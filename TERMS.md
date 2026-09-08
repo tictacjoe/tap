@@ -15,11 +15,14 @@ Any public citation, journalistic reference, academic paper, policy brief, or de
 - **Prohibited Commercial AI Ingestion:** Scraping, crawling, or downloading TAP structured data, research briefs, or confidence notes for the purpose of training, fine-tuning, or augmenting proprietary or commercial Large Language Models (LLMs) or commercial automated question-answering systems is strictly prohibited without prior written commercial authorization from JTDA LLC.
 - **Robots / Crawlers:** Automated crawlers must respect `robots.txt` directives and rate-limits.
 
-### 4. Integrity of Falsifiable Standards
+### 4. Journalism & Independent Press Exception
+Fair quotation, excerpting, citation, and embedding of TAP data, summaries, or confidence findings by accredited journalists, independent news outlets, policy commentators, and investigative platforms—including subscription-supported or ad-supported media (e.g. newspapers, podcasts, newsletters, and Substacks)—is explicitly recognized as permitted civic use under these terms, provided mandatory attribution to JTDA LLC and The Accountability Project™ (Section 2) is preserved.
+
+### 5. Integrity of Falsifiable Standards
 The Accountability Project™ operates on strict, falsifiable standards designed to document official conduct with legal-grade citations. Users may not:
 - Misrepresent preliminary research briefs or flagged gate alerts as final verified entries.
 - Remove confidence caveats, status indicators, or verification notes when quoting TAP entries.
 - Attribute unofficial political conjecture or unverified claims to TAP.
 
-### 5. Disclaimer of Warranties
+### 6. Disclaimer of Warranties
 All information is provided for civic transparency and educational debate preparation. While TAP applies multi-tier cryptographic and automated verification gates, all material is provided "as is" without warranty of any kind.
