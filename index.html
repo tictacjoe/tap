@@ -1862,13 +1862,17 @@ function buildUpdateRequestHtml(entry, cfg) {
    Requires a colon shortly after the word so a forward self-reference
    like "(see Update below)" -- which is never itself followed by a
    colon -- doesn't get treated as a marker. Each paragraph is passed
-   through hl() individually so search-term highlighting still works. */
+   through hl() individually so search-term highlighting still works.
+   Also matches "Added[ YYYY-MM-DD][ (round-4 backlog cluster cXXXX)]:",
+   the equivalent marker convention used across government-services and
+   deregulation `what_changed` fields for backlog-fold additions -- same
+   shape, same false-positive guard, just a second marker word. */
 function paragraphizeUpdates(text, hl) {
   if (!text) return "";
   // 130, not 60: government-services entries' "(correction -- ...)"
   // annotations run long, and the real corpus needs up to 121 chars
-  // between "Update" and its colon to all match.
-  const marker = /\bUpdate\b[^.:]{0,130}:/g;
+  // between "Update"/"Added" and its colon to all match.
+  const marker = /\b(?:Update|Added)\b[^.:]{0,130}:/g;
   const starts = [0];
   let m;
   while ((m = marker.exec(text)) !== null) {

@@ -314,6 +314,51 @@ test("prosecution Status field does not false-split on a forward self-reference 
   );
 });
 
+test("paragraphizeUpdates splits on an Added marker (round-4 backlog-fold convention used in government-services/deregulation what_changed fields)", () => {
+  const text = "Original narrative here. Added 2026-09-10 (round-4 backlog cluster c0309): first fold addition. Added 2026-09-09 (round-4 backlog cluster c0574): second fold addition.";
+  const result = paragraphizeUpdates(text, identity);
+
+  assert.equal((result.match(/<p>/g) || []).length, 3, "should split into 3 paragraphs, one per Added marker plus the lead-in text");
+  assert(result.includes("<p>Original narrative here.</p>"), "lead-in text before the first marker should be its own paragraph");
+  assert(result.includes("<p>Added 2026-09-10 (round-4 backlog cluster c0309): first fold addition.</p>"), "each Added marker should start its own paragraph");
+  assert(result.includes("<p>Added 2026-09-09 (round-4 backlog cluster c0574): second fold addition.</p>"), "a second Added marker should also start its own paragraph");
+});
+
+test("paragraphizeUpdates splits correctly when Update and Added markers are mixed in the same field", () => {
+  const text = "Original narrative. Update 2026-08-17: a recheck update. Added 2026-09-10 (round-4 backlog cluster c0309): a fold addition.";
+  const result = paragraphizeUpdates(text, identity);
+
+  assert.equal((result.match(/<p>/g) || []).length, 3, "Update and Added markers should each start their own paragraph, same as same-word markers do");
+  assert(result.includes("<p>Update 2026-08-17: a recheck update.</p>"), "an Update marker should still split correctly when Added markers are also present");
+  assert(result.includes("<p>Added 2026-09-10 (round-4 backlog cluster c0309): a fold addition.</p>"), "an Added marker should split correctly when Update markers are also present");
+});
+
+test("prosecution Status field does not false-split on a forward self-reference like \"(see Added below)\"", () => {
+  const entry = {
+    offense_category: "Fraud",
+    status_category: "Investigation",
+    incident_summary: "Summary.",
+    status: "The DOJ did not appeal (see Added detail below). No charges have been filed against Powell as of this entry Added: new detail follows here.",
+    confidence_note: "Strong evidence.",
+  };
+  const cfg = { kind: "prosecution" };
+  const result = buildDetailHtml(entry, cfg);
+
+  const statusStart = result.indexOf('<div class="field-label">Status</div><div class="field-value">');
+  const statusEnd = result.indexOf('<div class="field-label">Confidence note</div>');
+  const statusHtml = result.slice(statusStart, statusEnd);
+
+  assert.equal((statusHtml.match(/<p>/g) || []).length, 2, "the parenthetical \"(see Added detail below)\" mention must not itself start a paragraph");
+  assert(
+    statusHtml.includes("<p>The DOJ did not appeal (see Added detail below). No charges have been filed against Powell as of this entry</p>"),
+    "text up to the real Added marker should stay one paragraph, including the false-positive mention"
+  );
+  assert(
+    statusHtml.includes("<p>Added: new detail follows here.</p>"),
+    "the real, colon-terminated Added marker should start the second paragraph"
+  );
+});
+
 test("tracker (Reporting) highlights the search term in the body", () => {
   const entry = {
     what_happened: "The EPA announced new rules today.",
