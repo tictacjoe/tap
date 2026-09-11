@@ -51,6 +51,14 @@ def load_exclude_list(site_dir: Path) -> set:
     return excluded
 
 
+def strip_internal_fields(entry: dict) -> dict:
+    """Working-repo entries can carry underscore-prefixed top-level
+    fields (e.g. `_leaner_pass`) for internal editorial tracking --
+    never meant for the public site. Strip any such key before
+    publishing."""
+    return {k: v for k, v in entry.items() if not k.startswith("_")}
+
+
 def publish_json_entries(source_dir: Path, dest_file: Path, excluded_ids: set,
                           dry_run: bool = False) -> tuple:
     """Read all *.json files in source_dir, exclude by FILENAME (stem,
@@ -71,7 +79,7 @@ def publish_json_entries(source_dir: Path, dest_file: Path, excluded_ids: set,
             continue
         with open(f) as fh:
             data = json.load(fh)
-        included.append(data)
+        included.append(strip_internal_fields(data))
 
     if not dry_run:
         dest_file.parent.mkdir(parents=True, exist_ok=True)
