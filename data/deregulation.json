@@ -3270,6 +3270,89 @@
     }
   },
   {
+    "id": "fda-peptide-compounding-restrictions-loosened-2025-2026",
+    "rule_name": "FDA's Category 2 restricted-compounding list for peptide drugs (BPC-157, TB-500, and related unapproved peptides)",
+    "administration": "Trump II (2025-present)",
+    "agency": "HHS/FDA",
+    "domain": "environmental",
+    "status": "Partially loosened, outcome unresolved -- FDA removed BPC-157 and 11 other peptides from the restricted Category 2 list in April 2026 without adding them to the permitted Category 1 list, leaving a regulatory gray zone; a July 2026 advisory panel narrowly recommended Category 1 addition for BPC-157 tied to one specific indication, but FDA has proposed NOT adding it to the compounding bulks list, with no final resolution expected before late 2026 at the earliest",
+    "date_of_action": "2023 (FDA's original Category 2 restriction, citing cancer/liver/kidney/heart risks) through 2026-07 (PCAC advisory vote); ongoing",
+    "original_rule_summary": "In 2023, under the Biden administration, FDA placed nearly 20 peptide substances -- including BPC-157 (marketed for injury healing/inflammation) and TB-500 (banned by international sports authorities) -- on its Category 2 list of substances compounding pharmacies should not produce, based on a determination that these peptides 'present significant safety risks' given a near-total lack of human clinical testing, most safety data coming only from animal studies, and specific concerns about cancer and liver, kidney, and heart problems.",
+    "what_changed": "HHS Secretary Robert F. Kennedy Jr., a self-described peptide user who told Joe Rogan 'I'm a big fan of peptides ... I've used them myself and with really good effect on a couple of injuries,' repeatedly pledged throughout 2025 to loosen FDA restrictions on peptides even while acknowledging gray-market safety risks ('With the gray market you have no idea if you're getting a good product'). Unapproved peptides had already become popular among wellness influencers and 'Make America Healthy Again' (MAHA) supporters -- including longevity influencer Gary Brecka, who sells peptide formulas directly through his own website -- despite the FDA's existing restriction and repeated public warnings about contamination, allergic reactions, and quality-control risks given the near-total absence of human safety data. On February 27, 2026, Kennedy announced that approximately 14 of the 19 restricted peptides would be moved from Category 2 back to Category 1 (the list of substances permitted for compounding). FDA followed on April 15, 2026 by removing BPC-157 and eleven other peptides from Category 2 entirely -- but without adding them to Category 1, leaving them in a regulatory gray zone, neither explicitly prohibited nor affirmatively authorized for compounding. FDA's Pharmacy Compounding Advisory Committee (PCAC) then met July 23-24, 2026 and voted narrowly, 8-6, to recommend adding BPC-157 to Category 1 -- but only tied to a specific proposed ulcerative-colitis indication, not a blanket recommendation, and over continued objections from FDA's own scientists about the absence of human clinical data. As of this entry, FDA has proposed NOT adding BPC-157 to the formal 503A compounding bulks list despite the panel's recommendation, and a final compounding pathway is not expected to be resolved before late 2026 at the earliest, if ever.",
+    "primary_proponent": {
+      "name": "Robert F. Kennedy Jr.",
+      "role": "Secretary of Health and Human Services",
+      "note": "Personally announced the February 2026 reclassification of most restricted peptides and has publicly and repeatedly advocated loosening peptide restrictions based partly on his own stated personal use, while FDA's own career scientists have continued to raise human-safety-data objections throughout the process."
+    },
+    "corporate_beneficiaries": [
+      {
+        "name": "Wellness/longevity influencers and online peptide sellers, including Gary Brecka",
+        "connection": "Sell peptide formulas directly to consumers; regulatory loosening reduces legal risk and expands the addressable market for products FDA's own scientists say lack adequate human safety data"
+      },
+      {
+        "name": "Compounding pharmacies",
+        "connection": "Would gain a lawful pathway to produce and sell peptides currently restricted or in regulatory limbo, pending final Category 1 classification"
+      }
+    ],
+    "estimated_health_impact": {
+      "summary": "FDA's original 2023 restriction was based on a near-total absence of human clinical trial data for these peptides and specific concern about cancer and liver, kidney, and heart problems; loosening that restriction before such data exists extends consumer access to injectable substances FDA's own scientists maintain have not been shown safe or effective in humans, other than for one narrow indication (BPC-157/ulcerative colitis) an advisory panel voted narrowly to endorse.",
+      "figures": [
+        {
+          "metric": "Peptides originally restricted to FDA's Category 2 do-not-compound list (2023)",
+          "value": "~19-20 peptides",
+          "source": "PBS NewsHour, AJMC, citing FDA's original 2023 determination"
+        },
+        {
+          "metric": "Peptides Kennedy announced moving back toward Category 1 (Feb. 2026)",
+          "value": "~14 of 19",
+          "source": "AJMC/Pharmacy Times reporting on Kennedy's Feb. 27, 2026 announcement"
+        },
+        {
+          "metric": "Peptides FDA actually removed from Category 2 (Apr. 2026), without Category 1 addition",
+          "value": "12 (including BPC-157)",
+          "source": "AJMC, citing FDA's April 15, 2026 action"
+        },
+        {
+          "metric": "PCAC advisory vote on adding BPC-157 to Category 1 (July 2026)",
+          "value": "8-6 in favor, tied to a specific ulcerative-colitis indication only",
+          "source": "PharmExec, AJMC coverage of the July 23-24, 2026 PCAC meeting"
+        }
+      ],
+      "caveat": "The regulatory status remains genuinely unresolved and narrower than headline coverage of Kennedy's February 2026 announcement suggested -- FDA has not added BPC-157 to the compounding bulks list despite the advisory panel's vote, and the panel's endorsement covers only one specific indication, not general wellness/injury/anti-aging use as marketed by influencers. No quantified figure for consumer harm (illness, hospitalization) specifically attributable to the 2025-2026 loosening was found in reporting reviewed."
+    },
+    "confidence_note": "Strong sourcing: FDA's original 2023 restriction basis, Kennedy's public advocacy and February 2026 announcement, the April 2026 Category 2 removal, and the July 2026 PCAC vote and its narrow, indication-specific scope are all corroborated across PBS NewsHour, AJMC, Pharmacy Times, PharmExec, and AP/ABC News wire reporting on the underlying FDA reviews.",
+    "last_verified": "2026-09-12",
+    "date_added": "2026-09-12",
+    "sources": [
+      {
+        "name": "PBS NewsHour -- FDA to weigh easing limits on unproven peptides favored by RFK Jr. and MAHA supporters",
+        "url": "https://www.pbs.org/newshour/health/fda-to-weigh-easing-limits-on-unproven-peptides-favored-by-rfk-jr-and-maha-supporters"
+      },
+      {
+        "name": "AP News (via ABC News) -- FDA reviews peptide injections favored by RFK Jr. and wellness influencers",
+        "url": "https://abcnews.com/Health/wireStory/fda-reviews-peptide-injections-favored-rfk-jr-wellness-135007977"
+      },
+      {
+        "name": "AJMC -- 5 Things to Know About the FDA's Peptide Reversal",
+        "url": "https://www.ajmc.com/view/5-things-to-know-about-the-fda-s-peptide-reversal"
+      },
+      {
+        "name": "PharmExec -- FDA Panel Votes to Loosen Restrictions for Four Peptides",
+        "url": "https://www.pharmexec.com/view/fda-votes-loosen-restrictions-four-peptides"
+      },
+      {
+        "name": "AJMC -- FDA Panel Backs 6 Peptides for Compounding",
+        "url": "https://www.ajmc.com/view/fda-panel-backs-6-peptides-for-compounding"
+      }
+    ],
+    "short_summary": "RFK Jr. pushed to loosen FDA restrictions on unproven peptides popular with MAHA-aligned wellness influencers; FDA has partially removed restrictions but has not fully authorized them despite an advisory panel's narrow endorsement.",
+    "section_summaries": {
+      "what_changed": "RFK Jr. drove a 2025-2026 push to loosen FDA restrictions on unapproved peptides popular with wellness influencers; FDA removed several peptides from its restricted list in April 2026 without fully authorizing them, and a July 2026 advisory panel narrowly endorsed one peptide for one specific medical use only.",
+      "estimated_impact": "Extends consumer access to injectable substances FDA's own scientists say lack adequate human safety data, though the regulatory loosening achieved so far is narrower and less resolved than initial headlines suggested.",
+      "confidence_note": "Strong sourcing across FDA's own review process, PBS NewsHour, AJMC, and PharmExec's direct coverage of the same regulatory actions."
+    }
+  },
+  {
     "id": "fda-single-trial-approval-standard-2026",
     "rule_name": "FDA's longstanding requirement that new drugs be supported by two independent clinical studies before approval",
     "administration": "Trump II (2025-present)",
@@ -3278,7 +3361,7 @@
     "status": "Finalized (policy change announced)",
     "date_of_action": "2026-02-18 (announcement, per AP reporting)",
     "original_rule_summary": "FDA has long applied a default expectation that new drug approvals be supported by two independent, adequate, and well-controlled clinical studies -- a standard intended to guard against a single trial's results being a statistical fluke, methodological artifact, or site-specific anomaly, and to provide independent replication of a drug's safety and efficacy findings before it reaches the market.",
-    "what_changed": "FDA announced it will end its longstanding two-independent-study requirement for new drug approvals, moving to a default standard of a single trial, with the stated goal of accelerating drug approvals. The change was led by FDA Commissioner Marty Makary and vaccine/biologics official Dr. Vinay Prasad -- the same official whose office separately refused to even review Moderna's mRNA flu vaccine application over trial-design objections (see fda-moderna-mrna-flu-vaccine-refusal-2026.json), creating an apparent tension between accelerating approval standards for new drugs generally while applying an unusually strict, refusal-to-file standard in that specific vaccine case. Days later, Commissioner Makary announced a related acceleration measure: a pilot 'Reviewer Recognition and Excellence' program offering quarterly cash bonuses (starting around August 2026) to drug reviewers who complete evaluations ahead of schedule, tied to 'weighted time savings' and work-quality/complexity metrics. Makary told FDA staff the payments were meant to 'recognize and reward staff who find ways to be more efficient,' and that securing approval for the bonuses took 'some wrangling.'",
+    "what_changed": "This policy had an internal antecedent conflict that predates its formal announcement. Dr. Richard Pazdur -- a 26-year FDA veteran Makary had personally recruited to lead the Center for Drug Evaluation and Research (CDER) on November 11, 2025, reportedly with promises of autonomy -- publicly and internally raised legal and safety objections within days of taking the role, telling colleagues the plan to reduce the standard evidentiary bar to a single clinical trial in many cases 'is not sufficiently transparent and could be illegal,' and separately raised similar concerns about Makary's National Priority Voucher program, which aimed to compress drug review timelines from 10-12 months to 1-2 months. The dispute came to a head when Pazdur was handed a prepared press release containing a quotation attributed to himself endorsing the reduced trial requirements and was told, in his own words, to 'just agree to it' -- which he characterized as breaching 'this wall between the commissioner's office and the review staff.' Pazdur filed his retirement on December 2, 2025, barely three weeks into the CDER director role, and left by the end of that month; HHS defended the underlying changes as necessary reform and characterized Pazdur himself as indecisive. FDA announced it will end its longstanding two-independent-study requirement for new drug approvals, moving to a default standard of a single trial, with the stated goal of accelerating drug approvals. The change was led by FDA Commissioner Marty Makary and vaccine/biologics official Dr. Vinay Prasad -- the same official whose office separately refused to even review Moderna's mRNA flu vaccine application over trial-design objections (see fda-moderna-mrna-flu-vaccine-refusal-2026.json), creating an apparent tension between accelerating approval standards for new drugs generally while applying an unusually strict, refusal-to-file standard in that specific vaccine case. Days later, Commissioner Makary announced a related acceleration measure: a pilot 'Reviewer Recognition and Excellence' program offering quarterly cash bonuses (starting around August 2026) to drug reviewers who complete evaluations ahead of schedule, tied to 'weighted time savings' and work-quality/complexity metrics. Makary told FDA staff the payments were meant to 'recognize and reward staff who find ways to be more efficient,' and that securing approval for the bonuses took 'some wrangling.'",
     "primary_proponent": {
       "name": "Dr. Marty Makary / Dr. Vinay Prasad",
       "role": "FDA Commissioner / FDA vaccine and biologics official",
@@ -3291,9 +3374,9 @@
       "summary": "Replication across independent studies has historically served as a safeguard against approving drugs based on results that don't hold up under a second trial -- a single-trial default standard increases the risk that approved drugs' safety/efficacy profiles rest on findings that would not have replicated, a tradeoff FDA is making explicitly in favor of faster approval timelines.",
       "caveat": "FDA retains discretion to require additional studies for specific drugs under the new default policy; this entry documents the announced change in the default standard, not a claim that every future approval under it will prove unsafe or ineffective."
     },
-    "confidence_note": "HIGH confidence -- the policy announcement, its FDA leadership attribution (Makary and Prasad), and its stated acceleration rationale are confirmed by AP's direct reporting, with no dispute of the underlying facts identified in sourcing reviewed.",
+    "confidence_note": "HIGH confidence -- the policy announcement, its FDA leadership attribution (Makary and Prasad), and its stated acceleration rationale are confirmed by AP's direct reporting, with no dispute of the underlying facts identified in sourcing reviewed. Added 2026-09-12 (round-4 backlog fold, cluster c0727): Pazdur's appointment, his legal/safety objections, his own on-record 'just agree to it' and 'wall...breached' quotes, and his December 2, 2025 retirement filing are HIGH confidence, corroborated across the Washington Post's original reporting and BioSpace's detailed follow-up coverage, including HHS's on-record defense of the changes.",
     "short_summary": "FDA ended its default two-independent-study requirement for new drug approvals, moving to a single-trial standard to accelerate approvals.",
-    "last_verified": "2026-08-05",
+    "last_verified": "2026-09-12",
     "date_added": "2026-08-05",
     "last_updated": "2026-08-05",
     "sources": [
@@ -3304,10 +3387,22 @@
       {
         "name": "AP -- 'FDA to offer bonus payments to staffers who complete speedy drug reviews'",
         "url": "https://www.usnews.com/news/us/articles/2026-02-26/fda-to-offer-bonus-payments-to-staffers-who-complete-speedy-drug-reviews"
+      },
+      {
+        "name": "Washington Post -- New top FDA drug regulator raises legal concerns about expediting approvals",
+        "url": "https://www.washingtonpost.com/health/2025/11/21/fda-regulator-richard-pazdur-concerns/"
+      },
+      {
+        "name": "BioSpace -- 'Just Agree to It:' Pazdur Said He Was Told To Cosign FDA's Reduced Trial Requirements",
+        "url": "https://www.biospace.com/fda/just-agree-to-it-pazdur-said-he-was-told-to-cosign-fdas-reduced-trial-requirements"
+      },
+      {
+        "name": "BioSpace -- Pazdur To Retire Weeks After Taking On Coveted FDA Role",
+        "url": "https://www.biospace.com/fda/pazdur-to-retire-weeks-after-taking-on-coveted-fda-role"
       }
     ],
     "section_summaries": {
-      "what_changed": "FDA ended its default two-independent-study requirement for new drug approvals, moving to a single-trial standard under Makary and Prasad to accelerate approvals. Makary also introduced a bonus-pay pilot program rewarding reviewers who complete evaluations ahead of schedule.",
+      "what_changed": "FDA ended its default two-independent-study requirement for new drug approvals, moving to a single-trial standard under Makary and Prasad to accelerate approvals, over the newly-appointed CDER director Pazdur's internal legal/safety objections -- he retired after three weeks rather than cosign a prepared quote endorsing the change. Makary also introduced a bonus-pay pilot program rewarding reviewers who complete evaluations ahead of schedule.",
       "estimated_impact": "Increases the risk that approved drugs rest on unreplicated findings, a tradeoff made explicitly in favor of faster approval timelines.",
       "confidence_note": "Confirmed directly by AP's reporting with clear FDA leadership attribution; no facts disputed."
     }
