@@ -2434,6 +2434,89 @@
     }
   },
   {
+    "id": "epa-hfc-technology-transitions-delay-2025-2026",
+    "rule_name": "AIM Act Technology Transitions Rule -- HFC (hydrofluorocarbon) refrigerant phasedown compliance deadlines for supermarket, remote-condensing, industrial-chiller, and semiconductor refrigeration systems",
+    "administration": "Trump II (2025-present)",
+    "agency": "EPA",
+    "domain": "environmental",
+    "status": "Finalized -- EPA published a final rule May 26, 2026, effective July 27, 2026",
+    "date_of_action": "2025-03-12 (EPA announces reconsideration) through 2026-05-26 (final rule issued); effective 2026-07-27",
+    "original_rule_summary": "The American Innovation and Manufacturing (AIM) Act of 2020 -- a bipartisan law Trump signed in his first term -- directed EPA to phase down high-global-warming-potential (GWP) hydrofluorocarbon refrigerants nationwide. EPA's October 2023 Technology Transitions Rule implemented that phasedown with specific GWP limits and compliance deadlines for different equipment sectors, including supermarket/remote-condensing refrigeration systems, industrial chillers, and semiconductor-manufacturing refrigeration, with several deadlines set for January 1, 2026 and January 1, 2028.",
+    "what_changed": "On March 12, 2025 -- the same day EPA Administrator Lee Zeldin announced 31 simultaneous deregulatory actions -- EPA announced it would reconsider the 2023 Technology Transitions Rule. EPA released its formal reconsideration proposal on October 3, 2025, and closed the public comment period on November 21, 2025. EPA finalized the rule on May 26, 2026, effective July 27, 2026: the GWP threshold for remote condensing units and supermarket systems, originally set to drop to 150-300 on January 1, 2026, was instead raised to an interim 1,400 starting July 27, 2026, with the original 150/300 limit not taking effect until January 1, 2032 -- a six-year delay. Separately, compliance deadlines for industrial chillers and semiconductor-manufacturing refrigeration systems, originally January 1, 2026 and January 1, 2028 respectively, were both pushed to January 1, 2030. The final rule also removed a prohibition on installing R-410A (a higher-GWP refrigerant) systems. EPA and Trump justified the delay by citing 'stranded inventory' -- billions of dollars in already-manufactured equipment that would become illegal to install under the original deadlines -- and Trump said the change would save consumers $2.4 billion by reducing grocery and retail-store operating costs. Industry reaction was split rather than uniform: the Air-Conditioning, Heating, and Refrigeration Institute (AHRI) and the Alliance for Responsible Atmospheric Policy -- representing manufacturers who had already invested in new compliant equipment, refrigerants, and production lines to meet the original deadlines Congress and the first Trump administration set -- opposed the delay, arguing it would keep demand for older high-GWP refrigerants elevated even as supply keeps falling under the AIM Act's separate production phasedown, pushing refrigerant prices higher for the very companies that complied on schedule. AHRI's Stephen Yurek said extending the deadline 'is maintaining and even increasing demand in the market for existing refrigerants while supply continues to fall,' and that 'refrigerant prices are likely to rise.' Other industry segments -- particularly grocery and retail-store operators represented by the Food Industry Association -- supported the delay for the cost relief it offered. Environmental groups including NRDC criticized the rule as undermining the AIM Act's climate goals.",
+    "primary_proponent": {
+      "name": "Lee Zeldin",
+      "role": "Administrator, Environmental Protection Agency",
+      "note": "Announced and finalized the reconsideration and delay of the Technology Transitions Rule's compliance deadlines, framing the change around 'stranded inventory' relief; President Trump separately publicized the $2.4 billion consumer-savings estimate."
+    },
+    "corporate_beneficiaries": [
+      {
+        "name": "Grocery and retail-store operators still using older, higher-GWP refrigeration equipment",
+        "connection": "Avoid the cost of replacing still-functional equipment on the original 2026/2028 compliance schedule; represented in support of the delay by the Food Industry Association"
+      },
+      {
+        "name": "Manufacturers and importers of higher-GWP refrigerants (e.g., R-410A) whose products would otherwise have faced installation prohibitions starting in 2026",
+        "connection": "Extended market for existing higher-GWP refrigerant supply through the new interim 2032/2030 deadlines"
+      }
+    ],
+    "estimated_health_impact": {
+      "summary": "Delaying the shift away from high-GWP refrigerants by up to six years extends the use and installation of chemicals with substantially greater heat-trapping potential than their low-GWP replacements, working against the AIM Act's bipartisan climate-mitigation goal; the harm here is a climate/regulatory-durability one rather than a direct public-health-standard rollback, and industry itself is split on whether the delay is a net benefit (cost relief for late-adopting operators) or a net harm (price and stranded-investment risk for manufacturers who already complied on the original schedule).",
+      "figures": [
+        {
+          "metric": "Original GWP compliance deadline for remote condensing/supermarket systems, before delay",
+          "value": "January 1, 2026",
+          "source": "EPA's 2023 Technology Transitions Rule"
+        },
+        {
+          "metric": "New interim GWP threshold and effective date for the same systems",
+          "value": "GWP 1,400, effective July 27, 2026 (down to 150/300 only by January 1, 2032)",
+          "source": "EPA's May 26, 2026 final rule fact sheet"
+        },
+        {
+          "metric": "Industrial chiller and semiconductor-refrigeration compliance deadlines, original vs. delayed",
+          "value": "January 1, 2026 / January 1, 2028 (original) -> January 1, 2030 (both, delayed)",
+          "source": "EPA's May 26, 2026 final rule fact sheet"
+        },
+        {
+          "metric": "Trump's claimed consumer savings from the delay",
+          "value": "$2.4 billion (grocery/retail operating-cost reduction)",
+          "source": "Trump administration public statement, cited by Facilities Dive"
+        }
+      ],
+      "caveat": "No independent, quantified estimate of the resulting additional climate/GWP impact (in CO2-equivalent terms) from the multi-year delay was found in reporting reviewed -- the documented impact so far is the scale and duration of the schedule change itself, plus the administration's own cost-savings claim, which is presented as the administration's own figure rather than independently verified. Industry reaction is genuinely split by sector (compliant manufacturers oppose; grocery/retail operators support), not uniformly critical or supportive."
+    },
+    "confidence_note": "Strong sourcing: the reconsideration announcement, proposal, comment period, and final rule dates and terms are corroborated across EPA's own press releases and final-rule fact sheet, Facilities Dive, the Hunton Nickel Report (legal-industry tracking), and Alliance Chemical's summary of the final rule; the split industry reaction (AHRI/Alliance for Responsible Atmospheric Policy opposed, Food Industry Association supportive) is corroborated by Facilities Dive's direct sourcing of trade-group statements.",
+    "last_verified": "2026-09-12",
+    "date_added": "2026-09-12",
+    "sources": [
+      {
+        "name": "AP News -- Trump officials delay HFC refrigerant phase-out rule",
+        "url": "https://apnews.com/article/hfc-alternative-refrigerants-air-conditioners-trump-epa-fb2d3c8bd3029b9f924e9adb45bedfb4"
+      },
+      {
+        "name": "Facilities Dive -- EPA rule extending high-GWP HFC refrigerant phase-outs will raise costs, critics say",
+        "url": "https://www.facilitiesdive.com/news/epa-rule-extending-high-gwp-hfc-refrigerant-phase-outs-will-raise-costs-cr/821046/"
+      },
+      {
+        "name": "EPA -- EPA Proposes Reforming Biden Technology Transitions Rule to Lower Costs for American Families",
+        "url": "https://www.epa.gov/newsreleases/epa-proposes-reforming-biden-technology-transitions-rule-lower-costs-american-families"
+      },
+      {
+        "name": "Alliance Chemical -- EPA Finalizes HFC Technology Transitions Rule",
+        "url": "https://alliancechemical.com/blogs/news/epa-finalizes-aim-act-technology-transitions-changes-for-hydrofluorocarbons"
+      },
+      {
+        "name": "Hunton Andrews Kurth, The Nickel Report -- Status Update on the AIM Act and EPA's HFC-Refrigerant Regulations",
+        "url": "https://www.hunton.com/the-nickel-report/status-update-on-the-aim-act-and-epas-hfc-refrigerant-regulations"
+      }
+    ],
+    "short_summary": "EPA delayed the bipartisan AIM Act's HFC refrigerant phasedown by up to six years, citing 'stranded inventory,' over the objection of manufacturers who had already complied with the original schedule.",
+    "section_summaries": {
+      "what_changed": "EPA finalized a May 2026 rule delaying HFC refrigerant phase-down deadlines by up to six years (to 2030-2032), reversing parts of the bipartisan 2020 AIM Act's implementation that Trump himself signed into law in his first term.",
+      "estimated_impact": "Extends use of higher-GWP refrigerants against the law's climate goal; industry reaction is split, with compliant manufacturers warning of price increases and stranded investment while grocery/retail operators welcome the cost relief.",
+      "confidence_note": "Strong sourcing across EPA's own filings, trade press, and legal-industry trackers, including direct trade-group statements on both sides of the industry split."
+    }
+  },
+  {
     "id": "epa-methane-stripper-well-rollback-2026",
     "rule_name": "Methane emission rules for low-producing ('stripper') oil and gas wells",
     "administration": "Trump II (2025-present)",

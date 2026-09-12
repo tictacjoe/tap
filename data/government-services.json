@@ -9286,6 +9286,62 @@
     }
   },
   {
+    "id": "epa-shutdown-furlough-chaos-deregulation-priority-2025",
+    "title": "EPA's Shutdown Furloughs Were 'Scattershot and Seemingly Random,' While Deregulation and Permitting Work Continued",
+    "institution": "Environmental Protection Agency",
+    "domain": "staff_office_cuts",
+    "status": "Shutdown ended November 12, 2025; no lasting policy change identified, though EPA's redefinition of furlough-'exempt' status during the shutdown was not reported as reversed or explained afterward",
+    "date_of_action": "2025-10-01 through 2025-11-12 (43-day shutdown)",
+    "what_changed": "As the October-November 2025 government shutdown stretched into its fifth week, EPA employees and their union described the agency's furlough process as 'scattershot and seemingly random,' with staff in the same division split between furloughed and working with no discernible pattern, and some employees reporting they learned of their own furlough status only through colleagues' out-of-office auto-replies rather than direct notice. EPA's shutdown contingency plan initially indicated only 1,734 of the agency's employees -- 828 traditionally 'exempt' staff plus 906 meeting statutory or public-safety requirements -- would keep working through the funding lapse; the union representing EPA staff estimated 6,000-7,000 employees were ultimately sent home. EPA further muddied the picture by sending a mass email from a generic agency address directing a wide swath of employees to keep working because they 'work on activities which currently have available funds and thus are currently exempted from the shutdown' -- a redefinition of 'exempt' status that AFGE Council 238 President Justin Chen said broke from how the term had traditionally been used in furlough planning ('That's not how the term \"exempt\" has been used in the past in these situations'), since employees paid from leftover fiscal-2025 carryover funds are not the same category as employees statutorily exempt from a shutdown. Even as this confusion left thousands of employees uncertain of their status, EPA kept staff working on Trump administration priorities -- drafting rule rollbacks and processing permits -- while furloughing others essentially at random; the agency's climate offices, already in the process of being disbanded and having their staff reassigned, were left in particular limbo, uncounted in the contingency plan's own working-staff figures. The pattern paralleled a similar, separately-documented disparity at the Interior Department during the same shutdown, where oil, gas, and coal permitting staff were exempted from furlough while renewable-energy work was halted entirely (see shutdown-fossil-fuel-permitting-renewable-freeze-2025.json) -- both agencies kept fossil-fuel-adjacent priority work staffed through the shutdown while other functions were disrupted, though EPA's disruption was additionally marked by chaotic, inconsistent internal communication that Interior's cleaner permitting-exemption policy did not exhibit to the same degree.",
+    "primary_proponent": {
+      "name": "Lee Zeldin",
+      "role": "Administrator, Environmental Protection Agency",
+      "note": "As agency head, Zeldin's EPA set the shutdown contingency plan and the disputed 'exempt' redefinition; no individual statement from Zeldin himself addressing the furlough chaos was found in reporting reviewed."
+    },
+    "estimated_impact": {
+      "summary": "Thousands of EPA employees experienced an unusually chaotic, inconsistently-communicated furlough process during the shutdown's peak, even as the agency kept deregulatory rulemaking and permit processing staffed -- a disparity in priorities that, combined with poor communication, left affected staff both financially exposed and uncertain of their own employment status for weeks.",
+      "figures": [
+        {
+          "metric": "EPA employees the initial shutdown contingency plan indicated would keep working",
+          "value": "1,734 (828 'exempt' + 906 meeting statutory/public-safety requirements)",
+          "source": "E&E News/POLITICO, citing EPA's shutdown contingency plan"
+        },
+        {
+          "metric": "EPA employees the agency's union estimated were furloughed",
+          "value": "6,000-7,000",
+          "source": "AFGE Council 238, cited by multiple outlets including The Hill and E&E News"
+        }
+      ],
+      "caveat": "No single, EPA-confirmed total furlough count was found -- the contingency plan's working-staff figures and the union's furloughed-staff estimate come from different sources and don't necessarily reconcile to the agency's actual total headcount; the climate-office staff already being reassigned amid the ORD elimination (see epa-ord-elimination-trump2.json) further complicate a clean count."
+    },
+    "confidence_note": "Well-corroborated across E&E News/POLITICO, The Hill, WBUR, and Wired, all citing EPA's own contingency-plan documents and AFGE Council 238's on-the-record statements; the specific 'exempt' redefinition and Justin Chen's quoted objection are directly sourced to E&E News' reporting on the agency's own internal email.",
+    "section_summaries": {
+      "what_changed": "EPA's shutdown furloughs were described by staff and their union as chaotic and effectively random, with the agency redefining 'exempt' status in a way its own union called inconsistent with past practice, while deregulatory rulemaking and permit-processing work continued uninterrupted.",
+      "estimated_impact": "Thousands of employees faced weeks of uncertainty about their own furlough status amid inconsistent communication, while the agency's deregulation priorities remained staffed throughout.",
+      "confidence_note": "Well-corroborated across multiple independent outlets citing EPA's own contingency plan and the union's on-record statements."
+    },
+    "last_verified": "2026-09-12",
+    "date_added": "2026-09-12",
+    "sources": [
+      {
+        "name": "E&E News/POLITICO -- How the shutdown is roiling climate programs at 6 agencies",
+        "url": "https://www.eenews.net/articles/how-the-shutdown-is-roiling-climate-programs-at-6-agencies/"
+      },
+      {
+        "name": "The Hill -- Government shutdown reduces EPA to skeleton crew",
+        "url": "https://thehill.com/policy/energy-environment/5531546-government-shutdown-epa-furloughs/"
+      },
+      {
+        "name": "WBUR -- 40% of New England EPA employees furloughed amid government shutdown, union says",
+        "url": "https://www.wbur.org/news/2025/10/24/new-england-environmental-protection-agency-furlough-government-shutdown"
+      },
+      {
+        "name": "Wired -- The EPA Is in Chaos",
+        "url": "https://www.wired.com/story/environmental-protection-agency-shutdown-chaos/"
+      }
+    ]
+  },
+  {
     "id": "faa-aircraft-mechanic-training-grants-dei-freeze-2025",
     "title": "FAA Froze Aircraft-Mechanic Training Grants Over DEI-Language Stripping Requirements Amid a Projected 10% Mechanic Shortfall",
     "institution": "Federal Aviation Administration (Aviation Workforce Development Grants program)",
@@ -9927,7 +9983,7 @@
     "domain": "staff_office_cuts",
     "status": "Ongoing -- no formal response or corrective action from FBI leadership identified in sourcing reviewed",
     "date_of_action": "2025-02 through 2025-08 (assessment's coverage period) through 2025-12-01 (report leaked)",
-    "what_changed": "The New York Post obtained and reported on December 1, 2025 a 115-page internal assessment -- compiled by a national alliance of retired and active-duty FBI special agents and analysts, drawing on confidential accounts from 24 FBI sources, and prepared for the Senate and House Judiciary Committees -- covering the first six months of Director Kash Patel's tenure (February 21 through August 21, 2025). The report described the FBI as 'internally paralyzed by fear,' with plummeting morale and a 'rudderless ship' in which managers were afraid to take initiative without Patel's explicit personal approval. It characterized Patel himself as 'in over his head,' leading a 'chronically under-performing' agency, and cited concerns from foreign law enforcement partners that the leadership turmoil could cause long-term damage to international law-enforcement cooperation. Sen. Dick Durbin issued a public statement responding to the report. Separately, the same period saw a documented pattern of Patel publicly disclosing sensitive operational details on social media before or during active investigations: in one specific instance, the Secret Service accused Patel of compromising an active covert investigation into a planned attack on a White House-linked UFC event (which numerous high-ranking officials attended) by publicly announcing the plot had been foiled while the operation, including still-at-large suspects, remained active -- FBI Deputy Director Matthew Quinn confirmed the operation's active status at the time. In a related development the same season, the FBI launched a new 'Rapid Response' social-media account in November 2025 that took an unusually combative public posture, immediately engaging in public disputes with commentators including Tucker Carlson, amplifying Deputy Director Dan Bongino's own frequently partisan public statements, and defending the Bureau's January 6 pipe-bomb investigation against outside criticism -- a marked departure from the FBI's traditionally reticent public-communications posture. Added 2026-09-09 (round-4 backlog cluster c0579): the pattern of premature public disclosure during active investigations predates the November/December 2025 developments above by roughly two months. On September 11, 2025, hours after conservative activist Charlie Kirk was fatally shot at Utah Valley University, Patel publicly announced 'the subject for the horrific shooting... is now in custody' -- then retracted the claim less than two hours later, saying authorities had the wrong person, while Utah law enforcement officials were simultaneously holding a news conference stating the gunman remained at large, producing hours of public confusion before the actual suspect, Tyler Robinson, was arrested roughly 33 hours after the shooting. Patel also drew criticism for dining at an exclusive New York restaurant hours after the assassination while continuing to post premature investigative updates; former FBI officials characterized both the dining choice and the social-media conduct as 'grandstanding' that undermined public confidence in the bureau during an active national-security-sensitive investigation.",
+    "what_changed": "The New York Post obtained and reported on December 1, 2025 a 115-page internal assessment -- compiled by a national alliance of retired and active-duty FBI special agents and analysts, drawing on confidential accounts from 24 FBI sources, and prepared for the Senate and House Judiciary Committees -- covering the first six months of Director Kash Patel's tenure (February 21 through August 21, 2025). The report described the FBI as 'internally paralyzed by fear,' with plummeting morale and a 'rudderless ship' in which managers were afraid to take initiative without Patel's explicit personal approval. It characterized Patel himself as 'in over his head,' leading a 'chronically under-performing' agency, and cited concerns from foreign law enforcement partners that the leadership turmoil could cause long-term damage to international law-enforcement cooperation. Sen. Dick Durbin issued a public statement responding to the report. Separately, the same period saw a documented pattern of Patel publicly disclosing sensitive operational details on social media before or during active investigations: in one specific instance, the Secret Service accused Patel of compromising an active covert investigation into a planned attack on a White House-linked UFC event (which numerous high-ranking officials attended) by publicly announcing the plot had been foiled while the operation, including still-at-large suspects, remained active -- FBI Deputy Director Matthew Quinn confirmed the operation's active status at the time. In a related development the same season, the FBI launched a new 'Rapid Response' social-media account in November 2025 that took an unusually combative public posture, immediately engaging in public disputes with commentators including Tucker Carlson, amplifying Deputy Director Dan Bongino's own frequently partisan public statements, and defending the Bureau's January 6 pipe-bomb investigation against outside criticism -- a marked departure from the FBI's traditionally reticent public-communications posture. The pipe-bomb episode had a specific, well-documented flashpoint: on November 8, 2025, The Blaze reported a purported 'gait analysis' finding a 94% match between the January 6 pipe bomber and a former Capitol Police officer (since employed in CIA campus security), a story Rep. Thomas Massie and Rep. Barry Loudermilk promoted -- Massie went further, claiming 'Capitol Police turned CIA orchestrated the pipe bombs on January 6th, and the FBI has covered it up.' Bongino, rather than directly debunking the story, posted on November 13, 2025 that some reporting on 'prior persons of interest is grossly inaccurate and serves only to mislead the public,' without disclosing that the FBI had already investigated and cleared the officer (whose attorney, Steve Bunnell, called the allegations 'recklessly false, absurd, and defamatory') using video evidence placing her elsewhere when the bombs were planted; the FBI separately clarified it had actually been tracking an unrelated person captured via SmartTrip card records near the RNC. The Blaze later retracted its story. The FBI ultimately arrested a different suspect, Virginia bail bondsman Brian Cole Jr., on December 2, 2025, who told investigators he believed the 2020 election was stolen and was a Trump supporter -- vindicating the FBI's original investigation over the MAGA-media conspiracy theory Bongino had allowed to fester rather than immediately and clearly contradicting. Bongino announced December 17, 2025 he would step down as Deputy Director in January 2026, citing a desire to return to his media career; reporting also cited friction with Attorney General Bondi and the Epstein-files dispute as contributing factors, without identifying the pipe-bomb episode itself as a stated cause. Added 2026-09-09 (round-4 backlog cluster c0579): the pattern of premature public disclosure during active investigations predates the November/December 2025 developments above by roughly two months. On September 11, 2025, hours after conservative activist Charlie Kirk was fatally shot at Utah Valley University, Patel publicly announced 'the subject for the horrific shooting... is now in custody' -- then retracted the claim less than two hours later, saying authorities had the wrong person, while Utah law enforcement officials were simultaneously holding a news conference stating the gunman remained at large, producing hours of public confusion before the actual suspect, Tyler Robinson, was arrested roughly 33 hours after the shooting. Patel also drew criticism for dining at an exclusive New York restaurant hours after the assassination while continuing to post premature investigative updates; former FBI officials characterized both the dining choice and the social-media conduct as 'grandstanding' that undermined public confidence in the bureau during an active national-security-sensitive investigation.",
     "primary_proponent": {
       "name": "Kash Patel, FBI Director",
       "role": "Subject of the leaked internal assessment and the specific social-media disclosure incidents documented",
@@ -9949,8 +10005,8 @@
       ],
       "caveat": "The assessment is a compilation by a group of retired and active-duty agents, not an independent government audit (e.g., DOJ Inspector General); it represents the perspective of FBI personnel critical of Patel's leadership rather than an adjudicated finding. Sourcing reviewed did not identify a public response from Patel or the FBI specifically rebutting the report's findings."
     },
-    "confidence_note": "HIGH confidence on the leaked assessment's existence, its scope, and its core findings, corroborated across the New York Post's original reporting, The Hill, The Guardian, and wide syndication (MEAWW, Inkl, uPolitics). HIGH confidence on the UFC-event investigation disclosure, corroborated by the Secret Service's own on-record accusation and Deputy Director Quinn's confirmation as reported by the Daily Beast and IBTimes UK. MODERATE confidence connecting the FBI Rapid Response account's specific November 2025 posts to any particular sensitive-operation disclosure -- the account's combative public posture is well-documented, but no source reviewed tied a specific Rapid Response post to compromising an active investigation the way the UFC-event incident did. Added 2026-09-09 (round-4 backlog cluster c0579): the Charlie Kirk investigation false-custody announcement and the restaurant-dining criticism are HIGH confidence, corroborated across Reuters, NBC News, and Fox News's own scrutiny coverage.",
-    "last_verified": "2026-09-09",
+    "confidence_note": "HIGH confidence on the leaked assessment's existence, its scope, and its core findings, corroborated across the New York Post's original reporting, The Hill, The Guardian, and wide syndication (MEAWW, Inkl, uPolitics). HIGH confidence on the UFC-event investigation disclosure, corroborated by the Secret Service's own on-record accusation and Deputy Director Quinn's confirmation as reported by the Daily Beast and IBTimes UK. MODERATE confidence connecting the FBI Rapid Response account's specific November 2025 posts to any particular sensitive-operation disclosure -- the account's combative public posture is well-documented, but no source reviewed tied a specific Rapid Response post to compromising an active investigation the way the UFC-event incident did. Added 2026-09-09 (round-4 backlog cluster c0579): the Charlie Kirk investigation false-custody announcement and the restaurant-dining criticism are HIGH confidence, corroborated across Reuters, NBC News, and Fox News's own scrutiny coverage. Added 2026-09-12 (round-4 backlog fold, cluster c0706): the Blaze/gait-analysis pipe-bomb episode, Massie's and Loudermilk's promotion of it, Bongino's non-debunking response, the officer's clearance, and Cole's eventual arrest are all HIGH confidence, corroborated across NBC News, Newsweek, NPR, and Washington Examiner reporting on the same sequence. MODERATE confidence on any connection between this episode and Bongino's December 17, 2025 resignation announcement, since reporting cited multiple contributing factors (Bondi friction, the Epstein-files dispute) without singling out the pipe-bomb episode as a stated cause.",
+    "last_verified": "2026-09-12",
     "date_added": "2026-09-09",
     "sources": [
       {
@@ -9980,9 +10036,25 @@
       {
         "name": "NBC News -- 'Kash Patel criticized for actions and posts during Charlie Kirk shooting investigation'",
         "url": "https://www.nbcnews.com/politics/justice-department/kash-patel-criticized-actions-posts-charlie-kirk-shooting-investigatio-rcna231043"
+      },
+      {
+        "name": "NBC News -- 'FBI throws cold water on story suggesting Capitol Police officer was Jan. 6 pipe bomber'",
+        "url": "https://www.nbcnews.com/politics/justice-department/fbi-throws-cold-water-story-suggesting-capitol-police-officer-was-jan-rcna243434"
+      },
+      {
+        "name": "Newsweek -- 'Conventional Wisdom: January 6 Pipe Bomber Arrest Edition'",
+        "url": "https://www.newsweek.com/january-6-pipe-bomber-arrest-bongino-baker-nike-11161447"
+      },
+      {
+        "name": "NPR -- 'Pipe bomb suspect said he believed 2020 election was stolen, was supportive of Trump'",
+        "url": "https://npr.org/2025/12/04/nx-s1-5632646/fbi-pipe-bombs-arrest"
+      },
+      {
+        "name": "CNN -- 'Dan Bongino plans to step down as FBI deputy director in January'",
+        "url": "https://www.cnn.com/2025/12/17/politics/dan-bongino-leaving-fbi"
       }
     ],
-    "last_updated": "2026-09-09",
+    "last_updated": "2026-09-12",
     "section_summaries": {
       "what_changed": "A leaked 115-page assessment from FBI insiders described the Bureau as 'internally paralyzed by fear' and a 'rudderless ship' under Director Patel; separately, Patel publicly disclosed details of an active covert investigation into a White House-linked UFC-event plot, and the FBI launched an unusually combative public 'Rapid Response' social-media account.",
       "estimated_impact": "Reported severe morale/operational degradation and at least one documented instance of an active investigation's security being compromised by the Director's own public statements.",
@@ -28317,6 +28389,68 @@
       }
     ],
     "last_updated": "2026-09-12"
+  },
+  {
+    "id": "usda-keyword-search-grant-cancellation-litigation-2025-2026",
+    "title": "Litigation Revealed USDA Used an Automated Banned-Word Search to Flag ~600 Grants Worth $3B+ for Cancellation",
+    "institution": "U.S. Department of Agriculture; DOGE",
+    "domain": "funding_redirection",
+    "status": "Ongoing litigation (USDN v. USDA, D.D.C.) -- a preliminary injunction has already restored some canceled grants, and the court has ordered DOGE/USDA to produce administrative records; more plaintiffs joined in 2026 seeking further restoration",
+    "date_of_action": "2025-06 (USDN v. USDA filed) through 2026-05 (24 additional plaintiffs join, seeking ~$127M in restorations); documents revealing the search methodology reported 2025-11-13",
+    "what_changed": "Documents obtained by legal advocacy group FarmSTAND and reported by Reuters on November 13, 2025 revealed that USDA, complying with 2025 Trump executive orders targeting DEI and climate programs, systematically searched its own grant records for banned terms and topics -- including 'climate modeling,' 'climate and emission analysis,' 'climate smart agriculture and land use that does not directly benefit farmers,' 'carbon pricing and market mechanics,' 'renewable energy modernization that does not directly benefit farmers,' 'climate adaptation and resilience planning,' and 'biodiversity and ecosystem resilience related to climate change' -- to flag grants for termination. Per DOGE's own website, USDA ultimately terminated approximately 600 grants worth more than $3 billion using this method, spanning USDA's full portfolio from food stamps to farm subsidies to conservation programs. The keyword-search methodology was disclosed through USDN v. USDA, a lawsuit originally filed in June 2025 by Agroecology Commons, the Institute on Agriculture and Trade Policy, Oakville Bluegrass Cooperative, Providence Farm Collective, and the Urban Sustainability Directors Network (USDN), after the administration froze funding, withheld required approvals, and ultimately terminated 49 of 50 projects under USDA's Increasing Land, Capital, and Market Access (LCM) Program. In August 2025, the U.S. District Court for the District of Columbia granted a preliminary injunction restoring six grants held by the original plaintiffs and ordered DOGE and USDA to produce the administrative records that ultimately revealed the keyword-search method -- the court's order noted that many more grants canceled the same way could be eligible for the same relief. By May 2026, 24 additional organizations and local governments joined the suit, filing their own motion for a preliminary injunction seeking to restore roughly $127 million in canceled grants and compel USDA to honor the underlying grant agreements.",
+    "primary_proponent": {
+      "name": "DOGE (Department of Government Efficiency)",
+      "role": "Implementing entity, in coordination with USDA leadership",
+      "note": "DOGE's own public website lists the ~600 terminated grants/$3B+ total; no individual DOGE or USDA official was named in reporting reviewed as personally designing or ordering the keyword-search methodology, though this tracker separately documents DOGE staffer Gavin Kliger's direct role in the related $3.1B Climate-Smart Commodities cancellation (see usda-climate-smart-commodities-cancellation-2025.json)."
+    },
+    "estimated_impact": {
+      "summary": "An automated keyword search, rather than individualized programmatic review, was used to flag roughly $3 billion across 600 grants for termination across USDA's entire portfolio -- including conservation, climate-resilience, and land-access programs unrelated to DEI in any conventional sense -- with litigation subsequently finding at least some terminations improper enough to warrant court-ordered restoration.",
+      "figures": [
+        {
+          "metric": "Grants terminated via the keyword-search method, per DOGE's own website",
+          "value": "~600 grants, $3B+",
+          "source": "DOGE website, cited by Reuters, Nov. 13, 2025"
+        },
+        {
+          "metric": "LCM Program projects terminated (the specific program underlying the original 2025 lawsuit)",
+          "value": "49 of 50",
+          "source": "Earthjustice, USDN v. USDA case summary"
+        },
+        {
+          "metric": "Grants restored under the August 2025 preliminary injunction",
+          "value": "6 (original plaintiffs)",
+          "source": "Earthjustice, USDN v. USDA case summary"
+        },
+        {
+          "metric": "Additional canceled-grant value at issue in the May 2026 expanded lawsuit",
+          "value": "~$127 million (24 additional plaintiffs)",
+          "source": "Earthjustice, USDN v. USDA case summary"
+        }
+      ],
+      "caveat": "No official USDA or DOGE statement addressing the keyword-search methodology's fairness or accuracy was found in reporting reviewed; DOGE's own published $3B/600-grant figure has not been independently audited grant-by-grant, and it is not established that all ~600 terminations were later found improper -- the litigation to date has restored a small subset (6 of the original plaintiffs' grants, with a further ~$127M sought by additional plaintiffs), not the program's full scope."
+    },
+    "confidence_note": "Strong sourcing: the keyword-search methodology and specific banned terms are sourced directly to internal USDA documents obtained by FarmSTAND and reported by Reuters (widely syndicated via Investing.com, MarketScreener, and local radio/news affiliates); the litigation history, injunction, and expanded plaintiff group are corroborated by Earthjustice's and Indianz/Montana Free Press's direct case reporting. No official USDA/DOGE rebuttal to the keyword-search characterization was found.",
+    "section_summaries": {
+      "what_changed": "Litigation revealed USDA used an automated search for banned terms (climate modeling, biodiversity, DEI-adjacent language) to flag roughly 600 grants worth $3B+ for cancellation, rather than individualized review.",
+      "estimated_impact": "A federal court has already ordered some grants restored and found the pattern potentially unlawful across many more; litigation to recover additional canceled funding was expanding as of mid-2026.",
+      "confidence_note": "Strong sourcing via documents obtained through litigation and reported by Reuters, plus direct case reporting from the plaintiffs' own legal counsel."
+    },
+    "last_verified": "2026-09-12",
+    "date_added": "2026-09-12",
+    "sources": [
+      {
+        "name": "Reuters (via Investing.com) -- USDA searched for terms like 'diversity,' 'climate modeling' to target grants for cancellation",
+        "url": "https://www.investing.com/news/commodities-news/usda-searched-for-terms-like-diversity-climate-modeling-to-target-grants-for-cancellation-4355496"
+      },
+      {
+        "name": "Earthjustice -- Recently Shuttered USDA Program Grantees Join Suit to Restore $125M+ in Illegally Canceled Grants",
+        "url": "https://earthjustice.org/press/2026/recently-shuttered-usda-program-grantees-join-suit-to-restore-125m-in-illegally-canceled-grants"
+      },
+      {
+        "name": "Indianz.com (Montana Free Press) -- Lawsuit challenges cancellation of federal grants for tribal agricultural programs",
+        "url": "https://indianz.com/News/2026/05/27/montana-free-press-lawsuit-challenges-cancellation-of-federal-grants-for-tribal-agricultural-programs/"
+      }
+    ]
   },
   {
     "id": "usda-local-food-schools-food-banks-cut-2025",
