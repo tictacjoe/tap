@@ -10155,6 +10155,50 @@
     }
   },
   {
+    "id": "patel-kneeling-agents-firing-2025",
+    "official": "Kash Patel, FBI Director",
+    "offense_category": "Retaliatory firing of federal law-enforcement employees for perceived political disloyalty, contradicting the agency's own prior clearance findings -- a pattern raising due-process and whistleblower/civil-service-protection concerns rather than a specific criminal statute",
+    "incident_summary": "Round-4 backlog fold, cluster c0763: on June 4, 2020, a group of FBI agents in Washington, D.C. knelt during a protest following George Floyd's murder, an act they say was intended to de-escalate tensions with a hostile crowd rather than to express political solidarity with the broader movement. An FBI internal review at the time concluded the kneeling was a de-escalation tactic, not a political statement, and a Justice Department Inspector General review separately found no misconduct and no Hatch Act violation. Despite both clearances, FBI Director Kash Patel fired 12 of the agents in September 2025. Their termination letters cited 'unprofessional conduct and a lack of impartiality' and accused the agents of 'weaponisation' of the FBI -- the same word Patel and the administration have used to describe the conduct they say justified purging Trump-investigation-linked personnel elsewhere in the Bureau (see the related patel-fbi-field-office-purge-2025-2026.json entry). On December 8, 2025, the 12 fired agents sued Patel in U.S. District Court, alleging their termination was part of a 'campaign of retribution' and that 'defendants targeted plaintiffs in particular because of plaintiffs' use of deescalation with civilians that defendants perceived as opposed to, or otherwise not affiliated with, President Trump.' The lawsuit further alleges the decision to fire the agents originated at the White House and had been made before Patel himself joined the FBI in early 2026 -- meaning Patel's firings executed a preexisting White House directive rather than reflecting his own independent judgment of the underlying conduct.",
+    "contested": true,
+    "elements_required": [
+      "The June 2020 kneeling incident was reviewed twice before this firing -- an FBI internal review at the time, and a DOJ Inspector General review -- both of which cleared the agents of misconduct and found no Hatch Act violation",
+      "The termination letters' stated rationale ('unprofessional conduct,' 'lack of impartiality,' 'weaponisation') was issued years after both clearances, with no new fact identified in sourcing reviewed that would justify revisiting the prior findings",
+      "The lawsuit's central factual allegation -- that the firing decision originated at the White House and predated Patel's own tenure -- is a plaintiff-side pleading, not an independently adjudicated finding; no FBI or DOJ response to the lawsuit was identified in sourcing reviewed",
+      "The specific term 'weaponisation' used to justify these firings is the same term this administration has used to describe alleged misconduct by career FBI personnel elsewhere, creating an apparent inconsistency worth noting -- deescalating a protest is being characterized the same way as allegedly using the Bureau against political opponents"
+    ],
+    "evidence": [
+      {
+        "type": "public_record",
+        "description": "The underlying June 4, 2020 kneeling incident occurred during a Washington, D.C. protest following George Floyd's murder; an FBI internal review at the time concluded the agents had knelt to ease tensions with the crowd rather than as a political gesture -- the finding the September 2025 firings contradicted years later.",
+        "source_url": "https://www.aljazeera.com/news/2025/12/8/fbi-agents-allege-wrongful-termination-for-kneeling-during-us-protest",
+        "maps_to_element": "Establishes the original incident and its contemporaneous, favorable internal characterization"
+      },
+      {
+        "type": "public_record",
+        "description": "A Justice Department Inspector General review separately found the agents committed no misconduct and no Hatch Act violation, a second, independent clearance predating the September 2025 firings by years.",
+        "source_url": "https://www.npr.org/2025/12/08/g-s1-100970/fbi-agents-kneel-protest-lawsuit",
+        "maps_to_element": "Documents the second, independent (Inspector General) clearance the firing decision overrode"
+      },
+      {
+        "type": "court_filing",
+        "description": "Al Jazeera reported the 12 fired agents filed suit in U.S. District Court on December 8, 2025, alleging the September 2025 terminations were part of a 'campaign of retribution' targeting them 'because of plaintiffs' use of deescalation with civilians that defendants perceived as opposed to, or otherwise not affiliated with, President Trump,' and that their termination letters cited 'unprofessional conduct and a lack of impartiality' and 'weaponisation' of the FBI.",
+        "source_url": "https://www.aljazeera.com/news/2025/12/8/fbi-agents-allege-wrongful-termination-for-kneeling-during-us-protest",
+        "maps_to_element": "Documents the lawsuit's filing date, its central retaliation allegation, and the termination letters' stated (contested) rationale"
+      }
+    ],
+    "status": "The lawsuit was filed December 8, 2025 and remained pending as of this entry; no ruling, FBI/DOJ response, or reinstatement was identified in sourcing reviewed.",
+    "rebuttal_anticipated": "Likely DOJ/FBI defense: the termination letters' stated grounds ('unprofessional conduct,' 'lack of impartiality') reflect an independent, current-leadership judgment about appropriate agent conduct during politically charged public events, distinct from the narrower 2020-era misconduct/Hatch-Act findings, and within the FBI Director's legitimate personnel authority regardless of prior reviews' scope.",
+    "comeback": "The years-long gap between the original clearances and the 2025 firings, combined with the lawsuit's specific allegation that the decision originated at the White House and predated Patel's own arrival, undercuts the idea that this reflects Patel's own considered judgment of new facts -- it reads instead as a retroactive punishment for conduct two independent reviews had already found unobjectionable, based on how the agents' de-escalation gesture was perceived politically rather than on any new misconduct.",
+    "cause": "The firings fit a broader pattern this database documents of FBI leadership under Patel removing personnel associated -- even tangentially or years earlier -- with actions perceived as insufficiently aligned with Trump, a pattern otherwise concentrated on Trump-investigation-linked staff (see patel-fbi-field-office-purge-2025-2026.json) but here extended to a 2020 protest-conduct incident with no connection to any Trump-related investigation.",
+    "confidence_note": "HIGH confidence on the lawsuit's filing date, its core allegations, the termination letters' quoted language, and the original incident's date and the FBI's contemporaneous internal review -- corroborated across Al Jazeera and NPR, both directly read. MODERATE confidence on the lawsuit's more specific claim that the firing decision originated at the White House and predated Patel's tenure, since this is a plaintiff-side pleading not yet tested in litigation or independently confirmed by any other source reviewed.",
+    "last_verified": "2026-09-12",
+    "date_added": "2026-09-12",
+    "section_summaries": {
+      "incident_summary": "Twelve FBI agents fired in September 2025 for a June 2020 protest-kneeling incident that both an FBI internal review and a DOJ Inspector General review had already cleared of misconduct sued Director Patel in December 2025, alleging the firings were retaliation for being perceived as insufficiently pro-Trump and that the decision originated at the White House before Patel even joined the agency.",
+      "confidence_note": "The lawsuit's filing, allegations, and the original incident's favorable prior reviews are well-corroborated across two directly-read outlets; the claim of White House origination and a pre-Patel decision is a pleading, not yet independently confirmed."
+    }
+  },
+  {
     "id": "patel-milan-olympics-jet-2026",
     "official": "Kash Patel, FBI Director",
     "offense_category": "Personal/Recreational Misuse of FBI Aircraft Delaying Real Investigations, Including Mass-Shooting Responses -- expanded from an initial Olympics-trip controversy to a documented pattern with concrete investigative harm, per whistleblower disclosures to the Senate Judiciary Committee",
