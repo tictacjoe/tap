@@ -24388,7 +24388,7 @@
     "domain": "staff_office_cuts",
     "status": "Resolved as to Ryan's departure -- resigned March 16, 2026; the underlying cases (Sun, Musk) proceeded toward settlement rather than the charges she reportedly sought",
     "date_of_action": "2026-03-16 (resignation, after roughly six months in the role)",
-    "what_changed": "Margaret Ryan, Director of the SEC's Division of Enforcement, abruptly resigned on March 16, 2026 after only about six months in the role, with the SEC's own announcement providing no explanation. Multiple outlets subsequently reported Ryan had clashed with SEC Chairman Paul Atkins and other senior officials over the handling of cases touching Trump- and Musk-linked figures: she reportedly wanted to pursue fraud and other charges against crypto entrepreneur Justin Sun and against Tesla/X CEO Elon Musk, but faced internal resistance. The SEC subsequently settled its lawsuit against Sun and his companies for $10 million, with Sun's side neither admitting nor denying the charges; the SEC and Musk jointly filed a document the day after Ryan's resignation stating they were negotiating a settlement in the Musk matter as well. Ryan's exit and the settlement pattern coincide with a broader enforcement-strategy shift under the current SEC leadership toward traditional fraud/market-manipulation cases and away from several compliance-focused enforcement areas, including certain crypto-related actions, that were more common under the prior administration's SEC leadership.",
+    "what_changed": "Margaret Ryan, Director of the SEC's Division of Enforcement, abruptly resigned on March 16, 2026 after only about six months in the role, with the SEC's own announcement providing no explanation. Multiple outlets subsequently reported Ryan had clashed with SEC Chairman Paul Atkins and other senior officials over the handling of cases touching Trump- and Musk-linked figures: she reportedly wanted to pursue fraud and other charges against crypto entrepreneur Justin Sun and against Tesla/X CEO Elon Musk, but faced internal resistance. The SEC subsequently settled its lawsuit against Sun and his companies for $10 million, with Sun's side neither admitting nor denying the charges; the SEC and Musk jointly filed a document the day after Ryan's resignation stating they were negotiating a settlement in the Musk matter as well. Ryan's exit and the settlement pattern coincide with a broader enforcement-strategy shift under the current SEC leadership toward traditional fraud/market-manipulation cases and away from several compliance-focused enforcement areas, including certain crypto-related actions, that were more common under the prior administration's SEC leadership. Added 2026-09-12 (round-4 backlog cluster c0564, cross-reference): Ryan's departure is one of several contributing factors this database documents in the SEC's broader enforcement-capacity decline -- see sec-workforce-buyout-supervisor-exodus-2025.json for the agency-wide staffing story (two 2025 buyout rounds, an 18% workforce reduction by September 2026, and a 47-66% drop in enforcement actions compared to 2024/2021).",
     "primary_proponent": {
       "name": "Paul Atkins",
       "role": "SEC Chairman",
@@ -24433,6 +24433,87 @@
       "estimated_impact": "Raises questions about enforcement independence in cases touching politically connected figures, though the SEC has not confirmed the internal-dispute account.",
       "confidence_note": "Core facts are well-documented via the SEC's own release and the settlements themselves; the internal-dispute narrative rests on anonymously sourced reporting."
     }
+  },
+  {
+    "id": "sec-workforce-buyout-supervisor-exodus-2025",
+    "title": "SEC Lost 18% of Its Workforce to Repeated Buyout Waves, With Longer-Tenured Staff Most Likely to Leave -- Enforcement Actions Fell Nearly 50%",
+    "institution": "U.S. Securities and Exchange Commission",
+    "domain": "staff_office_cuts",
+    "status": "Ongoing consolidation -- per a December 2025 annual staffing plan, SEC is consolidating business groups and work functions (including nationwide consolidation of investor-assistance functions under one office) to cope with reduced headcount, rather than rebuilding staffing levels. As of the GAO's most recent triennial report, the agency had not reversed the workforce decline.",
+    "date_of_action": "2025-03-03 (initial $50,000 buyout offer announced) through 2026-09 (18% cumulative workforce decline confirmed in reporting)",
+    "what_changed": "On March 3, 2025, the SEC offered staff a one-time $50,000 lump-sum payment to resign or retire, part of the broader Trump administration federal-workforce-reduction push. Roughly 500 staffers accepted the buyout and deferred-resignation offers, with the Division of Enforcement, the Division of Examinations, and the Office of General Counsel among the divisions hit hardest, according to agency data obtained through a public-records request. On September 2, 2025, the SEC's chief operating officer told staff in an internal memo, reported by Reuters, that the agency would offer a second round of incentives specifically to supervisor-graded employees following an 'agencywide review' -- another $50,000 lump-sum buyout option, plus voluntary demotions, aimed at reallocating staff. A subsequent GAO report (GAO-26-107813, a triennial review mandated by the Dodd-Frank Act) found that employees who left via the April 2025 voluntary-departure programs skewed toward longer-tenured staff -- a finding indicating the buyouts disproportionately removed the agency's more experienced personnel rather than being distributed evenly across tenure levels. By December 2025, SEC submitted its annual staffing plan to Congress proposing to consolidate business groups and work functions -- including nationwide consolidation of investor-assistance functions under a single office -- to manage operations at the reduced headcount, rather than a plan to restore staffing. By the end of September 2026, SEC's total workforce had fallen approximately 18% since 2024, a steeper decline than the roughly 12% reduction across the federal government as a whole. The Division of Enforcement -- the SEC's largest division by headcount -- requested budget for 1,178 full-time-equivalent positions for fiscal year 2026, down nearly 17% from 1,424 actual FTEs in fiscal year 2024, reflecting an estimated 15-20% Enforcement Division headcount loss. The combination of this staffing decline with other factors -- including Enforcement Director Margaret Ryan's departure after six months in the role (documented separately in this database's sec-enforcement-chief-ryan-resignation-2026.json entry) -- coincided with a sharp drop in enforcement output: SEC brought 67 enforcement actions between February and July 2026, down 47% from 127 in the same period of 2024, and down 66% from 198 in the same period of 2021.",
+    "primary_proponent": {
+      "name": "Paul Atkins",
+      "role": "SEC Chairman",
+      "note": "Presided over the agency's workforce reduction and restructuring, including the successive 2025 buyout waves and the resulting enforcement-capacity decline; reporting frames the changes as part of Atkins reshaping the SEC's enforcement posture."
+    },
+    "estimated_impact": {
+      "summary": "The SEC lost roughly a fifth of its workforce through two successive rounds of buyout incentives, with a federal watchdog finding the departures disproportionately removed longer-tenured, more experienced staff -- a decline that coincided with SEC bringing roughly half as many enforcement actions in 2026 as it did just two years earlier, reducing regulatory scrutiny of the securities markets and public companies at a time the agency's own workload had not correspondingly shrunk.",
+      "figures": [
+        {
+          "metric": "SEC staff who accepted the March 2025 buyout/deferred-resignation offers",
+          "value": "~500",
+          "source": "Agency data obtained via public-records request, reported by InvestmentNews"
+        },
+        {
+          "metric": "SEC-wide workforce reduction, 2024 to September 2026",
+          "value": "~18%",
+          "source": "PYMNTS, citing GAO/agency staffing data"
+        },
+        {
+          "metric": "Enforcement Division FTE reduction, FY2024 actual to FY2026 request",
+          "value": "1,424 to 1,178 (~17%)",
+          "source": "Securities Docket / Perkins Coie, citing SEC budget data"
+        },
+        {
+          "metric": "SEC enforcement actions, Feb-July 2026 vs. same period 2024",
+          "value": "67 vs. 127 (-47%)",
+          "source": "Yahoo Finance, citing SEC enforcement data"
+        },
+        {
+          "metric": "SEC enforcement actions, Feb-July 2026 vs. same period 2021",
+          "value": "67 vs. 198 (-66%)",
+          "source": "Yahoo Finance, citing SEC enforcement data"
+        },
+        {
+          "metric": "Buyout lump-sum payment offered per employee (both 2025 rounds)",
+          "value": "$50,000",
+          "source": "Reuters; Bloomberg"
+        }
+      ],
+      "caveat": "This entry does not include a health/mortality figure, since SEC is a financial regulator and no source reviewed ties this staffing decline to a documented health outcome -- the harm documented is reduced regulatory/enforcement capacity over the securities markets, not a population health effect. The enforcement-action decline has multiple contributing causes noted in reporting (staffing, leadership turnover including the Ryan resignation, and changed enforcement priorities under Chairman Atkins) -- this entry does not claim staffing reductions are the sole cause, only a documented contributing factor."
+    },
+    "confidence_note": "HIGH confidence on the two 2025 buyout rounds and their terms, sourced to Reuters' direct reporting on the September 2025 internal memo and corroborated by Bloomberg, U.S. News, Forbes, and InvestmentNews on the March 2025 round and its ~500-departure outcome. HIGH confidence on the tenure-skew finding, sourced to GAO's own official report (GAO-26-107813). MODERATE-HIGH confidence on the 2026 cumulative figures (18% workforce decline, Enforcement Division FTE and enforcement-action drops), corroborated across PYMNTS, Securities Docket/Perkins Coie, and Yahoo Finance, though this entry does not independently verify GAO's underlying report data beyond what these outlets report. Built under the Round-4 backlog fold's leaner-rigor pass -- facts and sourcing verified directly, narrative prose kept efficient rather than exhaustively polished.",
+    "last_verified": "2026-09-12",
+    "date_added": "2026-09-12",
+    "sources": [
+      {
+        "name": "Reuters -- US SEC to Offer More Buyouts to Supervisors, Memo Says",
+        "url": "https://www.reuters.com/legal/litigation/us-sec-offer-more-buyouts-supervisors-memo-says-2025-09-02/"
+      },
+      {
+        "name": "InvestmentNews -- SEC workforce to get decimated as hundreds take buyout offers",
+        "url": "https://www.investmentnews.com/regulation-and-legislation/sec-workforce-to-get-decimated-as-hundreds-rush-to-take-buyout-offers/259812"
+      },
+      {
+        "name": "U.S. GAO -- Securities and Exchange Commission: Recent Workforce Reductions and Other Personnel Management Changes (GAO-26-107813)",
+        "url": "https://www.gao.gov/products/gao-26-107813"
+      },
+      {
+        "name": "PYMNTS -- SEC Staffing Levels Dip 18% Under Trump",
+        "url": "https://www.pymnts.com/legal/2026/sec-staffing-levels-dip-18-under-trump/"
+      },
+      {
+        "name": "Securities Docket / Perkins Coie -- Securities Enforcement Forum West 2026: The Enforcement Division Recalibrates Amid Record Lows",
+        "url": "https://www.securitiesdocket.com/2026/05/29/securities-enforcement-forum-west-2026-the-enforcement-division-recalibrates-amid-record-lows-perkins-coie/"
+      }
+    ],
+    "section_summaries": {
+      "what_changed": "SEC ran two 2025 buyout rounds ($50,000 lump-sum offers, the second targeting supervisors specifically), losing ~500 staff in the first round and 18% of its total workforce by September 2026, with GAO finding departures skewed toward longer-tenured staff.",
+      "estimated_impact": "Enforcement Division headcount fell ~17-20% and SEC enforcement actions dropped 47-66% compared to 2024/2021, reducing regulatory scrutiny of securities markets.",
+      "confidence_note": "Well-corroborated across Reuters, GAO's own report, and multiple business-press outlets tracking the cumulative 2026 figures."
+    },
+    "last_updated": "2026-09-12"
   },
   {
     "id": "smithsonian-content-review",
