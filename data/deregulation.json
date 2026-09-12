@@ -3803,6 +3803,83 @@
     "last_updated": "2026-08-22"
   },
   {
+    "id": "ndaa-2026-pfas-military-rollback",
+    "rule_name": "PFAS ('Forever Chemical') Restrictions on Military Firefighting Foam and Base Cleanup, FY2026 NDAA",
+    "administration": "Trump II (2025-present)",
+    "agency": "DOD",
+    "domain": "environmental",
+    "status": "Weakened (not fully repealed) -- mixed final outcome, distinct from the original committee-stage rollback",
+    "date_of_action": "2025-08 (committee-stage provisions first reported) through 2025-12-18 (President Trump signed the final FY2026 NDAA, P.L. 119-60)",
+    "original_rule_summary": "A 2020-2023 statutory framework (building on earlier NDAAs) required DOD to stop purchasing PFAS-based aqueous film-forming firefighting foam (AFFF) by October 2023 and stop using it by October 2024, paused open burning/incineration of PFAS-contaminated foam and waste pending safer disposal methods, and restricted DOD's purchase of everyday PFAS-treated products (cookware, carpets, etc.).",
+    "what_changed": "Committee-stage House and Senate FY2026 NDAA text (reported August-September 2025 by the Guardian, The Hill, and Environmental Working Group) would have delayed the firefighting-foam phaseout, repealed the incineration/open-burning pause, rescinded the everyday-PFAS-product purchase restrictions, and cut PFAS-site cleanup funding versus FY2024 levels. The final, enacted NDAA (signed December 18, 2025) is a mixed outcome, not a straight rollback as first reported: it extends DOD's authority to purchase PFAS-based firefighting foam through 2026 and use existing stockpiles through 2028 (rather than the 2023/2024 phaseout deadlines), and grants DOD authority to destroy PFAS waste using 'innovative technologies' approved by federal or state regulators -- softer than the committee-stage full repeal of the incineration pause, but still a loosening of the prior blanket moratorium. The final bill did NOT add new restrictions on PFAS-treated firefighter turnout gear, a gap several outlets flagged as a missed opportunity. Separately, and cutting the other direction, the final NDAA also created a new, first-ever high-level DOD Coordinator position dedicated to PFAS-impacted defense communities, which Rep. Brian Fitzpatrick (R-PA), who pushed the provision, called 'the strongest federal reform yet for PFAS-impacted defense communities.' Independent of the NDAA itself, Senate Democrats separately pressed the Pentagon in November 2025 over an administrative decision to delay some PFAS site cleanups.",
+    "primary_proponent": {
+      "name": "Roger Wicker",
+      "role": "Chairman, Senate Armed Services Committee",
+      "note": "Senate Armed Services Committee text carried the most aggressive PFAS rollback provisions (including full repeal of the incineration/open-burning pause, later softened in the final conference outcome); House Armed Services Committee Chairman Mike Rogers (R-AL) also a central figure in the joint bill's development."
+    },
+    "corporate_beneficiaries": [
+      "PFAS/AFFF firefighting-foam manufacturers and defense contractors reliant on existing PFAS-based foam stockpiles",
+      "The U.S. Chamber of Commerce publicly lobbied to retain the rollback provisions in the NDAA text"
+    ],
+    "estimated_health_impact": {
+      "summary": "PFAS ('forever chemicals') from firefighting foam have contaminated drinking water and groundwater at hundreds of military installations, with exposure linked to certain cancers, thyroid disruption, immune effects, and other health harms. The rollback provisions extend the window in which DOD may keep purchasing and using PFAS-based foam rather than accelerating the phaseout already in law; the cleanup-funding-cut figure reported at the committee stage was not confirmed against the final enacted bill's own text or appropriations figures.",
+      "figures": [
+        {
+          "metric": "Reported cut to PFAS cleanup funding, FY2026 committee bills vs. FY2024 levels (committee-stage figure, not confirmed against final enacted appropriations)",
+          "value": "$186.4-200 million",
+          "source": "Environmental Working Group / The Guardian, August-September 2025 reporting on committee-stage bill text"
+        },
+        {
+          "metric": "Service members reported exposed to PFAS-contaminated drinking water at U.S. military bases (background scale figure, not specific to this rollback's marginal effect)",
+          "value": "600,000+",
+          "source": "DOD data / Environmental Working Group analysis"
+        },
+        {
+          "metric": "U.S. military installations with confirmed PFAS detections in drinking water or groundwater",
+          "value": "455 confirmed; 700+ likely contaminated per EWG's broader estimate",
+          "source": "Environmental Working Group installation map"
+        },
+        {
+          "metric": "Extension of the deadline DOD may keep purchasing/using PFAS-based firefighting foam",
+          "value": "Purchase through 2026, use through 2028 (vs. prior October 2023/2024 phaseout deadlines)",
+          "source": "The Hill / multiple outlets' coverage of the enacted FY2026 NDAA"
+        }
+      ],
+      "caveat": "The committee-stage $186.4-200M cleanup-funding-cut figure comes from August-September 2025 reporting on House/Senate committee bill text, before conference and final passage; this entry could not confirm that figure against the enacted NDAA's own final funding tables or a subsequent appropriations bill, and it should be presented as the reported committee-stage figure, not a confirmed final cut, until re-verified. The 600,000+ exposed-servicemembers and installation-count figures are pre-existing background scale (from 2022-2023 DOD/EWG data), included for context on what's at stake generally, not as a measurement of this specific rollback's marginal health effect."
+    },
+    "confidence_note": "HIGH confidence on the enacted foam purchase/use-deadline extension and the destruction-technology authority replacing the committee-stage full incineration-pause repeal, corroborated across The Hill and Holland & Knight's FY2026 NDAA legal analysis. HIGH confidence the final bill also added a new DOD PFAS-communities Coordinator role, per Rep. Fitzpatrick's own press release. MODERATE-LOW confidence on the cleanup-funding-cut dollar figure, which comes from committee-stage reporting (Guardian/EWG, August-September 2025) and was not independently confirmed against the final enacted bill's own funding tables -- worth re-verifying before citing the specific dollar figure in debate. This entry corrects the original discovery record's framing (a straight 'PFAS rollback' based on August-September 2025 committee-stage reporting) to reflect the mixed final outcome actually signed into law December 18, 2025.",
+    "short_summary": "Extended DOD's PFAS firefighting-foam use through 2028 and eased the incineration pause, while also adding a new PFAS-communities coordinator role.",
+    "last_verified": "2026-09-12",
+    "date_added": "2026-09-12",
+    "section_summaries": {
+      "what_changed": "The final FY2026 NDAA extended DOD's PFAS firefighting-foam use through 2028 and eased the incineration pause, a softer outcome than committee-stage bills proposed.",
+      "estimated_impact": "PFAS from military firefighting foam has contaminated water at 455+ installations exposing 600,000+ service members; the committee-stage cleanup-funding cut wasn't confirmed in the final bill.",
+      "confidence_note": "HIGH confidence on the enacted foam-use extension; MODERATE-LOW on the cleanup-funding-cut figure, which is committee-stage only."
+    },
+    "sources": [
+      {
+        "name": "The Guardian -- committee-stage PFAS rollback reporting, August 2025",
+        "url": "https://www.theguardian.com/us-news/2025/sep/19/pfas-pollution-military-republicans"
+      },
+      {
+        "name": "Environmental Working Group -- 'Congress' PFAS protection rollbacks betray service members and defense communities'",
+        "url": "https://www.ewg.org/news-insights/news/2025/08/congress-pfas-protection-rollbacks-betray-service-members-and-defense"
+      },
+      {
+        "name": "The Hill -- 'Defense bill delays phaseout of forever chemicals in firefighting foam'",
+        "url": "https://thehill.com/policy/energy-environment/5639257-defense-bill-ndaa-pfas-forever-chemicals/"
+      },
+      {
+        "name": "Rep. Brian Fitzpatrick press release on the FY26 defense bill's PFAS Coordinator provision",
+        "url": "https://fitzpatrick.house.gov/2025/9/fitzpatrick-delivers-historic-pfas-accountability-win-as-fy26-defense-bill-passes-the-house"
+      },
+      {
+        "name": "Stars and Stripes -- Senate Democrats urge reversal of Pentagon decision to delay PFAS cleanups",
+        "url": "https://www.stripes.com/theaters/us/2025-11-19/senate-democrats-pentagon-pfas-cleanups-19818665.html"
+      }
+    ]
+  },
+  {
     "id": "neighborhood-access-equity-grants-rescinded-2025",
     "rule_name": "One Big Beautiful Bill Act's Rescission of the Neighborhood Access and Equity Transportation Grant Program",
     "administration": "Trump II (2025-present)",
@@ -4323,7 +4400,7 @@
       ],
       "caveat": "As of this entry, both actions are proposed, not finalized -- comment period closed July 20, 2026. EPA states explicitly it is not accepting comment on the underlying health-risk science, only on the legal/procedural basis for rescission -- worth noting this framing choice in debate, since it forecloses public health argument at the comment stage."
     },
-    "confidence_note": "Strong, EPA's-own-numbers framing available (the ~100 million people figure comes from EPA's own 2024 rule justification, not an outside estimate). Note carefully that this is still proposed, not finalized, and litigation is expected regardless of outcome per legal analysts. [Rechecked 2026-07-06: no material change -- comment period closes July 20, 2026 (as previously noted, confirming those forward-looking dates were accurate, not an error); public hearing held July 7, 2026; EPA states intent to finalize both rules before end of 2026.] Re-verified 2026-07-18: no material change -- comment period closes July 20, 2026 (2 days from this update) as previously noted, not yet finalized. Re-verified 2026-07-20: comment period closed today as scheduled -- more than 15,000 public comments submitted on the rescission rule, EPA has stated intent to finalize both rules before end of 2026 but no final rule issued yet. Environmental Working Group publicly opposed the rescission (\"condemning millions of Americans to drink contaminated water for years to come\"). Litigation from environmental/public-health groups is expected if finalized, likely invoking the Safe Drinking Water Act's anti-backsliding provision; industry litigation is expected if the rescission is NOT finalized. Neither rule has changed in substance since the May 2026 proposal. Re-verified 2026-07-26: no material change -- comment period closed July 20, 2026 as previously noted; EPA has not yet issued a final rule on either proposal. Re-verified 2026-08-02: added a broader population-exposure figure (176-200+ million Americans with PFAS detected in their tap water) from the Environmental Working Group -- this is a different metric than EPA's own ~100 million 'protected by the 2024 rule' figure already in this entry, and should be sourced explicitly to EWG (an advocacy group, albeit one whose methodology draws on EPA's own testing data) rather than presented as an EPA estimate. Re-verified 2026-08-16: no material change -- comment period closed July 20, 2026 as previously noted; EPA has not yet issued a final rule on either the rescission or the compliance-extension proposal. Re-verified 2026-08-22: no material change -- comment period closed July 20, 2026 as previously noted; EPA has not yet issued a final rule on either the rescission or the compliance-extension proposal. Re-verified 2026-08-30: no material change -- comment period closed July 20, 2026 as previously noted; EPA has not yet issued a final rule on either the rescission or the compliance-extension proposal.",
+    "confidence_note": "A related but distinct rollback -- DOD's PFAS firefighting-foam and base-cleanup restrictions under the FY2026 NDAA, a different mechanism (Congress via defense authorization, not EPA rulemaking) and different exposure pathway (military bases, not general drinking-water regulation) -- is tracked separately in ndaa-2026-pfas-military-rollback.json. Strong, EPA's-own-numbers framing available (the ~100 million people figure comes from EPA's own 2024 rule justification, not an outside estimate). Note carefully that this is still proposed, not finalized, and litigation is expected regardless of outcome per legal analysts. [Rechecked 2026-07-06: no material change -- comment period closes July 20, 2026 (as previously noted, confirming those forward-looking dates were accurate, not an error); public hearing held July 7, 2026; EPA states intent to finalize both rules before end of 2026.] Re-verified 2026-07-18: no material change -- comment period closes July 20, 2026 (2 days from this update) as previously noted, not yet finalized. Re-verified 2026-07-20: comment period closed today as scheduled -- more than 15,000 public comments submitted on the rescission rule, EPA has stated intent to finalize both rules before end of 2026 but no final rule issued yet. Environmental Working Group publicly opposed the rescission (\"condemning millions of Americans to drink contaminated water for years to come\"). Litigation from environmental/public-health groups is expected if finalized, likely invoking the Safe Drinking Water Act's anti-backsliding provision; industry litigation is expected if the rescission is NOT finalized. Neither rule has changed in substance since the May 2026 proposal. Re-verified 2026-07-26: no material change -- comment period closed July 20, 2026 as previously noted; EPA has not yet issued a final rule on either proposal. Re-verified 2026-08-02: added a broader population-exposure figure (176-200+ million Americans with PFAS detected in their tap water) from the Environmental Working Group -- this is a different metric than EPA's own ~100 million 'protected by the 2024 rule' figure already in this entry, and should be sourced explicitly to EWG (an advocacy group, albeit one whose methodology draws on EPA's own testing data) rather than presented as an EPA estimate. Re-verified 2026-08-16: no material change -- comment period closed July 20, 2026 as previously noted; EPA has not yet issued a final rule on either the rescission or the compliance-extension proposal. Re-verified 2026-08-22: no material change -- comment period closed July 20, 2026 as previously noted; EPA has not yet issued a final rule on either the rescission or the compliance-extension proposal. Re-verified 2026-08-30: no material change -- comment period closed July 20, 2026 as previously noted; EPA has not yet issued a final rule on either the rescission or the compliance-extension proposal.",
     "section_summaries": {
       "what_changed": "EPA proposed dropping enforceable limits for 4 of 6 regulated PFAS chemicals and extending the compliance deadline for the remaining two by two years.",
       "estimated_impact": "EPA's own 2024 rule projected the full six-chemical rule would prevent PFAS exposure for ~100 million people; that benefit is now partly unwound.",
