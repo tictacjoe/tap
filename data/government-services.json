@@ -9222,6 +9222,68 @@
     }
   },
   {
+    "id": "faa-aircraft-mechanic-training-grants-dei-freeze-2025",
+    "title": "FAA Froze Aircraft-Mechanic Training Grants Over DEI-Language Stripping Requirements Amid a Projected 10% Mechanic Shortfall",
+    "institution": "Federal Aviation Administration (Aviation Workforce Development Grants program)",
+    "domain": "funding_redirection",
+    "status": "Resolved with a delay of roughly 8 months: after congressional pressure, the FAA opened a new $26 million Aviation Workforce Development Grants round (split between pilot/drone-operator and aviation-maintenance-technician training) on May 18, 2026, with a June 22, 2026 application deadline. The new solicitation still lists outreach to populations underrepresented in the aviation industry as an eligible grant use.",
+    "date_of_action": "2025-09-17 (Reuters reports the freeze) through 2026-05-18 (FAA opens $26M in new grants)",
+    "what_changed": "Congress had pledged tens of millions of dollars for FAA's Aviation Workforce Development Grants program to train aircraft mechanics and technicians, at a time the Aviation Technician Education Council projected a 10% shortfall in certified mechanics for 2025 amid surging maintenance and production demand from Boeing and Airbus. Reuters reported September 17, 2025 that the approved grant funds had not been issued: officials from at least one technical college and an education council said the FAA told them to reapply once grant applications were rewritten to remove references to diversity, equity, and inclusion, in line with Trump administration executive orders. Women represent less than 3% of aircraft maintenance workers, making outreach language a recurring feature of these grant applications historically. On November 24, 2025, 21 House Democrats -- including Reps. Marilyn Strickland, Rick Larsen, and Andre Carson -- sent a letter to FAA Administrator Bryan Bedford demanding answers, writing that the delays were 'stalling critical aviation workforce development' and warning further delay could violate the law; the FAA said only that it would respond to lawmakers directly. On May 18, 2026, Transportation Secretary Sean Duffy announced $26 million in new Aviation Workforce Development Grants, split evenly between pilot/drone-operator training and aviation-maintenance-technician training, with a June 22, 2026 application deadline -- resolving the freeze roughly eight months after it was first reported, though no source reviewed confirms whether this $26M round represents the same previously-pledged funds or a separate, later appropriation.",
+    "primary_proponent": {
+      "name": "Federal Aviation Administration leadership (institutional attribution -- no single named official is identified in sourcing reviewed as personally ordering grant applications be rewritten to strip DEI language, beyond general attribution to Trump administration executive orders on DEI)",
+      "role": "Administers the Aviation Workforce Development Grants program",
+      "note": "The freeze traces to Trump administration executive orders on DEI generally, applied by FAA to its own grant-application process; Transportation Secretary Sean Duffy announced the eventual May 2026 grant reopening."
+    },
+    "estimated_impact": {
+      "summary": "Tens of millions of congressionally-appropriated dollars meant to train aircraft mechanics sat unissued for roughly eight months while the industry faced a projected 10% shortfall in certified mechanics, a safety-relevant capacity gap in aviation maintenance that a training-grant freeze -- however brief -- directly worked against, at a moment lawmakers said the delay itself could violate the law.",
+      "figures": [
+        {
+          "metric": "Projected 2025 shortfall in certified aircraft mechanics",
+          "value": "10%",
+          "source": "Aviation Technician Education Council, via Reuters"
+        },
+        {
+          "metric": "Women's share of the aircraft maintenance workforce",
+          "value": "<3%",
+          "source": "Rep. Strickland's congressional letter"
+        },
+        {
+          "metric": "New Aviation Workforce Development Grants opened May 2026",
+          "value": "$26,000,000",
+          "source": "General Aviation News / AVweb, citing Transportation Secretary Sean Duffy's announcement"
+        }
+      ],
+      "caveat": "This entry does not assert the $26M in grants opened in May 2026 represents the exact same funds frozen in 2025 -- no source reviewed makes that direct connection, and it may represent a separate, later appropriation cycle for the same recurring grant program. The freeze's precise total dollar value and exact resolution date are not independently confirmed beyond the roughly eight-month gap between the September 2025 freeze report and the May 2026 grant reopening."
+    },
+    "confidence_note": "HIGH confidence on the freeze itself and its DEI-language-stripping cause, sourced to Reuters' original reporting (via U.S. News pickup) and corroborated by eplaneai.com and Aerospace Global News. HIGH confidence on the congressional letter and its specific figures (21 signers, <3% women in the workforce), sourced directly to Rep. Strickland's own press release. MODERATE confidence connecting the May 2026 grant announcement to this specific freeze's resolution, since no source directly states the new $26M round represents the previously-stalled funds rather than a new appropriation cycle -- flagged explicitly in estimated_impact's caveat. Built under the Round-4 backlog fold's leaner-rigor pass -- facts and sourcing verified directly, narrative prose kept efficient rather than exhaustively polished.",
+    "last_verified": "2026-09-12",
+    "date_added": "2026-09-12",
+    "sources": [
+      {
+        "name": "Reuters (via U.S. News) -- Trump's DEI Crackdown Further Strains US Supply of Aircraft Mechanics, Industry Officials Say",
+        "url": "https://www.usnews.com/news/top-news/articles/2025-09-17/trumps-dei-crackdown-further-strains-us-supply-of-aircraft-mechanics-industry-officials-say"
+      },
+      {
+        "name": "Rep. Marilyn Strickland -- US lawmakers probe FAA grant delays over aircraft mechanic shortage before Thanksgiving",
+        "url": "https://strickland.house.gov/?p=3271"
+      },
+      {
+        "name": "General Aviation News -- FAA Invests $26M in Aviation Workforce",
+        "url": "https://generalaviationnews.com/2026/05/21/faa-26m-aviation-workforce-grants/"
+      },
+      {
+        "name": "AVweb -- FAA Opens $26 Million For Aviation Workforce Grants",
+        "url": "https://avweb.com/flight-safety/flight-training/faa-26-million-aviation-workforce-grants/"
+      }
+    ],
+    "section_summaries": {
+      "what_changed": "FAA froze congressionally-pledged aircraft-mechanic training grants after ordering applicants to strip DEI language, amid a projected 10% mechanic shortfall; 21 House Democrats demanded answers in November 2025, and FAA opened a new $26M grant round in May 2026.",
+      "estimated_impact": "Training funds for a safety-relevant workforce shortage sat unissued for roughly 8 months; women (under 3% of the workforce) were a specific focus of the outreach language that triggered the freeze.",
+      "confidence_note": "Well-corroborated on the freeze and congressional response; the connection between the frozen funds and the eventual May 2026 grant round is not independently confirmed and is flagged as such."
+    },
+    "last_updated": "2026-09-12"
+  },
+  {
     "id": "faa-aviation-meteorologist-staffing-shortage-2025",
     "title": "GAO Finds FAA's Aviation Meteorologist Staffing at a Critical Low, With Some of the Busiest Air-Traffic Control Centers Down to One or Two",
     "institution": "Federal Aviation Administration / National Weather Service (Center Weather Service Units)",
