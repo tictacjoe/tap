@@ -2358,6 +2358,61 @@
     }
   },
   {
+    "id": "epa-formaldehyde-threshold-model-2025-2026",
+    "rule_name": "EPA's Formaldehyde Risk Assessment Under the Toxic Substances Control Act (TSCA)",
+    "administration": "Trump II (2025-present)",
+    "agency": "EPA, Office of Chemical Safety and Pollution Prevention",
+    "domain": "chemical_safety",
+    "status": "Proposed -- public comment period ran through February 2, 2026; no final rule identified in sourcing reviewed as of this entry",
+    "date_of_action": "2025-12-03 (EPA released proposed revisions) through 2026-02-02 (public comment period closed)",
+    "original_rule_summary": "Under the Biden administration, EPA's TSCA risk evaluation for formaldehyde used the 'linear' dose-response model -- the approach EPA has applied to potent carcinogens for nearly 40 years under administrations of both parties, which assumes even minimal chemical exposure carries some cancer risk with no fully 'safe' threshold. Applying that model, EPA found formaldehyde posed an 'unreasonable risk' in 58 specific worker and consumer exposure settings, including automotive-care products, crafting supplies, building materials, textiles, and leather goods.",
+    "what_changed": "EPA, under Principal Deputy Assistant Administrator Nancy Beck and Deputy Assistant Administrator Lynn Dekleva -- both former officials of the American Chemistry Council, the chemical industry's main trade group -- proposed on December 3, 2025 to replace the linear model with a 'threshold' model for formaldehyde, which assumes the chemical poses no cancer risk below a specific exposure level. The industry-preferred threshold approach nearly doubles the level of formaldehyde EPA would consider safe to inhale. Dekleva had personally advocated for this same threshold approach in a 2022 letter to an EPA scientist, which the agency rejected at the time. Applying the new model, EPA's proposal reverses the prior 'unreasonable risk' finding in 5 of the 58 previously identified exposure settings, including wood-product manufacturing, while leaving the other roughly 53 settings' risk findings standing for now. Earthjustice attorney Jonathan Kalmuss-Katz said 'the science on formaldehyde hasn't changed'; former EPA scientist Tracey Woodruff warned the move would 'open the floodgates,' since 'chemical companies want every carcinogen to be considered a threshold carcinogen.' The proposal's public comment period closed February 2, 2026, after which EPA can move to finalize it.",
+    "primary_proponent": {
+      "name": "Nancy Beck and Lynn Dekleva",
+      "role": "Principal Deputy Assistant Administrator and Deputy Assistant Administrator, EPA Office of Chemical Safety and Pollution Prevention",
+      "note": "Both are former American Chemistry Council officials; Dekleva personally proposed the same threshold-model approach for formaldehyde in a 2022 letter that EPA rejected before this administration adopted it."
+    },
+    "corporate_beneficiaries": [
+      "Formaldehyde and formaldehyde-releasing-product manufacturers across the automotive-care, crafting-supply, building-materials, textile, and leather-goods sectors (named manufacturers not identified in sourcing reviewed); wood-product manufacturers specifically benefit from the finding reversal in that one of the five reversed settings"
+    ],
+    "estimated_health_impact": {
+      "summary": "The threshold-model change nearly doubles the formaldehyde exposure level EPA would treat as safe to inhale, reversing the agency's own 'unreasonable risk' finding for wood-product manufacturing and four other settings; the remaining roughly 53 of the original 58 unreasonable-risk findings are not directly reversed by this proposal but could be revisited under the same new methodology in future EPA risk evaluations, since the threshold model, once adopted for one carcinogen, is expected by critics to be sought by industry for others.",
+      "figures": [
+        {
+          "metric": "Exposure settings where EPA's Biden-era assessment found formaldehyde posed an 'unreasonable risk'",
+          "value": "58",
+          "source": "EPA's prior TSCA risk evaluation, per ProPublica, Dec. 2025"
+        },
+        {
+          "metric": "Of those 58 settings, number where this proposal reverses the unreasonable-risk finding",
+          "value": "5 (including wood-product manufacturing)",
+          "source": "ProPublica, Dec. 2025"
+        },
+        {
+          "metric": "Change in the formaldehyde exposure level EPA would consider safe to inhale",
+          "value": "Nearly doubled",
+          "source": "ProPublica, Dec. 2025"
+        }
+      ],
+      "caveat": "No source reviewed provided a quantified national cancer-case or mortality estimate specific to this proposed methodology change, as distinct from formaldehyde's already-established general carcinogenicity; the proposal is not yet final, so any such projection would itself depend on whether and how EPA finalizes the change following its comment period. This entry corrects the discovery record's looser framing that the change 'overturns...findings of unreasonable risks across 58 settings' -- per ProPublica's own reporting, only 5 of the 58 findings are directly reversed by this specific proposal."
+    },
+    "confidence_note": "HIGH confidence on Beck's and Dekleva's roles, industry backgrounds, Dekleva's 2022 letter, the linear-vs-threshold methodology dispute, the December 3, 2025 proposal date, the February 2, 2026 comment-period close, and the named critics' quotes (Kalmuss-Katz, Woodruff) -- directly read and sourced to ProPublica's own dedicated investigation. The precise scope of the proposal (5 of 58 settings reversed, not all 58) is drawn from the same ProPublica reporting and is presented here as a correction to the discovery record's broader framing.",
+    "short_summary": "EPA proposed replacing the 40-year-old linear cancer-risk model with an industry-preferred threshold model for formaldehyde, under two former chemical-industry lobbyists now running EPA's chemical-safety office, nearly doubling the exposure level considered safe and reversing 5 of 58 prior 'unreasonable risk' findings.",
+    "last_verified": "2026-09-12",
+    "date_added": "2026-09-12",
+    "section_summaries": {
+      "what_changed": "EPA officials Beck and Dekleva -- both former chemical-industry lobbyists -- proposed replacing the decades-old linear cancer-risk model with an industry-preferred threshold model for formaldehyde, nearly doubling the 'safe' inhalation exposure level and reversing 5 of 58 prior unreasonable-risk findings; scientists warn the methodology shift could be sought by industry for other carcinogens.",
+      "estimated_impact": "The proposal directly reverses risk findings for wood-product manufacturing and four other settings, with critics warning the methodology itself -- if broadly adopted -- poses a larger downstream risk to how EPA assesses other carcinogens; no quantified cancer-case estimate specific to this change was found, and the rule remains proposed, not final.",
+      "confidence_note": "The proposal's mechanics, personnel, and quoted criticism are directly sourced to ProPublica's own investigation; this entry corrects the discovery record's overstatement that all 58 findings were reversed."
+    },
+    "sources": [
+      {
+        "name": "ProPublica -- EPA Formaldehyde Risk Assessment",
+        "url": "https://www.propublica.org/article/epa-formaldehyde-risk-assessment"
+      }
+    ]
+  },
+  {
     "id": "epa-ghg-reporting-program-elimination-2025",
     "rule_name": "EPA's Proposed Elimination of the Greenhouse Gas Reporting Program (GHGRP)",
     "administration": "Trump II (2025-present)",
