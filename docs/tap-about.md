@@ -78,7 +78,7 @@ been dismissed months earlier.
 
 ## How information gets presented
 
-Four trackers, organized by kind of action, not by target — each one built to answer a different question, and sourced differently to match.
+Five trackers, organized by kind of action, not by target — each one built to answer a different question, and sourced differently to match.
 
 | Tracker | What it covers |
 |---|---|
@@ -86,6 +86,7 @@ Four trackers, organized by kind of action, not by target — each one built to 
 | Cabinet-Level Accountability | Documented prosecution exposure and other accountability-relevant conduct for current officials — legal allegations framed to legal standards, non-legal conduct labeled as such |
 | Government Service Redirection | What government capacity was suppressed, defunded, or reassigned, and what oversight bodies or courts found |
 | Reporting | A running archive of relevant news coverage — broader in scope, sourced to established news organizations by design |
+| User Topics | Reader-suggested topics that don't clear the bar for one of the three curated trackers, given a verdict rather than a quantified impact figure — see below |
 
 The three curated trackers — Corporate Deregulation, Cabinet-Level
 Accountability, and Government Service Redirection — are built the same

@@ -17,7 +17,7 @@ schemas, and workflows. This file is a pointer, not a source of truth.
 - `docs/tap-homepage-banner.md`, `docs/tap-methodology.md` —
   site-specific content
 - `docs/tap-file-map.md` — this repo's own file map; points to the
-  private repo's `docs/tap-file-map.md` for the full two-repo picture
+  private repo's `docs/superpowers/tap-file-map.md` for the full two-repo picture
 - `publish_exclude.txt` — entries withheld from publish; needs periodic
   review against each entry's *current* confidence, not just checked when
   originally excluded (see `~/gjoe/tap-data/docs/handoffs/` for the

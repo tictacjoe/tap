@@ -2,7 +2,7 @@
 
 This repo's own layout. For the full picture across both repos — including
 the private working repo's trackers, entry directories, and scripts — see
-`~/gjoe/tap-data/docs/tap-file-map.md`, the canonical file map.
+`~/gjoe/tap-data/docs/superpowers/tap-file-map.md`, the canonical file map.
 
 ## `~/gjoe/tap-site/`
 
