@@ -667,6 +667,13 @@
     color: var(--ink-faint);
     white-space: nowrap;
     flex-shrink: 0;
+    /* Fixed to the common "YYYY-MM-DD" width so the tracker tag and
+       headline start at the same x-position on every row -- without this,
+       shorter values (a bare year, "undated") shift everything after them
+       left, since formatHeadlineDate() doesn't always return the same
+       length (compound date_of_action strings sometimes only have
+       month-precision, e.g. "2025-08"). Monospace font makes `ch` exact. */
+    min-width: 10ch;
   }
   .headline-row-tracker {
     font-family: ui-monospace, monospace;
