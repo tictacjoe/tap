@@ -1541,17 +1541,34 @@ function buildTrailHtml(trail) {
   return parts.join("");
 }
 
+/* Short codes for the Headlines row's tracker tag only -- everywhere
+   else on the site (tab buttons, filter dropdowns, coverage callouts)
+   keeps using TRACKERS[key].label in full. The row's tracker tag has to
+   share space with the headline text itself, and the full labels (e.g.
+   "CABINET-LEVEL ACCOUNTABILITY") were eating ~150-200px of an already
+   tight row -- the full name is still available as this tag's title
+   tooltip and via the tracker filter dropdown, which does use the full
+   label. */
+const HEADLINE_TRACKER_ABBR = {
+  deregulation: "CDR",
+  prosecution: "CLA",
+  govservices: "GSR",
+  tracker: "RPT",
+  communitytopics: "UT",
+};
+
 function buildHeadlineRow(item) {
   const row = document.createElement("div");
   row.className = "headline-entry";
 
   const trackerLabel = TRACKERS[item.tracker].label;
+  const trackerAbbr = HEADLINE_TRACKER_ABBR[item.tracker] || trackerLabel;
 
   const line = document.createElement("div");
   line.className = "headline-row";
   line.innerHTML =
     '<span class="headline-row-date">' + escapeHtml(formatHeadlineDate(item.date)) + '</span>' +
-    '<span class="headline-row-tracker">' + escapeHtml(trackerLabel) + '</span>' +
+    '<span class="headline-row-tracker" title="' + escapeHtml(trackerLabel) + '">' + escapeHtml(trackerAbbr) + '</span>' +
     '<span class="headline-row-text" data-full-headline="' + escapeHtml(item.headline) + '" title="' + escapeHtml(item.headline) + '">' + escapeHtml(item.headline) + '</span>';
   row.appendChild(line);
 
