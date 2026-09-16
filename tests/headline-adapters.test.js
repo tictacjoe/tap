@@ -99,7 +99,7 @@ test("adaptDeregulationEntry composes headline/tiers/trail/date/category", () =>
   assert.equal(r.trail.confidenceNote, "High confidence.");
   assert.equal(r.trail.lastVerified, "2026-09-01");
   assert.equal(r.trail.dateAdded, "2026-01-15");
-  assert.equal(r.date, "2026-09-01");
+  assert.equal(r.date, "2026-01-01");
   assert.equal(r.tracker, "deregulation");
   assert.equal(r.category, "consumer_safety");
 });
@@ -153,7 +153,7 @@ test("adaptProsecutionEntry composes headline/tiers/trail (from evidence)/date/c
   assert.match(r.tiers[2], /Part of a broader pattern\./);
   assert.equal(r.trail.sources[0].name, "Letter of removal");
   assert.equal(r.trail.sources[0].url, "https://example.com/c");
-  assert.equal(r.date, "2026-07-01");
+  assert.equal(r.date, "2026-06-01");
   assert.equal(r.tracker, "prosecution");
   assert.equal(r.category, "Improper Removal");
 });

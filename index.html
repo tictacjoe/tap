@@ -1392,7 +1392,7 @@ function adaptDeregulationEntry(entry) {
       lastVerified: entry.last_verified || null,
       dateAdded: entry.date_added || null,
     },
-    date: entry.last_verified || entry.date_of_action || entry.date_added || null,
+    date: entry.date_of_action || entry.date_added || entry.last_verified || null,
     tracker: "deregulation",
     category: entry.domain || null,
   };
@@ -1450,7 +1450,7 @@ function adaptProsecutionEntry(entry) {
       lastVerified: entry.last_verified || null,
       dateAdded: entry.date_added || null,
     },
-    date: entry.last_verified || entry.date_added || null,
+    date: entry.date_added || entry.last_verified || null,
     tracker: "prosecution",
     category: entry.offense_category || null,
   };
