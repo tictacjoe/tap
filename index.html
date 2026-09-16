@@ -1338,6 +1338,42 @@ function usableTierCount(tiers) {
 }
 /* usable-tier-count:end */
 
+/* Shortens a headline to fit a character budget without cutting off
+   mid-thought -- tries the nearest sentence end, then a clause break
+   (" -- ", "; ", ": "), then a comma, always within the budget and never
+   earlier than 40% of it (a break that early would drop most of the
+   point rather than lead with it). Only falls back to a raw word-boundary
+   cut with an ellipsis when none of those exist in range. */
+/* pack-headline:start */
+function packHeadline(text, maxChars) {
+  const s = (text || "").trim();
+  if (s.length <= maxChars) return s;
+
+  const sentenceBreak = s.lastIndexOf(". ", maxChars);
+  if (sentenceBreak > maxChars * 0.4) {
+    return s.slice(0, sentenceBreak + 1).trim();
+  }
+
+  const clauseBreaks = [" -- ", "; ", ": "];
+  for (const sep of clauseBreaks) {
+    const idx = s.lastIndexOf(sep, maxChars);
+    if (idx > maxChars * 0.4) {
+      return s.slice(0, idx).trim();
+    }
+  }
+
+  const commaBreak = s.lastIndexOf(", ", maxChars);
+  if (commaBreak > maxChars * 0.5) {
+    return s.slice(0, commaBreak).trim();
+  }
+
+  const hardCut = s.slice(0, maxChars);
+  const lastSpace = hardCut.lastIndexOf(" ");
+  const base = lastSpace > maxChars * 0.6 ? hardCut.slice(0, lastSpace) : hardCut;
+  return base.trim() + "…";
+}
+/* pack-headline:end */
+
 /* adapt-deregulation-entry:start */
 function adaptDeregulationEntry(entry) {
   const override = entry.narrative_override || {};
@@ -1516,7 +1552,7 @@ function buildHeadlineRow(item) {
   line.innerHTML =
     '<span class="headline-row-date">' + escapeHtml(formatHeadlineDate(item.date)) + '</span>' +
     '<span class="headline-row-tracker">' + escapeHtml(trackerLabel) + '</span>' +
-    '<span class="headline-row-text" title="' + escapeHtml(item.headline) + '">' + escapeHtml(item.headline) + '</span>';
+    '<span class="headline-row-text" data-full-headline="' + escapeHtml(item.headline) + '" title="' + escapeHtml(item.headline) + '">' + escapeHtml(item.headline) + '</span>';
   row.appendChild(line);
 
   const body = document.createElement("div");
@@ -1568,6 +1604,42 @@ function buildHeadlineRow(item) {
   return row;
 }
 
+/* Estimates how many characters of `text` fit in `el`'s current width,
+   using a scratch <canvas> measured with the element's actual computed
+   font. A fixed character budget can't work here -- #headlines-wrap's
+   own width varies a lot (floor width on a normal screen vs. much wider
+   on a spacious monitor), and each row's date/tracker tag eats a
+   different amount of the row before the headline span even starts, so
+   the true per-character cost has to be measured, not guessed. */
+function estimateFitChars(el, text) {
+  const canvas = estimateFitChars._canvas || (estimateFitChars._canvas = document.createElement("canvas"));
+  const ctx = canvas.getContext("2d");
+  const style = getComputedStyle(el);
+  ctx.font = [style.fontStyle, style.fontWeight, style.fontSize, style.fontFamily].join(" ");
+  const sample = text.slice(0, 120) || text;
+  const avgCharWidth = ctx.measureText(sample).width / sample.length || 8;
+  return Math.max(15, Math.floor(el.clientWidth / avgCharWidth));
+}
+
+/* Shows the full headline whenever it already fits; only shortens it via
+   packHeadline() when the rendered text actually overflows the row's
+   available width. Must run after the element is attached to the live
+   document -- clientWidth/scrollWidth/getComputedStyle are meaningless
+   on a detached node, which is why this isn't done inside
+   buildHeadlineRow() itself. Retries at shrinking fractions of the
+   measured estimate since packHeadline's natural-break search can land
+   the cut a little short or long of the raw pixel estimate. */
+function fitHeadlineRowText(el) {
+  if (el.scrollWidth <= el.clientWidth) return;
+  const full = el.dataset.fullHeadline || el.textContent;
+  const estimate = estimateFitChars(el, full);
+  const budgets = [estimate, Math.floor(estimate * 0.8), Math.floor(estimate * 0.6), Math.floor(estimate * 0.4)];
+  for (const budget of budgets) {
+    el.textContent = packHeadline(full, budget);
+    if (el.scrollWidth <= el.clientWidth) return;
+  }
+}
+
 let headlinesSortValue = "date-desc";
 let headlinesTrackerFilter = "";
 let headlinesSubFilter = "";
@@ -1601,6 +1673,7 @@ function renderHeadlinesView() {
   const frag = document.createDocumentFragment();
   toRender.forEach(item => frag.appendChild(buildHeadlineRow(item)));
   container.appendChild(frag);
+  container.querySelectorAll(".headline-row-text").forEach(fitHeadlineRowText);
 }
 
 function renderHeadlinesControls() {

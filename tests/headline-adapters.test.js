@@ -22,6 +22,7 @@ const names = [
   "verdict-label",
   "combine-tier-text",
   "usable-tier-count",
+  "pack-headline",
   "adapt-deregulation-entry",
   "adapt-govservices-entry",
   "adapt-prosecution-entry",
@@ -30,7 +31,7 @@ const names = [
 ];
 const combined = names.map(n => extractFunction(source, n)).join("\n");
 const exposeNames = [
-  "combineTierText", "usableTierCount",
+  "combineTierText", "usableTierCount", "packHeadline",
   "adaptDeregulationEntry", "adaptGovServicesEntry", "adaptProsecutionEntry",
   "adaptCommunityTopicEntry", "adaptReportingEntry",
 ];
@@ -46,6 +47,34 @@ test("usableTierCount counts leading non-empty, non-duplicate tiers", () => {
   assert.equal(fns.usableTierCount(["a", "a", "a"]), 1);
   assert.equal(fns.usableTierCount(["a", "a b", "a b"]), 2);
   assert.equal(fns.usableTierCount(["", "x", "y"]), 0);
+});
+
+test("packHeadline returns short text unchanged", () => {
+  assert.equal(fns.packHeadline("Repealed the widget rule.", 110), "Repealed the widget rule.");
+});
+
+test("packHeadline cuts at the nearest sentence break within budget", () => {
+  const text = "EPA rescinded the endangerment finding entirely. Vehicle emissions standards were repealed as a follow-on action affecting a much longer tail of downstream rules.";
+  const result = fns.packHeadline(text, 60);
+  assert.equal(result, "EPA rescinded the endangerment finding entirely.");
+});
+
+test("packHeadline cuts at a clause break (em-dash style) when no sentence break is in range", () => {
+  const text = "DOJ's Public Integrity Section was cut from 36 attorneys to 2 -- while Trump pardoned 15 people convicted of public corruption over the same period";
+  const result = fns.packHeadline(text, 70);
+  assert.equal(result, "DOJ's Public Integrity Section was cut from 36 attorneys to 2");
+});
+
+test("packHeadline falls back to a word-boundary cut with an ellipsis when no natural break exists in range", () => {
+  const text = "a".repeat(30) + " " + "b".repeat(30) + " " + "c".repeat(30) + " " + "d".repeat(30);
+  const result = fns.packHeadline(text, 50);
+  assert.ok(result.endsWith("…"));
+  assert.ok(result.length <= 51);
+  assert.ok(!result.slice(0, -1).includes(" ".repeat(2))); // sanity: no double-space artifact
+});
+
+test("packHeadline never returns an empty string for non-empty input", () => {
+  assert.notEqual(fns.packHeadline("x".repeat(200), 50), "");
 });
 
 test("adaptDeregulationEntry composes headline/tiers/trail/date/category", () => {
