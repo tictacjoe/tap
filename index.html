@@ -395,6 +395,26 @@
     min-height: 400px;
   }
 
+  /* Headlines lives outside <main> so it isn't capped at main's 880px --
+     it needs the extra width for a headline to fit on one line. Left edge
+     matches main's own left edge (same formula main's margin:auto produces)
+     for visual alignment. Width grows to fill whatever space is actually
+     available before the fixed .nav-actions button column on the right
+     (13rem clearance), but never shrinks below main's own 880px -- on a
+     narrow/medium viewport where there's no more room than main already
+     has, this is exactly as wide as main and no more likely to graze
+     .nav-actions than main already is; on a wide viewport it grows well
+     past 880px. */
+  #headlines-wrap {
+    --headlines-left: max(1rem, calc((100vw - 880px) / 2));
+    margin-left: var(--headlines-left);
+    width: max(880px, calc(100vw - var(--headlines-left) - 13rem));
+    background: var(--paper-card);
+    padding: 1.75rem 1.5rem 3rem;
+    min-height: 400px;
+    box-sizing: border-box;
+  }
+
   .controls {
     display: flex;
     gap: 0.75rem;
@@ -1020,14 +1040,16 @@
   </div>
   <div class="result-count" id="count"></div>
   <div id="entries"></div>
-  <div class="controls" id="headlines-controls" style="display:none">
+</main>
+<div id="headlines-wrap" style="display:none">
+  <div class="controls" id="headlines-controls">
     <select id="headlines-sort"></select>
     <select id="headlines-tracker-filter"></select>
     <select id="headlines-subfilter"></select>
   </div>
-  <div class="result-count" id="headlines-count" style="display:none"></div>
-  <div id="headlines-view" style="display:none"></div>
-</main>
+  <div class="result-count" id="headlines-count"></div>
+  <div id="headlines-view"></div>
+</div>
 
 <footer class="site-footer">
   <div class="footer-content">
@@ -3051,21 +3073,19 @@ function renderDispatch() {
   const useOneLiners = document.getElementById("global-oneliner").checked;
   const useImpactSort = true; // always sorted by impact now -- no toggle
   const tabsEl = document.getElementById("tabs");
+  const mainEl = document.querySelector("main");
   const controlsEl = document.getElementById("tab-controls");
   const browseLabelEl = document.getElementById("browse-instead");
-  const headlinesControlsEl = document.getElementById("headlines-controls");
-  const headlinesViewEl = document.getElementById("headlines-view");
-  const headlinesCountEl = document.getElementById("headlines-count");
+  const headlinesWrapEl = document.getElementById("headlines-wrap");
   const entriesEl = document.getElementById("entries");
   const countEl = document.getElementById("count");
 
   if (term) {
     tabsEl.style.display = "none";
+    mainEl.style.display = "";
     controlsEl.style.display = "none";
     browseLabelEl.style.display = "none";
-    headlinesControlsEl.style.display = "none";
-    headlinesViewEl.style.display = "none";
-    headlinesCountEl.style.display = "none";
+    headlinesWrapEl.style.display = "none";
     entriesEl.style.display = "";
     countEl.style.display = "";
     renderGlobalResults(term, useRegex, useOneLiners, useImpactSort);
@@ -3078,21 +3098,16 @@ function renderDispatch() {
   renderTabs();
 
   if (activeTracker === "headlines") {
-    controlsEl.style.display = "none";
-    entriesEl.style.display = "none";
-    countEl.style.display = "none";
-    headlinesControlsEl.style.display = "";
-    headlinesViewEl.style.display = "";
-    headlinesCountEl.style.display = "";
+    mainEl.style.display = "none";
+    headlinesWrapEl.style.display = "";
     renderHeadlinesControls();
     renderHeadlinesView();
     return;
   }
 
+  mainEl.style.display = "";
   controlsEl.style.display = "";
-  headlinesControlsEl.style.display = "none";
-  headlinesViewEl.style.display = "none";
-  headlinesCountEl.style.display = "none";
+  headlinesWrapEl.style.display = "none";
   entriesEl.style.display = "";
   countEl.style.display = "";
   renderFilterOptions(TRACKERS[activeTracker]);
