@@ -143,6 +143,7 @@ test("adaptProsecutionEntry composes headline/tiers/trail (from evidence)/date/c
     comeback: "No performance record was ever cited.",
     confidence_note: "High confidence, court filing.",
     last_verified: "2026-07-01",
+    date_of_action: "2026-05-01",
     date_added: "2026-06-01",
     offense_category: "Improper Removal",
   };
@@ -153,9 +154,14 @@ test("adaptProsecutionEntry composes headline/tiers/trail (from evidence)/date/c
   assert.match(r.tiers[2], /Part of a broader pattern\./);
   assert.equal(r.trail.sources[0].name, "Letter of removal");
   assert.equal(r.trail.sources[0].url, "https://example.com/c");
-  assert.equal(r.date, "2026-06-01");
+  assert.equal(r.date, "2026-05-01");
   assert.equal(r.tracker, "prosecution");
   assert.equal(r.category, "Improper Removal");
+});
+
+test("adaptProsecutionEntry falls back to date_added when date_of_action is missing", () => {
+  const r = fns.adaptProsecutionEntry({ last_verified: "2026-07-01", date_added: "2026-06-01" });
+  assert.equal(r.date, "2026-06-01");
 });
 
 test("adaptCommunityTopicEntry composes headline/tiers/trail/date, category is null", () => {

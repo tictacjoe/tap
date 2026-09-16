@@ -1463,7 +1463,7 @@ function adaptProsecutionEntry(entry) {
       lastVerified: entry.last_verified || null,
       dateAdded: entry.date_added || null,
     },
-    date: entry.date_added || entry.last_verified || null,
+    date: entry.date_of_action || entry.date_added || entry.last_verified || null,
     tracker: "prosecution",
     category: entry.offense_category || null,
   };
@@ -2283,7 +2283,7 @@ function visibleSearchText(entry, cfg) {
     parts.push(
       entry.offense_category, entry.offense_category_raw, entry.status_category, entry.status,
       entry.concern_type,
-      entry.last_verified,
+      entry.date_of_action, entry.last_verified,
       entry.section_summaries?.incident_summary, entry.section_summaries?.confidence_note,
       entry.incident_summary, entry.confidence_note,
       entry.cause, entry.rebuttal_anticipated, entry.comeback
@@ -2545,6 +2545,7 @@ function buildEntryCard(entry, cfg, docketLabel, sourceLabel, term, useRegex) {
     metaHtml += '<span class="meta-field"><span class="meta-field-label">Violation Type</span><span class="meta-field-value">' + hl(entry.offense_category) + '</span></span>' +
                '<span class="meta-field"><span class="meta-field-label">Status Stage</span><span class="meta-field-value">' + hl(entry.status_category) + '</span></span>' +
                (entry.concern_type ? '<span class="meta-field"><span class="meta-field-label">Concern</span><span class="meta-field-value">' + hl(entry.concern_type) + '</span></span>' : '') +
+               (entry.date_of_action ? '<span>' + hl(entry.date_of_action) + '</span>' : '') +
                '<span>verified ' + (entry.last_verified || "") + '</span>';
   }
 
