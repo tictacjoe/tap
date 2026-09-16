@@ -709,8 +709,13 @@
     border-bottom: 1px solid var(--rule);
   }
   .exhibit-list li:last-child { border-bottom: none; }
-  .exhibit-list a { color: var(--brass); text-decoration: none; }
-  .exhibit-list a:hover { text-decoration: underline; }
+  /* Underlined by default, not just on hover -- color alone (var(--brass)
+     against the confidence-box's own warm background) wasn't a strong
+     enough signal that these are clickable links rather than plain prose;
+     a source description can run a full sentence long, so it needs to
+     read as a reference at a glance, not just on mouseover. */
+  .exhibit-list a { color: var(--brass); text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--brass) 50%, transparent); }
+  .exhibit-list a:hover { text-decoration-color: var(--brass); }
 
   .figure-group-label {
     font-family: ui-monospace, monospace;
