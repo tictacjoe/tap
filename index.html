@@ -632,9 +632,41 @@
     gap: 0.9rem;
     margin-top: 1rem;
   }
-  .headline-tier-text { display: none; }
-  .headline-more-btn, .headline-trail-btn { margin-top: 0.5rem; margin-right: 0.5rem; }
-  .headline-trail-panel { margin-top: 0.75rem; }
+  .headline-entry { border-bottom: 1px solid var(--rule); }
+  .headline-entry:last-child { border-bottom: none; }
+  .headline-row {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.55rem 0.8rem;
+  }
+  .headline-row-date {
+    font-family: ui-monospace, monospace;
+    font-size: 0.7rem;
+    color: var(--ink-faint);
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .headline-row-tracker {
+    font-family: ui-monospace, monospace;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--brass);
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .headline-row-text {
+    flex: 1 1 auto;
+    min-width: 0;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .headline-more-btn, .headline-trail-btn { flex-shrink: 0; }
+  .headline-tier-text { display: none; margin: 0 0.8rem 0.6rem; }
+  .headline-trail-panel { margin: 0.5rem 0.8rem 0.6rem; }
   .update-request-row .field-value { color: var(--ink-faint); }
   .request-update-btn { padding: 0.4rem 0.85rem; font-size: 0.72rem; }
 
@@ -1453,24 +1485,20 @@ function buildTrailHtml(trail) {
 
 function buildHeadlineRow(item) {
   const row = document.createElement("div");
-  row.className = "entry headline-entry";
+  row.className = "headline-entry";
 
   const trackerLabel = TRACKERS[item.tracker].label;
-  const head = document.createElement("div");
-  head.className = "entry-head";
-  head.style.cursor = "default"; // unlike buildEntryCard()'s cards, the head has no click-to-toggle handler here
-  head.innerHTML =
-    '<div class="entry-title-block">' +
-      '<p class="entry-title">' + escapeHtml(item.headline) + '</p>' +
-      '<div class="entry-meta"><span class="source-tag">' + escapeHtml(trackerLabel) + '</span>' +
-      (item.category ? '<span class="domain-tag">' + escapeHtml(item.category) + '</span>' : '') +
-      '<span>' + escapeHtml(formatHeadlineDate(item.date)) + '</span></div>' +
-    '</div>';
-  row.appendChild(head);
+
+  const line = document.createElement("div");
+  line.className = "headline-row";
+  line.innerHTML =
+    '<span class="headline-row-date">' + escapeHtml(formatHeadlineDate(item.date)) + '</span>' +
+    '<span class="headline-row-tracker">' + escapeHtml(trackerLabel) + '</span>' +
+    '<span class="headline-row-text" title="' + escapeHtml(item.headline) + '">' + escapeHtml(item.headline) + '</span>';
+  row.appendChild(line);
 
   const body = document.createElement("div");
-  body.className = "entry-detail headline-tiers";
-  body.style.display = "block";
+  body.className = "headline-tiers";
 
   const tierEl = document.createElement("div");
   tierEl.className = "field-value headline-tier-text";
@@ -1496,13 +1524,13 @@ function buildHeadlineRow(item) {
       updateTierDisplay();
     });
   }
-  body.appendChild(moreBtn);
+  line.appendChild(moreBtn);
 
   const trailBtn = document.createElement("button");
   trailBtn.type = "button";
   trailBtn.className = "share-link-btn headline-trail-btn";
   trailBtn.textContent = "trail";
-  body.appendChild(trailBtn);
+  line.appendChild(trailBtn);
 
   const trailPanel = document.createElement("div");
   trailPanel.className = "confidence-box headline-trail-panel";
