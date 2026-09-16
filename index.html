@@ -1534,9 +1534,6 @@ function buildTrailHtml(trail) {
   if (trail.lastVerified) {
     parts.push('<div class="field-label">Last verified</div><div class="field-value">' + escapeHtml(trail.lastVerified) + '</div>');
   }
-  if (trail.dateAdded) {
-    parts.push('<div class="field-label">Added to TAP</div><div class="field-value">' + escapeHtml(trail.dateAdded) + '</div>');
-  }
   if (trail.sources.length) {
     parts.push('<div class="field-label">Sources</div><ul class="exhibit-list">' +
       trail.sources.map(s => s.url
