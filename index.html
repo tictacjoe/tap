@@ -1265,6 +1265,140 @@ function usableTierCount(tiers) {
 }
 /* usable-tier-count:end */
 
+/* adapt-deregulation-entry:start */
+function adaptDeregulationEntry(entry) {
+  const override = entry.narrative_override || {};
+  const headline = override.headline || entry.short_summary || truncate(entry.what_changed || "", 110);
+  const brief = override.brief || entry.what_changed || "";
+  const beforeText = entry.original_rule_summary ? "Before this action: " + entry.original_rule_summary : "";
+  const medium = override.medium || combineTierText([brief, beforeText]);
+  const stakesText = entry.estimated_health_impact?.summary ? "At stake: " + entry.estimated_health_impact.summary : "";
+  const full = override.full || combineTierText([medium, stakesText]);
+  return {
+    headline,
+    tiers: [brief, medium, full],
+    trail: {
+      sources: (entry.sources || []).map(s => ({ name: s.name || "Source", url: s.url || null })),
+      confidenceNote: entry.confidence_note || null,
+      lastVerified: entry.last_verified || null,
+      dateAdded: entry.date_added || null,
+    },
+    date: entry.last_verified || entry.date_of_action || entry.date_added || null,
+    tracker: "deregulation",
+    category: entry.domain || null,
+  };
+}
+/* adapt-deregulation-entry:end */
+
+/* adapt-govservices-entry:start */
+function adaptGovServicesEntry(entry) {
+  const override = entry.narrative_override || {};
+  const headline = override.headline || entry.title || truncate(entry.what_changed || "", 110);
+  const brief = override.brief || entry.what_changed || "";
+  const p = entry.primary_proponent;
+  const proponentText = p?.name
+    ? "Driven by " + p.name + (p.role ? " (" + p.role + ")" : "") + (p.note ? " — " + p.note : "")
+    : "";
+  const medium = override.medium || combineTierText([brief, proponentText]);
+  const impactText = entry.estimated_impact?.summary ? "Impact: " + entry.estimated_impact.summary : "";
+  const full = override.full || combineTierText([medium, impactText]);
+  return {
+    headline,
+    tiers: [brief, medium, full],
+    trail: {
+      sources: (entry.sources || []).map(s => ({ name: s.name || "Source", url: s.url || null })),
+      confidenceNote: entry.confidence_note || null,
+      lastVerified: entry.last_verified || null,
+      dateAdded: entry.date_added || null,
+    },
+    date: entry.date_of_action || entry.last_verified || entry.date_added || null,
+    tracker: "govservices",
+    category: entry.domain || null,
+  };
+}
+/* adapt-govservices-entry:end */
+
+/* adapt-prosecution-entry:start */
+function adaptProsecutionEntry(entry) {
+  const override = entry.narrative_override || {};
+  const headline = override.headline || entry.section_summaries?.incident_summary || truncate(entry.incident_summary || "", 110);
+  const brief = override.brief || entry.incident_summary || "";
+  const elementsText = (entry.elements_required || []).length
+    ? "What must hold: " + entry.elements_required.join("; ") : "";
+  const evidenceText = (entry.evidence || []).length
+    ? "Evidence: " + entry.evidence.map(ev => ev.description).filter(Boolean).join("; ") : "";
+  const medium = override.medium || combineTierText([brief, elementsText, evidenceText]);
+  const causeText = entry.cause ? "Pattern: " + entry.cause : "";
+  const rebuttalText = entry.rebuttal_anticipated ? "Anticipated defense: " + entry.rebuttal_anticipated : "";
+  const comebackText = entry.comeback ? "Response: " + entry.comeback : "";
+  const full = override.full || combineTierText([medium, causeText, rebuttalText, comebackText]);
+  return {
+    headline,
+    tiers: [brief, medium, full],
+    trail: {
+      sources: (entry.evidence || []).map(ev => ({ name: ev.description || ev.type || "Evidence", url: ev.source_url || null })),
+      confidenceNote: entry.confidence_note || null,
+      lastVerified: entry.last_verified || null,
+      dateAdded: entry.date_added || null,
+    },
+    date: entry.last_verified || entry.date_added || null,
+    tracker: "prosecution",
+    category: entry.offense_category || null,
+  };
+}
+/* adapt-prosecution-entry:end */
+
+/* adapt-communitytopic-entry:start */
+function adaptCommunityTopicEntry(entry) {
+  const override = entry.narrative_override || {};
+  const headline = override.headline || truncate(entry.topic || "", 110);
+  const brief = override.brief || truncate(entry.summary || "", 160);
+  const verdictText = entry.verdict ? "Verdict: " + verdictLabel(entry.verdict) : "";
+  const medium = override.medium || combineTierText([entry.summary || "", verdictText]);
+  const claimText = entry.submitted_claim ? "As submitted: " + entry.submitted_claim : "";
+  const relatedText = (entry.related_entries || []).length
+    ? "Related: " + entry.related_entries.map(r => r.note || r.id).filter(Boolean).join("; ") : "";
+  const full = override.full || combineTierText([medium, claimText, relatedText]);
+  return {
+    headline,
+    tiers: [brief, medium, full],
+    trail: {
+      sources: (entry.sources || []).map(s => ({ name: s.name || "Source", url: s.url || null })),
+      confidenceNote: null,
+      lastVerified: null,
+      dateAdded: entry.date_added || null,
+    },
+    date: entry.date_submitted || entry.date_added || null,
+    tracker: "communitytopics",
+    category: null,
+  };
+}
+/* adapt-communitytopic-entry:end */
+
+/* adapt-reporting-entry:start */
+function adaptReportingEntry(entry) {
+  const override = entry.narrative_override || {};
+  const headline = override.headline || truncate(entry.what_happened || "", 110);
+  const brief = override.brief || (entry.what_happened || "");
+  const whyText = entry.why_it_matters ? "Why it matters: " + entry.why_it_matters : "";
+  const medium = override.medium || combineTierText([brief, whyText]);
+  const full = override.full || medium;
+  return {
+    headline,
+    tiers: [brief, medium, full],
+    trail: {
+      sources: entry.source_name ? [{ name: entry.source_name, url: entry.source_url || null }] : [],
+      confidenceNote: null,
+      lastVerified: null,
+      dateAdded: null,
+    },
+    date: entry.date || null,
+    tracker: "tracker",
+    category: entry.category || null,
+  };
+}
+/* adapt-reporting-entry:end */
+
 /* Extracts the largest numeric value found in a string like
    "$300,000,000/year" or "2,577 mortalities" -- used to compare
    quantified impact figures that come in wildly different units. */
