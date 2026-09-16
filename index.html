@@ -396,19 +396,20 @@
   }
 
   /* Headlines lives outside <main> so it isn't capped at main's 880px --
-     it needs the extra width for a headline to fit on one line. Left edge
-     matches main's own left edge (same formula main's margin:auto produces)
-     for visual alignment. Width grows to fill whatever space is actually
-     available before the fixed .nav-actions button column on the right
-     (13rem clearance), but never shrinks below main's own 880px -- on a
-     narrow/medium viewport where there's no more room than main already
-     has, this is exactly as wide as main and no more likely to graze
-     .nav-actions than main already is; on a wide viewport it grows well
-     past 880px. */
+     it needs the extra width for a headline to fit on one line. Unlike an
+     earlier version of this rule, the left edge does NOT mirror main's own
+     centered position -- main is a narrow reading column by design, so its
+     left margin on a wide viewport is mostly empty space, and copying that
+     margin here just wasted it (Joe: "a lot of empty room on the left...
+     can we expand the inner box"). Instead this sits close to the left
+     edge (matching main's own internal 1.5rem side padding, for a
+     consistent gutter) and grows to fill nearly the full viewport width up
+     to the fixed .nav-actions button column's clearance (13rem) on the
+     right. Never shrinks below main's own 880px, so narrow viewports are
+     unaffected. */
   #headlines-wrap {
-    --headlines-left: max(1rem, calc((100vw - 880px) / 2));
-    margin-left: var(--headlines-left);
-    width: max(880px, calc(100vw - var(--headlines-left) - 13rem));
+    margin-left: 1.5rem;
+    width: max(880px, calc(100vw - 1.5rem - 13rem));
     background: var(--paper-card);
     padding: 1.75rem 1.5rem 3rem;
     min-height: 400px;
