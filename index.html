@@ -632,6 +632,9 @@
     gap: 0.9rem;
     margin-top: 1rem;
   }
+  .headline-tier-text { display: none; }
+  .headline-more-btn, .headline-trail-btn { margin-top: 0.5rem; margin-right: 0.5rem; }
+  .headline-trail-panel { margin-top: 0.75rem; }
   .update-request-row .field-value { color: var(--ink-faint); }
   .request-update-btn { padding: 0.4rem 0.85rem; font-size: 0.72rem; }
 
@@ -985,6 +988,13 @@
   </div>
   <div class="result-count" id="count"></div>
   <div id="entries"></div>
+  <div class="controls" id="headlines-controls" style="display:none">
+    <select id="headlines-sort"></select>
+    <select id="headlines-tracker-filter"></select>
+    <select id="headlines-subfilter"></select>
+  </div>
+  <div class="result-count" id="headlines-count"></div>
+  <div id="headlines-view" style="display:none"></div>
 </main>
 
 <footer class="site-footer">
@@ -1398,6 +1408,133 @@ function adaptReportingEntry(entry) {
   };
 }
 /* adapt-reporting-entry:end */
+
+function buildHeadlineItems() {
+  const items = [];
+  TRACKERS.deregulation.data.forEach(e => items.push(adaptDeregulationEntry(e)));
+  TRACKERS.govservices.data.forEach(e => items.push(adaptGovServicesEntry(e)));
+  TRACKERS.prosecution.data.forEach(e => items.push(adaptProsecutionEntry(e)));
+  TRACKERS.communitytopics.data.forEach(e => items.push(adaptCommunityTopicEntry(e)));
+  TRACKERS.tracker.data.forEach(e => items.push(adaptReportingEntry(e)));
+  return items;
+}
+
+function buildTrailHtml(trail) {
+  const parts = [];
+  if (trail.confidenceNote) {
+    parts.push('<div class="field-label">Confidence</div><div class="field-value">' + escapeHtml(trail.confidenceNote) + '</div>');
+  }
+  if (trail.lastVerified) {
+    parts.push('<div class="field-label">Last verified</div><div class="field-value">' + escapeHtml(trail.lastVerified) + '</div>');
+  }
+  if (trail.dateAdded) {
+    parts.push('<div class="field-label">Added to TAP</div><div class="field-value">' + escapeHtml(trail.dateAdded) + '</div>');
+  }
+  if (trail.sources.length) {
+    parts.push('<div class="field-label">Sources</div><ul class="exhibit-list">' +
+      trail.sources.map(s => s.url
+        ? '<li><a href="' + escapeHtml(s.url) + '" target="_blank" rel="noopener">' + escapeHtml(s.name) + '</a></li>'
+        : '<li>' + escapeHtml(s.name) + '</li>'
+      ).join("") + '</ul>');
+  } else {
+    parts.push('<div class="field-label">Sources</div><div class="field-value">None cited.</div>');
+  }
+  return parts.join("");
+}
+
+function buildHeadlineRow(item) {
+  const row = document.createElement("div");
+  row.className = "entry headline-entry";
+
+  const trackerLabel = TRACKERS[item.tracker].label;
+  const head = document.createElement("div");
+  head.className = "entry-head";
+  head.style.cursor = "default"; // unlike buildEntryCard()'s cards, the head has no click-to-toggle handler here
+  head.innerHTML =
+    '<div class="entry-title-block">' +
+      '<p class="entry-title">' + escapeHtml(item.headline) + '</p>' +
+      '<div class="entry-meta"><span class="source-tag">' + escapeHtml(trackerLabel) + '</span>' +
+      (item.category ? '<span class="domain-tag">' + escapeHtml(item.category) + '</span>' : '') +
+      '<span>' + escapeHtml(item.date || "undated") + '</span></div>' +
+    '</div>';
+  row.appendChild(head);
+
+  const body = document.createElement("div");
+  body.className = "entry-detail headline-tiers";
+  body.style.display = "block";
+
+  const tierEl = document.createElement("div");
+  tierEl.className = "field-value headline-tier-text";
+  body.appendChild(tierEl);
+
+  const maxLevel = usableTierCount(item.tiers);
+  let level = 0;
+
+  const moreBtn = document.createElement("button");
+  moreBtn.type = "button";
+  moreBtn.className = "share-link-btn headline-more-btn";
+  if (maxLevel === 0) {
+    moreBtn.style.display = "none";
+  } else {
+    const updateTierDisplay = () => {
+      tierEl.textContent = level === 0 ? "" : item.tiers[level - 1];
+      tierEl.style.display = level === 0 ? "none" : "block";
+      moreBtn.textContent = level >= maxLevel ? "less" : "more";
+    };
+    updateTierDisplay();
+    moreBtn.addEventListener("click", () => {
+      level = level >= maxLevel ? 0 : level + 1;
+      updateTierDisplay();
+    });
+  }
+  body.appendChild(moreBtn);
+
+  const trailBtn = document.createElement("button");
+  trailBtn.type = "button";
+  trailBtn.className = "share-link-btn headline-trail-btn";
+  trailBtn.textContent = "trail";
+  body.appendChild(trailBtn);
+
+  const trailPanel = document.createElement("div");
+  trailPanel.className = "confidence-box headline-trail-panel";
+  trailPanel.style.display = "none";
+  trailPanel.innerHTML = buildTrailHtml(item.trail);
+  body.appendChild(trailPanel);
+
+  trailBtn.addEventListener("click", () => {
+    trailPanel.style.display = trailPanel.style.display === "none" ? "block" : "none";
+  });
+
+  row.appendChild(body);
+  return row;
+}
+
+let headlinesSortValue = "date-desc";
+let headlinesTrackerFilter = "";
+let headlinesSubFilter = "";
+
+function renderHeadlinesView() {
+  const container = document.getElementById("headlines-view");
+  const countEl = document.getElementById("headlines-count");
+  let items = buildHeadlineItems();
+
+  if (headlinesTrackerFilter) {
+    items = items.filter(i => i.tracker === headlinesTrackerFilter);
+    if (headlinesSubFilter) {
+      items = items.filter(i => (i.category || "Uncategorized") === headlinesSubFilter);
+    }
+  }
+
+  items.sort((a, b) => {
+    if (headlinesSortValue === "date-asc") return (a.date || "").localeCompare(b.date || "");
+    if (headlinesSortValue === "alpha") return a.headline.localeCompare(b.headline);
+    return (b.date || "").localeCompare(a.date || "");
+  });
+
+  countEl.textContent = items.length + " headline(s)";
+  container.innerHTML = "";
+  items.forEach(item => container.appendChild(buildHeadlineRow(item)));
+}
 
 /* Extracts the largest numeric value found in a string like
    "$300,000,000/year" or "2,577 mortalities" -- used to compare
@@ -2273,6 +2410,11 @@ function renderTabs() {
     btn.onclick = () => { activeTracker = key; filterValue = ""; sortValue = ""; groupMode = defaultGroupModeFor(key); statusGroupOn = false; renderDispatch(); };
     nav.appendChild(btn);
   });
+  const headlinesBtn = document.createElement("button");
+  headlinesBtn.textContent = "Headlines";
+  headlinesBtn.className = activeTracker === "headlines" ? "active" : "";
+  headlinesBtn.onclick = () => { activeTracker = "headlines"; renderDispatch(); };
+  nav.appendChild(headlinesBtn);
 }
 
 function pluralize(word) {
@@ -2834,23 +2976,47 @@ function renderDispatch() {
   const tabsEl = document.getElementById("tabs");
   const controlsEl = document.getElementById("tab-controls");
   const browseLabelEl = document.getElementById("browse-instead");
+  const headlinesControlsEl = document.getElementById("headlines-controls");
+  const headlinesViewEl = document.getElementById("headlines-view");
+  const entriesEl = document.getElementById("entries");
+  const countEl = document.getElementById("count");
 
   if (term) {
     tabsEl.style.display = "none";
     controlsEl.style.display = "none";
     browseLabelEl.style.display = "none";
+    headlinesControlsEl.style.display = "none";
+    headlinesViewEl.style.display = "none";
+    entriesEl.style.display = "";
+    countEl.style.display = "";
     renderGlobalResults(term, useRegex, useOneLiners, useImpactSort);
-  } else {
-    tabsEl.style.display = "";
-    controlsEl.style.display = "";
-    browseLabelEl.style.display = "";
-    document.getElementById("regex-error").textContent = "";
-    renderTabs();
-    renderFilterOptions(TRACKERS[activeTracker]);
-    renderSortToggle(TRACKERS[activeTracker]);
-    renderGroupToggle(TRACKERS[activeTracker]);
-    renderEntries();
+    return;
   }
+
+  tabsEl.style.display = "";
+  browseLabelEl.style.display = "";
+  document.getElementById("regex-error").textContent = "";
+  renderTabs();
+
+  if (activeTracker === "headlines") {
+    controlsEl.style.display = "none";
+    entriesEl.style.display = "none";
+    countEl.style.display = "none";
+    headlinesControlsEl.style.display = "";
+    headlinesViewEl.style.display = "";
+    renderHeadlinesView();
+    return;
+  }
+
+  controlsEl.style.display = "";
+  headlinesControlsEl.style.display = "none";
+  headlinesViewEl.style.display = "none";
+  entriesEl.style.display = "";
+  countEl.style.display = "";
+  renderFilterOptions(TRACKERS[activeTracker]);
+  renderSortToggle(TRACKERS[activeTracker]);
+  renderGroupToggle(TRACKERS[activeTracker]);
+  renderEntries();
 }
 
 document.getElementById("search").addEventListener("input", (e) => {
