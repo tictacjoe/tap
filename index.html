@@ -993,7 +993,7 @@
     <select id="headlines-tracker-filter"></select>
     <select id="headlines-subfilter"></select>
   </div>
-  <div class="result-count" id="headlines-count"></div>
+  <div class="result-count" id="headlines-count" style="display:none"></div>
   <div id="headlines-view" style="display:none"></div>
 </main>
 
@@ -1248,6 +1248,15 @@ function extractFirstDate(str) {
   return 0;
 }
 
+function formatHeadlineDate(dateStr) {
+  if (!dateStr) return "undated";
+  const isoMatch = String(dateStr).match(/\d{4}-\d{2}(?:-\d{2})?/);
+  if (isoMatch) return isoMatch[0];
+  const yearMatch = String(dateStr).match(/\b(19|20)\d{2}\b/);
+  if (yearMatch) return yearMatch[0];
+  return truncate(dateStr, 24);
+}
+
 /* truncate:start */
 function truncate(str, n) {
   if (!str) return "";
@@ -1433,7 +1442,7 @@ function buildTrailHtml(trail) {
   if (trail.sources.length) {
     parts.push('<div class="field-label">Sources</div><ul class="exhibit-list">' +
       trail.sources.map(s => s.url
-        ? '<li><a href="' + escapeHtml(s.url) + '" target="_blank" rel="noopener">' + escapeHtml(s.name) + '</a></li>'
+        ? '<li><a href="' + escapeHtml(safeHref(s.url)) + '" target="_blank" rel="noopener">' + escapeHtml(s.name) + '</a></li>'
         : '<li>' + escapeHtml(s.name) + '</li>'
       ).join("") + '</ul>');
   } else {
@@ -1455,7 +1464,7 @@ function buildHeadlineRow(item) {
       '<p class="entry-title">' + escapeHtml(item.headline) + '</p>' +
       '<div class="entry-meta"><span class="source-tag">' + escapeHtml(trackerLabel) + '</span>' +
       (item.category ? '<span class="domain-tag">' + escapeHtml(item.category) + '</span>' : '') +
-      '<span>' + escapeHtml(item.date || "undated") + '</span></div>' +
+      '<span>' + escapeHtml(formatHeadlineDate(item.date)) + '</span></div>' +
     '</div>';
   row.appendChild(head);
 
@@ -1526,14 +1535,22 @@ function renderHeadlinesView() {
   }
 
   items.sort((a, b) => {
-    if (headlinesSortValue === "date-asc") return (a.date || "").localeCompare(b.date || "");
+    if (headlinesSortValue === "date-asc") return extractFirstDate(a.date) - extractFirstDate(b.date);
     if (headlinesSortValue === "alpha") return a.headline.localeCompare(b.headline);
-    return (b.date || "").localeCompare(a.date || "");
+    return extractFirstDate(b.date) - extractFirstDate(a.date);
   });
 
-  countEl.textContent = items.length + " headline(s)";
+  const RENDER_CAP = 300;
+  const toRender = items.slice(0, RENDER_CAP);
+
+  countEl.textContent = items.length > RENDER_CAP
+    ? toRender.length + " shown of " + items.length + " headlines — sort or filter to narrow further"
+    : items.length + " headline(s)";
+
   container.innerHTML = "";
-  items.forEach(item => container.appendChild(buildHeadlineRow(item)));
+  const frag = document.createDocumentFragment();
+  toRender.forEach(item => frag.appendChild(buildHeadlineRow(item)));
+  container.appendChild(frag);
 }
 
 function renderHeadlinesControls() {
@@ -3010,6 +3027,7 @@ function renderDispatch() {
   const browseLabelEl = document.getElementById("browse-instead");
   const headlinesControlsEl = document.getElementById("headlines-controls");
   const headlinesViewEl = document.getElementById("headlines-view");
+  const headlinesCountEl = document.getElementById("headlines-count");
   const entriesEl = document.getElementById("entries");
   const countEl = document.getElementById("count");
 
@@ -3019,6 +3037,7 @@ function renderDispatch() {
     browseLabelEl.style.display = "none";
     headlinesControlsEl.style.display = "none";
     headlinesViewEl.style.display = "none";
+    headlinesCountEl.style.display = "none";
     entriesEl.style.display = "";
     countEl.style.display = "";
     renderGlobalResults(term, useRegex, useOneLiners, useImpactSort);
@@ -3036,6 +3055,7 @@ function renderDispatch() {
     countEl.style.display = "none";
     headlinesControlsEl.style.display = "";
     headlinesViewEl.style.display = "";
+    headlinesCountEl.style.display = "";
     renderHeadlinesControls();
     renderHeadlinesView();
     return;
@@ -3044,6 +3064,7 @@ function renderDispatch() {
   controlsEl.style.display = "";
   headlinesControlsEl.style.display = "none";
   headlinesViewEl.style.display = "none";
+  headlinesCountEl.style.display = "none";
   entriesEl.style.display = "";
   countEl.style.display = "";
   renderFilterOptions(TRACKERS[activeTracker]);
