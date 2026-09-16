@@ -1080,6 +1080,7 @@ const TRACKERS = {
    one-liners. Deliberately distinct wording from the curated trackers'
    "Verified"/"Contested" stamps, since this tracker's whole point is a
    lower, explicitly-labeled bar. */
+/* verdict-label:start */
 function verdictLabel(verdict) {
   const map = {
     confirmed: "Confirmed",
@@ -1089,6 +1090,7 @@ function verdictLabel(verdict) {
   };
   return map[verdict] || verdict || "Unrated";
 }
+/* verdict-label:end */
 
 function verdictColor(verdict) {
   const map = {
@@ -1236,10 +1238,32 @@ function extractFirstDate(str) {
   return 0;
 }
 
+/* truncate:start */
 function truncate(str, n) {
   if (!str) return "";
   return str.length > n ? str.slice(0, n).trim() + "…" : str;
 }
+/* truncate:end */
+
+/* combine-tier-text:start */
+function combineTierText(parts) {
+  return parts.filter(p => p && String(p).trim()).join(" ");
+}
+/* combine-tier-text:end */
+
+/* usable-tier-count:start */
+function usableTierCount(tiers) {
+  let count = 0;
+  let prev = "";
+  for (const t of tiers) {
+    const text = (t || "").trim();
+    if (!text || text === prev) break;
+    count++;
+    prev = text;
+  }
+  return count;
+}
+/* usable-tier-count:end */
 
 /* Extracts the largest numeric value found in a string like
    "$300,000,000/year" or "2,577 mortalities" -- used to compare
