@@ -2837,6 +2837,13 @@ function buildEntryCard(entry, cfg, docketLabel, sourceLabel, term, useRegex) {
   if (cfg.idField) div.dataset.entryId = entry[cfg.idField] || "";
   const rawTitle = entry[cfg.titleField] || "Untitled";
   const title = cfg.kind === "tracker" ? truncate(rawTitle, 110) : rawTitle;
+  // Reporting headlines are truncated to 110 chars above (raw scraped
+  // "what_happened" prose runs much longer than other trackers' titles)
+  // -- a title attribute surfaces the full text on hover without having
+  // to open the card. Only set when actually truncated, so the tooltip
+  // doesn't redundantly repeat text that's already fully visible.
+  const titleTooltipHtml = (cfg.kind === "tracker" && rawTitle.length > 110)
+    ? ' title="' + escapeHtml(rawTitle) + '"' : "";
   // Highlights the active search term in the free-text fields most
   // likely to contain it (title, summary, category labels, and
   // date_of_action -- unlike a plain date, date_of_action is often a
@@ -2904,7 +2911,7 @@ function buildEntryCard(entry, cfg, docketLabel, sourceLabel, term, useRegex) {
   div.innerHTML =
     '<div class="entry-head">' +
       '<div class="entry-title-block">' +
-        '<p class="entry-title">' + hl(title) + shareBtnHtml + '</p>' +
+        '<p class="entry-title"' + titleTooltipHtml + '>' + hl(title) + shareBtnHtml + '</p>' +
         '<div class="entry-meta">' + metaHtml + '</div>' +
       '</div>' +
     '</div>' +
