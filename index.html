@@ -1130,7 +1130,6 @@
   <div class="suggest-modal" role="dialog" aria-modal="true" aria-labelledby="browse-modal-title">
     <button class="suggest-close-btn" id="browse-close-btn" type="button" title="Close">✕</button>
     <h2 id="browse-modal-title">Browse by Database</h2>
-    <p class="suggest-desc">Choose a database to browse.</p>
     <div class="browse-options" id="browse-options"></div>
   </div>
 </div>
@@ -1666,7 +1665,7 @@ function buildTrailHtml(trail) {
     parts.push('<div class="field-label">Confidence</div><div class="field-value">' + escapeHtml(trail.confidenceNote) + '</div>');
   }
   if (trail.lastVerified) {
-    parts.push('<div class="field-label">Last verified</div><div class="field-value">' + escapeHtml(trail.lastVerified) + '</div>');
+    parts.push('<div class="field-label">Last updated and verified</div><div class="field-value">' + escapeHtml(trail.lastVerified) + '</div>');
   }
   if (trail.sources.length) {
     parts.push('<div class="field-label">Sources</div><ul class="exhibit-list">' +
@@ -1879,8 +1878,8 @@ function renderHeadlinesView(appendOnly) {
   const remaining = items.length - toRender.length;
 
   countEl.textContent = remaining > 0
-    ? toRender.length + " shown of " + items.length + " headlines — sort or filter to narrow further, or load more below"
-    : items.length + " headline(s)";
+    ? toRender.length + " shown of " + items.length + " records — sort or filter to narrow further, or load more below"
+    : items.length + " record(s)";
 
   const alreadyRendered = appendOnly ? container.children.length : 0;
   const newlyRendered = toRender.slice(alreadyRendered);
@@ -2593,7 +2592,7 @@ function matchesTerm(haystack, term, useRegex) {
 function buildUpdateRequestHtml(entry, cfg) {
   const lastVerified = entry.last_verified || "not yet recorded";
   return '<div class="update-request-row">' +
-    '<span class="field-value">Last verified ' + escapeHtml(lastVerified) + '</span>' +
+    '<span class="field-value">Last updated and verified ' + escapeHtml(lastVerified) + '</span>' +
     '<button class="suggest-submit-btn request-update-btn" type="button" data-tracker="' + escapeHtml(cfg.kind) + '" data-entry-id="' + escapeHtml(entry[cfg.idField] || "") + '" data-entry-title="' + escapeHtml(entry[cfg.titleField] || "") + '" data-last-verified="' + escapeHtml(entry.last_verified || "") + '">Request an update for this entry</button>' +
     '</div>';
 }

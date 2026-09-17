@@ -415,7 +415,7 @@ test("deregulation shows last verified date and a request-update button", () => 
   const cfg = { kind: "deregulation", idField: "id", titleField: "rule_name" };
   const result = buildDetailHtml(entry, cfg);
 
-  assert(result.includes('<span class="field-value">Last verified 2026-08-01</span>'), "should show the last_verified date");
+  assert(result.includes('<span class="field-value">Last updated and verified 2026-08-01</span>'), "should show the last_verified date");
   assert(result.includes('class="suggest-submit-btn request-update-btn"'), "should include the request-update button");
   assert(result.includes('data-tracker="deregulation"'), "button should carry the tracker key");
   assert(result.includes('data-entry-id="some-rule-id"'), "button should carry the entry id");
@@ -436,7 +436,7 @@ test("prosecution falls back to a placeholder when last_verified is missing", ()
   const cfg = { kind: "prosecution", idField: "id", titleField: "official" };
   const result = buildDetailHtml(entry, cfg);
 
-  assert(result.includes('<span class="field-value">Last verified not yet recorded</span>'), "should show the fallback text when last_verified is absent");
+  assert(result.includes('<span class="field-value">Last updated and verified not yet recorded</span>'), "should show the fallback text when last_verified is absent");
   assert(result.includes('data-last-verified=""'), "should carry an empty data-last-verified when the entry has no last_verified value");
 });
 
@@ -451,7 +451,7 @@ test("govservices request-update button carries the correct tracker and entry id
   const cfg = { kind: "govservices", idField: "id", titleField: "title" };
   const result = buildDetailHtml(entry, cfg);
 
-  assert(result.includes('<span class="field-value">Last verified 2026-07-15</span>'), "should show the last_verified date");
+  assert(result.includes('<span class="field-value">Last updated and verified 2026-07-15</span>'), "should show the last_verified date");
   assert(result.includes('data-tracker="govservices"'), "button should carry the govservices tracker key");
   assert(result.includes('data-entry-id="some-action-id"'), "button should carry the entry id");
 });
