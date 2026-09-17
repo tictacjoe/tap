@@ -1830,23 +1830,18 @@ function renderHeadlinesControls() {
     Object.keys(TRACKERS).filter(key => key !== "communitytopics").map(key => '<option value="' + key + '">' + TRACKERS[key].label + '</option>').join("");
   trackerSel.value = headlinesTrackerFilter;
 
+  // The Records category subfilter (Corruption, Disinformation, etc., for
+  // the Reporting database specifically) is turned off in the UI by
+  // request -- may be re-added later. The mapping it was built on
+  // (normalizeCategory(), CATEGORY_CANONICAL_MAP, CANONICAL_CATEGORY_ORDER
+  // above, and each Reporting item's .category field) is untouched and
+  // still runs on every entry; re-adding this dropdown just means
+  // restoring the block this comment replaced (see git history), no need
+  // to redo any of that mapping work.
   const subSel = document.getElementById("headlines-subfilter");
-  if (!headlinesTrackerFilter) {
-    subSel.style.display = "none";
-    subSel.innerHTML = "";
-    return;
-  }
-  const items = buildHeadlineItems().filter(i => i.tracker === headlinesTrackerFilter);
-  const categories = [...new Set(items.map(i => i.category || "Uncategorized"))].sort();
-  if (categories.length <= 1) {
-    subSel.style.display = "none";
-    subSel.innerHTML = "";
-    return;
-  }
-  subSel.style.display = "";
-  subSel.innerHTML = '<option value="">All categories</option>' +
-    categories.map(c => '<option value="' + escapeHtml(c) + '">' + escapeHtml(c) + '</option>').join("");
-  subSel.value = headlinesSubFilter;
+  subSel.style.display = "none";
+  subSel.innerHTML = "";
+  headlinesSubFilter = "";
 }
 
 /* Extracts the largest numeric value found in a string like
