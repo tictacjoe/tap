@@ -390,6 +390,8 @@
      where the descriptive part ends and the actual number begins. Bold +
      accent color makes it read as its own distinct chunk at a glance. */
   .oneliner-figure { font-weight: bold; color: var(--brass); }
+  .oneliner-figure-harm { color: var(--flag); }
+  .oneliner-figure-savings { color: var(--verified); }
   .oneliner-list {
     border: 1px solid var(--rule-strong);
     border-radius: 4px;
@@ -810,6 +812,8 @@
     margin: 0.6rem 0 0.2rem;
   }
   .figure-group-label:first-child { margin-top: 0.3rem; }
+  .figure-harm-value { color: var(--flag); }
+  .figure-savings-value { color: var(--verified); }
 
   .confidence-box {
     background: var(--brass-light);
@@ -1982,12 +1986,37 @@ const FIGURE_HEALTH_KEYWORDS = /death|mortalit|illness|disease|cancer|injur|expo
 const FIGURE_FINANCIAL_KEYWORDS = /\bcost|saving|spending|funding|budget|\bfee\b|penalt|investment|\bprice|revenue|payment|threshold|compensation|contract|taxpayer|benefit/i;
 const FIGURE_CATEGORY_ORDER = ["Health & safety", "Financial", "Scale & scope"];
 
+/* Marks a Financial-category figure as a claimed cost savings (colored
+   green in buildFiguresHtml) rather than a cost, penalty, or funding
+   cut. "at risk" is excluded deliberately -- "Annual Net Consumer
+   Savings at Risk" contains "savings" but describes a benefit
+   threatened with loss, the opposite of a savings claim. */
+const FIGURE_SAVINGS_KEYWORDS = /\bsaving|cost reduction|price reduction|premium reduction/i;
+function isFigureSavings(fig) {
+  const text = (fig.metric || "") + " " + (fig.value || "");
+  // Also excludes disclaimers like "(context figure, not this rule's own
+  // cost/savings estimate)" -- "not" appearing shortly before "saving(s)"
+  // means the figure is explicitly NOT a savings claim, not that it is one.
+  return FIGURE_SAVINGS_KEYWORDS.test(text) && !/at risk/i.test(text) && !/\bnot\b.{0,30}saving/i.test(text);
+}
+
 function figureCategory(fig) {
   const metric = fig.metric || "";
   const value = fig.value || "";
   if (FIGURE_HEALTH_KEYWORDS.test(metric) || FIGURE_HEALTH_KEYWORDS.test(value)) return "Health & safety";
   if (/\$/.test(value) || FIGURE_FINANCIAL_KEYWORDS.test(metric)) return "Financial";
   return "Scale & scope";
+}
+
+/* Same harm/savings classification buildFiguresHtml() uses for card
+   figures, exposed as a single "harm" | "savings" | null verdict for
+   callers (oneLinerFor()) that need it as data rather than pre-built
+   HTML. */
+function figureKindOf(fig) {
+  const cat = figureCategory(fig);
+  if (cat === "Health & safety") return "harm";
+  if (cat === "Financial" && isFigureSavings(fig)) return "savings";
+  return null;
 }
 
 /* Shared by both schemas that carry a figures array (deregulation's
@@ -1999,7 +2028,17 @@ function buildFiguresHtml(figs, hl) {
   figs.forEach(f => { (groups[figureCategory(f)] = groups[figureCategory(f)] || []).push(f); });
   return FIGURE_CATEGORY_ORDER.filter(cat => groups[cat]).map(cat =>
     '<div class="figure-group-label">' + cat + '</div>' +
-    '<ul class="exhibit-list">' + groups[cat].map(f => '<li>' + hl(f.metric) + ': <strong>' + hl(f.value) + '</strong> (' + hl(f.source) + ')</li>').join("") + '</ul>'
+      '<ul class="exhibit-list">' + groups[cat].map(f => {
+        // Health & safety figures are harms (mortality, injury,
+        // illness, exposure risk -- see FIGURE_HEALTH_KEYWORDS) --
+        // colored red. Within Financial, a figure claiming cost
+        // savings is colored green; other Financial figures (costs,
+        // penalties, funding cuts, benefits "at risk") stay neutral --
+        // see isFigureSavings().
+        const valueClass = cat === "Health & safety" ? ' class="figure-harm-value"'
+          : (cat === "Financial" && isFigureSavings(f)) ? ' class="figure-savings-value"' : "";
+        return '<li>' + hl(f.metric) + ': <strong' + valueClass + '>' + hl(f.value) + '</strong> (' + hl(f.source) + ')</li>';
+      }).join("") + '</ul>'
   ).join("");
 }
 
@@ -2432,7 +2471,7 @@ function oneLinerFor(entry, cfg) {
     const line = proponent + " (" + (entry.agency || "") + ") " + verb + " \u201c" + entry.rule_name + "\u201d";
     const figs = entry.estimated_health_impact?.figures;
     if (figs && figs.length) {
-      return { line, figure: figs[0].metric + ": " + figs[0].value + "." };
+      return { line, figure: figs[0].metric + ": " + figs[0].value + ".", figureKind: figureKindOf(figs[0]) };
     }
     return { line: line + " (" + (entry.date_of_action || entry.administration || "") + ").", figure: null };
   }
@@ -2448,7 +2487,7 @@ function oneLinerFor(entry, cfg) {
     const line = (entry.institution || "") + " \u2014 " + (entry.title || "");
     if (figs.length) {
       const top = figs.reduce((a, b) => extractLargestNumber(b.value) > extractLargestNumber(a.value) ? b : a);
-      return { line, figure: top.metric + ": " + top.value };
+      return { line, figure: top.metric + ": " + top.value, figureKind: figureKindOf(top) };
     }
     return { line, figure: null };
   }
@@ -3460,7 +3499,7 @@ function renderGlobalResults(term, useRegex, useOneLiners, useImpactSort) {
       '<span class="oneliner-caret">▸</span>' +
       '<span class="oneliner-text"><span class="source-tag">' + m.sourceLabel + '</span>' +
       highlightMatches(oneLiner.line, term, useRegex) +
-      (oneLiner.figure ? ' <span class="oneliner-figure">' + highlightMatches(oneLiner.figure, term, useRegex) + '</span>' : '') +
+      (oneLiner.figure ? ' <span class="oneliner-figure' + (oneLiner.figureKind ? ' oneliner-figure-' + oneLiner.figureKind : '') + '">' + highlightMatches(oneLiner.figure, term, useRegex) + '</span>' : '') +
       '</span>';
 
     const detail = document.createElement("div");
