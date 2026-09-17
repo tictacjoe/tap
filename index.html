@@ -1461,17 +1461,58 @@ function combineTierText(parts) {
 }
 /* combine-tier-text:end */
 
+/* How many characters of *additional* tier text justify a separate
+   "more" click, and how short an entry's fullest tier has to be before
+   staged disclosure is skipped entirely in favor of revealing everything
+   on the first click -- both calibrated against this database's real
+   tier-length distribution (checked 2026-09-18): Reporting entries mostly
+   run under ~700 chars total, and even Deregulation/Gov Services' shortest
+   ~10% run under ~1200, well within "just show it all" range, while their
+   typical (median 2000-3000+ char) entries and Prosecution's (median
+   ~5500 chars) genuinely benefit from staged reveal. Fixes a real
+   complaint: a short entry's modest amount of extra detail was still
+   getting spread across all 3 raw tiers (brief/medium/full) just because
+   each happened to differ textually from the last, even when the *whole*
+   addition was too small to be worth splitting into multiple clicks. */
+const SHORT_ENTRY_CHARS = 1200;
+const MIN_STAGE_GROWTH_CHARS = 200;
+
 /* usable-tier-count:start */
-function usableTierCount(tiers) {
-  let count = 0;
-  let prev = "";
-  for (const t of tiers) {
-    const text = (t || "").trim();
-    if (!text || text === prev) break;
-    count++;
-    prev = text;
+// Builds the actual list of "more"-click reveal stages from an item's raw
+// [brief, medium, full] tiers -- replaces the old usableTierCount(), which
+// only collapsed tiers that were byte-for-byte identical to the previous
+// one, still exposing every tier that merely *differed* from the last as
+// its own click even when the difference was a single short clause. This
+// dedupes identical tiers first, then collapses to one single reveal stage
+// (the fullest tier) outright for a short entry, and otherwise merges any
+// stage that doesn't add at least MIN_STAGE_GROWTH_CHARS over the last
+// *kept* stage -- comparing against the last kept stage, not the raw
+// previous tier, so a skipped middle tier doesn't wrongly reset the bar.
+function buildDisplayTiers(tiers) {
+  const deduped = [];
+  for (const raw of tiers) {
+    const text = (raw || "").trim();
+    if (!text) break;
+    if (deduped.length && text === deduped[deduped.length - 1]) continue;
+    deduped.push(text);
   }
-  return count;
+  if (deduped.length === 0) return [];
+
+  const full = deduped[deduped.length - 1];
+  if (full.length <= SHORT_ENTRY_CHARS) return [full];
+
+  const staged = [deduped[0]];
+  for (let i = 1; i < deduped.length; i++) {
+    const candidate = deduped[i];
+    if (candidate.length - staged[staged.length - 1].length < MIN_STAGE_GROWTH_CHARS) continue;
+    staged.push(candidate);
+  }
+  // The merge loop can drop the true final tier if it never cleared the
+  // growth bar over whatever was last kept -- always keep the fullest
+  // version available as the last stage so "more" never stops short of
+  // everything there is to show.
+  if (staged[staged.length - 1] !== full) staged.push(full);
+  return staged;
 }
 /* usable-tier-count:end */
 
@@ -1736,17 +1777,23 @@ function buildHeadlineRow(item, displayDate) {
   tierEl.className = "field-value headline-tier-text";
   body.appendChild(tierEl);
 
-  const maxLevel = usableTierCount(item.tiers);
+  const displayTiers = buildDisplayTiers(item.tiers);
+  const maxLevel = displayTiers.length;
   let level = 0;
 
   const moreBtn = document.createElement("button");
   moreBtn.type = "button";
   moreBtn.className = "share-link-btn headline-more-btn";
   if (maxLevel === 0) {
+    // Nothing beyond the headline itself -- hidden outright rather than
+    // shown disabled, matching how this button already handles "no tiers
+    // at all" (as opposed to "tiers exist but none add up to a reveal
+    // worth a click," which buildDisplayTiers() now also collapses to 0
+    // for an entry whose tiers are all empty or pure duplicates).
     moreBtn.style.display = "none";
   } else {
     const updateTierDisplay = () => {
-      tierEl.textContent = level === 0 ? "" : item.tiers[level - 1];
+      tierEl.textContent = level === 0 ? "" : displayTiers[level - 1];
       tierEl.style.display = level === 0 ? "none" : "block";
       moreBtn.textContent = level >= maxLevel ? "less" : "more";
     };
