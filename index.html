@@ -225,11 +225,6 @@
   }
   .suggest-submit-btn:hover { opacity: 0.88; }
   .suggest-submit-btn:disabled { opacity: 0.5; cursor: default; }
-  .suggest-fallback-link {
-    font-size: 0.75rem;
-    color: var(--ink-faint);
-  }
-  .suggest-fallback-link a { color: var(--ink-faint); }
   .suggest-success {
     text-align: center;
     padding: 1rem 0;
@@ -1041,7 +1036,6 @@
       <input type="url" id="suggest-source-input" placeholder="https://...">
       <div class="suggest-submit-row">
         <button class="suggest-submit-btn" id="suggest-submit-btn" type="button">Submit</button>
-        <span class="suggest-fallback-link">Trouble submitting? <a href="https://docs.google.com/forms/d/e/1FAIpQLSeje_96qI3OzIVhd-4Ngb5WPA_6NmO20vY6AfcIFq_9b8jAFA/viewform" target="_blank" rel="noopener">Use the form directly →</a></span>
       </div>
     </div>
     <div id="suggest-success-view" class="suggest-success" hidden>
