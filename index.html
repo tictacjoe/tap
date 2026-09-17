@@ -3679,6 +3679,16 @@ document.getElementById("headlines-subfilter").addEventListener("change", (e) =>
 });
 document.getElementById("headlines-exclude-reporting-btn").addEventListener("click", () => {
   headlinesExcludeReporting = !headlinesExcludeReporting;
+  // Raw Reporting entries have no last_verified at all, so "Recently
+  // updated first" is meaningless with them included (they'd just sort
+  // last, en masse, under "Newest first"'s own behavior anyway) -- but
+  // once they're excluded, the remaining curated entries are exactly the
+  // ones "Recently updated" was built for (SCHEMA.md's documented
+  // date_of_action tradeoff: a substantively-updated entry can carry an
+  // old leading event date and get buried under "Newest first"). Default
+  // to it on exclude, back to "Newest first" when reporting is re-included.
+  headlinesSortValue = headlinesExcludeReporting ? "updated-desc" : "date-desc";
+  document.getElementById("headlines-sort").value = headlinesSortValue;
   headlinesRenderLimit = RENDER_STEP;
   renderHeadlinesView();
 });
