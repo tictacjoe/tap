@@ -358,7 +358,7 @@
 
   /* ================= TABS ================= */
   /* Replaced the five database tabs (a row of buttons) with a single
-     dropdown -- same "— search or browse by database —" label above
+     dropdown -- same "— browse by index —" label above
      it, same TRACKERS-driven option list/counts, just one control
      instead of five, so there's no longer a tab-width-vs-label-length
      tradeoff to size around. Centered rather than left-aligned to
@@ -377,7 +377,7 @@
     cursor: pointer;
   }
   /* Used on the Records landing view, where the select would otherwise
-     sit redundantly below the "— search or browse by database —"
+     sit redundantly below the "— browse by index —"
      button and duplicate what that button already opens. Deliberately
      NOT display:none -- showPicker() (called by the button's click
      handler) requires the element to still be "rendered", which
@@ -1045,7 +1045,7 @@
   </div>
 
   <div class="regex-error" id="regex-error"></div>
-  <button type="button" class="browse-instead" id="browse-instead">— search or browse by database —</button>
+  <button type="button" class="browse-instead" id="browse-instead">— browse by index —</button>
 </header>
 
 <div class="nav-actions">
@@ -3561,7 +3561,7 @@ document.getElementById("back-to-top-btn").addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-// "— search or browse by database —" is a button, not just a label, so
+// "— browse by index —" is a button, not just a label, so
 // it can open the database dropdown directly instead of just describing
 // it. showPicker() (Chrome 121+/Edge/Opera; not yet in Firefox or
 // Safari) is the only standard way to programmatically open a native
