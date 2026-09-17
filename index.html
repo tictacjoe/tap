@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="A sourced record of corporate deregulation, cabinet-level accountability, government service redirection, and daily reporting. Type a topic and see exactly what's documented — every entry sourced, nothing asserted without a citation.">
-<title>The Accountability Project</title>
+<title>TAP</title>
 <style>
   :root {
     --paper: #EDEFE7;
@@ -1754,6 +1754,14 @@ function renderHeadlinesView(appendOnly) {
   const container = document.getElementById("headlines-view");
   const countEl = document.getElementById("headlines-count");
   let items = buildHeadlineItems();
+
+  // Records aggregates every tracker, but some curated entries (e.g. the
+  // Corporate Deregulation tracker's "Trump I" background rollbacks, or
+  // multi-stage sagas that start in late 2024) legitimately carry a
+  // pre-2025 leading date. They belong on their home tracker tab; this
+  // feed stays scoped to "since Jan 2025" like the Reporting tracker it's
+  // built around.
+  items = items.filter(i => extractFirstDate(i.date) >= 20250101);
 
   if (headlinesExcludeReporting) {
     items = items.filter(i => i.tracker !== "tracker");
