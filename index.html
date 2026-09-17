@@ -1775,6 +1775,13 @@ function buildHeadlineRow(item, displayDate) {
   dbBtn.title = item.id ? "Jump to this entry in " + trackerLabel : "Jump to " + trackerLabel;
   dbBtn.textContent = trackerAbbr;
   dbBtn.addEventListener("click", () => {
+    // Stamp the CURRENT history entry (still Records, not yet navigated)
+    // with a snapshot via replaceState, then push a new entry for the
+    // page we're about to show -- so a later Back lands on the replaced
+    // entry and the popstate handler below restores Records from its
+    // stamped snapshot, rather than leaving the site.
+    history.replaceState(captureHeadlinesSnapshot(), "", location.href);
+    history.pushState({ type: "entry", tracker: item.tracker, id: item.id || null }, "", location.href);
     if (item.id) {
       goToTrackerHome(item.tracker);
       openCardById(item.id);
@@ -1947,6 +1954,43 @@ function renderHeadlinesView(appendOnly) {
 
   const excludeBtn = document.getElementById("headlines-exclude-reporting-btn");
   excludeBtn.classList.toggle("active", headlinesExcludeReporting);
+}
+
+/* Records/Headlines has no URL or history footprint of its own -- every
+   filter/sort/scroll change is plain in-memory state, so following a
+   row's database-jump button (buildHeadlineRow()'s dbBtn) away from
+   Records left the browser Back button with nothing of this site's own
+   to step to, and it exited the site entirely instead of returning to
+   the visitor's place on Records. captureHeadlinesSnapshot()/
+   restoreHeadlinesSnapshot() are the save/restore pair dbBtn's click
+   handler uses (via history.replaceState/pushState) to make Back
+   actually return to Records in that state -- see that handler for how
+   the two history entries are set up. */
+function captureHeadlinesSnapshot() {
+  return {
+    type: "headlines",
+    sortValue: headlinesSortValue,
+    excludeReporting: headlinesExcludeReporting,
+    trackerFilter: headlinesTrackerFilter,
+    subFilter: headlinesSubFilter,
+    renderLimit: headlinesRenderLimit,
+    scrollY: window.scrollY,
+  };
+}
+
+function restoreHeadlinesSnapshot(snap) {
+  headlinesSortValue = snap.sortValue;
+  headlinesExcludeReporting = snap.excludeReporting;
+  headlinesTrackerFilter = snap.trackerFilter;
+  headlinesSubFilter = snap.subFilter;
+  headlinesRenderLimit = snap.renderLimit;
+  activeTracker = "headlines";
+  document.getElementById("global-search").value = "";
+  renderDispatch();
+  // Scroll restoration has to wait a frame -- renderDispatch() just
+  // rebuilt the row list, and clientHeight/scrollHeight aren't final
+  // until the browser has laid the new DOM out.
+  requestAnimationFrame(() => window.scrollTo(0, snap.scrollY));
 }
 
 function renderHeadlinesControls() {
@@ -3778,6 +3822,23 @@ browseBackdrop.addEventListener("click", (e) => {
 });
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && !browseBackdrop.hidden) closeBrowseModal();
+});
+
+// Counterpart to the dbBtn click handler in buildHeadlineRow() -- restores
+// Records from its stamped snapshot on Back, or replays the jump to the
+// specific tracker entry on Forward. A null e.state means the visitor has
+// popped past every state this page ever pushed (e.g. they loaded the page
+// fresh and pressed Back without ever using a database-jump button) --
+// nothing to restore, so this deliberately does nothing and lets the
+// browser's own default navigation take over.
+window.addEventListener("popstate", (e) => {
+  if (!e.state) return;
+  if (e.state.type === "headlines") {
+    restoreHeadlinesSnapshot(e.state);
+  } else if (e.state.type === "entry") {
+    goToTrackerHome(e.state.tracker);
+    if (e.state.id) openCardById(e.state.id);
+  }
 });
 
 document.getElementById("start-over-btn").addEventListener("click", () => {
