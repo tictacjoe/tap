@@ -21,6 +21,13 @@
     --brass: #96762C;
     --brass-light: #EFE7D2;
     --highlight: #F2D98D;
+    /* Brighter, more saturated than --flag/--verified on purpose --
+       those are tuned for small checkmark/contested-tag accents, not
+       for standing out against a paragraph of bold ink-colored figure
+       text (Joe: the original harm/savings coloring was too close to
+       --ink's near-black to read as colored at a glance). */
+    --harm-figure: #C0392B;
+    --savings-figure: #1E8449;
   }
 
   * { box-sizing: border-box; }
@@ -390,8 +397,8 @@
      where the descriptive part ends and the actual number begins. Bold +
      accent color makes it read as its own distinct chunk at a glance. */
   .oneliner-figure { font-weight: bold; color: var(--brass); }
-  .oneliner-figure-harm { color: var(--flag); }
-  .oneliner-figure-savings { color: var(--verified); }
+  .oneliner-figure-harm { color: var(--harm-figure); }
+  .oneliner-figure-savings { color: var(--savings-figure); }
   .oneliner-list {
     border: 1px solid var(--rule-strong);
     border-radius: 4px;
@@ -812,8 +819,8 @@
     margin: 0.6rem 0 0.2rem;
   }
   .figure-group-label:first-child { margin-top: 0.3rem; }
-  .figure-harm-value { color: var(--flag); }
-  .figure-savings-value { color: var(--verified); }
+  .figure-harm-value { color: var(--harm-figure); }
+  .figure-savings-value { color: var(--savings-figure); }
 
   .confidence-box {
     background: var(--brass-light);
