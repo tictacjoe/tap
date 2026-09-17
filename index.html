@@ -1702,7 +1702,7 @@ const HEADLINE_TRACKER_ABBR = {
   communitytopics: "CC",
 };
 
-function buildHeadlineRow(item) {
+function buildHeadlineRow(item, displayDate) {
   const row = document.createElement("div");
   row.className = "headline-entry";
 
@@ -1720,8 +1720,11 @@ function buildHeadlineRow(item) {
   // packHeadline() repacking expects headline-shaped text, not a full
   // paragraph, so it's left untouched.
   const tooltipText = (item.tiers && item.tiers[0]) || item.headline;
+  // displayDate defaults to the event date (item.date), same as always,
+  // for every caller except renderHeadlinesView()'s "Recently updated"
+  // sort mode, which passes last_verified instead -- see that call site.
   line.innerHTML =
-    '<span class="headline-row-date">' + escapeHtml(formatHeadlineDate(item.date)) + '</span>' +
+    '<span class="headline-row-date">' + escapeHtml(formatHeadlineDate(displayDate ?? item.date)) + '</span>' +
     '<span class="headline-row-text" data-full-headline="' + escapeHtml(item.headline) + '" title="' + escapeHtml(tooltipText) + '">' + escapeHtml(item.headline) + '</span>';
   const textSpan = line.querySelector(".headline-row-text");
   row.appendChild(line);
@@ -1887,6 +1890,15 @@ function renderHeadlinesView(appendOnly) {
   items.sort((a, b) => {
     if (headlinesSortValue === "date-asc") return extractFirstDate(a.date) - extractFirstDate(b.date);
     if (headlinesSortValue === "alpha") return a.headline.localeCompare(b.headline);
+    // "Recently updated" sorts by last_verified, not the event date --
+    // a substantively-updated entry (e.g. a proposed rule that just
+    // finalized) can carry an old leading date_of_action, which the
+    // default "Newest first" sort (below) would otherwise bury far down
+    // the list despite today's real news being the update itself.
+    // Reporting/Community Topics carry no last_verified at all
+    // (extractFirstDate(null) -> 0), so they naturally sort last here
+    // rather than needing a separate exclusion.
+    if (headlinesSortValue === "updated-desc") return extractFirstDate(b.trail.lastVerified) - extractFirstDate(a.trail.lastVerified);
     return extractFirstDate(b.date) - extractFirstDate(a.date);
   });
 
@@ -1909,8 +1921,15 @@ function renderHeadlinesView(appendOnly) {
   // avoid. fitHeadlineRowText() needs real layout (clientWidth is 0 on
   // a detached node), so these are only fit after the append below.
   const newTextSpans = [];
+  // In "Recently updated" mode, the row's date badge shows last_verified
+  // (what the sort order is actually keyed on) instead of the event date
+  // -- otherwise a row sorted to the top for a just-finalized update
+  // would confusingly display its original, much older date_of_action.
+  const rowDisplayDate = item => headlinesSortValue === "updated-desc"
+    ? (item.trail.lastVerified || item.date)
+    : item.date;
   newlyRendered.forEach(item => {
-    const row = buildHeadlineRow(item);
+    const row = buildHeadlineRow(item, rowDisplayDate(item));
     newTextSpans.push(row.querySelector(".headline-row-text"));
     frag.appendChild(row);
   });
@@ -1935,6 +1954,7 @@ function renderHeadlinesControls() {
   sortSel.innerHTML =
     '<option value="date-desc">Newest first</option>' +
     '<option value="date-asc">Oldest first</option>' +
+    '<option value="updated-desc">Recently updated first</option>' +
     '<option value="alpha">Alphabetical</option>';
   sortSel.value = headlinesSortValue;
 
