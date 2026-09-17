@@ -89,20 +89,22 @@
   .global-search-box input[type="text"]::placeholder { color: var(--ink-faint); }
   .browse-instead {
     display: block;
-    max-width: 700px;
+    width: fit-content;
     margin: 1.75rem auto 0;
     text-align: center;
     font-family: ui-monospace, monospace;
     font-size: 0.72rem;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    color: var(--ink-faint);
-    background: none;
-    border: none;
-    padding: 0;
+    color: var(--ink-soft);
+    background: var(--paper-card);
+    border: 1px solid var(--rule-strong);
+    border-radius: 4px;
+    padding: 0.55rem 1rem;
     cursor: pointer;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
   }
-  .browse-instead:hover { color: var(--ink-soft); text-decoration: underline; }
+  .browse-instead:hover { background: var(--brass); color: var(--paper-card); border-color: var(--brass); }
 
   /* ================= NAV ACTIONS (floating) ================= */
   .nav-actions {
@@ -373,6 +375,25 @@
     color: var(--ink);
     border-radius: 3px;
     cursor: pointer;
+  }
+  /* Used on the Records landing view, where the select would otherwise
+     sit redundantly below the "— search or browse by database —"
+     button and duplicate what that button already opens. Deliberately
+     NOT display:none -- showPicker() (called by the button's click
+     handler) requires the element to still be "rendered", which
+     display:none/visibility:hidden both fail. This keeps a real,
+     zero-footprint layout box instead. Only applied on Records; a
+     tracker's own page still shows the select normally as its active-
+     database indicator/switcher. */
+  .tabs-select.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    border: 0;
   }
   .records-tab-row {
     max-width: 880px;
@@ -1110,7 +1131,7 @@
 <footer class="site-footer">
   <div class="footer-content">
     <p class="footer-copyright">
-      TAP&trade; &bull; Published by <strong>JTDA LLC</strong> &bull; &copy; 2025&ndash;2026.
+      TAP&trade; &copy; 2025&ndash;2026.
     </p>
     <nav class="footer-links">
       <a href="TERMS.md">Terms of Use</a> &bull;
@@ -3436,6 +3457,7 @@ function renderDispatch() {
   renderTabs();
 
   if (activeTracker === "headlines") {
+    tabsEl.classList.add("visually-hidden");
     mainEl.style.display = "none";
     headlinesWrapEl.style.display = "";
     renderHeadlinesControls();
@@ -3443,6 +3465,7 @@ function renderDispatch() {
     return;
   }
 
+  tabsEl.classList.remove("visually-hidden");
   mainEl.style.display = "";
   controlsEl.style.display = "";
   headlinesWrapEl.style.display = "none";
