@@ -88,6 +88,7 @@
   }
   .global-search-box input[type="text"]::placeholder { color: var(--ink-faint); }
   .browse-instead {
+    display: block;
     max-width: 700px;
     margin: 1.75rem auto 0;
     text-align: center;
@@ -96,7 +97,12 @@
     letter-spacing: 0.05em;
     text-transform: uppercase;
     color: var(--ink-faint);
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
   }
+  .browse-instead:hover { color: var(--ink-soft); text-decoration: underline; }
 
   /* ================= NAV ACTIONS (floating) ================= */
   .nav-actions {
@@ -1065,7 +1071,7 @@
   <input type="text" name="entry.694581047" id="update-request-hidden-title">
 </form>
 
-<p class="browse-instead" id="browse-instead">— search or browse by database —</p>
+<button type="button" class="browse-instead" id="browse-instead">— search or browse by database —</button>
 
 <select class="tabs-select" id="tabs"></select>
 <div class="records-tab-row" id="records-tab-row"></div>
@@ -3512,6 +3518,23 @@ document.getElementById("global-search-clear-btn").addEventListener("click", () 
    above) so the page looks exactly like a first visit. */
 document.getElementById("back-to-top-btn").addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+// "— search or browse by database —" is a button, not just a label, so
+// it can open the database dropdown directly instead of just describing
+// it. showPicker() (Chrome 121+/Edge/Opera; not yet in Firefox or
+// Safari) is the only standard way to programmatically open a native
+// <select>'s list -- .click()/.focus() alone don't do it in any browser.
+// Where showPicker() isn't available, falling back to .focus() at least
+// gets the select keyboard-ready (arrow keys / Enter / typeahead all
+// work from there) instead of doing nothing.
+document.getElementById("browse-instead").addEventListener("click", () => {
+  const tabsSelect = document.getElementById("tabs");
+  if (typeof tabsSelect.showPicker === "function") {
+    tabsSelect.showPicker();
+  } else {
+    tabsSelect.focus();
+  }
 });
 
 document.getElementById("start-over-btn").addEventListener("click", () => {
