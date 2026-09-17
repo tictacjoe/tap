@@ -1242,7 +1242,7 @@ const TRACKERS = {
     kind: "govservices",
   },
   tracker: {
-    label: "Administration events reports since Jan 2025",
+    label: "Reporting",
     data: [],
     titleField: "what_happened",
     idField: null,
@@ -1922,14 +1922,9 @@ function renderHeadlinesControls() {
     '<option value="alpha">Alphabetical</option>';
   sortSel.value = headlinesSortValue;
 
-  // Shortened to "Reporting" only in this dropdown -- TRACKERS.tracker.label
-  // stays "Administration events reports since Jan 2025" everywhere else
-  // (the main database picker, the browse-by-index dialog, tab counts),
-  // since this is the one spot where the full name was crowding a
-  // dropdown full of short database names.
   const trackerSel = document.getElementById("headlines-tracker-filter");
   trackerSel.innerHTML = '<option value="">All databases</option>' +
-    Object.keys(TRACKERS).filter(key => key !== "communitytopics").map(key => '<option value="' + key + '">' + (key === "tracker" ? "Reporting" : TRACKERS[key].label) + '</option>').join("");
+    Object.keys(TRACKERS).filter(key => key !== "communitytopics").map(key => '<option value="' + key + '">' + TRACKERS[key].label + '</option>').join("");
   trackerSel.value = headlinesTrackerFilter;
 
   // The Records category subfilter (Corruption, Disinformation, etc., for
@@ -2419,14 +2414,44 @@ function escapeRegExp(str) {
   return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
+/* Splits a plain-mode search term into tokens for matchesTerm()/
+   highlightMatches() -- a "quoted phrase" stays together as one token
+   (matched as an exact adjacent sequence via tokenPattern() below),
+   while unquoted text still splits on whitespace into independent
+   words, exactly like before quoting existed. An unterminated trailing
+   quote (typed `"Supreme Court` and forgot to close it) has no closing
+   `"` for the first regex branch to match, so it falls through to the
+   plain-word branch with the stray `"` stripped out -- degrading to an
+   ordinary independent-word search for "Supreme" and "Court" rather
+   than becoming a literal-quote-character token nothing will ever
+   match. */
+function parseSearchTokens(term) {
+  const tokens = [];
+  const re = /"([^"]+)"|(\S+)/g;
+  let m;
+  while ((m = re.exec(term))) {
+    const token = m[1] !== undefined ? m[1].trim() : m[2].replace(/"/g, "");
+    if (token) tokens.push(token);
+  }
+  return tokens;
+}
+
+/* Builds one token (single word or quoted multi-word phrase) into a
+   \b-bounded regex fragment. \s+ between a phrase's own words tolerates
+   whatever whitespace actually separates them in the source text
+   (a line break mid-sentence, doubled spaces) rather than demanding the
+   exact single space the user happened to type between quotes. */
+function tokenPattern(token) {
+  return "\\b" + token.split(/\s+/).filter(Boolean).map(escapeRegExp).join("\\s+") + "\\b";
+}
+
 /* Escapes the text first (so entry data can never inject stray HTML),
    then wraps matches of the search term in <mark>. In plain-text mode
-   the term is split into words (mirroring matchesTerm()'s plain-mode
-   behavior), each regex-escaped and wrapped in \b word boundaries so
-   special characters like "?" or "(" are matched literally and only
-   whole-word matches are highlighted, and any of the words lights up
-   wherever it appears -- only in regex mode does the term act as an
-   actual unbounded pattern. */
+   the term is split into tokens (mirroring matchesTerm()'s plain-mode
+   behavior -- see parseSearchTokens()), each turned into a \b-bounded
+   pattern so special characters like "?" or "(" are matched literally,
+   and any token lights up wherever it appears -- only in regex mode
+   does the term act as an actual unbounded pattern. */
 function highlightMatches(text, term, useRegex) {
   const escaped = escapeHtml(text);
   if (!term) return escaped;
@@ -2435,9 +2460,9 @@ function highlightMatches(text, term, useRegex) {
     if (useRegex) {
       pattern = term;
     } else {
-      const words = term.trim().split(/\s+/).filter(Boolean);
-      if (!words.length) return escaped;
-      pattern = words.map(w => "\\b" + escapeRegExp(w) + "\\b").join("|");
+      const tokens = parseSearchTokens(term);
+      if (!tokens.length) return escaped;
+      pattern = tokens.map(tokenPattern).join("|");
     }
     const re = new RegExp(pattern, "gi");
     return escaped.replace(re, (match) => "<mark class=\"hl\">" + match + "</mark>");
@@ -2504,14 +2529,18 @@ function oneLinerFor(entry, cfg) {
    returns null so the caller can show an error rather than silently
    falling back to a different match behavior.
 
-   Plain mode splits the term on whitespace and requires every word to
-   appear somewhere in the haystack (each still \b-bounded, so "epa"
-   still won't match inside "department") -- an earlier version required
-   the whole term to appear as one literal phrase in that exact word
-   order, so "aircraft carrier lincoln" failed to match an entry that
-   only ever wrote "the aircraft carrier USS Abraham Lincoln". Regex
-   mode is unaffected since it's an explicit opt-in to pattern matching,
-   phrase order and all. */
+   Plain mode splits the term into tokens (see parseSearchTokens()) and
+   requires every token to appear somewhere in the haystack (each still
+   \b-bounded, so "epa" still won't match inside "department") -- an
+   earlier version required the whole term to appear as one literal
+   phrase in that exact word order, so "aircraft carrier lincoln" failed
+   to match an entry that only ever wrote "the aircraft carrier USS
+   Abraham Lincoln". A "quoted phrase" is the one exception: it's kept
+   together as a single token requiring that exact adjacent sequence,
+   for searches like "Supreme Court" that need to exclude unrelated
+   mentions of "court" elsewhere in the same entry. Regex mode is
+   unaffected since it's an explicit opt-in to pattern matching, phrase
+   order and all. */
 /* Builds the search haystack out of only the fields actually rendered
    somewhere in the UI for this entry -- title, card meta line, and the
    expandable detail body -- rather than the entire raw record. Fields
@@ -2575,9 +2604,9 @@ function matchesTerm(haystack, term, useRegex) {
       return null; // signals invalid regex to the caller
     }
   }
-  const words = term.trim().split(/\s+/).filter(Boolean);
-  if (!words.length) return true;
-  return words.every(w => new RegExp("\\b" + escapeRegExp(w) + "\\b", "i").test(haystack));
+  const tokens = parseSearchTokens(term);
+  if (!tokens.length) return true;
+  return tokens.every(t => new RegExp(tokenPattern(t), "i").test(haystack));
 }
 /* matches-term:end */
 
@@ -4010,7 +4039,7 @@ const TapDemoTour = (() => {
       }
     },
     {
-      title: "Administration Events Reports Since Jan 2025",
+      title: "Reporting",
       desc: "A high-volume news-scrape tracker with over 13,000 entries -- every article ingested since Inauguration Day, searchable and sortable by most recent activity.",
       target: () => document.getElementById("count"),
       action: async () => {

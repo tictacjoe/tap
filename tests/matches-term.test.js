@@ -86,3 +86,27 @@ test("highlightMatches: multi-word plain term highlights words wherever they app
     'The <mark class="hl">aircraft</mark> <mark class="hl">carrier</mark> USS Abraham <mark class="hl">Lincoln</mark> deployed.'
   );
 });
+
+test('plain mode: quoted phrase requires the words adjacent, in order', () => {
+  assert.equal(matchesTerm("The Supreme Court ruled today.", '"Supreme Court"', false), true);
+  assert.equal(
+    matchesTerm("A district court and the supreme leader both weighed in.", '"Supreme Court"', false),
+    false
+  );
+});
+
+test('plain mode: quoted phrase can combine with an independent unquoted word', () => {
+  assert.equal(matchesTerm("EPA cited the Supreme Court ruling.", '"Supreme Court" EPA', false), true);
+  assert.equal(matchesTerm("The Supreme Court ruled today.", '"Supreme Court" EPA', false), false);
+});
+
+test('plain mode: unterminated quote degrades to independent-word matching instead of matching nothing', () => {
+  assert.equal(matchesTerm("The Supreme Court ruled today.", '"Supreme Court', false), true);
+});
+
+test('highlightMatches: quoted phrase highlights only the adjacent match, not stray occurrences of either word', () => {
+  assert.equal(
+    highlightMatches("The Supreme Court and a district court both ruled.", '"Supreme Court"', false),
+    'The <mark class="hl">Supreme Court</mark> and a district court both ruled.'
+  );
+});
