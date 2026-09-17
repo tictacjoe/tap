@@ -1562,7 +1562,10 @@ function buildHeadlineItems() {
   TRACKERS.deregulation.data.forEach(e => items.push(adaptDeregulationEntry(e)));
   TRACKERS.govservices.data.forEach(e => items.push(adaptGovServicesEntry(e)));
   TRACKERS.prosecution.data.forEach(e => items.push(adaptProsecutionEntry(e)));
-  TRACKERS.communitytopics.data.forEach(e => items.push(adaptCommunityTopicEntry(e)));
+  // Claim-checks (community-submitted topics) are deliberately excluded
+  // from Records -- that feed aggregates TAP's own curated trackers plus
+  // the raw Reporting scrape, not the separate submission-triage queue.
+  // Still fully browsable on its own "Claim-checks" database tab.
   TRACKERS.tracker.data.forEach(e => items.push(adaptReportingEntry(e)));
   return items;
 }
@@ -1824,7 +1827,7 @@ function renderHeadlinesControls() {
 
   const trackerSel = document.getElementById("headlines-tracker-filter");
   trackerSel.innerHTML = '<option value="">All databases</option>' +
-    Object.keys(TRACKERS).map(key => '<option value="' + key + '">' + TRACKERS[key].label + '</option>').join("");
+    Object.keys(TRACKERS).filter(key => key !== "communitytopics").map(key => '<option value="' + key + '">' + TRACKERS[key].label + '</option>').join("");
   trackerSel.value = headlinesTrackerFilter;
 
   const subSel = document.getElementById("headlines-subfilter");
