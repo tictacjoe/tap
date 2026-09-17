@@ -1438,6 +1438,7 @@ function adaptDeregulationEntry(entry) {
     date: entry.date_of_action || entry.date_added || entry.last_verified || null,
     tracker: "deregulation",
     category: entry.domain || null,
+    id: entry.id || null,
   };
 }
 /* adapt-deregulation-entry:end */
@@ -1466,6 +1467,7 @@ function adaptGovServicesEntry(entry) {
     date: entry.date_of_action || entry.last_verified || entry.date_added || null,
     tracker: "govservices",
     category: entry.domain || null,
+    id: entry.id || null,
   };
 }
 /* adapt-govservices-entry:end */
@@ -1496,6 +1498,7 @@ function adaptProsecutionEntry(entry) {
     date: entry.date_of_action || entry.date_added || entry.last_verified || null,
     tracker: "prosecution",
     category: entry.offense_category || null,
+    id: entry.id || null,
   };
 }
 /* adapt-prosecution-entry:end */
@@ -1547,6 +1550,11 @@ function adaptReportingEntry(entry) {
     date: entry.date || null,
     tracker: "tracker",
     category: entry.category || null,
+    // Reporting has no idField (raw scraped posts, not individually
+    // stamped with a stable id) -- explicitly null rather than omitted,
+    // so buildHeadlineRow()'s "can this row deep-link to its own card?"
+    // check has a real value to test instead of relying on undefined.
+    id: null,
   };
 }
 /* adapt-reporting-entry:end */
@@ -1644,22 +1652,30 @@ function buildHeadlineRow(item) {
   }
   line.insertBefore(moreBtn, textSpan);
 
-  // The tracker abbreviation is a real jump-tab, not just a label --
-  // clicking it switches the "search or browse by database" dropdown
-  // to this item's source database and lands on that database's own
-  // home view (e.g. an "rpt" tag jumps to the Administration events
-  // reports tab). It does not deep-link to this specific entry's own
-  // card there -- none of the adapt*Entry() item shapes above carry an
-  // id, and the Reporting tracker (by far the most common source in
-  // this feed) has no idField to deep-link to in the first place, so
-  // "jump to the database" is the one behavior that works uniformly
-  // across all five trackers.
+  // The tracker abbreviation is a real jump-tab, not just a label.
+  // Deregulation/Cabinet-Level Accountability/Government Service
+  // Redirection items carry the source entry's own id (see the
+  // adapt*Entry() functions above), so for those it reuses the same
+  // goToTrackerHome() + openCardById() pair the "Copy link" hash-based
+  // deep link already relies on -- lands directly on that entry's own
+  // card, opened and scrolled to. Reporting items have no id (raw
+  // scraped posts, no idField on that tracker at all -- see
+  // adaptReportingEntry()), so there's nothing to deep-link to; those
+  // fall back to just switching the database dropdown to Reporting's
+  // home view instead.
   const dbBtn = document.createElement("button");
   dbBtn.type = "button";
   dbBtn.className = "share-link-btn headline-row-tracker";
-  dbBtn.title = "Jump to " + trackerLabel;
+  dbBtn.title = item.id ? "Jump to this entry in " + trackerLabel : "Jump to " + trackerLabel;
   dbBtn.textContent = trackerAbbr;
-  dbBtn.addEventListener("click", () => selectDatabaseTab(item.tracker));
+  dbBtn.addEventListener("click", () => {
+    if (item.id) {
+      goToTrackerHome(item.tracker);
+      openCardById(item.id);
+    } else {
+      selectDatabaseTab(item.tracker);
+    }
+  });
   line.insertBefore(dbBtn, textSpan);
 
   const trailBtn = document.createElement("button");
