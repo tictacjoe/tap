@@ -406,7 +406,7 @@
 
   /* ================= TABS ================= */
   /* Replaced the five database tabs (a row of buttons) with a single
-     dropdown -- same "— browse by index —" label above
+     dropdown -- same "— browse by database —" label above
      it, same TRACKERS-driven option list/counts, just one control
      instead of five, so there's no longer a tab-width-vs-label-length
      tradeoff to size around. Centered rather than left-aligned to
@@ -425,7 +425,7 @@
     cursor: pointer;
   }
   /* Used on the Records landing view, where the select would otherwise
-     sit redundantly below the "— browse by index —" button, which now
+     sit redundantly below the "— browse by database —" button, which now
      opens its own dialog (see #browse-backdrop) rather than this select.
      Only applied on Records; a tracker's own page still shows the
      select normally as its active-database indicator/switcher. */
@@ -1082,7 +1082,7 @@
   </div>
 
   <div class="regex-error" id="regex-error"></div>
-  <button type="button" class="browse-instead" id="browse-instead">— browse by index —</button>
+  <button type="button" class="browse-instead" id="browse-instead">— browse by database —</button>
 </header>
 
 <div class="nav-actions">
@@ -1125,7 +1125,7 @@
 <div class="suggest-backdrop" id="browse-backdrop" hidden>
   <div class="suggest-modal" role="dialog" aria-modal="true" aria-labelledby="browse-modal-title">
     <button class="suggest-close-btn" id="browse-close-btn" type="button" title="Close">✕</button>
-    <h2 id="browse-modal-title">Browse by Index</h2>
+    <h2 id="browse-modal-title">Browse by Database</h2>
     <p class="suggest-desc">Choose a database to browse.</p>
     <div class="browse-options" id="browse-options"></div>
   </div>
@@ -3617,7 +3617,7 @@ document.getElementById("back-to-top-btn").addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-// "— browse by index —" opens a real dialog listing every database,
+// "— browse by database —" opens a real dialog listing every database,
 // rather than trying to force the native <select> open programmatically.
 // An earlier version called showPicker() on #tabs -- the standard API
 // for this exact purpose -- but it proved unreliable in practice (Joe
