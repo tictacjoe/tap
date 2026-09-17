@@ -1,14 +1,14 @@
 # Terms of Use & Data Provenance Policy
-**The Accountability Project™ (TAP)**
+**TAP™**
 **Effective Date:** September 8, 2026
 **Curator & Publisher:** JTDA LLC
 
 ### 1. Acceptance of Terms
-By accessing, browsing, reading, downloading, or programmatically querying data from The Accountability Project™ (accessible via https://tictacjoe.github.io/ or related TAP repositories), you agree to be bound by these Terms of Use and the accompanying CC BY-NC-SA 4.0 license (see `LICENSE.md`).
+By accessing, browsing, reading, downloading, or programmatically querying data from TAP™ (accessible via https://tictacjoe.github.io/ or related TAP repositories), you agree to be bound by these Terms of Use and the accompanying CC BY-NC-SA 4.0 license (see `LICENSE.md`).
 
 ### 2. Mandatory Attribution
 Any public citation, journalistic reference, academic paper, policy brief, or derivative graphic utilizing TAP data, cluster groupings, or verification verdicts must provide explicit attribution in the following format:
-> "Source: The Accountability Project™ (TAP), a project of JTDA LLC (https://tictacjoe.github.io/)."
+> "Source: TAP™, a project of JTDA LLC (https://tictacjoe.github.io/)."
 
 ### 3. Artificial Intelligence & Automated Training Restrictions
 - **Civic & Academic AI Evaluation:** Academic research evaluating public accountability data is permitted under CC BY-NC-SA 4.0 terms.
@@ -16,10 +16,10 @@ Any public citation, journalistic reference, academic paper, policy brief, or de
 - **Robots / Crawlers:** Automated crawlers must respect `robots.txt` directives and rate-limits.
 
 ### 4. Journalism & Independent Press Exception
-Fair quotation, excerpting, citation, and embedding of TAP data, summaries, or confidence findings by accredited journalists, independent news outlets, policy commentators, and investigative platforms—including subscription-supported or ad-supported media (e.g. newspapers, podcasts, newsletters, and Substacks)—is explicitly recognized as permitted civic use under these terms, provided mandatory attribution to JTDA LLC and The Accountability Project™ (Section 2) is preserved.
+Fair quotation, excerpting, citation, and embedding of TAP data, summaries, or confidence findings by accredited journalists, independent news outlets, policy commentators, and investigative platforms—including subscription-supported or ad-supported media (e.g. newspapers, podcasts, newsletters, and Substacks)—is explicitly recognized as permitted civic use under these terms, provided mandatory attribution to JTDA LLC and TAP™ (Section 2) is preserved.
 
 ### 5. Integrity of Falsifiable Standards
-The Accountability Project™ operates on strict, falsifiable standards designed to document official conduct with legal-grade citations. Users may not:
+TAP™ operates on strict, falsifiable standards designed to document official conduct with legal-grade citations. Users may not:
 - Misrepresent preliminary research briefs or flagged gate alerts as final verified entries.
 - Remove confidence caveats, status indicators, or verification notes when quoting TAP entries.
 - Attribute unofficial political conjecture or unverified claims to TAP.
