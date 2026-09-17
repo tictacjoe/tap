@@ -762,6 +762,20 @@
     color: var(--brass);
     white-space: nowrap;
     flex-shrink: 0;
+    /* Fixed to the widest medium label's own rendered width
+       ("Accountability", 14 characters -> ~98.5px measured live, not the
+       ~86px a naive 15ch would suggest -- this button is border-box, so
+       padding/border eat into the ch budget, and uppercase+letter-spacing
+       add a bit more) so every row's tracker tag renders at the same
+       width regardless of which database it names -- otherwise a
+       mixed-tracker view (the common case) has the "notes" button and
+       headline text starting at a different x-position on every row,
+       since the labels range from 9 ("Reporting") to 14 characters. Same
+       reasoning as headline-row-date's own min-width below. Overridden
+       narrower for the <600px abbreviated fallback, where the codes are
+       already all 3 characters. */
+    min-width: 18ch;
+    text-align: center;
   }
   /* Medium theme-first label (e.g. "Accountability") shown by default;
      the 600px media query below swaps to tracker-name-abbr instead --
@@ -906,6 +920,12 @@
     .stamp { position: static; transform: rotate(-3deg); display: inline-block; margin-top: 0.4rem; }
     .headline-row-tracker .tracker-name-medium { display: none; }
     .headline-row-tracker .tracker-name-abbr { display: inline; }
+    /* All four codes (CDR/CLA/GSR/RPT) are 3 characters -- narrower than
+       the default 15ch, which would otherwise waste width this
+       breakpoint can't spare (this is the exact width budget
+       fitHeadlineRowText() and the earlier overflow fix were built
+       around). */
+    .headline-row-tracker { min-width: 4ch; }
   }
 
   /* ================= DEMO MODE & GUIDED TOUR ================= */
