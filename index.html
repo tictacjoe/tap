@@ -334,6 +334,12 @@
     background: var(--paper);
   }
   .oneliner-row.open + .oneliner-detail { display: block; }
+  /* The trailing quantified figure (health/mortality risk, cost/savings
+     claim, etc.) used to run on directly after the rule name in the same
+     weight and color as the rest of the sentence -- easy to lose track of
+     where the descriptive part ends and the actual number begins. Bold +
+     accent color makes it read as its own distinct chunk at a glance. */
+  .oneliner-figure { font-weight: bold; color: var(--brass); }
   .oneliner-list {
     border: 1px solid var(--rule-strong);
     border-radius: 4px;
@@ -1017,6 +1023,7 @@
   </div>
 
   <div class="regex-error" id="regex-error"></div>
+  <button type="button" class="browse-instead" id="browse-instead">— search or browse by database —</button>
 </header>
 
 <div class="nav-actions">
@@ -1070,8 +1077,6 @@
   <input type="text" name="entry.296946726" id="update-request-hidden-entry-id">
   <input type="text" name="entry.694581047" id="update-request-hidden-title">
 </form>
-
-<button type="button" class="browse-instead" id="browse-instead">— search or browse by database —</button>
 
 <select class="tabs-select" id="tabs"></select>
 <div class="records-tab-row" id="records-tab-row"></div>
@@ -2329,7 +2334,15 @@ function highlightMatches(text, term, useRegex) {
 /* One-liner generation is deliberately template-based rather than
    free-text, so it stays deterministic and traceable back to the
    same structured fields as the full card -- no separate "summary"
-   field to keep in sync, no LLM call needed client-side. */
+   field to keep in sync, no LLM call needed client-side.
+
+   Returns { line, figure } rather than one flat string -- `figure` is
+   the trailing quantified metric (deregulation/govservices only; null
+   for every other kind), kept separate so the call site can style it
+   distinctly (see .oneliner-figure) instead of it running on in the
+   same weight/color as the descriptive part of the sentence. Each
+   piece still gets escaped/highlighted independently at the call
+   site -- this function itself returns plain text, no HTML. */
 function oneLinerFor(entry, cfg) {
   if (cfg.kind === "deregulation") {
     const s = (entry.status || "").toLowerCase();
@@ -2338,36 +2351,36 @@ function oneLinerFor(entry, cfg) {
     else if (s.includes("proposed")) verb = "proposed repealing";
     else if (s.includes("delayed") || s.includes("paused")) verb = "paused enforcement of";
     const proponent = entry.primary_proponent?.name || entry.agency || "An agency";
-    let line = proponent + " (" + (entry.agency || "") + ") " + verb + " \u201c" + entry.rule_name + "\u201d";
+    const line = proponent + " (" + (entry.agency || "") + ") " + verb + " \u201c" + entry.rule_name + "\u201d";
     const figs = entry.estimated_health_impact?.figures;
     if (figs && figs.length) {
-      line += " \u2014 " + figs[0].metric + ": " + figs[0].value + ".";
-    } else {
-      line += " (" + (entry.date_of_action || entry.administration || "") + ").";
+      return { line, figure: figs[0].metric + ": " + figs[0].value + "." };
     }
-    return line;
+    return { line: line + " (" + (entry.date_of_action || entry.administration || "") + ").", figure: null };
   }
   if (cfg.kind === "prosecution") {
     const tag = entry.contested ? " [CONTESTED]" : "";
-    return entry.official + " \u2014 " + entry.status_category + ": " + entry.offense_category + tag;
+    return { line: entry.official + " \u2014 " + entry.status_category + ": " + entry.offense_category + tag, figure: null };
   }
   if (cfg.kind === "tracker") {
-    return (entry.date || "") + " " + truncate(entry.what_happened, 150);
+    return { line: (entry.date || "") + " " + truncate(entry.what_happened, 150), figure: null };
   }
   if (cfg.kind === "govservices") {
     const figs = entry.estimated_impact?.figures || [];
-    let line = (entry.institution || "") + " \u2014 " + (entry.title || "");
+    const line = (entry.institution || "") + " \u2014 " + (entry.title || "");
     if (figs.length) {
       const top = figs.reduce((a, b) => extractLargestNumber(b.value) > extractLargestNumber(a.value) ? b : a);
-      line += " (" + top.metric + ": " + top.value + ")";
+      return { line, figure: top.metric + ": " + top.value };
     }
-    return line;
+    return { line, figure: null };
   }
   if (cfg.kind === "communitytopics") {
-    return "[" + verdictLabel(entry.verdict) + "] " + entry.topic +
-      (entry.summary ? " \u2014 " + truncate(entry.summary, 100) : "");
+    return {
+      line: "[" + verdictLabel(entry.verdict) + "] " + entry.topic + (entry.summary ? " \u2014 " + truncate(entry.summary, 100) : ""),
+      figure: null,
+    };
   }
-  return JSON.stringify(entry).slice(0, 150);
+  return { line: JSON.stringify(entry).slice(0, 150), figure: null };
 }
 
 /* Matches a search term against a haystack string. Supports plain
@@ -3362,11 +3375,15 @@ function renderGlobalResults(term, useRegex, useOneLiners, useImpactSort) {
   const list = document.createElement("div");
   list.className = "oneliner-list";
   toRender.forEach((m, i) => {
+    const oneLiner = oneLinerFor(m.entry, m.cfg);
     const row = document.createElement("div");
     row.className = "oneliner-row";
     row.innerHTML =
       '<span class="oneliner-caret">▸</span>' +
-      '<span class="oneliner-text"><span class="source-tag">' + m.sourceLabel + '</span>' + highlightMatches(oneLinerFor(m.entry, m.cfg), term, useRegex) + '</span>';
+      '<span class="oneliner-text"><span class="source-tag">' + m.sourceLabel + '</span>' +
+      highlightMatches(oneLiner.line, term, useRegex) +
+      (oneLiner.figure ? ' <span class="oneliner-figure">' + highlightMatches(oneLiner.figure, term, useRegex) + '</span>' : '') +
+      '</span>';
 
     const detail = document.createElement("div");
     detail.className = "oneliner-detail";
