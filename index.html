@@ -59,13 +59,6 @@
     color: var(--brass);
     font-style: italic;
   }
-  header.masthead .subhead {
-    margin: 1rem auto 0;
-    max-width: 560px;
-    font-size: 0.95rem;
-    color: var(--ink-soft);
-  }
-
   /* ================= GLOBAL SEARCH (primary interaction) ================= */
   .global-search-box {
     max-width: 700px;
@@ -361,27 +354,27 @@
     padding: 0 1.5rem;
     display: flex;
     flex-wrap: wrap;
-    gap: 3px;
+    gap: 4px;
     margin-top: -1px;
   }
-  /* ~75% smaller by area than the original tabs (which were 0.78rem /
-     0.6rem+1.1rem+0.5rem padding) -- roughly half the linear
-     font-size/padding, since area scales with the square of a linear
-     dimension. Kept distinct from .reports-tab-row button below, which
-     stays at the original size so Reports reads as a different kind of
-     view (an aggregate feed across all five databases) rather than a
-     sixth database tab. */
+  /* ~10% smaller than the original tabs (which were 0.78rem font /
+     0.6rem+1.1rem+0.5rem padding / 6px radius) -- a mild trim, not the
+     much more aggressive ~75%-smaller size tried earlier and reverted
+     as unreadable. Kept distinct from .records-tab-row button below,
+     which stays at the original full size so Records reads as a
+     different kind of view (an aggregate feed across all five
+     databases) rather than a sixth database tab. */
   nav.tabs button {
     font-family: ui-monospace, 'SF Mono', 'Courier New', monospace;
-    font-size: 0.42rem;
-    letter-spacing: 0.04em;
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
     background: var(--rule);
     color: var(--ink-soft);
     border: none;
-    padding: 0.32rem 0.55rem 0.28rem;
+    padding: 0.54rem 1rem 0.45rem;
     cursor: pointer;
-    border-radius: 4px 4px 0 0;
+    border-radius: 5px 5px 0 0;
     position: relative;
     top: 1px;
   }
@@ -393,14 +386,14 @@
   nav.tabs button:hover:not(.active) {
     background: var(--rule-strong);
   }
-  .reports-tab-row {
+  .records-tab-row {
     max-width: 880px;
     margin: 0.5rem auto 0;
     padding: 0 1.5rem;
     display: flex;
     justify-content: center;
   }
-  .reports-tab-row button {
+  .records-tab-row button {
     font-family: ui-monospace, 'SF Mono', 'Courier New', monospace;
     font-size: 0.78rem;
     letter-spacing: 0.05em;
@@ -412,12 +405,12 @@
     cursor: pointer;
     border-radius: 6px;
   }
-  .reports-tab-row button.active {
+  .records-tab-row button.active {
     background: var(--paper-card);
     color: var(--ink);
     font-weight: bold;
   }
-  .reports-tab-row button:hover:not(.active) {
+  .records-tab-row button:hover:not(.active) {
     background: var(--rule-strong);
   }
 
@@ -1004,9 +997,8 @@
 <body>
 
 <header class="masthead">
-  <h1>The Accountability Project</h1>
+  <h1>TAP</h1>
   <p class="tagline">While headlines flood, the record stands.</p>
-  <p class="subhead">The Accountability Project consolidates the daily flood of headlines into cohesive, topic-based, and verifiable records of documented government actions — vetted in code for sourcing, duplicates, and required evidence. Enter a keyword, statement, or topic — or browse by database.</p>
   <div class="global-search-box" id="search-mode-box">
     <span class="search-icon">🔍</span>
     <input type="text" id="global-search" placeholder="Search everything — try &quot;EPA&quot;, &quot;Supreme Court&quot;, or a name...">
@@ -1023,8 +1015,6 @@
   <button id="back-to-top-btn" class="nav-action-btn" type="button" title="Scroll to the top of the page">↑ Back to Top</button>
   <button id="demo-tour-btn" class="nav-action-btn" type="button" title="Start automated or interactive video walkthrough tour" hidden>▶ Demo Tour</button>
   <button id="suggest-claim-link" class="nav-action-btn" type="button" title="Suggest a topic or story for The Accountability Project to evaluate">✎ Suggest a Topic</button>
-  <a id="reports-link" class="nav-action-btn" href="docs/index.html" title="Process guides and technical reports documenting how The Accountability Project works">📄 Docs</a>
-  <a id="about-link" class="nav-action-btn" href="about.html" title="How The Accountability Project verifies its entries and presents information">ℹ About</a>
 </div>
 
 <!-- Suggest-a-Topic modal: posts to the same Google Form the site used to
@@ -1076,7 +1066,7 @@
 <p class="browse-instead" id="browse-instead">— search or browse by database —</p>
 
 <nav class="tabs" id="tabs"></nav>
-<div class="reports-tab-row" id="reports-tab-row"></div>
+<div class="records-tab-row" id="records-tab-row"></div>
 
 <main>
   <div class="controls" id="tab-controls">
@@ -2648,18 +2638,18 @@ function renderTabs() {
     nav.appendChild(btn);
   });
 
-  // Reports (formerly "Headlines") lives in its own centered row below
-  // the five database tabs, not inline with them -- it's a cross-tracker
-  // aggregate feed, not a sixth database, so it's kept visually distinct
-  // (own row, own un-shrunk button size) rather than blending into the
-  // database-tab row above.
-  const reportsRow = document.getElementById("reports-tab-row");
-  reportsRow.innerHTML = "";
-  const reportsBtn = document.createElement("button");
-  reportsBtn.textContent = "Reports";
-  reportsBtn.className = activeTracker === "headlines" ? "active" : "";
-  reportsBtn.onclick = () => { activeTracker = "headlines"; renderDispatch(); };
-  reportsRow.appendChild(reportsBtn);
+  // Records (formerly "Headlines", briefly "Reports") lives in its own
+  // centered row below the five database tabs, not inline with them --
+  // it's a cross-tracker aggregate feed, not a sixth database, so it's
+  // kept visually distinct (own row, own un-shrunk button size) rather
+  // than blending into the database-tab row above.
+  const recordsRow = document.getElementById("records-tab-row");
+  recordsRow.innerHTML = "";
+  const recordsBtn = document.createElement("button");
+  recordsBtn.textContent = "Records";
+  recordsBtn.className = activeTracker === "headlines" ? "active" : "";
+  recordsBtn.onclick = () => { activeTracker = "headlines"; renderDispatch(); };
+  recordsRow.appendChild(recordsBtn);
 }
 
 function pluralize(word) {
