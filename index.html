@@ -240,8 +240,56 @@
   .suggest-success .stamp-check { font-size: 2rem; color: var(--verified); }
   .suggest-success p { color: var(--ink-soft); font-size: 0.9rem; margin: 0.6rem 0 0; }
 
+  /* ================= BROWSE-BY-INDEX MODAL ================= */
+  .browse-options { display: flex; flex-direction: column; gap: 0.5rem; }
+  .browse-option-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-family: ui-monospace, monospace;
+    font-size: 0.9rem;
+    color: var(--ink);
+    background: var(--paper);
+    border: 1px solid var(--rule-strong);
+    border-radius: 4px;
+    padding: 0.7rem 0.9rem;
+    cursor: pointer;
+    text-align: left;
+  }
+  .browse-option-btn:hover { background: var(--brass-light); border-color: var(--brass); }
+  .browse-option-count { color: var(--ink-faint); font-size: 0.8rem; }
+
+  /* Below this width, the reserved-nav-actions-column layout main and
+     #headlines-wrap share breaks down two ways: their shared 880px
+     floor pins them wider than the viewport (forcing horizontal scroll
+     on an actual phone), and even before that floor is hit, the fixed
+     nav-actions column can overlap the right edge of a not-yet-full-
+     width main/headlines-wrap. Below 900px, both go fluid (full
+     available width via the 1.5rem/1rem padding they already carry
+     internally) and nav-actions comes out of fixed-floating mode into
+     a normal in-flow row right after the header, so it can never
+     overlap content again regardless of how narrow the viewport gets. */
+  @media (max-width: 900px) {
+    main, #headlines-wrap {
+      width: auto;
+      margin-left: 0;
+    }
+    .nav-actions {
+      position: static;
+      top: auto;
+      right: auto;
+      transform: none;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 700px;
+      margin: 1.25rem auto 0;
+      padding: 0 1rem;
+    }
+  }
+
   @media (max-width: 600px) {
-    .nav-actions { right: 0.75rem; }
     .nav-action-btn { padding: 0.45rem 0.7rem; font-size: 0.68rem; }
   }
 
@@ -377,23 +425,12 @@
     cursor: pointer;
   }
   /* Used on the Records landing view, where the select would otherwise
-     sit redundantly below the "— browse by index —"
-     button and duplicate what that button already opens. Deliberately
-     NOT display:none -- showPicker() (called by the button's click
-     handler) requires the element to still be "rendered", which
-     display:none/visibility:hidden both fail. This keeps a real,
-     zero-footprint layout box instead. Only applied on Records; a
-     tracker's own page still shows the select normally as its active-
-     database indicator/switcher. */
+     sit redundantly below the "— browse by index —" button, which now
+     opens its own dialog (see #browse-backdrop) rather than this select.
+     Only applied on Records; a tracker's own page still shows the
+     select normally as its active-database indicator/switcher. */
   .tabs-select.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    overflow: hidden;
-    white-space: nowrap;
-    border: 0;
+    display: none;
   }
   .records-tab-row {
     max-width: 880px;
@@ -1035,7 +1072,7 @@
 
 <header class="masthead">
   <h1>TAP</h1>
-  <p class="tagline">Trump 2 news verification and indexing</p>
+  <p class="tagline">Trump 2 news verification and indexing from Jan. 2025</p>
   <div class="global-search-box" id="search-mode-box">
     <span class="search-icon">🔍</span>
     <input type="text" id="global-search" placeholder="Search everything — try &quot;EPA&quot;, &quot;Supreme Court&quot;, or a name...">
@@ -1077,6 +1114,20 @@
       <div class="stamp-check">✓</div>
       <p>Thanks — your submission was received. TAP reviews new submissions periodically and adds real, sourced topics to the site.</p>
     </div>
+  </div>
+</div>
+
+<!-- Browse-by-index modal: lists every database as a clickable option.
+     Built on the same suggest-backdrop/suggest-modal shell as Claim-Check
+     above, for visual consistency and so this doesn't need its own CSS.
+     Options are populated from TRACKERS in openBrowseModal() (see JS
+     section near the bottom), not hardcoded here. -->
+<div class="suggest-backdrop" id="browse-backdrop" hidden>
+  <div class="suggest-modal" role="dialog" aria-modal="true" aria-labelledby="browse-modal-title">
+    <button class="suggest-close-btn" id="browse-close-btn" type="button" title="Close">✕</button>
+    <h2 id="browse-modal-title">Browse by Index</h2>
+    <p class="suggest-desc">Choose a database to browse.</p>
+    <div class="browse-options" id="browse-options"></div>
   </div>
 </div>
 <iframe name="suggest-target-frame" id="suggest-target-frame" style="display:none;" title="Submission target (hidden)"></iframe>
@@ -1868,9 +1919,14 @@ function renderHeadlinesControls() {
     '<option value="alpha">Alphabetical</option>';
   sortSel.value = headlinesSortValue;
 
+  // Shortened to "Reporting" only in this dropdown -- TRACKERS.tracker.label
+  // stays "Administration events reports since Jan 2025" everywhere else
+  // (the main database picker, the browse-by-index dialog, tab counts),
+  // since this is the one spot where the full name was crowding a
+  // dropdown full of short database names.
   const trackerSel = document.getElementById("headlines-tracker-filter");
   trackerSel.innerHTML = '<option value="">All databases</option>' +
-    Object.keys(TRACKERS).filter(key => key !== "communitytopics").map(key => '<option value="' + key + '">' + TRACKERS[key].label + '</option>').join("");
+    Object.keys(TRACKERS).filter(key => key !== "communitytopics").map(key => '<option value="' + key + '">' + (key === "tracker" ? "Reporting" : TRACKERS[key].label) + '</option>').join("");
   trackerSel.value = headlinesTrackerFilter;
 
   // The Records category subfilter (Corruption, Disinformation, etc., for
@@ -3561,21 +3617,47 @@ document.getElementById("back-to-top-btn").addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-// "— browse by index —" is a button, not just a label, so
-// it can open the database dropdown directly instead of just describing
-// it. showPicker() (Chrome 121+/Edge/Opera; not yet in Firefox or
-// Safari) is the only standard way to programmatically open a native
-// <select>'s list -- .click()/.focus() alone don't do it in any browser.
-// Where showPicker() isn't available, falling back to .focus() at least
-// gets the select keyboard-ready (arrow keys / Enter / typeahead all
-// work from there) instead of doing nothing.
-document.getElementById("browse-instead").addEventListener("click", () => {
-  const tabsSelect = document.getElementById("tabs");
-  if (typeof tabsSelect.showPicker === "function") {
-    tabsSelect.showPicker();
-  } else {
-    tabsSelect.focus();
-  }
+// "— browse by index —" opens a real dialog listing every database,
+// rather than trying to force the native <select> open programmatically.
+// An earlier version called showPicker() on #tabs -- the standard API
+// for this exact purpose -- but it proved unreliable in practice (Joe
+// reported the button doing nothing, even though showPicker() itself
+// never threw in testing). A custom modal, built on the same
+// suggest-backdrop/suggest-modal shell the Claim-Check dialog already
+// uses, has no dependency on that API at all and works identically in
+// every browser.
+const browseBackdrop = document.getElementById("browse-backdrop");
+const browseOptionsEl = document.getElementById("browse-options");
+
+function openBrowseModal() {
+  browseOptionsEl.innerHTML = "";
+  Object.keys(TRACKERS).forEach(key => {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "browse-option-btn";
+    btn.innerHTML =
+      '<span>' + escapeHtml(TRACKERS[key].label) + '</span>' +
+      '<span class="browse-option-count">' + TRACKERS[key].data.length + '</span>';
+    btn.addEventListener("click", () => {
+      closeBrowseModal();
+      selectDatabaseTab(key);
+    });
+    browseOptionsEl.appendChild(btn);
+  });
+  browseBackdrop.hidden = false;
+}
+
+function closeBrowseModal() {
+  browseBackdrop.hidden = true;
+}
+
+document.getElementById("browse-instead").addEventListener("click", openBrowseModal);
+document.getElementById("browse-close-btn").addEventListener("click", closeBrowseModal);
+browseBackdrop.addEventListener("click", (e) => {
+  if (e.target === browseBackdrop) closeBrowseModal();
+});
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && !browseBackdrop.hidden) closeBrowseModal();
 });
 
 document.getElementById("start-over-btn").addEventListener("click", () => {
