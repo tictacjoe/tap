@@ -1580,6 +1580,7 @@ function buildHeadlineRow(item) {
     '<span class="headline-row-date">' + escapeHtml(formatHeadlineDate(item.date)) + '</span>' +
     '<span class="headline-row-tracker" title="' + escapeHtml(trackerLabel) + '">' + escapeHtml(trackerAbbr) + '</span>' +
     '<span class="headline-row-text" data-full-headline="' + escapeHtml(item.headline) + '" title="' + escapeHtml(item.headline) + '">' + escapeHtml(item.headline) + '</span>';
+  const textSpan = line.querySelector(".headline-row-text");
   row.appendChild(line);
 
   const body = document.createElement("div");
@@ -1609,13 +1610,13 @@ function buildHeadlineRow(item) {
       updateTierDisplay();
     });
   }
-  line.appendChild(moreBtn);
+  line.insertBefore(moreBtn, textSpan);
 
   const trailBtn = document.createElement("button");
   trailBtn.type = "button";
   trailBtn.className = "share-link-btn headline-trail-btn";
   trailBtn.textContent = "trail";
-  line.appendChild(trailBtn);
+  line.insertBefore(trailBtn, textSpan);
 
   const trailPanel = document.createElement("div");
   trailPanel.className = "confidence-box headline-trail-panel";
