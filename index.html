@@ -354,27 +354,30 @@
     padding: 0 1.5rem;
     display: flex;
     flex-wrap: wrap;
-    gap: 4px;
+    gap: 3px;
     margin-top: -1px;
   }
-  /* ~10% smaller than the original tabs (which were 0.78rem font /
-     0.6rem+1.1rem+0.5rem padding / 6px radius) -- a mild trim, not the
-     much more aggressive ~75%-smaller size tried earlier and reverted
-     as unreadable. Kept distinct from .records-tab-row button below,
-     which stays at the original full size so Records reads as a
-     different kind of view (an aggregate feed across all five
-     databases) rather than a sixth database tab. */
+  /* Sized to the smallest that still keeps all five database tabs on
+     one row at the container's 880px max-width -- driven entirely by
+     the longest label ("Administration events reports since Jan 2025
+     (13354)"); a larger size wraps to two rows. Verified empirically
+     (measured actual rendered button widths, not estimated) rather
+     than computed from a fixed ratio off the original size. Kept
+     distinct from .reports-tab-row button below, which stays at the
+     original full size so Reports reads as a different kind of view
+     (an aggregate feed across all five databases) rather than a sixth
+     database tab. */
   nav.tabs button {
     font-family: ui-monospace, 'SF Mono', 'Courier New', monospace;
-    font-size: 0.7rem;
-    letter-spacing: 0.05em;
+    font-size: 0.42rem;
+    letter-spacing: 0.04em;
     text-transform: uppercase;
     background: var(--rule);
     color: var(--ink-soft);
     border: none;
-    padding: 0.54rem 1rem 0.45rem;
+    padding: 0.32rem 0.6rem 0.26rem;
     cursor: pointer;
-    border-radius: 5px 5px 0 0;
+    border-radius: 3px 3px 0 0;
     position: relative;
     top: 1px;
   }
@@ -386,14 +389,14 @@
   nav.tabs button:hover:not(.active) {
     background: var(--rule-strong);
   }
-  .records-tab-row {
+  .reports-tab-row {
     max-width: 880px;
     margin: 0.5rem auto 0;
     padding: 0 1.5rem;
     display: flex;
     justify-content: center;
   }
-  .records-tab-row button {
+  .reports-tab-row button {
     font-family: ui-monospace, 'SF Mono', 'Courier New', monospace;
     font-size: 0.78rem;
     letter-spacing: 0.05em;
@@ -405,12 +408,12 @@
     cursor: pointer;
     border-radius: 6px;
   }
-  .records-tab-row button.active {
+  .reports-tab-row button.active {
     background: var(--paper-card);
     color: var(--ink);
     font-weight: bold;
   }
-  .records-tab-row button:hover:not(.active) {
+  .reports-tab-row button:hover:not(.active) {
     background: var(--rule-strong);
   }
 
@@ -998,7 +1001,6 @@
 
 <header class="masthead">
   <h1>TAP</h1>
-  <p class="tagline">While headlines flood, the record stands.</p>
   <div class="global-search-box" id="search-mode-box">
     <span class="search-icon">🔍</span>
     <input type="text" id="global-search" placeholder="Search everything — try &quot;EPA&quot;, &quot;Supreme Court&quot;, or a name...">
@@ -1014,7 +1016,7 @@
   <button id="start-over-btn" class="nav-action-btn" type="button" title="Clear search/filters and return to the default view">↻ Start Over</button>
   <button id="back-to-top-btn" class="nav-action-btn" type="button" title="Scroll to the top of the page">↑ Back to Top</button>
   <button id="demo-tour-btn" class="nav-action-btn" type="button" title="Start automated or interactive video walkthrough tour" hidden>▶ Demo Tour</button>
-  <button id="suggest-claim-link" class="nav-action-btn" type="button" title="Suggest a topic or story for The Accountability Project to evaluate">✎ Suggest a Topic</button>
+  <button id="suggest-claim-link" class="nav-action-btn" type="button" title="Submit a claim for TAP to check">✎ Claim-Check</button>
 </div>
 
 <!-- Suggest-a-Topic modal: posts to the same Google Form the site used to
@@ -1025,8 +1027,8 @@
   <div class="suggest-modal" role="dialog" aria-modal="true" aria-labelledby="suggest-modal-title">
     <button class="suggest-close-btn" id="suggest-close-btn" type="button" title="Close">✕</button>
     <div id="suggest-form-view">
-      <h2 id="suggest-modal-title">Suggest a Topic</h2>
-      <p class="suggest-desc">Suggest a topic or claim for The Accountability Project to research and add. Describe it below.  Source link is optional.</p>
+      <h2 id="suggest-modal-title">Claim-Check</h2>
+      <p class="suggest-desc">Submit a topic or claim for TAP to research and add. Describe it below.  Source link is optional.</p>
       <label class="suggest-field-label" for="suggest-claim-input">Topic</label>
       <textarea id="suggest-claim-input" required></textarea>
       <label class="suggest-field-label" for="suggest-source-input">Source link if available</label>
@@ -1066,7 +1068,7 @@
 <p class="browse-instead" id="browse-instead">— search or browse by database —</p>
 
 <nav class="tabs" id="tabs"></nav>
-<div class="records-tab-row" id="records-tab-row"></div>
+<div class="reports-tab-row" id="reports-tab-row"></div>
 
 <main>
   <div class="controls" id="tab-controls">
@@ -1151,7 +1153,7 @@ const TRACKERS = {
     kind: "govservices",
   },
   tracker: {
-    label: "Reporting since Jan. 2025",
+    label: "Administration events reports since Jan 2025",
     data: [],
     titleField: "what_happened",
     idField: null,
@@ -1226,7 +1228,7 @@ function flattenTrackerPosts(posts) {
   return flat;
 }
 
-let activeTracker = "deregulation";
+let activeTracker = "headlines";
 let searchTerm = "";
 let filterValue = "";
 let sortValue = "";
@@ -1641,7 +1643,7 @@ function buildHeadlineRow(item) {
   const trailBtn = document.createElement("button");
   trailBtn.type = "button";
   trailBtn.className = "share-link-btn headline-trail-btn";
-  trailBtn.textContent = "trail";
+  trailBtn.textContent = "notes";
   line.insertBefore(trailBtn, textSpan);
 
   const trailPanel = document.createElement("div");
@@ -2638,18 +2640,18 @@ function renderTabs() {
     nav.appendChild(btn);
   });
 
-  // Records (formerly "Headlines", briefly "Reports") lives in its own
-  // centered row below the five database tabs, not inline with them --
-  // it's a cross-tracker aggregate feed, not a sixth database, so it's
-  // kept visually distinct (own row, own un-shrunk button size) rather
-  // than blending into the database-tab row above.
-  const recordsRow = document.getElementById("records-tab-row");
-  recordsRow.innerHTML = "";
-  const recordsBtn = document.createElement("button");
-  recordsBtn.textContent = "Records";
-  recordsBtn.className = activeTracker === "headlines" ? "active" : "";
-  recordsBtn.onclick = () => { activeTracker = "headlines"; renderDispatch(); };
-  recordsRow.appendChild(recordsBtn);
+  // Reports (formerly "Headlines") lives in its own centered row below
+  // the five database tabs, not inline with them -- it's a cross-tracker
+  // aggregate feed, not a sixth database, so it's kept visually distinct
+  // (own row, own un-shrunk button size) rather than blending into the
+  // database-tab row above.
+  const reportsRow = document.getElementById("reports-tab-row");
+  reportsRow.innerHTML = "";
+  const reportsBtn = document.createElement("button");
+  reportsBtn.textContent = "Reports";
+  reportsBtn.className = activeTracker === "headlines" ? "active" : "";
+  reportsBtn.onclick = () => { activeTracker = "headlines"; renderDispatch(); };
+  reportsRow.appendChild(reportsBtn);
 }
 
 function pluralize(word) {
@@ -3317,7 +3319,7 @@ document.getElementById("global-search-clear-btn").addEventListener("click", () 
 
 /* Floating nav actions: Back to Top just scrolls; Start Over resets
    every piece of search/filter state to the fresh-load default
-   (activeTracker back to "deregulation", the actual initial value
+   (activeTracker back to "headlines"/Records, the actual initial value
    above) so the page looks exactly like a first visit. */
 document.getElementById("back-to-top-btn").addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
@@ -3331,7 +3333,7 @@ document.getElementById("start-over-btn").addEventListener("click", () => {
   document.getElementById("filter").value = "";
   document.getElementById("sort-order").value = "";
   document.getElementById("group-mode").value = "";
-  activeTracker = "deregulation";
+  activeTracker = "headlines";
   searchTerm = "";
   filterValue = "";
   sortValue = "";
@@ -3643,12 +3645,12 @@ const TapDemoTour = (() => {
       }
     },
     {
-      title: "Reporting Since January 2025",
+      title: "Administration Events Reports Since Jan 2025",
       desc: "A high-volume news-scrape tracker with over 13,000 entries -- every article ingested since Inauguration Day, searchable and sortable by most recent activity.",
       target: () => document.getElementById("count"),
       action: async () => {
         const tabBtn = Array.from(document.querySelectorAll("#tabs button"))
-          .find(b => b.textContent.startsWith("Reporting since Jan. 2025"));
+          .find(b => b.textContent.startsWith("Administration events reports since Jan 2025"));
         if (tabBtn) tabBtn.click();
         await new Promise(r => setTimeout(r, 300));
         const sortSelect = document.getElementById("sort-order");
@@ -3662,7 +3664,7 @@ const TapDemoTour = (() => {
     },
     {
       title: "Community-Submitted Topics",
-      desc: "Every topic submitted through Suggest a Topic lands here first, rated Confirmed, Partially Confirmed, Unable to Verify, or Misleading as Stated -- topics that check out get promoted into TAP's main trackers.",
+      desc: "Every topic submitted through Claim-Check lands here first, rated Confirmed, Partially Confirmed, Unable to Verify, or Misleading as Stated -- topics that check out get promoted into TAP's main trackers.",
       target: () => document.getElementById("filter"),
       action: async () => {
         const tabBtn = Array.from(document.querySelectorAll("#tabs button"))

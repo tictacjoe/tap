@@ -281,7 +281,7 @@ _PAGE_TEMPLATE = """<!DOCTYPE html>
 <body>
 <header class="masthead">
 <h1>{title}</h1>
-<p class="tagline">The Accountability Project — Docs</p>
+<p class="tagline">TAP — Docs</p>
 </header>
 <main>
 {body}
@@ -321,7 +321,7 @@ def render_index(reports: list) -> str:
         for r in ordered
     )
     body = f'<ul class="report-index">\n{items}\n</ul>'
-    return render_page("Docs", body, back_links=[("Back to The Accountability Project", "../index.html")])
+    return render_page("Docs", body, back_links=[("Back to TAP", "../index.html")])
 
 
 # Reserved for any future webdocs/ file that shouldn't be published (e.g.
@@ -376,7 +376,7 @@ def build_docs(working: Path, site: Path) -> None:
         body_html = convert_report(body_text)
         page_html = render_page(title, body_html, back_links=[
             ("All Docs", "index.html"),
-            ("Back to The Accountability Project", "../index.html"),
+            ("Back to TAP", "../index.html"),
         ])
 
         slug = md_file.stem
