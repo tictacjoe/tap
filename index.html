@@ -1472,18 +1472,24 @@ function combineTierText(parts) {
 /* How many characters of *additional* tier text justify a separate
    "more" click, and how short an entry's fullest tier has to be before
    staged disclosure is skipped entirely in favor of revealing everything
-   on the first click -- both calibrated against this database's real
-   tier-length distribution (checked 2026-09-18): Reporting entries mostly
-   run under ~700 chars total, and even Deregulation/Gov Services' shortest
-   ~10% run under ~1200, well within "just show it all" range, while their
-   typical (median 2000-3000+ char) entries and Prosecution's (median
-   ~5500 chars) genuinely benefit from staged reveal. Fixes a real
-   complaint: a short entry's modest amount of extra detail was still
-   getting spread across all 3 raw tiers (brief/medium/full) just because
-   each happened to differ textually from the last, even when the *whole*
-   addition was too small to be worth splitting into multiple clicks. */
-const SHORT_ENTRY_CHARS = 1200;
-const MIN_STAGE_GROWTH_CHARS = 200;
+   on the first click. Raised 2026-09-18 (from 1200/200) after Joe flagged
+   Corporate Deregulation specifically as still feeling like the same
+   "more > more > more" problem even post-fix -- the original thresholds
+   only merged CDR's shortest ~10% (9 of 86 entries), leaving the
+   remaining 77 at a full 3 stages despite real per-stage growth often
+   being just ~300-450 chars (median deltas: 453 chars brief->medium, 404
+   chars medium->full), which still reads as "barely more" against a wide
+   row. Deliberately NOT collapsed to a flat one-click reveal everywhere
+   (Joe's call): Prosecution's entries are genuinely long (median ~5500
+   chars, up to ~20,000) and still benefit from real staging. These two
+   values were picked by simulating the actual published corpus rather
+   than guessing -- at 3500/400, Deregulation goes from 77/86 forced into
+   3 stages down to 10/86 (73 collapse to a single "more > all" click),
+   Gov Services gets a reasonable 1/2/3-stage mix scaled to its own wider
+   length spread, and Prosecution keeps 260/267 (97%) at full 3-stage
+   disclosure since its content is long enough to still warrant it. */
+const SHORT_ENTRY_CHARS = 3500;
+const MIN_STAGE_GROWTH_CHARS = 400;
 
 /* usable-tier-count:start */
 // Builds the actual list of "more"-click reveal stages from an item's raw
