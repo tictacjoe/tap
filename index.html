@@ -1711,9 +1711,18 @@ function buildHeadlineRow(item) {
 
   const line = document.createElement("div");
   line.className = "headline-row";
+  // The hover tooltip deliberately points at tiers[0] ("brief"), the
+  // fuller untruncated source text each adapt*Entry() function carries,
+  // not item.headline -- headline is already truncated to ~110 chars,
+  // so using it here just echoed the visible truncated text back on
+  // hover instead of showing anything new. data-full-headline stays
+  // bound to item.headline on purpose: fitHeadlineRowText()'s
+  // packHeadline() repacking expects headline-shaped text, not a full
+  // paragraph, so it's left untouched.
+  const tooltipText = (item.tiers && item.tiers[0]) || item.headline;
   line.innerHTML =
     '<span class="headline-row-date">' + escapeHtml(formatHeadlineDate(item.date)) + '</span>' +
-    '<span class="headline-row-text" data-full-headline="' + escapeHtml(item.headline) + '" title="' + escapeHtml(item.headline) + '">' + escapeHtml(item.headline) + '</span>';
+    '<span class="headline-row-text" data-full-headline="' + escapeHtml(item.headline) + '" title="' + escapeHtml(tooltipText) + '">' + escapeHtml(item.headline) + '</span>';
   const textSpan = line.querySelector(".headline-row-text");
   row.appendChild(line);
 
