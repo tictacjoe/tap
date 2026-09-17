@@ -763,11 +763,11 @@
     white-space: nowrap;
     flex-shrink: 0;
   }
-  /* Full name shown by default; the 600px media query below swaps to
-     tracker-name-abbr instead, since the full name alone can overflow
-     the row before headline-row-text (the only flexible sibling) gets a
-     chance to shrink -- see buildHeadlineRow()'s HEADLINE_TRACKER_ABBR
-     comment for how this was confirmed. */
+  /* Medium theme-first label (e.g. "Accountability") shown by default;
+     the 600px media query below swaps to tracker-name-abbr instead --
+     see buildHeadlineRow()'s HEADLINE_TRACKER_MEDIUM comment for why the
+     narrow-screen fallback stays the 3-letter code rather than this
+     label. */
   .headline-row-tracker .tracker-name-abbr { display: none; }
   .headline-row-text {
     flex: 1 1 auto;
@@ -904,7 +904,7 @@
     header.masthead h1 { font-size: 1.9rem; }
     .entry-head { flex-direction: column; gap: 0.3rem; padding-right: 1rem; }
     .stamp { position: static; transform: rotate(-3deg); display: inline-block; margin-top: 0.4rem; }
-    .headline-row-tracker .tracker-name-full { display: none; }
+    .headline-row-tracker .tracker-name-medium { display: none; }
     .headline-row-tracker .tracker-name-abbr { display: inline; }
   }
 
@@ -1741,17 +1741,32 @@ function buildTrailHtml(trail) {
   return parts.join("");
 }
 
-/* Narrow-screen fallback for the tracker tag below -- dbdd4fc originally
-   abbreviated this tag everywhere (desktop included) because the full
-   labels were eating ~150-200px of an already tight row. Reverted to
-   full labels on wider screens 2026-09-18 (Joe's call), but the
-   abbreviation is still needed below ~600px: checked live at a real
-   phone width (~390px), and the full label alone -- "Government Service
-   Redirection," worst case -- already overflows the row before the
-   headline text gets a chance to shrink (headline-row-tracker's
-   flex-shrink:0 means it never yields space, unlike headline-row-text's
-   own min-width:0). Both spans render into the DOM always; the CSS media
-   query below picks which one is visible. */
+/* Three tiers for the tracker tag: the true full name (TRACKERS[key].label,
+   used only as the button's title tooltip now), a medium "theme-first"
+   label shown by default, and a 3-letter code as the narrow-screen
+   fallback. History: dbdd4fc originally abbreviated this tag everywhere
+   because the full labels were eating ~150-200px of an already tight
+   row; reverted to showing the full label by default 2026-09-18, but
+   Joe found the full name too long and the bare code too cryptic --
+   HEADLINE_TRACKER_MEDIUM is the requested middle ground (e.g.
+   "Accountability" instead of "Cabinet-Level Accountability" or "CLA").
+   The narrow-screen code fallback is still needed below ~600px: checked
+   live at a real phone width (~390px), and the full label alone --
+   "Government Service Redirection," worst case -- already overflowed the
+   row before the headline text got a chance to shrink
+   (headline-row-tracker's flex-shrink:0 means it never yields space,
+   unlike headline-row-text's own min-width:0); the medium labels weren't
+   re-tested at that width, so the code fallback stays as the known-safe
+   option there rather than assuming the shorter medium label is
+   automatically narrow enough too. Both spans render into the DOM
+   always; the CSS media query below picks which one is visible. */
+const HEADLINE_TRACKER_MEDIUM = {
+  deregulation: "Deregulation",
+  prosecution: "Accountability",
+  govservices: "Service Cuts",
+  tracker: "Reporting",
+  communitytopics: "Claim-checks",
+};
 const HEADLINE_TRACKER_ABBR = {
   deregulation: "CDR",
   prosecution: "CLA",
@@ -1765,6 +1780,7 @@ function buildHeadlineRow(item, displayDate) {
   row.className = "headline-entry";
 
   const trackerLabel = TRACKERS[item.tracker].label;
+  const trackerMedium = HEADLINE_TRACKER_MEDIUM[item.tracker] || trackerLabel;
   const trackerAbbr = HEADLINE_TRACKER_ABBR[item.tracker] || trackerLabel;
 
   const line = document.createElement("div");
@@ -1838,7 +1854,7 @@ function buildHeadlineRow(item, displayDate) {
   dbBtn.className = "share-link-btn headline-row-tracker";
   dbBtn.title = item.id ? "Jump to this entry in " + trackerLabel : "Jump to " + trackerLabel;
   dbBtn.innerHTML =
-    '<span class="tracker-name-full">' + escapeHtml(trackerLabel) + '</span>' +
+    '<span class="tracker-name-medium">' + escapeHtml(trackerMedium) + '</span>' +
     '<span class="tracker-name-abbr">' + escapeHtml(trackerAbbr) + '</span>';
   dbBtn.addEventListener("click", () => {
     // Stamp the CURRENT history entry (still Records, not yet navigated)
