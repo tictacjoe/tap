@@ -763,6 +763,12 @@
     white-space: nowrap;
     flex-shrink: 0;
   }
+  /* Full name shown by default; the 600px media query below swaps to
+     tracker-name-abbr instead, since the full name alone can overflow
+     the row before headline-row-text (the only flexible sibling) gets a
+     chance to shrink -- see buildHeadlineRow()'s HEADLINE_TRACKER_ABBR
+     comment for how this was confirmed. */
+  .headline-row-tracker .tracker-name-abbr { display: none; }
   .headline-row-text {
     flex: 1 1 auto;
     min-width: 0;
@@ -898,6 +904,8 @@
     header.masthead h1 { font-size: 1.9rem; }
     .entry-head { flex-direction: column; gap: 0.3rem; padding-right: 1rem; }
     .stamp { position: static; transform: rotate(-3deg); display: inline-block; margin-top: 0.4rem; }
+    .headline-row-tracker .tracker-name-full { display: none; }
+    .headline-row-tracker .tracker-name-abbr { display: inline; }
   }
 
   /* ================= DEMO MODE & GUIDED TOUR ================= */
@@ -1727,14 +1735,17 @@ function buildTrailHtml(trail) {
   return parts.join("");
 }
 
-/* Short codes for the Headlines row's tracker tag only -- everywhere
-   else on the site (tab buttons, filter dropdowns, coverage callouts)
-   keeps using TRACKERS[key].label in full. The row's tracker tag has to
-   share space with the headline text itself, and the full labels (e.g.
-   "CABINET-LEVEL ACCOUNTABILITY") were eating ~150-200px of an already
-   tight row -- the full name is still available as this tag's title
-   tooltip and via the tracker filter dropdown, which does use the full
-   label. */
+/* Narrow-screen fallback for the tracker tag below -- dbdd4fc originally
+   abbreviated this tag everywhere (desktop included) because the full
+   labels were eating ~150-200px of an already tight row. Reverted to
+   full labels on wider screens 2026-09-18 (Joe's call), but the
+   abbreviation is still needed below ~600px: checked live at a real
+   phone width (~390px), and the full label alone -- "Government Service
+   Redirection," worst case -- already overflows the row before the
+   headline text gets a chance to shrink (headline-row-tracker's
+   flex-shrink:0 means it never yields space, unlike headline-row-text's
+   own min-width:0). Both spans render into the DOM always; the CSS media
+   query below picks which one is visible. */
 const HEADLINE_TRACKER_ABBR = {
   deregulation: "CDR",
   prosecution: "CLA",
@@ -1820,7 +1831,9 @@ function buildHeadlineRow(item, displayDate) {
   dbBtn.type = "button";
   dbBtn.className = "share-link-btn headline-row-tracker";
   dbBtn.title = item.id ? "Jump to this entry in " + trackerLabel : "Jump to " + trackerLabel;
-  dbBtn.textContent = trackerAbbr;
+  dbBtn.innerHTML =
+    '<span class="tracker-name-full">' + escapeHtml(trackerLabel) + '</span>' +
+    '<span class="tracker-name-abbr">' + escapeHtml(trackerAbbr) + '</span>';
   dbBtn.addEventListener("click", () => {
     // Stamp the CURRENT history entry (still Records, not yet navigated)
     // with a snapshot via replaceState, then push a new entry for the
