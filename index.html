@@ -348,55 +348,33 @@
   }
 
   /* ================= TABS ================= */
-  nav.tabs {
-    max-width: 880px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 3px;
-    margin-top: -1px;
-  }
-  /* Sized to the smallest that still keeps all five database tabs on
-     one row at the container's 880px max-width -- driven entirely by
-     the longest label ("Administration events reports since Jan 2025
-     (13354)"); a larger size wraps to two rows. Verified empirically
-     (measured actual rendered button widths, not estimated) rather
-     than computed from a fixed ratio off the original size. Kept
-     distinct from .reports-tab-row button below, which stays at the
-     original full size so Reports reads as a different kind of view
-     (an aggregate feed across all five databases) rather than a sixth
-     database tab. */
-  nav.tabs button {
-    font-family: ui-monospace, 'SF Mono', 'Courier New', monospace;
-    font-size: 0.42rem;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    background: var(--rule);
-    color: var(--ink-soft);
-    border: none;
-    padding: 0.32rem 0.6rem 0.26rem;
-    cursor: pointer;
-    border-radius: 3px 3px 0 0;
-    position: relative;
-    top: 1px;
-  }
-  nav.tabs button.active {
+  /* Replaced the five database tabs (a row of buttons) with a single
+     dropdown -- same "— search or browse by database —" label above
+     it, same TRACKERS-driven option list/counts, just one control
+     instead of five, so there's no longer a tab-width-vs-label-length
+     tradeoff to size around. Centered rather than left-aligned to
+     main's column since it's now a compact single control, not a row
+     that needs to start flush with the reading column. */
+  .tabs-select {
+    display: block;
+    margin: 0.6rem auto 0;
+    font-family: ui-monospace, monospace;
+    font-size: 0.85rem;
+    padding: 0.55rem 0.7rem;
+    border: 1px solid var(--rule-strong);
     background: var(--paper-card);
     color: var(--ink);
-    font-weight: bold;
+    border-radius: 3px;
+    cursor: pointer;
   }
-  nav.tabs button:hover:not(.active) {
-    background: var(--rule-strong);
-  }
-  .reports-tab-row {
+  .records-tab-row {
     max-width: 880px;
     margin: 0.5rem auto 0;
     padding: 0 1.5rem;
     display: flex;
     justify-content: center;
   }
-  .reports-tab-row button {
+  .records-tab-row button {
     font-family: ui-monospace, 'SF Mono', 'Courier New', monospace;
     font-size: 0.78rem;
     letter-spacing: 0.05em;
@@ -408,12 +386,12 @@
     cursor: pointer;
     border-radius: 6px;
   }
-  .reports-tab-row button.active {
+  .records-tab-row button.active {
     background: var(--paper-card);
     color: var(--ink);
     font-weight: bold;
   }
-  .reports-tab-row button:hover:not(.active) {
+  .records-tab-row button:hover:not(.active) {
     background: var(--rule-strong);
   }
 
@@ -726,6 +704,20 @@
   .headline-more-btn, .headline-trail-btn { flex-shrink: 0; }
   .headline-tier-text { display: none; margin: 0 0.8rem 0.6rem; }
   .headline-trail-panel { margin: 0.5rem 0.8rem 0.6rem; }
+  /* Toggle button (not a real checkbox) -- .active mirrors the same
+     pressed-state language the database-tab/Records buttons use
+     elsewhere on the page, so "on" reads consistently sitewide. */
+  .headlines-exclude-btn.active {
+    background: var(--brass);
+    color: var(--paper-card);
+    border-color: var(--brass);
+    font-weight: bold;
+  }
+  .headlines-load-more-row { text-align: center; margin-top: 1.2rem; }
+  .headlines-load-more-btn {
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+  }
   .update-request-row .field-value { color: var(--ink-faint); }
   .request-update-btn { padding: 0.4rem 0.85rem; font-size: 0.72rem; }
 
@@ -1046,7 +1038,7 @@
     <button class="suggest-close-btn" id="suggest-close-btn" type="button" title="Close">✕</button>
     <div id="suggest-form-view">
       <h2 id="suggest-modal-title">Claim-Check</h2>
-      <p class="suggest-desc">Submit a topic or claim for TAP to research and add. Describe it below.  Source link is optional.</p>
+      <p class="suggest-desc">Submit a topic or claim for TAP to research and add. Describe it below. Your claim will be verified or contested using TAP's checks. Source link is optional.</p>
       <label class="suggest-field-label" for="suggest-claim-input">Topic</label>
       <textarea id="suggest-claim-input" required></textarea>
       <label class="suggest-field-label" for="suggest-source-input">Source link if available</label>
@@ -1085,8 +1077,8 @@
 
 <p class="browse-instead" id="browse-instead">— search or browse by database —</p>
 
-<nav class="tabs" id="tabs"></nav>
-<div class="reports-tab-row" id="reports-tab-row"></div>
+<select class="tabs-select" id="tabs"></select>
+<div class="records-tab-row" id="records-tab-row"></div>
 
 <main>
   <div class="controls" id="tab-controls">
@@ -1105,9 +1097,13 @@
     <select id="headlines-sort"></select>
     <select id="headlines-tracker-filter"></select>
     <select id="headlines-subfilter"></select>
+    <button type="button" id="headlines-exclude-reporting-btn" class="share-link-btn headlines-exclude-btn">Exclude raw reporting</button>
   </div>
   <div class="result-count" id="headlines-count"></div>
   <div id="headlines-view"></div>
+  <div id="headlines-load-more-row" class="headlines-load-more-row" style="display:none">
+    <button type="button" id="headlines-load-more-btn" class="share-link-btn headlines-load-more-btn">Load 300 more</button>
+  </div>
 </div>
 
 <footer class="site-footer">
@@ -1183,7 +1179,7 @@ const TRACKERS = {
     kind: "tracker",
   },
   communitytopics: {
-    label: "User Topics",
+    label: "Claim-checks",
     data: [],
     titleField: "topic",
     idField: "id",
@@ -1610,7 +1606,7 @@ const HEADLINE_TRACKER_ABBR = {
   prosecution: "CLA",
   govservices: "GSR",
   tracker: "RPT",
-  communitytopics: "UT",
+  communitytopics: "CC",
 };
 
 function buildHeadlineRow(item) {
@@ -1624,7 +1620,6 @@ function buildHeadlineRow(item) {
   line.className = "headline-row";
   line.innerHTML =
     '<span class="headline-row-date">' + escapeHtml(formatHeadlineDate(item.date)) + '</span>' +
-    '<span class="headline-row-tracker" title="' + escapeHtml(trackerLabel) + '">' + escapeHtml(trackerAbbr) + '</span>' +
     '<span class="headline-row-text" data-full-headline="' + escapeHtml(item.headline) + '" title="' + escapeHtml(item.headline) + '">' + escapeHtml(item.headline) + '</span>';
   const textSpan = line.querySelector(".headline-row-text");
   row.appendChild(line);
@@ -1657,6 +1652,24 @@ function buildHeadlineRow(item) {
     });
   }
   line.insertBefore(moreBtn, textSpan);
+
+  // The tracker abbreviation is a real jump-tab, not just a label --
+  // clicking it switches the "search or browse by database" dropdown
+  // to this item's source database and lands on that database's own
+  // home view (e.g. an "rpt" tag jumps to the Administration events
+  // reports tab). It does not deep-link to this specific entry's own
+  // card there -- none of the adapt*Entry() item shapes above carry an
+  // id, and the Reporting tracker (by far the most common source in
+  // this feed) has no idField to deep-link to in the first place, so
+  // "jump to the database" is the one behavior that works uniformly
+  // across all five trackers.
+  const dbBtn = document.createElement("button");
+  dbBtn.type = "button";
+  dbBtn.className = "share-link-btn headline-row-tracker";
+  dbBtn.title = "Jump to " + trackerLabel;
+  dbBtn.textContent = trackerAbbr;
+  dbBtn.addEventListener("click", () => selectDatabaseTab(item.tracker));
+  line.insertBefore(dbBtn, textSpan);
 
   const trailBtn = document.createElement("button");
   trailBtn.type = "button";
@@ -1717,11 +1730,34 @@ function fitHeadlineRowText(el) {
 let headlinesSortValue = "date-desc";
 let headlinesTrackerFilter = "";
 let headlinesSubFilter = "";
+let headlinesExcludeReporting = false;
+// How many of the current (sorted/filtered) result set are actually
+// rendered to the DOM -- grows via the "Load more" button rather than
+// rendering all ~14k headlines at once, which previously froze the tab
+// (see RENDER_STEP below). Reset to RENDER_STEP any time the
+// underlying result set changes (sort, filter, or the exclude-reporting
+// toggle) so pagination restarts from the top of the new set rather
+// than carrying over a stale, now-meaningless position.
+const RENDER_STEP = 300;
+let headlinesRenderLimit = RENDER_STEP;
 
-function renderHeadlinesView() {
+/* appendOnly (set only by the "Load more" button) renders and
+   fits-to-width just the newly-revealed slice and appends it, instead
+   of tearing down and re-measuring every already-rendered row from
+   scratch -- with a plain full rebuild, each click's cost grows with
+   the *total* rendered so far (measured ~15s across 4 clicks / 1800
+   rows), which is exactly the kind of unbounded-cost-as-you-page-back
+   problem RENDER_STEP exists to avoid in the first place. A sort,
+   filter, or the exclude-reporting toggle still does a full rebuild,
+   since the actual set of rows (not just how many) has changed. */
+function renderHeadlinesView(appendOnly) {
   const container = document.getElementById("headlines-view");
   const countEl = document.getElementById("headlines-count");
   let items = buildHeadlineItems();
+
+  if (headlinesExcludeReporting) {
+    items = items.filter(i => i.tracker !== "tracker");
+  }
 
   if (headlinesTrackerFilter) {
     items = items.filter(i => i.tracker === headlinesTrackerFilter);
@@ -1736,18 +1772,44 @@ function renderHeadlinesView() {
     return extractFirstDate(b.date) - extractFirstDate(a.date);
   });
 
-  const RENDER_CAP = 300;
-  const toRender = items.slice(0, RENDER_CAP);
+  const toRender = items.slice(0, headlinesRenderLimit);
+  const remaining = items.length - toRender.length;
 
-  countEl.textContent = items.length > RENDER_CAP
-    ? toRender.length + " shown of " + items.length + " headlines — sort or filter to narrow further"
+  countEl.textContent = remaining > 0
+    ? toRender.length + " shown of " + items.length + " headlines — sort or filter to narrow further, or load more below"
     : items.length + " headline(s)";
 
-  container.innerHTML = "";
+  const alreadyRendered = appendOnly ? container.children.length : 0;
+  const newlyRendered = toRender.slice(alreadyRendered);
+  if (!appendOnly) container.innerHTML = "";
   const frag = document.createDocumentFragment();
-  toRender.forEach(item => frag.appendChild(buildHeadlineRow(item)));
+  // Grabs each row's own text span (a cheap, single-row-scoped
+  // querySelector) as it's built, rather than querySelectorAll-ing the
+  // whole container afterward -- the latter would re-scan every
+  // already-rendered row too (cost growing with the running total, not
+  // just the new batch), which is exactly what appendOnly exists to
+  // avoid. fitHeadlineRowText() needs real layout (clientWidth is 0 on
+  // a detached node), so these are only fit after the append below.
+  const newTextSpans = [];
+  newlyRendered.forEach(item => {
+    const row = buildHeadlineRow(item);
+    newTextSpans.push(row.querySelector(".headline-row-text"));
+    frag.appendChild(row);
+  });
   container.appendChild(frag);
-  container.querySelectorAll(".headline-row-text").forEach(fitHeadlineRowText);
+  newTextSpans.forEach(fitHeadlineRowText);
+
+  const loadMoreRow = document.getElementById("headlines-load-more-row");
+  const loadMoreBtn = document.getElementById("headlines-load-more-btn");
+  if (remaining > 0) {
+    loadMoreRow.style.display = "";
+    loadMoreBtn.textContent = "Load " + Math.min(RENDER_STEP, remaining) + " more (" + remaining + " left)";
+  } else {
+    loadMoreRow.style.display = "none";
+  }
+
+  const excludeBtn = document.getElementById("headlines-exclude-reporting-btn");
+  excludeBtn.classList.toggle("active", headlinesExcludeReporting);
 }
 
 function renderHeadlinesControls() {
@@ -2561,7 +2623,7 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
       '<div class="field-label">Sources</div><ul class="exhibit-list">' + (entry.sources || []).map(s => '<li><a href="' + escapeHtml(safeHref(s.url)) + '" target="_blank" rel="noopener">' + hl(s.name) + '</a></li>').join("") + '</ul>' +
       (entry.submitter_source_link ? '<div class="field-label">Submitter-provided source</div><div class="field-value"><a href="' + escapeHtml(safeHref(entry.submitter_source_link)) + '" target="_blank" rel="noopener">' + hl(entry.submitter_source_link) + '</a></div>' : '') +
       '<div class="field-label">Submitted</div><div class="field-value">' + hl(entry.date_submitted) + '</div>' +
-      '<div class="field-value" style="margin-top:0.9rem;"><a href="#" class="tracker-home-link back-home-link" data-tracker-key="communitytopics">← Back to User Topics</a></div>';
+      '<div class="field-value" style="margin-top:0.9rem;"><a href="#" class="tracker-home-link back-home-link" data-tracker-key="communitytopics">← Back to Claim-checks</a></div>';
   }
   // prosecution (default)
   return '<div class="field-label">Violation Type</div><div class="field-value">' + hl(entry.offense_category) + '</div>' +
@@ -2699,35 +2761,64 @@ function wireShareLinkButtons(container) {
   });
 }
 
-function renderTabs() {
-  const nav = document.getElementById("tabs");
-  nav.innerHTML = "";
-  Object.keys(TRACKERS).forEach(key => {
-    const btn = document.createElement("button");
-    btn.textContent = TRACKERS[key].label + " (" + TRACKERS[key].data.length + ")";
-    btn.className = key === activeTracker ? "active" : "";
-    // Deliberately does NOT clear searchTerm or the #search input --
-    // switching tabs should carry an active search term over to the
-    // newly-selected tracker, not silently discard it. filterValue is
-    // still reset since each tracker's filter dropdown has a different,
-    // tracker-specific set of options (domain vs. status category etc.)
-    // that wouldn't carry over meaningfully.
-    btn.onclick = () => { activeTracker = key; filterValue = ""; sortValue = ""; groupMode = defaultGroupModeFor(key); statusGroupOn = false; renderDispatch(); };
-    nav.appendChild(btn);
-  });
+// Deliberately does NOT clear searchTerm or the #search input --
+// switching databases should carry an active search term over to the
+// newly-selected tracker, not silently discard it. filterValue is
+// still reset since each tracker's filter dropdown has a different,
+// tracker-specific set of options (domain vs. status category etc.)
+// that wouldn't carry over meaningfully. Shared by the dropdown's own
+// change handler and by selectDatabaseTab() (used by the hidden demo
+// tour to drive the dropdown programmatically).
+function switchToTracker(key) {
+  activeTracker = key;
+  filterValue = "";
+  sortValue = "";
+  groupMode = defaultGroupModeFor(key);
+  statusGroupOn = false;
+  renderDispatch();
+}
 
-  // Reports (formerly "Headlines") lives in its own centered row below
-  // the five database tabs, not inline with them -- it's a cross-tracker
-  // aggregate feed, not a sixth database, so it's kept visually distinct
-  // (own row, own un-shrunk button size) rather than blending into the
-  // database-tab row above.
-  const reportsRow = document.getElementById("reports-tab-row");
-  reportsRow.innerHTML = "";
-  const reportsBtn = document.createElement("button");
-  reportsBtn.textContent = "Reports";
-  reportsBtn.className = activeTracker === "headlines" ? "active" : "";
-  reportsBtn.onclick = () => { activeTracker = "headlines"; renderDispatch(); };
-  reportsRow.appendChild(reportsBtn);
+function selectDatabaseTab(key) {
+  const select = document.getElementById("tabs");
+  if (!select || !TRACKERS[key]) return;
+  select.value = key;
+  switchToTracker(key);
+}
+
+function renderTabs() {
+  const select = document.getElementById("tabs");
+  select.innerHTML = "";
+  // Shown only while activeTracker is "headlines" (Records) -- none of
+  // the five real options should look selected when browsing the
+  // cross-tracker feed instead of an actual database. Disabled so it
+  // can't be chosen back to once a real database is picked.
+  const placeholder = document.createElement("option");
+  placeholder.value = "";
+  placeholder.textContent = "— choose a database —";
+  placeholder.disabled = true;
+  placeholder.selected = !TRACKERS[activeTracker];
+  select.appendChild(placeholder);
+  Object.keys(TRACKERS).forEach(key => {
+    const opt = document.createElement("option");
+    opt.value = key;
+    opt.textContent = TRACKERS[key].label + " (" + TRACKERS[key].data.length + ")";
+    opt.selected = key === activeTracker;
+    select.appendChild(opt);
+  });
+  select.onchange = () => switchToTracker(select.value);
+
+  // Records (formerly "Headlines", briefly "Reports") lives in its own
+  // centered row below the five database tabs, not inline with them --
+  // it's a cross-tracker aggregate feed, not a sixth database, so it's
+  // kept visually distinct (own row, own un-shrunk button size) rather
+  // than blending into the database-tab row above.
+  const recordsRow = document.getElementById("records-tab-row");
+  recordsRow.innerHTML = "";
+  const recordsBtn = document.createElement("button");
+  recordsBtn.textContent = "Records";
+  recordsBtn.className = activeTracker === "headlines" ? "active" : "";
+  recordsBtn.onclick = () => { activeTracker = "headlines"; renderDispatch(); };
+  recordsRow.appendChild(recordsBtn);
 }
 
 function pluralize(word) {
@@ -3014,8 +3105,8 @@ const RELATED_TRACKER_FIELD_TO_KEY = {
 /* Switches to a tracker's tab with search/filter cleared, landing on
    its plain, unfiltered list. The shared "go to this tracker's home
    view" step behind both jumpToRelatedEntry() (which then also opens a
-   specific card on top of it) and the User Topics detail view's own
-   "Back to User Topics" link (which doesn't target any specific card,
+   specific card on top of it) and the Claim-checks detail view's own
+   "Back to Claim-checks" link (which doesn't target any specific card,
    just wants the tab reset to its default list). */
 function goToTrackerHome(key) {
   if (!TRACKERS[key]) return;
@@ -3225,7 +3316,7 @@ function renderGlobalResults(term, useRegex, useOneLiners, useImpactSort) {
   if (allMatches.length === 0) {
     const empty = document.createElement("div");
     empty.className = "empty-state";
-    empty.textContent = "No matches in Corporate Deregulation, Cabinet-Level Accountability, Government Service Redirection, or User Topics.";
+    empty.textContent = "No matches in Corporate Deregulation, Cabinet-Level Accountability, Government Service Redirection, or Claim-checks.";
     container.appendChild(empty);
     if (reportingLink) container.appendChild(reportingLink);
     return;
@@ -3348,17 +3439,29 @@ document.getElementById("group-mode").addEventListener("change", (e) => {
 });
 document.getElementById("headlines-sort").addEventListener("change", (e) => {
   headlinesSortValue = e.target.value;
+  headlinesRenderLimit = RENDER_STEP;
   renderHeadlinesView();
 });
 document.getElementById("headlines-tracker-filter").addEventListener("change", (e) => {
   headlinesTrackerFilter = e.target.value;
   headlinesSubFilter = "";
+  headlinesRenderLimit = RENDER_STEP;
   renderHeadlinesControls();
   renderHeadlinesView();
 });
 document.getElementById("headlines-subfilter").addEventListener("change", (e) => {
   headlinesSubFilter = e.target.value;
+  headlinesRenderLimit = RENDER_STEP;
   renderHeadlinesView();
+});
+document.getElementById("headlines-exclude-reporting-btn").addEventListener("click", () => {
+  headlinesExcludeReporting = !headlinesExcludeReporting;
+  headlinesRenderLimit = RENDER_STEP;
+  renderHeadlinesView();
+});
+document.getElementById("headlines-load-more-btn").addEventListener("click", () => {
+  headlinesRenderLimit += RENDER_STEP;
+  renderHeadlinesView(/* appendOnly */ true);
 });
 /* Checking "Group by status" resets and disables the "List by
    individual" dropdown -- the two grouping mechanisms are mutually
@@ -3632,9 +3735,7 @@ const TapDemoTour = (() => {
           globalSearch.value = "";
           globalSearch.dispatchEvent(new Event("input", { bubbles: true }));
         }
-        const tabBtn = Array.from(document.querySelectorAll("#tabs button"))
-          .find(b => b.textContent.startsWith("Corporate Deregulation"));
-        if (tabBtn) tabBtn.click();
+        selectDatabaseTab("deregulation");
         await new Promise(r => setTimeout(r, 200));
         const filterSelect = document.getElementById("filter");
         if (filterSelect) {
@@ -3662,11 +3763,7 @@ const TapDemoTour = (() => {
           filterSelect.value = "";
           filterSelect.dispatchEvent(new Event("change", { bubbles: true }));
         }
-        // Tab buttons carry no id/data-* attribute -- only label text
-        // (plus a live entry count) -- so match on the label prefix.
-        const tabBtn = Array.from(document.querySelectorAll("#tabs button"))
-          .find(b => b.textContent.startsWith("Cabinet-Level Accountability"));
-        if (tabBtn) tabBtn.click();
+        selectDatabaseTab("prosecution");
         await new Promise(r => setTimeout(r, 200));
         // This tab defaults to grouped-by-individual view (see the next
         // step) -- force flat cards so a single .entry is directly
@@ -3706,9 +3803,7 @@ const TapDemoTour = (() => {
       desc: "Tracks government services, offices, and programs that were cut, defunded, or redirected -- filter by domain, like Research Suppression or Funding Redirection, to focus on one kind of rollback.",
       target: () => document.getElementById("tab-controls"),
       action: async () => {
-        const tabBtn = Array.from(document.querySelectorAll("#tabs button"))
-          .find(b => b.textContent.startsWith("Government Service Redirection"));
-        if (tabBtn) tabBtn.click();
+        selectDatabaseTab("govservices");
         await new Promise(r => setTimeout(r, 300));
         const filterSelect = document.getElementById("filter");
         if (filterSelect) {
@@ -3725,9 +3820,7 @@ const TapDemoTour = (() => {
       desc: "A high-volume news-scrape tracker with over 13,000 entries -- every article ingested since Inauguration Day, searchable and sortable by most recent activity.",
       target: () => document.getElementById("count"),
       action: async () => {
-        const tabBtn = Array.from(document.querySelectorAll("#tabs button"))
-          .find(b => b.textContent.startsWith("Administration events reports since Jan 2025"));
-        if (tabBtn) tabBtn.click();
+        selectDatabaseTab("tracker");
         await new Promise(r => setTimeout(r, 300));
         const sortSelect = document.getElementById("sort-order");
         if (sortSelect) {
@@ -3743,9 +3836,7 @@ const TapDemoTour = (() => {
       desc: "Every topic submitted through Claim-Check lands here first, rated Confirmed, Partially Confirmed, Unable to Verify, or Misleading as Stated -- topics that check out get promoted into TAP's main trackers.",
       target: () => document.getElementById("filter"),
       action: async () => {
-        const tabBtn = Array.from(document.querySelectorAll("#tabs button"))
-          .find(b => b.textContent.startsWith("User Topics"));
-        if (tabBtn) tabBtn.click();
+        selectDatabaseTab("communitytopics");
         await new Promise(r => setTimeout(r, 300));
         const filterSelect = document.getElementById("filter");
         if (filterSelect) {
