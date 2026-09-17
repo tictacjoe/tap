@@ -32,6 +32,6 @@ Public laws, federal register notices, congressional records, federal court fili
 
 ### Commercial Licensing Inquiries
 For commercial licensing, enterprise intelligence integrations, or API access outside the scope of CC BY-NC-SA 4.0, contact:
-**JTDA LLC** — via tictacjoe.github.io
+**JTDA LLC** — via tictacjoe.github.io/contact
 
 See also `TERMS.md` in this repository for the site's terms of use, attribution format, and AI-ingestion policy.

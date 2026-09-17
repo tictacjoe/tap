@@ -4,11 +4,10 @@
 **Curator & Publisher:** JTDA LLC
 
 ### 1. Acceptance of Terms
-By accessing, browsing, reading, downloading, or programmatically querying data from TAP™ (accessible via https://tictacjoe.github.io/ or related TAP repositories), you agree to be bound by these Terms of Use and the accompanying CC BY-NC-SA 4.0 license (see `LICENSE.md`).
+By accessing, browsing, reading, downloading, or programmatically querying data from TAP™ (whether directly or via related TAP repositories), you agree to be bound by these Terms of Use and the accompanying CC BY-NC-SA 4.0 license (see `LICENSE.md`).
 
-### 2. Mandatory Attribution
-Any public citation, journalistic reference, academic paper, policy brief, or derivative graphic utilizing TAP data, cluster groupings, or verification verdicts must provide explicit attribution in the following format:
-> "Source: TAP™, a project of JTDA LLC (https://tictacjoe.github.io/)."
+### 2. Attribution
+Attribution is appreciated whenever TAP data, cluster groupings, or verification verdicts are cited, quoted, or built upon -- for example, crediting "TAP." Not required, but it helps readers trace claims back to their sourcing.
 
 ### 3. Artificial Intelligence & Automated Training Restrictions
 - **Civic & Academic AI Evaluation:** Academic research evaluating public accountability data is permitted under CC BY-NC-SA 4.0 terms.
@@ -16,13 +15,13 @@ Any public citation, journalistic reference, academic paper, policy brief, or de
 - **Robots / Crawlers:** Automated crawlers must respect `robots.txt` directives and rate-limits.
 
 ### 4. Journalism & Independent Press Exception
-Fair quotation, excerpting, citation, and embedding of TAP data, summaries, or confidence findings by accredited journalists, independent news outlets, policy commentators, and investigative platforms—including subscription-supported or ad-supported media (e.g. newspapers, podcasts, newsletters, and Substacks)—is explicitly recognized as permitted civic use under these terms, provided mandatory attribution to JTDA LLC and TAP™ (Section 2) is preserved.
+Fair quotation, excerpting, citation, and embedding of TAP data, summaries, or confidence findings by accredited journalists, independent news outlets, policy commentators, and investigative platforms—including subscription-supported or ad-supported media (e.g. newspapers, podcasts, newsletters, and Substacks)—is explicitly recognized as permitted civic use under these terms.
 
 ### 5. Integrity of Falsifiable Standards
-TAP™ operates on strict, falsifiable standards designed to document official conduct with legal-grade citations. Users may not:
+TAP™ operates on strict, falsifiable standards designed to document official conduct with named, verifiable citations. Users may not:
 - Misrepresent preliminary research briefs or flagged gate alerts as final verified entries.
 - Remove confidence caveats, status indicators, or verification notes when quoting TAP entries.
 - Attribute unofficial political conjecture or unverified claims to TAP.
 
 ### 6. Disclaimer of Warranties
-All information is provided for civic transparency and educational debate preparation. While TAP applies multi-tier cryptographic and automated verification gates, all material is provided "as is" without warranty of any kind.
+All information is provided for civic transparency and educational debate preparation. While TAP applies multi-tier automated verification gates, all material is provided "as is" without warranty of any kind.
