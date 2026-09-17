@@ -25,15 +25,18 @@ const summaryLineFunctionSource = extractFunction(source, "summary-line");
 const highlightMatchesFunctionSource = extractFunction(source, "highlight-matches");
 const buildUpdateRequestHtmlFunctionSource = extractFunction(source, "build-update-request-html");
 const paragraphizeUpdatesFunctionSource = extractFunction(source, "paragraphize-updates");
+const buildConfidenceNoteHtmlFunctionSource = extractFunction(source, "build-confidence-note-html");
 const buildDetailHtmlFunctionSource = extractFunction(source, "build-detail-html");
 
 // Eval them all together so buildDetailHtml can call summaryLineHtml and
 // highlightMatches (which itself calls escapeHtml/escapeRegExp), plus
-// buildUpdateRequestHtml (which calls escapeHtml directly) and
-// paragraphizeUpdates (used for the Cabinet-Level Status field).
+// buildUpdateRequestHtml (which calls escapeHtml directly),
+// paragraphizeUpdates (used for the Cabinet-Level Status/Incident summary
+// fields), and buildConfidenceNoteHtml (used for the Confidence note
+// field on all three curated-tracker kinds; calls escapeHtml directly).
 const combined = escapeHtmlFunctionSource + "\n" + summaryLineFunctionSource + "\n" +
   highlightMatchesFunctionSource + "\n" + buildUpdateRequestHtmlFunctionSource + "\n" +
-  paragraphizeUpdatesFunctionSource + "\n" + buildDetailHtmlFunctionSource;
+  paragraphizeUpdatesFunctionSource + "\n" + buildConfidenceNoteHtmlFunctionSource + "\n" + buildDetailHtmlFunctionSource;
 const buildDetailHtml = (0, eval)(`${combined}\nbuildDetailHtml;`);
 
 // paragraphizeUpdates has no dependencies of its own, so it's also
@@ -576,7 +579,7 @@ test("deregulation What changed splits into separate paragraphs at each Update m
   assert(html.includes("<p>Update 2026-08-02: a challenge was filed.</p>"), "the Update marker should start its own paragraph");
 });
 
-test("prosecution Confidence note splits into separate paragraphs at each Update marker", () => {
+test("prosecution Confidence note splits its base text from a separate Updates section, dated by heading", () => {
   const entry = {
     offense_category: "Fraud",
     status_category: "Investigation",
@@ -587,13 +590,35 @@ test("prosecution Confidence note splits into separate paragraphs at each Update
   const cfg = { kind: "prosecution" };
   const result = buildDetailHtml(entry, cfg);
 
-  const start = result.indexOf('<div class="field-label">Confidence note</div><div class="confidence-box">');
-  const end = result.indexOf('<div class="field-label">Root Cause</div>');
-  const html = result.slice(start, end);
+  const confidenceStart = result.indexOf('<div class="field-label">Confidence note</div><div class="confidence-box">');
+  const updatesStart = result.indexOf('<div class="field-label">Updates</div>');
+  const rootCauseStart = result.indexOf('<div class="field-label">Root Cause</div>');
 
-  assert.equal((html.match(/<p>/g) || []).length, 2, "should split into 2 paragraphs, one per Update marker plus the lead-in text");
-  assert(html.includes("<p>Well-sourced initially.</p>"), "lead-in text before the marker should be its own paragraph");
-  assert(html.includes("<p>Update 2026-08-02: a second outlet corroborated.</p>"), "the Update marker should start its own paragraph");
+  assert(confidenceStart !== -1 && updatesStart !== -1 && rootCauseStart !== -1, "all three sections should be present");
+  assert(confidenceStart < updatesStart && updatesStart < rootCauseStart, "Updates should render between Confidence note and Root Cause");
+
+  const confidenceHtml = result.slice(confidenceStart, updatesStart);
+  assert(confidenceHtml.includes("<p>Well-sourced initially.</p>"), "the base text before the marker stays in the Confidence note box");
+  assert(!confidenceHtml.includes("2026-08-02"), "the dated update should not remain in the Confidence note box");
+
+  const updatesHtml = result.slice(updatesStart, rootCauseStart);
+  assert(updatesHtml.includes('<div class="update-date">2026-08-02</div>'), "the update's date should render as its heading");
+  assert(updatesHtml.includes("<p>Update 2026-08-02: a second outlet corroborated.</p>"), "the update's own text should render under its date heading");
+});
+
+test("prosecution Confidence note renders no Updates section when it has no Update/Added markers", () => {
+  const entry = {
+    offense_category: "Fraud",
+    status_category: "Investigation",
+    incident_summary: "Summary.",
+    status: "Under investigation.",
+    confidence_note: "Well-sourced, single outlet.",
+  };
+  const cfg = { kind: "prosecution" };
+  const result = buildDetailHtml(entry, cfg);
+
+  assert(!result.includes('<div class="field-label">Updates</div>'), "no Updates section should render when there's nothing to put in it");
+  assert(result.includes("<p>Well-sourced, single outlet.</p>"), "the whole note stays in the Confidence note box");
 });
 
 test("govservices Confidence note splits into separate paragraphs at each Update marker", () => {

@@ -768,6 +768,24 @@
   }
   .confidence-box p { margin: 0 0 0.65rem; }
   .confidence-box p:last-child { margin-bottom: 0; }
+  /* Updates box: same warm confidence-box background/border, but not
+     italic (these are dated log entries, not an assessment) and split
+     into separate .update-item blocks, each with its own date heading
+     -- not-italic + a rule between items is enough to read as a
+     distinct log rather than a continuation of the Confidence note
+     above it. */
+  .updates-box { font-style: normal; }
+  .update-item { padding: 0.5rem 0; border-top: 1px solid var(--brass); }
+  .update-item:first-child { padding-top: 0; border-top: none; }
+  .update-item:last-child { padding-bottom: 0; }
+  .update-item p { margin: 0.3rem 0 0; }
+  .update-date {
+    font-family: ui-monospace, 'SF Mono', 'Courier New', monospace;
+    font-size: 0.72rem;
+    font-weight: bold;
+    letter-spacing: 0.03em;
+    color: var(--ink);
+  }
 
   /* User Topics: a strong visual pointer to a fuller, already-
      researched curated entry, shown at the very top of the detail view
@@ -2411,6 +2429,64 @@ function paragraphizeUpdates(text, hl) {
 }
 /* paragraphize-updates:end */
 
+/* build-confidence-note-html:start */
+/* Splits a confidence_note into its base assessment (whatever text
+   comes before the first "Update"/"Added" marker) and a list of dated
+   update chunks (from each marker onward) -- reuses paragraphizeUpdates()'s
+   own marker regex so the two stay in sync, but keeps the pieces
+   separate instead of flattening them into one box, so updates can get
+   their own "Updates" section with the update's own date as a heading
+   rather than an inline marker buried in running prose. A marker
+   without a YYYY-MM-DD anywhere in its own text (rare -- a bare
+   "Update:" with no date, or "Added" used as an ordinary verb rather
+   than a dated marker) falls back to just its leading word ("Update"/
+   "Added") as the heading rather than breaking. */
+function splitConfidenceNote(text) {
+  if (!text) return { base: "", updates: [] };
+  const marker = /\b(?:Update|Added)\b[^.:]{0,130}:/g;
+  const markerIndices = [];
+  let m;
+  while ((m = marker.exec(text)) !== null) {
+    markerIndices.push(m.index);
+  }
+  if (markerIndices.length === 0) return { base: text.trim(), updates: [] };
+  const base = text.slice(0, markerIndices[0]).trim();
+  const updates = [];
+  for (let i = 0; i < markerIndices.length; i++) {
+    const end = i + 1 < markerIndices.length ? markerIndices[i + 1] : text.length;
+    const chunk = text.slice(markerIndices[i], end).trim();
+    if (!chunk) continue;
+    const dateMatch = chunk.match(/\d{4}-\d{2}-\d{2}/);
+    const label = (chunk.match(/^(?:Update|Added)/) || ["Update"])[0];
+    updates.push({ heading: dateMatch ? dateMatch[0] : label, text: chunk });
+  }
+  return { base, updates };
+}
+
+/* Renders the "Confidence note" field-value box plus, only if the note
+   actually contains any dated updates, a separate "Updates" box right
+   after it -- one dated sub-heading per update, newest-last (the order
+   they were appended to the note in). Shared across all three
+   confidence_note-bearing kinds (deregulation, govservices, prosecution)
+   in buildDetailHtml() below so the three stay identical rather than
+   drifting. */
+function buildConfidenceNoteHtml(entry, hl, summary) {
+  const { base, updates } = splitConfidenceNote(entry.confidence_note);
+  let html = '<div class="field-label">Confidence note</div><div class="confidence-box">' +
+    summary(entry.section_summaries?.confidence_note) +
+    (base ? "<p>" + hl(base) + "</p>" : "") +
+    '</div>';
+  if (updates.length) {
+    html += '<div class="field-label">Updates</div><div class="confidence-box updates-box">' +
+      updates.map(u =>
+        '<div class="update-item"><div class="update-date">' + escapeHtml(u.heading) + '</div><p>' + hl(u.text) + '</p></div>'
+      ).join("") +
+      '</div>';
+  }
+  return html;
+}
+/* build-confidence-note-html:end */
+
 /* build-detail-html:start */
 function buildDetailHtml(entry, cfg, term, useRegex) {
   // Same highlighting the card's title/meta line already gets --
@@ -2427,7 +2503,7 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
       '<div class="field-label">Estimated impact</div><div class="field-value">' + summary(entry.section_summaries?.estimated_impact) + hl(entry.estimated_health_impact?.summary) + '</div>' +
       buildFiguresHtml(entry.estimated_health_impact?.figures, hl) +
       (entry.estimated_health_impact?.caveat ? '<div class="field-label">Caveat</div><div class="field-value" style="font-style:italic;">' + hl(entry.estimated_health_impact.caveat) + '</div>' : '') +
-      '<div class="field-label">Confidence note</div><div class="confidence-box">' + summary(entry.section_summaries?.confidence_note) + paragraphizeUpdates(entry.confidence_note, hl) + '</div>' +
+      buildConfidenceNoteHtml(entry, hl, summary) +
       '<div class="field-label">Sources</div><ul class="exhibit-list">' + (entry.sources || []).map(s => '<li><a href="' + escapeHtml(safeHref(s.url)) + '" target="_blank" rel="noopener">' + hl(s.name) + '</a></li>').join("") + '</ul>' +
       buildUpdateRequestHtml(entry, cfg);
   }
@@ -2442,7 +2518,7 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
       '<div class="field-label">Estimated impact</div><div class="field-value">' + summary(entry.section_summaries?.estimated_impact) + hl(entry.estimated_impact?.summary) + '</div>' +
       buildFiguresHtml(entry.estimated_impact?.figures, hl) +
       (entry.estimated_impact?.caveat ? '<div class="field-label">Caveat</div><div class="field-value" style="font-style:italic;">' + hl(entry.estimated_impact.caveat) + '</div>' : '') +
-      '<div class="field-label">Confidence note</div><div class="confidence-box">' + summary(entry.section_summaries?.confidence_note) + paragraphizeUpdates(entry.confidence_note, hl) + '</div>' +
+      buildConfidenceNoteHtml(entry, hl, summary) +
       '<div class="field-label">Sources</div><ul class="exhibit-list">' + (entry.sources || []).map(s => '<li><a href="' + escapeHtml(safeHref(s.url)) + '" target="_blank" rel="noopener">' + hl(s.name) + '</a></li>').join("") + '</ul>' +
       buildUpdateRequestHtml(entry, cfg);
   }
@@ -2496,7 +2572,7 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
     '<div class="field-label">Alleged Violation (full legal citation)</div><div class="field-value">' + hl(entry.offense_category_raw || entry.offense_category) + '</div>' +
     '<div class="field-label">Incident summary</div><div class="field-value">' + summary(entry.section_summaries?.incident_summary) + paragraphizeUpdates(entry.incident_summary, hl) + '</div>' +
     '<div class="field-label">Status</div><div class="field-value">' + paragraphizeUpdates(entry.status, hl) + '</div>' +
-    '<div class="field-label">Confidence note</div><div class="confidence-box">' + summary(entry.section_summaries?.confidence_note) + paragraphizeUpdates(entry.confidence_note, hl) + '</div>' +
+    buildConfidenceNoteHtml(entry, hl, summary) +
     '<div class="field-label">Root Cause</div><div class="field-value">' + hl(entry.cause) + '</div>' +
     '<div class="field-label">Anticipated Defense</div><div class="field-value">' + hl(entry.rebuttal_anticipated) + '</div>' +
     '<div class="field-label">TAP\'s Rebuttal</div><div class="field-value">' + hl(entry.comeback) + '</div>' +
