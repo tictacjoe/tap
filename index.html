@@ -748,6 +748,18 @@
     padding: 0.85rem 1rem;
     box-shadow: 0 1px 3px rgba(29, 34, 32, 0.08);
   }
+  /* Lighter sibling of .entry-aside-card for the main column's own
+     sections (2026-09-18, Joe's call) -- set apart as their own boxes
+     too, but quieter: same border color as the sidebar cards (a
+     lighter --rule was tried first but read as invisible against the
+     entry's own paper-card background -- a box you can't see fails
+     the actual ask), just with no fill color and no shadow, so the
+     sidebar cards still read as the bolder, more "lifted" of the two. */
+  .entry-main-card {
+    border: 1px solid var(--rule-strong);
+    border-radius: 6px;
+    padding: 0.85rem 1rem;
+  }
   /* Each field-group's own first label needs no extra top margin --
      the flex gap between groups already provides it. A second label
      inside the same group (e.g. Confidence note's "Updates" sub-label)
@@ -2975,9 +2987,9 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
 
   if (cfg.kind === "deregulation") {
     const mainHtml =
-      '<div class="field-group"><div class="field-label">What changed</div><div class="field-value">' + summary(entry.section_summaries?.what_changed) + paragraphizeUpdates(entry.what_changed, hl) + '</div></div>' +
-      '<div class="field-group"><div class="field-label">Estimated impact</div><div class="field-value">' + summary(entry.section_summaries?.estimated_impact) + hl(entry.estimated_health_impact?.summary) + '</div></div>' +
-      (entry.estimated_health_impact?.caveat ? '<div class="field-group"><div class="field-label">Caveat</div><div class="field-value" style="font-style:italic;">' + hl(entry.estimated_health_impact.caveat) + '</div></div>' : '');
+      '<div class="field-group entry-main-card"><div class="field-label">What changed</div><div class="field-value">' + summary(entry.section_summaries?.what_changed) + paragraphizeUpdates(entry.what_changed, hl) + '</div></div>' +
+      '<div class="field-group entry-main-card"><div class="field-label">Estimated impact</div><div class="field-value">' + summary(entry.section_summaries?.estimated_impact) + hl(entry.estimated_health_impact?.summary) + '</div></div>' +
+      (entry.estimated_health_impact?.caveat ? '<div class="field-group entry-main-card"><div class="field-label">Caveat</div><div class="field-value" style="font-style:italic;">' + hl(entry.estimated_health_impact.caveat) + '</div></div>' : '');
     const asideHtml =
       '<div class="field-group entry-aside-card"><div class="field-label">Primary proponent</div><div class="field-value"><strong>' + hl(entry.primary_proponent?.name) + '</strong> — ' + hl(entry.primary_proponent?.role) + (entry.primary_proponent?.note ? '<br><em>' + hl(entry.primary_proponent.note) + '</em>' : '') + '</div></div>' +
       (entry.estimated_health_impact?.figures?.length ? '<div class="field-group entry-aside-card">' + buildFiguresHtml(entry.estimated_health_impact.figures, hl) + '</div>' : '') +
@@ -2998,9 +3010,9 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
     // the actual content better -- and it reuses Reporting's existing
     // label for the same kind of field rather than inventing a new one.
     const mainHtml =
-      '<div class="field-group"><div class="field-label">What happened</div><div class="field-value">' + summary(entry.section_summaries?.what_changed) + paragraphizeUpdates(entry.what_changed, hl) + '</div></div>' +
-      '<div class="field-group"><div class="field-label">Estimated impact</div><div class="field-value">' + summary(entry.section_summaries?.estimated_impact) + hl(entry.estimated_impact?.summary) + '</div></div>' +
-      (entry.estimated_impact?.caveat ? '<div class="field-group"><div class="field-label">Caveat</div><div class="field-value" style="font-style:italic;">' + hl(entry.estimated_impact.caveat) + '</div></div>' : '');
+      '<div class="field-group entry-main-card"><div class="field-label">What happened</div><div class="field-value">' + summary(entry.section_summaries?.what_changed) + paragraphizeUpdates(entry.what_changed, hl) + '</div></div>' +
+      '<div class="field-group entry-main-card"><div class="field-label">Estimated impact</div><div class="field-value">' + summary(entry.section_summaries?.estimated_impact) + hl(entry.estimated_impact?.summary) + '</div></div>' +
+      (entry.estimated_impact?.caveat ? '<div class="field-group entry-main-card"><div class="field-label">Caveat</div><div class="field-value" style="font-style:italic;">' + hl(entry.estimated_impact.caveat) + '</div></div>' : '');
     const asideHtml =
       '<div class="field-group entry-aside-card"><div class="field-label">Institution</div><div class="field-value">' + hl(entry.institution) + '</div></div>' +
       '<div class="field-group entry-aside-card"><div class="field-label">Primary proponent</div><div class="field-value"><strong>' + hl(entry.primary_proponent?.name) + '</strong> — ' + hl(entry.primary_proponent?.role) + (entry.primary_proponent?.note ? '<br><em>' + hl(entry.primary_proponent.note) + '</em>' : '') + '</div></div>' +
@@ -3064,12 +3076,12 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
   // cite in it. The new name instead ties it directly to the sidebar's
   // "Violation Type" card -- same field, unabbreviated.
   const mainHtml =
-    '<div class="field-group"><div class="field-label">Violation Type (in full)</div><div class="field-value">' + hl(entry.offense_category_raw || entry.offense_category) + '</div></div>' +
-    '<div class="field-group"><div class="field-label">Incident summary</div><div class="field-value">' + summary(entry.section_summaries?.incident_summary) + paragraphizeUpdates(entry.incident_summary, hl) + '</div></div>' +
-    '<div class="field-group"><div class="field-label">Status</div><div class="field-value">' + paragraphizeUpdates(entry.status, hl) + '</div></div>' +
-    '<div class="field-group"><div class="field-label">Broader Pattern</div><div class="field-value">' + hl(entry.cause) + '</div></div>' +
-    '<div class="field-group"><div class="field-label">Anticipated Defense</div><div class="field-value">' + hl(entry.rebuttal_anticipated) + '</div></div>' +
-    '<div class="field-group"><div class="field-label">TAP\'s Rebuttal</div><div class="field-value">' + hl(entry.comeback) + '</div></div>';
+    '<div class="field-group entry-main-card"><div class="field-label">Violation Type (in full)</div><div class="field-value">' + hl(entry.offense_category_raw || entry.offense_category) + '</div></div>' +
+    '<div class="field-group entry-main-card"><div class="field-label">Incident summary</div><div class="field-value">' + summary(entry.section_summaries?.incident_summary) + paragraphizeUpdates(entry.incident_summary, hl) + '</div></div>' +
+    '<div class="field-group entry-main-card"><div class="field-label">Status</div><div class="field-value">' + paragraphizeUpdates(entry.status, hl) + '</div></div>' +
+    '<div class="field-group entry-main-card"><div class="field-label">Broader Pattern</div><div class="field-value">' + hl(entry.cause) + '</div></div>' +
+    '<div class="field-group entry-main-card"><div class="field-label">Anticipated Defense</div><div class="field-value">' + hl(entry.rebuttal_anticipated) + '</div></div>' +
+    '<div class="field-group entry-main-card"><div class="field-label">TAP\'s Rebuttal</div><div class="field-value">' + hl(entry.comeback) + '</div></div>';
   const asideHtml =
     '<div class="field-group entry-aside-card"><div class="field-label">Violation Type</div><div class="field-value">' + hl(entry.offense_category) + '</div></div>' +
     (entry.concern_type && entry.concern_type !== "Other/Unclassified"
