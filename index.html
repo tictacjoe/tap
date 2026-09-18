@@ -2700,29 +2700,55 @@ function tokenPattern(token) {
   return "\\b" + token.split(/\s+/).filter(Boolean).map(escapeRegExp).join("\\s+") + "\\b";
 }
 
+/* Editorial skim-emphasis convention (2026-09-18): a `**phrase**` marker
+   in entry free-text fields renders as <strong>. Checked against the
+   full corpus before wiring this in -- zero existing "**" occurrences
+   across any field in any tracker, so this can't misfire on legacy
+   text. Runs on the already-escaped string (escapeHtml has no effect on
+   "*", so order versus escaping doesn't matter), non-greedy so multiple
+   bolded phrases in one field don't merge into one span. */
+function boldify(escapedText) {
+  return escapedText.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+}
+
 /* Escapes the text first (so entry data can never inject stray HTML),
-   then wraps matches of the search term in <mark>. In plain-text mode
-   the term is split into tokens (mirroring matchesTerm()'s plain-mode
-   behavior -- see parseSearchTokens()), each turned into a \b-bounded
-   pattern so special characters like "?" or "(" are matched literally,
-   and any token lights up wherever it appears -- only in regex mode
-   does the term act as an actual unbounded pattern. */
+   applies the **bold** convention, then wraps matches of the search
+   term in <mark>. In plain-text mode the term is split into tokens
+   (mirroring matchesTerm()'s plain-mode behavior -- see
+   parseSearchTokens()), each turned into a \b-bounded pattern so
+   special characters like "?" or "(" are matched literally, and any
+   token lights up wherever it appears -- only in regex mode does the
+   term act as an actual unbounded pattern.
+
+   The mark-wrapping pass runs on each text segment split around the
+   <strong>/</strong> tags boldify() just inserted, never on the whole
+   string at once -- otherwise a search match straddling a bold-phrase
+   boundary (e.g. term "schools hurt" against "...**budget for
+   schools** hurt families...") would wrap <mark> around text that
+   crosses into or out of a <strong> tag, producing overlapping,
+   invalid HTML. Splitting first means every match stays inside one
+   segment, so <mark> only ever nests cleanly inside or outside
+   <strong>, never straddling it. */
 function highlightMatches(text, term, useRegex) {
-  const escaped = escapeHtml(text);
-  if (!term) return escaped;
+  const boldified = boldify(escapeHtml(text));
+  if (!term) return boldified;
   try {
     let pattern;
     if (useRegex) {
       pattern = term;
     } else {
       const tokens = parseSearchTokens(term);
-      if (!tokens.length) return escaped;
+      if (!tokens.length) return boldified;
       pattern = tokens.map(tokenPattern).join("|");
     }
     const re = new RegExp(pattern, "gi");
-    return escaped.replace(re, (match) => "<mark class=\"hl\">" + match + "</mark>");
+    const wrap = (segment) => segment.replace(re, (match) => "<mark class=\"hl\">" + match + "</mark>");
+    return boldified
+      .split(/(<\/?strong>)/)
+      .map((seg) => (seg === "<strong>" || seg === "</strong>" ? seg : wrap(seg)))
+      .join("");
   } catch (err) {
-    return escaped; // invalid regex -- matchesTerm() upstream already surfaces the error banner
+    return boldified; // invalid regex -- matchesTerm() upstream already surfaces the error banner
   }
 }
 /* highlight-matches:end */
