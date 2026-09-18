@@ -725,6 +725,54 @@
     font-weight: 700;
     margin: 0 0 0.35rem;
   }
+
+  /* Columnar entry-detail layout (2026-09-18, Deregulation/Government
+     Services/Prosecution only -- Reporting and Claim-checks keep the
+     old flat layout since they don't have enough fields to split).
+     Narrows the free-text fields to a comfortable reading measure and
+     gives short/list-shaped fields (Primary proponent, Sources,
+     Confidence note, and Prosecution's Violation Type/Status Stage)
+     their own boxed cards in a sidebar next to the narrative, instead
+     of one full-width column of everything. */
+  .entry-cols { display: flex; flex-direction: row; align-items: flex-start; gap: 2rem; }
+  .entry-main { display: flex; flex-direction: column; gap: 0.9rem; min-width: 0; flex: 0 1 34em; }
+  .entry-aside { display: flex; flex-direction: column; gap: 0.9rem; flex: 1 1 auto; min-width: 12rem; max-width: 20rem; }
+  @media (max-width: 700px) {
+    .entry-cols { flex-direction: column; gap: 1.1rem; }
+    .entry-aside { max-width: none; }
+  }
+  .entry-aside-card {
+    background: var(--paper);
+    border: 1px solid var(--rule-strong);
+    border-radius: 6px;
+    padding: 0.85rem 1rem;
+    box-shadow: 0 1px 3px rgba(29, 34, 32, 0.08);
+  }
+  /* Each field-group's own first label needs no extra top margin --
+     the flex gap between groups already provides it. A second label
+     inside the same group (e.g. Confidence note's "Updates" sub-label)
+     keeps its normal margin, since that's real internal separation. */
+  .entry-main .field-group > .field-label:first-child,
+  .entry-aside .field-group > .field-label:first-child {
+    margin-top: 0;
+  }
+  .entry-main .field-value,
+  .entry-main .confidence-box,
+  .entry-main .exhibit-list,
+  .entry-aside .field-value,
+  .entry-aside .confidence-box,
+  .entry-aside .exhibit-list {
+    max-width: 34em;
+  }
+  .field-label-row { display: flex; justify-content: space-between; align-items: baseline; gap: 0.6rem; }
+  .field-label-row .field-label { margin: 0; }
+  .field-asof {
+    font-family: ui-monospace, monospace;
+    font-size: 0.66rem;
+    color: var(--ink-faint);
+    white-space: nowrap;
+  }
+
   .update-request-row {
     display: flex;
     align-items: center;
@@ -2864,10 +2912,15 @@ function splitConfidenceNote(text) {
    they were appended to the note in). Shared across all three
    confidence_note-bearing kinds (deregulation, govservices, prosecution)
    in buildDetailHtml() below so the three stay identical rather than
-   drifting. */
+   drifting. The "as of" date next to the label is entry.last_verified --
+   already tracked on every entry, just not previously surfaced next to
+   the note it actually describes (2026-09-18). */
 function buildConfidenceNoteHtml(entry, hl, summary) {
   const { base, updates } = splitConfidenceNote(entry.confidence_note);
-  let html = '<div class="field-label">Confidence note</div><div class="confidence-box">' +
+  const labelHtml = entry.last_verified
+    ? '<div class="field-label-row"><div class="field-label">Confidence note</div><span class="field-asof">as of ' + escapeHtml(entry.last_verified) + '</span></div>'
+    : '<div class="field-label">Confidence note</div>';
+  let html = labelHtml + '<div class="confidence-box">' +
     summary(entry.section_summaries?.confidence_note) +
     (base ? "<p>" + hl(base) + "</p>" : "") +
     '</div>';
@@ -2893,13 +2946,16 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
   const summary = (text) => summaryLineHtml(text, term, useRegex);
 
   if (cfg.kind === "deregulation") {
-    return '<div class="field-label">What changed</div><div class="field-value">' + summary(entry.section_summaries?.what_changed) + paragraphizeUpdates(entry.what_changed, hl) + '</div>' +
-      '<div class="field-label">Primary proponent</div><div class="field-value"><strong>' + hl(entry.primary_proponent?.name) + '</strong> — ' + hl(entry.primary_proponent?.role) + (entry.primary_proponent?.note ? '<br><em>' + hl(entry.primary_proponent.note) + '</em>' : '') + '</div>' +
-      '<div class="field-label">Estimated impact</div><div class="field-value">' + summary(entry.section_summaries?.estimated_impact) + hl(entry.estimated_health_impact?.summary) + '</div>' +
-      buildFiguresHtml(entry.estimated_health_impact?.figures, hl) +
-      (entry.estimated_health_impact?.caveat ? '<div class="field-label">Caveat</div><div class="field-value" style="font-style:italic;">' + hl(entry.estimated_health_impact.caveat) + '</div>' : '') +
-      buildConfidenceNoteHtml(entry, hl, summary) +
-      '<div class="field-label">Sources</div><ul class="exhibit-list">' + (entry.sources || []).map(s => '<li><a href="' + escapeHtml(safeHref(s.url)) + '" target="_blank" rel="noopener">' + hl(s.name) + '</a></li>').join("") + '</ul>' +
+    const mainHtml =
+      '<div class="field-group"><div class="field-label">What changed</div><div class="field-value">' + summary(entry.section_summaries?.what_changed) + paragraphizeUpdates(entry.what_changed, hl) + '</div></div>' +
+      '<div class="field-group"><div class="field-label">Estimated impact</div><div class="field-value">' + summary(entry.section_summaries?.estimated_impact) + hl(entry.estimated_health_impact?.summary) + '</div></div>' +
+      (entry.estimated_health_impact?.caveat ? '<div class="field-group"><div class="field-label">Caveat</div><div class="field-value" style="font-style:italic;">' + hl(entry.estimated_health_impact.caveat) + '</div></div>' : '');
+    const asideHtml =
+      '<div class="field-group entry-aside-card"><div class="field-label">Primary proponent</div><div class="field-value"><strong>' + hl(entry.primary_proponent?.name) + '</strong> — ' + hl(entry.primary_proponent?.role) + (entry.primary_proponent?.note ? '<br><em>' + hl(entry.primary_proponent.note) + '</em>' : '') + '</div></div>' +
+      (entry.estimated_health_impact?.figures?.length ? '<div class="field-group entry-aside-card">' + buildFiguresHtml(entry.estimated_health_impact.figures, hl) + '</div>' : '') +
+      '<div class="field-group">' + buildConfidenceNoteHtml(entry, hl, summary) + '</div>' +
+      '<div class="field-group entry-aside-card"><div class="field-label">Sources</div><ul class="exhibit-list">' + (entry.sources || []).map(s => '<li><a href="' + escapeHtml(safeHref(s.url)) + '" target="_blank" rel="noopener">' + hl(s.name) + '</a></li>').join("") + '</ul></div>';
+    return '<div class="entry-cols"><div class="entry-main">' + mainHtml + '</div><div class="entry-aside">' + asideHtml + '</div></div>' +
       buildUpdateRequestHtml(entry, cfg);
   }
   if (cfg.kind === "tracker") {
@@ -2907,14 +2963,22 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
       (entry.source_name ? '<div class="field-label">Source</div><ul class="exhibit-list"><li><a href="' + escapeHtml(safeHref(entry.source_url)) + '" target="_blank" rel="noopener">' + hl(entry.source_name) + '</a></li></ul>' : '<div class="field-label">Source</div><div class="field-value" style="color:var(--ink-faint);font-style:italic;">not cited in original post</div>');
   }
   if (cfg.kind === "govservices") {
-    return '<div class="field-label">Institution</div><div class="field-value">' + hl(entry.institution) + '</div>' +
-      '<div class="field-label">What changed</div><div class="field-value">' + summary(entry.section_summaries?.what_changed) + paragraphizeUpdates(entry.what_changed, hl) + '</div>' +
-      '<div class="field-label">Primary proponent</div><div class="field-value"><strong>' + hl(entry.primary_proponent?.name) + '</strong> — ' + hl(entry.primary_proponent?.role) + (entry.primary_proponent?.note ? '<br><em>' + hl(entry.primary_proponent.note) + '</em>' : '') + '</div>' +
-      '<div class="field-label">Estimated impact</div><div class="field-value">' + summary(entry.section_summaries?.estimated_impact) + hl(entry.estimated_impact?.summary) + '</div>' +
-      buildFiguresHtml(entry.estimated_impact?.figures, hl) +
-      (entry.estimated_impact?.caveat ? '<div class="field-label">Caveat</div><div class="field-value" style="font-style:italic;">' + hl(entry.estimated_impact.caveat) + '</div>' : '') +
-      buildConfidenceNoteHtml(entry, hl, summary) +
-      '<div class="field-label">Sources</div><ul class="exhibit-list">' + (entry.sources || []).map(s => '<li><a href="' + escapeHtml(safeHref(s.url)) + '" target="_blank" rel="noopener">' + hl(s.name) + '</a></li>').join("") + '</ul>' +
+    // "What happened" (renamed from "What changed" 2026-09-18, Joe's
+    // call): these entries are usually reporting an event/finding, not
+    // a rule change the way Deregulation's field is, so "happened" fits
+    // the actual content better -- and it reuses Reporting's existing
+    // label for the same kind of field rather than inventing a new one.
+    const mainHtml =
+      '<div class="field-group"><div class="field-label">What happened</div><div class="field-value">' + summary(entry.section_summaries?.what_changed) + paragraphizeUpdates(entry.what_changed, hl) + '</div></div>' +
+      '<div class="field-group"><div class="field-label">Estimated impact</div><div class="field-value">' + summary(entry.section_summaries?.estimated_impact) + hl(entry.estimated_impact?.summary) + '</div></div>' +
+      (entry.estimated_impact?.caveat ? '<div class="field-group"><div class="field-label">Caveat</div><div class="field-value" style="font-style:italic;">' + hl(entry.estimated_impact.caveat) + '</div></div>' : '');
+    const asideHtml =
+      '<div class="field-group entry-aside-card"><div class="field-label">Institution</div><div class="field-value">' + hl(entry.institution) + '</div></div>' +
+      '<div class="field-group entry-aside-card"><div class="field-label">Primary proponent</div><div class="field-value"><strong>' + hl(entry.primary_proponent?.name) + '</strong> — ' + hl(entry.primary_proponent?.role) + (entry.primary_proponent?.note ? '<br><em>' + hl(entry.primary_proponent.note) + '</em>' : '') + '</div></div>' +
+      (entry.estimated_impact?.figures?.length ? '<div class="field-group entry-aside-card">' + buildFiguresHtml(entry.estimated_impact.figures, hl) + '</div>' : '') +
+      '<div class="field-group">' + buildConfidenceNoteHtml(entry, hl, summary) + '</div>' +
+      '<div class="field-group entry-aside-card"><div class="field-label">Sources</div><ul class="exhibit-list">' + (entry.sources || []).map(s => '<li><a href="' + escapeHtml(safeHref(s.url)) + '" target="_blank" rel="noopener">' + hl(s.name) + '</a></li>').join("") + '</ul></div>';
+    return '<div class="entry-cols"><div class="entry-main">' + mainHtml + '</div><div class="entry-aside">' + asideHtml + '</div></div>' +
       buildUpdateRequestHtml(entry, cfg);
   }
   if (cfg.kind === "communitytopics") {
@@ -2959,18 +3023,25 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
       '<div class="field-value" style="margin-top:0.9rem;"><a href="#" class="tracker-home-link back-home-link" data-tracker-key="communitytopics">← Back to Claim-checks</a></div>';
   }
   // prosecution (default)
-  return '<div class="field-label">Violation Type</div><div class="field-value">' + hl(entry.offense_category) + '</div>' +
+  // "Broader Pattern" (renamed from "Root Cause" 2026-09-18, Joe's
+  // call): this field was never a single-incident causal explanation --
+  // it's TAP cross-referencing the entry against a pattern tracked
+  // elsewhere in the database. The label now says what the field does.
+  const mainHtml =
+    '<div class="field-group"><div class="field-label">Alleged Violation (full legal citation)</div><div class="field-value">' + hl(entry.offense_category_raw || entry.offense_category) + '</div></div>' +
+    '<div class="field-group"><div class="field-label">Incident summary</div><div class="field-value">' + summary(entry.section_summaries?.incident_summary) + paragraphizeUpdates(entry.incident_summary, hl) + '</div></div>' +
+    '<div class="field-group"><div class="field-label">Status</div><div class="field-value">' + paragraphizeUpdates(entry.status, hl) + '</div></div>' +
+    '<div class="field-group"><div class="field-label">Broader Pattern</div><div class="field-value">' + hl(entry.cause) + '</div></div>' +
+    '<div class="field-group"><div class="field-label">Anticipated Defense</div><div class="field-value">' + hl(entry.rebuttal_anticipated) + '</div></div>' +
+    '<div class="field-group"><div class="field-label">TAP\'s Rebuttal</div><div class="field-value">' + hl(entry.comeback) + '</div></div>';
+  const asideHtml =
+    '<div class="field-group entry-aside-card"><div class="field-label">Violation Type</div><div class="field-value">' + hl(entry.offense_category) + '</div></div>' +
     (entry.concern_type && entry.concern_type !== "Other/Unclassified"
-      ? '<div class="field-label">Accountability Concern Type</div><div class="field-value">' + hl(entry.concern_type) + ' <em>(not alleged as a legal violation)</em></div>'
+      ? '<div class="field-group entry-aside-card"><div class="field-label">Accountability Concern Type</div><div class="field-value">' + hl(entry.concern_type) + ' <em>(not alleged as a legal violation)</em></div></div>'
       : '') +
-    '<div class="field-label">Status Stage</div><div class="field-value">' + hl(entry.status_category) + '</div>' +
-    '<div class="field-label">Alleged Violation (full legal citation)</div><div class="field-value">' + hl(entry.offense_category_raw || entry.offense_category) + '</div>' +
-    '<div class="field-label">Incident summary</div><div class="field-value">' + summary(entry.section_summaries?.incident_summary) + paragraphizeUpdates(entry.incident_summary, hl) + '</div>' +
-    '<div class="field-label">Status</div><div class="field-value">' + paragraphizeUpdates(entry.status, hl) + '</div>' +
-    buildConfidenceNoteHtml(entry, hl, summary) +
-    '<div class="field-label">Root Cause</div><div class="field-value">' + hl(entry.cause) + '</div>' +
-    '<div class="field-label">Anticipated Defense</div><div class="field-value">' + hl(entry.rebuttal_anticipated) + '</div>' +
-    '<div class="field-label">TAP\'s Rebuttal</div><div class="field-value">' + hl(entry.comeback) + '</div>' +
+    '<div class="field-group entry-aside-card"><div class="field-label">Status Stage</div><div class="field-value">' + hl(entry.status_category) + '</div></div>' +
+    '<div class="field-group">' + buildConfidenceNoteHtml(entry, hl, summary) + '</div>';
+  return '<div class="entry-cols"><div class="entry-main">' + mainHtml + '</div><div class="entry-aside">' + asideHtml + '</div></div>' +
     buildUpdateRequestHtml(entry, cfg);
 }
 /* build-detail-html:end */
