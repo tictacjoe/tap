@@ -734,11 +734,19 @@
      Confidence note, and Prosecution's Violation Type/Status Stage)
      their own boxed cards in a sidebar next to the narrative, instead
      of one full-width column of everything. */
-  .entry-cols { display: flex; flex-direction: row; align-items: flex-start; gap: 2rem; }
+  /* max-width caps the row at roughly entry-main's 34em + the 2rem gap +
+     entry-aside's 20rem (56em together) -- without it, .entry-cols is a
+     block-level flex container that stretches to fill its parent, which
+     since 2026-09-18 is `main`'s intentionally near-full-viewport width
+     (see that rule's own comment), not a narrow reading column. Both
+     children have fixed/capped widths and neither grows past its cap, so
+     the excess just sat as dead space to the right of the sidebar instead
+     of the two columns reflowing to use it. */
+  .entry-cols { display: flex; flex-direction: row; align-items: flex-start; gap: 2rem; max-width: 56em; }
   .entry-main { display: flex; flex-direction: column; gap: 0.9rem; min-width: 0; flex: 0 1 34em; }
   .entry-aside { display: flex; flex-direction: column; gap: 0.9rem; flex: 1 1 auto; min-width: 12rem; max-width: 20rem; }
   @media (max-width: 700px) {
-    .entry-cols { flex-direction: column; gap: 1.1rem; }
+    .entry-cols { flex-direction: column; gap: 1.1rem; max-width: none; }
     .entry-aside { max-width: none; }
   }
   .entry-aside-card {
