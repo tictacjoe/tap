@@ -791,8 +791,8 @@
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  .headline-trail-btn { flex-shrink: 0; }
-  .headline-tier-text { margin: 0 0.8rem 0.6rem; }
+  .headline-more-btn, .headline-trail-btn { flex-shrink: 0; }
+  .headline-tier-text { display: none; margin: 0 0.8rem 0.6rem; }
   .headline-trail-panel { margin: 0.5rem 0.8rem 0.6rem; }
   /* Toggle button (not a real checkbox) -- .active mirrors the same
      pressed-state language the database-tab/Records buttons use
@@ -1490,10 +1490,14 @@ function combineTierText(parts) {
 /* combine-tier-text:end */
 
 /* fullest-tier-text:start */
-// Replaces the old staged "more > more > more" reveal (buildDisplayTiers)
-// removed 2026-09-17 -- Joe's call once the entry text itself got easier
-// to read (narrower columns, bolded skim phrases): the headline feed just
-// shows the fullest tier directly instead of gating it behind clicks.
+// Replaces the old staged "more > more > more" reveal (buildDisplayTiers),
+// removed 2026-09-17 for every tracker except Reporting -- most trackers'
+// headline rows don't show tier text or a "more" button at all anymore
+// (Joe's call, once the entry text itself got easier to read: gating it
+// behind clicks stopped pulling its weight). Reporting keeps a single
+// "more" toggle (2026-09-18, see buildHeadlineRow) since its raw scraped
+// posts are short enough that one extra click's worth of tier is still
+// worth having; this helper just returns that one revealed tier's text.
 function fullestTierText(tiers) {
   let text = "";
   for (const raw of (tiers || [])) {
@@ -1793,14 +1797,31 @@ function buildHeadlineRow(item, displayDate) {
 
   const tierEl = document.createElement("div");
   tierEl.className = "field-value headline-tier-text";
-  const fullTierText = fullestTierText(item.tiers);
-  if (fullTierText) {
-    tierEl.textContent = fullTierText;
-  } else {
-    // Nothing beyond the headline itself -- leave the row with no body.
-    tierEl.style.display = "none";
-  }
   body.appendChild(tierEl);
+
+  // Reporting keeps the "more" reveal (Joe's call, 2026-09-18) -- its
+  // raw scraped posts are short enough that one click's worth of extra
+  // tier is genuinely useful. Every other tracker just shows the
+  // one-line headline now, with no expand affordance at all: the
+  // columnar/skim-friendly entry-detail view (reached via the tracker
+  // jump button below) is now the place to read the fuller text,
+  // rather than gating it behind clicks in this feed.
+  if (item.tracker === "tracker") {
+    const fullTierText = fullestTierText(item.tiers);
+    if (fullTierText) {
+      const moreBtn = document.createElement("button");
+      moreBtn.type = "button";
+      moreBtn.className = "share-link-btn headline-more-btn";
+      moreBtn.textContent = "more";
+      moreBtn.addEventListener("click", () => {
+        const opening = tierEl.style.display === "none" || !tierEl.style.display;
+        if (opening) tierEl.textContent = fullTierText;
+        tierEl.style.display = opening ? "block" : "none";
+        moreBtn.textContent = opening ? "less" : "more";
+      });
+      line.insertBefore(moreBtn, textSpan);
+    }
+  }
 
   // The tracker abbreviation is a real jump-tab, not just a label.
   // Deregulation/Cabinet-Level Accountability/Government Service
