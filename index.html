@@ -1695,6 +1695,12 @@ function adaptCommunityTopicEntry(entry) {
     date: entry.date_submitted || entry.date_added || null,
     tracker: "communitytopics",
     category: null,
+    // Added 2026-09-18 alongside making Claim-checks explicitly
+    // selectable in Records' tracker filter -- entries do carry a
+    // stable id (TRACKERS.communitytopics.idField is "id"), so the
+    // jump-to-card deep link works the same way it does for every
+    // other tracker's rows once this is populated.
+    id: entry.id || null,
   };
 }
 /* adapt-communitytopic-entry:end */
@@ -1733,11 +1739,15 @@ function buildHeadlineItems() {
   TRACKERS.deregulation.data.forEach(e => items.push(adaptDeregulationEntry(e)));
   TRACKERS.govservices.data.forEach(e => items.push(adaptGovServicesEntry(e)));
   TRACKERS.prosecution.data.forEach(e => items.push(adaptProsecutionEntry(e)));
-  // Claim-checks (community-submitted topics) are deliberately excluded
-  // from Records -- that feed aggregates TAP's own curated trackers plus
-  // the raw Reporting scrape, not the separate submission-triage queue.
-  // Still fully browsable on its own "Claim-checks" database tab.
   TRACKERS.tracker.data.forEach(e => items.push(adaptReportingEntry(e)));
+  // Claim-checks (community-submitted topics) are included here so they
+  // exist to be found when the tracker filter is explicitly set to
+  // "communitytopics" -- but renderHeadlinesView() unconditionally
+  // filters them back out otherwise (Joe's call, 2026-09-18): the "All
+  // databases" aggregate stays TAP's own curated trackers plus Reporting,
+  // same as before. Claim-checks is opt-in only, never opt-out like
+  // Reporting's exclude toggle.
+  TRACKERS.communitytopics.data.forEach(e => items.push(adaptCommunityTopicEntry(e)));
   return items;
 }
 
@@ -1985,6 +1995,14 @@ function renderHeadlinesView(appendOnly) {
   // built around.
   items = items.filter(i => extractFirstDate(i.date) >= 20250101);
 
+  // Claim-checks is opt-in only -- present in buildHeadlineItems() so it
+  // can be found once selected, but never part of the "All databases"
+  // aggregate or any other tracker's filtered view, unlike Reporting's
+  // exclude-toggle-when-included-by-default behavior.
+  if (headlinesTrackerFilter !== "communitytopics") {
+    items = items.filter(i => i.tracker !== "communitytopics");
+  }
+
   if (headlinesExcludeReporting) {
     items = items.filter(i => i.tracker !== "tracker");
   }
@@ -2104,9 +2122,13 @@ function renderHeadlinesControls() {
     '<option value="alpha">Alphabetical</option>';
   sortSel.value = headlinesSortValue;
 
+  // Claim-checks is a selectable option here (2026-09-18) even though
+  // it's excluded from "All databases" (see renderHeadlinesView()) --
+  // this dropdown lists every tracker that's *findable*, not every
+  // tracker that's in the default aggregate.
   const trackerSel = document.getElementById("headlines-tracker-filter");
   trackerSel.innerHTML = '<option value="">All databases</option>' +
-    Object.keys(TRACKERS).filter(key => key !== "communitytopics").map(key => '<option value="' + key + '">' + TRACKERS[key].label + '</option>').join("");
+    Object.keys(TRACKERS).map(key => '<option value="' + key + '">' + TRACKERS[key].label + '</option>').join("");
   trackerSel.value = headlinesTrackerFilter;
 
   // The Records category subfilter (Corruption, Disinformation, etc., for
