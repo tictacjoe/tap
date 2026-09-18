@@ -3057,8 +3057,14 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
   // call): this field was never a single-incident causal explanation --
   // it's TAP cross-referencing the entry against a pattern tracked
   // elsewhere in the database. The label now says what the field does.
+  // "Violation Type (in full)" (renamed from "Alleged Violation (full
+  // legal citation)" 2026-09-18): the old label implied a formal
+  // citation is always present, but this field is often a legal theory
+  // or characterization, only sometimes with an actual statute/case
+  // cite in it. The new name instead ties it directly to the sidebar's
+  // "Violation Type" card -- same field, unabbreviated.
   const mainHtml =
-    '<div class="field-group"><div class="field-label">Alleged Violation (full legal citation)</div><div class="field-value">' + hl(entry.offense_category_raw || entry.offense_category) + '</div></div>' +
+    '<div class="field-group"><div class="field-label">Violation Type (in full)</div><div class="field-value">' + hl(entry.offense_category_raw || entry.offense_category) + '</div></div>' +
     '<div class="field-group"><div class="field-label">Incident summary</div><div class="field-value">' + summary(entry.section_summaries?.incident_summary) + paragraphizeUpdates(entry.incident_summary, hl) + '</div></div>' +
     '<div class="field-group"><div class="field-label">Status</div><div class="field-value">' + paragraphizeUpdates(entry.status, hl) + '</div></div>' +
     '<div class="field-group"><div class="field-label">Broader Pattern</div><div class="field-value">' + hl(entry.cause) + '</div></div>' +
