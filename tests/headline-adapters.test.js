@@ -21,7 +21,7 @@ const names = [
   "truncate",
   "verdict-label",
   "combine-tier-text",
-  "usable-tier-count",
+  "fullest-tier-text",
   "pack-headline",
   "adapt-deregulation-entry",
   "adapt-govservices-entry",
@@ -31,7 +31,7 @@ const names = [
 ];
 const combined = names.map(n => extractFunction(source, n)).join("\n");
 const exposeNames = [
-  "combineTierText", "usableTierCount", "packHeadline",
+  "combineTierText", "fullestTierText", "packHeadline",
   "adaptDeregulationEntry", "adaptGovServicesEntry", "adaptProsecutionEntry",
   "adaptCommunityTopicEntry", "adaptReportingEntry",
 ];
@@ -42,11 +42,11 @@ test("combineTierText joins only non-empty parts with a space", () => {
   assert.equal(fns.combineTierText(["", null, undefined]), "");
 });
 
-test("usableTierCount counts leading non-empty, non-duplicate tiers", () => {
-  assert.equal(fns.usableTierCount(["a", "a b", "a b c"]), 3);
-  assert.equal(fns.usableTierCount(["a", "a", "a"]), 1);
-  assert.equal(fns.usableTierCount(["a", "a b", "a b"]), 2);
-  assert.equal(fns.usableTierCount(["", "x", "y"]), 0);
+test("fullestTierText returns the last non-empty leading tier", () => {
+  assert.equal(fns.fullestTierText(["a", "a b", "a b c"]), "a b c");
+  assert.equal(fns.fullestTierText(["a", "a", "a"]), "a");
+  assert.equal(fns.fullestTierText(["a", "a b", "a b"]), "a b");
+  assert.equal(fns.fullestTierText(["", "x", "y"]), "");
 });
 
 test("packHeadline returns short text unchanged", () => {
@@ -201,7 +201,7 @@ test("adaptReportingEntry caps at 2 usable tiers (full collapses into medium)", 
   assert.equal(r.tiers[0], "An agency announced a new policy.");
   assert.match(r.tiers[1], /It affects millions of people\./);
   assert.equal(r.tiers[2], r.tiers[1]);
-  assert.equal(fns.usableTierCount(r.tiers), 2);
+  assert.equal(fns.fullestTierText(r.tiers), r.tiers[1]);
   assert.equal(r.trail.sources[0].name, "Local News");
   assert.equal(r.trail.confidenceNote, null);
   assert.equal(r.date, "2026-05-01");

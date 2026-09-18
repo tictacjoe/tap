@@ -791,8 +791,8 @@
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  .headline-more-btn, .headline-trail-btn { flex-shrink: 0; }
-  .headline-tier-text { display: none; margin: 0 0.8rem 0.6rem; }
+  .headline-trail-btn { flex-shrink: 0; }
+  .headline-tier-text { margin: 0 0.8rem 0.6rem; }
   .headline-trail-panel { margin: 0.5rem 0.8rem 0.6rem; }
   /* Toggle button (not a real checkbox) -- .active mirrors the same
      pressed-state language the database-tab/Records buttons use
@@ -1489,66 +1489,21 @@ function combineTierText(parts) {
 }
 /* combine-tier-text:end */
 
-/* How many characters of *additional* tier text justify a separate
-   "more" click, and how short an entry's fullest tier has to be before
-   staged disclosure is skipped entirely in favor of revealing everything
-   on the first click. Raised 2026-09-18 (from 1200/200) after Joe flagged
-   Corporate Deregulation specifically as still feeling like the same
-   "more > more > more" problem even post-fix -- the original thresholds
-   only merged CDR's shortest ~10% (9 of 86 entries), leaving the
-   remaining 77 at a full 3 stages despite real per-stage growth often
-   being just ~300-450 chars (median deltas: 453 chars brief->medium, 404
-   chars medium->full), which still reads as "barely more" against a wide
-   row. Deliberately NOT collapsed to a flat one-click reveal everywhere
-   (Joe's call): Prosecution's entries are genuinely long (median ~5500
-   chars, up to ~20,000) and still benefit from real staging. These two
-   values were picked by simulating the actual published corpus rather
-   than guessing -- at 3500/400, Deregulation goes from 77/86 forced into
-   3 stages down to 10/86 (73 collapse to a single "more > all" click),
-   Gov Services gets a reasonable 1/2/3-stage mix scaled to its own wider
-   length spread, and Prosecution keeps 260/267 (97%) at full 3-stage
-   disclosure since its content is long enough to still warrant it. */
-const SHORT_ENTRY_CHARS = 3500;
-const MIN_STAGE_GROWTH_CHARS = 400;
-
-/* usable-tier-count:start */
-// Builds the actual list of "more"-click reveal stages from an item's raw
-// [brief, medium, full] tiers -- replaces the old usableTierCount(), which
-// only collapsed tiers that were byte-for-byte identical to the previous
-// one, still exposing every tier that merely *differed* from the last as
-// its own click even when the difference was a single short clause. This
-// dedupes identical tiers first, then collapses to one single reveal stage
-// (the fullest tier) outright for a short entry, and otherwise merges any
-// stage that doesn't add at least MIN_STAGE_GROWTH_CHARS over the last
-// *kept* stage -- comparing against the last kept stage, not the raw
-// previous tier, so a skipped middle tier doesn't wrongly reset the bar.
-function buildDisplayTiers(tiers) {
-  const deduped = [];
-  for (const raw of tiers) {
-    const text = (raw || "").trim();
-    if (!text) break;
-    if (deduped.length && text === deduped[deduped.length - 1]) continue;
-    deduped.push(text);
+/* fullest-tier-text:start */
+// Replaces the old staged "more > more > more" reveal (buildDisplayTiers)
+// removed 2026-09-17 -- Joe's call once the entry text itself got easier
+// to read (narrower columns, bolded skim phrases): the headline feed just
+// shows the fullest tier directly instead of gating it behind clicks.
+function fullestTierText(tiers) {
+  let text = "";
+  for (const raw of (tiers || [])) {
+    const t = (raw || "").trim();
+    if (!t) break;
+    text = t;
   }
-  if (deduped.length === 0) return [];
-
-  const full = deduped[deduped.length - 1];
-  if (full.length <= SHORT_ENTRY_CHARS) return [full];
-
-  const staged = [deduped[0]];
-  for (let i = 1; i < deduped.length; i++) {
-    const candidate = deduped[i];
-    if (candidate.length - staged[staged.length - 1].length < MIN_STAGE_GROWTH_CHARS) continue;
-    staged.push(candidate);
-  }
-  // The merge loop can drop the true final tier if it never cleared the
-  // growth bar over whatever was last kept -- always keep the fullest
-  // version available as the last stage so "more" never stops short of
-  // everything there is to show.
-  if (staged[staged.length - 1] !== full) staged.push(full);
-  return staged;
+  return text;
 }
-/* usable-tier-count:end */
+/* fullest-tier-text:end */
 
 /* Shortens a headline to fit a character budget without cutting off
    mid-thought -- tries the nearest sentence end, then a clause break
@@ -1838,35 +1793,14 @@ function buildHeadlineRow(item, displayDate) {
 
   const tierEl = document.createElement("div");
   tierEl.className = "field-value headline-tier-text";
-  body.appendChild(tierEl);
-
-  const displayTiers = buildDisplayTiers(item.tiers);
-  const maxLevel = displayTiers.length;
-  let level = 0;
-
-  const moreBtn = document.createElement("button");
-  moreBtn.type = "button";
-  moreBtn.className = "share-link-btn headline-more-btn";
-  if (maxLevel === 0) {
-    // Nothing beyond the headline itself -- hidden outright rather than
-    // shown disabled, matching how this button already handles "no tiers
-    // at all" (as opposed to "tiers exist but none add up to a reveal
-    // worth a click," which buildDisplayTiers() now also collapses to 0
-    // for an entry whose tiers are all empty or pure duplicates).
-    moreBtn.style.display = "none";
+  const fullTierText = fullestTierText(item.tiers);
+  if (fullTierText) {
+    tierEl.textContent = fullTierText;
   } else {
-    const updateTierDisplay = () => {
-      tierEl.textContent = level === 0 ? "" : displayTiers[level - 1];
-      tierEl.style.display = level === 0 ? "none" : "block";
-      moreBtn.textContent = level >= maxLevel ? "less" : "more";
-    };
-    updateTierDisplay();
-    moreBtn.addEventListener("click", () => {
-      level = level >= maxLevel ? 0 : level + 1;
-      updateTierDisplay();
-    });
+    // Nothing beyond the headline itself -- leave the row with no body.
+    tierEl.style.display = "none";
   }
-  line.insertBefore(moreBtn, textSpan);
+  body.appendChild(tierEl);
 
   // The tracker abbreviation is a real jump-tab, not just a label.
   // Deregulation/Cabinet-Level Accountability/Government Service
