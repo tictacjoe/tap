@@ -606,7 +606,7 @@ test("prosecution Confidence note splits its base text from a separate Updates s
     status_category: "Investigation",
     incident_summary: "Summary.",
     status: "Under investigation.",
-    confidence_note: "Well-sourced initially. Update 2026-08-02: a second outlet corroborated.",
+    confidence_note: "Initially sourced to one outlet. Update 2026-08-02: a second outlet corroborated.",
   };
   const cfg = { kind: "prosecution" };
   const result = buildDetailHtml(entry, cfg);
@@ -619,7 +619,7 @@ test("prosecution Confidence note splits its base text from a separate Updates s
   assert(causeStart < confidenceStart && confidenceStart < updatesStart, "main column (Broader Pattern) precedes the sidebar's Confidence note, which precedes its Updates");
 
   const confidenceHtml = result.slice(confidenceStart, updatesStart);
-  assert(confidenceHtml.includes("<p>Well-sourced initially.</p>"), "the base text before the marker stays in the Confidence note box");
+  assert(confidenceHtml.includes("<p>Initially sourced to one outlet.</p>"), "the base text before the marker stays in the Confidence note box");
   assert(!confidenceHtml.includes("2026-08-02"), "the dated update should not remain in the Confidence note box");
 
   const updatesHtml = result.slice(updatesStart);
@@ -633,13 +633,13 @@ test("prosecution Confidence note renders no Updates section when it has no Upda
     status_category: "Investigation",
     incident_summary: "Summary.",
     status: "Under investigation.",
-    confidence_note: "Well-sourced, single outlet.",
+    confidence_note: "Single outlet, no dispute.",
   };
   const cfg = { kind: "prosecution" };
   const result = buildDetailHtml(entry, cfg);
 
   assert(!result.includes('<div class="field-label">Updates</div>'), "no Updates section should render when there's nothing to put in it");
-  assert(result.includes("<p>Well-sourced, single outlet.</p>"), "the whole note stays in the Confidence note box");
+  assert(result.includes("<p>Single outlet, no dispute.</p>"), "the whole note stays in the Confidence note box");
 });
 
 test("govservices Confidence note splits into separate paragraphs at each Update marker", () => {
@@ -647,7 +647,7 @@ test("govservices Confidence note splits into separate paragraphs at each Update
     institution: "Some Agency",
     what_changed: "Reduced staffing.",
     estimated_impact: {},
-    confidence_note: "Well-sourced initially. Update 2026-08-02: a second outlet corroborated.",
+    confidence_note: "Initially sourced to one outlet. Update 2026-08-02: a second outlet corroborated.",
   };
   const cfg = { kind: "govservices" };
   const result = buildDetailHtml(entry, cfg);
@@ -661,7 +661,7 @@ test("govservices Confidence note splits into separate paragraphs at each Update
   const html = result.slice(start, end);
 
   assert.equal((html.match(/<p>/g) || []).length, 2, "should split into 2 paragraphs, one per Update marker plus the lead-in text");
-  assert(html.includes("<p>Well-sourced initially.</p>"), "lead-in text before the marker should be its own paragraph");
+  assert(html.includes("<p>Initially sourced to one outlet.</p>"), "lead-in text before the marker should be its own paragraph");
   assert(html.includes("<p>Update 2026-08-02: a second outlet corroborated.</p>"), "the Update marker should start its own paragraph");
 });
 
@@ -670,7 +670,7 @@ test("deregulation Confidence note splits into separate paragraphs at each Updat
     what_changed: "Rule repealed outright.",
     estimated_health_impact: {},
     primary_proponent: {},
-    confidence_note: "Well-sourced initially. Update 2026-08-02: a second outlet corroborated.",
+    confidence_note: "Initially sourced to one outlet. Update 2026-08-02: a second outlet corroborated.",
   };
   const cfg = { kind: "deregulation" };
   const result = buildDetailHtml(entry, cfg);
@@ -684,7 +684,7 @@ test("deregulation Confidence note splits into separate paragraphs at each Updat
   const html = result.slice(start, end);
 
   assert.equal((html.match(/<p>/g) || []).length, 2, "should split into 2 paragraphs, one per Update marker plus the lead-in text");
-  assert(html.includes("<p>Well-sourced initially.</p>"), "lead-in text before the marker should be its own paragraph");
+  assert(html.includes("<p>Initially sourced to one outlet.</p>"), "lead-in text before the marker should be its own paragraph");
   assert(html.includes("<p>Update 2026-08-02: a second outlet corroborated.</p>"), "the Update marker should start its own paragraph");
 });
 
@@ -920,4 +920,73 @@ test("a Confidence note with no ratings renders unchanged", () => {
   };
   const result = buildDetailHtml(entry, { kind: "deregulation" });
   assert(result.includes("<p>Sourced to two outlets; no dispute identified.</p>"), "text without a rating passes through untouched");
+});
+
+// ---- Bold the leading sourcing-quality phrase (2026-09-19) ------------
+// ~140 notes (mostly Deregulation and Government Service) open with a
+// sourcing-quality phrase ("Strong sourcing on...", "Very strong...",
+// "Well-corroborated across...") instead of a HIGH/MODERATE rating. Those
+// describe how solid the entry's SOURCES are, not a per-claim confidence,
+// so they are bolded for visual consistency but never rewritten into a
+// rating. Only at the very start of the base text; only the quality words
+// themselves (not the noun after them), matching how ratings are bolded.
+const boldLeadingSourcingQuality = (0, eval)(`${extractFunction(source, "bold-leading-sourcing-quality")}\nboldLeadingSourcingQuality;`);
+
+test("boldLeadingSourcingQuality bolds the leading quality words, not the noun after them", () => {
+  const cases = [
+    ["Strong sourcing on the waiver.", "**Strong** sourcing on the waiver."],
+    ["Very strong sourcing: court filings are primary.", "**Very strong** sourcing: court filings are primary."],
+    ["Exceptionally strong sourcing across outlets.", "**Exceptionally strong** sourcing across outlets."],
+    ["Unusually strong entry, similar to X.", "**Unusually strong** entry, similar to X."],
+    ["Extremely well-documented from many angles.", "**Extremely well-documented** from many angles."],
+    ["Well-corroborated across multiple outlets.", "**Well-corroborated** across multiple outlets."],
+    ["Well documented across specialist outlets.", "**Well documented** across specialist outlets."],
+    ["Solid on the facts of the action.", "**Solid** on the facts of the action."],
+    ["Strong, multi-source documentation.", "**Strong**, multi-source documentation."],
+  ];
+  for (const [input, expected] of cases) assert.equal(boldLeadingSourcingQuality(input), expected, input);
+});
+
+test("boldLeadingSourcingQuality only acts at the very start of the text", () => {
+  const untouched = [
+    "The sourcing here is strong and solid.",
+    "Sourced primarily to one outlet; strong on the facts.",
+    "Corroborated across multiple independent outlets.",
+    "This is legislation, not a rule.",
+    "Strongly worded criticism from the opposition.",
+    "HIGH confidence on the orders; strong sourcing overall.",
+  ];
+  for (const text of untouched) assert.equal(boldLeadingSourcingQuality(text), text, text);
+});
+
+test("boldLeadingSourcingQuality leaves already-bold text alone and is idempotent", () => {
+  assert.equal(boldLeadingSourcingQuality("**Strong sourcing** on X."), "**Strong sourcing** on X.");
+  const once = boldLeadingSourcingQuality("Very strong sourcing on X.");
+  assert.equal(boldLeadingSourcingQuality(once), once);
+});
+
+test("boldLeadingSourcingQuality returns an empty string for missing text", () => {
+  assert.equal(boldLeadingSourcingQuality(""), "");
+  assert.equal(boldLeadingSourcingQuality(undefined), "");
+});
+
+test("Confidence note bolds a leading sourcing-quality phrase alongside ratings, but not inside a dated update", () => {
+  const entry = {
+    what_changed: "x", estimated_health_impact: {}, primary_proponent: { name: "A", role: "B" }, sources: [],
+    confidence_note: "Strong sourcing on the order. MODERATE confidence on intent. Update 2026-08-02: Strong sourcing on the follow-up.",
+  };
+  const result = buildDetailHtml(entry, { kind: "deregulation" });
+  assert(result.includes("<strong>Strong</strong> sourcing on the order"), "leading quality phrase should be bold");
+  assert(result.includes("<strong>MODERATE</strong> confidence on intent"), "rating should still be bold");
+  assert(result.includes("Update 2026-08-02: Strong sourcing on the follow-up"), "an update's own text is not treated as a note opening");
+  assert.equal((result.match(/<strong>Strong<\/strong>/g) || []).length, 1, "only the note's opening is bolded");
+});
+
+test("a note that opens with a rating gets no extra opening bold", () => {
+  const entry = {
+    what_changed: "x", estimated_health_impact: {}, primary_proponent: { name: "A", role: "B" }, sources: [],
+    confidence_note: "HIGH confidence on the order.",
+  };
+  const result = buildDetailHtml(entry, { kind: "deregulation" });
+  assert(result.includes("<p><strong>HIGH</strong> confidence on the order.</p>"), "just the rating is bold in the note paragraph, nothing extra");
 });

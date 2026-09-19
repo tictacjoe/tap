@@ -3006,6 +3006,33 @@ function boldConfidenceRatings(text) {
 }
 /* bold-confidence-ratings:end */
 
+/* Bolds the sourcing-quality phrase a note OPENS with (2026-09-19, Joe
+   picked this over rewriting the notes). About 140 notes -- mostly
+   Deregulation and Government Service, whose schemas ask for "how strong
+   the sourcing is and how to frame it", not a rating -- begin with things
+   like "Strong sourcing on...", "Very strong...", "Well-corroborated
+   across...". That describes how solid the ENTRY's sources are; a
+   HIGH/MODERATE rating is per claim, and the two disagree often enough
+   (in the 36 notes that carry both, "strong" is followed by MODERATE about
+   1 time in 6) that converting one into the other would assert a
+   confidence the author never assessed. So this only adds visual
+   emphasis, never changes the wording.
+   Anchored to the very start of the text (so "the sourcing is strong"
+   mid-note is untouched), bolds only the quality words -- an optional
+   intensifier plus strong/solid/well-corroborated/well-documented/
+   well-sourced -- and not the noun after them, matching how ratings are
+   bolded. Bland factual openers ("Corroborated across...", "Sourced
+   primarily to...") aren't quality claims and stay plain. Text that
+   already starts with ** is left alone, and a second pass is a no-op. */
+/* bold-leading-sourcing-quality:start */
+const LEADING_SOURCING_QUALITY_PATTERN =
+  /^(?:(?:Exceptionally|Extremely|Unusually|Very)\s+)?(?:strong|solid|well[- ]corroborated|well[- ]documented|well[- ]sourced)\b/i;
+function boldLeadingSourcingQuality(text) {
+  if (!text) return "";
+  return String(text).replace(LEADING_SOURCING_QUALITY_PATTERN, "**$&**");
+}
+/* bold-leading-sourcing-quality:end */
+
 /* Splits a confidence_note into its base assessment (whatever text
    comes before the first "Update"/"Added" marker) and a list of dated
    update chunks (from each marker onward) -- reuses paragraphizeUpdates()'s
@@ -3055,7 +3082,7 @@ function buildConfidenceNoteHtml(entry, hl, summary) {
     : '<div class="field-label">Confidence note</div>';
   let html = labelHtml + '<div class="confidence-box">' +
     summary(entry.section_summaries?.confidence_note) +
-    (base ? "<p>" + hl(boldConfidenceRatings(base)) + "</p>" : "") +
+    (base ? "<p>" + hl(boldConfidenceRatings(boldLeadingSourcingQuality(base))) + "</p>" : "") +
     '</div>';
   if (updates.length) {
     html += '<div class="field-label">Updates</div><div class="confidence-box updates-box">' +
