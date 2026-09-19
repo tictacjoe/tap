@@ -734,20 +734,46 @@
      Confidence note, and Prosecution's Violation Type/Status Stage)
      their own boxed cards in a sidebar next to the narrative, instead
      of one full-width column of everything. */
-  /* max-width caps the row at roughly entry-main's 34em + the 2rem gap +
-     entry-aside's 20rem (56em together) -- without it, .entry-cols is a
-     block-level flex container that stretches to fill its parent, which
-     since 2026-09-18 is `main`'s intentionally near-full-viewport width
-     (see that rule's own comment), not a narrow reading column. Both
-     children have fixed/capped widths and neither grows past its cap, so
-     the excess just sat as dead space to the right of the sidebar instead
-     of the two columns reflowing to use it. */
-  .entry-cols { display: flex; flex-direction: row; align-items: flex-start; gap: 2rem; max-width: 56em; }
-  .entry-main { display: flex; flex-direction: column; gap: 0.9rem; min-width: 0; flex: 0 1 34em; }
-  .entry-aside { display: flex; flex-direction: column; gap: 0.9rem; flex: 1 1 auto; min-width: 12rem; max-width: 20rem; }
+  /* Even multi-column layout (2026-09-19, Joe: "the right side of expanded
+     entries is empty", then "the cards ... stack up mostly on the left").
+     The expanded card is nearly as wide as the window (`main` is
+     intentionally near-full-viewport, see that rule's own comment), so a
+     narrative + sidebar pair left ~40% of a 1564px card unused; and giving
+     each column a fixed job (narrative / data cards / Confidence note)
+     just moved the imbalance, since the narrative is usually far taller
+     than the rest. Measured on real entries, the median tallest column was
+     1408px (Government Service), 1056px (Deregulation), 1864px
+     (Cabinet-Level) with fixed roles, vs 1097 / 854 / 1097 with cards
+     dealt into whichever column is shortest.
+
+     So: N equal columns (.entry-col), each capped at the 34em reading
+     measure, and distributeEntryCards() (script below) deals the cards
+     into them in reading order, shortest column first. This CSS only says
+     how many columns are visible. That depends on the width of the
+     *expanded card's own content box* (a container query on
+     .entry-detail), not the viewport -- the card is viewport minus ~320px,
+     so a viewport media query would guess wrong:
+       >= 68rem   3 columns
+       otherwise  2 columns
+       <= 700px viewport: 1 column, cards in reading order
+     Hidden columns are display:none, so the script counts visible ones.
+     Browsers without container-query support keep the 2-column base. */
+  .entry-detail { container-type: inline-size; container-name: entry-detail; }
+  .entry-cols {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 34em));
+    column-gap: 2rem;
+    align-items: start;
+  }
+  .entry-col { display: flex; flex-direction: column; gap: 0.9rem; min-width: 0; }
+  .entry-col:nth-child(n+3) { display: none; }
+  @container entry-detail (min-width: 68rem) {
+    .entry-cols { grid-template-columns: repeat(3, minmax(0, 34em)); }
+    .entry-col:nth-child(n+3) { display: flex; }
+  }
   @media (max-width: 700px) {
-    .entry-cols { flex-direction: column; gap: 1.1rem; max-width: none; }
-    .entry-aside { max-width: none; }
+    .entry-cols { grid-template-columns: minmax(0, 1fr); }
+    .entry-col:nth-child(n+2) { display: none; }
   }
   .entry-aside-card {
     background: var(--paper);
@@ -772,16 +798,12 @@
      the flex gap between groups already provides it. A second label
      inside the same group (e.g. Confidence note's "Updates" sub-label)
      keeps its normal margin, since that's real internal separation. */
-  .entry-main .field-group > .field-label:first-child,
-  .entry-aside .field-group > .field-label:first-child {
+  .entry-col .field-group > .field-label:first-child {
     margin-top: 0;
   }
-  .entry-main .field-value,
-  .entry-main .confidence-box,
-  .entry-main .exhibit-list,
-  .entry-aside .field-value,
-  .entry-aside .confidence-box,
-  .entry-aside .exhibit-list {
+  .entry-col .field-value,
+  .entry-col .confidence-box,
+  .entry-col .exhibit-list {
     max-width: 34em;
   }
   .field-label-row { display: flex; justify-content: space-between; align-items: baseline; gap: 0.6rem; }
@@ -795,12 +817,11 @@
 
   /* Priority pull-quote (2026-09-18): renders only when entry.pull_quote
      is set -- no entry has that field yet, so this is inert until a
-     separate editorial pass writes per-entry quote text. Starts in the
-     sidebar in the DOM; placeEntryQuote() (see script below) measures
-     .entry-main vs .entry-aside once the card is opened and moves it
-     into whichever is actually shorter, since either column can end up
-     taller depending on the entry. */
-  .entry-aside-quote { margin-top: 0.9rem; }
+     separate editorial pass writes per-entry quote text. It is just the
+     last card in reading order, so distributeEntryCards() (see script
+     below) drops it into whichever column is shortest by then. The
+     column's own flex gap already spaces it from the card above. */
+  .entry-aside-quote { margin-top: 0; }
   .entry-aside-quote blockquote {
     margin: 0;
     font-family: Georgia, 'Iowan Old Style', 'Times New Roman', serif;
@@ -2650,6 +2671,7 @@ function escapeHtml(str) {
    silently dropping the link entirely. Used together with escapeHtml()
    on the same value, since a raw URL can also contain a `"` that would
    otherwise break out of the href attribute. */
+/* safe-href:start */
 function safeHref(url) {
   try {
     const parsed = new URL(String(url), location.href);
@@ -2657,6 +2679,7 @@ function safeHref(url) {
   } catch (e) { /* falls through to the safe default below */ }
   return "#";
 }
+/* safe-href:end */
 
 /* summary-line:start */
 function summaryLineHtml(summary, term, useRegex) {
@@ -3011,12 +3034,52 @@ function buildConfidenceNoteHtml(entry, hl, summary) {
 
 /* Renders nothing until entry.pull_quote is actually set -- no entry
    has that field yet (2026-09-18). See the .entry-aside-quote CSS
-   comment and placeEntryQuote() for the rest of this mechanism. */
+   comment and distributeEntryCards() for the rest of this mechanism. */
+/* build-pull-quote-html:start */
 function buildPullQuoteHtml(entry, hl) {
   return entry.pull_quote
     ? '<div class="entry-aside-quote"><blockquote>' + hl(entry.pull_quote) + '</blockquote></div>'
     : '';
 }
+/* build-pull-quote-html:end */
+
+/* Assembles the expanded-entry body (2026-09-19). Every card -- narrative,
+   data, Confidence note, pull-quote -- goes into the FIRST of three generic
+   .entry-col containers, in reading order; the other two start empty.
+   distributeEntryCards() (see the script below) then measures the cards
+   once the entry is open and moves each into whichever visible column is
+   currently shortest, so the columns come out roughly even instead of one
+   column carrying all the long text. How many columns are visible (three,
+   two, one) is CSS's call -- see the .entry-cols rules.
+   The three strings stay separate arguments only so the builders read the
+   same as before; they are simply concatenated in reading order. */
+/* build-entry-cols-html:start */
+function buildEntryColsHtml(mainHtml, asideHtml, noteHtml) {
+  return '<div class="entry-cols"><div class="entry-col">' + mainHtml + asideHtml + noteHtml + '</div>' +
+    '<div class="entry-col"></div><div class="entry-col"></div></div>';
+}
+/* build-entry-cols-html:end */
+
+/* The pure half of distributeEntryCards(): given each card's measured
+   height (in reading order), the number of visible columns, and the gap
+   between stacked cards, returns which column (0-based) each card goes in.
+   Each card, in order, goes to the column that is currently shortest (ties
+   go to the leftmost), so reading order runs left to right along the top,
+   then keeps filling whichever column has room. */
+/* assign-cards-to-columns:start */
+function assignCardsToColumns(heights, columnCount, gap) {
+  const n = Math.max(1, columnCount | 0);
+  const filled = new Array(n).fill(0);
+  const count = new Array(n).fill(0);
+  return heights.map(h => {
+    let best = 0;
+    for (let i = 1; i < n; i++) if (filled[i] < filled[best]) best = i;
+    filled[best] += (count[best] ? gap : 0) + h;
+    count[best]++;
+    return best;
+  });
+}
+/* assign-cards-to-columns:end */
 
 /* build-detail-html:start */
 function buildDetailHtml(entry, cfg, term, useRegex) {
@@ -3036,10 +3099,9 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
     const asideHtml =
       '<div class="field-group entry-aside-card"><div class="field-label">Primary proponent</div><div class="field-value"><strong>' + hl(entry.primary_proponent?.name) + '</strong> — ' + hl(entry.primary_proponent?.role) + (entry.primary_proponent?.note ? '<br><em>' + hl(entry.primary_proponent.note) + '</em>' : '') + '</div></div>' +
       (entry.estimated_health_impact?.figures?.length ? '<div class="field-group entry-aside-card">' + buildFiguresHtml(entry.estimated_health_impact.figures, hl) + '</div>' : '') +
-      '<div class="field-group">' + buildConfidenceNoteHtml(entry, hl, summary) + '</div>' +
-      '<div class="field-group entry-aside-card"><div class="field-label">Sources</div><ul class="exhibit-list">' + (entry.sources || []).map(s => '<li><a href="' + escapeHtml(safeHref(s.url)) + '" target="_blank" rel="noopener">' + hl(s.name) + '</a></li>').join("") + '</ul></div>' +
-      buildPullQuoteHtml(entry, hl);
-    return '<div class="entry-cols"><div class="entry-main">' + mainHtml + '</div><div class="entry-aside">' + asideHtml + '</div></div>' +
+      '<div class="field-group entry-aside-card"><div class="field-label">Sources</div><ul class="exhibit-list">' + (entry.sources || []).map(s => '<li><a href="' + escapeHtml(safeHref(s.url)) + '" target="_blank" rel="noopener">' + hl(s.name) + '</a></li>').join("") + '</ul></div>';
+    const noteHtml = '<div class="field-group">' + buildConfidenceNoteHtml(entry, hl, summary) + '</div>' + buildPullQuoteHtml(entry, hl);
+    return buildEntryColsHtml(mainHtml, asideHtml, noteHtml) +
       buildUpdateRequestHtml(entry, cfg);
   }
   if (cfg.kind === "tracker") {
@@ -3060,10 +3122,9 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
       '<div class="field-group entry-aside-card"><div class="field-label">Institution</div><div class="field-value">' + hl(entry.institution) + '</div></div>' +
       '<div class="field-group entry-aside-card"><div class="field-label">Primary proponent</div><div class="field-value"><strong>' + hl(entry.primary_proponent?.name) + '</strong> — ' + hl(entry.primary_proponent?.role) + (entry.primary_proponent?.note ? '<br><em>' + hl(entry.primary_proponent.note) + '</em>' : '') + '</div></div>' +
       (entry.estimated_impact?.figures?.length ? '<div class="field-group entry-aside-card">' + buildFiguresHtml(entry.estimated_impact.figures, hl) + '</div>' : '') +
-      '<div class="field-group">' + buildConfidenceNoteHtml(entry, hl, summary) + '</div>' +
-      '<div class="field-group entry-aside-card"><div class="field-label">Sources</div><ul class="exhibit-list">' + (entry.sources || []).map(s => '<li><a href="' + escapeHtml(safeHref(s.url)) + '" target="_blank" rel="noopener">' + hl(s.name) + '</a></li>').join("") + '</ul></div>' +
-      buildPullQuoteHtml(entry, hl);
-    return '<div class="entry-cols"><div class="entry-main">' + mainHtml + '</div><div class="entry-aside">' + asideHtml + '</div></div>' +
+      '<div class="field-group entry-aside-card"><div class="field-label">Sources</div><ul class="exhibit-list">' + (entry.sources || []).map(s => '<li><a href="' + escapeHtml(safeHref(s.url)) + '" target="_blank" rel="noopener">' + hl(s.name) + '</a></li>').join("") + '</ul></div>';
+    const noteHtml = '<div class="field-group">' + buildConfidenceNoteHtml(entry, hl, summary) + '</div>' + buildPullQuoteHtml(entry, hl);
+    return buildEntryColsHtml(mainHtml, asideHtml, noteHtml) +
       buildUpdateRequestHtml(entry, cfg);
   }
   if (cfg.kind === "communitytopics") {
@@ -3130,39 +3191,55 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
     (entry.concern_type && entry.concern_type !== "Other/Unclassified"
       ? '<div class="field-group entry-aside-card"><div class="field-label">Accountability Concern Type</div><div class="field-value">' + hl(entry.concern_type) + ' <em>(not alleged as a legal violation)</em></div></div>'
       : '') +
-    '<div class="field-group entry-aside-card"><div class="field-label">Status Stage</div><div class="field-value">' + hl(entry.status_category) + '</div></div>' +
-    '<div class="field-group">' + buildConfidenceNoteHtml(entry, hl, summary) + '</div>' +
-    buildPullQuoteHtml(entry, hl);
-  return '<div class="entry-cols"><div class="entry-main">' + mainHtml + '</div><div class="entry-aside">' + asideHtml + '</div></div>' +
+    '<div class="field-group entry-aside-card"><div class="field-label">Status Stage</div><div class="field-value">' + hl(entry.status_category) + '</div></div>';
+  const noteHtml = '<div class="field-group">' + buildConfidenceNoteHtml(entry, hl, summary) + '</div>' + buildPullQuoteHtml(entry, hl);
+  return buildEntryColsHtml(mainHtml, asideHtml, noteHtml) +
     buildUpdateRequestHtml(entry, cfg);
 }
 /* build-detail-html:end */
 
-/* Moves a card's .entry-aside-quote (if it has one -- most won't,
-   since entry.pull_quote is unset on every entry as of 2026-09-18)
-   into whichever of .entry-main/.entry-aside is actually shorter, since
-   Confidence note living in the sidebar means either column can end up
-   taller depending on the entry -- there's no safe permanent home for
-   the quote in the markup. Only meaningful once the card is open
-   (a closed .entry-detail is display:none, so both columns measure
-   0 and nothing would move); called from the entry-head click handler
-   below and again on resize for every currently-open card. */
-function placeEntryQuote(div) {
-  const quote = div.querySelector(".entry-aside-quote");
-  if (!quote) return;
-  const mainCol = div.querySelector(".entry-main");
-  const asideCol = div.querySelector(".entry-aside");
-  if (!mainCol || !asideCol) return;
-  quote.remove();
-  const mainH = mainCol.getBoundingClientRect().height;
-  const asideH = asideCol.getBoundingClientRect().height;
-  (mainH <= asideH ? mainCol : asideCol).appendChild(quote);
+/* Deals an expanded entry's cards into its visible columns so the columns
+   come out roughly even (2026-09-19; replaces placeEntryQuote(), which
+   only ever moved the pull-quote). buildEntryColsHtml() leaves every card
+   in the first .entry-col, in reading order. This:
+     1. stamps each card with its reading-order index, once, while they are
+        all still in column 0 -- so later re-runs (resize) can restore the
+        order no matter where the cards currently sit;
+     2. stacks every card in the first visible column and measures it.
+        Columns are equal width, so a card is the same height wherever it
+        ends up -- the one condition that makes measuring in one column
+        valid;
+     3. asks assignCardsToColumns() which visible column each card belongs
+        in, and moves it there.
+   How many columns are visible is CSS's call (see the .entry-cols rules),
+   so it is read back from which .entry-col elements are actually displayed
+   rather than guessed from the window width.
+   Only meaningful once the entry is open (a closed .entry-detail is
+   display:none, so every card measures 0); called from the entry-head
+   click handler below and again on resize for every currently-open entry. */
+function distributeEntryCards(div) {
+  const colsEl = div.querySelector(".entry-cols");
+  if (!colsEl) return;
+  const cols = [...colsEl.children];
+  if (!colsEl.dataset.cardsOrdered) {
+    [...cols[0].children].forEach((card, i) => { card.dataset.cardOrder = i; });
+    colsEl.dataset.cardsOrdered = "1";
+  }
+  const cards = cols.flatMap(col => [...col.children])
+    .sort((a, b) => a.dataset.cardOrder - b.dataset.cardOrder);
+  const visible = cols.filter(col => getComputedStyle(col).display !== "none");
+  if (!cards.length || !visible.length) return;
+  cards.forEach(card => visible[0].appendChild(card));
+  const heights = cards.map(card => card.getBoundingClientRect().height);
+  const gap = parseFloat(getComputedStyle(visible[0]).rowGap) || 0;
+  const target = assignCardsToColumns(heights, visible.length, gap);
+  cards.forEach((card, i) => visible[target[i]].appendChild(card));
 }
 window.addEventListener("resize", () => {
-  document.querySelectorAll(".entry.open").forEach(placeEntryQuote);
+  document.querySelectorAll(".entry.open").forEach(distributeEntryCards);
   document.querySelectorAll(".oneliner-row.open").forEach(row => {
     const detail = row.nextElementSibling;
-    if (detail) placeEntryQuote(detail);
+    if (detail) distributeEntryCards(detail);
   });
 });
 
@@ -3262,7 +3339,7 @@ function buildEntryCard(entry, cfg, docketLabel, sourceLabel, term, useRegex) {
 
   div.querySelector(".entry-head").addEventListener("click", () => {
     div.classList.toggle("open");
-    if (div.classList.contains("open")) placeEntryQuote(div);
+    if (div.classList.contains("open")) distributeEntryCards(div);
   });
   wireRelatedEntryLinks(div);
   wireUpdateRequestButtons(div);
@@ -3898,7 +3975,7 @@ function renderGlobalResults(term, useRegex, useOneLiners, useImpactSort) {
     row.addEventListener("click", () => {
       row.classList.toggle("open");
       detail.style.display = row.classList.contains("open") ? "block" : "none";
-      if (row.classList.contains("open")) placeEntryQuote(detail);
+      if (row.classList.contains("open")) distributeEntryCards(detail);
     });
 
     list.appendChild(row);

@@ -27,6 +27,25 @@ const buildUpdateRequestHtmlFunctionSource = extractFunction(source, "build-upda
 const paragraphizeUpdatesFunctionSource = extractFunction(source, "paragraphize-updates");
 const buildConfidenceNoteHtmlFunctionSource = extractFunction(source, "build-confidence-note-html");
 const buildDetailHtmlFunctionSource = extractFunction(source, "build-detail-html");
+// Added 2026-09-19: buildDetailHtml gained two more direct dependencies
+// with the 2026-09-18 columnar layout (safeHref for source links,
+// buildPullQuoteHtml for the pull-quote) that this harness never picked
+// up, so 26 of these tests were failing with ReferenceErrors before any
+// layout work started.
+const safeHrefFunctionSource = extractFunction(source, "safe-href");
+const buildPullQuoteHtmlFunctionSource = extractFunction(source, "build-pull-quote-html");
+const buildEntryColsHtmlFunctionSource = extractFunction(source, "build-entry-cols-html");
+
+// safeHref resolves relative URLs against location.href, which doesn't
+// exist in Node -- give it a fixed base so absolute test URLs round-trip.
+globalThis.location = { href: "https://example.test/" };
+
+// buildFiguresHtml drags in a whole categorization chain (figureCategory,
+// FIGURE_CATEGORY_ORDER, isFigureSavings, ...) that has nothing to do
+// with what these tests check. A placeholder keeps figures' *placement*
+// (which column the card lands in) testable without evaluating that
+// chain; the grouping logic itself isn't covered here.
+const buildFiguresHtmlStubSource = "function buildFiguresHtml(figs) { return figs && figs.length ? '<!--figures:' + figs.length + '-->' : ''; }";
 
 // Eval them all together so buildDetailHtml can call summaryLineHtml and
 // highlightMatches (which itself calls escapeHtml/escapeRegExp), plus
@@ -36,7 +55,9 @@ const buildDetailHtmlFunctionSource = extractFunction(source, "build-detail-html
 // field on all three curated-tracker kinds; calls escapeHtml directly).
 const combined = escapeHtmlFunctionSource + "\n" + summaryLineFunctionSource + "\n" +
   highlightMatchesFunctionSource + "\n" + buildUpdateRequestHtmlFunctionSource + "\n" +
-  paragraphizeUpdatesFunctionSource + "\n" + buildConfidenceNoteHtmlFunctionSource + "\n" + buildDetailHtmlFunctionSource;
+  paragraphizeUpdatesFunctionSource + "\n" + buildConfidenceNoteHtmlFunctionSource + "\n" +
+  safeHrefFunctionSource + "\n" + buildPullQuoteHtmlFunctionSource + "\n" + buildEntryColsHtmlFunctionSource + "\n" +
+  buildFiguresHtmlStubSource + "\n" + buildDetailHtmlFunctionSource;
 const buildDetailHtml = (0, eval)(`${combined}\nbuildDetailHtml;`);
 
 // paragraphizeUpdates has no dependencies of its own, so it's also
@@ -225,7 +246,7 @@ test("prosecution (Cabinet-Level) highlights the search term throughout the body
   );
 });
 
-test("prosecution renders Root Cause, Anticipated Defense, and TAP's Rebuttal after Confidence note", () => {
+test("prosecution renders Broader Pattern, Anticipated Defense, and TAP's Rebuttal in the main column, ahead of the sidebar's Confidence note", () => {
   const entry = {
     offense_category: "Fraud",
     status_category: "Investigation",
@@ -240,16 +261,16 @@ test("prosecution renders Root Cause, Anticipated Defense, and TAP's Rebuttal af
   const cfg = { kind: "prosecution" };
   const result = buildDetailHtml(entry, cfg);
 
-  assert(result.includes('<div class="field-label">Root Cause</div><div class="field-value">Structural incentive analysis goes here.</div>'), "should render cause under a Root Cause label");
+  assert(result.includes('<div class="field-label">Broader Pattern</div><div class="field-value">Structural incentive analysis goes here.</div>'), "should render cause under a Broader Pattern label");
   assert(result.includes('<div class="field-label">Anticipated Defense</div><div class="field-value">The likely defense goes here.</div>'), "should render rebuttal_anticipated under an Anticipated Defense label");
   assert(result.includes("<div class=\"field-label\">TAP's Rebuttal</div><div class=\"field-value\">Why that defense doesn't hold up goes here.</div>"), "should render comeback under a TAP's Rebuttal label");
 
   const confidenceIndex = result.indexOf("Confidence note");
-  const causeIndex = result.indexOf("Root Cause");
+  const causeIndex = result.indexOf("Broader Pattern");
   const rebuttalIndex = result.indexOf("Anticipated Defense");
   const comebackIndex = result.indexOf("TAP's Rebuttal");
-  assert(confidenceIndex < causeIndex, "Root Cause should come after Confidence note");
-  assert(causeIndex < rebuttalIndex, "Anticipated Defense should come after Root Cause");
+  assert(causeIndex < confidenceIndex, "the main column (Broader Pattern) precedes the sidebar's Confidence note in the DOM");
+  assert(causeIndex < rebuttalIndex, "Anticipated Defense should come after Broader Pattern");
   assert(rebuttalIndex < comebackIndex, "TAP's Rebuttal should come after Anticipated Defense");
 });
 
@@ -387,7 +408,7 @@ test("tracker (Reporting) highlights the search term inside the source name", ()
   const result = buildDetailHtml(entry, cfg, "civil rights", false);
 
   assert(
-    result.includes('<mark class="hl">Civil Rights</mark>'),
+    result.includes('<mark class="hl">Civil</mark> <mark class="hl">Rights</mark>'),
     "should wrap the matched term in the source name with a <mark> highlight"
   );
 });
@@ -520,7 +541,7 @@ test("govservices What changed renders as a single paragraph when there are no U
   const result = buildDetailHtml(entry, cfg);
 
   assert(
-    result.includes('<div class="field-label">What changed</div><div class="field-value"><p>Reduced staffing by 30%.</p></div>'),
+    result.includes('<div class="field-label">What happened</div><div class="field-value"><p>Reduced staffing by 30%.</p></div>'),
     "what_changed with no Update marker should render as one <p> inside field-value"
   );
 });
@@ -535,8 +556,8 @@ test("govservices What changed splits into separate paragraphs at each Update ma
   const cfg = { kind: "govservices" };
   const result = buildDetailHtml(entry, cfg);
 
-  const start = result.indexOf('<div class="field-label">What changed</div><div class="field-value">');
-  const end = result.indexOf('<div class="field-label">Primary proponent</div>');
+  const start = result.indexOf('<div class="field-label">What happened</div><div class="field-value">');
+  const end = result.indexOf('<div class="field-label">Estimated impact</div>');
   const html = result.slice(start, end);
 
   assert.equal((html.match(/<p>/g) || []).length, 2, "should split into 2 paragraphs, one per Update marker plus the lead-in text");
@@ -592,16 +613,16 @@ test("prosecution Confidence note splits its base text from a separate Updates s
 
   const confidenceStart = result.indexOf('<div class="field-label">Confidence note</div><div class="confidence-box">');
   const updatesStart = result.indexOf('<div class="field-label">Updates</div>');
-  const rootCauseStart = result.indexOf('<div class="field-label">Root Cause</div>');
+  const causeStart = result.indexOf('<div class="field-label">Broader Pattern</div>');
 
-  assert(confidenceStart !== -1 && updatesStart !== -1 && rootCauseStart !== -1, "all three sections should be present");
-  assert(confidenceStart < updatesStart && updatesStart < rootCauseStart, "Updates should render between Confidence note and Root Cause");
+  assert(confidenceStart !== -1 && updatesStart !== -1 && causeStart !== -1, "all three sections should be present");
+  assert(causeStart < confidenceStart && confidenceStart < updatesStart, "main column (Broader Pattern) precedes the sidebar's Confidence note, which precedes its Updates");
 
   const confidenceHtml = result.slice(confidenceStart, updatesStart);
   assert(confidenceHtml.includes("<p>Well-sourced initially.</p>"), "the base text before the marker stays in the Confidence note box");
   assert(!confidenceHtml.includes("2026-08-02"), "the dated update should not remain in the Confidence note box");
 
-  const updatesHtml = result.slice(updatesStart, rootCauseStart);
+  const updatesHtml = result.slice(updatesStart);
   assert(updatesHtml.includes('<div class="update-date">2026-08-02</div>'), "the update's date should render as its heading");
   assert(updatesHtml.includes("<p>Update 2026-08-02: a second outlet corroborated.</p>"), "the update's own text should render under its date heading");
 });
@@ -632,7 +653,11 @@ test("govservices Confidence note splits into separate paragraphs at each Update
   const result = buildDetailHtml(entry, cfg);
 
   const start = result.indexOf('<div class="field-label">Confidence note</div><div class="confidence-box">');
-  const end = result.indexOf('<div class="field-label">Sources</div>');
+  // Sources moved out of the way in the 2026-09-19 three-column split: it
+  // now sits in .entry-aside, *before* the Confidence note's .entry-note
+  // column, so the note runs until the update-request row that follows
+  // the columns.
+  const end = result.indexOf('<div class="update-request-row">');
   const html = result.slice(start, end);
 
   assert.equal((html.match(/<p>/g) || []).length, 2, "should split into 2 paragraphs, one per Update marker plus the lead-in text");
@@ -651,10 +676,134 @@ test("deregulation Confidence note splits into separate paragraphs at each Updat
   const result = buildDetailHtml(entry, cfg);
 
   const start = result.indexOf('<div class="field-label">Confidence note</div><div class="confidence-box">');
-  const end = result.indexOf('<div class="field-label">Sources</div>');
+  // Sources moved out of the way in the 2026-09-19 three-column split: it
+  // now sits in .entry-aside, *before* the Confidence note's .entry-note
+  // column, so the note runs until the update-request row that follows
+  // the columns.
+  const end = result.indexOf('<div class="update-request-row">');
   const html = result.slice(start, end);
 
   assert.equal((html.match(/<p>/g) || []).length, 2, "should split into 2 paragraphs, one per Update marker plus the lead-in text");
   assert(html.includes("<p>Well-sourced initially.</p>"), "lead-in text before the marker should be its own paragraph");
   assert(html.includes("<p>Update 2026-08-02: a second outlet corroborated.</p>"), "the Update marker should start its own paragraph");
+});
+
+// ---- Even card distribution across columns (2026-09-19) --------------
+// Expanded curated-tracker entries render as .entry-cols holding three
+// generic .entry-col containers. The markup puts EVERY card into the first
+// one, in reading order; a script (distributeEntryCards) then measures the
+// cards and moves each into whichever visible column is currently
+// shortest. assignCardsToColumns is the pure "which column" decision,
+// tested here in isolation; the DOM moving itself is checked in-browser.
+const assignCardsToColumns = (0, eval)(`${extractFunction(source, "assign-cards-to-columns")}\nassignCardsToColumns;`);
+
+test("assignCardsToColumns puts everything in column 0 when there is one column", () => {
+  assert.deepEqual(assignCardsToColumns([100, 50, 80], 1, 10), [0, 0, 0]);
+});
+
+test("assignCardsToColumns spreads equal cards left to right across the columns", () => {
+  assert.deepEqual(assignCardsToColumns([50, 50, 50], 3, 0), [0, 1, 2]);
+  assert.deepEqual(assignCardsToColumns([50, 50, 50, 50], 3, 0), [0, 1, 2, 0]);
+});
+
+test("assignCardsToColumns sends each card to the currently shortest column", () => {
+  // One tall card in column 0; the four short ones all fit under column 1's
+  // running total before it catches up (30, 60, 90, then 120 > 100).
+  assert.deepEqual(assignCardsToColumns([100, 30, 30, 30, 30], 2, 0), [0, 1, 1, 1, 1]);
+});
+
+test("assignCardsToColumns breaks ties toward the leftmost column", () => {
+  assert.deepEqual(assignCardsToColumns([50, 50], 3, 0), [0, 1]);
+});
+
+test("assignCardsToColumns counts the gap between stacked cards", () => {
+  // Column 1 is at 85, then 85+20+10 = 115 after its second card, so the
+  // last card belongs in column 0 (100). With no gap it would be 95 and
+  // column 1 would win again -- this pins that the gap is included.
+  assert.deepEqual(assignCardsToColumns([100, 85, 10, 10], 2, 20), [0, 1, 1, 0]);
+  assert.deepEqual(assignCardsToColumns([100, 85, 10, 10], 2, 0), [0, 1, 1, 1]);
+});
+
+test("assignCardsToColumns handles no cards and a nonsense column count", () => {
+  assert.deepEqual(assignCardsToColumns([], 3, 10), []);
+  assert.deepEqual(assignCardsToColumns([10, 20], 0, 10), [0, 0]);
+});
+
+const layoutEntries = {
+  deregulation: {
+    cfg: { kind: "deregulation" },
+    entry: {
+      what_changed: "Agency repealed the rule.",
+      estimated_health_impact: { summary: "Costs rise.", caveat: "Modeled.", figures: [{ metric: "m", value: "1", source: "s" }] },
+      confidence_note: "High confidence.",
+      pull_quote: "A striking quote.",
+      primary_proponent: { name: "John Doe", role: "Administrator", note: "" },
+      sources: [{ name: "Src One", url: "https://example.com/1" }],
+    },
+    // Labels in the order a reader meets them: narrative cards, then data
+    // cards, then the Confidence note, then the pull-quote.
+    order: [">What changed</div>", ">Estimated impact</div>", ">Caveat</div>", ">Primary proponent</div>", "<!--figures:1-->", ">Sources</div>", ">Confidence note</div>", "entry-aside-quote"],
+  },
+  govservices: {
+    cfg: { kind: "govservices" },
+    entry: {
+      institution: "Some Agency",
+      what_changed: "Reduced staffing by 30%.",
+      estimated_impact: { summary: "Delays.", caveat: "Estimate.", figures: [{ metric: "m", value: "1", source: "s" }] },
+      confidence_note: "Moderately confident.",
+      pull_quote: "A striking quote.",
+      primary_proponent: { name: "Jane Smith", role: "Secretary", note: "" },
+      sources: [{ name: "Src One", url: "https://example.com/1" }],
+    },
+    order: [">What happened</div>", ">Estimated impact</div>", ">Caveat</div>", ">Institution</div>", ">Primary proponent</div>", "<!--figures:1-->", ">Sources</div>", ">Confidence note</div>", "entry-aside-quote"],
+  },
+  prosecution: {
+    cfg: { kind: "prosecution" },
+    entry: {
+      offense_category: "Fraud",
+      status_category: "Investigation",
+      offense_category_raw: "18 USC 1001",
+      incident_summary: "Summary.",
+      status: "Under investigation.",
+      confidence_note: "Strong evidence.",
+      pull_quote: "A striking quote.",
+      cause: "Pattern.",
+      rebuttal_anticipated: "Defense.",
+      comeback: "Rebuttal.",
+    },
+    order: [">Violation Type (in full)</div>", ">Incident summary</div>", ">Status</div>", ">Broader Pattern</div>", ">Anticipated Defense</div>", ">TAP's Rebuttal</div>", ">Violation Type</div>", ">Status Stage</div>", ">Confidence note</div>", "entry-aside-quote"],
+  },
+};
+
+for (const [kind, { cfg, entry, order }] of Object.entries(layoutEntries)) {
+  test(`${kind} renders .entry-cols as three generic columns with every card in the first`, () => {
+    const result = buildDetailHtml(entry, cfg);
+    assert(result.startsWith('<div class="entry-cols"><div class="entry-col">'), "entry-cols should open onto the first entry-col");
+    assert(result.includes('</div><div class="entry-col"></div><div class="entry-col"></div></div>'), "columns 2 and 3 start empty; the script fills them once the card is open");
+    assert.equal((result.match(/<div class="entry-col">/g) || []).length, 3, "exactly three columns");
+  });
+
+  test(`${kind} no longer emits the old fixed-role column classes`, () => {
+    const result = buildDetailHtml(entry, cfg);
+    assert(!result.includes('class="entry-main"'), "entry-main column is gone");
+    assert(!result.includes('class="entry-aside"'), "entry-aside column is gone");
+    assert(!result.includes('class="entry-note"'), "entry-note column is gone");
+  });
+
+  test(`${kind} keeps its cards in reading order (narrative, data cards, Confidence note, quote last)`, () => {
+    const result = buildDetailHtml(entry, cfg);
+    let last = -1;
+    for (const marker of order) {
+      const at = result.indexOf(marker);
+      assert(at !== -1, `card marker missing: ${marker}`);
+      assert(at > last, `${marker} should come after the previous card in reading order`);
+      last = at;
+    }
+  });
+}
+
+test("an entry with no pull_quote renders no quote element anywhere", () => {
+  const { cfg, entry } = layoutEntries.govservices;
+  const { pull_quote, ...withoutQuote } = entry;
+  assert(!buildDetailHtml(withoutQuote, cfg).includes("entry-aside-quote"), "no quote markup when pull_quote is unset");
 });
