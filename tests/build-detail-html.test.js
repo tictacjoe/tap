@@ -943,6 +943,9 @@ test("boldLeadingSourcingQuality bolds the leading quality words, not the noun a
     ["Well documented across specialist outlets.", "**Well documented** across specialist outlets."],
     ["Solid on the facts of the action.", "**Solid** on the facts of the action."],
     ["Strong, multi-source documentation.", "**Strong**, multi-source documentation."],
+    ["Strongly sourced: a primary-source coalition.", "**Strongly sourced**: a primary-source coalition."],
+    ["Extensively corroborated by independent outlets.", "**Extensively corroborated** by independent outlets."],
+    ["Very strongly sourced across outlets.", "**Very strongly sourced** across outlets."],
   ];
   for (const [input, expected] of cases) assert.equal(boldLeadingSourcingQuality(input), expected, input);
 });
@@ -954,6 +957,8 @@ test("boldLeadingSourcingQuality only acts at the very start of the text", () =>
     "Corroborated across multiple independent outlets.",
     "This is legislation, not a rule.",
     "Strongly worded criticism from the opposition.",
+    "Extensively reported on by the trade press.",
+    "The claim is strongly sourced and extensively corroborated.",
     "HIGH confidence on the orders; strong sourcing overall.",
   ];
   for (const text of untouched) assert.equal(boldLeadingSourcingQuality(text), text, text);

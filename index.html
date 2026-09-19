@@ -3020,13 +3020,14 @@ function boldConfidenceRatings(text) {
    Anchored to the very start of the text (so "the sourcing is strong"
    mid-note is untouched), bolds only the quality words -- an optional
    intensifier plus strong/solid/well-corroborated/well-documented/
-   well-sourced -- and not the noun after them, matching how ratings are
+   well-sourced, or "strongly/extensively sourced/corroborated/documented"
+   -- and not the noun after them, matching how ratings are
    bolded. Bland factual openers ("Corroborated across...", "Sourced
    primarily to...") aren't quality claims and stay plain. Text that
    already starts with ** is left alone, and a second pass is a no-op. */
 /* bold-leading-sourcing-quality:start */
 const LEADING_SOURCING_QUALITY_PATTERN =
-  /^(?:(?:Exceptionally|Extremely|Unusually|Very)\s+)?(?:strong|solid|well[- ]corroborated|well[- ]documented|well[- ]sourced)\b/i;
+  /^(?:(?:Exceptionally|Extremely|Unusually|Very)\s+)?(?:strong|solid|well[- ]corroborated|well[- ]documented|well[- ]sourced|(?:strongly|extensively)\s+(?:sourced|corroborated|documented))\b/i;
 function boldLeadingSourcingQuality(text) {
   if (!text) return "";
   return String(text).replace(LEADING_SOURCING_QUALITY_PATTERN, "**$&**");
