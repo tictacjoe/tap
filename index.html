@@ -2970,6 +2970,42 @@ function paragraphizeUpdates(text, hl) {
 /* paragraphize-updates:end */
 
 /* build-confidence-note-html:start */
+/* Wraps each confidence rating in ** markers so the site's existing
+   **bold** handling (boldify(), run by hl()) renders it as <strong>
+   (2026-09-19, Joe: notes often carry several ratings -- "HIGH confidence
+   on X ... MODERATE confidence on Y" -- and they should stand out).
+   Display-time on purpose: no entry data is edited, and every future note
+   is covered automatically.
+
+   The rule follows the house style, checked against all 769 published
+   notes (1,523 UPPERCASE rating words; ~18 joined to another word, all
+   genuine ratings; zero false positives found):
+     - UPPERCASE LOW / MODERATE / HIGH, alone or joined by "-" or "/"
+       (MODERATE-HIGH, LOW-MODERATE, MODERATE/HIGH), or VERY HIGH -- one
+       span each. Only the rating is bolded, not the word "confidence".
+       "MODERATE-to-HIGH" bolds MODERATE and HIGH separately.
+     - a sentence-initial "High confidence" / "Moderate confidence" /
+       "Low confidence" (capitalized AND directly followed by "confidence",
+       so "High stakes" and "Low-income" stay plain).
+     Lowercase prose ("with high confidence until verified", "moderate-high
+     rather than low confidence") is left alone -- it isn't a rating label.
+   Text already inside a ** span is skipped, so this can never double-bold
+   a note that is later hand-bolded, and running it twice is a no-op. */
+/* bold-confidence-ratings:start */
+const CONFIDENCE_RATING_PATTERN = new RegExp(
+  "\\b(?:VERY HIGH|(?:LOW|MODERATE|HIGH)(?:[-/](?:LOW|MODERATE|HIGH))*)\\b" +
+  "|\\b(?:Very high|High|Moderate|Low)(?:[-/](?:high|moderate|low))*(?= confidence\\b)",
+  "g"
+);
+function boldConfidenceRatings(text) {
+  if (!text) return "";
+  return String(text)
+    .split(/(\*\*[\s\S]+?\*\*)/)
+    .map((part, i) => (i % 2 ? part : part.replace(CONFIDENCE_RATING_PATTERN, "**$&**")))
+    .join("");
+}
+/* bold-confidence-ratings:end */
+
 /* Splits a confidence_note into its base assessment (whatever text
    comes before the first "Update"/"Added" marker) and a list of dated
    update chunks (from each marker onward) -- reuses paragraphizeUpdates()'s
@@ -3019,12 +3055,12 @@ function buildConfidenceNoteHtml(entry, hl, summary) {
     : '<div class="field-label">Confidence note</div>';
   let html = labelHtml + '<div class="confidence-box">' +
     summary(entry.section_summaries?.confidence_note) +
-    (base ? "<p>" + hl(base) + "</p>" : "") +
+    (base ? "<p>" + hl(boldConfidenceRatings(base)) + "</p>" : "") +
     '</div>';
   if (updates.length) {
     html += '<div class="field-label">Updates</div><div class="confidence-box updates-box">' +
       updates.map(u =>
-        '<div class="update-item"><div class="update-date">' + escapeHtml(u.heading) + '</div><p>' + hl(u.text) + '</p></div>'
+        '<div class="update-item"><div class="update-date">' + escapeHtml(u.heading) + '</div><p>' + hl(boldConfidenceRatings(u.text)) + '</p></div>'
       ).join("") +
       '</div>';
   }

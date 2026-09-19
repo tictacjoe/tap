@@ -807,3 +807,117 @@ test("an entry with no pull_quote renders no quote element anywhere", () => {
   const { pull_quote, ...withoutQuote } = entry;
   assert(!buildDetailHtml(withoutQuote, cfg).includes("entry-aside-quote"), "no quote markup when pull_quote is unset");
 });
+
+// ---- Bold confidence ratings (2026-09-19) -----------------------------
+// Confidence notes often carry several ratings ("HIGH confidence on X...
+// MODERATE confidence on Y"). buildConfidenceNoteHtml wraps each rating in
+// ** markers before the text goes through the site's existing **bold**
+// handling. House style (checked against all 769 published notes): the
+// rating is UPPERCASE ("HIGH", "MODERATE-HIGH", "VERY HIGH", ...), so
+// that's the rule; only sentence-initial "High confidence"-style text is
+// also caught. Lowercase prose ("with high confidence until verified") is
+// deliberately left alone -- it isn't a rating label.
+const boldConfidenceRatings = (0, eval)(`${extractFunction(source, "bold-confidence-ratings")}\nboldConfidenceRatings;`);
+
+test("boldConfidenceRatings bolds a single uppercase rating", () => {
+  assert.equal(boldConfidenceRatings("HIGH confidence on the orders."), "**HIGH** confidence on the orders.");
+});
+
+test("boldConfidenceRatings bolds every rating when a note has several", () => {
+  assert.equal(
+    boldConfidenceRatings("HIGH confidence on the orders. MODERATE confidence on the cost. LOW confidence on intent."),
+    "**HIGH** confidence on the orders. **MODERATE** confidence on the cost. **LOW** confidence on intent."
+  );
+});
+
+test("boldConfidenceRatings keeps combined ratings together as one span", () => {
+  assert.equal(boldConfidenceRatings("MODERATE-HIGH confidence on X"), "**MODERATE-HIGH** confidence on X");
+  assert.equal(boldConfidenceRatings("LOW-MODERATE confidence on X"), "**LOW-MODERATE** confidence on X");
+  assert.equal(boldConfidenceRatings("MODERATE-LOW confidence on X"), "**MODERATE-LOW** confidence on X");
+  assert.equal(boldConfidenceRatings("MODERATE/HIGH confidence on X"), "**MODERATE/HIGH** confidence on X");
+  assert.equal(boldConfidenceRatings("VERY HIGH confidence -- this is"), "**VERY HIGH** confidence -- this is");
+});
+
+test("boldConfidenceRatings bolds only the rating in attributive and qualified forms", () => {
+  assert.equal(boldConfidenceRatings("the entry's HIGH-confidence sourcing"), "the entry's **HIGH**-confidence sourcing");
+  assert.equal(boldConfidenceRatings("MODERATE/contested confidence on X"), "**MODERATE**/contested confidence on X");
+  assert.equal(boldConfidenceRatings("raised from MODERATE-to-HIGH confidence"), "raised from **MODERATE**-to-**HIGH** confidence");
+});
+
+test("boldConfidenceRatings bolds ratings that aren't followed by the word confidence", () => {
+  assert.equal(boldConfidenceRatings("flagged MODERATE pending a primary source"), "flagged **MODERATE** pending a primary source");
+  assert.equal(boldConfidenceRatings("MODERATE rather than HIGH confidence"), "**MODERATE** rather than **HIGH** confidence");
+});
+
+test("boldConfidenceRatings catches a sentence-initial capitalized rating followed by confidence", () => {
+  assert.equal(boldConfidenceRatings("High confidence throughout."), "**High** confidence throughout.");
+  assert.equal(boldConfidenceRatings("Moderate confidence on downstream impact."), "**Moderate** confidence on downstream impact.");
+});
+
+test("boldConfidenceRatings leaves lowercase prose and non-rating words alone", () => {
+  const untouched = [
+    "cannot name a specific individual with high confidence until verified",
+    "supports moderate-high rather than low confidence",
+    "High stakes for rural hospitals",
+    "Low-income families are affected",
+    "HIGHLY corroborated; LOWER estimate; MODERATED tone",
+  ];
+  for (const text of untouched) assert.equal(boldConfidenceRatings(text), text, `should not change: ${text}`);
+});
+
+test("boldConfidenceRatings does not touch text already inside a ** span, and is idempotent", () => {
+  assert.equal(
+    boldConfidenceRatings("**HIGH confidence** on X. MODERATE confidence on Y."),
+    "**HIGH confidence** on X. **MODERATE** confidence on Y."
+  );
+  const once = boldConfidenceRatings("HIGH confidence on X. MODERATE-HIGH confidence on Y.");
+  assert.equal(boldConfidenceRatings(once), once, "a second pass must not double-bold");
+});
+
+test("boldConfidenceRatings returns an empty string for missing text", () => {
+  assert.equal(boldConfidenceRatings(""), "");
+  assert.equal(boldConfidenceRatings(undefined), "");
+  assert.equal(boldConfidenceRatings(null), "");
+});
+
+const ratingNote = "HIGH confidence on the order. MODERATE-HIGH confidence on the cost. Update 2026-08-02: LOW confidence on intent.";
+for (const [kind, extra] of [
+  ["deregulation", { what_changed: "x", estimated_health_impact: {}, primary_proponent: { name: "A", role: "B" }, sources: [] }],
+  ["govservices", { institution: "I", what_changed: "x", estimated_impact: {}, primary_proponent: { name: "A", role: "B" }, sources: [] }],
+  ["prosecution", { offense_category: "Fraud", status_category: "Investigation", incident_summary: "s", status: "t" }],
+]) {
+  test(`${kind} Confidence note bolds ratings in the main text and in the dated updates`, () => {
+    const result = buildDetailHtml({ ...extra, confidence_note: ratingNote }, { kind });
+    assert(result.includes("<strong>HIGH</strong> confidence on the order"), "main-text rating should be bold");
+    assert(result.includes("<strong>MODERATE-HIGH</strong> confidence on the cost"), "combined rating should be one bold span");
+    assert(result.includes("<strong>LOW</strong> confidence on intent"), "a rating inside a dated update should be bold too");
+  });
+}
+
+test("the one-line Confidence summary is left as it was (already fully bold), not run through rating-bolding", () => {
+  const entry = {
+    what_changed: "x", estimated_health_impact: {}, primary_proponent: { name: "A", role: "B" }, sources: [],
+    confidence_note: "HIGH confidence on X.",
+    section_summaries: { what_changed: "a", estimated_impact: "b", confidence_note: "HIGH overall." },
+  };
+  const result = buildDetailHtml(entry, { kind: "deregulation" });
+  assert(result.includes('<p class="field-summary">HIGH overall.</p>'), "summary line should not gain a nested <strong>");
+});
+
+test("a search term that matches a bolded rating still highlights inside the bold", () => {
+  const entry = {
+    what_changed: "x", estimated_health_impact: {}, primary_proponent: { name: "A", role: "B" }, sources: [],
+    confidence_note: "HIGH confidence on X.",
+  };
+  const result = buildDetailHtml(entry, { kind: "deregulation" }, "high", false);
+  assert(result.includes('<strong><mark class="hl">HIGH</mark></strong>'), "search mark should nest cleanly inside the rating's bold");
+});
+
+test("a Confidence note with no ratings renders unchanged", () => {
+  const entry = {
+    what_changed: "x", estimated_health_impact: {}, primary_proponent: { name: "A", role: "B" }, sources: [],
+    confidence_note: "Sourced to two outlets; no dispute identified.",
+  };
+  const result = buildDetailHtml(entry, { kind: "deregulation" });
+  assert(result.includes("<p>Sourced to two outlets; no dispute identified.</p>"), "text without a rating passes through untouched");
+});
