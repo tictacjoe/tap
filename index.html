@@ -646,7 +646,9 @@
     font-weight: 600;
   }
   .glance-badge-physical, .glance-badge-rights { background: var(--flag-bg); color: var(--flag); }
-  .glance-badge-livelihood, .glance-badge-money { background: var(--brass-light); color: var(--brass); }
+  /* Badge text is a darker brass than --brass (#96762C was 3.46:1 on the
+     brass-light background at this size; this is >= 4.5:1). */
+  .glance-badge-livelihood, .glance-badge-money { background: var(--brass-light); color: #7E6325; }
   .glance-badge-institutional { background: var(--paper); color: var(--ink-soft); border: 1px solid var(--rule); }
   .glance-harm-who { color: var(--ink-soft); }
   .glance-orig-title { margin: 0 0 0.6rem; font-weight: bold; color: var(--ink-soft); }
@@ -2959,7 +2961,9 @@ function visibleSearchText(entry, cfg) {
   if (cfg.kind === "deregulation") {
     parts.push(
       entry.agency, entry.domain, entry.status, entry.date_of_action, entry.last_verified,
-      entry.short_summary, entry.what_changed,
+      // A glance card does not show short_summary anywhere, so keep it out of
+      // the haystack there (the agency is shown, so it stays in).
+      glanceActive(entry, cfg) ? null : entry.short_summary, entry.what_changed,
       entry.section_summaries?.what_changed, entry.section_summaries?.estimated_impact, entry.section_summaries?.confidence_note,
       entry.primary_proponent?.name, entry.primary_proponent?.role, entry.primary_proponent?.note,
       entry.estimated_health_impact?.summary, entry.estimated_health_impact?.caveat, entry.confidence_note
@@ -3477,6 +3481,7 @@ function glanceMetaHtml(entry, cfg, sourceLabel, hl) {
   let html = sourceLabel ? '<span class="source-tag">' + sourceLabel + '</span>' : "";
   if (cfg.kind === "deregulation") {
     html += '<span class="domain-tag" style="background:' + domainColor(entry.domain) + '22; color:' + domainColor(entry.domain) + '">' + entry.domain + '</span>';
+    if (entry.agency) html += '<span>' + hl(entry.agency) + '</span>';
   } else if (cfg.kind === "govservices") {
     html += '<span class="domain-tag" style="background:' + domainColor(entry.domain) + '22; color:' + domainColor(entry.domain) + '">' + govservicesDomainLabel(entry.domain) + '</span>';
   }

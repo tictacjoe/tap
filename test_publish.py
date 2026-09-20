@@ -97,3 +97,40 @@ def test_publish_without_a_checker_leaves_glance_untouched(tmp_path):
 def test_load_glance_checker_imports_the_working_repos_validator():
     check = load_glance_checker(TAP_DATA)
     assert check({}) != []  # an empty block is invalid
+
+
+def _real_glance(**overrides):
+    glance = {
+        "who": "Example Agency Administrator",
+        "what": "Rolled back an example safety rule with no replacement",
+        "harm": {"kind": "physical", "certainty": "projected", "who": "Workers at example sites"},
+        "reviewed": "2026-09-20",
+    }
+    glance.update(overrides)
+    return glance
+
+
+@pytest.mark.skipif(not (TAP_DATA / "tracker/validate_glance.py").exists(),
+                    reason="tap-data working repo not present")
+def test_real_validator_through_the_publish_guard_strips_an_over_limit_glance(tmp_path, capsys):
+    check = load_glance_checker(TAP_DATA)
+    source_dir = _one_entry_dir(tmp_path, {"id": "e", "glance": _real_glance(what="w" * 111)})
+    included, _ = publish_json_entries(
+        source_dir, tmp_path / "out.json", excluded_ids=set(), check_glance=check)
+    assert included[0]["id"] == "e"
+    assert "glance" not in included[0]
+    out = capsys.readouterr().out
+    assert "malformed glance stripped from" in out
+    assert "max 110" in out
+
+
+@pytest.mark.skipif(not (TAP_DATA / "tracker/validate_glance.py").exists(),
+                    reason="tap-data working repo not present")
+def test_real_validator_through_the_publish_guard_keeps_a_valid_glance(tmp_path, capsys):
+    check = load_glance_checker(TAP_DATA)
+    glance = _real_glance()
+    source_dir = _one_entry_dir(tmp_path, {"id": "e", "glance": glance})
+    included, _ = publish_json_entries(
+        source_dir, tmp_path / "out.json", excluded_ids=set(), check_glance=check)
+    assert included[0]["glance"] == glance
+    assert "malformed glance" not in capsys.readouterr().out

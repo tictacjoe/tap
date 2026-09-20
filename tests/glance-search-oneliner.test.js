@@ -76,3 +76,22 @@ test("oneLinerFor keeps the figure suffix for an active glance", () => {
   assert.equal(result.figure, "Deaths: 10.");
   assert.equal(result.figureKind, "harm");
 });
+
+const cfgDereg = { kind: "deregulation", titleField: "rule_name", glanceEnabled: true };
+const cfgDeregOff = { kind: "deregulation", titleField: "rule_name", glanceEnabled: false };
+const deregEntry = () => ({
+  rule_name: "Rule", agency: "Example Agency of Testing", short_summary: "Zorblax wording only in the summary",
+  glance: validGlance(),
+});
+
+test("visibleSearchText for Deregulation leaves short_summary out but keeps agency when glance is active", () => {
+  const text = api.visibleSearchText(deregEntry(), cfgDereg);
+  assert.ok(!text.includes("Zorblax"));
+  assert.ok(text.includes("Example Agency of Testing"));
+});
+
+test("visibleSearchText for Deregulation still includes short_summary when the flag is off", () => {
+  const text = api.visibleSearchText(deregEntry(), cfgDeregOff);
+  assert.ok(text.includes("Zorblax"));
+  assert.ok(text.includes("Example Agency of Testing"));
+});
