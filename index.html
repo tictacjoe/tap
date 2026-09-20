@@ -2870,7 +2870,8 @@ function highlightMatches(text, term, useRegex) {
    same weight/color as the descriptive part of the sentence. Each
    piece still gets escaped/highlighted independently at the call
    site -- this function itself returns plain text, no HTML. */
-function oneLinerFor(entry, cfg) {
+/* one-liner-base:start */
+function oneLinerBase(entry, cfg) {
   if (cfg.kind === "deregulation") {
     const s = (entry.status || "").toLowerCase();
     let verb = "acted on";
@@ -2909,6 +2910,17 @@ function oneLinerFor(entry, cfg) {
   }
   return { line: JSON.stringify(entry).slice(0, 150), figure: null };
 }
+/* one-liner-base:end */
+
+/* one-liner-for:start */
+/* Glance entries read "who - what" in the 1-liners list; the trailing
+   figure (Deregulation / Government Services) is kept exactly as before. */
+function oneLinerFor(entry, cfg) {
+  const base = oneLinerBase(entry, cfg);
+  if (!glanceActive(entry, cfg)) return base;
+  return { line: entry.glance.who + " — " + entry.glance.what, figure: base.figure, figureKind: base.figureKind };
+}
+/* one-liner-for:end */
 
 /* Matches a search term against a haystack string. Supports plain
    whole-word (case-insensitive) or regex mode. On invalid regex,
@@ -2936,8 +2948,14 @@ function oneLinerFor(entry, cfg) {
    as false positives. Field lists here intentionally mirror what
    buildEntryCard()/buildDetailHtml() actually render for each kind --
    keep the two in sync when either changes. */
+/* visible-search-text:start */
 function visibleSearchText(entry, cfg) {
   const parts = [entry[cfg.titleField]];
+  // Glance text is visible on the card, so it must be searchable (this
+  // function's own rule: the haystack mirrors what a reader can see).
+  if (glanceActive(entry, cfg)) {
+    parts.push(entry.glance.who, entry.glance.what, entry.glance.harm.who, GLANCE_HARM_LABELS[entry.glance.harm.kind]);
+  }
   if (cfg.kind === "deregulation") {
     parts.push(
       entry.agency, entry.domain, entry.status, entry.date_of_action, entry.last_verified,
@@ -2978,6 +2996,7 @@ function visibleSearchText(entry, cfg) {
   }
   return stripProcessLabels(parts.filter(Boolean).join(" \n "));
 }
+/* visible-search-text:end */
 
 /* matches-term:start */
 function matchesTerm(haystack, term, useRegex) {
@@ -4205,7 +4224,9 @@ function renderGlobalResults(term, useRegex, useOneLiners, useImpactSort) {
 
     const detail = document.createElement("div");
     detail.className = "oneliner-detail";
-    detail.innerHTML = buildDetailHtml(m.entry, m.cfg, term, useRegex);
+    detail.innerHTML =
+      glanceDetailTitleHtml(m.entry, m.cfg, (t) => highlightMatches(t || "", term, useRegex)) +
+      buildDetailHtml(m.entry, m.cfg, term, useRegex);
     wireRelatedEntryLinks(detail);
 
     row.addEventListener("click", () => {
