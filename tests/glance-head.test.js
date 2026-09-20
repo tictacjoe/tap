@@ -75,6 +75,16 @@ test("buildGlanceHeadHtml renders who, what, the harm badge and harm who", () =>
   assert.ok(html.includes("Example detainees"));
 });
 
+test("the environment harm kind is accepted and renders its own badge class and label", () => {
+  const glance = validGlance({
+    harm: { kind: "environment", certainty: "projected", who: "Arctic Refuge coastal plain" },
+  });
+  assert.equal(api.isValidGlance(glance), true);
+  const html = api.buildGlanceHeadHtml({ glance }, cfgOn, { hl: hlPlain });
+  assert.ok(html.includes("glance-badge-environment"));
+  assert.ok(html.includes("Environment · projected"));
+});
+
 test("hideWho drops the responsible-party lead-in but keeps the what line", () => {
   const html = api.buildGlanceHeadHtml({ glance: validGlance() }, cfgOn, { hl: hlPlain, hideWho: true });
   assert.ok(!html.includes("glance-who"));

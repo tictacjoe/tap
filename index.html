@@ -634,8 +634,8 @@
   /* Glance card (see the glance-head script block). The harm badge names
      the kind in words; colour is only a second signal. Two tones plus a
      neutral, reusing existing palette variables: severe (physical,
-     rights) = flag red, middle (livelihood, money) = brass, institutional
-     = neutral. */
+     rights) = flag red, middle (livelihood, money) = darker brass,
+     institutional and environment = neutral. */
   .glance-harm { margin: 0 0 0.3rem; font-size: 0.85rem; }
   .glance-badge {
     display: inline-block;
@@ -649,7 +649,7 @@
   /* Badge text is a darker brass than --brass (#96762C was 3.46:1 on the
      brass-light background at this size; this is >= 4.5:1). */
   .glance-badge-livelihood, .glance-badge-money { background: var(--brass-light); color: #7E6325; }
-  .glance-badge-institutional { background: var(--paper); color: var(--ink-soft); border: 1px solid var(--rule); }
+  .glance-badge-institutional, .glance-badge-environment { background: var(--paper); color: var(--ink-soft); border: 1px solid var(--rule); }
   .glance-harm-who { color: var(--ink-soft); }
   .glance-orig-title { margin: 0 0 0.6rem; font-weight: bold; color: var(--ink-soft); }
 
@@ -3428,6 +3428,7 @@ const GLANCE_HARM_LABELS = {
   rights: "Rights & liberty",
   livelihood: "Livelihood",
   money: "Money",
+  environment: "Environment",
   institutional: "Institutional integrity",
 };
 const GLANCE_CERTAINTIES = ["documented", "projected", "alleged"];
