@@ -2704,6 +2704,45 @@ function summaryLineHtml(summary, term, useRegex) {
 /* summary-line:end */
 
 /* highlight-matches:start */
+/* Hides internal workflow labels from entry text at display time
+   (2026-09-19, Joe: "remove the 'round-4 backlog cluster' language from
+   the expanded entries' text"). Entries built or folded during the round-4
+   backlog pass carry provenance labels -- "(round-4 backlog cluster
+   c0309)", "(round-4 backlog fold, cluster c0757)", "(round 4 batch 27,
+   cluster c0385)", "(cluster c1234)", "Round-4 backlog fold, cluster
+   c0757: ..." -- that mean nothing to a reader. The DATA keeps them (so an
+   entry can still be traced back to its candidate); only the rendered page
+   and the search text hide them. The public JSON files still contain them.
+   Two pure-label shapes are handled:
+     1. a parenthetical containing a label word, removed along with the
+        space before it: "Added 2026-09-10 (round-4 backlog cluster c0309):
+        x" -> "Added 2026-09-10: x". Label words are deliberately specific
+        (round-4/round 4 + backlog|batch|candidate|discovery|fold|cluster,
+        cluster cNNNN, backlog/discovery/residual-record fold) so ordinary
+        parentheticals and "round 4 of talks" are untouched.
+     2. a "Round-4 backlog fold, cluster cNNNN:" prefix at the start of a
+        sentence, removed with the next word re-capitalized.
+   Sentences that NARRATE the process ("Built under the round-4 backlog
+   fold's leaner-rigor pass...", "Folded in round-4 backlog cluster c0494
+   ... at creation time") are left alone: removing them would change what a
+   note says, so they need an editorial rewrite in the data instead. The
+   "Added DATE:" paragraph marker (see paragraphizeUpdates) is unaffected.
+   Idempotent. */
+/* strip-process-labels:start */
+const PROCESS_LABEL_WORDS =
+  "round[- ]4\\s+(?:backlog|batch|candidate|discovery|fold|cluster)|clusters?\\s+c\\d{3,4}|residual-record fold|backlog fold|discovery fold";
+const PROCESS_PAREN_LABEL_RE = new RegExp("\\s*\\((?:[^()]*?(?:" + PROCESS_LABEL_WORDS + ")[^()]*?)\\)", "gi");
+const PROCESS_COLON_LABEL_RE = /(^|[.!?]\s+)Round[- ]4\s+(?:backlog\s+)?(?:fold|cluster|candidate discovery|discovery fold)[^:.]{0,70}:\s*(\S)/gi;
+function stripProcessLabels(text) {
+  if (!text) return "";
+  const original = String(text);
+  const stripped = original
+    .replace(PROCESS_PAREN_LABEL_RE, "")
+    .replace(PROCESS_COLON_LABEL_RE, (m, before, first) => before + first.toUpperCase());
+  return stripped === original ? original : stripped.replace(/^\s+/, "");
+}
+/* strip-process-labels:end */
+
 function escapeRegExp(str) {
   return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
@@ -2910,7 +2949,7 @@ function visibleSearchText(entry, cfg) {
     (entry.sources || []).forEach(s => parts.push(s.name));
     (entry.related_entries || []).forEach(r => parts.push(r.note));
   }
-  return parts.filter(Boolean).join(" \n ");
+  return stripProcessLabels(parts.filter(Boolean).join(" \n "));
 }
 
 /* matches-term:start */
@@ -3168,7 +3207,7 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
   // searches needs to go through this, or a match found only inside
   // (say) a confidence note or a source name would filter the entry in
   // but never show the reader why.
-  const hl = (text) => highlightMatches(text || "", term, useRegex);
+  const hl = (text) => highlightMatches(stripProcessLabels(text), term, useRegex);
   const summary = (text) => summaryLineHtml(text, term, useRegex);
 
   if (cfg.kind === "deregulation") {

@@ -1024,3 +1024,105 @@ test("the only px font sizes left are the self-contained guided-tour popover's",
   }
   assert.deepEqual(offenders, [], "a px font size outside .demo-* would not scale with the root font size");
 });
+
+// ---- Hide internal provenance labels (2026-09-19) ---------------------
+// Entry text carries workflow labels from the round-4 backlog fold --
+// "(round-4 backlog cluster c0309)", "Round-4 backlog fold, cluster c0757:"
+// -- that mean nothing to a reader. stripProcessLabels() hides them at
+// display time only; the data keeps them so an entry can still be traced
+// back to its candidate. Only pure LABELS are stripped. Sentences that
+// narrate the process ("Built under the round-4 backlog fold's leaner-rigor
+// pass...") can't be removed mechanically without changing what the note
+// says, so they are deliberately left alone here.
+const stripProcessLabels = (0, eval)(`${extractFunction(source, "strip-process-labels")}\nstripProcessLabels;`);
+
+test("stripProcessLabels removes a parenthetical label and the space before it", () => {
+  assert.equal(
+    stripProcessLabels("Added 2026-09-10 (round-4 backlog cluster c0309): the root cause was"),
+    "Added 2026-09-10: the root cause was"
+  );
+});
+
+test("stripProcessLabels handles every parenthetical variant found in the corpus", () => {
+  const variants = [
+    "(round-4 backlog cluster c0510)",
+    "(round-4 backlog fold, cluster c0757)",
+    "(round 4 batch 27, cluster c0385)",
+    "(round 4 batch 27)",
+    "(cluster c1234)",
+    "(residual-record fold, cluster c0123)",
+    "(round-4 candidate discovery, cluster c0555)",
+    "(round-4 candidate discovery, cluster c0555, batch 9)",
+    "(round-4 backlog fold, cluster c0371, added 2026-09-12)",
+    "(round-4 discovery fold)",
+    "(added 2026-09-12, round-4 discovery fold)",
+    "(round-4 candidate discovery, clusters c0100/c0101)",
+    "(cluster c0810, 2 of 8 records; the other 6 went elsewhere -- see doe-oced-dismantlement-trump2.json)",
+  ];
+  for (const v of variants) {
+    assert.equal(stripProcessLabels(`Fact one (${"x"}). Added 2026-09-01 ${v}: next.`), "Fact one (x). Added 2026-09-01: next.", v);
+  }
+});
+
+test("stripProcessLabels removes every label when a field has several", () => {
+  assert.equal(
+    stripProcessLabels("A (cluster c0001). B (round-4 backlog fold, cluster c0002) here."),
+    "A. B here."
+  );
+});
+
+test("stripProcessLabels removes a 'Round-4 backlog fold, cluster cNNNN:' prefix and re-capitalizes what follows", () => {
+  assert.equal(
+    stripProcessLabels("Wrote a letter in December 2025. Round-4 backlog fold, cluster c0757: separately, in a letter released"),
+    "Wrote a letter in December 2025. Separately, in a letter released"
+  );
+  assert.equal(
+    stripProcessLabels("Round-4 backlog fold, cluster c0509: The New York Times reported"),
+    "The New York Times reported"
+  );
+});
+
+test("stripProcessLabels leaves unrelated parentheticals and prose alone", () => {
+  const untouched = [
+    "Reported by outlets (AP/ABC News) at the time.",
+    "A slowdown (Reuters investigation published; backlog and understaffing conditions accumulated over the preceding months).",
+    "Talks reached round 4 of negotiations (see cluster of cases in Texas).",
+    "A fivefold jump from the original $50B cutoff.",
+    "Built under the Round-4 backlog fold's leaner-rigor pass -- facts and sourcing verified directly.",
+    "Folded in round-4 backlog cluster c0494 (AP/ABC News) at creation time.",
+  ];
+  for (const text of untouched) assert.equal(stripProcessLabels(text), text, text);
+});
+
+test("stripProcessLabels is idempotent and safe on missing text", () => {
+  const once = stripProcessLabels("Added 2026-09-10 (round-4 backlog cluster c0309): x");
+  assert.equal(stripProcessLabels(once), once);
+  assert.equal(stripProcessLabels(""), "");
+  assert.equal(stripProcessLabels(undefined), "");
+  assert.equal(stripProcessLabels(null), "");
+});
+
+test("expanded entry text no longer shows the label, and the Added marker still splits paragraphs", () => {
+  const entry = {
+    institution: "Some Agency",
+    what_changed: "Original account. Added 2026-09-10 (round-4 backlog cluster c0309): a later development.",
+    estimated_impact: {},
+    confidence_note: "HIGH confidence on X. Update 2026-08-02 (round 4 batch 27, cluster c0385): a recheck. Round-4 backlog fold, cluster c0757: separately, more.",
+    primary_proponent: { name: "A", role: "B" }, sources: [],
+  };
+  const result = buildDetailHtml(entry, { kind: "govservices" });
+  assert(!/round[- ]?4|cluster c\d/i.test(result), "no label text should remain in the rendered entry");
+  assert(result.includes("<p>Original account.</p>"), "lead-in text stays its own paragraph");
+  assert(result.includes("<p>Added 2026-09-10: a later development.</p>"), "the Added marker still starts its own paragraph, minus the label");
+  assert(result.includes("Separately, more."), "a colon-prefix label is stripped and the sentence re-capitalized");
+});
+
+test("search highlighting still works on text that had a label stripped", () => {
+  const entry = {
+    what_changed: "Agency acted (round-4 backlog cluster c0309) against schools.",
+    estimated_health_impact: {}, confidence_note: "x", primary_proponent: { name: "A", role: "B" }, sources: [],
+  };
+  const result = buildDetailHtml(entry, { kind: "deregulation" }, "schools", false);
+  assert(result.includes('<mark class="hl">schools</mark>'), "term still highlighted");
+  assert(!/round-4|c0309/.test(result), "label gone");
+});
