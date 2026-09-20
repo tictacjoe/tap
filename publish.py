@@ -60,14 +60,19 @@ def strip_internal_fields(entry: dict) -> dict:
 
 
 def publish_json_entries(source_dir: Path, dest_file: Path, excluded_ids: set,
-                          dry_run: bool = False) -> tuple:
+                          dry_run: bool = False, check_glance=None) -> tuple:
     """Read all *.json files in source_dir, exclude by FILENAME (stem,
     no .json extension) -- not a schema field, since prosecution and
     deregulation don't share a consistent id-field name (prosecution
     uses 'official', a full descriptive string; deregulation uses a
     clean 'id' slug). Filenames are consistent and visible via `ls`,
     so that's the exclude-list key for both. Write a single combined
-    JSON array to dest_file. Returns (included, excluded_count)."""
+    JSON array to dest_file. Returns (included, excluded_count).
+
+    check_glance, when given, is called with each entry's glance block;
+    a block with problems is stripped (the entry itself is still
+    published) and a WARNING is printed, so a malformed block can never
+    reach the site."""
     files = sorted(source_dir.glob("*.json"))
     included = []
     excluded_count = 0
@@ -79,7 +84,13 @@ def publish_json_entries(source_dir: Path, dest_file: Path, excluded_ids: set,
             continue
         with open(f) as fh:
             data = json.load(fh)
-        included.append(strip_internal_fields(data))
+        published = strip_internal_fields(data)
+        if check_glance is not None and "glance" in published:
+            problems = check_glance(published["glance"])
+            if problems:
+                print(f"    WARNING: malformed glance stripped from {f.stem}: {'; '.join(problems)}")
+                del published["glance"]
+        included.append(published)
 
     if not dry_run:
         dest_file.parent.mkdir(parents=True, exist_ok=True)
@@ -107,6 +118,16 @@ def publish_tracker(source_file: Path, dest_file: Path, dry_run: bool = False) -
     return len(data)
 
 
+def load_glance_checker(working: Path):
+    """Imports check_glance from the working repo's tracker/validate_glance.py
+    so the publish guard and the authoring tools share one set of rules."""
+    tracker_dir = str(working / "tracker")
+    if tracker_dir not in sys.path:
+        sys.path.insert(0, tracker_dir)
+    from validate_glance import check_glance
+    return check_glance
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--working", default=str(Path.home() / "gjoe/tap-data"),
@@ -128,6 +149,12 @@ def main():
         print("Create it first (see setup instructions) before running publish.py")
         sys.exit(1)
 
+    try:
+        check_glance = load_glance_checker(working)
+    except ImportError as exc:
+        print(f"ERROR: cannot load validate_glance from {working / 'tracker'}: {exc}")
+        sys.exit(1)
+
     excluded_ids = load_exclude_list(site)
     print(f"Exclude list: {len(excluded_ids)} entry ID(s) — {sorted(excluded_ids) if excluded_ids else '(none)'}")
     print()
@@ -138,7 +165,7 @@ def main():
     if prosecution_src.exists():
         included, excl_count = publish_json_entries(
             prosecution_src, site / "data" / "prosecution.json",
-            excluded_ids, dry_run=args.dry_run
+            excluded_ids, dry_run=args.dry_run, check_glance=check_glance
         )
         print(f"  {len(included)} entries published, {excl_count} excluded")
     else:
@@ -151,7 +178,7 @@ def main():
     if deregulation_src.exists():
         included, excl_count = publish_json_entries(
             deregulation_src, site / "data" / "deregulation.json",
-            excluded_ids, dry_run=args.dry_run
+            excluded_ids, dry_run=args.dry_run, check_glance=check_glance
         )
         print(f"  {len(included)} entries published, {excl_count} excluded")
     else:
@@ -164,7 +191,7 @@ def main():
     if govservices_src.exists():
         included, excl_count = publish_json_entries(
             govservices_src, site / "data" / "government-services.json",
-            excluded_ids, dry_run=args.dry_run
+            excluded_ids, dry_run=args.dry_run, check_glance=check_glance
         )
         print(f"  {len(included)} entries published, {excl_count} excluded")
     else:
