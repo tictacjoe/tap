@@ -4600,7 +4600,17 @@
       }
     ],
     "short_summary": "Made it harder to hold parent companies liable for franchisee labor violations.",
-    "last_substantive_update": "2026-09-06"
+    "last_substantive_update": "2026-09-06",
+    "glance": {
+      "who": "National Labor Relations Board",
+      "what": "Withdrew the 2023 joint-employer rule and restored the narrower 2020 standard",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "projected",
+        "who": "Accountability of parent companies"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "ldmv-ghg-standards-repeal-trump2",
@@ -4671,7 +4681,17 @@
       }
     ],
     "short_summary": "Repealed vehicle emissions standards for new cars, trucks, and SUVs.",
-    "last_substantive_update": "2026-09-03"
+    "last_substantive_update": "2026-09-03",
+    "glance": {
+      "who": "Lee Zeldin (EPA Administrator)",
+      "what": "Repealed greenhouse-gas standards for new cars, trucks and SUVs",
+      "harm": {
+        "kind": "physical",
+        "certainty": "projected",
+        "who": "Americans exposed to vehicle pollution"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "mats-2026-reset-trump2",
@@ -4740,7 +4760,17 @@
       }
     ],
     "short_summary": "Reverted coal plant mercury limits to 2012 levels, undoing 2024 tightening.",
-    "last_substantive_update": "2026-09-08"
+    "last_substantive_update": "2026-09-08",
+    "glance": {
+      "who": "Lee Zeldin (EPA Administrator)",
+      "what": "Repealed the 2024 tightening of coal-plant mercury and particulate limits, reverting to 2012 levels",
+      "harm": {
+        "kind": "physical",
+        "certainty": "projected",
+        "who": "People near coal-fired power plants"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "mats-cost-benefit-rollback-trump1",
@@ -4801,7 +4831,17 @@
       }
     ],
     "short_summary": "Excluded major health co-benefits from the cost-benefit case for mercury limits.",
-    "last_substantive_update": "2026-09-03"
+    "last_substantive_update": "2026-09-03",
+    "glance": {
+      "who": "Andrew Wheeler (EPA Administrator)",
+      "what": "Reversed the 'appropriate and necessary' finding for mercury limits by excluding particulate health benefits",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "projected",
+        "who": "Legal basis for mercury limits"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "michigan-coal-plants-emergency-order-2025",
@@ -4861,7 +4901,17 @@
       "estimated_impact": "Extended emissions from among the dirtiest U.S. coal plants; cost Consumers Energy $135M through 2025, partly billed to ratepayers across 11 states.",
       "confidence_note": "Well corroborated across environmental-advocacy and utility-industry reporting; the orders' legality remains under active litigation."
     },
-    "last_substantive_update": "2026-09-10"
+    "last_substantive_update": "2026-09-10",
+    "glance": {
+      "who": "Chris Wright (Energy Secretary)",
+      "what": "Forced two Michigan coal plants to keep running past retirement through repeated 'emergency' orders",
+      "harm": {
+        "kind": "environment",
+        "certainty": "projected",
+        "who": "Air and water near two coal plants"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "msha-silica-niosh-rollback-trump2",
@@ -4949,7 +4999,17 @@
     ],
     "short_summary": "Paused stricter mine silica dust limits and cut federal mine-safety research capacity.",
     "last_updated": "2026-08-22",
-    "last_substantive_update": "2026-08-22"
+    "last_substantive_update": "2026-08-22",
+    "glance": {
+      "who": "Department of Labor leadership (MSHA)",
+      "what": "Paused the stricter mine silica dust rule and cut federal mine-safety research staff",
+      "harm": {
+        "kind": "physical",
+        "certainty": "projected",
+        "who": "Coal and metal miners"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "ndaa-2026-pfas-military-rollback",
@@ -5031,7 +5091,17 @@
     "narrative_override": {
       "headline": "NDAA 2026 extended DOD's PFAS firefighting-foam use through 2028 and eased the incineration pause."
     },
-    "last_substantive_update": "2026-09-12"
+    "last_substantive_update": "2026-09-12",
+    "glance": {
+      "who": "Roger Wicker (Senate Armed Services chair)",
+      "what": "Extended DOD's PFAS firefighting-foam use through 2028 and eased the incineration pause in the NDAA",
+      "harm": {
+        "kind": "physical",
+        "certainty": "projected",
+        "who": "Service members and base communities"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "neighborhood-access-equity-grants-rescinded-2025",
@@ -5102,7 +5172,17 @@
       "estimated_impact": "The rescinded projects addressed documented traffic-safety and pedestrian-connectivity problems; no independent health-outcome study of the rescission itself was identified.",
       "confidence_note": "Well-corroborated across multiple outlets and a dedicated transportation-policy analysis; the precise total dollar figure varies by outlet depending on accounting method, presented here as a range."
     },
-    "last_substantive_update": "2026-09-09"
+    "last_substantive_update": "2026-09-09",
+    "glance": {
+      "who": "House and Senate Republicans (OBBBA)",
+      "what": "Rescinded ~$2.4B in unspent road-safety and connectivity grants, canceling 55 projects",
+      "harm": {
+        "kind": "physical",
+        "certainty": "projected",
+        "who": "Pedestrians near canceled projects"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "nhtsa-safe-iii-cafe-standards-rollback-2025",
@@ -5176,7 +5256,17 @@
       "estimated_impact": "DOT claims $900 lower sticker prices and $109B in five-year savings; opposing lawmakers cite 450+ premature deaths and ~14,000 asthma cases nationally, though that figure's underlying study wasn't independently confirmed.",
       "confidence_note": "Rule mechanics are well-corroborated across law-firm analyses and news coverage; the opposition health figure rests on one paywalled source and should be caveated if used."
     },
-    "last_substantive_update": "2026-09-11"
+    "last_substantive_update": "2026-09-11",
+    "glance": {
+      "who": "Sean Duffy (Transportation Secretary)",
+      "what": "Proposed cutting fuel-economy standards ~19 mpg by 2031 and resetting completed model years",
+      "harm": {
+        "kind": "physical",
+        "certainty": "alleged",
+        "who": "People exposed to vehicle pollution"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "nuclear-plutonium-reprocessing-eo-2025",
@@ -5226,7 +5316,17 @@
       "estimated_impact": "Nonproliferation experts warn reprocessing raises weapons-diversion risk, reversing a policy adopted specifically to avoid it; no quantified risk figure exists since implementation was still in early R&D stages.",
       "confidence_note": "The order's contents are well documented via DOE's own materials; the proliferation-risk impact is expert/advocacy characterization, not a measured government risk assessment."
     },
-    "last_substantive_update": "2026-09-10"
+    "last_substantive_update": "2026-09-10",
+    "glance": {
+      "who": "Donald Trump",
+      "what": "Ordered DOE to pursue reprocessing of plutonium and spent fuel, reversing decades-old U.S. policy",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "alleged",
+        "who": "Nuclear nonproliferation safeguards"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "obbba-usda-clean-energy-rollback-2025",
@@ -5315,7 +5415,17 @@
       "estimated_impact": "No direct health pathway documented; the harm is to renewable-project financing and farmer lease income, and USDA's own data (424,000 acres, 0.05% of farmland; $2B+ in prior REAP support) undercuts its stated farmland-loss rationale.",
       "confidence_note": "Both actions are independently well-corroborated across law-firm analysis, USDA's own statements, and multiple trade/wire outlets."
     },
-    "last_substantive_update": "2026-09-09"
+    "last_substantive_update": "2026-09-09",
+    "glance": {
+      "who": "Donald Trump, Brooke Rollins (USDA Secretary)",
+      "what": "Compressed wind and solar tax-credit deadlines; USDA cut farmland solar and wind funding",
+      "harm": {
+        "kind": "money",
+        "certainty": "projected",
+        "who": "Renewable projects and farm lease income"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "offshore-wind-coal-taxpayer-funded-rollback-2025-2026",
@@ -5434,7 +5544,17 @@
       }
     ],
     "short_summary": "Federal buyouts canceled 9 offshore wind farms ($2.7B, including $928M to TotalEnergies now reinvesting in oil/gas) while DOE used emergency orders to keep aging coal plants running past retirement, at growing ratepayer cost.",
-    "last_substantive_update": "2026-09-10"
+    "last_substantive_update": "2026-09-10",
+    "glance": {
+      "who": "Donald Trump",
+      "what": "Paid $2.7B to cancel 9 offshore wind farms and used emergency orders to keep coal plants open",
+      "harm": {
+        "kind": "money",
+        "certainty": "documented",
+        "who": "Taxpayers and ratepayers"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "osha-injury-reporting-rollback-trump1",
@@ -5489,7 +5609,17 @@
       }
     ],
     "short_summary": "Ended detailed public reporting of workplace injuries at large employers.",
-    "last_substantive_update": "2026-09-06"
+    "last_substantive_update": "2026-09-06",
+    "glance": {
+      "who": "Alexander Acosta (Labor Secretary)",
+      "what": "Ended the requirement for large employers to submit detailed injury logs to OSHA",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "documented",
+        "who": "OSHA's ability to spot injury patterns"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "osha-inspections-decline-2025-2026",
@@ -5530,7 +5660,17 @@
       "estimated_impact": "Suggests reduced deterrence against the most serious, knowing workplace-safety violations even as the underlying safety standards remain formally in place.",
       "confidence_note": "Underlying figures are OSHA's own enforcement statistics, released and characterized by a Democratic senator's office rather than an independent nonpartisan audit."
     },
-    "last_substantive_update": "2026-08-05"
+    "last_substantive_update": "2026-08-05",
+    "glance": {
+      "who": "Department of Labor (OSHA)",
+      "what": "OSHA inspections fell 20% and 'willful' violation findings 42% in late 2025 versus a year earlier",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "projected",
+        "who": "Workplace safety enforcement"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "pfas-drinking-water-rollback-trump2",
@@ -5604,7 +5744,17 @@
       }
     ],
     "short_summary": "Proposed dropping enforceable limits on 4 of 6 regulated 'forever chemicals.'",
-    "last_substantive_update": "2026-08-30"
+    "last_substantive_update": "2026-08-30",
+    "glance": {
+      "who": "Lee Zeldin (EPA Administrator)",
+      "what": "Proposed dropping enforceable limits on 4 of 6 regulated PFAS and delaying the other two by two years",
+      "harm": {
+        "kind": "physical",
+        "certainty": "projected",
+        "who": "People with PFAS in drinking water"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "power-plant-ghg-standards-repeal-trump2",
