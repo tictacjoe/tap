@@ -995,3 +995,32 @@ test("a note that opens with a rating gets no extra opening bold", () => {
   const result = buildDetailHtml(entry, { kind: "deregulation" });
   assert(result.includes("<p><strong>HIGH</strong> confidence on the order.</p>"), "just the rating is bold in the note paragraph, nothing extra");
 });
+
+// ---- Root font size (2026-09-19) --------------------------------------
+// Joe found the 80% browser-zoom look right (3 columns, text large enough)
+// and wanted 100% to match. The stylesheet is rem-based throughout (the
+// only px font sizes are the self-contained .demo-* tour popover), so one
+// root rule rescales text AND the rem-based layout thresholds/columns in
+// step -- which is what makes 3 columns appear at 100%. It is a
+// PERCENTAGE, not a px value, so a visitor's own browser default font size
+// (accessibility setting) still scales the whole site.
+test("the stylesheet sets a percentage root font size on html", () => {
+  const m = source.match(/(?:^|\n)\s*html\s*\{([^}]*)\}/);
+  assert(m, "an html { ... } rule should exist");
+  const fs = m[1].match(/font-size:\s*([\d.]+)(%|px|rem|em)/);
+  assert(fs, "the html rule should set font-size");
+  assert.equal(fs[2], "%", "root font size must be a percentage so browser font settings still apply");
+  assert.equal(Number(fs[1]), 80, "root font size is 80%");
+});
+
+test("the only px font sizes left are the self-contained guided-tour popover's", () => {
+  const css = source.slice(source.indexOf("<style"), source.indexOf("</style>"));
+  const lines = css.split("\n");
+  const offenders = [];
+  let selector = "";
+  for (const line of lines) {
+    if (/\{\s*$/.test(line)) selector = line.trim();
+    if (/font-size:\s*[\d.]+px/.test(line) && !selector.startsWith(".demo-")) offenders.push(`${selector} ${line.trim()}`);
+  }
+  assert.deepEqual(offenders, [], "a px font size outside .demo-* would not scale with the root font size");
+});

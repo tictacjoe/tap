@@ -32,6 +32,22 @@
 
   * { box-sizing: border-box; }
 
+  /* Root font size (2026-09-19, Joe): at 100% browser zoom the site read
+     larger than it needed to, and only got its 3-column entry layout after
+     zooming out to 80%. Nearly everything here is sized in rem (the only
+     px font sizes are the self-contained .demo-* tour popover, fixed-size
+     by design), so scaling the root rescales the text AND the rem-based
+     layout -- the 68rem 3-column threshold, the 34em column caps -- in
+     step, which is exactly what a browser zoom-out does. 80% matches
+     Joe's 80%-zoom look exactly: measured in a 1229px window, 100% = 2
+     columns/14.7px text, 85% = 3/12.5px, 80% = 3/11.8px, and 3 columns
+     start at ~1130px window width (vs ~1200px at 85%, ~1410px at 100%).
+     Trade-off, chosen by Joe over the 85% middle ground: 11.8px body text
+     is small for a public audience. A percentage, not px, so a visitor's
+     own browser default font size (an accessibility setting) still
+     scales the site. */
+  html { font-size: 80%; }
+
   body {
     margin: 0;
     background: var(--paper);
