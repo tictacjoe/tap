@@ -1383,6 +1383,10 @@
    populated asynchronously.
 ==================================================================== */
 
+/* glanceEnabled (Glance cards): per-tracker switch. false = the old card
+   everywhere, whatever data exists. Flip to true only after
+   `validate_glance.py <tracker> --require-all` passes and the live check in
+   the Glance plan is done. */
 const TRACKERS = {
   deregulation: {
     label: "Corporate Deregulation",
@@ -1395,6 +1399,7 @@ const TRACKERS = {
     filterLabel: "domain",
     statusField: "status",
     kind: "deregulation",
+    glanceEnabled: false,
   },
   prosecution: {
     label: "Cabinet-Level Accountability",
@@ -1407,6 +1412,7 @@ const TRACKERS = {
     filterLabel: "status",
     statusField: "status",
     kind: "prosecution",
+    glanceEnabled: false,
   },
   govservices: {
     label: "Government Service Redirection",
@@ -1419,6 +1425,7 @@ const TRACKERS = {
     filterLabel: "domain",
     statusField: "status",
     kind: "govservices",
+    glanceEnabled: false,
   },
   tracker: {
     label: "Reporting",
@@ -3444,10 +3451,25 @@ function glanceDetailTitleHtml(entry, cfg, hl) {
 }
 /* glance-head:end */
 
+/* Third line of a glance card: [domain tag] - date of action - verified
+   date (per the spec). Lives outside the glance-head block because it
+   needs domainColor()/govservicesDomainLabel(). */
+function glanceMetaHtml(entry, cfg, sourceLabel, hl) {
+  let html = sourceLabel ? '<span class="source-tag">' + sourceLabel + '</span>' : "";
+  if (cfg.kind === "deregulation") {
+    html += '<span class="domain-tag" style="background:' + domainColor(entry.domain) + '22; color:' + domainColor(entry.domain) + '">' + entry.domain + '</span>';
+  } else if (cfg.kind === "govservices") {
+    html += '<span class="domain-tag" style="background:' + domainColor(entry.domain) + '22; color:' + domainColor(entry.domain) + '">' + govservicesDomainLabel(entry.domain) + '</span>';
+  }
+  if (entry.date_of_action) html += '<span>' + hl(entry.date_of_action) + '</span>';
+  if (entry.last_verified) html += '<span>verified ' + hl(entry.last_verified) + '</span>';
+  return html;
+}
+
 /* Shared card builder used by both the per-tracker tabbed view and
    the cross-database global search view, so the two stay visually
    and behaviorally consistent rather than drifting apart. */
-function buildEntryCard(entry, cfg, docketLabel, sourceLabel, term, useRegex) {
+function buildEntryCard(entry, cfg, docketLabel, sourceLabel, term, useRegex, cardOpts) {
   const div = document.createElement("div");
   div.className = "entry";
   // Stamped so jumpToRelatedEntry() can locate this exact card by id
@@ -3529,14 +3551,27 @@ function buildEntryCard(entry, cfg, docketLabel, sourceLabel, term, useRegex) {
     ? ' <button type="button" class="share-link-btn" data-share-tracker="' + escapeHtml(cfg.kind) + '" data-share-id="' + escapeHtml(entry[cfg.idField] || "") + '" title="Copy a link to this entry">🔗 Copy link</button>'
     : "";
 
-  div.innerHTML =
+  // Glance card (see the glance-head script block): null when the tracker's
+  // flag is off or the entry has no valid `glance`, in which case the
+  // old head below is drawn unchanged.
+  const glanceHead = buildGlanceHeadHtml(entry, cfg, {
+    hl,
+    shareBtnHtml,
+    hideWho: !!(cardOpts && cardOpts.hideWho),
+    metaHtml: glanceMetaHtml(entry, cfg, sourceLabel, hl),
+  });
+  const oldHead =
     '<div class="entry-head">' +
       '<div class="entry-title-block">' +
         '<p class="entry-title"' + titleTooltipHtml + '>' + hl(title) + shareBtnHtml + '</p>' +
         '<div class="entry-meta">' + metaHtml + '</div>' +
       '</div>' +
-    '</div>' +
-    '<div class="entry-detail">' + buildDetailHtml(entry, cfg, term, useRegex) + '</div>';
+    '</div>';
+  div.innerHTML = (glanceHead || oldHead) +
+    '<div class="entry-detail">' +
+      (glanceHead ? glanceDetailTitleHtml(entry, cfg, hl) : "") +
+      buildDetailHtml(entry, cfg, term, useRegex) +
+    '</div>';
 
   div.querySelector(".entry-head").addEventListener("click", () => {
     div.classList.toggle("open");
@@ -3755,7 +3790,7 @@ function sortGroupsByStatusRank(groupEntries) {
    see their callers in renderEntries()); each group's internal card
    order is whatever renderEntries() already sorted `entries` into,
    untouched. */
-function renderGroupedEntries(entries, cfg, container, keyFn, sortGroups) {
+function renderGroupedEntries(entries, cfg, container, keyFn, sortGroups, cardOpts) {
   const groups = new Map();
   entries.forEach(e => {
     const key = keyFn(e);
@@ -3778,7 +3813,7 @@ function renderGroupedEntries(entries, cfg, container, keyFn, sortGroups) {
     div.querySelector(".official-group-head").addEventListener("click", () => div.classList.toggle("open"));
     const body = div.querySelector(".official-group-body");
     groupEntries.forEach(entry => {
-      body.appendChild(buildEntryCard(entry, cfg, null, null, searchTerm, false));
+      body.appendChild(buildEntryCard(entry, cfg, null, null, searchTerm, false, cardOpts));
     });
     container.appendChild(div);
   });
@@ -3849,7 +3884,7 @@ function renderEntries() {
   }
 
   if (groupMode === "individual" && cfg.kind === "prosecution") {
-    renderGroupedEntries(toRender, cfg, container, officialGroupKey, sortGroupsByCount);
+    renderGroupedEntries(toRender, cfg, container, officialGroupKey, sortGroupsByCount, { hideWho: true });
     return;
   }
 
