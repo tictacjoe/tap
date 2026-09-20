@@ -1257,7 +1257,17 @@
       }
     ],
     "short_summary": "DOE canceled $82.9B/223 clean energy projects (111,765 jobs) under Trump; court filings show $7.6B of that specifically targeted the 16 states that voted for Harris, contradicting Sec. Wright's public merit-based justification -- a court has already ruled this illegal.",
-    "last_substantive_update": "2026-09-11"
+    "last_substantive_update": "2026-09-11",
+    "glance": {
+      "who": "Chris Wright (Energy Secretary)",
+      "what": "Canceled hundreds of clean energy grants; DOE admitted $7.6B targeted Harris-voting states",
+      "harm": {
+        "kind": "livelihood",
+        "certainty": "projected",
+        "who": "Clean-energy workers, 16 targeted states"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "doe-cp2-lng-export-authorization-2025",
@@ -1333,7 +1343,17 @@
         "url": "https://www.theguardian.com/us-news/2025/oct/22/us-eu-climate-rules-lng-gas"
       }
     ],
-    "last_substantive_update": "2026-09-11"
+    "last_substantive_update": "2026-09-11",
+    "glance": {
+      "who": "Chris Wright (Energy Secretary)",
+      "what": "Ended the LNG export pause and authorized the CP2 export terminal in Louisiana",
+      "harm": {
+        "kind": "environment",
+        "certainty": "projected",
+        "who": "Climate, through added greenhouse gases"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "doe-dod-coal-plant-subsidy-2026",
@@ -1382,7 +1402,17 @@
       "estimated_impact": "Extends emissions from aging generation sources that would otherwise face market-driven retirement, at direct taxpayer expense, though DOE frames this as grid-reliability policy amid rising demand.",
       "confidence_note": "Confirmed directly by DOE's own announcement and independently corroborated by multiple outlets, with no facts disputed."
     },
-    "last_substantive_update": "2026-08-05"
+    "last_substantive_update": "2026-08-05",
+    "glance": {
+      "who": "Donald Trump (with DOE)",
+      "what": "Ordered $175M to keep six aging coal plants running and told the Pentagon to buy coal power",
+      "harm": {
+        "kind": "environment",
+        "certainty": "projected",
+        "who": "Air quality and climate"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "doe-nuclear-reactor-nepa-exemption-2026",
@@ -1432,7 +1462,17 @@
       "estimated_impact": "Removes the public accident-impact assessment NEPA otherwise requires, for a reactor class with limited independent operational track record to validate DOE's inherent-safety justification.",
       "confidence_note": "Confirmed by DOE's own Federal Register notice and independently corroborated by multiple outlets; a coalition of state AGs has formally opposed it as unlawful, with no court ruling yet."
     },
-    "last_substantive_update": "2026-08-05"
+    "last_substantive_update": "2026-08-05",
+    "glance": {
+      "who": "U.S. Department of Energy",
+      "what": "Exempted advanced nuclear reactors from NEPA review, effective immediately, over state AG objections",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "documented",
+        "who": "Public safety review of new reactors"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "doe-section-504-disability-access-rescission-2025",
@@ -1485,7 +1525,17 @@
     "narrative_override": {
       "headline": "DOE fast-tracked ending accessibility requirements for new construction it funds."
     },
-    "last_substantive_update": "2026-09-12"
+    "last_substantive_update": "2026-09-12",
+    "glance": {
+      "who": "Department of Energy (Secretary Chris Wright)",
+      "what": "Moved to end accessibility rules for new DOE-funded construction; objections forced delays",
+      "harm": {
+        "kind": "rights",
+        "certainty": "projected",
+        "who": "People with disabilities"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "doj-ada-guidance-documents-withdrawal-2025",
@@ -1535,7 +1585,17 @@
       "estimated_impact": "Advocates warn removing DOJ's practical compliance guidance risks under-compliance and reduced accessibility, though no measured outcome yet exists.",
       "confidence_note": "Withdrawal and the official's quoted rationale are well corroborated; the accessibility-harm impact is advocacy framing, not a measured outcome."
     },
-    "last_substantive_update": "2026-09-10"
+    "last_substantive_update": "2026-09-10",
+    "glance": {
+      "who": "Mac Warner (DOJ Civil Rights Division)",
+      "what": "Withdrew 11 ADA compliance-guidance documents for hotels, retail and gas stations",
+      "harm": {
+        "kind": "rights",
+        "certainty": "alleged",
+        "who": "People with disabilities"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "doj-forced-reset-triggers-settlement-2025",
@@ -1608,7 +1668,17 @@
         "url": "https://thetexan.news/issues/second-amendment/15-states-d-c-sue-to-block-return-of-seized-forced-reset-triggers/article_71f98601-1b91-4e5a-8398-82d30407069b.html"
       }
     ],
-    "last_substantive_update": "2026-09-10"
+    "last_substantive_update": "2026-09-10",
+    "glance": {
+      "who": "Pam Bondi (Attorney General)",
+      "what": "Settled to end the machine-gun ban on forced-reset triggers; ~12,000 seized devices to be returned",
+      "harm": {
+        "kind": "physical",
+        "certainty": "projected",
+        "who": "Public safety nationwide"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "dol-deregulatory-agenda-60-rules-trump2",
@@ -1681,7 +1751,17 @@
         "url": "https://www.cnbc.com/2026/04/20/labor-secretary-lori-chavez-deremer-resignation-keith-sonderling.html"
       }
     ],
-    "last_substantive_update": "2026-09-10"
+    "last_substantive_update": "2026-09-10",
+    "glance": {
+      "who": "Lori Chavez-DeRemer (Labor Secretary)",
+      "what": "Proposed repealing 60+ workplace rules; home-care wage and overtime rights already unenforced",
+      "harm": {
+        "kind": "livelihood",
+        "certainty": "projected",
+        "who": "~2M home care workers, other workers"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "dol-h2a-farmworker-protections-rescission-2025",
@@ -1742,7 +1822,17 @@
     "narrative_override": {
       "headline": "DOL suspended, then repealed, a 2024 rule protecting H-2A farmworkers from retaliation."
     },
-    "last_substantive_update": "2026-09-12"
+    "last_substantive_update": "2026-09-12",
+    "glance": {
+      "who": "Lori Chavez-DeRemer (Labor Secretary)",
+      "what": "Suspended, then repealed, a rule protecting H-2A farmworkers from retaliation for organizing",
+      "harm": {
+        "kind": "rights",
+        "certainty": "projected",
+        "who": "H-2A farmworkers (~400,000 a year)"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "dol-overtime-threshold-rescission-trump2",
@@ -1817,7 +1907,17 @@
         "url": "https://www.sanders.senate.gov/wp-content/uploads/Restoring-Overtime-Pay-Act-of-2026-Fact-Sheet.pdf"
       }
     ],
-    "last_substantive_update": "2026-07-10"
+    "last_substantive_update": "2026-07-10",
+    "glance": {
+      "who": "Andrew Rogers (Wage and Hour Administrator)",
+      "what": "Rescinded the 2024 overtime rule, restoring the lower $684-a-week salary threshold",
+      "harm": {
+        "kind": "livelihood",
+        "certainty": "projected",
+        "who": "Millions of salaried workers"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "donlin-gold-mine-fast41-tailings-dam-risk-2025",
@@ -1898,7 +1998,17 @@
         "url": "https://www.washingtonpost.com/politics/2025/08/07/native-alaskans-mining-oil-drilling-spiritual-religion/310eb9d2-737e-11f0-84e0-485bb531abeb_story.html"
       }
     ],
-    "last_substantive_update": "2026-09-10"
+    "last_substantive_update": "2026-09-10",
+    "glance": {
+      "who": "Donald Trump",
+      "what": "Fast-tracked Alaska's Donlin Gold mine permits while a court-ordered dam-spill review is unfinished",
+      "harm": {
+        "kind": "environment",
+        "certainty": "projected",
+        "who": "Kuskokwim watershed, subsistence fishing"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "dot-safety-rule-rollback-blitz-2025",
@@ -1984,7 +2094,17 @@
       "estimated_impact": "ProPublica found five of the targeted rules alone could together prevent up to 1,000 deaths and 40,000 injuries a year if kept in place; DOT separately claims $1.3 billion in self-reported industry cost savings.",
       "confidence_note": "Well-sourced investigative reporting with named officials and agency enforcement data; the $1.3B savings figure is DOT's own unverified self-report, distinct from the independently-modeled safety figures."
     },
-    "last_substantive_update": "2026-09-11"
+    "last_substantive_update": "2026-09-11",
+    "glance": {
+      "who": "Sean Duffy (Transportation Secretary)",
+      "what": "Scrapped or delayed 30+ safety rules while enforcement fell 50-83%",
+      "harm": {
+        "kind": "physical",
+        "certainty": "projected",
+        "who": "Road, air and transit travelers"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "dot-wheelchair-rule-nonenforcement-2025",
@@ -2061,7 +2181,17 @@
         "url": "https://simpleflying.com/us-airlines-sue-reverse-usdot-rule-wheelchair-damage/"
       }
     ],
-    "last_substantive_update": "2026-09-11"
+    "last_substantive_update": "2026-09-11",
+    "glance": {
+      "who": "Sean Duffy (Transportation Secretary)",
+      "what": "Stopped enforcing key wheelchair protections for air travelers while a replacement rule is written",
+      "harm": {
+        "kind": "rights",
+        "certainty": "projected",
+        "who": "Air travelers who use wheelchairs"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "endangerment-finding-rescission-trump2",
@@ -2150,7 +2280,17 @@
       }
     ],
     "short_summary": "Rescinded the legal basis for EPA to regulate greenhouse gases at all; vehicle standards repealed too.",
-    "last_substantive_update": "2026-09-12"
+    "last_substantive_update": "2026-09-12",
+    "glance": {
+      "who": "Lee Zeldin (EPA Administrator)",
+      "what": "Rescinded the 2009 Endangerment Finding and repealed the vehicle GHG standards built on it",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "documented",
+        "who": "EPA's power to regulate greenhouse gases"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "eo-14192-ten-for-one-trump2",
@@ -2198,7 +2338,17 @@
       }
     ],
     "short_summary": "Agencies must repeal 10 existing rules for every 1 new rule they issue.",
-    "last_substantive_update": "2026-07-03"
+    "last_substantive_update": "2026-07-03",
+    "glance": {
+      "who": "Donald Trump",
+      "what": "Ordered agencies to repeal 10 rules per new rule, with net new-rule costs below zero",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "projected",
+        "who": "Federal health and safety protections"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "epa-31-rule-deregulation-announcement-2025",
