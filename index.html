@@ -631,6 +631,26 @@
     letter-spacing: 0.02em;
   }
 
+  /* Glance card (see the glance-head script block). The harm badge names
+     the kind in words; colour is only a second signal. Two tones plus a
+     neutral, reusing existing palette variables: severe (physical,
+     rights) = flag red, middle (livelihood, money) = brass, institutional
+     = neutral. */
+  .glance-harm { margin: 0 0 0.3rem; font-size: 0.85rem; }
+  .glance-badge {
+    display: inline-block;
+    padding: 0.1rem 0.5rem;
+    border-radius: 2px;
+    font-size: 0.68rem;
+    letter-spacing: 0.02em;
+    font-weight: 600;
+  }
+  .glance-badge-physical, .glance-badge-rights { background: var(--flag-bg); color: var(--flag); }
+  .glance-badge-livelihood, .glance-badge-money { background: var(--brass-light); color: var(--brass); }
+  .glance-badge-institutional { background: var(--paper); color: var(--ink-soft); border: 1px solid var(--rule); }
+  .glance-harm-who { color: var(--ink-soft); }
+  .glance-orig-title { margin: 0 0 0.6rem; font-weight: bold; color: var(--ink-soft); }
+
   /* User Topics card-level coverage indicator -- same color language as
      the detail view's .promoted-callout/.related-callout (brass for
      "this became a curated entry," verified-green for "a different
@@ -3361,6 +3381,68 @@ window.addEventListener("resize", () => {
     if (detail) distributeEntryCards(detail);
   });
 });
+
+/* glance-head:start */
+/* Glance cards (spec: tap-data/docs/superpowers/specs/2026-09-20-glance-design.md).
+   A curated entry may carry a `glance` block -- who did what, and the harm
+   (kind + certainty) -- that replaces the card's title/meta rows with a
+   three-line summary. Deterministic: nothing here calls a model.
+   Drawn only when BOTH the tracker's `glanceEnabled` flag is on AND the
+   entry's block passes isValidGlance(); anything else falls back to the
+   old card, so a half-authored tracker (or one bad block) never breaks a
+   list. isValidGlance() mirrors validate_glance.py in the tap-data repo --
+   keep the limits in step. Pure functions (no DOM) so Node tests can run
+   them; buildEntryCard() does the wiring. */
+const GLANCE_HARM_LABELS = {
+  physical: "Physical / life",
+  rights: "Rights & liberty",
+  livelihood: "Livelihood",
+  money: "Money",
+  institutional: "Institutional integrity",
+};
+const GLANCE_CERTAINTIES = ["documented", "projected", "alleged"];
+
+function isValidGlance(g) {
+  if (!g || typeof g !== "object") return false;
+  const line = (v, max) => typeof v === "string" && v.trim() !== "" && v.length <= max && !/[\r\n]/.test(v);
+  const harm = g.harm;
+  return line(g.who, 50) && line(g.what, 110) &&
+    !!harm && typeof harm === "object" &&
+    Object.prototype.hasOwnProperty.call(GLANCE_HARM_LABELS, harm.kind) &&
+    GLANCE_CERTAINTIES.includes(harm.certainty) &&
+    line(harm.who, 40);
+}
+
+function glanceActive(entry, cfg) {
+  return !!(cfg && cfg.glanceEnabled && entry && isValidGlance(entry.glance));
+}
+
+/* opts: { hl, metaHtml, shareBtnHtml, hideWho }. hideWho is set inside
+   "List by individual" groups, whose header already names the person. */
+function buildGlanceHeadHtml(entry, cfg, opts) {
+  if (!glanceActive(entry, cfg)) return null;
+  const g = entry.glance;
+  const hl = opts.hl;
+  const who = opts.hideWho ? "" : '<span class="glance-who">' + hl(g.who) + '</span> — ';
+  return '<div class="entry-head">' +
+    '<div class="entry-title-block">' +
+      '<p class="entry-title glance-line">' + who + hl(g.what) + (opts.shareBtnHtml || "") + '</p>' +
+      '<p class="glance-harm"><span class="glance-badge glance-badge-' + g.harm.kind + '">' +
+        escapeHtml(GLANCE_HARM_LABELS[g.harm.kind]) + ' · ' + escapeHtml(g.harm.certainty) + '</span> ' +
+        '<span class="glance-harm-who">' + hl(g.harm.who) + '</span></p>' +
+      '<div class="entry-meta">' + (opts.metaHtml || "") + '</div>' +
+    '</div>' +
+  '</div>';
+}
+
+/* The card no longer shows the entry's own title (rule name, official
+   string), so Details opens with it as a heading -- nothing is lost. */
+function glanceDetailTitleHtml(entry, cfg, hl) {
+  if (!glanceActive(entry, cfg)) return "";
+  const title = entry[cfg.titleField];
+  return title ? '<p class="glance-orig-title">' + hl(title) + '</p>' : "";
+}
+/* glance-head:end */
 
 /* Shared card builder used by both the per-tracker tabbed view and
    the cross-database global search view, so the two stay visually
