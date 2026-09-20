@@ -3576,7 +3576,17 @@
       "estimated_impact": "No quantified extinction-risk figure exists in sourcing; the concrete risk is a protection gap during the time FWS takes to draft individual species rules, illustrated with named species like the monarch butterfly and Florida manatee.",
       "confidence_note": "Well-corroborated across multiple outlets and DOI's own press release; the prospective-only scope is confirmed by a secondary industry source, not just advocacy framing -- an important limitation to cite accurately."
     },
-    "last_substantive_update": "2026-09-11"
+    "last_substantive_update": "2026-09-11",
+    "glance": {
+      "who": "Doug Burgum (Interior Secretary)",
+      "what": "Ended automatic ESA protection for newly listed threatened species; economics can drive habitat exclusions",
+      "harm": {
+        "kind": "environment",
+        "certainty": "projected",
+        "who": "Newly listed threatened species"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "esa-harm-definition-rollback-2026",
@@ -3635,7 +3645,17 @@
       }
     ],
     "short_summary": "Interior/Commerce rescinded the ~50-year-old ESA definition of \"harm\" that included habitat destruction, so only direct killing/injury of animals now counts -- easing ESA review for development in critical habitat; 4 environmental groups suing.",
-    "last_substantive_update": "2026-09-10"
+    "last_substantive_update": "2026-09-10",
+    "glance": {
+      "who": "Doug Burgum (Interior Secretary)",
+      "what": "Rescinded the ESA 'harm' definition covering habitat destruction; only direct killing or injury now counts",
+      "harm": {
+        "kind": "environment",
+        "certainty": "projected",
+        "who": "Protected species and their habitat"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "fcc-net-neutrality-repeal-trump1",
@@ -3679,7 +3699,17 @@
       }
     ],
     "short_summary": "Let ISPs block, throttle, or prioritize internet traffic without restriction.",
-    "last_substantive_update": "2026-09-06"
+    "last_substantive_update": "2026-09-06",
+    "glance": {
+      "who": "Ajit Pai (FCC Chairman)",
+      "what": "Repealed net neutrality: ISPs may now block, throttle or charge for priority traffic",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "documented",
+        "who": "Limits on ISP blocking and throttling"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "fcc-salt-typhoon-cyber-rule-rescission-2025",
@@ -3741,7 +3771,17 @@
       }
     ],
     "short_summary": "FCC rescinded a mandatory telecom network-security rule adopted after China's Salt Typhoon breach, after lobbying from the breached carriers.",
-    "last_substantive_update": "2026-08-09"
+    "last_substantive_update": "2026-08-09",
+    "glance": {
+      "who": "Brendan Carr (FCC Chairman)",
+      "what": "Rescinded the telecom network-security rule adopted after China's Salt Typhoon hack",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "projected",
+        "who": "U.S. telecom network security"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "fda-chlorine-dioxide-autism-warning-removed-2025",
@@ -3801,7 +3841,17 @@
     "narrative_override": {
       "headline": "FDA quietly removed its 2019 warning against chlorine dioxide 'cures' for autism."
     },
-    "last_substantive_update": "2026-09-12"
+    "last_substantive_update": "2026-09-12",
+    "glance": {
+      "who": "HHS and FDA (Secretary Robert F. Kennedy Jr.)",
+      "what": "Removed FDA's 2019 warning against chlorine dioxide 'cures' for autism, calling it routine cleanup",
+      "harm": {
+        "kind": "physical",
+        "certainty": "projected",
+        "who": "Consumers of chlorine dioxide 'cures'"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "fda-flavored-vapes-authorization-2026",
@@ -3855,7 +3905,17 @@
       "estimated_impact": "Public health and parent advocacy groups warn the authorization risks reversing progress on youth vaping rates, given the category's documented youth appeal.",
       "confidence_note": "The facts of the authorization, Trump's personal pressure on Makary, and industry lobbying are corroborated across many independent outlets (CNBC, CBS News, NPR, STAT News)."
     },
-    "last_substantive_update": "2026-08-02"
+    "last_substantive_update": "2026-08-02",
+    "glance": {
+      "who": "Donald Trump",
+      "what": "Pressed FDA to move faster; FDA then authorized fruit-flavored e-cigarettes for the first time",
+      "harm": {
+        "kind": "physical",
+        "certainty": "alleged",
+        "who": "Young people at risk of vaping"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "fda-fluoride-supplement-restriction-2025",
@@ -3906,7 +3966,17 @@
       "estimated_impact": "ADA and AAP opposed the restriction, warning it removes a supported cavity-prevention tool from children in non-fluoridated, often lower-income rural communities who benefit most.",
       "confidence_note": "HIGH on the factual sequence; MODERATE on tracker classification, since Utah's own ban is state action included only as context for the federal FDA restriction this entry tracks."
     },
-    "last_substantive_update": "2026-08-10"
+    "last_substantive_update": "2026-08-10",
+    "glance": {
+      "who": "Robert F. Kennedy Jr. (HHS Secretary)",
+      "what": "Restricted marketing of children's fluoride supplements, over dentist and pediatrician objections",
+      "harm": {
+        "kind": "physical",
+        "certainty": "projected",
+        "who": "Kids in non-fluoridated communities"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "fda-peptide-compounding-restrictions-loosened-2025-2026",
@@ -3994,7 +4064,17 @@
     "narrative_override": {
       "headline": "RFK Jr. pushed FDA to loosen restrictions on unproven peptides popular with MAHA wellness influencers."
     },
-    "last_substantive_update": "2026-09-12"
+    "last_substantive_update": "2026-09-12",
+    "glance": {
+      "who": "Robert F. Kennedy Jr. (HHS Secretary)",
+      "what": "Pushed FDA to loosen limits on unproven injectable peptides; 12 came off the restricted list",
+      "harm": {
+        "kind": "physical",
+        "certainty": "projected",
+        "who": "Users of unproven injectable peptides"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "fda-single-trial-approval-standard-2026",
@@ -4054,7 +4134,17 @@
     "narrative_override": {
       "headline": "FDA dropped its two-study requirement for new drug approvals, moving to a single-trial standard."
     },
-    "last_substantive_update": "2026-09-12"
+    "last_substantive_update": "2026-09-12",
+    "glance": {
+      "who": "Marty Makary, Vinay Prasad (FDA)",
+      "what": "Ended FDA's default two-study requirement for new drug approvals; one trial can now suffice",
+      "harm": {
+        "kind": "physical",
+        "certainty": "projected",
+        "who": "Patients taking newly approved drugs"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "ftc-click-to-cancel-repeal-trump2",
@@ -4094,7 +4184,17 @@
       }
     ],
     "short_summary": "Removed the requirement that canceling a subscription be as easy as signing up.",
-    "last_substantive_update": "2026-09-08"
+    "last_substantive_update": "2026-09-08",
+    "glance": {
+      "who": "Andrew Ferguson (FTC Chairman)",
+      "what": "Dropped the 'click to cancel' rule after a court vacatur, ending easy-cancellation requirements",
+      "harm": {
+        "kind": "money",
+        "certainty": "projected",
+        "who": "Consumers with recurring charges"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "ftc-noncompete-ban-reversal-trump2",
@@ -4143,7 +4243,17 @@
       }
     ],
     "short_summary": "Abandoned the nationwide ban on employee noncompete agreements.",
-    "last_substantive_update": "2026-07-03"
+    "last_substantive_update": "2026-07-03",
+    "glance": {
+      "who": "Andrew Ferguson (FTC Chairman)",
+      "what": "Dropped the appeal and abandoned the nationwide noncompete ban after courts vacated it",
+      "harm": {
+        "kind": "livelihood",
+        "certainty": "projected",
+        "who": "Workers bound by noncompete clauses"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "gipsa-fair-practices-withdrawal-trump1",
@@ -4187,7 +4297,17 @@
       }
     ],
     "short_summary": "Withdrew protections letting farmers challenge unfair meatpacker practices.",
-    "last_substantive_update": "2026-09-08"
+    "last_substantive_update": "2026-09-08",
+    "glance": {
+      "who": "USDA leadership (first Trump administration)",
+      "what": "Withdrew farmer protections against processor retaliation before they took effect",
+      "harm": {
+        "kind": "livelihood",
+        "certainty": "projected",
+        "who": "Independent contract growers"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "hud-emotional-support-animal-guidance-rescission-2026",
@@ -4236,7 +4356,17 @@
       "estimated_impact": "Disability-rights advocates warn the change leaves people with mental health and emotional disabilities more vulnerable to housing-accommodation denials.",
       "confidence_note": "The guidance rescission and its substantive terms are corroborated across legal-industry and disability-advocacy sources (Mondaq/Duane Morris, DREDF, National Low Income Housing Coalition)."
     },
-    "last_substantive_update": "2026-08-02"
+    "last_substantive_update": "2026-08-02",
+    "glance": {
+      "who": "HUD Fair Housing office (FHEO leadership)",
+      "what": "Rescinded guidance treating untrained emotional support animals as valid housing accommodations",
+      "harm": {
+        "kind": "rights",
+        "certainty": "alleged",
+        "who": "People with mental health disabilities"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "interior-public-lands-drilling-bonding-methane-rollback-2026",
@@ -4319,7 +4449,17 @@
       "estimated_impact": "Shifts well-cleanup financial risk toward taxpayers and loosens methane venting/flaring rules, though no quantified emissions or cost estimate exists yet since this remains a proposed rule.",
       "confidence_note": "Strong: the proposal's specific terms are corroborated across multiple independent outlets plus Interior's own press release confirming the rationale."
     },
-    "last_substantive_update": "2026-08-30"
+    "last_substantive_update": "2026-08-30",
+    "glance": {
+      "who": "Doug Burgum (Interior Secretary)",
+      "what": "Proposed cutting drilling cleanup bonds from $500,000 to $25,000 and dropping methane-limit plans",
+      "harm": {
+        "kind": "money",
+        "certainty": "projected",
+        "who": "Taxpayers (cleanup) and the climate"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "irs-notice-2025-42-wind-solar-safe-harbor-2025",
@@ -4401,7 +4541,17 @@
         "url": "https://carboncredits.com/china-adds-power-7x-more-than-the-us-in-2025-with-500b-energy-build-out-in-a-single-year/"
       }
     ],
-    "last_substantive_update": "2026-09-10"
+    "last_substantive_update": "2026-09-10",
+    "glance": {
+      "who": "Donald Trump (via Treasury and IRS)",
+      "what": "Had the IRS end the wind and solar 5% safe harbor; a federal court vacated it in June 2026",
+      "harm": {
+        "kind": "money",
+        "certainty": "projected",
+        "who": "Clean-energy project investment"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "joint-employer-standard-narrowing-trump2",
