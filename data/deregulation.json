@@ -50,7 +50,17 @@
       }
     ],
     "short_summary": "Energy/environmental rules now auto-expire after 1 year unless agencies act to renew them.",
-    "last_substantive_update": "2026-09-06"
+    "last_substantive_update": "2026-09-06",
+    "glance": {
+      "who": "Donald Trump",
+      "what": "Ordered energy rules to expire after one year unless agencies renew them",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "projected",
+        "who": "Energy and environmental protections"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "ai-data-center-nepa-cwa-permitting-exemptions-2025",
@@ -135,7 +145,17 @@
         "url": "https://abcnews.go.com/Technology/wireStory/ai-plan-trump-chipping-foundational-environmental-law-124180682"
       }
     ],
-    "last_substantive_update": "2026-09-10"
+    "last_substantive_update": "2026-09-10",
+    "glance": {
+      "who": "Donald Trump",
+      "what": "Directed streamlined NEPA and Clean Water Act review for large AI data centers",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "projected",
+        "who": "Local communities and waterways"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "anwr-npra-offshore-leasing-expansion-2025-2026",
@@ -240,7 +260,17 @@
       }
     ],
     "short_summary": "Interior reopened ANWR's full coastal plain and 13M NPR-A acres to drilling, then proposed the most aggressive 5-year offshore leasing plan in decades -- though the first ANWR lease sale drew just $3.7M from two bidders.",
-    "last_substantive_update": "2026-09-09"
+    "last_substantive_update": "2026-09-09",
+    "glance": {
+      "who": "Doug Burgum",
+      "what": "Reopened the Arctic Refuge and 13M acres of NPR-A to oil and gas leasing",
+      "harm": {
+        "kind": "environment",
+        "certainty": "projected",
+        "who": "Arctic wildlife, Indigenous communities"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "atf-gun-trafficking-enforcement-rollback-2026",
@@ -305,7 +335,17 @@
       "estimated_impact": "Public-safety advocates connect reduced dealer accountability and the trafficking-referral decline to an increased risk of firearms flowing into illegal markets.",
       "confidence_note": "ProPublica's investigative reporting is corroborated by CNN's independent confirmation of specific relicensed dealers and by trade/legal-press summaries."
     },
-    "last_substantive_update": "2026-08-02"
+    "last_substantive_update": "2026-08-02",
+    "glance": {
+      "who": "DOJ leadership (Bondi, Blanche)",
+      "what": "Reversed ATF's zero-tolerance dealer-license policy and relicensed revoked gun shops",
+      "harm": {
+        "kind": "physical",
+        "certainty": "projected",
+        "who": "Communities exposed to trafficked guns"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "bears-ears-grand-staircase-monuments-shrunk-2026",
@@ -377,7 +417,17 @@
       }
     ],
     "short_summary": "Trump cut Bears Ears and Grand Staircase-Escalante monuments by ~90% combined (~3M acres), opening the land to oil/gas/uranium/coal/mineral development -- the second such reduction in a decade after Biden reversed the first.",
-    "last_substantive_update": "2026-07-27"
+    "last_substantive_update": "2026-07-27",
+    "glance": {
+      "who": "Donald Trump",
+      "what": "Cut Bears Ears and Grand Staircase monuments ~90%, opening ~3M acres to drilling and mining",
+      "harm": {
+        "kind": "environment",
+        "certainty": "projected",
+        "who": "Tribal sacred sites and ecosystems"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "big-bend-border-wall-environmental-waiver-2026",
@@ -437,7 +487,17 @@
       "estimated_impact": "Removes environmental review, endangered-species protection, and historic/archaeological safeguards for construction on protected park land; a lawsuit challenging the waiver's legality is pending.",
       "confidence_note": "Strong: the waiver's scope and statutes covered are independently corroborated across multiple outlets beyond the litigating advocacy group."
     },
-    "last_substantive_update": "2026-08-05"
+    "last_substantive_update": "2026-08-05",
+    "glance": {
+      "who": "Markwayne Mullin",
+      "what": "Waived nine federal environmental and preservation laws for border-wall work in Big Bend park",
+      "harm": {
+        "kind": "environment",
+        "certainty": "documented",
+        "who": "Big Bend park lands and wildlife"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "cfpb-overdraft-fee-cap-repeal-2025",
@@ -514,7 +574,17 @@
       "estimated_impact": "CFPB projected $5B/year in consumer savings from the capped rule; OMB's opposing projection said the cap would cause 6 million consumers to face higher fees and more bounced checks. Both are the interested party's own estimate.",
       "confidence_note": "Legislative sequence is well-corroborated across CRS and legal-industry sources; the competing savings/cost figures are each side's own projection, not independent estimates."
     },
-    "last_substantive_update": "2026-08-12"
+    "last_substantive_update": "2026-08-12",
+    "glance": {
+      "who": "Congressional Republicans and Trump",
+      "what": "Killed the CFPB's $5 overdraft-fee cap through a Congressional Review Act vote",
+      "harm": {
+        "kind": "money",
+        "certainty": "projected",
+        "who": "Bank customers who overdraft"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "cfpb-payday-lending-rollback-trump1",
@@ -573,7 +643,17 @@
       }
     ],
     "short_summary": "Payday lenders no longer required to verify borrowers can actually repay loans.",
-    "last_substantive_update": "2026-09-06"
+    "last_substantive_update": "2026-09-06",
+    "glance": {
+      "who": "Mick Mulvaney (Acting CFPB Director)",
+      "what": "Dropped the rule requiring payday lenders to check that borrowers can repay",
+      "harm": {
+        "kind": "money",
+        "certainty": "projected",
+        "who": "Payday loan borrowers"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "chaco-canyon-drilling-buffer-revocation-2026",
@@ -654,7 +734,17 @@
     "narrative_override": {
       "headline": "BLM proposed shrinking the no-drilling buffer around Chaco Culture National Historical Park."
     },
-    "last_substantive_update": "2026-09-12"
+    "last_substantive_update": "2026-09-12",
+    "glance": {
+      "who": "Doug Burgum",
+      "what": "Proposed revoking the 10-mile no-drilling buffer around Chaco Culture National Historical Park",
+      "harm": {
+        "kind": "environment",
+        "certainty": "projected",
+        "who": "Chaco cultural sites and tribes"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "clean-power-plan-repeal-trump1",
@@ -710,7 +800,17 @@
       }
     ],
     "short_summary": "Replaced binding power-plant carbon caps with a weaker efficiency-only standard.",
-    "last_substantive_update": "2026-09-06"
+    "last_substantive_update": "2026-09-06",
+    "glance": {
+      "who": "Andrew Wheeler (EPA)",
+      "what": "Replaced binding power-plant carbon caps with a weaker efficiency-only rule",
+      "harm": {
+        "kind": "physical",
+        "certainty": "projected",
+        "who": "People near coal power plants"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "climate-financial-risk-oversight-withdrawal-2025",
@@ -765,7 +865,17 @@
       "estimated_impact": "Eliminates federal regulators' capacity to monitor climate-driven financial risk -- an oversight loss, not a direct physical or environmental harm.",
       "confidence_note": "HIGH confidence, corroborated by Reuters and Treasury's own meeting record; bundles several separate agency actions taken across different dates."
     },
-    "last_substantive_update": "2026-08-08"
+    "last_substantive_update": "2026-08-08",
+    "glance": {
+      "who": "Bessent (FSOC), Fed, FDIC, Treasury",
+      "what": "Withdrew from the NGFS climate network and dissolved FSOC's climate-risk committees",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "documented",
+        "who": "Federal climate-risk monitoring"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "coal-ash-disposal-rollback-trump2",
@@ -834,7 +944,17 @@
       }
     ],
     "short_summary": "Delayed coal ash cleanup deadlines ~3 years; broader exemption for most sites still pending.",
-    "last_substantive_update": "2026-07-18"
+    "last_substantive_update": "2026-07-18",
+    "glance": {
+      "who": "Lee Zeldin (EPA)",
+      "what": "Delayed coal-ash cleanup deadlines about 3 years; proposed exempting most sites from oversight",
+      "harm": {
+        "kind": "physical",
+        "certainty": "projected",
+        "who": "Children near coal-ash sites"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "corporate-transparency-act-enforcement-scaleback-2025",
@@ -902,7 +1022,17 @@
       "estimated_impact": "GAO found the expanded exemptions created information gaps that reporting links to law-enforcement concerns over cartel and money-laundering use of anonymous shell companies.",
       "confidence_note": "Well-corroborated by Treasury's own announcement, the published rule, law-firm analyses, and a GAO report on the resulting gaps."
     },
-    "last_substantive_update": "2026-08-10"
+    "last_substantive_update": "2026-08-10",
+    "glance": {
+      "who": "Scott Bessent (Treasury)",
+      "what": "Exempted over 99% of U.S. companies from beneficial-ownership reporting",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "alleged",
+        "who": "Anti-money-laundering oversight"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "deregulatory-fast-track-memo-trump2",
@@ -950,7 +1080,17 @@
       }
     ],
     "short_summary": "Lets agencies repeal rules they deem 'unlawful' by skipping public notice-and-comment.",
-    "last_substantive_update": "2026-09-08"
+    "last_substantive_update": "2026-09-08",
+    "glance": {
+      "who": "Donald Trump",
+      "what": "Told agencies to repeal 'unlawful' rules without public notice and comment",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "documented",
+        "who": "Public input on rule repeals"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "dodd-frank-threshold-amendment-trump1",
@@ -998,7 +1138,17 @@
       }
     ],
     "short_summary": "Exempted regional banks under $250B in assets from strict post-2008 oversight.",
-    "last_substantive_update": "2026-09-08"
+    "last_substantive_update": "2026-09-08",
+    "glance": {
+      "who": "Donald Trump (signed S.2155)",
+      "what": "Raised the Dodd-Frank oversight threshold for banks from $50B to $250B in assets",
+      "harm": {
+        "kind": "money",
+        "certainty": "alleged",
+        "who": "Bank depositors and the economy"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "doe-clean-energy-grants-political-cancellation-2026",
