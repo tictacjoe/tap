@@ -666,6 +666,10 @@
      brass-light background at this size; this is >= 4.5:1). */
   .glance-badge-livelihood, .glance-badge-money { background: var(--brass-light); color: #7E6325; }
   .glance-badge-institutional, .glance-badge-environment { background: var(--paper); color: var(--ink-soft); border: 1px solid var(--rule); }
+  /* "averted" = blocked or vacated before it took effect, so no harm happened:
+     neutral like institutional, never the alarming physical/rights red. Must
+     stay after the kind rules above (same specificity, later wins). */
+  .glance-badge-averted { background: var(--paper); color: var(--ink-soft); border: 1px solid var(--rule); }
   .glance-harm-who { color: var(--ink-soft); }
   .glance-orig-title { margin: 0 0 0.6rem; font-weight: bold; color: var(--ink-soft); }
 
@@ -3447,7 +3451,7 @@ const GLANCE_HARM_LABELS = {
   environment: "Environment",
   institutional: "Institutional integrity",
 };
-const GLANCE_CERTAINTIES = ["documented", "projected", "alleged"];
+const GLANCE_CERTAINTIES = ["documented", "projected", "alleged", "averted"];
 
 function isValidGlance(g) {
   if (!g || typeof g !== "object") return false;
@@ -3474,7 +3478,8 @@ function buildGlanceHeadHtml(entry, cfg, opts) {
   return '<div class="entry-head">' +
     '<div class="entry-title-block">' +
       '<p class="entry-title glance-line">' + who + hl(g.what) + (opts.shareBtnHtml || "") + '</p>' +
-      '<p class="glance-harm"><span class="glance-badge glance-badge-' + g.harm.kind + '">' +
+      '<p class="glance-harm"><span class="glance-badge glance-badge-' + g.harm.kind +
+        (g.harm.certainty === "averted" ? " glance-badge-averted" : "") + '">' +
         escapeHtml(GLANCE_HARM_LABELS[g.harm.kind]) + ' · ' + escapeHtml(g.harm.certainty) + '</span> ' +
         '<span class="glance-harm-who">' + hl(g.harm.who) + '</span></p>' +
       '<div class="entry-meta">' + (opts.metaHtml || "") + '</div>' +

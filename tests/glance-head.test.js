@@ -85,6 +85,20 @@ test("the environment harm kind is accepted and renders its own badge class and 
   assert.ok(html.includes("Environment · projected"));
 });
 
+test("the averted certainty is accepted and renders a muted badge, not the alarming kind colour", () => {
+  const glance = validGlance({
+    harm: { kind: "physical", certainty: "averted", who: "People breathing fine-particle soot" },
+  });
+  assert.equal(api.isValidGlance(glance), true);
+  const html = api.buildGlanceHeadHtml({ glance }, cfgOn, { hl: hlPlain });
+  assert.ok(html.includes("Physical / life · averted"));
+  assert.ok(html.includes("glance-badge-averted"));
+  // the other certainties must not pick up the muted class
+  const projected = api.buildGlanceHeadHtml({ glance: validGlance({
+    harm: { kind: "physical", certainty: "projected", who: "Example workers" } }) }, cfgOn, { hl: hlPlain });
+  assert.ok(!projected.includes("glance-badge-averted"));
+});
+
 test("hideWho drops the responsible-party lead-in but keeps the what line", () => {
   const html = api.buildGlanceHeadHtml({ glance: validGlance() }, cfgOn, { hl: hlPlain, hideWho: true });
   assert.ok(!html.includes("glance-who"));
