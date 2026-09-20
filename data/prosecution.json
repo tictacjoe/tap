@@ -4328,6 +4328,16 @@
     "section_summaries": {
       "incident_summary": "A DHS whistleblower disclosure says USCIS staff were told to pose as individual voters to search state voter records under DHS's 'Unlawful Voter Initiative,' given under 2 hours of training and a 40-person daily quota.",
       "confidence_note": "The whistleblower disclosure and DHS's practice are well corroborated (AP, Padilla/Schumer press release); the specific legal-violation characterization is the whistleblower's own assessment, not yet independently adjudicated."
+    },
+    "glance": {
+      "who": "DHS under Markwayne Mullin (Secretary)",
+      "what": "Reportedly told USCIS staff to pose as voters to search state voter records, on under 2 hours' training",
+      "harm": {
+        "kind": "rights",
+        "certainty": "alleged",
+        "who": "Voters flagged by the initiative"
+      },
+      "reviewed": "2026-09-20"
     }
   },
   {
@@ -4381,7 +4391,17 @@
       "confidence_note": "Confirmed directly by CNN's reporting and DHS's own on-record admission of the inaccuracies."
     },
     "date_of_action": "2025-12 (DHS launches 'worst of the worst' website) through 2026-02 (CNN's investigation prompts DHS to correct errors)",
-    "last_substantive_update": "2026-09-08"
+    "last_substantive_update": "2026-09-08",
+    "glance": {
+      "who": "Kristi Noem (then-Secretary of Homeland Security)",
+      "what": "Promoted a 'worst of the worst' immigrant website; DHS admitted it misstated hundreds of arrestees' offenses",
+      "harm": {
+        "kind": "rights",
+        "certainty": "documented",
+        "who": "Arrestees mislabeled as worst offenders"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "dillon-immigration-judge-whistleblower-retaliation-2025-2026",
@@ -4428,7 +4448,17 @@
       "incident_summary": "SF immigration judge Chloe Dillon says she was fired by email 48 hours after reporting that ICE unlawfully detained an unaccompanied minor in her courtroom; she sued DOJ, EOIR, and AG Blanche in September 2026, over a year later, seeking reinstatement.",
       "confidence_note": "Core sequence is well-corroborated across AP, Newsweek, and MS NOW; the Aug. 2025 incident/firing date required reconciling a source that implied 2026 -- Blanche is named only as DOJ's current head, not because he was AG at the time."
     },
-    "last_substantive_update": "2026-09-17"
+    "last_substantive_update": "2026-09-17",
+    "glance": {
+      "who": "Sirce Owen (Acting Director, EOIR)",
+      "what": "Fired immigration judge Chloe Dillon two days after she reported an unlawful ICE detention, she says",
+      "harm": {
+        "kind": "rights",
+        "certainty": "alleged",
+        "who": "Immigration judge Chloe Dillon"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "doge-chatgpt-grant-cuts-deposition-2026",
@@ -4505,7 +4535,17 @@
       "confidence_note": "Grounded in deposition videos and records from active litigation, well-corroborated across multiple outlets; the ChatGPT-review account is specific to the NEH grants documented, not confirmed as DOGE's universal government-wide method."
     },
     "date_of_action": "2026-04-13 (Washington Post reveals DOGE's ChatGPT-driven grant-cutting deposition videos)",
-    "last_substantive_update": "2026-09-02"
+    "last_substantive_update": "2026-09-02",
+    "glance": {
+      "who": "DOGE under Elon Musk (staffers Fox, Cavanaugh)",
+      "what": "Used ChatGPT to flag NEH grants as DEI and cut them; a judge ruled it viewpoint discrimination",
+      "harm": {
+        "kind": "rights",
+        "certainty": "documented",
+        "who": "Humanities grantees (1,400+ awards)"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "doge-coristine-vetting-failure-2025",
@@ -4551,7 +4591,17 @@
       "confidence_note": "HIGH confidence on the core facts; SSA's own 2026 filing later upgraded the whistleblower claim to an agency-admitted policy violation."
     },
     "date_of_action": "2025-02 (Coristine given DOGE access despite vetting concerns) through 2025-08 (whistleblower flags his continued access to Social Security data)",
-    "last_substantive_update": "2026-09-07"
+    "last_substantive_update": "2026-09-07",
+    "glance": {
+      "who": "DOGE under Elon Musk (former leader)",
+      "what": "Gave a 19-year-old with a data-leak history access to SSA data; SSA later admitted likely policy violations",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "documented",
+        "who": "Security of Social Security data"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "doge-nro-data-exposure-2025",
@@ -4603,7 +4653,17 @@
       "confidence_note": "HIGH confidence on the exposure and reaction; MODERATE on the separate website-vulnerability finding, sourced to one technical outlet."
     },
     "date_of_action": "2025-02 (DOGE website exposes NRO data) through 2025-02-27 (Senators open formal investigation)",
-    "last_substantive_update": "2026-09-07"
+    "last_substantive_update": "2026-09-07",
+    "glance": {
+      "who": "DOGE under Elon Musk (former leader)",
+      "what": "DOGE's website exposed controlled National Reconnaissance Office headcount and budget data",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "alleged",
+        "who": "NRO's controlled data"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "doj-bannon-contempt-dismissal-2026",
@@ -4668,7 +4728,17 @@
       "confidence_note": "The motion, its rationale, and the Supreme Court's ruling are all independently corroborated and undisputed by any party."
     },
     "date_of_action": "2026-02 (DOJ moves to dismiss Bannon's conviction) through 2026-04 (Supreme Court clears path for dismissal)",
-    "last_substantive_update": "2026-09-02"
+    "last_substantive_update": "2026-09-02",
+    "glance": {
+      "who": "DOJ under Pam Bondi (then-AG)",
+      "what": "Moved to dismiss Steve Bannon's contempt-of-Congress conviction; a judge denied it, refiling allowed",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "averted",
+        "who": "Congress's subpoena power"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "doj-birthright-citizenship-segregationist-arguments-2026",
@@ -4721,7 +4791,17 @@
       "confidence_note": "Morse's historical role and DOJ's citation of the related arguments are well-documented across multiple outlets; whether DOJ's current litigation strategy knowingly invokes that racist legacy, versus citing the precedent for its textual argument alone, is a disputed characterization."
     },
     "date_of_action": "2026-03-30 (source publish date, event date not stated in reporting)",
-    "last_substantive_update": "2026-09-02"
+    "last_substantive_update": "2026-09-02",
+    "glance": {
+      "who": "DOJ under Pam Bondi (Attorney General)",
+      "what": "Argued to end birthright citizenship, citing a segregationist's arguments; the Supreme Court ruled against it",
+      "harm": {
+        "kind": "rights",
+        "certainty": "averted",
+        "who": "U.S.-born children of noncitizens"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "doj-crypto-enforcement-team-disbanded-2025",
@@ -4774,7 +4854,17 @@
       "confidence_note": "HIGH confidence on the memo and its timing; the financial-conflict framing is interpretive analysis, not adjudicated fact."
     },
     "date_of_action": "2025-04-07 (Blanche disbands National Cryptocurrency Enforcement Team)",
-    "last_substantive_update": "2026-09-11"
+    "last_substantive_update": "2026-09-11",
+    "glance": {
+      "who": "Todd Blanche (Deputy Attorney General)",
+      "what": "Disbanded DOJ's crypto enforcement team, ending 'regulation by prosecution' of digital assets",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "documented",
+        "who": "DOJ's crypto-crime enforcement"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "doj-face-act-abortion-clinic-rollback-2025",
@@ -4833,7 +4923,17 @@
       "confidence_note": "Both the pardons and the enforcement memo are well-documented public records; the causal link to a broader rise in clinic violence is real but not proven to be the sole driver."
     },
     "date_of_action": "2025-01-23 (Trump pardons 23 FACE Act violators) through 2025-01-24 (DOJ curtails future FACE Act prosecutions)",
-    "last_substantive_update": "2026-09-12"
+    "last_substantive_update": "2026-09-12",
+    "glance": {
+      "who": "Donald Trump (President) and Chad Mizelle (DOJ)",
+      "what": "Pardoned 23 clinic blockaders; DOJ then limited FACE Act cases to 'extraordinary' ones",
+      "harm": {
+        "kind": "rights",
+        "certainty": "documented",
+        "who": "Abortion clinics, patients and staff"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "doj-fani-willis-travel-subpoena-2025",
@@ -4879,7 +4979,17 @@
       "confidence_note": "The subpoena itself is well-corroborated across multiple outlets; DOJ's motive and Willis's target status are not publicly disclosed, limiting confidence on the accountability characterization."
     },
     "date_of_action": "2025-09 (federal subpoena of Fani Willis's travel records reported)",
-    "last_substantive_update": "2026-09-09"
+    "last_substantive_update": "2026-09-09",
+    "glance": {
+      "who": "Theodore Hertzberg (U.S. Attorney, N.D. Georgia)",
+      "what": "Subpoenaed Fani Willis's travel records via a federal grand jury; no charges, her status undisclosed",
+      "harm": {
+        "kind": "rights",
+        "certainty": "alleged",
+        "who": "Fulton County DA Fani Willis"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "doj-fbi-arizona-maricopa-2020-audit-subpoena-2026",
@@ -4950,7 +5060,17 @@
       "confidence_note": "Core facts are well-corroborated across multiple outlets; no specific DOJ or FBI official was identified in sourcing as personally directing the subpoena, so individual accountability is attributed institutionally to the Attorney General's oversight of DOJ."
     },
     "date_of_action": "2026-03-07 (FBI removes Maricopa 2020 audit records via subpoena)",
-    "last_substantive_update": "2026-09-02"
+    "last_substantive_update": "2026-09-02",
+    "glance": {
+      "who": "DOJ under Pam Bondi (then-AG)",
+      "what": "Grand jury subpoenaed the Arizona Senate's 2020 audit records; an FBI agent took dozens of drives and servers",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "alleged",
+        "who": "Settled 2020 Arizona election result"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "doj-fbi-epstein-files-delay-presentation-2026",
@@ -5061,7 +5181,17 @@
       "headline": "DOJ missed its own Epstein-files disclosure deadlines by months before releasing 3 million pages."
     },
     "date_of_action": "2025-02-27 (DOJ releases partial Epstein files 'Part 1') through 2026-09-10 (Poland/Norway/Latvia/Britain say DOJ has not responded to their own Epstein-evidence requests)",
-    "last_substantive_update": "2026-09-17"
+    "last_substantive_update": "2026-09-17",
+    "glance": {
+      "who": "Pam Bondi (then-AG) and Kash Patel (FBI Director)",
+      "what": "DOJ missed the Epstein-files release deadline by months; FBI staff compiled unverified claims on 13 men",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "documented",
+        "who": "Public access to Epstein records"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "doj-fema-nyc-migrant-shelter-subpoenas-2025",
@@ -5135,7 +5265,17 @@
       "headline": "DOJ subpoenaed NYC shelters for migrant data; a judge permanently blocked the FEMA funding condition."
     },
     "date_of_action": "2025-03 (subpoenas served on NYC migrant shelters) through 2025-09-24 (judge permanently enjoins immigration-related grant conditions)",
-    "last_substantive_update": "2026-09-02"
+    "last_substantive_update": "2026-09-02",
+    "glance": {
+      "who": "Kristi Noem (Secretary of Homeland Security)",
+      "what": "Tied FEMA grants to handing over migrant records and no-smuggling affidavits; a judge permanently barred it",
+      "harm": {
+        "kind": "rights",
+        "certainty": "documented",
+        "who": "Migrant shelter residents and grantees"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "doj-gentile-commutation-investigation-halted-2026",
@@ -5200,7 +5340,17 @@
       "confidence_note": "Strong: original NYT investigative reporting, with the underlying commutation independently corroborated by NBC News; the specific officials who ordered the halt aren't named in reporting reviewed."
     },
     "date_of_action": "2025-11-26 (Gentile receives clemency, restitution eliminated) through 2026-06 (New York Times reports halted DOJ inquiry)",
-    "last_substantive_update": "2026-09-11"
+    "last_substantive_update": "2026-09-11",
+    "glance": {
+      "who": "DOJ under Pam Bondi (then-AG)",
+      "what": "Reportedly halted a Brooklyn probe of $2.5M+ in payments tied to David Gentile's commutation",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "alleged",
+        "who": "Probe of payments tied to clemency"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "doj-lausd-gender-identity-disclosure-investigation-2026",
