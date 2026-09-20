@@ -102,6 +102,11 @@
   }
   .global-search-box input[type="text"] {
     flex: 1;
+    /* A text input's default min-width:auto pins it at its intrinsic width,
+       so in this nowrap row the "1-liners" / "regex" labels overflowed the
+       box (and the page) by ~21px on a 390px phone. Guarded by
+       test_mobile_overflow.py. */
+    min-width: 0;
     border: none;
     background: transparent;
     font-family: ui-monospace, 'SF Mono', 'Courier New', monospace;
@@ -288,16 +293,13 @@
      floor pins them wider than the viewport (forcing horizontal scroll
      on an actual phone), and even before that floor is hit, the fixed
      nav-actions column can overlap the right edge of a not-yet-full-
-     width main/headlines-wrap. Below 900px, both go fluid (full
-     available width via the 1.5rem/1rem padding they already carry
-     internally) and nav-actions comes out of fixed-floating mode into
-     a normal in-flow row right after the header, so it can never
-     overlap content again regardless of how narrow the viewport gets. */
+     width main/headlines-wrap. Below 900px, nav-actions comes out of
+     fixed-floating mode into a normal in-flow row right after the
+     header, so it can never overlap content again regardless of how
+     narrow the viewport gets. (The other half of the fix, main and
+     #headlines-wrap going fluid, lives after their base rules below --
+     it has to, see the comment there.) */
   @media (max-width: 900px) {
-    main, #headlines-wrap {
-      width: auto;
-      margin-left: 0;
-    }
     .nav-actions {
       position: static;
       top: auto;
@@ -509,6 +511,20 @@
     padding: 1.75rem 1.5rem 3rem;
     min-height: 400px;
     box-sizing: border-box;
+  }
+
+  /* Below 900px both go fluid (full available width via the 1.5rem/1rem
+     padding they already carry internally) instead of being pinned to the
+     880px floor above. This MUST stay after the two base rules: it has the
+     same specificity as them, so a copy placed earlier in the stylesheet
+     loses the cascade and the phone gets an 899px-wide page (that is how
+     the first version of this fix, 2026-09-17, silently did nothing).
+     Guarded by test_mobile_overflow.py. */
+  @media (max-width: 900px) {
+    main, #headlines-wrap {
+      width: auto;
+      margin-left: 0;
+    }
   }
 
   .controls {
