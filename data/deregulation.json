@@ -2402,7 +2402,17 @@
       "estimated_impact": "No aggregate health-impact figure exists for the announcement as a whole; individual constituent rules' estimated impacts are tracked in their own separate entries to avoid double-counting.",
       "confidence_note": "The announcement and Zeldin's quotes are well-documented; the bipartisan condemnation is sourced to on-record quotes from a Democratic- and a Republican-appointed former EPA administrator, not an invented characterization."
     },
-    "last_substantive_update": "2026-08-11"
+    "last_substantive_update": "2026-08-11",
+    "glance": {
+      "who": "Lee Zeldin (EPA Administrator)",
+      "what": "Announced 31 environmental rollbacks in one day, calling it the 'greatest day of deregulation'",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "projected",
+        "who": "EPA air, water and climate rules"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "epa-air-pollution-health-cost-monetization-ended-2026",
@@ -2460,7 +2470,17 @@
       "estimated_impact": "Because monetized health benefits have historically been the dominant justification for stricter air-pollution rules, this methodological shift structurally weakens the case for future tightening, independent of any single rule's numbers.",
       "confidence_note": "Well-corroborated across mainstream, legal, and public-health sources reporting the same announcement and EPA's own stated rationale."
     },
-    "last_substantive_update": "2026-08-11"
+    "last_substantive_update": "2026-08-11",
+    "glance": {
+      "who": "Lee Zeldin (EPA Administrator)",
+      "what": "Stopped putting a dollar value on lives saved when justifying air-pollution rules",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "projected",
+        "who": "Future air-pollution standards"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "epa-civil-enforcement-collapse-2025",
@@ -2549,7 +2569,17 @@
       "estimated_impact": "Achieves a de facto rollback of environmental enforcement without any formal rule repeal, since the underlying standards remain on the books but are not being actively enforced. Water infrastructure funding and Clean Water Act enforcement specifically were both cut sharply, per the same report.",
       "confidence_note": "Independently reported by NPR, Inside Climate News, and the watchdog group's own report; EPA disputed the finding without offering a competing figure."
     },
-    "last_substantive_update": "2026-09-12"
+    "last_substantive_update": "2026-09-12",
+    "glance": {
+      "who": "Lee Zeldin (EPA Administrator)",
+      "what": "Enforcement collapsed: a record-low 16 civil complaints in 2025 amid deep enforcement budget cuts",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "documented",
+        "who": "Enforcement of pollution laws"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "epa-copper-smelter-emissions-exemption-2025",
@@ -2605,7 +2635,17 @@
         "url": "https://www.propublica.org/article/clean-air-act-exemptions-trump-emails"
       }
     ],
-    "last_substantive_update": "2026-09-11"
+    "last_substantive_update": "2026-09-11",
+    "glance": {
+      "who": "Donald Trump",
+      "what": "Exempted an Arizona copper smelter from 2024 toxic-emissions limits for up to two years",
+      "harm": {
+        "kind": "physical",
+        "certainty": "projected",
+        "who": "Residents near the Arizona smelter"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "epa-ethylene-oxide-sterilizer-emissions-rollback-2026",
@@ -2677,7 +2717,17 @@
       "estimated_impact": "The 90% figure is EPA's own projection for the full 2024 rule, not an independent estimate of either rollback action's incremental harm; the 2025 proclamation alone already exempted ~45% of the industry for two years.",
       "confidence_note": "High confidence on content and timeline across both actions, now including a named proponent (Zeldin) for the 2025 exemption and pending litigation challenging it; health-impact figure remains EPA's own original projection, not an independent estimate of either rollback's incremental harm."
     },
-    "last_substantive_update": "2026-08-30"
+    "last_substantive_update": "2026-08-30",
+    "glance": {
+      "who": "Lee Zeldin (EPA Administrator)",
+      "what": "Proposed scrapping the ~90% cut in carcinogenic ethylene oxide emissions at sterilization plants",
+      "harm": {
+        "kind": "physical",
+        "certainty": "projected",
+        "who": "Sterilizer workers and nearby residents"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "epa-fenceline-monitoring-honor-system-rollback-2025",
@@ -2749,7 +2799,17 @@
       "estimated_impact": "5+ million people face elevated cancer risk near affected facilities; EPA's own modeling found the delayed standards would have cut unacceptable-cancer-risk exposure near larger chemical plants by 97% (90,000 to 3,000 people).",
       "confidence_note": "Based on EPA's own monitoring data and U.S. Steel's own exemption application, both obtained by ProPublica via public-records request; distinct from this tracker's separate ethylene-oxide-sterilizer rollback entry."
     },
-    "last_substantive_update": "2026-09-12"
+    "last_substantive_update": "2026-09-12",
+    "glance": {
+      "who": "Trump administration (EPA)",
+      "what": "Halted required fence-line monitors at 130+ plants; gave Clairton Coke Works a two-year exemption",
+      "harm": {
+        "kind": "physical",
+        "certainty": "projected",
+        "who": "People near coke and chemical plants"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "epa-formaldehyde-threshold-model-2025-2026",
@@ -2809,7 +2869,17 @@
     "narrative_override": {
       "headline": "Former chemical-industry lobbyists now running EPA proposed a weaker formaldehyde cancer standard."
     },
-    "last_substantive_update": "2026-09-12"
+    "last_substantive_update": "2026-09-12",
+    "glance": {
+      "who": "Nancy Beck, Lynn Dekleva (EPA chemical office)",
+      "what": "Proposed a cancer-risk model that nearly doubles the formaldehyde exposure treated as safe",
+      "harm": {
+        "kind": "physical",
+        "certainty": "projected",
+        "who": "Workers exposed to formaldehyde"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "epa-ghg-reporting-program-elimination-2025",
@@ -2886,7 +2956,17 @@
       "estimated_impact": "Ending the program would remove the primary public dataset for tracking large-facility greenhouse gas emissions, saving industry an EPA-estimated $2.4 billion while reducing monitoring/accountability capacity rather than directly permitting more pollution.",
       "confidence_note": "Well-corroborated across trade, legal, and congressional sources, including the notably bipartisan opposition -- a signal this isn't a purely partisan characterization."
     },
-    "last_substantive_update": "2026-08-11"
+    "last_substantive_update": "2026-08-11",
+    "glance": {
+      "who": "Lee Zeldin (EPA Administrator)",
+      "what": "Proposed ending mandatory greenhouse-gas reporting by ~8,000 facilities, over bipartisan objections",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "projected",
+        "who": "Public tracking of greenhouse gases"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "epa-hfc-technology-transitions-delay-2025-2026",
@@ -2974,7 +3054,17 @@
     "narrative_override": {
       "headline": "EPA delayed the bipartisan HFC refrigerant phasedown by up to six years, citing 'stranded inventory.'"
     },
-    "last_substantive_update": "2026-09-12"
+    "last_substantive_update": "2026-09-12",
+    "glance": {
+      "who": "Lee Zeldin (EPA Administrator)",
+      "what": "Delayed HFC refrigerant phase-down deadlines by up to six years, to 2030-2032",
+      "harm": {
+        "kind": "environment",
+        "certainty": "projected",
+        "who": "Climate, via high-warming refrigerants"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "epa-methane-stripper-well-rollback-2026",
@@ -3042,7 +3132,17 @@
       "estimated_impact": "A Clean Air Task Force analysis quantifies the disparity: stripper wells are ~6% of US oil and gas production but ~50% of the sector's methane emissions, and Hilcorp is the industry's #1 methane emitter -- corroborating, with figures, the conflict-of-interest pattern already documented.",
       "confidence_note": "Strong: original ProPublica investigative reporting, independently corroborated, with donation figures sourced to FEC filings."
     },
-    "last_substantive_update": "2026-08-16"
+    "last_substantive_update": "2026-08-16",
+    "glance": {
+      "who": "Aaron Szabo (EPA, ex-Hilcorp lobbyist)",
+      "what": "Leading the rollback of 2024 methane rules for low-producing 'stripper' oil and gas wells",
+      "harm": {
+        "kind": "environment",
+        "certainty": "projected",
+        "who": "Climate, via methane from stripper wells"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "epa-pfas-pesticides-fast-track-approval-2025",
@@ -3106,7 +3206,17 @@
       "estimated_impact": "New PFAS pesticides linked to reproductive/liver toxicity concerns and persistent water contamination were approved for food-crop and residential use at an accelerated pace.",
       "confidence_note": "Approvals and timing are well-corroborated; the pace comparison and specific health claims trace mainly to advocacy-group analysis, with at least one agricultural-trade source disputing the PFAS characterization for some products."
     },
-    "last_substantive_update": "2026-08-11"
+    "last_substantive_update": "2026-08-11",
+    "glance": {
+      "who": "Lee Zeldin (EPA Administrator)",
+      "what": "Approved two new PFAS-class pesticides for food crops and turf, at a pace groups call fivefold faster",
+      "harm": {
+        "kind": "physical",
+        "certainty": "alleged",
+        "who": "People exposed via food, water and turf"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "epa-rmp-chemical-safety-rollback-trump2",
@@ -3185,7 +3295,17 @@
         "url": "https://blog.ucs.org/dminovi/epa-common-sense-is-protecting-communities-and-workers-from-chemical-disasters/"
       }
     ],
-    "last_substantive_update": "2026-07-18"
+    "last_substantive_update": "2026-07-18",
+    "glance": {
+      "who": "Lee Zeldin (EPA Administrator)",
+      "what": "Proposed rolling back most 2024 chemical-plant safety rules: narrower audits, less public disclosure",
+      "harm": {
+        "kind": "physical",
+        "certainty": "projected",
+        "who": "People near high-risk chemical plants"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "epa-soot-standard-vacatur-attempt-rejected-2025-2026",
@@ -3239,7 +3359,17 @@
       "estimated_impact": "The attempt, had it succeeded, would have loosened a standard credited with preventing pollution-related illness and death; because the court rejected it, that harm did not materialize.",
       "confidence_note": "Well-corroborated across trade and legal press; notable as a rollback attempt that was fully defeated in court rather than finalized or left pending."
     },
-    "last_substantive_update": "2026-08-11"
+    "last_substantive_update": "2026-08-11",
+    "glance": {
+      "who": "Lee Zeldin (EPA Administrator)",
+      "what": "Moved to vacate the 2024 soot standard; an appeals court denied it and the standard stays",
+      "harm": {
+        "kind": "physical",
+        "certainty": "projected",
+        "who": "Public health; attempt failed in court"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "epa-tsca-risk-evaluation-ppe-rollback-2025",
@@ -3295,7 +3425,17 @@
         "url": "https://thehill.com/policy/energy-environment/5516491-trump-epa-chemical-safety-review/"
       }
     ],
-    "last_substantive_update": "2026-09-10"
+    "last_substantive_update": "2026-09-10",
+    "glance": {
+      "who": "Lee Zeldin (EPA Administrator)",
+      "what": "Proposed letting chemical-risk reviews assume workers wear protective gear correctly",
+      "harm": {
+        "kind": "physical",
+        "certainty": "projected",
+        "who": "Workers exposed to toxic chemicals"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "epa-vehicle-pollution-standards-delay-2026",
@@ -3353,7 +3493,17 @@
       "estimated_impact": "Environmental and public-health groups say the delay means higher tailpipe pollution exposure for longer, increasing preventable illness tied to ozone and particulate matter.",
       "confidence_note": "The proposed delay's terms and the $1.7 billion figure come directly from EPA's own press release, corroborated by Reuters and multiple trade/policy outlets."
     },
-    "last_substantive_update": "2026-08-16"
+    "last_substantive_update": "2026-08-16",
+    "glance": {
+      "who": "Environmental Protection Agency",
+      "what": "Proposed a two-year delay of Biden-era vehicle pollution standards, to model year 2029",
+      "harm": {
+        "kind": "physical",
+        "certainty": "alleged",
+        "who": "People exposed to tailpipe pollution"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "esa-blanket-4d-rule-elimination-2025",
