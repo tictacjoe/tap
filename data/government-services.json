@@ -13103,7 +13103,17 @@
       "estimated_impact": "Individually documented family disruption (relocations, canceled moves, broken leases) occurred within a year federal civilian employment fell over 10%, though that broader figure reflects multiple combined workforce-reduction actions, not the RTO mandate alone.",
       "confidence_note": "Well-corroborated across the Washington Post, CNN, NPR, Reuters, and Federal News Network, each documenting different specific cases; Pew's headcount figures are an independent non-partisan calculation."
     },
-    "last_substantive_update": "2026-08-12"
+    "last_substantive_update": "2026-08-12",
+    "glance": {
+      "who": "OPM, implementing Trump's return-to-office memo",
+      "what": "Ordered remote federal workers to report on days' notice, some into offices without desks or Wi-Fi",
+      "harm": {
+        "kind": "livelihood",
+        "certainty": "documented",
+        "who": "Remote federal employees and families"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "federal-worker-mass-firing-mental-health-toll-2026",
@@ -13221,7 +13231,17 @@
     },
     "last_updated": "2026-09-10",
     "date_added": "2026-08-02",
-    "last_substantive_update": "2026-09-10"
+    "last_substantive_update": "2026-09-10",
+    "glance": {
+      "who": "OPM leadership (directive under Charles Ezell)",
+      "what": "Fired 25,000+ probationary workers; 95% of 300+ who responded to a survey report ongoing mental-health harm",
+      "harm": {
+        "kind": "physical",
+        "certainty": "projected",
+        "who": "Fired probationary federal workers"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "federal-workforce-cumulative-departures-2025-2026",
@@ -13312,7 +13332,17 @@
       }
     ],
     "last_updated": "2026-09-09",
-    "last_substantive_update": "2026-09-13"
+    "last_substantive_update": "2026-09-13",
+    "glance": {
+      "who": "OPM under Trump's workforce-reduction directive",
+      "what": "OPM's 'Fork in the Road' offer drove ~250,000-335,000 federal employees out in 2025, mostly voluntarily",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "documented",
+        "who": "Federal agencies' experienced workforce"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "fedramp-microsoft-gcc-high-approval-2026",
@@ -13376,7 +13406,17 @@
       "confidence_note": "Findings and the authorization decision are well-documented via ProPublica's own investigation of internal records; the specific causal role of FedRAMP staffing cuts is ProPublica's analytical framing, not an on-record FedRAMP admission."
     },
     "last_updated": "2026-08-30",
-    "last_substantive_update": "2026-08-30"
+    "last_substantive_update": "2026-08-30",
+    "glance": {
+      "who": "FedRAMP (General Services Administration)",
+      "what": "Authorized Microsoft's GCC High cloud though FedRAMP reviewers said they could not verify its security",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "documented",
+        "who": "Federal cloud-security oversight"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "fema-bric-program-elimination-reinstatement-2025",
@@ -13451,7 +13491,17 @@
       "estimated_impact": "Hundreds of in-progress community hardening projects were threatened for nearly a year before a court intervened; the restored program remains far smaller than before.",
       "confidence_note": "Well-corroborated across multiple outlets and the New York Attorney General's own litigation announcement."
     },
-    "last_substantive_update": "2026-08-09"
+    "last_substantive_update": "2026-08-09",
+    "glance": {
+      "who": "FEMA leadership (Trump administration)",
+      "what": "Canceled the $3.6B BRIC resilience-grant program; a court ordered it restored, and FEMA reinstated it with $1B",
+      "harm": {
+        "kind": "money",
+        "certainty": "documented",
+        "who": "Disaster-resilience projects nationwide"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "fema-capacity-collapse-texas-floods-trump2",
@@ -13770,7 +13820,17 @@
       }
     ],
     "last_updated": "2026-09-18",
-    "last_substantive_update": "2026-09-18"
+    "last_substantive_update": "2026-09-18",
+    "glance": {
+      "who": "Kristi Noem (DHS Secretary)",
+      "what": "A $100,000 spending sign-off rule delayed FEMA call-center funding during the deadly 2025 Texas floods",
+      "harm": {
+        "kind": "physical",
+        "certainty": "documented",
+        "who": "Texas flood survivors calling FEMA"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "fema-disaster-aid-partisan-approval-gap-trump2",
@@ -13888,7 +13948,17 @@
       }
     ],
     "last_updated": "2026-08-30",
-    "last_substantive_update": "2026-08-30"
+    "last_substantive_update": "2026-08-30",
+    "glance": {
+      "who": "Donald Trump (President)",
+      "what": "Approved 23% of Democratic-led states' disaster aid requests vs. 89% for Republican-led, per E&E News/POLITICO",
+      "harm": {
+        "kind": "livelihood",
+        "certainty": "documented",
+        "who": "Disaster survivors in denied states"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "fema-national-fire-academy-shutdown-2025",
@@ -13945,7 +14015,17 @@
       "estimated_impact": "Cut off the nation's main free federal firefighter/first-responder training pipeline for ~87 days with no advance notice, before bipartisan pressure led to reopening.",
       "confidence_note": "Well-corroborated across CBS News, Washington Post, FireRescue1, Maryland Matters, and WYPR, covering both the closure and the reopening."
     },
-    "last_substantive_update": "2026-08-10"
+    "last_substantive_update": "2026-08-10",
+    "glance": {
+      "who": "FEMA leadership (Trump administration)",
+      "what": "Shut down all National Fire Academy training for ~87 days before reopening after bipartisan pressure",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "documented",
+        "who": "Firefighter and responder training"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "fhfa-pulte-loyalist-installation-risky-policy-2025",
@@ -13992,7 +14072,17 @@
       "confidence_note": "HIGH confidence on the purge, named replacements, and policy pushes, directly sourced to Reuters' investigation (read via a wire-copy mirror after reuters.com itself could not be fetched); the exact total staff-termination count is not precisely quantified in sourcing reviewed."
     },
     "last_updated": "2026-09-12",
-    "last_substantive_update": "2026-09-12"
+    "last_substantive_update": "2026-09-12",
+    "glance": {
+      "who": "Bill Pulte (FHFA Director)",
+      "what": "Purged 14 Fannie Mae/Freddie Mac board members and hundreds of staff, installing loyalists; GAO probe open",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "documented",
+        "who": "Fannie, Freddie and FHFA independence"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "foreign-aid-rescissions-2026",
@@ -14047,7 +14137,17 @@
       "estimated_impact": "Long-standing bipartisan foreign aid tools used to counter Chinese/Russian influence and prevent humanitarian crises were permanently eliminated via a process that bypassed normal congressional objection procedures.",
       "confidence_note": "Well-documented via the NYT's own data review and independently corroborated Myanmar/Rohingya humanitarian reporting."
     },
-    "last_substantive_update": "2026-08-06"
+    "last_substantive_update": "2026-08-06",
+    "glance": {
+      "who": "Donald Trump (President)",
+      "what": "Cancelled billions in foreign aid by rescission, incl. ~90% of Africa economic aid, all Myanmar atrocity funds",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "documented",
+        "who": "Myanmar, Pacific and Africa aid programs"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "foreign-doctor-visa-delays-2026",
@@ -14114,7 +14214,17 @@
       "estimated_impact": "Hospital physician staffing is being reduced by a blanket visa-processing policy, not individualized security findings, with the harm concentrated in the communities most dependent on foreign-trained doctors.",
       "confidence_note": "Sourced to Politico's dedicated reporting; an aggregate national impact figure and broader independent corroboration weren't identified beyond that reporting."
     },
-    "last_substantive_update": "2026-08-30"
+    "last_substantive_update": "2026-08-30",
+    "glance": {
+      "who": "State Department (visa screening policy)",
+      "what": "Proclamation 10998 holds visa renewals for doctors from 39 countries; rural hospitals are losing physicians",
+      "harm": {
+        "kind": "livelihood",
+        "certainty": "alleged",
+        "who": "Rural hospitals and their patients"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "forest-service-firefighter-shortage-trump2",
@@ -14309,7 +14419,17 @@
       }
     ],
     "last_updated": "2026-09-10",
-    "last_substantive_update": "2026-09-10"
+    "last_substantive_update": "2026-09-10",
+    "glance": {
+      "who": "Brooke Rollins (Agriculture Secretary)",
+      "what": "Forest Service lost ~4,800 staff in 2025; its Chief's leaked memo contradicted 'fully staffed' claims",
+      "harm": {
+        "kind": "physical",
+        "certainty": "projected",
+        "who": "Communities at wildfire risk"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "forest-service-hq-relocation-2026",
@@ -14351,7 +14471,17 @@
       "estimated_impact": "The plan restructures the agency's nationwide management structure and risks losing experienced staff and institutional knowledge.",
       "confidence_note": "Sourced to Government Executive's reporting; implementation status and broader corroboration weren't confirmed beyond that single primary source as of this entry."
     },
-    "last_substantive_update": "2026-08-06"
+    "last_substantive_update": "2026-08-06",
+    "glance": {
+      "who": "U.S. Department of Agriculture",
+      "what": "Reportedly plans to move Forest Service headquarters to Utah and close all nine regional offices",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "alleged",
+        "who": "Forest Service experienced staff"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "forest-service-research-station-closures-2026",
@@ -14419,7 +14549,17 @@
       "confidence_note": "Strong: the closure plan and specific stations are corroborated across multiple independent outlets, and the agency's own counter-framing is included."
     },
     "last_updated": "2026-08-30",
-    "last_substantive_update": "2026-08-30"
+    "last_substantive_update": "2026-08-30",
+    "glance": {
+      "who": "U.S. Forest Service (USDA)",
+      "what": "Plans to close 57 of 77 research stations, incl. a Seattle wildfire-smoke lab, ahead of fire season",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "projected",
+        "who": "Wildfire and smoke research capacity"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "forest-service-trail-maintenance-collapse-2025",
@@ -14520,7 +14660,17 @@
       }
     ],
     "last_updated": "2026-09-11",
-    "last_substantive_update": "2026-09-11"
+    "last_substantive_update": "2026-09-11",
+    "glance": {
+      "who": "U.S. Forest Service under Chief Tom Schultz",
+      "what": "Internal report found trail maintenance down 22%, some districts with no trail crews, at a 15-year low",
+      "harm": {
+        "kind": "livelihood",
+        "certainty": "documented",
+        "who": "Trail users and forest visitors"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "fort-bliss-detention-contract-albers-donor-cronyism-2025",
