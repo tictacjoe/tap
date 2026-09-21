@@ -1,6 +1,9 @@
 """Browser tests for the Evidence drawer. The site is served from this repo's own directory on a
-free port. The drawer flag is on in index.html, so the tests load the page as shipped. Skips if
-Playwright or Chromium is missing."""
+free port. The drawer's behaviour is tested whatever state the shipped flag is in: when
+`evidenceDrawerEnabled` is false in index.html (as of 2026-09-21, at Joe's request) each test serves
+a copy of the page with the flag flipped on, so the hidden feature keeps its coverage; a separate test
+loads the page exactly as shipped and checks the drawer appears if and only if the flag is on.
+Skips if Playwright or Chromium is missing."""
 
 import functools
 import http.server
@@ -16,6 +19,7 @@ sync_api = pytest.importorskip("playwright.sync_api")
 
 SITE_DIR = pathlib.Path(__file__).parent
 FLAG_ON = "evidenceDrawerEnabled: true"
+FLAG_OFF = "evidenceDrawerEnabled: false"
 ENTRY_ID = "bondi-tirrell-ethics-jack-smith-purge-2025"
 OTHER_ID = "comer-epstein-probe-selective-subpoenas-2025-2026"
 # TAP's own dated recheck notes ("Re-verified 2026-08-18: ...", "Re-verification ...") are not
@@ -69,10 +73,15 @@ def _entry_evidence_counts():
             for e in entries}
 
 
-def _open_page(browser, site_url, context_args=None, block_checks=False):
+def _open_page(browser, site_url, context_args=None, block_checks=False, as_shipped=False):
     context = browser.new_context(**(context_args or {"viewport": {"width": 1280, "height": 900}}))
     page = context.new_page()
-    assert FLAG_ON in (SITE_DIR / "index.html").read_text(encoding="utf-8"), "the prosecution flag is expected to be on"
+    shipped = (SITE_DIR / "index.html").read_text(encoding="utf-8")
+    if not as_shipped and FLAG_ON not in shipped:
+        # The drawer is switched off in the shipped page: serve a copy with the prosecution flag on.
+        assert FLAG_OFF in shipped, "the prosecution drawer flag line changed; update this test"
+        flipped = shipped.replace(FLAG_OFF, FLAG_ON, 1)
+        page.route("**/index.html", lambda route: route.fulfill(body=flipped, content_type="text/html"))
     requests = []
     page.on("request", lambda r: requests.append(r.url) if "claim-checks.json" in r.url else None)
     if block_checks:
@@ -260,4 +269,19 @@ def test_the_most_covered_count_leaves_recheck_notes_out(browser, site_url):
         {description: "Added 2026-09-09 (cluster c0495): a later development that was re-verified"},
     ]}, {kind: "prosecution"})""")
     assert counted == 2   # the source and the "Added" item; the two notes do not count
+    assert errors == []
+
+
+def test_the_shipped_page_shows_the_drawer_in_an_expanded_card_only_when_the_flag_is_on(browser, site_url):
+    """Joe, 2026-09-21: "in the expanded cards, don't show the evidence drawer". The shipped page must
+    match its flag: no drawer in an expanded Cabinet-Level card while evidenceDrawerEnabled is false."""
+    shipped = (SITE_DIR / "index.html").read_text(encoding="utf-8")
+    flag_on = FLAG_ON in shipped
+    assert flag_on != (FLAG_OFF in shipped), "exactly one prosecution drawer flag line is expected"
+    page, requests, errors = _open_page(browser, site_url, as_shipped=True)
+    page.evaluate(_OPEN_ENTRY, ENTRY_ID)
+    card = page.locator(f'.entry[data-entry-id="{ENTRY_ID}"]')
+    assert card.locator(".entry-cols").count() == 1          # the card really expanded to its Details
+    assert card.locator(".evidence-drawer").count() == (1 if flag_on else 0)
+    assert requests == []                                     # the check file is never fetched at load
     assert errors == []

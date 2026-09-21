@@ -1466,9 +1466,12 @@
    `validate_glance.py <tracker> --require-all` passes and the live check in
    the Glance plan is done.
 
-   evidenceDrawerEnabled (Evidence drawer, Cabinet-Level only): on (turned on
-   2026-09-21 at the drawer plan's final rollout step); the drawer needs data/claim-checks.json
-   only for its check states (the item list works without it). */
+   evidenceDrawerEnabled (Evidence drawer, Cabinet-Level only): OFF -- turned on
+   2026-09-21 at the drawer plan's final rollout step, then turned off again the same day at
+   Joe's request ("in the expanded cards, don't show the evidence drawer"). Nothing else was
+   removed: the drawer code, data/claim-checks.json and the methodology page stay, and setting
+   this back to true shows the drawer again. The drawer needs data/claim-checks.json only for
+   its check states (the item list works without it). */
 const TRACKERS = {
   deregulation: {
     label: "Corporate Deregulation",
@@ -1495,7 +1498,7 @@ const TRACKERS = {
     statusField: "status",
     kind: "prosecution",
     glanceEnabled: true,
-    evidenceDrawerEnabled: true,
+    evidenceDrawerEnabled: false,
   },
   govservices: {
     label: "Government Service Redirection",
