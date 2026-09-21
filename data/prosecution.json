@@ -3135,8 +3135,8 @@
       },
       {
         "type": "news_report",
-        "description": "CNN and Bloomberg Law reporting confirms Tirrell's nearly 20-year DOJ career, his role advising Jack Smith on ethics matters including approval of Smith's $140,000 in outside legal-fee coverage, and that Bondi fired at least 20 DOJ employees with Jack Smith ties the same week",
-        "source_url": "https://www.cnn.com/2025/07/14/politics/justice-department-ethics-official-fired",
+        "description": "ABC News reporting that Bondi fired Tirrell along with at least 20 officials who supported Jack Smith's prosecutions of President Trump, and that Tirrell signed off on the $140,000 gift of legal services to Smith as compliant with applicable ethics laws",
+        "source_url": "https://abcnews.com/US/attorney-general-pam-bondi-fires-top-justice-department/story?id=123746598",
         "maps_to_element": "Tirrell's specific prior association with the Jack Smith prosecutions and the broader same-day purge"
       },
       {
@@ -3174,16 +3174,16 @@
     "rebuttal_anticipated": "DOJ leadership could argue that political appointees and their chosen staff serve at the Attorney General's discretion and that a change in administration routinely brings staff turnover, without needing to allege individual misconduct by any specific employee.",
     "comeback": "Tirrell was a career civil servant, not a political appointee serving at the AG's pleasure in the ordinary sense, and the ethics office he ran exists specifically to provide independent oversight of DOJ leadership's own conduct -- firing its head without stated cause, on the same day as a broader purge of Jack-Smith-associated staff, and doing so while the one structural check against improper removal (MSPB appeal) had been separately disabled, describes a coordinated effort to eliminate independent ethics oversight and retaliate against association with the Trump prosecutions, not routine staff turnover.",
     "cause": "[Interpretive, not sourced -- flag as analysis in debate] Illustrates a pattern of removing internal accountability structures (ethics oversight, the MSPB's appeal function) at the same time as retaliating against DOJ personnel connected to the Trump prosecutions -- related to, but a distinct mechanism from, this database's trump-inspectors-general-mass-firing-2025.json entry, which covers a different set of independent-oversight officials (agency Inspectors General) removed without the statutorily required congressional notice.",
-    "last_verified": "2026-09-02",
+    "last_verified": "2026-09-21",
     "date_added": "2026-08-10",
-    "confidence_note": "HIGH confidence on the firing, its unexplained nature, Tirrell's prior Jack Smith-ethics role, the same-day broader purge, and the subsequent lawsuit and MSPB-quorum problem -- corroborated across Washington Times, CNN, Rolling Stone, Bloomberg Law, Newsweek, and the ABA Journal's independent coverage of the lawsuit. The `contested: true` flag reflects that DOJ has not publicly stated a reason for the firing, leaving the retaliation inference well-supported by circumstance and timing rather than a DOJ admission. Re-verified 2026-08-19: added procedural detail on the pending motion to dismiss (MSPB-futility argument) and Tirrell's continued public writing on DOJ ethics policy; no ruling on the merits or the motion to dismiss identified as of this recheck. Re-verified 2026-08-26: no material change; motion to dismiss still pending, no ruling identified. Re-verified 2026-09-02 (moderate): the McGregor-cigars/FIFA-ball episode is HIGH confidence, sourced to Tirrell's own on-record account to the New York Times as reported by the Daily Beast, with DOJ's own spokesperson corroborating the outcome; no ruling on the motion to dismiss identified in this recheck either.",
+    "confidence_note": "HIGH confidence on the firing, its unexplained nature, Tirrell's prior Jack Smith-ethics role, the same-day broader purge, and the subsequent lawsuit and MSPB-quorum problem -- corroborated across Washington Times, CNN, Rolling Stone, Bloomberg Law, Newsweek, and the ABA Journal's independent coverage of the lawsuit. The `contested: true` flag reflects that DOJ has not publicly stated a reason for the firing, leaving the retaliation inference well-supported by circumstance and timing rather than a DOJ admission. Re-verified 2026-08-19: added procedural detail on the pending motion to dismiss (MSPB-futility argument) and Tirrell's continued public writing on DOJ ethics policy; no ruling on the merits or the motion to dismiss identified as of this recheck. Re-verified 2026-08-26: no material change; motion to dismiss still pending, no ruling identified. Re-verified 2026-09-02 (moderate): the McGregor-cigars/FIFA-ball episode is HIGH confidence, sourced to Tirrell's own on-record account to the New York Times as reported by the Daily Beast, with DOJ's own spokesperson corroborating the outcome; no ruling on the motion to dismiss identified in this recheck either. Update 2026-09-21 (correction): the second evidence item now cites ABC News' July 14, 2025 report, which states that Bondi fired at least 20 officials who supported Jack Smith's prosecutions and that Tirrell signed off on the $140,000 gift of legal services to Smith as compliant with ethics laws. The previous wording also cited CNN and Bloomberg Law and a nearly 20-year tenure, which reports give differently (nearly 20 years; 16 years), so the tenure clause was removed.",
     "pull_quote": "Months before he was fired, Tirrell's ethics office had to push back after Bondi's office sought to keep cigars gifted by UFC fighter Conor McGregor and a soccer ball gifted by FIFA — DOJ later confirmed the ball was kept only after payment and the cigars were destroyed.",
     "section_summaries": {
       "incident_summary": "Bondi fired DOJ's career ethics chief, who had previously overseen Jack Smith's ethics compliance, the same day she purged 20+ other Smith-associated staff; he sued, since the MSPB appeal process was separately disabled.",
       "confidence_note": "Well-corroborated firing, purge, and lawsuit facts; contested because DOJ gave no stated reason, so the retaliation motive rests on strong circumstantial timing rather than an admission."
     },
     "date_of_action": "2025-07-11 (Tirrell fired as DOJ ethics office director)",
-    "last_substantive_update": "2026-09-02",
+    "last_substantive_update": "2026-09-21",
     "glance": {
       "who": "Pam Bondi (Attorney General)",
       "what": "Fired DOJ's career ethics chief, who had advised Jack Smith, in a same-day purge; no reason given",
@@ -3192,7 +3192,7 @@
         "certainty": "alleged",
         "who": "DOJ's ethics office and fired staff"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-09-21"
     },
     "timeline": {
       "status": {
@@ -3203,6 +3203,17 @@
             "label": "Update",
             "text": "Update 2026-09-02: a November 17, 2025 Daily Beast account (sourced to Tirrell's own New York Times interview), predating this entry's date_added by nearly nine months and not previously incorporated, documents a specific pre-firing episode in which Tirrell's ethics office required Bondi's office to either pay for, return, or destroy gifted items (cigars from Conor McGregor, a soccer ball from FIFA) that federal employees are barred from keeping -- DOJ confirmed the ball was accepted (with payment) and the cigars destroyed. This is a concrete, named example of Tirrell's oversight authority being exercised directly against Bondi's own office, strengthening rather than replacing the entry's existing Jack Smith-association account of the firing's likely motive. No ruling on the pending motion to dismiss identified in this recheck.",
             "effective_date": "2026-09-02"
+          }
+        ]
+      },
+      "confidence_note": {
+        "base": "HIGH confidence on the firing, its unexplained nature, Tirrell's prior Jack Smith-ethics role, the same-day broader purge, and the subsequent lawsuit and MSPB-quorum problem -- corroborated across Washington Times, CNN, Rolling Stone, Bloomberg Law, Newsweek, and the ABA Journal's independent coverage of the lawsuit. The `contested: true` flag reflects that DOJ has not publicly stated a reason for the firing, leaving the retaliation inference well-supported by circumstance and timing rather than a DOJ admission. Re-verified 2026-08-19: added procedural detail on the pending motion to dismiss (MSPB-futility argument) and Tirrell's continued public writing on DOJ ethics policy; no ruling on the merits or the motion to dismiss identified as of this recheck. Re-verified 2026-08-26: no material change; motion to dismiss still pending, no ruling identified. Re-verified 2026-09-02 (moderate): the McGregor-cigars/FIFA-ball episode is HIGH confidence, sourced to Tirrell's own on-record account to the New York Times as reported by the Daily Beast, with DOJ's own spokesperson corroborating the outcome; no ruling on the motion to dismiss identified in this recheck either.",
+        "updates": [
+          {
+            "date": "2026-09-21",
+            "label": "Update",
+            "text": "Update 2026-09-21 (correction): the second evidence item now cites ABC News' July 14, 2025 report, which states that Bondi fired at least 20 officials who supported Jack Smith's prosecutions and that Tirrell signed off on the $140,000 gift of legal services to Smith as compliant with ethics laws. The previous wording also cited CNN and Bloomberg Law and a nearly 20-year tenure, which reports give differently (nearly 20 years; 16 years), so the tenure clause was removed.",
+            "effective_date": "2026-09-21"
           }
         ]
       }
@@ -4219,23 +4230,23 @@
       {
         "type": "news report",
         "description": "The Clintons agree to appear and testify in Feb. 2026, saying they had no knowledge of Epstein's crimes, after the contempt resolution advanced",
-        "source_url": "https://abcnews.com/Politics/house-committee-set-approve-resolutions-holding-clintons-contempt/story?id=129381902",
+        "source_url": "https://abcnews.com/Politics/clintons-agree-give-depositions-house-oversight-committee-epstein/story?id=129785193",
         "maps_to_element": "elements_required.0"
       }
     ],
     "rebuttal_anticipated": "Comer's committee describes this as a good-faith, bipartisan investigation reaching across four presidential administrations regardless of party, notes some subpoenas passed with bipartisan support, and points out that Acosta was in fact interviewed once his relevance was raised -- so no one was permanently shielded.",
     "comeback": "The initial ten-person subpoena list, assembled by the committee itself, excluded the one Trump-era Cabinet official with a direct, personally negotiated legal role in the underlying non-prosecution deal -- and he was added only after outside criticism from victims' counsel, not the committee's own initiative, and even then via a voluntary interview rather than the same compelled subpoena-and-deposition process applied to Democratic-aligned witnesses. Treating a Republican former official's cooperation as optional while pursuing contempt-of-Congress proceedings against Democrats who resisted the same demand is not evenhanded process, regardless of how the investigation is later described -- particularly since it ran in parallel with the administration's own DOJ facing separate, credible criticism (see [[doj-fbi-epstein-files-delay-presentation-2026]]) for stonewalling and mishandling its own Epstein-files disclosure obligations.",
     "cause": "[Interpretive, not sourced -- flag as analysis in debate] Illustrates a broader pattern in the administration's handling of the Epstein matter: directing investigative energy and public suspicion outward at political opponents while extending comparatively light-touch treatment to the administration's own personnel and processes most directly implicated in the underlying case.",
-    "confidence_note": "HIGH confidence -- the subpoena list, the Acosta omission and subsequent voluntary-interview arrangement, Comer's 'prime suspect' statement, and the Clintons' contempt vote and eventual testimony are all independently confirmed via CNN, NBC, Axios, Bloomberg, The Hill, PBS, and ABC News, plus the committee's own press releases. The characterization of the pattern as 'selective' is an interpretive framing, not itself independently adjudicated -- flagged as contested accordingly.",
+    "confidence_note": "HIGH confidence -- the subpoena list, the Acosta omission and subsequent voluntary-interview arrangement, Comer's 'prime suspect' statement, and the Clintons' contempt vote and eventual testimony are all independently confirmed via CNN, NBC, Axios, Bloomberg, The Hill, PBS, and ABC News, plus the committee's own press releases. The characterization of the pattern as 'selective' is an interpretive framing, not itself independently adjudicated -- flagged as contested accordingly. Update 2026-09-21 (correction): the source for the February 2026 agreement to testify (ninth evidence item) was re-pointed to ABC News' February 3, 2026 report, which states that Hillary Clinton would testify on February 26 and Bill Clinton on February 27 after the committee advanced the contempt resolutions and that both deny any knowledge of Epstein's crimes; the previously cited January 21 ABC article predates the agreement. The description is unchanged.",
     "pull_quote": "Comer publicly called Bill Clinton a “prime suspect” in the probe, citing unverified reports of island visits — while applying no comparable public pressure to Acosta, the Republican official who actually brokered the 2008 deal.",
-    "last_verified": "2026-09-09",
+    "last_verified": "2026-09-21",
     "date_added": "2026-09-09",
     "section_summaries": {
       "incident_summary": "Comer's committee subpoenaed DOJ, Maxwell and 10 mostly-Democratic figures over Epstein but initially left off Acosta, the Trump-era official who brokered the 2008 deal, adding him only after criticism and only as a voluntary interview.",
       "confidence_note": "Well-documented via CNN, NBC, Axios, Bloomberg, PBS/ABC and the committee's own releases; the 'selective' framing is interpretive and flagged as contested."
     },
     "date_of_action": "2025-07-25 (Oversight Committee subpoenas Maxwell/DOJ) through 2026-02 (Clintons testify after contempt threat)",
-    "last_substantive_update": "2026-09-09",
+    "last_substantive_update": "2026-09-21",
     "glance": {
       "who": "James Comer (House Oversight Chairman)",
       "what": "Subpoenaed 10 mostly-Democratic figures in the Epstein probe but let Acosta appear voluntarily",
@@ -4244,7 +4255,20 @@
         "certainty": "alleged",
         "who": "Even-handed congressional oversight"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-09-21"
+    },
+    "timeline": {
+      "confidence_note": {
+        "base": "HIGH confidence -- the subpoena list, the Acosta omission and subsequent voluntary-interview arrangement, Comer's 'prime suspect' statement, and the Clintons' contempt vote and eventual testimony are all independently confirmed via CNN, NBC, Axios, Bloomberg, The Hill, PBS, and ABC News, plus the committee's own press releases. The characterization of the pattern as 'selective' is an interpretive framing, not itself independently adjudicated -- flagged as contested accordingly.",
+        "updates": [
+          {
+            "date": "2026-09-21",
+            "label": "Update",
+            "text": "Update 2026-09-21 (correction): the source for the February 2026 agreement to testify (ninth evidence item) was re-pointed to ABC News' February 3, 2026 report, which states that Hillary Clinton would testify on February 26 and Bill Clinton on February 27 after the committee advanced the contempt resolutions and that both deny any knowledge of Epstein's crimes; the previously cited January 21 ABC article predates the agreement. The description is unchanged.",
+            "effective_date": "2026-09-21"
+          }
+        ]
+      }
     }
   },
   {
@@ -14809,8 +14833,8 @@
       },
       {
         "type": "court_filing",
-        "description": "NBC News's reporting identifying the named plaintiffs (Garman, Toleman, Ball), their 'exemplary' service records, and the proposed class of at least 50 former employees",
-        "source_url": "https://www.nbcnews.com/politics/justice-department/ex-fbi-agents-assigned-trump-cases-sue-kash-patel-unlawful-firings-rcna264462",
+        "description": "CBS News's reporting identifying the named plaintiffs (Jamie Garman, Blaire Toleman, Michelle Ball) and a proposed class of at least 50 former agents, a number the suit says is expected to grow",
+        "source_url": "https://www.cbsnews.com/news/former-fbi-agents-trump-2020-election-probe-sue-patel-bondi-over-firing/",
         "maps_to_element": "Named plaintiffs and proposed class scope"
       },
       {
@@ -14848,16 +14872,16 @@
     "rebuttal_anticipated": "Likely defense: personnel decisions regarding FBI agents, including for performance, judgment, or conduct concerns, fall within the Director's normal management authority, the plaintiffs' characterization of their own terminations as purely retaliatory is a one-sided allegation not yet tested against DOJ's actual stated reasons in court, and any grand jury material release, if it occurred, could reflect an isolated administrative error rather than an authorized, deliberate agency decision.",
     "comeback": "The specific concern distinguishing this from an ordinary personnel dispute is the scale (a proposed class of 50+ former employees, not an isolated firing) and the specificity of the alleged common thread (work on the single investigation that led directly to Trump's own indictment), consistent with the broader, independently documented pattern of Patel's FBI purges already tracked elsewhere in this database -- and the grand jury secrecy allegation, if substantiated, would represent a separate, freestanding legal violation regardless of how the underlying firings are ultimately resolved.",
     "cause": "[Interpretive, not sourced -- flag as analysis in debate] Direct legal-accountability follow-on to the staffing purges documented in this tracker's Government Services database (patel-fbi-field-office-purge-2025-2026.json), which already establishes the broader pattern of Patel removing personnel connected to Trump-related investigations.",
-    "last_verified": "2026-09-02",
+    "last_verified": "2026-09-21",
     "date_added": "2026-08-06",
-    "confidence_note": "HIGH confidence on the lawsuit's filing, named plaintiffs, core constitutional claims, and its connection to Arctic Frost -- independently corroborated across The Hill, NBC News, and CBS News, all reporting on the complaint's own contents. MODERATE confidence on the grand jury secrecy violation allegation specifically, since it is the plaintiffs' own claim in the complaint, not yet an independently confirmed or adjudicated fact. Re-verified 2026-08-19: no material change; still no ruling identified on this suit specifically. Re-verified 2026-08-26: no material change; still no ruling identified on either this suit or the adjacent Doe v. Patel suit despite its briefing schedule having concluded. Re-verified 2026-09-02 (moderate): confirmed Doe 1 v. Patel's pending motion-to-dismiss status directly against Civil Rights Litigation Clearinghouse's docket tracking (updated today). Garman's own docket could not be independently confirmed since CourtListener 403'd to automated access; its briefing timeline and related-case status rest on WebSearch synthesis and a legal-blog secondary source, not a primary docket -- treat with correspondingly lower confidence than the Doe 1 status. The amicus-brief filings are corroborated directly against Campaign Legal Center's own case page.",
+    "confidence_note": "HIGH confidence on the lawsuit's filing, named plaintiffs, core constitutional claims, and its connection to Arctic Frost -- independently corroborated across The Hill, NBC News, and CBS News, all reporting on the complaint's own contents. MODERATE confidence on the grand jury secrecy violation allegation specifically, since it is the plaintiffs' own claim in the complaint, not yet an independently confirmed or adjudicated fact. Re-verified 2026-08-19: no material change; still no ruling identified on this suit specifically. Re-verified 2026-08-26: no material change; still no ruling identified on either this suit or the adjacent Doe v. Patel suit despite its briefing schedule having concluded. Re-verified 2026-09-02 (moderate): confirmed Doe 1 v. Patel's pending motion-to-dismiss status directly against Civil Rights Litigation Clearinghouse's docket tracking (updated today). Garman's own docket could not be independently confirmed since CourtListener 403'd to automated access; its briefing timeline and related-case status rest on WebSearch synthesis and a legal-blog secondary source, not a primary docket -- treat with correspondingly lower confidence than the Doe 1 status. The amicus-brief filings are corroborated directly against Campaign Legal Center's own case page. Update 2026-09-21 (correction): the second evidence item now cites CBS News' March 31, 2026 report, which names the plaintiffs (Garman, Toleman, Ball) and a proposed class of at least 50 former agents. The NBC News article previously cited (March 20, 2026) covers the earlier filing by two anonymous plaintiffs and does not name them; the description of their service records as exemplary was removed because it appears only in the Campaign Legal Center's own case summary.",
     "pull_quote": "The FBI Agents Association argued in a 31-page amicus brief that FBI agents' at-will status cannot be read to permit firing based on a lawful assignment.",
     "section_summaries": {
       "incident_summary": "Former FBI agents Garman, Toleman, and Ball sued Patel and Bondi, alleging they and a proposed class of 50+ others were illegally fired -- violating their First and Fifth Amendment rights -- for having worked on Arctic Frost, the investigation that led to Trump's 2023 indictment, and separately alleging the FBI unlawfully disclosed grand-jury-protected Arctic Frost materials.",
       "confidence_note": "The lawsuit's filing and core claims are well-corroborated across multiple outlets reporting on the complaint itself; the underlying allegations have not been tested in court or independently adjudicated."
     },
     "date_of_action": "2026-03-31 (source publish date, event date not stated in reporting)",
-    "last_substantive_update": "2026-09-02",
+    "last_substantive_update": "2026-09-21",
     "glance": {
       "who": "Kash Patel (FBI) and Pam Bondi (then-AG)",
       "what": "Allegedly fired career agents for working on Arctic Frost and leaked grand-jury material, per a lawsuit",
@@ -14866,7 +14890,7 @@
         "certainty": "alleged",
         "who": "FBI agents who worked on Arctic Frost"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-09-21"
     },
     "timeline": {
       "status": {
@@ -14877,6 +14901,17 @@
             "label": "Update",
             "text": "Update 2026-09-02: no ruling on the merits or on either suit's motion to dismiss identified. Newly documented: Garman v. Patel was formally noticed as a related case to Doe 1 v. Patel, and five outside parties -- including the FBI Agents Association and a coalition of First Amendment scholars represented by the Campaign Legal Center and Yale's Media Freedom and Information Access Clinic -- filed amicus briefs in late July 2026 supporting the plaintiffs across both suits.",
             "effective_date": "2026-09-02"
+          }
+        ]
+      },
+      "confidence_note": {
+        "base": "HIGH confidence on the lawsuit's filing, named plaintiffs, core constitutional claims, and its connection to Arctic Frost -- independently corroborated across The Hill, NBC News, and CBS News, all reporting on the complaint's own contents. MODERATE confidence on the grand jury secrecy violation allegation specifically, since it is the plaintiffs' own claim in the complaint, not yet an independently confirmed or adjudicated fact. Re-verified 2026-08-19: no material change; still no ruling identified on this suit specifically. Re-verified 2026-08-26: no material change; still no ruling identified on either this suit or the adjacent Doe v. Patel suit despite its briefing schedule having concluded. Re-verified 2026-09-02 (moderate): confirmed Doe 1 v. Patel's pending motion-to-dismiss status directly against Civil Rights Litigation Clearinghouse's docket tracking (updated today). Garman's own docket could not be independently confirmed since CourtListener 403'd to automated access; its briefing timeline and related-case status rest on WebSearch synthesis and a legal-blog secondary source, not a primary docket -- treat with correspondingly lower confidence than the Doe 1 status. The amicus-brief filings are corroborated directly against Campaign Legal Center's own case page.",
+        "updates": [
+          {
+            "date": "2026-09-21",
+            "label": "Update",
+            "text": "Update 2026-09-21 (correction): the second evidence item now cites CBS News' March 31, 2026 report, which names the plaintiffs (Garman, Toleman, Ball) and a proposed class of at least 50 former agents. The NBC News article previously cited (March 20, 2026) covers the earlier filing by two anonymous plaintiffs and does not name them; the description of their service records as exemplary was removed because it appears only in the Campaign Legal Center's own case summary.",
+            "effective_date": "2026-09-21"
           }
         ]
       }
@@ -15551,7 +15586,7 @@
       {
         "type": "public_record",
         "description": "Senate Judiciary Committee Democrats led by Sen. Adam Schiff sent a letter to Acting Attorney General Todd Blanche demanding information on his and SDNY U.S. Attorney Jay Clayton's roles in the subpoenas, writing that DOJ's conduct was \"seemingly directed by President Trump after he was upset by negative reporting,\" and noting the subpoenas sought records dating back to January 1, 2026 -- broader than DOJ's own guidelines allow for information that must be \"essential\" to an investigation.",
-        "source_url": "https://www.judiciary.senate.gov/press/dem/releases/senate-judiciary-democrats-demand-todd-blanche-answer-to-dozens-of-oversight-requests-ignored-by-justice-department",
+        "source_url": "https://www.welch.senate.gov/welch-joins-schiff-senate-judiciary-committee-democrats-in-probing-justice-department-subpoenas-of-new-york-times-journalists-in-air-force-one-scandal/",
         "maps_to_element": "Accountable official's response -- congressional oversight into whether the subpoenas were White House-directed"
       },
       {
@@ -15577,16 +15612,16 @@
     "rebuttal_anticipated": "Likely defense: leaks of information touching on presidential security and travel logistics are a legitimate, serious concern regardless of the underlying story's political sensitivity, and the FBI Director personally engaging on a high-priority national-security-adjacent matter is not inherently improper.",
     "comeback": "The specific facts distinguishing this from a routine leak investigation are the White House's direct tasking of the FBI Director, the investigation being run from the White House building itself rather than FBI or DOJ facilities, and the speed and personal scale of the response (an eight-hour, director-led effort producing home-delivered subpoenas within days) -- all following a story that embarrassed rather than genuinely endangered the president, since the security concern being reported was itself the news, not a secret compromised by the reporting.",
     "cause": "[Interpretive, not sourced -- flag as analysis in debate] Part of the same broader pattern this tracker documents elsewhere (Blanche/DOJ's May 2026 WaPo/WSJ subpoenas, Hegseth's July 2026 Pentagon-DOJ leak task force) of leak investigations increasingly directed at identifying sources for stories embarrassing to the president, using DOJ/FBI subpoena power against journalists themselves.",
-    "last_verified": "2026-09-02",
+    "last_verified": "2026-09-21",
     "date_added": "2026-07-27",
-    "confidence_note": "HIGH confidence -- corroborated extensively across independent outlets (NPR, CNN, Philadelphia Inquirer, Irish Star, New York Times) including direct on-record detail (Patel's canceled Chicago trip, the eight-hour White House timeframe) that would be difficult to fabricate and has not been disputed by the White House or FBI. The July 23, 2026 subpoena withdrawal is independently reported by the New York Times, the subpoenas' target. Re-verified 2026-08-05: the July 23 withdrawal circumstances (Judge Subramanian's specific procedural objection, DOJ's on-record refusal to concede error) and the subsequent Senate Judiciary Democrats oversight letter are both independently corroborated (NPR, Senate Judiciary Committee official release) and add detail without changing the entry's core facts. Reordered 2026-08-06 (chronology cleanup, no new facts): three July 11, 2026 evidence items had been placed after July 12-15, 2026 items; no facts were added, removed, or altered, only reordered to match actual publication dates. Re-verified 2026-08-19: added Jay Clayton's own July 15, 2026 confirmation-hearing testimony, which predates this entry's Aug 6, 2026 last_verified by three weeks and had not been incorporated -- the one on-record statement, evasive as it is, from the prosecutor at the center of the Senate Judiciary Democrats' still-unanswered oversight letter. Re-verified 2026-08-26: no material change -- no DOJ response to the Senate Judiciary Democrats' oversight letter has been identified. Re-verified 2026-09-02: no material change -- still no DOJ response identified.",
+    "confidence_note": "HIGH confidence -- corroborated extensively across independent outlets (NPR, CNN, Philadelphia Inquirer, Irish Star, New York Times) including direct on-record detail (Patel's canceled Chicago trip, the eight-hour White House timeframe) that would be difficult to fabricate and has not been disputed by the White House or FBI. The July 23, 2026 subpoena withdrawal is independently reported by the New York Times, the subpoenas' target. Re-verified 2026-08-05: the July 23 withdrawal circumstances (Judge Subramanian's specific procedural objection, DOJ's on-record refusal to concede error) and the subsequent Senate Judiciary Democrats oversight letter are both independently corroborated (NPR, Senate Judiciary Committee official release) and add detail without changing the entry's core facts. Reordered 2026-08-06 (chronology cleanup, no new facts): three July 11, 2026 evidence items had been placed after July 12-15, 2026 items; no facts were added, removed, or altered, only reordered to match actual publication dates. Re-verified 2026-08-19: added Jay Clayton's own July 15, 2026 confirmation-hearing testimony, which predates this entry's Aug 6, 2026 last_verified by three weeks and had not been incorporated -- the one on-record statement, evasive as it is, from the prosecutor at the center of the Senate Judiciary Democrats' still-unanswered oversight letter. Re-verified 2026-08-26: no material change -- no DOJ response to the Senate Judiciary Democrats' oversight letter has been identified. Re-verified 2026-09-02: no material change -- still no DOJ response identified. Update 2026-09-21 (correction): the source for the Senate Judiciary Democrats' letter to Blanche (ninth evidence item) was re-pointed from a July 1, 2026 Senate Judiciary press release, which predates the subpoenas and does not mention them, to the Welch/Schiff release of July 28, 2026, which describes the letter, the quoted language, and the January 1, 2026 records demand. The description is unchanged.",
     "pull_quote": "A federal judge questioned whether DOJ had completed required investigative steps before issuing the subpoenas; DOJ withdrew them rather than have them quashed, but a DOJ spokesperson publicly disputed the ruling, saying it was “blocking the grand jury from receiving core evidence in a national security investigation.”",
     "section_summaries": {
       "incident_summary": "The White House directed FBI Director Patel to personally run a leak probe from the White House itself after NYT reporting embarrassed Trump over Air Force One security, producing home-delivered subpoenas to reporters within days; DOJ later withdrew the subpoenas under judicial pressure and now faces a Senate Judiciary Democrats oversight inquiry into whether the White House directed them.",
       "confidence_note": "Extensively corroborated across independent outlets with specific, undisputed on-record detail, including the judge's stated reasoning for the withdrawal and the Senate Judiciary Committee's own public release on its oversight letter."
     },
     "date_of_action": "2026-07-11 (grand jury subpoenas issued to NYT reporters)",
-    "last_substantive_update": "2026-09-02",
+    "last_substantive_update": "2026-09-21",
     "glance": {
       "who": "Kash Patel (FBI Director)",
       "what": "Ran a White House-directed leak probe that subpoenaed five NYT reporters; DOJ withdrew the subpoenas July 23",
@@ -15595,7 +15630,7 @@
         "certainty": "documented",
         "who": "New York Times reporters"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-09-21"
     },
     "timeline": {
       "status": {
@@ -15606,6 +15641,17 @@
             "label": "Update",
             "text": "Update 2026-08-19: at his July 15, 2026 confirmation hearing to be Director of National Intelligence, Clayton testified his office 'followed the protocols' and took 'the least intrusive possible' steps, but repeatedly declined to say whether the White House ordered the subpoenas or whether he discussed them with the White House beforehand -- predating this entry's own August 6, 2026 last_verified by three weeks and never previously incorporated, despite bearing directly on the entry's central disputed question.",
             "effective_date": "2026-08-19"
+          }
+        ]
+      },
+      "confidence_note": {
+        "base": "HIGH confidence -- corroborated extensively across independent outlets (NPR, CNN, Philadelphia Inquirer, Irish Star, New York Times) including direct on-record detail (Patel's canceled Chicago trip, the eight-hour White House timeframe) that would be difficult to fabricate and has not been disputed by the White House or FBI. The July 23, 2026 subpoena withdrawal is independently reported by the New York Times, the subpoenas' target. Re-verified 2026-08-05: the July 23 withdrawal circumstances (Judge Subramanian's specific procedural objection, DOJ's on-record refusal to concede error) and the subsequent Senate Judiciary Democrats oversight letter are both independently corroborated (NPR, Senate Judiciary Committee official release) and add detail without changing the entry's core facts. Reordered 2026-08-06 (chronology cleanup, no new facts): three July 11, 2026 evidence items had been placed after July 12-15, 2026 items; no facts were added, removed, or altered, only reordered to match actual publication dates. Re-verified 2026-08-19: added Jay Clayton's own July 15, 2026 confirmation-hearing testimony, which predates this entry's Aug 6, 2026 last_verified by three weeks and had not been incorporated -- the one on-record statement, evasive as it is, from the prosecutor at the center of the Senate Judiciary Democrats' still-unanswered oversight letter. Re-verified 2026-08-26: no material change -- no DOJ response to the Senate Judiciary Democrats' oversight letter has been identified. Re-verified 2026-09-02: no material change -- still no DOJ response identified.",
+        "updates": [
+          {
+            "date": "2026-09-21",
+            "label": "Update",
+            "text": "Update 2026-09-21 (correction): the source for the Senate Judiciary Democrats' letter to Blanche (ninth evidence item) was re-pointed from a July 1, 2026 Senate Judiciary press release, which predates the subpoenas and does not mention them, to the Welch/Schiff release of July 28, 2026, which describes the letter, the quoted language, and the January 1, 2026 records demand. The description is unchanged.",
+            "effective_date": "2026-09-21"
           }
         ]
       }
