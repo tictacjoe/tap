@@ -1455,8 +1455,8 @@
    `validate_glance.py <tracker> --require-all` passes and the live check in
    the Glance plan is done.
 
-   evidenceDrawerEnabled (Evidence drawer, Cabinet-Level only): off until the
-   drawer plan's final rollout step; the drawer needs data/claim-checks.json
+   evidenceDrawerEnabled (Evidence drawer, Cabinet-Level only): on (turned on
+   2026-09-21 at the drawer plan's final rollout step); the drawer needs data/claim-checks.json
    only for its check states (the item list works without it). */
 const TRACKERS = {
   deregulation: {
@@ -1484,7 +1484,7 @@ const TRACKERS = {
     statusField: "status",
     kind: "prosecution",
     glanceEnabled: true,
-    evidenceDrawerEnabled: false,
+    evidenceDrawerEnabled: true,
   },
   govservices: {
     label: "Government Service Redirection",

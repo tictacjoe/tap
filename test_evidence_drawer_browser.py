@@ -1,7 +1,6 @@
 """Browser tests for the Evidence drawer. The site is served from this repo's own directory on a
-free port; the drawer flag is off in index.html, so each test serves a copy of the page with the
-Cabinet-Level flag flipped on (index.html itself is not touched). Skips if Playwright or Chromium
-is missing."""
+free port. The drawer flag is on in index.html, so the tests load the page as shipped. Skips if
+Playwright or Chromium is missing."""
 
 import functools
 import http.server
@@ -14,7 +13,6 @@ import pytest
 sync_api = pytest.importorskip("playwright.sync_api")
 
 SITE_DIR = pathlib.Path(__file__).parent
-FLAG_OFF = "evidenceDrawerEnabled: false"
 FLAG_ON = "evidenceDrawerEnabled: true"
 ENTRY_ID = "bondi-tirrell-ethics-jack-smith-purge-2025"
 OTHER_ID = "comer-epstein-probe-selective-subpoenas-2025-2026"
@@ -67,10 +65,7 @@ def _entry_evidence_counts():
 def _open_page(browser, site_url, context_args=None, block_checks=False):
     context = browser.new_context(**(context_args or {"viewport": {"width": 1280, "height": 900}}))
     page = context.new_page()
-    original = (SITE_DIR / "index.html").read_text(encoding="utf-8")
-    assert FLAG_OFF in original, "the prosecution flag line changed; update this test"
-    flipped = original.replace(FLAG_OFF, FLAG_ON, 1)
-    page.route("**/index.html", lambda route: route.fulfill(body=flipped, content_type="text/html"))
+    assert FLAG_ON in (SITE_DIR / "index.html").read_text(encoding="utf-8"), "the prosecution flag is expected to be on"
     requests = []
     page.on("request", lambda r: requests.append(r.url) if "claim-checks.json" in r.url else None)
     if block_checks:
