@@ -20,7 +20,7 @@ const api = (0, eval)(
   extractFunction(source, "evidence-drawer") + "\n" +
   "({ CLAIM_STATE_LABELS, CLAIM_STATE_SHORT, EVIDENCE_NOTE_TEXT, EVIDENCE_UNAVAILABLE_TEXT, claimStateOf, " +
   "evidenceTallyText, claimShortDate, evidenceHostOf, buildEvidenceItemHtml, buildEvidenceItemsHtml, " +
-  "buildEvidenceDrawerHtml });");
+  "buildEvidenceDrawerHtml, isRecheckNote });");
 
 const hl = (text) => text || "";
 const ITEM = { type: "news_report", description: "CNN reporting on the ruling", source_url: "https://www.npr.org/story" };
@@ -185,4 +185,82 @@ test("a check whose state is an inherited property name renders as unchecked", (
   assert(html.includes("evidence-state-unchecked"), html.slice(0, 200));
   assert(html.includes("Not yet checked"));
   assert(!html.includes("function Object"));
+});
+
+// --- TAP's own recheck notes are not sources: the drawer leaves them out -------------------
+// (decision 2026-09-21). Checks stay keyed by an item's ORIGINAL position in entry.evidence,
+// so skipping a note never renumbers the items after it.
+const NOTE = (text) => ({ type: "note", description: text, source_url: "" });
+const REAL = (text, over) => ({ ...ITEM, description: text, ...over });
+
+test("isRecheckNote matches 'Re-verified' and 'Re-verification' at the start only", () => {
+  assert.equal(api.isRecheckNote(NOTE("Re-verified 2026-08-18: no new litigation resolution.")), true);
+  assert.equal(api.isRecheckNote(NOTE("  re-verification 2026-08-20 found no change.")), true);
+  assert.equal(api.isRecheckNote(NOTE("Added 2026-08-01 (fold): a real source's description.")), false);
+  assert.equal(api.isRecheckNote(REAL("The ruling was re-verified by two outlets.")), false);
+  assert.equal(api.isRecheckNote(NOTE("Re-verifying the docket later.")), false);
+  assert.equal(api.isRecheckNote({}), false);
+  assert.equal(api.isRecheckNote(null), false);
+  assert.equal(api.isRecheckNote(undefined), false);
+});
+
+test("the drawer skips recheck notes but keeps the original position for the check lookup", () => {
+  const entry = { id: "e", evidence: [
+    NOTE("Re-verified 2026-08-18: nothing new."), NOTE("Re-verification 2026-08-19: nothing new."),
+    REAL("first source"), REAL("second source"), NOTE("Re-verified 2026-08-20: still nothing."),
+  ] };
+  // Checks keyed by ORIGINAL position: 2 -> first source, 3 -> second source; 0 is a note's.
+  const html = api.buildEvidenceDrawerHtml(entry, CFG, hl,
+    { loadState: "loaded", checks: { "0": check({ state: "partly" }), "2": check({ state: "supports" }), "3": check({ state: "unopened", why: "" }) } });
+  assert.equal((html.match(/class="evidence-item /g) || []).length, 2);
+  assert(!html.includes("Re-verif"));
+  const items = html.split('<li ').slice(1);
+  assert(items[0].includes("first source") && items[0].includes("evidence-state-supports"), items[0]);
+  assert(items[1].includes("second source") && items[1].includes("evidence-state-unopened"), items[1]);
+});
+
+test("the header count and the tally count listed items only", () => {
+  const entry = { id: "e", evidence: [
+    NOTE("Re-verified 2026-08-18: nothing new."), REAL("a"), REAL("b"), NOTE("Re-verification 2026-08-19: nothing new."),
+  ] };
+  const collapsed = api.buildEvidenceDrawerHtml(entry, CFG, hl);
+  assert(collapsed.includes("Evidence · 2 items"), collapsed);
+  // The note's own check (position 0, "partly") must not reach the tally.
+  const html = api.buildEvidenceDrawerHtml(entry, CFG, hl,
+    { loadState: "loaded", checks: { "0": check({ state: "partly" }), "1": check(), "2": check({ state: "unopened" }) } });
+  assert(html.includes('<span class="evidence-tally">1 support · 1 couldn\'t open</span>'), html);
+  // One listed item reads "1 item".
+  const one = { id: "o", evidence: [NOTE("Re-verified 2026-08-18: nothing new."), REAL("only")] };
+  assert(api.buildEvidenceDrawerHtml(one, CFG, hl).includes("Evidence · 1 item<"));
+});
+
+test("evidenceTallyText takes an optional list of listed positions and defaults to all", () => {
+  const checks = { "0": check({ state: "partly" }), "1": check(), "2": check() };
+  assert.equal(api.evidenceTallyText(3, checks), "2 support · 1 partly");
+  assert.equal(api.evidenceTallyText(3, checks, [1, 2]), "2 support");
+  assert.equal(api.evidenceTallyText(3, checks, [0, 1, 2]), "2 support · 1 partly");
+  assert.equal(api.evidenceTallyText(3, null, [1]), "");
+});
+
+test("a mid-text 're-verified' is not a note, so that item is listed", () => {
+  const entry = { id: "e", evidence: [REAL("Court records show the order was re-verified in May.")] };
+  const html = api.buildEvidenceDrawerHtml(entry, CFG, hl);
+  assert(html.includes("Evidence · 1 item<"));
+  assert.equal((html.match(/class="evidence-item /g) || []).length, 1);
+});
+
+test("an entry whose evidence is all recheck notes gets no drawer", () => {
+  const entry = { id: "e", evidence: [NOTE("Re-verified 2026-08-18: nothing new."), NOTE("Re-verification 2026-08-19: nothing new.")] };
+  assert.equal(api.buildEvidenceDrawerHtml(entry, CFG, hl), "");
+  assert.equal(api.buildEvidenceDrawerHtml(entry, CFG, hl, { loadState: "loaded", checks: {} }), "");
+});
+
+test("an entry with no recheck notes renders exactly as before", () => {
+  const checks = { "0": check(), "1": check({ state: "partly", why: "part" }) };
+  const html = api.buildEvidenceDrawerHtml(ENTRY, CFG, hl, { loadState: "loaded", checks });
+  assert(html.includes("Evidence · 3 items"));
+  assert(html.includes('<span class="evidence-tally">1 support · 1 partly · 1 not yet checked</span>'));
+  const items = html.split('<li ').slice(1);
+  assert.equal(items.length, 3);
+  assert(items[0].includes("CNN reporting") && items[1].includes("second") && items[2].includes("third"));
 });

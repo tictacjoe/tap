@@ -6,6 +6,7 @@ import functools
 import http.server
 import json
 import pathlib
+import re
 import threading
 import time
 
@@ -17,6 +18,10 @@ SITE_DIR = pathlib.Path(__file__).parent
 FLAG_ON = "evidenceDrawerEnabled: true"
 ENTRY_ID = "bondi-tirrell-ethics-jack-smith-purge-2025"
 OTHER_ID = "comer-epstein-probe-selective-subpoenas-2025-2026"
+# TAP's own dated recheck notes ("Re-verified 2026-08-18: ...", "Re-verification ...") are not
+# sources and the drawer does not list them. Same rule as isRecheckNote() in index.html: only a
+# description that BEGINS with the word counts.
+RECHECK_NOTE = re.compile(r"^\s*Re-verif(?:ied|ication)\b", re.I)
 
 _SELECT_VIEW = """(value) => {
     const select = document.getElementById('tabs');
@@ -60,7 +65,8 @@ def browser():
 
 def _entry_evidence_counts():
     entries = json.loads((SITE_DIR / "data" / "prosecution.json").read_text())
-    return {e["id"]: len(e["evidence"]) for e in entries}
+    return {e["id"]: sum(1 for item in e["evidence"] if not RECHECK_NOTE.match(item.get("description") or ""))
+            for e in entries}
 
 
 def _open_page(browser, site_url, context_args=None, block_checks=False):

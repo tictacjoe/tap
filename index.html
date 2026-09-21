@@ -3366,10 +3366,28 @@ function claimStateOf(checks, index) {
   return claimStateFrom(checks && checks[String(index)]);
 }
 
-function evidenceTallyText(itemCount, checks) {
+// TAP's own dated recheck notes ("Re-verified 2026-08-18: no new ..." / "Re-verification ...")
+// sit in entry.evidence but are not sources, so the drawer leaves them out. Only a description
+// that BEGINS with the word counts; one that mentions "re-verified" later in its text is a source.
+// The published check file still holds a check for every note; it is simply never shown.
+function isRecheckNote(item) {
+  return /^\s*Re-verif(?:ied|ication)\b/i.test((item && item.description) || "");
+}
+
+// Original positions in entry.evidence of the items the drawer lists (everything but the notes).
+// Checks are keyed by ORIGINAL position, so these positions, not a renumbering, index the checks.
+function listedEvidencePositions(evidence) {
+  const positions = [];
+  (evidence || []).forEach((item, i) => { if (!isRecheckNote(item)) positions.push(i); });
+  return positions;
+}
+
+// `positions` (optional): the original positions to count; defaults to all itemCount of them.
+function evidenceTallyText(itemCount, checks, positions) {
   if (checks == null) return "";
   const counts = {};
-  for (let i = 0; i < itemCount; i++) {
+  const listed = positions || Array.from({ length: itemCount }, (_, i) => i);
+  for (const i of listed) {
     const state = claimStateOf(checks, i);
     counts[state] = (counts[state] || 0) + 1;
   }
@@ -3423,24 +3441,27 @@ function buildEvidenceItemHtml(item, index, check, hl) {
 }
 
 function buildEvidenceItemsHtml(entry, checks, hl) {
+  const evidence = entry.evidence || [];
   return '<ol class="evidence-list">' +
-    (entry.evidence || []).map((item, i) => buildEvidenceItemHtml(item, i, checks && checks[String(i)], hl)).join("") +
+    listedEvidencePositions(evidence).map(i => buildEvidenceItemHtml(evidence[i], i, checks && checks[String(i)], hl)).join("") +
     "</ol>";
 }
 
 function buildEvidenceDrawerHtml(entry, cfg, hl, opts) {
   const evidence = entry && entry.evidence;
   if (!cfg || !cfg.evidenceDrawerEnabled || !Array.isArray(evidence) || evidence.length === 0) return "";
+  const listed = listedEvidencePositions(evidence);
+  if (listed.length === 0) return "";  // nothing but recheck notes: no drawer
   const o = opts || {};
   const loaded = o.loadState === "loaded";
   const checks = loaded ? (o.checks || {}) : null;
-  const tally = loaded ? evidenceTallyText(evidence.length, checks) : "";
+  const tally = loaded ? evidenceTallyText(evidence.length, checks, listed) : "";
   const idBase = "evidence-" + String(entry.id || "").replace(/[^a-z0-9_-]+/gi, "-");
   const notice = o.loadState === "failed"
     ? '<p class="evidence-unavailable">' + escapeHtml(EVIDENCE_UNAVAILABLE_TEXT) + "</p>" : "";
   return '<div class="evidence-drawer" data-evidence-entry="' + escapeHtml(String(entry.id || "")) + '">' +
     '<button type="button" class="evidence-drawer-head" aria-expanded="false" aria-controls="' + idBase + '-body">' +
-    '<span class="evidence-drawer-title">Evidence · ' + evidence.length + (evidence.length === 1 ? " item" : " items") + "</span>" +
+    '<span class="evidence-drawer-title">Evidence · ' + listed.length + (listed.length === 1 ? " item" : " items") + "</span>" +
     '<span class="evidence-tally">' + escapeHtml(tally) + "</span></button>" +
     '<div class="evidence-drawer-body" id="' + idBase + '-body" hidden>' +
     '<p class="evidence-note">' + escapeHtml(EVIDENCE_NOTE_TEXT) +
