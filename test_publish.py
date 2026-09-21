@@ -226,3 +226,84 @@ def test_real_validator_through_the_publish_guard_keeps_a_valid_glance(tmp_path,
         source_dir, tmp_path / "out.json", excluded_ids=set(), check_glance=check)
     assert included[0]["glance"] == glance
     assert "malformed glance" not in capsys.readouterr().out
+
+
+from publish import load_claim_checks, publish_claim_checks
+
+
+def _claims_file(tmp_path, records):
+    path = tmp_path / "claims.json"
+    path.write_text(json.dumps({r["claim_id"]: r for r in records}))
+    return path
+
+
+def _claim_record(**over):
+    record = {
+        "claim_id": "entry-a::ev000", "entry_id": "entry-a", "evidence_index": 0,
+        "claim_text": "the evidence", "source_url": "https://www.npr.org/x",
+        "verdict": "confirmed", "verdict_rationale": "supported.", "fetch_status": "ok",
+        "date_verified": "2026-09-15", "fact_or_interpretation": "fact", "source_excerpt": "SECRET",
+    }
+    record.update(over)
+    return record
+
+
+_ENTRY_A = {"id": "entry-a", "evidence": [{"description": "the evidence", "source_url": "https://www.npr.org/x"}]}
+
+_needs_tap_data = pytest.mark.skipif(not (TAP_DATA / "tracker/claim_checks_public.py").exists(),
+                                     reason="tap-data working repo not present")
+
+
+@_needs_tap_data
+def test_load_claim_checks_imports_the_working_repos_module():
+    module = load_claim_checks(TAP_DATA)
+    assert module.public_state({"verdict": "confirmed"}) == "supports"
+
+
+@_needs_tap_data
+def test_publish_claim_checks_writes_the_public_file_and_reports(tmp_path, capsys):
+    module = load_claim_checks(TAP_DATA)
+    claims = _claims_file(tmp_path, [_claim_record()])
+    dest = tmp_path / "data" / "claim-checks.json"
+    report = publish_claim_checks(module, claims, [_ENTRY_A], dest)
+    assert report["published"] == 1
+    written = json.loads(dest.read_text())
+    assert written["checks"]["entry-a"]["0"]["state"] == "supports"
+    assert "SECRET" not in dest.read_text()
+    assert "1 published" in capsys.readouterr().out
+
+
+@_needs_tap_data
+def test_publish_claim_checks_without_a_claims_file_warns_and_writes_nothing(tmp_path, capsys):
+    module = load_claim_checks(TAP_DATA)
+    dest = tmp_path / "data" / "claim-checks.json"
+    assert publish_claim_checks(module, tmp_path / "missing.json", [_ENTRY_A], dest) is None
+    assert not dest.exists()
+    assert "WARNING" in capsys.readouterr().out
+
+
+@_needs_tap_data
+def test_publish_claim_checks_dry_run_writes_nothing(tmp_path):
+    module = load_claim_checks(TAP_DATA)
+    dest = tmp_path / "data" / "claim-checks.json"
+    publish_claim_checks(module, _claims_file(tmp_path, [_claim_record()]), [_ENTRY_A], dest, dry_run=True)
+    assert not dest.exists()
+
+
+@_needs_tap_data
+def test_publish_claim_checks_is_byte_identical_when_run_twice(tmp_path):
+    module = load_claim_checks(TAP_DATA)
+    claims = _claims_file(tmp_path, [_claim_record()])
+    for name in ("a.json", "b.json"):
+        publish_claim_checks(module, claims, [_ENTRY_A], tmp_path / name)
+    assert (tmp_path / "a.json").read_bytes() == (tmp_path / "b.json").read_bytes()
+
+
+@_needs_tap_data
+def test_publish_claim_checks_drops_a_check_whose_evidence_changed(tmp_path, capsys):
+    module = load_claim_checks(TAP_DATA)
+    changed = {"id": "entry-a", "evidence": [{"description": "reworded", "source_url": "https://www.npr.org/x"}]}
+    dest = tmp_path / "data" / "claim-checks.json"
+    report = publish_claim_checks(module, _claims_file(tmp_path, [_claim_record()]), [changed], dest)
+    assert report["dropped_stale"] == 1 and json.loads(dest.read_text())["checks"] == {}
+    assert "entry-a::ev000" in capsys.readouterr().out

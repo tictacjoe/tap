@@ -155,6 +155,45 @@ def load_update_markers(working: Path):
     return update_markers
 
 
+CLAIMS_RELATIVE = Path("tracker/output/atomic-claims/claims.json")
+
+
+def load_claim_checks(working: Path):
+    """Imports claim_checks_public from the working repo's tracker/ folder so
+    publish and the tests share one mapping and one guard (same pattern as
+    load_glance_checker / load_update_markers)."""
+    tracker_dir = str(working / "tracker")
+    if tracker_dir not in sys.path:
+        sys.path.insert(0, tracker_dir)
+    import claim_checks_public
+    return claim_checks_public
+
+
+def publish_claim_checks(module, claims_file: Path, published_entries: list,
+                         dest_file: Path, dry_run: bool = False):
+    """Write the public check file for the Evidence drawer from the internal
+    claims.json, through the module's state mapping and stale guard. Returns the
+    report dict, or None (with a WARNING) when claims.json is missing. Only
+    entries in published_entries are considered, so an excluded entry can never
+    leak a check."""
+    if not claims_file.exists():
+        print(f"    WARNING: {claims_file} not found, claim-checks.json not written")
+        return None
+    with open(claims_file, encoding="utf-8") as fh:
+        claims = json.load(fh)
+    entries = {e["id"]: e for e in published_entries if "id" in e}
+    public, report = module.build_public_checks(
+        claims, entries, warn=lambda message: print(f"    WARNING: {message}"))
+    if not dry_run:
+        dest_file.parent.mkdir(parents=True, exist_ok=True)
+        with open(dest_file, "w", encoding="utf-8") as fh:
+            json.dump(public, fh, indent=1, ensure_ascii=False)
+            fh.write("\n")
+    print(f"  claim checks: {report['published']} published, {report['dropped_stale']} dropped as stale, "
+          f"{report['unchecked']} evidence items without a check, {report['withheld']} withheld for review")
+    return report
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--working", default=str(Path.home() / "gjoe/tap-data"),
@@ -188,6 +227,12 @@ def main():
         print(f"ERROR: cannot load update_markers from {working / 'tracker'}: {exc}")
         sys.exit(1)
 
+    try:
+        claim_checks = load_claim_checks(working)
+    except ImportError as exc:
+        print(f"ERROR: cannot load claim_checks_public from {working / 'tracker'}: {exc}")
+        sys.exit(1)
+
     excluded_ids = load_exclude_list(site)
     print(f"Exclude list: {len(excluded_ids)} entry ID(s) — {sorted(excluded_ids) if excluded_ids else '(none)'}")
     print()
@@ -203,6 +248,8 @@ def main():
             timeline_fields=update_markers.TIMELINE_FIELDS["prosecution"]
         )
         print(f"  {len(included)} entries published, {excl_count} excluded")
+        publish_claim_checks(claim_checks, working / CLAIMS_RELATIVE, included,
+                             site / "data" / "claim-checks.json", dry_run=args.dry_run)
     else:
         print(f"  WARNING: {prosecution_src} not found, skipping")
     print()
