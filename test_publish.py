@@ -99,6 +99,98 @@ def test_load_glance_checker_imports_the_working_repos_validator():
     assert check({}) != []  # an empty block is invalid
 
 
+from types import SimpleNamespace
+
+from publish import load_update_markers
+
+
+def _stub_markers(timeline, seen=None):
+    """A stand-in for the update_markers module: build_timeline returns a
+    fixed value and records what it was called with."""
+    def build(entry, fields, warn=None):
+        if seen is not None:
+            seen.append((dict(entry), tuple(fields)))
+        return timeline
+    return SimpleNamespace(build_timeline=build)
+
+
+def test_publish_adds_the_timeline_the_builder_returns(tmp_path):
+    source_dir = _one_entry_dir(tmp_path, {"id": "e", "what_changed": "x"})
+    timeline = {"what_changed": {"base": "x", "updates": []}}
+    included, _ = publish_json_entries(
+        source_dir, tmp_path / "out.json", excluded_ids=set(),
+        update_markers=_stub_markers(timeline), timeline_fields=("what_changed",))
+    assert included[0]["timeline"] == timeline
+    assert json.loads((tmp_path / "out.json").read_text())[0]["timeline"] == timeline
+
+
+def test_publish_adds_no_timeline_key_when_the_builder_returns_none(tmp_path):
+    source_dir = _one_entry_dir(tmp_path, {"id": "e", "what_changed": "x"})
+    included, _ = publish_json_entries(
+        source_dir, tmp_path / "out.json", excluded_ids=set(),
+        update_markers=_stub_markers(None), timeline_fields=("what_changed",))
+    assert "timeline" not in included[0]
+
+
+def test_publish_gives_the_builder_the_published_entry_and_the_field_list(tmp_path):
+    seen = []
+    source_dir = _one_entry_dir(tmp_path, {"id": "e", "_internal": 1, "status": "s"})
+    publish_json_entries(
+        source_dir, tmp_path / "out.json", excluded_ids=set(),
+        update_markers=_stub_markers(None, seen), timeline_fields=("status", "confidence_note"))
+    entry, fields = seen[0]
+    assert fields == ("status", "confidence_note")
+    assert "_internal" not in entry  # the builder sees the already-stripped entry
+
+
+def test_publish_warns_and_overwrites_a_timeline_key_already_in_the_source(tmp_path, capsys):
+    source_dir = _one_entry_dir(tmp_path, {"id": "e", "timeline": {"stale": True}})
+    included, _ = publish_json_entries(
+        source_dir, tmp_path / "out.json", excluded_ids=set(),
+        update_markers=_stub_markers(None), timeline_fields=("status",))
+    assert "timeline" not in included[0]
+    assert "already has a 'timeline' key" in capsys.readouterr().out
+
+
+def test_publish_without_update_markers_leaves_the_entry_alone(tmp_path):
+    source_dir = _one_entry_dir(tmp_path, {"id": "e", "timeline": {"x": 1}})
+    included, _ = publish_json_entries(source_dir, tmp_path / "out.json", excluded_ids=set())
+    assert included[0]["timeline"] == {"x": 1}
+
+
+@pytest.mark.skipif(not (TAP_DATA / "tracker/update_markers.py").exists(),
+                    reason="tap-data working repo not present")
+def test_load_update_markers_imports_the_working_repos_parser():
+    module = load_update_markers(TAP_DATA)
+    assert module.parse_field("Base. Update 2026-08-02: more.")["updates"][0]["date"] == "2026-08-02"
+
+
+@pytest.mark.skipif(not (TAP_DATA / "tracker/update_markers.py").exists(),
+                    reason="tap-data working repo not present")
+def test_real_parser_through_publish_keeps_prose_untouched_and_adds_the_timeline(tmp_path):
+    module = load_update_markers(TAP_DATA)
+    prose = "Base. Update 2026-08-02: later. Added 2026-08-17: latest."
+    source_dir = _one_entry_dir(tmp_path, {"id": "e", "what_changed": prose, "status": "Plain."})
+    included, _ = publish_json_entries(
+        source_dir, tmp_path / "out.json", excluded_ids=set(),
+        update_markers=module, timeline_fields=("what_changed", "status"))
+    assert included[0]["what_changed"] == prose
+    timeline = included[0]["timeline"]
+    assert list(timeline) == ["what_changed"]
+    assert [u["label"] for u in timeline["what_changed"]["updates"]] == ["Update", "Added"]
+
+
+@pytest.mark.skipif(not (TAP_DATA / "tracker/update_markers.py").exists(),
+                    reason="tap-data working repo not present")
+def test_publishing_twice_gives_byte_identical_files(tmp_path):
+    module = load_update_markers(TAP_DATA)
+    source_dir = _one_entry_dir(tmp_path, {"id": "e", "confidence_note": "B. Update 2026-08-02: x."})
+    for name in ("a.json", "b.json"):
+        publish_json_entries(source_dir, tmp_path / name, excluded_ids=set(),
+                             update_markers=module, timeline_fields=("confidence_note",))
+    assert (tmp_path / "a.json").read_bytes() == (tmp_path / "b.json").read_bytes()
+
+
 def _real_glance(**overrides):
     glance = {
         "who": "Example Agency Administrator",

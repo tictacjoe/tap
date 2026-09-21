@@ -60,7 +60,8 @@ def strip_internal_fields(entry: dict) -> dict:
 
 
 def publish_json_entries(source_dir: Path, dest_file: Path, excluded_ids: set,
-                          dry_run: bool = False, check_glance=None) -> tuple:
+                          dry_run: bool = False, check_glance=None,
+                          update_markers=None, timeline_fields=()) -> tuple:
     """Read all *.json files in source_dir, exclude by FILENAME (stem,
     no .json extension) -- not a schema field, since prosecution and
     deregulation don't share a consistent id-field name (prosecution
@@ -72,7 +73,13 @@ def publish_json_entries(source_dir: Path, dest_file: Path, excluded_ids: set,
     check_glance, when given, is called with each entry's glance block;
     a block with problems is stripped (the entry itself is still
     published) and a WARNING is printed, so a malformed block can never
-    reach the site."""
+    reach the site.
+
+    update_markers, when given (the module from load_update_markers),
+    builds each entry's `timeline` object from the text fields named in
+    timeline_fields and adds it next to the untouched prose. `timeline`
+    is a reserved key: one already present in a source entry is dropped
+    with a WARNING."""
     files = sorted(source_dir.glob("*.json"))
     included = []
     excluded_count = 0
@@ -90,6 +97,15 @@ def publish_json_entries(source_dir: Path, dest_file: Path, excluded_ids: set,
             if problems:
                 print(f"    WARNING: malformed glance stripped from {f.stem}: {'; '.join(problems)}")
                 del published["glance"]
+        if update_markers is not None:
+            if "timeline" in published:
+                print(f"    WARNING: {f.stem} already has a 'timeline' key; overwriting")
+                del published["timeline"]
+            timeline = update_markers.build_timeline(
+                published, timeline_fields,
+                warn=lambda message, stem=f.stem: print(f"    WARNING: {stem}: {message}"))
+            if timeline:
+                published["timeline"] = timeline
         included.append(published)
 
     if not dry_run:
@@ -128,6 +144,17 @@ def load_glance_checker(working: Path):
     return check_glance
 
 
+def load_update_markers(working: Path):
+    """Imports update_markers from the working repo's tracker/ folder so
+    publish and the tests share one parser (same pattern as
+    load_glance_checker)."""
+    tracker_dir = str(working / "tracker")
+    if tracker_dir not in sys.path:
+        sys.path.insert(0, tracker_dir)
+    import update_markers
+    return update_markers
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--working", default=str(Path.home() / "gjoe/tap-data"),
@@ -155,6 +182,12 @@ def main():
         print(f"ERROR: cannot load validate_glance from {working / 'tracker'}: {exc}")
         sys.exit(1)
 
+    try:
+        update_markers = load_update_markers(working)
+    except ImportError as exc:
+        print(f"ERROR: cannot load update_markers from {working / 'tracker'}: {exc}")
+        sys.exit(1)
+
     excluded_ids = load_exclude_list(site)
     print(f"Exclude list: {len(excluded_ids)} entry ID(s) — {sorted(excluded_ids) if excluded_ids else '(none)'}")
     print()
@@ -165,7 +198,9 @@ def main():
     if prosecution_src.exists():
         included, excl_count = publish_json_entries(
             prosecution_src, site / "data" / "prosecution.json",
-            excluded_ids, dry_run=args.dry_run, check_glance=check_glance
+            excluded_ids, dry_run=args.dry_run, check_glance=check_glance,
+            update_markers=update_markers,
+            timeline_fields=update_markers.TIMELINE_FIELDS["prosecution"]
         )
         print(f"  {len(included)} entries published, {excl_count} excluded")
     else:
@@ -178,7 +213,9 @@ def main():
     if deregulation_src.exists():
         included, excl_count = publish_json_entries(
             deregulation_src, site / "data" / "deregulation.json",
-            excluded_ids, dry_run=args.dry_run, check_glance=check_glance
+            excluded_ids, dry_run=args.dry_run, check_glance=check_glance,
+            update_markers=update_markers,
+            timeline_fields=update_markers.TIMELINE_FIELDS["deregulation"]
         )
         print(f"  {len(included)} entries published, {excl_count} excluded")
     else:
@@ -191,7 +228,9 @@ def main():
     if govservices_src.exists():
         included, excl_count = publish_json_entries(
             govservices_src, site / "data" / "government-services.json",
-            excluded_ids, dry_run=args.dry_run, check_glance=check_glance
+            excluded_ids, dry_run=args.dry_run, check_glance=check_glance,
+            update_markers=update_markers,
+            timeline_fields=update_markers.TIMELINE_FIELDS["government-services"]
         )
         print(f"  {len(included)} entries published, {excl_count} excluded")
     else:
