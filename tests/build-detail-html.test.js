@@ -1112,6 +1112,26 @@ test("prosecution detail places the Evidence drawer between the columns and the 
   assert(!off.includes("evidence-drawer"), "no flag, no drawer");
 });
 
+// buildDetailHtml never passes opts.checks (the checks arrive later, from the
+// browser-only rerender), so the `why` text's escaping is not reachable through
+// it. Re-evaluate the same combined source to get at the drawer builder and the
+// REAL highlightMatches, and wire hl exactly as wireEvidenceDrawers does.
+const evidenceApi = (0, eval)(`${combined}\n({ buildEvidenceDrawerHtml, highlightMatches });`);
+
+test("a check rationale is escaped by the real highlighting path, with and without a search term", () => {
+  const entry = {
+    id: "entry-a",
+    evidence: [{ type: "news_report", description: "CNN on the ruling", source_url: "https://example.com/a" }],
+  };
+  for (const term of ["", "ruling"]) {
+    const hl = (text) => evidenceApi.highlightMatches(stripProcessLabels(text), term, false);
+    const html = evidenceApi.buildEvidenceDrawerHtml(entry, { evidenceDrawerEnabled: true }, hl,
+      { loadState: "loaded", checks: { "0": { state: "partly", why: "<script>alert(1)</script>", host: "example.com", date: "2026-09-15", kind: "fact", archive: false } } });
+    assert(!html.includes("<script>alert(1)</script>"), term);
+    assert(html.includes("&lt;script&gt;alert(1)&lt;/script&gt;"), term);
+  }
+});
+
 test("the Evidence drawer escapes hostile evidence text through the entry's hl", () => {
   const entry = {
     id: "entry-a", offense_category: "Fraud", status_category: "Investigation", incident_summary: "S.",

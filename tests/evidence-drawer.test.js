@@ -157,3 +157,32 @@ test("an entry id is sanitized for the element id and escaped in the data attrib
   assert(!html.includes('"c<d'));
   assert(html.includes('data-evidence-entry="a b&quot;c&lt;d"'));
 });
+
+// The source line has to match the label: nothing was checked against a page the
+// software could not open, so an unopened item says what actually happened.
+test("an unopened item says 'Tried', not 'Checked against'", () => {
+  const html = api.buildEvidenceItemHtml(ITEM, 0, check({ state: "unopened", why: "" }), hl);
+  assert(html.includes('Tried <a href="https://www.npr.org/story"'), html);
+  assert(html.includes(", Sep 15, 2026"));
+  assert(!html.includes("Checked against"));
+  const archived = api.buildEvidenceItemHtml(ITEM, 0, check({ state: "unopened", archive: true }), hl);
+  assert(archived.includes("Tried ") && archived.includes("(archived copy)"));
+});
+
+test("every state where the page was read still says 'Checked against'", () => {
+  for (const state of ["supports", "partly", "not_found", "differs"]) {
+    const html = api.buildEvidenceItemHtml(ITEM, 0, check({ state }), hl);
+    assert(html.includes("Checked against "), state);
+    assert(!html.includes("Tried "), state);
+  }
+});
+
+// CLAIM_STATE_LABELS is a plain object, so "constructor" and friends are truthy
+// on it by inheritance; a check carrying one must still read as unchecked.
+test("a check whose state is an inherited property name renders as unchecked", () => {
+  assert.equal(api.claimStateOf({ "0": check({ state: "constructor" }) }, 0), "unchecked");
+  const html = api.buildEvidenceItemHtml(ITEM, 0, check({ state: "constructor" }), hl);
+  assert(html.includes("evidence-state-unchecked"), html.slice(0, 200));
+  assert(html.includes("Not yet checked"));
+  assert(!html.includes("function Object"));
+});

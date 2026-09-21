@@ -1063,7 +1063,16 @@
   .evidence-drawer-head[aria-expanded="true"]::after { content: "\25BE"; }
   .evidence-drawer-body { padding: 0.2rem 0.8rem 0.8rem; }
   .evidence-drawer-body[hidden] { display: none; }
-  .evidence-note, .evidence-unavailable { font-size: 0.8rem; color: var(--ink-faint); margin: 0.4rem 0 0.7rem; }
+  /* The standing note and each item's source line are text a reader has to be able to
+     read, not decoration: --ink-soft (about 7:1) rather than --ink-faint (about 3.2:1
+     at this size). The links follow .exhibit-list a, the site's other source links. */
+  .evidence-note { font-size: 0.85rem; color: var(--ink-soft); margin: 0.4rem 0 0.7rem; }
+  .evidence-unavailable { font-size: 0.8rem; color: var(--ink-faint); margin: 0.4rem 0 0.7rem; }
+  .evidence-note a, .evidence-source a {
+    color: var(--brass); text-decoration: underline;
+    text-decoration-color: color-mix(in srgb, var(--brass) 50%, transparent);
+  }
+  .evidence-note a:hover, .evidence-source a:hover { text-decoration-color: var(--brass); }
   .evidence-list { list-style: none; margin: 0; padding: 0; }
   .evidence-item { padding: 0.65rem 0; border-top: 1px solid var(--rule); }
   .evidence-item:first-child { border-top: 0; }
@@ -1078,7 +1087,7 @@
   }
   .evidence-tag { font-size: 0.7rem; color: var(--ink-faint); font-style: italic; }
   .evidence-desc { margin: 0 0 0.3rem; font-size: 0.9rem; overflow-wrap: anywhere; }
-  .evidence-source { margin: 0 0 0.3rem; font-size: 0.8rem; color: var(--ink-faint); overflow-wrap: anywhere; }
+  .evidence-source { margin: 0 0 0.3rem; font-size: 0.8rem; color: var(--ink-soft); overflow-wrap: anywhere; }
   .evidence-why { font-size: 0.82rem; margin: 0.2rem 0 0; }
   .evidence-why-toggle summary { font-size: 0.8rem; color: var(--ink-faint); cursor: pointer; }
 
@@ -3344,9 +3353,17 @@ const EVIDENCE_METHOD_HREF = "docs/tap-source-check-method.html";
 const EVIDENCE_UNAVAILABLE_TEXT = "Check results unavailable right now.";
 const CLAIM_MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
+// The one place a check object becomes a state. hasOwnProperty, not a truthy
+// lookup: CLAIM_STATE_LABELS is a plain object, so a check whose state were
+// "constructor" or "toString" would otherwise pass as a real state.
+function claimStateFrom(check) {
+  const state = check && check.state;
+  return Object.prototype.hasOwnProperty.call(CLAIM_STATE_LABELS, state) && state !== "unchecked"
+    ? state : "unchecked";
+}
+
 function claimStateOf(checks, index) {
-  const found = checks && checks[String(index)];
-  return found && CLAIM_STATE_LABELS[found.state] && found.state !== "unchecked" ? found.state : "unchecked";
+  return claimStateFrom(checks && checks[String(index)]);
 }
 
 function evidenceTallyText(itemCount, checks) {
@@ -3375,7 +3392,7 @@ function evidenceHostOf(url) {
 }
 
 function buildEvidenceItemHtml(item, index, check, hl) {
-  const state = check && CLAIM_STATE_LABELS[check.state] && check.state !== "unchecked" ? check.state : "unchecked";
+  const state = claimStateFrom(check);
   const host = (check && check.host) || evidenceHostOf(item.source_url);
   const link = item.source_url
     ? '<a href="' + escapeHtml(safeHref(item.source_url)) + '" target="_blank" rel="noopener">' + escapeHtml(host || "source") + "</a>"
@@ -3383,7 +3400,10 @@ function buildEvidenceItemHtml(item, index, check, hl) {
   let sourceLine = "";
   if (check && link) {
     const date = claimShortDate(check.date);
-    sourceLine = "Checked against " + link + (date ? ", " + escapeHtml(date) : "") + (check.archive ? " (archived copy)" : "");
+    // Nothing was "checked against" a page the software could not open: an
+    // unopened item reports the attempt, and its date is when it was attempted.
+    const verb = state === "unopened" ? "Tried " : "Checked against ";
+    sourceLine = verb + link + (date ? ", " + escapeHtml(date) : "") + (check.archive ? " (archived copy)" : "");
   } else if (link) {
     sourceLine = "Source: " + link;
   }
@@ -3823,7 +3843,13 @@ function loadClaimChecks() {
   if (!claimChecksPromise) {
     claimChecksPromise = fetch("data/claim-checks.json")
       .then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
-      .then(data => (data && data.checks && typeof data.checks === "object") ? data : null)
+      .then(data => {
+        if (data && data.checks && typeof data.checks === "object") return data;
+        // A 200 with the wrong shape is as temporary as a network error:
+        // clear the cache too, or every later open reuses the empty result.
+        claimChecksPromise = null;
+        return null;
+      })
       .catch(() => { claimChecksPromise = null; return null; });
   }
   return claimChecksPromise;
@@ -3848,7 +3874,9 @@ function wireEvidenceDrawers(container, entry, cfg, term, useRegex) {
         loadClaimChecks().then(data => {
           checks = data ? (data.checks[entry.id] || {}) : null;
           loadState = data ? "loaded" : "failed";
-          rerender(true);
+          // The reader may have collapsed the drawer again while the file was
+          // loading; re-render in whatever state it is in now, never force it open.
+          rerender(mount.querySelector(".evidence-drawer-head").getAttribute("aria-expanded") === "true");
         });
       }
     });
@@ -3858,6 +3886,9 @@ function wireEvidenceDrawers(container, entry, cfg, term, useRegex) {
     mount.querySelector(".evidence-drawer-body").hidden = !open;
   };
   const rerender = (open) => {
+    // Replacing the node throws away the button the reader is standing on, so a
+    // keyboard open would silently drop focus to the document. Put it back.
+    const hadFocus = document.activeElement === mount.querySelector(".evidence-drawer-head");
     const holder = document.createElement("div");
     holder.innerHTML = buildEvidenceDrawerHtml(entry, cfg, hl, { checks, loadState });
     const fresh = holder.firstElementChild;
@@ -3865,6 +3896,7 @@ function wireEvidenceDrawers(container, entry, cfg, term, useRegex) {
     mount = fresh;
     setOpen(open);
     bind();
+    if (hadFocus) mount.querySelector(".evidence-drawer-head").focus();
   };
   bind();
 }

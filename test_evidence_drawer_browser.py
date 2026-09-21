@@ -7,6 +7,7 @@ import http.server
 import json
 import pathlib
 import threading
+import time
 
 import pytest
 
@@ -134,6 +135,88 @@ def test_an_open_drawer_does_not_overflow_a_phone(browser, site_url):
     page.wait_for_timeout(900)
     measure = page.evaluate("() => ({w: window.innerWidth, s: document.documentElement.scrollWidth})")
     assert measure["w"] == 390 and measure["s"] <= measure["w"], measure
+    assert errors == []
+
+
+_CLICK_HEAD_TWICE = """(id) => {
+    const head = document.querySelector('.entry[data-entry-id="' + id + '"] .evidence-drawer-head');
+    head.click();   // opens the drawer and starts the one fetch
+    head.click();   // the reader changes their mind before the file arrives
+}"""
+_ACTIVE_HEAD = """() => {
+    const el = document.activeElement;
+    const drawer = el && el.closest ? el.closest('.evidence-drawer') : null;
+    return {klass: el ? el.className : "", entry: drawer ? drawer.getAttribute('data-evidence-entry') : ""};
+}"""
+
+
+def _slow_checks_route(page, delay=1.0):
+    """Serve the real check file, but a second late, so a test can act during the load."""
+    body = (SITE_DIR / "data" / "claim-checks.json").read_text(encoding="utf-8")
+
+    def handler(route):
+        time.sleep(delay)
+        route.fulfill(status=200, content_type="application/json", body=body)
+
+    page.route("**/data/claim-checks.json", handler)
+
+
+def test_keyboard_focus_survives_the_first_open(browser, site_url):
+    """Opening from the keyboard re-renders the drawer in place; the reader must not be
+    left with focus on the document body, unable to press Enter again to close it."""
+    page, _, errors = _open_page(browser, site_url)
+    page.evaluate(_OPEN_ENTRY, ENTRY_ID)
+    drawer = page.locator(f'.entry[data-entry-id="{ENTRY_ID}"] .evidence-drawer')
+    drawer.locator(".evidence-drawer-head").focus()
+    page.keyboard.press("Enter")
+    page.wait_for_timeout(1200)
+    assert drawer.locator(".evidence-tally").inner_text() != "", "the checks should have loaded and re-rendered"
+    focused = page.evaluate(_ACTIVE_HEAD)
+    assert focused == {"klass": "evidence-drawer-head", "entry": ENTRY_ID}, focused
+    assert drawer.locator(".evidence-drawer-head").get_attribute("aria-expanded") == "true"
+    assert errors == []
+
+
+def test_collapsing_during_the_load_leaves_the_drawer_closed(browser, site_url):
+    """The post-load re-render must use the drawer's current state, not force it open."""
+    page, _, errors = _open_page(browser, site_url)
+    _slow_checks_route(page)
+    page.evaluate(_OPEN_ENTRY, ENTRY_ID)
+    page.evaluate(_CLICK_HEAD_TWICE, ENTRY_ID)
+    drawer = page.locator(f'.entry[data-entry-id="{ENTRY_ID}"] .evidence-drawer')
+    assert drawer.locator(".evidence-drawer-head").get_attribute("aria-expanded") == "false"
+    page.wait_for_timeout(2500)
+    assert drawer.locator(".evidence-tally").inner_text() != "", "the checks should still have loaded"
+    assert drawer.locator(".evidence-drawer-head").get_attribute("aria-expanded") == "false"
+    assert drawer.locator(".evidence-drawer-body").is_hidden()
+    assert errors == []
+
+
+def test_a_shapeless_response_is_retried_on_the_next_open(browser, site_url):
+    """A 200 carrying the wrong JSON must not poison the shared promise for the session."""
+    page, requests, errors = _open_page(browser, site_url)
+    body = (SITE_DIR / "data" / "claim-checks.json").read_text(encoding="utf-8")
+    served = []
+
+    def handler(route):
+        served.append(len(served) + 1)
+        route.fulfill(status=200, content_type="application/json",
+                      body="{}" if len(served) == 1 else body)
+
+    page.route("**/data/claim-checks.json", handler)
+    page.evaluate(_OPEN_ENTRY, ENTRY_ID)
+    drawer = page.locator(f'.entry[data-entry-id="{ENTRY_ID}"] .evidence-drawer')
+    head = drawer.locator(".evidence-drawer-head")
+    head.click()
+    page.wait_for_timeout(900)
+    assert "Check results unavailable right now." in drawer.locator(".evidence-drawer-body").inner_text()
+    head.click()            # close
+    page.wait_for_timeout(200)
+    head.click()            # open again: this must go back to the network
+    page.wait_for_timeout(900)
+    assert len(served) == 2, served
+    assert len(requests) == 2, requests
+    assert drawer.locator(".evidence-tally").inner_text() != ""
     assert errors == []
 
 
