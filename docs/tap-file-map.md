@@ -29,8 +29,14 @@ docs/                        site-specific content (separate from the private re
 
 tests/
   build-detail-html.test.js
+  glance-head.test.js
+  glance-search-oneliner.test.js
 test_publish.py
 ```
+
+## Glance cards
+
+`index.html` has a per-tracker `glanceEnabled` flag in the `TRACKERS` object (all three curated trackers are on as of 2026-09-20; Reporting and User Topics have none). The card code lives in the marked region `/* glance-head:start */ ... /* glance-head:end */` and is covered by `tests/glance-head.test.js` and `tests/glance-search-oneliner.test.js`. A card is drawn only when the flag is on and the entry's `glance` block is valid; otherwise the old card shows.
 
 ## Live site
 
