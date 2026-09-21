@@ -5234,7 +5234,17 @@
       "estimated_impact": "Reduced specialized engineering and inspection capacity at agencies overseeing dams, where technical failure risks public safety.",
       "confidence_note": "MODERATE confidence -- a single AP wire report citing named experts, without a specific agency-level headcount figure."
     },
-    "last_substantive_update": "2026-08-08"
+    "last_substantive_update": "2026-08-08",
+    "glance": {
+      "who": "DOGE (Department of Government Efficiency)",
+      "what": "Federal purges reportedly cut hundreds of jobs at the Bureau of Reclamation and Army Corps, which oversee dams",
+      "harm": {
+        "kind": "physical",
+        "certainty": "projected",
+        "who": "Communities below federally run dams"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "dha-military-treatment-facility-closures-review-2025",
@@ -5291,7 +5301,17 @@
       "estimated_impact": "Reduced full-service hospital access for servicemembers/families and degraded training case volume for military physicians, per Congress's own findings.",
       "confidence_note": "Well corroborated across Military Times/MOAA reporting and the House Armed Services Committee's own 2026 bill language."
     },
-    "last_substantive_update": "2026-09-10"
+    "last_substantive_update": "2026-09-10",
+    "glance": {
+      "who": "Defense Health Agency, under Pete Hegseth",
+      "what": "Reviewed military hospitals for closure or downgrade; Congress found 41 changed and moved to reverse it",
+      "harm": {
+        "kind": "livelihood",
+        "certainty": "documented",
+        "who": "Service members' hospital access"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "dhs-counterterrorism-grants-immigration-condition-2025",
@@ -5368,7 +5388,17 @@
       "estimated_impact": "Oregon alone has ~$10-18 million at stake depending on the year; the July 2026 suit puts over $1 billion in nationwide Homeland Security Grant Program funding at issue.",
       "confidence_note": "Well-corroborated across ProPublica/OPB, Oregon Capital Chronicle, Daily Record, and KPTV; the exact September 2025 case name/judge wasn't independently confirmable due to a blocked source."
     },
-    "last_substantive_update": "2026-09-11"
+    "last_substantive_update": "2026-09-11",
+    "glance": {
+      "who": "DHS under Kristi Noem",
+      "what": "Tied homeland-security grants to immigration-enforcement cooperation; courts blocked it twice, DHS kept trying",
+      "harm": {
+        "kind": "money",
+        "certainty": "projected",
+        "who": "States' homeland-security grants ($1B+)"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "dhs-intelligence-analysis-office-staff-cuts-2025",
@@ -5430,7 +5460,17 @@
       "confidence_note": "Well-corroborated by Defense One's direct reporting citing DHS's own workforce data; no independent source confirms the private congressional warning's originating organization."
     },
     "last_updated": "2026-09-12",
-    "last_substantive_update": "2026-09-12"
+    "last_substantive_update": "2026-09-12",
+    "glance": {
+      "who": "DHS leadership",
+      "what": "Halved the Office of Intelligence and Analysis through buyouts after a 73% cut was withdrawn under backlash",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "documented",
+        "who": "Threat-intelligence sharing with police"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "dhs-sensitive-locations-policy-rescission-2025",
@@ -5484,7 +5524,17 @@
       "estimated_impact": "Nearly half of undocumented adults surveyed reported avoiding medical care since the rescission, with providers documenting delayed diagnoses and ER-avoidance for serious conditions.",
       "confidence_note": "The policy change is well documented; the healthcare-avoidance impact rests on survey research and provider accounts, not an isolated causal study."
     },
-    "last_substantive_update": "2026-09-10"
+    "last_substantive_update": "2026-09-10",
+    "glance": {
+      "who": "Department of Homeland Security (DHS/ICE)",
+      "what": "Rescinded the decade-old policy limiting immigration enforcement at hospitals, clinics, schools and churches",
+      "harm": {
+        "kind": "physical",
+        "certainty": "projected",
+        "who": "Undocumented adults avoiding care"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "disability-rights-protection-advocacy-defunding-2025",
@@ -5561,7 +5611,17 @@
       }
     ],
     "last_updated": "2026-09-09",
-    "last_substantive_update": "2026-09-09"
+    "last_substantive_update": "2026-09-09",
+    "glance": {
+      "who": "HHS under Robert F. Kennedy Jr.",
+      "what": "Proposed cutting disability-rights advocacy (P&A) funding about 53%, from $148M to ~$69M",
+      "harm": {
+        "kind": "rights",
+        "certainty": "projected",
+        "who": "Disabled people needing legal advocacy"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "disease-surveillance-cuts-emerging-threats-2026",
@@ -5653,7 +5713,17 @@
       }
     ],
     "last_updated": "2026-08-30",
-    "last_substantive_update": "2026-08-30"
+    "last_substantive_update": "2026-08-30",
+    "glance": {
+      "who": "HHS under Robert F. Kennedy Jr.",
+      "what": "Made foodborne-illness reporting optional, cut USDA staff 18% and ended USAID malaria surveillance funding",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "documented",
+        "who": "Foodborne and disease surveillance"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "doctors-relocating-canada-trump-2025",
@@ -5708,7 +5778,17 @@
       "estimated_impact": "A 50-65% rise in most jurisdictions and a tripling in British Columbia specifically -- the record's cited '750%' figure was not corroborated by any source reviewed.",
       "confidence_note": "Well corroborated across multiple outlets citing the same provincial licensing data; figures vary by jurisdiction/metric and shouldn't be combined into one aggregate number."
     },
-    "last_substantive_update": "2026-09-10"
+    "last_substantive_update": "2026-09-10",
+    "glance": {
+      "who": "Trump administration",
+      "what": "U.S. doctors sought Canadian licenses at sharply higher rates, citing lost trust in the administration",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "projected",
+        "who": "U.S. physician workforce"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "doe-budget-cuts-efficiency-standards-rollback-2025",
@@ -5794,7 +5874,17 @@
       "estimated_impact": "Threatens both DOE's clean-energy research capacity and consumer cost savings from efficiency standards; DOE's own later claimed savings figure was found independently overstated relative to documented cuts.",
       "confidence_note": "Workforce and regulatory actions are well-corroborated across multiple independent outlets and DOE's own statements; the precise budget-cut figure varies slightly by source and remains a proposal."
     },
-    "last_substantive_update": "2026-09-11"
+    "last_substantive_update": "2026-09-11",
+    "glance": {
+      "who": "Department of Energy leadership",
+      "what": "Proposed ~$19-20B in cuts, deemed 43% of staff non-essential and targeted 47 efficiency rules for removal",
+      "harm": {
+        "kind": "money",
+        "certainty": "projected",
+        "who": "Consumers' appliance efficiency savings"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "doe-grain-belt-express-loan-guarantee-cancelled-2025",
@@ -5856,7 +5946,17 @@
         "url": "https://thehill.com/policy/energy-environment/5418063-trump-administration-solar-wind-power-line-grain-belt/"
       }
     ],
-    "last_substantive_update": "2026-09-12"
+    "last_substantive_update": "2026-09-12",
+    "glance": {
+      "who": "Chris Wright (Energy Secretary)",
+      "what": "Canceled a $4.9B loan guarantee for the Grain Belt Express, the largest planned U.S. transmission line",
+      "harm": {
+        "kind": "money",
+        "certainty": "documented",
+        "who": "Grain Belt Express project financing"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "doe-nuclear-waste-cleanup-staffing-collapse-2026",
@@ -5947,7 +6047,17 @@
       "confidence_note": "Based directly on a GAO report, the strongest source type this tracker prioritizes; the earlier lease-termination episode is separately well-corroborated."
     },
     "last_updated": "2026-08-09",
-    "last_substantive_update": "2026-08-30"
+    "last_substantive_update": "2026-08-30",
+    "glance": {
+      "who": "Trump administration deferred-resignation program",
+      "what": "Nearly half of DOE's nuclear-cleanup office left; GAO found 45% vacancy, 100% at the Carlsbad field office",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "documented",
+        "who": "Nuclear waste cleanup oversight"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "doe-oced-dismantlement-trump2",
@@ -6054,7 +6164,17 @@
         "url": "https://pv-magazine-usa.com/2026/01/23/department-of-energy-cuts-83-billion-in-loans-reversing-energy-transition/"
       }
     ],
-    "last_substantive_update": "2026-09-09"
+    "last_substantive_update": "2026-09-09",
+    "glance": {
+      "who": "Chris Wright (Energy Secretary)",
+      "what": "Canceled $3.7B+ in clean-energy demonstration awards, cut the managing office's staff 86% and erased it",
+      "harm": {
+        "kind": "money",
+        "certainty": "documented",
+        "who": "Clean-energy demonstration projects"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "doge-ai-deregulation-delete-list-tool-2025",
@@ -6118,7 +6238,17 @@
         "url": "https://www.engadget.com/big-tech/doge-is-reportedly-pushing-an-ai-tool-that-would-put-half-of-all-federal-regulations-on-a-delete-list-212053871.html"
       }
     ],
-    "last_substantive_update": "2026-09-12"
+    "last_substantive_update": "2026-09-12",
+    "glance": {
+      "who": "DOGE (Department of Government Efficiency)",
+      "what": "Built an AI tool to draft deleting half of federal regulations; used for all of CFPB's deregulatory actions",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "projected",
+        "who": "Federal rulemaking review"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "doge-dissolution-personnel-dispersal-2025",
@@ -6181,7 +6311,17 @@
       "estimated_impact": "Extended DOGE's personnel network and technology into permanent agency positions without public confirmation that its data-access and surveillance practices were reviewed first.",
       "confidence_note": "Well-corroborated on the dissolution timing and the OPM director's statements; the personnel placements and surveillance-tool status rest on single-source (WinBuzzer) reporting not yet independently corroborated."
     },
-    "last_substantive_update": "2026-09-12"
+    "last_substantive_update": "2026-09-12",
+    "glance": {
+      "who": "DOGE, under OPM Director Scott Kupor",
+      "what": "Dissolved DOGE eight months early, moving its functions into OPM and other agencies",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "alleged",
+        "who": "Oversight of DOGE data access"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "doge-gsa-793-lease-terminations-2025",
@@ -6259,7 +6399,17 @@
       "confidence_note": "Strongly corroborated across independent outlets and CRE industry legal tracking of the same GSA/DOGE public list."
     },
     "last_updated": "2026-08-11",
-    "last_substantive_update": "2026-08-11"
+    "last_substantive_update": "2026-08-11",
+    "glance": {
+      "who": "GSA, carrying out DOGE's lease-cutting drive",
+      "what": "Targeted 793 office leases for termination, blindsiding agencies; list shrank to 384, ~30% finalized",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "documented",
+        "who": "Federal agencies' office operations"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "doge-gsa-smartpay-spending-cap-2025",
