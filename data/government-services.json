@@ -11785,7 +11785,17 @@
       "confidence_note": "Well-corroborated across WaPo, The Guardian, and NBC News; this entry supersedes in scale this tracker's earlier, narrower March 2025 DTOS-reassignment entry."
     },
     "last_updated": "2026-09-12",
-    "last_substantive_update": "2026-09-12"
+    "last_substantive_update": "2026-09-12",
+    "glance": {
+      "who": "FBI under Kash Patel",
+      "what": "Reassigned ~23% of FBI agents (45% in the largest offices) to immigration work, per Sen. Warner's data",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "documented",
+        "who": "FBI national-security casework"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "fbi-defers-ice-investigations-hsi-2026",
@@ -11835,7 +11845,17 @@
       }
     ],
     "last_updated": "2026-07-27",
-    "last_substantive_update": "2026-07-27"
+    "last_substantive_update": "2026-07-27",
+    "glance": {
+      "who": "DOJ under Todd Blanche",
+      "what": "Reportedly told the FBI to stop investigating confrontations with ICE agents, shifting them to ICE's own HSI",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "alleged",
+        "who": "Independent oversight of ICE conduct"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "fbi-domestic-terrorism-operations-cuts-2025",
@@ -11906,7 +11926,17 @@
       "estimated_impact": "A Senate oversight report called the combined cuts a broad pullback, set against FBI data showing domestic terrorism cases had quadrupled.",
       "confidence_note": "Strong initial Reuters sourcing; the broader pullback and later Senate figures rest on oversight letters and a committee report."
     },
-    "last_substantive_update": "2026-08-30"
+    "last_substantive_update": "2026-08-30",
+    "glance": {
+      "who": "Kash Patel (FBI Director)",
+      "what": "Reassigned ~16 agents out of the FBI's domestic-terrorism unit and scrapped a tracking tool",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "documented",
+        "who": "Domestic-terrorism investigations"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "fbi-mission-shift-street-policing-standards-lowered-2025",
@@ -11978,7 +12008,17 @@
         "url": "https://www.nbcnews.com/politics/justice-department/dc-grand-jury-declines-indict-another-defendant-trumps-crime-crackdown-rcna228527"
       }
     ],
-    "last_substantive_update": "2026-09-10"
+    "last_substantive_update": "2026-09-10",
+    "glance": {
+      "who": "Kash Patel (FBI Director)",
+      "what": "Cut new-agent training from 18 to 8 weeks, dropped the degree rule and diverted agents to street patrols",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "documented",
+        "who": "FBI agent training and casework"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "fbi-patel-leadership-dysfunction-2025",
@@ -12069,7 +12109,17 @@
       "estimated_impact": "Reported severe morale/operational degradation and at least one documented instance of an active investigation's security being compromised by the Director's own public statements.",
       "confidence_note": "The leaked report and the UFC-event disclosure are each well-corroborated across multiple independent outlets; connecting a specific Rapid Response account post to a sensitive-operation disclosure is not independently confirmed."
     },
-    "last_substantive_update": "2026-09-12"
+    "last_substantive_update": "2026-09-12",
+    "glance": {
+      "who": "Kash Patel (FBI Director)",
+      "what": "Leaked insider report called the FBI 'paralyzed by fear'; Patel publicly disclosed an active covert probe",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "alleged",
+        "who": "FBI operations and morale"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "fda-bird-flu-milk-testing-suspended-2025",
@@ -12119,7 +12169,17 @@
       "estimated_impact": "Reduced federal capacity to verify bird-flu detection in the milk supply during an active outbreak, part of a broader pattern of federal bird-flu-surveillance capacity loss documented elsewhere in this tracker.",
       "confidence_note": "Well-corroborated across CBS News and independent wire/trade reporting; no confirmed restoration of the suspended testing found as of this recheck."
     },
-    "last_substantive_update": "2026-08-22"
+    "last_substantive_update": "2026-08-22",
+    "glance": {
+      "who": "HHS under Robert F. Kennedy Jr.",
+      "what": "Eliminated FDA's food-safety lab, suspending a 40-lab bird-flu testing exercise and, weeks later, milk testing",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "documented",
+        "who": "Bird-flu testing of the milk supply"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "fda-cber-vaccine-leadership-turmoil",
@@ -12339,7 +12399,17 @@
       }
     ],
     "last_updated": "2026-09-13",
-    "last_substantive_update": "2026-09-13"
+    "last_substantive_update": "2026-09-13",
+    "glance": {
+      "who": "Vinay Prasad (FDA vaccine division director)",
+      "what": "Narrowed COVID-vaccine approval to high-risk adults; the vaccine division had six directors in a year",
+      "harm": {
+        "kind": "physical",
+        "certainty": "projected",
+        "who": "Adults under 65 seeking COVID shots"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "fda-drug-review-support-staff-cuts-2025",
@@ -12403,7 +12473,17 @@
       "estimated_impact": "Despite the cuts, FDA largely met its statutory drug-review deadlines in 2025; the documented harm was narrower -- reduced responsiveness to non-essential inquiries, some missed or postponed developer meetings, and at least one named biotech (Dare Bioscience) postponing a planned clinical trial due to FDA guidance delays.",
       "confidence_note": "HIGH confidence on the headcount and industry-concern facts; MODERATE on downstream impact, since the specific approval-delay fear that prompted industry's original warning was not borne out by 2025 performance data."
     },
-    "last_substantive_update": "2026-09-11"
+    "last_substantive_update": "2026-09-11",
+    "glance": {
+      "who": "Department of Health and Human Services",
+      "what": "Terminated ~3,500 FDA staff in April 2025; review deadlines held, but some developer meetings slipped",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "documented",
+        "who": "FDA responsiveness to drug developers"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "fda-food-safety-device-tobacco-staff-cuts-2025",
@@ -12456,7 +12536,17 @@
       "estimated_impact": "Reduced FDA capacity to review food additives, medical devices, and tobacco products for safety, within a much larger HHS-wide cut; by May 2025 the team that redacts and publishes food-safety warning letters had itself been gutted, stalling public disclosure of hazards including a potential botulism risk.",
       "confidence_note": "HIGH confidence -- The Guardian's reporting is corroborated by the New York Times and CBS News on the director's resignation letter."
     },
-    "last_substantive_update": "2026-09-11"
+    "last_substantive_update": "2026-09-11",
+    "glance": {
+      "who": "Department of Health and Human Services",
+      "what": "Fired FDA food-safety, device and tobacco staff in a ~5,200-worker HHS purge; the food-safety head resigned",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "documented",
+        "who": "FDA food, device, tobacco oversight"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "fda-inspection-capacity-collapse-2025",
@@ -12534,7 +12624,17 @@
       "estimated_impact": "By November 2025, foreign food-safety inspections had fallen to their lowest level in more than a decade -- a measured, real-world consequence, not just a modeled risk.",
       "confidence_note": "Well-corroborated across CBS News, NPR, and the Louisiana Illuminator's dedicated later reporting on inspection-volume impact. The state-devolution plan is corroborated by CBS News (citing multiple federal health officials) and HealthDay/US News reprints; it was described as tentative and not yet final, and FDA's own on-record denial that routine inspections are being suspended is presented alongside it rather than resolved either way."
     },
-    "last_substantive_update": "2026-09-11"
+    "last_substantive_update": "2026-09-11",
+    "glance": {
+      "who": "HHS under Robert F. Kennedy Jr.",
+      "what": "Cut ~170 FDA inspection-support staff; foreign food-safety inspections fell to a decade low by November 2025",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "documented",
+        "who": "FDA food and drug inspections"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "fda-moderna-mrna-flu-vaccine-refusal-2026",
@@ -12626,7 +12726,17 @@
       "estimated_impact": "Blocks any substantive FDA safety/efficacy evaluation of a vaccine showing improved protection for a flu-vulnerable population, diverging sharply from peer regulators' response to the identical data.",
       "confidence_note": "The refusal and its stated rationale are well-corroborated; whether the rationale itself was scientifically justified is disputed between FDA and Moderna and not independently resolved. A separate court-frozen ACIP complicates whether the approved vaccine reaches patients at guaranteed no cost."
     },
-    "last_substantive_update": "2026-08-30"
+    "last_substantive_update": "2026-08-30",
+    "glance": {
+      "who": "Vinay Prasad (FDA vaccine division director)",
+      "what": "Refused to review Moderna's mRNA flu vaccine, reversed within 8 days; approved in August 2026",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "documented",
+        "who": "Moderna flu-vaccine review process"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "fda-vaccine-safety-study-suppression-2025-2026",
@@ -12680,7 +12790,17 @@
       "estimated_impact": "The suppressed research covered vaccines used by tens of millions of Americans; an outside Johns Hopkins expert who reviewed the withdrawn studies found nothing methodologically wrong with them, undercutting HHS's stated rationale.",
       "confidence_note": "Well-documented on the record via HHS's own spokesperson and consistent multi-outlet reporting; whether this reflects political suppression versus legitimate review rests on one independent expert's disputed assessment of the stated rationale."
     },
-    "last_substantive_update": "2026-07-28"
+    "last_substantive_update": "2026-07-28",
+    "glance": {
+      "who": "HHS under Robert F. Kennedy Jr.",
+      "what": "Ordered FDA scientists to pull two accepted COVID-vaccine safety studies; blocked a shingles-vaccine abstract",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "documented",
+        "who": "Public vaccine-safety research"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "fda-vrbpac-flu-vaccine-meeting-cancelled-2025",
@@ -12726,7 +12846,17 @@
         "url": "https://azpha.org/2025/03/17/fda-bypasses-vaccines-related-biological-products-advisory-committee-establishes-this-falls-influenza-vaccine-formula-w-o-vrbpac-technical-review/"
       }
     ],
-    "last_substantive_update": "2026-08-08"
+    "last_substantive_update": "2026-08-08",
+    "glance": {
+      "who": "Robert F. Kennedy Jr. (HHS Secretary)",
+      "what": "Canceled FDA's public flu-strain advisory meeting; the strain call was made behind closed doors",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "documented",
+        "who": "Public review of flu-strain selection"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "fec-quorum-loss-2025",
@@ -12774,7 +12904,17 @@
       "estimated_impact": "The FEC lost its ability to investigate complaints, issue guidance, or enforce campaign finance law during the 2026 election cycle's ramp-up; no specific unenforced-violation count was found.",
       "confidence_note": "Well corroborated across multiple independent outlets on the departures and resulting quorum loss."
     },
-    "last_substantive_update": "2026-09-10"
+    "last_substantive_update": "2026-09-10",
+    "glance": {
+      "who": "Donald Trump (President)",
+      "what": "Removed a Democratic FEC commissioner; with two departures the FEC fell below quorum",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "documented",
+        "who": "FEC's campaign-finance enforcement"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "federal-reserve-cook-removal-blocked-trump2",
@@ -12874,7 +13014,17 @@
       }
     ],
     "last_updated": "2026-09-01",
-    "last_substantive_update": "2026-09-01"
+    "last_substantive_update": "2026-09-01",
+    "glance": {
+      "who": "Donald Trump (President)",
+      "what": "Tried to fire Fed Governor Lisa Cook over unproven fraud claims; blocked, but a second attempt opened in 2026",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "averted",
+        "who": "Federal Reserve independence"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "federal-rto-mandate-relocation-chaos-2025",
