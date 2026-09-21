@@ -17994,7 +17994,17 @@
     },
     "last_updated": "2026-08-31",
     "date_added": "2026-08-02",
-    "last_substantive_update": "2026-08-31"
+    "last_substantive_update": "2026-08-31",
+    "glance": {
+      "who": "House Republican leadership",
+      "what": "House passed a bill cutting $141M in WIC fruit-and-vegetable benefits for ~5.4M women and children",
+      "harm": {
+        "kind": "livelihood",
+        "certainty": "projected",
+        "who": "5.4 million WIC women and children"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "hubbard-brook-acid-rain-monitoring-defunded-2025",
@@ -18049,7 +18059,17 @@
       "estimated_impact": "Removes the monitoring capacity needed to detect any resurgence of acid rain just as the underlying emissions rules that caused it face rollback, per the program's own founding scientist.",
       "confidence_note": "The funding cut and Likens' warning are well-corroborated across multiple outlets; the exact funding mechanism cut is not fully specified in sourcing reviewed, and a separate, larger proposed NSF budget cut threatening the site is not yet enacted and is not conflated with this already-executed cut. The FY2026 topline threat is resolved per enacted appropriations; no program-specific confirmation for Hubbard Brook's own LTER line item was found."
     },
-    "last_substantive_update": "2026-08-17"
+    "last_substantive_update": "2026-08-17",
+    "glance": {
+      "who": "Trump administration (NSF funding)",
+      "what": "Cut funding for the 49-year Hubbard Brook acid-rain monitoring program, reported March 2025",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "documented",
+        "who": "Acid-rain monitoring data record"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "hud-budget-cut-fair-housing-grants-defunding-2025-2026",
@@ -18121,7 +18141,17 @@
         "url": "https://www.motherjones.com/politics/2025/07/hud-cuts-eviction-fears-disability-discrimination-and-trumps-war-on-fair-housing/"
       }
     ],
-    "last_substantive_update": "2026-09-12"
+    "last_substantive_update": "2026-09-12",
+    "glance": {
+      "who": "Scott Turner (HUD Secretary)",
+      "what": "Proposed a $33B HUD cut, rejected by Congress; courts blocked two bids to defund fair-housing groups",
+      "harm": {
+        "kind": "livelihood",
+        "certainty": "averted",
+        "who": "Low-income renters, fair-housing groups"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "hud-continuum-of-care-builds-unlawful-2026",
@@ -18171,7 +18201,17 @@
       "estimated_impact": "A court blocked HUD's attempt to reshape a needs-based homeless-housing construction program around political priorities before it took effect.",
       "confidence_note": "Well-corroborated across AP News and multiple local outlets; the ruling judge being a Trump nominee is independently confirmed."
     },
-    "last_substantive_update": "2026-08-06"
+    "last_substantive_update": "2026-08-06",
+    "glance": {
+      "who": "Department of Housing and Urban Development",
+      "what": "Rewrote funding criteria for its $75M homeless-housing program; a judge ruled it unlawful and scrapped it",
+      "harm": {
+        "kind": "money",
+        "certainty": "averted",
+        "who": "Homeless-housing providers ($75M)"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "hud-fair-housing-staff-cuts-trump2",
@@ -18265,7 +18305,17 @@
       }
     ],
     "last_updated": "2026-08-31",
-    "last_substantive_update": "2026-08-31"
+    "last_substantive_update": "2026-08-31",
+    "glance": {
+      "who": "Scott Turner (HUD Secretary)",
+      "what": "HUD's fair-housing office lost 45-67% of its staff; whistleblowers allege discrimination cases were stalled",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "documented",
+        "who": "Federal fair-housing enforcement"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "hud-housing-inspection-contract-termination-2025",
@@ -18320,7 +18370,17 @@
       "estimated_impact": "Thousands of legally required safety inspections, including ~250 already-flagged priority properties, were left undone with no reported replacement oversight.",
       "confidence_note": "Corroborated by ABC News's original named-source reporting, widely syndicated; the savings figure itself is disputed, not the underlying termination."
     },
-    "last_substantive_update": "2026-09-10"
+    "last_substantive_update": "2026-09-10",
+    "glance": {
+      "who": "DOGE under Elon Musk",
+      "what": "Terminated HUD's contract to inspect ~6,200 low-income housing properties for gas leaks and other hazards",
+      "harm": {
+        "kind": "physical",
+        "certainty": "projected",
+        "who": "Low-income housing tenants"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "hud-rental-assistance-work-requirements-time-limits-2025-2026",
@@ -18391,7 +18451,17 @@
         "url": "https://nlihc.org/resource/hud-publishes-proposed-rulemaking-regarding-time-limits-and-work-requirements-new-nlihc"
       }
     ],
-    "last_substantive_update": "2026-09-10"
+    "last_substantive_update": "2026-09-10",
+    "glance": {
+      "who": "Scott Turner (HUD Secretary)",
+      "what": "Proposed optional two-year limits and 40-hour work rules for rental aid; CBPP models up to 3.7M at risk",
+      "harm": {
+        "kind": "livelihood",
+        "certainty": "projected",
+        "who": "Section 8 and public housing residents"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "hud-supportive-housing-shift-2026",
@@ -18513,7 +18583,17 @@
       "estimated_impact": "A federal court blocked the funding shift three times, but the underlying legal dispute over HUD's authority remains unresolved for FY2027. Near-term, a statutory auto-renewal trigger has already funded 622 Q1-expiring projects ($349M) and reportedly ~4,241 Q3/Q4-expiring projects (~$2.4B, pending confirmation) at pre-cut permanent-supportive-housing terms, substantially reducing the originally-estimated 170,000-eviction-risk exposure for the current fiscal year even as the fight over the program's future structure continues.",
       "confidence_note": "Well-corroborated via multiple outlets and the California AG's own press release; the litigation's final resolution wasn't identified in sourcing reviewed. The statutory-renewal mechanism is HIGH confidence for the Q1 figure (directly fetched, corroborated) and MODERATE for the larger Q3/Q4 figure (single-search-sourced, pending direct confirmation)."
     },
-    "last_substantive_update": "2026-09-10"
+    "last_substantive_update": "2026-09-10",
+    "glance": {
+      "who": "Department of Housing and Urban Development",
+      "what": "Proposed moving two-thirds of $3.9B in homeless aid from permanent housing to shelter; courts blocked it",
+      "harm": {
+        "kind": "livelihood",
+        "certainty": "averted",
+        "who": "Formerly homeless residents (170,000)"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "hudson-tunnel-gateway-funding-freeze-2026",
@@ -18590,7 +18670,17 @@
       "estimated_impact": "Threatened to halt construction on a project both states call critical to preventing failure of a more-than-century-old, Sandy-damaged rail crossing, with roughly 1,000 workers facing immediate layoff.",
       "confidence_note": "Independently corroborated by both states' official Attorney General press releases plus Reuters and other national outlets, with no facts disputed by DOT."
     },
-    "last_substantive_update": "2026-08-17"
+    "last_substantive_update": "2026-08-17",
+    "glance": {
+      "who": "U.S. Department of Transportation",
+      "what": "Froze ~$16B in committed Hudson River tunnel funding for four months; a judge ruled the freeze illegal",
+      "harm": {
+        "kind": "money",
+        "certainty": "documented",
+        "who": "Hudson Tunnel project funding"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "ice-body-cameras-undeployed-2026",
@@ -18689,7 +18779,17 @@
       }
     ],
     "last_updated": "2026-09-01",
-    "last_substantive_update": "2026-09-01"
+    "last_substantive_update": "2026-09-01",
+    "glance": {
+      "who": "DHS (pledge made under Kristi Noem)",
+      "what": "Pledged ICE body cameras after fatal Minneapolis shootings; agents in later fatal shootings still had none",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "documented",
+        "who": "Accountability for ICE shootings"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "ice-detention-deaths-surge-2025",
@@ -18784,7 +18884,17 @@
       }
     ],
     "last_updated": "2026-09-11",
-    "last_substantive_update": "2026-09-11"
+    "last_substantive_update": "2026-09-11",
+    "glance": {
+      "who": "DHS under Kristi Noem",
+      "what": "31-33 people died in ICE custody in 2025, a two-decade high, as detention inspections fell ~36%",
+      "harm": {
+        "kind": "physical",
+        "certainty": "documented",
+        "who": "People in ICE custody"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "ice-mass-text-groupchat-data-exposure-2025",
@@ -18828,7 +18938,17 @@
       }
     ],
     "last_updated": "2026-09-10",
-    "last_substantive_update": "2026-09-10"
+    "last_substantive_update": "2026-09-10",
+    "glance": {
+      "who": "U.S. Immigration and Customs Enforcement",
+      "what": "Reportedly exposed live-manhunt data, incl. DMV records, to a stranger via an unencrypted group text",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "alleged",
+        "who": "Security of ICE operations"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "ice-training-surge-non-ice-academy-freeze-2025",
@@ -18915,7 +19035,17 @@
       "confidence_note": "Well-corroborated on the freeze, the whistleblower complaint, and the eventual reversal; the precise shortened-training-length figure is genuinely unreconciled across DHS's own statement and independent reporting."
     },
     "last_updated": "2026-09-12",
-    "last_substantive_update": "2026-09-12"
+    "last_substantive_update": "2026-09-12",
+    "glance": {
+      "who": "DHS under Kristi Noem",
+      "what": "Froze FLETC training for 75+ non-ICE agencies to rush a shortened ICE program; ICE scrapped it in May 2026",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "documented",
+        "who": "Federal law-enforcement training"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "ies-nces-research-contract-cancellations-trump2",
@@ -19001,7 +19131,17 @@
         "url": "https://abcnews.com/Politics/education-department-cuts-agency-compiles-nations-report-card/story?id=119735831"
       }
     ],
-    "last_substantive_update": "2026-08-11"
+    "last_substantive_update": "2026-08-11",
+    "glance": {
+      "who": "DOGE and Education Secretary Linda McMahon",
+      "what": "Canceled 89 research contracts (~$881M by DOGE's count) and fired nearly all ~130 NCES staff",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "documented",
+        "who": "Federal education statistics, research"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "ihs-vaccine-language-restrictions-navajo-2025",
@@ -19035,7 +19175,17 @@
       "estimated_impact": "Reduced public vaccine messaging at federally operated Navajo Nation health facilities during active measles outbreaks, while independent tribal facilities not subject to the restriction kept promoting vaccination.",
       "confidence_note": "HIGH confidence, directly sourced to ProPublica's dedicated investigation."
     },
-    "last_substantive_update": "2026-09-13"
+    "last_substantive_update": "2026-09-13",
+    "glance": {
+      "who": "Indian Health Service, under HHS Secretary Kennedy",
+      "what": "Reportedly made 'vaccines' an approval-only term, cutting vaccine-clinic outreach on Navajo Nation",
+      "harm": {
+        "kind": "physical",
+        "certainty": "alleged",
+        "who": "Navajo Nation patients during measles"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "ilo-us-appointment-rescinded-unpaid-dues-2026",
@@ -19111,7 +19261,17 @@
       "confidence_note": "Well-sourced to Reuters' direct reporting with figures attributed to the ILO, plus the ILO's own published Governing Body decision records and session agenda for the contingency-framework and post-reduction developments."
     },
     "last_updated": "2026-09-01",
-    "last_substantive_update": "2026-09-01"
+    "last_substantive_update": "2026-09-01",
+    "glance": {
+      "who": "Trump administration (unpaid ILO dues)",
+      "what": "Left $328M in ILO dues unpaid; the ILO rescinded a U.S. deputy director-general appointment",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "documented",
+        "who": "U.S. role at the ILO; ILO staffing"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "imls-dismantlement-reversed-trump2",
@@ -19201,7 +19361,17 @@
         "url": "https://www.bangordailynews.com/2025/05/18/state/maine-state-library-temporarily-closed/"
       }
     ],
-    "last_substantive_update": "2026-09-11"
+    "last_substantive_update": "2026-09-11",
+    "glance": {
+      "who": "Keith Sonderling (Acting IMLS Director)",
+      "what": "Moved to eliminate IMLS and cut off its grants; courts blocked it and a settlement restored the agency",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "documented",
+        "who": "IMLS grants to libraries, museums"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "immigrant-student-enrollment-collapse-school-budgets-2025",
@@ -19266,7 +19436,17 @@
       "estimated_impact": "Multi-district enrollment collapse has already produced concrete, quantified budget and program losses (Miami-Dade's $70 million shortfall, Houston ISD's newcomer-school closure), and a parallel, independently-sourced survey finding points to a comparable withdrawal from pediatric health care access among the same population.",
       "confidence_note": "Enrollment/budget figures are strongly sourced to named district officials, though from a single widely-syndicated AP dispatch; the health-access figure is a genuinely independent corroborating survey."
     },
-    "last_substantive_update": "2026-09-11"
+    "last_substantive_update": "2026-09-11",
+    "glance": {
+      "who": "DHS enforcement policy (indirect effect)",
+      "what": "Immigrant enrollment fell sharply amid deportations; Miami-Dade lost ~$70M and a Houston newcomer school shut",
+      "harm": {
+        "kind": "money",
+        "certainty": "documented",
+        "who": "Districts serving immigrant students"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "immigration-habeas-surge-usao-strain-2026",
@@ -19331,7 +19511,17 @@
       "estimated_impact": "Described as a 'tsunami' straining offices across the country, structurally similar to the office-specific staffing collapses documented elsewhere in this tracker but at national scale.",
       "confidence_note": "Sourced to a single but detailed CBS News investigation; no independent DOJ data on the precise national scale was found."
     },
-    "last_substantive_update": "2026-08-30"
+    "last_substantive_update": "2026-08-30",
+    "glance": {
+      "who": "Immigration-detention enforcement policy",
+      "what": "Immigration habeas petitions rose ~36-fold; prosecutors were reportedly pulled off criminal casework",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "alleged",
+        "who": "U.S. Attorney criminal casework"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "international-organizations-mass-withdrawal-2026",
@@ -19448,7 +19638,17 @@
       }
     ],
     "last_updated": "2026-09-12",
-    "last_substantive_update": "2026-09-12"
+    "last_substantive_update": "2026-09-12",
+    "glance": {
+      "who": "Donald Trump (President)",
+      "what": "Ordered withdrawal from 66 international bodies, incl. the UN Population Fund and the climate-treaty framework",
+      "harm": {
+        "kind": "physical",
+        "certainty": "projected",
+        "who": "Women in UNFPA-served countries"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "irs-ice-data-sharing-errors-2026",
