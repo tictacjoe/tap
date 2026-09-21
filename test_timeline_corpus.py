@@ -44,6 +44,14 @@ def test_every_timeline_reassembles_to_its_prose_field(tracker):
 
 
 @pytest.mark.parametrize("tracker", FILES)
+def test_every_timeline_equals_a_fresh_parse_of_its_prose_field(tracker):
+    markers = _markers()
+    for entry in _entries(tracker):
+        for field, part in (entry.get("timeline") or {}).items():
+            assert part == markers.parse_field(entry[field]), (entry.get("id"), field)
+
+
+@pytest.mark.parametrize("tracker", FILES)
 def test_every_update_has_valid_dates_and_a_consistent_effective_date(tracker):
     for entry in _entries(tracker):
         for field, part in (entry.get("timeline") or {}).items():

@@ -1038,8 +1038,9 @@
   }
   /* Label between a field's base narrative and its update paragraphs
      ("Updates, newest first, dated when TAP added them"). Muted so it
-     reads as a caption, not a heading. */
-  .update-timeline-label {
+     reads as a caption, not a heading. The `p.` qualifier is needed to
+     outrank `.field-value p`, whose margin would otherwise win. */
+  .field-value p.update-timeline-label {
     margin: 0.6rem 0 0.2rem;
     font-size: 0.72rem;
     letter-spacing: 0.03em;
