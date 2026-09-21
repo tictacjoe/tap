@@ -247,3 +247,17 @@ def test_the_drawer_works_in_the_global_search_one_liner_list(browser, site_url)
     assert drawer.locator(".evidence-drawer-body").is_visible()
     assert drawer.locator(".evidence-item").count() == expected
     assert errors == []
+
+
+def test_the_most_covered_count_leaves_recheck_notes_out(browser, site_url):
+    """coverageCount() drives the "most covered" sort; TAP's own recheck notes are not sources
+    (the drawer leaves them out too), so they must not raise an entry's coverage."""
+    page, _, errors = _open_page(browser, site_url)
+    counted = page.evaluate("""() => coverageCount({evidence: [
+        {description: "CNN reporting on the ruling"},
+        {description: "Re-verified 2026-08-18: no new litigation resolution identified."},
+        {description: "Re-verification 2026-09-02: still pending."},
+        {description: "Added 2026-09-09 (cluster c0495): a later development that was re-verified"},
+    ]}, {kind: "prosecution"})""")
+    assert counted == 2   # the source and the "Added" item; the two notes do not count
+    assert errors == []

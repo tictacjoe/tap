@@ -96,3 +96,13 @@ def test_published_checks_plus_unchecked_items_equal_the_evidence_item_count():
                     if str(position) not in checks.get(entry_id, {}))
     assert 0 < published <= total
     assert published + unchecked == total
+
+
+def test_the_drawers_recheck_note_pattern_equals_the_python_one():
+    """isRecheckNote in index.html and claim_checks_public.RECHECK_NOTE must be the same pattern:
+    the drawer hides notes by the JS one, the claim refresh skips them by the Python one."""
+    import re
+    source = (SITE / "index.html").read_text(encoding="utf-8")
+    match = re.search(r"function isRecheckNote\(item\) \{\s*return /(.+?)/i\.test\(", source, re.S)
+    assert match, "isRecheckNote not found in index.html"
+    assert match.group(1) == _module().RECHECK_NOTE.pattern

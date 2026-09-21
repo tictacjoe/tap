@@ -1058,7 +1058,7 @@
   }
   .evidence-drawer-head:hover, .evidence-drawer-head:focus-visible { background: var(--brass-light); }
   .evidence-drawer-title { font-weight: 700; }
-  .evidence-tally { font-size: 0.8rem; color: var(--ink-faint); }
+  .evidence-tally { font-size: 0.8rem; color: var(--ink-soft); }
   .evidence-drawer-head::after { content: "\25B8"; margin-left: auto; }
   .evidence-drawer-head[aria-expanded="true"]::after { content: "\25BE"; }
   .evidence-drawer-body { padding: 0.2rem 0.8rem 0.8rem; }
@@ -1082,14 +1082,16 @@
     border: 1px solid var(--rule-strong); background: var(--paper); color: var(--ink);
   }
   .evidence-state-supports .evidence-badge { border-color: var(--brass); }
+  /* "Not yet checked" / "Couldn't open" are set apart by the dashed border, not by a faint
+     text colour: the label itself must stay readable (--ink-soft, about 7:1). */
   .evidence-state-unchecked .evidence-badge, .evidence-state-unopened .evidence-badge {
-    color: var(--ink-faint); border-style: dashed;
+    color: var(--ink-soft); border-style: dashed;
   }
-  .evidence-tag { font-size: 0.7rem; color: var(--ink-faint); font-style: italic; }
+  .evidence-tag { font-size: 0.7rem; color: var(--ink-soft); font-style: italic; }
   .evidence-desc { margin: 0 0 0.3rem; font-size: 0.9rem; overflow-wrap: anywhere; }
   .evidence-source { margin: 0 0 0.3rem; font-size: 0.8rem; color: var(--ink-soft); overflow-wrap: anywhere; }
   .evidence-why { font-size: 0.82rem; margin: 0.2rem 0 0; }
-  .evidence-why-toggle summary { font-size: 0.8rem; color: var(--ink-faint); cursor: pointer; }
+  .evidence-why-toggle summary { font-size: 0.8rem; color: var(--ink-soft); cursor: pointer; }
 
   /* User Topics: a strong visual pointer to a fuller, already-
      researched curated entry, shown at the very top of the detail view
@@ -2512,7 +2514,8 @@ function impactScore(entry, cfg) {
    single source_name/source_url pair rather than an array, so it's
    0-or-1 there. */
 function coverageCount(entry, cfg) {
-  if (cfg.kind === "prosecution") return (entry.evidence || []).length;
+  // Recheck notes are not sources (the Evidence drawer leaves them out too), so they do not count as coverage.
+  if (cfg.kind === "prosecution") return (entry.evidence || []).filter(ev => !isRecheckNote(ev)).length;
   if (cfg.kind === "tracker") return entry.source_name ? 1 : 0;
   return (entry.sources || []).length;
 }
