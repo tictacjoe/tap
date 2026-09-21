@@ -3911,8 +3911,10 @@ function renderEntries() {
   // Safety valve: even a successful search can still match thousands
   // of entries (e.g. a common word against 12,000+ News entries) --
   // cap what's actually rendered so the page doesn't choke, and be
-  // explicit that there are more matches than are shown.
-  const RENDER_CAP = 300;
+  // explicit that there are more matches than are shown. Only the
+  // Reporting tracker is that large; the curated trackers (411 entries at
+  // most) always render in full so no entry is hidden from the default list.
+  const RENDER_CAP = cfg.kind === "tracker" ? 300 : Math.max(300, cfg.data.length);
   const toRender = filtered.slice(0, RENDER_CAP);
 
   countEl.textContent = filtered.length > RENDER_CAP
