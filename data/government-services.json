@@ -36508,7 +36508,17 @@
       "estimated_impact": "Represents a longer-term reduction in future U.S. vaccine development capacity, connected to this tracker's separately-documented FDA and state-mandate-repeal entries.",
       "confidence_note": "Primary source is the NYT's own investigative reporting; the precise causal weight of federal policy versus other market factors is not fully isolated."
     },
-    "last_substantive_update": "2026-08-30"
+    "last_substantive_update": "2026-08-30",
+    "glance": {
+      "who": "Robert F. Kennedy Jr. (HHS Secretary)",
+      "what": "Reportedly, manufacturers cut vaccine R&D, canceled factories and laid off workers amid hostile federal policy",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "alleged",
+        "who": "U.S. vaccine development capacity"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "vance-fraud-task-force-hospice-suspensions-2026",
@@ -36595,7 +36605,17 @@
       "confidence_note": "Strong: suspension figures corroborated across multiple outlets including administration-friendly ones; the collateral-damage finding comes from the Washington Post's own independently verified reporting."
     },
     "last_updated": "2026-08-30",
-    "last_substantive_update": "2026-08-17"
+    "last_substantive_update": "2026-08-17",
+    "glance": {
+      "who": "JD Vance (Vice President)",
+      "what": "Task force suspended Medicare payments to 447 LA hospices; the Washington Post found 43+ were legitimate",
+      "harm": {
+        "kind": "livelihood",
+        "certainty": "documented",
+        "who": "LA hospices and home-health providers"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "voa-usagm-dismantlement-trump2",
@@ -36662,7 +36682,17 @@
         "url": "https://en.wikipedia.org/wiki/Voice_of_America"
       }
     ],
-    "last_substantive_update": "2026-09-08"
+    "last_substantive_update": "2026-09-08",
+    "glance": {
+      "who": "Kari Lake (acting USAGM CEO)",
+      "what": "Cut USAGM staff ~85% and VOA languages from 49 to 4; a court voided the actions and ordered reinstatement",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "documented",
+        "who": "VOA international broadcasting"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "white-house-200b-research-funding-overhaul-2026",
@@ -36742,7 +36772,17 @@
     ],
     "last_verified": "2026-08-30",
     "last_updated": "2026-08-30",
-    "last_substantive_update": "2026-08-30"
+    "last_substantive_update": "2026-08-30",
+    "glance": {
+      "who": "Michael Kratsios (OSTP), Russell Vought (OMB)",
+      "what": "Unveiled a plan moving $200B in yearly federal R&D from peer review toward appointee-influenced funding",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "projected",
+        "who": "Federal research independence"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "white-house-higher-ed-compact-collapse-2025",
@@ -36806,7 +36846,17 @@
       }
     ],
     "last_updated": "2026-08-14",
-    "last_substantive_update": "2026-08-14"
+    "last_substantive_update": "2026-08-14",
+    "glance": {
+      "who": "Education Department and White House",
+      "what": "Offered nine universities priority funding for mandated admissions, hiring and speech policies; none signed",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "averted",
+        "who": "University independence"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "white-house-iran-threat-intel-downplayed-2026",
@@ -36858,7 +36908,17 @@
       }
     ],
     "last_updated": "2026-09-01",
-    "last_substantive_update": "2026-08-30"
+    "last_substantive_update": "2026-08-30",
+    "glance": {
+      "who": "The White House",
+      "what": "Reportedly blocked an Iran threat bulletin, then publicly downplayed a similar FBI/NCTC report",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "alleged",
+        "who": "Threat warnings to police and the public"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "who-withdrawal-surveillance-access-loss-2026",
@@ -36916,7 +36976,17 @@
       "confidence_note": "Well-sourced to named health officials via NBC News; deliberately does not repeat the separate, Snopes-flagged misleading claim that staffing cuts delayed this specific outbreak's response. The smallpox-governance and unpaid-dues detail comes directly from a primary-source Senate letter, read in full."
     },
     "last_updated": "2026-08-30",
-    "last_substantive_update": "2026-08-30"
+    "last_substantive_update": "2026-08-30",
+    "glance": {
+      "who": "Donald Trump (President)",
+      "what": "Withdrew the U.S. from WHO in January 2026; CDC lost direct real-time outbreak surveillance data",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "documented",
+        "who": "CDC outbreak surveillance access"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "whooping-cough-resurgence-vaccine-policy-2025",
@@ -36999,7 +37069,17 @@
       "estimated_impact": "Louisiana's outbreak (387 cases, 2 infant deaths) and its months-long disclosure delay coincided with a broader national pattern of declining pertussis vaccination and elevated cases that also produced three infant deaths in Kentucky and 3,500+ cases in Texas, though no sourcing reviewed proves the Louisiana policy caused its own outbreak's specific deaths.",
       "confidence_note": "HIGH confidence, corroborated across KFF Health News/NPR, ABC News, and CIDRAP; several other outlets covering the same stories could not be directly fetched and are not relied upon."
     },
-    "last_substantive_update": "2026-09-13"
+    "last_substantive_update": "2026-09-13",
+    "glance": {
+      "who": "Ralph Abraham (Louisiana Surgeon General)",
+      "what": "Ended vaccine promotion the day RFK Jr. was confirmed; Louisiana's pertussis warning then came 3+ months late",
+      "harm": {
+        "kind": "physical",
+        "certainty": "documented",
+        "who": "Louisiana infants and families"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "wic-shutdown-funding-crisis-2025",
@@ -37077,7 +37157,17 @@
       "confidence_note": "Well-corroborated across many outlets; no confirmed nationwide benefit interruption occurred before the emergency rescue funding arrived."
     },
     "last_updated": "2026-09-12",
-    "last_substantive_update": "2026-09-12"
+    "last_substantive_update": "2026-09-12",
+    "glance": {
+      "who": "Trump administration / OMB, USDA leadership",
+      "what": "Shutdown withheld WIC's quarterly funding for 6.8M participants until emergency tariff transfers arrived",
+      "harm": {
+        "kind": "livelihood",
+        "certainty": "projected",
+        "who": "6.8M WIC mothers and young children"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "wildland-fire-service-suppression-policy-2026",
@@ -37175,7 +37265,17 @@
       }
     ],
     "last_updated": "2026-08-30",
-    "last_substantive_update": "2026-08-30"
+    "last_substantive_update": "2026-08-30",
+    "glance": {
+      "who": "Doug Burgum (Interior Secretary)",
+      "what": "Created a wildland fire agency without congressional approval and ordered full suppression of every wildfire",
+      "harm": {
+        "kind": "physical",
+        "certainty": "projected",
+        "who": "Wildland firefighters and communities"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "wright-iea-net-zero-ultimatum-2026",
@@ -37218,6 +37318,16 @@
       "estimated_impact": "A documented case of U.S. political pressure producing a substantive shift in an international agency's independent forecasting, though the U.S. has not yet actually withdrawn.",
       "confidence_note": "The ultimatum and its terms are well-corroborated; the direct causal link to IEA's forecast change is supported by timing and outlet characterization but not an explicit IEA admission."
     },
-    "last_substantive_update": "2026-09-08"
+    "last_substantive_update": "2026-09-08",
+    "glance": {
+      "who": "Chris Wright (Energy Secretary)",
+      "what": "Gave the IEA a one-year ultimatum to drop net-zero modeling or face U.S. exit; forecasts reportedly softened",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "alleged",
+        "who": "IEA forecasting independence"
+      },
+      "reviewed": "2026-09-20"
+    }
   }
 ]
