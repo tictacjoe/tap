@@ -35,6 +35,7 @@ const buildDetailHtmlFunctionSource = extractFunction(source, "build-detail-html
 const safeHrefFunctionSource = extractFunction(source, "safe-href");
 const buildPullQuoteHtmlFunctionSource = extractFunction(source, "build-pull-quote-html");
 const buildEntryColsHtmlFunctionSource = extractFunction(source, "build-entry-cols-html");
+const evidenceDrawerFunctionSource = extractFunction(source, "evidence-drawer");
 
 // safeHref resolves relative URLs against location.href, which doesn't
 // exist in Node -- give it a fixed base so absolute test URLs round-trip.
@@ -58,7 +59,7 @@ const combined = escapeHtmlFunctionSource + "\n" + summaryLineFunctionSource + "
   highlightMatchesFunctionSource + "\n" + buildUpdateRequestHtmlFunctionSource + "\n" +
   updateTimelineFunctionSource + "\n" + buildConfidenceNoteHtmlFunctionSource + "\n" +
   safeHrefFunctionSource + "\n" + buildPullQuoteHtmlFunctionSource + "\n" + buildEntryColsHtmlFunctionSource + "\n" +
-  buildFiguresHtmlStubSource + "\n" + buildDetailHtmlFunctionSource;
+  buildFiguresHtmlStubSource + "\n" + evidenceDrawerFunctionSource + "\n" + buildDetailHtmlFunctionSource;
 const buildDetailHtml = (0, eval)(`${combined}\nbuildDetailHtml;`);
 
 
@@ -1093,4 +1094,31 @@ test("a field with markers but no timeline entry falls back to one unsplit parag
   };
   const result = buildDetailHtml(entry, { kind: "prosecution" });
   assert(result.includes('<div class="field-label">Status</div><div class="field-value"><p>Found. Update 2026-07-26: more.</p></div>'));
+});
+
+test("prosecution detail places the Evidence drawer between the columns and the update-request area when the flag is on", () => {
+  const entry = {
+    id: "entry-a", offense_category: "Fraud", status_category: "Investigation", incident_summary: "Summary.",
+    status: "Under investigation.", confidence_note: "Strong evidence.",
+    evidence: [{ type: "news_report", description: "CNN reporting on the ruling", source_url: "https://www.npr.org/story" }],
+  };
+  const on = buildDetailHtml(entry, { kind: "prosecution", evidenceDrawerEnabled: true });
+  const cols = on.indexOf('class="entry-cols"');
+  const drawer = on.indexOf('class="evidence-drawer"');
+  assert(cols !== -1 && drawer > cols, "drawer comes after the columns");
+  assert(on.includes("Evidence · 1 item<"));
+  assert(on.includes("CNN reporting on the ruling"));
+  const off = buildDetailHtml(entry, { kind: "prosecution" });
+  assert(!off.includes("evidence-drawer"), "no flag, no drawer");
+});
+
+test("the Evidence drawer escapes hostile evidence text through the entry's hl", () => {
+  const entry = {
+    id: "entry-a", offense_category: "Fraud", status_category: "Investigation", incident_summary: "S.",
+    status: "S.", confidence_note: "C.",
+    evidence: [{ type: "news_report", description: "<script>alert(1)</script>", source_url: "https://example.com/a" }],
+  };
+  const html = buildDetailHtml(entry, { kind: "prosecution", evidenceDrawerEnabled: true });
+  assert(!html.includes("<script>alert(1)</script>"));
+  assert(html.includes("&lt;script&gt;"));
 });

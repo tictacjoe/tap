@@ -1048,6 +1048,40 @@
     color: var(--ink-faint);
   }
 
+  /* Evidence drawer (Cabinet-Level, behind evidenceDrawerEnabled). Theme tokens only, so it
+     follows the site's palette. Badges are text plus a glyph, never color alone. */
+  .evidence-drawer { margin: 1.1rem 0 0; border: 1px solid var(--rule-strong); background: var(--paper-card); }
+  .evidence-drawer-head {
+    display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.3rem 0.9rem; width: 100%;
+    padding: 0.6rem 0.8rem; background: none; border: 0; font: inherit; text-align: left;
+    color: var(--ink); cursor: pointer;
+  }
+  .evidence-drawer-head:hover, .evidence-drawer-head:focus-visible { background: var(--brass-light); }
+  .evidence-drawer-title { font-weight: 700; }
+  .evidence-tally { font-size: 0.8rem; color: var(--ink-faint); }
+  .evidence-drawer-head::after { content: "\25B8"; margin-left: auto; }
+  .evidence-drawer-head[aria-expanded="true"]::after { content: "\25BE"; }
+  .evidence-drawer-body { padding: 0.2rem 0.8rem 0.8rem; }
+  .evidence-drawer-body[hidden] { display: none; }
+  .evidence-note, .evidence-unavailable { font-size: 0.8rem; color: var(--ink-faint); margin: 0.4rem 0 0.7rem; }
+  .evidence-list { list-style: none; margin: 0; padding: 0; }
+  .evidence-item { padding: 0.65rem 0; border-top: 1px solid var(--rule); }
+  .evidence-item:first-child { border-top: 0; }
+  .evidence-item-top { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; margin-bottom: 0.25rem; }
+  .evidence-badge {
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.02em; padding: 0.1rem 0.45rem;
+    border: 1px solid var(--rule-strong); background: var(--paper); color: var(--ink);
+  }
+  .evidence-state-supports .evidence-badge { border-color: var(--brass); }
+  .evidence-state-unchecked .evidence-badge, .evidence-state-unopened .evidence-badge {
+    color: var(--ink-faint); border-style: dashed;
+  }
+  .evidence-tag { font-size: 0.7rem; color: var(--ink-faint); font-style: italic; }
+  .evidence-desc { margin: 0 0 0.3rem; font-size: 0.9rem; overflow-wrap: anywhere; }
+  .evidence-source { margin: 0 0 0.3rem; font-size: 0.8rem; color: var(--ink-faint); overflow-wrap: anywhere; }
+  .evidence-why { font-size: 0.82rem; margin: 0.2rem 0 0; }
+  .evidence-why-toggle summary { font-size: 0.8rem; color: var(--ink-faint); cursor: pointer; }
+
   /* User Topics: a strong visual pointer to a fuller, already-
      researched curated entry, shown at the very top of the detail view
      -- deliberately more prominent than confidence-box (solid border on
@@ -1419,7 +1453,11 @@
 /* glanceEnabled (Glance cards): per-tracker switch. false = the old card
    everywhere, whatever data exists. Flip to true only after
    `validate_glance.py <tracker> --require-all` passes and the live check in
-   the Glance plan is done. */
+   the Glance plan is done.
+
+   evidenceDrawerEnabled (Evidence drawer, Cabinet-Level only): off until the
+   drawer plan's final rollout step; the drawer needs data/claim-checks.json
+   only for its check states (the item list works without it). */
 const TRACKERS = {
   deregulation: {
     label: "Corporate Deregulation",
@@ -1446,6 +1484,7 @@ const TRACKERS = {
     statusField: "status",
     kind: "prosecution",
     glanceEnabled: true,
+    evidenceDrawerEnabled: false,
   },
   govservices: {
     label: "Government Service Redirection",
@@ -3503,6 +3542,7 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
     '<div class="field-group entry-aside-card"><div class="field-label">Status Stage</div><div class="field-value">' + hl(entry.status_category) + '</div></div>';
   const noteHtml = '<div class="field-group">' + buildConfidenceNoteHtml(entry, hl, summary) + '</div>' + buildPullQuoteHtml(entry, hl);
   return buildEntryColsHtml(mainHtml, asideHtml, noteHtml) +
+    (cfg.evidenceDrawerEnabled ? buildEvidenceDrawerHtml(entry, cfg, hl) : "") +
     buildUpdateRequestHtml(entry, cfg);
 }
 /* build-detail-html:end */
@@ -3746,6 +3786,7 @@ function buildEntryCard(entry, cfg, docketLabel, sourceLabel, term, useRegex, ca
   wireRelatedEntryLinks(div);
   wireUpdateRequestButtons(div);
   wireShareLinkButtons(div);
+  wireEvidenceDrawers(div, entry, cfg, term, useRegex);
   return div;
 }
 
@@ -3772,6 +3813,60 @@ function wireShareLinkButtons(container) {
       }
     });
   });
+}
+
+// The Evidence drawer's check results (data/claim-checks.json) load once, on the first open of
+// ANY drawer, and every drawer shares that one fetch. A failure resolves to null (and clears
+// the cache so the next open retries); the drawer then still lists its items.
+let claimChecksPromise = null;
+function loadClaimChecks() {
+  if (!claimChecksPromise) {
+    claimChecksPromise = fetch("data/claim-checks.json")
+      .then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+      .then(data => (data && data.checks && typeof data.checks === "object") ? data : null)
+      .catch(() => { claimChecksPromise = null; return null; });
+  }
+  return claimChecksPromise;
+}
+
+// Browser-only counterpart to buildEvidenceDrawerHtml(): toggles the drawer, and on the first
+// open loads the checks and re-renders the drawer in place (staying open) with states and tally.
+function wireEvidenceDrawers(container, entry, cfg, term, useRegex) {
+  let mount = container.querySelector(".evidence-drawer");
+  if (!mount) return;
+  const hl = (text) => highlightMatches(stripProcessLabels(text), term, useRegex);
+  let loadState = "idle";
+  let checks = null;
+
+  const bind = () => {
+    const head = mount.querySelector(".evidence-drawer-head");
+    head.addEventListener("click", () => {
+      const open = head.getAttribute("aria-expanded") !== "true";
+      setOpen(open);
+      if (open && (loadState === "idle" || loadState === "failed")) {
+        loadState = "loading";
+        loadClaimChecks().then(data => {
+          checks = data ? (data.checks[entry.id] || {}) : null;
+          loadState = data ? "loaded" : "failed";
+          rerender(true);
+        });
+      }
+    });
+  };
+  const setOpen = (open) => {
+    mount.querySelector(".evidence-drawer-head").setAttribute("aria-expanded", open ? "true" : "false");
+    mount.querySelector(".evidence-drawer-body").hidden = !open;
+  };
+  const rerender = (open) => {
+    const holder = document.createElement("div");
+    holder.innerHTML = buildEvidenceDrawerHtml(entry, cfg, hl, { checks, loadState });
+    const fresh = holder.firstElementChild;
+    mount.replaceWith(fresh);
+    mount = fresh;
+    setOpen(open);
+    bind();
+  };
+  bind();
 }
 
 // Deliberately does NOT clear searchTerm or the #search input --
