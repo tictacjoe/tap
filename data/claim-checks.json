@@ -5235,6 +5235,14 @@
     "kind": "fact",
     "archive": false
    },
+   "5": {
+    "state": "partly",
+    "why": "The excerpt and the House Armed Services paragraph confirm the Senate and House committee statements ('has directed inquiries', 'vigorous oversight', 'taking bipartisan action to gather a full accounting') and the earlier Wicker/Reed letters, but the source says nothing about the inquiries later being closed by both Republican chairs, and the article itself shows Wicker and Reed had already sent letters the month before, so it does not establish this as the 'dated start' of the inquiries.",
+    "host": "washingtonpost.com",
+    "date": "2026-09-21",
+    "kind": "fact",
+    "archive": false
+   },
    "6": {
     "state": "partly",
     "why": "The Guardian article confirms the December 2, 2025 White House/Pentagon framing naming Bradley (not Hegseth) as the officer who ordered the second strike, distancing Hegseth from accountability, but it predates and does not cover the December 6, 2025 Reagan National Defense Forum remarks or Hegseth's refusal there to commit to releasing footage -- that part of the claim is not addressed by this source.",
@@ -6618,10 +6626,18 @@
     "archive": false
    },
    "3": {
-    "state": "partly",
-    "why": "WIRED confirms an FBI bulletin describing impersonation-related robberies, kidnappings, and sexual assaults across several states, urging agencies to help civilians verify officers' identities, but the text describes only one bulletin (issued 'last month') without the specific Nov. 9/Nov. 22, 2025 two-bulletin timeline the claim asserts.",
+    "state": "supports",
+    "why": "The opening paragraph states that an FBI bulletin warned that criminals posing as immigration officers carried out robberies, kidnappings and sexual assaults in several states and urged agencies to cooperate when civilians ask to verify an officer's identity; the article also says it was 'First reported by WIRED'. The exact October/early-November dates are not in the text beyond 'issued last month', a peripheral detail.",
     "host": "wired.com",
-    "date": "2026-09-15",
+    "date": "2026-09-21",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "supports",
+    "why": "The Hill article (dated 11/13/25) says House Democrats are demanding a briefing from DHS and the FBI after the October FBI bulletin, Thompson's letter ties the impersonation crimes to ICE's masked agents and failure to identify themselves, and a DHS spokesperson said officers verbally identify themselves and wear vests marked ICE/ERO or Homeland Security.",
+    "host": "thehill.com",
+    "date": "2026-09-21",
     "kind": "fact",
     "archive": false
    },
