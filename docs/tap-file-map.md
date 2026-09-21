@@ -31,12 +31,18 @@ tests/
   build-detail-html.test.js
   glance-head.test.js
   glance-search-oneliner.test.js
+  update-timeline.test.js
 test_publish.py
+test_timeline_corpus.py
 ```
 
 ## Glance cards
 
 `index.html` has a per-tracker `glanceEnabled` flag in the `TRACKERS` object (all three curated trackers are on as of 2026-09-20; Reporting and User Topics have none). The card code lives in the marked region `/* glance-head:start */ ... /* glance-head:end */` and is covered by `tests/glance-head.test.js` and `tests/glance-search-oneliner.test.js`. A card is drawn only when the flag is on and the entry's `glance` block is valid; otherwise the old card shows.
+
+## Update timeline
+
+`publish.py` adds a derived `timeline` object to each published curated entry that carries `Update` / `Added` markers in its text fields, using `tracker/update_markers.py` from the private repo; the raw prose is published unchanged. `index.html` renders updates newest first from it, in the marked region `/* update-timeline:start */ ... /* update-timeline:end */`, covered by `tests/update-timeline.test.js`. `test_timeline_corpus.py` checks the invariants of the published `timeline` objects against `data/*.json`.
 
 ## Live site
 
