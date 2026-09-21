@@ -564,7 +564,8 @@ test("prosecution Confidence note renders no Updates section when it has no Upda
   const cfg = { kind: "prosecution" };
   const result = buildDetailHtml(entry, cfg);
 
-  assert(!result.includes('<div class="field-label">Updates</div>'), "no Updates section should render when there's nothing to put in it");
+  assert(!result.includes('class="confidence-box updates-box"'), "no updates box should render when there's nothing to put in it");
+  assert(!result.includes('class="update-date"'), "no update heading should render when there's nothing to put in it");
   assert(result.includes("<p>Single outlet, no dispute.</p>"), "the whole note stays in the Confidence note box");
 });
 
