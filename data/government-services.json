@@ -32980,7 +32980,17 @@
       "estimated_impact": "The proposal quantifies in one document the scale of the defense-vs-domestic-programs tradeoff this tracker documents piecemeal across many individual agency entries.",
       "confidence_note": "The top-line figures are well-sourced to Reuters's reporting on the budget document; this is a proposal requiring congressional action, not enacted law."
     },
-    "last_substantive_update": "2026-08-06"
+    "last_substantive_update": "2026-08-06",
+    "glance": {
+      "who": "Donald Trump (President)",
+      "what": "Proposed ~$500B more for defense and a 10% cut to non-defense discretionary spending in the FY2027 budget",
+      "harm": {
+        "kind": "money",
+        "certainty": "projected",
+        "who": "Non-defense discretionary programs"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "tsa-precheck-global-entry-shutdown-suspension-2026",
@@ -33093,7 +33103,17 @@
       "estimated_impact": "Disrupted travel for the 18+ million annual Global Entry users; Sen. Warner noted both programs stayed operational through a longer prior shutdown, undercutting the funding-lapse rationale.",
       "confidence_note": "Independently corroborated across multiple outlets and a senator's own office statement, with no facts disputed."
     },
-    "last_substantive_update": "2026-08-06"
+    "last_substantive_update": "2026-08-06",
+    "glance": {
+      "who": "Kristi Noem (DHS Secretary)",
+      "what": "Suspended TSA PreCheck and Global Entry during a funding lapse; PreCheck was restored within a day",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "documented",
+        "who": "Global Entry users (18M+ in 2025)"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "tsa-privatization-budget-cut-2025",
@@ -33148,7 +33168,17 @@
       "estimated_impact": "Raised accountability/safety concerns about shifting airport screening to private contractors; remained a proposal, not an enacted policy, as of this entry's creation.",
       "confidence_note": "Well corroborated via direct congressional-hearing coverage and TSA's own testimony record."
     },
-    "last_substantive_update": "2026-09-10"
+    "last_substantive_update": "2026-09-10",
+    "glance": {
+      "who": "Ha Nguyen McNeill (Acting TSA Administrator)",
+      "what": "Told Congress privatizing airport screening is 'on the table' as the White House proposed a ~$250M TSA cut",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "projected",
+        "who": "Airport screening standards"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "us-scientist-emigration-europe-brain-drain-2025",
@@ -33265,7 +33295,17 @@
       "estimated_impact": "Represents a measurable, internationally visible loss of U.S. research talent and capacity, compounding the direct NIH/NSF funding and staffing cuts this tracker documents separately, though attributed to the cumulative policy environment rather than one specific federal action.",
       "confidence_note": "The recruitment programs' existence and figures are well-corroborated across multiple outlets citing officials' own public announcements; the causal link to federal policy for any individual researcher's choice is their own stated reasoning, not independently isolated."
     },
-    "last_substantive_update": "2026-08-30"
+    "last_substantive_update": "2026-08-30",
+    "glance": {
+      "who": "Federal research-funding cuts (no single actor)",
+      "what": "About 300 U.S. scientists applied to a French program; the EU's recruitment pledge grew from EUR 500M to ~900M",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "documented",
+        "who": "U.S. research talent and capacity"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "usadf-iaf-marocco-takeover-trump2",
@@ -33332,7 +33372,17 @@
         "url": "https://thehill.com/homenews/administration/5201948-justice-department-defends-trump/"
       }
     ],
-    "last_substantive_update": "2026-09-08"
+    "last_substantive_update": "2026-09-08",
+    "glance": {
+      "who": "Peter Marocco (acting head, USADF and IAF)",
+      "what": "Took over USADF and IAF without Senate confirmation and gutted both; courts later voided the takeovers",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "documented",
+        "who": "Two chartered foreign-aid agencies"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "usaid-cdc-cuts-drc-ebola-response-2026",
@@ -33450,7 +33500,17 @@
       "confidence_note": "Well-corroborated on the capacity-reduction claim across multiple outlets and IRC's field assessment; the outbreak's origin itself is attributed to an unrelated wildlife spillover event, and this entry is framed accordingly."
     },
     "last_updated": "2026-08-30",
-    "last_substantive_update": "2026-08-30"
+    "last_substantive_update": "2026-08-30",
+    "glance": {
+      "who": "Trump administration (USAID and CDC cuts)",
+      "what": "Closed USAID's DRC mission and cut CDC global-health staff; experts say this slowed 2026 Ebola detection",
+      "harm": {
+        "kind": "physical",
+        "certainty": "alleged",
+        "who": "People in the DRC Ebola outbreak"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "usaid-dismantlement-trump2",
@@ -33731,7 +33791,17 @@
       }
     ],
     "last_updated": "2026-09-12",
-    "last_substantive_update": "2026-09-12"
+    "last_substantive_update": "2026-09-12",
+    "glance": {
+      "who": "Marco Rubio (Secretary of State)",
+      "what": "Dissolved USAID into State in July 2025, cutting staff from 10,000+ to under 300 and 83% of programs",
+      "harm": {
+        "kind": "physical",
+        "certainty": "projected",
+        "who": "People who relied on USAID health aid"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "uscis-immigration-records-redaction-withholding-2026",
@@ -33779,6 +33849,16 @@
       "what_changed": "USCIS redacted or withheld more than 80% of one lawyer's clients' records requests since April 17, 2025, versus about 10% in the prior year (roughly eightfold), and a former USCIS records official's whistleblower complaint alleges a May 2025 order to withhold document categories such as tax returns and marriage certificates.",
       "estimated_impact": "Immigrants are being denied or given unusable copies of their own status records, undermining their ability to prove lawful presence or contest deportation; the 80% figure comes from one lawyer's caseload, not a systemwide statistic.",
       "confidence_note": "HIGH confidence on the redaction increase and the whistleblower complaint's existence (NYT plus independent coverage); MODERATE on intent, which rests on the whistleblower's own interpretation with no on-record USCIS response."
+    },
+    "glance": {
+      "who": "USCIS leadership (DHS)",
+      "what": "Reportedly withheld or redacted 80%+ of one lawyer's clients' record requests, up from about 10%",
+      "harm": {
+        "kind": "rights",
+        "certainty": "alleged",
+        "who": "Immigrants seeking status records"
+      },
+      "reviewed": "2026-09-20"
     }
   },
   {
@@ -33851,7 +33931,17 @@
         "url": "https://www.greenbeltnewsreview.com/news-stories/decommissioning-begins-at-barc-reportedly-to-move-by-september-30/"
       }
     ],
-    "last_substantive_update": "2026-09-12"
+    "last_substantive_update": "2026-09-12",
+    "glance": {
+      "who": "Brooke Rollins (Secretary of Agriculture)",
+      "what": "Announced closing the 116-year-old Beltsville research campus and began decommissioning in April 2026",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "documented",
+        "who": "USDA research capacity, ~1,000 jobs"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "usda-bird-flu-response-staff-accidental-firing-2025",
@@ -33890,7 +33980,17 @@
       "estimated_impact": "Temporarily reduced bird-flu-response capacity during an active outbreak, though USDA's swift reversal limited the gap.",
       "confidence_note": "MODERATE-HIGH confidence -- the firing/rehire episode rests on one NBC report; the broader pattern is corroborated by The Hill."
     },
-    "last_substantive_update": "2026-08-12"
+    "last_substantive_update": "2026-08-12",
+    "glance": {
+      "who": "U.S. Department of Agriculture",
+      "what": "Reportedly fired bird-flu response staff by mistake in February 2025, then moved to rehire the staff",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "alleged",
+        "who": "Bird-flu outbreak response capacity"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "usda-climate-smart-commodities-cancellation-2025",
@@ -33958,7 +34058,17 @@
       "estimated_impact": "A major climate-mitigation farming program was eliminated in purpose (not entirely in funding), with Missouri alone having ~$1.2B at stake and existing grantees facing new eligibility terms.",
       "confidence_note": "Well-corroborated across USDA's own release, Reuters, Civil Eats, and state-level reporting on the same announcement."
     },
-    "last_substantive_update": "2026-09-12"
+    "last_substantive_update": "2026-09-12",
+    "glance": {
+      "who": "Brooke Rollins (Secretary of Agriculture)",
+      "what": "Canceled the $3.1B Climate-Smart Commodities program, replacing it with a rebranded non-climate initiative",
+      "harm": {
+        "kind": "money",
+        "certainty": "documented",
+        "who": "Climate-Smart Commodities grantees"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "usda-conservation-agricultural-grants-frozen-2025",
@@ -33998,7 +34108,17 @@
       "estimated_impact": "Left farmers who had already begun irrigation and fencing projects without expected reimbursement, a direct financial exposure.",
       "confidence_note": "MODERATE-HIGH confidence -- a single NBC News report describing farmer-level impacts, without a precise aggregate figure."
     },
-    "last_substantive_update": "2026-08-08"
+    "last_substantive_update": "2026-08-08",
+    "glance": {
+      "who": "Trump administration",
+      "what": "Reportedly froze billions in conservation and farm grants, stranding projects farmers had begun",
+      "harm": {
+        "kind": "money",
+        "certainty": "alleged",
+        "who": "Farmers with projects underway"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "usda-food-for-progress-grants-canceled-2025",
@@ -34047,7 +34167,17 @@
       "estimated_impact": "Disrupted over $218M/year in agricultural-development food aid to countries including Tanzania, Tunisia, and Sri Lanka before a partial, incompletely-scoped reversal.",
       "confidence_note": "Strongly sourced to Reuters' review of two separate internal USDA emails documenting both the cancellation and the reversal."
     },
-    "last_substantive_update": "2026-08-10"
+    "last_substantive_update": "2026-08-10",
+    "glance": {
+      "who": "U.S. Department of Agriculture",
+      "what": "Reportedly canceled all active Food for Progress grants on May 14, 2025; partly reversed two days later",
+      "harm": {
+        "kind": "money",
+        "certainty": "alleged",
+        "who": "Food-aid recipient countries"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "usda-food-safety-advisory-committees-terminated-2025",
@@ -34118,7 +34248,17 @@
         "url": "https://www.food-safety.com/articles/10298-dozens-of-prominent-food-safety-stakeholders-call-for-reinstatement-of-nacmcf-and-nacmpi"
       }
     ],
-    "last_substantive_update": "2026-08-10"
+    "last_substantive_update": "2026-08-10",
+    "glance": {
+      "who": "USDA under Executive Order 14217",
+      "what": "Terminated USDA's two scientific food-safety advisory committees, halting an in-progress Listeria review",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "documented",
+        "who": "Food-safety scientific review"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "usda-food-security-survey-cancellation-2025",
@@ -34194,7 +34334,17 @@
       }
     ],
     "last_updated": "2026-09-12",
-    "last_substantive_update": "2026-09-12"
+    "last_substantive_update": "2026-09-12",
+    "glance": {
+      "who": "USDA under Brooke Rollins",
+      "what": "Canceled the 30-year Household Food Security Survey as 'redundant, costly, politicized, and extraneous'",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "documented",
+        "who": "Public tracking of food insecurity"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "usda-keyword-search-grant-cancellation-litigation-2025-2026",
@@ -34258,7 +34408,17 @@
         "url": "https://indianz.com/News/2026/05/27/montana-free-press-lawsuit-challenges-cancellation-of-federal-grants-for-tribal-agricultural-programs/"
       }
     ],
-    "last_substantive_update": "2026-09-12"
+    "last_substantive_update": "2026-09-12",
+    "glance": {
+      "who": "DOGE and USDA",
+      "what": "Used an automated banned-word search to flag ~600 grants worth $3B+ for cancellation; a court restored some",
+      "harm": {
+        "kind": "money",
+        "certainty": "documented",
+        "who": "Grantees of ~600 canceled grants"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "usda-local-food-schools-food-banks-cut-2025",
@@ -34321,7 +34481,17 @@
         "url": "https://www.farmtoschool.org/news-and-articles/action-alert-usda-terminates-660m-program-for-local-food-in-schools-and-child-care"
       }
     ],
-    "last_substantive_update": "2026-09-10"
+    "last_substantive_update": "2026-09-10",
+    "glance": {
+      "who": "USDA under the Trump administration",
+      "what": "Canceled $660M Local Food for Schools and ~$500M Local Food Purchase Assistance mid-agreement in March 2025",
+      "harm": {
+        "kind": "money",
+        "certainty": "documented",
+        "who": "Schools, food banks and local farmers"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "usda-mass-firings-inspection-collapse-2025",
@@ -34402,7 +34572,17 @@
         "url": "https://westernpriorities.org/2025/12/usda-lost-over-20000-workers-in-the-first-half-of-2025/"
       }
     ],
-    "last_substantive_update": "2026-09-12"
+    "last_substantive_update": "2026-09-12",
+    "glance": {
+      "who": "Brooke Rollins (Secretary of Agriculture)",
+      "what": "Fired thousands of probationary staff until a court ordered reinstatement; the IG confirmed 20,000+ departures",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "documented",
+        "who": "Food-safety and import inspection"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "usda-regional-food-business-centers-terminated-2025",
@@ -34469,7 +34649,17 @@
         "url": "https://thisisreno.com/2025/08/usda-terminates-biden-era-program/"
       }
     ],
-    "last_substantive_update": "2026-09-12"
+    "last_substantive_update": "2026-09-12",
+    "glance": {
+      "who": "Brooke Rollins (Secretary of Agriculture)",
+      "what": "Terminated the $420M Regional Food Business Centers program on July 15, 2025; 450+ awarded grants continue",
+      "harm": {
+        "kind": "money",
+        "certainty": "documented",
+        "who": "Small farms and food businesses"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "usda-snap-data-demand-reapplication-fraud-narrative-2025-2026",
@@ -34561,7 +34751,17 @@
         "url": "https://ag.ny.gov/press-release/2025/attorney-general-james-wins-court-order-protecting-snap-recipients-sensitive"
       }
     ],
-    "last_substantive_update": "2026-09-10"
+    "last_substantive_update": "2026-09-10",
+    "glance": {
+      "who": "Brooke Rollins (Secretary of Agriculture)",
+      "what": "Demanded all SNAP recipients' personal data and floated mass reapplication; 21 states sued and won twice",
+      "harm": {
+        "kind": "rights",
+        "certainty": "documented",
+        "who": "SNAP recipients' personal data"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "usda-tefap-ccc-funding-rescission-2025",
