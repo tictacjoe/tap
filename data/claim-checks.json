@@ -4709,18 +4709,26 @@
    }
   },
   "grant-newsom-tax-travel-investigation-2026": {
+   "0": {
+    "state": "supports",
+    "why": "The DOJ profile states Bondi appointed Grant U.S. Attorney for the Eastern District of California beginning August 11, 2025, and that the district court further appointed him effective December 9, 2025, matching the claim exactly.",
+    "host": "justice.gov",
+    "date": "2026-09-21",
+    "kind": "fact",
+    "archive": false
+   },
    "1": {
     "state": "supports",
-    "why": "The governor's office release calls the DOJ investigation 'politically motivated' and announces a FOIA request demanding DOJ records about it.",
-    "host": "gov.ca.gov",
+    "why": "CNN, citing a person familiar with the matter, reports the EDCA U.S. attorney's office is leading tax-related probes including one of Newsom's wife; the same article says the source said the governor is not being investigated while Newsom claimed he is a target.",
+    "host": "cnn.com",
     "date": "2026-09-21",
     "kind": "fact",
     "archive": false
    },
    "2": {
-    "state": "unopened",
-    "why": "",
-    "host": "axios.com",
+    "state": "supports",
+    "why": "The governor's office release says it filed a FOIA request seeking DOJ records about what it calls President Trump's politically motivated investigation, matching the claim's characterization and records demand.",
+    "host": "gov.ca.gov",
     "date": "2026-09-21",
     "kind": "fact",
     "archive": false
@@ -4728,14 +4736,22 @@
    "3": {
     "state": "unopened",
     "why": "",
-    "host": "sfstandard.com",
+    "host": "axios.com",
     "date": "2026-09-21",
     "kind": "fact",
     "archive": false
    },
    "4": {
+    "state": "unopened",
+    "why": "",
+    "host": "sfstandard.com",
+    "date": "2026-09-21",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
     "state": "partly",
-    "why": "Mother Jones reports the September subpoenas (via the SF Standard) and Newsom's June characterization of the probe as a politically motivated 'fishing expedition' and his statement that agents had not found a crime. It does not say prosecutors have not publicly identified the crime under investigation.",
+    "why": "Mother Jones does report the September subpoenas and Newsom's politically motivated 'fishing expedition' characterization and 'not because they found a crime' denial, but nowhere states that prosecutors have not publicly identified the crime under investigation; it says only the probe relates to his travel and how it was paid for.",
     "host": "motherjones.com",
     "date": "2026-09-21",
     "kind": "fact",
