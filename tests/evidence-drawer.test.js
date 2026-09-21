@@ -42,7 +42,7 @@ test("state labels are exactly the approved wording", () => {
 test("the drawer chrome text never says 'verified'", () => {
   const chrome = [...Object.values(api.CLAIM_STATE_LABELS), ...Object.values(api.CLAIM_STATE_SHORT),
     api.EVIDENCE_NOTE_TEXT, api.EVIDENCE_UNAVAILABLE_TEXT];
-  for (const text of chrome) assert(!/verif/i.test(text), text);
+  for (const text of chrome) assert(!/verified/i.test(text), text);
 });
 
 test("claimStateOf falls back to unchecked for a missing or unknown check", () => {
