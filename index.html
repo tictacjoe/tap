@@ -3271,6 +3271,125 @@ function assignCardsToColumns(heights, columnCount, gap) {
 }
 /* assign-cards-to-columns:end */
 
+/* evidence-drawer:start */
+/* The Evidence drawer's pure builders (2026-09-21; design:
+   docs/superpowers/specs/2026-09-21-evidence-drawer-design.md). Cabinet-Level
+   only. The drawer lists entry.evidence (already loaded with the entry) and
+   colors each item from data/claim-checks.json, which is fetched lazily on the
+   first open (see loadClaimChecks / wireEvidenceDrawers, outside this region
+   because they touch the DOM and the network). Deterministic: no model at
+   display time. The word "verified" is never used in this chrome; the labels
+   are the only claims the drawer makes. Entry text always goes through the
+   caller's hl() (escaping + highlighting); every other string through
+   escapeHtml; links through safeHref. */
+const CLAIM_STATE_LABELS = {
+  supports: "Source supports the main assertion",
+  partly: "Source supports part of the claim",
+  not_found: "Claim not found on this page",
+  unopened: "Couldn't open this source automatically",
+  differs: "Source differs from the description",
+  unchecked: "Not yet checked",
+};
+const CLAIM_STATE_SHORT = {
+  supports: "support", partly: "partly", not_found: "not found",
+  unopened: "couldn't open", differs: "differ", unchecked: "not yet checked",
+};
+const CLAIM_STATE_ORDER = ["supports", "partly", "not_found", "unopened", "differs", "unchecked"];
+const CLAIM_STATE_GLYPH = {
+  supports: "✓", partly: "◐", not_found: "○",
+  unopened: "⚠", differs: "≠", unchecked: "…",
+};
+const CLAIM_STATES_WITH_OPEN_REASON = new Set(["partly", "not_found", "unopened", "differs"]);
+const EVIDENCE_NOTE_TEXT = "Automated source check: software read each cited page and compared it with the description. It can miss details, so confirm at the source.";
+const EVIDENCE_METHOD_HREF = "docs/tap-source-check-method.html";
+const EVIDENCE_UNAVAILABLE_TEXT = "Check results unavailable right now.";
+const CLAIM_MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+function claimStateOf(checks, index) {
+  const found = checks && checks[String(index)];
+  return found && CLAIM_STATE_LABELS[found.state] && found.state !== "unchecked" ? found.state : "unchecked";
+}
+
+function evidenceTallyText(itemCount, checks) {
+  if (checks == null) return "";
+  const counts = {};
+  for (let i = 0; i < itemCount; i++) {
+    const state = claimStateOf(checks, i);
+    counts[state] = (counts[state] || 0) + 1;
+  }
+  return CLAIM_STATE_ORDER.filter(s => counts[s]).map(s => counts[s] + " " + CLAIM_STATE_SHORT[s]).join(" · ");
+}
+
+function claimShortDate(iso) {
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso || "");
+  const month = m && CLAIM_MONTHS[Number(m[2]) - 1];
+  return month ? month + " " + Number(m[3]) + ", " + m[1] : "";
+}
+
+function evidenceHostOf(url) {
+  try {
+    const host = new URL(String(url)).hostname.toLowerCase();
+    return host.startsWith("www.") ? host.slice(4) : host;
+  } catch (e) {
+    return "";
+  }
+}
+
+function buildEvidenceItemHtml(item, index, check, hl) {
+  const state = check && CLAIM_STATE_LABELS[check.state] && check.state !== "unchecked" ? check.state : "unchecked";
+  const host = (check && check.host) || evidenceHostOf(item.source_url);
+  const link = item.source_url
+    ? '<a href="' + escapeHtml(safeHref(item.source_url)) + '" target="_blank" rel="noopener">' + escapeHtml(host || "source") + "</a>"
+    : "";
+  let sourceLine = "";
+  if (check && link) {
+    const date = claimShortDate(check.date);
+    sourceLine = "Checked against " + link + (date ? ", " + escapeHtml(date) : "") + (check.archive ? " (archived copy)" : "");
+  } else if (link) {
+    sourceLine = "Source: " + link;
+  }
+  const tag = check && check.kind === "interpretation" ? ' <span class="evidence-tag">Interpretation</span>' : "";
+  let why = "";
+  if (check && check.why) {
+    why = CLAIM_STATES_WITH_OPEN_REASON.has(state)
+      ? '<p class="evidence-why">' + hl(check.why) + "</p>"
+      : '<details class="evidence-why-toggle"><summary>Why</summary><p class="evidence-why">' + hl(check.why) + "</p></details>";
+  }
+  return '<li class="evidence-item evidence-state-' + state + '">' +
+    '<div class="evidence-item-top"><span class="evidence-badge"><span class="evidence-glyph" aria-hidden="true">' +
+    CLAIM_STATE_GLYPH[state] + "</span> " + escapeHtml(CLAIM_STATE_LABELS[state]) + "</span>" + tag + "</div>" +
+    '<p class="evidence-desc">' + hl(item.description || "") + "</p>" +
+    (sourceLine ? '<p class="evidence-source">' + sourceLine + "</p>" : "") +
+    why + "</li>";
+}
+
+function buildEvidenceItemsHtml(entry, checks, hl) {
+  return '<ol class="evidence-list">' +
+    (entry.evidence || []).map((item, i) => buildEvidenceItemHtml(item, i, checks && checks[String(i)], hl)).join("") +
+    "</ol>";
+}
+
+function buildEvidenceDrawerHtml(entry, cfg, hl, opts) {
+  const evidence = entry && entry.evidence;
+  if (!cfg || !cfg.evidenceDrawerEnabled || !Array.isArray(evidence) || evidence.length === 0) return "";
+  const o = opts || {};
+  const loaded = o.loadState === "loaded";
+  const checks = loaded ? (o.checks || {}) : null;
+  const tally = loaded ? evidenceTallyText(evidence.length, checks) : "";
+  const idBase = "evidence-" + String(entry.id || "").replace(/[^a-z0-9_-]+/gi, "-");
+  const notice = o.loadState === "failed"
+    ? '<p class="evidence-unavailable">' + escapeHtml(EVIDENCE_UNAVAILABLE_TEXT) + "</p>" : "";
+  return '<div class="evidence-drawer" data-evidence-entry="' + escapeHtml(String(entry.id || "")) + '">' +
+    '<button type="button" class="evidence-drawer-head" aria-expanded="false" aria-controls="' + idBase + '-body">' +
+    '<span class="evidence-drawer-title">Evidence · ' + evidence.length + (evidence.length === 1 ? " item" : " items") + "</span>" +
+    '<span class="evidence-tally">' + escapeHtml(tally) + "</span></button>" +
+    '<div class="evidence-drawer-body" id="' + idBase + '-body" hidden>' +
+    '<p class="evidence-note">' + escapeHtml(EVIDENCE_NOTE_TEXT) +
+    ' <a href="' + EVIDENCE_METHOD_HREF + '" target="_blank" rel="noopener">How this works</a></p>' +
+    notice + buildEvidenceItemsHtml(entry, checks, hl) + "</div></div>";
+}
+/* evidence-drawer:end */
+
 /* build-detail-html:start */
 function buildDetailHtml(entry, cfg, term, useRegex) {
   // Same highlighting the card's title/meta line already gets --
