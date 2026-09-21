@@ -3094,6 +3094,56 @@ function paragraphizeUpdates(text, hl) {
 }
 /* paragraphize-updates:end */
 
+/* update-timeline:start */
+/* Renders an entry's update history from the published `timeline` object
+   (2026-09-21). The marker parsing lives ONLY in tracker/update_markers.py
+   in the working repo; publish.py turns each field's "Update ...:" /
+   "Added ...:" paragraphs into
+     timeline[field] = { base, updates: [{ date, label, text, effective_date }] }
+   and this site never parses those markers itself. Design:
+   docs/superpowers/specs/2026-09-21-update-timeline-design.md.
+   Newest first = sort on effective_date descending, later position first
+   on a tie, null last (a leading undated update sorts oldest). A marker's
+   date is when TAP recorded the text, not when the event happened, which
+   is why the label says so. */
+function sortUpdatesNewestFirst(updates) {
+  return updates
+    .map((update, position) => ({ update, position }))
+    .sort((a, b) => {
+      const da = a.update.effective_date, db = b.update.effective_date;
+      if (da !== db) {
+        if (da == null) return 1;
+        if (db == null) return -1;
+        return da < db ? 1 : -1;
+      }
+      return b.position - a.position;
+    })
+    .map(item => item.update);
+}
+
+function updatesLabel(count) {
+  return count === 1
+    ? "Update, dated when TAP added it"
+    : "Updates, newest first, dated when TAP added them";
+}
+
+/* One field as HTML: base narrative, a muted label, then the updates,
+   newest first. With no timeline entry for the field (no markers, or a
+   stale cache) the raw prose renders as one unsplit paragraph. hl() is
+   applied to every paragraph, as before, so search highlighting and the
+   round-4 label hiding still work. */
+function buildFieldTimelineHtml(entry, field, hl) {
+  const part = entry.timeline && entry.timeline[field];
+  if (!part || !Array.isArray(part.updates) || part.updates.length === 0) {
+    return entry[field] ? "<p>" + hl(entry[field]) + "</p>" : "";
+  }
+  const sorted = sortUpdatesNewestFirst(part.updates);
+  return (part.base ? "<p>" + hl(part.base) + "</p>" : "") +
+    '<p class="update-timeline-label">' + updatesLabel(sorted.length) + "</p>" +
+    sorted.map(u => "<p>" + hl(u.text) + "</p>").join("");
+}
+/* update-timeline:end */
+
 /* build-confidence-note-html:start */
 /* Wraps each confidence rating in ** markers so the site's existing
    **bold** handling (boldify(), run by hl()) renders it as <strong>
