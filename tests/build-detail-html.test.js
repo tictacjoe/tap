@@ -24,7 +24,7 @@ const escapeHtmlFunctionSource = extractFunction(source, "escape-html");
 const summaryLineFunctionSource = extractFunction(source, "summary-line");
 const highlightMatchesFunctionSource = extractFunction(source, "highlight-matches");
 const buildUpdateRequestHtmlFunctionSource = extractFunction(source, "build-update-request-html");
-const paragraphizeUpdatesFunctionSource = extractFunction(source, "paragraphize-updates");
+const updateTimelineFunctionSource = extractFunction(source, "update-timeline");
 const buildConfidenceNoteHtmlFunctionSource = extractFunction(source, "build-confidence-note-html");
 const buildDetailHtmlFunctionSource = extractFunction(source, "build-detail-html");
 // Added 2026-09-19: buildDetailHtml gained two more direct dependencies
@@ -50,21 +50,24 @@ const buildFiguresHtmlStubSource = "function buildFiguresHtml(figs) { return fig
 // Eval them all together so buildDetailHtml can call summaryLineHtml and
 // highlightMatches (which itself calls escapeHtml/escapeRegExp), plus
 // buildUpdateRequestHtml (which calls escapeHtml directly),
-// paragraphizeUpdates (used for the Cabinet-Level Status/Incident summary
-// fields), and buildConfidenceNoteHtml (used for the Confidence note
+// the update-timeline functions (buildFieldTimelineHtml, used for each
+// curated tracker's What changed / Incident summary / Status fields), and
+// buildConfidenceNoteHtml (used for the Confidence note
 // field on all three curated-tracker kinds; calls escapeHtml directly).
 const combined = escapeHtmlFunctionSource + "\n" + summaryLineFunctionSource + "\n" +
   highlightMatchesFunctionSource + "\n" + buildUpdateRequestHtmlFunctionSource + "\n" +
-  paragraphizeUpdatesFunctionSource + "\n" + buildConfidenceNoteHtmlFunctionSource + "\n" +
+  updateTimelineFunctionSource + "\n" + buildConfidenceNoteHtmlFunctionSource + "\n" +
   safeHrefFunctionSource + "\n" + buildPullQuoteHtmlFunctionSource + "\n" + buildEntryColsHtmlFunctionSource + "\n" +
   buildFiguresHtmlStubSource + "\n" + buildDetailHtmlFunctionSource;
 const buildDetailHtml = (0, eval)(`${combined}\nbuildDetailHtml;`);
 
-// paragraphizeUpdates has no dependencies of its own, so it's also
-// evaluated standalone to test its marker regex directly rather than
-// only through one field's wiring in buildDetailHtml.
-const paragraphizeUpdates = (0, eval)(`${paragraphizeUpdatesFunctionSource}\nparagraphizeUpdates;`);
-const identity = (text) => text || "";
+
+// Tests feed buildDetailHtml the PUBLISHED shape: prose fields plus a `timeline`
+// object (built in Python by tracker/update_markers.py; its split rules are tested
+// there). upd(text, date[, label]) builds one update; tl(base, ...updates) one field.
+const upd = (text, date, label = "Update", effective = date) =>
+  ({ date: date || null, label, text, effective_date: effective || null });
+const tl = (base, ...updates) => ({ base, updates });
 
 test("deregulation with summaries", () => {
   const entry = {
@@ -298,6 +301,7 @@ test("prosecution Status field splits into separate paragraphs at each Update ma
     incident_summary: "Summary.",
     status: "Initial finding here. Update 2026-07-26: first update text. Update 2026-08-02 (real correction): second update text.",
     confidence_note: "Strong evidence.",
+    timeline: { status: tl("Initial finding here.", upd("Update 2026-07-26: first update text.", "2026-07-26"), upd("Update 2026-08-02 (real correction): second update text.", "2026-08-02")) },
   };
   const cfg = { kind: "prosecution" };
   const result = buildDetailHtml(entry, cfg);
@@ -310,77 +314,8 @@ test("prosecution Status field splits into separate paragraphs at each Update ma
   assert(statusHtml.includes("<p>Initial finding here.</p>"), "lead-in text before the first marker should be its own paragraph");
   assert(statusHtml.includes("<p>Update 2026-07-26: first update text.</p>"), "each Update marker should start its own paragraph");
   assert(statusHtml.includes("<p>Update 2026-08-02 (real correction): second update text.</p>"), "an annotated Update marker should also start its own paragraph");
-});
-
-test("prosecution Status field does not false-split on a forward self-reference like \"(see Update below)\"", () => {
-  const entry = {
-    offense_category: "Fraud",
-    status_category: "Investigation",
-    incident_summary: "Summary.",
-    status: "The DOJ did not appeal (see Update below). No charges have been filed against Powell as of this entry Update: Powell's chair term ended May 15, 2026.",
-    confidence_note: "Strong evidence.",
-  };
-  const cfg = { kind: "prosecution" };
-  const result = buildDetailHtml(entry, cfg);
-
-  const statusStart = result.indexOf('<div class="field-label">Status</div><div class="field-value">');
-  const statusEnd = result.indexOf('<div class="field-label">Confidence note</div>');
-  const statusHtml = result.slice(statusStart, statusEnd);
-
-  assert.equal((statusHtml.match(/<p>/g) || []).length, 2, "the parenthetical \"(see Update below)\" mention must not itself start a paragraph");
-  assert(
-    statusHtml.includes("<p>The DOJ did not appeal (see Update below). No charges have been filed against Powell as of this entry</p>"),
-    "text up to the real Update marker should stay one paragraph, including the false-positive mention"
-  );
-  assert(
-    statusHtml.includes("<p>Update: Powell's chair term ended May 15, 2026.</p>"),
-    "the real, colon-terminated Update marker should start the second paragraph"
-  );
-});
-
-test("paragraphizeUpdates splits on an Added marker (round-4 backlog-fold convention used in government-services/deregulation what_changed fields)", () => {
-  const text = "Original narrative here. Added 2026-09-10 (round-4 backlog cluster c0309): first fold addition. Added 2026-09-09 (round-4 backlog cluster c0574): second fold addition.";
-  const result = paragraphizeUpdates(text, identity);
-
-  assert.equal((result.match(/<p>/g) || []).length, 3, "should split into 3 paragraphs, one per Added marker plus the lead-in text");
-  assert(result.includes("<p>Original narrative here.</p>"), "lead-in text before the first marker should be its own paragraph");
-  assert(result.includes("<p>Added 2026-09-10 (round-4 backlog cluster c0309): first fold addition.</p>"), "each Added marker should start its own paragraph");
-  assert(result.includes("<p>Added 2026-09-09 (round-4 backlog cluster c0574): second fold addition.</p>"), "a second Added marker should also start its own paragraph");
-});
-
-test("paragraphizeUpdates splits correctly when Update and Added markers are mixed in the same field", () => {
-  const text = "Original narrative. Update 2026-08-17: a recheck update. Added 2026-09-10 (round-4 backlog cluster c0309): a fold addition.";
-  const result = paragraphizeUpdates(text, identity);
-
-  assert.equal((result.match(/<p>/g) || []).length, 3, "Update and Added markers should each start their own paragraph, same as same-word markers do");
-  assert(result.includes("<p>Update 2026-08-17: a recheck update.</p>"), "an Update marker should still split correctly when Added markers are also present");
-  assert(result.includes("<p>Added 2026-09-10 (round-4 backlog cluster c0309): a fold addition.</p>"), "an Added marker should split correctly when Update markers are also present");
-});
-
-test("prosecution Status field does not false-split on a forward self-reference like \"(see Added below)\"", () => {
-  const entry = {
-    offense_category: "Fraud",
-    status_category: "Investigation",
-    incident_summary: "Summary.",
-    status: "The DOJ did not appeal (see Added detail below). No charges have been filed against Powell as of this entry Added: new detail follows here.",
-    confidence_note: "Strong evidence.",
-  };
-  const cfg = { kind: "prosecution" };
-  const result = buildDetailHtml(entry, cfg);
-
-  const statusStart = result.indexOf('<div class="field-label">Status</div><div class="field-value">');
-  const statusEnd = result.indexOf('<div class="field-label">Confidence note</div>');
-  const statusHtml = result.slice(statusStart, statusEnd);
-
-  assert.equal((statusHtml.match(/<p>/g) || []).length, 2, "the parenthetical \"(see Added detail below)\" mention must not itself start a paragraph");
-  assert(
-    statusHtml.includes("<p>The DOJ did not appeal (see Added detail below). No charges have been filed against Powell as of this entry</p>"),
-    "text up to the real Added marker should stay one paragraph, including the false-positive mention"
-  );
-  assert(
-    statusHtml.includes("<p>Added: new detail follows here.</p>"),
-    "the real, colon-terminated Added marker should start the second paragraph"
-  );
+  assert(statusHtml.indexOf("second update text") < statusHtml.indexOf("first update text"), "newest update first");
+  assert(statusHtml.includes("Updates, newest first, dated when TAP added them"));
 });
 
 test("tracker (Reporting) highlights the search term in the body", () => {
@@ -477,22 +412,6 @@ test("govservices request-update button carries the correct tracker and entry id
   assert(result.includes('data-entry-id="some-action-id"'), "button should carry the entry id");
 });
 
-test("paragraphizeUpdates splits on an Update marker with a long parenthetical annotation (regression for the old 60-char cap)", () => {
-  // Real production shape from government-services/entries -- an
-  // annotation like "(correction -- this entry's original 'litigation
-  // ongoing' framing is now outdated)" runs well past 60 characters
-  // before its colon, which the original cap missed entirely.
-  const text = "Original finding here. Update 2026-08-17 (correction -- this entry's original 'litigation ongoing' framing is now outdated): the court declined to block the order.";
-  const result = paragraphizeUpdates(text, identity);
-
-  assert.equal((result.match(/<p>/g) || []).length, 2, "the long-annotation marker should still start its own paragraph");
-  assert(result.includes("<p>Original finding here.</p>"), "lead-in text should be its own paragraph");
-  assert(
-    result.includes("<p>Update 2026-08-17 (correction -- this entry's original 'litigation ongoing' framing is now outdated): the court declined to block the order.</p>"),
-    "the long-annotation Update marker should start the second paragraph"
-  );
-});
-
 test("prosecution Incident summary renders as a single paragraph when there are no Update markers", () => {
   const entry = {
     offense_category: "Fraud",
@@ -517,6 +436,7 @@ test("prosecution Incident summary splits into separate paragraphs at each Updat
     incident_summary: "Initial account here. Update 2026-07-26: additional detail surfaced.",
     status: "Under investigation.",
     confidence_note: "Strong evidence.",
+    timeline: { incident_summary: tl("Initial account here.", upd("Update 2026-07-26: additional detail surfaced.", "2026-07-26")) },
   };
   const cfg = { kind: "prosecution" };
   const result = buildDetailHtml(entry, cfg);
@@ -528,6 +448,7 @@ test("prosecution Incident summary splits into separate paragraphs at each Updat
   assert.equal((html.match(/<p>/g) || []).length, 2, "should split into 2 paragraphs, one per Update marker plus the lead-in text");
   assert(html.includes("<p>Initial account here.</p>"), "lead-in text before the marker should be its own paragraph");
   assert(html.includes("<p>Update 2026-07-26: additional detail surfaced.</p>"), "the Update marker should start its own paragraph");
+  assert(html.includes("Update, dated when TAP added it"));
 });
 
 test("govservices What changed renders as a single paragraph when there are no Update markers", () => {
@@ -552,6 +473,7 @@ test("govservices What changed splits into separate paragraphs at each Update ma
     what_changed: "Initial cuts announced. Update 2026-08-02: further reductions confirmed.",
     estimated_impact: {},
     confidence_note: "Moderately confident.",
+    timeline: { what_changed: tl("Initial cuts announced.", upd("Update 2026-08-02: further reductions confirmed.", "2026-08-02")) },
   };
   const cfg = { kind: "govservices" };
   const result = buildDetailHtml(entry, cfg);
@@ -563,6 +485,7 @@ test("govservices What changed splits into separate paragraphs at each Update ma
   assert.equal((html.match(/<p>/g) || []).length, 2, "should split into 2 paragraphs, one per Update marker plus the lead-in text");
   assert(html.includes("<p>Initial cuts announced.</p>"), "lead-in text before the marker should be its own paragraph");
   assert(html.includes("<p>Update 2026-08-02: further reductions confirmed.</p>"), "the Update marker should start its own paragraph");
+  assert(html.includes("Update, dated when TAP added it"));
 });
 
 test("deregulation What changed renders as a single paragraph when there are no Update markers", () => {
@@ -587,6 +510,7 @@ test("deregulation What changed splits into separate paragraphs at each Update m
     estimated_health_impact: {},
     confidence_note: "High confidence.",
     primary_proponent: {},
+    timeline: { what_changed: tl("Rule repealed outright.", upd("Update 2026-08-02: a challenge was filed.", "2026-08-02")) },
   };
   const cfg = { kind: "deregulation" };
   const result = buildDetailHtml(entry, cfg);
@@ -598,6 +522,7 @@ test("deregulation What changed splits into separate paragraphs at each Update m
   assert.equal((html.match(/<p>/g) || []).length, 2, "should split into 2 paragraphs, one per Update marker plus the lead-in text");
   assert(html.includes("<p>Rule repealed outright.</p>"), "lead-in text before the marker should be its own paragraph");
   assert(html.includes("<p>Update 2026-08-02: a challenge was filed.</p>"), "the Update marker should start its own paragraph");
+  assert(html.includes("Update, dated when TAP added it"));
 });
 
 test("prosecution Confidence note splits its base text from a separate Updates section, dated by heading", () => {
@@ -607,12 +532,13 @@ test("prosecution Confidence note splits its base text from a separate Updates s
     incident_summary: "Summary.",
     status: "Under investigation.",
     confidence_note: "Initially sourced to one outlet. Update 2026-08-02: a second outlet corroborated.",
+    timeline: { confidence_note: tl("Initially sourced to one outlet.", upd("Update 2026-08-02: a second outlet corroborated.", "2026-08-02")) },
   };
   const cfg = { kind: "prosecution" };
   const result = buildDetailHtml(entry, cfg);
 
   const confidenceStart = result.indexOf('<div class="field-label">Confidence note</div><div class="confidence-box">');
-  const updatesStart = result.indexOf('<div class="field-label">Updates</div>');
+  const updatesStart = result.indexOf('<div class="field-label">Update, dated when TAP added it</div>');
   const causeStart = result.indexOf('<div class="field-label">Broader Pattern</div>');
 
   assert(confidenceStart !== -1 && updatesStart !== -1 && causeStart !== -1, "all three sections should be present");
@@ -648,6 +574,7 @@ test("govservices Confidence note splits into separate paragraphs at each Update
     what_changed: "Reduced staffing.",
     estimated_impact: {},
     confidence_note: "Initially sourced to one outlet. Update 2026-08-02: a second outlet corroborated.",
+    timeline: { confidence_note: tl("Initially sourced to one outlet.", upd("Update 2026-08-02: a second outlet corroborated.", "2026-08-02")) },
   };
   const cfg = { kind: "govservices" };
   const result = buildDetailHtml(entry, cfg);
@@ -671,6 +598,7 @@ test("deregulation Confidence note splits into separate paragraphs at each Updat
     estimated_health_impact: {},
     primary_proponent: {},
     confidence_note: "Initially sourced to one outlet. Update 2026-08-02: a second outlet corroborated.",
+    timeline: { confidence_note: tl("Initially sourced to one outlet.", upd("Update 2026-08-02: a second outlet corroborated.", "2026-08-02")) },
   };
   const cfg = { kind: "deregulation" };
   const result = buildDetailHtml(entry, cfg);
@@ -887,7 +815,7 @@ for (const [kind, extra] of [
   ["prosecution", { offense_category: "Fraud", status_category: "Investigation", incident_summary: "s", status: "t" }],
 ]) {
   test(`${kind} Confidence note bolds ratings in the main text and in the dated updates`, () => {
-    const result = buildDetailHtml({ ...extra, confidence_note: ratingNote }, { kind });
+    const result = buildDetailHtml({ ...extra, confidence_note: ratingNote, timeline: { confidence_note: tl("HIGH confidence on the order. MODERATE-HIGH confidence on the cost.", upd("Update 2026-08-02: LOW confidence on intent.", "2026-08-02")) } }, { kind });
     assert(result.includes("<strong>HIGH</strong> confidence on the order"), "main-text rating should be bold");
     assert(result.includes("<strong>MODERATE-HIGH</strong> confidence on the cost"), "combined rating should be one bold span");
     assert(result.includes("<strong>LOW</strong> confidence on intent"), "a rating inside a dated update should be bold too");
@@ -979,6 +907,7 @@ test("Confidence note bolds a leading sourcing-quality phrase alongside ratings,
   const entry = {
     what_changed: "x", estimated_health_impact: {}, primary_proponent: { name: "A", role: "B" }, sources: [],
     confidence_note: "Strong sourcing on the order. MODERATE confidence on intent. Update 2026-08-02: Strong sourcing on the follow-up.",
+    timeline: { confidence_note: tl("Strong sourcing on the order. MODERATE confidence on intent.", upd("Update 2026-08-02: Strong sourcing on the follow-up.", "2026-08-02")) },
   };
   const result = buildDetailHtml(entry, { kind: "deregulation" });
   assert(result.includes("<strong>Strong</strong> sourcing on the order"), "leading quality phrase should be bold");
@@ -1109,6 +1038,10 @@ test("expanded entry text no longer shows the label, and the Added marker still 
     estimated_impact: {},
     confidence_note: "HIGH confidence on X. Update 2026-08-02 (round 4 batch 27, cluster c0385): a recheck. Round-4 backlog fold, cluster c0757: separately, more.",
     primary_proponent: { name: "A", role: "B" }, sources: [],
+    timeline: {
+      what_changed: tl("Original account.", upd("Added 2026-09-10 (round-4 backlog cluster c0309): a later development.", "2026-09-10", "Added")),
+      confidence_note: tl("HIGH confidence on X.", upd("Update 2026-08-02 (round 4 batch 27, cluster c0385): a recheck. Round-4 backlog fold, cluster c0757: separately, more.", "2026-08-02")),
+    },
   };
   const result = buildDetailHtml(entry, { kind: "govservices" });
   assert(!/round[- ]?4|cluster c\d/i.test(result), "no label text should remain in the rendered entry");
@@ -1125,4 +1058,38 @@ test("search highlighting still works on text that had a label stripped", () => 
   const result = buildDetailHtml(entry, { kind: "deregulation" }, "schools", false);
   assert(result.includes('<mark class="hl">schools</mark>'), "term still highlighted");
   assert(!/round-4|c0309/.test(result), "label gone");
+});
+
+test("govservices What happened shows updates newest first, by date, not by written order", () => {
+  const entry = {
+    institution: "I", what_changed: "raw", estimated_impact: {}, primary_proponent: { name: "A", role: "B" }, sources: [],
+    confidence_note: "x",
+    timeline: { what_changed: tl("Base.",
+      upd("Update 2026-09-12: a.", "2026-09-12"), upd("Added 2026-08-17: b.", "2026-08-17", "Added"), upd("Update 2026-08-29: c.", "2026-08-29")) },
+  };
+  const result = buildDetailHtml(entry, { kind: "govservices" });
+  const order = ["Update 2026-09-12: a.", "Update 2026-08-29: c.", "Added 2026-08-17: b."].map(s => result.indexOf(s));
+  assert(order.every(i => i !== -1) && order[0] < order[1] && order[1] < order[2], "true date order, newest first");
+});
+
+test("Confidence note Updates box is newest first and headed by the update's own date, else its label", () => {
+  const entry = {
+    what_changed: "x", estimated_health_impact: {}, primary_proponent: { name: "A", role: "B" }, sources: [],
+    confidence_note: "raw",
+    timeline: { confidence_note: tl("Base.",
+      upd("Update 2026-08-01: one.", "2026-08-01"), upd("Update: two, undated.", null, "Update", "2026-08-01"), upd("Added 2026-09-01: three.", "2026-09-01", "Added")) },
+  };
+  const result = buildDetailHtml(entry, { kind: "deregulation" });
+  assert(result.includes('<div class="field-label">Updates, newest first, dated when TAP added them</div>'));
+  const heads = [...result.matchAll(/<div class="update-date">([^<]*)<\/div>/g)].map(m => m[1]);
+  assert.deepEqual(heads, ["2026-09-01", "Update", "2026-08-01"]);
+});
+
+test("a field with markers but no timeline entry falls back to one unsplit paragraph", () => {
+  const entry = {
+    offense_category: "Fraud", status_category: "Investigation", incident_summary: "Summary.",
+    status: "Found. Update 2026-07-26: more.", confidence_note: "Strong evidence.",
+  };
+  const result = buildDetailHtml(entry, { kind: "prosecution" });
+  assert(result.includes('<div class="field-label">Status</div><div class="field-value"><p>Found. Update 2026-07-26: more.</p></div>'));
 });

@@ -1036,6 +1036,16 @@
     letter-spacing: 0.03em;
     color: var(--ink);
   }
+  /* Label between a field's base narrative and its update paragraphs
+     ("Updates, newest first, dated when TAP added them"). Muted so it
+     reads as a caption, not a heading. */
+  .update-timeline-label {
+    margin: 0.6rem 0 0.2rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.03em;
+    font-style: italic;
+    color: var(--ink-faint);
+  }
 
   /* User Topics: a strong visual pointer to a fuller, already-
      researched curated entry, shown at the very top of the detail view
@@ -2775,7 +2785,7 @@ function summaryLineHtml(summary, term, useRegex) {
    fold's leaner-rigor pass...", "Folded in round-4 backlog cluster c0494
    ... at creation time") are left alone: removing them would change what a
    note says, so they need an editorial rewrite in the data instead. The
-   "Added DATE:" paragraph marker (see paragraphizeUpdates) is unaffected.
+   "Added DATE:" paragraph marker (see buildFieldTimelineHtml) is unaffected.
    Idempotent. */
 /* strip-process-labels:start */
 const PROCESS_LABEL_WORDS =
@@ -3060,40 +3070,6 @@ function buildUpdateRequestHtml(entry, cfg) {
    (tabbed/global card view) and by the one-liner expand-on-click,
    so there's exactly one place that knows how to render each
    tracker kind's fields, not two drifting copies. */
-/* paragraphize-updates:start */
-/* Cabinet-Level `status` fields accumulate one clause per recheck,
-   each marked "Update[ YYYY-MM-DD][ annotation]:" -- splits the raw
-   text on that marker so it renders as separate paragraphs instead of
-   one ever-growing block, without changing the underlying data.
-   Requires a colon shortly after the word so a forward self-reference
-   like "(see Update below)" -- which is never itself followed by a
-   colon -- doesn't get treated as a marker. Each paragraph is passed
-   through hl() individually so search-term highlighting still works.
-   Also matches "Added[ YYYY-MM-DD][ (round-4 backlog cluster cXXXX)]:",
-   the equivalent marker convention used across government-services and
-   deregulation `what_changed` fields for backlog-fold additions -- same
-   shape, same false-positive guard, just a second marker word. */
-function paragraphizeUpdates(text, hl) {
-  if (!text) return "";
-  // 130, not 60: government-services entries' "(correction -- ...)"
-  // annotations run long, and the real corpus needs up to 121 chars
-  // between "Update"/"Added" and its colon to all match.
-  const marker = /\b(?:Update|Added)\b[^.:]{0,130}:/g;
-  const starts = [0];
-  let m;
-  while ((m = marker.exec(text)) !== null) {
-    starts.push(m.index);
-  }
-  starts.push(text.length);
-  const paragraphs = [];
-  for (let i = 0; i < starts.length - 1; i++) {
-    const chunk = text.slice(starts[i], starts[i + 1]).trim();
-    if (chunk) paragraphs.push(chunk);
-  }
-  return paragraphs.map(p => "<p>" + hl(p) + "</p>").join("");
-}
-/* paragraphize-updates:end */
-
 /* update-timeline:start */
 /* Renders an entry's update history from the published `timeline` object
    (2026-09-21). The marker parsing lives ONLY in tracker/update_markers.py
@@ -3209,50 +3185,24 @@ function boldLeadingSourcingQuality(text) {
 }
 /* bold-leading-sourcing-quality:end */
 
-/* Splits a confidence_note into its base assessment (whatever text
-   comes before the first "Update"/"Added" marker) and a list of dated
-   update chunks (from each marker onward) -- reuses paragraphizeUpdates()'s
-   own marker regex so the two stay in sync, but keeps the pieces
-   separate instead of flattening them into one box, so updates can get
-   their own "Updates" section with the update's own date as a heading
-   rather than an inline marker buried in running prose. A marker
-   without a YYYY-MM-DD anywhere in its own text (rare -- a bare
-   "Update:" with no date, or "Added" used as an ordinary verb rather
-   than a dated marker) falls back to just its leading word ("Update"/
-   "Added") as the heading rather than breaking. */
-function splitConfidenceNote(text) {
-  if (!text) return { base: "", updates: [] };
-  const marker = /\b(?:Update|Added)\b[^.:]{0,130}:/g;
-  const markerIndices = [];
-  let m;
-  while ((m = marker.exec(text)) !== null) {
-    markerIndices.push(m.index);
-  }
-  if (markerIndices.length === 0) return { base: text.trim(), updates: [] };
-  const base = text.slice(0, markerIndices[0]).trim();
-  const updates = [];
-  for (let i = 0; i < markerIndices.length; i++) {
-    const end = i + 1 < markerIndices.length ? markerIndices[i + 1] : text.length;
-    const chunk = text.slice(markerIndices[i], end).trim();
-    if (!chunk) continue;
-    const dateMatch = chunk.match(/\d{4}-\d{2}-\d{2}/);
-    const label = (chunk.match(/^(?:Update|Added)/) || ["Update"])[0];
-    updates.push({ heading: dateMatch ? dateMatch[0] : label, text: chunk });
-  }
-  return { base, updates };
-}
-
 /* Renders the "Confidence note" field-value box plus, only if the note
-   actually contains any dated updates, a separate "Updates" box right
-   after it -- one dated sub-heading per update, newest-last (the order
-   they were appended to the note in). Shared across all three
-   confidence_note-bearing kinds (deregulation, govservices, prosecution)
-   in buildDetailHtml() below so the three stay identical rather than
-   drifting. The "as of" date next to the label is entry.last_verified --
-   already tracked on every entry, just not previously surfaced next to
-   the note it actually describes (2026-09-18). */
+   has dated updates, a separate updates box right after it -- one dated
+   sub-heading per update, NEWEST FIRST (2026-09-21; it was oldest-first
+   before). The base assessment and the updates come from the published
+   `timeline.confidence_note` (see buildFieldTimelineHtml above); an
+   update's heading is its own marker date, or its leading word
+   ("Update"/"Added") when the marker carries none. Without a timeline
+   entry the raw note renders as the base and there is no updates box.
+   Shared across all three confidence_note-bearing kinds (deregulation,
+   govservices, prosecution) in buildDetailHtml() below so the three stay
+   identical rather than drifting. The "as of" date next to the label is
+   entry.last_verified -- already tracked on every entry, just not
+   previously surfaced next to the note it actually describes (2026-09-18). */
 function buildConfidenceNoteHtml(entry, hl, summary) {
-  const { base, updates } = splitConfidenceNote(entry.confidence_note);
+  const part = entry.timeline && entry.timeline.confidence_note;
+  const hasUpdates = !!(part && Array.isArray(part.updates) && part.updates.length);
+  const base = hasUpdates ? part.base : (entry.confidence_note || "").trim();
+  const updates = hasUpdates ? sortUpdatesNewestFirst(part.updates) : [];
   const labelHtml = entry.last_verified
     ? '<div class="field-label-row"><div class="field-label">Confidence note</div><span class="field-asof">as of ' + escapeHtml(entry.last_verified) + '</span></div>'
     : '<div class="field-label">Confidence note</div>';
@@ -3261,9 +3211,9 @@ function buildConfidenceNoteHtml(entry, hl, summary) {
     (base ? "<p>" + hl(boldConfidenceRatings(boldLeadingSourcingQuality(base))) + "</p>" : "") +
     '</div>';
   if (updates.length) {
-    html += '<div class="field-label">Updates</div><div class="confidence-box updates-box">' +
+    html += '<div class="field-label">' + updatesLabel(updates.length) + '</div><div class="confidence-box updates-box">' +
       updates.map(u =>
-        '<div class="update-item"><div class="update-date">' + escapeHtml(u.heading) + '</div><p>' + hl(boldConfidenceRatings(u.text)) + '</p></div>'
+        '<div class="update-item"><div class="update-date">' + escapeHtml(u.date || u.label) + '</div><p>' + hl(boldConfidenceRatings(u.text)) + '</p></div>'
       ).join("") +
       '</div>';
   }
@@ -3332,7 +3282,7 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
 
   if (cfg.kind === "deregulation") {
     const mainHtml =
-      '<div class="field-group entry-main-card"><div class="field-label">What changed</div><div class="field-value">' + summary(entry.section_summaries?.what_changed) + paragraphizeUpdates(entry.what_changed, hl) + '</div></div>' +
+      '<div class="field-group entry-main-card"><div class="field-label">What changed</div><div class="field-value">' + summary(entry.section_summaries?.what_changed) + buildFieldTimelineHtml(entry, "what_changed", hl) + '</div></div>' +
       '<div class="field-group entry-main-card"><div class="field-label">Estimated impact</div><div class="field-value">' + summary(entry.section_summaries?.estimated_impact) + hl(entry.estimated_health_impact?.summary) + '</div></div>' +
       (entry.estimated_health_impact?.caveat ? '<div class="field-group entry-main-card"><div class="field-label">Caveat</div><div class="field-value" style="font-style:italic;">' + hl(entry.estimated_health_impact.caveat) + '</div></div>' : '');
     const asideHtml =
@@ -3354,7 +3304,7 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
     // the actual content better -- and it reuses Reporting's existing
     // label for the same kind of field rather than inventing a new one.
     const mainHtml =
-      '<div class="field-group entry-main-card"><div class="field-label">What happened</div><div class="field-value">' + summary(entry.section_summaries?.what_changed) + paragraphizeUpdates(entry.what_changed, hl) + '</div></div>' +
+      '<div class="field-group entry-main-card"><div class="field-label">What happened</div><div class="field-value">' + summary(entry.section_summaries?.what_changed) + buildFieldTimelineHtml(entry, "what_changed", hl) + '</div></div>' +
       '<div class="field-group entry-main-card"><div class="field-label">Estimated impact</div><div class="field-value">' + summary(entry.section_summaries?.estimated_impact) + hl(entry.estimated_impact?.summary) + '</div></div>' +
       (entry.estimated_impact?.caveat ? '<div class="field-group entry-main-card"><div class="field-label">Caveat</div><div class="field-value" style="font-style:italic;">' + hl(entry.estimated_impact.caveat) + '</div></div>' : '');
     const asideHtml =
@@ -3420,8 +3370,8 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
   // "Violation Type" card -- same field, unabbreviated.
   const mainHtml =
     '<div class="field-group entry-main-card"><div class="field-label">Violation Type (in full)</div><div class="field-value">' + hl(entry.offense_category_raw || entry.offense_category) + '</div></div>' +
-    '<div class="field-group entry-main-card"><div class="field-label">Incident summary</div><div class="field-value">' + summary(entry.section_summaries?.incident_summary) + paragraphizeUpdates(entry.incident_summary, hl) + '</div></div>' +
-    '<div class="field-group entry-main-card"><div class="field-label">Status</div><div class="field-value">' + paragraphizeUpdates(entry.status, hl) + '</div></div>' +
+    '<div class="field-group entry-main-card"><div class="field-label">Incident summary</div><div class="field-value">' + summary(entry.section_summaries?.incident_summary) + buildFieldTimelineHtml(entry, "incident_summary", hl) + '</div></div>' +
+    '<div class="field-group entry-main-card"><div class="field-label">Status</div><div class="field-value">' + buildFieldTimelineHtml(entry, "status", hl) + '</div></div>' +
     '<div class="field-group entry-main-card"><div class="field-label">Broader Pattern</div><div class="field-value">' + hl(entry.cause) + '</div></div>' +
     '<div class="field-group entry-main-card"><div class="field-label">Anticipated Defense</div><div class="field-value">' + hl(entry.rebuttal_anticipated) + '</div></div>' +
     '<div class="field-group entry-main-card"><div class="field-label">TAP\'s Rebuttal</div><div class="field-value">' + hl(entry.comeback) + '</div></div>';
