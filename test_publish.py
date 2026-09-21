@@ -279,7 +279,11 @@ def test_publish_claim_checks_without_a_claims_file_warns_and_writes_nothing(tmp
     dest = tmp_path / "data" / "claim-checks.json"
     assert publish_claim_checks(module, tmp_path / "missing.json", [_ENTRY_A], dest) is None
     assert not dest.exists()
-    assert "WARNING" in capsys.readouterr().out
+    out = capsys.readouterr().out
+    assert "WARNING" in out
+    # the warning must name the consequence: an old check file stays in place
+    assert "claim-checks.json not written" in out
+    assert "left unchanged and may now be stale" in out
 
 
 @_needs_tap_data

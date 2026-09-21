@@ -5,7 +5,7 @@
   "abrego-garcia-vindictive-prosecution-2025-2026": {
    "0": {
     "state": "unopened",
-    "why": "fetch_status is empty (page fetched but no extractable text), so no source text exists to check this claim against.",
+    "why": "",
     "host": "pbs.org",
     "date": "2026-09-15",
     "kind": "fact",
@@ -89,7 +89,7 @@
   "bessent-irs-settlement-audit-immunity-2026-06": {
    "0": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was retrieved for this bot-walled domain.",
+    "why": "",
     "host": "washingtontimes.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -105,7 +105,7 @@
    },
    "2": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was retrieved for this bot-walled domain.",
+    "why": "",
     "host": "washingtontimes.com",
     "date": "2026-09-15",
     "kind": "interpretation",
@@ -153,7 +153,7 @@
    },
    "8": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was retrieved for this bot-walled domain.",
+    "why": "",
     "host": "bloomberg.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -169,7 +169,7 @@
    },
    "10": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was retrieved for this bot-walled domain.",
+    "why": "",
     "host": "bloomberg.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -227,7 +227,7 @@
    },
    "4": {
     "state": "unopened",
-    "why": "fetch_status is connection_error; no source text was retrieved.",
+    "why": "",
     "host": "usnews.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -251,7 +251,7 @@
    },
    "7": {
     "state": "unopened",
-    "why": "fetch_status is connection_error; no source text was retrieved.",
+    "why": "",
     "host": "usnews.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -331,7 +331,7 @@
    },
    "17": {
     "state": "unopened",
-    "why": "No usable source text was available (fetch_status: needs_browser_fetch), so the claim cannot be judged.",
+    "why": "",
     "host": "bloomberg.com",
     "date": "2026-09-21",
     "kind": "fact",
@@ -349,7 +349,7 @@
    },
    "1": {
     "state": "unopened",
-    "why": "fetch_status is connection_error; no source text was retrieved.",
+    "why": "",
     "host": "usnews.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -373,7 +373,7 @@
    },
    "4": {
     "state": "unopened",
-    "why": "fetch_status is connection_error; no source text was retrieved.",
+    "why": "",
     "host": "usnews.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -493,7 +493,7 @@
   "blanche-doj-hundreds-voter-investigations-2026": {
    "0": {
     "state": "unopened",
-    "why": "No usable source text was available (fetch_status: needs_browser_fetch), so the claim cannot be judged.",
+    "why": "",
     "host": "cbsnews.com",
     "date": "2026-09-21",
     "kind": "fact",
@@ -553,7 +553,7 @@
   "blanche-doj-law-firm-subpoenas-epshteyn-2026": {
    "0": {
     "state": "unopened",
-    "why": "fetch_status is http_error (401 Forbidden); no source text was retrieved.",
+    "why": "",
     "host": "wsj.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -685,7 +685,7 @@
   "blanche-journalist-grand-jury-subpoenas-2026": {
    "0": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was retrieved for this claim, only a note that the domain bot-walls direct fetches, so the claim cannot be verified.",
+    "why": "",
     "host": "washingtonpost.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -766,8 +766,8 @@
     "archive": false
    },
    "3": {
-    "state": "not_found",
-    "why": "fetch_status is 'ok', but the source_text_or_reason field for this claim is a single JSON line so large it exceeds the maximum size the available Read tool can load, even at the smallest possible read (a single line). No portion of the actual source text could be retrieved or reviewed, so this claim cannot be verified against it.",
+    "state": "unopened",
+    "why": "",
     "host": "judiciary.senate.gov",
     "date": "2026-09-15",
     "kind": "fact",
@@ -815,7 +815,7 @@
    },
    "9": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was retrieved for this claim, only a note that congress.gov bot-walls direct fetches, so the claim cannot be verified.",
+    "why": "",
     "host": "congress.gov",
     "date": "2026-09-15",
     "kind": "fact",
@@ -855,7 +855,7 @@
    },
    "14": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was retrieved for this claim, only a note that bloomberg.com bot-walls direct fetches, so the claim cannot be verified.",
+    "why": "",
     "host": "bloomberg.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -896,8 +896,8 @@
     "archive": false
    },
    "4": {
-    "state": "not_found",
-    "why": "The source_text_or_reason for this claim is raw, undecoded PDF binary data (PDF object/stream markup, not extracted text), so it contains no readable content that could support or refute this claim about Oyer's Senate testimony.",
+    "state": "unopened",
+    "why": "",
     "host": "judiciary.senate.gov",
     "date": "2026-09-15",
     "kind": "fact",
@@ -1087,7 +1087,7 @@
    },
    "1": {
     "state": "unopened",
-    "why": "fetch_status is 'empty' -- the page was fetched but no extractable text was obtained (likely a JS-rendered page), so there is no source text to judge this claim against.",
+    "why": "",
     "host": "pbs.org",
     "date": "2026-09-15",
     "kind": "fact",
@@ -1168,8 +1168,8 @@
     "archive": false
    },
    "2": {
-    "state": "not_found",
-    "why": "fetch_status is 'ok', but the source_text_or_reason field for this claim is a single JSON line so large it exceeds the maximum size the available Read tool can load, even at the smallest possible read (a single line). No portion of the actual source text could be retrieved or reviewed, so this claim cannot be verified against it.",
+    "state": "unopened",
+    "why": "",
     "host": "warren.senate.gov",
     "date": "2026-09-15",
     "kind": "fact",
@@ -1221,7 +1221,7 @@
    },
    "1": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was retrieved to check against.",
+    "why": "",
     "host": "bloomberg.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -1244,8 +1244,8 @@
     "archive": false
    },
    "4": {
-    "state": "not_found",
-    "why": "fetch_status is ok but the extracted text is raw unreadable PDF binary/stream data, not usable source text.",
+    "state": "unopened",
+    "why": "",
     "host": "downloads.regulations.gov",
     "date": "2026-09-15",
     "kind": "fact",
@@ -1281,7 +1281,7 @@
   "bondi-doj-carl-charles-lambda-legal-indictment-2025": {
    "0": {
     "state": "unopened",
-    "why": "fetch_status is connection_error; no source text was retrieved to check against.",
+    "why": "",
     "host": "usnews.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -1333,7 +1333,7 @@
   "bondi-doj-public-integrity-section-gutted-2026": {
    "0": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was retrieved to check against.",
+    "why": "",
     "host": "washingtonpost.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -1389,7 +1389,7 @@
    },
    "7": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was retrieved to check against.",
+    "why": "",
     "host": "thehill.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -1423,7 +1423,7 @@
    },
    "3": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was retrieved to check against.",
+    "why": "",
     "host": "washingtonpost.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -1447,7 +1447,7 @@
    },
    "6": {
     "state": "unopened",
-    "why": "fetch_status is empty; the page was fetched but no extractable text was returned.",
+    "why": "",
     "host": "pbs.org",
     "date": "2026-09-15",
     "kind": "fact",
@@ -1537,7 +1537,7 @@
    },
    "6": {
     "state": "unopened",
-    "why": "fetch_status is connection_error; no source text was retrieved to check against.",
+    "why": "",
     "host": "miamiherald.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -1677,7 +1677,7 @@
    },
    "7": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was retrieved to check against.",
+    "why": "",
     "host": "thehill.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -1784,8 +1784,8 @@
     "archive": false
    },
    "4": {
-    "state": "not_found",
-    "why": "fetch_status is ok but the extracted text is raw unreadable PDF binary/stream data, not usable source text.",
+    "state": "unopened",
+    "why": "",
     "host": "democrats-judiciary.house.gov",
     "date": "2026-09-15",
     "kind": "fact",
@@ -1935,7 +1935,7 @@
    },
    "1": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was retrieved to check against.",
+    "why": "",
     "host": "thehill.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -2044,32 +2044,32 @@
   },
   "burgum-commemorative-works-act-arch-2026-06": {
    "0": {
-    "state": "not_found",
-    "why": "fetch_status is ok but the extracted text is raw unreadable PDF binary/stream data (beginning with %PDF-1.3), not usable source text.",
+    "state": "unopened",
+    "why": "",
     "host": "king.senate.gov",
     "date": "2026-09-15",
     "kind": "fact",
     "archive": false
    },
    "1": {
-    "state": "not_found",
-    "why": "fetch_status is ok but the extracted text is raw unreadable PDF binary/stream data (beginning with %PDF-1.3), not usable source text.",
+    "state": "unopened",
+    "why": "",
     "host": "king.senate.gov",
     "date": "2026-09-15",
     "kind": "fact",
     "archive": false
    },
    "2": {
-    "state": "not_found",
-    "why": "fetch_status is ok but the extracted text is raw unreadable PDF binary/stream data (beginning with %PDF-1.3), not usable source text.",
+    "state": "unopened",
+    "why": "",
     "host": "king.senate.gov",
     "date": "2026-09-15",
     "kind": "fact",
     "archive": false
    },
    "3": {
-    "state": "not_found",
-    "why": "The extracted text is only site navigation and header boilerplate from Rep. Huffman's press-release page (no article body was captured), so it contains nothing about oversight investigations, the arch, or the ballroom to check the claim against.",
+    "state": "unopened",
+    "why": "",
     "host": "huffman.house.gov",
     "date": "2026-09-15",
     "kind": "fact",
@@ -2085,7 +2085,7 @@
    },
    "5": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was retrieved to check against.",
+    "why": "",
     "host": "thehill.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -2161,7 +2161,7 @@
    },
    "1": {
     "state": "unopened",
-    "why": "fetch_status is http_error (404 Not Found); no source text was retrieved to check against.",
+    "why": "",
     "host": "foreign.senate.gov",
     "date": "2026-09-15",
     "kind": "fact",
@@ -2169,7 +2169,7 @@
    },
    "2": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was retrieved to check against.",
+    "why": "",
     "host": "thehill.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -2235,7 +2235,7 @@
    },
    "7": {
     "state": "unopened",
-    "why": "fetch_status is empty; the page was fetched but no extractable text was returned.",
+    "why": "",
     "host": "pbs.org",
     "date": "2026-09-15",
     "kind": "fact",
@@ -2245,7 +2245,7 @@
   "coast-guard-swastika-policy-reversal-2026": {
    "0": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was retrieved to check against.",
+    "why": "",
     "host": "washingtonpost.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -2261,7 +2261,7 @@
    },
    "2": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was retrieved to check against.",
+    "why": "",
     "host": "washingtonpost.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -2277,7 +2277,7 @@
    },
    "4": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was retrieved to check against.",
+    "why": "",
     "host": "washingtonpost.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -2475,7 +2475,7 @@
    },
    "4": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was retrieved, only a reason the fetch failed, so there is nothing to judge the claim against.",
+    "why": "",
     "host": "bloomberg.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -2483,7 +2483,7 @@
    },
    "5": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was retrieved, only a reason the fetch failed, so there is nothing to judge the claim against.",
+    "why": "",
     "host": "thehill.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -2491,7 +2491,7 @@
    },
    "6": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was retrieved, only a reason the fetch failed, so there is nothing to judge the claim against.",
+    "why": "",
     "host": "thehill.com",
     "date": "2026-09-15",
     "kind": "interpretation",
@@ -2499,7 +2499,7 @@
    },
    "7": {
     "state": "unopened",
-    "why": "fetch_status is empty (page fetched but no extractable text), so there is no source text to judge the claim against.",
+    "why": "",
     "host": "pbs.org",
     "date": "2026-09-15",
     "kind": "fact",
@@ -2575,7 +2575,7 @@
    },
    "1": {
     "state": "unopened",
-    "why": "fetch_status is connection_error ('The read operation timed out'); no source text is available to judge the claim against.",
+    "why": "",
     "host": "usnews.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -2601,7 +2601,7 @@
   "dea-maltz-mexico-strike-proposal-2025": {
    "0": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was retrieved, only a reason the fetch failed, so there is nothing to judge the claim against.",
+    "why": "",
     "host": "washingtonpost.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -2735,7 +2735,7 @@
    },
    "6": {
     "state": "unopened",
-    "why": "fetch_status is http_error (401 Forbidden); no source text is available to judge the claim against.",
+    "why": "",
     "host": "wsj.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -2777,7 +2777,7 @@
   "dhs-fema-polygraph-leak-crackdown-2025": {
    "0": {
     "state": "unopened",
-    "why": "fetch_status is connection_error ('The read operation timed out'); no source text is available to judge the claim against.",
+    "why": "",
     "host": "usnews.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -2803,7 +2803,7 @@
    },
    "1": {
     "state": "unopened",
-    "why": "No usable source text was available (fetch_status: needs_browser_fetch), so the claim cannot be judged.",
+    "why": "",
     "host": "washingtontimes.com",
     "date": "2026-09-21",
     "kind": "fact",
@@ -2811,7 +2811,7 @@
    },
    "2": {
     "state": "unopened",
-    "why": "No usable source text was available (fetch_status: needs_browser_fetch), so the claim cannot be judged.",
+    "why": "",
     "host": "thehill.com",
     "date": "2026-09-21",
     "kind": "fact",
@@ -2889,7 +2889,7 @@
   "dhs-student-visa-duration-status-rule-blocked-2026": {
    "0": {
     "state": "unopened",
-    "why": "No usable source text was available (fetch_status: needs_browser_fetch), so the claim cannot be judged.",
+    "why": "",
     "host": "washingtonpost.com",
     "date": "2026-09-21",
     "kind": "fact",
@@ -2905,7 +2905,7 @@
    },
    "2": {
     "state": "unopened",
-    "why": "No usable source text was available (fetch_status: needs_browser_fetch), so the claim cannot be judged.",
+    "why": "",
     "host": "reuters.com",
     "date": "2026-09-21",
     "kind": "fact",
@@ -2922,8 +2922,8 @@
     "archive": false
    },
    "1": {
-    "state": "not_found",
-    "why": "The Wayback capture text contains only site navigation and headline boilerplate; the article body is absent, so nothing in it can be checked against the claim.",
+    "state": "unopened",
+    "why": "",
     "host": "apnews.com",
     "date": "2026-09-21",
     "kind": "fact",
@@ -3101,7 +3101,7 @@
    },
    "1": {
     "state": "unopened",
-    "why": "fetch_status is http_error (404 Not Found); no source text is available to judge the claim against.",
+    "why": "",
     "host": "nquiringminds.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -3109,7 +3109,7 @@
    },
    "2": {
     "state": "unopened",
-    "why": "fetch_status is http_error (404 Not Found); no source text is available to judge the claim against.",
+    "why": "",
     "host": "warren.senate.gov",
     "date": "2026-09-15",
     "kind": "fact",
@@ -3177,7 +3177,7 @@
   "doj-birthright-citizenship-segregationist-arguments-2026": {
    "0": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was provided to judge against.",
+    "why": "",
     "host": "washingtonpost.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -3295,7 +3295,7 @@
    },
    "1": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was provided to judge against.",
+    "why": "",
     "host": "thehill.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -3435,7 +3435,7 @@
    },
    "8": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was provided to judge against.",
+    "why": "",
     "host": "thehill.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -3443,7 +3443,7 @@
    },
    "9": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was provided to judge against.",
+    "why": "",
     "host": "thehill.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -3627,7 +3627,7 @@
    },
    "2": {
     "state": "unopened",
-    "why": "fetch_status is http_error (404 Not Found); no source text was provided to judge against.",
+    "why": "",
     "host": "oversightdemocrats.house.gov",
     "date": "2026-09-15",
     "kind": "fact",
@@ -3768,8 +3768,8 @@
   },
   "doj-reuveni-ig-oversight-failure-2026": {
    "0": {
-    "state": "not_found",
-    "why": "The source_text_or_reason is raw unextracted PDF binary data (starts with %PDF-1.6), a known mis-extraction bug; it is unreadable and cannot be judged.",
+    "state": "unopened",
+    "why": "",
     "host": "judiciary.senate.gov",
     "date": "2026-09-15",
     "kind": "fact",
@@ -3835,7 +3835,7 @@
    },
    "5": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no usable source text was provided, only a bot-wall notice.",
+    "why": "",
     "host": "thehill.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -3850,8 +3850,8 @@
     "archive": false
    },
    "7": {
-    "state": "not_found",
-    "why": "fetch_status is 'ok' but the extracted text is raw PDF binary garbage (starts with '%PDF-'), a known pipeline bug -- there is no readable source text to judge the claim against.",
+    "state": "unopened",
+    "why": "",
     "host": "ca1.uscourts.gov",
     "date": "2026-09-15",
     "kind": "fact",
@@ -3965,7 +3965,7 @@
    },
    "10": {
     "state": "unopened",
-    "why": "fetch_status is 'empty' -- the page was fetched but no extractable text was returned.",
+    "why": "",
     "host": "pbs.org",
     "date": "2026-09-15",
     "kind": "fact",
@@ -4017,7 +4017,7 @@
   "doj-walz-frey-subpoenas-quashed-2026": {
    "0": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no usable source text was provided.",
+    "why": "",
     "host": "washingtonpost.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -4041,7 +4041,7 @@
    },
    "3": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no usable source text was provided.",
+    "why": "",
     "host": "thehill.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -4049,7 +4049,7 @@
    },
    "4": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no usable source text was provided.",
+    "why": "",
     "host": "washingtonpost.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -4057,7 +4057,7 @@
    },
    "5": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no usable source text was provided.",
+    "why": "",
     "host": "washingtonpost.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -4091,7 +4091,7 @@
    },
    "1": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no usable source text was provided.",
+    "why": "",
     "host": "thehill.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -4191,7 +4191,7 @@
    },
    "3": {
     "state": "not_found",
-    "why": "The cited Lawfare article (same source text as ev002) discusses only the judicial immunity legal argument in detail and never mentions a letter from more than 150 former judges to Attorney General Bondi.",
+    "why": "",
     "host": "lawfaremedia.org",
     "date": "2026-09-15",
     "kind": "fact",
@@ -4233,7 +4233,7 @@
    },
    "4": {
     "state": "unopened",
-    "why": "fetch_status is 'empty' -- the DOJ staff-profile page was fetched but returned no extractable text.",
+    "why": "",
     "host": "justice.gov",
     "date": "2026-09-15",
     "kind": "fact",
@@ -4259,7 +4259,7 @@
    },
    "1": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no usable source text was provided.",
+    "why": "",
     "host": "washingtonpost.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -4453,7 +4453,7 @@
   "gabbard-directors-initiatives-group-2026": {
    "0": {
     "state": "unopened",
-    "why": "fetch_status is connection_error, so no source text was available to judge this claim against.",
+    "why": "",
     "host": "usnews.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -4469,7 +4469,7 @@
    },
    "2": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch, so no source text was available to judge this claim against.",
+    "why": "",
     "host": "thehill.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -4477,7 +4477,7 @@
    },
    "3": {
     "state": "unopened",
-    "why": "fetch_status is http_error (429), so no source text was available to judge this claim against.",
+    "why": "",
     "host": "thedefensenews.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -4503,7 +4503,7 @@
    },
    "2": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch, so no source text was available to judge this claim against.",
+    "why": "",
     "host": "washingtonpost.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -4511,7 +4511,7 @@
    },
    "3": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch, so no source text was available to judge this claim against.",
+    "why": "",
     "host": "washingtonpost.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -4527,7 +4527,7 @@
    },
    "5": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch, so no source text was available to judge this claim against.",
+    "why": "",
     "host": "bloomberg.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -4543,7 +4543,7 @@
    },
    "7": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch, so no source text was available to judge this claim against.",
+    "why": "",
     "host": "bloomberg.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -4551,7 +4551,7 @@
    },
    "8": {
     "state": "unopened",
-    "why": "fetch_status is http_error (404), so no source text was available to judge this claim against.",
+    "why": "",
     "host": "aol.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -4577,7 +4577,7 @@
    },
    "2": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch, so no source text was available to judge this claim against.",
+    "why": "",
     "host": "washingtonpost.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -4643,7 +4643,7 @@
    },
    "3": {
     "state": "unopened",
-    "why": "fetch_status is empty (page fetched but no extractable text), so no source text was available to judge this claim against.",
+    "why": "",
     "host": "pbs.org",
     "date": "2026-09-15",
     "kind": "fact",
@@ -4651,7 +4651,7 @@
    },
    "4": {
     "state": "unopened",
-    "why": "fetch_status is http_error (401), so no source text was available to judge this claim against.",
+    "why": "",
     "host": "wsj.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -4674,8 +4674,8 @@
     "archive": true
    },
    "7": {
-    "state": "not_found",
-    "why": "fetch_status is \"ok\" but the paired source_text_or_reason is simply the same Feb. 7, 2026 NBC article; that article predates and cannot speak to whether any new developments occurred by the Sept. 2, 2026 re-verification date, so it does not address this meta-claim of \"no new developments\" at all.",
+    "state": "unopened",
+    "why": "",
     "host": "nbcnews.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -4719,7 +4719,7 @@
    },
    "2": {
     "state": "unopened",
-    "why": "No usable source text was available (fetch_status: needs_browser_fetch), so the claim cannot be judged.",
+    "why": "",
     "host": "axios.com",
     "date": "2026-09-21",
     "kind": "fact",
@@ -4727,7 +4727,7 @@
    },
    "3": {
     "state": "unopened",
-    "why": "No usable source text was available (fetch_status: connection_error), so the claim cannot be judged.",
+    "why": "",
     "host": "sfstandard.com",
     "date": "2026-09-21",
     "kind": "fact",
@@ -4825,7 +4825,7 @@
    },
    "10": {
     "state": "unopened",
-    "why": "fetch_status is http_error (403), so no source text was available to judge this claim against.",
+    "why": "",
     "host": "supplychaindive.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -4859,7 +4859,7 @@
    },
    "1": {
     "state": "unopened",
-    "why": "fetch_status is http_error (404), so no source text was available to judge this claim against.",
+    "why": "",
     "host": "spokesman.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -4877,7 +4877,7 @@
   "halligan-comey-vindictive-prosecution-2025-2026": {
    "0": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was provided to judge this claim against.",
+    "why": "",
     "host": "washingtonpost.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -4909,7 +4909,7 @@
    },
    "4": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was provided to judge this claim against.",
+    "why": "",
     "host": "washingtonpost.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -4925,7 +4925,7 @@
    },
    "6": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was provided to judge this claim against.",
+    "why": "",
     "host": "washingtonpost.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -4981,7 +4981,7 @@
    },
    "13": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was provided to judge this claim against.",
+    "why": "",
     "host": "washingtonpost.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -5069,7 +5069,7 @@
    },
    "24": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was provided to judge this claim against.",
+    "why": "",
     "host": "thehill.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -5095,7 +5095,7 @@
    },
    "1": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was provided to judge this claim against.",
+    "why": "",
     "host": "washingtonpost.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -5129,7 +5129,7 @@
    },
    "3": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was provided to judge this claim against.",
+    "why": "",
     "host": "thehill.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -5147,7 +5147,7 @@
   "hegseth-army-cid-security-detail-diversion-2025": {
    "0": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was provided to judge this claim against.",
+    "why": "",
     "host": "washingtonpost.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -5163,7 +5163,7 @@
    },
    "2": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was provided to judge this claim against.",
+    "why": "",
     "host": "thehill.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -5189,7 +5189,7 @@
    },
    "1": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was provided to judge this claim against.",
+    "why": "",
     "host": "washingtonpost.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -5221,7 +5221,7 @@
    },
    "5": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was provided to judge this claim against.",
+    "why": "",
     "host": "washingtonpost.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -5351,7 +5351,7 @@
    },
    "1": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was provided to judge this claim against.",
+    "why": "",
     "host": "thehill.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -5367,7 +5367,7 @@
    },
    "3": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was provided to judge this claim against.",
+    "why": "",
     "host": "thehill.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -5375,7 +5375,7 @@
    },
    "4": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was provided to judge this claim against.",
+    "why": "",
     "host": "thehill.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -5443,7 +5443,7 @@
    },
    "2": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was provided to judge this claim against.",
+    "why": "",
     "host": "thehill.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -5503,7 +5503,7 @@
    },
    "3": {
     "state": "unopened",
-    "why": "fetch_status is http_error (403 Forbidden); no source text was retrieved to check this claim against.",
+    "why": "",
     "host": "highereddive.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -5560,8 +5560,8 @@
     "archive": false
    },
    "5": {
-    "state": "not_found",
-    "why": "The source is a PDF letter; the extracted 'source_text_or_reason' for this claim is an anomalously large block of unreadable raw/garbled text consistent with the pipeline's known PDF mis-extraction bug (fetch_status ok but not actual readable text), so it cannot be read to verify the claim.",
+    "state": "unopened",
+    "why": "",
     "host": "warren.senate.gov",
     "date": "2026-09-15",
     "kind": "fact",
@@ -5593,7 +5593,7 @@
    },
    "9": {
     "state": "not_found",
-    "why": "The cited source is the same June 18, 2026 Military Times article already used for ev006; it cannot speak to a 'fresh search' or NDAA conference status as of the 2026-09-02 re-verification date the claim asserts, so it does not settle whether anything changed by that later date.",
+    "why": "",
     "host": "militarytimes.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -5627,7 +5627,7 @@
    },
    "2": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; only a bot-wall/no-wayback note is present, not usable source text.",
+    "why": "",
     "host": "thehill.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -5659,7 +5659,7 @@
    },
    "6": {
     "state": "unopened",
-    "why": "fetch_status is http_error (308 Permanent Redirect); no source text was retrieved to check this claim against.",
+    "why": "",
     "host": "yahoo.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -5675,7 +5675,7 @@
    },
    "8": {
     "state": "not_found",
-    "why": "The cited source is the same March 2025 Verdict/Justia analysis already used for ev005; a March 2025 article cannot speak to whether a 'fresh search' as of the 2026-08-26 re-verification date turned up litigation or reinstatement, so it does not settle the claim.",
+    "why": "",
     "host": "verdict.justia.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -5717,7 +5717,7 @@
    },
    "4": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no usable source text was provided for this claim.",
+    "why": "",
     "host": "washingtonpost.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -5765,7 +5765,7 @@
    },
    "10": {
     "state": "not_found",
-    "why": "The cited source is the same CBS article already used for ev005; that article cannot speak to whether a 'fresh search' as of the 2026-09-01 re-verification date turned up a public report release or Pentagon responses to the August deadlines, so it does not settle the claim.",
+    "why": "",
     "host": "cbsnews.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -5783,7 +5783,7 @@
    },
    "1": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; only a bot-wall/no-wayback note is present, not usable source text.",
+    "why": "",
     "host": "washingtonpost.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -5809,7 +5809,7 @@
    },
    "1": {
     "state": "unopened",
-    "why": "fetch_status is http_error; no source text was retrieved to check this claim against.",
+    "why": "",
     "host": "spokesman.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -5825,7 +5825,7 @@
    },
    "3": {
     "state": "unopened",
-    "why": "fetch_status is http_error (403 Forbidden); no source text was retrieved to check this claim against.",
+    "why": "",
     "host": "nationalinterest.org",
     "date": "2026-09-15",
     "kind": "fact",
@@ -5856,8 +5856,8 @@
     "archive": false
    },
    "7": {
-    "state": "not_found",
-    "why": "The source_text_or_reason begins with '%PDF-1.7' and consists of raw, unreadable binary PDF stream data despite fetch_status 'ok' -- this is the pipeline's known PDF mis-extraction bug, not usable source text.",
+    "state": "unopened",
+    "why": "",
     "host": "slotkin.senate.gov",
     "date": "2026-09-15",
     "kind": "fact",
@@ -5941,7 +5941,7 @@
    },
    "2": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no usable source text was provided for this claim.",
+    "why": "",
     "host": "thehill.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -5967,7 +5967,7 @@
   "hegseth-pentagon-press-credentialing-restrictions-2025": {
    "0": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no usable source text was provided for this claim.",
+    "why": "",
     "host": "washingtonpost.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -6051,7 +6051,7 @@
    },
    "3": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no usable source text was provided for this claim.",
+    "why": "",
     "host": "thehill.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -6067,7 +6067,7 @@
    },
    "5": {
     "state": "unopened",
-    "why": "No usable source text was available (fetch_status: http_error), so the claim cannot be judged.",
+    "why": "",
     "host": "gvwire.com",
     "date": "2026-09-21",
     "kind": "fact",
@@ -6077,7 +6077,7 @@
   "hegseth-russia-cyber-pause-denial-2025": {
    "0": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no usable source text was provided for this claim.",
+    "why": "",
     "host": "washingtonpost.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -6085,7 +6085,7 @@
    },
    "1": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no usable source text was provided for this claim.",
+    "why": "",
     "host": "bloomberg.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -6127,7 +6127,7 @@
    },
    "2": {
     "state": "unopened",
-    "why": "fetch_status is http_error (401 Forbidden); no source text was retrieved to check the claim against.",
+    "why": "",
     "host": "wsj.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -6191,7 +6191,7 @@
    },
    "10": {
     "state": "unopened",
-    "why": "fetch_status is http_error (401 Forbidden); no source text was retrieved to check the claim against.",
+    "why": "",
     "host": "wsj.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -6274,8 +6274,8 @@
     "archive": false
    },
    "3": {
-    "state": "not_found",
-    "why": "The source_text_or_reason for this claim is raw unreadable binary beginning with '%PDF-1.3' (a known PDF-extraction failure in this pipeline), not usable text, so the claim cannot be checked against any actual content.",
+    "state": "unopened",
+    "why": "",
     "host": "oversightdemocrats.house.gov",
     "date": "2026-09-15",
     "kind": "fact",
@@ -6401,7 +6401,7 @@
   "hung-cao-taiwan-arms-sale-contradiction-2026": {
    "0": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was available to check the claim against.",
+    "why": "",
     "host": "thehill.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -6409,7 +6409,7 @@
    },
    "1": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was available to check the claim against.",
+    "why": "",
     "host": "thehill.com",
     "date": "2026-09-15",
     "kind": "interpretation",
@@ -6619,7 +6619,7 @@
    },
    "4": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was available to check the claim against.",
+    "why": "",
     "host": "thehill.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -6635,7 +6635,7 @@
    },
    "6": {
     "state": "unopened",
-    "why": "fetch_status is connection_error (incomplete read); no usable source text was retrieved to check the claim against.",
+    "why": "",
     "host": "nbcphiladelphia.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -6669,7 +6669,7 @@
   "ice-misconduct-oversight-weakened-2026": {
    "0": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; source_text_or_reason is a fetch-failure note, not source text, so nothing can be checked.",
+    "why": "",
     "host": "washingtonpost.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -6692,8 +6692,8 @@
     "archive": false
    },
    "3": {
-    "state": "not_found",
-    "why": "fetch_status is ok_via_wayback, but the captured text is entirely site navigation/menu chrome from the Wayback capture and contains no article body discussing the testimony, training-cut figures, or DHS's response described in the claim.",
+    "state": "unopened",
+    "why": "",
     "host": "apnews.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -6701,7 +6701,7 @@
    },
    "4": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text is available to check the claim.",
+    "why": "",
     "host": "washingtonpost.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -6825,7 +6825,7 @@
    },
    "4": {
     "state": "unopened",
-    "why": "fetch_status is empty (page fetched but no extractable text); nothing is available to check the claim against.",
+    "why": "",
     "host": "cato.org",
     "date": "2026-09-15",
     "kind": "fact",
@@ -6841,7 +6841,7 @@
    },
    "6": {
     "state": "unopened",
-    "why": "fetch_status is empty (page fetched but no extractable text); nothing is available to check the claim against.",
+    "why": "",
     "host": "pbs.org",
     "date": "2026-09-15",
     "kind": "fact",
@@ -6851,7 +6851,7 @@
   "irizarry-pentagon-jan6-hire-2026": {
    "0": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text is available to check the claim.",
+    "why": "",
     "host": "washingtonpost.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -6867,7 +6867,7 @@
    },
    "2": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text is available to check the claim.",
+    "why": "",
     "host": "thehill.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -6875,7 +6875,7 @@
    },
    "3": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text is available to check the claim.",
+    "why": "",
     "host": "washingtonpost.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -6884,8 +6884,8 @@
   },
   "johnson-grijalva-swearing-in-delay-epstein-2025": {
    "0": {
-    "state": "not_found",
-    "why": "fetch_status is ok_via_wayback, but the captured text is entirely AP site navigation/menu chrome and contains no article body describing Johnson's recess decision, the shutdown timeline, or the discharge-petition signature count.",
+    "state": "unopened",
+    "why": "",
     "host": "apnews.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -6901,7 +6901,7 @@
    },
    "2": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text is available to check the claim.",
+    "why": "",
     "host": "thehill.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -6961,7 +6961,7 @@
    },
    "1": {
     "state": "unopened",
-    "why": "fetch_status is empty (page fetched but no extractable text); nothing is available to check the claim against.",
+    "why": "",
     "host": "pbs.org",
     "date": "2026-09-15",
     "kind": "fact",
@@ -7013,7 +7013,7 @@
   "kennedy-niaid-whistleblower-retaliation-2025": {
    "0": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text is available to check the claim.",
+    "why": "",
     "host": "katzbanks.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -7071,7 +7071,7 @@
    },
    "1": {
     "state": "unopened",
-    "why": "No usable source text was available (fetch_status: pdf_not_extracted), so the claim cannot be judged.",
+    "why": "",
     "host": "democracyforward.org",
     "date": "2026-09-21",
     "kind": "fact",
@@ -7087,7 +7087,7 @@
    },
    "3": {
     "state": "unopened",
-    "why": "No usable source text was available (fetch_status: pdf_not_extracted), so the claim cannot be judged.",
+    "why": "",
     "host": "democracyforward.org",
     "date": "2026-09-21",
     "kind": "fact",
@@ -7095,7 +7095,7 @@
    },
    "4": {
     "state": "unopened",
-    "why": "No usable source text was available (fetch_status: connection_error), so the claim cannot be judged.",
+    "why": "",
     "host": "usnews.com",
     "date": "2026-09-21",
     "kind": "fact",
@@ -7121,7 +7121,7 @@
    },
    "2": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text is available to check the claim.",
+    "why": "",
     "host": "bloomberg.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -7137,7 +7137,7 @@
    },
    "4": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text is available to check the claim.",
+    "why": "",
     "host": "bloomberg.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -7146,8 +7146,8 @@
   },
   "lewandowski-dhs-contracts-2026": {
    "0": {
-    "state": "not_found",
-    "why": "fetch_status is 'ok' but source_text_or_reason contains only the word 'MSN' with no actual article content, leaving nothing to check the claim against.",
+    "state": "unopened",
+    "why": "",
     "host": "msn.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -7212,16 +7212,16 @@
   },
   "loeffler-sba-hatch-act-2025-09": {
    "0": {
-    "state": "not_found",
-    "why": "fetch_status is 'ok' but source_text_or_reason is raw PDF binary garbage (starts with %PDF-) with no extractable readable text, a known mis-extraction; treated as unusable per instructions.",
+    "state": "unopened",
+    "why": "",
     "host": "sbc.senate.gov",
     "date": "2026-09-15",
     "kind": "fact",
     "archive": false
    },
    "1": {
-    "state": "not_found",
-    "why": "fetch_status is 'ok' but source_text_or_reason is raw PDF binary garbage (starts with %PDF-) with no extractable readable text, a known mis-extraction; treated as unusable per instructions.",
+    "state": "unopened",
+    "why": "",
     "host": "sbc.senate.gov",
     "date": "2026-09-15",
     "kind": "fact",
@@ -7323,7 +7323,7 @@
    },
    "1": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was retrieved, only a note that thehill.com bot-walls direct fetches, so there is nothing to judge the claim against.",
+    "why": "",
     "host": "thehill.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -7404,8 +7404,8 @@
     "archive": false
    },
    "4": {
-    "state": "not_found",
-    "why": "fetch_status is 'ok' but source_text_or_reason is raw unreadable PDF binary data (begins with %PDF-1.6), a known extraction bug -- there is no readable text to judge the claim against.",
+    "state": "unopened",
+    "why": "",
     "host": "democrats-judiciary.house.gov",
     "date": "2026-09-15",
     "kind": "fact",
@@ -7421,7 +7421,7 @@
    },
    "6": {
     "state": "unopened",
-    "why": "fetch_status is http_error (403 Forbidden); no source text was retrieved to judge the claim against.",
+    "why": "",
     "host": "citizen.org",
     "date": "2026-09-15",
     "kind": "interpretation",
@@ -7479,7 +7479,7 @@
    },
    "3": {
     "state": "unopened",
-    "why": "fetch_status is http_error (403 Forbidden); no source text was retrieved to judge the claim against.",
+    "why": "",
     "host": "k12dive.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -7536,8 +7536,8 @@
     "archive": false
    },
    "5": {
-    "state": "not_found",
-    "why": "fetch_status is 'ok' but source_text_or_reason is raw unreadable PDF binary data (begins with %PDF-1.7), a known extraction bug -- there is no readable text to judge this detailed claim against.",
+    "state": "unopened",
+    "why": "",
     "host": "ed.gov",
     "date": "2026-09-15",
     "kind": "fact",
@@ -7595,7 +7595,7 @@
    },
    "5": {
     "state": "unopened",
-    "why": "fetch_status is http_error (403 Forbidden); no source text was retrieved to judge the claim against.",
+    "why": "",
     "host": "floridapolitics.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -7787,7 +7787,7 @@
    },
    "2": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was retrieved to judge the claim against.",
+    "why": "",
     "host": "bloomberg.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -7802,8 +7802,8 @@
     "archive": false
    },
    "4": {
-    "state": "not_found",
-    "why": "fetch_status is 'ok' but source_text_or_reason is raw unreadable PDF binary data (begins with %PDF-1.6), a known extraction bug -- there is no readable text to judge this re-verification claim against.",
+    "state": "unopened",
+    "why": "",
     "host": "ca4.uscourts.gov",
     "date": "2026-09-15",
     "kind": "fact",
@@ -7918,8 +7918,8 @@
     "archive": false
    },
    "6": {
-    "state": "not_found",
-    "why": "The fetch_status is ok but the extracted 'text' is raw PDF binary garbage (starts with %PDF-1.4), a known extraction-bug artifact, not readable source content.",
+    "state": "unopened",
+    "why": "",
     "host": "media.cadc.uscourts.gov",
     "date": "2026-09-15",
     "kind": "fact",
@@ -7927,7 +7927,7 @@
    },
    "7": {
     "state": "not_found",
-    "why": "The fetched CourtListener docket text is the same page as ev004, truncated at December 2025 entries; it does not show anything about a September 29, 2026 oral argument or confirm the absence of interim rulings as of August 2026.",
+    "why": "",
     "host": "courtlistener.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -7963,7 +7963,7 @@
   "noem-dhs-administrative-subpoena-abuse-2026": {
    "0": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was retrieved.",
+    "why": "",
     "host": "washingtonpost.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -7979,7 +7979,7 @@
    },
    "2": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was retrieved.",
+    "why": "",
     "host": "washingtonpost.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -8013,7 +8013,7 @@
    },
    "2": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was retrieved.",
+    "why": "",
     "host": "thehill.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -8021,7 +8021,7 @@
    },
    "3": {
     "state": "unopened",
-    "why": "fetch_status is http_error (404 Not Found); no source text was retrieved.",
+    "why": "",
     "host": "yahoo.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -8039,7 +8039,7 @@
   "noem-dhs-social-media-false-assault-accusations-2026": {
    "0": {
     "state": "unopened",
-    "why": "fetch_status is http_error (401 HTTP Forbidden); no source text was retrieved.",
+    "why": "",
     "host": "wsj.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -8115,7 +8115,7 @@
    },
    "1": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was retrieved.",
+    "why": "",
     "host": "bloomberg.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -8223,7 +8223,7 @@
    },
    "2": {
     "state": "unopened",
-    "why": "fetch_status is http_error (403 Forbidden); no source text was retrieved.",
+    "why": "",
     "host": "valawyersweekly.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -8257,7 +8257,7 @@
    },
    "3": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was retrieved.",
+    "why": "",
     "host": "thehill.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -8315,7 +8315,7 @@
    },
    "3": {
     "state": "unopened",
-    "why": "fetch_status is http_error (403 Forbidden); no source text was retrieved.",
+    "why": "",
     "host": "travelpulse.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -8406,8 +8406,8 @@
     "archive": false
    },
    "3": {
-    "state": "not_found",
-    "why": "The fetch_status is ok but the extracted text is raw PDF binary garbage (starts with %PDF-1.6), a known extraction-bug artifact, not readable source content.",
+    "state": "unopened",
+    "why": "",
     "host": "democrats-judiciary.house.gov",
     "date": "2026-09-15",
     "kind": "fact",
@@ -8417,7 +8417,7 @@
   "patel-bondi-arctic-frost-agents-lawsuit-2026": {
    "0": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was retrieved.",
+    "why": "",
     "host": "thehill.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -8441,7 +8441,7 @@
    },
    "3": {
     "state": "unopened",
-    "why": "fetch_status is http_error (404 Not Found); no source text was retrieved.",
+    "why": "",
     "host": "aol.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -8629,15 +8629,15 @@
    },
    "1": {
     "state": "unopened",
-    "why": "fetch_status is http_error ('403 Forbidden'); no usable source text was provided.",
+    "why": "",
     "host": "poynter.org",
     "date": "2026-09-15",
     "kind": "fact",
     "archive": false
    },
    "2": {
-    "state": "not_found",
-    "why": "fetch_status is 'ok' but source_text_or_reason is unreadable raw PDF binary data (starts with %PDF-), a known extraction bug, so no usable text was provided to check the claim against.",
+    "state": "unopened",
+    "why": "",
     "host": "democrats-judiciary.house.gov",
     "date": "2026-09-15",
     "kind": "fact",
@@ -8776,8 +8776,8 @@
     "archive": false
    },
    "5": {
-    "state": "not_found",
-    "why": "The source is a lengthy PDF letter whose extracted text is far larger than can be read with the tools available for this task, consistent with this batch's known PDF raw-extraction problem; no usable source text could be examined to check this claim.",
+    "state": "unopened",
+    "why": "",
     "host": "democrats-judiciary.house.gov",
     "date": "2026-09-15",
     "kind": "fact",
@@ -8802,8 +8802,8 @@
     "archive": false
    },
    "2": {
-    "state": "not_found",
-    "why": "Although fetch_status is ok_via_wayback, the extracted text consists entirely of AP's site navigation/section menu boilerplate with no article content about the subpoenas, Patel, or the White House meeting, so nothing in the provided text addresses the claim.",
+    "state": "unopened",
+    "why": "",
     "host": "apnews.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -8927,7 +8927,7 @@
    },
    "1": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no usable source text was provided (only a note that the domain bot-walls direct fetches).",
+    "why": "",
     "host": "bloomberg.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -8953,7 +8953,7 @@
    },
    "1": {
     "state": "unopened",
-    "why": "fetch_status is 'empty' -- the page was fetched but no extractable text was returned, so there is no usable source text to check the claim against.",
+    "why": "",
     "host": "pbs.org",
     "date": "2026-09-15",
     "kind": "interpretation",
@@ -9003,7 +9003,7 @@
    },
    "3": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no usable source text was provided (only a note that the domain bot-walls direct fetches).",
+    "why": "",
     "host": "thehill.com",
     "date": "2026-09-15",
     "kind": "interpretation",
@@ -9026,8 +9026,8 @@
     "archive": false
    },
    "6": {
-    "state": "not_found",
-    "why": "fetch_status is 'ok' but source_text_or_reason is unreadable raw PDF binary data (starts with %PDF-), a known extraction bug, so no usable source text was provided.",
+    "state": "unopened",
+    "why": "",
     "host": "oversightdemocrats.house.gov",
     "date": "2026-09-15",
     "kind": "fact",
@@ -9042,8 +9042,8 @@
     "archive": false
    },
    "8": {
-    "state": "not_found",
-    "why": "fetch_status is 'ok' but source_text_or_reason is unreadable raw PDF binary data (starts with %PDF-), a known extraction bug, so no usable source text was provided.",
+    "state": "unopened",
+    "why": "",
     "host": "democrats-judiciary.house.gov",
     "date": "2026-09-15",
     "kind": "fact",
@@ -9053,7 +9053,7 @@
   "pirro-doj-anonymous-ice-critic-subpoenas-2026": {
    "0": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no usable source text was provided (only a note that the domain bot-walls direct fetches).",
+    "why": "",
     "host": "bloomberg.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -9095,7 +9095,7 @@
   "pirro-doj-bank-debanking-subpoenas-2026": {
    "0": {
     "state": "unopened",
-    "why": "fetch_status is http_error (401 Forbidden); no source text was retrieved to check the claim against.",
+    "why": "",
     "host": "wsj.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -9227,7 +9227,7 @@
    },
    "1": {
     "state": "unopened",
-    "why": "fetch_status is empty (page fetched but no extractable text); no source text is available to check the claim against.",
+    "why": "",
     "host": "pbs.org",
     "date": "2026-09-15",
     "kind": "fact",
@@ -9269,7 +9269,7 @@
    },
    "2": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch (Washington Post bot-walled with no usable Wayback snapshot); no source text is available to check the claim against.",
+    "why": "",
     "host": "washingtonpost.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -9277,7 +9277,7 @@
    },
    "3": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch (Washington Post bot-walled with no usable Wayback snapshot); no source text is available to check the claim against.",
+    "why": "",
     "host": "washingtonpost.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -9347,7 +9347,7 @@
   "pulte-mortgage-data-misuse-2025-2026": {
    "0": {
     "state": "unopened",
-    "why": "fetch_status is http_error (429 Too Many Requests); no source text was retrieved to check the claim against.",
+    "why": "",
     "host": "wichitaliberty.org",
     "date": "2026-09-15",
     "kind": "fact",
@@ -9427,7 +9427,7 @@
    },
    "10": {
     "state": "unopened",
-    "why": "fetch_status is http_error (429 Too Many Requests); no source text was retrieved to check the claim against.",
+    "why": "",
     "host": "wichitaliberty.org",
     "date": "2026-09-15",
     "kind": "interpretation",
@@ -9467,7 +9467,7 @@
    },
    "15": {
     "state": "unopened",
-    "why": "fetch_status is empty (page fetched but no extractable text, likely JS-rendered); no source text is available to check the claim against.",
+    "why": "",
     "host": "cato.org",
     "date": "2026-09-15",
     "kind": "fact",
@@ -9475,7 +9475,7 @@
    },
    "16": {
     "state": "unopened",
-    "why": "fetch_status is connection_error (read timed out); no source text was retrieved to check the claim against.",
+    "why": "",
     "host": "usnews.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -9592,8 +9592,8 @@
     "archive": false
    },
    "2": {
-    "state": "not_found",
-    "why": "fetch_status is 'ok' but the extracted text is raw PDF binary garbage (starts with %PDF-), a known extraction bug -- there is no readable source text to check the claim against.",
+    "state": "unopened",
+    "why": "",
     "host": "ca4.uscourts.gov",
     "date": "2026-09-15",
     "kind": "fact",
@@ -9601,7 +9601,7 @@
    },
    "3": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch (The Hill bot-walled with no usable Wayback snapshot); no source text is available to check the claim against.",
+    "why": "",
     "host": "thehill.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -9685,7 +9685,7 @@
    },
    "6": {
     "state": "unopened",
-    "why": "fetch_status is http_error (401 Forbidden); no source text was retrieved.",
+    "why": "",
     "host": "wsj.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -9693,7 +9693,7 @@
    },
    "7": {
     "state": "not_found",
-    "why": "The fetched Wikipedia text (truncated at 8000 characters) covers Kennedy's early biography and career and never reaches any content about Judge Brian Murphy, the ACIP ruling, or the six-organization lawsuit referenced in the claim, so the provided text does not address this claim at all.",
+    "why": "",
     "host": "en.wikipedia.org",
     "date": "2026-09-15",
     "kind": "interpretation",
@@ -9701,7 +9701,7 @@
    },
    "8": {
     "state": "unopened",
-    "why": "fetch_status is http_error (403 Forbidden); no source text was retrieved.",
+    "why": "",
     "host": "biopharmadive.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -9709,15 +9709,15 @@
    },
    "9": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was retrieved.",
+    "why": "",
     "host": "thehill.com",
     "date": "2026-09-15",
     "kind": "fact",
     "archive": false
    },
    "10": {
-    "state": "not_found",
-    "why": "The fetch_status is 'ok' but the returned source_text_or_reason is unreadable raw PDF binary/stream data with no extractable readable text addressing the claim, so there is nothing usable to judge the claim against.",
+    "state": "unopened",
+    "why": "",
     "host": "ag.ny.gov",
     "date": "2026-09-15",
     "kind": "fact",
@@ -9725,7 +9725,7 @@
    },
    "11": {
     "state": "unopened",
-    "why": "fetch_status is http_error (403 Forbidden); no source text was retrieved.",
+    "why": "",
     "host": "fiercehealthcare.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -9741,7 +9741,7 @@
    },
    "13": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was retrieved.",
+    "why": "",
     "host": "thehill.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -9757,7 +9757,7 @@
    },
    "15": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was retrieved.",
+    "why": "",
     "host": "congress.gov",
     "date": "2026-09-15",
     "kind": "fact",
@@ -9773,23 +9773,23 @@
    },
    "17": {
     "state": "not_found",
-    "why": "Same First Circuit feed aggregator page as ev016, again listing unrelated cases only; it does not mention case No. 26-1503, so it cannot settle whether a ruling or oral-argument date exists for that appeal.",
+    "why": "",
     "host": "ca1.uscourts.gov",
     "date": "2026-09-15",
     "kind": "interpretation",
     "archive": false
    },
    "18": {
-    "state": "not_found",
-    "why": "fetch_status is 'ok' but the returned text is unreadable raw PDF binary data with no extractable content addressing the claim.",
+    "state": "unopened",
+    "why": "",
     "host": "litigationtracker.law.georgetown.edu",
     "date": "2026-09-15",
     "kind": "fact",
     "archive": false
    },
    "19": {
-    "state": "not_found",
-    "why": "fetch_status is 'ok' but the returned text is unreadable raw PDF binary data with no extractable content addressing the claim.",
+    "state": "unopened",
+    "why": "",
     "host": "litigationtracker.law.georgetown.edu",
     "date": "2026-09-15",
     "kind": "fact",
@@ -9797,7 +9797,7 @@
    },
    "20": {
     "state": "not_found",
-    "why": "Same First Circuit feed aggregator page pattern as ev016/ev017; it does not mention case No. 26-1503 anywhere in the visible listing, so it cannot confirm or refute the 're-verified no change' claim.",
+    "why": "",
     "host": "ca1.uscourts.gov",
     "date": "2026-09-15",
     "kind": "interpretation",
@@ -9814,8 +9814,8 @@
     "archive": false
    },
    "1": {
-    "state": "not_found",
-    "why": "fetch_status is 'ok' but the returned source_text_or_reason is unreadable raw PDF binary/stream data with no extractable readable text addressing the claim.",
+    "state": "unopened",
+    "why": "",
     "host": "lujan.senate.gov",
     "date": "2026-09-15",
     "kind": "fact",
@@ -9846,8 +9846,8 @@
     "archive": false
    },
    "5": {
-    "state": "not_found",
-    "why": "fetch_status is 'ok' but the returned source_text_or_reason is unreadable raw PDF binary/stream data with no extractable readable text addressing the claim.",
+    "state": "unopened",
+    "why": "",
     "host": "lujan.senate.gov",
     "date": "2026-09-15",
     "kind": "fact",
@@ -9855,7 +9855,7 @@
    },
    "6": {
     "state": "unopened",
-    "why": "fetch_status is connection_error (the read operation timed out); no source text was retrieved.",
+    "why": "",
     "host": "usnews.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -9891,7 +9891,7 @@
   "rfk-jr-maha-commission-2025": {
    "0": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was retrieved.",
+    "why": "",
     "host": "thehill.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -9933,7 +9933,7 @@
   "rfk-jr-military-aircraft-campaign-travel-2026": {
    "0": {
     "state": "unopened",
-    "why": "No usable source text was available (fetch_status: needs_browser_fetch), so the claim cannot be judged.",
+    "why": "",
     "host": "washingtonpost.com",
     "date": "2026-09-21",
     "kind": "fact",
@@ -10024,8 +10024,8 @@
     "archive": false
    },
    "3": {
-    "state": "not_found",
-    "why": "fetch_status is 'ok' but the returned source_text_or_reason is unreadable raw PDF binary/stream data with no extractable readable text addressing the claim.",
+    "state": "unopened",
+    "why": "",
     "host": "litigationtracker.law.georgetown.edu",
     "date": "2026-09-15",
     "kind": "fact",
@@ -10058,8 +10058,8 @@
     "archive": false
    },
    "3": {
-    "state": "not_found",
-    "why": "fetch_status is 'ok' but the returned source_text_or_reason is unreadable raw PDF binary/stream data with no extractable readable text addressing the claim.",
+    "state": "unopened",
+    "why": "",
     "host": "warren.senate.gov",
     "date": "2026-09-15",
     "kind": "fact",
@@ -10101,7 +10101,7 @@
    },
    "2": {
     "state": "unopened",
-    "why": "fetch_status is 'empty' (page fetched but no extractable text, likely JS-rendered); no source text was retrieved to judge the claim against.",
+    "why": "",
     "host": "pbs.org",
     "date": "2026-09-15",
     "kind": "fact",
@@ -10128,8 +10128,8 @@
   },
   "rodney-scott-cbp-hernandez-rojas-coverup-2025": {
    "0": {
-    "state": "not_found",
-    "why": "fetch_status is 'ok' but the returned source_text_or_reason is unreadable raw PDF binary/stream data with no extractable readable text addressing the claim.",
+    "state": "unopened",
+    "why": "",
     "host": "finance.senate.gov",
     "date": "2026-09-15",
     "kind": "fact",
@@ -10154,8 +10154,8 @@
   },
   "rollins-establishment-clause-2026-05": {
    "0": {
-    "state": "not_found",
-    "why": "fetch_status is 'ok' but the returned source_text_or_reason is unreadable raw PDF binary/stream data with no extractable readable text addressing the claim.",
+    "state": "unopened",
+    "why": "",
     "host": "democracyforward.org",
     "date": "2026-09-15",
     "kind": "fact",
@@ -10234,8 +10234,8 @@
     "archive": false
    },
    "10": {
-    "state": "not_found",
-    "why": "fetch_status is 'ok' but the returned source_text_or_reason is unreadable raw PDF binary/stream data with no extractable readable text addressing the claim.",
+    "state": "unopened",
+    "why": "",
     "host": "democracyforward.org",
     "date": "2026-09-15",
     "kind": "fact",
@@ -10401,7 +10401,7 @@
    },
    "3": {
     "state": "unopened",
-    "why": "fetch_status is connection_error; no usable source text was provided (only a fetch-failure reason), so the claim cannot be checked against any source text.",
+    "why": "",
     "host": "usnews.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -10485,7 +10485,7 @@
    },
    "1": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no usable source text was provided (only a fetch-failure reason), so the claim cannot be checked against any source text.",
+    "why": "",
     "host": "washingtonpost.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -10592,8 +10592,8 @@
     "archive": false
    },
    "3": {
-    "state": "not_found",
-    "why": "The fetch_status is 'ok' but the provided source_text_or_reason for this claim is unreadable raw PDF binary/stream data, not extracted text; no comprehensible content is available to check the claim against.",
+    "state": "unopened",
+    "why": "",
     "host": "cotton.senate.gov",
     "date": "2026-09-15",
     "kind": "fact",
@@ -10687,7 +10687,7 @@
    },
    "2": {
     "state": "unopened",
-    "why": "fetch_status is connection_error; no usable source text was provided (only a fetch-failure reason), so the claim cannot be checked against any source text.",
+    "why": "",
     "host": "usnews.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -10695,7 +10695,7 @@
    },
    "3": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no usable source text was provided (only a fetch-failure reason), so the claim cannot be checked against any source text.",
+    "why": "",
     "host": "thehill.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -10711,7 +10711,7 @@
    },
    "5": {
     "state": "unopened",
-    "why": "fetch_status is empty (page fetched but no extractable text); no usable source text was provided, so the claim cannot be checked against any source text.",
+    "why": "",
     "host": "justice.gov",
     "date": "2026-09-15",
     "kind": "fact",
@@ -10729,7 +10729,7 @@
   "sonderling-imls-unlawful-actions-2025": {
    "0": {
     "state": "unopened",
-    "why": "fetch_status is connection_error; no usable source text was provided (only a fetch-failure reason), so the claim cannot be checked against any source text.",
+    "why": "",
     "host": "usnews.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -10769,7 +10769,7 @@
    },
    "5": {
     "state": "unopened",
-    "why": "fetch_status is connection_error; no usable source text was provided (only a fetch-failure reason), so the claim cannot be checked against any source text.",
+    "why": "",
     "host": "usnews.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -10777,7 +10777,7 @@
    },
    "6": {
     "state": "unopened",
-    "why": "fetch_status is http_error; no usable source text was provided (only a fetch-failure reason), so the claim cannot be checked against any source text.",
+    "why": "",
     "host": "plansponsor.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -10887,7 +10887,7 @@
    },
    "4": {
     "state": "unopened",
-    "why": "fetch_status is empty (no extractable text from the PBS page), so there is no source text to check the claim against.",
+    "why": "",
     "host": "pbs.org",
     "date": "2026-09-15",
     "kind": "fact",
@@ -10971,7 +10971,7 @@
    },
    "4": {
     "state": "unopened",
-    "why": "fetch_status is http_error (404 Not Found), so no source text exists to check the claim against.",
+    "why": "",
     "host": "spotlightpa.org",
     "date": "2026-09-15",
     "kind": "fact",
@@ -11055,7 +11055,7 @@
    },
    "1": {
     "state": "unopened",
-    "why": "fetch_status is http_error (403 Forbidden), so no source text exists to check the claim against.",
+    "why": "",
     "host": "france24.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -11395,7 +11395,7 @@
    },
    "3": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; the Washington Post article text was never retrieved, so the claim cannot be checked.",
+    "why": "",
     "host": "washingtonpost.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -11479,7 +11479,7 @@
    },
    "1": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was provided to judge against.",
+    "why": "",
     "host": "thehill.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -11554,8 +11554,8 @@
     "archive": false
    },
    "2": {
-    "state": "not_found",
-    "why": "fetch_status is \"ok\" but the returned source_text_or_reason is raw, garbled PDF byte-stream data (compressed object streams), not extracted readable text -- there is nothing usable in it to judge the claim against.",
+    "state": "unopened",
+    "why": "",
     "host": "cdn.ca9.uscourts.gov",
     "date": "2026-09-15",
     "kind": "fact",
@@ -11587,7 +11587,7 @@
    },
    "6": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was provided to judge against.",
+    "why": "",
     "host": "congress.gov",
     "date": "2026-09-15",
     "kind": "fact",
@@ -11645,7 +11645,7 @@
    },
    "2": {
     "state": "unopened",
-    "why": "fetch_status is http_error (403 Forbidden); no source text was provided to judge against.",
+    "why": "",
     "host": "timesofisrael.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -11718,8 +11718,8 @@
     "archive": false
    },
    "8": {
-    "state": "not_found",
-    "why": "fetch_status is \"ok\" but the returned source_text_or_reason is raw, garbled PDF byte-stream data, not extracted readable text -- there is nothing usable in it to judge the claim against.",
+    "state": "unopened",
+    "why": "",
     "host": "docs.house.gov",
     "date": "2026-09-15",
     "kind": "fact",
@@ -11885,7 +11885,7 @@
    },
    "7": {
     "state": "unopened",
-    "why": "fetch_status is http_error (403 Forbidden); no source text was provided to judge against.",
+    "why": "",
     "host": "uscis.gov",
     "date": "2026-09-15",
     "kind": "fact",
@@ -11903,7 +11903,7 @@
   "trump-harvard-irs-tax-exempt-threat-2025": {
    "0": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was provided to judge against.",
+    "why": "",
     "host": "washingtonpost.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -11953,7 +11953,7 @@
    },
    "1": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was provided to judge against.",
+    "why": "",
     "host": "bloomberg.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -12161,7 +12161,7 @@
    },
    "2": {
     "state": "unopened",
-    "why": "fetch_status is http_error, so no source text was available to judge this claim.",
+    "why": "",
     "host": "abcnews.go.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -12401,7 +12401,7 @@
    },
    "4": {
     "state": "unopened",
-    "why": "No usable source text was available (fetch_status: needs_browser_fetch), so the claim cannot be judged.",
+    "why": "",
     "host": "axios.com",
     "date": "2026-09-21",
     "kind": "fact",
@@ -12513,7 +12513,7 @@
   "trump-mcmahon-china-fox-hunt-pardon-2025": {
    "0": {
     "state": "unopened",
-    "why": "fetch_status is empty, so no source text was available to judge this claim.",
+    "why": "",
     "host": "justice.gov",
     "date": "2026-09-15",
     "kind": "fact",
@@ -12529,7 +12529,7 @@
    },
    "2": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch, so no source text was available to judge this claim.",
+    "why": "",
     "host": "washingtonpost.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -12589,7 +12589,7 @@
   "trump-military-academy-boards-loyalists-2025": {
    "0": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch, so no source text was available to judge this claim.",
+    "why": "",
     "host": "thehill.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -12613,7 +12613,7 @@
    },
    "3": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch, so no source text was available to judge this claim.",
+    "why": "",
     "host": "thehill.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -12631,7 +12631,7 @@
    },
    "1": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch, so no source text was available to judge this claim.",
+    "why": "",
     "host": "thehill.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -12667,7 +12667,7 @@
   "trump-qatar-jet-emoluments-2025": {
    "0": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch, so no source text was available to judge this claim.",
+    "why": "",
     "host": "bloomberg.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -12675,7 +12675,7 @@
    },
    "1": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch, so no source text was available to judge this claim.",
+    "why": "",
     "host": "congress.gov",
     "date": "2026-09-15",
     "kind": "fact",
@@ -12683,7 +12683,7 @@
    },
    "2": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch, so no source text was available to judge this claim.",
+    "why": "",
     "host": "congress.gov",
     "date": "2026-09-15",
     "kind": "fact",
@@ -12825,15 +12825,15 @@
    },
    "3": {
     "state": "unopened",
-    "why": "fetch_status is http_error (429 Too Many Requests); no usable source text was retrieved.",
+    "why": "",
     "host": "coindesk.com",
     "date": "2026-09-15",
     "kind": "fact",
     "archive": false
    },
    "4": {
-    "state": "not_found",
-    "why": "Although fetch_status is 'ok', the source_text_or_reason field contains only raw, unreadable PDF binary stream data rather than extracted text, so it does not actually address the claim in any usable way.",
+    "state": "unopened",
+    "why": "",
     "host": "banking.senate.gov",
     "date": "2026-09-15",
     "kind": "fact",
@@ -12848,8 +12848,8 @@
     "archive": false
    },
    "6": {
-    "state": "not_found",
-    "why": "Although fetch_status is 'ok', the source_text_or_reason field contains only raw, unreadable PDF binary stream data rather than extracted text, so it does not actually address the claim in any usable way.",
+    "state": "unopened",
+    "why": "",
     "host": "occ.gov",
     "date": "2026-09-15",
     "kind": "fact",
@@ -12867,7 +12867,7 @@
    },
    "1": {
     "state": "unopened",
-    "why": "fetch_status is http_error (403 Forbidden); no source text was retrieved.",
+    "why": "",
     "host": "american.edu",
     "date": "2026-09-15",
     "kind": "fact",
@@ -12943,7 +12943,7 @@
    },
    "2": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was retrieved for this claim.",
+    "why": "",
     "host": "thehill.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -12951,7 +12951,7 @@
    },
    "3": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was retrieved for this claim.",
+    "why": "",
     "host": "thehill.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -12977,7 +12977,7 @@
   "usds-doge-resignations-2025": {
    "0": {
     "state": "unopened",
-    "why": "fetch_status is http_error (403 Forbidden); no source text was retrieved.",
+    "why": "",
     "host": "techstory.in",
     "date": "2026-09-15",
     "kind": "fact",
@@ -13077,7 +13077,7 @@
   "venezuela-war-powers-resolution-votes-2025": {
    "0": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was retrieved for this claim.",
+    "why": "",
     "host": "congress.gov",
     "date": "2026-09-15",
     "kind": "fact",
@@ -13111,7 +13111,7 @@
   "vought-impoundment-control-act-2025-2026": {
    "0": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was retrieved for this claim.",
+    "why": "",
     "host": "washingtonpost.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -13151,7 +13151,7 @@
    },
    "5": {
     "state": "unopened",
-    "why": "fetch_status is http_error (403 Forbidden); no source text was retrieved.",
+    "why": "",
     "host": "cbpp.org",
     "date": "2026-09-15",
     "kind": "fact",
@@ -13275,7 +13275,7 @@
   "waltz-telemessage-tm-sgnl-breach-2025": {
    "0": {
     "state": "unopened",
-    "why": "fetch_status is http_error (403 Forbidden); no source text was retrieved.",
+    "why": "",
     "host": "techmeme.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -13307,7 +13307,7 @@
    },
    "4": {
     "state": "unopened",
-    "why": "fetch_status is http_error (403 Forbidden); no source text was retrieved.",
+    "why": "",
     "host": "cisa.gov",
     "date": "2026-09-15",
     "kind": "fact",
@@ -13349,7 +13349,7 @@
    },
    "3": {
     "state": "unopened",
-    "why": "fetch_status is needs_browser_fetch; no source text was retrieved for this claim.",
+    "why": "",
     "host": "washingtonpost.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -13415,7 +13415,7 @@
    },
    "5": {
     "state": "unopened",
-    "why": "fetch_status is http_error (401 Forbidden); no source text was retrieved, so the claim cannot be checked against any source content.",
+    "why": "",
     "host": "wsj.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -13465,7 +13465,7 @@
    },
    "2": {
     "state": "unopened",
-    "why": "No usable source text was available (fetch_status: needs_browser_fetch), so the claim cannot be judged.",
+    "why": "",
     "host": "nytimes.com",
     "date": "2026-09-21",
     "kind": "fact",
@@ -13475,7 +13475,7 @@
   "wright-faca-violation-2026": {
    "0": {
     "state": "unopened",
-    "why": "fetch_status is http_error (403 Forbidden); no source text was retrieved, so the claim about a FACA ruling cannot be checked.",
+    "why": "",
     "host": "britannica.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -13483,7 +13483,7 @@
    },
    "1": {
     "state": "unopened",
-    "why": "fetch_status is http_error (403 Forbidden); no source text was retrieved, so the claim about the working group's disbandment and the EPA endangerment-finding reversal cannot be checked.",
+    "why": "",
     "host": "britannica.com",
     "date": "2026-09-15",
     "kind": "fact",
@@ -13604,8 +13604,8 @@
     "archive": false
    },
    "9": {
-    "state": "not_found",
-    "why": "Although fetch_status is 'ok', the extracted source_text_or_reason for this PDF consists of raw, unreadable binary PDF stream data (compressed object streams), not decoded text. No readable sentence content is present, so it does not meaningfully address the claim at all.",
+    "state": "unopened",
+    "why": "",
     "host": "vanhollen.senate.gov",
     "date": "2026-09-15",
     "kind": "fact",

@@ -177,7 +177,8 @@ def publish_claim_checks(module, claims_file: Path, published_entries: list,
     entries in published_entries are considered, so an excluded entry can never
     leak a check."""
     if not claims_file.exists():
-        print(f"    WARNING: {claims_file} not found, claim-checks.json not written")
+        print(f"    WARNING: {claims_file} not found, claim-checks.json not written; "
+              "any existing data/claim-checks.json is left unchanged and may now be stale")
         return None
     with open(claims_file, encoding="utf-8") as fh:
         claims = json.load(fh)

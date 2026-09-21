@@ -1,6 +1,5 @@
 """Invariants of the published data/claim-checks.json against the real published entries
 (skipped when the working repo is absent)."""
-import glob
 import json
 import sys
 from pathlib import Path
@@ -52,6 +51,25 @@ def test_no_internal_field_reaches_the_public_file():
         assert forbidden not in text, forbidden
 
 
+def test_no_published_why_is_machine_text_and_no_state_is_claimed_falsely():
+    """Every rationale in the live file is reader-facing prose: the screen in
+    claim_checks_public must leave no pipeline vocabulary, evidence position or
+    tool internal behind, no unopened check may carry a rationale at all, and no
+    "claim not found" may rest on a page the checker could not read."""
+    ccp = _module()
+    for entry_id, positions in _checks_file()["checks"].items():
+        for position, check in positions.items():
+            why = check["why"]
+            where = (entry_id, position, why[:120])
+            assert not ccp.INTERNAL_VOCAB.search(why), where
+            assert not ccp.EVIDENCE_REF.search(why), where
+            assert not ccp.TOOL_INTERNALS.search(why), where
+            if check["state"] == "unopened":
+                assert why == "", where
+            if check["state"] == "not_found":
+                assert not ccp.READ_FAILURE.search(why), where
+
+
 def test_as_of_is_the_latest_check_date():
     data = _checks_file()
     dates = [c["date"] for positions in data["checks"].values() for c in positions.values()]
@@ -69,6 +87,11 @@ def test_the_file_regenerates_exactly_from_the_internal_claims():
 
 def test_published_checks_plus_unchecked_items_equal_the_evidence_item_count():
     entries = _published()
+    checks = _checks_file()["checks"]
     total = sum(len(e["evidence"]) for e in entries.values())
-    published = sum(len(p) for p in _checks_file()["checks"].values())
+    published = sum(len(p) for p in checks.values())
+    unchecked = sum(1 for entry_id, entry in entries.items()
+                    for position in range(len(entry["evidence"]))
+                    if str(position) not in checks.get(entry_id, {}))
     assert 0 < published <= total
+    assert published + unchecked == total
