@@ -18,6 +18,7 @@ const indexHtmlPath = path.join(__dirname, "..", "index.html");
 const source = fs.readFileSync(indexHtmlPath, "utf8");
 
 const names = [
+  "evidence-drawer",        // isRecheckNote / evidenceForSourceTrail, used by adaptProsecutionEntry
   "truncate",
   "verdict-label",
   "combine-tier-text",
@@ -157,6 +158,21 @@ test("adaptProsecutionEntry composes headline/tiers/trail (from evidence)/date/c
   assert.equal(r.date, "2026-05-01");
   assert.equal(r.tracker, "prosecution");
   assert.equal(r.category, "Improper Removal");
+});
+
+test("adaptProsecutionEntry leaves recheck notes out of the Sources trail unless a note is a link's only citation", () => {
+  const r = fns.adaptProsecutionEntry({
+    evidence: [
+      { description: "Court order granting the injunction", source_url: "https://example.com/order" },
+      { description: "Re-verified 2026-08-18: no new ruling identified.", source_url: "https://example.com/order" },   // same link as a source: redundant
+      { description: "Re-verification 2026-09-02: still pending.", source_url: null },                                 // no link: nothing to lose
+      { description: "Re-verified 2026-09-05: DOJ filed a notice of appeal.", source_url: "https://example.com/docket" }, // only place this link is cited
+      { description: "Added 2026-09-09 (cluster c1): a later development was re-verified", source_url: "https://example.com/later" },
+    ],
+  });
+  assert.deepEqual(r.trail.sources.map(s => s.url),
+    ["https://example.com/order", "https://example.com/docket", "https://example.com/later"]);
+  assert.equal(r.trail.sources[1].name, "Re-verified 2026-09-05: DOJ filed a notice of appeal.");
 });
 
 test("adaptProsecutionEntry falls back to date_added when date_of_action is missing", () => {

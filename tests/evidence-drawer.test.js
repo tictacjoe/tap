@@ -20,7 +20,7 @@ const api = (0, eval)(
   extractFunction(source, "evidence-drawer") + "\n" +
   "({ CLAIM_STATE_LABELS, CLAIM_STATE_SHORT, EVIDENCE_NOTE_TEXT, EVIDENCE_UNAVAILABLE_TEXT, claimStateOf, " +
   "evidenceTallyText, claimShortDate, evidenceHostOf, buildEvidenceItemHtml, buildEvidenceItemsHtml, " +
-  "buildEvidenceDrawerHtml, isRecheckNote });");
+  "buildEvidenceDrawerHtml, isRecheckNote, evidenceForSourceTrail });");
 
 const hl = (text) => text || "";
 const ITEM = { type: "news_report", description: "CNN reporting on the ruling", source_url: "https://www.npr.org/story" };
@@ -263,4 +263,17 @@ test("an entry with no recheck notes renders exactly as before", () => {
   const items = html.split('<li ').slice(1);
   assert.equal(items.length, 3);
   assert(items[0].includes("CNN reporting") && items[1].includes("second") && items[2].includes("third"));
+});
+
+
+test("evidenceForSourceTrail: no evidence gives an empty list, and an all-notes entry keeps only links no other item cites", () => {
+  assert.deepEqual(api.evidenceForSourceTrail(undefined), []);
+  assert.deepEqual(api.evidenceForSourceTrail([]), []);
+  const only = [
+    { description: "Re-verified 2026-08-18: nothing new.", source_url: "https://a.example/x" },
+    { description: "Re-verification 2026-09-02: nothing new.", source_url: "https://a.example/x" },   // same link twice, no listed source
+    { description: "Re-verified 2026-09-03: nothing new.", source_url: null },
+  ];
+  assert.equal(api.evidenceForSourceTrail(only).length, 2);   // both notes citing the only copy of that link stay; the link-less one goes
+  assert.equal(api.evidenceForSourceTrail(only).every(ev => ev.source_url === "https://a.example/x"), true);
 });

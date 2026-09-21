@@ -1854,7 +1854,7 @@ function adaptProsecutionEntry(entry) {
     headline,
     tiers: [brief, medium, full],
     trail: {
-      sources: (entry.evidence || []).map(ev => ({ name: ev.description || ev.type || "Evidence", url: ev.source_url || null })),
+      sources: evidenceForSourceTrail(entry.evidence).map(ev => ({ name: ev.description || ev.type || "Evidence", url: ev.source_url || null })),
       confidenceNote: entry.confidence_note || null,
       lastVerified: entry.last_verified || null,
       lastSubstantiveUpdate: entry.last_substantive_update || entry.last_verified || null,
@@ -3383,6 +3383,15 @@ function listedEvidencePositions(evidence) {
   const positions = [];
   (evidence || []).forEach((item, i) => { if (!isRecheckNote(item)) positions.push(i); });
   return positions;
+}
+
+// The Sources trail (Headlines tab) lists evidence too. TAP's own recheck notes are not sources, so they
+// are left out -- unless the note is the ONLY place its link is cited: dropping it then would make that
+// source vanish from the site, so it stays. (The Evidence drawer hides every note, by Joe's decision.)
+function evidenceForSourceTrail(evidence) {
+  const list = evidence || [];
+  const cited = new Set(list.filter(ev => !isRecheckNote(ev)).map(ev => ev && ev.source_url).filter(Boolean));
+  return list.filter(ev => !isRecheckNote(ev) || (ev.source_url && !cited.has(ev.source_url)));
 }
 
 // `positions` (optional): the original positions to count; defaults to all itemCount of them.
