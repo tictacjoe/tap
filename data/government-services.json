@@ -27216,7 +27216,17 @@
       "estimated_impact": "Sharing over 460,000 leads with ICE drove more than 12,000 arrests and roughly sextupled children's time in federal custody.",
       "confidence_note": "HIGH confidence on the policy changes, corroborated by the NYT, Reuters, and Migration Policy Institute."
     },
-    "last_substantive_update": "2026-09-01"
+    "last_substantive_update": "2026-09-01",
+    "glance": {
+      "who": "HHS under Robert F. Kennedy Jr.",
+      "what": "Ended ORR's confidentiality wall, sharing sponsor data with ICE; child custody rose from 30 to 194 days",
+      "harm": {
+        "kind": "rights",
+        "certainty": "documented",
+        "who": "Migrant children, sponsors"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "paho-funding-elimination-fy2027-budget-2026",
@@ -27280,7 +27290,17 @@
       "estimated_impact": "Removing PAHO's largest funder (roughly half of member-state contributions) while it is already cutting 19% of its budget and 17% of its staff would degrade early-warning surveillance for cross-border threats like screwworm and H5N1; no mortality estimate was found.",
       "confidence_note": "HIGH confidence in the proposal's existence and scope (Health Policy Watch, KFF, New York Times); it remains a pending budget request that Congress could modify or restore, and should be framed that way."
     },
-    "last_substantive_update": "2026-09-13"
+    "last_substantive_update": "2026-09-13",
+    "glance": {
+      "who": "Trump administration (FY2027 budget request)",
+      "what": "Proposed eliminating all U.S. funding for the Pan American Health Organization; the U.S. already owes ~$135M",
+      "harm": {
+        "kind": "physical",
+        "certainty": "projected",
+        "who": "Disease early warning in the Americas"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "patel-fbi-field-office-purge-2025-2026",
@@ -27393,7 +27413,17 @@
     ],
     "last_updated": "2026-09-09",
     "evidence": [],
-    "last_substantive_update": "2026-09-09"
+    "last_substantive_update": "2026-09-09",
+    "glance": {
+      "who": "Kash Patel (FBI Director)",
+      "what": "Forced out FBI leaders and agents linked to Trump-related cases; Patel says the removals are standards-based",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "alleged",
+        "who": "FBI independence"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "peace-corps-workforce-reduction-trump2",
@@ -27483,7 +27513,17 @@
         "url": "https://abcnews.go.com/US/doge-arrives-peace-corps-set-gain-access-internal/story?id=120502061"
       }
     ],
-    "last_substantive_update": "2026-09-11"
+    "last_substantive_update": "2026-09-11",
+    "glance": {
+      "who": "Richard Swarttz (Acting Director, Peace Corps)",
+      "what": "Peace Corps cut about 40% of its headquarters staff; its own FY2027 budget filing confirms the cuts",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "documented",
+        "who": "Peace Corps recruitment and placement"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "pediaflow-cornell-heart-device-funding-cut-2025",
@@ -27538,7 +27578,17 @@
       "estimated_impact": "Halted a nearly-completed medical device with direct, named-patient stakes for infants with congenital heart defects.",
       "confidence_note": "HIGH confidence, corroborated by the New York Times's initial reporting and NPR's more detailed follow-up."
     },
-    "last_substantive_update": "2026-08-08"
+    "last_substantive_update": "2026-08-08",
+    "glance": {
+      "who": "Trump administration",
+      "what": "Cancelled ~$12.5M in NIH and Pentagon funding for Cornell's nearly finished infant heart pump, PediaFlow",
+      "harm": {
+        "kind": "physical",
+        "certainty": "projected",
+        "who": "Infants with congenital heart defects"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "pentagon-civilian-harm-reduction-program-dismantled-2026",
@@ -27663,7 +27713,17 @@
       "confidence_note": "Based on a formal Inspector General finding, the strongest source type this tracker prioritizes; well-corroborated elsewhere. The Minab strike is independently corroborated across five-plus outlets; casualty-count discrepancies are flagged as a range rather than resolved."
     },
     "last_updated": "2026-08-30",
-    "last_substantive_update": "2026-08-30"
+    "last_substantive_update": "2026-08-30",
+    "glance": {
+      "who": "Pete Hegseth (Secretary of Defense)",
+      "what": "Quietly dismantled the congressionally mandated civilian-harm program, a DoD IG found; staff fell ~90%",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "documented",
+        "who": "Pentagon civilian-harm tracking"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "pentagon-civilian-hiring-freeze-limbo-2025",
@@ -27734,7 +27794,17 @@
       "estimated_impact": "Documented individual cases of concrete family harm from the freeze's initial design, set within a broader DoD push that saw 21,000 employees take deferred resignation and a stated goal of cutting 50,000-60,000 civilian positions overall.",
       "confidence_note": "Well-corroborated across Defense One's direct reporting, DefenseScoop's exemption-timeline coverage, and Government Executive's parallel coverage."
     },
-    "last_substantive_update": "2026-08-11"
+    "last_substantive_update": "2026-08-11",
+    "glance": {
+      "who": "Pete Hegseth (Secretary of Defense)",
+      "what": "Pentagon hiring freeze required Hegseth's personal approval for exemptions, trapping employees mid-move",
+      "harm": {
+        "kind": "livelihood",
+        "certainty": "documented",
+        "who": "Pentagon civilian employees mid-move"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "pentagon-civilian-workforce-cuts-no-analysis-2026",
@@ -27821,7 +27891,17 @@
       "estimated_impact": "GAO already documented concrete readiness impacts, including Navy shipyard maintenance delays and Space Force skill-gap challenges, despite the absence of a formal department-wide impact analysis.",
       "confidence_note": "Based directly on a GAO report, the strongest source type this tracker prioritizes; extensively corroborated elsewhere."
     },
-    "last_substantive_update": "2026-08-30"
+    "last_substantive_update": "2026-08-30",
+    "glance": {
+      "who": "Pete Hegseth (Secretary of Defense)",
+      "what": "Cut 78,000 civilian jobs (10%) without the legally required impact analysis, GAO found",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "documented",
+        "who": "Pentagon civilian workforce readiness"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "pentagon-climate-program-elimination-2025",
@@ -27897,7 +27977,17 @@
       "estimated_impact": "Military and outside analysts warn this severs readiness-relevant planning work, given climate-linked weather has already sidelined 10,000+ troops since 2018 -- though the Pentagon disputes that framing and maintains the work was genuinely outside its mission. The cuts represent a reversal from DOD's own ~$5 billion FY2024 climate-initiative request.",
       "confidence_note": "Well-corroborated across multiple outlets from March through October 2025; the readiness-impact question remains a genuine, unresolved policy dispute."
     },
-    "last_substantive_update": "2026-08-30"
+    "last_substantive_update": "2026-08-30",
+    "glance": {
+      "who": "Pete Hegseth (Secretary of Defense)",
+      "what": "Eliminated Pentagon climate programs and canceled 91 studies, saying DOD 'does not do climate change crap'",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "documented",
+        "who": "Pentagon climate research and planning"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "pentagon-combatant-command-consolidation-2025-2026",
@@ -27979,7 +28069,17 @@
         "url": "https://www.armed-services.senate.gov/press-releases/sasc-completes-markup-of-national-defense-authorization-act-for-fiscal-year-2027"
       }
     ],
-    "last_substantive_update": "2026-08-30"
+    "last_substantive_update": "2026-08-30",
+    "glance": {
+      "who": "Pete Hegseth (Secretary of Defense)",
+      "what": "Reportedly drafted a plan to cut combatant commands from 11 to 8; the NATO-command idea was dropped",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "alleged",
+        "who": "U.S. command presence in Europe"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "pentagon-counter-wmd-nonproliferation-cuts-2025",
@@ -28038,7 +28138,17 @@
       "confidence_note": "Well-sourced on the proposal and internal impact assessments via Wired's reporting on internal documents; the final outcome at counter-WMD-specific scale remains unconfirmed in sourcing reviewed."
     },
     "last_updated": "2026-08-30",
-    "last_substantive_update": "2026-08-30"
+    "last_substantive_update": "2026-08-30",
+    "glance": {
+      "who": "Pentagon leadership (DOGE-driven directive)",
+      "what": "Reportedly weighed cutting counter-WMD programs up to 75%; agencies called 60% a 'red line'",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "alleged",
+        "who": "Counter-WMD, nonproliferation programs"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "pentagon-military-academy-tenure-elimination-2026",
@@ -28081,7 +28191,17 @@
       "estimated_impact": "Decades-old tenure protections would end at institutions enrolling 10,000+ people, alongside a course review with no defined standard for 'ideological'; no faculty headcount or dollar figure exists because the proposal is still a draft.",
       "confidence_note": "HIGH confidence in the memo's existence, contents, and draft status (CBS News, Yahoo News, Hoodline, Fox News, plus on-record pushback from the West Point and Naval Academy superintendents); frame it as an unapproved draft, not a finalized policy."
     },
-    "last_substantive_update": "2026-09-13"
+    "last_substantive_update": "2026-09-13",
+    "glance": {
+      "who": "Tim Dill (DoD manpower official)",
+      "what": "Draft memo would end civilian faculty tenure and order ideological review of courses at military academies",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "projected",
+        "who": "Academic freedom at military academies"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "pentagon-sexual-assault-prevention-staffing-delay-2025",
@@ -28135,7 +28255,17 @@
       "estimated_impact": "Existing prevention staff stretched thinner than planned during the delay; Senators Gillibrand and Murkowski raised bipartisan alarm, though no incident-increase figure was found.",
       "confidence_note": "Well corroborated by AP's original reporting and the senators' own letter; internal staffing figures came from anonymous Pentagon officials."
     },
-    "last_substantive_update": "2026-09-10"
+    "last_substantive_update": "2026-09-10",
+    "glance": {
+      "who": "Pete Hegseth (Secretary of Defense)",
+      "what": "Hiring freeze reportedly delayed the buildout to 2,500 sexual-assault and suicide prevention staff",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "alleged",
+        "who": "Military prevention staffing"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "pepfar-cuts-hiv-treatment-sites-closed-2025-2026",
@@ -28252,7 +28382,17 @@
       }
     ],
     "last_updated": "2026-08-30",
-    "last_substantive_update": "2026-08-30"
+    "last_substantive_update": "2026-08-30",
+    "glance": {
+      "who": "Marco Rubio (Secretary of State)",
+      "what": "PEPFAR funding disruptions closed 1,714 HIV sites, cut treatment for 77,000+ children, per an amfAR survey",
+      "harm": {
+        "kind": "physical",
+        "certainty": "projected",
+        "who": "People with or at risk of HIV"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "petrova-harvard-researcher-ice-detention-2025",
@@ -28326,7 +28466,17 @@
       "estimated_impact": "A customs infraction escalated into months of detention and felony exposure, disrupting an active cancer-research lab's work; no dollar figure for the disruption was found.",
       "confidence_note": "Well corroborated across major outlets on the timeline and charges; the disproportionality characterization is advocacy framing, not a court finding."
     },
-    "last_substantive_update": "2026-09-10"
+    "last_substantive_update": "2026-09-10",
+    "glance": {
+      "who": "DHS under Kristi Noem",
+      "what": "ICE detained Harvard cancer researcher Kseniia Petrova for ~4 months over undeclared frog embryos",
+      "harm": {
+        "kind": "rights",
+        "certainty": "documented",
+        "who": "Harvard researcher Kseniia Petrova"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "pharma-tariff-healthcare-cost-impact-2025",
@@ -28407,7 +28557,17 @@
         "url": "https://taxfoundation.org/blog/pharmaceutical-tariffs/"
       }
     ],
-    "last_substantive_update": "2026-09-10"
+    "last_substantive_update": "2026-09-10",
+    "glance": {
+      "who": "Donald Trump (President)",
+      "what": "Pharma tariff threats led insurers to add 2-3.6 points to 2026 premiums; a 15% EU rate began July 2026",
+      "harm": {
+        "kind": "money",
+        "certainty": "documented",
+        "who": "Health insurance premium payers"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "pjm-grid-capacity-price-record-trump-renewables-blame-2025",
@@ -28484,7 +28644,17 @@
       }
     ],
     "last_updated": "2026-09-10",
-    "last_substantive_update": "2026-09-10"
+    "last_substantive_update": "2026-09-10",
+    "glance": {
+      "who": "Donald Trump (President)",
+      "what": "Blamed wind and solar for record PJM capacity costs ($16.4B) that data-center demand drove",
+      "harm": {
+        "kind": "money",
+        "certainty": "documented",
+        "who": "PJM-region households and businesses"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "princeton-research-funding-suspension-2025",
@@ -28548,7 +28718,17 @@
       }
     ],
     "last_updated": "2026-08-14",
-    "last_substantive_update": "2026-08-14"
+    "last_substantive_update": "2026-08-14",
+    "glance": {
+      "who": "Trump administration (multiple federal agencies)",
+      "what": "Suspended $210M in Princeton research funding with no stated reason; about half was restored by August",
+      "harm": {
+        "kind": "money",
+        "certainty": "documented",
+        "who": "Princeton researchers ($210M)"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "psu-northwest-tribal-funding-obbba-risk-2025",
@@ -28612,7 +28792,17 @@
       }
     ],
     "last_updated": "2026-09-10",
-    "last_substantive_update": "2026-09-10"
+    "last_substantive_update": "2026-09-10",
+    "glance": {
+      "who": "Donald Trump (President)",
+      "what": "PSU report: $530M, nearly half of Northwest tribes' federal funding, at risk under OBBBA, EO reversal",
+      "harm": {
+        "kind": "money",
+        "certainty": "projected",
+        "who": "Northwest tribes' federal funding"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "rfk-allies-state-vaccine-mandate-repeal-2026",
@@ -28738,7 +28928,17 @@
       "estimated_impact": "The South Carolina measles outbreak this entry originally cited as active concluded at 997 cases in April 2026, but 2026 became the worst U.S. measles year in 35 years regardless (2,777 cases nationally); experts' original warning about weakening school-entry mandates remains live given the campaign's pivot to federal legal action and state regulation after its legislative track record of stalling.",
       "confidence_note": "The campaign's scope and the concurrent outbreak figures are independently corroborated. A real correction this recheck: the prior update's Idaho claim was already stale when written, since the bill it named had been superseded and rejected in committee five months earlier -- caught via direct primary-source verification rather than trusting the original search synthesis."
     },
-    "last_substantive_update": "2026-09-09"
+    "last_substantive_update": "2026-09-09",
+    "glance": {
+      "who": "Medical Freedom Act Coalition (RFK Jr. allies)",
+      "what": "Pushed bills in 9+ states to weaken school vaccine mandates; most stalled, then an August 2026 EO followed",
+      "harm": {
+        "kind": "physical",
+        "certainty": "projected",
+        "who": "Schoolchildren's vaccine protection"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "rfk-fda-psychedelics-fast-track-2025",
