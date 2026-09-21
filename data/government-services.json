@@ -3657,6 +3657,14 @@
       {
         "name": "The Center Square — Census Bureau plans 2030 count as 2020 lawsuit continues",
         "url": "https://www.thecentersquare.com/national/article_7580c79f-01a3-474f-b764-4c1ae6539ae9.html"
+      },
+      {
+        "name": "Science - 'Scientists attack ban on adding \"noise\" to U.S. census data'",
+        "url": "https://www.science.org/content/article/scientists-attack-ban-adding-noise-u-s-census-data-and-many-surveys"
+      },
+      {
+        "name": "FlowingData - 'Administration orders for less detailed census data'",
+        "url": "https://flowingdata.com/2026/06/30/administration-orders-for-less-detailed-census-data/"
       }
     ],
     "last_updated": "2026-08-30",
@@ -3668,59 +3676,6 @@
         "kind": "institutional",
         "certainty": "projected",
         "who": "Small-area census data"
-      },
-      "reviewed": "2026-09-20"
-    }
-  },
-  {
-    "id": "census-bureau-noise-infusion-ban-trump2",
-    "title": "Commerce Department bans Census Bureau's main privacy technique, forcing coarser or withheld data",
-    "institution": "Census Bureau and Bureau of Economic Analysis (U.S. Department of Commerce)",
-    "domain": "data_collection_halted",
-    "status": "Finalized -- Department Administrative Order 216-26 in effect",
-    "date_of_action": "2026-06 (order reported)",
-    "what_changed": "The Commerce Department issued Department Administrative Order 216-26, banning the Census Bureau and the Bureau of Economic Analysis from using 'noise infusion' -- a widely-used disclosure-avoidance technique that adds small random statistical variation to published data so individuals can't be re-identified while still allowing detailed, granular statistics to be released. The order designates 'coarsening' (releasing less granular, more aggregated statistics, or withholding some datasets outright) as the preferred disclosure-avoidance method instead, and bars noise infusion for any statistical product going forward. Data scientists and demographers warned the change would force the bureau to either publish blurrier, less-detailed data or withhold some datasets entirely, since coarsening and noise infusion aren't interchangeable substitutes for the same privacy goal.",
-    "primary_proponent": {
-      "name": "Howard Lutnick",
-      "role": "Secretary of Commerce",
-      "note": "Department Administrative Order 216-26 was issued under his department's authority; reporting attributes the order to the Commerce Department generally rather than quoting Lutnick personally on this specific decision, so this entry follows the schema's standard for using the highest-ranking accountable official when no more specific individual is on record."
-    },
-    "estimated_impact": {
-      "summary": "**Detailed Census Bureau and BEA statistics used for redistricting, disaster response, housing policy, and economic planning are expected to become less granular or unavailable, since agencies now have to choose between coarser aggregation and withholding data rather than using the noise-based method that let them publish detailed figures while still protecting privacy.**",
-      "figures": [],
-      "caveat": "No dollar or headcount figure has been reported for this policy -- the harm is a data-quality/availability degradation rather than a budget or staffing cut, so this entry has no quantified 'figures' the way most GSR entries do. Impact is described by data experts and demographers (Census Bureau's own disclosure-avoidance researchers, academics cited by NPR/Science) rather than an independent audit."
-    },
-    "confidence_note": "Well-corroborated by numerous independent outlets (NPR, Science, Wyoming Public Media, South Carolina Public Radio, FlowingData) and the Commerce Department's own order text/framing as reported. No formal GAO or Inspector General finding on this specific policy has been identified.",
-    "pull_quote": "Data scientists and demographers warned the change would force the bureau into blurrier data or outright withholding, since coarsening and noise infusion aren't interchangeable substitutes for the same privacy goal.",
-    "section_summaries": {
-      "what_changed": "Commerce Dept order (DAO 216-26) bans the Census Bureau's noise-infusion privacy technique, forcing it toward coarser or withheld data instead.",
-      "estimated_impact": "Detailed Census/BEA statistics used for redistricting, disaster response, and economic planning are expected to get less granular or disappear -- no dollar figure, this is a data-quality loss.",
-      "confidence_note": "Well-corroborated across independent outlets and the order's own reported text; no formal watchdog finding yet."
-    },
-    "last_verified": "2026-07-27",
-    "date_added": "2026-07-27",
-    "sources": [
-      {
-        "name": "NPR -- 'A Trump push to cut \"statistical noise\" could mean less data from the Census Bureau'",
-        "url": "https://www.npr.org/2026/06/12/nx-s1-5855734/census-bureau-data-differential-privacy"
-      },
-      {
-        "name": "Science -- 'Scientists attack ban on adding \"noise\" to U.S. census data'",
-        "url": "https://www.science.org/content/article/scientists-attack-ban-adding-noise-u-s-census-data-and-many-surveys"
-      },
-      {
-        "name": "FlowingData -- 'Administration orders for less detailed census data'",
-        "url": "https://flowingdata.com/2026/06/30/administration-orders-for-less-detailed-census-data/"
-      }
-    ],
-    "last_substantive_update": "2026-07-27",
-    "glance": {
-      "who": "Commerce Department under Howard Lutnick",
-      "what": "Order DAO 216-26 banned the Census Bureau's noise-infusion privacy method, forcing coarser or withheld data",
-      "harm": {
-        "kind": "institutional",
-        "certainty": "projected",
-        "who": "Detailed Census and BEA statistics"
       },
       "reviewed": "2026-09-20"
     }
@@ -5761,13 +5716,13 @@
     "last_substantive_update": "2026-09-11",
     "glance": {
       "who": "CISA (Department of Homeland Security)",
-      "what": "Let the contract funding the CVE vulnerability database lapse, then extended it hours before it expired",
+      "what": "Signaled it would not renew the CVE database contract, then extended it 11 months hours before it expired",
       "harm": {
         "kind": "institutional",
         "certainty": "averted",
         "who": "Global vulnerability tracking (CVE)"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-09-21"
     }
   },
   {
@@ -19590,13 +19545,13 @@
     "last_substantive_update": "2026-09-10",
     "glance": {
       "who": "Robert F. Kennedy Jr. (HHS Secretary)",
-      "what": "Froze $10B in childcare and family-aid funds to five Democratic-led states; a court blocked it, HHS rescinded",
+      "what": "Froze $10B in family-aid funds to five Democratic-led states; a court enjoined it in a month, HHS rescinded",
       "harm": {
         "kind": "money",
-        "certainty": "averted",
+        "certainty": "projected",
         "who": "Low-income families in five states"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-09-21"
     }
   },
   {
@@ -20456,13 +20411,13 @@
     "last_substantive_update": "2026-09-12",
     "glance": {
       "who": "Scott Turner (HUD Secretary)",
-      "what": "Proposed a $33B HUD cut, rejected by Congress; courts blocked two bids to defund fair-housing groups",
+      "what": "Cut 78 fair-housing grants, court-reversed; proposed $33B HUD cut that Congress rejected",
       "harm": {
         "kind": "livelihood",
-        "certainty": "averted",
+        "certainty": "documented",
         "who": "Low-income renters, fair-housing groups"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-09-21"
     }
   },
   {
@@ -26969,10 +26924,10 @@
       "what": "Issued layoff notices to 11 senior NIH neuroscience lab heads in a 'coding error'; revoked after seven weeks",
       "harm": {
         "kind": "livelihood",
-        "certainty": "averted",
+        "certainty": "documented",
         "who": "NIH neuroscience lab heads, trainees"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-09-21"
     }
   },
   {
@@ -28047,13 +28002,13 @@
     "last_substantive_update": "2026-09-11",
     "glance": {
       "who": "Interior, under Tyler Hassen and Doug Burgum",
-      "what": "Paused air-quality monitoring at all 63 national parks, then reversed within days after a leaked email",
+      "what": "Ordered contractors to stop air-quality monitoring at all 63 national parks; reversed within days after a leak",
       "harm": {
-        "kind": "physical",
-        "certainty": "averted",
+        "kind": "institutional",
+        "certainty": "documented",
         "who": "Air-quality data at 63 national parks"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-09-21"
     }
   },
   {
@@ -28844,13 +28799,13 @@
     "last_substantive_update": "2026-08-02",
     "glance": {
       "who": "NSF leadership",
-      "what": "Began dismantling 80% of the $368M Ocean Observatories network; reversed in ~5 weeks after bipartisan pressure",
+      "what": "Removed some Pacific NW ocean instruments in a plan to disband 80% of the $368M network; reversed June 18",
       "harm": {
         "kind": "institutional",
-        "certainty": "averted",
+        "certainty": "documented",
         "who": "Ocean climate monitoring network"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-09-21"
     }
   },
   {
@@ -40305,10 +40260,10 @@
       "what": "Told examiners to rate disabilities by treated symptoms, skipping rulemaking; rescinded within weeks",
       "harm": {
         "kind": "livelihood",
-        "certainty": "averted",
+        "certainty": "projected",
         "who": "Veterans with treated conditions"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-09-21"
     }
   },
   {
