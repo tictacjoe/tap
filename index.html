@@ -4472,6 +4472,7 @@ function renderGlobalResults(term, useRegex, useOneLiners, useImpactSort) {
       glanceDetailTitleHtml(m.entry, m.cfg, (t) => highlightMatches(t || "", term, useRegex)) +
       buildDetailHtml(m.entry, m.cfg, term, useRegex);
     wireRelatedEntryLinks(detail);
+    wireEvidenceDrawers(detail, m.entry, m.cfg, term, useRegex);
 
     row.addEventListener("click", () => {
       row.classList.toggle("open");

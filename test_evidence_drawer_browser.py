@@ -140,3 +140,26 @@ def test_an_open_drawer_does_not_overflow_a_phone(browser, site_url):
     measure = page.evaluate("() => ({w: window.innerWidth, s: document.documentElement.scrollWidth})")
     assert measure["w"] == 390 and measure["s"] <= measure["w"], measure
     assert errors == []
+
+
+def test_the_drawer_works_in_the_global_search_one_liner_list(browser, site_url):
+    """The 1-liners checkbox belongs to the global search box, so one-liner mode is reached by
+    searching (not from a per-tracker tab). A Cabinet-Level row expanded there must get a
+    working drawer too."""
+    page, _, errors = _open_page(browser, site_url)
+    page.check("#global-oneliner")
+    page.fill("#global-search", "Tirrell")
+    page.wait_for_timeout(900)
+    detail = page.locator(f'.oneliner-detail:has(.evidence-drawer[data-evidence-entry="{ENTRY_ID}"])')
+    assert detail.count() == 1
+    # expand the row that owns this detail (the row is the detail's previous sibling)
+    detail.evaluate("el => el.previousElementSibling.click()")
+    drawer = detail.locator(".evidence-drawer")
+    drawer.scroll_into_view_if_needed()
+    drawer.locator(".evidence-drawer-head").click()
+    page.wait_for_timeout(900)
+    expected = _entry_evidence_counts()[ENTRY_ID]
+    assert drawer.locator(".evidence-drawer-head").get_attribute("aria-expanded") == "true"
+    assert drawer.locator(".evidence-drawer-body").is_visible()
+    assert drawer.locator(".evidence-item").count() == expected
+    assert errors == []
