@@ -68,6 +68,7 @@ def test_no_published_why_is_machine_text_and_no_state_is_claimed_falsely():
                 assert why == "", where
             if check["state"] == "not_found":
                 assert not ccp.READ_FAILURE.search(why), where
+                assert not ccp.PARTIAL_READ.search(why), where
 
 
 def test_as_of_is_the_latest_check_date():
