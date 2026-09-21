@@ -10500,7 +10500,17 @@
         "url": "https://www.npr.org/2026/01/20/nx-s1-5670378/trump-energy-promises-one-year"
       }
     ],
-    "last_substantive_update": "2026-09-10"
+    "last_substantive_update": "2026-09-10",
+    "glance": {
+      "who": "Donald Trump (President)",
+      "what": "Energy policy (tariffs, data-center cost-shifting, clean-energy freezes) was cited for ~10% higher power bills",
+      "harm": {
+        "kind": "livelihood",
+        "certainty": "alleged",
+        "who": "Ratepayers, especially in West Virginia"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "epa-energy-star-elimination-threat-doe-transfer-2025-2026",
@@ -10575,7 +10585,17 @@
       "estimated_impact": "A program EPA itself credits with $500B+ in consumer savings survived an elimination attempt through organized pushback, illustrating both how far the administration's climate-program cuts reached and the practical limits imposed by broad industry opposition.",
       "confidence_note": "Well-corroborated across mainstream and trade press plus a formal Senate letter; the DOE transition's exact dates rely most heavily on a single trade-press source, though the broad outcome is independently confirmed elsewhere."
     },
-    "last_substantive_update": "2026-08-11"
+    "last_substantive_update": "2026-08-11",
+    "glance": {
+      "who": "Paul Gunning (EPA air-office director)",
+      "what": "Moved to eliminate Energy Star; industry and bipartisan pushback forced a transfer to DOE instead",
+      "harm": {
+        "kind": "money",
+        "certainty": "averted",
+        "who": "Consumers using Energy Star"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "epa-environmental-justice-grants-cancellation-2025-2026",
@@ -10659,7 +10679,17 @@
       "estimated_impact": "Billions in congressionally authorized funding for pollution/climate-risk mitigation in low-income and minority communities was cut, including a case where a canceled flood-protection grant preceded a devastating storm in the same community.",
       "confidence_note": "Well-corroborated core facts and litigation outcome across multiple outlets; the precise causal relationship between Kipnuk's storm damage and the canceled grant is a documented sequence, not an adjudicated causal finding, and is presented as such."
     },
-    "last_substantive_update": "2026-09-09"
+    "last_substantive_update": "2026-09-09",
+    "glance": {
+      "who": "EPA under Lee Zeldin",
+      "what": "Canceled $2.7B in environmental justice grants; a federal judge ruled the cancellation unlawful in June 2026",
+      "harm": {
+        "kind": "money",
+        "certainty": "documented",
+        "who": "Low-income communities' EJ grants"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "epa-environmental-justice-staff-rif-2026",
@@ -10730,7 +10760,17 @@
       "estimated_impact": "EPA has effectively eliminated its dedicated environmental-justice staffing capacity, removing the agency's ability to specifically track pollution and health risks in disproportionately burdened communities.",
       "confidence_note": "Well-corroborated across multiple outlets with an on-record union statement; the 2025 baseline figures are cited from earlier reporting for context."
     },
-    "last_substantive_update": "2026-08-11"
+    "last_substantive_update": "2026-08-11",
+    "glance": {
+      "who": "Lee Zeldin (EPA Administrator)",
+      "what": "Issued layoff notices to the last 22 environmental justice staff, ending EPA's dedicated EJ function",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "documented",
+        "who": "EPA environmental-justice capacity"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "epa-ggrf-climate-grants-clawback-blocked-2026",
@@ -10829,7 +10869,17 @@
       }
     ],
     "last_updated": "2026-09-10",
-    "last_substantive_update": "2026-09-10"
+    "last_substantive_update": "2026-09-10",
+    "glance": {
+      "who": "Lee Zeldin (EPA Administrator)",
+      "what": "Froze and tried to claw back $20B in climate grants over unsubstantiated fraud claims; two courts blocked it",
+      "harm": {
+        "kind": "money",
+        "certainty": "documented",
+        "who": "Climate-grant recipients ($20B frozen)"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "epa-headquarters-conditions-forced-attrition-2025",
@@ -10872,7 +10922,17 @@
         "url": "https://www.rawstory.com/epa-2673042319/"
       }
     ],
-    "last_substantive_update": "2026-09-12"
+    "last_substantive_update": "2026-09-12",
+    "glance": {
+      "who": "EPA under Lee Zeldin",
+      "what": "EPA headquarters staff reported broken elevators and heat, suspecting a pressure tactic; EPA denies it",
+      "harm": {
+        "kind": "physical",
+        "certainty": "alleged",
+        "who": "EPA headquarters employees"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "epa-noaa-cdc-data-tools-erasure-2026",
@@ -10940,7 +11000,17 @@
       "estimated_impact": "Both discontinued tools were standard references for researchers, journalists, and policymakers; outside groups have had to independently preserve the data since the federal versions went away.",
       "confidence_note": "EJScreen and the NOAA database removals are each strongly multi-sourced; the CDC/USDA page removals grouped in here rest on thinner sourcing."
     },
-    "last_substantive_update": "2026-09-11"
+    "last_substantive_update": "2026-09-11",
+    "glance": {
+      "who": "EPA, NOAA and CDC leadership",
+      "what": "Took EPA's EJScreen offline and retired NOAA's billion-dollar disaster database; others preserved copies",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "documented",
+        "who": "Public environmental and disaster data"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "epa-ord-elimination-trump2",
@@ -11056,7 +11126,17 @@
       }
     ],
     "last_updated": "2026-09-11",
-    "last_substantive_update": "2026-09-12"
+    "last_substantive_update": "2026-09-12",
+    "glance": {
+      "who": "Lee Zeldin (EPA Administrator)",
+      "what": "Eliminated EPA's Office of Research and Development, moving its work under the Administrator's direct control",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "documented",
+        "who": "EPA's independent scientific research"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "epa-pfas-farmland-research-grants-terminated-2025",
@@ -11115,7 +11195,17 @@
       "estimated_impact": "80% of federally funded research into how forever chemicals contaminate U.S. farms and food was cut, removing independent scientific capacity on an already-documented contamination pathway.",
       "confidence_note": "Well-corroborated across agriculture-trade, legal, and mainstream press; the rationale for the partial restoration remains undocumented in sourcing reviewed."
     },
-    "last_substantive_update": "2026-08-11"
+    "last_substantive_update": "2026-08-11",
+    "glance": {
+      "who": "EPA Office of Research and Development",
+      "what": "Terminated $15M in PFAS farmland research across 10 studies; restored 2 without explanation",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "documented",
+        "who": "PFAS-on-farms research"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "epa-shutdown-furlough-chaos-deregulation-priority-2025",
@@ -11173,7 +11263,17 @@
         "url": "https://www.wired.com/story/environmental-protection-agency-shutdown-chaos/"
       }
     ],
-    "last_substantive_update": "2026-09-12"
+    "last_substantive_update": "2026-09-12",
+    "glance": {
+      "who": "EPA under Lee Zeldin",
+      "what": "Staff and their union called EPA's shutdown furloughs 'scattershot' while deregulation work stayed staffed",
+      "harm": {
+        "kind": "livelihood",
+        "certainty": "alleged",
+        "who": "EPA employees furloughed in shutdown"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "faa-aircraft-mechanic-training-grants-dei-freeze-2025",
@@ -11237,7 +11337,17 @@
       "confidence_note": "Well-corroborated on the freeze and congressional response; the connection between the frozen funds and the eventual May 2026 grant round is not independently confirmed and is flagged as such."
     },
     "last_updated": "2026-09-12",
-    "last_substantive_update": "2026-09-12"
+    "last_substantive_update": "2026-09-12",
+    "glance": {
+      "who": "Federal Aviation Administration",
+      "what": "Froze mechanic-training grants after ordering DEI language stripped; a new $26M round opened after ~8 months",
+      "harm": {
+        "kind": "money",
+        "certainty": "documented",
+        "who": "Aircraft-mechanic training programs"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "faa-aviation-meteorologist-staffing-shortage-2025",
@@ -11307,7 +11417,17 @@
       "confidence_note": "Directly sourced to a GAO watchdog report, the strongest source type this tracker prioritizes, and widely corroborated."
     },
     "last_updated": "2026-09-12",
-    "last_substantive_update": "2026-09-12"
+    "last_substantive_update": "2026-09-12",
+    "glance": {
+      "who": "FAA and National Weather Service",
+      "what": "Aviation-meteorologist staffing fell to 69 (target 90); agencies then lowered the target to 81, GAO found",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "documented",
+        "who": "Weather support at air-traffic centers"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "faa-controller-staffing-structural-crisis-trump2",
@@ -11429,7 +11549,17 @@
         "url": "https://www.wsj.com/business/airlines/this-air-traffic-controller-just-averted-a-midair-collision-now-hes-speaking-out-30d389c7"
       }
     ],
-    "last_substantive_update": "2026-09-11"
+    "last_substantive_update": "2026-09-11",
+    "glance": {
+      "who": "FAA (shortage predates this administration)",
+      "what": "Controller shortage worsened in the 2025 shutdown; a 2026 plan lowered the target rather than hiring more",
+      "harm": {
+        "kind": "physical",
+        "certainty": "documented",
+        "who": "Air travelers (2025 midair collision)"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "faa-february-2025-safety-adjacent-firings",
@@ -11473,7 +11603,17 @@
       "estimated_impact": "Reduced FAA capacity in inspector support, air-traffic-control maintenance, and navigation-chart upkeep amid heightened safety scrutiny.",
       "confidence_note": "HIGH confidence, corroborated by The Guardian and the AP, with the AP detailing affected functions and the union's dispute."
     },
-    "last_substantive_update": "2026-08-08"
+    "last_substantive_update": "2026-08-08",
+    "glance": {
+      "who": "DOGE (Department of Government Efficiency)",
+      "what": "Fired ~400 FAA safety-adjacent staff in February 2025, despite recent fatal crashes",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "documented",
+        "who": "FAA safety-support capacity"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "faa-shutdown-flight-reduction-trump2",
@@ -11567,7 +11707,17 @@
         "url": "https://www.wsj.com/politics/policy/trump-threatens-to-dock-pay-of-absent-air-traffic-controllers-e18b04e7"
       }
     ],
-    "last_substantive_update": "2026-09-09"
+    "last_substantive_update": "2026-09-09",
+    "glance": {
+      "who": "Sean Duffy (Transportation Secretary)",
+      "what": "Cut flights 10% at 40 major airports after unpaid controllers missed shifts during the shutdown",
+      "harm": {
+        "kind": "money",
+        "certainty": "documented",
+        "who": "Air travelers and airlines"
+      },
+      "reviewed": "2026-09-20"
+    }
   },
   {
     "id": "fbi-agents-diverted-ice-immigration-enforcement-2025",
