@@ -1594,13 +1594,17 @@ let searchTerm = "";
 let filterValue = "";
 let sortValue = "";
 
-/* Cabinet-Level Accountability lands grouped by individual by default
-   (Joe's call -- most useful first view given how many entries repeat
-   the same official); every other tracker has no group-mode control at
-   all, so "" (flat cards) is the only sensible default there. */
+/* default-group-mode:start */
+/* Every tracker lands on flat individual cards. Cabinet-Level
+   Accountability used to land grouped by individual; Joe switched it back
+   to "Individual cards" on 2026-09-21 ("List by individual" is still one
+   dropdown choice away). Every other tracker has no group-mode control at
+   all, so "" (flat cards) is the only option there. Kept as a function so
+   every place that resets the view still asks one place for the default. */
 function defaultGroupModeFor(key) {
-  return key === "prosecution" ? "individual" : "";
+  return "";
 }
+/* default-group-mode:end */
 let groupMode = defaultGroupModeFor(activeTracker);
 
 /* "Group by status" is a separate checkbox, not a groupMode dropdown
@@ -4039,6 +4043,27 @@ function renderFilterOptions(cfg) {
   sel.value = filterValue;
 }
 
+/* alpha-sort:start */
+/* "Alphabetical" (Cabinet-Level only): A to Z by the name each card LEADS with,
+   case-insensitive -- the glance "who" when the card shows a glance head
+   (that is the visible label, e.g. "Kevin Lunday (Coast Guard) and Kristi Noem
+   (DHS)"), else the entry title (`official`). Sorting on `official` instead
+   would order by a string that is not on the card. Depends on glanceActive()
+   from the glance-head region. Many entries share the same lead name, so ties
+   fall back to what the card says next (glance "what"), then the entry id --
+   a fixed order, not whatever the previous sort left behind. */
+function cardLeadText(entry, cfg) {
+  return String(glanceActive(entry, cfg) ? entry.glance.who : (entry[cfg.titleField] || ""));
+}
+function compareByCardTitle(cfg) {
+  const byText = (x, y) => x.localeCompare(y, undefined, { sensitivity: "base" });
+  return (a, b) =>
+    byText(cardLeadText(a, cfg), cardLeadText(b, cfg)) ||
+    byText(glanceActive(a, cfg) ? a.glance.what : "", glanceActive(b, cfg) ? b.glance.what : "") ||
+    String(a[cfg.idField] || "").localeCompare(String(b[cfg.idField] || ""));
+}
+/* alpha-sort:end */
+
 /* Builds the sort-order dropdown's options per tracker -- mirrors
    renderFilterOptions()'s pattern of rebuilding a <select>'s contents
    on every tab switch, then restoring the current selection from the
@@ -4062,6 +4087,7 @@ function renderSortToggle(cfg) {
   options.push(['activity', 'Most recent activity']);
   options.push(['impact', 'Biggest impact first']);
   if (cfg.kind !== "tracker") options.push(['covered', 'Most covered']);
+  if (cfg.kind === "prosecution") options.push(['alpha', 'Alphabetical']);
   sel.innerHTML = options.map(([v, label]) => '<option value="' + v + '">' + label + '</option>').join("");
   sel.value = sortValue;
 }
@@ -4190,6 +4216,8 @@ function renderEntries() {
     filtered.sort((a, b) => impactScore(b, cfg) - impactScore(a, cfg));
   } else if (sortValue === "covered") {
     filtered.sort((a, b) => coverageCount(b, cfg) - coverageCount(a, cfg));
+  } else if (sortValue === "alpha" && cfg.kind === "prosecution") {
+    filtered.sort(compareByCardTitle(cfg));
   } else if (cfg.kind === "govservices") {
     // Default ordering: Government Service Redirection is sorted
     // reverse-chronologically by date of action instead of impact
@@ -4340,9 +4368,9 @@ function goToTrackerHome(key) {
 function openCardById(id) {
   const card = document.querySelector('.entry[data-entry-id="' + CSS.escape(id) + '"]');
   if (!card) return;
-  // Cabinet-Level Accountability defaults to grouped view -- if this
-  // card landed inside a collapsed .official-group, opening just the
-  // card leaves it in a display:none ancestor. Open the group too so
+  // Cabinet-Level Accountability can be in the grouped "List by individual"
+  // view -- if this card landed inside a collapsed .official-group, opening
+  // just the card leaves it in a display:none ancestor. Open the group too so
   // the deep link actually shows something.
   const group = card.closest(".official-group");
   if (group) group.classList.add("open");
@@ -4361,11 +4389,9 @@ function jumpToRelatedEntry(trackerField, id) {
 // #<trackerKey>/<entryId> (trackerKey is a TRACKERS key, which is
 // always identical to that tracker's own cfg.kind); this reads that
 // hash back on initial load, switches to the right tab via
-// goToTrackerHome() (not a bare activeTracker assignment -- Cabinet-
-// Level Accountability's groupMode still holds whatever the page's
-// very first tracker defaulted to at this point, so skipping the reset
-// would render prosecution as a flat list instead of its normal
-// grouped-by-official view), and opens + scrolls to the card via the
+// goToTrackerHome() (not a bare activeTracker assignment -- that resets
+// filter, sort and grouping to the tracker's defaults, so a stale choice
+// from the page's first tracker cannot carry over), and opens + scrolls to the card via the
 // same openCardById() used for in-page related-entry jumps. Only
 // trackers with a unique idField are linkable -- Reporting (kind
 // "tracker") has none, so a hash naming it (or any unknown/malformed
@@ -5036,9 +5062,9 @@ const TapDemoTour = (() => {
         }
         selectDatabaseTab("prosecution");
         await new Promise(r => setTimeout(r, 200));
-        // This tab defaults to grouped-by-individual view (see the next
-        // step) -- force flat cards so a single .entry is directly
-        // clickable here.
+        // This tab lands on flat individual cards (the next step switches to
+        // the grouped view) -- set them explicitly anyway so a single .entry
+        // is directly clickable here even if the view was changed earlier.
         const groupSelect = document.getElementById("group-mode");
         if (groupSelect) {
           groupSelect.value = "";
