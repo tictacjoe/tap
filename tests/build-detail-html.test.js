@@ -1142,3 +1142,39 @@ test("the Evidence drawer escapes hostile evidence text through the entry's hl",
   assert(!html.includes("<script>alert(1)</script>"));
   assert(html.includes("&lt;script&gt;"));
 });
+
+// Cabinet-Level Sources card (2026-09-21): built from entry.evidence, not a `sources` array.
+test("prosecution renders a Sources card of evidence links, leaving out recheck notes", () => {
+  const entry = {
+    offense_category: "Fraud",
+    status_category: "Investigation",
+    incident_summary: "x",
+    status: "y",
+    evidence: [
+      { type: "news_report", description: "Reuters report on the subpoenas", source_url: "https://example.com/a", maps_to_element: "e1" },
+      { type: "public_record", description: "Re-verified 2026-09-01: no new developments", source_url: "https://example.com/a", maps_to_element: "e1" },
+      { type: "court_filing", description: "Docket entry with no link", source_url: "", maps_to_element: "e2" }
+    ]
+  };
+  // Drawer flag left OFF (the live setting): the Sources card must still appear.
+  const html = buildDetailHtml(entry, { kind: "prosecution", evidenceDrawerEnabled: false });
+  assert(html.includes('<div class="field-label">Sources</div>'), "should render a Sources label");
+  assert(html.includes('<a href="https://example.com/a" target="_blank" rel="noopener">Reuters report on the subpoenas</a>'), "should link the evidence description to its source_url");
+  assert(html.includes("<li>Docket entry with no link</li>"), "an item with no URL renders as plain text");
+  assert(!html.includes("Re-verified 2026-09-01"), "a recheck note whose link is cited elsewhere is not a source");
+});
+
+test("prosecution keeps a recheck note that is the only place its link is cited", () => {
+  const entry = {
+    offense_category: "Fraud", status_category: "Investigation", incident_summary: "x", status: "y",
+    evidence: [{ type: "news_report", description: "Re-verified 2026-09-01: found new filing", source_url: "https://example.com/only", maps_to_element: "e1" }]
+  };
+  const html = buildDetailHtml(entry, { kind: "prosecution" });
+  assert(html.includes('href="https://example.com/only"'), "the link must not vanish from the site");
+});
+
+test("prosecution with no evidence renders no Sources card", () => {
+  const entry = { offense_category: "Fraud", status_category: "Investigation", incident_summary: "x", status: "y", evidence: [] };
+  const html = buildDetailHtml(entry, { kind: "prosecution" });
+  assert(!html.includes('<div class="field-label">Sources</div>'));
+});
