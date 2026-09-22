@@ -413,7 +413,7 @@ test("govservices request-update button carries the correct tracker and entry id
   assert(result.includes('data-entry-id="some-action-id"'), "button should carry the entry id");
 });
 
-test("prosecution Incident summary renders as a single paragraph when there are no Update markers", () => {
+test("prosecution What happened renders as a single paragraph when there are no Update markers", () => {
   const entry = {
     offense_category: "Fraud",
     status_category: "Investigation",
@@ -425,12 +425,12 @@ test("prosecution Incident summary renders as a single paragraph when there are 
   const result = buildDetailHtml(entry, cfg);
 
   assert(
-    result.includes('<div class="field-label">Incident summary</div><div class="field-value"><p>False statements on federal forms.</p></div>'),
+    result.includes('<div class="field-label">What happened</div><div class="field-value"><p>False statements on federal forms.</p></div>'),
     "incident_summary with no Update marker should render as one <p> inside field-value"
   );
 });
 
-test("prosecution Incident summary splits into separate paragraphs at each Update marker", () => {
+test("prosecution What happened splits into separate paragraphs at each Update marker", () => {
   const entry = {
     offense_category: "Fraud",
     status_category: "Investigation",
@@ -442,7 +442,7 @@ test("prosecution Incident summary splits into separate paragraphs at each Updat
   const cfg = { kind: "prosecution" };
   const result = buildDetailHtml(entry, cfg);
 
-  const start = result.indexOf('<div class="field-label">Incident summary</div><div class="field-value">');
+  const start = result.indexOf('<div class="field-label">What happened</div><div class="field-value">');
   const end = result.indexOf('<div class="field-label">Status</div>');
   const html = result.slice(start, end);
 
@@ -489,7 +489,7 @@ test("govservices What changed splits into separate paragraphs at each Update ma
   assert(html.includes("Update, dated when TAP added it"));
 });
 
-test("deregulation What changed renders as a single paragraph when there are no Update markers", () => {
+test("deregulation What happened renders as a single paragraph when there are no Update markers", () => {
   const entry = {
     what_changed: "Agency repealed the rule.",
     estimated_health_impact: {},
@@ -500,12 +500,12 @@ test("deregulation What changed renders as a single paragraph when there are no 
   const result = buildDetailHtml(entry, cfg);
 
   assert(
-    result.includes('<div class="field-label">What changed</div><div class="field-value"><p>Agency repealed the rule.</p></div>'),
+    result.includes('<div class="field-label">What happened</div><div class="field-value"><p>Agency repealed the rule.</p></div>'),
     "what_changed with no Update marker should render as one <p> inside field-value"
   );
 });
 
-test("deregulation What changed splits into separate paragraphs at each Update marker", () => {
+test("deregulation What happened splits into separate paragraphs at each Update marker", () => {
   const entry = {
     what_changed: "Rule repealed outright. Update 2026-08-02: a challenge was filed.",
     estimated_health_impact: {},
@@ -516,7 +516,7 @@ test("deregulation What changed splits into separate paragraphs at each Update m
   const cfg = { kind: "deregulation" };
   const result = buildDetailHtml(entry, cfg);
 
-  const start = result.indexOf('<div class="field-label">What changed</div><div class="field-value">');
+  const start = result.indexOf('<div class="field-label">What happened</div><div class="field-value">');
   const end = result.indexOf('<div class="field-label">Primary proponent</div>');
   const html = result.slice(start, end);
 
@@ -672,7 +672,7 @@ const layoutEntries = {
     },
     // Labels in the order a reader meets them: narrative cards, then data
     // cards, then the Confidence note, then the pull-quote.
-    order: [">What changed</div>", ">Estimated impact</div>", ">Caveat</div>", ">Primary proponent</div>", "<!--figures:1-->", ">Sources</div>", ">Confidence note</div>", "entry-aside-quote"],
+    order: [">What happened</div>", ">Estimated impact</div>", ">Caveat</div>", ">Primary proponent</div>", "<!--figures:1-->", ">Sources</div>", ">Confidence note</div>", "entry-aside-quote"],
   },
   govservices: {
     cfg: { kind: "govservices" },
@@ -701,7 +701,7 @@ const layoutEntries = {
       rebuttal_anticipated: "Defense.",
       comeback: "Rebuttal.",
     },
-    order: [">Violation Type (in full)</div>", ">Incident summary</div>", ">Status</div>", ">Broader Pattern</div>", ">Anticipated Defense</div>", ">TAP's Rebuttal</div>", ">Violation Type</div>", ">Status Stage</div>", ">Confidence note</div>", "entry-aside-quote"],
+    order: [">What happened</div>", ">Violation Type (in full)</div>", ">Status</div>", ">Broader Pattern</div>", ">Anticipated Defense</div>", ">TAP's Rebuttal</div>", ">Violation Type</div>", ">Status Stage</div>", ">Confidence note</div>", "entry-aside-quote"],
   },
 };
 

@@ -3500,8 +3500,11 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
   const summary = (text) => summaryLineHtml(text, term, useRegex);
 
   if (cfg.kind === "deregulation") {
+    // "What happened" (renamed from "What changed" 2026-09-21, Joe's call),
+    // matching Government Service Redirection and Reporting. Label only: the
+    // data field is still `what_changed`.
     const mainHtml =
-      '<div class="field-group entry-main-card"><div class="field-label">What changed</div><div class="field-value">' + summary(entry.section_summaries?.what_changed) + buildFieldTimelineHtml(entry, "what_changed", hl) + '</div></div>' +
+      '<div class="field-group entry-main-card"><div class="field-label">What happened</div><div class="field-value">' + summary(entry.section_summaries?.what_changed) + buildFieldTimelineHtml(entry, "what_changed", hl) + '</div></div>' +
       '<div class="field-group entry-main-card"><div class="field-label">Estimated impact</div><div class="field-value">' + summary(entry.section_summaries?.estimated_impact) + hl(entry.estimated_health_impact?.summary) + '</div></div>' +
       (entry.estimated_health_impact?.caveat ? '<div class="field-group entry-main-card"><div class="field-label">Caveat</div><div class="field-value" style="font-style:italic;">' + hl(entry.estimated_health_impact.caveat) + '</div></div>' : '');
     const asideHtml =
@@ -3587,9 +3590,14 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
   // or characterization, only sometimes with an actual statute/case
   // cite in it. The new name instead ties it directly to the sidebar's
   // "Violation Type" card -- same field, unabbreviated.
+  // "What happened" (renamed from "Incident summary" 2026-09-21, Joe's call):
+  // matches the other trackers. Label only -- the data field is still
+  // `incident_summary`. It is also the FIRST card, which puts it top-left in the
+  // expanded columns (the first card in reading order always lands there; see
+  // buildEntryColsHtml / assignCardsToColumns), as it already is in the other trackers.
   const mainHtml =
+    '<div class="field-group entry-main-card"><div class="field-label">What happened</div><div class="field-value">' + summary(entry.section_summaries?.incident_summary) + buildFieldTimelineHtml(entry, "incident_summary", hl) + '</div></div>' +
     '<div class="field-group entry-main-card"><div class="field-label">Violation Type (in full)</div><div class="field-value">' + hl(entry.offense_category_raw || entry.offense_category) + '</div></div>' +
-    '<div class="field-group entry-main-card"><div class="field-label">Incident summary</div><div class="field-value">' + summary(entry.section_summaries?.incident_summary) + buildFieldTimelineHtml(entry, "incident_summary", hl) + '</div></div>' +
     '<div class="field-group entry-main-card"><div class="field-label">Status</div><div class="field-value">' + buildFieldTimelineHtml(entry, "status", hl) + '</div></div>' +
     '<div class="field-group entry-main-card"><div class="field-label">Broader Pattern</div><div class="field-value">' + hl(entry.cause) + '</div></div>' +
     '<div class="field-group entry-main-card"><div class="field-label">Anticipated Defense</div><div class="field-value">' + hl(entry.rebuttal_anticipated) + '</div></div>' +
