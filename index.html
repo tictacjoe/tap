@@ -3389,9 +3389,14 @@ function boldLeadingSourcingQuality(text) {
 // "Why" toggle. The short section_summaries skim line stays OUTSIDE the toggle
 // either way -- it exists specifically to be readable without expanding
 // anything (see the skim-emphasis section of prosecution/cabinet-level/SCHEMA.md),
-// so hiding it here would work against its own purpose. Deregulation and
-// Government Service Redirection don't pass this flag, so their rendering is
-// byte-for-byte unchanged.
+// so hiding it here would work against its own purpose. Rendered AFTER the
+// details block (2026-09-22, Joe: "put it under the Confidence note label",
+// once the whole field-group started sharing the Sources card's box) -- with
+// the toggle closed by default this still lands directly under the "Confidence
+// note" label, not buried under a wall of hidden content, since nothing else
+// in the closed <details> is visible. Deregulation and Government Service
+// Redirection don't pass this flag, so their rendering is byte-for-byte
+// unchanged.
 function buildConfidenceNoteHtml(entry, hl, summary, collapsible) {
   const part = entry.timeline && entry.timeline.confidence_note;
   const hasUpdates = !!(part && Array.isArray(part.updates) && part.updates.length);
@@ -3416,7 +3421,7 @@ function buildConfidenceNoteHtml(entry, hl, summary, collapsible) {
   const summaryTag = entry.last_verified
     ? '<summary class="field-label-row"><span class="field-label">Confidence note</span><span class="field-asof">as of ' + escapeHtml(entry.last_verified) + '</span></summary>'
     : '<summary class="field-label">Confidence note</summary>';
-  return summaryLine + '<details class="field-toggle">' + summaryTag + bodyHtml + '</details>';
+  return '<details class="field-toggle">' + summaryTag + bodyHtml + '</details>' + summaryLine;
 }
 /* build-confidence-note-html:end */
 

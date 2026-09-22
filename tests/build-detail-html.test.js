@@ -734,7 +734,7 @@ test("prosecution Confidence note is a closed-by-default <details>/<summary> tog
   assert(insideToggle.includes("a second outlet corroborated"), "the update text itself should be inside the toggle");
 });
 
-test("prosecution Confidence note's skim-line summary stays visible outside the toggle", () => {
+test("prosecution Confidence note's skim-line summary stays visible outside the toggle, under the label (2026-09-22)", () => {
   const entry = {
     offense_category: "Fraud", status_category: "Investigation", incident_summary: "x", status: "y",
     confidence_note: "Full prose goes here.",
@@ -743,9 +743,10 @@ test("prosecution Confidence note's skim-line summary stays visible outside the 
   const html = buildDetailHtml(entry, { kind: "prosecution" });
   const summaryLineIdx = html.indexOf('<p class="field-summary">Short skim condensation.</p>');
   const detailsIdx = html.indexOf('<details class="field-toggle">');
+  const detailsEndIdx = html.indexOf('</details>', detailsIdx);
   assert(summaryLineIdx !== -1, "skim-line summary should render");
-  assert(summaryLineIdx < detailsIdx, "skim-line summary should render before (outside) the toggle");
-  const detailsHtml = html.slice(detailsIdx);
+  assert(summaryLineIdx > detailsEndIdx, "skim-line summary should render after (outside) the toggle, under its label");
+  const detailsHtml = html.slice(detailsIdx, detailsEndIdx);
   assert(!detailsHtml.includes("Short skim condensation."), "the skim-line should not be duplicated inside the toggle");
 });
 
