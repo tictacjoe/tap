@@ -652,7 +652,8 @@
      neutral, reusing existing palette variables: severe (physical,
      rights) = flag red, middle (livelihood, money) = darker brass,
      institutional and environment = neutral. */
-  /* Three labeled segments (Harm type / Harm status / Who was harmed) on one line,
+  /* Labeled segments (Harm type / Harm status / Principal / Who/What was harmed,
+     plus Violation/Concern Type and Status Stage on Cabinet-Level) on one line,
      wrapping onto more lines on a narrow screen; same flex+bullet-separator pattern
      as .entry-meta, kept as its own rule since .entry-meta's own selector excludes
      non-tag/field spans (added 2026-09-21, Joe's request to label these lines). */
@@ -3935,7 +3936,7 @@ function buildGlanceHeadHtml(entry, cfg, opts) {
   const hl = opts.hl;
   const who = opts.hideWho ? "" : '<span class="glance-who">' + hl(g.who) + '</span> — ';
   // Cabinet-Level only (2026-09-22, Joe's call): Violation/Concern Type and Status
-  // Stage move here, after Who was harmed, from their own expanded-entry aside
+  // Stage move here, after Who/What was harmed, from their own expanded-entry aside
   // cards -- see buildDetailHtml's asideHtml, which skips both cards whenever
   // glanceActive() is true for the same entry, so the information is never shown
   // twice, and never dropped outright if an entry's glance block is ever invalid.
@@ -3969,7 +3970,11 @@ function buildGlanceHeadHtml(entry, cfg, opts) {
         // entirely absent from an individual card just because its group header
         // already names the person.
         '<span class="glance-harm-item"><span class="glance-harm-label">Principal:</span> ' + hl(g.who) + '</span>' +
-        '<span class="glance-harm-item"><span class="glance-harm-label">Who was harmed:</span> ' +
+        // "Who/What was harmed" (renamed from "Who was harmed" 2026-09-22, Joe's
+        // call): harm.who isn't always a person -- the environment harm kind
+        // names a place or ecosystem (e.g. "Arctic Refuge coastal plain"), so the
+        // old label was already inaccurate for that case.
+        '<span class="glance-harm-item"><span class="glance-harm-label">Who/What was harmed:</span> ' +
           '<span class="glance-harm-who">' + hl(g.harm.who) + '</span></span>' +
         claExtraHtml +
       '</p>' +

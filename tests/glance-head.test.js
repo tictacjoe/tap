@@ -74,17 +74,17 @@ test("buildGlanceHeadHtml renders who, what, the harm badge and harm who", () =>
   assert.ok(html.includes("glance-badge-rights"));
   assert.ok(html.includes(">Harm type:</span> <span class=\"glance-badge glance-badge-rights\">Rights &amp; liberty</span>"));
   assert.ok(html.includes(">Harm status:</span> alleged"));
-  assert.ok(html.includes(">Who was harmed:</span> <span class=\"glance-harm-who\">Example detainees</span>"));
+  assert.ok(html.includes(">Who/What was harmed:</span> <span class=\"glance-harm-who\">Example detainees</span>"));
 });
 
-test("Principal renders the same name as the who-lead-in, right before Who was harmed", () => {
+test("Principal renders the same name as the who-lead-in, right before Who/What was harmed", () => {
   const html = api.buildGlanceHeadHtml({ glance: validGlance() }, cfgOn, { hl: hlPlain });
   assert.ok(html.includes(">Principal:</span> Example Agency Administrator"));
   const statusIdx = html.indexOf("Harm status:");
   const principalIdx = html.indexOf("Principal:");
-  const whoHarmedIdx = html.indexOf("Who was harmed:");
+  const whoHarmedIdx = html.indexOf("Who/What was harmed:");
   assert.ok(statusIdx < principalIdx, "Principal should come after Harm status");
-  assert.ok(principalIdx < whoHarmedIdx, "Principal should come before Who was harmed");
+  assert.ok(principalIdx < whoHarmedIdx, "Principal should come before Who/What was harmed");
 });
 
 test("Principal still renders when hideWho hides the title's who-lead-in", () => {
@@ -99,7 +99,7 @@ test("Principal renders for non-Cabinet-Level trackers too (no cfg.kind guard, u
   assert.ok(html.includes(">Principal:</span> Example Agency Administrator"));
 });
 
-test("Cabinet-Level: Violation/Concern Type and Status Stage render after Who was harmed", () => {
+test("Cabinet-Level: Violation/Concern Type and Status Stage render after Who/What was harmed", () => {
   const entry = {
     glance: validGlance(),
     offense_category: "Fraud",
@@ -108,10 +108,10 @@ test("Cabinet-Level: Violation/Concern Type and Status Stage render after Who wa
   const html = api.buildGlanceHeadHtml(entry, cfgOn, { hl: hlPlain });
   assert.ok(html.includes(">Violation/Concern Type:</span> Fraud"));
   assert.ok(html.includes(">Status Stage:</span> Investigation"));
-  const whoIdx = html.indexOf("Who was harmed:");
+  const whoIdx = html.indexOf("Who/What was harmed:");
   const violationIdx = html.indexOf("Violation/Concern Type:");
   const statusIdx = html.indexOf("Status Stage:");
-  assert.ok(whoIdx < violationIdx, "Violation/Concern Type should come after Who was harmed");
+  assert.ok(whoIdx < violationIdx, "Violation/Concern Type should come after Who/What was harmed");
   assert.ok(violationIdx < statusIdx, "Status Stage should come after Violation/Concern Type");
 });
 
