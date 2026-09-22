@@ -701,7 +701,7 @@ const layoutEntries = {
       rebuttal_anticipated: "Defense.",
       comeback: "Rebuttal.",
     },
-    order: [">What happened</div>", ">Violation Type (in full)</div>", ">Status</div>", ">Broader Pattern</div>", ">Anticipated Defense</div>", ">TAP's Rebuttal</div>", ">Violation/Concern Type</div>", ">Status Stage</div>", ">Confidence note</div>", "entry-aside-quote"],
+    order: [">What happened</div>", ">Status</div>", ">Broader Pattern</div>", ">Violation Type (in full)</div>", ">Anticipated Defense</div>", ">TAP's Rebuttal</div>", ">Violation/Concern Type</div>", ">Status Stage</div>", ">Confidence note</div>", "entry-aside-quote"],
   },
 };
 

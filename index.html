@@ -3672,11 +3672,19 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
   // `incident_summary`. It is also the FIRST card, which puts it top-left in the
   // expanded columns (the first card in reading order always lands there; see
   // buildEntryColsHtml / assignCardsToColumns), as it already is in the other trackers.
+  // Status is second and Broader Pattern third (reordered 2026-09-22, Joe's call,
+  // from What happened/Violation Type/Status/Broader Pattern): with three columns
+  // visible, assignCardsToColumns always seeds columns 0/1/2 with the first three
+  // cards in reading order (each starts at 0 filled height, and the greedy pick
+  // favors an empty column over a non-empty one, so the tie always resolves to
+  // the next unfilled column) -- so this ordering is what puts Status top-middle
+  // and Broader Pattern top-right. Violation Type (in full) drops to fourth,
+  // filling in wherever the shortest column lands after that.
   const mainHtml =
     '<div class="field-group entry-main-card"><div class="field-label">What happened</div><div class="field-value">' + summary(entry.section_summaries?.incident_summary) + buildFieldTimelineHtml(entry, "incident_summary", hl) + '</div></div>' +
-    '<div class="field-group entry-main-card"><div class="field-label">Violation Type (in full)</div><div class="field-value">' + hl(entry.offense_category_raw || entry.offense_category) + '</div></div>' +
     '<div class="field-group entry-main-card"><div class="field-label">Status</div><div class="field-value">' + buildFieldTimelineHtml(entry, "status", hl) + '</div></div>' +
     '<div class="field-group entry-main-card"><div class="field-label">Broader Pattern</div><div class="field-value">' + hl(entry.cause) + '</div></div>' +
+    '<div class="field-group entry-main-card"><div class="field-label">Violation Type (in full)</div><div class="field-value">' + hl(entry.offense_category_raw || entry.offense_category) + '</div></div>' +
     '<div class="field-group entry-main-card"><div class="field-label">Anticipated Defense</div><div class="field-value">' + hl(entry.rebuttal_anticipated) + '</div></div>' +
     '<div class="field-group entry-main-card"><div class="field-label">TAP\'s Rebuttal</div><div class="field-value">' + hl(entry.comeback) + '</div></div>';
   const asideHtml =
