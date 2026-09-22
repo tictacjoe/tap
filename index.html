@@ -866,6 +866,22 @@
   .entry-col .field-group > .field-label:first-child {
     margin-top: 0;
   }
+  /* Collapsible field labels (Confidence note and Sources, Cabinet-Level only --
+     see buildConfidenceNoteHtml's `collapsible` option and
+     buildProsecutionSourcesCardHtml): the label is a clickable <summary> inside
+     a closed-by-default <details> instead of a plain div. Always margin-top: 0
+     here rather than relying on the field-group :first-child rule above --
+     Confidence note's skim-line paragraph (which stays outside the toggle, see
+     that function's own comment) already supplies its own spacing above the
+     button when present, and when it isn't, zero still matches every other
+     field-group's first label. The native disclosure marker is left alone (no
+     marker suppression) so it stays the visual cue that this label is
+     clickable, matching the existing .evidence-why-toggle "Why" pattern. */
+  .field-toggle > summary.field-label,
+  .field-toggle > summary.field-label-row {
+    margin-top: 0;
+    cursor: pointer;
+  }
   .entry-col .field-value,
   .entry-col .confidence-box,
   .entry-col .exhibit-list {
@@ -3336,26 +3352,42 @@ function boldLeadingSourcingQuality(text) {
    identical rather than drifting. The "as of" date next to the label is
    entry.last_verified -- already tracked on every entry, just not
    previously surfaced next to the note it actually describes (2026-09-18). */
-function buildConfidenceNoteHtml(entry, hl, summary) {
+// collapsible (Cabinet-Level only, 2026-09-22, Joe's call: "make the confidence
+// note a button that opens the content"): wraps the label AND everything below
+// it (base note plus any Updates -- one button for the whole field, not a
+// separate one per Update) in a single closed-by-default <details>/<summary>,
+// reusing the same native disclosure pattern as the Evidence drawer's per-item
+// "Why" toggle. The short section_summaries skim line stays OUTSIDE the toggle
+// either way -- it exists specifically to be readable without expanding
+// anything (see the skim-emphasis section of prosecution/cabinet-level/SCHEMA.md),
+// so hiding it here would work against its own purpose. Deregulation and
+// Government Service Redirection don't pass this flag, so their rendering is
+// byte-for-byte unchanged.
+function buildConfidenceNoteHtml(entry, hl, summary, collapsible) {
   const part = entry.timeline && entry.timeline.confidence_note;
   const hasUpdates = !!(part && Array.isArray(part.updates) && part.updates.length);
   const base = hasUpdates ? part.base : (entry.confidence_note || "").trim();
   const updates = hasUpdates ? sortUpdatesNewestFirst(part.updates) : [];
+  const summaryLine = summary(entry.section_summaries?.confidence_note);
   const labelHtml = entry.last_verified
     ? '<div class="field-label-row"><div class="field-label">Confidence note</div><span class="field-asof">as of ' + escapeHtml(entry.last_verified) + '</span></div>'
     : '<div class="field-label">Confidence note</div>';
-  let html = labelHtml + '<div class="confidence-box">' +
-    summary(entry.section_summaries?.confidence_note) +
+  let bodyHtml = '<div class="confidence-box">' +
+    (collapsible ? "" : summaryLine) +
     (base ? "<p>" + hl(boldConfidenceRatings(boldLeadingSourcingQuality(base))) + "</p>" : "") +
     '</div>';
   if (updates.length) {
-    html += '<div class="field-label">' + updatesLabel(updates.length) + '</div><div class="confidence-box updates-box">' +
+    bodyHtml += '<div class="field-label">' + updatesLabel(updates.length) + '</div><div class="confidence-box updates-box">' +
       updates.map(u =>
         '<div class="update-item"><div class="update-date">' + escapeHtml(u.date || u.label) + '</div><p>' + hl(boldConfidenceRatings(u.text)) + '</p></div>'
       ).join("") +
       '</div>';
   }
-  return html;
+  if (!collapsible) return labelHtml + bodyHtml;
+  const summaryTag = entry.last_verified
+    ? '<summary class="field-label-row"><span class="field-label">Confidence note</span><span class="field-asof">as of ' + escapeHtml(entry.last_verified) + '</span></summary>'
+    : '<summary class="field-label">Confidence note</summary>';
+  return summaryLine + '<details class="field-toggle">' + summaryTag + bodyHtml + '</details>';
 }
 /* build-confidence-note-html:end */
 
@@ -3706,7 +3738,10 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
     (glanceShowing ? '' : buildViolationConcernCardHtml(entry, hl)) +
     (glanceShowing ? '' : '<div class="field-group entry-aside-card"><div class="field-label">Status Stage</div><div class="field-value">' + hl(entry.status_category) + '</div></div>') +
     buildProsecutionSourcesCardHtml(entry);
-  const noteHtml = '<div class="field-group">' + buildConfidenceNoteHtml(entry, hl, summary) + '</div>' + buildPullQuoteHtml(entry, hl);
+  // collapsible=true here only (Joe's call, 2026-09-22): Deregulation and
+  // Government Service Redirection's own calls below don't pass it, so
+  // their Confidence note stays a plain always-open field.
+  const noteHtml = '<div class="field-group">' + buildConfidenceNoteHtml(entry, hl, summary, true) + '</div>' + buildPullQuoteHtml(entry, hl);
   return buildEntryColsHtml(mainHtml, asideHtml, noteHtml) +
     (cfg.evidenceDrawerEnabled ? buildEvidenceDrawerHtml(entry, cfg, hl) : "") +
     buildUpdateRequestHtml(entry, cfg);
@@ -3735,13 +3770,15 @@ function buildViolationConcernCardHtml(entry, hl) {
    (2026-09-21, Joe's option 3 after the Evidence drawer was switched off). Same list and
    same recheck-note rule as the Headlines Sources trail (evidenceForSourceTrail), so the
    two never disagree. Just the list of URLs (Joe's call: no evidence descriptions), each
-   shown once, in evidence order. Empty list => no card. */
+   shown once, in evidence order. Empty list => no card. Closed-by-default
+   <details>/<summary> toggle (2026-09-22, Joe's call, same as Confidence note above) --
+   no skim-line equivalent here, so the whole list sits behind the button. */
 function buildProsecutionSourcesCardHtml(entry) {
   const urls = [...new Set(evidenceForSourceTrail(entry.evidence).map(ev => ev.source_url).filter(Boolean))];
   if (!urls.length) return "";
-  return '<div class="field-group entry-aside-card"><div class="field-label">Sources</div><ul class="exhibit-list">' +
+  return '<div class="field-group entry-aside-card"><details class="field-toggle"><summary class="field-label">Sources</summary><ul class="exhibit-list">' +
     urls.map(url => '<li><a href="' + escapeHtml(safeHref(url)) + '" target="_blank" rel="noopener">' + escapeHtml(url) + '</a></li>').join("") +
-    '</ul></div>';
+    '</ul></details></div>';
 }
 
 /* Broader Pattern cross-references (2026-09-22, Joe: "in 'broader pattern' could we

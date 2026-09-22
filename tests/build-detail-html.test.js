@@ -422,8 +422,11 @@ test("prosecution Status field splits into separate paragraphs at each Update ma
   const result = buildDetailHtml(entry, cfg);
 
   const statusStart = result.indexOf('<div class="field-label">Status</div><div class="field-value">');
-  const statusEnd = result.indexOf('<div class="field-label">Confidence note</div>');
+  // Confidence note is a collapsible <summary> for prosecution/CLA (2026-09-22),
+  // not a plain <div class="field-label">, so the boundary marker matches that.
+  const statusEnd = result.indexOf('<summary class="field-label">Confidence note</summary>');
   const statusHtml = result.slice(statusStart, statusEnd);
+  assert(statusEnd !== -1, "Confidence note boundary marker should be found");
 
   assert.equal((statusHtml.match(/<p>/g) || []).length, 3, "should split into 3 paragraphs, one per Update marker plus the lead-in text");
   assert(statusHtml.includes("<p>Initial finding here.</p>"), "lead-in text before the first marker should be its own paragraph");
@@ -652,7 +655,11 @@ test("prosecution Confidence note splits its base text from a separate Updates s
   const cfg = { kind: "prosecution" };
   const result = buildDetailHtml(entry, cfg);
 
-  const confidenceStart = result.indexOf('<div class="field-label">Confidence note</div><div class="confidence-box">');
+  // Collapsible <summary> for prosecution/CLA (2026-09-22), not a plain
+  // <div class="field-label">, and the skim-line (none here, no
+  // section_summaries.confidence_note on this test entry) would otherwise sit
+  // between the label and the box -- see buildConfidenceNoteHtml's comment.
+  const confidenceStart = result.indexOf('<summary class="field-label">Confidence note</summary><div class="confidence-box">');
   const updatesStart = result.indexOf('<div class="field-label">Update, dated when TAP added it</div>');
   const causeStart = result.indexOf('<div class="field-label">Broader Pattern</div>');
 
@@ -666,6 +673,66 @@ test("prosecution Confidence note splits its base text from a separate Updates s
   const updatesHtml = result.slice(updatesStart);
   assert(updatesHtml.includes('<div class="update-date">2026-08-02</div>'), "the update's date should render as its heading");
   assert(updatesHtml.includes("<p>Update 2026-08-02: a second outlet corroborated.</p>"), "the update's own text should render under its date heading");
+});
+
+test("prosecution Confidence note is a closed-by-default <details>/<summary> toggle, base note and Updates both inside it", () => {
+  const entry = {
+    offense_category: "Fraud", status_category: "Investigation", incident_summary: "x", status: "y",
+    confidence_note: "Initially sourced to one outlet. Update 2026-08-02: a second outlet corroborated.",
+    timeline: { confidence_note: tl("Initially sourced to one outlet.", upd("Update 2026-08-02: a second outlet corroborated.", "2026-08-02")) },
+  };
+  const html = buildDetailHtml(entry, { kind: "prosecution" });
+  assert(html.includes('<details class="field-toggle"><summary class="field-label">Confidence note</summary>'), "should open a closed-by-default details/summary toggle");
+  assert(!html.includes('<details class="field-toggle" open'), "must not default to open");
+  const detailsStart = html.indexOf('<details class="field-toggle"><summary class="field-label">Confidence note</summary>');
+  const detailsEnd = html.indexOf("</details>", detailsStart);
+  const insideToggle = html.slice(detailsStart, detailsEnd);
+  assert(insideToggle.includes("Initially sourced to one outlet."), "base note text should be inside the toggle");
+  assert(insideToggle.includes("Update, dated when TAP added it"), "the Updates section should be inside the same toggle, not a separate one");
+  assert(insideToggle.includes("a second outlet corroborated"), "the update text itself should be inside the toggle");
+});
+
+test("prosecution Confidence note's skim-line summary stays visible outside the toggle", () => {
+  const entry = {
+    offense_category: "Fraud", status_category: "Investigation", incident_summary: "x", status: "y",
+    confidence_note: "Full prose goes here.",
+    section_summaries: { confidence_note: "Short skim condensation." },
+  };
+  const html = buildDetailHtml(entry, { kind: "prosecution" });
+  const summaryLineIdx = html.indexOf('<p class="field-summary">Short skim condensation.</p>');
+  const detailsIdx = html.indexOf('<details class="field-toggle">');
+  assert(summaryLineIdx !== -1, "skim-line summary should render");
+  assert(summaryLineIdx < detailsIdx, "skim-line summary should render before (outside) the toggle");
+  const detailsHtml = html.slice(detailsIdx);
+  assert(!detailsHtml.includes("Short skim condensation."), "the skim-line should not be duplicated inside the toggle");
+});
+
+test("prosecution Confidence note's toggle summary includes the as-of date when last_verified is set", () => {
+  const entry = {
+    offense_category: "Fraud", status_category: "Investigation", incident_summary: "x", status: "y",
+    confidence_note: "Some note.", last_verified: "2026-09-20",
+  };
+  const html = buildDetailHtml(entry, { kind: "prosecution" });
+  assert(html.includes('<summary class="field-label-row"><span class="field-label">Confidence note</span><span class="field-asof">as of 2026-09-20</span></summary>'));
+});
+
+test("deregulation and government-services Confidence note are unaffected (plain field, not collapsible)", () => {
+  for (const kind of ["deregulation", "govservices"]) {
+    const entry = { what_changed: "x", incident_summary: "x", status: "y", confidence_note: "Some note." };
+    const html = buildDetailHtml(entry, { kind });
+    assert(html.includes('<div class="field-label">Confidence note</div>'), `${kind} should keep the plain field-label div`);
+    assert(!html.includes("field-toggle"), `${kind} should not get the collapsible toggle`);
+  }
+});
+
+test("prosecution Sources card is a closed-by-default <details>/<summary> toggle", () => {
+  const entry = {
+    offense_category: "Fraud", status_category: "Investigation", incident_summary: "x", status: "y",
+    evidence: [{ type: "news_report", description: "x", source_url: "https://example.com/a", maps_to_element: "e1" }],
+  };
+  const html = buildDetailHtml(entry, { kind: "prosecution" });
+  assert(html.includes('<details class="field-toggle"><summary class="field-label">Sources</summary><ul class="exhibit-list">'));
+  assert(!html.includes('<details class="field-toggle" open'), "must not default to open");
 });
 
 test("prosecution Confidence note renders no Updates section when it has no Update/Added markers", () => {
@@ -815,7 +882,8 @@ const layoutEntries = {
       rebuttal_anticipated: "Defense.",
       comeback: "Rebuttal.",
     },
-    order: [">What happened</div>", ">Status</div>", ">Broader Pattern</div>", ">Violation Type (in full)</div>", ">Anticipated Defense</div>", ">TAP's Rebuttal</div>", ">Violation/Concern Type</div>", ">Status Stage</div>", ">Confidence note</div>", "entry-aside-quote"],
+    // Confidence note is a collapsible <summary> for prosecution/CLA (2026-09-22), not a plain <div>.
+    order: [">What happened</div>", ">Status</div>", ">Broader Pattern</div>", ">Violation Type (in full)</div>", ">Anticipated Defense</div>", ">TAP's Rebuttal</div>", ">Violation/Concern Type</div>", ">Status Stage</div>", ">Confidence note</summary>", "entry-aside-quote"],
   },
 };
 
@@ -1288,7 +1356,8 @@ test("prosecution renders a Sources card of bare URLs, once each, leaving out re
   };
   // Drawer flag left OFF (the live setting): the Sources card must still appear.
   const html = buildDetailHtml(entry, { kind: "prosecution", evidenceDrawerEnabled: false });
-  assert(html.includes('<div class="field-label">Sources</div>'), "should render a Sources label");
+  // Collapsible <summary> (2026-09-22, Joe's call), not a plain <div class="field-label">.
+  assert(html.includes('<summary class="field-label">Sources</summary>'), "should render a Sources label");
   assert(html.includes('<a href="https://example.com/a?x=1&amp;y=2" target="_blank" rel="noopener">https://example.com/a?x=1&amp;y=2</a>'), "link text is the URL itself, escaped");
   assert(html.includes('>https://example.org/b</a>'), "should list the second URL");
   assert.equal((html.match(/example\.com\/a\?x=1&amp;y=2<\/a>/g) || []).length, 1, "a URL cited by several evidence items is listed once");
@@ -1308,7 +1377,7 @@ test("prosecution keeps a recheck note's URL when it is the only place that link
 test("prosecution with no evidence renders no Sources card", () => {
   const entry = { offense_category: "Fraud", status_category: "Investigation", incident_summary: "x", status: "y", evidence: [] };
   const html = buildDetailHtml(entry, { kind: "prosecution" });
-  assert(!html.includes('<div class="field-label">Sources</div>'));
+  assert(!html.includes('<summary class="field-label">Sources</summary>'));
 });
 
 // Violation/Concern Type card (2026-09-21): one card, not two. Real violation label wins;
