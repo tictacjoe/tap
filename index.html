@@ -1080,6 +1080,25 @@
     font-style: italic;
     color: var(--ink-faint);
   }
+  /* CLA's Confidence note now sits inside an .entry-aside-card wrapper
+     (2026-09-22, Joe: "make the Confidence Note box look like the Sources
+     box" -- see buildDetailHtml's prosecution branch) so it gets the same
+     paper-card background/border/shadow as the Sources card next to it.
+     Left as-is, .confidence-box's own tan background and brass left-border
+     would nest a second, differently-colored box inside that card -- doubled
+     borders/padding, not a match for Sources' plain exhibit-list with no
+     competing background. So it drops its own fill/border/padding here and
+     reads as plain text within the card, same as Sources' list does.
+     Deregulation and Government Service Redirection's Confidence note isn't
+     wrapped in .entry-aside-card, so their .confidence-box keeps its tan
+     highlight untouched. */
+  .entry-aside-card .confidence-box {
+    background: none;
+    border-left: none;
+    border-radius: 0;
+    padding: 0;
+  }
+  .entry-aside-card .update-item { border-top-color: var(--rule); }
 
   /* Evidence drawer (Cabinet-Level, behind evidenceDrawerEnabled). Theme tokens only, so it
      follows the site's palette. Badges are text plus a glyph, never color alone. */
@@ -3769,7 +3788,15 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
   // collapsible=true here only (Joe's call, 2026-09-22): Deregulation and
   // Government Service Redirection's own calls below don't pass it, so
   // their Confidence note stays a plain always-open field.
-  const noteHtml = '<div class="field-group">' + buildConfidenceNoteHtml(entry, hl, summary, true) + '</div>' + buildPullQuoteHtml(entry, hl);
+  // entry-aside-card (2026-09-22, Joe's call: "make the Confidence note box
+  // look like the Sources box"): matches buildProsecutionSourcesCardHtml's
+  // own wrapper exactly, so both collapsible CLA-only cards -- Confidence
+  // note and Sources -- get the same paper-card background/border/shadow
+  // instead of Confidence note sitting as a bare field-group next to a
+  // boxed Sources card. Deregulation/Government Service Redirection's
+  // wrappers above are untouched -- their Confidence note isn't collapsible
+  // and was never asked to match a Sources box.
+  const noteHtml = '<div class="field-group entry-aside-card">' + buildConfidenceNoteHtml(entry, hl, summary, true) + '</div>' + buildPullQuoteHtml(entry, hl);
   return buildEntryColsHtml(mainHtml, asideHtml, noteHtml) +
     (cfg.evidenceDrawerEnabled ? buildEvidenceDrawerHtml(entry, cfg, hl) : "") +
     buildUpdateRequestHtml(entry, cfg);
