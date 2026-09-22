@@ -278,6 +278,113 @@ test("prosecution renders Broader Pattern, Anticipated Defense, and TAP's Rebutt
   assert(rebuttalIndex < comebackIndex, "TAP's Rebuttal should come after Anticipated Defense");
 });
 
+test("splitCauseReferences returns one plain segment when there are no references", () => {
+  assert.deepEqual(splitCauseReferences("Plain text.", undefined), [{ text: "Plain text.", ref: null }]);
+  assert.deepEqual(splitCauseReferences("Plain text.", []), [{ text: "Plain text.", ref: null }]);
+});
+
+test("splitCauseReferences splits out a matched phrase into its own segment", () => {
+  const ref = { match: "the Bondi-James entry", tracker: "prosecution", id: "bondi-james-thing" };
+  const segments = splitCauseReferences("Same structural cause as the Bondi-James entry: DOJ acted.", [ref]);
+  assert.deepEqual(segments, [
+    { text: "Same structural cause as ", ref: null },
+    { text: "the Bondi-James entry", ref },
+    { text: ": DOJ acted.", ref: null },
+  ]);
+});
+
+test("splitCauseReferences drops a stale reference whose match text is no longer present", () => {
+  const ref = { match: "wording that was since edited away", tracker: "prosecution", id: "some-id" };
+  assert.deepEqual(splitCauseReferences("Current wording, unrelated.", [ref]), [{ text: "Current wording, unrelated.", ref: null }]);
+});
+
+test("splitCauseReferences ignores a reference missing match/tracker/id", () => {
+  const text = "Mentions the Bondi-James entry here.";
+  assert.deepEqual(splitCauseReferences(text, [{ tracker: "prosecution", id: "x" }]), [{ text, ref: null }]);
+  assert.deepEqual(splitCauseReferences(text, [{ match: "the Bondi-James entry", id: "x" }]), [{ text, ref: null }]);
+  assert.deepEqual(splitCauseReferences(text, [{ match: "the Bondi-James entry", tracker: "prosecution" }]), [{ text, ref: null }]);
+});
+
+test("splitCauseReferences keeps the earlier of two overlapping references and drops the later", () => {
+  // "the Bondi-James entry" and "James entry" overlap (share "James entry") --
+  // only the first-starting one should survive.
+  const refA = { match: "the Bondi-James entry", tracker: "prosecution", id: "a" };
+  const refB = { match: "James entry", tracker: "prosecution", id: "b" };
+  const segments = splitCauseReferences("See the Bondi-James entry for details.", [refA, refB]);
+  assert.deepEqual(segments, [
+    { text: "See ", ref: null },
+    { text: "the Bondi-James entry", ref: refA },
+    { text: " for details.", ref: null },
+  ]);
+});
+
+test("splitCauseReferences handles multiple non-overlapping references in order", () => {
+  const refA = { match: "Vought's secret spend-plan footnotes", tracker: "govservices", id: "vought-thing" };
+  const refB = { match: "Blanche's recusal failure", tracker: "prosecution", id: "blanche-recusal-irs-settlement-2026" };
+  const segments = splitCauseReferences(
+    "Consistent with patterns documented across other entries (Vought's secret spend-plan footnotes, Blanche's recusal failure on Trump-personal matters): a pattern.",
+    [refA, refB]
+  );
+  assert.deepEqual(segments.filter(s => s.ref).map(s => s.ref.id), ["vought-thing", "blanche-recusal-irs-settlement-2026"]);
+});
+
+test("buildCauseFieldHtml renders a plain Broader Pattern field unchanged when there are no references", () => {
+  const entry = { cause: "Structural incentive analysis goes here." };
+  assert.equal(buildCauseFieldHtml(entry), "Structural incentive analysis goes here.");
+});
+
+test("buildCauseFieldHtml wraps a referenced phrase in a related-entry-link anchor pointing at the right tracker/id", () => {
+  const entry = {
+    cause: "Same structural cause as the Bondi-James entry: DOJ acted.",
+    cause_references: [{ match: "the Bondi-James entry", tracker: "prosecution", id: "bondi-james-thing" }],
+  };
+  const result = buildCauseFieldHtml(entry);
+  assert.equal(
+    result,
+    'Same structural cause as <a href="#" class="related-entry-link cause-reference-link" data-tracker="prosecution" data-id="bondi-james-thing">the Bondi-James entry</a>: DOJ acted.'
+  );
+});
+
+test("buildCauseFieldHtml still strips process labels before linking", () => {
+  const entry = {
+    cause: "Added 2026-09-10 (round-4 backlog cluster c0309): same pattern as the Bondi-James entry.",
+    cause_references: [{ match: "the Bondi-James entry", tracker: "prosecution", id: "bondi-james-thing" }],
+  };
+  const result = buildCauseFieldHtml(entry);
+  assert(!result.includes("round-4"), "process label should be stripped before the reference split runs");
+  assert(result.includes('data-id="bondi-james-thing"'), "reference should still be found and linked after stripping");
+});
+
+test("buildCauseFieldHtml highlights a search term inside a linked phrase without breaking the anchor", () => {
+  const entry = {
+    cause: "See the Bondi-James entry for details.",
+    cause_references: [{ match: "the Bondi-James entry", tracker: "prosecution", id: "bondi-james-thing" }],
+  };
+  const result = buildCauseFieldHtml(entry, "Bondi", false);
+  assert(result.includes('<a href="#" class="related-entry-link cause-reference-link" data-tracker="prosecution" data-id="bondi-james-thing">the <mark class="hl">Bondi</mark>-James entry</a>'));
+});
+
+test("buildCauseFieldHtml drops a stale reference and renders the rest as plain text", () => {
+  const entry = {
+    cause: "The wording has since changed.",
+    cause_references: [{ match: "old wording that is gone", tracker: "prosecution", id: "whatever" }],
+  };
+  assert.equal(buildCauseFieldHtml(entry), "The wording has since changed.");
+});
+
+test("buildDetailHtml renders a Broader Pattern reference link end to end for the prosecution/CLA kind", () => {
+  const entry = {
+    offense_category: "Fraud",
+    status_category: "Investigation",
+    incident_summary: "Summary.",
+    status: "Under investigation.",
+    cause: "Same structural cause as the Bondi-James entry.",
+    cause_references: [{ match: "the Bondi-James entry", tracker: "prosecution", id: "bondi-james-thing" }],
+  };
+  const result = buildDetailHtml(entry, { kind: "prosecution" });
+  assert(result.includes('<div class="field-label">Broader Pattern</div><div class="field-value">Same structural cause as <a href="#" class="related-entry-link cause-reference-link" data-tracker="prosecution" data-id="bondi-james-thing">the Bondi-James entry</a>.</div>'));
+});
+
 test("prosecution Status field renders as a single paragraph when there are no Update markers", () => {
   const entry = {
     offense_category: "Fraud",

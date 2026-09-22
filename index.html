@@ -1003,6 +1003,15 @@
   .exhibit-list a { color: var(--brass); text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--brass) 50%, transparent); overflow-wrap: anywhere; } /* anywhere: Cabinet-Level lists bare URLs, which have no spaces to wrap at */
   .exhibit-list a:hover { text-decoration-color: var(--brass); }
 
+  /* Broader Pattern's inline cross-references (2026-09-22): .related-entry-link
+     itself carries no visual style (see wireRelatedEntryLinks's comment -- it's a
+     behavior-only class shared with the differently-styled coverage tags and
+     callout links), so this companion class gives an in-prose mention its own
+     look -- same underlined-brass convention as .exhibit-list a, since both are
+     "this phrase is a link" inside a paragraph of running text. */
+  .cause-reference-link { color: var(--brass); text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--brass) 50%, transparent); }
+  .cause-reference-link:hover { text-decoration-color: var(--brass); }
+
   .figure-group-label {
     font-family: ui-monospace, monospace;
     font-size: 0.62rem;
@@ -3683,7 +3692,7 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
   const mainHtml =
     '<div class="field-group entry-main-card"><div class="field-label">What happened</div><div class="field-value">' + summary(entry.section_summaries?.incident_summary) + buildFieldTimelineHtml(entry, "incident_summary", hl) + '</div></div>' +
     '<div class="field-group entry-main-card"><div class="field-label">Status</div><div class="field-value">' + buildFieldTimelineHtml(entry, "status", hl) + '</div></div>' +
-    '<div class="field-group entry-main-card"><div class="field-label">Broader Pattern</div><div class="field-value">' + hl(entry.cause) + '</div></div>' +
+    '<div class="field-group entry-main-card"><div class="field-label">Broader Pattern</div><div class="field-value">' + buildCauseFieldHtml(entry, term, useRegex) + '</div></div>' +
     '<div class="field-group entry-main-card"><div class="field-label">Violation Type (in full)</div><div class="field-value">' + hl(entry.offense_category_raw || entry.offense_category) + '</div></div>' +
     '<div class="field-group entry-main-card"><div class="field-label">Anticipated Defense</div><div class="field-value">' + hl(entry.rebuttal_anticipated) + '</div></div>' +
     '<div class="field-group entry-main-card"><div class="field-label">TAP\'s Rebuttal</div><div class="field-value">' + hl(entry.comeback) + '</div></div>';
@@ -3722,6 +3731,70 @@ function buildProsecutionSourcesCardHtml(entry) {
   return '<div class="field-group entry-aside-card"><div class="field-label">Sources</div><ul class="exhibit-list">' +
     urls.map(url => '<li><a href="' + escapeHtml(safeHref(url)) + '" target="_blank" rel="noopener">' + escapeHtml(url) + '</a></li>').join("") +
     '</ul></div>';
+}
+
+/* Broader Pattern cross-references (2026-09-22, Joe: "in 'broader pattern' could we
+   include links to the 'documents elsewhere' mentioned?"). `cause` is TAP's own
+   analysis prose, and it very often names another specific entry by an informal
+   handle ("Blanche's WaPo/WSJ Iran-leak subpoenas", "the Bondi-James entry") rather
+   than a formal citation. entry.cause_references pairs each such mention -- the
+   exact substring as it appears in `cause` once stripProcessLabels() has run -- with
+   the tracker + id it names, reusing the same {tracker, id} shape and tracker-name
+   convention (schema-facing names: "prosecution"/"deregulation"/"government-services",
+   not TRACKERS' internal "govservices" key) as community-topics' related_entries, and
+   the same related-entry-link/jumpToRelatedEntry click mechanism (see
+   RELATED_TRACKER_FIELD_TO_KEY, wireRelatedEntryLinks).
+
+   Splitting happens once, on the stripped-but-still-raw (pre-escape) text, before
+   highlightMatches() (escape + **bold** + search-<mark>) runs separately on each
+   resulting segment -- never on the whole string with a link spliced in afterward --
+   so a link's own <a> tags can never be mangled by the mark-wrapping regex or the
+   boldify regex. The one thing this doesn't support: a **bold** marker whose span
+   crosses a reference match's boundary (starts in one segment, ends in another)
+   renders as a literal, un-bolded "**" on each side -- avoid overlapping the two
+   conventions on the same phrase when writing cause_references.
+
+   A stale reference (the match substring no longer appears, e.g. after a copy edit
+   changed the wording) is silently dropped rather than crashing or half-rendering --
+   same "no-op on a bad id" posture as openCardById(). Overlapping references (would
+   mean two entries' match substrings overlap in the text) keep whichever comes first
+   in reading order and drop the rest, rather than producing invalid nested anchors. */
+function splitCauseReferences(text, references) {
+  if (!text || !references || !references.length) return [{ text: text || "", ref: null }];
+  const found = [];
+  for (const ref of references) {
+    if (!ref || !ref.match || !ref.id || !ref.tracker) continue;
+    const idx = text.indexOf(ref.match);
+    if (idx === -1) continue;
+    found.push({ start: idx, end: idx + ref.match.length, ref });
+  }
+  found.sort((a, b) => a.start - b.start);
+  const kept = [];
+  let lastEnd = 0;
+  for (const f of found) {
+    if (f.start < lastEnd) continue;
+    kept.push(f);
+    lastEnd = f.end;
+  }
+  if (!kept.length) return [{ text, ref: null }];
+  const segments = [];
+  let pos = 0;
+  for (const f of kept) {
+    if (f.start > pos) segments.push({ text: text.slice(pos, f.start), ref: null });
+    segments.push({ text: text.slice(f.start, f.end), ref: f.ref });
+    pos = f.end;
+  }
+  if (pos < text.length) segments.push({ text: text.slice(pos), ref: null });
+  return segments;
+}
+
+function buildCauseFieldHtml(entry, term, useRegex) {
+  const stripped = stripProcessLabels(entry.cause);
+  return splitCauseReferences(stripped, entry.cause_references).map(seg => {
+    const inner = highlightMatches(seg.text, term, useRegex);
+    if (!seg.ref) return inner;
+    return '<a href="#" class="related-entry-link cause-reference-link" data-tracker="' + escapeHtml(seg.ref.tracker) + '" data-id="' + escapeHtml(seg.ref.id) + '">' + inner + '</a>';
+  }).join("");
 }
 /* build-detail-html:end */
 
