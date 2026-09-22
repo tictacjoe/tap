@@ -652,7 +652,14 @@
      neutral, reusing existing palette variables: severe (physical,
      rights) = flag red, middle (livelihood, money) = darker brass,
      institutional and environment = neutral. */
-  .glance-harm { margin: 0 0 0.3rem; font-size: 0.85rem; }
+  /* Three labeled segments (Harm type / Harm status / Who was harmed) on one line,
+     wrapping onto more lines on a narrow screen; same flex+bullet-separator pattern
+     as .entry-meta, kept as its own rule since .entry-meta's own selector excludes
+     non-tag/field spans (added 2026-09-21, Joe's request to label these lines). */
+  .glance-harm { margin: 0 0 0.3rem; font-size: 0.85rem; display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: baseline; }
+  .glance-harm-label { color: var(--ink-faint); font-weight: 600; }
+  .glance-harm-item:not(:first-child) { position: relative; padding-left: 0.75rem; }
+  .glance-harm-item:not(:first-child)::before { content: "•"; position: absolute; left: 0; color: var(--rule-strong); }
   .glance-badge {
     display: inline-block;
     padding: 0.1rem 0.5rem;
@@ -3719,10 +3726,19 @@ function buildGlanceHeadHtml(entry, cfg, opts) {
   return '<div class="entry-head">' +
     '<div class="entry-title-block">' +
       '<p class="entry-title glance-line">' + who + hl(g.what) + (opts.shareBtnHtml || "") + '</p>' +
-      '<p class="glance-harm"><span class="glance-badge glance-badge-' + g.harm.kind +
-        (g.harm.certainty === "averted" ? " glance-badge-averted" : "") + '">' +
-        escapeHtml(GLANCE_HARM_LABELS[g.harm.kind]) + ' · ' + escapeHtml(g.harm.certainty) + '</span> ' +
-        '<span class="glance-harm-who">' + hl(g.harm.who) + '</span></p>' +
+      // "Harm status" (not "Certainty"): documented/projected/alleged are genuine
+      // confidence levels, but averted means the harm never happened (blocked before
+      // it took effect) -- an outcome, not a confidence level. "Harm status" reads
+      // naturally for all four and does not collide with an entry's own Status field.
+      '<p class="glance-harm">' +
+        '<span class="glance-harm-item"><span class="glance-harm-label">Harm type:</span> ' +
+          '<span class="glance-badge glance-badge-' + g.harm.kind +
+          (g.harm.certainty === "averted" ? " glance-badge-averted" : "") + '">' +
+          escapeHtml(GLANCE_HARM_LABELS[g.harm.kind]) + '</span></span>' +
+        '<span class="glance-harm-item"><span class="glance-harm-label">Harm status:</span> ' + escapeHtml(g.harm.certainty) + '</span>' +
+        '<span class="glance-harm-item"><span class="glance-harm-label">Who was harmed:</span> ' +
+          '<span class="glance-harm-who">' + hl(g.harm.who) + '</span></span>' +
+      '</p>' +
       '<div class="entry-meta">' + (opts.metaHtml || "") + '</div>' +
     '</div>' +
   '</div>';
