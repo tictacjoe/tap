@@ -1013,6 +1013,20 @@ test("stripProcessLabels removes a 'Round-4 backlog fold, cluster cNNNN:' prefix
   );
 });
 
+test("stripProcessLabels removes a colon label right after a '; ' or ': ' join, not just after '.'/'!'/'?'", () => {
+  // Found 2026-09-22: prosecution's Records-feed evidence text is assembled as
+  // "Evidence: " + descriptions.join("; "), so a label can start right after
+  // either separator -- neither is a sentence-ending punctuation mark.
+  assert.equal(
+    stripProcessLabels("A fact here; Round-4 backlog fold, cluster c0740: Media Matters compiled records."),
+    "A fact here; Media Matters compiled records."
+  );
+  assert.equal(
+    stripProcessLabels("Evidence: Round-4 backlog fold, cluster c0284: The Washington Post reported."),
+    "Evidence: The Washington Post reported."
+  );
+});
+
 test("stripProcessLabels leaves unrelated parentheticals and prose alone", () => {
   const untouched = [
     "Reported by outlets (AP/ABC News) at the time.",

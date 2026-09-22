@@ -1575,6 +1575,7 @@ function verdictColor(verdict) {
   return map[verdict] || "#5C5A52";
 }
 
+/* flatten-tracker-posts:start */
 /* Converts raw scraped posts (one JSON object per Substack post, each
    containing multiple dated entries) into a flat list of individually
    searchable pseudo-entries -- one per event, not one per post. */
@@ -1595,6 +1596,7 @@ function flattenTrackerPosts(posts) {
   });
   return flat;
 }
+/* flatten-tracker-posts:end */
 
 let activeTracker = "headlines";
 let searchTerm = "";
@@ -1802,7 +1804,7 @@ function adaptDeregulationEntry(entry) {
   const medium = override.medium || combineTierText([brief, beforeText]);
   const stakesText = entry.estimated_health_impact?.summary ? "At stake: " + entry.estimated_health_impact.summary : "";
   const full = override.full || combineTierText([medium, stakesText]);
-  return {
+  return stripAdaptedItemLabels({
     headline,
     tiers: [brief, medium, full],
     trail: {
@@ -1816,7 +1818,7 @@ function adaptDeregulationEntry(entry) {
     tracker: "deregulation",
     category: entry.domain || null,
     id: entry.id || null,
-  };
+  });
 }
 /* adapt-deregulation-entry:end */
 
@@ -1832,7 +1834,7 @@ function adaptGovServicesEntry(entry) {
   const medium = override.medium || combineTierText([brief, proponentText]);
   const impactText = entry.estimated_impact?.summary ? "Impact: " + entry.estimated_impact.summary : "";
   const full = override.full || combineTierText([medium, impactText]);
-  return {
+  return stripAdaptedItemLabels({
     headline,
     tiers: [brief, medium, full],
     trail: {
@@ -1846,7 +1848,7 @@ function adaptGovServicesEntry(entry) {
     tracker: "govservices",
     category: entry.domain || null,
     id: entry.id || null,
-  };
+  });
 }
 /* adapt-govservices-entry:end */
 
@@ -1864,7 +1866,7 @@ function adaptProsecutionEntry(entry) {
   const rebuttalText = entry.rebuttal_anticipated ? "Anticipated defense: " + entry.rebuttal_anticipated : "";
   const comebackText = entry.comeback ? "Response: " + entry.comeback : "";
   const full = override.full || combineTierText([medium, causeText, rebuttalText, comebackText]);
-  return {
+  return stripAdaptedItemLabels({
     headline,
     tiers: [brief, medium, full],
     trail: {
@@ -1878,7 +1880,7 @@ function adaptProsecutionEntry(entry) {
     tracker: "prosecution",
     category: entry.offense_category || null,
     id: entry.id || null,
-  };
+  });
 }
 /* adapt-prosecution-entry:end */
 
@@ -1893,7 +1895,7 @@ function adaptCommunityTopicEntry(entry) {
   const relatedText = (entry.related_entries || []).length
     ? "Related: " + entry.related_entries.map(r => r.note || r.id).filter(Boolean).join("; ") : "";
   const full = override.full || combineTierText([medium, claimText, relatedText]);
-  return {
+  return stripAdaptedItemLabels({
     headline,
     tiers: [brief, medium, full],
     trail: {
@@ -1911,7 +1913,7 @@ function adaptCommunityTopicEntry(entry) {
     // jump-to-card deep link works the same way it does for every
     // other tracker's rows once this is populated.
     id: entry.id || null,
-  };
+  });
 }
 /* adapt-communitytopic-entry:end */
 
@@ -1923,7 +1925,7 @@ function adaptReportingEntry(entry) {
   const whyText = entry.why_it_matters ? "Why it matters: " + entry.why_it_matters : "";
   const medium = override.medium || combineTierText([brief, whyText]);
   const full = override.full || medium;
-  return {
+  return stripAdaptedItemLabels({
     headline,
     tiers: [brief, medium, full],
     trail: {
@@ -1940,7 +1942,7 @@ function adaptReportingEntry(entry) {
     // so buildHeadlineRow()'s "can this row deep-link to its own card?"
     // check has a real value to test instead of relying on undefined.
     id: null,
-  };
+  });
 }
 /* adapt-reporting-entry:end */
 
@@ -2874,7 +2876,16 @@ function summaryLineHtml(summary, term, useRegex) {
         cluster cNNNN, backlog/discovery/residual-record fold) so ordinary
         parentheticals and "round 4 of talks" are untouched.
      2. a "Round-4 backlog fold, cluster cNNNN:" prefix at the start of a
-        sentence, removed with the next word re-capitalized.
+        sentence, removed with the next word re-capitalized -- "sentence
+        start" also includes right after a "; " or ": " join (found and
+        fixed 2026-09-22, the same session that wired stripProcessLabels()
+        into the Records feed's adapt*Entry() functions -- see
+        strip-adapted-item-labels): prosecution's evidence-item list is
+        assembled as "Evidence: " + descriptions joined with "; ", so a
+        label starting the very first description followed ": " (the
+        "Evidence:" prefix), and a label starting a later description
+        followed "; " (the join separator) -- neither is a "." or "!" or
+        "?" sentence end.
    Sentences that NARRATE the process ("Built under the round-4 backlog
    fold's leaner-rigor pass...", "Folded in round-4 backlog cluster c0494
    ... at creation time") are left alone: removing them would change what a
@@ -2885,7 +2896,7 @@ function summaryLineHtml(summary, term, useRegex) {
 const PROCESS_LABEL_WORDS =
   "round[- ]4\\s+(?:backlog|batch|candidate|discovery|fold|cluster)|clusters?\\s+c\\d{3,4}|residual-record fold|backlog fold|discovery fold";
 const PROCESS_PAREN_LABEL_RE = new RegExp("\\s*\\((?:[^()]*?(?:" + PROCESS_LABEL_WORDS + ")[^()]*?)\\)", "gi");
-const PROCESS_COLON_LABEL_RE = /(^|[.!?]\s+)Round[- ]4\s+(?:backlog\s+)?(?:fold|cluster|candidate discovery|discovery fold)[^:.]{0,70}:\s*(\S)/gi;
+const PROCESS_COLON_LABEL_RE = /(^|[.!?;:]\s+)Round[- ]4\s+(?:backlog\s+)?(?:fold|cluster|candidate discovery|discovery fold)[^:.]{0,70}:\s*(\S)/gi;
 function stripProcessLabels(text) {
   if (!text) return "";
   const original = String(text);
@@ -2895,6 +2906,30 @@ function stripProcessLabels(text) {
   return stripped === original ? original : stripped.replace(/^\s+/, "");
 }
 /* strip-process-labels:end */
+
+/* strip-adapted-item-labels:start */
+/* Records (Headlines) feed gap, found and fixed 2026-09-22: stripProcessLabels() was only
+   ever wired into buildDetailHtml()'s hl(), the evidence drawer's hl(), and
+   visibleSearchText() -- never into the adapt*Entry() functions below, which build the
+   Records row's headline, its "brief"/"medium"/"full" tiers (tiers[0] is the mouse-over
+   tooltip text), and the Headlines trail panel's confidenceNote/sources. All five
+   adapt*Entry() functions wrap their return value in this, so a round-4 backlog-fold
+   label can no longer reach the Records feed (row text, tooltip, or trail) the way it
+   already couldn't reach the expanded detail card. Same scope as stripProcessLabels()
+   itself -- mechanical labels only, not full-sentence process narration (see that
+   function's own doc comment); this only reuses it, it does not widen what it strips. */
+function stripAdaptedItemLabels(item) {
+  item.headline = stripProcessLabels(item.headline);
+  if (Array.isArray(item.tiers)) item.tiers = item.tiers.map(stripProcessLabels);
+  if (item.trail) {
+    if (item.trail.confidenceNote) item.trail.confidenceNote = stripProcessLabels(item.trail.confidenceNote);
+    if (Array.isArray(item.trail.sources)) {
+      item.trail.sources = item.trail.sources.map(src => src && src.name ? { ...src, name: stripProcessLabels(src.name) } : src);
+    }
+  }
+  return item;
+}
+/* strip-adapted-item-labels:end */
 
 function escapeRegExp(str) {
   return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");

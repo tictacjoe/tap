@@ -24,6 +24,9 @@ const names = [
   "combine-tier-text",
   "fullest-tier-text",
   "pack-headline",
+  "strip-process-labels",   // stripAdaptedItemLabels (below) calls stripProcessLabels
+  "strip-adapted-item-labels", // every adapt*Entry() wraps its return in this
+  "flatten-tracker-posts",  // Reporting's real shape: tracker.json is digests of dated entries, not flat posts
   "adapt-deregulation-entry",
   "adapt-govservices-entry",
   "adapt-prosecution-entry",
@@ -32,7 +35,7 @@ const names = [
 ];
 const combined = names.map(n => extractFunction(source, n)).join("\n");
 const exposeNames = [
-  "combineTierText", "fullestTierText", "packHeadline",
+  "combineTierText", "fullestTierText", "packHeadline", "stripAdaptedItemLabels", "flattenTrackerPosts",
   "adaptDeregulationEntry", "adaptGovServicesEntry", "adaptProsecutionEntry",
   "adaptCommunityTopicEntry", "adaptReportingEntry",
 ];
@@ -228,4 +231,77 @@ test("adaptReportingEntry caps at 2 usable tiers (full collapses into medium)", 
 test("adaptReportingEntry uses Uncategorized-safe null category when missing", () => {
   const r = fns.adaptReportingEntry({ what_happened: "x", date: "2026-01-01", category: null });
   assert.equal(r.category, null);
+});
+
+// Found 2026-09-22: stripProcessLabels() was never wired into these adapters, so a round-4
+// backlog-fold label in the underlying raw text reached the Records feed's headline, its
+// mouse-over tooltip (tiers[0]), and the Headlines trail panel (confidenceNote/sources),
+// even though it was already hidden on the expanded detail card and in search. Every
+// adapt*Entry() now wraps its return in stripAdaptedItemLabels().
+test("stripAdaptedItemLabels strips headline, every tier, trail.confidenceNote and trail.sources[].name", () => {
+  const item = {
+    headline: "Agency acted (round-4 backlog cluster c0309) against schools.",
+    tiers: [
+      "Round-4 backlog fold, cluster c0509: The New York Times reported.",
+      "Brief. Update 2026-08-02 (round 4 batch 27, cluster c0385): a recheck.",
+      "Full text (cluster c1234) unaffected otherwise.",
+    ],
+    trail: {
+      confidenceNote: "HIGH confidence (round-4 discovery fold).",
+      sources: [{ name: "Evidence: Round-4 backlog fold, cluster c0284: WaPo reported.", url: "https://example.com" }],
+    },
+  };
+  const stripped = fns.stripAdaptedItemLabels(item);
+  assert.equal(stripped.headline, "Agency acted against schools.");
+  assert.equal(stripped.tiers[0], "The New York Times reported.");
+  assert.equal(stripped.tiers[1], "Brief. Update 2026-08-02: a recheck.", "only the parenthetical is removed; the entry's own Update DATE: marker stays");
+  assert.equal(stripped.tiers[2], "Full text unaffected otherwise.");
+  assert.equal(stripped.trail.confidenceNote, "HIGH confidence.");
+  assert.equal(stripped.trail.sources[0].name, "Evidence: WaPo reported.");
+  assert.equal(stripped.trail.sources[0].url, "https://example.com", "non-name fields on a source are untouched");
+});
+
+test("stripAdaptedItemLabels tolerates a trail with no confidenceNote/sources and returns the same item", () => {
+  const item = { headline: "x", tiers: ["a", "b"], trail: {} };
+  assert.equal(fns.stripAdaptedItemLabels(item), item);
+});
+
+for (const [kind, adaptFn, file] of [
+  ["deregulation", "adaptDeregulationEntry", "deregulation.json"],
+  ["govservices", "adaptGovServicesEntry", "government-services.json"],
+  ["prosecution", "adaptProsecutionEntry", "prosecution.json"],
+  ["communitytopics", "adaptCommunityTopicEntry", "community-topics.json"],
+]) {
+  test(`${kind}: no published entry's Records headline/tiers/trail still carries round-4 backlog-fold language`, () => {
+    const data = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "data", file), "utf8"));
+    // Same specific vocabulary as PROCESS_LABEL_WORDS in index.html (word-boundary'd),
+    // not a bare "round 4" -- that alone false-positives on ordinary text like
+    // "around 400 employees" ("round4" is a literal substring of "around 40...").
+    const LEAK_RE = /\bround[\s-]?4\s+(backlog|batch|candidate|discovery|fold|cluster)|\bbacklog\s+(fold|cluster)|\bclusters?\s+c\d{3,4}\b/i;
+    const leaks = [];
+    for (const entry of data) {
+      const item = fns[adaptFn](entry);
+      const texts = [item.headline, ...(item.tiers || []), item.trail?.confidenceNote, ...((item.trail?.sources || []).map(s => s.name))];
+      if (texts.some(t => t && LEAK_RE.test(t))) leaks.push(entry.id);
+    }
+    assert.deepEqual(leaks, [], `entries whose Records feed output still leaks round-4 language: ${leaks.join(", ")}`);
+  });
+}
+
+// Reporting's own published shape is nested digests (tracker.json is a list of {date, entries:
+// [...]} posts), not one row per entry -- flatten the same way loadAllData() does before adapting.
+// Real Reporting posts are externally scraped news, not TAP's own process narration, so this is
+// a belt-and-suspenders check, not an expected finding.
+test("reporting: no flattened published post's Records headline/tiers still carries round-4 backlog-fold language", () => {
+  const digests = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "data", "tracker.json"), "utf8"));
+  const posts = fns.flattenTrackerPosts(digests);
+  const LEAK_RE = /\bround[\s-]?4\s+(backlog|batch|candidate|discovery|fold|cluster)|\bbacklog\s+(fold|cluster)|\bclusters?\s+c\d{3,4}\b/i;
+  const leaks = [];
+  for (const post of posts) {
+    const item = fns.adaptReportingEntry(post);
+    if ([item.headline, ...item.tiers].some(t => t && LEAK_RE.test(t))) {
+      leaks.push((post.post_title || "").slice(0, 60) + " @ " + post.date);
+    }
+  }
+  assert.deepEqual(leaks, []);
 });
