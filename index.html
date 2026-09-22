@@ -3800,19 +3800,21 @@ function glanceDetailTitleHtml(entry, cfg, hl) {
 }
 /* glance-head:end */
 
-/* Third line of a glance card: [domain tag] - date of action - verified
-   date (per the spec). Lives outside the glance-head block because it
-   needs domainColor()/govservicesDomainLabel(). */
+/* Third line of a glance card: previously [domain tag] - date of action -
+   verified date; collapsed to a single "Last update: <date>" (2026-09-21,
+   Joe's call -- the domain tag, date of action and verified date all
+   dropped from this line). The date is last_substantive_update, falling
+   back to last_verified, same convention Headlines' "Recently updated"
+   sort already uses (see isRecheckNote's neighboring comments) -- a pure
+   re-verification with no real change should not look like a fresh
+   update here either. Lives outside the glance-head block (unchanged
+   from before this simplification) so it stays next to its sibling,
+   the old non-glance card's metaHtml, which still uses domainColor()/
+   govservicesDomainLabel() for its own domain tag. */
 function glanceMetaHtml(entry, cfg, sourceLabel, hl) {
   let html = sourceLabel ? '<span class="source-tag">' + sourceLabel + '</span>' : "";
-  if (cfg.kind === "deregulation") {
-    html += '<span class="domain-tag" style="background:' + domainColor(entry.domain) + '22; color:' + domainColor(entry.domain) + '">' + entry.domain + '</span>';
-    if (entry.agency) html += '<span>' + hl(entry.agency) + '</span>';
-  } else if (cfg.kind === "govservices") {
-    html += '<span class="domain-tag" style="background:' + domainColor(entry.domain) + '22; color:' + domainColor(entry.domain) + '">' + govservicesDomainLabel(entry.domain) + '</span>';
-  }
-  if (entry.date_of_action) html += '<span>' + hl(entry.date_of_action) + '</span>';
-  if (entry.last_verified) html += '<span>verified ' + hl(entry.last_verified) + '</span>';
+  const lastUpdate = entry.last_substantive_update || entry.last_verified;
+  if (lastUpdate) html += '<span>Last update: ' + hl(lastUpdate) + '</span>';
   return html;
 }
 
