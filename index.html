@@ -4051,6 +4051,18 @@ function renderFilterOptions(cfg) {
   sel.value = filterValue;
 }
 
+/* verified-sort:start */
+/* "Last verified, newest first" (Cabinet-Level, Corporate Deregulation and
+   Government Service Redirection; Reporting has no last_verified). last_verified is
+   always a plain YYYY-MM-DD, so a string comparison is a date comparison; an entry
+   with none sorts last. Many entries were rechecked in the same batch and share a
+   date -- Array.sort is stable, so those keep the list's own order rather than
+   being shuffled. */
+function compareByLastVerified(a, b) {
+  return String(b.last_verified || "").localeCompare(String(a.last_verified || ""));
+}
+/* verified-sort:end */
+
 /* alpha-sort:start */
 /* "Alphabetical" (Cabinet-Level only): A to Z by the name each card LEADS with,
    case-insensitive -- the glance "who" when the card shows a glance head
@@ -4093,6 +4105,7 @@ function renderSortToggle(cfg) {
   const options = [['', 'Default']];
   if (cfg.dateAddedField) options.push(['added', 'Most recent entries added']);
   options.push(['activity', 'Most recent activity']);
+  if (cfg.kind !== "tracker") options.push(['verified', 'Last verified, newest first']);
   options.push(['impact', 'Biggest impact first']);
   if (cfg.kind !== "tracker") options.push(['covered', 'Most covered']);
   if (cfg.kind === "prosecution") options.push(['alpha', 'Alphabetical']);
@@ -4220,6 +4233,8 @@ function renderEntries() {
     filtered.sort((a, b) => (b[cfg.dateAddedField] || "").localeCompare(a[cfg.dateAddedField] || ""));
   } else if (sortValue === "activity") {
     filtered.sort((a, b) => extractFirstDate(b[cfg.dateField]) - extractFirstDate(a[cfg.dateField]));
+  } else if (sortValue === "verified" && cfg.kind !== "tracker") {
+    filtered.sort(compareByLastVerified);
   } else if (sortValue === "impact") {
     filtered.sort((a, b) => impactScore(b, cfg) - impactScore(a, cfg));
   } else if (sortValue === "covered") {
