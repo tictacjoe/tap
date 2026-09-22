@@ -1143,28 +1143,32 @@ test("the Evidence drawer escapes hostile evidence text through the entry's hl",
   assert(html.includes("&lt;script&gt;"));
 });
 
-// Cabinet-Level Sources card (2026-09-21): built from entry.evidence, not a `sources` array.
-test("prosecution renders a Sources card of evidence links, leaving out recheck notes", () => {
+// Cabinet-Level Sources card (2026-09-21): just the URLs of entry.evidence (no `sources` array exists).
+test("prosecution renders a Sources card of bare URLs, once each, leaving out recheck notes", () => {
   const entry = {
     offense_category: "Fraud",
     status_category: "Investigation",
     incident_summary: "x",
     status: "y",
     evidence: [
-      { type: "news_report", description: "Reuters report on the subpoenas", source_url: "https://example.com/a", maps_to_element: "e1" },
-      { type: "public_record", description: "Re-verified 2026-09-01: no new developments", source_url: "https://example.com/a", maps_to_element: "e1" },
-      { type: "court_filing", description: "Docket entry with no link", source_url: "", maps_to_element: "e2" }
+      { type: "news_report", description: "Reuters report on the subpoenas", source_url: "https://example.com/a?x=1&y=2", maps_to_element: "e1" },
+      { type: "public_record", description: "Second item citing the same link", source_url: "https://example.com/a?x=1&y=2", maps_to_element: "e2" },
+      { type: "news_report", description: "Re-verified 2026-09-01: no new developments", source_url: "https://example.com/a?x=1&y=2", maps_to_element: "e1" },
+      { type: "court_filing", description: "Docket entry with no link", source_url: "", maps_to_element: "e3" },
+      { type: "news_report", description: "Another outlet", source_url: "https://example.org/b", maps_to_element: "e3" }
     ]
   };
   // Drawer flag left OFF (the live setting): the Sources card must still appear.
   const html = buildDetailHtml(entry, { kind: "prosecution", evidenceDrawerEnabled: false });
   assert(html.includes('<div class="field-label">Sources</div>'), "should render a Sources label");
-  assert(html.includes('<a href="https://example.com/a" target="_blank" rel="noopener">Reuters report on the subpoenas</a>'), "should link the evidence description to its source_url");
-  assert(html.includes("<li>Docket entry with no link</li>"), "an item with no URL renders as plain text");
-  assert(!html.includes("Re-verified 2026-09-01"), "a recheck note whose link is cited elsewhere is not a source");
+  assert(html.includes('<a href="https://example.com/a?x=1&amp;y=2" target="_blank" rel="noopener">https://example.com/a?x=1&amp;y=2</a>'), "link text is the URL itself, escaped");
+  assert(html.includes('>https://example.org/b</a>'), "should list the second URL");
+  assert.equal((html.match(/example\.com\/a\?x=1&amp;y=2<\/a>/g) || []).length, 1, "a URL cited by several evidence items is listed once");
+  assert(!html.includes("Reuters report") && !html.includes("Docket entry with no link"), "evidence descriptions are not shown");
+  assert(!html.includes("Re-verified 2026-09-01"), "recheck notes are not shown");
 });
 
-test("prosecution keeps a recheck note that is the only place its link is cited", () => {
+test("prosecution keeps a recheck note's URL when it is the only place that link is cited", () => {
   const entry = {
     offense_category: "Fraud", status_category: "Investigation", incident_summary: "x", status: "y",
     evidence: [{ type: "news_report", description: "Re-verified 2026-09-01: found new filing", source_url: "https://example.com/only", maps_to_element: "e1" }]

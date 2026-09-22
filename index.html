@@ -993,7 +993,7 @@
      enough signal that these are clickable links rather than plain prose;
      a source description can run a full sentence long, so it needs to
      read as a reference at a glance, not just on mouseover. */
-  .exhibit-list a { color: var(--brass); text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--brass) 50%, transparent); }
+  .exhibit-list a { color: var(--brass); text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--brass) 50%, transparent); overflow-wrap: anywhere; } /* anywhere: Cabinet-Level lists bare URLs, which have no spaces to wrap at */
   .exhibit-list a:hover { text-decoration-color: var(--brass); }
 
   .figure-group-label {
@@ -3596,7 +3596,7 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
       ? '<div class="field-group entry-aside-card"><div class="field-label">Accountability Concern Type</div><div class="field-value">' + hl(entry.concern_type) + ' <em>(not alleged as a legal violation)</em></div></div>'
       : '') +
     '<div class="field-group entry-aside-card"><div class="field-label">Status Stage</div><div class="field-value">' + hl(entry.status_category) + '</div></div>' +
-    buildProsecutionSourcesCardHtml(entry, hl);
+    buildProsecutionSourcesCardHtml(entry);
   const noteHtml = '<div class="field-group">' + buildConfidenceNoteHtml(entry, hl, summary) + '</div>' + buildPullQuoteHtml(entry, hl);
   return buildEntryColsHtml(mainHtml, asideHtml, noteHtml) +
     (cfg.evidenceDrawerEnabled ? buildEvidenceDrawerHtml(entry, cfg, hl) : "") +
@@ -3605,17 +3605,14 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
 /* Cabinet-Level has no `sources` array; its sources are the `url`s of entry.evidence
    (2026-09-21, Joe's option 3 after the Evidence drawer was switched off). Same list and
    same recheck-note rule as the Headlines Sources trail (evidenceForSourceTrail), so the
-   two never disagree. Link text is the evidence description. Empty list => no card. */
-function buildProsecutionSourcesCardHtml(entry, hl) {
-  const items = evidenceForSourceTrail(entry.evidence);
-  if (!items.length) return "";
+   two never disagree. Just the list of URLs (Joe's call: no evidence descriptions), each
+   shown once, in evidence order. Empty list => no card. */
+function buildProsecutionSourcesCardHtml(entry) {
+  const urls = [...new Set(evidenceForSourceTrail(entry.evidence).map(ev => ev.source_url).filter(Boolean))];
+  if (!urls.length) return "";
   return '<div class="field-group entry-aside-card"><div class="field-label">Sources</div><ul class="exhibit-list">' +
-    items.map(ev => {
-      const label = hl(ev.description || ev.type || "Evidence");
-      return ev.source_url
-        ? '<li><a href="' + escapeHtml(safeHref(ev.source_url)) + '" target="_blank" rel="noopener">' + label + '</a></li>'
-        : '<li>' + label + '</li>';
-    }).join("") + '</ul></div>';
+    urls.map(url => '<li><a href="' + escapeHtml(safeHref(url)) + '" target="_blank" rel="noopener">' + escapeHtml(url) + '</a></li>').join("") +
+    '</ul></div>';
 }
 /* build-detail-html:end */
 
