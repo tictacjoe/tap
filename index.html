@@ -3769,14 +3769,39 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
   // Broader Pattern to second/top-middle for migrated entries only, an
   // inconsistency nobody asked for. Entries without the flag (the ~267 not
   // yet migrated) keep the original two-card layout untouched.
+  //
+  // statusSkimCardHtml (2026-09-22, Joe: "I thought we were going to keep the
+  // status box and just keep 1 or 2 lines of current status in it"): a small
+  // Status card, skim-line only (section_summaries.status, same authored
+  // one-sentence pattern as the other section_summaries fields), for
+  // narrative_combined entries -- restoring a Status box without undoing
+  // Braid's point, since the full status text stays where Braid put it, as
+  // the trailing sentence inside "What happened." Deliberately keyed to the
+  // NEW section_summaries.status field, not just narrative_combined alone:
+  // that field doesn't exist on any of the 116 migrated entries yet (real
+  // authoring work, not a display trick -- see project_tap_cross_ex's
+  // capacity-pilot precedent for why this shouldn't be rushed), so this
+  // renders nothing and every migrated entry's layout stays byte-identical
+  // until an entry's skim line is actually written. Once it is, the layout
+  // reverts to the SAME card order as the non-merged branch below (What
+  // happened, Status, Broader Pattern, Violation Type) -- no swap needed,
+  // since a real Status card exists again to hold third place open for
+  // Broader Pattern; the swap only still applies to the remaining
+  // skim-line-less migrated entries.
   const violationTypeCardHtml = '<div class="field-group entry-main-card"><div class="field-label">Violation Type (in full)</div><div class="field-value">' + hl(entry.offense_category_raw || entry.offense_category) + '</div></div>';
   const broaderPatternCardHtml = '<div class="field-group entry-main-card"><div class="field-label">Broader Pattern</div><div class="field-value">' + buildCauseFieldHtml(entry, term, useRegex) + '</div></div>';
   const tailCardsHtml =
     '<div class="field-group entry-main-card"><div class="field-label">Anticipated Defense</div><div class="field-value">' + hl(entry.rebuttal_anticipated) + '</div></div>' +
     '<div class="field-group entry-main-card"><div class="field-label">TAP\'s Rebuttal</div><div class="field-value">' + hl(entry.comeback) + '</div></div>';
+  const hasStatusSkim = !!(entry.narrative_combined && entry.section_summaries?.status);
+  const statusSkimCardHtml = hasStatusSkim
+    ? '<div class="field-group entry-main-card"><div class="field-label">Status</div><div class="field-value">' + summary(entry.section_summaries.status) + '</div></div>'
+    : '';
   const mainHtml = entry.narrative_combined
     ? '<div class="field-group entry-main-card"><div class="field-label">What happened</div><div class="field-value">' + summary(entry.section_summaries?.incident_summary) + buildFieldTimelineHtml(entry, "incident_summary", hl) + buildFieldTimelineHtml(entry, "status", hl) + '</div></div>' +
-      violationTypeCardHtml + broaderPatternCardHtml + tailCardsHtml
+      (hasStatusSkim
+        ? statusSkimCardHtml + broaderPatternCardHtml + violationTypeCardHtml + tailCardsHtml
+        : violationTypeCardHtml + broaderPatternCardHtml + tailCardsHtml)
     : '<div class="field-group entry-main-card"><div class="field-label">What happened</div><div class="field-value">' + summary(entry.section_summaries?.incident_summary) + buildFieldTimelineHtml(entry, "incident_summary", hl) + '</div></div>' +
       '<div class="field-group entry-main-card"><div class="field-label">Status</div><div class="field-value">' + buildFieldTimelineHtml(entry, "status", hl) + '</div></div>' +
       broaderPatternCardHtml + violationTypeCardHtml + tailCardsHtml;

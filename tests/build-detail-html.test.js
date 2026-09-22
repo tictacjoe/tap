@@ -327,6 +327,39 @@ test("prosecution narrative_combined still puts Broader Pattern top-right (third
   }
 });
 
+test("prosecution narrative_combined with section_summaries.status gets a skim-line-only Status card, full text stays merged too (2026-09-22)", () => {
+  const entry = {
+    offense_category: "Fraud", status_category: "Investigation", incident_summary: "First part.",
+    status: "Second part, the full status prose.", narrative_combined: true,
+    section_summaries: { status: "Short current-status skim line." },
+    cause: "The pattern.",
+  };
+  const result = buildDetailHtml(entry, { kind: "prosecution" });
+  // A real Status card exists again, skim-line only.
+  assert(result.includes('<div class="field-label">Status</div><div class="field-value"><p class="field-summary">Short current-status skim line.</p></div>'), "Status card should hold only the skim line");
+  // The full status text is NOT duplicated into the small Status card...
+  const statusCardStart = result.indexOf('<div class="field-label">Status</div>');
+  const broaderPatternStart = result.indexOf('<div class="field-label">Broader Pattern</div>');
+  const statusCardHtml = result.slice(statusCardStart, broaderPatternStart);
+  assert(!statusCardHtml.includes("the full status prose"), "full status text should not appear inside the small Status card");
+  // ...it stays merged inside What happened, same as before this change.
+  const whatHappenedStart = result.indexOf('<div class="field-label">What happened</div>');
+  const whatHappenedHtml = result.slice(whatHappenedStart, statusCardStart);
+  assert(whatHappenedHtml.includes("<p>Second part, the full status prose.</p>"), "full status text should still be merged into What happened");
+  // Card order reverts to the same order as the non-merged branch: What happened, Status, Broader Pattern, Violation Type.
+  const cards = [...result.matchAll(/<div class="field-label">([^<]+)<\/div>/g)].map(m => m[1]);
+  assert.deepEqual(cards.slice(0, 4), ["What happened", "Status", "Broader Pattern", "Violation Type (in full)"]);
+});
+
+test("prosecution narrative_combined without section_summaries.status renders no Status card at all (unchanged from before)", () => {
+  const entry = {
+    offense_category: "Fraud", status_category: "Investigation", incident_summary: "x",
+    status: "y", narrative_combined: true,
+  };
+  const result = buildDetailHtml(entry, { kind: "prosecution" });
+  assert(!result.includes('<div class="field-label">Status</div>'), "no Status card without an authored skim line");
+});
+
 test("splitCauseReferences returns one plain segment when there are no references", () => {
   assert.deepEqual(splitCauseReferences("Plain text.", undefined), [{ text: "Plain text.", ref: null }]);
   assert.deepEqual(splitCauseReferences("Plain text.", []), [{ text: "Plain text.", ref: null }]);
