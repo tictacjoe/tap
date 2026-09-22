@@ -97,3 +97,21 @@ test("buildFieldTimelineHtml renders nothing for an empty or missing field", () 
   assert.equal(buildFieldTimelineHtml({}, "status", identity), "");
   assert.equal(buildFieldTimelineHtml({ status: "" }, "status", identity), "");
 });
+
+test("buildFieldTimelineHtml splits a marker-free field on blank lines into separate paragraphs (narrative_combined's merged prose)", () => {
+  const entry = { incident_summary: "First paragraph.\n\nSecond paragraph.\n\nThird paragraph." };
+  const html = buildFieldTimelineHtml(entry, "incident_summary", identity);
+  assert.equal(html, "<p>First paragraph.</p><p>Second paragraph.</p><p>Third paragraph.</p>");
+});
+
+test("buildFieldTimelineHtml tolerates extra whitespace around a blank-line paragraph break", () => {
+  const entry = { incident_summary: "First.\n\n  \nSecond." };
+  const html = buildFieldTimelineHtml(entry, "incident_summary", identity);
+  assert.equal(html, "<p>First.</p><p>Second.</p>");
+});
+
+test("buildFieldTimelineHtml passes each split paragraph through hl individually", () => {
+  const entry = { incident_summary: "one\n\ntwo" };
+  const html = buildFieldTimelineHtml(entry, "incident_summary", (t) => t.toUpperCase());
+  assert.equal(html, "<p>ONE</p><p>TWO</p>");
+});

@@ -285,6 +285,48 @@ test("prosecution renders Broader Pattern, Anticipated Defense, and TAP's Rebutt
   assert(rebuttalIndex < comebackIndex, "TAP's Rebuttal should come after Anticipated Defense");
 });
 
+test("prosecution with narrative_combined merges What happened and Status into one card, no separate Status heading", () => {
+  const entry = {
+    offense_category: "Fraud", status_category: "Investigation", incident_summary: "First part.",
+    status: "Second part.", narrative_combined: true,
+  };
+  const result = buildDetailHtml(entry, { kind: "prosecution" });
+  assert(!result.includes('<div class="field-label">Status</div>'), "no separate Status card");
+  assert.equal((result.match(/field-label">What happened</g) || []).length, 1, "exactly one What happened card");
+  const whatHappenedStart = result.indexOf('<div class="field-label">What happened</div><div class="field-value">');
+  const violationStart = result.indexOf('<div class="field-label">Violation Type (in full)</div>');
+  const whatHappenedHtml = result.slice(whatHappenedStart, violationStart);
+  assert(whatHappenedHtml.includes("<p>First part.</p>"), "incident_summary renders inside the merged card");
+  assert(whatHappenedHtml.includes("<p>Second part.</p>"), "status renders inside the SAME merged card, right after incident_summary");
+});
+
+test("prosecution without narrative_combined keeps the original two-card layout (backward compatible)", () => {
+  const entry = {
+    offense_category: "Fraud", status_category: "Investigation", incident_summary: "First part.", status: "Second part.",
+  };
+  const result = buildDetailHtml(entry, { kind: "prosecution" });
+  assert(result.includes('<div class="field-label">What happened</div><div class="field-value"><p>First part.</p></div>'));
+  assert(result.includes('<div class="field-label">Status</div><div class="field-value"><p>Second part.</p></div>'));
+});
+
+test("prosecution narrative_combined still puts Broader Pattern top-right (third card) despite Status no longer being a separate card", () => {
+  const merged = buildDetailHtml({
+    offense_category: "Fraud", status_category: "Investigation", incident_summary: "x", status: "y",
+    cause: "The pattern.", narrative_combined: true,
+  }, { kind: "prosecution" });
+  const unmerged = buildDetailHtml({
+    offense_category: "Fraud", status_category: "Investigation", incident_summary: "x", status: "y",
+    cause: "The pattern.",
+  }, { kind: "prosecution" });
+  // Broader Pattern must be the third field-group card in reading order in BOTH cases,
+  // so assignCardsToColumns (which seeds columns 0/1/2 from the first three cards)
+  // always lands it in the same column regardless of migration state.
+  for (const result of [merged, unmerged]) {
+    const cards = [...result.matchAll(/<div class="field-label">([^<]+)<\/div>/g)].map(m => m[1]);
+    assert.equal(cards[2], "Broader Pattern", `third card should be Broader Pattern, got: ${cards.join(", ")}`);
+  }
+});
+
 test("splitCauseReferences returns one plain segment when there are no references", () => {
   assert.deepEqual(splitCauseReferences("Plain text.", undefined), [{ text: "Plain text.", ref: null }]);
   assert.deepEqual(splitCauseReferences("Plain text.", []), [{ text: "Plain text.", ref: null }]);

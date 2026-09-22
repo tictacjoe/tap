@@ -3266,7 +3266,16 @@ function updatesLabel(count) {
 function buildFieldTimelineHtml(entry, field, hl) {
   const part = entry.timeline && entry.timeline[field];
   if (!part || !Array.isArray(part.updates) || part.updates.length === 0) {
-    return entry[field] ? "<p>" + hl(entry[field]) + "</p>" : "";
+    // A field with no Update markers can still be authored as more than one
+    // paragraph (a blank line between them, e.g. narrative_combined's merged
+    // What-happened/Status prose) -- split on that and give each its own <p>,
+    // the same way a field WITH markers already gets one <p> per marker
+    // chunk below, rather than collapsing every paragraph break into a
+    // single <p> (where it would just vanish -- browsers collapse
+    // whitespace, so a raw "\n\n" renders as nothing without this split).
+    // A field with no blank line at all still yields exactly one <p>, byte-
+    // for-byte the same as before this split existed.
+    return entry[field] ? entry[field].split(/\n\s*\n/).map(p => "<p>" + hl(p.trim()) + "</p>").join("") : "";
   }
   const sorted = sortUpdatesNewestFirst(part.updates);
   return (part.base ? "<p>" + hl(part.base) + "</p>" : "") +
@@ -3722,13 +3731,31 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
   // the next unfilled column) -- so this ordering is what puts Status top-middle
   // and Broader Pattern top-right. Violation Type (in full) drops to fourth,
   // filling in wherever the shortest column lands after that.
-  const mainHtml =
-    '<div class="field-group entry-main-card"><div class="field-label">What happened</div><div class="field-value">' + summary(entry.section_summaries?.incident_summary) + buildFieldTimelineHtml(entry, "incident_summary", hl) + '</div></div>' +
-    '<div class="field-group entry-main-card"><div class="field-label">Status</div><div class="field-value">' + buildFieldTimelineHtml(entry, "status", hl) + '</div></div>' +
-    '<div class="field-group entry-main-card"><div class="field-label">Broader Pattern</div><div class="field-value">' + buildCauseFieldHtml(entry, term, useRegex) + '</div></div>' +
-    '<div class="field-group entry-main-card"><div class="field-label">Violation Type (in full)</div><div class="field-value">' + hl(entry.offense_category_raw || entry.offense_category) + '</div></div>' +
+  //
+  // narrative_combined (added same day): once an entry's What-happened/Status
+  // rewrite is done (see prosecution/cabinet-level/SCHEMA.md's field section),
+  // `status` is just a short trailing sentence, not a full box's worth of
+  // content -- it renders as the tail of the SAME "What happened" card
+  // (buildFieldTimelineHtml on "status" appended right after the one on
+  // "incident_summary", inside one field-group) rather than its own card, so
+  // there's no more "Status" heading breaking up one continuous narrative.
+  // Violation Type (in full) and Broader Pattern swap order in this branch
+  // specifically so Broader Pattern STAYS the third card (top-right) either
+  // way -- losing the separate Status card would otherwise silently promote
+  // Broader Pattern to second/top-middle for migrated entries only, an
+  // inconsistency nobody asked for. Entries without the flag (the ~267 not
+  // yet migrated) keep the original two-card layout untouched.
+  const violationTypeCardHtml = '<div class="field-group entry-main-card"><div class="field-label">Violation Type (in full)</div><div class="field-value">' + hl(entry.offense_category_raw || entry.offense_category) + '</div></div>';
+  const broaderPatternCardHtml = '<div class="field-group entry-main-card"><div class="field-label">Broader Pattern</div><div class="field-value">' + buildCauseFieldHtml(entry, term, useRegex) + '</div></div>';
+  const tailCardsHtml =
     '<div class="field-group entry-main-card"><div class="field-label">Anticipated Defense</div><div class="field-value">' + hl(entry.rebuttal_anticipated) + '</div></div>' +
     '<div class="field-group entry-main-card"><div class="field-label">TAP\'s Rebuttal</div><div class="field-value">' + hl(entry.comeback) + '</div></div>';
+  const mainHtml = entry.narrative_combined
+    ? '<div class="field-group entry-main-card"><div class="field-label">What happened</div><div class="field-value">' + summary(entry.section_summaries?.incident_summary) + buildFieldTimelineHtml(entry, "incident_summary", hl) + buildFieldTimelineHtml(entry, "status", hl) + '</div></div>' +
+      violationTypeCardHtml + broaderPatternCardHtml + tailCardsHtml
+    : '<div class="field-group entry-main-card"><div class="field-label">What happened</div><div class="field-value">' + summary(entry.section_summaries?.incident_summary) + buildFieldTimelineHtml(entry, "incident_summary", hl) + '</div></div>' +
+      '<div class="field-group entry-main-card"><div class="field-label">Status</div><div class="field-value">' + buildFieldTimelineHtml(entry, "status", hl) + '</div></div>' +
+      broaderPatternCardHtml + violationTypeCardHtml + tailCardsHtml;
   // Violation/Concern Type and Status Stage move into the glance card's harm line
   // instead (2026-09-22, Joe's call; see buildGlanceHeadHtml) -- omitted here only
   // when glance is actually showing for this entry, so the information is never
