@@ -701,7 +701,7 @@ const layoutEntries = {
       rebuttal_anticipated: "Defense.",
       comeback: "Rebuttal.",
     },
-    order: [">What happened</div>", ">Violation Type (in full)</div>", ">Status</div>", ">Broader Pattern</div>", ">Anticipated Defense</div>", ">TAP's Rebuttal</div>", ">Violation Type</div>", ">Status Stage</div>", ">Confidence note</div>", "entry-aside-quote"],
+    order: [">What happened</div>", ">Violation Type (in full)</div>", ">Status</div>", ">Broader Pattern</div>", ">Anticipated Defense</div>", ">TAP's Rebuttal</div>", ">Violation/Concern Type</div>", ">Status Stage</div>", ">Confidence note</div>", "entry-aside-quote"],
   },
 };
 
@@ -1181,4 +1181,28 @@ test("prosecution with no evidence renders no Sources card", () => {
   const entry = { offense_category: "Fraud", status_category: "Investigation", incident_summary: "x", status: "y", evidence: [] };
   const html = buildDetailHtml(entry, { kind: "prosecution" });
   assert(!html.includes('<div class="field-label">Sources</div>'));
+});
+
+// Violation/Concern Type card (2026-09-21): one card, not two. Real violation label wins;
+// else the concern label with its caveat; else plain "Other/Unclassified" with no caveat.
+test("prosecution shows the real Violation Type alone when offense_category is classified", () => {
+  const entry = { offense_category: "War Powers Resolution Violation", concern_type: null, status_category: "x", incident_summary: "x", status: "x" };
+  const html = buildDetailHtml(entry, { kind: "prosecution" });
+  assert(html.includes('<div class="field-label">Violation/Concern Type</div><div class="field-value">War Powers Resolution Violation</div>'));
+  assert(!html.includes("not alleged as a legal violation"));
+  assert.equal((html.match(/field-label">Violation\/Concern Type</g) || []).length, 1, "only one Violation/Concern card, not two");
+});
+
+test("prosecution shows the Concern Type, with its caveat, when offense_category is Other/Unclassified but a concern matched", () => {
+  const entry = { offense_category: "Other/Unclassified", concern_type: "Press Freedom / Newsgathering Interference", status_category: "x", incident_summary: "x", status: "x" };
+  const html = buildDetailHtml(entry, { kind: "prosecution" });
+  assert(html.includes('<div class="field-label">Violation/Concern Type</div><div class="field-value">Press Freedom / Newsgathering Interference <em>(not alleged as a legal violation)</em></div>'));
+  assert.equal((html.match(/field-label">Violation\/Concern Type</g) || []).length, 1);
+});
+
+test("prosecution shows plain Other/Unclassified, no caveat, when neither classifier matched", () => {
+  const entry = { offense_category: "Other/Unclassified", concern_type: "Other/Unclassified", status_category: "x", incident_summary: "x", status: "x" };
+  const html = buildDetailHtml(entry, { kind: "prosecution" });
+  assert(html.includes('<div class="field-label">Violation/Concern Type</div><div class="field-value">Other/Unclassified</div>'));
+  assert(!html.includes("not alleged as a legal violation"));
 });

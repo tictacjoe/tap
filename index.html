@@ -2667,6 +2667,20 @@ function classifyOffenseCategory(raw) {
     [/federal records act/, "Federal Records Act Violation"],
     [/whistleblower protection act|whistleblower-disclosure and congressional-notification|intelligence community whistleblower/, "Whistleblower Protection Act Violation"],
     [/inspector general act/, "Inspector General Act Violation"],
+    // Added 2026-09-21 (Joe's request to narrow the residual Other/Unclassified
+    // bucket): each pattern anchors to a statute, clause or exact phrase the
+    // entry's own offense_category text actually uses -- not a topic guess.
+    [/emoluments clause/, "Foreign Emoluments Clause Violation"],
+    [/war powers resolution/, "War Powers Resolution Violation"],
+    [/privacy protection act/, "Privacy Protection Act Violation"],
+    [/18\s*u\.?\s*s\.?\s*c\.?\s*§?\s*1001|false statement to congress/, "False Statement to Congress (18 U.S.C. § 1001)"],
+    [/26\s*u\.?\s*s\.?\s*c\.?\s*§?\s*7217/, "IRS Non-Interference Violation (26 U.S.C. § 7217)"],
+    [/42\s*u\.?\s*s\.?\s*c\.?\s*§?\s*1975/, "Civil Rights Commission Act Violation (42 U.S.C. § 1975)"],
+    [/violation of a federal court injunction|defiance of a federal court order|court's? contempt inquiry/, "Federal Court Order Defiance"],
+    [/posse comitatus/, "Posse Comitatus Act Concern"],
+    [/home rule act/, "D.C. Home Rule Act Dispute"],
+    [/circumvent(ing)? the senate confirmation|senate advice-and-consent review|circumventing senate/, "Senate Confirmation Bypass"],
+    [/federal procurement authority violation|exercising contracting authority .{0,20}did not legally hold/, "Federal Procurement Authority Violation"],
   ];
 
   for (const [pattern, label] of rules) {
@@ -2713,6 +2727,20 @@ function classifyConcernType(raw) {
     [/institutional.credibility/, "Institutional Credibility Concern"],
     [/perjury|referred for investigation/, "Referred for Investigation (Not Charged)"],
     [/institutional.accountability/, "Institutional Accountability Concern (General)"],
+    // Added 2026-09-21, same narrowing pass as classifyOffenseCategory above --
+    // these entries explicitly disclaim a legal violation (no criminal/civil
+    // charge, "not itself unlawful"), so they stay concern-framed, not violation-framed.
+    [/retribution pattern|double.?standard|disparate treatment|target(ing)? (a )?political critic|demand the firing of|punishing or sidelining|public(ly)? (presidential )?demand to prosecute named|suspending (two |several )?career prosecutors/, "Retaliation Against Critics or Political Opponents"],
+    [/grand jury.{0,30}(refus|declin)|failure to persuade.{0,20}grand jur(y|ies)|grand jur(y|ies).{0,20}fail(ed)? to indict|failed at every stage|found no evidence of criminal conduct|jury acquittal/, "Failed or Rejected Prosecution"],
+    [/obstructing congressional oversight|oversight visit|internal watchdog failing|oversight inquiry|congressional investigative power|obstruction of a duly-elected member/, "Congressional or Internal Oversight Obstructed"],
+    [/press freedom|chills journalism|press-credentialing|leak-prosecution apparatus|anti-leak campaign/, "Press Freedom / Newsgathering Interference"],
+    [/qualification standards disregarded|documented pattern of threatening|fringe views|undisclosed in the official announcement|credible.{0,20}corroborated allegations/, "Appointment/Nomination With Undisclosed or Disqualifying Record"],
+    [/foreign self-dealing|pay-to-play|undisclosed compensation|redirection of congressionally-appropriated/, "Self-Dealing or Undisclosed Financial Conflict"],
+    [/personal.{0,10}recreational misuse|misuse of (fbi|federal) aircraft|waiving standard security-clearance/, "Misuse of Official Resources or Authority"],
+    [/inhumane conditions|internal civil rights and detention oversight|weakened oversight.{0,20}(enabling|immunity)|permanently expanding a criminal database/, "Immigration Enforcement Oversight Weakened"],
+    [/alleged obstruction\/cover-up|obstruction-adjacent|cover-up of/, "Alleged Obstruction or Cover-Up (Non-Adjudicated)"],
+    [/evasion of court-ordered (testimony|deposition)/, "Evasion of Court-Ordered Testimony"],
+    [/no criminal or civil legal violation established|not an allegation of illegality|judicially-sustained administration action/, "Executive Action With No Established Legal Violation (Policy Dispute)"],
   ];
 
   for (const [pattern, label] of rules) {
@@ -3496,6 +3524,13 @@ function buildEvidenceDrawerHtml(entry, cfg, hl, opts) {
 }
 /* evidence-drawer:end */
 
+/* One card, not two: shows the real Violation Type when classifyOffenseCategory matched
+   a statute/doctrine, else the Concern Type when classifyConcernType matched a pattern
+   (with the same "not alleged as a legal violation" caveat as before), else plain
+   "Other/Unclassified" with no caveat. Replaces the old always-shown "Violation Type" card
+   plus a second "Accountability Concern Type" card that only appeared for concern matches --
+   that pairing showed "Violation Type: Other/Unclassified" right next to the concern label,
+   which read as two answers to the same question (2026-09-21, Joe's call to unify the label). */
 /* build-detail-html:start */
 function buildDetailHtml(entry, cfg, term, useRegex) {
   // Same highlighting the card's title/meta line already gets --
@@ -3610,10 +3645,7 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
     '<div class="field-group entry-main-card"><div class="field-label">Anticipated Defense</div><div class="field-value">' + hl(entry.rebuttal_anticipated) + '</div></div>' +
     '<div class="field-group entry-main-card"><div class="field-label">TAP\'s Rebuttal</div><div class="field-value">' + hl(entry.comeback) + '</div></div>';
   const asideHtml =
-    '<div class="field-group entry-aside-card"><div class="field-label">Violation Type</div><div class="field-value">' + hl(entry.offense_category) + '</div></div>' +
-    (entry.concern_type && entry.concern_type !== "Other/Unclassified"
-      ? '<div class="field-group entry-aside-card"><div class="field-label">Accountability Concern Type</div><div class="field-value">' + hl(entry.concern_type) + ' <em>(not alleged as a legal violation)</em></div></div>'
-      : '') +
+    buildViolationConcernCardHtml(entry, hl) +
     '<div class="field-group entry-aside-card"><div class="field-label">Status Stage</div><div class="field-value">' + hl(entry.status_category) + '</div></div>' +
     buildProsecutionSourcesCardHtml(entry);
   const noteHtml = '<div class="field-group">' + buildConfidenceNoteHtml(entry, hl, summary) + '</div>' + buildPullQuoteHtml(entry, hl);
@@ -3621,6 +3653,21 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
     (cfg.evidenceDrawerEnabled ? buildEvidenceDrawerHtml(entry, cfg, hl) : "") +
     buildUpdateRequestHtml(entry, cfg);
 }
+// Shared by the detail card above and the glance meta-line (outside this region, in
+// glanceMetaHtml) -- which raw string is the entry's Violation/Concern Type value, and
+// whether it's the concern (not a violation) case.
+function violationConcernValue(entry) {
+  const isRealViolation = entry.offense_category && entry.offense_category !== "Other/Unclassified";
+  const isRealConcern = !isRealViolation && entry.concern_type && entry.concern_type !== "Other/Unclassified";
+  return { text: isRealViolation ? entry.offense_category : isRealConcern ? entry.concern_type : entry.offense_category, isConcern: isRealConcern };
+}
+
+function buildViolationConcernCardHtml(entry, hl) {
+  const v = violationConcernValue(entry);
+  const caveat = v.isConcern ? ' <em>(not alleged as a legal violation)</em>' : '';
+  return '<div class="field-group entry-aside-card"><div class="field-label">Violation/Concern Type</div><div class="field-value">' + hl(v.text) + caveat + '</div></div>';
+}
+
 /* Cabinet-Level has no `sources` array; its sources are the `url`s of entry.evidence
    (2026-09-21, Joe's option 3 after the Evidence drawer was switched off). Same list and
    same recheck-note rule as the Headlines Sources trail (evidenceForSourceTrail), so the
@@ -3843,9 +3890,8 @@ function buildEntryCard(entry, cfg, docketLabel, sourceLabel, term, useRegex, ca
                (entry.submitted_claim ? '<span>“' + hl(truncate(entry.submitted_claim, 100)) + '”</span>' : '') +
                '<span>' + hl(truncate(entry.summary || "", 100)) + '</span>';
   } else {
-    metaHtml += '<span class="meta-field"><span class="meta-field-label">Violation Type</span><span class="meta-field-value">' + hl(entry.offense_category) + '</span></span>' +
+    metaHtml += '<span class="meta-field"><span class="meta-field-label">Violation/Concern Type</span><span class="meta-field-value">' + hl(violationConcernValue(entry).text) + '</span></span>' +
                '<span class="meta-field"><span class="meta-field-label">Status Stage</span><span class="meta-field-value">' + hl(entry.status_category) + '</span></span>' +
-               (entry.concern_type ? '<span class="meta-field"><span class="meta-field-label">Concern</span><span class="meta-field-value">' + hl(entry.concern_type) + '</span></span>' : '') +
                (entry.date_of_action ? '<span>' + hl(entry.date_of_action) + '</span>' : '') +
                '<span>verified ' + (entry.last_verified || "") + '</span>';
   }
