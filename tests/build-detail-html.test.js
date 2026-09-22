@@ -36,6 +36,12 @@ const safeHrefFunctionSource = extractFunction(source, "safe-href");
 const buildPullQuoteHtmlFunctionSource = extractFunction(source, "build-pull-quote-html");
 const buildEntryColsHtmlFunctionSource = extractFunction(source, "build-entry-cols-html");
 const evidenceDrawerFunctionSource = extractFunction(source, "evidence-drawer");
+// Added 2026-09-22: buildDetailHtml's prosecution/CLA branch now calls
+// glanceActive() (to decide whether to omit the Violation/Concern Type and
+// Status Stage aside cards, which moved into the glance card's harm line) --
+// another direct dependency this harness needs pulled in explicitly, same
+// reason as the safeHref/buildPullQuoteHtml note above.
+const glanceHeadFunctionSource = extractFunction(source, "glance-head");
 
 // safeHref resolves relative URLs against location.href, which doesn't
 // exist in Node -- give it a fixed base so absolute test URLs round-trip.
@@ -59,7 +65,8 @@ const combined = escapeHtmlFunctionSource + "\n" + summaryLineFunctionSource + "
   highlightMatchesFunctionSource + "\n" + buildUpdateRequestHtmlFunctionSource + "\n" +
   updateTimelineFunctionSource + "\n" + buildConfidenceNoteHtmlFunctionSource + "\n" +
   safeHrefFunctionSource + "\n" + buildPullQuoteHtmlFunctionSource + "\n" + buildEntryColsHtmlFunctionSource + "\n" +
-  buildFiguresHtmlStubSource + "\n" + evidenceDrawerFunctionSource + "\n" + buildDetailHtmlFunctionSource;
+  buildFiguresHtmlStubSource + "\n" + evidenceDrawerFunctionSource + "\n" + glanceHeadFunctionSource + "\n" +
+  buildDetailHtmlFunctionSource;
 const buildDetailHtml = (0, eval)(`${combined}\nbuildDetailHtml;`);
 
 
@@ -1326,4 +1333,35 @@ test("prosecution shows plain Other/Unclassified, no caveat, when neither classi
   const html = buildDetailHtml(entry, { kind: "prosecution" });
   assert(html.includes('<div class="field-label">Violation/Concern Type</div><div class="field-value">Other/Unclassified</div>'));
   assert(!html.includes("not alleged as a legal violation"));
+});
+
+function validGlanceForDetail() {
+  return {
+    who: "Example Official, Secretary of Something",
+    what: "Did the thing that harmed people",
+    harm: { kind: "rights", certainty: "documented", who: "Affected people" },
+    reviewed: "2026-09-20",
+  };
+}
+
+test("prosecution omits the Violation/Concern Type and Status Stage aside cards once glance is showing (moved into the glance line instead)", () => {
+  const entry = {
+    offense_category: "Fraud", status_category: "Investigation", incident_summary: "x", status: "x",
+    glance: validGlanceForDetail(),
+  };
+  const html = buildDetailHtml(entry, { kind: "prosecution", glanceEnabled: true });
+  assert(!html.includes("Violation/Concern Type"), "Violation/Concern Type card should be gone from the expanded entry");
+  assert(!html.includes('<div class="field-label">Status Stage</div>'), "Status Stage card should be gone from the expanded entry");
+});
+
+test("prosecution keeps the Violation/Concern Type and Status Stage aside cards when glance is off or the entry's glance block is invalid", () => {
+  const entryFlagOff = { offense_category: "Fraud", status_category: "Investigation", incident_summary: "x", status: "x", glance: validGlanceForDetail() };
+  const htmlFlagOff = buildDetailHtml(entryFlagOff, { kind: "prosecution", glanceEnabled: false });
+  assert(htmlFlagOff.includes('<div class="field-label">Violation/Concern Type</div>'));
+  assert(htmlFlagOff.includes('<div class="field-label">Status Stage</div>'));
+
+  const entryBadGlance = { offense_category: "Fraud", status_category: "Investigation", incident_summary: "x", status: "x", glance: { who: "" } };
+  const htmlBadGlance = buildDetailHtml(entryBadGlance, { kind: "prosecution", glanceEnabled: true });
+  assert(htmlBadGlance.includes('<div class="field-label">Violation/Concern Type</div>'), "an invalid glance block must not cause this data to disappear entirely");
+  assert(htmlBadGlance.includes('<div class="field-label">Status Stage</div>'));
 });

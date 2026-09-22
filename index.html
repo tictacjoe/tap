@@ -3696,18 +3696,28 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
     '<div class="field-group entry-main-card"><div class="field-label">Violation Type (in full)</div><div class="field-value">' + hl(entry.offense_category_raw || entry.offense_category) + '</div></div>' +
     '<div class="field-group entry-main-card"><div class="field-label">Anticipated Defense</div><div class="field-value">' + hl(entry.rebuttal_anticipated) + '</div></div>' +
     '<div class="field-group entry-main-card"><div class="field-label">TAP\'s Rebuttal</div><div class="field-value">' + hl(entry.comeback) + '</div></div>';
+  // Violation/Concern Type and Status Stage move into the glance card's harm line
+  // instead (2026-09-22, Joe's call; see buildGlanceHeadHtml) -- omitted here only
+  // when glance is actually showing for this entry, so the information is never
+  // dropped outright if an entry's glance block is ever invalid (glanceActive()
+  // false), in which case these cards keep carrying it as before.
+  const glanceShowing = glanceActive(entry, cfg);
   const asideHtml =
-    buildViolationConcernCardHtml(entry, hl) +
-    '<div class="field-group entry-aside-card"><div class="field-label">Status Stage</div><div class="field-value">' + hl(entry.status_category) + '</div></div>' +
+    (glanceShowing ? '' : buildViolationConcernCardHtml(entry, hl)) +
+    (glanceShowing ? '' : '<div class="field-group entry-aside-card"><div class="field-label">Status Stage</div><div class="field-value">' + hl(entry.status_category) + '</div></div>') +
     buildProsecutionSourcesCardHtml(entry);
   const noteHtml = '<div class="field-group">' + buildConfidenceNoteHtml(entry, hl, summary) + '</div>' + buildPullQuoteHtml(entry, hl);
   return buildEntryColsHtml(mainHtml, asideHtml, noteHtml) +
     (cfg.evidenceDrawerEnabled ? buildEvidenceDrawerHtml(entry, cfg, hl) : "") +
     buildUpdateRequestHtml(entry, cfg);
 }
-// Shared by the detail card above and the glance meta-line (outside this region, in
-// glanceMetaHtml) -- which raw string is the entry's Violation/Concern Type value, and
-// whether it's the concern (not a violation) case.
+/* violation-concern-value:start */
+// Shared by the detail card's aside card (buildViolationConcernCardHtml, below), the
+// old collapsed card's meta line (buildEntryCard's metaHtml), and the glance card's
+// harm line (buildGlanceHeadHtml, in the glance-head region) -- which raw string is
+// the entry's Violation/Concern Type value, and whether it's the concern (not a
+// violation) case. Its own marker region (rather than just living inside
+// build-detail-html) because buildGlanceHeadHtml, in a different region, needs it too.
 function violationConcernValue(entry) {
   const isRealViolation = entry.offense_category && entry.offense_category !== "Other/Unclassified";
   const isRealConcern = !isRealViolation && entry.concern_type && entry.concern_type !== "Other/Unclassified";
@@ -3719,6 +3729,7 @@ function buildViolationConcernCardHtml(entry, hl) {
   const caveat = v.isConcern ? ' <em>(not alleged as a legal violation)</em>' : '';
   return '<div class="field-group entry-aside-card"><div class="field-label">Violation/Concern Type</div><div class="field-value">' + hl(v.text) + caveat + '</div></div>';
 }
+/* violation-concern-value:end */
 
 /* Cabinet-Level has no `sources` array; its sources are the `url`s of entry.evidence
    (2026-09-21, Joe's option 3 after the Evidence drawer was switched off). Same list and
@@ -3886,6 +3897,19 @@ function buildGlanceHeadHtml(entry, cfg, opts) {
   const g = entry.glance;
   const hl = opts.hl;
   const who = opts.hideWho ? "" : '<span class="glance-who">' + hl(g.who) + '</span> — ';
+  // Cabinet-Level only (2026-09-22, Joe's call): Violation/Concern Type and Status
+  // Stage move here, after Who was harmed, from their own expanded-entry aside
+  // cards -- see buildDetailHtml's asideHtml, which skips both cards whenever
+  // glanceActive() is true for the same entry, so the information is never shown
+  // twice, and never dropped outright if an entry's glance block is ever invalid.
+  // violationConcernValue lives in its own marker region (violation-concern-value)
+  // specifically so this region can pull it in independently.
+  const claExtraHtml = cfg.kind !== "prosecution" ? "" : (() => {
+    const v = violationConcernValue(entry);
+    const caveat = v.isConcern ? ' <em>(not alleged as a legal violation)</em>' : '';
+    return '<span class="glance-harm-item"><span class="glance-harm-label">Violation/Concern Type:</span> ' + hl(v.text) + caveat + '</span>' +
+      '<span class="glance-harm-item"><span class="glance-harm-label">Status Stage:</span> ' + hl(entry.status_category) + '</span>';
+  })();
   return '<div class="entry-head">' +
     '<div class="entry-title-block">' +
       '<p class="entry-title glance-line">' + who + hl(g.what) + (opts.shareBtnHtml || "") + '</p>' +
@@ -3901,6 +3925,7 @@ function buildGlanceHeadHtml(entry, cfg, opts) {
         '<span class="glance-harm-item"><span class="glance-harm-label">Harm status:</span> ' + escapeHtml(g.harm.certainty) + '</span>' +
         '<span class="glance-harm-item"><span class="glance-harm-label">Who was harmed:</span> ' +
           '<span class="glance-harm-who">' + hl(g.harm.who) + '</span></span>' +
+        claExtraHtml +
       '</p>' +
       '<div class="entry-meta">' + (opts.metaHtml || "") + '</div>' +
     '</div>' +

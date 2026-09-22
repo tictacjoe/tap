@@ -18,9 +18,10 @@ const source = fs.readFileSync(path.join(__dirname, "..", "index.html"), "utf8")
 const combined =
   extractFunction(source, "escape-html") + "\n" +
   extractFunction(source, "highlight-matches") + "\n" +
+  extractFunction(source, "violation-concern-value") + "\n" +
   extractFunction(source, "glance-head");
 const api = (0, eval)(
-  `${combined}\n({ isValidGlance, glanceActive, buildGlanceHeadHtml, glanceDetailTitleHtml, highlightMatches });`
+  `${combined}\n({ isValidGlance, glanceActive, buildGlanceHeadHtml, glanceDetailTitleHtml, highlightMatches, violationConcernValue });`
 );
 
 const hlPlain = (text) => api.highlightMatches(text || "", "", false);
@@ -74,6 +75,41 @@ test("buildGlanceHeadHtml renders who, what, the harm badge and harm who", () =>
   assert.ok(html.includes(">Harm type:</span> <span class=\"glance-badge glance-badge-rights\">Rights &amp; liberty</span>"));
   assert.ok(html.includes(">Harm status:</span> alleged"));
   assert.ok(html.includes(">Who was harmed:</span> <span class=\"glance-harm-who\">Example detainees</span>"));
+});
+
+test("Cabinet-Level: Violation/Concern Type and Status Stage render after Who was harmed", () => {
+  const entry = {
+    glance: validGlance(),
+    offense_category: "Fraud",
+    status_category: "Investigation",
+  };
+  const html = api.buildGlanceHeadHtml(entry, cfgOn, { hl: hlPlain });
+  assert.ok(html.includes(">Violation/Concern Type:</span> Fraud"));
+  assert.ok(html.includes(">Status Stage:</span> Investigation"));
+  const whoIdx = html.indexOf("Who was harmed:");
+  const violationIdx = html.indexOf("Violation/Concern Type:");
+  const statusIdx = html.indexOf("Status Stage:");
+  assert.ok(whoIdx < violationIdx, "Violation/Concern Type should come after Who was harmed");
+  assert.ok(violationIdx < statusIdx, "Status Stage should come after Violation/Concern Type");
+});
+
+test("Cabinet-Level: the concern caveat still renders in the glance line when it's a concern, not a violation", () => {
+  const entry = {
+    glance: validGlance(),
+    offense_category: "Other/Unclassified",
+    concern_type: "Norms/Institutional Erosion",
+    status_category: "Ongoing",
+  };
+  const html = api.buildGlanceHeadHtml(entry, cfgOn, { hl: hlPlain });
+  assert.ok(html.includes(">Violation/Concern Type:</span> Norms/Institutional Erosion <em>(not alleged as a legal violation)</em>"));
+});
+
+test("non-Cabinet-Level trackers don't get the Violation/Concern Type or Status Stage spans", () => {
+  const cfgDeregulation = { kind: "deregulation", titleField: "rule_name", glanceEnabled: true };
+  const entry = { glance: validGlance(), offense_category: "Fraud", status_category: "Investigation" };
+  const html = api.buildGlanceHeadHtml(entry, cfgDeregulation, { hl: hlPlain });
+  assert.ok(!html.includes("Violation/Concern Type"));
+  assert.ok(!html.includes("Status Stage"));
 });
 
 test("the environment harm kind is accepted and renders its own badge class and label", () => {
