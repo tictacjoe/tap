@@ -3960,6 +3960,15 @@ function buildGlanceHeadHtml(entry, cfg, opts) {
           (g.harm.certainty === "averted" ? " glance-badge-averted" : "") + '">' +
           escapeHtml(GLANCE_HARM_LABELS[g.harm.kind]) + '</span></span>' +
         '<span class="glance-harm-item"><span class="glance-harm-label">Harm status:</span> ' + escapeHtml(g.harm.certainty) + '</span>' +
+        // Principal (2026-09-22, Joe's call): the same name as the card's own
+        // who-lead-in (g.who, already required and validated by isValidGlance for
+        // every glance-enabled entry across all three trackers -- no cfg.kind
+        // guard needed, unlike the Cabinet-Level-only fields below). Renders here
+        // unconditionally, even when opts.hideWho suppressed that lead-in (the
+        // "List by individual" grouped prosecution view), so the name is never
+        // entirely absent from an individual card just because its group header
+        // already names the person.
+        '<span class="glance-harm-item"><span class="glance-harm-label">Principal:</span> ' + hl(g.who) + '</span>' +
         '<span class="glance-harm-item"><span class="glance-harm-label">Who was harmed:</span> ' +
           '<span class="glance-harm-who">' + hl(g.harm.who) + '</span></span>' +
         claExtraHtml +

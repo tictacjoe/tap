@@ -77,6 +77,28 @@ test("buildGlanceHeadHtml renders who, what, the harm badge and harm who", () =>
   assert.ok(html.includes(">Who was harmed:</span> <span class=\"glance-harm-who\">Example detainees</span>"));
 });
 
+test("Principal renders the same name as the who-lead-in, right before Who was harmed", () => {
+  const html = api.buildGlanceHeadHtml({ glance: validGlance() }, cfgOn, { hl: hlPlain });
+  assert.ok(html.includes(">Principal:</span> Example Agency Administrator"));
+  const statusIdx = html.indexOf("Harm status:");
+  const principalIdx = html.indexOf("Principal:");
+  const whoHarmedIdx = html.indexOf("Who was harmed:");
+  assert.ok(statusIdx < principalIdx, "Principal should come after Harm status");
+  assert.ok(principalIdx < whoHarmedIdx, "Principal should come before Who was harmed");
+});
+
+test("Principal still renders when hideWho hides the title's who-lead-in", () => {
+  const html = api.buildGlanceHeadHtml({ glance: validGlance() }, cfgOn, { hl: hlPlain, hideWho: true });
+  assert.ok(!html.includes("glance-who"), "the title lead-in should still be gone");
+  assert.ok(html.includes(">Principal:</span> Example Agency Administrator"), "but the name should still appear via Principal");
+});
+
+test("Principal renders for non-Cabinet-Level trackers too (no cfg.kind guard, unlike Violation/Concern Type)", () => {
+  const cfgDeregulation = { kind: "deregulation", titleField: "rule_name", glanceEnabled: true };
+  const html = api.buildGlanceHeadHtml({ glance: validGlance() }, cfgDeregulation, { hl: hlPlain });
+  assert.ok(html.includes(">Principal:</span> Example Agency Administrator"));
+});
+
 test("Cabinet-Level: Violation/Concern Type and Status Stage render after Who was harmed", () => {
   const entry = {
     glance: validGlance(),
