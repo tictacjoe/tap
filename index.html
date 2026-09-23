@@ -3738,12 +3738,17 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
     // isn't a timeline-marked field here either (see
     // update_markers.TIMELINE_FIELDS and tracker/check_marker_placement.py).
     // Broader Pattern (2026-09-23): third card when cause is present, matching CLA -- see buildGsrCdrPatternCardHtml.
+    // Estimated impact + Caveat share Status's card (2026-09-23, Joe's call: "put
+    // estimated impact under status box in middle"): one field-group moves as one unit
+    // in distributeEntryCards(), and as the second card it always seeds the middle
+    // column -- same technique as CLA's shared Anticipated Defense / TAP's Rebuttal card.
     const mainHtml =
       '<div class="field-group entry-main-card"><div class="field-label">What happened</div><div class="field-value">' + summary(entry.section_summaries?.what_changed) + buildFieldTimelineHtml(entry, "what_changed", hl) + '</div></div>' +
-      '<div class="field-group entry-main-card"><div class="field-label">Status</div><div class="field-value">' + buildFieldTimelineHtml(entry, "status", hl) + '</div></div>' +
-      buildGsrCdrPatternCardHtml(entry, term, useRegex) +
-      '<div class="field-group entry-main-card"><div class="field-label">Estimated impact</div><div class="field-value">' + summary(entry.section_summaries?.estimated_impact) + hl(entry.estimated_health_impact?.summary) + '</div></div>' +
-      (entry.estimated_health_impact?.caveat ? '<div class="field-group entry-main-card"><div class="field-label">Caveat</div><div class="field-value" style="font-style:italic;">' + hl(entry.estimated_health_impact.caveat) + '</div></div>' : '');
+      '<div class="field-group entry-main-card"><div class="field-label">Status</div><div class="field-value">' + buildFieldTimelineHtml(entry, "status", hl) + '</div>' +
+      '<div class="field-label">Estimated impact</div><div class="field-value">' + summary(entry.section_summaries?.estimated_impact) + hl(entry.estimated_health_impact?.summary) + '</div>' +
+      (entry.estimated_health_impact?.caveat ? '<div class="field-label">Caveat</div><div class="field-value" style="font-style:italic;">' + hl(entry.estimated_health_impact.caveat) + '</div>' : '') +
+      '</div>' +
+      buildGsrCdrPatternCardHtml(entry, term, useRegex);
     const asideHtml =
       '<div class="field-group entry-aside-card"><div class="field-label">Primary proponent</div><div class="field-value"><strong>' + hl(entry.primary_proponent?.name) + '</strong> — ' + hl(entry.primary_proponent?.role) + (entry.primary_proponent?.note ? '<br><em>' + hl(entry.primary_proponent.note) + '</em>' : '') + '</div></div>' +
       (entry.estimated_health_impact?.figures?.length ? '<div class="field-group entry-aside-card">' + buildFiguresHtml(entry.estimated_health_impact.figures, hl) + '</div>' : '') +
@@ -3770,12 +3775,17 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
     // rationale and no-section_summaries caveat as Deregulation's own
     // copy of this comment above.
     // Broader Pattern (2026-09-23): third card when cause is present, matching CLA -- see buildGsrCdrPatternCardHtml.
+    // Estimated impact + Caveat share Status's card (2026-09-23, Joe's call: "put
+    // estimated impact under status box in middle"): one field-group moves as one unit
+    // in distributeEntryCards(), and as the second card it always seeds the middle
+    // column -- same technique as CLA's shared Anticipated Defense / TAP's Rebuttal card.
     const mainHtml =
       '<div class="field-group entry-main-card"><div class="field-label">What happened</div><div class="field-value">' + summary(entry.section_summaries?.what_changed) + buildFieldTimelineHtml(entry, "what_changed", hl) + '</div></div>' +
-      '<div class="field-group entry-main-card"><div class="field-label">Status</div><div class="field-value">' + buildFieldTimelineHtml(entry, "status", hl) + '</div></div>' +
-      buildGsrCdrPatternCardHtml(entry, term, useRegex) +
-      '<div class="field-group entry-main-card"><div class="field-label">Estimated impact</div><div class="field-value">' + summary(entry.section_summaries?.estimated_impact) + hl(entry.estimated_impact?.summary) + '</div></div>' +
-      (entry.estimated_impact?.caveat ? '<div class="field-group entry-main-card"><div class="field-label">Caveat</div><div class="field-value" style="font-style:italic;">' + hl(entry.estimated_impact.caveat) + '</div></div>' : '');
+      '<div class="field-group entry-main-card"><div class="field-label">Status</div><div class="field-value">' + buildFieldTimelineHtml(entry, "status", hl) + '</div>' +
+      '<div class="field-label">Estimated impact</div><div class="field-value">' + summary(entry.section_summaries?.estimated_impact) + hl(entry.estimated_impact?.summary) + '</div>' +
+      (entry.estimated_impact?.caveat ? '<div class="field-label">Caveat</div><div class="field-value" style="font-style:italic;">' + hl(entry.estimated_impact.caveat) + '</div>' : '') +
+      '</div>' +
+      buildGsrCdrPatternCardHtml(entry, term, useRegex);
     const asideHtml =
       '<div class="field-group entry-aside-card"><div class="field-label">Institution</div><div class="field-value">' + hl(entry.institution) + '</div></div>' +
       '<div class="field-group entry-aside-card"><div class="field-label">Primary proponent</div><div class="field-value"><strong>' + hl(entry.primary_proponent?.name) + '</strong> — ' + hl(entry.primary_proponent?.role) + (entry.primary_proponent?.note ? '<br><em>' + hl(entry.primary_proponent.note) + '</em>' : '') + '</div></div>' +

@@ -1543,13 +1543,13 @@ for (const kind of ["govservices", "deregulation"]) {
   });
   const cardLabels = (html) => [...html.matchAll(/<div class="field-label">([^<]+)<\/div>/g)].map(m => m[1]);
 
-  test(`${kind} with cause renders Broader Pattern as the third card, before Estimated impact`, () => {
+  test(`${kind} with cause renders Broader Pattern after Status, Estimated impact and Caveat`, () => {
     const result = buildDetailHtml({
       ...baseEntry(),
       cause: "[TAP Analysis, not sourced] Pattern text. See also: the DC takeover entry.",
       cause_references: [{ match: "the DC takeover entry", tracker: "prosecution", id: "trump-dc-police-federal-takeover-2025" }],
     }, { kind });
-    assert.deepEqual(cardLabels(result).slice(0, 5), ["What happened", "Status", "Broader Pattern", "Estimated impact", "Caveat"]);
+    assert.deepEqual(cardLabels(result).slice(0, 5), ["What happened", "Status", "Estimated impact", "Caveat", "Broader Pattern"]);
     assert(result.includes('<a href="#" class="related-entry-link cause-reference-link" data-tracker="prosecution" data-id="trump-dc-police-federal-takeover-2025">the DC takeover entry</a>'), "reference renders as a link");
     assert(result.includes("[TAP Analysis, not sourced] Pattern text."), "the analysis label is shown, as in CLA");
   });
@@ -1572,5 +1572,43 @@ for (const kind of ["govservices", "deregulation"]) {
       cause_references: [{ match: "the zebra entry", tracker: "government-services", id: "zebra-id" }],
     }, { kind }, "zebra", false);
     assert(result.includes('data-id="zebra-id">the <mark class="hl">zebra</mark> entry</a>'));
+  });
+}
+
+// Estimated impact (and its Caveat) share Status's card (2026-09-23, Joe's call:
+// "put estimated impact under status box in middle"). One field-group moves as one
+// unit in distributeEntryCards(), and as the second card it always seeds the middle
+// column -- same technique as CLA's shared Anticipated Defense / TAP's Rebuttal card.
+for (const kind of ["govservices", "deregulation"]) {
+  const impactKey = kind === "govservices" ? "estimated_impact" : "estimated_health_impact";
+  const entryWith = (impact) => ({
+    what_changed: "Base narrative.", status: "Ongoing.", [impactKey]: impact,
+    confidence_note: "Note.", primary_proponent: { name: "Jane", role: "Secretary", note: "" }, sources: [],
+  });
+  // Labels per top-level main card, in order (aside cards trimmed off the last chunk).
+  const mainCards = (html) => html.split('<div class="field-group entry-main-card">').slice(1)
+    .map(c => [...c.split("entry-aside-card")[0].matchAll(/<div class="field-label">([^<]+)<\/div>/g)].map(m => m[1]));
+
+  test(`${kind} puts Status, Estimated impact and Caveat together in the second (middle) card`, () => {
+    const cards = mainCards(buildDetailHtml(entryWith({ summary: "Impact.", caveat: "A caveat." }), { kind }));
+    assert.deepEqual(cards[0], ["What happened"]);
+    assert.deepEqual(cards[1], ["Status", "Estimated impact", "Caveat"]);
+    assert.equal(cards.length, 2, "no separate Estimated impact or Caveat card");
+  });
+
+  test(`${kind} without a caveat puts just Status and Estimated impact in the second card`, () => {
+    const cards = mainCards(buildDetailHtml(entryWith({ summary: "Impact." }), { kind }));
+    assert.deepEqual(cards[1], ["Status", "Estimated impact"]);
+  });
+
+  test(`${kind} with cause keeps Broader Pattern as the third card, after the Status/impact card`, () => {
+    const entry = { ...entryWith({ summary: "Impact.", caveat: "A caveat." }), cause: "[TAP Analysis, not sourced] Pattern." };
+    const cards = mainCards(buildDetailHtml(entry, { kind }));
+    assert.deepEqual(cards.map(c => c[0]), ["What happened", "Status", "Broader Pattern"]);
+  });
+
+  test(`${kind} keeps the Caveat italic inside the shared card`, () => {
+    const html = buildDetailHtml(entryWith({ summary: "Impact.", caveat: "A caveat." }), { kind });
+    assert(html.includes('<div class="field-label">Caveat</div><div class="field-value" style="font-style:italic;">A caveat.</div>'));
   });
 }
