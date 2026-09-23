@@ -42,6 +42,11 @@ const evidenceDrawerFunctionSource = extractFunction(source, "evidence-drawer");
 // another direct dependency this harness needs pulled in explicitly, same
 // reason as the safeHref/buildPullQuoteHtml note above.
 const glanceHeadFunctionSource = extractFunction(source, "glance-head");
+// Added 2026-09-23: Deregulation/GSR's Status card (top-middle) and
+// collapsible Sources/Confidence note cards (matching CLA's treatment)
+// added buildSourcesCardHtml as a direct dependency of buildDetailHtml's
+// deregulation/govservices branches.
+const buildSourcesCardHtmlFunctionSource = extractFunction(source, "build-sources-card-html");
 
 // safeHref resolves relative URLs against location.href, which doesn't
 // exist in Node -- give it a fixed base so absolute test URLs round-trip.
@@ -66,7 +71,7 @@ const combined = escapeHtmlFunctionSource + "\n" + summaryLineFunctionSource + "
   updateTimelineFunctionSource + "\n" + buildConfidenceNoteHtmlFunctionSource + "\n" +
   safeHrefFunctionSource + "\n" + buildPullQuoteHtmlFunctionSource + "\n" + buildEntryColsHtmlFunctionSource + "\n" +
   buildFiguresHtmlStubSource + "\n" + evidenceDrawerFunctionSource + "\n" + glanceHeadFunctionSource + "\n" +
-  buildDetailHtmlFunctionSource;
+  buildSourcesCardHtmlFunctionSource + "\n" + buildDetailHtmlFunctionSource;
 const buildDetailHtml = (0, eval)(`${combined}\nbuildDetailHtml;`);
 
 
@@ -792,12 +797,16 @@ test("prosecution Confidence note's toggle summary includes the as-of date when 
   assert(html.includes('<summary class="field-label-row"><span class="field-label">Confidence note</span><span class="field-asof">as of 2026-09-20</span></summary>'));
 });
 
-test("deregulation and government-services Confidence note are unaffected (plain field, not collapsible)", () => {
+test("deregulation and government-services Confidence note and Sources are collapsible, same as CLA (2026-09-23)", () => {
   for (const kind of ["deregulation", "govservices"]) {
-    const entry = { what_changed: "x", incident_summary: "x", status: "y", confidence_note: "Some note." };
+    const entry = {
+      what_changed: "x", incident_summary: "x", status: "y", confidence_note: "Some note.",
+      sources: [{ name: "Src One", url: "https://example.com/1" }],
+    };
     const html = buildDetailHtml(entry, { kind });
-    assert(html.includes('<div class="field-label">Confidence note</div>'), `${kind} should keep the plain field-label div`);
-    assert(!html.includes("field-toggle"), `${kind} should not get the collapsible toggle`);
+    assert(html.includes('<details class="field-toggle"><summary class="field-label">Confidence note</summary>'), `${kind} Confidence note should be a collapsible toggle`);
+    assert(html.includes('<details class="field-toggle"><summary class="field-label">Sources</summary><ul class="exhibit-list">'), `${kind} Sources should be a collapsible toggle`);
+    assert(!html.includes('<details class="field-toggle" open'), `${kind} toggles must not default to open`);
   }
 });
 
@@ -838,7 +847,9 @@ test("govservices Confidence note splits into separate paragraphs at each Update
   const cfg = { kind: "govservices" };
   const result = buildDetailHtml(entry, cfg);
 
-  const start = result.indexOf('<div class="field-label">Confidence note</div><div class="confidence-box">');
+  // Collapsible since 2026-09-23 (matching CLA) -- <details>/<summary>
+  // wraps the field-label instead of a plain div.
+  const start = result.indexOf('<details class="field-toggle"><summary class="field-label">Confidence note</summary><div class="confidence-box">');
   // Sources moved out of the way in the 2026-09-19 three-column split: it
   // now sits in .entry-aside, *before* the Confidence note's .entry-note
   // column, so the note runs until the update-request row that follows
@@ -862,7 +873,9 @@ test("deregulation Confidence note splits into separate paragraphs at each Updat
   const cfg = { kind: "deregulation" };
   const result = buildDetailHtml(entry, cfg);
 
-  const start = result.indexOf('<div class="field-label">Confidence note</div><div class="confidence-box">');
+  // Collapsible since 2026-09-23 (matching CLA) -- <details>/<summary>
+  // wraps the field-label instead of a plain div.
+  const start = result.indexOf('<details class="field-toggle"><summary class="field-label">Confidence note</summary><div class="confidence-box">');
   // Sources moved out of the way in the 2026-09-19 three-column split: it
   // now sits in .entry-aside, *before* the Confidence note's .entry-note
   // column, so the note runs until the update-request row that follows
@@ -921,28 +934,33 @@ const layoutEntries = {
     cfg: { kind: "deregulation" },
     entry: {
       what_changed: "Agency repealed the rule.",
+      status: "Ongoing.",
       estimated_health_impact: { summary: "Costs rise.", caveat: "Modeled.", figures: [{ metric: "m", value: "1", source: "s" }] },
       confidence_note: "High confidence.",
       pull_quote: "A striking quote.",
       primary_proponent: { name: "John Doe", role: "Administrator", note: "" },
       sources: [{ name: "Src One", url: "https://example.com/1" }],
     },
-    // Labels in the order a reader meets them: narrative cards, then data
-    // cards, then the Confidence note, then the pull-quote.
-    order: [">What happened</div>", ">Estimated impact</div>", ">Caveat</div>", ">Primary proponent</div>", "<!--figures:1-->", ">Sources</div>", ">Confidence note</div>", "entry-aside-quote"],
+    // Labels in the order a reader meets them: narrative cards (What
+    // happened, Status, Estimated impact, Caveat), then data cards, then
+    // the Confidence note, then the pull-quote. Status card and the
+    // collapsible Sources/Confidence note treatment added 2026-09-23,
+    // matching prosecution/CLA's own pattern.
+    order: [">What happened</div>", ">Status</div>", ">Estimated impact</div>", ">Caveat</div>", ">Primary proponent</div>", "<!--figures:1-->", ">Sources</summary>", ">Confidence note</summary>", "entry-aside-quote"],
   },
   govservices: {
     cfg: { kind: "govservices" },
     entry: {
       institution: "Some Agency",
       what_changed: "Reduced staffing by 30%.",
+      status: "Ongoing.",
       estimated_impact: { summary: "Delays.", caveat: "Estimate.", figures: [{ metric: "m", value: "1", source: "s" }] },
       confidence_note: "Moderately confident.",
       pull_quote: "A striking quote.",
       primary_proponent: { name: "Jane Smith", role: "Secretary", note: "" },
       sources: [{ name: "Src One", url: "https://example.com/1" }],
     },
-    order: [">What happened</div>", ">Estimated impact</div>", ">Caveat</div>", ">Institution</div>", ">Primary proponent</div>", "<!--figures:1-->", ">Sources</div>", ">Confidence note</div>", "entry-aside-quote"],
+    order: [">What happened</div>", ">Status</div>", ">Estimated impact</div>", ">Caveat</div>", ">Institution</div>", ">Primary proponent</div>", "<!--figures:1-->", ">Sources</summary>", ">Confidence note</summary>", "entry-aside-quote"],
   },
   prosecution: {
     cfg: { kind: "prosecution" },

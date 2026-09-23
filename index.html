@@ -3468,6 +3468,24 @@ function buildPullQuoteHtml(entry, hl) {
 }
 /* build-pull-quote-html:end */
 
+/* Collapsible Sources card for Deregulation/Government Service Redirection
+   (2026-09-23, Joe's call: match the click-to-open treatment CLA's Sources
+   and Confidence note cards already have). Distinct from prosecution's
+   buildProsecutionSourcesCardHtml: these two trackers' entry.sources is
+   already an array of {name, url} objects with real display names, not a
+   list of bare URLs derived from an evidence array, so there's no
+   evidenceForSourceTrail/dedup step -- just the same <details>/<summary>
+   field-toggle wrapper and entry-aside-card styling. */
+/* build-sources-card-html:start */
+function buildSourcesCardHtml(entry, hl) {
+  const sources = entry.sources || [];
+  if (!sources.length) return "";
+  return '<div class="field-group entry-aside-card"><details class="field-toggle"><summary class="field-label">Sources</summary><ul class="exhibit-list">' +
+    sources.map(s => '<li><a href="' + escapeHtml(safeHref(s.url)) + '" target="_blank" rel="noopener">' + hl(s.name) + '</a></li>').join("") +
+    '</ul></details></div>';
+}
+/* build-sources-card-html:end */
+
 /* Assembles the expanded-entry body (2026-09-19). Every card -- narrative,
    data, Confidence note, pull-quote -- goes into the FIRST of three generic
    .entry-col containers, in reading order; the other two start empty.
@@ -3687,15 +3705,32 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
     // "What happened" (renamed from "What changed" 2026-09-21, Joe's call),
     // matching Government Service Redirection and Reporting. Label only: the
     // data field is still `what_changed`.
+    // Status card (added 2026-09-23, Joe's call): this tracker's `status`
+    // field existed in the schema but was never shown in the expanded
+    // view. Placed second in reading order -- same convention CLA's own
+    // comment documents (buildEntryColsHtml / assignCardsToColumns seeds
+    // the first three cards into columns 0/1/2 with three columns
+    // visible) -- so Status lands top-middle and Estimated impact top-
+    // right. No section_summaries.status field exists for this tracker
+    // (only what_changed/estimated_impact/confidence_note do), so this
+    // renders the raw field only -- buildFieldTimelineHtml's own
+    // no-marker fallback (paragraph-split) is enough, since `status`
+    // isn't a timeline-marked field here either (see
+    // update_markers.TIMELINE_FIELDS and tracker/check_marker_placement.py).
     const mainHtml =
       '<div class="field-group entry-main-card"><div class="field-label">What happened</div><div class="field-value">' + summary(entry.section_summaries?.what_changed) + buildFieldTimelineHtml(entry, "what_changed", hl) + '</div></div>' +
+      '<div class="field-group entry-main-card"><div class="field-label">Status</div><div class="field-value">' + buildFieldTimelineHtml(entry, "status", hl) + '</div></div>' +
       '<div class="field-group entry-main-card"><div class="field-label">Estimated impact</div><div class="field-value">' + summary(entry.section_summaries?.estimated_impact) + hl(entry.estimated_health_impact?.summary) + '</div></div>' +
       (entry.estimated_health_impact?.caveat ? '<div class="field-group entry-main-card"><div class="field-label">Caveat</div><div class="field-value" style="font-style:italic;">' + hl(entry.estimated_health_impact.caveat) + '</div></div>' : '');
     const asideHtml =
       '<div class="field-group entry-aside-card"><div class="field-label">Primary proponent</div><div class="field-value"><strong>' + hl(entry.primary_proponent?.name) + '</strong> — ' + hl(entry.primary_proponent?.role) + (entry.primary_proponent?.note ? '<br><em>' + hl(entry.primary_proponent.note) + '</em>' : '') + '</div></div>' +
       (entry.estimated_health_impact?.figures?.length ? '<div class="field-group entry-aside-card">' + buildFiguresHtml(entry.estimated_health_impact.figures, hl) + '</div>' : '') +
-      '<div class="field-group entry-aside-card"><div class="field-label">Sources</div><ul class="exhibit-list">' + (entry.sources || []).map(s => '<li><a href="' + escapeHtml(safeHref(s.url)) + '" target="_blank" rel="noopener">' + hl(s.name) + '</a></li>').join("") + '</ul></div>';
-    const noteHtml = '<div class="field-group">' + buildConfidenceNoteHtml(entry, hl, summary) + '</div>' + buildPullQuoteHtml(entry, hl);
+      buildSourcesCardHtml(entry, hl);
+    // entry-aside-card + collapsible (2026-09-23, Joe's call: same
+    // click-to-open treatment as CLA's Confidence note/Sources cards) --
+    // matches buildSourcesCardHtml's own wrapper so both boxes read the
+    // same way.
+    const noteHtml = '<div class="field-group entry-aside-card">' + buildConfidenceNoteHtml(entry, hl, summary, true) + '</div>' + buildPullQuoteHtml(entry, hl);
     return buildEntryColsHtml(mainHtml, asideHtml, noteHtml) +
       buildUpdateRequestHtml(entry, cfg);
   }
@@ -3709,16 +3744,20 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
     // a rule change the way Deregulation's field is, so "happened" fits
     // the actual content better -- and it reuses Reporting's existing
     // label for the same kind of field rather than inventing a new one.
+    // Status card (added 2026-09-23, Joe's call) -- same placement
+    // rationale and no-section_summaries caveat as Deregulation's own
+    // copy of this comment above.
     const mainHtml =
       '<div class="field-group entry-main-card"><div class="field-label">What happened</div><div class="field-value">' + summary(entry.section_summaries?.what_changed) + buildFieldTimelineHtml(entry, "what_changed", hl) + '</div></div>' +
+      '<div class="field-group entry-main-card"><div class="field-label">Status</div><div class="field-value">' + buildFieldTimelineHtml(entry, "status", hl) + '</div></div>' +
       '<div class="field-group entry-main-card"><div class="field-label">Estimated impact</div><div class="field-value">' + summary(entry.section_summaries?.estimated_impact) + hl(entry.estimated_impact?.summary) + '</div></div>' +
       (entry.estimated_impact?.caveat ? '<div class="field-group entry-main-card"><div class="field-label">Caveat</div><div class="field-value" style="font-style:italic;">' + hl(entry.estimated_impact.caveat) + '</div></div>' : '');
     const asideHtml =
       '<div class="field-group entry-aside-card"><div class="field-label">Institution</div><div class="field-value">' + hl(entry.institution) + '</div></div>' +
       '<div class="field-group entry-aside-card"><div class="field-label">Primary proponent</div><div class="field-value"><strong>' + hl(entry.primary_proponent?.name) + '</strong> — ' + hl(entry.primary_proponent?.role) + (entry.primary_proponent?.note ? '<br><em>' + hl(entry.primary_proponent.note) + '</em>' : '') + '</div></div>' +
       (entry.estimated_impact?.figures?.length ? '<div class="field-group entry-aside-card">' + buildFiguresHtml(entry.estimated_impact.figures, hl) + '</div>' : '') +
-      '<div class="field-group entry-aside-card"><div class="field-label">Sources</div><ul class="exhibit-list">' + (entry.sources || []).map(s => '<li><a href="' + escapeHtml(safeHref(s.url)) + '" target="_blank" rel="noopener">' + hl(s.name) + '</a></li>').join("") + '</ul></div>';
-    const noteHtml = '<div class="field-group">' + buildConfidenceNoteHtml(entry, hl, summary) + '</div>' + buildPullQuoteHtml(entry, hl);
+      buildSourcesCardHtml(entry, hl);
+    const noteHtml = '<div class="field-group entry-aside-card">' + buildConfidenceNoteHtml(entry, hl, summary, true) + '</div>' + buildPullQuoteHtml(entry, hl);
     return buildEntryColsHtml(mainHtml, asideHtml, noteHtml) +
       buildUpdateRequestHtml(entry, cfg);
   }
