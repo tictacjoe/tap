@@ -3969,6 +3969,82 @@
     "narrative_combined": true
   },
   {
+    "id": "dans-arctic-research-commission-russia-ties-2026",
+    "official": "Thomas Dans, Chair, U.S. Arctic Research Commission",
+    "offense_category": "Undisclosed Conflict of Interest / Potential Foreign Agents Registration Act Gap -- a Trump appointee promoting a foreign shipbuilder's business while it was under EU sanctions investigation for supplying Russia, without registering as a lobbyist or foreign agent; not itself a charged violation, and Arctic Research Commission members are not classified as federal employees required to file ethics disclosures",
+    "incident_summary": "President Trump appointed Thomas Dans -- a Texas venture capitalist and MAGA-aligned online influencer with no formal scientific background -- chair of the U.S. Arctic Research Commission in December 2025. Dans has long-standing personal and business ties to Russia dating to learning Russian as a child; he worked in finance in Moscow in the mid-1990s and previously held a $250,000-$500,000 investment stake in the company operating Papa John's restaurants in Russia. He has publicly advocated reestablishing closer U.S.-Russia relations and shared pro-Kremlin content online, and in 2023 attempted to buy Finland's Helsinki Shipyard -- where roughly half the world's icebreaker fleet has been built -- while it was chaired by Viktor Olerskiy, a former Russian deputy transport minister and former board member of Russia's state-owned shipping company, Sovcomflot.\n\nIn August 2024, before his Arctic Research Commission appointment, Dans announced he was \"working with Damen Shipyards Group,\" a Dutch shipbuilder, publicly promoting its icebreaker capabilities. As Arctic Research Commission chair -- a position that helps shape U.S. Arctic policy, including federal icebreaker procurement -- Dans continued championing Damen while his own consulting arrangement with the company remained undisclosed and unregistered. ProPublica reported (September 15, 2026) that during Dans's engagement with Damen, Dutch prosecutors were investigating the company for supplying Russia with equipment usable for military purposes in violation of EU sanctions, and that one Damen executive Dans had publicly posed with, Rutger Dolk, was later detained by Dutch authorities. Damen terminated its agreement with Dans -- which would have paid him if the company won a federal icebreaker contract -- while ProPublica's reporting was still underway. Legal experts told ProPublica the arrangement may have required Dans to register as a lobbyist or foreign agent under the Foreign Agents Registration Act; he apparently did neither. Unlike most senior presidential appointees, Arctic Research Commission members are not classified as federal employees and are not required to file ethics disclosures; the commission has a conflict-of-interest policy, but ProPublica reported violations carry no penalties.\n\nWhite House spokesperson Anna Kelly defended Dans, saying \"Tom Dans is doing a great job leading the Arctic Research Commission, and his shipbuilding expertise has helped him succeed in this role,\" and dismissed ethics concerns, saying \"These so-called 'experts' have no idea what they are talking about.\" Dans declined ProPublica's interview request and did not respond to its written questions.",
+    "contested": false,
+    "elements_required": [
+      "A presidential appointee held a paid business arrangement with a company (Damen Shipyards) whose interests directly overlapped with the appointee's own federal policy role (Arctic/icebreaker policy)",
+      "That arrangement was not publicly disclosed or registered, despite legal experts identifying a plausible FARA/lobbying registration obligation",
+      "The foreign company involved was, during the same period, under investigation by its own government for sanctions violations tied to supplying Russia -- a fact the appointee did not disclose while publicly promoting the company",
+      "The appointee has a documented pattern of pro-Russia advocacy and business ties predating the appointment, relevant to assessing whether the conflict was an isolated oversight or consistent with a broader pattern",
+      "The regulatory gap itself is structural, not unique to Dans: Arctic Research Commission members are exempt from the ethics-disclosure requirements that apply to most senior appointees"
+    ],
+    "evidence": [
+      {
+        "type": "news_report",
+        "description": "ProPublica documented Dans's long-standing Russia ties: he learned Russian as a child, worked in finance in Moscow in the mid-1990s, held a $250,000-$500,000 stake in the company operating Papa John's restaurants in Russia, has advocated closer U.S.-Russia relations and shared pro-Kremlin content, and in 2023 attempted to buy Finland's Helsinki Shipyard while it was chaired by a former Russian deputy transport minister and ex-Sovcomflot board member, Viktor Olerskiy.",
+        "source_url": "https://www.propublica.org/article/thomas-dans-arctic-research-commission-trump-russia-propaganda",
+        "maps_to_element": "Documents the appointee's pattern of pro-Russia advocacy and business ties predating the appointment"
+      },
+      {
+        "type": "public_record",
+        "description": "In August 2024, Dans publicly announced he was \"working with Damen Shipyards Group,\" a Dutch shipbuilder, and continued promoting its icebreaker capabilities after becoming Arctic Research Commission chair.",
+        "source_url": "https://www.propublica.org/article/thomas-dans-arctic-research-commission-trump-russia-propaganda",
+        "maps_to_element": "Establishes the paid business arrangement overlapping with the appointee's federal policy role"
+      },
+      {
+        "type": "public_record",
+        "description": "Trump appointed Thomas Dans, a Texas venture capitalist and online influencer with no formal scientific background, chair of the U.S. Arctic Research Commission in December 2025.",
+        "source_url": "https://www.propublica.org/article/thomas-dans-arctic-research-commission-trump-russia-propaganda",
+        "maps_to_element": "Establishes the appointment and the appointee's lack of relevant scientific/policy background"
+      },
+      {
+        "type": "news_report",
+        "description": "ProPublica reported that during Dans's engagement with Damen, Dutch prosecutors were investigating the company for supplying Russia with equipment usable for military purposes in violation of EU sanctions, and that a Damen executive Dans had publicly posed with, Rutger Dolk, was later detained by Dutch authorities; Damen terminated its agreement with Dans -- which would have paid him if the company won a federal icebreaker contract -- while ProPublica's reporting was still underway.",
+        "source_url": "https://www.propublica.org/article/thomas-dans-arctic-research-commission-trump-russia-propaganda",
+        "maps_to_element": "Documents the foreign company's own sanctions exposure, undisclosed during the appointee's public promotion of it"
+      },
+      {
+        "type": "public_record",
+        "description": "Legal experts told ProPublica the Damen arrangement may have required Dans to register as a lobbyist or foreign agent under FARA; he apparently registered as neither. ProPublica also reported that Arctic Research Commission members, unlike most senior presidential appointees, are not classified as federal employees and are not required to file ethics disclosures, and that violations of the commission's own conflict-of-interest policy carry no penalties.",
+        "source_url": "https://www.propublica.org/article/thomas-dans-arctic-research-commission-trump-russia-propaganda",
+        "maps_to_element": "Establishes the undisclosed/unregistered nature of the arrangement and the structural regulatory gap"
+      },
+      {
+        "type": "public_record",
+        "description": "White House spokesperson Anna Kelly defended Dans -- \"Tom Dans is doing a great job leading the Arctic Research Commission, and his shipbuilding expertise has helped him succeed in this role\" -- and dismissed ethics concerns as coming from people who \"have no idea what they are talking about.\" Dans declined ProPublica's interview request and did not respond to its written questions.",
+        "source_url": "https://www.propublica.org/article/thomas-dans-arctic-research-commission-trump-russia-propaganda",
+        "maps_to_element": "The administration's on-record response and the appointee's own non-response"
+      }
+    ],
+    "status": "No ethics investigation, FARA enforcement action, or removal has been identified as of this entry's addition. Damen terminated its agreement with Dans during ProPublica's reporting; the White House has publicly defended him and rejected the ethics concerns raised.",
+    "rebuttal_anticipated": "Likely defense (echoing the White House's own on-record statement): Dans's shipbuilding-industry experience is exactly the relevant expertise for an Arctic Research Commission chair focused on icebreaker capacity, and informal advocacy for a shipbuilder he'd worked with isn't itself unlawful absent a specific disclosure statute Arctic Research Commission members are shown to be bound by.",
+    "comeback": "The defense doesn't address the specific gap ProPublica documented: legal experts said the paid Damen arrangement itself -- not just Dans's general industry background -- plausibly triggered a FARA or lobbying-registration obligation that wasn't met, and Damen was under active EU sanctions investigation for Russia-linked conduct at the time Dans was publicly promoting it in his federal policy role, a fact neither Dans nor the White House disputes. That the Arctic Research Commission's ethics rules happen to be unusually weak is a structural finding about the position, not a rebuttal to whether Dans's own conduct met even that low bar -- and the undisclosed payment arrangement was terminated only once a journalist began asking about it, not through any internal compliance process.",
+    "cause": "[TAP Analysis, not sourced] An appointee with documented pro-Russia advocacy and undisclosed foreign business ties placed in a federal policy role with outsized influence over lucrative shipbuilding contracts, in a position exempt from the ethics-disclosure rules that would normally surface exactly this kind of conflict -- illustrating how appointments to lower-profile advisory bodies can carry real policy and national-security stakes with less oversight than higher-visibility Cabinet posts.",
+    "confidence_note": "HIGH confidence on the underlying facts -- ProPublica's investigation is detailed, on-record (including the White House's own defense of Dans and confirmation that Damen ended the arrangement), and was independently republished/corroborated by Salon, Defense One, and Alaska Public Media's own follow-up reporting on the story. What remains genuinely unresolved: whether Dans's conduct actually violated FARA or any other specific statute -- ProPublica reports legal experts' view that registration was plausibly required, not a formal finding that it was legally mandated or that Dans broke the law. Use in debate as 'a documented, undisclosed conflict of interest under a commission with unusually weak ethics rules,' not as a proven legal violation.",
+    "pull_quote": "Legal experts told ProPublica that Dans's paid arrangement with a foreign shipbuilder under EU sanctions investigation for supplying Russia may have required him to register as a lobbyist or foreign agent; he apparently did neither.",
+    "section_summaries": {
+      "incident_summary": "Trump's Arctic Research Commission chair promoted a Russia-linked Dutch shipbuilder under EU sanctions investigation while his own paid arrangement with it went undisclosed.",
+      "confidence_note": "ProPublica's reporting is well-documented and on-record, including the White House's own defense; whether it amounts to a legal violation remains unresolved."
+    },
+    "date_of_action": "2024-08 (Dans announces Damen partnership) through 2026-09-15 (ProPublica publishes investigation)",
+    "last_verified": "2026-09-22",
+    "last_substantive_update": "2026-09-22",
+    "date_added": "2026-09-22",
+    "glance": {
+      "who": "Thomas Dans (Arctic Research Commission Chair)",
+      "what": "Promoted a Russia-linked shipbuilder under EU sanctions probe while his paid tie to it went undisclosed",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "documented",
+        "who": "Federal conflict-of-interest oversight"
+      },
+      "reviewed": "2026-09-22"
+    }
+  },
+  {
     "id": "darin-smith-wyoming-grand-jury-misconduct-2026",
     "official": "Darin Smith, Interim/Confirmed U.S. Attorney for the District of Wyoming",
     "offense_category": "Prosecutorial Misconduct Before a Grand Jury -- calling defendants 'murderers' to grand jurors, telling them deliberations 'won't take long,' and engaging in off-the-record conversations with jurors during breaks between indictments",
@@ -21050,13 +21126,19 @@
         "description": "Axios and PBS NewsHour reporting confirming the 30-day-notice order and Kennedy Center officials' statement that the closure is temporary, for structural repairs, and that \"nothing is being demolished\"",
         "source_url": "https://www.axios.com/2026/09/17/kennedy-center-demolition-30-days-notice-ruling",
         "maps_to_element": "Kennedy Center's official rebuttal and the terms of the court order"
+      },
+      {
+        "type": "reporting",
+        "description": "Added 2026-09-22: WSJ and ABC News reported Trump said Congress's $257 million appropriation for the Kennedy Center's renovation will not proceed unless the naming ruling is overturned and his name is added to the building; he separately said the center would \"end up being ripped down\" if he is not given what he called \"recognition\" for leading the renovation effort.",
+        "source_url": "https://abcnews.com/Politics/trump-kennedy-center-ripped-recognition/story?id=136513298",
+        "maps_to_element": "Trump himself said the closure would be immediate -- this extends that same posture to conditioning the renovation's federal funding on winning the naming dispute"
       }
     ],
-    "status": "Ongoing litigation. Judge Cooper has found Trump in violation of his original naming injunction and, separately, ordered 30 days' advance notice before any major physical change to the Kennedy Center building, including demolition. The Trump-installed board's building closure remains in effect pending the administration's court-ordered status report on repair plans; no demolition has occurred as of this entry's research (2026-09-18).",
+    "status": "Ongoing litigation. Judge Cooper has found Trump in violation of his original naming injunction and, separately, ordered 30 days' advance notice before any major physical change to the Kennedy Center building, including demolition. The Trump-installed board's building closure remains in effect pending the administration's court-ordered status report on repair plans; no demolition has occurred as of this entry's research (2026-09-18). Update 2026-09-22: Trump has since said the $257 million congressionally appropriated renovation will not proceed unless the naming ruling is overturned, an explicit conditioning of federal renovation funds on the outcome of the naming dispute.",
     "rebuttal_anticipated": "Building closures for documented structural hazards -- a partial ceiling collapse and a roof-terrace canopy problem -- are a routine facilities-safety decision, not a renaming or demolition act, and the board (which Trump chairs) has the authority to make facility decisions; the placard photograph is not itself an order to demolish the building.",
     "comeback": "This entry does not rest on the placard photo alone -- a federal judge has already found Trump in contempt of a standing injunction over the Kennedy Center's name, and the same board Trump installed after purging its prior bipartisan membership then moved, on Trump's own statement that closure would be \"immediate,\" to shut the building down citing safety concerns Kennedy Center officials had not previously flagged as urgent. The court's own response -- ordering 30 days' notice before any major physical change, specifically naming demolition -- reflects the same pattern of concern, not manufactured advocacy framing.",
     "cause": "[TAP Analysis, not sourced] Illustrates a pattern of using board-level personnel control over an independent federal cultural institution to override a standing court order and unilaterally reshape or threaten the institution itself.",
-    "last_verified": "2026-09-18",
+    "last_verified": "2026-09-22",
     "date_added": "2026-09-18",
     "date_of_action": "2025-02 (Trump purges Kennedy Center board, installs himself as chair) through 2026-09-17 (court orders 30 days' notice before demolition)",
     "confidence_note": "HIGH confidence on the injunction-violation finding and the board's closure vote, both independently confirmed by Beatty's own office statement and multiple news outlets (CNN, CNBC, Axios, PBS). MODERATE confidence on demolition intent specifically -- the Kennedy Center's own officials deny any demolition is planned, and the photograph is circumstantial; frame the entry around the adjudicated injunction violation as the strongest claim, with the demolition dispute as an escalating, still-contested thread.",
@@ -21065,16 +21147,29 @@
       "incident_summary": "Judge Cooper held Trump violated his own injunction against renaming the Kennedy Center; his hand-picked board then voted to close the building amid a demolition dispute.",
       "confidence_note": "HIGH confidence on the injunction violation and closure vote; demolition intent itself remains disputed and officially denied."
     },
-    "last_substantive_update": "2026-09-18",
+    "last_substantive_update": "2026-09-22",
     "glance": {
       "who": "Donald Trump (President)",
-      "what": "A judge held Trump violated an order on the Kennedy Center's name; the board Trump chairs voted to close it",
+      "what": "A judge held Trump violated a naming order; he says the $257M renovation won't proceed unless he wins",
       "harm": {
         "kind": "institutional",
         "certainty": "documented",
         "who": "Kennedy Center's statutory name"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-09-22"
+    },
+    "timeline": {
+      "status": {
+        "base": "Ongoing litigation. Judge Cooper has found Trump in violation of his original naming injunction and, separately, ordered 30 days' advance notice before any major physical change to the Kennedy Center building, including demolition. The Trump-installed board's building closure remains in effect pending the administration's court-ordered status report on repair plans; no demolition has occurred as of this entry's research (2026-09-18).",
+        "updates": [
+          {
+            "date": "2026-09-22",
+            "label": "Update",
+            "text": "Update 2026-09-22: Trump has since said the $257 million congressionally appropriated renovation will not proceed unless the naming ruling is overturned, an explicit conditioning of federal renovation funds on the outcome of the naming dispute.",
+            "effective_date": "2026-09-22"
+          }
+        ]
+      }
     }
   },
   {
