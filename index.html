@@ -875,13 +875,45 @@
      Confidence note's skim-line paragraph (which stays outside the toggle, see
      that function's own comment) already supplies its own spacing above the
      button when present, and when it isn't, zero still matches every other
-     field-group's first label. The native disclosure marker is left alone (no
-     marker suppression) so it stays the visual cue that this label is
-     clickable, matching the existing .evidence-why-toggle "Why" pattern. */
+     field-group's first label. */
   .field-toggle > summary.field-label,
   .field-toggle > summary.field-label-row {
     margin-top: 0;
     cursor: pointer;
+  }
+  /* Explicit disclosure arrow (2026-09-22, Joe: "put an arrow next to
+     'confidence note' like 'sources' has to indicate it is clickable") --
+     replaces relying on the browser's native <summary> marker. Sources'
+     summary is plain (class="field-label" on the <summary> itself), so the
+     native marker showed there; but Confidence note's summary is
+     class="field-label-row" whenever entry.last_verified is set (the "as
+     of" date sits in a second span, laid out with display:flex for
+     space-between) -- and overriding a <summary>'s display to flex/grid
+     silently drops its native list-item marker in Chrome and Firefox, so
+     the arrow vanished in exactly the common case. Drawn on the field-label
+     text itself (the summary in the plain case, the first child span in the
+     row case) rather than on the summary, so a row's flex layout can't
+     misplace it via justify-content: space-between. list-style/::marker
+     suppressed on the summary so browsers never show a second, native one
+     alongside this one. */
+  .field-toggle > summary {
+    list-style: none;
+  }
+  .field-toggle > summary::-webkit-details-marker {
+    display: none;
+  }
+  .field-toggle > summary.field-label::before,
+  .field-toggle > summary.field-label-row > .field-label::before {
+    content: "\25B8";
+    display: inline-block;
+    margin-right: 0.35em;
+    font-size: 0.7em;
+    color: var(--brass);
+    transition: transform 0.15s ease;
+  }
+  .field-toggle[open] > summary.field-label::before,
+  .field-toggle[open] > summary.field-label-row > .field-label::before {
+    transform: rotate(90deg);
   }
   .entry-col .field-value,
   .entry-col .confidence-box,
@@ -3790,9 +3822,18 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
   // skim-line-less migrated entries.
   const violationTypeCardHtml = '<div class="field-group entry-main-card"><div class="field-label">Violation Type (in full)</div><div class="field-value">' + hl(entry.offense_category_raw || entry.offense_category) + '</div></div>';
   const broaderPatternCardHtml = '<div class="field-group entry-main-card"><div class="field-label">Broader Pattern</div><div class="field-value">' + buildCauseFieldHtml(entry, term, useRegex) + '</div></div>';
+  // Anticipated Defense and TAP's Rebuttal share one field-group (2026-09-22,
+  // Joe's call: "put them into a single box so they stay together despite
+  // how the layout is configured") -- distributeEntryCards() moves each
+  // top-level card in mainHtml as one unit (see its own comment), so two
+  // separate field-groups here could land in different columns. One
+  // field-group with two label/value pairs is the same pattern
+  // buildConfidenceNoteHtml uses for its "Updates" sub-label; the second
+  // label keeps its normal margin-top for internal separation (see the
+  // .entry-col .field-group > .field-label:first-child CSS comment).
   const tailCardsHtml =
-    '<div class="field-group entry-main-card"><div class="field-label">Anticipated Defense</div><div class="field-value">' + hl(entry.rebuttal_anticipated) + '</div></div>' +
-    '<div class="field-group entry-main-card"><div class="field-label">TAP\'s Rebuttal</div><div class="field-value">' + hl(entry.comeback) + '</div></div>';
+    '<div class="field-group entry-main-card"><div class="field-label">Anticipated Defense</div><div class="field-value">' + hl(entry.rebuttal_anticipated) + '</div>' +
+    '<div class="field-label">TAP\'s Rebuttal</div><div class="field-value">' + hl(entry.comeback) + '</div></div>';
   const hasStatusSkim = !!(entry.narrative_combined && entry.section_summaries?.status);
   const statusSkimCardHtml = hasStatusSkim
     ? '<div class="field-group entry-main-card"><div class="field-label">Status</div><div class="field-value">' + summary(entry.section_summaries.status) + '</div></div>'
