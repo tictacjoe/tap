@@ -1528,3 +1528,49 @@ test("prosecution keeps the Violation/Concern Type and Status Stage aside cards 
   assert(htmlBadGlance.includes('<div class="field-label">Violation/Concern Type</div>'), "an invalid glance block must not cause this data to disappear entirely");
   assert(htmlBadGlance.includes('<div class="field-label">Status Stage</div>'));
 });
+
+// GSR/CDR Broader Pattern card (2026-09-23 spec, sec-5): same card and renderer
+// as CLA's, third in reading order, only when `cause` is present.
+for (const kind of ["govservices", "deregulation"]) {
+  const impactKey = kind === "govservices" ? "estimated_impact" : "estimated_health_impact";
+  const baseEntry = () => ({
+    what_changed: "Base narrative.",
+    status: "Ongoing.",
+    [impactKey]: { summary: "Impact summary.", caveat: "A caveat." },
+    confidence_note: "Note.",
+    primary_proponent: { name: "Jane", role: "Secretary", note: "" },
+    sources: [],
+  });
+  const cardLabels = (html) => [...html.matchAll(/<div class="field-label">([^<]+)<\/div>/g)].map(m => m[1]);
+
+  test(`${kind} with cause renders Broader Pattern as the third card, before Estimated impact`, () => {
+    const result = buildDetailHtml({
+      ...baseEntry(),
+      cause: "[TAP Analysis, not sourced] Pattern text. See also: the DC takeover entry.",
+      cause_references: [{ match: "the DC takeover entry", tracker: "prosecution", id: "trump-dc-police-federal-takeover-2025" }],
+    }, { kind });
+    assert.deepEqual(cardLabels(result).slice(0, 5), ["What happened", "Status", "Broader Pattern", "Estimated impact", "Caveat"]);
+    assert(result.includes('<a href="#" class="related-entry-link cause-reference-link" data-tracker="prosecution" data-id="trump-dc-police-federal-takeover-2025">the DC takeover entry</a>'), "reference renders as a link");
+    assert(result.includes("[TAP Analysis, not sourced] Pattern text."), "the analysis label is shown, as in CLA");
+  });
+
+  test(`${kind} without cause renders no Broader Pattern card and keeps the original order`, () => {
+    const result = buildDetailHtml(baseEntry(), { kind });
+    assert(!result.includes("Broader Pattern"));
+    assert.deepEqual(cardLabels(result).slice(0, 4), ["What happened", "Status", "Estimated impact", "Caveat"]);
+  });
+
+  test(`${kind} with an empty cause (even with references) renders no Broader Pattern card`, () => {
+    const result = buildDetailHtml({ ...baseEntry(), cause: "", cause_references: [{ match: "x", tracker: "prosecution", id: "y" }] }, { kind });
+    assert(!result.includes("Broader Pattern"));
+  });
+
+  test(`${kind} highlights a search term inside a linked cause phrase without breaking the anchor`, () => {
+    const result = buildDetailHtml({
+      ...baseEntry(),
+      cause: "[TAP Analysis, not sourced] See also: the zebra entry.",
+      cause_references: [{ match: "the zebra entry", tracker: "government-services", id: "zebra-id" }],
+    }, { kind }, "zebra", false);
+    assert(result.includes('data-id="zebra-id">the <mark class="hl">zebra</mark> entry</a>'));
+  });
+}
