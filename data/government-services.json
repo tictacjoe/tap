@@ -19053,7 +19053,7 @@
       "note": "Vought's OMB directed the shift to monthly CDC apportionments requiring DOGE review of individual grant awards; the separate HHS/ACF billion-dollar backlog was attributed by HHS officials to DOGE-imposed bureaucratic hurdles and ACF grants-management staffing losses, without a single named individual identified for that specific action in sourcing reviewed."
     },
     "estimated_impact": {
-      "summary": "Two overlapping DOGE-related bureaucratic chokepoints delayed well over a billion dollars in already-appropriated HHS and CDC health funding through mid-to-late 2025, disrupting grant cycles for children's/family services and freezing tens of millions in CDC public-health, disaster-preparedness, and disease-prevention funding; even after CDC funds were substantially released, local health departments could only rehire about half of the staff they had laid off during the uncertainty -- a lasting workforce loss the funding restoration did not reverse.",
+      "summary": "Two overlapping DOGE-related bureaucratic chokepoints delayed well over a billion dollars in already-appropriated HHS and CDC health funding through mid-to-late 2025, disrupting grant cycles for children's/family services and freezing CDC money for disaster preparedness, disease prevention, and overdose tracking, including $140 million states use to track and respond to fentanyl and other overdose deaths. Even after the CDC funds were released, local health departments could only rehire about half of the staff they had laid off during the uncertainty. In February 2026 OMB used the same mechanism to order more than $600 million in cuts to CDC public-health grants in only four Democratic-led states, cuts a federal court has so far blocked, at least in part.",
       "figures": [
         {
           "metric": "HHS-wide grant backlog attributed to DOGE hurdles",
@@ -19066,26 +19066,36 @@
           "source": "CBS News, July 11, 2025, citing HHS officials"
         },
         {
+          "metric": "CDC Overdose Data to Action (OD2A) funding held up by the 2025 OMB freeze (CDC said Aug. 5 it would be fully funded)",
+          "value": "$140,000,000",
+          "source": "NPR, July 17 and August 5, 2025"
+        },
+        {
           "metric": "CDC funding released after the August 2025 OMB apportionment freeze was resolved",
           "value": "$200,000,000+ across youth/gun violence prevention, emergency preparedness, tobacco and chronic disease research",
-          "source": "Reporting reviewed, late August 2025"
+          "source": "The Hill and related reporting, late August 2025"
         },
         {
           "metric": "Share of laid-off local health department staff rehired after CDC funding was restored",
           "value": "~50%",
-          "source": "Reporting reviewed"
+          "source": "The Hill and related reporting"
+        },
+        {
+          "metric": "CDC public-health grant cuts ordered by OMB's February 2026 'Targeting Directive' in California, Colorado, Illinois, and Minnesota (blocked by court order)",
+          "value": "$600,000,000+",
+          "source": "NPR, February 2026; California Attorney General filings"
         }
       ],
-      "caveat": "These are two related but mechanistically distinct delays (ACF grants-management staffing shortfall vs. OMB's monthly DOGE-review apportionment gate for CDC specifically), documented together here because both stem from the same broader 2025 DOGE bureaucratic-review regime applied to HHS grantmaking; sourcing reviewed does not confirm whether the ACF-wide $1 billion backlog was itself ever fully resolved, only that the narrower CDC-specific August freeze was."
+      "caveat": "The 2025 figures cover two related but mechanistically distinct delays (ACF grants-management staffing shortfall vs. OMB's monthly DOGE-review apportionment gate for CDC specifically); available reporting does not confirm whether the HHS-wide $1 billion backlog was ever fully resolved, only that the narrower CDC-specific August freeze was. The $600 million-plus 2026 cut was blocked by a temporary restraining order and then a March 13, 2026 preliminary injunction, still in effect as of July 2026 reporting; a July 21, 2026 opinion granted the states' preliminary-injunction motion in part; the only available source, the Georgetown litigation tracker, does not say which claims succeeded, and the case remains unresolved."
     },
     "confidence_note": "HIGH confidence on both threads -- the HHS/ACF backlog is corroborated by CBS News's July 2025 reporting citing multiple HHS officials; the CDC-specific OMB apportionment freeze and its resolution are corroborated across The Hill and related reporting on the roughly $200 million release and the local-department rehiring shortfall. Added 2026-08-18 (GSR recheck batch 22): the February 2026 Targeting Directive/$600M episode is HIGH confidence -- independently corroborated across NPR (syndicated to multiple member stations), Newsweek, CalMatters, Infectious Disease Advisor, and the California Attorney General's own press releases and case filings, all describing the same directive, dollar figure, four states, and court rulings consistently. The $10M congressional increase (rather than cut) to the underlying grant line is per NPR's reporting on the enacted appropriations text. Re-verified 2026-08-29: the Georgetown Health Care Litigation Tracker confirms the case remains active past the March 13, 2026 injunction, with a July 21, 2026 merits opinion and a September 21, 2026 status-report/appeal deadline, but the tracker page does not detail the July 21 ruling's substance -- flagged for a future recheck rather than characterized here without direct confirmation. No material change to this entry's status. Re-verified 2026-09-01 (GSR recheck batch 50): confirmed via the same Georgetown tracker (case-specific primary source, consistent with this entry's sourcing standard) that the July 21 opinion granted the preliminary-injunction motion in part -- MODERATE confidence on this characterization since the tracker's own summary line is the only source found and does not break out which claims were granted versus denied. Added 2026-09-10 (round-4 backlog fold, cluster c0457): the $140 million OD2A freeze and its eventual full-funding resolution are HIGH confidence, both directly sourced to NPR (the original July 17, 2025 report and the August 5, 2025 follow-up confirming release), with the states' layoff warnings corroborated by The Guardian.",
     "pull_quote": "Four states’ attorneys general alleged OMB’s $600 million CDC grant cut targeted only Democratic-led states days after Congress increased, not cut, the same funding -- political animus, not a neutral budget rationale.",
     "section_summaries": {
       "what_changed": "DOGE-imposed review requirements first left HHS with a $1B+ grant backlog (tied partly to ACF losing half its grants-management staff), then separately froze tens of millions in CDC funding under a new monthly OMB apportionment-review gate -- including $140M for the Overdose Data to Action program specifically -- before roughly $200M plus the OD2A funding was released about a month later.",
-      "estimated_impact": "Well over a billion dollars in appropriated health funding was delayed across two overlapping bottlenecks; even after CDC funds were restored, local health departments only rehired about half the staff they'd laid off in the interim -- a lasting loss.",
+      "estimated_impact": "Over $1 billion in HHS and CDC health funding was delayed, including $140 million for overdose tracking; local health departments could rehire only about half the staff they had laid off.",
       "confidence_note": "Both threads well-corroborated across multiple outlets, though it isn't confirmed whether the broader ACF backlog was ever fully resolved."
     },
-    "last_verified": "2026-09-22",
+    "last_verified": "2026-09-23",
     "date_added": "2026-08-14",
     "sources": [
       {
@@ -19130,7 +19140,7 @@
       }
     ],
     "last_updated": "2026-09-22",
-    "last_substantive_update": "2026-09-22",
+    "last_substantive_update": "2026-09-23",
     "glance": {
       "who": "OMB under Russell Vought, with DOGE",
       "what": "Froze CDC funds under monthly OMB review and left a $1B+ HHS grant backlog; ~$200M released a month later",
@@ -19139,7 +19149,7 @@
         "certainty": "documented",
         "who": "Local health departments and grantees"
       },
-      "reviewed": "2026-09-22"
+      "reviewed": "2026-09-23"
     },
     "timeline": {
       "what_changed": {
@@ -19988,28 +19998,33 @@
       "note": "Oversaw implementation of the Schedule Policy/Career reclassification within HHS and CDC, moving career scientific and public-health staff into an at-will employment category as part of the administration's broader OPM-driven Schedule F rollout."
     },
     "estimated_impact": {
-      "summary": "Career civil servants at HHS and CDC, including scientists directly responsible for public-health research and disease surveillance, lost job-protection rights and became removable without the standard due-process and appeal protections competitive-service employees have historically had.",
+      "summary": "Career civil servants at HHS and CDC, including research biologists, epidemiologists, and other scientists directly responsible for public-health research and disease surveillance, are being reclassified into at-will status, making them removable without advance notice or the right to appeal to the Merit Systems Protection Board.",
       "figures": [
         {
-          "metric": "HHS positions reclassified per initial May 2026 supervisor memo",
+          "metric": "HHS positions being moved into Schedule Policy/Career per a May 2026 HHS supervisor memo",
           "value": "100+",
           "source": "FedSmith, citing the internal HHS memo, May 2026"
         },
         {
-          "metric": "Federal positions estimated affected government-wide by the OPM final rule",
-          "value": "~50,000",
-          "source": "OPM final rule, February 2026, as reported by Partnership for Public Service"
+          "metric": "GS-15 positions tentatively identified for the initial reclassification tranche (per CDC officials)",
+          "value": "several hundred",
+          "source": "CDC officials"
         },
         {
-          "metric": "Career federal workers converted government-wide per Trump's June 2026 executive order",
-          "value": "~10,000 (nearly)",
-          "source": "Government Executive, June 2026"
+          "metric": "Federal positions estimated affected government-wide by the OPM final rule",
+          "value": "~50,000",
+          "source": "OPM final rule, February 2026"
+        },
+        {
+          "metric": "Federal positions converted government-wide by Trump's June 3, 2026 executive order",
+          "value": "~8,000",
+          "source": "NPR and Government Executive, June 2026"
         }
       ],
-      "caveat": "The 50,000 figure is a government-wide OPM estimate at the time of the final rule, not an HHS-specific count; the 100+ HHS figure is from an initial internal memo and may have grown as implementation continued through mid-2026."
+      "caveat": "The 50,000 figure is a government-wide OPM estimate at the time of the final rule, and the 8,000 conversions are government-wide, not HHS-specific counts. HHS and CDC implementation is proceeding in incremental rounds, so the 100+ memo figure and the several hundred GS-15 positions CDC officials said were tentatively identified are early counts, with further rounds expected. No court has ruled on the framework's legality; the pending challenge (PEER v. OPM, D. Md.) remains at the pleading stage."
     },
     "confidence_note": "HIGH confidence -- the OPM final rule, the HHS supervisor memo, and the subsequent executive order are all independently corroborated across multiple outlets (FedSmith, STAT News, Federal News Network, Government Executive, NARFE), with consistent figures across close reporting dates. Re-verified 2026-08-17: implementation is proceeding in incremental rounds rather than a single mass reclassification, and the framework's legality remains unresolved in active litigation (preliminary-injunction motion under advisement as of an April 30, 2026 hearing) -- neither development changes the entry's core facts, but both are worth tracking for a future update if the litigation resolves. Re-verified 2026-08-30 (real correction): the case identity (PEER v. OPM, D. Md., Judge Xinis), the coalition of plaintiffs, and the March 4, 2026 Second Amended Complaint are corroborated across a Congress.gov CRS legal sidebar (LSB11412) and independent reporting on the case's procedural history -- HIGH confidence. The specific Aug. 18, 2026 summary-judgment deadline and Oct. 16, 2026 hearing date come from a search-engine synthesis of that same CRS sidebar, which could not be independently fetched directly (congress.gov blocked retrieval, consistent with this sweep's standing lesson on that domain) -- presented as MODERATE confidence pending direct confirmation from a case-specific docket tracker. The June 3, 2026 8,000-position conversion executive order is HIGH confidence, corroborated by NPR and Government Executive. CORRECTION 2026-08-31: the prior recheck's Aug. 18/Oct. 16, 2026 summary-judgment-and-hearing dates, flagged MODERATE pending direct docket confirmation, do not hold up against that confirmation -- neither the CRS sidebar itself (fetched directly via its everycrsreport.com mirror) nor the Civil Rights Litigation Clearinghouse's docket summary supports them, and the docket instead shows the case still stalled on the unresolved motion to amend/motion to dismiss as of its most recent entry (June 18, 2026). This is the same 'a prior recheck's own claim can itself be wrong' pattern this tracker's recheck notes have documented in several other entries (e.g. GSR batch 24, batch 41, batch 43) -- here caught by checking a case-specific primary tracker rather than trusting an unverified search-engine synthesis a second time. Added 2026-09-11 (round-4 backlog fold, cluster c0343): the April 2025 NPRM's 40,500-comment/94%-opposed figures and comment-period dates are corroborated across Government Executive and multiple employment-law firm summaries (Empire Justice, Gilbert Employment Law, Federal Worker Rights); the Guardian's BLS/BEA-specific warning and the Lutnick GDP-exclusion framing are that outlet's own May 2025 reporting, with the GDP angle independently corroborated by Axios and Fortune's earlier March 2025 coverage of Lutnick's original remarks -- HIGH confidence on the NPRM facts, MODERATE on the BLS/BEA-specific alarm since no BLS/BEA reclassification was confirmed to have actually occurred.",
-    "last_verified": "2026-09-22",
+    "last_verified": "2026-09-23",
     "date_added": "2026-08-02",
     "sources": [
       {
@@ -20059,11 +20074,11 @@
     ],
     "section_summaries": {
       "what_changed": "HHS moved 100+ positions, including CDC scientists, into the revived Schedule F 'at-will' category as part of a government-wide OPM rule; a June 3, 2026 executive order later converted roughly 8,000 federal positions government-wide into the same status, the first confirmed actual conversions since the rule was finalized. The underlying litigation (PEER v. OPM, D. Md., Judge Xinis, joined by AFGE/AFSCME/AFL-CIO/Democracy Forward) remains unresolved after a March 2026 amended complaint challenging the whole framework, not just HHS's use of it.",
-      "estimated_impact": "Career public-health scientists and other HHS staff lost standard due-process and appeal protections against removal.",
+      "estimated_impact": "Career HHS and CDC staff, including research scientists, are being reclassified into at-will status without MSPB appeal rights; a June 2026 order converted about 8,000 positions government-wide.",
       "confidence_note": "Well-corroborated across multiple independent outlets with consistent figures for the underlying rule and conversions; a prior recheck's claimed summary-judgment/hearing date pair was checked directly against the case's own docket this recheck and found unsupported -- the litigation remains stalled at the pleading stage, not proceeding to summary judgment."
     },
     "last_updated": "2026-09-22",
-    "last_substantive_update": "2026-09-22",
+    "last_substantive_update": "2026-09-23",
     "glance": {
       "who": "Robert F. Kennedy Jr. (HHS Secretary)",
       "what": "Moved 100+ HHS positions, incl. CDC scientists, into at-will 'Schedule F' status without removal protections",
@@ -20072,7 +20087,7 @@
         "certainty": "documented",
         "who": "HHS and CDC career civil servants"
       },
-      "reviewed": "2026-09-22"
+      "reviewed": "2026-09-23"
     },
     "timeline": {
       "what_changed": {
@@ -23209,12 +23224,12 @@
       "note": "The underlying Medicaid funding cuts were enacted through the OBBBA reconciliation legislation Trump signed July 4, 2025; sourcing reviewed did not identify a single named administration official personally responsible for the hospital-level risk analysis's findings, which is an independent third-party assessment of the funding law's downstream effects."
     },
     "estimated_impact": {
-      "summary": "Nearly 450 hospitals nationwide -- spanning 44 states and the District of Columbia -- were found to be at high financial risk from reduced Medicaid funding, threatening not just coverage for Medicaid beneficiaries but broader local access to jobs, maternity care, mental health services, and emergency treatment in the communities those hospitals serve.",
+      "summary": "OBBBA's Medicaid cuts put 446 hospitals across 44 states and D.C. at high risk of closing or cutting services, Public Citizen found. NBC News reported the cuts put jobs, maternity care, mental health services, and local access to treatment at risk in affected communities, and NPR reported children's hospitals are among the hardest-hit. Some of the harm is already real rather than projected: named hospitals have closed labor-and-delivery and OB services, a Washington hospital laid off 108 workers, and Providence Health System announced 296 layoffs in Washington and 150 in Oregon, citing Medicaid cuts.",
       "figures": [
         {
-          "metric": "Hospitals identified as highest-risk in the earlier Harvard analysis",
-          "value": "109 (85% in urban areas)",
-          "source": "Harvard T.H. Chan School of Public Health / NYT, Nov. 2025"
+          "metric": "Americans whose healthcare access is threatened by OBBBA's Medicaid cuts (projected, as reported at enactment)",
+          "value": "17 million",
+          "source": "The Guardian, July 4, 2025"
         },
         {
           "metric": "Hospitals found at high risk of closing or cutting services",
@@ -23227,16 +23242,6 @@
           "source": "Public Citizen analysis, March 31, 2026"
         },
         {
-          "metric": "Rural hospitals that have closed labor-and-delivery units since 2020 (national, not OBBBA-attributed specifically)",
-          "value": "139 (13% drop)",
-          "source": "Center for Healthcare Quality and Payment Reform, 2026 report"
-        },
-        {
-          "metric": "Federal Medicaid funding reduction, OBBBA, over the next decade",
-          "value": "roughly $1 trillion",
-          "source": "Public Citizen, March 31, 2026"
-        },
-        {
           "metric": "Patients served in 2024 by the 446 at-risk hospitals",
           "value": "approximately 6.6 million, across 68,986 beds",
           "source": "Public Citizen, March 31, 2026"
@@ -23245,13 +23250,33 @@
           "metric": "Direct patient-care workers employed at the 446 at-risk hospitals",
           "value": "approximately 275,458",
           "source": "Public Citizen, March 31, 2026"
+        },
+        {
+          "metric": "Hospitals identified as highest-risk in the earlier Harvard analysis",
+          "value": "109 (85% in urban areas)",
+          "source": "Harvard T.H. Chan School of Public Health / NYT, Nov. 2025"
+        },
+        {
+          "metric": "Hospital layoffs, completed or announced, citing Medicaid cuts (named cases)",
+          "value": "108 at East Adams Rural Hospital (WA); 296 in Washington and 150 in Oregon announced by Providence Health System",
+          "source": "The Guardian, November 20, 2025"
+        },
+        {
+          "metric": "Rural hospitals that have closed labor-and-delivery units since 2020 (national, not OBBBA-attributed specifically)",
+          "value": "139 (13% drop)",
+          "source": "Center for Healthcare Quality and Payment Reform, 2026 report"
+        },
+        {
+          "metric": "Federal Medicaid funding reduction, OBBBA, over the next decade",
+          "value": "roughly $1 trillion",
+          "source": "Public Citizen, March 31, 2026"
         }
       ],
-      "caveat": "This is fundamentally a risk analysis projecting financial vulnerability based on hospital operating margins and Medicaid payer mix, not a confirmed, adjudicated count of hospitals that closed specifically because of OBBBA. Two things cut in opposite directions on that caveat as of the 2026-08-17 update: several individually-named hospitals dispute being at risk at all (see what_changed), while at least three other hospitals have confirmed actual maternity/OB service closures since the analysis published -- so the 446 figure should be read as a contested, imperfect risk projection that has started to show some real-world confirmation, not as a settled prediction in either direction."
+      "caveat": "The 446 figure is a risk analysis projecting financial vulnerability from hospital operating margins and Medicaid payer mix, not a count of hospitals that closed because of OBBBA. At least four named hospitals on or near the list dispute being at risk; those are the hospitals' own assessments, not an independent re-analysis. Separately, at least three hospitals have closed maternity/OB services, one rural hospital laid off staff, and one hospital system announced layoffs, citing Medicaid cuts, in the months after OBBBA's enactment; the dated closures (fall 2025 and January 2026) came before the March 2026 Public Citizen analysis was published, so they show the funding pressure already producing cuts rather than confirming that analysis's projections. The roughly $1 trillion cut is Public Citizen's framing of OBBBA's overall Medicaid impact, not a cost tied only to these hospitals; NPR separately reported a figure of nearly $900 billion over a decade."
     },
     "confidence_note": "MODERATE-HIGH confidence -- the 446-hospital figure and its state-level scope are now attributed to Public Citizen's March 31, 2026 report (20%+ Medicaid payer mix, negative 2022-2024 net margins), identified via HFMA's follow-up coverage; the original entry cited only NBC News's reporting on an unnamed analysis, which understated confidence in a verifiable, named methodology. The underlying OBBBA Medicaid funding cuts are well-documented public record. Re-verified 2026-08-06: NBC News independently corroborates Trump's own April 2026 statement explicitly tying reduced federal support for Medicaid, Medicare, and child care to military spending priorities and a preference for shifting those costs to states. Updated 2026-08-17: added the Public Citizen attribution, four hospitals' documented rebuttals of their own risk classification, and three confirmed post-publication OB/maternity service closures tied to Medicaid cuts (St. Mary's Sacred Heart GA, Centra Southside VA, Greene County General IN) -- present the 446 figure as contested and partially-confirmed, not as either a debunked or a fully-validated projection. Updated 2026-08-30: HIGH confidence on the beds/patients/workers/state-breakdown figures and the 267-of-446 urban share -- these are drawn directly from Public Citizen's own report and corroborating trade-press coverage (US News, HFMA, Chief Healthcare Executive), not a secondary summary. The $1 trillion decade-scale funding-cut figure is Public Citizen's own framing of OBBBA's overall Medicaid impact, not specific to the 446 flagged hospitals -- presented here as context for scale, not as a cost attributable only to these hospitals. Added 2026-09-09: early antecedent reporting from the OBBBA-enactment week (Guardian, AP, NYT, July 4-6, 2025). HIGH confidence, corroborated across three independent outlets reporting the same rural-hospital risk. Added 2026-09-09 (round-4 backlog cluster c0317): the Spencer Hospital, Iowa detail is HIGH confidence (NPR/KFF Health News joint reporting with named, on-record sourcing); the pre-enactment $785 billion Senate estimate is HIGH confidence (Reuters) and is presented as a since-superseded earlier estimate, not a conflicting figure with the entry's already-documented ~$1 trillion enacted-law figure; the Kentucky $11-12.3 billion/35-hospital figures are HIGH confidence, corroborated by the Kentucky Hospital Association's own estimate as reported across the Kentucky Center for Economic Policy, LEX18, and Yahoo/wire pickup, plus Gov. Beshear's public statement. Added 2026-09-10 (round-4 backlog cluster c0424): the Kennedy Beaver/CAP-C North Carolina detail is HIGH confidence (CBS News, on-record family and state-official sourcing); the $900 billion decade-scale figure and Phoenix Children's Hospital detail are HIGH confidence (NPR), presented as an independently-sourced estimate in the same range as this entry's existing ~$1 trillion Public Citizen figure, not a conflicting one -- the two use different methodologies and were not reconciled against each other in sourcing reviewed. Added 2026-09-12 (round-4 backlog fold, cluster c0728): the East Adams Rural Hospital and Providence Health System layoffs are HIGH confidence, corroborated via The Guardian's original reporting and HealthLeaders Media's follow-up coverage of the same survey; most other facts in the Guardian's November 20, 2025 piece (St. Mary's Sacred Heart, Centra Southside) were already independently documented in this entry.",
     "pull_quote": "A Harvard analysis of more than 4,400 U.S. hospitals identified 109 -- mostly serving Medicaid patients, financially distressed, and already caring for vulnerable populations -- as facing the greatest risk of closure.",
-    "last_verified": "2026-09-22",
+    "last_verified": "2026-09-23",
     "date_added": "2026-08-06",
     "sources": [
       {
@@ -23326,10 +23351,10 @@
     "last_updated": "2026-09-22",
     "section_summaries": {
       "what_changed": "Public Citizen found 446 hospitals in 44 states and D.C. at high risk of closing or cutting services from OBBBA's Medicaid cuts; at least three hospitals have confirmed maternity closures.",
-      "estimated_impact": "Nearly 450 hospitals face financial risk, threatening jobs, maternity care, mental health services, and local treatment access for roughly 6.6 million patients and 275,000+ direct care workers, against a roughly $1 trillion federal Medicaid funding reduction over the next decade; the risk projection is now both disputed by some flagged hospitals and partially confirmed by others' actual closures.",
+      "estimated_impact": "446 hospitals that served about 6.6 million patients in 2024 are at high risk of closing or cutting services, per Public Citizen; separately, OB units have closed and layoffs have begun.",
       "confidence_note": "The 446-hospital figure is now attributed to Public Citizen by name with its methodology; four hospitals dispute the classification, three have confirmed post-publication closures -- present as contested and partially-confirmed. The beds/patients/workers/urban-share figures are drawn directly from Public Citizen's own report."
     },
-    "last_substantive_update": "2026-09-22",
+    "last_substantive_update": "2026-09-23",
     "glance": {
       "who": "Congressional Republicans, Trump administration",
       "what": "OBBBA's ~$1T Medicaid cuts put 446 hospitals at high risk of closing or cutting services, Public Citizen found",
@@ -23338,7 +23363,7 @@
         "certainty": "projected",
         "who": "Patients of 446 at-risk hospitals"
       },
-      "reviewed": "2026-09-22"
+      "reviewed": "2026-09-23"
     },
     "timeline": {
       "what_changed": {
@@ -34578,7 +34603,7 @@
       "note": "Co-signed and helped lead the August 2025 letter to Secretary Bunch launching the formal Smithsonian museum review, and, per legal analysis, has 'sought to influence the Smithsonian's decisions, including by instigating a curatorial review of the museum,' despite being a non-Senate-confirmed executive branch appointee with no formal authority over the historically independent institution."
     },
     "estimated_impact": {
-      "summary": "A White House-directed content review, backed by the implicit threat of withholding congressionally appropriated funds, has already produced at least one exhibit alteration, contributed to the departure of two museum leaders, and led to the cancellation of at least one planned exhibition, at an institution that hosted nearly 17 million visitors in the prior year.",
+      "summary": "A White House pressure campaign over Smithsonian content, begun with a March 2025 order to condition future appropriations and widened by an August 2025 review of eight museums, has already coincided with at least one exhibit alteration, the departure of two museum leaders, and an artist's cancellation of a planned exhibition after a dispute over a painting, at an institution that hosted nearly 17 million visitors in the prior year. In July 2026 Trump escalated the campaign with Executive Order 14416, which directs agencies to use 'any and all available authorities,' including funding and contract conditions, to push compliance, and orders National Park Service signs outside the National Museum of American History warning visitors that it reflects 'ideological capture.'",
       "figures": [
         {
           "metric": "Smithsonian museums in the first phase of the White House content review",
@@ -34601,16 +34626,16 @@
           "source": "CBS News and Yale Law Journal analysis, 2025-2026"
         }
       ],
-      "caveat": "The White House frames this as restoring historical accuracy and 'American exceptionalism' rather than suppressing content, and its July 2026 report argues specific exhibits (e.g., 'The Shape of Power,' framing on 'White culture' at NMAAHC) promote an ideological rather than factual narrative. The Smithsonian has consistently maintained its independence, stating its content is grounded in 'scholarly excellence, rigorous research, and the accurate, factual presentation of history,' has said it was not directed by the administration to remove the impeachment references (calling that specific placard 'temporary' and not meeting museum standards on its own), and Secretary Bunch has publicly reaffirmed the institution's independence from political influence in a September 2025 letter to staff. The Smithsonian's unique legal status as a congressionally chartered 'trust instrumentality' - not a standard executive-branch agency - is itself a live, unresolved legal question about whether the White House has authority to compel these changes at all."
+      "caveat": "The White House frames this as restoring historical accuracy and 'American exceptionalism' rather than suppressing content; its July 2026 report, 'Saving America's Story,' accuses the National Museum of American History of 'anti-white,' 'illegal alien,' and transgender-related 'activism' and argues specific exhibits (e.g., 'The Shape of Power,' framing on 'White culture' at NMAAHC) promote an ideological rather than factual narrative. The Smithsonian has consistently maintained its independence, has said it was not directed by the administration to remove the impeachment references (calling that specific placard 'temporary' and not meeting museum standards on its own), and Secretary Bunch responded directly that the July 2026 report 'is not a fair characterization of the work and totality of the National Museum of American History.' The Smithsonian's unique legal status as a congressionally chartered 'trust instrumentality' - not a standard executive-branch agency - is itself a live, unresolved legal question about whether the White House has authority to compel these changes at all; a bipartisan Senate letter from Sens. Murkowski and Merkley has also questioned the legal basis of E.O. 14416's signage directive, with no Interior or NPS response identified. The full reach of the review is not yet known, since the museums in its second phase had not been announced as of late August 2026."
     },
     "confidence_note": "High confidence on the executive order, the review letter, and the individual episodes (impeachment placard, Sajet resignation, Sherald cancellation), which are corroborated across NPR, CNN, CBS, ABC News, and a Yale Law Journal legal analysis. The characterization of specific exhibit content and the White House's July 2026 findings report reflect the administration's own framing and are presented here as such, not verified as fact. Re-verified 2026-07-20: Bunch's July 2026 response is worth citing specifically rather than only the earlier general September 2025 statement, since it directly addresses the content of the report this entry's status already references. No news found yet on which museums comprise the review's 'second phase.' Re-verified 2026-07-26: no material change to report. Update 2026-08-17: E.O. 14416 is sourced directly to the White House's own fact sheet and Federal Register publication (2026-07-29), corroborated by independent local/wire coverage of the warning-signage directive specifically. Flagging for the record: this is a case where the entry's own 2026-07-26 'no material change' recheck missed a significant development that had already been public for two days -- a gap in that prior pass, not a new development since it. Re-verified 2026-08-30: the Aug. 6, 2026 Murkowski/Merkley letter is sourced directly to Sen. Merkley's office and independently corroborated by Newsweek; no Interior/NPS response to it was identified.",
     "pull_quote": "Secretary Bunch responded that the White House report “is not a fair characterization of the work and totality of the National Museum of American History” and that the institution “remain[s] focused on… scholarship, nonpartisanship, independence, accuracy and integrity.”",
     "section_summaries": {
       "what_changed": "White House officials launched a content review of major Smithsonian museums, threatening funds over 'ideology'; pressure already forced an exhibit edit, a resignation, and a canceled show.",
-      "estimated_impact": "A museum system drawing ~17 million annual visitors has already lost two leaders and a planned show, and seen its own exhibit text rewritten, under threat of lost funding.",
+      "estimated_impact": "Under White House pressure the Smithsonian altered an exhibit; an artist separately canceled a show after a painting dispute. A July 2026 order directs funding and contract leverage and warning signs.",
       "confidence_note": "Well-corroborated across several major outlets on the core events; the White House's specific accusations reflect its own framing, not verified fact, and the director has directly rebutted them."
     },
-    "last_verified": "2026-09-22",
+    "last_verified": "2026-09-23",
     "date_added": "2026-07-10",
     "sources": [
       {
@@ -34671,7 +34696,7 @@
       }
     ],
     "last_updated": "2026-09-22",
-    "last_substantive_update": "2026-09-22",
+    "last_substantive_update": "2026-09-23",
     "glance": {
       "who": "Lindsey Halligan and the White House",
       "what": "Launched a White House content review of the Smithsonian; an exhibit was edited, two leaders left",
@@ -34680,7 +34705,7 @@
         "certainty": "documented",
         "who": "Smithsonian independence"
       },
-      "reviewed": "2026-09-22"
+      "reviewed": "2026-09-23"
     },
     "timeline": {
       "what_changed": {
@@ -39893,7 +39918,7 @@
       "note": "Signed the February 2025 executive order directing USIP's elimination, personally fired the board members, and the building was ultimately renamed in his honor in December 2025 even as a federal court had already ruled the underlying takeover unlawful."
     },
     "estimated_impact": {
-      "summary": "A congressionally chartered independent institute running active peace-building and conflict-resolution programs in more than two dozen countries was forcibly shuttered and its staff terminated overnight, actions a federal court later ruled were entirely unlawful, though a stay pending appeal has kept the administration in operational control.",
+      "summary": "A congressionally chartered independent institute running active peace-building and conflict-resolution programs in more than two dozen countries was forcibly seized and shuttered, its staff terminated overnight, and its headquarters left damaged after a roughly two-month DOGE occupation. A federal court ruled the takeover and firings unlawful, but a June 2025 stay pending appeal returned operational control to the administration, which it still held as of late August 2026.",
       "figures": [
         {
           "metric": "USIP staff terminated",
@@ -39916,16 +39941,16 @@
           "source": "CNN, December 3, 2025"
         }
       ],
-      "caveat": "The White House's official position, stated by spokesperson Anna Kelly, is that USIP 'was once a bloated, useless entity that blew $50 million per year while delivering no peace,' and that renaming it for President Trump celebrates 'a President who ended eight wars in less than a year.' USIP's outside counsel, George Foote, counters that 'a federal judge has already ruled that the government's armed takeover was illegal,' and that the stay pending appeal is 'the only reason the government continues to control the building' -- meaning the administration's continued control rests on a paused legal loss, not a reversed one. The central unresolved legal question, per the D.C. Circuit's own reasoning, is whether USIP 'exercises substantial executive power' subject to at-will presidential control, or is a genuinely independent congressional creation as USIP has argued throughout the litigation; that question remained formally unresolved as of the last-verified date, with the case held in abeyance pending related Supreme Court precedent."
+      "caveat": "The White House's official position, stated by spokesperson Anna Kelly, is that USIP 'was once a bloated, useless entity that blew $50 million per year while delivering no peace,' and that renaming it for President Trump celebrates 'a President who ended eight wars in less than a year.' USIP's outside counsel, George Foote, counters that 'a federal judge has already ruled that the government's armed takeover was illegal,' and that the stay pending appeal is 'the only reason the government continues to control the building' -- meaning the administration's continued control rests on a paused legal loss, not a reversed one. The central unresolved legal question, per the D.C. Circuit's own reasoning, is whether USIP 'exercises substantial executive power' subject to at-will presidential control, or is a genuinely independent congressional creation as USIP has argued throughout the litigation. The Supreme Court decided the related Trump v. Slaughter case on June 29, 2026, and USIP moved on July 2, 2026 to lift the D.C. Circuit's abeyance and schedule oral argument on that question; the government opposed on July 8, 2026, and as of late August 2026 no ruling had been reported; the case remained in abeyance and the administration in operational control under the existing stay."
     },
     "confidence_note": "Very strong. Anchored in multiple federal court filings and opinions cited by docket number and date (Judge Howell's May 19, 2025 summary judgment; the D.C. Circuit's June 27, 2025 stay order; the November 26, 2025 abeyance ruling), independently corroborated across CNN, NPR, PBS, NBC News, Reuters (via U.S. News), Bloomberg Law, and a formal case-tracking page maintained by the Civil Rights Litigation Clearinghouse. Re-verified 2026-07-19: the July 2/July 8 filings are corroborated by the case's CourtListener docket. Re-verified 2026-07-26: no material change to report. Re-verified 2026-08-17: no material change to report. Re-verified 2026-08-29: no material change to report; the abeyance-lift motion remains undecided. Re-verified 2026-08-31 (GSR recheck batch 45): no material change to report; the abeyance-lift motion remains undecided more than seven weeks after the government's opposition was filed.",
     "pull_quote": "Staff who retook the building found extensive damage from the roughly two-month DOGE occupation — water leaks, missing ceiling tiles, weeds growing in the rooftop cooling tower, and an infestation of rats and roaches — described by the security chief's own account as resembling ‘a zombie movie.’",
     "section_summaries": {
       "what_changed": "Officials forced their way into USIP's headquarters, fired its board and staff overnight, and transferred the building, treating it wrongly as a federal agency -- later ruled unlawful.",
-      "estimated_impact": "An independent institute running peace-building work in dozens of countries was shut down overnight; courts ruled it unlawful, yet an appeals stay left officials still in practical control.",
+      "estimated_impact": "An independent peace institute was forcibly seized and its staff terminated overnight; a court ruled it unlawful, but a June 2025 stay returned control to the administration.",
       "confidence_note": "Very strongly anchored in named rulings at each stage of the litigation, independently corroborated by several major outlets and an independent docket-tracking project."
     },
-    "last_verified": "2026-09-12",
+    "last_verified": "2026-09-23",
     "date_added": "2026-07-10",
     "sources": [
       {
@@ -39962,7 +39987,7 @@
       }
     ],
     "last_updated": "2026-09-12",
-    "last_substantive_update": "2026-09-12",
+    "last_substantive_update": "2026-09-23",
     "glance": {
       "who": "Donald Trump (President)",
       "what": "Ordered USIP eliminated; officials seized the HQ and fired 200+ staff; a court ruled the takeover unlawful",
@@ -39971,7 +39996,7 @@
         "certainty": "documented",
         "who": "USIP peace-building in 26 countries"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-09-23"
     },
     "timeline": {
       "what_changed": {

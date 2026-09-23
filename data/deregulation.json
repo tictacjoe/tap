@@ -1270,7 +1270,7 @@
       }
     ],
     "estimated_health_impact": {
-      "summary": "This entry documents an economic and process-integrity rollback rather than a direct public-health standard: the primary harms alleged are lost investment and jobs, and -- more seriously for democratic accountability -- a documented instance of DOE officials publicly misrepresenting the actual (politically motivated) basis for agency funding decisions, which a federal court has since found illegal in at least the $7.6 billion Democratic-state-targeting instance.",
+      "summary": "This is an economic and process-integrity rollback rather than a direct public-health standard: 223 clean energy projects representing 111,765 projected jobs and $82.9 billion in investment were delayed or canceled, per an advocacy-coalition analysis. DOE's own lawyers admitted in court that it canceled $7.6 billion in grants for projects in the 16 states that voted for Harris based solely on the political identity of the recipient's state, contradicting Energy Secretary Chris Wright's public merit-based explanation. A federal court has ruled the administration illegally blocked billions in grants to Democratic-leaning states, and a court order and a settlement have so far required DOE to reinstate 18 awards worth $109.7 million.",
       "figures": [
         {
           "metric": "Clean energy/manufacturing projects delayed or canceled",
@@ -1291,18 +1291,33 @@
           "metric": "Grants DOE admitted canceling based on recipient state's political identity (16 Harris-voting states)",
           "value": "$7,600,000,000",
           "source": "Federal court filings, reported by Fortune/AP/ABC News, July 2026"
+        },
+        {
+          "metric": "Energy funding terminations announced October 2, 2025, targeting the 16 Harris-voting states",
+          "value": "Roughly $8,000,000,000, hitting 136 congressional districts (108 held by Democrats, 28 by Republicans)",
+          "source": "OMB Director Russ Vought's announcement; district tally by House Appropriations Committee Democrats"
+        },
+        {
+          "metric": "Earliest documented cancellation wave, May 28, 2025 (24 bipartisan-infrastructure-law grants)",
+          "value": "$3,700,000,000",
+          "source": "DOE announcement, reported by AP News and US News"
+        },
+        {
+          "metric": "Awards DOE was required to reinstate by court order (January 2026, 7 awards, $27.6M) and settlement (June 12, 2026, 11 awards, $82.1M)",
+          "value": "18 awards worth $109,700,000",
+          "source": "Court order by U.S. District Judge Amit Mehta and federal court settlement, reported by Utility Dive and E&E News/POLITICO"
         }
       ],
-      "caveat": "The $82.9 billion/223-project figure (BlueGreen Alliance, a labor-and-environmental advocacy coalition, not a neutral government auditor) attributes the broader rollback generally to Trump's tax law and administration policy, while the $7.6 billion figure is independently and more directly established via DOE's own court admission -- present the two figures with their different evidentiary weight rather than treating them as equally certain. A federal court has ruled on the legality of the $7.6 billion in state-targeted cancellations specifically; the broader $82.9 billion figure has not been the subject of a comparable legal finding."
+      "caveat": "The $82.9 billion/223-project/111,765-job figures come from BlueGreen Alliance, a labor-and-environmental advocacy coalition rather than a neutral government auditor, and attribute the broader rollback generally to Trump's tax and spending law and other administration policy; the $7.6 billion figure is more directly established by DOE's own court admission, so the two carry different evidentiary weight. The roughly $8 billion October 2025 figure and the $7.6 billion court-admitted figure both concern the same 16 Harris-voting states but are not confirmed to describe the identical set of cancellations, and no source identified reconciles the two totals. Court relief so far is limited: DOE has been required to reinstate 18 awards worth $109.7 million, two broader suits (one by a coalition of states including California and New York, one by the University of California system) were reported still pending as of August 2026, and the broader $82.9 billion figure has not been the subject of a comparable legal finding. The $3.7 billion, roughly $8 billion, $7.6 billion and $82.9 billion figures measure overlapping or unreconciled sets of cancellations and should not be added together. No health or mortality estimate is attached to these cancellations."
     },
     "confidence_note": "HIGH confidence on the $7.6 billion state-targeting admission, since it comes directly from DOE's own federal court filings, corroborated across Fortune, ABC News, NBC Washington, Yahoo, and Utility Dive, and has already been the basis for a federal court ruling against the administration. MODERATE-HIGH confidence on the broader $82.9 billion/223-project/111,765-job figures, which are corroborated across Reuters-sourced wire coverage (GV Wire, Virginia Business, Spokesman-Review, US News) but originate from an advocacy-coalition analysis (BlueGreen Alliance) rather than a government or fully independent academic source. Re-verified 2026-09-03: added the January 2026 ($27.6M/7 awards) and June 2026 ($82.1M/11 awards) court-ordered/settled reinstatements, both HIGH confidence (court orders/settlements, corroborated across Utility Dive, Smart Cities Dive, ACHR News, and E&E News/Politico), plus an August 2026 FactCheck.org analysis corroborating this entry's Wright-contradiction framing. No new development identified on the broader $82.9B/223-project BlueGreen Alliance figure itself. Added 2026-09-10 (round-4 backlog fold, cluster c0371): the May 2025 $3.7B/24-project cancellation wave and the Heidelberg-specific detail are HIGH confidence, corroborated across AP News, US News, E&E News, Duane Morris ESG blog, World Oil, and Sen. Schiff's own press release; sourcing reviewed did not identify a separate, later Heidelberg cancellation distinct from the May 2025 award, so the two records are presented as one event reported twice.",
     "pull_quote": "OMB Director Russ Vought, announcing the October 2025 round of terminations, called the targeted funding ‘Green New Scam funding to fuel the Left's climate agenda’ -- an on-record statement of the same political motive DOE's court filings later admitted to.",
     "section_summaries": {
       "what_changed": "DOE's first major cancellation wave, in May 2025, cut $3.7 billion across 24 clean-energy and carbon-capture grants (including a $500M Heidelberg cement project in Indiana) on stated merit grounds. DOE went on to cancel hundreds more clean energy projects worth $82.9 billion under Trump's second term, and admitted in court that $7.6 billion of those cancellations specifically targeted the 16 states that voted for Harris -- directly contradicting Wright's public claims that all the cancellations, including the May 2025 wave, were merit-based.",
-      "estimated_impact": "223 projects and 111,765 projected jobs were delayed or canceled; a federal court has already ruled the politically-targeted portion of the cancellations illegal.",
+      "estimated_impact": "223 clean energy projects and 111,765 projected jobs were delayed or canceled, per an advocacy analysis; DOE admitted in court canceling $7.6 billion in grants in 16 Harris-won states over politics.",
       "confidence_note": "The $7.6B political-targeting admission is directly documented in DOE's own court filings and independently corroborated; the broader $82.9B figure comes from an advocacy-coalition analysis, not a government auditor, though it is widely wire-corroborated."
     },
-    "last_verified": "2026-09-22",
+    "last_verified": "2026-09-23",
     "date_added": "2026-07-27",
     "sources": [
       {
@@ -1355,7 +1370,7 @@
       }
     ],
     "short_summary": "DOE canceled $82.9B/223 clean energy projects (111,765 jobs) under Trump; court filings show $7.6B of that specifically targeted the 16 states that voted for Harris, contradicting Sec. Wright's public merit-based justification -- a court has already ruled this illegal.",
-    "last_substantive_update": "2026-09-11",
+    "last_substantive_update": "2026-09-23",
     "glance": {
       "who": "Chris Wright (Energy Secretary)",
       "what": "Canceled hundreds of clean energy grants; DOE admitted $7.6B targeted Harris-voting states",
@@ -1364,7 +1379,7 @@
         "certainty": "projected",
         "who": "Clean-energy workers, 16 targeted states"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-09-23"
     },
     "timeline": {
       "what_changed": {
