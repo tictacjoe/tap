@@ -1375,8 +1375,13 @@
       "note": "No single named individual was identified in sourcing reviewed for this entry as personally directing the surveillance scale-back; reporting attributes the capacity loss to the combined effect of the broader 2025 federal staffing purges, the October-November 2025 shutdown, and new communication restrictions, consistent with the pattern documented in this database's other bird-flu and public-health-surveillance entries."
     },
     "estimated_impact": {
-      "summary": "A documented, sharp resurgence in poultry outbreaks coincided directly with reduced federal capacity to track, sequence, and communicate about the virus -- scientists interviewed described themselves as effectively 'flying blind' at a moment infection rates were rising, while immigration-enforcement fears independently suppressed testing among the workforce most exposed to the virus.",
+      "summary": "Bird flu had infected 70 people over the preceding year, most of them farmworkers, when HHS had a National Academies workshop on protecting them cancelled in April 2025; as poultry outbreaks surged later that year, scientists said scaled-back federal surveillance, sequencing, and communication left them 'flying blind' on infections in animals and people, while immigration-enforcement fears deterred the most exposed workers from testing. In 2026, USDA's own livestock-detection tracker went nearly 30 days without posting new detections, so anyone checking it -- a reporter, a farmer, a local health official -- would have seen stale numbers with no on-page sign they were stale.",
       "figures": [
+        {
+          "metric": "People infected with bird flu over the year before the April 2025 workshop cancellation, most of them farmworkers",
+          "value": "70",
+          "source": "Reuters"
+        },
         {
           "metric": "Poultry flocks struck by H5N1 in the 30 days before Nov. 6, 2025 reporting",
           "value": "66",
@@ -1391,9 +1396,14 @@
           "metric": "Farmworkers surveyed across three states reporting symptoms coinciding with sick farm animals, but not tested",
           "value": "~20% reported symptoms; most were never tested",
           "source": "NPR, citing a multi-state farmworker survey"
+        },
+        {
+          "metric": "Egg-laying chickens killed in the Dec. 2024-Feb. 2025 Ohio/Indiana outbreak whose airborne-spread evidence USDA rejected",
+          "value": "20 million+ (about 5% of the U.S. flock), across 83 farms",
+          "source": "ProPublica, 2025-11-28"
         }
       ],
-      "caveat": "No single reporting source quantified the precise surveillance-capacity reduction (e.g., a specific staffing or budget cut figure specific to this scaled-back response) -- the entry documents the outbreak resurgence, the qualitative surveillance-gap description from working scientists, and the specific farmworker-testing figures, without claiming a precise causal percentage tying the outbreak's severity to the capacity loss."
+      "caveat": "No single reporting source quantified the precise surveillance-capacity reduction (e.g., a specific staffing or budget cut figure specific to this scaled-back response) -- the entry documents the outbreak resurgence, the qualitative surveillance-gap description from working scientists, and the specific farmworker-testing figures, without claiming a precise causal percentage tying the outbreak's severity to the capacity loss. The 70 human infections and the Ohio/Indiana outbreak both came before most of the documented scale-back and show the stakes, not harm caused by it; ProPublica's airborne-spread analysis is single-outlet modeling; the 20 million+ figure is the outbreak's reported toll. CDC's human-surveillance systems showed no unusual human influenza activity as of the August 30, 2026 update, so the 2026 tracker gap is a reporting and transparency failure, not a confirmed undetected human outbreak. The entry states no dollar cost."
     },
     "confidence_note": "HIGH confidence on the outbreak figures (66 flocks, 3.5 million birds), independently corroborated across NPR's national broadcast and numerous NPR-member-station syndications (NHPR, KUNC, Houston Public Media, OPB, and others) all citing the same underlying reporting. HIGH confidence on the farmworker-testing findings and immigration-fear dynamic, corroborated by the same NPR reporting and a related Stateline article. The late-November 2025 congressional letter demanding restored surveillance is corroborated by Rep. McBride's own press release. Re-verified 2026-08-17: no USDA response confirming restored surveillance capacity was found; a follow-up 2026 congressional letter repeated the same restoration demand, consistent with this entry's 'ongoing, no confirmation of reversal' status. Real correction, GSR recheck batch 28 (2026-08-30): the nearly-30-day APHIS tracker reporting gap and the specific detections that appeared afterward are corroborated across The Poultry Site and Medical Daily trade-press coverage, both published in August 2026; the 2026 year-to-date herd-outbreak comparison (85 in 2026 vs. 171 in all of 2025 vs. 917 in 2024) comes from the same coverage citing APHIS's own published totals and should not be read as evidence surveillance itself improved, since the entry's concern is reporting-cadence/transparency, not raw case totals. Re-verified 2026-09-01 (GSR recheck batch 49): no material change -- CIDRAP's coverage of the same August 2026 detection cluster and reporting gap corroborates, without adding to, what this entry already documents; no confirmation found that USDA restored full surveillance capacity or responded to Congress's restoration demands. Round-4 backlog fold, cluster c0285: the April 23, 2025 HHS-directed NAS workshop cancellation is HIGH confidence, corroborated by Reuters' original reporting and wide wire pickup (US News, Yahoo, AOL, trade press including The Poultry Site and The Cattle Site). Added 2026-09-12 (round-4 backlog fold, cluster c0721): the airborne-transmission evidence, USDA's rejection of it, and the named officials/scientists (McCluskey, Spackman, Cooper) are HIGH confidence, sourced directly to ProPublica's original data-driven investigation, which independently modeled wind-dispersion patterns against confirmed outbreak sites rather than relying solely on official statements; single-source as of this entry, worth rechecking for independent corroboration or a USDA response to the specific wind-modeling findings.",
     "pull_quote": "About 20% of farmworkers surveyed across three states reported symptoms coinciding with sick farm animals -- but most were never tested.",
@@ -1435,11 +1445,11 @@
     ],
     "section_summaries": {
       "what_changed": "Bird flu had infected 70 people, mostly farmworkers, by April 2025; by Nov. 2025 it killed 3.5M+ birds in 30 days as federal surveillance scaled back amid staff purges and a shutdown.",
-      "estimated_impact": "Scientists said they lacked visibility into the outbreak's spread in both animals and humans at the moment it was worsening; a farmworker survey found most people with symptoms coinciding with sick animals were never tested. A nearly month-long gap in USDA's own detection tracker in 2026 left anyone checking it -- reporters, farmers, local health officials -- looking at stale numbers with no indication they were stale.",
+      "estimated_impact": "Scientists said scaled-back surveillance left them 'flying blind' as 2025 outbreaks surged; immigration fears deterred farmworker testing. In 2026 a USDA tracker went nearly 30 days without updates.",
       "confidence_note": "The outbreak figures and surveillance-gap description are well-corroborated across NPR's national and syndicated reporting; a bipartisan congressional letter independently confirms the surveillance-restoration demand. The 2026 tracker-reporting-gap finding is corroborated across two independent trade-press outlets."
     },
-    "last_updated": "2026-09-12",
-    "last_substantive_update": "2026-09-12",
+    "last_updated": "2026-09-23",
+    "last_substantive_update": "2026-09-23",
     "glance": {
       "who": "USDA and HHS/CDC",
       "what": "Scaled back bird-flu surveillance and sequencing while outbreaks hit 66 flocks in a month",
@@ -1448,7 +1458,7 @@
         "certainty": "projected",
         "who": "Farmworkers and public exposed to H5N1"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-09-23"
     },
     "timeline": {
       "what_changed": {
@@ -7571,7 +7581,7 @@
       "note": "Personally authored and sent the new mission statements redirecting each section's priorities. At a Federalist Society event, she likened the division's work under Democratic administrations to a 'speeding train' and, addressing the departing attorneys directly, said 'we wish them well in their future endeavors and their passions. They need to pursue them elsewhere. That's not going to be happening at the DOJ.'"
     },
     "estimated_impact": {
-      "summary": "Stacey Young, an 18-year Civil Rights Division veteran who resigned in January 2025 and founded Justice Connection to support current and former staff, described the scale of change as unprecedented in the division's near-70-year history: 'Every presidential administration has its own policy priorities, but I don't think there's any precedent for an administration almost completely refocusing the civil rights division's enforcement priorities the way this one has.' Joseph Rich, who led the Voting Section from 1999-2005 under both a Democratic and Republican administration, raised a specific operational concern about the reduced Voting Section potentially bringing voter-fraud suits 'right in the middle of an election.'",
+      "summary": "Most of the Civil Rights Division's attorneys have left, and its enforcement has moved away from voting rights, police misconduct and environmental justice: the Voting Section fell from an estimated 30 attorneys to 3, the unit prosecuting police and federal-agent misconduct lost roughly two-thirds of its attorneys, and the division ended an agreement that was the first-ever use of federal civil rights law to address an environmental-justice claim, which had required the Alabama Department of Public Health to prioritize septic and wastewater fixes for Lowndes County residents exposed to raw sewage. More than 100 new attorneys and staff sworn in during July 2026 began refilling the roster, aligned with the redirected priorities. Stacey Young, an 18-year division veteran who founded Justice Connection, said she doesn't think there's 'any precedent for an administration almost completely refocusing the civil rights division's enforcement priorities the way this one has.' Joseph Rich, who led the Voting Section from 1999-2005, warned the reduced section could bring voter-fraud suits 'right in the middle of an election.'",
       "figures": [
         {
           "metric": "Attorneys who departed the division, initial estimate (through May 2025)",
@@ -7579,14 +7589,29 @@
           "source": "NPR, The Leadership Conference on Civil and Human Rights, Justice Connection"
         },
         {
-          "metric": "Attorneys who departed, updated estimate (through October 2025)",
-          "value": "~400 (about 75%)",
-          "source": "Justice Connection, cited by The Justice Connection's own press summary"
+          "metric": "Staff who departed the division, cumulative count (through July 23, 2025)",
+          "value": "368",
+          "source": "Reuters"
+        },
+        {
+          "metric": "People who departed the division, updated estimate (through October 2025)",
+          "value": "nearly 400 (about 75% of attorneys)",
+          "source": "Justice Connection"
         },
         {
           "metric": "Voting Section attorneys, January 2025 vs. May 2025",
           "value": "~30 -> 3",
           "source": "Justice Connection estimate, reported by Democracy Docket"
+        },
+        {
+          "metric": "Attorneys in the unit prosecuting police and federal-agent misconduct",
+          "value": "~40 -> as few as 13",
+          "source": "Reuters, Feb. 2026"
+        },
+        {
+          "metric": "Charges under the civil rights statute most commonly used in federal excessive-force cases, 2025",
+          "value": "54 (down about 36%; lowest since 2020)",
+          "source": "Reuters, Feb. 2026"
         },
         {
           "metric": "Attorneys remaining in the section covering nondiscrimination by federal-fund recipients",
@@ -7599,13 +7624,13 @@
           "source": "Federal News Network / Bloomberg Law, reported July 2026"
         }
       ],
-      "caveat": "Dhillon and DOJ leadership frame this as a legitimate, if unusually large, exercise of an incoming administration's prerogative to set its own enforcement priorities -- a framing multiple sources acknowledge is normal in kind (priorities do shift between administrations) even while disputing that this instance is normal in scale or process. The 250 vs. 260 vs. 400 figures reflect different snapshot dates from the same source network (Justice Connection) rather than conflicting estimates -- the count grew over the year as departures continued, not because of methodological disagreement."
+      "caveat": "Dhillon and DOJ leadership frame this as a legitimate, if unusually large, exercise of an incoming administration's prerogative to set its own enforcement priorities -- a framing multiple sources acknowledge is normal in kind (priorities do shift between administrations) even while disputing that this instance is normal in scale or process. The 250-260 (through May 2025) and nearly-400 (October 2025) figures are different Justice Connection snapshots, and the later one counts departing people rather than attorneys only, so part of the increase reflects the broader count. Reuters' July 2025 figure of 368 is a separate outlet's count of staff, so it is not directly comparable to the attorney-only 250-260 estimate. No count of people affected by the Lowndes County agreement's termination, or of misconduct cases not brought, is available in the entry's sourcing."
     },
     "confidence_note": "Strong, consistent sourcing across NPR, Government Executive, Democracy Docket, and multiple advocacy organizations, all citing the same core figures traceable to Justice Connection's direct contacts within the division -- a meaningful source since it draws on current employees, not just outside inference. Dhillon's own quotes and mission-statement language are on the record from her own public remarks and DOJ's own internal communications, not disputed characterizations. Re-verified 2026-07-20: Riordan's appointment and the reported election-observer defunding consideration both extend this entry's existing pattern (priorities redirected toward voter-fraud pursuit, away from voting-rights protection) with new, specific, named developments rather than changing the basic trajectory already documented. Re-verified 2026-07-26: the DOJ denial is corroborated by CBS News's own follow-up reporting and Election Law Blog's contemporaneous coverage. Re-verified 2026-08-17: the July 2026 swearing-in of 100+ new attorneys and the division's reoriented case priorities are corroborated across Bloomberg Law and Federal News Network reporting; the demographic-composition criticism is a characterization from Atlanta Black Star's coverage of DOJ's own published photo, presented here as commentary rather than an independently adjudicated fact. Re-verified 2026-08-30 (real correction): Van Erem's whistleblower disclosure and its core claims (25-28 page disclosure, House Judiciary Committee referral, the Harvard/Brown/Columbia investigations, the predetermined-outcome allegation) are well-corroborated across CBS News, ABC News, the Jewish Telegraphic Agency, jweekly, Higher Ed Dive, and the Government Accountability Project's own press release -- HIGH confidence. The specific 'poison pill' settlement-language and single-article-triggered-investigation details are sourced to Above the Law's fuller writeup of the disclosure and were not independently cross-checked against the disclosure document itself -- MODERATE confidence on those two specific procedural details. Added 2026-09-09 (round-4 backlog cluster c0278): the April 2025 100+-attorney and July 2025 368-staff figures are each HIGH confidence, directly sourced to ABC News's and Reuters's own original reporting respectively. Added 2026-09-10 (round-4 backlog fold, cluster c0462): the Hankison sentencing-recommendation and appeal-release sequence is HIGH confidence, corroborated across WDRB, LPM, CNN, Al Jazeera, and Yahoo/wire reporting on the December 2025 Sixth Circuit release order. Added 2026-09-11 (round-4 backlog fold, cluster c0231): the Lowndes County environmental-justice settlement termination is HIGH confidence, directly sourced to DOJ's own press release plus independent reporting (Inside Climate News, 1819 News, Alabama Daily News) all corroborating the same April 11, 2025 date, EO 14151 rationale, and settlement history.",
     "pull_quote": "DOJ's Civil Rights Division terminated the first-ever use of federal civil rights law to address an environmental-justice claim -- a rural, majority-Black county's raw-sewage exposure crisis.",
     "section_summaries": {
       "what_changed": "Roughly three-quarters of the Civil Rights Division's attorneys have left since January 2025, with the Voting Section gutted from 30 lawyers to 3, and the police-misconduct unit down two-thirds. DOJ's July 2025 recommendation of one day in prison for Brett Hankison, the officer convicted of violating Breonna Taylor's civil rights -- rejected by the sentencing judge, who imposed 33 months -- was a concrete early instance of the same leniency-toward-police pattern; DOJ later helped secure Hankison's release pending appeal. A former attorney's August 2026 whistleblower disclosure to Congress separately alleges the division's Harvard, Brown, and Columbia antisemitism investigations had predetermined outcomes, and that some departures were driven by attorneys' concern over exposure to state bar discipline for the division's current work.",
-      "estimated_impact": "A division veteran called this shift unprecedented in nearly 70 years; a former Voting Section chief warned of fraud suits timed around elections.",
+      "estimated_impact": "Most Civil Rights Division attorneys left; it ended an environmental-justice deal for Lowndes County residents exposed to raw sewage, and the Voting Section fell from an estimated 30 attorneys to 3.",
       "confidence_note": "Strongly sourced, including figures from current employees rather than outside inference; the 2026 whistleblower disclosure's core claims are corroborated across five-plus independent outlets, though two specific procedural details rest on a single source."
     },
     "last_verified": "2026-09-22",
@@ -7684,8 +7709,8 @@
         "url": "https://news.bloomberglaw.com/us-law-week/doj-fires-and-reassigns-civil-rights-lawyers-as-new-hires-arrive"
       }
     ],
-    "last_updated": "2026-09-22",
-    "last_substantive_update": "2026-09-22",
+    "last_updated": "2026-09-23",
+    "last_substantive_update": "2026-09-23",
     "glance": {
       "who": "Harmeet Dhillon (Civil Rights Division head)",
       "what": "Civil Rights Division lost an estimated 70% of its attorneys; Voting Section shrank from 30 lawyers to 3",
@@ -7694,7 +7719,7 @@
         "certainty": "documented",
         "who": "Civil-rights enforcement capacity"
       },
-      "reviewed": "2026-09-22"
+      "reviewed": "2026-09-23"
     },
     "timeline": {
       "what_changed": {
@@ -13173,7 +13198,7 @@
       "note": "No single official is named in reporting as personally ordering the DTOS reassignments; attributed institutionally to Patel as FBI Director, a role in which he has been a public critic of the Bureau's domestic-terrorism investigative effort, per Reuters. Kristi Noem, then DHS Secretary, bears parallel institutional responsibility for the DHS-side database dismantlement and funding cuts documented in Durbin's letter."
     },
     "estimated_impact": {
-      "summary": "Sen. Durbin's oversight letter characterized the combined FBI and DHS actions as 'a broad institutional pullback from confronting the full scope of domestic terrorism threats at a time when experts continue to warn about intensifying danger,' set against the FBI's own data showing domestic terrorism investigations had grown more than fourfold in less than a decade.",
+      "summary": "Federal capacity to prevent domestic terrorism was cut back even as FBI data showed such investigations had grown more than fourfold in less than a decade: DHS eliminated the $18 million grant program that funded local school-based threat assessments and mental-health interventions credited by experts with helping identify radicalized individuals before attacks; DHS prevention cuts also ended hate-crime hotlines and extremist-threat tracking. A Senate HSGAC report from Sen. Gary Peters found roughly 15,000 positions cut across DOJ and the FBI overall and 1,300 DHS personnel cut specifically from counterterrorism-related roles, with the administration's domestic-terrorism enforcement focus shifted almost exclusively to left-wing targets. The FBI also scrapped a tool used to track domestic-terrorism cases and weighed disbanding its Domestic Terrorism Operations Section (DTOS; no final decision had been announced as of March 2025 reporting), and DHS dismantled a national database tracking domestic extremism and hate crimes.",
       "figures": [
         {
           "metric": "Agents/intelligence analysts reassigned out of DTOS",
@@ -13181,12 +13206,27 @@
           "source": "Reuters, 2025-03-21"
         },
         {
+          "metric": "Positions cut across DOJ and the FBI combined",
+          "value": "~15,000",
+          "source": "Senate HSGAC report from Ranking Member Gary Peters, 2026-07-30"
+        },
+        {
+          "metric": "DHS personnel cut from counterterrorism-related roles",
+          "value": "1,300",
+          "source": "Senate HSGAC report from Ranking Member Gary Peters, 2026-07-30"
+        },
+        {
+          "metric": "Targeted Violence and Terrorism Prevention (TVTP) Grant Program eliminated",
+          "value": "$18 million",
+          "source": "NBC News, 2025-06-16"
+        },
+        {
           "metric": "Increase in FBI domestic terrorism investigations, 2013-2021",
           "value": "357% (1,981 to 9,049 cases)",
           "source": "Sen. Dick Durbin oversight letter to DHS/FBI, 2025-04-08, citing FBI data"
         }
       ],
-      "caveat": "DTOS would have hundreds of employees if fully staffed, so 16 reassignments is a partial, not wholesale, cut -- the more consequential fact reported is the scrapped tracking tool and the discussed-but-undecided disbanding of the section entirely, alongside the DHS-side database dismantlement Durbin's letter separately documents. No dollar figure for the DHS prevention-program funding cuts was available in sourcing reviewed."
+      "caveat": "The ~16 DTOS reassignments were a partial, not wholesale, cut to a section that would have hundreds of employees if fully staffed; the Peters report's 15,000 and 1,300 figures show a larger institutional pullback, but reports that DTOS's entire remaining staff was reassigned could not be confirmed against a primary source and are not counted here. The DHS database dismantlement and the broader prevention-program funding cuts rest on Sen. Durbin's oversight letter (the hotline and threat-tracking eliminations on ProPublica's reporting); the $18 million figure covers the TVTP grant program only, and no dollar figure for the other DHS prevention cuts is available in the entry's sourcing. No count of attacks or casualties tied to these cuts is available in the entry's sourcing."
     },
     "confidence_note": "Strong initial sourcing: Reuters' exclusive, citing multiple sources familiar with the matter, is corroborated by wire pickup (U.S. News, Yahoo, The Globe and Mail). The broader DHS-side pullback (database dismantlement, prevention-program funding cuts) rests on Sen. Durbin's oversight letter rather than independent reporting reviewed here -- his letter is a primary congressional-oversight document, but the specific dollar amounts and database details are only as documented in that letter, not independently re-verified against a DHS source in this pass. Re-verified 2026-08-17 (GSR recheck batch 19): the Peters HSGAC report's topline figures (15,000 DOJ/FBI positions, 1,300 DHS counterterrorism personnel) are corroborated by the committee's own press release and independent coverage (MS NOW, Raw Story, Government Executive). The narrower claim that DTOS's entire remaining staff was reassigned appears consistently across multiple outlets' characterizations of the report but could not be traced to a directly quotable primary-source passage in this pass (several outlet pages returned access errors on fetch) -- treated as reported-but-not-independently-verified rather than confirmed fact, consistent with this tracker's standard for claims that would materially upgrade an entry's existing framing. Re-verified 2026-08-30 (correction): AG Bondi's December 4, 2025 domestic-terrorism directive is sourced to Arnold & Porter's legal analysis of the memorandum's text (law-firm client alert summarizing the primary document, not the memo itself, which was not independently located in this pass) and is consistent with, and gives specific mechanism to, the Peters report's ideological-skew finding already cited here. Added 2026-09-12 (round-4 backlog cluster c0648): this entry's March 2025 DTOS reassignment (16 agents) was an early instance of a far larger bureau-wide pattern -- Sen. Warner's October 2025 data showed 23% of all FBI agents nationwide (45% in the largest field offices) had by then been reassigned to immigration enforcement, sidelining counterterrorism, espionage, and cybercrime work at that full scale -- see the newer, broader fbi-agents-diverted-ice-immigration-enforcement-2025.json entry.",
     "pull_quote": "A senior DHS official, speaking anonymously for fear of being fired, on the elimination of a violence-prevention grant program: “That line should be quoted after every future mass casualty event in this country.”",
@@ -13222,13 +13262,13 @@
         "url": "https://www.arnoldporter.com/en/perspectives/blogs/enforcement-edge/2025/12/doj-issues-sweeping-new-domestic-terrorism-directive"
       }
     ],
-    "last_updated": "2026-09-22",
+    "last_updated": "2026-09-23",
     "section_summaries": {
       "what_changed": "FBI leadership reassigned agents out of its domestic-terrorism unit and scrapped a tracking tool, part of a larger counterterrorism pullback.",
-      "estimated_impact": "A Senate oversight report called the combined cuts a broad pullback, set against FBI data showing domestic terrorism cases had quadrupled.",
+      "estimated_impact": "DHS ended an $18 million school threat-assessment grant program; Sen. Peters's report counted 1,300 DHS counterterrorism-related roles cut, as domestic-terrorism cases grew more than fourfold.",
       "confidence_note": "Strong initial Reuters sourcing; the broader pullback and later Senate figures rest on oversight letters and a committee report."
     },
-    "last_substantive_update": "2026-09-22",
+    "last_substantive_update": "2026-09-23",
     "glance": {
       "who": "Kash Patel (FBI Director)",
       "what": "Reassigned ~16 agents out of the FBI's domestic-terrorism unit and scrapped a tracking tool",
@@ -13237,7 +13277,7 @@
         "certainty": "documented",
         "who": "Domestic-terrorism investigations"
       },
-      "reviewed": "2026-09-22"
+      "reviewed": "2026-09-23"
     },
     "timeline": {
       "what_changed": {
@@ -16906,7 +16946,7 @@
       "note": "Personally announced the shutdown-era RIF campaign on social media ('The RIFs have begun') and publicly stated the total could exceed 10,000 employees, explicitly using the shutdown as an occasion to pursue layoffs beyond the routine furlough process."
     },
     "estimated_impact": {
-      "summary": "The shutdown left roughly 1.4 million federal workers unpaid for up to six weeks, withholding nearly $14 billion in wages, while OMB simultaneously used the shutdown to attempt a mass reduction-in-force campaign of over 10,000 threatened layoffs -- a use of shutdown-era authority a continuing resolution later invalidated as illegal, and that required court intervention in December 2025 to actually enforce against the administration's narrower compliance.",
+      "summary": "The 43-day shutdown left about 1.4 million federal workers unpaid at its peak and withheld almost $14 billion in wages, with families skipping meals and delaying medical care and military families turning to food banks in rising numbers, while OMB deleted any reference to the 2019 back-pay law's guarantee from its own shutdown guidance. OMB also used the shutdown to launch a layoff campaign Vought said could exceed 10,000 -- a federal judge ruled the first notices illegal, the continuing resolution later invalidated shutdown-era layoffs, and a further court order in December 2025 was needed to reverse hundreds the administration had left in place.",
       "figures": [
         {
           "metric": "Federal employees furloughed",
@@ -16921,7 +16961,7 @@
         {
           "metric": "Paychecks withheld nationally by shutdown's end",
           "value": "~3 million paychecks; ~$14 billion in wages",
-          "source": "Contemporaneous reporting, Nov. 2025"
+          "source": "Bipartisan Policy Center; CBS, NPR, CNN"
         },
         {
           "metric": "Shutdown duration",
@@ -16949,8 +16989,8 @@
           "source": "NBC News, CNN"
         },
         {
-          "metric": "Workers whose shutdown-era RIFs were rescinded per the CR by late Nov. 2025",
-          "value": ">3,600 (incl. 299 at Education Dept.)",
+          "metric": "Workers whose RIFs were rescinded under the CR by late Nov. 2025",
+          "value": ">3,600 (incl. 299 Education Dept. employees whose notices predated the shutdown)",
           "source": "Federal News Network / Maryland Matters, Nov. 2025"
         },
         {
@@ -16959,12 +16999,17 @@
           "source": "Military.com, Oct. 9, 2025; ABC News, late Oct. 2025"
         },
         {
-          "metric": "Weapons research/testing funds temporarily reallocated by DoD to cover troop pay (Oct. 15 and Oct. 31, 2025)",
+          "metric": "Emergency food-assistance requests logged by the Military Family Advisory Network over a single three-day span in the shutdown's final days",
+          "value": "more than 50,000",
+          "source": "Military.com, Nov. 10, 2025, citing MFAN's own tally"
+        },
+        {
+          "metric": "Weapons research/testing funds temporarily reallocated by the administration to cover troop pay (Oct. 15 and Oct. 31, 2025)",
           "value": "up to $8,000,000,000",
           "source": "The Hill; Federal News Network, Oct. 2025"
         }
       ],
-      "caveat": "The furloughed/excepted worker counts and paycheck/wage totals are drawn from OMB/OPM-sourced reporting rather than this entry's own independent calculation; different outlets round the ~670K/~730K figures slightly differently. The RIF numbers describe an attempted, later-invalidated action, not a permanent workforce reduction -- however, the invalidation itself was contested and required a second round of litigation in December 2025 to enforce, and the underlying pause on new RIFs expires with the CR on January 30, 2026, so the ultimate permanent effect on federal staffing levels was not yet resolved as of this entry's writing. The congressional troop-pay standoff (added 2026-09-10) was genuinely two-sided -- House Republicans blocked a Democratic standalone bill on October 10, and Senate Democrats blocked a Republican standalone bill on October 23 -- presented here as a bipartisan legislative impasse rather than attributing blame to one party, since the original source records reviewed for this cluster presented only the Republican-blocking side of the story."
+      "caveat": "The furloughed/excepted worker counts and paycheck/wage totals are drawn from OMB/OPM-sourced reporting rather than this entry's own independent calculation; different outlets round the ~670K/~730K figures slightly differently. The reported health harms -- skipped meals and delayed medical care -- are documented in reporting but not counted; the MFAN figure is MFAN's own tally of requests, as reported by Military.com. The RIF numbers describe an attempted, later-invalidated action, not a permanent workforce reduction -- however, the invalidation itself was contested and required further litigation in December 2025 to enforce, and the underlying pause on new RIFs expires with the CR on January 30, 2026; a follow-on funding package stalled in the Senate on December 19, 2025, leaving that deadline unresolved heading into 2026, so the ultimate permanent effect on federal staffing levels was not yet resolved as of this entry's writing. The congressional troop-pay standoff was genuinely two-sided -- House Republicans blocked a Democratic standalone bill on October 10, and Senate Democrats blocked a Republican standalone bill on October 23 -- presented here as a bipartisan legislative impasse rather than attributing blame to one party, since both sides are corroborated by sources across the political spectrum."
     },
     "confidence_note": "HIGH confidence -- shutdown duration, furlough/excepted worker counts, and paycheck/wage figures are corroborated across the Bipartisan Policy Center, Wikipedia's sourced shutdown article, CBS, NPR, and CNN. The RIF campaign is corroborated by Vought's own public statements plus NPR, CNN, CNBC, and Government Executive reporting naming the specific agencies and initial 4,200 figure; the CR's invalidation of shutdown-era RIFs and the subsequent narrower-interpretation dispute are corroborated by Federal News Network and Maryland Matters, both of which cover federal workforce policy in detail and cite the CR's own text. Added 2026-09-12 (round-4 backlog cluster c0683): MODERATE confidence on the Army Garrison Bavaria German-food-bank-list episode -- the page's existence, its 'kit bags' heading, and its Nov. 5, 2025 removal are corroborated across 404 Media, Task & Purpose, Stars and Stripes, and Euronews, but the Army's German-employees-only explanation is not independently verified beyond the Army's own spokesperson, and it is unconfirmed whether any U.S. troops actually used the listed resources. HIGH confidence on the military-family food-bank surge (round-4 backlog cluster c0645, added 2026-09-10), corroborated by Military.com, ABC News, and the Armed Services YMCA's own reporting of its food-bank demand data; the $8 billion weapons-fund reallocation used to cover troop pay is corroborated by The Hill and Federal News Network. Added 2026-09-10 (round-4 backlog cluster c0662): the Capital Area Food Bank/Landover case is corroborated by CNN and NBC News, each independently interviewing furloughed workers on scene; the DHS/FBI selective-payment facts are corroborated by Federal News Network's dedicated 'budgetary twister' reporting and The Washington Post's reporting on the administration opting some federal workers out of the shutdown's pay impact. Added 2026-09-10 (round-4 backlog cluster c0630): the Oct. 15/28, 2025 TRO-then-injunction sequence is HIGH confidence, corroborated across CNBC, Federal News Network, AFGE, PBS News, and Roll Call, all citing Judge Illston's own rulings; the unemployment-claims figures are HIGH confidence, corroborated across Bloomberg News (original source), NBC News, and CNN. Added 2026-09-10 (round-4 backlog cluster c0642): the House GOP block of the Pay Our Military Act is corroborated across The Hill, CNN, Fox News, Politico, and Rep. Sykes's own office; the Senate Democratic block of the Shutdown Fairness Act (54-45, Oct. 23) is independently corroborated across Stars and Stripes, Axios, Bloomberg, and Sen. Cramer's office (the bill's sponsor's own account) -- both sides of this exchange are corroborated by sources across the political spectrum, supporting the two-sided framing over the one-sided framing in this cluster's original source records. Added 2026-09-10 (round-4 backlog cluster c0594): the Sept. 23, 2025 canceled Schumer/Jeffries meeting and Trump's 'unserious'/'ridiculous' characterization of the ACA-subsidy demand are HIGH confidence, corroborated across CNBC, PBS NewsHour, The Hill, Federal News Network, and Fox News, all citing Trump's own Truth Social post and Schumer's public response. Added 2026-09-11 (round-4 backlog cluster c0698): the MFAN 50,000-request/three-day figure and CEO Razsadin's statement are HIGH confidence, corroborated directly by Military.com's November 10, 2025 reporting citing MFAN's own tally. Added 2026-09-13 (residual-record fold, cluster c0327): the December 19, 2025 failed funding package and the Hickenlooper/Bennet hold over NCAR are HIGH confidence, directly sourced to Fox News's report (politico.com's own report on the same event could not be fetched by the tooling used to verify this entry). Added 2026-09-13 (residual-record fold, cluster c0241): the Antideficiency Act legal argument and the Kogan/Shriver quotes are HIGH confidence, directly sourced to MSNBC/ms.now's opinion coverage; the OMB back-pay-guidance deletion and the GSA/Interior notice-language comparison are HIGH confidence, directly sourced to Government Executive's dedicated report; a related contemporaneous Trump quote about back pay and a specific NIOSH/National Park Service instance were identified via WebSearch but could not be confirmed via direct fetch of any single article and are not included in this entry's account above.",
     "pull_quote": "A 21-year military veteran, now a civilian federal employee, told reporters it was the first time in his life he'd ever needed to seek food assistance.",
@@ -16972,7 +17017,7 @@
     "date_added": "2026-09-10",
     "section_summaries": {
       "what_changed": "The 43-day government shutdown left about 1.4 million federal workers unpaid, while OMB Director Russell Vought used the shutdown to launch a mass-layoff campaign of over 10,000 threatened firings that legal experts warned violated the Antideficiency Act and that was later ruled illegal and reversed, though only after a second round of litigation in December 2025 and after OMB itself quietly deleted the 2019 back-pay law from its own shutdown guidance; a follow-on funding package then stalled in the Senate over a Colorado NCAR dispute, leaving the January 30, 2026 deadline unresolved as Congress recessed for the holidays.",
-      "estimated_impact": "Federal workers went without pay for up to six weeks (nearly $14 billion in withheld wages) while thousands also faced attempted layoffs that a court later found used shutdown authority illegally; the pause on new layoffs is temporary and expires January 30, 2026.",
+      "estimated_impact": "About 1.4 million federal workers went unpaid at the peak of the 43-day shutdown; families skipped meals and delayed medical care, and a judge ruled the first shutdown layoff notices illegal.",
       "confidence_note": "Well-corroborated across many outlets and OMB/OPM-sourced data; the RIF campaign's eventual permanent effect on federal staffing was not yet resolved as of this entry's writing."
     },
     "sources": [
@@ -17117,8 +17162,8 @@
         "url": "https://www.cbsnews.com/news/government-shutdown-federal-workers-missing-paycheck-2025/"
       }
     ],
-    "last_updated": "2026-09-22",
-    "last_substantive_update": "2026-09-22",
+    "last_updated": "2026-09-23",
+    "last_substantive_update": "2026-09-23",
     "glance": {
       "who": "Russell Vought (OMB Director)",
       "what": "Announced 10,000+ shutdown-era layoffs, later ruled illegal, as the 43-day shutdown left ~1.4M workers unpaid",
@@ -17127,7 +17172,7 @@
         "certainty": "documented",
         "who": "Unpaid and laid-off federal workers"
       },
-      "reviewed": "2026-09-22"
+      "reviewed": "2026-09-23"
     },
     "timeline": {
       "what_changed": {
@@ -28243,8 +28288,13 @@
       "note": "Personally ordered Hanson's termination via the White House Presidential Personnel Office and signed EO 14300 directing DOGE-guided NRC workforce reductions and a wholesale regulatory rewrite routed through OMB Director Russell Vought."
     },
     "estimated_impact": {
-      "summary": "Removal of a sitting commissioner outside the agency's 51-year practice of for-cause-only removal, combined with a DOGE-directed reduction in force and an OMB-routed rewrite of nuclear safety regulations, at an agency already short-staffed against its own hiring targets.",
+      "summary": "NRC's proposed rewrite of nuclear safety rules would replace the ALARA radiation-exposure principle and raise the allowable emissions standard at a plant's property line from 10 to 25 millirem per year, which UCS's Edwin Lyman warned could, in some provisions, let actual exposures rise closer to legal caps. It followed the first removal of an NRC commissioner since the agency's 1974 creation and an executive order directing a DOGE-consulted reorganization and reductions in force, alongside an OMB-routed rulemaking process; NRC later voted in April 2026 to phase out NRC-run security drills -- at an agency already short-staffed against its own hiring targets.",
       "figures": [
+        {
+          "metric": "Proposed allowable radionuclide emissions standard for a hypothetical resident at a plant's property line (February 2026 proposed rulemaking)",
+          "value": "raised from 10 to 25 millirem per year",
+          "source": "The Globe and Mail"
+        },
         {
           "metric": "NRC new-hire shortfall against FY2023 recruitment goal",
           "value": "281 hired vs. 400 goal (about 160 short)",
@@ -28257,22 +28307,22 @@
         },
         {
           "metric": "Deadline for wholesale revision of NRC safety regulations",
-          "value": "proposed rules within 9 months, final rules within 18 months of May 23, 2025",
-          "source": "Federal Register, EO 14300"
+          "value": "proposed rules within 9 months, final rules within 18 months of May 23, 2025 (proposed rules issued by the February 2026 deadline; final rules due November 2026)",
+          "source": "EO 14300 (deadlines); NRC rulemaking record (status)"
         },
         {
-          "metric": "NRC partisan composition after Hanson's removal",
-          "value": "2 Democratic-aligned to 2 Republican-aligned commissioners, with one vacancy (of 5 seats)",
-          "source": "Morgan Lewis 'Up & Atom' legal analysis, June 2025"
+          "metric": "NRC commission composition after the vacancy from Hanson's removal was filled",
+          "value": "full five members restored when Doug Weaver was sworn in December 22, 2025; Republican Ho Nieh designated chairman January 8, 2026 (2-2 with one vacancy from June 13 to Dec. 22, 2025)",
+          "source": "American Nuclear Society Nuclear Newswire; Morgan Lewis 'Up & Atom'; Washington Examiner"
         }
       ],
-      "caveat": "The administration's stated rationale, laid out in EO 14300 itself, is that NRC over-regulation has stifled the industry -- only two new reactors have come online since 1978 -- and that reorganization is needed to meet a stated goal of quadrupling U.S. nuclear capacity to 400 GW by 2050 to meet AI-driven electricity demand; the order also directs staffing increases in new-reactor licensing offices even as it mandates cuts elsewhere. Nuclear safety and watchdog groups (Union of Concerned Scientists, American Nuclear Society, Nuclear Innovation Alliance) and congressional Democrats have raised the independence and safety-oversight concerns described above; some pro-nuclear industry voices have also flagged the licensing deadlines and workforce cuts as potentially undermining the very buildout the order seeks to accelerate. No senior administration or NRC official has published a defense of the Hanson firing beyond the 'rowing in the same direction' comment; NRC's own public statement was limited to noting the agency can function with fewer than five commissioners."
+      "caveat": "The administration's stated rationale, laid out in EO 14300 itself, is that NRC over-regulation has stifled the industry -- only two new reactors have come online since 1978 -- and that reorganization is needed to meet a stated goal of quadrupling U.S. nuclear capacity to 400 GW by 2050 to meet AI-driven electricity demand; the order also directs staffing increases in new-reactor licensing offices even as it mandates cuts elsewhere. NRC Chairman Ho Nieh said the radiation-standard change removes 'ambiguity' and does not alter worker or public exposure limits themselves; the risk of higher actual exposures is UCS's warning, not a measured outcome. Nuclear safety and watchdog groups (Union of Concerned Scientists, American Nuclear Society, Nuclear Innovation Alliance), nearly 30 former NRC officials, and congressional Democrats have raised the independence and safety-oversight concerns described above; some pro-nuclear industry voices have also flagged the licensing deadlines and workforce cuts as potentially undermining the very buildout the order seeks to accelerate. No senior administration or NRC official has published a defense of the Hanson firing beyond the 'rowing in the same direction' comment. The vacancy his firing created has since been filled, but his removal itself remains final and unlitigated."
     },
     "confidence_note": "High confidence on the firing itself and the EO 14300 text (Federal Register, White House, NPR, NOTUS, multiple law-firm summaries) and on Hanson's own on-record statement. The staffing-shortfall figure and career-departure detail (Techdirt/ProPublica) are well-sourced but describe broader trends rather than counts specific to the Hanson firing alone; framed accordingly in the summary above. Re-verified 2026-07-20: the reorganization and regulatory rewrite are proceeding essentially on the EO's original schedule, not stalled -- this is a case where the executive order's stated timeline has held up in practice so far, worth noting since that isn't true of every entry in this tracker. CORRECTION 2026-07-26: this entry's leadership-composition claim was stale by roughly seven months and has been corrected directly, per this tracker's real-correction standard. The restored full commission and Nieh's chairmanship are corroborated by the American Nuclear Society's Nuclear Newswire, Morgan Lewis's Up & Atom blog, and Washington Examiner reporting. Re-verified 2026-08-06: Reuters independently corroborates the NRC's shift from agency-run to operator-run 'force-on-force' security drills, extending the deregulatory pattern this entry documents from safety-rule rewriting to security-testing oversight specifically. Re-verified 2026-08-17: the September 2026 reorganization target and the August 11, 2026 rulemaking-procedure rule are corroborated by trade coverage (NAM, PowerMag, Eurasia Review) and the rule's own Federal Register listing. No new reporting on Hanson's removal itself was found. Re-verified 2026-08-30: no material change -- the reorganization remains on track for its end-of-September 2026 target per current reporting, and no new reporting on Hanson's own removal was found. Re-verified 2026-09-01 (GSR recheck batch 51): no material change -- multiple sources (ANS Nuclear Newswire, World Nuclear News, NAM, the NRC's own Federal Register listing) confirm the reorganization remains on track for its end-of-September 2026 target; no new reporting on Hanson's own removal was found. Added 2026-09-10 (round-4 backlog cluster c0354): the radiation-safety-standard changes (LNT reconsideration, ALARA replacement, the 10-to-25-millirem proposal) are HIGH confidence, corroborated across the EO 14300 text itself, Holland & Knight's and other law firms' EO summaries, and The Globe and Mail's direct reporting including NRC Chairman Nieh's on-record comment and UCS's Edwin Lyman's critique. The June 24, 2025 former-officials' letter is HIGH confidence, independently corroborated by Reuters and Neutron Bytes (which published the letter's text, shared by former NRC Chairman Stephen Burns); the roughly-30-signatory count comes from Reuters, not the letter itself. Added 2026-09-12 (round-4 backlog fold, cluster c0447): Blake's identity, DOE-detail status, and the 'rubber stamp' directive are HIGH confidence, corroborated across The Hill and E&E News/POLITICO independent reporting citing named sources (Sen. Whitehouse) and multiple meeting attendees. MODERATE confidence on the March 2026 VC-board conflict-of-interest finding -- sourced to a single investigative outlet (Sludge) not yet corroborated elsewhere in sourcing reviewed, though its underlying claim (Blake's KCRise Fund board seat) is a verifiable public record, not itself contested.",
     "pull_quote": "A DOGE representative told the NRC chair and top staff the agency would be expected to give “rubber stamp” approval to new reactors already tested by the Energy or Defense Departments, bypassing NRC's own independent safety review.",
     "section_summaries": {
       "what_changed": "Trump fired an NRC commissioner without cause -- a first in the agency's history -- alongside an order forcing a reorganization and safety-rule rewrite routed through a White House budget office, including a proposal to relax the decades-old ALARA radiation-exposure principle and raise allowable emissions limits. Nearly 30 former NRC officials condemned the firing as endangering nuclear-accident risk by letting politics override safety.",
-      "estimated_impact": "This breaks decades of practice requiring cause to remove a commissioner at the nuclear safety regulator, paired with a mandated staff cut and outside control over its safety-rule rewrite.",
+      "estimated_impact": "NRC's proposed rewrite would replace the ALARA radiation principle and raise the property-line emissions standard from 10 to 25 millirem a year, after the first-ever firing of an NRC commissioner.",
       "confidence_note": "Well-sourced via the Federal Register, multiple outlets, and Hanson's own public statement; unusually, the reorganization has stuck to its original schedule rather than stalling."
     },
     "last_verified": "2026-09-12",
@@ -28343,8 +28393,8 @@
         "url": "https://readsludge.com/2026/03/23/doge-operative-behind-nuclear-safety-rollbacks-sat-on-industry-backed-vc-board/"
       }
     ],
-    "last_updated": "2026-09-12",
-    "last_substantive_update": "2026-09-12",
+    "last_updated": "2026-09-23",
+    "last_substantive_update": "2026-09-23",
     "glance": {
       "who": "Donald Trump (President)",
       "what": "Fired NRC Commissioner Hanson without cause, a first; ordered a DOGE-guided reorganization and rule rewrite",
@@ -28353,7 +28403,7 @@
         "certainty": "documented",
         "who": "NRC independence and safety oversight"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-09-23"
     },
     "timeline": {
       "what_changed": {
