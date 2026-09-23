@@ -2469,6 +2469,7 @@ function extractLargestNumber(str) {
    because a figure like "Annual Monetized Health Benefits at Risk"
    carries a dollar value but is conceptually a health figure, not a
    financial one. */
+/* figure-category:start */
 const FIGURE_HEALTH_KEYWORDS = /death|mortalit|illness|disease|cancer|injur|exposure|black lung|silicosis|musculoskeletal|\bmsd\b|medical|hazard|poison|contaminat|birth defect|\bhealth\b|\bsafety\b/i;
 const FIGURE_FINANCIAL_KEYWORDS = /\bcost|saving|spending|funding|budget|\bfee\b|penalt|investment|\bprice|revenue|payment|threshold|compensation|contract|taxpayer|benefit/i;
 
@@ -2488,6 +2489,17 @@ function isFigureSavings(fig) {
   return FIGURE_SAVINGS_KEYWORDS.test(text) && !/at risk/i.test(text) && !/\bnot\b.{0,30}saving/i.test(text);
 }
 
+// A metric like "Share of ... workforce furloughed during the 45-day DHS
+// funding lapse" isn't a financial figure -- "funding" only names *when*
+// it happened (the lapse itself), not what's being measured (a headcount/
+// percentage). Stripped before the FIGURE_FINANCIAL_KEYWORDS test below so
+// this one narrow circumstantial pattern doesn't pull a non-dollar figure
+// into "Financial" just because a funding-lapse-type event is mentioned
+// as context. Deliberately narrow (found via cisa-cyber-workforce-cuts-
+// trump2, 2026-09-23) -- doesn't touch "budget cut"/"funding cut" etc.,
+// which name an actual financial action and should still count.
+const FIGURE_FINANCIAL_CONTEXT_RE = /\bfunding\s+(?:lapse|halt|freeze|gap|pause)\b/gi;
+
 // "Scale & scope" is still its own category (used by buildFiguresHtml to
 // keep acreage/percentage/count figures in their own labeled group,
 // separate from the combined Health & safety + Financial list) and by
@@ -2496,7 +2508,8 @@ function figureCategory(fig) {
   const metric = fig.metric || "";
   const value = fig.value || "";
   if (FIGURE_HEALTH_KEYWORDS.test(metric) || FIGURE_HEALTH_KEYWORDS.test(value)) return "Health & safety";
-  if (/\$/.test(value) || FIGURE_FINANCIAL_KEYWORDS.test(metric)) return "Financial";
+  const metricForFinancialTest = metric.replace(FIGURE_FINANCIAL_CONTEXT_RE, "");
+  if (/\$/.test(value) || FIGURE_FINANCIAL_KEYWORDS.test(metricForFinancialTest)) return "Financial";
   return "Scale & scope";
 }
 
@@ -2508,6 +2521,7 @@ function figureKindOf(fig) {
   if (cat === "Financial" && isFigureSavings(fig)) return "savings";
   return null;
 }
+/* figure-category:end */
 
 /* Shared by both schemas that carry a figures array (deregulation's
    estimated_health_impact.figures, govservices' estimated_impact.figures)
