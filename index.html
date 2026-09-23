@@ -1878,7 +1878,8 @@ function adaptDeregulationEntry(entry) {
   const beforeText = entry.original_rule_summary ? "Before this action: " + entry.original_rule_summary : "";
   const medium = override.medium || combineTierText([brief, beforeText]);
   const stakesText = entry.estimated_health_impact?.summary ? "At stake: " + entry.estimated_health_impact.summary : "";
-  const full = override.full || combineTierText([medium, stakesText]);
+  const causeText = entry.cause ? "Pattern: " + entry.cause : "";
+  const full = override.full || combineTierText([medium, stakesText, causeText]);
   return stripAdaptedItemLabels({
     headline,
     tiers: [brief, medium, full],
@@ -1908,7 +1909,8 @@ function adaptGovServicesEntry(entry) {
     : "";
   const medium = override.medium || combineTierText([brief, proponentText]);
   const impactText = entry.estimated_impact?.summary ? "Impact: " + entry.estimated_impact.summary : "";
-  const full = override.full || combineTierText([medium, impactText]);
+  const causeText = entry.cause ? "Pattern: " + entry.cause : "";
+  const full = override.full || combineTierText([medium, impactText, causeText]);
   return stripAdaptedItemLabels({
     headline,
     tiers: [brief, medium, full],

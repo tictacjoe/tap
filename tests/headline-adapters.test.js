@@ -305,3 +305,27 @@ test("reporting: no flattened published post's Records headline/tiers still carr
   }
   assert.deepEqual(leaks, []);
 });
+
+// GSR/CDR Broader Pattern in the feed (2026-09-23 spec, sec-5 item 2): same
+// "Pattern: " + cause as adaptProsecutionEntry, fullest tier only.
+test("adaptGovServicesEntry appends 'Pattern: ' + cause to the fullest tier only, after impact", () => {
+  const r = fns.adaptGovServicesEntry({ what_changed: "W.", estimated_impact: { summary: "I." }, cause: "[TAP Analysis, not sourced] P." });
+  assert.equal(r.tiers[2], "W. Impact: I. Pattern: [TAP Analysis, not sourced] P.");
+  assert(!r.tiers[1].includes("Pattern:"));
+});
+
+test("adaptGovServicesEntry without cause keeps its fullest tier unchanged", () => {
+  const r = fns.adaptGovServicesEntry({ what_changed: "W.", estimated_impact: { summary: "I." } });
+  assert.equal(r.tiers[2], "W. Impact: I.");
+});
+
+test("adaptDeregulationEntry appends 'Pattern: ' + cause to the fullest tier only, after stakes", () => {
+  const r = fns.adaptDeregulationEntry({ what_changed: "W.", estimated_health_impact: { summary: "S." }, cause: "[TAP Analysis, not sourced] P." });
+  assert.equal(r.tiers[2], "W. At stake: S. Pattern: [TAP Analysis, not sourced] P.");
+  assert(!r.tiers[1].includes("Pattern:"));
+});
+
+test("adaptDeregulationEntry without cause keeps its fullest tier unchanged", () => {
+  const r = fns.adaptDeregulationEntry({ what_changed: "W.", estimated_health_impact: { summary: "S." } });
+  assert.equal(r.tiers[2], "W. At stake: S.");
+});
