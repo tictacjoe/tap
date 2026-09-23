@@ -1070,8 +1070,6 @@
     margin: 0.6rem 0 0.2rem;
   }
   .figure-group-label:first-child { margin-top: 0.3rem; }
-  .figure-harm-value { color: var(--harm-figure); }
-  .figure-savings-value { color: var(--savings-figure); }
 
   .confidence-box {
     background: var(--brass-light);
@@ -2473,13 +2471,14 @@ function extractLargestNumber(str) {
    financial one. */
 const FIGURE_HEALTH_KEYWORDS = /death|mortalit|illness|disease|cancer|injur|exposure|black lung|silicosis|musculoskeletal|\bmsd\b|medical|hazard|poison|contaminat|birth defect|\bhealth\b|\bsafety\b/i;
 const FIGURE_FINANCIAL_KEYWORDS = /\bcost|saving|spending|funding|budget|\bfee\b|penalt|investment|\bprice|revenue|payment|threshold|compensation|contract|taxpayer|benefit/i;
-const FIGURE_CATEGORY_ORDER = ["Health & safety", "Financial", "Scale & scope"];
 
-/* Marks a Financial-category figure as a claimed cost savings (colored
-   green in buildFiguresHtml) rather than a cost, penalty, or funding
-   cut. "at risk" is excluded deliberately -- "Annual Net Consumer
-   Savings at Risk" contains "savings" but describes a benefit
-   threatened with loss, the opposite of a savings claim. */
+/* Marks a Financial-category figure as a claimed cost savings rather
+   than a cost, penalty, or funding cut -- used only by oneLinerBase()'s
+   list-view coloring now (buildFiguresHtml's own box dropped the
+   harm/savings color coding, 2026-09-22, Joe's call). "at risk" is
+   excluded deliberately -- "Annual Net Consumer Savings at Risk"
+   contains "savings" but describes a benefit threatened with loss, the
+   opposite of a savings claim. */
 const FIGURE_SAVINGS_KEYWORDS = /\bsaving|cost reduction|price reduction|premium reduction/i;
 function isFigureSavings(fig) {
   const text = (fig.metric || "") + " " + (fig.value || "");
@@ -2489,6 +2488,10 @@ function isFigureSavings(fig) {
   return FIGURE_SAVINGS_KEYWORDS.test(text) && !/at risk/i.test(text) && !/\bnot\b.{0,30}saving/i.test(text);
 }
 
+// "Scale & scope" is still its own category (used by buildFiguresHtml to
+// keep acreage/percentage/count figures in their own labeled group,
+// separate from the combined Health & safety + Financial list) and by
+// figureKindOf/oneLinerBase below.
 function figureCategory(fig) {
   const metric = fig.metric || "";
   const value = fig.value || "";
@@ -2497,10 +2500,8 @@ function figureCategory(fig) {
   return "Scale & scope";
 }
 
-/* Same harm/savings classification buildFiguresHtml() uses for card
-   figures, exposed as a single "harm" | "savings" | null verdict for
-   callers (oneLinerFor()) that need it as data rather than pre-built
-   HTML. */
+/* Harm/savings classification for callers (oneLinerFor()) that need it
+   as data rather than pre-built HTML. */
 function figureKindOf(fig) {
   const cat = figureCategory(fig);
   if (cat === "Health & safety") return "harm";
@@ -2510,25 +2511,26 @@ function figureKindOf(fig) {
 
 /* Shared by both schemas that carry a figures array (deregulation's
    estimated_health_impact.figures, govservices' estimated_impact.figures)
-   so the grouping logic and markup only exist in one place. */
+   so the grouping logic and markup only exist in one place.
+
+   Health & safety and Financial figures render together, undifferentiated,
+   in the estimated-impact box -- no sub-label, no color coding (Joe's call,
+   2026-09-22: the red/green harm/savings distinction read as an implied
+   verdict readers hadn't asked for). Scale & scope figures (acreage,
+   percentages, plain counts -- not dollars or health/safety figures) still
+   get their own labeled group underneath, since they're a genuinely
+   different kind of number and mixing them in unlabeled would be more
+   confusing, not less. figureCategory/figureKindOf/isFigureSavings stay in
+   place for oneLinerBase()'s separate list-view coloring, untouched here. */
 function buildFiguresHtml(figs, hl) {
   if (!figs || !figs.length) return "";
-  const groups = {};
-  figs.forEach(f => { (groups[figureCategory(f)] = groups[figureCategory(f)] || []).push(f); });
-  return FIGURE_CATEGORY_ORDER.filter(cat => groups[cat]).map(cat =>
-    '<div class="figure-group-label">' + cat + '</div>' +
-      '<ul class="exhibit-list">' + groups[cat].map(f => {
-        // Health & safety figures are harms (mortality, injury,
-        // illness, exposure risk -- see FIGURE_HEALTH_KEYWORDS) --
-        // colored red. Within Financial, a figure claiming cost
-        // savings is colored green; other Financial figures (costs,
-        // penalties, funding cuts, benefits "at risk") stay neutral --
-        // see isFigureSavings().
-        const valueClass = cat === "Health & safety" ? ' class="figure-harm-value"'
-          : (cat === "Financial" && isFigureSavings(f)) ? ' class="figure-savings-value"' : "";
-        return '<li>' + hl(f.metric) + ': <strong' + valueClass + '>' + hl(f.value) + '</strong> (' + hl(f.source) + ')</li>';
-      }).join("") + '</ul>'
-  ).join("");
+  const combined = figs.filter(f => figureCategory(f) !== "Scale & scope");
+  const scaleScope = figs.filter(f => figureCategory(f) === "Scale & scope");
+  const listHtml = list => '<ul class="exhibit-list">' + list.map(f =>
+    '<li>' + hl(f.metric) + ': <strong>' + hl(f.value) + '</strong> (' + hl(f.source) + ')</li>'
+  ).join("") + '</ul>';
+  return (combined.length ? listHtml(combined) : "") +
+    (scaleScope.length ? '<div class="figure-group-label">Scale & scope</div>' + listHtml(scaleScope) : "");
 }
 
 /* Impact scoring is inherently a heuristic, not an objective measure
