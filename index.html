@@ -3220,7 +3220,8 @@ function visibleSearchText(entry, cfg) {
       glanceActive(entry, cfg) ? null : entry.short_summary, entry.what_changed,
       entry.section_summaries?.what_changed, entry.section_summaries?.estimated_impact, entry.section_summaries?.confidence_note,
       entry.primary_proponent?.name, entry.primary_proponent?.role, entry.primary_proponent?.note,
-      entry.estimated_health_impact?.summary, entry.estimated_health_impact?.caveat, entry.confidence_note
+      entry.estimated_health_impact?.summary, entry.estimated_health_impact?.caveat, entry.confidence_note,
+      entry.cause
     );
     (entry.estimated_health_impact?.figures || []).forEach(f => parts.push(f.metric, f.value, f.source));
     (entry.sources || []).forEach(s => parts.push(s.name));
@@ -3239,7 +3240,8 @@ function visibleSearchText(entry, cfg) {
       entry.what_changed,
       entry.section_summaries?.what_changed, entry.section_summaries?.estimated_impact, entry.section_summaries?.confidence_note,
       entry.primary_proponent?.name, entry.primary_proponent?.role, entry.primary_proponent?.note,
-      entry.estimated_impact?.summary, entry.estimated_impact?.caveat, entry.confidence_note
+      entry.estimated_impact?.summary, entry.estimated_impact?.caveat, entry.confidence_note,
+      entry.cause
     );
     (entry.estimated_impact?.figures || []).forEach(f => parts.push(f.metric, f.value, f.source));
     (entry.sources || []).forEach(s => parts.push(s.name));

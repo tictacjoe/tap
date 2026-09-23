@@ -95,3 +95,12 @@ test("visibleSearchText for Deregulation still includes short_summary when the f
   assert.ok(text.includes("Zorblax"));
   assert.ok(text.includes("Example Agency of Testing"));
 });
+
+// GSR/CDR Broader Pattern is visible on the expanded card (2026-09-23 spec,
+// sec-5 item 3), so this function's own rule puts it in the haystack.
+for (const kind of ["govservices", "deregulation"]) {
+  test(`visibleSearchText includes cause for ${kind} (Broader Pattern card is visible)`, () => {
+    const entry = { title: "T", rule_name: "T", cause: "[TAP Analysis, not sourced] zebra pattern" };
+    assert.ok(api.visibleSearchText(entry, { kind, titleField: "title" }).includes("zebra pattern"));
+  });
+}
