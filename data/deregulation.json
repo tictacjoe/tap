@@ -2557,11 +2557,11 @@
       "Fossil-fuel and coal-power-generation industries broadly, per EcoWatch's framing of the announcement as 'the day Trump's Big Oil megadonors paid for' -- a characterization from Sen. Sheldon Whitehouse, not an EPA-sourced or independently quantified claim"
     ],
     "estimated_health_impact": {
-      "summary": "Because this entry documents the announcement rather than any single finalized rule, no agency or independent body has produced a combined health-impact estimate for all 31 actions together; each constituent rule's own estimated health impact (where finalized and quantifiable) is tracked in that rule's separate entry in this database. Update 2025-11-19 (added 2026-09-11): a ProPublica/Guardian analysis has since produced a cross-policy mortality projection spanning this announcement plus other 2025 climate/energy actions (OBBBA tax-credit repeal, drilling expansion) -- see propublica-climate-rollback-heat-death-projection-2025.json for that aggregate estimate; it is not repeated here to avoid double-counting.",
+      "summary": "Because this entry documents the announcement rather than any single finalized rule, no agency or independent body has produced a combined health-impact estimate for all 31 actions together; each constituent rule's own estimated health impact (where finalized and quantifiable) is tracked in that rule's separate entry in this database. Update 2025-11-19 (added 2026-09-11): a ProPublica/Guardian analysis has since produced a cross-policy mortality projection spanning this announcement plus other 2025 climate/energy actions (OBBBA tax-credit repeal, drilling expansion) -- that aggregate estimate is tracked in a separate entry in this database and is not repeated here to avoid double-counting.",
       "figures": [],
       "caveat": "This entry intentionally carries no aggregate figures to avoid double-counting harms already estimated individually in the specific-rule entries this announcement launched. See those entries for quantified figures."
     },
-    "confidence_note": "HIGH confidence on the announcement's content and Zeldin's own quotes -- corroborated across EcoWatch, NPR, the EPA's own press materials, and multiple law-firm client alerts (Taft, Holland & Knight, Babst Calland) that treat it as a significant, citable regulatory event. The bipartisan-condemnation framing is well-sourced to on-record quotes from former EPA Administrators Gina McCarthy (Obama-era, calling it 'the most disastrous day in EPA history') and Christine Todd Whitman (George W. Bush-era Republican, saying 'if there's an endangerment finding to be found anywhere, it should be found on this administration'), not a characterization invented by this entry. This entry's originating role is cross-referenced from the specific-rule entries it launched, which this database tracks separately: the endangerment-finding rescission (finalized Feb. 2026), the power-plant GHG standards repeal, the light-duty-vehicle GHG standards repeal, the MATS mercury/air-toxics reset, and the Greenhouse Gas Reporting Program elimination. The Environmental Justice office elimination this same announcement week accompanied is tracked separately in Government Services Redirection.",
+    "confidence_note": "HIGH confidence on the announcement's content and Zeldin's own quotes -- corroborated across EcoWatch, NPR, the EPA's own press materials, and multiple law-firm client alerts (Taft, Holland & Knight, Babst Calland) that treat it as a significant, citable regulatory event. The bipartisan-condemnation framing is well-sourced to on-record quotes from former EPA Administrators Gina McCarthy (Obama-era, calling it 'the most disastrous day in EPA history') and Christine Todd Whitman (George W. Bush-era Republican, saying 'if there's an endangerment finding to be found anywhere, it should be found on this administration'), not a characterization invented by this entry. The endangerment-finding rescission this announcement launched was finalized Feb. 2026. The Environmental Justice office elimination that accompanied the announcement the same week is a separate action.",
     "pull_quote": "\"We are driving a dagger straight into the heart of the climate change religion to drive down the cost of living,\" EPA Administrator Lee Zeldin said, announcing 31 deregulatory actions targeting the endangerment finding, emissions standards, and mercury/methane limits in a single day.",
     "short_summary": "EPA announced 31 environmental rollbacks in a single day, calling it the 'greatest day of deregulation' in U.S. history.",
     "last_verified": "2026-08-11",
@@ -2601,7 +2601,7 @@
       },
       "reviewed": "2026-09-20"
     },
-    "cause": "[TAP Analysis, not sourced] Several of the individual rules this announcement launched are tracked as distinct entries in this database. See also: the endangerment-finding rescission entry; the power-plant GHG standards repeal entry; the light-duty-vehicle GHG standards repeal entry; the MATS reset entry; the Greenhouse Gas Reporting Program elimination entry. The Environmental Justice office elimination that accompanied the announcement the same week is tracked separately: see the Environmental Justice office elimination entry.",
+    "cause": "[TAP Analysis, not sourced] Several of the individual rules this announcement launched are tracked as distinct entries in this database. See also: the endangerment-finding rescission entry; the power-plant GHG standards repeal entry; the light-duty-vehicle GHG standards repeal entry; the MATS reset entry; the Greenhouse Gas Reporting Program elimination entry. The Environmental Justice office elimination that accompanied the announcement the same week is tracked separately: see the Environmental Justice office elimination entry. A cross-policy mortality projection spanning this announcement is tracked separately: see the ProPublica/Guardian heat-death projection entry.",
     "cause_references": [
       {
         "match": "the endangerment-finding rescission entry",
@@ -2632,6 +2632,11 @@
         "match": "the Environmental Justice office elimination entry",
         "tracker": "government-services",
         "id": "epa-environmental-justice-staff-rif-2026"
+      },
+      {
+        "match": "the ProPublica/Guardian heat-death projection entry",
+        "tracker": "deregulation",
+        "id": "propublica-climate-rollback-heat-death-projection-2025"
       }
     ]
   },
