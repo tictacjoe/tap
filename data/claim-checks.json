@@ -1,6 +1,6 @@
 {
  "version": 1,
- "as_of": "2026-09-21",
+ "as_of": "2026-09-23",
  "checks": {
   "abrego-garcia-vindictive-prosecution-2025-2026": {
    "0": {
@@ -24,6 +24,56 @@
     "why": "The CNBC article confirms the May 22, 2026 dismissal on vindictiveness grounds, quotes the finding that the government would not have brought the case absent the lawsuit, and reports DOJ's plan to appeal.",
     "host": "cnbc.com",
     "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   }
+  },
+  "afpi-census-bureau-noncitizen-voting-report-2026": {
+   "0": {
+    "state": "partly",
+    "why": "The source confirms at least seven AFPI members (Jensen, McCrea plus at least five others) detailed via the IPA with access to sensitive data, but it describes the IPA as covering institutions 'like nonprofits and universities' and does not mention local governments or tribal organizations or say it is historically not used for advocacy staff.",
+    "host": "wired.com",
+    "date": "2026-09-23",
+    "kind": "fact",
+    "archive": false
+   },
+   "1": {
+    "state": "partly",
+    "why": "NPR confirms an unauthored report citing over 24,000 noncitizen votes in 2020, but the provided NPR text does not give the report's title or an August 18, 2026 publication date.",
+    "host": "npr.org",
+    "date": "2026-09-23",
+    "kind": "fact",
+    "archive": false
+   },
+   "2": {
+    "state": "supports",
+    "why": "WIRED names Jensen and McCrea as the two AFPI members it previously identified as report authors, and says at least five others are staffed at the Bureau, naming Kossek and Montgomery.",
+    "host": "wired.com",
+    "date": "2026-09-23",
+    "kind": "fact",
+    "archive": false
+   },
+   "3": {
+    "state": "partly",
+    "why": "Becker's quote is verbatim and former employees flagged the missing author and mismatch risk, but the provided (truncated) text does not specifically state an absence of false-match testing or sample validation of the 24,000 records.",
+    "host": "npr.org",
+    "date": "2026-09-23",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "supports",
+    "why": "The source quotes an anonymous Census employee saying there has historically been 'nothing close' to what AFPI is doing and that it is 'disrespectful to the institution.'",
+    "host": "wired.com",
+    "date": "2026-09-23",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "partly",
+    "why": "The letter is dated September 4, 2026 and raises concerns about the Beginning Analysis and AFPI-affiliated IPA hires, but the provided (truncated) text does not show the signatories, so the named Representatives cannot be confirmed from it.",
+    "host": "oversightdemocrats.house.gov",
+    "date": "2026-09-23",
     "kind": "fact",
     "archive": false
    }
@@ -326,6 +376,22 @@
     "why": "The CBS News article confirms DiGenova's exit came days after subpoena notices went out and that investigators separately contacted lawyers for former FBI agents who investigated Trump's classified-records retention.",
     "host": "cbsnews.com",
     "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "17": {
+    "state": "unopened",
+    "why": "",
+    "host": "washingtonpost.com",
+    "date": "2026-09-23",
+    "kind": "fact",
+    "archive": false
+   },
+   "18": {
+    "state": "unopened",
+    "why": "",
+    "host": "bloomberg.com",
+    "date": "2026-09-23",
     "kind": "fact",
     "archive": false
    }
@@ -1698,6 +1764,14 @@
     "date": "2026-09-15",
     "kind": "fact",
     "archive": false
+   },
+   "11": {
+    "state": "partly",
+    "why": "The snapshot confirms an appellate panel expressed skepticism Tuesday about DOJ's bid to revive the Comey/James cases after the illegal-appointment ruling, but it does not give the Sept 15-16 dates, Richmond, the second-appointment focus, or 'poised to uphold' language.",
+    "host": "washingtonpost.com",
+    "date": "2026-09-23",
+    "kind": "fact",
+    "archive": true
    }
   },
   "bondi-media-subpoena-policy-reversal-2025": {
@@ -2552,6 +2626,56 @@
     "why": "The source confirms DOJ's opposition filing (dated Tuesday night, with the AP article published August 19) and the exact 'no serious dispute' quote about the post meaning 'Kill President Trump,' but it does not explicitly address the argument that a jury rather than the judge must decide the true-threat question.",
     "host": "reviewjournal.com",
     "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   }
+  },
+  "dans-arctic-research-commission-russia-ties-2026": {
+   "0": {
+    "state": "partly",
+    "why": "The source confirms he learned Russian as a schoolboy, worked in Moscow finance in the mid-1990s, advocates closer U.S.-Russia ties and shares pro-Kremlin posts, but the provided (truncated) text does not mention the Papa John's stake or the Helsinki Shipyard bid.",
+    "host": "propublica.org",
+    "date": "2026-09-23",
+    "kind": "fact",
+    "archive": false
+   },
+   "1": {
+    "state": "partly",
+    "why": "The source confirms Dans championed Damen as commission chair while his consultancy was working to help Damen win a federal icebreaker contract, but the provided text does not contain the August 2024 'working with Damen Shipyards Group' announcement.",
+    "host": "propublica.org",
+    "date": "2026-09-23",
+    "kind": "fact",
+    "archive": false
+   },
+   "2": {
+    "state": "supports",
+    "why": "The source states Trump appointed a Texas venture capitalist and MAGA influencer with no formal science background as commission chair in December.",
+    "host": "propublica.org",
+    "date": "2026-09-23",
+    "kind": "fact",
+    "archive": false
+   },
+   "3": {
+    "state": "unopened",
+    "why": "",
+    "host": "propublica.org",
+    "date": "2026-09-23",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "partly",
+    "why": "The source confirms commission members are not government employees and need not file ethics disclosure forms, but the provided text does not contain the FARA/lobbyist-registration analysis or the no-penalty point about the conflict-of-interest policy.",
+    "host": "propublica.org",
+    "date": "2026-09-23",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "partly",
+    "why": "Anna Kelly's quote and Dans's refusal to be interviewed or answer written questions are confirmed, but the 'have no idea what they are talking about' remark does not appear in the provided text.",
+    "host": "propublica.org",
+    "date": "2026-09-23",
     "kind": "fact",
     "archive": false
    }
@@ -4955,6 +5079,14 @@
     "kind": "fact",
     "archive": false
    },
+   "9": {
+    "state": "supports",
+    "why": "Politico reports Trump praised the indictment, called Comey 'a dirty cop,' said 'there will be others,' denied pushing DOJ, and had warned Bondi over the weekend that 'we can't delay any longer.'",
+    "host": "politico.com",
+    "date": "2026-09-23",
+    "kind": "fact",
+    "archive": false
+   },
    "10": {
     "state": "supports",
     "why": "The NYT article confirms Halligan secured the indictment as her first act in the job over career prosecutors' misgivings after Siebert's resignation, and quotes Trump's Truth Social message to Bondi ending in exactly the 'JUSTICE MUST BE SERVED, NOW!!!' line the claim cites.",
@@ -5082,6 +5214,14 @@
     "date": "2026-09-15",
     "kind": "fact",
     "archive": false
+   },
+   "26": {
+    "state": "partly",
+    "why": "The snapshot confirms an appellate panel expressed skepticism Tuesday about DOJ's bid to revive the Comey/James cases after the illegal-appointment ruling, but it does not give the Sept 15-16 dates, Richmond, the second-appointment focus, or 'poised to uphold' language.",
+    "host": "washingtonpost.com",
+    "date": "2026-09-23",
+    "kind": "fact",
+    "archive": true
    }
   },
   "hatfill-hhs-aspr-appointment-firing-2025": {
@@ -5336,6 +5476,14 @@
     "why": "CNN's article confirms Lt. Gen. Joe McGee retired in late October 2025 amid tensions with Hegseth and Caine over Ukraine and the Caribbean campaign, that he had been nominated for promotion by Biden but never renominated, and that Parnell denied any clash -- matching the claim closely.",
     "host": "cnn.com",
     "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "20": {
+    "state": "partly",
+    "why": "AP confirms a Caribbean strike killing four, no evidence of drugs, and a toll of at least 231 in 69 strikes, but the strike was on 'Saturday' in an article updated Sept 19, 2026, not September 21 as the claim states.",
+    "host": "apnews.com",
+    "date": "2026-09-23",
     "kind": "fact",
     "archive": false
    }
@@ -5614,6 +5762,14 @@
     "why": "NPR confirms Trump fired Gen. Charles Q. Brown Jr. as Joint Chiefs chairman and announced he would nominate Dan Caine to succeed him.",
     "host": "npr.org",
     "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "1": {
+    "state": "partly",
+    "why": "Defense One confirms Vernon stepped down eight months after Plummer's firing with no Senate-confirmed JAG, but the article is dated October 23, 2025, not October 27.",
+    "host": "defenseone.com",
+    "date": "2026-09-23",
     "kind": "fact",
     "archive": false
    },
@@ -6025,6 +6181,14 @@
     "kind": "fact",
     "archive": false
    },
+   "1": {
+    "state": "supports",
+    "why": "The source says Hegseth blocked Sims's promotion first over unfounded leak suspicions, then over closeness to Milley, prompting a rare intervention by Gen. Caine.",
+    "host": "nytimes.com",
+    "date": "2026-09-23",
+    "kind": "fact",
+    "archive": false
+   },
    "2": {
     "state": "supports",
     "why": "NPR confirms Hegseth intervened to stop the promotions of four Army officers, two Black men and two female soldiers, on track to become one-star generals.",
@@ -6170,6 +6334,14 @@
     "why": "The source directly confirms Buria and Parlatore as the named subjects, the dirty-internet-line and leak-source questions about Buria, the message-deletion inquiry, and Parlatore's clearance-level question.",
     "host": "politico.com",
     "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "10": {
+    "state": "unopened",
+    "why": "",
+    "host": "wsj.com",
+    "date": "2026-09-23",
     "kind": "fact",
     "archive": false
    },
@@ -6736,6 +6908,14 @@
     "why": "The Techdirt piece confirms a federal appeals court (DC Circuit three-judge panel) unanimously required the administration to continue allowing unannounced congressional inspections, finding the practice posed minimal problems for the government.",
     "host": "techdirt.com",
     "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "12": {
+    "state": "partly",
+    "why": "CNN confirms the shooting of Garces Perez, 28, a Venezuelan DoorDash driver who entered via CBP One, his account of asking to pull over and the SUV hitting him, the bullet near his spine, and same-day transfer to ICE detention; the provided text does not address his criminal history or time in Austin, and DHS disputes his status.",
+    "host": "cnn.com",
+    "date": "2026-09-23",
     "kind": "fact",
     "archive": false
    }
@@ -9182,6 +9362,14 @@
     "date": "2026-09-15",
     "kind": "fact",
     "archive": false
+   },
+   "10": {
+    "state": "partly",
+    "why": "Raw Story (Jan 13, 2026, citing WSJ) confirms Trump called dozens of U.S. attorneys 'weak'/'ineffective' one day before Pirro's Powell subpoena, but the provided text does not mention Bondi introducing the group or a complaint about Schiff.",
+    "host": "rawstory.com",
+    "date": "2026-09-23",
+    "kind": "fact",
+    "archive": false
    }
   },
   "pirro-sandwich-thrower-failed-prosecution-2025": {
@@ -9603,6 +9791,14 @@
    }
   },
   "rfk-jr-acip-apa-violation-2026-03": {
+   "0": {
+    "state": "partly",
+    "why": "The snapshot confirms Kennedy removed all 17 ACIP members on Monday, June 9, 2025, but does not mention the eight replacements, the withdrawal, or ousted members' warnings about CDC staff cuts.",
+    "host": "nytimes.com",
+    "date": "2026-09-23",
+    "kind": "fact",
+    "archive": true
+   },
    "1": {
     "state": "partly",
     "why": "The source confirms the July 23, 2025 thimerosal flu-vaccine action and FDA's contrary safety assurance, but it never mentions Vicky Pebsworth or Lyn Redwood at all.",
@@ -9627,11 +9823,27 @@
     "kind": "fact",
     "archive": false
    },
+   "4": {
+    "state": "partly",
+    "why": "Reuters confirms HHS lawyers objected on Federal Advisory Committee Act grounds to Levi's expanded powers and notes Monarez's ouster, but none of the other backlash items (former CDC directors' op-ed, resignation calls, Marrazzo, Adams, Cantwell/Cassidy, Offit) appear in the text.",
+    "host": "reuters.com",
+    "date": "2026-09-23",
+    "kind": "fact",
+    "archive": false
+   },
    "5": {
     "state": "partly",
     "why": "The NYT article confirms the September 18, 2025 8-3 ACIP vote against the MMRV vaccine for children under 4, matching that part of the claim, but the provided text says nothing about a COVID-19 vaccine downgrade vote the following day, so that half of the compound claim is unaddressed by this source.",
     "host": "nytimes.com",
     "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
+    "state": "unopened",
+    "why": "",
+    "host": "wsj.com",
+    "date": "2026-09-23",
     "kind": "fact",
     "archive": false
    },
@@ -9982,6 +10194,14 @@
     "why": "ProPublica's reporting confirms Kennedy is pursuing changes to VICP and that his allies see reducing the recommended-vaccine list as a path to stripping manufacturers' liability shields, and ties this to Kennedy's history founding an anti-vaccination group and his broader anti-industry advocacy.",
     "host": "propublica.org",
     "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "1": {
+    "state": "partly",
+    "why": "Reuters (July 28, 2025) confirms Kennedy's plan to fix the VICP, working with Bondi to 'steer the Vaccine Court back,' and that he accused it of corruption, but the quoted phrase 'corrupt and unfair' does not appear and no August 1 date is given.",
+    "host": "reuters.com",
+    "date": "2026-09-23",
     "kind": "fact",
     "archive": false
    },
@@ -10440,6 +10660,14 @@
     "why": "The NBC News source discusses Ortiz's repatriation and background generally but never states that 8 of the 10 freed Americans were officially classified as wrongfully detained versus Ortiz, nor does it mention a 2023 Biden-administration swap that supposedly excluded Ortiz. The source does not address the specific facts asserted in the claim.",
     "host": "nbcnews.com",
     "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "supports",
+    "why": "The NYT reports that by the time of the extraction some State Department officials had realized one prisoner was a convicted triple murderer.",
+    "host": "nytimes.com",
+    "date": "2026-09-23",
     "kind": "fact",
     "archive": false
    }
@@ -11049,6 +11277,22 @@
     "kind": "fact",
     "archive": false
    },
+   "1": {
+    "state": "supports",
+    "why": "NPR (Nov 7, 2025) reports a Kennedy-hand-picked CDC committee is scrutinizing the childhood schedule and investigating splitting up the MMR vaccine.",
+    "host": "npr.org",
+    "date": "2026-09-23",
+    "kind": "fact",
+    "archive": false
+   },
+   "2": {
+    "state": "supports",
+    "why": "Reuters reports Trump signed a memo to review aligning child vaccine recommendations with 'peer, developed countries,' directing updates if those practices are deemed superior.",
+    "host": "reuters.com",
+    "date": "2026-09-23",
+    "kind": "fact",
+    "archive": false
+   },
    "3": {
     "state": "supports",
     "why": "CBS News directly confirms the CDC's updated recommendations reduced recommended childhood immunizations from 17 to 11, consistent with the executive order's directive to align with the HHS assessment.",
@@ -11136,6 +11380,56 @@
     "why": "SCOTUSblog confirms the June 29, 2026 6-3 ruling overruling Humphrey's Executor and the case's origin in Trump firing Slaughter for policy disagreement rather than statutory cause, plus its broader reach to roughly two dozen multi-member agencies, but the provided text never mentions Alvaro Bedoya as a co-plaintiff or subject of the case.",
     "host": "scotusblog.com",
     "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   }
+  },
+  "trump-cnn-msnow-politico-white-house-ban-2026": {
+   "0": {
+    "state": "partly",
+    "why": "Bloomberg Law confirms Trump announced the ban of CNN, MS NOW and Politico in a Friday social media post over their coverage, but the quoted phrase \"constant 'reporting' FAKE NEWS!\" does not appear; the post is quoted as complaining about 'FICTION and LIES.'",
+    "host": "news.bloomberglaw.com",
+    "date": "2026-09-23",
+    "kind": "fact",
+    "archive": false
+   },
+   "1": {
+    "state": "partly",
+    "why": "NPR confirms journalists from the three outlets were barred from entry starting over the weekend after the Friday announcement, but it says they still held permanent press passes and does not specifically report credentials being pulled on Saturday, September 19.",
+    "host": "npr.org",
+    "date": "2026-09-23",
+    "kind": "fact",
+    "archive": false
+   },
+   "2": {
+    "state": "supports",
+    "why": "CNN reports it was removed from its scheduled UN-trip pool duty, the pool chair said there would be no replacement pool, and the five networks issued the quoted joint statement.",
+    "host": "cnn.com",
+    "date": "2026-09-23",
+    "kind": "fact",
+    "archive": false
+   },
+   "3": {
+    "state": "unopened",
+    "why": "",
+    "host": "nytimes.com",
+    "date": "2026-09-23",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "partly",
+    "why": "Politico confirms the three outlets sued Monday in D.C. federal court seeking a restraining order, with the quoted joint statement, but the provided text does not name the three reporter plaintiffs.",
+    "host": "politico.com",
+    "date": "2026-09-23",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "supports",
+    "why": "CNBC reports Kelly, a 2017 Trump nominee, ordered a TRO response by Tuesday and set a 3:30 p.m. ET Wednesday videoconference hearing, and that he ordered Acosta's pass restored in 2018.",
+    "host": "cnbc.com",
+    "date": "2026-09-23",
     "kind": "fact",
     "archive": false
    }
@@ -12316,6 +12610,14 @@
     "why": "The Axios text confirms the judge's 30-day written notice requirement. It contains no statement from Kennedy Center officials about a temporary closure, structural repairs, or 'nothing is being demolished', and no PBS NewsHour text was provided.",
     "host": "axios.com",
     "date": "2026-09-21",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "supports",
+    "why": "ABC reports Trump said he would not spend the $257 million renovation appropriation unless the building bears his name, and that the center could be 'ripped down' without 'recognition'; only ABC's text is available here, not WSJ's.",
+    "host": "abcnews.com",
+    "date": "2026-09-23",
     "kind": "fact",
     "archive": false
    }
