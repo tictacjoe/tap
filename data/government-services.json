@@ -18435,7 +18435,7 @@
       "note": "Personally moved forward with the staffing cuts to civilian-harm-mitigation offices despite documented, on-record warnings from senior military leadership, including Gen. Erik Kurilla, Gen. CQ Brown, and Adm. Christopher Grady."
     },
     "estimated_impact": {
-      "summary": "The Pentagon's dedicated institutional capacity to assess civilian risk before strikes and investigate civilian harm afterward was cut by more than 95% (from ~200 to 9 staff at the Civilian Protection Center of Excellence specifically) over the explicit objections of senior military leadership, with AI-based assessment tools substituted for the human expertise that was removed -- shortly before a U.S. strike killed more than 170 people, mostly children, at a school.",
+      "summary": "Pentagon staff who assess civilian risk before U.S. strikes and investigate civilian harm afterward were cut from roughly 200 to fewer than 40 over senior military leaders' objections, and the Civilian Protection Center of Excellence was later cut further, from 40 to 9; CENTCOM's own staff fell from 16 to 1, and the Pentagon increasingly relied on AI-based assessments in place of the human staff removed. A DoD Inspector General found the post-cut structure violates two federal statutes, and the cuts came before a U.S. strike on a girls' school in Minab, Iran killed more than 170 children and teachers.",
       "figures": [
         {
           "metric": "Pentagon civilian-harm-mitigation personnel, before and after the initial cut",
@@ -18446,13 +18446,23 @@
           "metric": "Civilian Protection Center of Excellence staff, January 2025 vs. end of 2025",
           "value": "40 -> 9",
           "source": "The Intercept, July 2026"
+        },
+        {
+          "metric": "CENTCOM civilian-harm staff after the cuts, against commanders' stated 9-person minimum",
+          "value": "16 -> 1",
+          "source": "ProPublica / Defense One, August 2026"
+        },
+        {
+          "metric": "Proposed partial rebuild of the Civilian Harm Mitigation and Response office (April 2026 Colby proposal, not confirmed implemented)",
+          "value": "70 full-time personnel (35% of original capacity)",
+          "source": "ProPublica / Defense One, August 2026"
         }
       ],
-      "caveat": "Sourcing documents the staffing cuts and the AI-substitution pattern, and separately documents the Minab school strike and its outdated-intelligence cause; a direct causal claim that the staffing cuts specifically caused or worsened the Minab strike's outcome was not identified as an independently adjudicated finding in sourcing reviewed -- present the two as a documented, temporally-adjacent institutional pattern rather than an established causal chain."
+      "caveat": "Sourcing documents the staffing cuts, the AI-substitution pattern, and a DoD Inspector General finding that the post-cut structure violates 10 U.S.C. Sec. 134 and Sec. 184 (a finding Colby disputes), and separately documents the Minab school strike; a direct causal claim that the staffing cuts specifically caused or worsened the Minab strike's outcome was not identified as an independently adjudicated finding in sourcing reviewed -- present the two as a documented, temporally-adjacent institutional pattern rather than an established causal chain. Colby's proposed rebuild to 70 staff has commanders' support, but no sourcing reviewed confirms it has been implemented."
     },
     "confidence_note": "HIGH confidence -- the staffing cut figures, the named generals' objections, and the AI-substitution pattern are corroborated across Politico, The Intercept, Truthout, and additional wire coverage (Al Mayadeen, syndicated AP-sourced pieces); The Guardian's March 2025 and The Intercept's April 2025 reporting independently corroborate an earlier start to the same reduction, pinning the ~90% cut to spring 2025 rather than only a generic '2025' date. MODERATE confidence on the implied connection to the Minab school strike's outcome specifically, since no official investigation finding tying the two together was identified in sourcing reviewed as of this entry's addition -- the connection documented here is institutional and temporal (the offices responsible for this kind of risk assessment were gutted before the strike this tracker separately documents), not a confirmed causal finding. Re-verified 2026-08-17: the FY2027 NDAA travel-funds provision is corroborated across Military Times, The Hill, and Raw Story reporting on the Senate Armed Services Committee's June 2026 markup; its not-yet-enacted status (House passed July 22, 2026; Senate floor vote blocked; conference ongoing as of August 4, 2026) is corroborated via Breaking Defense and Congress.gov/CRS reporting. Presented here as a pending legislative provision, not a description of enacted law. Re-verified 2026-08-30 (real correction): the commander-poll detail, named generals, and partial-revival proposal are corroborated across ProPublica (Aug. 25, 2026) and Defense One (same day), both citing the same underlying reporting. The DoD Inspector General statutory-violation finding is corroborated via Just Security's direct review of the IG report and Colby's response, and separately via a Washington Times report on the same IG evaluation; presented as HIGH confidence on the finding's existence, MODERATE on whether Colby's promised follow-up reviews were ever completed, since sourcing reviewed describes that as unresolved rather than confirmed either way.",
     "pull_quote": "The offices responsible for pre-strike civilian-risk assessment and post-strike investigation had been cut from ~200 staff to 9 when a U.S. strike killed more than 170 people, mostly children, at a school in Iran -- no official investigation has confirmed a direct causal link between the two.",
-    "last_verified": "2026-09-22",
+    "last_verified": "2026-09-26",
     "date_added": "2026-08-05",
     "sources": [
       {
@@ -18503,10 +18513,10 @@
     "last_updated": "2026-09-22",
     "section_summaries": {
       "what_changed": "Hegseth cut Pentagon civilian-harm-mitigation staff from ~200 to fewer than 40 (Civilian Protection Center of Excellence specifically from 40 to 9), overriding a unanimous 2025 commander poll -- all nine regional combatant commands rejected elimination and asked to keep reduced staffing instead, with Gens. Kurilla and Grynkewich and Adm. Cooper among those objecting -- and substituted AI assessments for the removed human staff, shortly before a U.S. strike killed 170+ people at an Iranian school. A DoD Inspector General later found the cuts put the Pentagon in violation of two federal statutes governing civilian-harm compliance; Colby has disputed that finding while also proposing a commander-endorsed partial rebuild to 70 staff (35% of original capacity) under Joint Staff oversight, not yet confirmed implemented.",
-      "estimated_impact": "The Pentagon's civilian-risk-assessment capacity was cut by more than 95% over senior military objections, though no official finding has tied the cuts directly to the Minab strike's outcome.",
+      "estimated_impact": "Pentagon civilian-harm staff fell from ~200 to under 40 over military leaders' objections; a DoD IG found this violates two statutes. No official finding linking it to Minab has been identified.",
       "confidence_note": "Staffing cuts, the commander poll, and AI substitution are well-corroborated across multiple outlets; the IG's statutory-violation finding and the partial-rebuild proposal are each corroborated by at least two independent sources, though whether the rebuild has actually happened remains unconfirmed."
     },
-    "last_substantive_update": "2026-09-22",
+    "last_substantive_update": "2026-09-26",
     "glance": {
       "who": "Pete Hegseth (Secretary of Defense)",
       "what": "Cut Pentagon civilian-harm staff from ~200 to under 40 over commanders' objections; a DoD IG found violations",
@@ -18515,7 +18525,7 @@
         "certainty": "documented",
         "who": "Pentagon civilian-harm mitigation"
       },
-      "reviewed": "2026-09-22"
+      "reviewed": "2026-09-26"
     },
     "timeline": {
       "what_changed": {
@@ -18991,7 +19001,7 @@
         },
         {
           "metric": "Unions party to the lawsuit",
-          "value": "2 (AFGE, NFFE)",
+          "value": "2 national unions (AFGE, NFFE), through more than 20 affiliates",
           "source": "Defense One, July 2026"
         }
       ],
@@ -19004,7 +19014,7 @@
       "estimated_impact": "Pentagon civilian employees lost bargaining protections abruptly, including some categories the underlying executive order didn't intend to reach, according to the unions' suit.",
       "confidence_note": "Based on detailed single-source reporting of the filed lawsuit; no Pentagon response identified, and the litigation's legal questions remain unresolved."
     },
-    "last_verified": "2026-08-31",
+    "last_verified": "2026-09-26",
     "date_added": "2026-07-27",
     "sources": [
       {
@@ -19021,7 +19031,7 @@
       }
     ],
     "last_updated": "2026-08-31",
-    "last_substantive_update": "2026-08-31",
+    "last_substantive_update": "2026-09-26",
     "glance": {
       "who": "Pete Hegseth (Secretary of Defense)",
       "what": "Reportedly ordered most Pentagon union contracts terminated on 24 hours' notice; AFGE and NFFE sued",
@@ -19030,7 +19040,7 @@
         "certainty": "alleged",
         "who": "Pentagon civilian union employees"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-09-26"
     },
     "timeline": {
       "what_changed": {
@@ -21171,7 +21181,7 @@
       "note": "Sourcing reviewed did not identify a single named HUD official personally driving the NOFO change; attributed institutionally pending more specific sourcing."
     },
     "estimated_impact": {
-      "summary": "A proposed redirection of roughly two-thirds of a $3.9 billion federal homelessness-services program away from permanent housing and toward short-term interventions was blocked by a federal court, but the underlying legal dispute over HUD's authority to make the change remained unresolved months later, leaving up to 170,000 formerly homeless people -- including veterans -- at continued risk of eviction back into homelessness.",
+      "summary": "HUD's plan to move roughly two-thirds of a $3.9 billion homelessness program away from permanent supportive housing, which advocacy groups said could lead to the eviction of up to 170,000 formerly homeless people, including veterans, has been blocked in federal court repeatedly. A statutory auto-renewal has since funded 622 Q1-expiring projects and reportedly (MODERATE confidence) the 4,241 Q3/Q4-expiring projects at pre-cut terms, but the court declined a permanent injunction, leaving HUD free to attempt similar changes for FY2027 and beyond.",
       "figures": [
         {
           "metric": "Continuum of Care Program funds affected by the proposed shift",
@@ -21186,7 +21196,7 @@
         {
           "metric": "FY2026 Continuum of Care allocation (separate NOFO from the $3.9B figure above, which was the FY2025 program's budget)",
           "value": "$4.04 billion, with ~$1.3B set aside for new temporary-housing/treatment programs",
-          "source": "HUD's June 1, 2026 NOFO, cited in Davis Vanguard, August 2026"
+          "source": "HUD's June 2026 FY2026 NOFO, cited in Davis Vanguard, August 2026"
         },
         {
           "metric": "Statutory auto-renewal funding for Q1-2026-expiring projects, at prior (non-cut) PSH terms",
@@ -21196,14 +21206,14 @@
         {
           "metric": "Statutory auto-renewal funding for Q3/Q4-2026-expiring projects (triggered because HUD had issued no new-NOFO awards by July 1, 2026), at prior PSH terms",
           "value": "$2,402,872,704 for 4,241 projects",
-          "source": "Single WebSearch synthesis, not independently re-fetched -- MODERATE confidence, flagged for direct confirmation on the next recheck"
+          "source": "Single web-search synthesis with no directly verifiable outlet -- MODERATE confidence, not yet independently confirmed"
         }
       ],
-      "caveat": "The specific funding shift was blocked by a federal court as of December 2025/January 2026, and HUD reinstated the prior funding notice -- this entry documents a proposed and judicially blocked action, not a change that has actually taken effect, though continued litigation left the underlying risk unresolved as of the most recent reporting reviewed. Added 2026-09-01: a separate, statutory (not litigation-dependent) mechanism -- the Consolidated Appropriations Act's auto-renewal triggers -- has since funded the large majority of expiring projects at pre-cut PSH terms while the NOFO fight continues, meaning the 170,000-eviction-risk estimate (dated to March 2026, before these renewals) likely overstates current exposure for FY2026-expiring projects specifically; it may still be a reasonable estimate of exposure for FY2027 and beyond, where no equivalent statutory backstop currently exists."
+      "caveat": "This entry documents a proposed and repeatedly court-blocked action, not a change that has taken effect: a December 2025 order made HUD reinstate its prior funding notice, a June 29, 2026 ruling vacated the November and December 2025 NOFOs, and an August 7, 2026 ruling blocked the replacement FY2026 NOFO. A separate, statutory (not litigation-dependent) mechanism, the Consolidated Appropriations Act's auto-renewal triggers, has funded the 622 Q1-2026-expiring projects and reportedly (MODERATE confidence, pending confirmation) the 4,241 Q3/Q4-expiring projects at pre-cut PSH terms while the NOFO fight continues; renewal of Q2-expiring projects is not confirmed in sourcing reviewed. The up-to-170,000 eviction-risk estimate predates these renewals, so it likely overstates current exposure for FY2026-expiring projects specifically; it may still be a reasonable estimate of exposure for FY2027 and beyond, where no equivalent statutory backstop currently exists. The National Alliance to End Homelessness gave a similar estimate of roughly 170,000 for a separate May 2025 budget proposal with the same goal, which Congress did not enact."
     },
     "confidence_note": "HIGH confidence -- the NOFO's terms, the $3.9 billion program scope, the 170,000-person risk estimate, the December 2025 court order, and HUD's January 2026 reinstatement of the prior notice are all independently corroborated across Shelterforce, CNN, Yahoo News, and California AG Bonta's own press release confirming a court order in the state's favor. MODERATE confidence on the precise current legal status as of mid-2026, since sourcing reviewed did not identify a final resolution of the underlying litigation. Re-verified August 2026: the June 29, 2026 and August 7, 2026 rulings are corroborated across Davis Vanguard, Smart Cities Dive, and Housing Online/NH&RA reporting. The $4.04 billion figure is a separate FY2026 allocation from the $3.9 billion FY2025 figure already in this entry -- not a conflicting count of the same thing. Re-verified 2026-08-29: KCRHA's own guidance to grantees (reviewing HUD.gov and the ruling directly) confirms the NOFO was set aside and applications cannot proceed under it; KCRHA reports no HUD guidance on next steps as of its most recent update. No material change to this entry's status. Re-verified 2026-09-01 (GSR recheck batch 50, real correction): the Q1-2026 auto-renewal figure ($349,205,436/622 projects) is HIGH confidence, directly fetched from National Network for Youth and corroborated by NACo's April 1, 2026 reporting that renewed projects retain FY2024-competition (pre-cut) PSH terms. The larger Q3/Q4 figure ($2.4B/4,241 projects) is MODERATE confidence, sourced only to a WebSearch synthesis that repeated the same figure without a directly-verifiable outlet link -- worth a direct HUD.gov or press fetch on the next recheck. NACo's August 25, 2026 reporting separately confirms HUD 'is considering legal options, including an appeal' of the August 7 ruling, with no appeal filed as of that reporting. Added 2026-09-09 (round-4 backlog cluster c0297): the May 2025 budget-proposal antecedent is HIGH confidence, corroborated across the National Alliance to End Homelessness's own dedicated policy analysis and the New York Times' original reporting. Added 2026-09-10 (round-4 backlog fold, cluster c0491): EO 14321's text and its HUD/HHS Housing-First-withdrawal directive are HIGH confidence, corroborated across SPLC, the National Low Income Housing Coalition, the National Homelessness Law Center, and NPR; the HUD-VASH/veteran-specific impact framing is corroborated via Military Times and Stars and Stripes.",
     "pull_quote": "A later, statutory auto-renewal requirement -- separate from the ongoing litigation -- has since funded most FY2026-expiring projects at their prior, non-cut terms, meaning the widely cited 170,000-eviction-risk figure likely overstates current exposure, though the underlying legal fight over FY2027 and beyond remains unresolved.",
-    "last_verified": "2026-09-22",
+    "last_verified": "2026-09-26",
     "date_added": "2026-08-06",
     "sources": [
       {
@@ -21274,10 +21284,10 @@
     "last_updated": "2026-09-22",
     "section_summaries": {
       "what_changed": "A July 24, 2025 executive order (EO 14321) directed HUD and HHS to withdraw support for Housing First policy in favor of encampment bans, policing, and involuntary commitment, threatening HUD-VASH veteran housing along the way; HUD's subsequent November 2025 Continuum of Care NOFO proposed shifting ~2/3 of its $3.9B homeless-services funding from permanent supportive housing to short-term shelter, risking eviction for up to 170,000 formerly homeless people including veterans; three separate HUD NOFO attempts (Nov. 2025, and FY2026 NOFOs in Jan. and June 2026) were each blocked in court through August 2026, but HUD retains the ability to try again for FY2027. Separately, a statutory auto-renewal mechanism in the Consolidated Appropriations Act, 2026 has funded nearly all FY2026-expiring projects at pre-cut PSH terms regardless of the litigation's outcome.",
-      "estimated_impact": "A federal court blocked the funding shift three times, but the underlying legal dispute over HUD's authority remains unresolved for FY2027. Near-term, a statutory auto-renewal trigger has already funded 622 Q1-expiring projects ($349M) and reportedly ~4,241 Q3/Q4-expiring projects (~$2.4B, pending confirmation) at pre-cut permanent-supportive-housing terms, substantially reducing the originally-estimated 170,000-eviction-risk exposure for the current fiscal year even as the fight over the program's future structure continues.",
+      "estimated_impact": "Courts have repeatedly blocked HUD's plan to move ~2/3 of $3.9B from permanent housing; statutory renewals mean the up-to-170,000 eviction estimate likely overstates FY2026 risk, not FY2027.",
       "confidence_note": "Well-corroborated via multiple outlets and the California AG's own press release; the litigation's final resolution wasn't identified in sourcing reviewed. The statutory-renewal mechanism is HIGH confidence for the Q1 figure (directly fetched, corroborated) and MODERATE for the larger Q3/Q4 figure (single-search-sourced, pending direct confirmation)."
     },
-    "last_substantive_update": "2026-09-22",
+    "last_substantive_update": "2026-09-26",
     "glance": {
       "who": "Department of Housing and Urban Development",
       "what": "Proposed moving two-thirds of $3.9B in homeless aid from permanent housing to shelter; courts blocked it",
@@ -21286,7 +21296,7 @@
         "certainty": "averted",
         "who": "Formerly homeless residents (170,000)"
       },
-      "reviewed": "2026-09-22"
+      "reviewed": "2026-09-26"
     },
     "timeline": {
       "what_changed": {
@@ -31187,7 +31197,7 @@
       "note": "No single named individual was identified in sourcing reviewed for this entry as personally directing the ORR policy changes; attributed institutionally to the HHS Secretary with oversight authority over ORR, per this tracker's standard for department-level actions without a specific named director on the record."
     },
     "estimated_impact": {
-      "summary": "A roughly two-decade-old firewall protecting unaccompanied migrant children and their prospective sponsors from immigration-enforcement consequences was dismantled, resulting in a large, quantified increase in both enforcement actions against sponsors and time children spend in federal custody",
+      "summary": "A roughly 2008-era firewall protecting unaccompanied migrant children and their prospective sponsors from immigration-enforcement consequences was dismantled and sponsor vetting was tightened, resulting in a large, quantified increase in enforcement actions against sponsors and household members and, from the added vetting, in the time children spend in federal custody. A lawsuit also alleges that the related sponsor re-vetting policy has uprooted children from homes with previously-approved sponsors.",
       "figures": [
         {
           "metric": "Investigative leads shared from ORR to ICE since January 2025",
@@ -31205,16 +31215,21 @@
           "source": "ORR's own figures, per investigative reporting"
         },
         {
+          "metric": "Children alleged to have been separated from previously-approved sponsors and re-referred to ORR under the re-vetting policy (as of January 2026)",
+          "value": "300+ (alleged, not adjudicated)",
+          "source": "Plaintiffs' complaint in N. v. HHS / Diego N. v. HHS (D.D.C.)"
+        },
+        {
           "metric": "Federal legal-aid contract value affected by the (later-blocked) termination attempt",
           "value": "~$200 million, covering legal representation for roughly 26,000 children",
           "source": "Contemporaneous 2025 reporting on the Acacia Center for Justice contract"
         }
       ],
-      "caveat": "The 460,000-lead and 12,000-arrest figures are drawn from investigative reporting citing government data obtained through reporting/records requests, not a formal ORR or ICE public accounting; the 194-day custody figure is described as ORR's own reported statistic. The legal-aid funding was ultimately restored after the court order, so that specific component's lasting impact was disruption/delay rather than a permanent cut."
+      "caveat": "The 460,000-lead and 12,000-arrest figures are drawn from investigative reporting citing government data obtained through reporting/records requests, not a formal ORR or ICE public accounting; the 194-day custody figure is described as ORR's own reported statistic. The 300+ separated-children figure comes only from the plaintiffs' own complaint ('upon information and belief'), is not corroborated by a government count or a second source, and has not been adjudicated; the court denied the plaintiffs' preliminary-injunction motion, finding them unlikely to succeed on the merits. ORR defends the data-sharing change as a child-welfare measure, with its acting director saying some children released to unvetted sponsors under the prior policy 'were sexually assaulted, others deceased, and some committing heinous crimes.' The legal-aid funding was ultimately restored after the court order, so that specific component's lasting impact was disruption/delay rather than a permanent cut."
     },
     "confidence_note": "HIGH confidence on the fingerprinting reimposition and the ICE data-sharing policy change, corroborated by the New York Times, Reuters, and the Migration Policy Institute. HIGH confidence on the legal-aid contract termination attempt and its judicial blocking, corroborated by PBS, NBC News, and Fox News's contemporaneous coverage. MODERATE-HIGH confidence on the cumulative 460,000-lead/12,000-arrest/194-day figures, which come from later (2026) investigative reporting citing government data rather than an official ORR/ICE public report -- worth rechecking against any official accounting if one is published. Re-verified 2026-08-17: no material change to the underlying policy or figures since last verification; added ORR's own on-record defense (Acting Director Salazar, June 11, 2026) and an outside critic's on-record rebuttal (Smyers) for balance, since the original entry omitted the agency's stated rationale entirely -- these quotes predate this entry's write date and are backfilled context, not a new development. CORRECTION 2026-08-30: added the N. v. HHS / Diego N. v. HHS litigation (1:26-cv-00577, D.D.C.), verified directly against the Civil Rights Litigation Clearinghouse's case-specific docket tracker rather than relying on a search-engine summary alone, per this tracker's standard practice for surprising procedural claims. This is a distinct case from the already-documented Acacia Center for Justice legal-aid contract dispute, and directly challenges the sponsor re-vetting policy itself. Re-verified 2026-09-01 (GSR recheck batch 51): checked the Civil Rights Litigation Clearinghouse's case-specific docket directly rather than relying on a search-engine summary, per this tracker's standard practice -- it shows no docket activity past the June 12, 2026 address-change notice, so the required Aug. 13, 2026 joint-status-report deadline's outcome remains unconfirmed rather than resolved either way. A National Center for Youth Law page describing a July 31, 2026 D.C. Circuit reply brief was checked against the same Clearinghouse docket and not corroborated there, so it is not adopted. The >300-children figure is MODERATE-LOW confidence -- sourced only to the plaintiffs' own complaint ('upon information and belief'), not independently corroborated by a government count or second source, and presented here as an allegation rather than an adjudicated fact.",
     "pull_quote": "Acting ORR Director Angie Salazar defended the change, saying some children released to unvetted sponsors under the prior policy “were sexually assaulted, others deceased, and some committing heinous crimes”; former ORR deputy director Jen Smyers countered that the safeguards were “completely reversed” and the program is being “weaponized... for the purposes of more deportations.”",
-    "last_verified": "2026-09-01",
+    "last_verified": "2026-09-26",
     "date_added": "2026-08-08",
     "sources": [
       {
@@ -31264,10 +31279,10 @@
     ],
     "section_summaries": {
       "what_changed": "ORR reimposed fingerprint vetting and began sharing sponsor immigration data with ICE, ending a two-decade confidentiality wall.",
-      "estimated_impact": "Sharing over 460,000 leads with ICE drove more than 12,000 arrests and roughly sextupled children's time in federal custody.",
+      "estimated_impact": "Over 460,000 leads shared with ICE led to 12,000+ arrests, while tighter sponsor vetting stretched children's average custody from about 30 to 194 days; a lawsuit alleges 300+ children were uprooted.",
       "confidence_note": "HIGH confidence on the policy changes, corroborated by the NYT, Reuters, and Migration Policy Institute."
     },
-    "last_substantive_update": "2026-09-01",
+    "last_substantive_update": "2026-09-26",
     "glance": {
       "who": "HHS under Robert F. Kennedy Jr.",
       "what": "Ended ORR's confidentiality wall, sharing sponsor data with ICE; child custody rose from 30 to 194 days",
@@ -31276,7 +31291,7 @@
         "certainty": "documented",
         "who": "Migrant children, sponsors"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-09-26"
     },
     "timeline": {
       "what_changed": {
