@@ -4132,58 +4132,58 @@
   },
   "doj-walz-frey-subpoenas-quashed-2026": {
    "0": {
-    "state": "unopened",
-    "why": "",
-    "host": "washingtonpost.com",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "The syndicated Post story states Schiltz found the subpoenas were issued to coerce officials on immigration enforcement, quotes the 'struggled - without success' line, and says he ruled last week and unsealed the ruling Monday.",
+    "host": "spokesman.com",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "1": {
-    "state": "partly",
-    "why": "Forbes (via Wayback) directly confirms the finding that the subpoenas were meant to 'harass, coerce, and retaliate,' but the article itself frames this as one of several similar recent rulings (against Powell, Comey, James) rather than describing this type of rebuke as rare.",
+    "state": "supports",
+    "why": "Forbes reports the 'to harass and retaliate against them' ruling, the 'has no doubt' unlawful-purpose finding, and places it alongside a judge throwing out the Powell subpoena.",
     "host": "forbes.com",
-    "date": "2026-09-15",
-    "kind": "interpretation",
+    "date": "2026-09-27",
+    "kind": "fact",
     "archive": true
    },
    "2": {
     "state": "supports",
-    "why": "ABC News confirms the full list of subpoenaed officials (Walz, Frey, St. Paul Mayor Her, AG Ellison, Hennepin County Attorney's Office and Board) and the January 20 issuance date tied to the immigration-enforcement surge.",
+    "why": "ABC states the subpoenas were issued Jan. 20 amid the immigration surge, names Walz, Frey, Her, Ellison and Hennepin County offices, and says quashing DOJ criminal subpoenas is almost unheard of.",
     "host": "abcnews.com",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "3": {
-    "state": "partly",
-    "why": "The Hill reports Schiltz noting the Constitution bars the federal government from forcing states or their subdivisions to enforce federal laws, and that the grand jury process was used to compel Minnesota officials to help with immigration enforcement. It never names the Tenth Amendment or commandeering doctrine, and does not say this was a distinct ground of the ruling separate from the harassment finding.",
-    "host": "thehill.com",
-    "date": "2026-09-21",
+    "state": "supports",
+    "why": "The AP/PBS text contains the 'dominant purpose' quote from the ruling unsealed Monday; the separate constitutionally-protected-conduct quote and the note on Minnesota's right not to devote resources also appear later in the same text (excerpt spans both).",
+    "host": "pbs.org",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "4": {
-    "state": "unopened",
-    "why": "",
-    "host": "washingtonpost.com",
-    "date": "2026-09-15",
+    "state": "partly",
+    "why": "The provided order text (truncated at page 5) confirms the case number, the 06/22/26 filing, and the six January 20 subpoenas to the listed custodians, and says they are quashed; the June 17 signing date, the dominant-purpose finding, and the Tenth Amendment anti-commandeering basis are not in the provided text.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "5": {
-    "state": "unopened",
-    "why": "",
-    "host": "washingtonpost.com",
-    "date": "2026-09-15",
+    "state": "partly",
+    "why": "The docket page shows the case and a last known filing of July 23, 2026, but the provided (truncated) entries stop at early February motions; the June 17 signing, June 22 entry of the order, and absence of a notice of appeal cannot be seen.",
+    "host": "courtlistener.com",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "6": {
     "state": "supports",
-    "why": "The New York Times article confirms the inquiry centered on alleged impeding/interference with ICE operations and reports DOJ's contemporaneous decision not to charge the agent who killed Renee Good.",
+    "why": "The NYT text reports Tuesday subpoenas to at least five officials, the widening from Frey/Walz, the conspiracy-to-impede theory, and that DOJ had all but announced it would not charge the agent who killed Good.",
     "host": "nytimes.com",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
@@ -4317,9 +4317,9 @@
   "ed-martin-grand-jury-leak-2026": {
    "0": {
     "state": "supports",
-    "why": "CNN directly confirms the DOJ review (overseen by Blanche's office) found Martin shared secret grand jury material from the Schiff case, that he initially denied it, and that emails later surfaced showing he had shared it.",
+    "why": "CNN states directly that the Blanche-overseen review found Martin shared Schiff grand jury material, initially denied it, and that emails then surfaced.",
     "host": "cnn.com",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
@@ -4333,33 +4333,33 @@
    },
    "2": {
     "state": "supports",
-    "why": "The uPolitics headline itself explicitly characterizes the disclosure as intended to discredit Trump 'enemies' Adam Schiff and Letitia James, matching the claim.",
+    "why": "The uPolitics headline uses the 'Discredit Trump Enemies' framing and the body, citing CNN sources, describes the Schiff/James mortgage-fraud material review and the Schiff-case finding.",
     "host": "upolitics.com",
-    "date": "2026-09-15",
-    "kind": "interpretation",
+    "date": "2026-09-27",
+    "kind": "fact",
     "archive": false
    },
    "3": {
     "state": "supports",
-    "why": "The Conservative Treehouse post directly quotes Blanche's on-the-record denial to CNN that any misconduct investigation into Martin existed, appearing in the same February 4, 2026 story.",
+    "why": "The Feb. 4, 2026 post quotes CNN's story, including Blanche's statement verbatim.",
     "host": "theconservativetreehouse.com",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "4": {
-    "state": "unopened",
-    "why": "",
+    "state": "supports",
+    "why": "The DOJ page lists the video dated Friday, August 14, 2026 as a Pardon Attorney message on the FFRR final rule.",
     "host": "justice.gov",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "5": {
-    "state": "partly",
-    "why": "The source (Washington Times only) confirms Trump's August 21, 2026 announcement and the stated election-legal-work reason, and it does not connect the departure to any grand jury leak finding, but it is a single outlet and cannot itself confirm that Washington Examiner, NBC News, and ABC News also reported the same date/reason, nor does it reference Blanche's prior denial of a misconduct investigation.",
-    "host": "washingtontimes.com",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "ABC7 reports Trump's Friday (Aug. 21, 2026) announcement with the quoted language; the article mentions a D.C. bar ethics complaint but not the grand jury review.",
+    "host": "abc7ny.com",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    }
@@ -4677,25 +4677,25 @@
   "gabbard-odni-reorganization-covert-officer-exposure-2025": {
    "0": {
     "state": "supports",
-    "why": "ABC News confirms elimination of all three named centers, and elsewhere in the article confirms the roughly 40-50% staff cut (\"cut nearly half its workforce\") and the $700 million in projected annual savings, matching the claim.",
+    "why": "ABC reports the near-half workforce cut and >$700M annual savings, and separately states the three centers are dissolved with functions folded into Mission Integration and the NIC.",
     "host": "abcnews.com",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "1": {
     "state": "partly",
-    "why": "The New York Times confirms the \"crush the deep state\" framing and the NIU/FMIC cuts, but only vaguely references (via a Warner quote) Gabbard's \"decision just yesterday to revoke security clearances from career national security officials,\" without specifying \"dozens\" of officials or tying the revocations to \"Russia and election analysis\" as the claim states.",
+    "why": "The NYT text supports the 'deep state' framing, $700M savings, NIU elimination and FMIC folding into Mission Integration, but contains no 'rooting out deep state actors' quote and no mention of 37 officials or their Russia/election work (only Warner's reference to revoked clearances).",
     "host": "nytimes.com",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "2": {
-    "state": "unopened",
-    "why": "",
+    "state": "supports",
+    "why": "The Post's subhead and lede state the senior Russia expert helped prepare Trump's team for the Aug. 15 summit, had her clearance summarily revoked, and was due to take a Ratcliffe-approved European post.",
     "host": "washingtonpost.com",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
@@ -4709,9 +4709,9 @@
    },
    "4": {
     "state": "supports",
-    "why": "The Guardian confirms Gabbard did not inform the White House in advance, that the list included two Democratic congressional staffers, and that Trump's top advisers were left \"deeply frustrated\" -- all matching the claim.",
+    "why": "The Guardian reports, via three people, that Gabbard did not inform the White House before revoking 37 clearances including Ratcliffe deputies and two Democratic staffers, that Trump advisers remain frustrated, and that a senior official disputed the account.",
     "host": "theguardian.com",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
@@ -4724,10 +4724,10 @@
     "archive": false
    },
    "6": {
-    "state": "partly",
-    "why": "The Daily Beast confirms Hartman made a personal plea to spare Nguyen and that Gabbard proceeded with firing him as part of the 37-official clearance revocation, but the article does not specify that Hartman \"called\" Gabbard or that he asked for \"evidence against\" Nguyen -- it only describes an unspecified \"personal plea\" and \"request for mercy.\"",
+    "state": "supports",
+    "why": "The Daily Beast, citing the NYT, says Gabbard rebuffed Hartman's plea and fired chief data scientist Nguyen, one of 37 who lost clearances, and describes his AI/cryptology/math expertise.",
     "host": "thedailybeast.com",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    }
@@ -4885,17 +4885,17 @@
    },
    "1": {
     "state": "supports",
-    "why": "USTR's own press release contains this exact sentence plus Greer's characterization of IEEPA as \"a necessary and appropriate tool,\" and announces the immediate Section 122 pivot -- matching the claim.",
+    "why": "The Feb. 20, 2026 USTR statement contains each quoted phrase: the 'necessary and appropriate tool' line, the continuity language, the immediate 10% Section 122 surcharge, new Section 301 investigations, and the 'only' Reciprocal and Fentanyl Tariffs line.",
     "host": "ustr.gov",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "2": {
     "state": "supports",
-    "why": "ABC News confirms this exact analysis from Wolff, plus other unnamed analysts who \"said\" a legal challenge to the tariffs was likely, matching the claim.",
+    "why": "ABC reports the 60-partner proposal (12.5% for 54, 10% for 6) and quotes Wolff's view that Section 301 was meant to address one country at a time.",
     "host": "abcnews.com",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
@@ -4916,18 +4916,18 @@
     "archive": false
    },
    "5": {
-    "state": "supports",
-    "why": "The guide matches the claim's dates, deadline, and country list exactly, and separately confirms the March 11, 2026 investigation launch and the July 24, 2026 Section 122 sunset.",
+    "state": "partly",
+    "why": "The guide supports the July 24 sunset, the March 11 investigations, the accelerated timeline with a July 20 deadline, and the 12.5% proposal, but attributes the accelerated timeline to USTR rather than a Greer signal, and its own update says the investigations missed July 20 and the final action differed from the proposal.",
     "host": "tariffstool.com",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "6": {
-    "state": "partly",
-    "why": "The same tariffstool.com guide confirms the July 20 and July 24, 2026 deadlines were still pending as described in its pre-July-24 sections, but this source text contains no mention whatsoever of a \"25% tariff on certain Brazilian imports\" or any yearlong Brazil investigation -- that detail is not supported by this text.",
+    "state": "supports",
+    "why": "The Aug. 6 update states the Section 122 lapse at 12:01 a.m. July 24, the broader two-tier final action covering about 60 economies (99.4% of imports), and that Section 301 has no rate cap or time limit.",
     "host": "tariffstool.com",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
@@ -4940,42 +4940,42 @@
     "archive": false
    },
    "8": {
-    "state": "partly",
-    "why": "CNBC confirms the substance of the August 3, 2026 25-state suit's arguments and that it followed an earlier suit \"by a group of small businesses,\" but this article never names \"Liberty Justice Center,\" \"Burlap & Barrel, Inc. v. Greer,\" or the specific co-lead states (Oregon, Arizona, California) that the claim asserts.",
+    "state": "supports",
+    "why": "CNBC reports the Monday 25-state CIT suit over 10%/12.5% tariffs on 60 partners seeking halt, unlawfulness declaration and refunds, the rushed/bypassed-consultation allegations, the July 23 announcement timing, and calls it at least the second challenge after a small-business suit.",
     "host": "cnbc.com",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "9": {
-    "state": "supports",
-    "why": "Trade Law Daily confirms the government's Aug. 4 motion to designate Burlap and Barrel the master case on this coordinated-but-not-consolidated basis, and separately names the three suits (Burlap and Barrel/Collective Horology, Learning Resources, and the 25-state coalition led by Oregon, Arizona and California) exactly as the claim describes.",
+    "state": "partly",
+    "why": "Trade Law Daily confirms the Aug. 4 motion to make the Burlap and Barrel case the master case with coordinated briefing across the three suits without formal consolidation, but gives the caption as Burlap and Barrel v. United States, not v. Greer.",
     "host": "tradelawdaily.com",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "10": {
-    "state": "unopened",
-    "why": "",
+    "state": "supports",
+    "why": "Supply Chain Dive reports the July 24 Burlap and Barrel/Collective Horology suit seeking removal and refunds, and quotes the states' 'arbitrary, capricious' and 'pretext' language elsewhere in the article.",
     "host": "supplychaindive.com",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "11": {
-    "state": "partly",
-    "why": "InsideTrade confirms the Sept. 30 hearing date, a three-judge panel, and an Aug. 13 scheduling order involving three separately-suing plaintiff groups, but the visible text is cut off by a paywall before it names the judges, confirms that Learning Resources (not Burlap & Barrel) was chosen as the sample case, or gives the specific Aug. 25/Sept. 4/Sept. 18 interim briefing dates the claim asserts.",
-    "host": "insidetrade.com",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "The Aug. 26 post states the In Re Section 301 Forced Labor Cases caption, Learning Resources as sample case with others stayed, the motion filed 'yesterday', and the Sept. 4 / Sept. 18 / Sept. 30 schedule before the named judges.",
+    "host": "taxprofblog.aals.org",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "12": {
     "state": "supports",
-    "why": "TaxProf Blog (dated Aug. 26, 2026) confirms this exact briefing schedule and separately confirms the Federal Circuit's stay serves \"merely to prevent any tariffs paid from being refunded,\" matching the claim.",
+    "why": "The post describes the Federal Circuit stay preventing refunds, the July 21 opening brief (corrected July 29), appellees' responses due Monday, a reply three weeks later, and the case then awaiting oral argument.",
     "host": "taxprofblog.aals.org",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    }
@@ -5245,17 +5245,17 @@
   "hegseth-army-chief-staff-purge-2026": {
    "0": {
     "state": "supports",
-    "why": "CNN's article directly confirms Hegseth ousted Gen. Randy George along with Maj. Gen. William Green Jr. and Gen. David Hodne on April 2, 2026, and quotes Sean Parnell's on-the-record statement confirming George's immediate retirement.",
-    "host": "cnn.com",
-    "date": "2026-09-15",
+    "why": "NBC (April 2, 2026) reports Parnell's statement that George was retiring as 41st chief effective immediately, that he had been expected to serve until end of summer 2027, and the firing of Green and Hodne.",
+    "host": "nbcnews.com",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "1": {
-    "state": "partly",
-    "why": "The NBC article confirms Lt. Gen. Christopher LaNeve is seen as the likely successor as chief of staff, but it never describes him as a former personal military aide to Hegseth -- that specific relationship is not stated in this source.",
-    "host": "nbcnews.com",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "DefenseScoop states each element of the claim directly.",
+    "host": "defensescoop.com",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
@@ -5268,18 +5268,18 @@
     "archive": false
    },
    "3": {
-    "state": "partly",
-    "why": "The Hill supports Driscoll looking to leave around the end of 2026 amid a turf war with Hegseth, WSJ having reported it first, and LaNeve serving as acting chief of staff with his confirmation in question. It does not mention Driscoll's family relocating or his on-base apartment, his earlier no-resignation statement, or that no nominee has been named nearly five months after George's removal.",
-    "host": "thehill.com",
-    "date": "2026-09-21",
+    "state": "supports",
+    "why": "Stars and Stripes (Aug. 26, 2026) reports the discussed year-end exit first reported Friday by the WSJ, the Fort Myer move-out, and later states LaNeve has filled the chief role in an acting capacity with no successor named.",
+    "host": "stripes.com",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "4": {
     "state": "supports",
-    "why": "The AP article confirms Driscoll's last full day was Wednesday (September 2026), that his resignation followed reported tensions with Hegseth, and connects that friction to the earlier ouster of his ally George and disruption from Hegseth's firings.",
-    "host": "apnews.com",
-    "date": "2026-09-15",
+    "why": "AP via PBS (Sept. 2) reports the X post naming Wednesday as his last full day with no reason after 18 months, the Monday White House confirmation, the Hegseth tensions, George's April ouster, and the lack of Senate-confirmed leaders.",
+    "host": "pbs.org",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    }
@@ -5507,33 +5507,33 @@
    },
    "2": {
     "state": "supports",
-    "why": "The Week's roundup confirms Driscoll had resisted pressure to fire Butler for months, and cites the Washington Post's reporting that Butler's prior work as Milley's spokesman 'appears to be a factor in his removal' rather than performance.",
+    "why": "The Week attributes each element to the stated outlet: Fox on months of resistance, NYT on the unfavorable-comparison grievance, and the Post on the Milley factor and the retirement paperwork.",
     "host": "theweek.com",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "3": {
-    "state": "not_found",
-    "why": "The source is a Feb. 2026 article about Butler's ouster and retirement; it cannot show whether any reversal or further statement occurred by Aug. 18, 2026, so the no-further-developments claim is not addressed.",
-    "host": "thehill.com",
-    "date": "2026-09-21",
+    "state": "supports",
+    "why": "Fox reports the 34-officer list held nearly four months over four to five officers Hegseth cannot legally remove, Butler's offer to withdraw, Driscoll's months of resistance, and that the demand came Thursday.",
+    "host": "foxnews.com",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "4": {
-    "state": "not_found",
-    "why": "The source is a Feb. 2026 article about Butler's ouster and retirement; it cannot show whether any reinstatement, statement or litigation occurred by Aug. 26, 2026, so the no-further-developments claim is not addressed.",
-    "host": "thehill.com",
-    "date": "2026-09-21",
+    "state": "supports",
+    "why": "AP (PBS, dated Sept. 1, 2026) says the White House announced Monday that Driscoll is leaving after 18 months with no reason given amid reported Hegseth tensions, and later notes George's April ouster as a Driscoll ally.",
+    "host": "pbs.org",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "5": {
     "state": "supports",
-    "why": "CBS News confirms Army Secretary Dan Driscoll resigned, with the White House confirming it on a Monday consistent with an August 31, 2026 date, after months of reported friction with Hegseth -- matching this entry's own account of tension over the Butler removal.",
+    "why": "CBS reports the Monday White House confirmation after months of friction, George's ouster as a close friend of Driscoll, and Driscoll's transformation/generals concerns.",
     "host": "cbsnews.com",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    }
@@ -5767,25 +5767,25 @@
    },
    "1": {
     "state": "supports",
-    "why": "Defense One (Oct. 23, 2025) says Vernon, acting JAG after Plummer's Feb. 21 firing, stepped down eight months later with no one nominated to fill the job, which supports the claim that the Air Force is left without a Senate-confirmed JAG.",
+    "why": "Defense One (Oct. 23, 2025) states Vernon, acting JAG after Plummer's firing, stepped down eight months later with no permanent nominee.",
     "host": "defenseone.com",
-    "date": "2026-09-23",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "2": {
-    "state": "partly",
-    "why": "The excerpt supports the Davids ouster and the 'at least five senior female service members' figure, and the text notes 18 months as academy head. However, the article is dated 07/26/25, not July 31, 2025 as the claim states.",
+    "state": "supports",
+    "why": "The Hill (July 26, 2025) says Davids, the first female superintendent, was moved after 18 months and is one of at least five senior women moved out since January.",
     "host": "thehill.com",
-    "date": "2026-09-21",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "3": {
-    "state": "partly",
-    "why": "Military.com confirms all six same-night removals by role -- Joint Chiefs chairman, Navy's top officer, Air Force vice chief, and the Army/Navy/Air Force judge advocates general -- but this article never names the three JAG officers; it only names Brown, Caine, Franchetti, and Slife, so the claim's assertion that the JAG officers were 'specifically named' is not supported by this text.",
+    "state": "supports",
+    "why": "Military.com identifies all six same-night removals: Brown, Franchetti, Slife, and the Army, Navy and Air Force JAGs.",
     "host": "military.com",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
@@ -5815,29 +5815,29 @@
    },
    "7": {
     "state": "supports",
-    "why": "CNN confirms Brown's July 3, 2026 Foreign Affairs essay co-authored with Peter Feaver and Andrew Kragie warning that politically contentious domestic missions make military work 'more fraught,' and his Aspen Ideas Festival remark that the firings pattern is 'not about merit.'",
+    "why": "CNN (July 3, 2026) reports the Foreign Affairs op-ed co-authored with Feaver and Kragie criticizing domestic crime missions, and quotes Brown's Aspen remark that the firings are 'not about merit'.",
     "host": "cnn.com",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "8": {
-    "state": "not_found",
-    "why": "",
-    "host": "verdict.justia.com",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "The Jan. 30, 2026 Congressional Record lists Eason's Air Force JAG nomination among those confirmed en bloc on Thune's unanimous-consent request.",
+    "host": "govinfo.gov",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    }
   },
   "hegseth-kuwait-drone-strike-accountability-2026": {
    "0": {
-    "state": "partly",
-    "why": "The Washington Post archive confirms 6 killed and that imagery/experts/officials found the facility offered little protection from overhead strikes, but this captured text does not address the 20+ wounded figure the claim also asserts.",
-    "host": "washingtonpost.com",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "The Post piece describes the struck building as a prefabricated trailer-style structure flanked by tall concrete barriers but lacking overhead protection, cites a 2021 photo, and contrasts this with the Army counter-drone manual's call for overhead protection.",
+    "host": "msn.com",
+    "date": "2026-09-27",
     "kind": "fact",
-    "archive": true
+    "archive": false
    },
    "1": {
     "state": "supports",
@@ -5849,73 +5849,73 @@
    },
    "2": {
     "state": "partly",
-    "why": "The article confirms chaotic, disorganized self-triage amid severe injuries ('there was no single line of patients to triage'), but nowhere states that senior officers specifically abandoned the building rather than organizing aid -- that specific allegation is not present in this text.",
-    "host": "cbsnews.com",
-    "date": "2026-09-15",
+    "why": "The provided text supports the account of Barnes running for the exit and bunker while dozens remained behind, but it is truncated before any passage stating that no interviewed troops saw Barnes or Hinson help the dead or wounded, or giving Army Central's response about leadership assisting the evacuation.",
+    "host": "washingtonpost.com",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "3": {
-    "state": "partly",
-    "why": "CBS confirms leadership ignored pre-attack requests for more medical personnel/ambulances, Carrier's account that no mass-casualty rehearsals were ever run, and the roughly-one-week-earlier relocation to Port Shuaiba -- but the 'I think if she would have gotten an ambulance, I think she might have lived' quote is attributed by the article to Major Stephen Ramsbottom, not to Master Sgt. Ann Marie Carrier as the claim states.",
+    "state": "supports",
+    "why": "CBS reports the medical-support request (personnel, availability and accessibility of supplies) was ignored, Carrier's statement that there was no mass-casualty planning or rehearsal, Ramsbottom's ambulance quote about Amor, and the relocation about one week before Epic Fury.",
     "host": "cbsnews.com",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": true
    },
    "4": {
-    "state": "unopened",
-    "why": "",
+    "state": "partly",
+    "why": "The text supports the 17-interview basis, the allegations that Barnes and Hinson ignored warnings and overrode force-protection assessments, and the U.S. official's statement that the investigation assigns no fault; it is truncated before any mention of the EAGLS request or of Hinson appointing a mid-career officer to run the investigation.",
     "host": "washingtonpost.com",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "5": {
-    "state": "partly",
-    "why": "CBS confirms the Army completed its investigation and privately briefed Gold Star families without releasing details, but this source does not mention a '350-page' report length or lawmakers questioning the investigation's independence over a midgrade in-unit investigator -- those specific details are absent from this text.",
+    "state": "supports",
+    "why": "CBS states the Pentagon completed its review in July, Army leaders briefed families without assigning blame or commenting on decision-making mistakes, the Pentagon has refused for weeks to disclose the 350-plus-page report, and a DoD spokesperson did not respond about release timing.",
     "host": "cbsnews.com",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "6": {
     "state": "supports",
-    "why": "Baldwin's August 5, 2026 letter to Adm. Cooper demands by August 18 the public release of the full unredacted Army Central investigation, all underlying documentation, the classified review of intelligence warnings and facility defenses, plus explanations on the medical-care delay, denied supply requests, and whether medical access factored into the Port Shuaiba repositioning.",
+    "why": "The Baldwin press release dated 08.05.2026 lists exactly the three requests to Adm. Cooper with an August 18, 2026 deadline, matching the claim.",
     "host": "baldwin.senate.gov",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "7": {
     "state": "partly",
-    "why": "The July 30, 2026 Warren/Ryan press release confirms the 13 named lawmakers, the letter's focus on medical care/injury classification/the investigation, the August 12, 2026 response deadline, and the earlier April 2026 Warren/Ryan inquiry into the same pattern, but this source never states the letter contained '23 questions,' and being dated before August 12 it cannot confirm whether a Pentagon response was later identified.",
+    "why": "The letter text confirms the July 29, 2026 date, the earlier April 2026 letter, and that Hegseth had not provided the investigation results or directly answered all the April questions; the provided excerpt is truncated before the signature list, the question count, the August 12 deadline, and any question about a commander appointing a subordinate to investigate.",
     "host": "warren.senate.gov",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "8": {
     "state": "partly",
-    "why": "Truthout confirms Hegseth's exact 'monologue falsehoods' retort and his '7,000 troops off of the X' defense in a House hearing, but the questioner is named 'Rep. Pat Ryan (D-New York)' in this article, not 'Rep. Tim Ryan' as the claim states, and this text never gives an April 29, 2026 hearing date.",
+    "why": "Truthout reports Ryan's question about survivors lying, Hegseth's 'monologue falsehoods' reply, and his 'tragic' / 'consequence of conflict' remark at a House hearing chaired by the HASC chair, but the article only says the hearing was on 'Wednesday' and never states the April 29, 2026 date.",
     "host": "truthout.org",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "9": {
-    "state": "partly",
-    "why": "Baldwin's July 21, 2026 press release confirms she questioned Hegseth at the Senate Appropriations Committee hearing about denied drone-defense and medical-system requests for Port Shuaiba, but this source does not contain Hegseth's response or the specific 'at any level' denial quote attributed to him in the claim.",
+    "state": "supports",
+    "why": "Baldwin's letter states she asked Hegseth on July 21 about the denial of counter-drone systems, quotes his 'not a single drone or defense request denied' answer as contradicted by the July 12 Post article, and records his pledge to coordinate with CENTCOM.",
     "host": "baldwin.senate.gov",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "10": {
-    "state": "not_found",
-    "why": "",
+    "state": "partly",
+    "why": "CBS supports the rejected LSA Jenkins / Prince Sultan options, the January intelligence briefings to Barnes, and the Army spokesperson's confirmation that the probe finished in early July but is unreleased; the text cuts off at the 'Congressional Democrats urge committee hearings' subhead, so the 'more than 20' Democrats and their appeal to the committee chairmen are not shown.",
     "host": "cbsnews.com",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    }
@@ -5949,81 +5949,81 @@
   "hegseth-navy-promotion-list-2026": {
    "0": {
     "state": "supports",
-    "why": "GIWPS's analysis states nearly verbatim what the claim describes, including the \"unprecedented and concerning\" characterization and the break from merit-based promotion norms.",
+    "why": "The GIWPS analysis calls the removal of two women and two Black officers 'unprecedented and concerning' and states that senior officials cannot recall a defense secretary selectively removing officers from a vetted slate, a break from longstanding norms.",
     "host": "giwps.georgetown.edu",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "interpretation",
     "archive": false
    },
    "1": {
-    "state": "unopened",
-    "why": "",
-    "host": "spokesman.com",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "The syndicated NYT piece states Hegseth blocked at least seven board-selected Navy officers (two women, two Black men, three white men), leaving a 22-nominee list released in late May with no women and apparently two nonwhite officers against 21% and 38% force shares, and four officials called it highly unusual.",
+    "host": "web.archive.org",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "2": {
-    "state": "partly",
-    "why": "The New Republic/NYT-sourced article confirms 'four current and former defense officials told the paper' about Hegseth personally blocking the promotions, but this text does not contain any quote or characterization from those four officials about being unable to recall a prior secretary doing this or calling it a break from longstanding norms -- that specific framing is absent here.",
+    "state": "supports",
+    "why": "The New Republic relays the Times report that Hegseth personally blocked several Navy officers including at least two women and two Black men, per four officials, and that the nearly-two-dozen list had no women and only two nonwhite officers.",
     "host": "newrepublic.com",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "3": {
-    "state": "unopened",
-    "why": "",
-    "host": "nationalinterest.org",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "ABC (June 2, 2026), citing three sources, says the removed officers included African Americans, women and white males removed for reasons including DEI involvement.",
+    "host": "abcnews.com",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "4": {
-    "state": "partly",
-    "why": "CommonDreams' account of the NYT report confirms the four Army colonels (two Black, two female), Driscoll's repeated objections citing their 'decadeslong records of exemplary service,' Buria's alleged 'Trump would not want to stand next to a Black female officer' remark and his 'completely false' denial, the paper written ~15 years earlier by one Black colonel, and the female logistics officer's Afghanistan-withdrawal role. However, this text does not say Hegseth 'pressed Driscoll for months' or 'unilaterally struck the names himself,' does not call the Black colonel a 'combat veteran,' and does not say Hegseth 'publicly condemned' the Afghanistan withdrawal -- those specifics are not in this source.",
+    "state": "supports",
+    "why": "Common Dreams (dated Mar 27/28, 2026) relays each element: the four blocked colonels over Driscoll's objections, the Buria-Driscoll exchange over Gant and Buria's 'completely false' denial, the 15-year-old paper, and the logistics officer held back over the Afghanistan withdrawal.",
     "host": "commondreams.org",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "5": {
     "state": "supports",
-    "why": "NBC News (byline April 2-3, 2026) confirms nine U.S. officials described Hegseth blocking or delaying promotions for more than a dozen Black and female senior officers across all four branches, and quotes an official saying 'there is not a single service that has been immune to this level of involvement by Hegseth.'",
+    "why": "NBC's April 2, 2026 (updated April 3) article cites nine U.S. officials that Hegseth blocked or delayed promotions for more than a dozen Black and female officers across all four branches and quotes the 'not a single service' line.",
     "host": "nbcnews.com",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "6": {
-    "state": "partly",
-    "why": "Reed's June 2, 2026 press release confirms the statutory-authority theory ('only the President may remove an officer from a promotion list') and the demographic disparity figures (under 20% vs. nearly 60%) verbatim, but this specific release does not contain the word 'disgraceful' or the exact phrase 'complete betrayal of the merit-based promotion system that is the foundation of our military' -- it instead says the disparity 'is a betrayal of the meritocracy that defines our military.'",
+    "state": "supports",
+    "why": "Reed's June 2, 2026 statement contains each quoted passage: the 'outrageous pattern that is both unlawful and corrosive' line, the 'only the President may remove' assertion, and the under-20% / nearly-60% disparity called a betrayal of meritocracy.",
     "host": "reed.senate.gov",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "7": {
-    "state": "unopened",
-    "why": "",
+    "state": "supports",
+    "why": "The July 6, 2026 letter, signed by Ossoff, Blumenthal, Slotkin, Gillibrand, Durbin, Booker and Merkley, requests Hegseth's decision-making process and rationale including legal and regulatory authorities, with a written response by August 30, 2026.",
     "host": "slotkin.senate.gov",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "8": {
     "state": "supports",
-    "why": "RedState (dated Jul 08, 2026) quotes Pentagon spokesman Sean Parnell rejecting the Democratic senators' letter as an attempt to 're-politicize military promotions,' saying promotion decisions are 'driven solely by merit,' and that the Pentagon will 'not entertain demands for demographic scorecards.'",
+    "why": "RedState's July 8, 2026 article quotes Parnell with each of the three phrases in the claim.",
     "host": "redstate.com",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "9": {
-    "state": "partly",
-    "why": "Political Wire's quotation of the Aug. 28, 2026 NYT report confirms the four blocked Army one-star officers, the 'targeting officers who worked for generals he does not like' framing, and the cumulative 45-officer/more-than-half-female-or-Black figures, but this source says nothing about a separate NBC News Sept. 1, 2026 report of six Army officers removed from an 18-candidate two-star list -- that half of the claim is unaddressed here.",
+    "state": "supports",
+    "why": "Political Wire quotes the Times verbatim on the four blocked Army officers, the apparent targeting of officers who worked for disfavored generals, and the at-least-45 removals with more than half female or Black.",
     "host": "politicalwire.com",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    }
@@ -6140,34 +6140,34 @@
   },
   "hegseth-persian-gulf-cadets-no-warning-2026": {
    "0": {
-    "state": "partly",
-    "why": "NOTUS confirms DoD's precedent-breaking failure to warn the vessels, the academy, or the Department of Transportation, and the roughly month-long delay before evacuation, but the article specifies cadets were aboard only two of the five U.S.-flagged vessels present, not all five as the claim's phrasing ('cadets aboard five U.S.-flagged vessels') suggests.",
+    "state": "supports",
+    "why": "NOTUS reports five U.S.-flagged vessels in the Gulf, cadets aboard two, DoD breaking precedent by giving no warning to the vessels, the academy or DOT (per three sources), and cadets evacuated about a month after the war started.",
     "host": "notus.org",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "1": {
     "state": "supports",
-    "why": "NOTUS confirms the Stena Imperative was struck by an Iranian projectile and killed a dockworker, that another U.S.-flagged vessel was nearly hit, and that more than 800 vessels were trapped trying to exit the Persian Gulf.",
+    "why": "NOTUS states the Crowley tanker Stena Imperative was hit by an Iranian projectile killing a dockworker, another U.S.-flagged vessel was nearly hit, and more than 800 vessels are trapped.",
     "host": "notus.org",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "2": {
     "state": "supports",
-    "why": "NOTUS quotes Blumenthal calling the lack of warning 'absolutely foreseeable' and describing his oversight concerns as 'sky high.'",
+    "why": "NOTUS quotes Blumenthal criticizing the failure to alert the vessels, describing his concerns as 'sky high', and saying the stranding was 'absolutely foreseeable'.",
     "host": "notus.org",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "3": {
-    "state": "not_found",
-    "why": "The cited source is Blumenthal's original March 20, 2026 letter itself (confirming the March 26 response deadline), which by its nature cannot speak to whether a CENTCOM response or further congressional follow-up was later identified as of the 2026-08-26 re-verification date.",
+    "state": "supports",
+    "why": "The March 20, 2026 letter to Adm. Cooper contains the quoted 'no warning or direction to reposition' language, asks what steps were taken to notify or reposition vessels, and requests a response by March 26, 2026.",
     "host": "blumenthal.senate.gov",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    }
@@ -6175,17 +6175,17 @@
   "hegseth-promotions-blocked-2026": {
    "0": {
     "state": "supports",
-    "why": "NBC News's report, based on nine U.S. officials, documents Hegseth blocking or delaying promotions for more than a dozen senior officers across all four military branches.",
+    "why": "NBC, citing nine U.S. officials, reports Hegseth blocked or delayed promotions for more than a dozen Black and female senior officers across all four branches.",
     "host": "nbcnews.com",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "1": {
     "state": "supports",
-    "why": "The source says Hegseth blocked Sims's promotion first over unfounded leak suspicions, then over closeness to Milley, prompting a rare intervention by Gen. Caine.",
+    "why": "The July 26, 2025 NYT text states Hegseth passed over Sims on unfounded leak suspicions, briefly agreed to promote him, reversed again 'early this month' citing closeness to Milley, prompting a rare intervention from Gen. Caine.",
     "host": "nytimes.com",
-    "date": "2026-09-23",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
@@ -6199,17 +6199,17 @@
    },
    "3": {
     "state": "supports",
-    "why": "The Hill reports, citing the New York Times, that Hegseth blocked promotion of two Black and two female Army officers, and describes them as struck from the promotion list.",
+    "why": "The Hill relays the Times report that Hegseth blocked the promotion of two Black and two female Army officers to one-star general.",
     "host": "thehill.com",
-    "date": "2026-09-21",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "4": {
-    "state": "partly",
-    "why": "Rolling Stone's account of the March 27, 2026 NYT report confirms Buria's remark to Driscoll about Trump not wanting to stand next to a Black female officer over Gant's MDW assignment, Driscoll escalating to a senior White House official who agreed, and Buria's denial (though quoted as calling it 'fake Washington gossip,' not verbatim 'fabricated'). However, this text never quotes Driscoll telling Buria the president 'is not a racist or sexist,' and it says nothing about Gant's Senate confirmation date or that her assignment proceeded despite the objection -- that entire final part of the claim is unaddressed here.",
+    "state": "supports",
+    "why": "Rolling Stone relays the March 27 Times report citing three officials on Buria's remark about Gant, Driscoll raising it with a White House official who agreed, Buria's 'fake Washington gossip' denial, and the four blocked Army officers.",
     "host": "rollingstone.com",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
@@ -6217,7 +6217,7 @@
     "state": "unopened",
     "why": "",
     "host": "gvwire.com",
-    "date": "2026-09-21",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    }
@@ -6398,34 +6398,34 @@
   },
   "hegseth-undisclosed-jordan-strikes-2026": {
    "0": {
-    "state": "partly",
-    "why": "The NYT text confirms three undisclosed Iranian strikes on U.S. forces in Jordan preceded the publicized Friday attack, with dozens injured and helicopters damaged, but it never states the calendar date 'July 18, 2026' for the publicly announced attack -- only 'Friday.'",
-    "host": "nytimes.com",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "The Inquirer-republished NYT piece (July 20, 2026) states that in the week before Friday's deadly attack Iran carried out three other strikes in Jordan that injured dozens and damaged helicopters, per anonymous officials, and the Pentagon did not disclose them.",
+    "host": "inquirer.com",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "1": {
-    "state": "not_found",
-    "why": "The source text (same NYT article) covers Pentagon spokesman Sean Parnell's denial of concealment and casualty figures, but never presents any official's rationale that detailed reporting could hand Iran targeting intelligence -- that specific rationale is not addressed in this text.",
-    "host": "nytimes.com",
-    "date": "2026-09-15",
-    "kind": "interpretation",
+    "state": "supports",
+    "why": "The article attributes the no-requirement point to one U.S. military official and the rhetorical question about helping Iran target bases to a second official, matching the claim.",
+    "host": "inquirer.com",
+    "date": "2026-09-27",
+    "kind": "fact",
     "archive": false
    },
    "2": {
     "state": "supports",
-    "why": "CNN's article confirms the Pentagon identified 1st Lt. Tyler Feehan and Pvt. Isabella Gonzales as killed in the Jordan attack, and Sgt. Angel Rampersad -- previously listed as missing -- as believed killed in the same attack, matching the claim.",
+    "why": "CNN reports DoD identified Feehan and Gonzales as killed in the Friday attack on Muwaffaq Salti Air Base and Rampersad, previously listed missing, as believed killed in the same attack.",
     "host": "cnn.com",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "3": {
-    "state": "unopened",
-    "why": "",
+    "state": "partly",
+    "why": "The August 4, 2026 letter supports the removal and 'Overseas Operations' reappearance of four deaths, the 'manipulated the record' language, and the three undisclosed Jordan strikes; the provided text is truncated before the letter's specific requests, so the request for a complete DCAS change record by August 18 is not shown.",
     "host": "oversightdemocrats.house.gov",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
@@ -6438,18 +6438,18 @@
     "archive": false
    },
    "5": {
-    "state": "partly",
-    "why": "The CNN article (dated July 26, before the Aug 18 deadline existed) confirms Pentagon press secretary Joel Valdez publicly attributed the casualty-count changes to 'temporary data disruptions,' but never uses the word 'anomalies,' and cannot speak to whether a response to the Committee's Aug 18 deadline was later identified since it predates that date.",
+    "state": "supports",
+    "why": "CNN (July 26, 2026) reports the DCAS update restoring the four soldiers under a new 'Overseas Operations' category starting July 7, and Valdez's post blaming 'temporary data disruptions on the (DCAS) website'.",
     "host": "cnn.com",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "6": {
     "state": "supports",
-    "why": "ABC News confirms Duckworth's bill (introduced Aug. 6, 2026) would require the Pentagon to combine all Iran War casualty records into one count and notify next-of-kin of corrections, and lists 17 Democratic cosponsors matching the claim's roster.",
+    "why": "ABC (August 6, 2026) reports Duckworth-led Democrats introducing the bill Thursday to require a single combined casualty count and next-of-kin notification, and lists 17 cosigners including the named senators.",
     "host": "abcnews.com",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    }
