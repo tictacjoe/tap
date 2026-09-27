@@ -1,6 +1,6 @@
 {
  "version": 1,
- "as_of": "2026-09-24",
+ "as_of": "2026-09-27",
  "checks": {
   "abrego-garcia-vindictive-prosecution-2025-2026": {
    "0": {
@@ -459,9 +459,9 @@
   "blanche-doj-antifa-task-force-lynch-jan6-2026": {
    "0": {
     "state": "supports",
-    "why": "The TPM article contains a direct DOJ statement matching the claim's exact terms about Lynch's presence, non-entry, brief stay, and no violation.",
+    "why": "TPM quotes the DOJ official's confirmation verbatim and states that DOJ confirmed the green-crane image is of Lynch; both halves of the claim are directly supported.",
     "host": "talkingpointsmemo.com",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
@@ -482,18 +482,18 @@
     "archive": false
    },
    "3": {
-    "state": "not_found",
-    "why": "This WSWS article, as provided, discusses DHS's Minnesota surveillance operation but never mentions Lynch by name, his Jan. 6 photograph, or his role convening the grand jury -- the specific claims about Lynch are not addressed in this text.",
+    "state": "partly",
+    "why": "The provided WSWS text shows the article relaying Riach's discovery motion for Sant (and the grand-jury 'The Conspiracy' slide), supporting the restatement framing, but the text is truncated before any mention of Lynch, so the quoted 'Riach's filing further notes' passage about Lynch at the Capitol, and the date/byline, cannot be confirmed from it.",
     "host": "wsws.org",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "4": {
-    "state": "supports",
-    "why": "The Raw Story article confirms Riach's filing calling the slide 'unhinged,' the naming of groups like the AFL-CIO and Minneapolis Federation of Educators as alleged co-conspirators 'with no evidence,' and the intent to pursue a selective-prosecution dismissal motion.",
-    "host": "rawstory.com",
-    "date": "2026-09-15",
+    "state": "partly",
+    "why": "The ECF 212 text (filed 08/13/26) confirms the 'broad and irrational investigation' and 'With no evidence' language naming the AFL-CIO and Minneapolis Federation of Educators, but the provided text is truncated before any mention of Lynch or the 'unhinged conspiracy slide', and it only refers to 'selective prosecution and outrageous government conduct motions he intends to bring', not the quoted 'intends to file a motion to dismiss for selective prosecution'; Riach's name also does not appear in the excerpted pages.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    }
@@ -610,26 +610,26 @@
   },
   "blanche-doj-law-firm-subpoenas-epshteyn-2026": {
    "0": {
-    "state": "unopened",
-    "why": "",
-    "host": "wsj.com",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "Political Wire excerpts both WSJ quotes exactly as claimed and adds that Epshteyn doesn't work for the federal government.",
+    "host": "politicalwire.com",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "1": {
-    "state": "partly",
-    "why": "The source confirms the 14-firm subpoena, its scope (Epshteyn communications and ABA correspondence), and disclosure in the ABA lawsuit, but it only says the subpoenas were \"filed Friday,\" not the specific calendar date July 18, 2026.",
+    "state": "supports",
+    "why": "The Reuters text via Missouri Lawyers Media states each element: 14 firms, records and depositions, subpoenas filed Friday in Washington federal court, Epshteyn communications since the second term began, ABA communications about Epshteyn, and disclosure in the ABA's lawsuit.",
     "host": "molawyersmedia.com",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "2": {
     "state": "supports",
-    "why": "The Bloomberg Law article confirms the 13-firm breakdown (9 deal firms plus 4 executive-order firms on appeal), the Epshteyn-communications focus, and DOJ's simultaneous executive-privilege assertion over the same material.",
+    "why": "Bloomberg Law cites the NYT July 14 report, describes the nine deal firms that pledged $940 million and the four firms whose executive orders were struck down and are on appeal, and carries both DOJ spokesperson quotes verbatim, including on the motion to quash the ABA's Epshteyn subpoena.",
     "host": "news.bloomberglaw.com",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
@@ -642,34 +642,34 @@
     "archive": false
    },
    "4": {
-    "state": "supports",
-    "why": "The Law.com article directly quotes the ABA calling the subpoenas 'absurd' and 'inefficient' and describes the ABA's request to compel discovery or receive a privilege log.",
-    "host": "law.com",
-    "date": "2026-09-15",
+    "state": "partly",
+    "why": "ECF 69 (filed 07/22/26, reply in support of the motion to compel) makes the same argument about the government subpoenaing third parties to produce documents back to the ABA, but the provided text is truncated and does not contain the specific quoted phrases ('absurd outcome', 'huge waste of time', the privilege-log request).",
+    "host": "storage.courtlistener.com",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "5": {
-    "state": "partly",
-    "why": "The UW-Madison article confirms the second set of subpoenas directing all 14 firms' leaders to depositions on August 3, but this July 20, 2026 article predates the depositions and cannot itself confirm that no outcome had been reported as of the claimed 2026-08-18 update.",
+    "state": "supports",
+    "why": "The July 20, 2026 tracker post states the July 1 issue date, the Epshteyn/agreements/executive-order scope, the July 16 response date, and verbatim that 'A second set of subpoenas directs the leaders of all 14 firms to sit for depositions on August 3.'",
     "host": "ladd.law.wisc.edu",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "6": {
-    "state": "supports",
-    "why": "The Washington Examiner article confirms the August 11, 2026 OLC memo signed by T. Elliot Gaiser concluding executive privilege can cover presidential communications with private outside advisers under the stated conditions, and ties it to the Epshteyn/ABA dispute.",
-    "host": "washingtonexaminer.com",
-    "date": "2026-09-15",
+    "state": "partly",
+    "why": "The OLC slip opinion dated August 10, 2026, addressed to the Counsel to the President, contains the quoted three-part conclusion and defines 'private advisers' as 'anyone the President consults outside the Executive Branch'; however, the provided (truncated) text does not show the 21-page length or the signature of T. Elliot Gaiser.",
+    "host": "justice.gov",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "7": {
-    "state": "not_found",
-    "why": "The provided source text is the July 27, 2026 Law.com article, which predates the claimed September 2, 2026 recheck and cannot itself confirm that both the depositions outcome and the disqualification ruling remained open as of that later date.",
-    "host": "law.com",
-    "date": "2026-09-15",
+    "state": "unopened",
+    "why": "",
+    "host": "courtlistener.com",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    }
@@ -800,18 +800,18 @@
   },
   "blanche-maxwell-interview-clemency-speculation-2025-2026": {
    "0": {
-    "state": "partly",
-    "why": "NBC News confirms the July 23, 2025 Florida ruling by Judge Rosenberg using this exact 'hands are tied'/'no exceptions' language, and confirms a parallel SDNY motion was pending, but the text does not give a July 18, 2025 date for when DOJ moved to unseal the SDNY Maxwell materials.",
+    "state": "supports",
+    "why": "The July 23, 2025 NBC article reports Rosenberg's 'hands are tied' ruling, the 'are no exceptions' and 'effectively conceded' quotes tied to 11th Circuit precedent, that it was separate from DOJ's pending New York request, and Trump's directive to Bondi to 'produce any and all pertinent Grand Jury testimony.'",
     "host": "nbcnews.com",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "1": {
-    "state": "partly",
-    "why": "The NYT article confirms DOJ contacted Maxwell's legal team, that Blanche was acting on Trump's instruction to release all 'credible' evidence, and that Maxwell's attorney said she would testify truthfully, but the article never uses the word 'cooperating' nor states that Trump's intervention was 'welcomed.'",
-    "host": "nytimes.com",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "ABC's July 22, 2025 article contains Bondi's 'coming days' statement, the Blanche quote as posted on X, Trump's prior-week order quote, and Markus's two quotes exactly as claimed.",
+    "host": "abcnews.com",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
@@ -824,10 +824,10 @@
     "archive": false
    },
    "3": {
-    "state": "unopened",
-    "why": "",
+    "state": "partly",
+    "why": "The July 28, 2025 letter to Blanche follows up on 'Ranking Member Durbin's initial inquiry of July 18, 2025', states the meeting 'occurred on July 24, 2025, and continued the following day', and calls its 'purpose and timing' perplexing; however, the provided text is truncated before the signature block, so Sen. Whitehouse's co-authorship is not shown anywhere in the source text.",
     "host": "judiciary.senate.gov",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
@@ -841,17 +841,17 @@
    },
    "5": {
     "state": "partly",
-    "why": "NBC News (the source actually provided, though the claim attributes this reporting to 'CNN') confirms the August 11, 2025 31-page Engelmayer ruling and its 'demonstrably false' language, but this text contains no mention of victim letters calling the motion 'political warfare' or objecting to Maxwell's 'public legitimization,' and does not discuss DOJ's failure to notify victims in advance.",
-    "host": "nbcnews.com",
-    "date": "2026-09-15",
+    "why": "The text confirms Dkt. 809, filed 08/11/25, 31 pages, by Judge Engelmayer, denying DOJ's unsealing motion, but it is truncated in the background section and does not contain the 'demonstrably false' language, the no-advance-notice passage, or the description of the six victim/witness letters.",
+    "host": "nysd.uscourts.gov",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "6": {
-    "state": "partly",
-    "why": "NBC confirms the Friday (August 22, 2025) release of the transcripts/audio and Giuffre's family's statement that it entirely invalidates survivors' experiences and gave Maxwell a platform to rewrite history, and confirms Maxwell disputed allegations against her, but the article gives no page counts (263/66 pages) and reports Maxwell's Trump-related comments only as indirect paraphrase, not as the direct quoted phrase 'never saw... in any inappropriate setting.'",
+    "state": "supports",
+    "why": "The NBC article (dated Saturday Aug. 23, 2025) reports the Friday release, Maxwell's denial of seeing inappropriate conduct by any man including Trump, and both Giuffre-family quotes verbatim.",
     "host": "nbcnews.com",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
@@ -872,10 +872,10 @@
     "archive": false
    },
    "9": {
-    "state": "unopened",
-    "why": "",
-    "host": "congress.gov",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "The Congress.gov record shows S.Res.608 by Sen. Rosen (D-NV), submitted 2026-02-12, Judiciary Committee discharged and resolution agreed to by unanimous consent on 2026-07-29, with the quoted title on Maxwell clemency.",
+    "host": "govinfo.gov",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
@@ -888,10 +888,10 @@
     "archive": false
    },
    "11": {
-    "state": "partly",
-    "why": "NBC News (dated November 8, 2025, not November 9 as the claim states) confirms Maxwell's 'much much happier here and more importantly safe' quote, the WSJ-reported perks, inmate retaliation allegations including one inmate transferred after speaking to the Journal, and Raskin's October 30 letter, but gives the possum line with different wording than the claim's paraphrase, does not confirm Garcia's letter was also sent on October 30, and dates its own reporting to Nov. 8, not Nov. 9.",
+    "state": "supports",
+    "why": "The Nov. 8, 2025 NBC article contains both email quotes, the House Judiciary Committee sourcing, Raskin's Oct. 30 letter to Warden Hall about 'VIP treatment' citing WSJ-reported perks and retaliation threats, the transferred inmate, and Garcia's similar inquiry.",
     "host": "nbcnews.com",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
@@ -904,10 +904,10 @@
     "archive": false
    },
    "13": {
-    "state": "partly",
-    "why": "The source confirms the February 2026 deposition and Fifth Amendment invocation, but does not describe \"months of defying\" a subpoena beforehand -- it frames the refusal as conditioned on clemency, not as prolonged defiance.",
-    "host": "washingtontimes.com",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "The Feb. 9, 2026 NBC article reports Maxwell's brief virtual appearance invoking the Fifth, Markus's quote, and Comer's statement that he does not 'think she should be granted any type of immunity or clemency.'",
+    "host": "nbcnews.com",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
@@ -996,18 +996,18 @@
   },
   "blanche-recusal-irs-settlement-2026": {
    "0": {
-    "state": "not_found",
-    "why": "The cited Wikipedia biography of Todd Blanche covers his career history and personal background but contains no mention of Joseph Tirrell, any ethics advice, or any recusal recommendation, so this claim is not addressed anywhere in the provided source text.",
-    "host": "en.wikipedia.org",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "The syndicated CNN article dated May 14, 2026 names Joseph Tirrell as the briefer, attributes the account to a former senior Justice ethics official, and says it was the first time Blanche was formally informed he would need to recuse.",
+    "host": "kvia.com",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "1": {
-    "state": "partly",
-    "why": "Sen. Schiff's press release confirms Blanche committed at his February 12, 2025 confirmation hearing to recuse when advised by ethics officials, but the actual quoted testimony in this source is 'I will follow the rules as told to me by the experts, career prosecutors in the department, if it comes to ever recusing' -- the claim's quoted phrase 'career professionals' does not match this exact wording, and the source itself inconsistently also dates the quoted remark to 'March 2025.'",
+    "state": "supports",
+    "why": "The senators' letter states the February 12, 2025 hearing date, the commitment, and the quoted testimony verbatim; note the press-release preamble elsewhere says 'March 2025,' an internal inconsistency in the source, but the letter itself matches the claim.",
     "host": "schiff.senate.gov",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
@@ -1028,36 +1028,36 @@
     "archive": false
    },
    "4": {
-    "state": "supports",
-    "why": "MaddowBlog confirms all details: the three named organizations, 101 former judges, the New York State Bar filing, the 73-page complaint, and its focus on the $1.776 billion fund and IRS audit shield.",
-    "host": "ms.now",
-    "date": "2026-09-15",
+    "state": "partly",
+    "why": "The June 22, 2026 complaint confirms the filers, the Attorney Grievance Committee of the First Department, the request to investigate Blanche under the NY Rules, and table-of-contents sections on the Trump v. IRS settlement, the Anti-Weaponization Fund and the general release; the provided text does not state a 73-page length or the $1.776 billion figure.",
+    "host": "ldad.org",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "5": {
-    "state": "partly",
-    "why": "CBS News confirms nearly every detail verbatim -- the 56-page ruling, the exact 'improper purpose' quote, the Brito referral to the Florida Bar, the second attorney's restricted practice in the Southern District of Florida, the bar on citing the settlement as evidence, and the intact permanent bar on IRS tax claims -- but the article gives the ruling's date only as 'Monday,' not the specific July 13, 2026 date in the claim.",
+    "state": "supports",
+    "why": "CBS reports the 56-page ruling, the 'improper purpose' quote, the Brito referral, the limit on a second lawyer, the bar on citing the settlement, and that the IRS-claims bar provision 'remains intact'; the text dates the ruling only as 'Monday.'",
     "host": "cbsnews.com",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "6": {
-    "state": "supports",
-    "why": "The source confirms the City Bar's letter to the Senate concluding Blanche is \"unfit to lead the U.S. Department of Justice,\" a position independent of and additional to the professional-ethics grievance complaint it separately describes.",
+    "state": "partly",
+    "why": "The City Bar summary confirms the July 13, 2026 letter to Grassley and Durbin urging rejection, the 'unfit to lead the U.S. Department of Justice' language, and its citation of the June 22, 2026 grievance complaint, but the provided text does not contain the quoted statement that confirmation 'is clearly inappropriate' while the grievance is pending.",
     "host": "nycbar.org",
-    "date": "2026-09-15",
-    "kind": "interpretation",
+    "date": "2026-09-27",
+    "kind": "fact",
     "archive": false
    },
    "7": {
-    "state": "partly",
-    "why": "The source confirms Blanche's reiteration that the fund is \"dead\" and that the settlement language remains formally unamended, but it never mentions a \"May 18 memo\" or a \"Judge Williams\" -- the only judge mentioned is an unnamed \"federal judge in Miami.\"",
+    "state": "supports",
+    "why": "The CBS article (Wayback capture of Aug. 3, 2026) reports the Sunday order after negotiations with Tillis and Cornyn, the quoted rescission text, the 'applies only retroactively' limit on tax-audit immunity, Blanche's 'dead' and Cornyn exchange at the July 15, 2026 hearing, and Bhattacharyya's view that the rescission has no legal effect.",
     "host": "cbsnews.com",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
-    "archive": false
+    "archive": true
    },
    "8": {
     "state": "partly",
@@ -1176,34 +1176,34 @@
     "archive": false
    },
    "5": {
-    "state": "partly",
-    "why": "Bloomberg Law's preview confirms Judge Emily C. Marks (Trump-appointed, M.D. Ala.) denied both the motion to dismiss and the discovery request, finding SPLC had not shown prosecutorial animus, but this paywalled excerpt gives the ruling date only as 'Friday' and does not mention an October 5, 2026 trial date or Alabama Reflector's reporting.",
+    "state": "supports",
+    "why": "Bloomberg Law reports the Friday order denying dismissal of the 11-count indictment for vindictive prosecution, rejection of the discovery motion, and the quoted 'failed to offer some evidence tending to show animus' language.",
     "host": "news.bloomberglaw.com",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "6": {
-    "state": "partly",
-    "why": "Legal Insurrection confirms the August 7, 2026 denial of SPLC's motion to dismiss and discovery request, and that 'the case moves forward,' consistent with no appeal yet, but this piece is contemporaneous reporting on the ruling itself (published August 8, 2026) rather than an August re-verification search, and it contains no mention of an October 5, 2026 trial date at all.",
-    "host": "legalinsurrection.com",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "Doc. 168 (filed 09/03/26, done September 2) recounts the August 31 rulings in Doc. 160 and, after SPLC counsel called February 1 unworkable, resets jury selection and trial to April 19, 2027 at 10:00 a.m. in Montgomery.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "7": {
-    "state": "partly",
-    "why": "MS NOW confirms the three specific charges against Beirich, that she is the first individually named defendant, the total of 14 combined charges, and the $140,000/joint-account/National Alliance informant details almost exactly, but the article's own dateline and 'Wednesday' reference place the indictment on August 12, 2026, not 'around August 19, 2026' as the claim states, and the whistleblower detail appears only as a linked video teaser, not as reporting within this article's own text.",
+    "state": "supports",
+    "why": "The Aug. 12, 2026 MS NOW article states the three counts, that she is the first named person, the 14 total charges against the center, and the $140,000 flow from SPLC to the informant's account to the couple's joint account.",
     "host": "ms.now",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "8": {
-    "state": "supports",
-    "why": "The Clearinghouse docket page shows a last-updated timestamp of Sept. 14, 2026, and its case summary documents the August 7, 2026 denial by Judge Marks; no October 5, 2026 trial date or appeal appears anywhere in the visible docket, consistent with the claim's negative findings.",
+    "state": "partly",
+    "why": "The Clearinghouse page confirms the summary authors and dates and the August 7, 2026 denial with the quoted language, but the provided docket listing is truncated at the early April entries and does not show the May 18, 2026 arraignment order setting trial for 10/5/2026.",
     "host": "clearinghouse.net",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    }
