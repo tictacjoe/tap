@@ -970,10 +970,10 @@
     "archive": false
    },
    "6": {
-    "state": "partly",
-    "why": "NBC News confirms Trump announced on Friday, August 21, 2026 that Ed Martin is leaving his DOJ pardon-attorney role to fight legal battles around the 2026 midterms and the 2028 presidential election, and no successor is mentioned, but the article is NBC's own reporting, so the claim's attribution of the same report to ABC News cannot be verified from this text.",
+    "state": "supports",
+    "why": "NBC's Aug. 21, 2026 report quotes Trump's Truth Social post verbatim, including the 'leaving to go outside to fight Legal Battles' line, and identifies pardon attorney as Martin's most recent role; neither the quoted post nor the article names any successor.",
     "host": "nbcnews.com",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
@@ -4595,7 +4595,7 @@
     "state": "unopened",
     "why": "",
     "host": "thedefensenews.com",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    }
@@ -7158,10 +7158,10 @@
     "archive": false
    },
    "2": {
-    "state": "partly",
-    "why": "The Al Jazeera article confirms the April 2, 2026 (Thursday before the April 3 publish date) removal of Gen. Randy George plus two other officials (Hodne and Green), framed generically as part of 'a string of high-profile dismissals... since Hegseth took office,' but the provided text never mentions Kacher or Butler by name, so it does not itself establish the specific link the claim draws to this entry's earlier removals.",
+    "state": "supports",
+    "why": "Al Jazeera calls George's firing 'only the latest in a string of high-profile dismissals', says the Pentagon spokesperson gave no reasons, cites the Times on the promotions clash (two Black officers, two women blocked), and reports Hodne and Green were also fired per the Times and Stars and Stripes.",
     "host": "aljazeera.com",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    }
@@ -8776,18 +8776,18 @@
   },
   "patel-journalist-retaliation-2025-2026": {
    "0": {
-    "state": "not_found",
-    "why": "The provided Wikipedia excerpt covers only Patel's early legal career (2005-2017) and never discusses the journalist investigation, Williamson, or any FBI database queries, so it does not address this claim at all.",
-    "host": "en.wikipedia.org",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "The April 22, 2026 NYT article states every element: the investigation began 'last month' after the girlfriend-security story, agents interviewed Wilkins and queried databases on Williamson, DOJ officials saw it as retaliation with no legal basis, and the FBI's quoted statement that it is not pursuing a case.",
+    "host": "nytimes.com",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "1": {
-    "state": "unopened",
-    "why": "",
+    "state": "partly",
+    "why": "Poynter confirms MS NOW reported a criminal leak investigation focusing on Fitzpatrick (denied by the FBI) and a polygraph story about 'more than two dozen members of his team', but the text is truncated before stating the polygraphs' purpose or the agents' concerns about lacking justification and fearing termination.",
     "host": "poynter.org",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
@@ -8817,33 +8817,33 @@
    },
    "5": {
     "state": "supports",
-    "why": "Raw Story confirms Democracy Forward's FOIA request gave the FBI a 20-day deadline and that it targeted records related to the alcohol-use allegations underlying The Atlantic's report.",
+    "why": "Raw Story reports Democracy Forward's FOIA filing gave the FBI 20 days to produce internal records tied to allegations of Patel's 'excessive drinking' reported by The Atlantic, with search terms like 'alcohol' and 'Drunk'.",
     "host": "rawstory.com",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "6": {
-    "state": "supports",
-    "why": "The Townhall op-ed by ACLJ's Jordan Sekulow, published July 17, 2026, confirms ACLJ filed a FOIA lawsuit against the FBI over Arctic Frost's surveillance of Patel and Susie Wiles, distinct from the other FOIA suits, matching the claim's core facts and rough mid-July 2026 timing.",
+    "state": "partly",
+    "why": "The July 17, 2026 column confirms ACLJ 'just filed' a FOIA lawsuit over Arctic Frost's surveillance of Patel and Wiles, but nothing in it supports 'since-fired' for Jack Smith, calling this a 'third' suit, or its relation to the Democracy Forward suits; it also inconsistently calls Wiles both 'former' and current Chief of Staff.",
     "host": "townhall.com",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "7": {
     "state": "partly",
-    "why": "The CourtListener docket confirms the case name, number (1:26-cv-01329, D.D.C.), an April 20, 2026 filing date, and that the complaint was filed by Patel against Sarah Fitzpatrick and The Atlantic Monthly Group LLC for libel/slander -- but the docket text given does not mention the FBI as a co-plaintiff, the $250 million figure, the specific article title 'The FBI Director is MIA,' or the 'two dozen anonymous sources' detail.",
+    "why": "The docket confirms the case name, number, D.D.C. court, April 20, 2026 filing, both defendants, and libel cause, but says nothing about the $250 million demand, the article's title or April 17 date, or its allegations.",
     "host": "courtlistener.com",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "8": {
     "state": "partly",
-    "why": "Fox News confirms The Atlantic filed a motion to dismiss and that Patel's attorney Jesse Binnall publicly rejected it, vowing to 'bring accountability' -- but the article gives only 'Monday' for both events (not the specific July 27/July 28, 2026 dates), and it never mentions the 'inherently plausible' phrase or Judge Sullivan's August 17/31 deadlines.",
+    "why": "Fox News confirms the motion to dismiss, the motion to stay discovery 'except Touhy requests', the 'ominous message' quote about Patel's other suits, and Binnall's quotes, but dates the filing only as 'Monday' and never states July 27, 2026.",
     "host": "foxnews.com",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
@@ -9566,10 +9566,10 @@
     "archive": true
    },
    "8": {
-    "state": "partly",
-    "why": "The Hill confirms a Maryland grand jury reviewed the Schiff mortgage-fraud allegations and quotes the exact subpoena language asking whether a witness dealt with anyone 'claiming to be working for or at the direction' of DOJ, Martin, or Pulte -- but the source frames this as examining possible unauthorized deputization/impersonation of federal agents, not, as the claim states, as an investigation into 'illegally shared grand jury information.'",
+    "state": "supports",
+    "why": "The Hill states nearly verbatim that a Maryland grand jury was assembled to review the Schiff allegations, that the probe involves Pulte and Martin, and quotes the subpoena language about improperly deputized outside figures.",
     "host": "thehill.com",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": true
    },
@@ -9599,9 +9599,9 @@
    },
    "12": {
     "state": "supports",
-    "why": "CNN confirms the DOJ review found Martin shared grand jury material in the Schiff case, that he initially denied it before emails surfaced, that he was removed as Weaponization Working Group head on January 1, 2026, and Bondi's exact quote 'There is no investigation into Bill Pulte.'",
+    "why": "CNN's Feb 4, 2026 article supports each element: two sources on the review's finding, the initial denial and emails, the review being part of the reason Martin was pushed out, his Jan 1 removal and relocation, no charges, Blanche's statement and its gap, and Bondi's X post.",
     "host": "cnn.com",
-    "date": "2026-09-15",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
