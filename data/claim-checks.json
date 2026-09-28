@@ -1,6 +1,6 @@
 {
  "version": 1,
- "as_of": "2026-09-27",
+ "as_of": "2026-09-28",
  "checks": {
   "abrego-garcia-vindictive-prosecution-2025-2026": {
    "0": {
@@ -10750,26 +10750,26 @@
   },
   "rfk-jr-maha-commission-2025": {
    "0": {
-    "state": "partly",
-    "why": "The Hill reports Kennedy telling staff the commission would examine the childhood vaccine schedule, pesticides, and psychiatric drugs, and notes his confirmation assurances on vaccine safety. The commission was launched by Trump's order, and the article does not explicitly frame it as coming despite those assurances.",
+    "state": "supports",
+    "why": "The Hill article states Kennedy told HHS staff in a closed-door Tuesday meeting that the Trump-launched MAHA commission would scrutinize the childhood vaccine schedule, pesticides and psychiatric drugs, that 'nothing is going to be off limits,' and that Cassidy voted to confirm after receiving assurances on vaccine safety.",
     "host": "thehill.com",
-    "date": "2026-09-21",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    },
    "1": {
     "state": "supports",
-    "why": "The retrieved article (a mirror of the NOTUS investigation, bearing the same NOTUS byline and reporting) confirms seven cited MAHA report sources do not appear to exist, including the study attributed to Katherine Keyes who confirmed she did not write it, plus other misrepresented studies, and the White House's 'formatting issues' characterization.",
+    "why": "The NOTUS article states seven cited sources don't appear to exist, that Keyes said she did not write the cited JAMA Pediatrics paper on adolescent anxiety, and that Leavitt and Hilliard later acknowledged inconsistencies, with Hilliard saying 'Minor citation and formatting errors have been corrected.'",
     "host": "notus.org",
-    "date": "2026-09-15",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    },
    "2": {
     "state": "supports",
-    "why": "PolitiFact directly quotes Kennedy telling Sen. Warren 'I support vaccines. I support the childhood schedule. I will do that,' and documents his 'Yes' commitment to Cassidy on not diverting vaccination funding, against the subsequent ACIP firings, the $11 billion CDC grant clawback, and mRNA research cancellation -- closely matching the claim.",
+    "why": "PolitiFact quotes Kennedy's 'I support vaccines. I support the childhood schedule. I will do that,' his 'Yes' funding commitment to Cassidy, and documents the ACIP firings, the $11 billion grant pullback, the half-billion mRNA cancellation, and the new autism-page language while the page technically kept the statement.",
     "host": "politifact.com",
-    "date": "2026-09-15",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    },
@@ -10783,10 +10783,42 @@
    },
    "4": {
     "state": "supports",
-    "why": "The Guardian confirms six former U.S. surgeons general issued the October 7, 2025 Washington Post op-ed warning Kennedy is 'endangering the health of the nation,' and cites the HHS spokesperson Andrew Nixon's responsive quote, matching the claim closely.",
+    "why": "The Guardian piece dated Tue 7 Oct 2025 names all six former surgeons general, says they wrote in the Washington Post that Kennedy's actions 'are endangering the health of the nation,' quotes the 'profound, immediate and unprecedented threat' language, and lists vaccine policy, research funding, morale and staffing as concerns.",
     "host": "theguardian.com",
-    "date": "2026-09-15",
-    "kind": "interpretation",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "supports",
+    "why": "ABC News reports Keyes confirmed she did not write the paper, a JAMA Pediatrics representative confirmed it does not exist, AAP and JAMA Pediatrics could not find certain papers, and Leavitt cited 'formatting issues' and 'complete confidence' in Kennedy.",
+    "host": "abcnews.com",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
+    "state": "supports",
+    "why": "Lynch's June 2, 2025 letter, signed as Acting Ranking Member, says public reporting revealed the Report cites nonexistent studies and may have used AI, and demands information on how it was drafted, reviewed, published and later amended.",
+    "host": "oversightdemocrats.house.gov",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "7": {
+    "state": "supports",
+    "why": "The NOTUS article (dated June 24, 2025) reports Kennedy said he didn't personally fact-check the report, called the fabricated citations 'wrong' and a 'mistake,' and insisted before a House Energy and Commerce subcommittee that 'all of the foundational assertions in that report are accurate.'",
+    "host": "notus.org",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "8": {
+    "state": "supports",
+    "why": "ABC News quotes HHS spokesperson Andrew Nixon saying the surgeons general 'presided over the decline in America's public health' and 'are now criticizing the first Secretary to confront it head-on.'",
+    "host": "abcnews.com",
+    "date": "2026-09-28",
+    "kind": "fact",
     "archive": false
    }
   },
@@ -10895,25 +10927,25 @@
   "rfk-jr-vaccine-injury-liability-conflict-2026": {
    "0": {
     "state": "supports",
-    "why": "ProPublica's reporting confirms Kennedy is pursuing changes to VICP and that his allies see reducing the recommended-vaccine list as a path to stripping manufacturers' liability shields, and ties this to Kennedy's history founding an anti-vaccination group and his broader anti-industry advocacy.",
+    "why": "The July 17, 2025 ProPublica article says Kennedy wants to overhaul the VICP, has long argued it removes industry's incentive to make safe products, can drop vaccines from coverage, and disclosed referring plaintiffs to a firm suing Merck over its HPV shot for a 10% cut of fees.",
     "host": "propublica.org",
-    "date": "2026-09-15",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    },
    "1": {
     "state": "supports",
-    "why": "Reuters (July 28, 2025) reports that Kennedy accused the VICP and its so-called 'Vaccine Court' of corruption and inefficiency in a post on X, and quotes him as working with AG Pam Bondi to 'steer the Vaccine Court back to its original congressional intent'; this matches the claim.",
-    "host": "reuters.com",
-    "date": "2026-09-23",
+    "why": "The Reuters text reports Kennedy accused the program and its 'Vaccine Court' of corruption and inefficiency in a post on X and quotes him saying, with AG Bondi, 'we will steer the Vaccine Court back to its original congressional intent.'",
+    "host": "gazette.com",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    },
    "2": {
     "state": "supports",
-    "why": "The STAT News article (visible lede before the paywall) directly confirms that Kennedy's allies are hopeful the reduced pediatric vaccine schedule opens the door to stripping manufacturer liability shields, achieving a longtime aim of Kennedy and other vaccine critics -- matching the claim even though the full article is paywalled.",
+    "why": "The STAT headline and lede state the schedule cut creates new uncertainty on liability protections, that Kennedy's allies hope it opens the door to stripping liability shields (a longtime Kennedy aim), and that HHS says the shield remains.",
     "host": "statnews.com",
-    "date": "2026-09-15",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    },
@@ -10927,9 +10959,9 @@
    },
    "4": {
     "state": "partly",
-    "why": "ProPublica's article confirms the general warning that Kennedy's changes could prompt vaccine manufacturers to flee the U.S. market as they did in the 1980s, but the visible 8000-character excerpt does not reach any mention of CDC warnings about polio circulating in 28 additional countries or Western Europe's diphtheria case rise, so that portion of the claim is unaddressed by the provided text.",
+    "why": "The March 19, 2026 excerpt supports the polio/28-countries and diphtheria-70-years points and a fragment says manufacturers 'may stop selling shots here like they did in the 1980s,' but the provided windows do not contain the statement that the VICP covers only CDC-recommended routine immunizations for children or pregnant women.",
     "host": "propublica.org",
-    "date": "2026-09-15",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    },
@@ -10938,6 +10970,62 @@
     "why": "The AP article confirms the $150,000 June 2025 HHS contract to an Arizona law firm for VICP 'expertise,' that attorney Andrew Downing led Gardasil litigation against Merck, and that he was listed in the HHS staff directory. However, the text does not contain any quote or statement from Downing criticizing VICP for taking a 'hard line' against such claims -- that specific detail is not present.",
     "host": "apnews.com",
     "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
+    "state": "partly",
+    "why": "The July 28, 2026 letter concerns the Merck Gardasil settlement and notes Kennedy has refused to disclose which settled cases he referred to Wisner Baum, but the extracted text is cut off before the signatories and any August 11, 2026 response deadline or question list appear.",
+    "host": "warren.senate.gov",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "7": {
+    "state": "supports",
+    "why": "The July 29, 2026 Reuters report says senators asked whether Kennedy's family stands to profit from the $50 million Gardasil settlement, quotes Brent Wisner that 'at no time' will Kennedy or his son receive fees, and notes son Conor works at Wisner Baum.",
+    "host": "wtaq.com",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "8": {
+    "state": "partly",
+    "why": "The August 24, 2026 letter cites Kennedy's August 1 X post, notes no identified change to his ethics documents ('Nor has the Senate Finance Committee identified any information indicating you have changed the disposition of your Gardasil stake') and sets a September 9 deadline, but the extracted text omits the signatories and the passage characterizing the post as suggesting he modified or strayed from his ethics agreement.",
+    "host": "warren.senate.gov",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "9": {
+    "state": "supports",
+    "why": "The Aug. 25, 2026 Reuters report states Kennedy said on social media no family member 'received a penny' and he 'relinquished any interest in potential Gardasil fees back to the Wisner Baum law firm,' and that senators said this conflicts with earlier ethics filings.",
+    "host": "wtaq.com",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "10": {
+    "state": "supports",
+    "why": "The August 25, 2026 HHS letter signed by Gary Andres, Assistant Secretary for Legislation, to Sen. Warren states exactly this February 11, 2025 assignment to WisnerBaum rather than a family member.",
+    "host": "warren.senate.gov",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "11": {
+    "state": "partly",
+    "why": "The September 24, 2026 letter says the August 25 HHS response revealed Kennedy transferred the stake to Wisner Baum rather than his son and calls his apparent failure to report the change 'deeply alarming,' but the extracted text is cut off before the signatories and any October 8, 2026 deadline appear.",
+    "host": "warren.senate.gov",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "12": {
+    "state": "partly",
+    "why": "The July 2, 2026 Federal Register notice (2026-13374) terminates the COVID-19 drug/biologic EUA declaration effective June 29, 2027, but the extracted text is cut off before the passage stating the Secretary's June 29, 2026 determination date.",
+    "host": "federalregister.gov",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    }
@@ -11113,17 +11201,17 @@
   "rosen-don-lemon-church-protest-prosecution-2026": {
    "0": {
     "state": "supports",
-    "why": "The ABC News article confirms the February 13, 2026 arraignment and not-guilty plea, the two-count indictment (conspiracy plus the injury-while-exercising-religious-freedom/FACE-type charge), Lemon's account that he was present as an independent journalist rather than a participant, and that former Minnesota U.S. Attorney Joe Thompson is representing him.",
+    "why": "ABC News (Feb. 13, 2026) reports the not-guilty pleas before Micko, the two counts, the Jan. 29 indictment, Micko's earlier no-probable-cause finding, Schiltz's Jan. 23 letter quotes, Lemon's independent-journalist account, and Joe Thompson's representation.",
     "host": "abcnews.com",
-    "date": "2026-09-15",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    },
    "1": {
-    "state": "not_found",
-    "why": "The ms.now (MS NOW) article provided as the source for this claim covers Lemon's not-guilty plea, his representation, and the charges, but never mentions Chief Judge Patrick Schiltz, the Eighth Circuit letters, or the 'not protesters at all' finding at all. The source does not address the claim.",
-    "host": "ms.now",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "CBS reports Schiltz's filing that Micko found probable cause for only three of eight warrants presented Jan. 20, that Rosen personally called demanding district-judge review, the quote 'There is absolutely no emergency,' and that the panel denied DOJ's request with Grasz concurring that probable cause existed.",
+    "host": "cbsnews.com",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    },
@@ -11137,51 +11225,83 @@
    },
    "3": {
     "state": "supports",
-    "why": "The ABC News article, dated August 7, 2026, confirms the vindictive-prosecution motion, the citation of Trump's attacks and hostile DOJ statements, the 'extraordinary channels' characterization, the ignored self-surrender offer, and reports no ruling on the motion as of that story.",
+    "why": "ABC News (Aug. 7, 2026) reports Lemon's filing seeking dismissal as vindictive prosecution, citing Trump's attacks and DOJ officials' hostility, and alleging 'extraordinary channels,' an ignored self-surrender offer, and circumvention of normal warrant procedure via an administrative warrant.",
     "host": "abcnews.com",
-    "date": "2026-09-15",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    },
    "4": {
     "state": "supports",
-    "why": "Newsweek confirms Judge Micko rejected the government's 90-day/three-month extension request, granted only a 30-day extension, and found the case not complex because all nine defendants face identical charges from the same discrete course of conduct.",
-    "host": "newsweek.com",
-    "date": "2026-09-15",
+    "why": "The order filed 02/23/26 in the case assigned to magistrate judge DLM denies the complex-case designation without prejudice, recites the requested 90-day exclusion, finds nine defendants charged with the same offenses 'not particularly complex,' and grants a 30-day Rule 16 continuance.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    },
    "5": {
-    "state": "partly",
-    "why": "The ABC17/CNN Newsource article confirms Judge Provinzino's August 18 order, the August 25 (Tuesday) production deadline, the categories of grand-jury material demanded, and the defense's 'irregularities' framing and request for direct access or in-camera review. However, it is a single wire-service article, so it does not itself establish that 'multiple outlets' characterized the order as rare (only Mark Wolf, quoted here, calls it rare), and it predates any resolution, so it cannot itself confirm the claim's added observation that no compliance or ruling has since been reported.",
+    "state": "supports",
+    "why": "The CNN report describes Provinzino's Aug. 18 'short but extraordinary order,' the Tuesday deadline and listed materials for January and February grand juries, the defense's 'irregularities' request, that she did not say she found misconduct, and Mark Wolf's comment on rarity.",
     "host": "abc17news.com",
-    "date": "2026-09-15",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
+    "state": "supports",
+    "why": "Judge Provinzino's August 18, 2026 order recites Micko's June 10 denial of three grand-jury disclosure motions, objections jointly signed by Lemon and Fort and by 32 other defendants, and orders production by August 25, 2026 of transcripts and multimedia from the January 29 and February 26, 2026 presentations.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "7": {
+    "state": "supports",
+    "why": "Micko's September 24, 2026 order grants the extension for responses to the 101 pending motions to October 16, 2026 and resets the October 19-22 hearing to November 3, 5, 9 and 10, 2026.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "8": {
+    "state": "supports",
+    "why": "CBS (updated February 27, 2026) reports DOJ moved to unseal a superseding indictment adding 30 defendants, accusing all 39 of a misdemeanor FACE Act count and a felony conspiracy count, and that the original nine including Lemon pleaded not guilty.",
+    "host": "cbsnews.com",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "9": {
+    "state": "supports",
+    "why": "The Minnesota Reformer piece (Aug. 7, 2026 URL, 'filed on Friday') describes Lemon's three motions on First Amendment, vindictiveness and the FACE Act house-of-worship commerce-power challenge, and Fort's three Thursday motions that did not challenge the FACE Act.",
+    "host": "web.archive.org",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    }
   },
   "rosen-minnesota-nspm7-antifa-prosecutions-2026": {
    "0": {
-    "state": "partly",
-    "why": "Fox 9's own reporting confirms the 15-person indictment, the Direct Action Minnesota and Black Cat Workers Collective affiliations, and the two Whipple federal building protest dates (January 23 and March 1, 2026). However, the specific quoted phrase attributed to Rosen describing the groups as 'violently opposed to the enforcement of federal law in our state' does not appear anywhere in this Fox 9 article (that quote appears in a different outlet's coverage).",
+    "state": "supports",
+    "why": "Fox 9 reports Rosen's indictment of 15 on conspiracy to impede or injure a federal officer, the additional counts, ties to Direct Action Minnesota and Black Cat Workers Collective, and the January 23 and March 1 Whipple blockades.",
     "host": "fox9.com",
-    "date": "2026-09-15",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    },
    "1": {
-    "state": "partly",
-    "why": "Common Dreams confirms the 'major escalation' characterization and that U.S. Attorney Rosen explicitly cited NSPM-7 in announcing the charges. However, the article does not describe this as 'one of the first' cases in which DOJ has explicitly invoked NSPM-7 as a basis for arrests; that superlative is not stated in the source.",
+    "state": "supports",
+    "why": "Common Dreams reports Rosen cited NSPM-7 and Joint Task Force Vanguard, quotes him calling the two groups 'violently opposed to the enforcement of federal law in our state,' and reports advocates calling the charges a 'major escalation.'",
     "host": "commondreams.org",
-    "date": "2026-09-15",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    },
    "2": {
-    "state": "partly",
-    "why": "The Appeal confirms the Signal message asking AFL-CIO contacts to focus on Whipple, Davis moderating organizing meetings, and his self-described anarchist views. It does not, however, identify Davis as 'chair of Macalester College's religious studies department' (he is described only as a 'Macalester College professor'), and it does not explicitly state that prosecutors accused him of no violent act, specific protest action, or direct ICE encounter -- that is an inference rather than something the article says outright.",
+    "state": "supports",
+    "why": "The Appeal reports the indictment's Signal message by Erik Davis asking AFL-CIO-connected people to focus on Whipple, and prosecutors' allegations that he moderated meetings, said he is an anarchist, and attended a rally where others wore 'Antifa' sweatshirts.",
     "host": "theappeal.org",
-    "date": "2026-09-15",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    },
@@ -11202,34 +11322,106 @@
     "archive": false
    },
    "5": {
-    "state": "partly",
-    "why": "The source confirms the early July 2026 arraignments and Kushner's characterization of the proceeding as routine, but it does not restate that participating in meetings is the only conduct alleged against Davis.",
+    "state": "supports",
+    "why": "The KARE11 article, published July 1, 2026, reports the arraignment of the indicted defendants (14 of 15 pleaded not guilty) and states that Davis's attorney Jordan Kushner said the arraignment was routine, matching both parts of the claim.",
     "host": "kare11.com",
-    "date": "2026-09-15",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    },
    "6": {
-    "state": "partly",
-    "why": "KSTP confirms Operation Puppet Master (opened Jan. 28) and Project Whipple Shield, their basis in NSPM-7, undercover agents, license-plate tracking at a Roseville church, subpoenaed financial records from unions including the Minneapolis Federation of Educators, the Minnesota Association of Professional Employees, SEIU Local 26 and AFL-CIO, and Kirtley's quote about surveillance without probable cause. However, this article does not mention Communications Workers of America among the surveilled unions, and it does not contain the quoted phrase 'broad and irrational investigation' attributed to Riach's filing.",
+    "state": "supports",
+    "why": "KSTP details Riach's filing on Operation Puppet Master (Jan. 28) and Project Whipple Shield (two weeks later), both launched under NSPM-7 per the filing, the undercover meeting surveillance, license-plate dossiers, subpoenaed financial records, the grand-jury slide naming the listed unions, and Kirtley's quote.",
     "host": "kstp.com",
-    "date": "2026-09-15",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    },
    "7": {
     "state": "partly",
-    "why": "Democracy Now's transcript independently corroborates surveillance of SEIU, Communications Workers of America, Sunrise Movement, Unidos MN, and Monarca. However, this transcript does not contain the Rosen quote about bodily harm 'not being the measure' of the federal crimes charged (that quote appears in a different outlet's reporting), nor does it show Sant stating on the record that he is not alleged to have hurt anyone; Sant is quoted here only calling the charges 'politically motivated' and 'intended to quell dissent.'",
+    "why": "The Democracy Now segment supports HSI obtaining SEIU, CWA and Sunrise Movement financial records per Riach's motion and the launch four days after Pretti's killing, but the extracted text is cut off before any statement that no targeted group has been charged, the Rosen 'bodily harm' quote, or Sant describing the activism as nonviolent.",
     "host": "democracynow.org",
-    "date": "2026-09-15",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    },
    "8": {
     "state": "supports",
-    "why": "TPM confirms Operation Puppet Master's use of PATRIOT Act Section 314(a) to map an entity's banking relationships nationwide without a warrant, subpoena, or grand jury by certifying a money-laundering or terrorism inquiry to Treasury; confirms the mapped groups (public-sector unions, DSA, AFL-CIO, SEIU, climate groups); and confirms HSI agent Ryan Ribner's involvement, his arrest of SEIU-California's David Huerta, and that the case against Huerta was dropped in July.",
+    "why": "TPM reports HSI's use of PATRIOT Act 314(a) in discovery emails released by Riach, former prosecutors' description of warrantless bank mapping, unrevealed search terms, the grand-jury conspiracy chart groups, the former prosecutor's quote, and agent Ryan Ribner's Huerta arrest in a case dropped in July.",
     "host": "talkingpointsmemo.com",
-    "date": "2026-09-15",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "9": {
+    "state": "supports",
+    "why": "Schultz's August 28, 2026 order sets motions by December 18, 2026, responses by January 4, 2027, a hearing January 8, 2027, and excludes August 28 through December 18, 2026 from Speedy Trial computation.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "10": {
+    "state": "supports",
+    "why": "Schultz's September 2, 2026 order notes the August 27 hearing and grants the government's motion for supplemental briefing on 'Operation Keyhole' over Sant's opposition.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "11": {
+    "state": "unopened",
+    "why": "",
+    "host": "storage.courtlistener.com",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "12": {
+    "state": "supports",
+    "why": "TPM (08.25.26) reports Riach filed dozens of exhibits on how DOJ and DHS operationalized NSPM-7 and seeks more disclosure, and that Protect Democracy's amicus, signed by Cato, FIRE and the Society for the Rule of Law, urges magistrate David T. Schultz to order more disclosure.",
+    "host": "talkingpointsmemo.com",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "13": {
+    "state": "supports",
+    "why": "The CBS/AP text says Thursday-filed documents show Puppet Master and Whipple Shield infiltrated meetings and obtained years of financial records for Sunrise, SEIU and CWA, and quotes Riach's 'broad and irrational investigation' driven by politics.",
+    "host": "cbsnews.com",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": true
+   },
+   "14": {
+    "state": "supports",
+    "why": "Klippenstein states directly that this is one of the first cases where NSPM-7 has been explicitly referenced by the Justice Department as directing arrests.",
+    "host": "kenklippenstein.com",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "15": {
+    "state": "supports",
+    "why": "The government's supplemental brief filed 09/10/26 on its consolidated response to ECF No. 212 contains this statement verbatim.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "16": {
+    "state": "unopened",
+    "why": "",
+    "host": "storage.courtlistener.com",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "17": {
+    "state": "supports",
+    "why": "The Minnesota Reformer text (via KVRR) says agents used administrative subpoenas issued by the agency rather than a judge to obtain financial records from SEIU and CWA, and that the programs go far beyond the 15 indicted.",
+    "host": "kvrr.com",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    }
@@ -11378,50 +11570,58 @@
   },
   "rubio-signal-autodelete-court-contradiction-2026": {
    "0": {
-    "state": "partly",
-    "why": "Raw Story directly quotes the State Department adviser's statement that 'Secretary Rubio does not use the auto-deletion functions in third-party messaging applications when sending communications that may include federal records.' However, the report's account of the LeapXpert representation is a paraphrase ('software... that preserved all records regardless of whether a user deletes them'), not the precise quoted wording the claim presents in quotation marks.",
+    "state": "supports",
+    "why": "Raw Story, summarizing The Atlantic, reports Rubio's lawyers cited LeapXpert preserving all records regardless of deletion and quotes the State Department adviser's statement verbatim.",
     "host": "rawstory.com",
-    "date": "2026-09-15",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    },
    "1": {
     "state": "supports",
-    "why": "Raw Story confirms that about two months after the court representation, Rubio changed the settings in a Signal chat with other senior officials so messages would auto-delete, which the article frames as contradicting the earlier no-auto-delete claim.",
+    "why": "Raw Story quotes The Atlantic that about two months later Rubio set a Signal chat with senior officials to auto-delete per a person familiar, and that a State official contested a 'practice' but could not address the specific instance.",
     "host": "rawstory.com",
-    "date": "2026-09-15",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    },
    "2": {
     "state": "supports",
-    "why": "The Atlantic confirms the State Department, in April 30 settlement disclosures, did not repeat its prior claim that Rubio did not use disappearing messages, instead stating an application on his device collected messages 'even if those messages otherwise have a deletion timeline setting enabled.'",
-    "host": "theatlantic.com",
-    "date": "2026-09-15",
+    "why": "The Atlantic states that in April 30 declarations under the American Oversight settlement State did not repeat the no-disappearing-messages claim and quotes the 'deletion timeline setting enabled' language, and quotes Weetman's September 9 declaration.",
+    "host": "web.archive.org",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    },
    "3": {
     "state": "supports",
-    "why": "Fox News confirms Judge James Boasberg ordered Rubio (as acting archivist) to collect and refer to DOJ any at-risk Signal messages belonging to top Trump officials, in a case arising from the Atlantic's Yemen war-plan Signal chat story.",
+    "why": "Fox News (June 20, 2025) reports Boasberg, in a watchdog suit against five Cabinet members over the Yemen chat, ordered Rubio as acting archivist to collect at-risk Signal messages and refer them to DOJ, saying the officials 'have thus far neglected to fulfill their duties.'",
     "host": "noticias.foxnews.com",
-    "date": "2026-09-15",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    },
    "4": {
-    "state": "not_found",
-    "why": "This is the same Atlantic article dated July 2026 used elsewhere in this entry; it necessarily predates the claim's 2026-08-18 re-verification window and contains no information about whether any court ruling, contempt finding, or credibility determination occurred after its publication. The source cannot confirm or deny a claim about the state of the record at a later date.",
-    "host": "theatlantic.com",
-    "date": "2026-09-15",
+    "state": "partly",
+    "why": "The September 11, 2026 State opposition discusses the Rogoff, Weetman and Kootz declarations, but the extracted windows do not contain the quoted 'does not use the auto-deletion functions' language, the Kootz 'enabling the autodelete feature' finding, or the point that any member could set a timeline.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    },
    "5": {
     "state": "supports",
-    "why": "Mediaite (published June 30, 2026) confirms the 13 previously unreported chats from the Democracy Forward FOIA litigation, the named eight-hour-autodelete chat among Rubio, Hegseth, and Caine, and the separate one-week-autodelete chat including Hegseth, Vance, and Lutnick.",
+    "why": "Mediaite (June 30, 2026) reports Democracy Forward FOIA records revealing 13 previously unreported chats, the Caine-administered 'SS/APNSA,SD,CJCS' chat with eight-hour auto-delete, and the Hegseth/Vance/Lutnick chat set to one week.",
     "host": "mediaite.com",
-    "date": "2026-09-15",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
+    "state": "partly",
+    "why": "The August 12, 2026 DFF motion quotes the July 22, 2025 declaration (footnoted to the Rogoff Declaration) and says the June 22, 2026 court-ordered production showed Rubio in multiple autodelete chats, but the extracted text does not include the Weetman/Kootz repetition passage or the 'SS/APNSA,SD,CJCS' chat with '8 hours' and '1 week' settings.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    }
@@ -11494,10 +11694,50 @@
     "archive": false
    },
    "3": {
-    "state": "partly",
-    "why": "TechCrunch confirms Sacks holds a second, June-issued ethics waiver specifically addressing his AI holdings (distinct from the March crypto waiver), that Kathleen Clark has criticized the arrangement as unusually sweeping ('graft'), and that the Vultron funding round renewed conflict-of-interest questions about his Craft Ventures stake. However, this article is dated and datelined July 19, 2025, not 'July 2026' as the claim states, and it does not contain a figure of 'over 97%' of Craft's AI-affected fund holdings being divested.",
+    "state": "supports",
+    "why": "TechCrunch (July 19, 2025) reports the March crypto waiver and June AI waiver, Kathleen Clark calling it 'graft,' and Vultron's $22 million round highlighting Craft Ventures, giving the AI czar a financial stake.",
     "host": "techcrunch.com",
-    "date": "2026-09-15",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "supports",
+    "why": "Fox Business reports Sacks was appointed PCAST co-chair and that the council will include up to 24 members including Huang, Zuckerberg and Ellison.",
+    "host": "foxbusiness.com",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "unopened",
+    "why": "",
+    "host": "whitehouse.gov",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
+    "state": "supports",
+    "why": "Nextgov/FCW (Sept. 17, 2025) reports Warren, Stansbury and six other lawmakers wrote Sacks about exceeding the 130-day SGE limit, quoting that the White House waived ethics restrictions so he could keep investments in industries he regulates.",
+    "host": "nextgov.com",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "7": {
+    "state": "supports",
+    "why": "CNBC reports Trump's Tuesday order asking companies to voluntarily join benchmarking and give access to covered frontier models up to 30 days before release, and that Sacks, Musk and Zuckerberg reportedly called the administration last month to lobby against the prior order.",
+    "host": "cnbc.com",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "8": {
+    "state": "supports",
+    "why": "The text of EO 14177 (January 23, 2025) establishes PCAST and provides that the APST and the Special Advisor for AI & Crypto shall serve as Co-Chairs.",
+    "host": "federalregister.gov",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    }
@@ -11596,10 +11836,10 @@
     "archive": false
    },
    "1": {
-    "state": "not_found",
-    "why": "The Wikipedia biography of Sonderling gives only office titles and tenure dates; it never mentions a visit to IMLS's office on the day of his appointment, a DOGE team member accompanying him, or a DOGE member later invoking his authority to terminate business-center grants. The source does not address the claim.",
+    "state": "partly",
+    "why": "The Wikipedia text confirms Sonderling was concurrently acting head of IMLS and MBDA, but the extracted portion ends in his early career and never mentions the DOGE team visit to IMLS or Nate Cavanaugh's April 2025 MBDA grant terminations.",
     "host": "en.wikipedia.org",
-    "date": "2026-09-15",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    },
@@ -11621,17 +11861,17 @@
    },
    "4": {
     "state": "supports",
-    "why": "ALA's release confirms the November 21, 2025 Rhode Island ruling permanently barring further dismantling steps, the April 6, 2026 appeal withdrawal, and (via its featured-news sidebar) the April 9, 2026 ALA/AFSCME settlement with DOJ.",
+    "why": "The ALA release (April 7, 2026) states the Nov. 21, 2025 District of Rhode Island decision permanently barred further steps to eliminate IMLS in the 21-AG suit Rhode Island v. Trump, the April 6 appeal withdrawal, and that ALA's D.C. case, which won a May 2025 TRO, is pending.",
     "host": "ala.org",
-    "date": "2026-09-15",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    },
    "5": {
-    "state": "unopened",
-    "why": "",
+    "state": "supports",
+    "why": "The AP article dated June 29, 2026 states Trump said Monday he will nominate Sonderling as secretary of labor, directly matching the claim's date and content.",
     "host": "usnews.com",
-    "date": "2026-09-15",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    },
@@ -11645,17 +11885,57 @@
    },
    "7": {
     "state": "supports",
-    "why": "PLANADVISER confirms the Senate HELP Committee voted 12-11 along party lines to advance Sonderling's nomination to the full Senate following the July 16 hearing, that no final confirmation vote had yet occurred, and the article's account of Democratic criticism (ethics, worker protections, independent-contractor policy, DOL's expanded responsibilities) does not mention IMLS as a stated reason for opposition.",
+    "why": "PLANADVISER (July 30, 2026) reports the HELP Committee's 12-11 party-line vote advancing the nomination, that he awaits a final vote, and that at the July 16 hearing Democrats questioned him on ethics, worker protections, independent contractor policies and DOL's expanding responsibilities.",
     "host": "planadviser.com",
-    "date": "2026-09-15",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    },
    "8": {
-    "state": "not_found",
-    "why": "This Bloomberg Law article is about the same July 30, 2026 HELP Committee vote covered elsewhere in this entry and does not itself confirm the state of the record as of the claim's 2026-08-26 re-verification date; it contains no information about any later floor-vote development.",
+    "state": "supports",
+    "why": "Bloomberg Law reports the HELP Committee approved Sonderling's nomination, teeing him up for a full Senate confirmation vote.",
     "host": "news.bloomberglaw.com",
-    "date": "2026-09-15",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "9": {
+    "state": "supports",
+    "why": "The April 9, 2026 ALA release announces the ALA/AFSCME settlement with DOJ protecting IMLS and states grants were reinstated, staff reductions reversed, and no further steps will implement the executive order.",
+    "host": "ala.org",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "10": {
+    "state": "partly",
+    "why": "The 119th Congress 2nd session roll-call list runs through vote 244 on Sep 24 and no Sonderling vote appears in the provided windows, but the text is excerpted with gaps, so it cannot fully establish that no such vote exists.",
+    "host": "senate.gov",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "11": {
+    "state": "supports",
+    "why": "The March 14, 2025 order 'Continuing the Reduction of the Federal Bureaucracy' lists IMLS in Sec. 2(a) among entities whose non-statutory components are eliminated and statutory functions reduced to the legal minimum.",
+    "host": "web.archive.org",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "12": {
+    "state": "partly",
+    "why": "The November 21, 2025 Memorandum and Order in the Rhode Island case grants the States summary judgment on EO 14238 as to IMLS, MBDA, FMCS and USICH, but the extracted text is cut off before the 'arbitrary and capricious'/'contrary to law' holdings, the vacatur, and the permanent injunction.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "13": {
+    "state": "supports",
+    "why": "The April 9, 2026 stipulation by ALA, AFSCME and defendants including Sonderling and IMLS dismisses the action without prejudice with each party bearing its own costs and fees.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    }
@@ -11764,34 +12044,66 @@
   },
   "treasury-hurley-somali-surveillance-resignation-2026": {
    "0": {
-    "state": "partly",
-    "why": "The truncated Wayback snapshot confirms Hurley is leaving after privately raising objections tied to the Somali-fraud-crackdown plans, supporting the resignation-over-objection core of the claim, but it does not mention Bessent by name, data-privacy concerns, monitoring of finances specifically, or other Trump allies being uneasy with the program's scope.",
-    "host": "washingtonpost.com",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "The Post report (as syndicated) states Hurley is leaving after privately objecting to the White House-backed Minnesota Somali fraud crackdown per seven people, that he conveyed concerns to Bessent about enhanced monitoring of Minneapolis international payments, that two people cited data-privacy concerns, that his and career officials' concerns were effectively overruled, that some Trump allies are uneasy, and that Hurley denied the premise.",
+    "host": "assets.msn.com",
+    "date": "2026-09-28",
     "kind": "fact",
-    "archive": true
+    "archive": false
    },
    "1": {
-    "state": "not_found",
-    "why": "The available source text is only the article's lead paragraph about Hurley's departure and does not mention Faulkender, chiefs of staff, or any broader pattern of Treasury turnover, so the claim cannot be assessed from it.",
-    "host": "washingtonpost.com",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "The ACAMS item, summarizing the Post, lists exactly the Faulkender (August), Katz (October) and Friedman (January) departures preceding Hurley's exit.",
+    "host": "web.archive.org",
+    "date": "2026-09-28",
     "kind": "fact",
-    "archive": true
+    "archive": false
    },
    "2": {
-    "state": "partly",
-    "why": "USCIB confirms Hurley's confirmation as OECD Ambassador on August 10, 2026 and that he had previously served as Treasury's Undersecretary for Terrorism and Financial Intelligence, but the text never states the specific April 28, 2026 end date for that Treasury position.",
+    "state": "supports",
+    "why": "The USCIB statement dated August 10, 2026 congratulates Hurley on confirmation as U.S. Ambassador to the OECD and notes his prior Treasury undersecretary role.",
     "host": "uscib.org",
-    "date": "2026-09-15",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    },
    "3": {
     "state": "partly",
-    "why": "FinCEN's press release confirms the Minnesota GTO was renewed on August 7, 2026, supporting the core claim that the program continued rather than ended, but the text does not mention the January 8, 2026 original issuance date, the Hennepin/Ramsey county scope, the $3,000 threshold, or the February 6, 2027 expiration date.",
+    "why": "The August 2026 FAQs support the issuance date, covered counties, $3,000 threshold and August 11, 2026-February 6, 2027 term, but the extracted text does not contain the statement that the order differs from January's only in dates and in carrying forward a February 27, 2026 bank exemption.",
     "host": "fincen.gov",
-    "date": "2026-09-15",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "not_found",
+    "why": "The extracted Senate confirmed-nominations list is cut off partway through the 2026-08-07 entries and does not include PN1022-15 or John Hurley, so the text cannot settle the claim.",
+    "host": "senate.gov",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "supports",
+    "why": "The April 28, 2026 Post piece's summary and lead say exactly this, including the expected OECD nomination.",
+    "host": "web.archive.org",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
+    "state": "supports",
+    "why": "The Reuters item dated February 15, 2026 reports, citing Bloomberg News, that Hurley was set to leave his under secretary post after friction with Bessent, and says Reuters could not immediately verify it.",
+    "host": "aol.com",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "7": {
+    "state": "supports",
+    "why": "The January 2026 FAQs state the January 8, 2026 issuance, Hennepin/Ramsey coverage, and the February 12-August 10, 2026 term.",
+    "host": "fincen.gov",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    }
@@ -11907,33 +12219,33 @@
   "trump-brazil-tariffs-bolsonaro-protection-2025": {
    "0": {
     "state": "supports",
-    "why": "Al Jazeera's July 9, 2025 article confirms Trump's letter threatening the 50% tariff on Brazil while explicitly calling the Bolsonaro prosecution a \"Witch Hunt\" that should end immediately.",
+    "why": "Al Jazeera reports Trump's July 9 letter to Brazil announcing a 50% tariff and quotes him calling the Bolsonaro trial a 'Witch Hunt that should end IMMEDIATELY!'",
     "host": "aljazeera.com",
-    "date": "2026-09-15",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    },
    "1": {
-    "state": "unopened",
-    "why": "",
-    "host": "france24.com",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "France 24/AFP reports the executive order adding a 40% tariff for a 50% total and that Treasury cited the Magnitsky Act in sanctioning Moraes, which freezes U.S.-based assets and bars travel.",
+    "host": "web.archive.org",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    },
    "2": {
     "state": "supports",
-    "why": "The Wikipedia article directly states visas were revoked for 8 of 11 Brazilian Supreme Court justices and other officials including Health Minister Alexandre Padilha.",
+    "why": "The Wikipedia summary states the measures included revoking U.S. visas for 8 of 11 Supreme Court justices, Mais Medicos officials, and other Brazilian political figures.",
     "host": "en.wikipedia.org",
-    "date": "2026-09-15",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    },
    "3": {
     "state": "supports",
-    "why": "NPR confirms the September 11, 2025 sentencing to 27 years (and three months) despite the tariffs/sanctions, and quotes Moraes citing \"overwhelming evidence\" of an assassination plot against Lula and Moraes drafted inside the presidential palace.",
+    "why": "NPR (updated September 11, 2025) reports the 27-years-and-three-months sentence, the four-of-five guilty vote, and Moraes citing 'overwhelming evidence' of an assassination plot against Lula and Moraes, part of which was printed inside the presidential palace.",
     "host": "npr.org",
-    "date": "2026-09-15",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    },
@@ -11946,18 +12258,122 @@
     "archive": false
    },
    "5": {
-    "state": "unopened",
-    "why": "",
+    "state": "not_found",
+    "why": "The extracted Wikipedia text covers only the dispute's early background and contains nothing about Executive Order 14361 or November 2025 agricultural exemptions, so the text cannot settle the claim.",
     "host": "en.wikipedia.org",
-    "date": "2026-09-15",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    },
    "6": {
     "state": "supports",
-    "why": "Al Jazeera confirms the Trump administration's proposed 25% tariff (June 2026), Flavio Bolsonaro's request to delay it until after the October election, and Lula's opposition to the tariff proposal (reflected in the article's linked coverage of Lula rejecting the treatment and telling Trump to stay out of the election).",
+    "why": "Al Jazeera/Reuters (July 6, 2026) reports the June proposal of 25% tariffs citing deforestation and electronic payment practices, Lula's accusation that Flavio Bolsonaro lobbied Washington for them, and his request to delay them until after the October election.",
     "host": "aljazeera.com",
-    "date": "2026-09-15",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "7": {
+    "state": "supports",
+    "why": "G1 (July 19, 2025) reports the U.S. suspended the visas of Moraes, seven other STF justices and Prosecutor General Paulo Gonet, with Mendonca, Nunes Marques and Fux left off the list.",
+    "host": "g1.globo.com",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "8": {
+    "state": "supports",
+    "why": "The Guardian article dated 25 Nov 2025, headlined on the 27-year term, contains this statement.",
+    "host": "theguardian.com",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "9": {
+    "state": "supports",
+    "why": "Agencia Brasil (15/08/2025) reports the cancellation of the visas of Padilha's wife and 10-year-old daughter, that his own visa had expired in 2024, and that earlier that week the visas of Mozart Sales and Alberto Kleiman were revoked, with Rubio citing a Cuban forced-labor export scheme.",
+    "host": "agenciabrasil.ebc.com.br",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "10": {
+    "state": "supports",
+    "why": "Migalhas reports Viviane Barci de Moraes and the family-linked Instituto Lex were added to the Global Magnitsky list on Monday the 22nd, that visas of AGU Jorge Messias and others were revoked, and that the White House called the sanctions a further response to Bolsonaro's conviction.",
+    "host": "migalhas.com.br",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "11": {
+    "state": "supports",
+    "why": "Al Jazeera (Oct. 27, 2025) reports Lula described his Sunday meeting with Trump at the ASEAN summit in Kuala Lumpur as 'surprisingly good' and quotes 'He guaranteed to me that we will reach an agreement.'",
+    "host": "aljazeera.com",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "12": {
+    "state": "supports",
+    "why": "The OFAC recent action dated 12/12/2025, titled Global Magnitsky Designations Removals, lists deletions of Alexandre de Moraes, Lex - Instituto de Estudos Juridicos Ltda, and Viviane Barci de Moraes from the SDN List.",
+    "host": "ofac.treasury.gov",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "13": {
+    "state": "supports",
+    "why": "The Guardian (12 Dec 2025) reports Treasury lifted Magnitsky sanctions on Moraes and his wife at Lula's repeated request in tariff talks, and separately that Bolsonaro was already serving his sentence at Federal Police headquarters in Brasília.",
+    "host": "theguardian.com",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "14": {
+    "state": "not_found",
+    "why": "The extracted Flexport text is navigation plus the start of a June 30, 2026 update and contains none of the Feb. 20 6-3 ruling, the executive order, the Feb. 24 CBP cutoff, or the March 20 CIT refund extension.",
+    "host": "flexport.com",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "15": {
+    "state": "supports",
+    "why": "The Reuters story (TBS, 04 July 2026) reports Moraes allowed Bolsonaro to remain under humanitarian house arrest, that he has served his 27-year sentence since November, and that in March Moraes granted 90 days of house arrest after pneumonia hospitalization.",
+    "host": "tbsnews.net",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "16": {
+    "state": "supports",
+    "why": "The USTR release dated July 15, 2026 announces final Section 301 action at the President's direction imposing a 25% tariff on certain Brazilian goods over the listed practice areas, following the June 1, 2026 determination and proposed action.",
+    "host": "ustr.gov",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "17": {
+    "state": "supports",
+    "why": "The Reuters report on NBC (July 16, 2026) states a 25% tariff on most Brazilian imports starting July 22 with exemptions including beef, coffee, rare earths, energy products and aircraft, and that Lula called the decision without justification and invoked the Reciprocity Law and WTO.",
+    "host": "nbcnews.com",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "18": {
+    "state": "supports",
+    "why": "CartaCapital (17.09.2026), citing O Estado de S.Paulo, reports the first formal U.S. proposal received in October 2025 had 21 demands, mostly commercial, including assuring 'free and fair' 2026 elections and not arresting or restricting 'political dissidents', read as a reference to Bolsonaro, and that Brazil refused to accept domestic issues in the negotiation.",
+    "host": "cartacapital.com.br",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "19": {
+    "state": "supports",
+    "why": "The Guardian (16 Jun 2026) reports Eduardo Bolsonaro was sentenced to four years and two months for courting US interference via sanctions on the justices and tariffs on Brazilian goods, and that he said he had not been properly notified.",
+    "host": "theguardian.com",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    }
@@ -12388,10 +12804,10 @@
     "archive": false
    },
    "1": {
-    "state": "partly",
-    "why": "The Hill confirms Trump revoked the Biden ethics order and its lobbying restrictions. On new rules, it only says a White House spokesperson did not respond about whether Trump planned another ethics order, without stating none had been issued.",
+    "state": "supports",
+    "why": "The Hill reports Trump revoked Biden's ethics order, describes its lobbyist gift ban, expanded cooling-off period and one-year shadow-lobbying ban, and says a White House spokesperson did not respond on whether Trump planned another ethics order.",
     "host": "thehill.com",
-    "date": "2026-09-21",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    },
@@ -12405,9 +12821,17 @@
    },
    "3": {
     "state": "supports",
-    "why": "The source names all four individuals with matching titles, departure dates, and current lobbying clients/targets exactly as stated in the claim.",
+    "why": "Sludge's Q2 review says the revolving-door moves are not illegal because Trump rescinded the Biden pledge and declined to revive his own, and it details Suess (Squire Patton Boggs, API client, lobbying Interior for Simplot), Fields (CGCN, White House and Commerce), LaJoie (Alpine Group, Energy/Treasury/Congress) and Cooksey (BGR Group, White House) as claimed.",
     "host": "readsludge.com",
-    "date": "2026-09-15",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "supports",
+    "why": "The Politico piece on Yahoo states Biden's order barred lobbying registration until the end of his administration or two years, whichever later; quotes Kelner on lifted restrictions; says this could help Biden alumni land well-paying private jobs; and says Trump had yet to issue new rules and the White House did not respond.",
+    "host": "yahoo.com",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    }
@@ -12448,10 +12872,10 @@
   },
   "trump-federal-union-bargaining-eo-upheld-2026": {
    "0": {
-    "state": "partly",
-    "why": "The GovExec article confirms the Ninth Circuit's February 26, 2026 refusal to enforce the injunction, its finding of legitimate national-security grounding apart from any retaliatory animus, and rejection of the retaliation theory on essentially a but-for basis -- but this source (the only one provided for this claim) never names the district judge \"Donato,\" so that specific attribution is unconfirmed here.",
+    "state": "supports",
+    "why": "Government Executive (February 26, 2026) reports the Ninth Circuit panel could not uphold the preliminary injunction against orders stripping two-thirds of the workforce of bargaining rights, quotes Bress on the legitimate national-security grounding, and reports Owens's concurrence that a fully developed record could change the outcome; the district judge's name is not given in the text but nothing contradicts it.",
     "host": "govexec.com",
-    "date": "2026-09-15",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    },
@@ -12473,65 +12897,153 @@
    },
    "3": {
     "state": "supports",
-    "why": "FedSmith confirms the June 17 order forecloses any panel or en banc rehearing and states plainly that the panel declined to address AFGE's statutory-authority claim, which remains pending at the district court -- distinct from the retaliation claim the panel resolved.",
+    "why": "FedSmith states the June 17 order bars panel or en banc rehearing and declares itself the mandate, and that the ruling was limited to the preliminary injunction standard, declining to address the statutory-authority claim, which with other merits claims remains pending at the district court.",
     "host": "fedsmith.com",
-    "date": "2026-09-15",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    },
    "4": {
     "state": "supports",
-    "why": "The same FedSmith article (used for this re-verification claim) confirms the statutory-authority claim remains pending at the district court and contains no mention of any Supreme Court certiorari petition, consistent with the claim's re-verification finding.",
-    "host": "fedsmith.com",
-    "date": "2026-09-15",
+    "why": "The September 1, 2026 letter to Judge Donato in 3:25-cv-03070 states the government's separation-of-powers objection that claims must be resolved solely on the face of the EO and proposes resolution on a motion to compel.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    },
    "5": {
-    "state": "supports",
-    "why": "Same underlying FedSmith source again: it confirms the statutory-authority claim is still pending and contains no reference to a certiorari petition, consistent with this later re-verification.",
-    "host": "fedsmith.com",
-    "date": "2026-09-15",
+    "state": "partly",
+    "why": "The docket confirms the Dec. 15, 2025 argument and a last filing on Sept. 24, 2026, but the extracted entries end in May 2025, so the Rule 28(j) letters of September 23-24, 2026 are not shown.",
+    "host": "courtlistener.com",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    },
    "6": {
-    "state": "unopened",
-    "why": "",
+    "state": "not_found",
+    "why": "The extracted Congress.gov text is page navigation plus the CRS product title and contains no discussion of EO 14251's date, title, or the 40 excluded agencies.",
     "host": "congress.gov",
-    "date": "2026-09-15",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    },
    "7": {
     "state": "supports",
-    "why": "Federal News Network confirms the August 2025 addition of NASA, USAGM, NWS/NESDIS, the Bureau of Reclamation's hydropower program, and the Patent and Trademark Office to the order, plus DHS/VA/HHS de-recognizing union chapters after an appeals court decision allowed enforcement to proceed.",
+    "why": "Federal News Network (August 28, 2025) lists NASA, USAGM, NWS and NESDIS, the Bureau of Reclamation's hydropower program and the PTO's commissioner of patents office as newly covered, and says DHS, VA and HHS 'de-recognized' union chapters after an appeals court decision green-lit implementation.",
     "host": "federalnewsnetwork.com",
-    "date": "2026-09-15",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    },
    "8": {
-    "state": "partly",
-    "why": "The NASA Watch item confirms EO 14343 was signed August 28, 2025 and details NASA's implementation (ending union recognition, halting dues collection, etc.), but it says nothing about a September 3, 2025 publication date, and it is specific to NASA -- it never states that the Patent and Trademark Office or National Weather Service were also covered by this order.",
+    "state": "supports",
+    "why": "The NASA Watch post reproduces the AFEU/IFPTE email stating EO 14343 was issued August 28, 2025, that NASA would fully implement it, and that implementation includes derecognizing IFPTE and AFGE, terminating CBAs and stopping dues collection.",
     "host": "nasawatch.com",
-    "date": "2026-09-15",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    },
    "9": {
     "state": "supports",
-    "why": "Forbes confirms BOP Director William Marshall III's September 25, 2025 termination of the collective bargaining agreement and Rabbi Margaretten's quoted characterization of the union.",
+    "why": "Forbes reports Marshall's September 25, 2025 notice terminating the CBA with AFGE's Council of Prison Locals and quotes Rabbi Moshe Margaretten of the Tzedek Association calling the union 'one of the greatest obstacles to real progress.'",
     "host": "forbes.com",
-    "date": "2026-09-15",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    },
    "10": {
     "state": "supports",
-    "why": "Defense One confirms the House had passed the provision in September, that it was stripped from the compromise NDAA language unveiled in December 2025, and specifically that only Sen. Murkowski among Senate Republicans pushed for its inclusion despite 16 House Republicans urging support.",
+    "why": "The Government Executive piece on Defense One (December 8, 2025) reports House leaders stripped the DoD civilian bargaining provision from the compromise NDAA, that the House passed the bill 231-196 in September, and that a source said only Sen. Murkowski pushed for its inclusion.",
     "host": "defenseone.com",
-    "date": "2026-09-15",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "11": {
+    "state": "supports",
+    "why": "The Clerk's roll call 332 on H R 2550, dated 11-Dec-2025, shows Passed with Republicans 20 yea / 195 nay, Democrats 211 yea, totals 231-195.",
+    "host": "clerk.house.gov",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "12": {
+    "state": "supports",
+    "why": "Federal News Network (September 26, 2025) reports over 30,000 correctional officers lost bargaining abilities when BOP ended its AFGE contract, and quotes Marshall calling the contract 'an obstacle to progress instead of a partner in it.'",
+    "host": "federalnewsnetwork.com",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "13": {
+    "state": "supports",
+    "why": "The AP report on Corrections1 dated September 26, 2025 states Marshall told the agency's nearly 35,000 employees the Council of Prison Locals had become 'an obstacle to progress instead of a partner in it.'",
+    "host": "corrections1.com",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "14": {
+    "state": "supports",
+    "why": "The joint statement filed 07/24/26 gives the June 24, 2025 injunction, August 1, 2025 stay, February 26, 2026 vacatur, no en banc or cert petition, the June 17, 2026 mandate, and the parties' discovery and motion-to-dismiss dispute over the First Amendment, ultra vires and Fifth Amendment claims.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "15": {
+    "state": "supports",
+    "why": "The Reuters report republished on 14 August 2025 says USDA sent notices Tuesday evening terminating contracts at APHIS and FSIS, covering about 6,500 FSIS inspectors, roughly 1,500 APHIS plant inspectors and at least another 150 APHIS employees in a second union, as NAAE sued.",
+    "host": "thepoultrysite.com",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "16": {
+    "state": "partly",
+    "why": "Federal News Network reports EPA terminated all its CBAs and names AFGE, NAGE and ESC among affected unions, but the extracted windows cut off before the Aug. 8, 2025 date and the full name of the fourth union.",
+    "host": "federalnewsnetwork.com",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "17": {
+    "state": "supports",
+    "why": "The Director's message dated September 25, 2025 states that when a union becomes an obstacle to progress instead of a partner in it, it's time for change, and announces termination of the contract with CPL-33.",
+    "host": "bop.gov",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "18": {
+    "state": "supports",
+    "why": "The Federal Register text of EO 14343 of August 28, 2025 (FR Doc. 2025-16924, filed 9-2-25) adds Bureau of Reclamation hydropower units, the PTO Office of the Commissioner for Patents, NESDIS, NWS, NASA and USAGM to the exclusions.",
+    "host": "federalregister.gov",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "19": {
+    "state": "supports",
+    "why": "The GovInfo bill-status record for H.R. 2550 shows passage by Yeas and Nays 231-195 (Roll no. 332) on 2025-12-11 and 'Received in the Senate' on 2025-12-15.",
+    "host": "govinfo.gov",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "20": {
+    "state": "supports",
+    "why": "NARFE's December 15, 2025 post says the House passed PAWA, sponsored by Golden and Fitzpatrick, to reverse executive orders that took collective bargaining rights from about one million federal employees.",
+    "host": "narfe.org",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "21": {
+    "state": "supports",
+    "why": "Government Executive (September 23, 2026) states the exclusion orders impacted roughly two-thirds of the federal workforce and that NTEU's lawsuit has languished before the D.C. Circuit since oral arguments last December.",
+    "host": "govexec.com",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    }
@@ -12546,18 +13058,130 @@
     "archive": false
    },
    "1": {
-    "state": "partly",
-    "why": "HRW confirms the February 6, 2025 executive order authorizing ICC sanctions, but this article was published February 7, 2025 -- months before the claimed June 2025 naming of four ICC judges by Secretary Rubio -- so it cannot and does not address that part of the claim, and it also does not state the order's number as 14203.",
+    "state": "supports",
+    "why": "HRW reports Trump's February 6, 2025 order authorizing ICC sanctions and its update says the annex published February 10 named Prosecutor Karim Khan as the first person sanctioned.",
     "host": "hrw.org",
-    "date": "2026-09-15",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    },
    "2": {
+    "state": "supports",
+    "why": "The Times of Israel (19 July 2025) reports Judge Torresen blocked enforcement of the Feb. 6 order after an April suit by two human rights advocates, calling it an unconstitutional infringement on free speech.",
+    "host": "timesofisrael.com",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "3": {
+    "state": "supports",
+    "why": "The OFAC recent action dated 12/12/2025, Global Magnitsky Designations Removals, lists Alexandre de Moraes, Lex - Instituto de Estudos Juridicos Ltda and Viviane Barci de Moraes as deletions from the SDN List, tagged [GLOMAG].",
+    "host": "ofac.treasury.gov",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "supports",
+    "why": "Rubio's June 5, 2025 statement designates Bossa, Ibanez Carranza, Alapini Gansou and Hohler pursuant to Executive Order 14203.",
+    "host": "state.gov",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "supports",
+    "why": "Al Jazeera (5 Jun 2025) reports Bossa and Ibanez Carranza were sanctioned for authorizing the Afghanistan investigation of U.S. troops, Alapini Gansou and Hohler for actions against Israeli leaders, and quotes the ICC calling the measures a clear attempt to undermine its independence.",
+    "host": "aljazeera.com",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
+    "state": "partly",
+    "why": "The D. Me. decision filed 07/18/25 in 1:25-cv-00158-NT describes the plaintiffs' challenge to EO 14203 and their fear of IEEPA penalties, but the extracted text is cut off before the operative order enjoining penalties for speech-based services.",
+    "host": "govinfo.gov",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "7": {
+    "state": "supports",
+    "why": "Rubio's August 20, 2025 statement designates Prost, Guillou, Nazhat Shameem Khan and Niang pursuant to Executive Order 14203.",
+    "host": "state.gov",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "8": {
+    "state": "supports",
+    "why": "Rubio's December 18, 2025 statement designates judges Lordkipanidze and Damdin under EO 14203, citing their vote with the majority against Israel's appeal on December 15.",
+    "host": "state.gov",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "9": {
+    "state": "supports",
+    "why": "The AP report on NBC (Aug. 19, 2026) says the State Department sanctioned ICC President Akane and senior trial lawyer Seye, and that nine of 18 judges, both deputy prosecutors, the former chief prosecutor and one other prosecution staffer have been sanctioned.",
+    "host": "nbcnews.com",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "10": {
+    "state": "supports",
+    "why": "Al Jazeera (21 Sep 2026), citing the WSJ and Reuters, reports the administration preparing sanctions that would prohibit most transactions with the ICC after a six-to-seven-month grace period.",
+    "host": "aljazeera.com",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "11": {
+    "state": "supports",
+    "why": "The Irish Times/Guardian report (Jan 21 2026) says Lafourcade told AFP she met DRL advisers Samuel D Samson and Christopher J Anderson last May and immediately reported the meeting to the foreign ministry, fearing a potential 'manipulation of the public debate in France'.",
+    "host": "irishtimes.com",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "12": {
+    "state": "supports",
+    "why": "The syndicated report quotes Trump's Truth Social post ending 'FREE MARINE LE PEN!' and says he earlier described her ban as a 'very big deal'.",
+    "host": "yahoo.com",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "13": {
     "state": "unopened",
     "why": "",
-    "host": "timesofisrael.com",
-    "date": "2026-09-15",
+    "host": "washingtonpost.com",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "14": {
+    "state": "supports",
+    "why": "The joint statement by the IBA Human Rights Institute, HRW and the ICJ condemns U.S. sanctions targeting the ICC and the designation of its prosecutor and four judges, saying sanctions dangerously weaken the international justice system.",
+    "host": "hrw.org",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "15": {
+    "state": "supports",
+    "why": "Amnesty, at the opening of the 24th ASP (1-6 December 2025), says the ICC faces existential attack from states such as the USA and Russia, urges members to defend its independence, and says the sanctions must be opposed, not appeased.",
+    "host": "amnesty.org",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "16": {
+    "state": "supports",
+    "why": "Verfassungsblog (16 July 2026) reports the July 7 appeal ruling upholding conviction, three years with two suspended, ineligibility cut to 45 months with 30 suspended leaving her formally eligible in 2027, and her announced pourvoi en cassation.",
+    "host": "verfassungsblog.de",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    }
