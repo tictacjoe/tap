@@ -1750,10 +1750,10 @@
     "archive": false
    },
    "9": {
-    "state": "not_found",
-    "why": "The provided source is the same original March 16, 2026 press release; it cannot itself confirm a fresh re-verification search's negative findings as of August 26, 2026.",
+    "state": "partly",
+    "why": "The release confirms the March 16 letter from Raskin, Lieu, Nadler and Goldman to Bondi, the retaliatory/President's-behest framing, the judge's ruling that Halligan's appointment was unlawful, and two grand juries' refusals; nothing in the text says the letter was dated March 15.",
     "host": "democrats-judiciary.house.gov",
-    "date": "2026-09-15",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    },
@@ -11637,9 +11637,9 @@
   "rubio-vacancies-act-concentration-2025-2026": {
    "0": {
     "state": "supports",
-    "why": "Wikipedia confirms Rubio's exact tenure dates as acting archivist and that he was succeeded by Edward Forst in an acting capacity; the elapsed time (Feb 16, 2025 to Feb 4, 2026) is 353 days, matching the claim's math.",
-    "host": "en.wikipedia.org",
-    "date": "2026-09-15",
+    "why": "The article, dated February 4, 2026, quotes the NARA spokesperson, explains the 210/300-day limits, and reports both the Byron designation and that NARA has no deputy archivist.",
+    "host": "federalnewsnetwork.com",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    },
@@ -11660,18 +11660,50 @@
     "archive": false
    },
    "3": {
-    "state": "unopened",
-    "why": "",
+    "state": "supports",
+    "why": "The letter is dated June 05, 2026, addressed to 'The Honorable Marco Rubio National Security Advisor The White House' with no 'Acting', salutes 'Dear Secretary Rubio', and is signed by Cotton and Grassley.",
     "host": "cotton.senate.gov",
-    "date": "2026-09-15",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    },
    "4": {
-    "state": "partly",
-    "why": "The Wikipedia National Security Advisor article confirms Rubio has continued to serve as acting national security advisor since May 1, 2025 with no successor listed. It does not, however, address (and cannot confirm) the absence of any new FVRA-limited acting role or legal challenge as of the 2026-08-18 re-verification date; that negative claim is not something this reference article states.",
+    "state": "supports",
+    "why": "The infobox lists Rubio as incumbent with 'Acting: May 1, 2025 – September 22, 2026', and the body says the advisor is appointed by the president without Senate confirmation.",
     "host": "en.wikipedia.org",
-    "date": "2026-09-15",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "supports",
+    "why": "The Globe states that Rubio's staff and NARA say he left on Dec. 4 within the 300-day limit, that he was tapped after Shogan's February 2025 firing, and that he had Byron perform the functions without naming him interim head.",
+    "host": "bostonglobe.com",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
+    "state": "supports",
+    "why": "The Globe reports Duckworth's GAO request and backdating concern, NARA and GAO confirming the Jan. 23, 2026 vacancy report, Super's 'bare minimum' reporting-violation conclusion, and NARA calling it inaccurate.",
+    "host": "bostonglobe.com",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "7": {
+    "state": "supports",
+    "why": "Fox reports the signed commission confirmed Tuesday by three officials, making permanent the interim role held since May 2025, and says he was acting archivist from February to December 2025.",
+    "host": "foxnews.com",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "8": {
+    "state": "supports",
+    "why": "The August 21, 2026 NARA release states the August 7 Senate confirmation and the March 2 nomination.",
+    "host": "archives.gov",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    }
@@ -11943,6 +11975,14 @@
     "state": "supports",
     "why": "The April 9, 2026 stipulation by ALA, AFSCME and defendants including Sonderling and IMLS dismisses the action without prejudice with each party bearing its own costs and fees.",
     "host": "storage.courtlistener.com",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "14": {
+    "state": "supports",
+    "why": "The agreement contains the binding-on-parties clause, the no-more-RIFs and statutory-surveys provisions, and the 7-day dismissal-without-prejudice clause with a reserved right to reinstate claims; a DOJ signature is dated Apr 9 and plaintiffs' counsel also signed.",
+    "host": "ala.org",
     "date": "2026-09-28",
     "kind": "fact",
     "archive": false
@@ -12531,17 +12571,17 @@
    },
    "2": {
     "state": "supports",
-    "why": "CNN reports it was removed from its scheduled UN-trip pool duty, the pool chair said there would be no replacement pool, and the five networks issued the quoted joint statement.",
+    "why": "CNN reports CNN was assigned as TV pool for the UNGA trip but no network was listed, quotes Boughton's 'no replacement pool' email, and quotes the networks' joint statement.",
     "host": "cnn.com",
-    "date": "2026-09-23",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    },
    "3": {
-    "state": "unopened",
-    "why": "",
-    "host": "nytimes.com",
-    "date": "2026-09-23",
+    "state": "supports",
+    "why": "CNBC quotes both lines from Trump's Monday Truth Social post and states he had not previously cited national security and gave no examples.",
+    "host": "cnbc.com",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    },
@@ -12558,6 +12598,38 @@
     "why": "CNBC reports Kelly, a 2017 Trump nominee, ordered a TRO response by Tuesday and set a 3:30 p.m. ET Wednesday videoconference hearing, and that he ordered Acosta's pass restored in 2018.",
     "host": "cnbc.com",
     "date": "2026-09-23",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
+    "state": "supports",
+    "why": "The September 24, 2026 order grants the TRO on the Fifth Amendment due-process claim citing Sherrill and Karem, finds nothing pre-suit suggesting national-security motivation, orders Defendants except Trump to restore hard passes, and runs 14 days.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "7": {
+    "state": "supports",
+    "why": "CBS reports the Thursday-morning denials prompting a request for an immediate hearing, re-entry around noon, and quotes the letters' 'trafficking in verifiable falsehoods' language.",
+    "host": "cbsnews.com",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "8": {
+    "state": "supports",
+    "why": "TheWrap quotes the Truth Social post containing the exact 'Why should I have to give access' and 'Perhaps Judge Kelly could explain that!' lines, which reference the judge presiding over the suit.",
+    "host": "thewrap.com",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "9": {
+    "state": "partly",
+    "why": "The AP text supports the Air Force One exclusion, CNN's pool membership and scheduled seat, and the note that Kelly's order covered hard passes, not pool duties; it only carries a headline saying the TV pool is back in operation and does not say it resumed on Friday.",
+    "host": "pbs.org",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    }
@@ -12731,15 +12803,15 @@
     "state": "unopened",
     "why": "",
     "host": "washingtonpost.com",
-    "date": "2026-09-15",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    },
    "4": {
-    "state": "supports",
-    "why": "ProPublica's reporting fully documents the Hernandez pardon and the Bureau of Prisons' bespoke post-release assistance: removing his immigration detainer, driving him via a tactical team to the Waldorf Astoria, and letting him use the BOP deputy director's phone.",
+    "state": "partly",
+    "why": "The ProPublica text confirms the article covers Hernández getting special treatment after Trump's pardon, but the provided windows never mention BOP post-release assistance, and the source cannot confirm what this database's own entry documents.",
     "host": "propublica.org",
-    "date": "2026-09-15",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    }
@@ -15294,18 +15366,18 @@
   },
   "witkoff-world-liberty-crypto-uae-conflict-2025-2026": {
    "0": {
-    "state": "partly",
-    "why": "ABC confirms nearly $107 million from a WLF-affiliated holding company, but the provided text contains no figure for over $250 million in income, over $400 million in assets, or a prior-year $34 million from the same entity.",
+    "state": "supports",
+    "why": "ABC reports the nearly $107M from a WLF-affiliated holding company per disclosures obtained by a watchdog, operation by Zach Witkoff and Trump's three sons, the May 2025 divesting statement, and Anna Kelly's 'fully divested' quote.",
     "host": "abcnews.com",
-    "date": "2026-09-21",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    },
    "1": {
     "state": "supports",
-    "why": "The Warren press release reports the Warren and Murphy letter about Witkoff's role in the UAE chip deal alongside the $2 billion investment in WLF's stablecoin, and lists the unsigned ethics form, the disputed June 30, 2025 appointment date, and conflicting divestment statements.",
+    "why": "The November 18, 2025 release describes the stalled chip deal advocacy, the $2B UAE-backed stablecoin investment, the unsigned forms, the June 30, 2025 appointment date versus Jan-Feb work, the conflicting divestment statements, and the December 1, 2025 deadline.",
     "host": "warren.senate.gov",
-    "date": "2026-09-21",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    },
@@ -15314,6 +15386,22 @@
     "why": "",
     "host": "nytimes.com",
     "date": "2026-09-21",
+    "kind": "fact",
+    "archive": false
+   },
+   "3": {
+    "state": "supports",
+    "why": "The article, citing the WSJ, gives the $69M cash / $38M crypto split, the tripling from $34M, the $400M+ assets and $250M+ income, and says Witkoff met Tahnoon as envoy. The Quartz byline and Sept. 10 date are not visible in the text.",
+    "host": "yahoo.com",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "supports",
+    "why": "CNBC, citing the WSJ, reports Tahnoon's secret 49% stake for $500M, Eric Trump's pre-inauguration signature, the $187M/$31M flows, and the later 500,000-chips-per-year access.",
+    "host": "cnbc.com",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    }
