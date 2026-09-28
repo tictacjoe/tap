@@ -5,10 +5,10 @@
     "administration": "Trump II (2025-present)",
     "agency": "White House / OMB (directs EPA, DOE, DOI, FERC, NRC, Army Corps of Engineers, BLM, BOEM)",
     "domain": "cross-cutting (structural/process rule, energy/environmental focus)",
-    "status": "Fully Enacted (in effect; individual agency sunset rules being implemented through 2026)",
+    "status": "In effect, partly implemented: FERC and NRC sunset rules are in force (first lapses due Dec. 5, 2026 and Jan. 8, 2027 unless extended); DOE withdrew its direct final rule July 9, 2026, and its identical proposal is pending; no EPA sunset rule in the Federal Register as of Sept. 2026.",
     "date_of_action": "2025-04-09",
-    "original_rule_summary": "No prior rule -- this is a new process mandate targeting energy-related regulations under statutes including the Clean Air Act, Federal Power Act, Natural Gas Act, Atomic Energy Act, Endangered Species Act, and appliance efficiency standards.",
-    "what_changed": "Directs covered agencies (EPA, DOE, FERC, NRC, DOI bureaus, Army Corps, BLM, BOEM) to issue a 'sunset rule' by September 30, 2025 (later extended to September 30, 2026 for some agencies) inserting a 'Conditional Sunset Date' into covered existing regulations -- one year after the sunset rule's effective date, unless the agency affirmatively extends it (up to 5 more years at a time, following a public comment opportunity). All new energy-related regulations must include a sunset date no more than 5 years out. **If an agency does not act to extend a regulation before its sunset date, the regulation automatically expires and is removed from the Code of Federal Regulations -- no additional agency action or public process is required for the expiration itself.** Update: DOE withdrew its own direct final rule implementing the sunset mandate (covering 21 parts of Title 10 CFR) on July 28, 2026, after receiving adverse public comments arguing the sunset process 'bypasses meaningful public input and fails to adequately assess whether the sunsets are consistent with underlying statutory mandates.' DOE will instead proceed through standard notice-and-comment rulemaking on a companion proposed rule it had already filed -- a second agency (alongside NRC) where sunset implementation has hit real friction rather than proceeding cleanly.",
+    "original_rule_summary": "No prior rule -- this is a new process mandate targeting energy-related regulations under statutes including the Federal Power Act, Natural Gas Act, Atomic Energy Act, Surface Mining Control and Reclamation Act, Outer Continental Shelf Lands Act, Endangered Species Act, and appliance efficiency law; EPA and the Army Corps were to name their own covered statutes to OMB.",
+    "what_changed": "Directs covered agencies (EPA, DOE, FERC, NRC, DOI bureaus, Army Corps, BLM, BOEM) to issue a 'sunset rule', effective by September 30, 2025, inserting a 'Conditional Sunset Date' into covered existing regulations -- one year after the sunset rule's effective date, unless the agency affirmatively extends it (to a date no more than 5 years out). All new energy-related regulations must include a sunset date no more than 5 years out. **If an agency does not act to extend a regulation before its sunset date, the regulation automatically expires and is removed from the Code of Federal Regulations -- no further rulemaking is required for the expiration itself, though the order says the agency will first offer the public a chance to comment on the rule's costs and benefits.** Agencies missed the September 30, 2025 deadline and applied the order narrowly. FERC issued a direct final rule on October 21, 2025, effective December 5, 2025, giving a set of its regulations a December 5, 2026 sunset date; it rescinded the sunset for one provision (non-mandatory smart-grid guidance) after an adverse comment. NRC issued its direct final rule on December 3, 2025, effective January 8, 2026, with a January 8, 2027 sunset date. NRC said the vast majority of its regulations fell outside the order because they protect public health and safety or the common defense, form part of its statutory permitting regime, or implement other statutes, so it applied sunsets mainly to unused or outdated provisions such as interpretation sections. After six comment submissions raised significant adverse comments, NRC withdrew the sunset for its aircraft impact assessment requirement for reactors (10 CFR 50.150) on January 8, 2026, then reinstated it through a final rule effective April 8, 2026. In June 2026 NRC opened the promised public comment period on the costs and benefits of the regulations due to lapse January 8, 2027. DOE published a direct final rule and an identical proposed rule on May 29, 2026, setting a one-year sunset on 21 parts of Title 10 of the CFR and a five-year sunset on seven more (covering access to classified information, the Human Reliability Program and worker safety), while leaving out nuclear-safety rules tied to Price-Anderson indemnification; its list does not include DOE's appliance efficiency standards. Adverse comments followed: the Institute for Policy Integrity said the process 'bypasses both meaningful public input and true consideration of whether the sunsets comport with statutory mandates or improve overall public welfare,' and 14 state attorneys general wrote that the proposal 'effectively repeals hundreds of regulations.' DOE withdrew the direct final rule on July 9, 2026, and said it would respond to the comments in any final action on the proposed rule, which remains pending. In a June 2026 oil and gas leasing proposal, BLM declined to add a sunset date, saying those rules rest mainly on the Mineral Leasing Act rather than the Federal Land Policy and Management Act.",
     "primary_proponent": {
       "name": "Donald Trump",
       "role": "President",
@@ -18,18 +18,34 @@
       "Energy producers and regulated industries broadly across the covered statutes -- a structural mandate rather than a single-sector rollback"
     ],
     "estimated_health_impact": {
-      "summary": "Severe systemic/structural risk: creates 'rolling regulatory vacuums' where protections automatically expire by default unless an agency proactively acts to renew them within the window -- inverting the normal presumption that a regulation stays in force until affirmatively repealed. Affected regulations may include power plant emissions standards, appliance efficiency standards, Endangered Species Act provisions, and oil/gas leasing rules.",
-      "figures": [],
-      "caveat": "No quantified health impact figure exists for the EO itself, since it is a process mechanism rather than a rule targeting a specific pollutant or practice -- and as of mid-2026, agencies are still in the process of identifying which specific regulations are 'covered' and issuing their individual sunset rules (e.g. NRC's Dec. 2025 proposal found most of its regulations could NOT be sunset because they're statutorily required for safety, and only sunset a small number of unused/obsolete rules). The real-world impact will depend heavily on which agencies let which specific regulations lapse -- track individual agency sunset-rule outcomes as they finalize."
+      "summary": "Structural risk to energy, nuclear and environmental protections: the order flips the normal default so covered rules lapse automatically unless an agency affirmatively renews them, with no further rulemaking needed for the lapse itself. As implemented so far, its reach is narrower than its text. NRC and FERC applied sunsets mainly to unused, outdated or procedural provisions, though NRC's list includes its aircraft impact assessment requirement for reactors. DOE's pending proposal, which 14 state attorneys general said would effectively repeal hundreds of regulations, including rules on access to nuclear facilities and information and nuclear waste storage, would put 28 parts of its rules on a sunset clock. No sunset rule has appeared for EPA's pollution standards, DOE's list leaves out appliance efficiency standards, and BLM declined to sunset its oil and gas leasing rules.",
+      "figures": [
+        {
+          "metric": "DOE rule parts proposed for automatic sunset",
+          "value": "28 parts of 10 CFR (21 with a one-year sunset, 7 with a five-year sunset)",
+          "source": "DOE direct final rule and companion proposed rule, 91 FR 31869 / 31985 (May 29, 2026)"
+        },
+        {
+          "metric": "NRC regulatory units due to lapse unless extended",
+          "value": "49 (48 listed in NRC's June 2026 request for comment plus a fitness-for-duty subpart), lapsing January 8, 2027; aircraft impact assessment requirement lapsing April 8, 2027",
+          "source": "NRC, Sunset Provisions request for information (June 26, 2026); NRC final rule, The Sunset Rule-Aircraft Impact Assessment (April 8, 2026)"
+        },
+        {
+          "metric": "First FERC sunset date",
+          "value": "December 5, 2026 for the regulations in its sunset rule",
+          "source": "FERC direct final rule, 90 FR 48397 (October 21, 2025)"
+        }
+      ],
+      "caveat": "Counts are TAP's, taken from the agencies' Federal Register documents; no agency, GAO or outside estimate of health, mortality or dollar effects was found, and none is claimed here. The 'hundreds of regulations' characterization is the state attorneys general's. Real impact depends on which provisions agencies let lapse at the first sunset dates, on DOE's final action, and on whether EPA, Interior bureaus and the Army Corps issue sunset rules; the order's requirement that new covered rules carry sunset dates of no more than five years is not captured in these counts."
     },
-    "confidence_note": "Strong 'process is the harm' entry, similar to EO 14192 but energy-specific and more severe in mechanism -- automatic expiration by default, rather than requiring agencies to affirmatively act to repeal. Worth noting the NRC's early implementation actually sunset very few regulations (found most were statutorily protected), which is a useful nuance: the mechanism is structurally risky, but agency-by-agency outcomes so far are mixed, not uniformly severe. Update: DOE's July 2026 withdrawal-and-restart adds a second data point to that mixed-outcomes pattern -- two of the covered agencies have now hit procedural friction rather than smoothly implementing the sunset mandate as designed.",
-    "pull_quote": "DOE withdrew its own implementing rule in July 2026 after public comments argued the sunset process ‘bypasses meaningful public input and fails to adequately assess whether the sunsets are consistent with underlying statutory mandates.’",
+    "confidence_note": "Strong 'process is the harm' entry, similar to EO 14192 but energy-specific and more severe in mechanism -- automatic expiration by default, rather than requiring agencies to affirmatively act to repeal. Worth noting that NRC and FERC applied sunsets mainly to unused, outdated or procedural provisions (NRC said most of its rules were outside the order's scope), DOE withdrew its direct final rule after adverse comments, and BLM declined to sunset its oil and gas leasing rules: the mechanism is structurally risky, but outcomes so far are narrow and uneven. NRC did, however, reinstate a sunset on its aircraft impact assessment requirement over adverse comments.",
+    "pull_quote": "The sunset process 'bypasses both meaningful public input and true consideration of whether the sunsets comport with statutory mandates,' the Institute for Policy Integrity told DOE, which withdrew its direct final rule in July 2026.",
     "section_summaries": {
-      "what_changed": "Agencies must give existing rules automatic expiration dates; unless renewed, they lapse from the CFR with no further action needed. DOE has since withdrawn its own implementing rule after public pushback and restarted via standard rulemaking.",
-      "estimated_impact": "Flips the default from rules staying in force to lapsing automatically, risking rolling gaps in emissions, safety, and species protections.",
-      "confidence_note": "A structurally risky mechanism, though both NRC and now DOE have hit friction in early rollout -- a real mixed-outcomes nuance, not uniformly severe."
+      "what_changed": "Agencies must give existing energy rules automatic expiration dates; unless renewed, they lapse. FERC and NRC applied it narrowly; DOE withdrew its direct final rule after adverse comments.",
+      "estimated_impact": "The order makes covered energy rules lapse unless renewed, but agencies have aimed it mostly at minor or unused rules; the first lapses are due Dec. 2026 (FERC) and Jan. 2027 (NRC).",
+      "confidence_note": "A structurally risky mechanism with a narrow, uneven rollout: NRC and FERC sunset mostly unused rules, DOE withdrew its direct final rule, and BLM left its leasing rules out."
     },
-    "last_verified": "2026-09-06",
+    "last_verified": "2026-09-28",
     "date_added": "2026-07-03",
     "sources": [
       {
@@ -47,10 +63,58 @@
       {
         "name": "Foley & Lardner — DOE Withdraws Direct Final Rule on Zero-Based Regulating, Will Proceed Through Standard Notice-and-Comment Rulemaking",
         "url": "https://www.foley.com/insights/publications/2026/07/doe-withdraws-direct-final-rule-on-zero-based-regulating-will-proceed-through-standard-notice-and-comment-rulemaking/"
+      },
+      {
+        "name": "Federal Register — Executive Order 14270, Zero-Based Regulatory Budgeting To Unleash American Energy (90 FR 15643)",
+        "url": "https://www.federalregister.gov/documents/2025/04/15/2025-06466/zero-based-regulatory-budgeting-to-unleash-american-energy"
+      },
+      {
+        "name": "Federal Register — FERC direct final rule inserting conditional sunset dates (Oct. 21, 2025)",
+        "url": "https://www.federalregister.gov/d/2025-19607"
+      },
+      {
+        "name": "Federal Register — FERC partial rescission (Dec. 18, 2025)",
+        "url": "https://www.federalregister.gov/d/2025-23294"
+      },
+      {
+        "name": "Federal Register — NRC, The Sunset Rule, direct final rule (Dec. 3, 2025)",
+        "url": "https://www.federalregister.gov/documents/2025/12/03/2025-21784/the-sunset-rule"
+      },
+      {
+        "name": "Federal Register — NRC, The Sunset Rule, confirmation of effective date and partial withdrawal (Jan. 8, 2026)",
+        "url": "https://www.federalregister.gov/d/2026-00175"
+      },
+      {
+        "name": "Federal Register — NRC, The Sunset Rule-Aircraft Impact Assessment (Apr. 8, 2026)",
+        "url": "https://www.federalregister.gov/documents/2026/04/08/2026-06747/the-sunset-rule-aircraft-impact-assessment"
+      },
+      {
+        "name": "Federal Register — NRC, Sunset Provisions request for information (June 26, 2026)",
+        "url": "https://www.federalregister.gov/documents/2026/06/26/2026-12887/sunset-provisions"
+      },
+      {
+        "name": "Federal Register — DOE, Zero-Based Regulating direct final rule (May 29, 2026)",
+        "url": "https://www.federalregister.gov/d/2026-10727"
+      },
+      {
+        "name": "Federal Register — DOE, Zero-Based Regulating, withdrawal of direct final rule (July 9, 2026)",
+        "url": "https://www.federalregister.gov/d/2026-13875"
+      },
+      {
+        "name": "Institute for Policy Integrity — Comments to the Department of Energy on Its Sunset Rule (June 30, 2026)",
+        "url": "https://policyintegrity.org/projects/update/comments-to-the-department-of-energy-on-its-sunset-rule"
+      },
+      {
+        "name": "Multi-state attorneys general comment letter on DOE Zero-Based Regulating NOPR (June 29, 2026)",
+        "url": "https://oag.ca.gov/system/files/attachments/press-docs/Final%20Multi-State%20Comment%20Letter%20DOE%20Sunset%20NOPR.pdf"
+      },
+      {
+        "name": "Federal Register — BLM, Oil and Gas Leasing proposed rule (June 24, 2026)",
+        "url": "https://www.federalregister.gov/d/2026-12734"
       }
     ],
-    "short_summary": "Energy/environmental rules now auto-expire after 1 year unless agencies act to renew them.",
-    "last_substantive_update": "2026-09-06",
+    "short_summary": "Ordered energy agencies to make covered rules auto-expire after 1 year unless renewed.",
+    "last_substantive_update": "2026-09-28",
     "glance": {
       "who": "Donald Trump",
       "what": "Ordered energy rules to expire after one year unless agencies renew them",
@@ -59,31 +123,7 @@
         "certainty": "documented",
         "who": "Energy and environmental protections"
       },
-      "reviewed": "2026-09-20"
-    },
-    "timeline": {
-      "what_changed": {
-        "base": "Directs covered agencies (EPA, DOE, FERC, NRC, DOI bureaus, Army Corps, BLM, BOEM) to issue a 'sunset rule' by September 30, 2025 (later extended to September 30, 2026 for some agencies) inserting a 'Conditional Sunset Date' into covered existing regulations -- one year after the sunset rule's effective date, unless the agency affirmatively extends it (up to 5 more years at a time, following a public comment opportunity). All new energy-related regulations must include a sunset date no more than 5 years out. **If an agency does not act to extend a regulation before its sunset date, the regulation automatically expires and is removed from the Code of Federal Regulations -- no additional agency action or public process is required for the expiration itself.**",
-        "updates": [
-          {
-            "date": null,
-            "label": "Update",
-            "text": "Update: DOE withdrew its own direct final rule implementing the sunset mandate (covering 21 parts of Title 10 CFR) on July 28, 2026, after receiving adverse public comments arguing the sunset process 'bypasses meaningful public input and fails to adequately assess whether the sunsets are consistent with underlying statutory mandates.' DOE will instead proceed through standard notice-and-comment rulemaking on a companion proposed rule it had already filed -- a second agency (alongside NRC) where sunset implementation has hit real friction rather than proceeding cleanly.",
-            "effective_date": null
-          }
-        ]
-      },
-      "confidence_note": {
-        "base": "Strong 'process is the harm' entry, similar to EO 14192 but energy-specific and more severe in mechanism -- automatic expiration by default, rather than requiring agencies to affirmatively act to repeal. Worth noting the NRC's early implementation actually sunset very few regulations (found most were statutorily protected), which is a useful nuance: the mechanism is structurally risky, but agency-by-agency outcomes so far are mixed, not uniformly severe.",
-        "updates": [
-          {
-            "date": null,
-            "label": "Update",
-            "text": "Update: DOE's July 2026 withdrawal-and-restart adds a second data point to that mixed-outcomes pattern -- two of the covered agencies have now hit procedural friction rather than smoothly implementing the sunset mandate as designed.",
-            "effective_date": null
-          }
-        ]
-      }
+      "reviewed": "2026-09-28"
     }
   },
   {
@@ -187,59 +227,64 @@
     "administration": "Trump II (2025-present)",
     "agency": "Department of the Interior (Bureau of Land Management, Bureau of Ocean Energy Management)",
     "domain": "environmental",
-    "status": "ANWR Coastal Plain and NPR-A leasing restrictions rescinded and finalized (Oct.-Nov. 2025); a June 2026 ANWR lease sale held under active litigation drew minimal industry interest; the five-year offshore leasing draft program (2026-2031) remains in draft/comment stage as of its January 23, 2026 comment-period close, with no finalization identified as of this entry",
+    "status": "ANWR and NPR-A leasing limits rescinded (Oct.-Nov. 2025); June 2026 ANWR sale drew $3.74M from two bidders as suits remain pending; the 2026-2031 offshore program is still a draft, its next proposal pending as of Sept. 2026",
     "date_of_action": "2025-10-23 (ANWR Coastal Plain reopened) through 2026-06-05 (ANWR lease sale results); NPR-A final rule published 2025-11-17; five-year OCS leasing draft program released 2025-11-20, comment period closed 2026-01-23",
     "original_rule_summary": "The Biden administration had left the Arctic Refuge's 1.56-million-acre Coastal Plain under a 2024 Record of Decision limiting leasing to a small fraction of the area Trump's first-term program allowed, and had suspended Alaska Industrial Development and Export Authority's (AIDEA) leases from a 2021 sale. A separate 2024 rule protected roughly 13 million acres of ecologically sensitive 'Special Areas' within the National Petroleum Reserve-Alaska by creating a regulatory presumption against oil and gas activity there unless operators could show minimal or no adverse effect on surface resources. The Biden administration's 2024 five-year Outer Continental Shelf (OCS) oil and gas leasing program scheduled no new lease sales in federal waters through 2029, the first such plan in the program's history to include zero new sales.",
-    "what_changed": "On October 23, 2025, Interior Secretary Doug Burgum rescinded the Biden-era Record of Decision on the Arctic Refuge and reinstated the maximum-leasing 2020 program, reopening the entire 1.56-million-acre Coastal Plain to oil and gas leasing and lifting the suspension on AIDEA's 2021 leases. On November 17, 2025, Interior published a final rule in the Federal Register rescinding the 2024 National Petroleum Reserve-Alaska rule, removing the presumption against drilling across roughly 13 million acres of 'Special Areas' and reverting to weaker 1977-era standards; Burgum said the change would 'unlock Alaska's energy potential.' On November 20, 2025, Interior released a draft five-year OCS leasing program for 2026-2031 proposing as many as 34 lease sales -- the most aggressive offering in decades -- across 21 of 27 planning areas, including six sales off California, new drilling more than 100 miles off Florida, and more than 20 Alaska sales spanning Cook Inlet, the Beaufort and Chukchi Seas, and a newly designated 'High Arctic' area over 200 miles offshore; the 60-day public comment period ran November 24, 2025 through January 23, 2026, and the administration later removed the Atlantic coast from consideration after bipartisan political backlash. **A June 2026 BLM lease sale in the Arctic Refuge, held while three separate lawsuits challenging the October 2025 decision remained pending (filed by NRDC/Center for Biological Diversity/Friends of the Earth, the Gwich'in Steering Committee, and the Native Village of Venetie Tribal Government), drew just nine bids on five of the 58 tracts offered -- about 72,049 of the 688,829 acres put up for sale -- totaling $3.7 million, with only AIDEA and Alaska-based Hex LLC bidding; neither company has prior Arctic drilling experience.** Added 2026-09-10 (round-4 backlog cluster c0510): a separate, non-oil-and-gas Alaska extraction project -- the Donlin Gold mine, a mining venture distinct from this entry's ANWR/NPRA leasing actions -- received its own fast-track federal permitting designation (FAST-41) in October 2025 under the same broader administration push; see the companion entry donlin-gold-mine-fast41-tailings-dam-risk-2025.json for that project's distinct legal mechanism and its own unresolved tailings-dam spill-risk court finding.",
+    "what_changed": "On October 23, 2025, Interior Secretary Doug Burgum rescinded the Biden-era Record of Decision on the Arctic Refuge and reinstated the maximum-leasing 2020 program, reopening the entire 1.56-million-acre Coastal Plain to oil and gas leasing and lifting the suspension on AIDEA's 2021 leases. On November 17, 2025, Interior published a final rule in the Federal Register rescinding the 2024 National Petroleum Reserve-Alaska rule, removing the presumption against drilling across roughly 13 million acres of 'Special Areas' and reverting to weaker 1977-era standards; Burgum said the change would 'unlock Alaska's energy potential.' On November 20, 2025, Interior released a draft five-year OCS leasing program for 2026-2031 proposing as many as 34 lease sales -- the most aggressive offering in decades -- across 21 of 27 planning areas, including six sales off California, new drilling at least 100 miles off Florida, and 21 Alaska sales spanning Cook Inlet, the Beaufort and Chukchi Seas, and a newly designated 'High Arctic' area over 200 miles offshore. Interior had already dropped the Atlantic coast from the plan about three weeks before the draft's release, after Republicans in the region pressed to keep rigs away from their shores, so the draft schedules no Atlantic sales. The 60-day public comment period ran November 24, 2025 through January 23, 2026. On December 11, 2025, Trump signed a Congressional Review Act resolution (H.J. Res. 131, Public Law 119-52) nullifying the Biden administration's December 2024 Coastal Plain Record of Decision. On March 18, 2026, the first National Petroleum Reserve-Alaska lease sale since 2019 -- one of five the 2025 One Big Beautiful Bill Act mandates there over 10 years -- drew a record $163 million in high bids from 11 companies, with ConocoPhillips and Repsol the most prominent bidders, on more than 1.3 million of the nearly 5.5 million acres offered; BLM accepted bids on tracts around Teshekpuk Lake even though U.S. District Judge Sharon Gleason had two days earlier issued an injunction reinstating a right-of-way agreement that bars development there, and the sale's inclusion of long-protected land is the subject of two lawsuits by Native and environmental groups. **A June 2026 BLM lease sale in the Arctic Refuge, held under the One Big Beautiful Bill Act's mandate of at least four Arctic Refuge sales through 2035 and while three separate but parallel lawsuits -- originally filed in 2020, with at least two amended in January 2026 to challenge the October 2025 decision -- remained pending (brought by NRDC/Center for Biological Diversity/Friends of the Earth, the Gwich'in Steering Committee, and the Native Village of Venetie Tribal Government), drew just nine bids on five of the 58 tracts offered -- 72,049 of the 688,829 acres put up for sale -- with high bids totaling $3.74 million, and only AIDEA and Anchorage-based HEX Energy LLC bidding; HEX, a Cook Inlet gas producer, has never operated on the North Slope, and AIDEA had done no exploration work on the leases it has held since 2021.** On July 8, 2026, the Justice Department settled suits by the State of Alaska and AIDEA over the Biden-era Coastal Plain limits, conceding that the 2024 program violated the 2017 Tax Cuts and Jobs Act. As of late September 2026, BOEM's program page still lists the offshore program's next step, the Proposed Program (2nd Analysis and Proposal), as pending, though a Secretary's Order issued with the draft directed BOEM to have the new program in place by October 2026. Separately, a non-oil-and-gas Alaska extraction project -- the Donlin Gold mine, distinct from this entry's ANWR/NPR-A leasing actions -- received fast-track federal permitting coverage (FAST-41) on October 27, 2025 under the same broader administration push; the companion Donlin Gold entry covers that project's distinct legal mechanism and its own unresolved tailings-dam spill-risk court finding.",
     "primary_proponent": {
       "name": "Doug Burgum",
       "role": "Secretary of the Interior",
-      "note": "Signed the October 2025 ANWR rescission and the November 2025 NPR-A rule, and Interior released the five-year OCS leasing draft program under his direction, implementing Trump's Executive Order 14153 (signed his first day in office, Jan. 20, 2025) directing agencies to maximize domestic energy development."
+      "note": "Signed the October 2025 ANWR rescission and the November 2025 NPR-A rule, and Interior released the five-year OCS leasing draft program under his direction, implementing Trump's Executive Orders 14153 and 14154 (both signed his first day in office, Jan. 20, 2025), the latter directing agencies to maximize domestic energy development."
     },
     "corporate_beneficiaries": [
       {
-        "name": "Alaska Industrial Development and Export Authority (AIDEA, a state-owned development corporation) and Hex LLC",
+        "name": "Alaska Industrial Development and Export Authority (AIDEA, a state-owned development corporation) and HEX Energy LLC",
         "connection": "The only two bidders at the June 2026 ANWR Coastal Plain lease sale; AIDEA also had its 2021 leases -- suspended under the Biden administration -- reinstated by the October 2025 rescission."
       },
       {
-        "name": "Oil and gas developers with interests in the newly reopened National Petroleum Reserve-Alaska Special Areas and OCS planning areas (California, Gulf of Mexico, Alaska, Florida)",
+        "name": "Oil and gas developers with interests in the newly reopened National Petroleum Reserve-Alaska Special Areas (including ConocoPhillips and Repsol, the prominent bidders at the record March 2026 NPR-A sale) and OCS planning areas (California, Gulf of Mexico, Alaska, Florida)",
         "connection": "The NPR-A rule removes the presumption against drilling on ~13 million acres, and the draft five-year OCS program would open the largest number of new lease sales in decades if finalized."
       }
     ],
     "estimated_health_impact": {
-      "summary": "This entry documents an environmental/conservation and public-lands leasing rollback rather than a direct human-health standard; the risk is chiefly to Arctic and coastal wildlife and ecosystems, and -- distinctly -- to Indigenous and North Slope communities whose subsistence economies depend on the caribou herds and marine mammals put at risk, rather than to a modeled human mortality figure. The economic case for the expansion is also disputed by the ANWR sale's own results.",
+      "summary": "The harm documented here is risk, not a realized event: the Gwich'in, whose subsistence and way of life depend on the Porcupine caribou herd that calves on the Arctic Refuge's coastal plain, and North Slope communities such as Nuiqsut near NPR-A development, face exposure of the land and wildlife they rely on as the entire 1.56-million-acre Coastal Plain is reopened to leasing and about 13 million acres of NPR-A Special Areas lose their presumption against drilling, with the offshore draft proposing 34 more sales. Denning polar bears, caribou and migratory birds lose protected habitat. No modeled human mortality figure exists. Financially, the June 2026 Arctic Refuge sale raised $3.74 million, half of it for Alaska, while the March 2026 NPR-A sale drew a record $163 million, so the revenue case differs sharply between the two areas.",
       "figures": [
         {
           "metric": "ANWR Coastal Plain acreage reopened to leasing",
-          "value": "1.56 million acres",
-          "source": "Interior Department / Earthjustice, October 2025"
+          "value": "1.56 million acres (entire Coastal Plain)",
+          "source": "BLM Record of Decision, October 23, 2025 (per Harvard EELP tracker and Earthjustice)"
         },
         {
           "metric": "NPR-A 'Special Areas' acreage stripped of the presumption-against-drilling protection",
-          "value": "~13 million acres",
-          "source": "BLM/DOI final rule, November 17, 2025"
+          "value": "~13 million acres (of the ~23-million-acre reserve)",
+          "source": "BLM final rule, published November 17, 2025; BLM press release; Reuters"
         },
         {
-          "metric": "Draft five-year OCS leasing program scope (2026-2031)",
-          "value": "up to 34 lease sales across 21 of 27 planning areas; as much as ~1.27-1.3 billion acres of federal waters",
-          "source": "NRDC, Center for Biological Diversity, November 2025 reporting on Interior's draft program"
+          "metric": "Draft five-year OCS leasing program scope (2026-2031), proposed not final",
+          "value": "up to 34 lease sales in 21 of 27 planning areas (21 Alaska, 7 Gulf, 6 Pacific); ~1.27 billion acres",
+          "source": "Interior Department release, November 20, 2025; BOEM program page"
         },
         {
-          "metric": "Total winning bids at the June 2026 ANWR Coastal Plain lease sale",
-          "value": "$3.7 million (9 bids on 5 of 58 offered tracts, ~72,049 of 688,829 acres offered)",
-          "source": "Alaska Beacon, June 2026"
+          "metric": "June 5, 2026 ANWR Coastal Plain lease sale results",
+          "value": "$3,741,528 in high bids (9 bids on 5 of 58 tracts; 72,049 of 688,829 acres); 50% ($1,870,764) to Alaska",
+          "source": "BLM 2026 Coastal Plain Lease Sale Bid Recap"
+        },
+        {
+          "metric": "March 18, 2026 NPR-A lease sale results",
+          "value": "$163 million in high bids from 11 companies on 1.3+ million of ~5.5 million acres offered (a record)",
+          "source": "Alaska Beacon, March 19, 2026"
         }
       ],
-      "caveat": "No oil spill or direct human-health incident has occurred under these actions as of this entry; the harm documented is exposure/risk (polar bear denning habitat, the Porcupine caribou herd, walrus, and bowhead and beluga whale habitat, per Center for Biological Diversity and Defenders of Wildlife reporting) rather than a realized event. The ANWR lease sale's weak results (2 bidders, both without Arctic drilling experience, well below the acreage and tract counts offered) are cited by opponents as evidence the leasing expansion lacks the industry demand its economic rationale assumes; that characterization is not independently adjudicated. The five-year OCS program remains a draft as of its comment-period close -- its final scope, if finalized, could differ from the November 2025 proposal (the Atlantic coast was already removed after backlash), so this entry should be rechecked against Interior's final program once published."
+      "caveat": "No oil spill or direct human-health incident has occurred under these actions as of September 2026; the harm is exposure and risk (polar bear denning habitat, the Porcupine caribou herd, migratory birds, and, offshore, walrus and bowhead and beluga whales, per Defenders of Wildlife, the Center for Biological Diversity, the Gwich'in Steering Committee and other opponents) rather than a realized event, and No agency or group estimate of a human health effect was found. The Arctic Refuge sale's weak results are cited by opponents as evidence the expansion lacks industry demand, but that characterization is contested (BLM and North Slope Inupiat groups called the sale a success) and the record NPR-A sale, where the prominent bidders already operate, drew strong demand. The offshore program is a draft: the Atlantic was excluded before its release, the next proposal is still pending, and final scope could differ."
     },
-    "confidence_note": "HIGH confidence on the ANWR and NPR-A actions (BLM's and DOI's own press releases, corroborated by Reuters, AP, and Earthjustice) and on the June 2026 lease-sale results (Alaska Beacon, Alaska Wilderness League, Environment America). HIGH confidence on the five-year OCS draft program's proposed scope (NRDC, PBS, NBC News, Earthjustice, Alaska Beacon all corroborate the 34-sale/21-planning-area figures), though its status is a draft, not a finalized program -- treat any acreage/sale-count figure as proposed, not final, pending Interior's final program. The litigation challenging the ANWR decision (three separate suits) was pending, not resolved, as of the sources reviewed.",
-    "pull_quote": "Interior Secretary Burgum said reopening the National Petroleum Reserve-Alaska's protected Special Areas would ‘unlock Alaska's energy potential’ -- a claim the ANWR lease sale's weak industry turnout later undercut.",
+    "confidence_note": "HIGH confidence on the ANWR and NPR-A actions (BLM's and DOI's own press releases, corroborated by Reuters, AP, and Earthjustice) and on the June 2026 lease-sale results (BLM's official bid recap and Alaska Beacon). HIGH confidence on the five-year OCS draft program's proposed scope (Interior's November 20, 2025 release and BOEM's program page give the 34-sale/21-of-27-planning-area figures; PBS/AP and NRDC report the same plan), though its status is a draft, not a finalized program -- treat any acreage/sale-count figure as proposed, not final, pending Interior's final program. The litigation challenging the ANWR decision (three separate suits) was pending, not resolved, as of the sources reviewed.",
+    "pull_quote": "Interior Secretary Burgum said reopening the National Petroleum Reserve-Alaska's protected Special Areas would ‘unlock Alaska's energy potential’; the reserve's March 2026 sale drew a record $163 million, while the Arctic Refuge's June 2026 sale drew just $3.74 million from two bidders.",
     "section_summaries": {
-      "what_changed": "Interior reopened ANWR's full 1.56M-acre Coastal Plain (Oct. 2025) and stripped drilling protections from 13M acres of NPR-A 'Special Areas' (Nov. 2025), then proposed the most aggressive five-year offshore leasing program in decades (34 potential sales, up to ~1.3B acres); a June 2026 ANWR lease sale held under active litigation drew just $3.7M from two bidders.",
-      "estimated_impact": "Millions of acres of Arctic and offshore habitat -- polar bear denning grounds, the Porcupine caribou herd's range, whale and walrus habitat -- were opened to leasing; the ANWR sale's weak industry turnout raises a disputed question about whether demand matches the policy's scale.",
-      "confidence_note": "Well-corroborated across DOI/BLM's own releases and multiple outlets for the finalized ANWR/NPR-A actions and the June 2026 sale results; the five-year OCS program remains a draft, not yet finalized, so its final scope should be rechecked."
+      "what_changed": "Interior reopened ANWR's 1.56M-acre Coastal Plain and stripped protections from 13M NPR-A acres (2025), and proposed 34 offshore lease sales; a June 2026 ANWR sale drew just $3.74M from two bidders.",
+      "estimated_impact": "Gwich'in who rely on the Porcupine caribou herd and North Slope villages like Nuiqsut face habitat risk as millions of Arctic acres open to leasing; no spill or health harm has occurred yet.",
+      "confidence_note": "ANWR/NPR-A actions and sale results rest on DOI/BLM records, a public law and multiple outlets; the offshore program is still a draft, so its final scope needs a recheck."
     },
-    "last_verified": "2026-09-09",
+    "last_verified": "2026-09-28",
     "date_added": "2026-09-09",
     "sources": [
       {
@@ -281,10 +326,50 @@
       {
         "name": "NBC News (AP) -- 'Trump administration announces plan to drill oil off California and Florida'",
         "url": "https://www.nbcnews.com/science/environment/trump-administration-oil-drilling-coasts-california-florida-rcna245034"
+      },
+      {
+        "name": "BLM -- 2026 Coastal Plain Oil & Gas Lease Sale Bid Recap (June 5, 2026)",
+        "url": "https://www.blm.gov/sites/default/files/docs/2026-06/2026%20Coastal%20Plain%20Lease%20Sale%20Bid%20Recap.pdf"
+      },
+      {
+        "name": "Harvard EELP -- Arctic National Wildlife Refuge oil and gas development tracker",
+        "url": "https://eelp.law.harvard.edu/tracker/arctic-national-wildlife-refuge-oil-and-gas-development/"
+      },
+      {
+        "name": "Earthjustice -- 'Lease Sale Seeks to Transform Arctic National Wildlife Refuge into a Fossil Fuel Industrial Zone' (June 5, 2026)",
+        "url": "https://earthjustice.org/press/2026/lease-sale-threatens-to-transform-arctic-national-wildlife-refuge-into-a-fossil-fuel-industrial-zone"
+      },
+      {
+        "name": "Trustees for Alaska -- Gwich'in Steering Committee and allied groups amended complaint release (Jan. 13, 2026)",
+        "url": "https://trustees.org/wp-content/uploads/2026/01/2026Jan.GwichinAlliedGroupsUpdateComplaint.UnlawfulArcticRefugeLeaseProgram-2.pdf"
+      },
+      {
+        "name": "Interior Department -- 'Interior Launches Expansive 11th National Offshore Leasing Program' (Nov. 20, 2025)",
+        "url": "https://www.doi.gov/pressreleases/interior-launches-expansive-11th-national-offshore-leasing-program-advance-us-energy"
+      },
+      {
+        "name": "BOEM -- National OCS Oil and Gas Leasing Program (11th program status page)",
+        "url": "https://www.boem.gov/oil-gas-energy/national-program/national-ocs-oil-and-gas-leasing-program"
+      },
+      {
+        "name": "Politico (reposted by Rep. Huffman) -- 'White House removes Atlantic from oil lease consideration after political backlash' (Oct. 31, 2025)",
+        "url": "https://huffman.house.gov/media-center/in-the-news/white-house-removes-atlantic-from-oil-lease-consideration-after-political-backlash"
+      },
+      {
+        "name": "Public Law 119-52 (H.J. Res. 131), disapproving the Coastal Plain Oil and Gas Leasing Program Record of Decision (Dec. 11, 2025)",
+        "url": "https://www.congress.gov/119/plaws/publ52/PLAW-119publ52.pdf"
+      },
+      {
+        "name": "Alaska Beacon (via Alaska Public Media) -- 'Arctic Alaska oil and gas lease sale draws record bidding, despite legal clouds' (Mar. 19, 2026)",
+        "url": "https://alaskapublic.org/news/economy/energy/2026-03-19/arctic-alaska-oil-and-gas-lease-sale-draws-record-bidding-despite-legal-clouds"
+      },
+      {
+        "name": "Center for Biological Diversity -- 'Trump Offshore Drilling Plan Brings Oil Spill Risks to U.S. Coasts' (Nov. 20, 2025)",
+        "url": "https://biologicaldiversity.org/w/news/press-releases/trump-offshore-drilling-plan-brings-oil-spill-risks-to-us-coasts-2025-11-20/"
       }
     ],
-    "short_summary": "Interior reopened ANWR's full coastal plain and 13M NPR-A acres to drilling, then proposed the most aggressive 5-year offshore leasing plan in decades -- though the first ANWR lease sale drew just $3.7M from two bidders.",
-    "last_substantive_update": "2026-09-09",
+    "short_summary": "Interior reopened ANWR's full coastal plain and 13M NPR-A acres to drilling, then proposed the most aggressive 5-year offshore leasing plan in decades -- though the June 2026 ANWR lease sale drew just $3.74M from two bidders.",
+    "last_substantive_update": "2026-09-28",
     "glance": {
       "who": "Doug Burgum",
       "what": "Reopened the Arctic Refuge and 13M acres of NPR-A to oil and gas leasing",
@@ -293,20 +378,7 @@
         "certainty": "projected",
         "who": "Arctic wildlife, Indigenous communities"
       },
-      "reviewed": "2026-09-20"
-    },
-    "timeline": {
-      "what_changed": {
-        "base": "On October 23, 2025, Interior Secretary Doug Burgum rescinded the Biden-era Record of Decision on the Arctic Refuge and reinstated the maximum-leasing 2020 program, reopening the entire 1.56-million-acre Coastal Plain to oil and gas leasing and lifting the suspension on AIDEA's 2021 leases. On November 17, 2025, Interior published a final rule in the Federal Register rescinding the 2024 National Petroleum Reserve-Alaska rule, removing the presumption against drilling across roughly 13 million acres of 'Special Areas' and reverting to weaker 1977-era standards; Burgum said the change would 'unlock Alaska's energy potential.' On November 20, 2025, Interior released a draft five-year OCS leasing program for 2026-2031 proposing as many as 34 lease sales -- the most aggressive offering in decades -- across 21 of 27 planning areas, including six sales off California, new drilling more than 100 miles off Florida, and more than 20 Alaska sales spanning Cook Inlet, the Beaufort and Chukchi Seas, and a newly designated 'High Arctic' area over 200 miles offshore; the 60-day public comment period ran November 24, 2025 through January 23, 2026, and the administration later removed the Atlantic coast from consideration after bipartisan political backlash. **A June 2026 BLM lease sale in the Arctic Refuge, held while three separate lawsuits challenging the October 2025 decision remained pending (filed by NRDC/Center for Biological Diversity/Friends of the Earth, the Gwich'in Steering Committee, and the Native Village of Venetie Tribal Government), drew just nine bids on five of the 58 tracts offered -- about 72,049 of the 688,829 acres put up for sale -- totaling $3.7 million, with only AIDEA and Alaska-based Hex LLC bidding; neither company has prior Arctic drilling experience.**",
-        "updates": [
-          {
-            "date": "2026-09-10",
-            "label": "Added",
-            "text": "Added 2026-09-10 (round-4 backlog cluster c0510): a separate, non-oil-and-gas Alaska extraction project -- the Donlin Gold mine, a mining venture distinct from this entry's ANWR/NPRA leasing actions -- received its own fast-track federal permitting designation (FAST-41) in October 2025 under the same broader administration push; see the companion entry donlin-gold-mine-fast41-tailings-dam-risk-2025.json for that project's distinct legal mechanism and its own unresolved tailings-dam spill-risk court finding.",
-            "effective_date": "2026-09-10"
-          }
-        ]
-      }
+      "reviewed": "2026-09-28"
     }
   },
   {
@@ -629,37 +701,42 @@
     "administration": "Trump I (2017-2021)",
     "agency": "CFPB",
     "domain": "financial",
-    "status": "Fully Repealed (ability-to-repay provision)",
-    "date_of_action": "2019-02-06 (proposed); 2020-07 (finalized)",
+    "status": "Fully Repealed (ability-to-repay provisions; final rule July 2020, effective Oct. 20, 2020). The surviving payment-withdrawal limits took effect March 30, 2025, but CFPB said it would not prioritize penalties under them; a planned rule to reconsider them had not been proposed as of Sept. 2026.",
+    "date_of_action": "2019-02-06 (proposed); 2020-07-07 (finalized)",
     "original_rule_summary": "2017 CFPB rule (under Director Richard Cordray) requiring payday and short-term title lenders to verify a borrower's actual ability to repay a loan before issuing it -- an underwriting requirement developed over 5 years of CFPB research, aimed at preventing debt-trap cycles from loans with APRs often exceeding 390%.",
-    "what_changed": "**The Trump-era CFPB proposed and later finalized removal of the ability-to-repay ('underwriting') provision, while leaving in place separate provisions restricting how lenders can debit a borrower's bank account. CFPB's own senior officials stated the rescission stemmed from a view that there wasn't enough evidence the practice was 'unfair and abusive' -- despite the agency's own prior 5-year research record concluding the opposite.** Update: CFPB's 2026 regulatory agenda (published July 2026) designates the remaining provisions of the 2017 rule -- including the payment/account-debiting restrictions left untouched by the 2020 rollback, and their compliance dates -- for a further rulemaking, explicitly categorized as deregulatory under Executive Order 14192; a Notice of Proposed Rulemaking is anticipated for July 2026. This is a planned, not-yet-enacted second-round action on the same underlying rule -- nothing has changed yet.",
+    "what_changed": "**The Trump-era CFPB proposed and later finalized removal of the ability-to-repay ('underwriting') provisions, while leaving in place separate provisions restricting how lenders can debit a borrower's bank account.** Acting Director Mick Mulvaney delayed the 2017 rule before it could take effect, and on February 6, 2019 the CFPB under Director Kathy Kraninger formally proposed dropping the underwriting provisions. A senior CFPB official, speaking to reporters on condition of anonymity, said the decision stemmed from a concern that there was not enough evidence that payday lending was unfair and abusive enough to require the rule -- even though the 2017 rule rested on five years of CFPB research and had declared lending without a reasonable ability-to-repay determination an unfair and abusive practice. In that 2019 proposal, the bureau estimated that dropping the underwriting requirements would raise payday lenders' annual revenue by about $3.4-3.6 billion and vehicle-title lenders' by about $3.9-4.1 billion. The CFPB finalized the rescission on July 7, 2020 (published July 22, 2020; effective October 20, 2020); the final rule itself acknowledged studies suggesting that the repeat borrowing the 2017 rule had limited could lead to overdraft and NSF fees, involuntary checking-account closures, financial instability, and effects on stress and related health measures. The surviving payment provisions -- which bar a lender from trying again to withdraw money from a borrower's account after two consecutive attempts fail for insufficient funds, unless the borrower gives new authorization -- were held up by industry litigation and finally took effect on March 30, 2025. Two days earlier, on March 28, 2025, the CFPB announced it would not prioritize enforcement or supervision actions over penalties or fines under those provisions. CFPB's 2026 regulatory agenda (released July 6, 2026) then designated the remaining provisions of the 2017 rule, including their compliance dates, for a further rulemaking, categorized as deregulatory under Executive Order 14192, with a Notice of Proposed Rulemaking anticipated for July 2026. As of late September 2026, no such proposal had been published in the Federal Register, so the payment provisions remain in effect on paper.",
     "primary_proponent": {
       "name": "Mick Mulvaney",
       "role": "Acting CFPB Director",
-      "note": "Initiated the delay and rollback process starting in 2018; publicly called the CFPB a 'sick, sad joke' and had proposed abolishing it as a congressman. Documented as having accepted campaign donations from payday lenders and dropping CFPB enforcement actions against installment lenders during his tenure. The rule was finalized under his successor, Kathy Kraninger, in 2020."
+      "note": "Initiated the delay and rollback process starting in 2018; publicly called the CFPB a 'sick, sad joke' and had proposed abolishing it as a congressman. Documented as having accepted campaign donations from payday lenders; during his tenure the CFPB dropped its lawsuit against four tribe-owned payday lenders and ended its investigation of installment lender World Acceptance Corporation. The 2019 proposal and 2020 final rule were issued under his successor, Kathy Kraninger."
     },
     "corporate_beneficiaries": [
       "Payday and short-term title lenders, including Select Management Resources, Advance America, and Check Into Cash, several of which donated to Trump's inaugural committee"
     ],
     "estimated_health_impact": {
-      "summary": "Indirect: debt-trap cycles correlate with acute psychological anxiety, depression, and stress-related physical ailments. CFPB's own estimate: the rescinded ability-to-repay provisions were projected to save consumers (and cost lenders) $7 billion per year -- a strong, agency-originated figure for debate use.",
+      "summary": "Payday and car-title borrowers lost the requirement, before it ever took effect, that lenders check they could repay before lending, leaving open the repeat-borrowing debt trap the 2017 rule was built to stop; CFPB had found that more than 80% of payday loans are rolled over or followed by another loan within two weeks. CFPB's own 2020 final rule acknowledged studies suggesting such reborrowing can bring overdraft and NSF fees, involuntary account closures, financial instability, and effects on stress and related health measures. In money terms, CFPB's 2019 proposal estimated that dropping the underwriting requirements would add about $3.4-3.6 billion a year to payday lenders' revenue and $3.9-4.1 billion to vehicle-title lenders' -- roughly $7 billion a year, largely borrower fees, that the 2017 rule would have kept from lenders. The account-debiting limits that survived took effect in March 2025, but the CFPB said it would not prioritize enforcement actions seeking penalties or fines under them.",
       "figures": [
         {
-          "metric": "CFPB's own estimate of annual consumer savings from the rescinded provisions",
-          "value": "$7,000,000,000/year",
-          "source": "CFPB, cited by Banking Dive"
+          "metric": "Added annual lender revenue from dropping the ability-to-repay requirements (payday $3.4-3.6B + vehicle title $3.9-4.1B), i.e., consumer savings the 2017 rule would have produced",
+          "value": "about $7.3-7.7 billion/year (reported as $7 billion)",
+          "source": "CFPB, 2019 proposed rule (84 FR 4252) and 2020 final rule (85 FR 44382); reported by Banking Dive"
+        },
+        {
+          "metric": "Share of payday loans rolled over or followed by another loan within 14 days",
+          "value": "more than 80%",
+          "source": "CFPB, Data Point: Payday Lending (March 2014)"
         }
       ],
-      "caveat": "The $7B figure is a financial-savings estimate, not a direct health/mortality figure -- the health linkage (debt-trap stress correlating with mental and physical health harm) is drawn from general research on financial stress, not a rule-specific health study."
+      "caveat": "Revenue figures are CFPB's own simulations, applied to CFSI's industry revenue estimates, against the 2017 rule's baseline (payday figure from the 2019 proposal; vehicle-title figure repeated in the 2020 final rule); they measure added lender revenue, mostly borrower fees, not net consumer harm. The health linkage comes from studies CFPB cited generally, not a rule-specific quantified health or mortality estimate. Does not capture the effect of CFPB's 2025 decision not to prioritize penalties or fines under the surviving payment provisions."
     },
-    "confidence_note": "Strong sourcing on the regulatory action, the proponent (Mulvaney, with documented conflicts of interest), and a real agency-originated dollar figure. The mental/physical health linkage rests on general evidence -- debt-trap stress is well-documented to correlate with anxiety and physical health harm -- not on a rule-specific quantified health study. Update: the 2026 agenda item targeting the rule's remaining provisions is a proposal, not a final action -- it is not completed until an actual NPRM or final rule is confirmed.",
+    "confidence_note": "Strong sourcing on the regulatory action (Federal Register), the proponent (Mulvaney, with documented conflicts of interest), and agency-originated revenue figures from CFPB's own analysis. The mental/physical health linkage rests on general research on debt-trap stress, which CFPB's 2020 final rule itself acknowledged, not on a rule-specific quantified health study. The planned reconsideration of the surviving payment provisions is an agenda item only; no proposed rule had been published as of September 2026.",
     "pull_quote": "CFPB's own estimate: the rescinded ability-to-repay provisions were projected to save consumers (and cost lenders) $7 billion per year -- loans the original rule targeted often carried APRs exceeding 390%.",
     "section_summaries": {
-      "what_changed": "CFPB dropped the requirement that payday lenders verify borrowers can repay loans, despite its own 5-year research finding the practice unfair. CFPB's 2026 agenda now also proposes rolling back the rule's remaining (payment-restriction) provisions, though nothing is final yet.",
-      "estimated_impact": "CFPB's own estimate: the dropped repayment-check rule would have saved consumers (and cost lenders) $7 billion a year, on top of debt-trap stress harms.",
-      "confidence_note": "Well-sourced on the rollback and Mulvaney's conflicts of interest; frame health harm as debt-stress correlation, not a rule-specific health study."
+      "what_changed": "CFPB dropped the rule that payday lenders verify borrowers can repay (final 2020). Surviving payment limits took effect in 2025; CFPB won't prioritize penalties and plans to revisit them.",
+      "estimated_impact": "CFPB estimated the dropped repayment check would have kept about $7 billion a year from payday and car-title lenders; it also cited studies suggesting repeat borrowing can affect stress and health.",
+      "confidence_note": "Well-sourced on the rollback, CFPB's own figures, and Mulvaney's conflicts; frame health harm as debt-stress research, not a rule-specific health study."
     },
-    "last_verified": "2026-09-06",
+    "last_verified": "2026-09-28",
     "date_added": "2026-07-03",
     "sources": [
       {
@@ -677,43 +754,39 @@
       {
         "name": "Consumer Financial Services Law Monitor — CFPB Releases 2026 Regulatory Agenda Detailing Planned Rulemakings",
         "url": "https://www.consumerfinancialserviceslawmonitor.com/2026/07/cfpb-releases-2026-regulatory-agenda-detailing-planned-rulemakings/"
+      },
+      {
+        "name": "Federal Register -- Payday, Vehicle Title, and Certain High-Cost Installment Loans (final rule, 85 FR 44382, July 22, 2020)",
+        "url": "https://www.federalregister.gov/documents/2020/07/22/2020-14935/payday-vehicle-title-and-certain-high-cost-installment-loans"
+      },
+      {
+        "name": "Federal Register -- Payday, Vehicle Title, and Certain High-Cost Installment Loans (proposed rule, 84 FR 4252, Feb. 14, 2019)",
+        "url": "https://www.federalregister.gov/documents/2019/02/14/2019-01906/payday-vehicle-title-and-certain-high-cost-installment-loans"
+      },
+      {
+        "name": "CFPB -- CFPB Offers Regulatory Relief for Small Loan Providers (Mar. 28, 2025)",
+        "url": "https://www.consumerfinance.gov/about-us/newsroom/cfpb-offers-regulatory-relief-for-small-loan-providers/"
+      },
+      {
+        "name": "NCLC Digital Library -- Rule on Bounced Payday and High-Cost Loan Payments Now in Effect",
+        "url": "https://library.nclc.org/article/rule-bounced-payday-and-high-cost-loan-payments-now-effect"
+      },
+      {
+        "name": "CFPB -- Data Point: Payday Lending (March 2014)",
+        "url": "https://files.consumerfinance.gov/f/201403_cfpb_report_payday-lending.pdf"
       }
     ],
     "short_summary": "Payday lenders no longer required to verify borrowers can actually repay loans.",
-    "last_substantive_update": "2026-09-06",
+    "last_substantive_update": "2026-09-28",
     "glance": {
-      "who": "Mick Mulvaney (Acting CFPB Director)",
+      "who": "Kathy Kraninger (CFPB Director)",
       "what": "Dropped the rule requiring payday lenders to check that borrowers can repay",
       "harm": {
         "kind": "money",
         "certainty": "projected",
         "who": "Payday loan borrowers"
       },
-      "reviewed": "2026-09-20"
-    },
-    "timeline": {
-      "what_changed": {
-        "base": "**The Trump-era CFPB proposed and later finalized removal of the ability-to-repay ('underwriting') provision, while leaving in place separate provisions restricting how lenders can debit a borrower's bank account. CFPB's own senior officials stated the rescission stemmed from a view that there wasn't enough evidence the practice was 'unfair and abusive' -- despite the agency's own prior 5-year research record concluding the opposite.**",
-        "updates": [
-          {
-            "date": null,
-            "label": "Update",
-            "text": "Update: CFPB's 2026 regulatory agenda (published July 2026) designates the remaining provisions of the 2017 rule -- including the payment/account-debiting restrictions left untouched by the 2020 rollback, and their compliance dates -- for a further rulemaking, explicitly categorized as deregulatory under Executive Order 14192; a Notice of Proposed Rulemaking is anticipated for July 2026. This is a planned, not-yet-enacted second-round action on the same underlying rule -- nothing has changed yet.",
-            "effective_date": null
-          }
-        ]
-      },
-      "confidence_note": {
-        "base": "Strong sourcing on the regulatory action, the proponent (Mulvaney, with documented conflicts of interest), and a real agency-originated dollar figure. The mental/physical health linkage rests on general evidence -- debt-trap stress is well-documented to correlate with anxiety and physical health harm -- not on a rule-specific quantified health study.",
-        "updates": [
-          {
-            "date": null,
-            "label": "Update",
-            "text": "Update: the 2026 agenda item targeting the rule's remaining provisions is a proposal, not a final action -- it is not completed until an actual NPRM or final rule is confirmed.",
-            "effective_date": null
-          }
-        ]
-      }
+      "reviewed": "2026-09-28"
     }
   },
   {
@@ -901,26 +974,37 @@
     "id": "climate-financial-risk-oversight-withdrawal-2025",
     "rule_name": "U.S. Financial Regulators' Participation in Climate-Related Financial Risk Oversight (NGFS Membership and FSOC's Climate-Risk Committees)",
     "administration": "Trump II (2025-present)",
-    "agency": "Federal Reserve, FDIC, Treasury Department (Federal Insurance Office), Financial Stability Oversight Council (FSOC)",
+    "agency": "Federal Reserve, FDIC, OCC, Treasury Department (Federal Insurance Office), Financial Stability Oversight Council (FSOC), FHFA",
     "domain": "financial",
     "status": "Fully Repealed",
-    "date_of_action": "2025-01-17 through 2025-09-10",
-    "original_rule_summary": "The Network of Central Banks and Supervisors for Greening the Financial System (NGFS) is a global coalition of financial regulators that develops shared climate-risk scenarios and analysis to help member institutions assess how climate change threatens financial stability; the U.S. Federal Reserve, FDIC, and Treasury's Federal Insurance Office were all members. Separately, FSOC -- the interagency body chaired by the Treasury Secretary that monitors systemic financial risk -- maintained two dedicated bodies, the Climate-related Financial Risk Committee (CFRC, staff-level) and the Climate-related Financial Risk Advisory Committee (CFRAC, outside experts), created to inform FSOC's assessment of climate change as a threat to U.S. financial stability.",
-    "what_changed": "In the days around Trump's January 20, 2025 inauguration, all three U.S. financial regulators still in the NGFS withdrew their membership: the FDIC announced its withdrawal January 21, 2025, and Treasury's Federal Insurance Office followed January 30, 2025, both stating NGFS's work fell outside their mandate or was 'inconsistent with this Administration's priorities'; the Federal Reserve withdrew separately around the same period. Then, **at its September 10, 2025 meeting, FSOC -- chaired by Treasury Secretary Scott Bessent -- voted to rescind the charters of both CFRC and CFRAC outright, eliminating the interagency body's dedicated climate-risk monitoring infrastructure entirely, with FSOC stating the move would let it 'better focus its attention and resources on core financial stability issues.'** Congressional Democrats pushed back on both fronts: over 40 House members, led by Reps. Juan Vargas and Sean Casten, sent a letter demanding answers on the committees' disbandment, and Senate Banking Committee Democrats sent a follow-up letter to Bessent in December 2025. Round-4 backlog fold, cluster c0757: separately, in a letter released December 11, 2025, Bessent called more broadly for loosening FSOC's general oversight function -- beyond the climate-specific committees already rescinded -- saying 'too often in the past, efforts to safeguard the financial system have resulted in burdensome and often duplicative regulations,' without detailing specific proposed changes to FSOC's designation authority or other tools. CBS News reported the call came amid mounting financial-stability concerns critics cited as reasons for caution rather than deregulation, including potential AI-related stock-valuation risk and recent bankruptcies of Tricolor Holdings, First Brands, and Renovo Home Partners. Oscar Valdés Viera of Americans for Financial Reform said 'what you're removing is the smoke alarm for the entire financial system,' and Sen. Elizabeth Warren said loosening safeguards 'just as cracks are emerging in the financial system and yellow lights are flashing across our economy is especially reckless.' Treasury and the White House declined to comment.",
+    "date_of_action": "2025-01-17 through 2025-09-25",
+    "original_rule_summary": "The Network of Central Banks and Supervisors for Greening the Financial System (NGFS) is a global coalition of financial regulators that develops shared climate-risk scenarios and analysis to help member institutions assess how climate change threatens financial stability; U.S. members included the Federal Reserve, the OCC, the FDIC, Treasury's Federal Insurance Office, and FHFA. Separately, FSOC -- the interagency body chaired by the Treasury Secretary that monitors systemic financial risk -- maintained two dedicated bodies, the Climate-related Financial Risk Committee (CFRC, staff-level) and the Climate-related Financial Risk Advisory Committee (CFRAC, outside experts), created to inform FSOC's assessment of climate change as a threat to U.S. financial stability.",
+    "what_changed": "Starting just before Trump's January 20, 2025 inauguration, U.S. federal regulators left the NGFS one after another: the Federal Reserve Board announced its withdrawal January 17, 2025, saying NGFS's work had 'increasingly broadened in scope, covering a wider range of issues that are outside of the Board's statutory mandate'; the FDIC followed January 21, saying 'the work of NGFS is not within the FDIC's authorities and mandate'; Treasury's Federal Insurance Office withdrew January 30, saying NGFS's initiatives were 'inconsistent with this Administration's priorities to grow the U.S. economy and American jobs'; and the OCC withdrew February 11, with Acting Comptroller Rodney Hood saying participation 'extends well beyond the OCC's statutory responsibilities.' Then, **at its September 10, 2025 meeting, FSOC -- chaired by Treasury Secretary Scott Bessent -- voted unanimously to rescind the charters of both CFRC and CFRAC outright, eliminating the interagency body's dedicated climate-risk monitoring infrastructure entirely.** According to the meeting minutes, Bessent introduced the vote 'in recognition of the fact that the Council does not consider climate change a financial stability risk or relevant to the Council's work,' and said rescinding the charters would let the Council 'better focus its attention and resources on core financial stability issues.' Days later, FHFA Director William Pulte announced on September 19, 2025 that FHFA was withdrawing from the NGFS too, and FHFA said September 25 it had completed the withdrawal, with Pulte stating 'Biden drove housing costs up with politicized nonsense that prioritized climate activists over American families.' Congressional Democrats pushed back on the committees' rescission: 46 House members, led by Reps. Juan Vargas and Sean Casten, sent Bessent an October 24, 2025 letter demanding answers on the committees' disbandment and urging the Council to reconsider, and Senate Banking Committee Ranking Member Elizabeth Warren cited the rescission in a December 10, 2025 letter to Bessent faulting FSOC's retreat from its mission. Separately, in a letter released December 11, 2025, Bessent called more broadly for loosening FSOC's general oversight function -- beyond the climate-specific committees already rescinded -- saying 'too often in the past, efforts to safeguard the financial system have resulted in burdensome and often duplicative regulations,' without detailing specific proposed changes to FSOC's designation authority or other tools. CBS News reported the call came amid mounting financial-stability concerns critics cited as reasons for caution rather than deregulation, including potential AI-related stock-valuation risk and recent bankruptcies of Tricolor Holdings, First Brands, and Renovo Home Partners. Oscar Valdés Viera of Americans for Financial Reform said 'what you're removing is the smoke alarm for the entire financial system,' and Sen. Elizabeth Warren said loosening safeguards 'just as cracks are emerging in the financial system and yellow lights are flashing across our economy is especially reckless.' Treasury and the White House did not respond to CBS News's requests for comment. In March 2026, a GAO review of the banking agencies' NGFS membership found the Fed, OCC and FDIC had cited changed agency priorities and their statutory mandates in withdrawing, had spent only staff time on the network, and, according to agency officials, had never adopted NGFS recommendations or shared nonpublic supervisory data.",
     "primary_proponent": {
       "name": "Scott Bessent",
       "role": "Treasury Secretary and FSOC Chair",
-      "note": "Directed and chaired the September 10, 2025 FSOC vote to dissolve both climate-risk committees. The earlier January 2025 NGFS withdrawals were made independently by the FDIC, the Federal Reserve, and Treasury's Federal Insurance Office as agency-level decisions in the administration's first days, not attributed to Bessent personally, but consistent with the same policy shift he later directed at FSOC."
+      "note": "Directed and chaired the September 10, 2025 FSOC vote to dissolve both climate-risk committees. The earlier NGFS withdrawals were agency-level decisions not attributed to Bessent personally: the Federal Reserve's (January 17, 2025, three days before the inauguration), the FDIC's (January 21), Treasury's Federal Insurance Office's (January 30) and the OCC's (February 11). They reflect the same policy shift he later directed at FSOC."
     },
     "corporate_beneficiaries": [],
     "estimated_health_impact": {
-      "summary": "Indirect: these were oversight/monitoring bodies, not rules directly regulating any industry's conduct or emissions -- the loss is federal regulators' own institutional capacity to identify and track climate-driven financial risk (e.g. insurance-market destabilization from increased disaster losses, stranded fossil-fuel assets), not a direct physical or environmental harm pathway.",
-      "figures": [],
-      "caveat": "No formal quantified estimate exists for the risk-monitoring capacity lost; this is best framed as reduced regulatory visibility into a systemic risk channel, not a modeled harm figure, similar to other financial-oversight rollbacks in this tracker."
+      "summary": "No direct health or mortality pathway is documented: these were monitoring and coordination bodies, not rules governing any industry's conduct or emissions. What was lost is regulators' shared capacity to track how climate-driven disasters -- $746.7 billion in U.S. billion-dollar weather and climate disaster losses from 2020 to 2024 -- could spill into insurance, housing and credit markets that households depend on: FSOC's staff committee, which drew staff from all 15 Council members to pool climate data and scenario analysis; its outside-expert advisory committee; and U.S. regulators' seats in the NGFS's shared climate-scenario work. Bessent said the Council does not consider climate change a financial-stability risk. On the savings side, GAO found NGFS membership had cost the banking agencies only staff time.",
+      "figures": [
+        {
+          "metric": "U.S. billion-dollar weather and climate disaster losses, 2020-2024 (the exposure the committees monitored, not a loss caused by the rollback)",
+          "value": "$746.7 billion",
+          "source": "NOAA NCEI billion-dollar disaster data, as cited in the October 24, 2025 letter from Reps. Vargas, Casten and 44 colleagues"
+        },
+        {
+          "metric": "Cost of U.S. banking agencies' NGFS membership (what withdrawal saved)",
+          "value": "Staff time only; no funding provided to NGFS",
+          "source": "GAO-26-108020 (March 26, 2026)"
+        }
+      ],
+      "caveat": "No agency, GAO or independent estimate quantifies harm from losing these monitoring bodies; the $746.7 billion figure measures total disaster losses the committees were tracking, not damage caused by their removal. GAO described the banking agencies' participation and reasons for leaving but did not assess what supervisory capacity was lost. The harm, if any, would show up as unanticipated climate-driven stress in insurance, mortgage or bank markets, which no one has modeled for this rollback."
     },
-    "confidence_note": "HIGH confidence on the sequence of withdrawals and the FSOC vote -- corroborated by Reuters, Treasury's own FSOC meeting readout (home.treasury.gov), and the Congressional letters demanding answers, which independently confirm the committees were in fact dissolved. This entry combines several formally separate agency-level actions (three NGFS withdrawals plus one FSOC vote) under one entry because they represent a single coordinated policy shift on the same subject matter across the same window; treat each action's date carefully if citing this entry, since they were not simultaneous. Added 2026-09-12 (round-4 backlog fold, cluster c0757): Bessent's broader December 11, 2025 call to loosen FSOC's general oversight function is HIGH confidence, directly sourced to CBS News's own dedicated report, including the named critics' quotes (Valdés Viera, Warren) and the specific bankruptcies cited as context. This is a distinct, broader move than the climate-committee rescission this entry otherwise documents -- included here as a related development by the same chair of the same body, not as the same specific action.",
+    "confidence_note": "HIGH confidence on the sequence of withdrawals and the FSOC vote -- each NGFS exit is documented in the withdrawing agency's own release, and the vote in Treasury's FSOC meeting readout and minutes, with Reuters and the Congressional letters confirming the committees were dissolved; GAO's March 2026 review confirms the three banking agencies' exits. This entry combines several formally separate agency-level actions (a series of NGFS withdrawals plus one FSOC vote) under one entry because they represent a single policy shift on the same subject matter; treat each action's date carefully if citing this entry, since they were not simultaneous. Bessent's broader December 11, 2025 call to loosen FSOC's general oversight function is HIGH confidence, directly sourced to CBS News's own dedicated report, including the named critics' quotes (Valdés Viera, Warren) and the specific bankruptcies cited as context. This is a distinct, broader move than the climate-committee rescission this entry otherwise documents -- included here as a related development by the same chair of the same body, not as the same specific action.",
     "pull_quote": "Oscar Valdés Viera of Americans for Financial Reform: ‘what you're removing is the smoke alarm for the entire financial system.’ Sen. Warren called the timing, amid emerging financial-system cracks, ‘especially reckless.’",
-    "last_verified": "2026-08-08",
+    "last_verified": "2026-09-28",
     "date_added": "2026-08-08",
     "sources": [
       {
@@ -940,39 +1024,66 @@
         "url": "https://www.cbsnews.com/news/scott-bessent-treasury-financial-system-oversight/"
       },
       {
-        "name": "Rep. Juan Vargas -- Press release on 40-member letter demanding answers on committee disbandment",
+        "name": "Rep. Juan Vargas -- Press release: Vargas, Casten lead 40 colleagues on committee-disbandment letter",
         "url": "https://vargas.house.gov/media/press-releases/reps-juan-vargas-sean-casten-lead-40-colleagues-in-calling-on-trump-admin-for-answers-on-disbandment-of-climate-and-financial-risk-oversight-committees"
+      },
+      {
+        "name": "Federal Reserve Board -- Withdrawal from the NGFS (January 17, 2025)",
+        "url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20250117a.htm"
+      },
+      {
+        "name": "FDIC -- FDIC Withdraws from the NGFS (January 21, 2025)",
+        "url": "https://content.govdelivery.com/accounts/USFDIC/bulletins/3cde4f5"
+      },
+      {
+        "name": "U.S. Treasury -- Treasury (Federal Insurance Office) withdraws from the NGFS (January 30, 2025), via FRASER",
+        "url": "https://fraser.stlouisfed.org/title/press-releases-united-states-department-treasury-6111/us-department-treasury-withdraws-network-central-banks-supervisors-greening-financial-system-ngfs-681125/fulltext"
+      },
+      {
+        "name": "OCC -- Acting Comptroller statement on withdrawal from the NGFS (February 11, 2025)",
+        "url": "https://occ.gov/news-issuances/news-releases/2025/nr-occ-2025-10.html"
+      },
+      {
+        "name": "FSOC -- Minutes of the September 10, 2025 Council meeting",
+        "url": "https://home.treasury.gov/system/files/261/FSOC-20250910-Minutes.pdf"
+      },
+      {
+        "name": "FHFA -- U.S. Federal Housing completes withdrawal from NGFS (September 25, 2025)",
+        "url": "https://www.fhfa.gov/news/news-release/u.s.-federal-housing-completes-withdrawal-from-international-greening-the-financial-system-network"
+      },
+      {
+        "name": "Reps. Vargas, Casten et al. -- October 24, 2025 letter to Bessent on the climate committees",
+        "url": "https://vargas.house.gov/sites/evo-subsites/vargas.house.gov/files/evo-media-document/102425-letter.pdf"
+      },
+      {
+        "name": "Sen. Elizabeth Warren -- December 10, 2025 letter to FSOC Chair Bessent",
+        "url": "https://www.banking.senate.gov/imo/media/doc/Letter%20to%20Bessent%20re.%20FSOC.pdf"
+      },
+      {
+        "name": "GAO -- International Collaboration: U.S. Banking Agencies' Participation in Climate Risk Network (GAO-26-108020, March 2026)",
+        "url": "https://www.gao.gov/products/gao-26-108020"
+      },
+      {
+        "name": "HousingWire -- Pulte announces FHFA withdrawal from climate change coalition (September 19, 2025)",
+        "url": "https://www.housingwire.com/articles/fhfa-withdraws-from-climate-finance-network-ngfs/"
       }
     ],
-    "short_summary": "Fed, FDIC, and Treasury quit the global NGFS climate-risk network, then FSOC dissolved its own two climate-financial-risk committees.",
+    "short_summary": "Fed, FDIC, OCC, Treasury and FHFA quit the global NGFS climate-risk network, then FSOC dissolved its own two climate-financial-risk committees.",
     "section_summaries": {
-      "what_changed": "In 2025, the FDIC, Treasury, and Federal Reserve all withdrew from the NGFS climate-risk network, and FSOC voted to dissolve its own climate-risk committees.",
-      "estimated_impact": "Eliminates federal regulators' capacity to monitor climate-driven financial risk -- an oversight loss, not a direct physical or environmental harm.",
-      "confidence_note": "HIGH confidence, corroborated by Reuters and Treasury's own meeting record; bundles several separate agency actions taken across different dates."
+      "what_changed": "In 2025, the Fed, FDIC, Treasury, OCC and FHFA withdrew from the NGFS climate-risk network, and FSOC voted unanimously to dissolve its own climate-risk committees.",
+      "estimated_impact": "Strips regulators' shared tools for tracking how climate disasters ($746.7B in 2020-24 losses) threaten insurance, housing and credit markets; no direct health harm is documented.",
+      "confidence_note": "HIGH confidence: agencies' own releases, Treasury's FSOC readout and minutes, and GAO; bundles several separate agency actions taken on different dates."
     },
-    "last_substantive_update": "2026-08-08",
+    "last_substantive_update": "2026-09-28",
     "glance": {
-      "who": "Bessent (FSOC), Fed, FDIC, Treasury",
+      "who": "Bessent (FSOC), Fed, FDIC, OCC, Treasury",
       "what": "Withdrew from the NGFS climate network and dissolved FSOC's climate-risk committees",
       "harm": {
         "kind": "institutional",
         "certainty": "documented",
         "who": "Federal climate-risk monitoring"
       },
-      "reviewed": "2026-09-20"
-    },
-    "timeline": {
-      "confidence_note": {
-        "base": "HIGH confidence on the sequence of withdrawals and the FSOC vote -- corroborated by Reuters, Treasury's own FSOC meeting readout (home.treasury.gov), and the Congressional letters demanding answers, which independently confirm the committees were in fact dissolved. This entry combines several formally separate agency-level actions (three NGFS withdrawals plus one FSOC vote) under one entry because they represent a single coordinated policy shift on the same subject matter across the same window; treat each action's date carefully if citing this entry, since they were not simultaneous.",
-        "updates": [
-          {
-            "date": "2026-09-12",
-            "label": "Added",
-            "text": "Added 2026-09-12 (round-4 backlog fold, cluster c0757): Bessent's broader December 11, 2025 call to loosen FSOC's general oversight function is HIGH confidence, directly sourced to CBS News's own dedicated report, including the named critics' quotes (Valdés Viera, Warren) and the specific bankruptcies cited as context. This is a distinct, broader move than the climate-committee rescission this entry otherwise documents -- included here as a related development by the same chair of the same body, not as the same specific action.",
-            "effective_date": "2026-09-12"
-          }
-        ]
-      }
+      "reviewed": "2026-09-28"
     }
   },
   {
@@ -1752,44 +1863,59 @@
     "administration": "Trump II (2025-present)",
     "agency": "DOJ",
     "domain": "consumer_safety",
-    "status": "Weakened (not fully repealed) -- DOJ ceased nationwide enforcement via litigation settlement rather than formal rulemaking; a 15-state-plus-D.C. lawsuit challenging the settlement remains pending, with no ruling identified as of mid-2026 reporting",
-    "date_of_action": "2025-05-16 (DOJ-Rare Breed Triggers settlement announced) through 2025-06-09 (15 states and D.C. sue to challenge it); litigation ongoing as of 2026",
+    "status": "Weakened (not fully repealed) -- DOJ ended federal FRT enforcement via a May 2025 litigation settlement, not rulemaking. A multistate challenge was voluntarily dismissed in April 2026 after ATF withheld returns from states that ban FRTs; returns proceeded elsewhere.",
+    "date_of_action": "2025-05-16 (DOJ-Rare Breed Triggers settlement announced; signed 2025-05-13); 15 states and D.C. sued to challenge it 2025-06-09 and voluntarily dismissed that suit 2026-04-23 after ATF withheld returns from states banning FRTs",
     "original_rule_summary": "Starting in 2021, ATF classified certain forced-reset triggers (FRTs) -- aftermarket devices that use a semi-automatic rifle's own cycling action to reset the trigger, enabling rates of fire of hundreds of rounds per minute without full-auto conversion -- as illegal machine guns under the National Firearms Act, and pursued seizure and enforcement actions against manufacturers (including Rare Breed Triggers) and owners nationwide.",
-    "what_changed": "A Texas federal court ruled in July 2024 (National Association for Gun Rights v. Garland) that ATF had exceeded its statutory authority in classifying FRTs as machine guns. Following Trump's February 2025 executive order on Second Amendment enforcement, DOJ's newly created Second Amendment Enforcement Task Force -- under Attorney General Pam Bondi -- concluded that continuing to litigate against lawful FRT ownership 'was not in the public interest.' On May 16, 2025, DOJ announced a settlement with Rare Breed Triggers and the National Association for Gun Rights ending the litigation nationwide, not just within the deciding court's jurisdiction: DOJ agreed FRTs are not machine guns under the NFA, agreed to cease enforcement against FRT owners nationwide, and **agreed to return the roughly 12,000 devices previously seized or voluntarily surrendered to owners who requested their return by September 30, 2025, without a state-residency or state-law carve-out**. On June 9, 2025, a coalition of 15 states (led by Delaware, Maryland, and New Jersey) and Washington, D.C. sued the federal government in the U.S. District Court for the District of Maryland, arguing the nationwide return of machine-gun-capable devices -- including into states where they remain separately banned, and, per the states' own lawsuit, to some individuals with felony convictions -- threatens public safety and imposes 'irreversible' law-enforcement and healthcare costs on states. The settlement also required Rare Breed to refrain from selling similar devices for handguns and to pursue its own patent-infringement claims against copycat manufacturers rather than relying on federal enforcement. The states' lawsuit remained pending, with no ruling identified in sourcing reviewed, as of mid-2026 reporting; separately, Washington state obtained a carveout from the administration's return plan after suing. At least 15 states had independently banned or restricted FRTs at the state level as of early 2026, regardless of the federal settlement.",
+    "what_changed": "A Texas federal court (Judge Reed O'Connor, N.D. Tex.) ruled on July 23, 2024, in National Association for Gun Rights v. Garland, that ATF had exceeded its statutory authority in classifying FRTs as machine guns, applying the Supreme Court's June 2024 bump-stock decision in Garland v. Cargill; the government appealed to the Fifth Circuit. Following Trump's February 7, 2025 executive order on Second Amendment rights, Attorney General Pam Bondi created a Second Amendment Task Force on April 8, 2025; after its review, the government stated in the settlement agreement that 'continuing the Litigation ... is not in the public interest.' The agreement, signed May 13 and announced by DOJ on May 16, 2025, resolved the Texas case, DOJ's Eastern District of New York suit against Rare Breed Triggers, and a Utah forfeiture case. DOJ agreed not to enforce federal machine-gun law against possessing or transferring FRTs that work as the Texas court described and are not designed for handguns, and agreed, 'to the extent practicable,' to return FRTs it had seized or taken by voluntary surrender to owners who requested them by September 30, 2025. **ATF had identified at least 11,884 such devices in its possession as of August 2024, according to the states' later lawsuit, and the agreement on its face had no carve-out for owners in states that ban FRTs or for people barred from having guns.** Rare Breed agreed not to develop, design, or market FRTs for handguns, to seek patent-infringement injunctions against other FRT makers at its own expense, and to promote safe use; the United States agreed to consider filing statements supporting those patent suits. On June 9, 2025, 15 states (led by New Jersey, Maryland, and Delaware) and Washington, D.C. sued in the U.S. District Court for the District of Maryland; California joined in an amended complaint on July 7. The states argued that returning the devices, including into states where they remain banned, would cause 'irreversible' harms by threatening public safety and driving up law-enforcement and health care costs, and cited ATF's own finding that more than 60 FRTs had previously been shipped to people legally barred from possessing firearms. In a June 26, 2025 sworn declaration, ATF committed not to return FRTs into states where they are illegal (owners there could have a device sent to them or a third party in a state where it is legal, or abandon it for destruction), to run a background check on everyone requesting a return, and to withhold devices tied to criminal cases. After Judge Paula Xinis signaled doubt that the states had standing, they withdrew their preliminary-injunction motion on July 11, 2025, and dropped Rare Breed and the other private defendants later that month. On April 23, 2026, the states voluntarily dismissed the case without prejudice, saying ATF was nearing completion of the returns and had kept those commitments, and reserving the right to sue again; the court closed the case on April 28, 2026. The settlement does not override state bans: ATF's June 2025 declaration listed 17 states plus D.C. where it understood FRT possession to be illegal. On August 31, 2026, DOJ, appearing for ATF, filed a statement of interest in the consolidated Rare Breed patent litigation in the Eastern District of Texas, arguing that because the settlement does not bind other FRT makers, the public interest 'should be weighed heavily' in favor of Rare Breed's bid for a preliminary injunction against them, while taking no position on the other injunction factors; it repeated a January 2026 statement filed in a Tennessee case before consolidation.",
     "primary_proponent": {
       "name": "Pam Bondi",
-      "role": "Attorney General",
-      "note": "DOJ's Second Amendment Enforcement Task Force, created under Bondi following Trump's February 2025 executive order, concluded continued litigation against FRT ownership 'was not in the public interest' and negotiated the May 2025 nationwide settlement."
+      "role": "then-Attorney General (until April 2, 2026)",
+      "note": "Bondi created DOJ's Second Amendment Task Force on April 8, 2025, under Trump's February 2025 executive order; after its review, the government stated in the May 2025 nationwide settlement that continuing the FRT litigation 'is not in the public interest.'"
     },
     "corporate_beneficiaries": [
       "Rare Breed Triggers",
       "National Association for Gun Rights"
     ],
     "estimated_health_impact": {
-      "summary": "Devices ATF spent years arguing posed a mass-casualty risk -- semi-automatic rifles converted to a near-machine-gun cyclic rate of hundreds of rounds per minute -- are being returned to owners nationwide, including in states where they remain independently illegal, with no federal registration, tracking, or transfer restriction.",
+      "summary": "Forced-reset triggers, which the states say let a semi-automatic rifle fire 800 to 900 rounds per minute, are no longer subject to federal machine-gun enforcement, so they can be sold without machine-gun restrictions or a background check, and ATF has been returning the devices it seized (at least 11,884 were in its hands as of August 2024) to owners who asked for them. A multistate lawsuit got ATF to withhold returns from states that ban FRTs and to background-check recipients, which narrows but does not remove the risk. For each device returned, the 16 to 24 ATF staff-hours spent retrieving it are undone.",
       "figures": [
         {
-          "metric": "FRTs previously seized/surrendered, now eligible for return",
-          "value": "~12,000",
-          "source": "Multiple outlets citing DOJ/ATF figures on Biden-era FRT seizures"
+          "metric": "FRTs in ATF possession as of August 2024 (pool eligible for return, minus criminal-case devices)",
+          "value": "at least 11,884",
+          "source": "States' amended complaint, New Jersey v. Bondi, No. 1:25-cv-1807 (D. Md.), ECF 86, citing ATF"
         },
         {
-          "metric": "Documented rate of fire enabled by FRTs",
-          "value": "Hundreds of rounds per minute from a converted semi-automatic rifle",
-          "source": "ATF's original 2021 classification rationale, wire reporting"
+          "metric": "Rate of fire of an FRT-equipped rifle",
+          "value": "800-900 rounds per minute",
+          "source": "States' amended complaint, ECF 86 (the states' allegation; gun-rights groups dispute that FRTs work like machine guns)"
+        },
+        {
+          "metric": "FRTs previously shipped to people barred from possessing firearms",
+          "value": "more than 60 (from a limited review of sales)",
+          "source": "ATF finding cited in the states' amended complaint, ECF 86"
+        },
+        {
+          "metric": "ATF staff time per FRT retrieval",
+          "value": "16-24 staff-hours per device; thousands of hours nationally",
+          "source": "ATF estimate cited in the states' amended complaint, ECF 86"
+        },
+        {
+          "metric": "Jurisdictions where ATF withheld returns",
+          "value": "14 plaintiff states plus D.C. (ATF's June 2025 list of FRT-ban jurisdictions named 17 states plus D.C.)",
+          "source": "ATF declaration of Matthew Varisco, ECF 64-1 (June 26, 2025); states' notice of voluntary dismissal, ECF 126 (April 23, 2026)"
         }
       ],
-      "caveat": "No source reviewed provides a quantified mortality or injury projection specific to this settlement's effect, as distinct from FRTs' general risk profile that drove ATF's original classification; the 15-state lawsuit's 'irreversible harm' claim is the states' own legal argument, not an independently modeled estimate."
+      "caveat": "No mortality or injury projection specific to this settlement was found; the figures are the states' court allegations citing ATF and ATF's own sworn commitments. How many devices were actually returned has not been made public (ATF told the states in April 2026 it was nearing completion). The larger long-run effect, FRTs sold legally outside machine-gun rules in states without their own bans, is not quantified."
     },
-    "confidence_note": "HIGH confidence on the settlement's terms and the underlying July 2024 NAGR v. Garland ruling that preceded it (NBC News, DOJ's own press release, NRA-ILA, Washington Examiner all corroborate). HIGH confidence on the 15-state-plus-D.C. lawsuit's filing date, lead states, and stated public-safety/cost claims (Bloomberg Law, Maryland Matters, The Texan). The felony-convictions detail is attributed specifically to the states' own lawsuit allegation, not independently confirmed against the settlement's text or a DOJ statement, and is worded accordingly. MODERATE confidence on the exact ~12,000-device seizure figure, which is repeated across gun-rights and news outlets but not independently verified in sourcing reviewed against an official DOJ/ATF public accounting.",
-    "pull_quote": "Fifteen states and Washington, D.C. sued to block the settlement, arguing the nationwide return of near-machine-gun-rate devices threatens public safety and imposes ‘irreversible’ law-enforcement and healthcare costs on states.",
-    "short_summary": "DOJ settled with a trigger manufacturer, ending the machine-gun classification of forced-reset triggers and agreeing to return ~12,000 seized devices nationwide.",
-    "last_verified": "2026-09-10",
+    "confidence_note": "HIGH confidence on the settlement's terms (the May 13, 2025 agreement text and DOJ's release) and the July 2024 NAGR v. Garland ruling. HIGH confidence on the multistate suit's course, read from the court docket: ATF's June 2025 declaration, the states' July 2025 amended complaint, and their April 2026 dismissal notice. The 11,884-device, more-than-60 prohibited-buyer, and 800-900 rounds-per-minute figures are the states' allegations citing ATF, not an independent ATF public accounting. The number of devices actually returned has not been made public.",
+    "pull_quote": "Fifteen states and Washington, D.C. sued, arguing that returning the seized devices would cause ‘irreversible’ harms by threatening public safety and driving up law-enforcement and health care costs.",
+    "short_summary": "DOJ settled with a trigger manufacturer, ending the machine-gun classification of forced-reset triggers and agreeing to return seized devices to their owners.",
+    "last_verified": "2026-09-28",
     "date_added": "2026-09-10",
     "section_summaries": {
-      "what_changed": "DOJ settled litigation with a trigger manufacturer, agreeing forced-reset triggers aren't machine guns under federal law and returning ~12,000 previously seized devices nationwide, including into states where they remain independently illegal.",
-      "estimated_impact": "Devices ATF spent years arguing posed a mass-casualty risk -- rifles converted to a near-machine-gun rate of fire -- are back in circulation nationwide with no federal tracking or transfer restriction.",
-      "confidence_note": "Settlement terms and the underlying court ruling are well-corroborated across DOJ's own release and multiple outlets; the 15-state lawsuit remains pending with no ruling identified as of mid-2026."
+      "what_changed": "DOJ settled with a trigger maker, agreeing not to enforce machine-gun law against forced-reset triggers and to return seized devices; a multistate suit got returns withheld from states banning them.",
+      "estimated_impact": "Triggers that let a rifle fire 800-900 rounds a minute, per the states, are outside federal machine-gun enforcement, and ATF has returned seized ones on request, except into states banning them.",
+      "confidence_note": "Settlement terms and the court record come from primary documents; device counts and rate-of-fire figures are the states' allegations citing ATF."
     },
     "sources": [
       {
@@ -1815,18 +1941,50 @@
       {
         "name": "The Texan -- 15 States, D.C. Sue to Block Return of Seized Forced Reset Triggers",
         "url": "https://thetexan.news/issues/second-amendment/15-states-d-c-sue-to-block-return-of-seized-forced-reset-triggers/article_71f98601-1b91-4e5a-8398-82d30407069b.html"
+      },
+      {
+        "name": "Settlement Agreement between the United States and Rare Breed Triggers et al. (May 13, 2025), posted by Gun Rights Foundation",
+        "url": "https://gunrightsfoundation.org/wp-content/uploads/FRT-Settlement-Agreement-FINAL.pdf"
+      },
+      {
+        "name": "CourtListener -- State of New Jersey v. Bondi, No. 1:25-cv-01807 (D. Md.) docket",
+        "url": "https://www.courtlistener.com/docket/70492484/state-of-new-jersey-v-bondi/"
+      },
+      {
+        "name": "ATF declaration of Matthew P. Varisco, ECF 64-1 (June 26, 2025), New Jersey v. Bondi (D. Md.)",
+        "url": "https://storage.courtlistener.com/recap/gov.uscourts.mdd.584141/gov.uscourts.mdd.584141.64.1.pdf"
+      },
+      {
+        "name": "States' amended complaint, ECF 86 (July 7, 2025), New Jersey v. Bondi (D. Md.)",
+        "url": "https://storage.courtlistener.com/recap/gov.uscourts.mdd.584141/gov.uscourts.mdd.584141.86.0.pdf"
+      },
+      {
+        "name": "States' notice of voluntary dismissal, ECF 126 (April 23, 2026), New Jersey v. Blanche (D. Md.)",
+        "url": "https://storage.courtlistener.com/recap/gov.uscourts.mdd.584141/gov.uscourts.mdd.584141.126.0.pdf"
+      },
+      {
+        "name": "Civil Rights Litigation Clearinghouse -- State of New Jersey v. Bondi case summary",
+        "url": "https://clearinghouse.net/case/46680/"
+      },
+      {
+        "name": "WMAR-2 News -- Feds won't return forfeited Forced Reset Triggers to Maryland gun owners (July 13, 2025)",
+        "url": "https://www.wmar2news.com/infocus/feds-wont-return-forfeited-forced-reset-triggers-to-maryland-gun-owners-thanks-to-attorney-generals-lawsuit"
+      },
+      {
+        "name": "Statement of Interest of the United States, ECF 44 (Aug. 31, 2026), In re Rare Breed Triggers Patent Litigation, No. 4:26-md-03176 (E.D. Tex.)",
+        "url": "https://storage.courtlistener.com/recap/gov.uscourts.txed.244951/gov.uscourts.txed.244951.44.0.pdf"
       }
     ],
-    "last_substantive_update": "2026-09-10",
+    "last_substantive_update": "2026-09-28",
     "glance": {
-      "who": "Pam Bondi (Attorney General)",
-      "what": "Settled to end the machine-gun ban on forced-reset triggers; ~12,000 seized devices to be returned",
+      "who": "Pam Bondi (then-Attorney General)",
+      "what": "Settled to end the machine-gun ban on forced-reset triggers and return seized devices to owners",
       "harm": {
         "kind": "physical",
         "certainty": "projected",
         "who": "Public safety nationwide"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-09-28"
     }
   },
   {
@@ -2777,62 +2935,77 @@
     "administration": "Trump II (2025-present)",
     "agency": "EPA / DOJ (DOJ files civil enforcement referrals on EPA's behalf)",
     "domain": "environmental",
-    "status": "Finalized as a completed calendar-year figure (2025); ongoing as an enforcement posture into 2026",
-    "date_of_action": "2025 (calendar year), report published 2026-02-05",
+    "status": "Ongoing as of Sept. 2026: DOJ civil suits for EPA fell to a record-low 16 in Trump's first year back, and EPA now favors fine-free compliance orders under a Dec. 2025 \"compliance first\" policy. Congress rejected the proposed 54% FY2026 EPA budget cut, instead trimming it about 4%.",
+    "date_of_action": "2025-01-20 to 2026-01-20 (first year of Trump's second term); Environmental Integrity Project report published 2026-02-05",
     "original_rule_summary": "Historically, DOJ files civil court complaints on EPA's behalf against companies found violating environmental laws (Clean Air Act, Clean Water Act, and related statutes), a routine enforcement mechanism independent of any specific rule needing to change.",
-    "what_changed": "Round-4 backlog fold, cluster c0509: The New York Times reported August 8, 2025, citing an earlier six-month analysis by the same watchdog group later cited below, that DOJ filed just 11 civil lawsuits against major polluters in the first six full months of Trump's second term, compared with 30 in the same period under Biden, and reached only 18 settlements in such cases compared with 53 under Biden over the same span; the same reporting described environmental-enforcement staffing at DOJ as down roughly a third. The Environmental Integrity Project, an independent watchdog group, found DOJ filed just 16 civil enforcement complaints on EPA's behalf in 2025 -- the lowest first-year enforcement total on record, below even Trump's own first term (2017), representing a 76% decline compared to the Biden administration's first year and an 81% decline compared to Trump's first term. EPA Administrator Lee Zeldin's agency disputed the findings in response to NPR's reporting. The decline was achieved through enforcement-referral practice rather than any formal rule repeal, meaning the underlying environmental standards remain on the books but are not being actively enforced against violators at anything close to historical rates. The same February 5, 2026 Environmental Integrity Project report that documented the 16-complaint civil-referral figure also found broader, budget-driven enforcement cuts across the agency: a 30% reduction in civil enforcement funding (from $201.3 million to $61.1 million -- figures as reported, though the described cut and the before/after totals do not arithmetically match and should be verified against the report directly before citing the dollar figures in debate), a 49% cut to criminal enforcement funding (from $60 million to $29.6 million), and a 35% reduction in compliance-monitoring funding. Water-infrastructure funding was cut by approximately 90%. On Clean Water Act enforcement specifically, the report found **3,001 facilities nationwide in 'significant noncompliance' with the Act for three or more years as of January 2026, and only 12% of facilities with air-pollution violations received any enforcement action over the prior year** (the reviewed reporting did not isolate an equivalent percentage specific to water-pollution violations). Total EPA penalties collected through September 2025 were $41 million, $8 million less than the same period in the first year of the Biden administration after adjusting for inflation -- described as the weakest EPA enforcement performance in 20 years across seven separate enforcement categories tracked in the report.",
+    "what_changed": "On March 12, 2025, EPA's acting enforcement chief issued a memo requiring a political appointee's advance approval for any enforcement action that would \"unduly burden or significantly disrupt\" energy production or power generation, according to the Environmental Integrity Project (EIP). The administration's fiscal 2026 budget request, released in spring 2025, proposed cutting EPA's budget by about 54%, including a 30% cut to civil enforcement ($61.1 million cut from $201.3 million), a 49% cut to criminal enforcement ($29.6 million cut from $60 million), a 35% cut to compliance monitoring ($38 million from $107.1 million) and cuts of roughly 90% to the Clean Water and Drinking Water State Revolving Funds, per a Holland & Knight analysis of the request. Congress later rejected the proposed overall cut; EIP reported in February 2026 that Congress had instead reduced EPA's fiscal 2026 budget by $325 million (about 4%) from fiscal 2025. The New York Times reported August 8, 2025, citing a six-month analysis by EIP, that DOJ filed just 11 civil lawsuits against major polluters in the first six full months of Trump's second term, compared with 30 in the same period under Biden, and reached only 18 settlements in such cases compared with 53. On December 5, 2025, acting enforcement chief Craig Pritzlaff issued a \"compliance first\" memo directing EPA staff to favor compliance assistance over formal enforcement, raising the bar for findings of violation, requiring political sign-off for most monitoring and third-party audit requirements, and ending supplemental environmental projects that benefit communities harmed by polluters (EIP said the memo prohibited them; Inside Climate News said it paused them). A February 2, 2026 report by the Environmental Data & Governance Initiative (EDGI) found that 14 of the 24 EPA enforcement measures it tracked were at their weakest or second-weakest level in 20 years in 2025, and that EPA launched fewer civil judicial cases in 2025 than under any administration in that span. EIP's February 5, 2026 report found DOJ filed just 16 civil complaints in EPA-referred cases in the 12 months after Trump's January 20, 2025 inauguration, a historic low: 76% below Biden's first year (67), 81% below Trump's first year in 2017 (86) and 87% below the first year of Obama's second term (127). Judicial settlements fell to 40, from 112 in Biden's first year and 186 in 2013. EPA's administrative case settlements rose compared with Biden's and Trump's first-term first years, driven mainly by Clean Air Act risk-management-plan and Safe Drinking Water Act cases, but only 50% of them carried a penalty, and administrative penalties assessed from Inauguration Day through September 30, 2025 totaled $41 million, about $8 million (16%) less than the same period of Biden's first year after adjusting for inflation. As of January 2026, 3,001 facilities were listed in \"significant noncompliance\" with the Clean Water Act for at least three years and 697 had unresolved high-priority air violations dating back more than 34 months, yet over the prior year only 12% of facilities with air-pollution violations and 2% with water-pollution violations received any federal or state enforcement action. NPR and Inside Climate News, citing an E&E News analysis, reported that at least a third of lawyers in DOJ's environment division had left in the past year. An EPA spokesperson called EIP's report \"erroneous\" and said EPA had concluded more cases in the first year of the Trump administration than the Biden administration had in its last year. In March 2026, EPA's fiscal 2025 enforcement results claimed 2,127 concluded civil cases, the most in nine years; that fiscal year included the last three and a half months of Biden's term. On March 18, 2026, Earthjustice's enforcement director countered that EPA's own data showed the fewest judicial case conclusions in at least a decade, and that of more than $650 million in civil penalties EPA touted, only $1.45 million (under 1%) came from judicial settlements filed and entered under Trump. In June 2026, DOJ renamed its Environment and Natural Resources Division, which had lost more than a quarter of its workforce, the Energy and Natural Resources Division, with a mission of \"advancing U.S. energy dominance,\" Inside Climate News reported. An Inside Climate News analysis of EPA data published September 1, 2026 found that EPA had lost more than a quarter of its workforce by the end of June; that its administrative actions had flipped from roughly 60% penalty orders to mostly compliance orders that impose no fine; that the median total cost to offenders of an administrative action had fallen to its lowest since 2000; and that orders telling public water systems to inventory lead service lines made up more than a third of all administrative orders, at a median cost below $600. EPA responded that it had concluded more than 2,300 enforcement actions in the first year, a 10-year high. The decline was achieved through enforcement policy, staffing and case choices rather than formal rule repeal: the underlying standards remain on the books but are enforced far less.",
     "primary_proponent": {
       "name": "Lee Zeldin",
       "role": "EPA Administrator",
-      "note": "EPA disputed the Environmental Integrity Project's findings when NPR sought comment, but did not provide an alternative enforcement-count figure in the reporting reviewed."
+      "note": "EPA called the Environmental Integrity Project's report \"erroneous\"; its March 2026 fiscal 2025 enforcement results claimed 2,127 concluded civil cases, the most in nine years, a count critics say is built on administrative orders and Biden-era cases."
     },
     "corporate_beneficiaries": [
       "Industrial polluters and regulated entities facing substantially reduced likelihood of federal civil enforcement action for Clean Air Act, Clean Water Act, and related violations"
     ],
     "estimated_health_impact": {
-      "summary": "Earthjustice's analysis argues the enforcement collapse undercuts Zeldin's public statements characterizing EPA enforcement as still serious, since sharply reduced referral volume means fewer violations are being formally addressed regardless of the underlying rules' continued existence -- a form of de facto deregulation achieved without any of the formal rulemaking process (public comment, judicial review) that a rule repeal would require.",
-      "caveat": "EPA disputed the Environmental Integrity Project's methodology/findings without providing its own competing enforcement-count figure in the sourcing reviewed; a single-year figure can be affected by case-timing and referral-pipeline factors, though the reported 76-81% declines relative to comparable first-year baselines suggest more than ordinary year-to-year variance. The civil-enforcement-funding percentage and its underlying dollar figures (30% cut, $201.3M to $61.1M) as reported in secondary coverage do not arithmetically reconcile -- treat the percentage as the reported headline figure and verify the underlying dollar amounts against the Environmental Integrity Project's report directly before citing them specifically. The 12%-enforcement-rate figure is specific to air-pollution violations, not water -- no equivalent water-specific enforcement-rate percentage was found in the reporting reviewed, though the 3,001-facility Clean Water Act noncompliance count is water-specific and independently reported.",
+      "summary": "Companies breaking air and water pollution laws now face far less chance of being stopped or fined, which leaves nearby communities exposed to illegal pollution for longer. As of January 2026, 3,001 facilities had been in significant noncompliance with the Clean Water Act for at least three years, and over the prior year only 2% of facilities with water-pollution violations and 12% with air-pollution violations faced any federal or state enforcement. Court cases, which bring the largest penalties and court-backed cleanup orders, fell to a record-low 16 in Trump's first year back. Penalties shrank too: EPA now relies mostly on compliance orders with no fine, and the orders against water systems over lead-pipe inventories cost offenders a median of under $600. Polluters that skip compliance save money that law-abiding competitors spend. All of this weakens environmental protection without any rule repeal, public comment period or judicial review.",
       "figures": [
         {
-          "metric": "Civil enforcement funding cut",
-          "value": "30% (reported as $201.3M to $61.1M)",
-          "source": "Environmental Integrity Project, Feb. 5, 2026 report"
-        },
-        {
-          "metric": "Criminal enforcement funding cut",
-          "value": "49% ($60M to $29.6M)",
-          "source": "Environmental Integrity Project, Feb. 5, 2026 report"
-        },
-        {
-          "metric": "Compliance monitoring funding cut",
-          "value": "35%",
-          "source": "Environmental Integrity Project, Feb. 5, 2026 report"
-        },
-        {
-          "metric": "Water infrastructure funding cut",
-          "value": "~90%",
-          "source": "Environmental Integrity Project, Feb. 5, 2026 report"
-        },
-        {
-          "metric": "Facilities in 'significant noncompliance' with the Clean Water Act, 3+ years, as of Jan. 2026",
+          "metric": "Facilities in 'significant noncompliance' with the Clean Water Act for 3+ years, as of Jan. 2026",
           "value": "3,001",
+          "source": "Environmental Integrity Project, Feb. 5, 2026 report (from EPA ECHO data)"
+        },
+        {
+          "metric": "Facilities with unresolved high-priority air violations older than 34 months, as of Jan. 2026",
+          "value": "697",
+          "source": "Environmental Integrity Project, Feb. 5, 2026 report (from EPA ECHO data)"
+        },
+        {
+          "metric": "Share of violating facilities that faced any federal or state enforcement action, prior year",
+          "value": "2% (water violations); 12% (air violations)",
           "source": "Environmental Integrity Project, Feb. 5, 2026 report"
         },
         {
-          "metric": "Facilities with air-pollution violations receiving any enforcement action, prior year",
-          "value": "12%",
+          "metric": "DOJ civil complaints in EPA-referred cases, first 12 months of the administration",
+          "value": "16 (vs. 67 Biden, 86 Trump first term, 127 Obama second term)",
           "source": "Environmental Integrity Project, Feb. 5, 2026 report"
         },
         {
-          "metric": "Total EPA penalties collected through Sept. 2025",
-          "value": "$41 million (vs. $49M inflation-adjusted in the comparable Biden-era period)",
+          "metric": "Judicial consent decrees entered, first year of the administration",
+          "value": "40 (vs. 112 Biden, 115 Trump first term, 186 Obama second term)",
           "source": "Environmental Integrity Project, Feb. 5, 2026 report"
+        },
+        {
+          "metric": "EPA administrative penalties assessed, Jan. 20-Sept. 30, 2025 (inflation-adjusted)",
+          "value": "$41 million (vs. $49 million in the same period of Biden's first year, -16%)",
+          "source": "Environmental Integrity Project, Feb. 5, 2026 report"
+        },
+        {
+          "metric": "Share of settled administrative cases that included a penalty",
+          "value": "50% (vs. 59% Biden, 66% Trump first term)",
+          "source": "Environmental Integrity Project, Feb. 5, 2026 report"
+        },
+        {
+          "metric": "Civil penalties in EPA's FY2025 results from judicial settlements filed and entered under Trump",
+          "value": "$1.45 million of more than $650 million (under 1%)",
+          "source": "Earthjustice (Laura Thoms), Mar. 18, 2026"
+        },
+        {
+          "metric": "EPA workforce lost since Jan. 2025, as of end of June 2026",
+          "value": "More than a quarter",
+          "source": "Inside Climate News analysis of federal employment data, Sept. 1, 2026"
+        },
+        {
+          "metric": "Proposed FY2026 enforcement cuts (budget request, not enacted as proposed)",
+          "value": "Civil enforcement -30% ($61.1M of $201.3M); criminal -49% ($29.6M of $60M); compliance monitoring -35% ($38M of $107.1M)",
+          "source": "Holland & Knight analysis of EPA's FY2026 budget request, June 5, 2025"
         }
-      ]
+      ],
+      "caveat": "The enforcement counts come from the Environmental Integrity Project's review of court records and EPA's ECHO data, backed by separate EDGI and Inside Climate News analyses; EPA disputes the picture, citing 2,127 concluded civil cases in fiscal 2025 and 2,300+ actions in the first year, counts that lean on administrative orders and Biden-era cases. First-year counts can understate an administration's pipeline because cases often take a year or more. No source estimates illnesses or deaths from unenforced violations, so the health harm is described but not quantified. The budget cuts listed are the FY2026 request; Congress rejected the proposed overall cut and instead trimmed EPA's budget about 4%, and the enacted enforcement lines were not checked."
     },
-    "confidence_note": "HIGH confidence -- the 16-complaint figure and its historical-comparison percentages are independently reported by NPR, Inside Climate News, and the Environmental Integrity Project's own report; EPA's dispute of the finding is noted but EPA did not provide a competing figure in sourcing reviewed. Added 2026-09-12 (round-4 backlog fold, cluster c0509): the New York Times' August 8, 2025 six-month figures (11 vs. 30 lawsuits, 18 vs. 53 settlements) are HIGH confidence, sourced to the same Environmental Integrity Project watchdog group's earlier interim analysis, later superseded by its own Feb. 2026 full-year report already documented above -- presented as an earlier data point in the same declining trend, not a conflicting count. Re-verified 2026-08-22: added the same Feb. 5, 2026 Environmental Integrity Project report's broader funding-cut and Clean Water Act-specific figures (3,001 facilities in significant noncompliance, 90% water-infrastructure funding cut, 12% air-violation enforcement rate, $41M total penalties) -- same underlying report already cited for the 16-complaint figure, not a new source. Prompted by a public submission via the site's claim-suggestion form asking about worsening water pollution; this entry's enforcement-collapse framing (rather than a direct pollution-level measurement) is the accurate, sourced way to substantiate that concern, since no source reviewed measures water pollution levels directly.",
-    "short_summary": "DOJ filed just 16 civil enforcement complaints on EPA's behalf in 2025 -- a record low -- while a broader Feb. 2026 watchdog report found deep cuts to enforcement funding and 3,001 facilities in ongoing Clean Water Act noncompliance.",
-    "last_verified": "2026-09-12",
+    "confidence_note": "HIGH confidence -- the 16-complaint figure, its comparisons and the penalty totals were read in the Environmental Integrity Project's Feb. 5, 2026 report and reported by NPR and Inside Climate News; the 3,001-facility, 697-facility, 12% and 2% figures were read in the report itself; EDGI (Feb. 2026) and an Inside Climate News data analysis (Sept. 2026) independently found the same collapse. EPA disputes the framing, citing 2,127 concluded civil cases in fiscal 2025 and 2,300+ actions in the first year, but those counts rest largely on administrative orders and cases developed under Biden, per Earthjustice and Inside Climate News. The civil, criminal and compliance-monitoring cuts are the FY2026 budget request, not enacted amounts; Congress cut EPA's overall budget about 4%. The New York Times' Aug. 8, 2025 six-month figures (11 vs. 30 lawsuits, 18 vs. 53 settlements) come from an earlier EIP analysis and were read in an archived copy of the article; they are an earlier data point in the same trend.",
+    "short_summary": "DOJ filed just 16 civil complaints for EPA in Trump's first year back, a record low, as EPA shifted to fine-free compliance orders.",
+    "last_verified": "2026-09-28",
     "date_added": "2026-08-05",
     "last_updated": "2026-08-22",
     "sources": [
@@ -2851,36 +3024,43 @@
       {
         "name": "New York Times -- 'Civil Cases Against Major Polluters Plummet Under Trump'",
         "url": "https://www.nytimes.com/2025/08/08/climate/pollution-civil-cases-epa-trump.html"
+      },
+      {
+        "name": "Environmental Integrity Project -- 'Declining Environmental Enforcement in Trump's Second Term' (Feb. 5, 2026 report)",
+        "url": "https://environmentalintegrity.org/wp-content/uploads/2026/02/EPA-Enforcement-Report-EMBARGOED-for-2.5.26.pdf"
+      },
+      {
+        "name": "Holland & Knight -- 'EPA Proposes Significant Budget Reduction for Fiscal Year 2026' (June 5, 2025)",
+        "url": "https://www.hklaw.com/en/insights/publications/2025/06/epa-proposes-significant-budget-reduction-for-fiscal-year-2026"
+      },
+      {
+        "name": "EDGI -- 'EPA's Enforcement Performance Under Trump Takes Historic Dive' (Feb. 2, 2026)",
+        "url": "https://envirodatagov.org/epas-enforcement-performance-under-trump-takes-historic-dive/"
+      },
+      {
+        "name": "Inside Climate News -- 'The Trump EPA Is a Toothless Friend of Polluting Industries, Analysis Shows' (Sept. 1, 2026)",
+        "url": "https://insideclimatenews.org/news/01092026/trump-epa-clean-air-water-retreat/"
+      },
+      {
+        "name": "Inside Climate News -- 'DOJ's Environmental Enforcement Has Collapsed in the Second Trump Administration, Former Attorneys Say' (July 28, 2026)",
+        "url": "https://insideclimatenews.org/news/28072026/justice-department-environmental-enforcement-has-collapsed/"
       }
     ],
     "section_summaries": {
-      "what_changed": "DOJ filed just 16 civil enforcement complaints on EPA's behalf in 2025, the lowest first-year total on record, down 76-81% from comparable first-year baselines under Biden and Trump's own first term. The same watchdog report found deep funding cuts across civil enforcement (-30%), criminal enforcement (-49%), compliance monitoring (-35%), and water infrastructure (-90%), plus 3,001 facilities in ongoing Clean Water Act noncompliance.",
-      "estimated_impact": "Achieves a de facto rollback of environmental enforcement without any formal rule repeal, since the underlying standards remain on the books but are not being actively enforced. Water infrastructure funding and Clean Water Act enforcement specifically were both cut sharply, per the same report.",
-      "confidence_note": "Independently reported by NPR, Inside Climate News, and the watchdog group's own report; EPA disputed the finding without offering a competing figure."
+      "what_changed": "DOJ filed just 16 civil suits for EPA in Trump's first year back, 76-87% below prior first years, as EPA shifted to fine-free compliance orders and lost over a quarter of its staff.",
+      "estimated_impact": "Known polluters go unchecked: only 2% of water violators and 12% of air violators faced any action last year, and 3,001 facilities have been out of Clean Water Act compliance for 3+ years.",
+      "confidence_note": "Based on EIP's report, backed by EDGI and Inside Climate News data analyses; EPA disputes it, citing case counts critics say rest on light orders and Biden-era cases."
     },
-    "last_substantive_update": "2026-09-12",
+    "last_substantive_update": "2026-09-28",
     "glance": {
       "who": "Lee Zeldin (EPA Administrator)",
-      "what": "Enforcement collapsed: a record-low 16 civil complaints in 2025 amid deep enforcement budget cuts",
+      "what": "Enforcement collapsed: a record-low 16 civil suits against polluters in Trump's first year back",
       "harm": {
         "kind": "institutional",
         "certainty": "documented",
         "who": "Enforcement of pollution laws"
       },
-      "reviewed": "2026-09-20"
-    },
-    "timeline": {
-      "confidence_note": {
-        "base": "HIGH confidence -- the 16-complaint figure and its historical-comparison percentages are independently reported by NPR, Inside Climate News, and the Environmental Integrity Project's own report; EPA's dispute of the finding is noted but EPA did not provide a competing figure in sourcing reviewed.",
-        "updates": [
-          {
-            "date": "2026-09-12",
-            "label": "Added",
-            "text": "Added 2026-09-12 (round-4 backlog fold, cluster c0509): the New York Times' August 8, 2025 six-month figures (11 vs. 30 lawsuits, 18 vs. 53 settlements) are HIGH confidence, sourced to the same Environmental Integrity Project watchdog group's earlier interim analysis, later superseded by its own Feb. 2026 full-year report already documented above -- presented as an earlier data point in the same declining trend, not a conflicting count. Re-verified 2026-08-22: added the same Feb. 5, 2026 Environmental Integrity Project report's broader funding-cut and Clean Water Act-specific figures (3,001 facilities in significant noncompliance, 90% water-infrastructure funding cut, 12% air-violation enforcement rate, $41M total penalties) -- same underlying report already cited for the 16-complaint figure, not a new source. Prompted by a public submission via the site's claim-suggestion form asking about worsening water pollution; this entry's enforcement-collapse framing (rather than a direct pollution-level measurement) is the accurate, sourced way to substantiate that concern, since no source reviewed measures water pollution levels directly.",
-            "effective_date": "2026-09-12"
-          }
-        ]
-      }
+      "reviewed": "2026-09-28"
     }
   },
   {
@@ -3917,10 +4097,10 @@
     "administration": "Trump II",
     "agency": "Department of the Interior (Fish and Wildlife Service) and Department of Commerce (NOAA/NMFS)",
     "domain": "environmental",
-    "status": "Finalized -- rule uploaded to the Federal Register July 2026, effective September 14, 2026; multiple lawsuits filed or noticed",
+    "status": "In effect since September 14, 2026 (final rule published July 14, 2026). Challenged by environmental groups and two tribes (suits filed July 14) and 21 attorneys general (Sept. 9); no court ruling reported as of mid-September 2026.",
     "date_of_action": "2025-04-17 (rule first proposed) through 2026-09-14 (effective date)",
     "original_rule_summary": "Since 1975 (revised 1981), federal regulations defined 'harm' to a protected species under the Endangered Species Act to include 'significant habitat modification or degradation where it actually kills or injures wildlife by significantly impairing essential behavioral patterns, including breeding, feeding, or sheltering.' This definition meant that destroying or significantly degrading a species' critical habitat -- not just directly killing or injuring an individual animal -- could itself violate the ESA's prohibition on 'take' of a listed species, and was the legal basis on which courts and agencies had evaluated development, logging, mining, and drilling proposals in critical habitat for nearly five decades.",
-    "what_changed": "Added 2026-09-10 (round-4 backlog fold, cluster c0245): the rescission finalized in July 2026 was first proposed over a year earlier. On April 17, 2025, the U.S. Fish and Wildlife Service and the National Marine Fisheries Service jointly proposed rescinding the same 'harm' definition, drawing more than 242,000 public comments during a comment period that closed May 19, 2025. At the time, Commerce Secretary Howard Lutnick said 'President Trump is rescinding overly broad and burdensome regulations that have restrained our fishermen for too long,' and Interior Secretary Doug Burgum said the administration was restoring the ESA 'to its original intent' while respecting the livelihoods of Americans who depend on the land. On July 11, 2026, the Departments of the Interior and Commerce announced they were **rescinding the regulatory definition of 'harm' that had included significant habitat modification or degradation, eliminating that language entirely from the operative regulation**. The rule was uploaded to the Federal Register and takes effect September 14, 2026. Under the new, narrower definition, development activities that destroy or degrade a protected species' habitat would no longer, on their own, constitute unlawful 'harm' to that species -- only actions that directly kill or injure individual animals would qualify. The Center for Biological Diversity, Sierra Club, and Conservation Law Foundation immediately filed suit, arguing the rescission 'violates the core purpose of the statute and decades of legal precedent'; Defenders of Wildlife separately sent a notice of intent to sue, arguing that 'destroying the habitat of endangered wildlife harms that species.'",
+    "what_changed": "On April 17, 2025, the U.S. Fish and Wildlife Service and the National Marine Fisheries Service jointly proposed rescinding the regulatory definition of 'harm' under the Endangered Species Act (90 FR 16102), with a comment period that closed May 19, 2025 and drew approximately 358,000 public comments. In November 2025, while that proposal was still pending, the administration proposed a separate package of ESA rollbacks, and Interior Secretary Doug Burgum said the administration was 'restoring the Endangered Species Act to its original intent' while respecting 'the livelihoods of Americans who depend on our land and resources.' On July 10, 2026, the Departments of the Interior and Commerce announced they were **rescinding the regulatory definition of 'harm' that had included significant habitat modification or degradation, eliminating that language entirely from the operative regulation**. Burgum said federal agencies had 'abused the ESA to obstruct lawful land use and burden American families and businesses,' and Commerce Secretary Howard Lutnick said 'President Trump is rescinding overly broad and burdensome regulations that have restrained our fishermen for too long.' The final rule was published in the Federal Register on July 14, 2026 (91 FR 43300) and took effect September 14, 2026; the agencies said permits and incidental take statements finalized before that date will not be reevaluated. With the definition gone, the agencies rely on the statute's bare text, which, in their reading, means that development activities that destroy or degrade a protected species' habitat would no longer, on their own, constitute unlawful 'harm' to that species -- only actions that directly kill or injure individual animals would qualify. In the final rule, the agencies summarized commenters' estimates that about $483 million had already been spent on species habitat under the old framework, that the proposal alone had chilled another $300 million in planned investment, and that habitat restoration broadly approaches $10 billion in economic impact and supports more than 53,000 jobs; the agencies called the magnitude of such effects uncertain and dismissed those markets as 'regulatory rents.' Challengers sued on July 14, 2026. Earthjustice and the Conservation Law Foundation, representing the Center for Biological Diversity, Sierra Club, Conservation Law Foundation and six other groups, filed in federal court in Seattle, with Earthjustice attorney Kristen Boyles saying the repeal 'violates the core purpose of the statute and decades of legal precedent'; the Swinomish Indian Tribal Community and Squaxin Island Tribe sued in the same court, warning of harm to threatened Skagit River Chinook salmon that remain at about 20% of their recovery levels; and the Environmental Protection Information Center and allied groups sued in the Northern District of California. Defenders of Wildlife sent a notice of intent to sue, with senior attorney Jane Davenport saying 'destroying the habitat -- the home -- of endangered wildlife harms that species ...' On September 9, 2026, a coalition of 21 attorneys general sued to challenge the rescission alongside other ESA rollbacks.",
     "primary_proponent": {
       "name": "Doug Burgum",
       "role": "Secretary of the Interior",
@@ -3933,29 +4113,49 @@
       }
     ],
     "estimated_health_impact": {
-      "summary": "This entry documents an environmental/conservation regulatory rollback rather than a direct public-health standard; the harm alleged is to protected species and their habitats (forests, streams, deserts, oceans, coastlines) rather than to human health directly, though habitat and ecosystem degradation carries broader environmental consequences.",
+      "summary": "The rescission removes habitat destruction from what counts as unlawful 'harm' to endangered and threatened species, so projects that degrade habitat without directly killing or injuring animals no longer violate that ESA prohibition. The human harm documented is indirect: the Swinomish Indian Tribal Community, suing with the Squaxin Island Tribe, warns of fewer treaty-reserved Skagit River Chinook salmon, already at about 20% of recovery levels, to feed its members, and its fisheries manager, Tandy Wilbur, said: \"I fear for the health of our people.\" Financially, commenters told the agencies that the habitat mitigation and restoration market built under the old rule (about $483 million spent, $300 million in planned investment already chilled, more than 53,000 restoration jobs broadly) stands to lose demand.",
       "figures": [
+        {
+          "metric": "Skagit River Chinook salmon (threatened) abundance relative to recovery level",
+          "value": "~20%",
+          "source": "Swinomish Indian Tribal Community, via Islands' Sounder, July 2026"
+        },
+        {
+          "metric": "Habitat spending already made under the prior 'harm' framework (commenter estimate)",
+          "value": "~$483 million",
+          "source": "Commenters, as summarized in the final rule (91 FR 43300, July 14, 2026)"
+        },
+        {
+          "metric": "Planned habitat investment chilled by the proposal alone (commenter estimate)",
+          "value": "~$300 million",
+          "source": "Commenters, as summarized in the final rule (91 FR 43300, July 14, 2026)"
+        },
+        {
+          "metric": "Jobs supported by habitat restoration broadly (commenter estimate)",
+          "value": "53,000+ (~$10 billion economic impact)",
+          "source": "Commenters, as summarized in the final rule (91 FR 43300, July 14, 2026)"
+        },
         {
           "metric": "Years the habitat-modification 'harm' definition had been in effect before rescission",
           "value": "~51 (1975, revised 1981, rescinded 2026)",
-          "source": "ABC News, July 2026"
+          "source": "ABC News, July 2026; final rule (91 FR 43300)"
         },
         {
-          "metric": "Environmental organizations that filed suit or noticed intent to sue",
-          "value": "4 (Center for Biological Diversity, Sierra Club, Conservation Law Foundation, Defenders of Wildlife)",
-          "source": "ABC News, July 2026"
+          "metric": "Legal challenges",
+          "value": "3 suits filed July 14, 2026 (9 environmental groups; 2 tribes; EPIC and allies) plus a 21-attorney-general suit Sept. 9, 2026; Defenders of Wildlife notice of intent to sue",
+          "source": "Earthjustice; Islands' Sounder; Harvard EELP tracker; Vermont Attorney General"
         }
       ],
-      "caveat": "The rule is not yet in effect as of this entry (effective date September 14, 2026) and is already subject to active litigation; its ultimate legal survival is not yet determined. This entry does not catalog specific development projects that would proceed under the new definition, since sourcing reviewed did not identify named projects directly tied to this rule change."
+      "caveat": "No agency or independent estimate quantifies species, habitat, or human-health losses from the rescission. The dollar and job figures are commenter estimates that the agencies recited but called uncertain and did not endorse, and the 53,000-jobs figure covers habitat restoration broadly, not only ESA-driven work. The rule took effect September 14, 2026, does not reopen permits finalized before then, and faces at least four lawsuits with no ruling reported as of mid-September 2026. The entry does not catalog specific development projects proceeding under the narrower definition."
     },
-    "confidence_note": "HIGH confidence -- the rule's substance, timeline, and litigation response are corroborated in detailed ABC News reporting naming the specific plaintiff organizations and quoting their legal arguments directly; the underlying Federal Register filing is a public record. See also the companion entry esa-blanket-4d-rule-elimination-2025.json: a separate rule (eliminating automatic protection for newly listed threatened species, plus a new economic/national-security critical-habitat exclusion standard) proposed the same day (Nov. 20, 2025) as this rule was re-promoted and finalized within days of this one (July 17 vs. July 11, 2026) -- same officials, same broader ESA rollback push, different statutory provisions.",
-    "pull_quote": "\"Destroying the habitat of endangered wildlife harms that species,\" Defenders of Wildlife argued in a notice of intent to sue over the rescission.",
+    "confidence_note": "HIGH confidence -- the rule's substance, dates, and comment count come from the final rule itself (91 FR 43300, July 14, 2026) and the Interior Department's announcement; the litigation is documented in plaintiffs' own releases, state attorney general releases, and ABC News reporting. See also the companion entry esa-blanket-4d-rule-elimination-2025: a separate rule (eliminating automatic protection for newly listed threatened species, plus a new economic/national-security critical-habitat exclusion standard) proposed in November 2025 while this rule was still pending and finalized within days of this one (July 17 vs. July 10, 2026) -- same officials, same broader ESA rollback push, different statutory provisions.",
+    "pull_quote": "\"The law has been clear for decades: destroying the habitat -- the home -- of endangered wildlife harms that species ...,\" said Defenders of Wildlife senior attorney Jane Davenport.",
     "section_summaries": {
-      "what_changed": "First proposed April 17, 2025, Interior and Commerce finalized in July 2026 the rescission of the ESA's ~50-year-old regulatory definition of 'harm' that included significant habitat destruction, meaning only direct killing or injury of individual animals -- not habitat degradation -- now counts as unlawful harm to a protected species.",
-      "estimated_impact": "Development in critical habitat (logging, mining, drilling) faces less ESA-based scrutiny under the new definition; four environmental organizations have sued or noticed intent to sue, arguing the change contradicts the statute's purpose and decades of legal precedent.",
-      "confidence_note": "Well-corroborated by detailed reporting naming the specific rule, its effective date, and the plaintiff organizations' legal arguments; the rule's ultimate survival in litigation is undetermined."
+      "what_changed": "Proposed April 2025 and in effect since Sept. 14, 2026, the rule drops habitat destruction from the ESA's 'harm' definition, so only directly killing or injuring animals counts.",
+      "estimated_impact": "Habitat destruction no longer counts as ESA 'harm'; a tribe warns of fewer Chinook salmon, and commenters say habitat work (~$483M spent to date) and restoration jobs lose demand.",
+      "confidence_note": "Dates and substance come from the final rule itself; lawsuits are documented by plaintiffs and state attorneys general. Litigation outcome is undetermined."
     },
-    "last_verified": "2026-09-10",
+    "last_verified": "2026-09-28",
     "date_added": "2026-07-27",
     "sources": [
       {
@@ -3965,10 +4165,38 @@
       {
         "name": "CBS News — Trump plans to change Endangered Species Act protections (2025-04-17 proposal)",
         "url": "https://www.cbsnews.com/news/trump-plans-to-change-endangered-species-act-protections/"
+      },
+      {
+        "name": "Federal Register — Rescinding the Definition of \"Harm\" Under the Endangered Species Act, final rule (91 FR 43300, July 14, 2026)",
+        "url": "https://www.govinfo.gov/content/pkg/FR-2026-07-14/html/2026-14195.htm"
+      },
+      {
+        "name": "U.S. Department of the Interior — Department of the Interior Restores Clear ESA Enforcement by Rescinding Misguided \"Harm\" Definition (July 10, 2026)",
+        "url": "https://www.doi.gov/pressreleases/department-interior-restores-clear-esa-enforcement-rescinding-misguided-harm"
+      },
+      {
+        "name": "Earthjustice — Lawsuit Seeks to Protect America's Wildlife From Trump Administration (July 14, 2026)",
+        "url": "https://earthjustice.org/press/2026/lawsuit-seeks-to-protect-americas-wildlife-from-trump-administration"
+      },
+      {
+        "name": "Islands' Sounder — Swinomish and Squaxin Island tribes file lawsuit challenging rescission of ESA harm rule (July 2026)",
+        "url": "https://www.islandssounder.com/2026/07/22/swinomish-and-squaxin-island-tribes-file-lawsuit-challenging-rescission-of-esa-harm-rule/"
+      },
+      {
+        "name": "Harvard Environmental and Energy Law Program — Endangered Species Act Regulations tracker",
+        "url": "https://eelp.law.harvard.edu/tracker/endangered-species-act-regulations/"
+      },
+      {
+        "name": "Vermont Attorney General — Attorney General Clark Sues Trump Administration for Rollbacks of Endangered Species Act Regulations (Sept. 9, 2026)",
+        "url": "https://ago.vermont.gov/blog/2026/09/09/attorney-general-clark-sues-trump-administration-rollbacks-endangered-species-act-regulations"
+      },
+      {
+        "name": "E&E News — Trump team proposes big changes in ESA rules (Nov. 19, 2025)",
+        "url": "https://www.eenews.net/articles/trump-team-proposes-big-changes-in-esa-rules/"
       }
     ],
-    "short_summary": "Interior/Commerce rescinded the ~50-year-old ESA definition of \"harm\" that included habitat destruction, so only direct killing/injury of animals now counts -- easing ESA review for development in critical habitat; 4 environmental groups suing.",
-    "last_substantive_update": "2026-09-10",
+    "short_summary": "Interior/Commerce rescinded the ~50-year-old ESA definition of \"harm\" that included habitat destruction, so only direct killing/injury of animals now counts -- easing ESA review for development in critical habitat; sued by environmental groups, two tribes and 21 attorneys general.",
+    "last_substantive_update": "2026-09-28",
     "glance": {
       "who": "Doug Burgum (Interior Secretary)",
       "what": "Rescinded the ESA 'harm' definition covering habitat destruction; only direct killing or injury now counts",
@@ -3977,20 +4205,7 @@
         "certainty": "projected",
         "who": "Protected species and their habitat"
       },
-      "reviewed": "2026-09-20"
-    },
-    "timeline": {
-      "what_changed": {
-        "base": "",
-        "updates": [
-          {
-            "date": "2026-09-10",
-            "label": "Added",
-            "text": "Added 2026-09-10 (round-4 backlog fold, cluster c0245): the rescission finalized in July 2026 was first proposed over a year earlier. On April 17, 2025, the U.S. Fish and Wildlife Service and the National Marine Fisheries Service jointly proposed rescinding the same 'harm' definition, drawing more than 242,000 public comments during a comment period that closed May 19, 2025. At the time, Commerce Secretary Howard Lutnick said 'President Trump is rescinding overly broad and burdensome regulations that have restrained our fishermen for too long,' and Interior Secretary Doug Burgum said the administration was restoring the ESA 'to its original intent' while respecting the livelihoods of Americans who depend on the land. On July 11, 2026, the Departments of the Interior and Commerce announced they were **rescinding the regulatory definition of 'harm' that had included significant habitat modification or degradation, eliminating that language entirely from the operative regulation**. The rule was uploaded to the Federal Register and takes effect September 14, 2026. Under the new, narrower definition, development activities that destroy or degrade a protected species' habitat would no longer, on their own, constitute unlawful 'harm' to that species -- only actions that directly kill or injure individual animals would qualify. The Center for Biological Diversity, Sierra Club, and Conservation Law Foundation immediately filed suit, arguing the rescission 'violates the core purpose of the statute and decades of legal precedent'; Defenders of Wildlife separately sent a notice of intent to sue, arguing that 'destroying the habitat of endangered wildlife harms that species.'",
-            "effective_date": "2026-09-10"
-          }
-        ]
-      }
+      "reviewed": "2026-09-28"
     }
   },
   {
@@ -5006,53 +5221,58 @@
     "administration": "Trump II (2025-present)",
     "agency": "EPA",
     "domain": "environmental",
-    "status": "Fully Repealed. A coalition of 24 states, 10 cities, and 5 counties (led by New York Attorney General Letitia James) filed suit in the U.S. Court of Appeals for the D.C. Circuit on 2026-03-19 challenging the repeal; the American Public Health Association, Sierra Club, and other public-health/environmental groups filed a separate petition for review in the same court. Litigation was ongoing as of this update (2026-09-03), with the U.S. Supreme Court seen by legal analysts as the likely ultimate destination given the stakes. No court ruling on the merits has been identified yet.",
-    "date_of_action": "2025 (Executive Order 14,154, 'Unleashing American Energy', directed the review); EPA's final rule rescinding the underlying 2009 Greenhouse Gas Endangerment Finding and eliminating GHG emission standards for light-, medium-, and heavy-duty vehicles/engines was finalized 2026-02-12 (published in the Federal Register 2026-02-18), effective 2026-04-26",
+    "status": "Fully Repealed, effective 2026-04-20. Challenges by a 40-member coalition of states, cities and counties, and by health and environmental groups, are pending together in the D.C. Circuit (No. 26-1037). As of 2026-09-18, petitioners' July motion to pause the case was undecided; no merits ruling.",
+    "date_of_action": "2025 (Executive Order 14,154, 'Unleashing American Energy', directed the review); EPA's final rule rescinding the underlying 2009 Greenhouse Gas Endangerment Finding and eliminating GHG emission standards for light-, medium-, and heavy-duty vehicles/engines was finalized 2026-02-12 (published in the Federal Register 2026-02-18), effective 2026-04-20",
     "original_rule_summary": "EPA tailpipe emissions standards for new light- and medium-duty vehicles beginning model year 2027, designed to cut vehicle greenhouse gas emissions and accelerate the market shift toward more efficient and electric vehicles; also produced fuel-cost savings for individual drivers.",
-    "what_changed": "EPA fully repealed the standards, citing Executive Order 14,154. The repeal removes both the emissions limits and the associated fuel-economy-driven consumer savings that came with them. EPA's Feb. 12, 2026 final rule went further than a standalone repeal of this one rule: **it rescinded the 2009 Endangerment Finding itself, the underlying legal finding that GHG emissions from motor vehicles endanger public health, on the theory that EPA lacks statutory authority under Clean Air Act Section 202(a) to regulate vehicle GHG emissions without it** -- eliminating not just the light/medium-duty MY2027+ standards this entry tracks, but GHG standards for heavy-duty vehicles/engines as well.",
+    "what_changed": "EPA fully repealed the standards, citing Executive Order 14,154. The repeal removes both the emissions limits and the associated fuel-economy-driven consumer savings that came with them. EPA's Feb. 12, 2026 final rule went further than a standalone repeal of this one rule: **it rescinded the 2009 Endangerment Finding itself, the underlying legal finding that GHG emissions from motor vehicles endanger public health, on the theory that Clean Air Act Section 202(a)(1) does not authorize EPA to set vehicle emission standards in response to global climate change concerns, and that the standards would not materially affect the health and welfare risks the 2009 finding identified** -- eliminating not just the light/medium-duty MY2027+ standards this entry tracks, but GHG standards for heavy-duty vehicles/engines as well. The rule was published in the Federal Register on Feb. 18, 2026 and took effect April 20, 2026. EPA said it does not affect its separate criteria-pollutant (soot- and smog-forming) vehicle standards or NHTSA's fuel-economy rules. Health, environmental and public-interest groups led by the American Public Health Association petitioned the D.C. Circuit for review on Feb. 18, 2026 (American Public Health Association v. EPA, No. 26-1037). On March 19, 2026 a 40-member coalition of 23 states, the District of Columbia, the U.S. Virgin Islands, nine cities, five counties and Pennsylvania's environmental agency, co-led by the attorneys general of New York, Massachusetts, California and Connecticut, filed its own petition, which the court is hearing alongside the groups' case. On July 29, 2026 the health groups, the state coalition and most other petitioners moved to hold the case in abeyance; EPA and 24 states intervening on its side opposed the motion on Aug. 10, 2026. As of the docket's Sept. 18, 2026 entries, the court had not ruled on that motion or on the merits.",
     "primary_proponent": {
       "name": "Lee Zeldin",
       "role": "EPA Administrator",
-      "note": "Announced the broader deregulatory package (31 actions including this one) as, in EPA's own words, the 'biggest deregulatory action in U.S. history.'"
+      "note": "Signed the February 2026 final rule. On March 12, 2025 he announced the 31-action deregulatory package that launched the reconsideration, which EPA billed as the 'Biggest Deregulatory Action in U.S. History.'"
     },
     "corporate_beneficiaries": [
       "Automakers seeking to delay electrification investment",
       "Oil and gas producers/refiners"
     ],
     "estimated_health_impact": {
-      "summary": "This is the single largest rollback by dollar value in the Institute for Policy Integrity's tracker of 2025-2026 Trump-era energy/environmental rollbacks, combining lost consumer fuel savings, lost health benefits from air pollution reduction, and lost climate benefits.",
+      "summary": "The repealed standards were projected by EPA's own 2024 analysis to prevent about 2,577 premature deaths from fine-particle and ozone pollution in the year 2055, with fine-particle health benefits valued at about $10.9 billion a year. Drivers stand to lose about $11.4 billion a year in net consumer savings (fuel, maintenance and repair savings minus higher vehicle costs). Counting about $78.7 billion a year in climate benefits and netting out compliance costs, NYU's Institute for Policy Integrity puts $101.9 billion a year in net benefits at risk, the largest of any rollback in its tracker.",
       "figures": [
         {
-          "metric": "Annual Net Benefits at Risk",
-          "value": "$101,857,000,000",
-          "source": "Institute for Policy Integrity, NYU School of Law (Regulatory Rollback Tracker, updated 2026-04-20)"
-        },
-        {
-          "metric": "Annual Net Consumer Savings at Risk",
-          "value": "$11,410,000,000",
-          "source": "Institute for Policy Integrity, NYU School of Law"
-        },
-        {
-          "metric": "Annual Monetized Health Benefits at Risk",
-          "value": "$10,929,000,000",
-          "source": "Institute for Policy Integrity, NYU School of Law"
-        },
-        {
-          "metric": "Annual Premature Mortalities at Risk",
+          "metric": "Premature deaths prevented in 2055 (ozone + PM2.5), listed by IPI as annual mortalities at risk",
           "value": "2,577",
-          "source": "Institute for Policy Integrity, NYU School of Law"
+          "source": "EPA 2024 Regulatory Impact Analysis for the MY2027+ light/medium-duty standards, as compiled in the Institute for Policy Integrity (NYU Law) Regulatory Rollback Tracker, updated 2026-04-20"
+        },
+        {
+          "metric": "Annual monetized health benefits at risk (PM2.5 only; excludes ozone; 2025$)",
+          "value": "$10,929,000,000",
+          "source": "Institute for Policy Integrity (NYU Law), from EPA's 2024 RIA"
+        },
+        {
+          "metric": "Annual net consumer savings at risk (2025$)",
+          "value": "$11,410,000,000",
+          "source": "Institute for Policy Integrity (NYU Law), from EPA's 2024 RIA"
+        },
+        {
+          "metric": "Annual climate benefits at risk (2025$)",
+          "value": "$78,688,000,000",
+          "source": "Institute for Policy Integrity (NYU Law), from EPA's 2024 RIA"
+        },
+        {
+          "metric": "Annual net benefits at risk (2025$)",
+          "value": "$101,857,000,000",
+          "source": "Institute for Policy Integrity (NYU Law), from EPA's 2024 RIA"
         }
       ],
-      "caveat": "Institute for Policy Integrity is an NYU academic policy center, not a neutral government source, but its methodology is built from the agencies' own prior regulatory impact analyses of the rules being repealed -- cite it as 'built from EPA's own prior cost-benefit analysis of the standard being repealed' rather than as an independent outside estimate."
+      "caveat": "These are IPI's compilation of EPA's own 2024 cost-benefit analysis of the standards before repeal (inflation-adjusted to 2025 dollars; 3% discount rate, 2% for climate), not an independent outside estimate. The mortality figure is EPA's projection for 2055 only, which IPI lists as its annual figure; nearer-term years would likely be lower. The 2024 rule also set criteria-pollutant (soot and smog-forming) limits that the 2026 repeal left in place, so part of the health benefit may survive the repeal. EPA's 2026 final rule no longer monetizes PM2.5 and ozone health effects and instead claims about $54 billion a year in cost savings across all vehicle classes (7% discount rate, 2024 dollars). The heavy-duty GHG standards repealed by the same rule are counted separately (IPI: $14.4 billion a year in net benefits at risk)."
     },
-    "confidence_note": "Strong, quantified, and traceable to agency-originated modeling (the underlying numbers trace back to EPA's own RIA for the rule before repeal). Notable headline figure: 2,577 estimated annual premature mortalities at risk is the largest single figure in the entire current-term tracker. Re-verified 2026-09-03: the repeal's actual legal mechanism (rescinding the 2009 Endangerment Finding, not just repealing this one MY2027+ standard) and the broader vehicle-class scope are now documented in `date_of_action`/`what_changed` above, corroborated across the EPA's own Federal Register final rule and multiple law-firm summaries (DLA Piper, Holland & Knight, Kirkland & Ellis). Active D.C. Circuit litigation (24-state coalition plus a separate public-health/environmental coalition) is noted in `status`; no ruling on the merits yet.",
-    "pull_quote": "EPA’s own prior cost-benefit analysis of the repealed standard estimated 2,577 preventable deaths annually from the resulting air-pollution increase — the single largest rollback by dollar value in NYU’s tracker of 2025-2026 energy/environmental rollbacks.",
+    "confidence_note": "Strong, quantified, and traceable to agency-originated modeling: the impact figures come from EPA's own 2024 regulatory impact analysis of the MY2027+ standards, compiled and inflation-adjusted by NYU's Institute for Policy Integrity. The 2,577 premature-mortality figure is the largest in IPI's tracker, but it is EPA's projection for the year 2055, and the 2024 rule it comes from also set criteria-pollutant limits that the 2026 repeal left in place -- cite it as a ceiling-scale estimate, not a current annual toll. The repeal's legal mechanism (rescinding the 2009 Endangerment Finding, not just repealing this one MY2027+ standard) and its all-vehicle-class scope are documented in EPA's Federal Register final rule (91 FR 7686), corroborated by client alerts from Holland & Knight and Kirkland & Ellis (Kirkland also gives the April 20, 2026 effective date). D.C. Circuit litigation by a coalition of states, cities and counties and a separate public-health/environmental coalition is pending, with no merits ruling as of 2026-09-18.",
+    "pull_quote": "EPA's own 2024 analysis projected the repealed standards would prevent about 2,577 premature deaths in 2055 alone; built from that analysis, NYU's Institute for Policy Integrity counts $101.9 billion a year in net benefits at risk — the largest rollback by dollar value in its tracker.",
     "section_summaries": {
-      "what_changed": "EPA fully repealed light/medium-duty vehicle GHG standards, citing EO 14,154, eliminating both emissions limits and fuel-savings benefits.",
-      "estimated_impact": "By dollar value, this ranks as the biggest rollback tracked in the current term once fuel, health, and climate losses are added together.",
-      "confidence_note": "Figures trace back to EPA's own pre-repeal analysis, and the mortality toll here outranks every other entry in the tracker."
+      "what_changed": "EPA rescinded the 2009 Endangerment Finding and repealed all vehicle GHG standards, including the MY2027+ car and light-truck limits; the rule took effect April 20, 2026.",
+      "estimated_impact": "EPA's 2024 analysis projected about 2,577 deaths prevented in 2055; NYU's tracker puts $101.9 billion a year in net benefits at risk, the largest rollback by dollar value it tracks.",
+      "confidence_note": "Figures come from EPA's own 2024 analysis; the death estimate is for 2055, and part of the benefit may come from pollution limits the repeal left in place."
     },
-    "last_verified": "2026-09-03",
+    "last_verified": "2026-09-28",
     "date_added": "2026-07-03",
     "sources": [
       {
@@ -5066,10 +5286,34 @@
       {
         "name": "Capture Cascade Timeline -- 24 States and 15 Local Governments Sue EPA Over Repeal of Greenhouse Gas Endangerment Finding",
         "url": "https://capturecascade.org/event/2026-03-19--24-states-sue-epa-endangerment-finding-repeal"
+      },
+      {
+        "name": "CourtListener -- American Public Health Association v. EPA, No. 26-1037 (D.C. Cir.) docket",
+        "url": "https://www.courtlistener.com/docket/72292285/american-public-health-association-v-epa/"
+      },
+      {
+        "name": "New York Attorney General -- Attorney General James Leads Challenge to Trump Administration's Climate Rollback (Mar. 19, 2026)",
+        "url": "https://ag.ny.gov/press-release/2026/attorney-general-james-leads-challenge-trump-administrations-climate-rollback"
+      },
+      {
+        "name": "Institute for Policy Integrity -- Forgone Benefits Tracker dataset (2025 dollars)",
+        "url": "https://policyintegrity.org/documents/Forgone_Benefits_Tracker_WEB_VERSION_2025_DOLLARS_2026.05.06.xlsx"
+      },
+      {
+        "name": "EPA -- EPA Launches Biggest Deregulatory Action in U.S. History (Mar. 12, 2025)",
+        "url": "https://www.epa.gov/newsreleases/epa-launches-biggest-deregulatory-action-us-history"
+      },
+      {
+        "name": "Holland & Knight -- EPA Repeals Vehicle Greenhouse Gas Standards and the Underlying Endangerment Finding (Feb. 2026)",
+        "url": "https://www.hklaw.com/en/insights/publications/2026/02/epa-repeals-vehicle-all-greenhouse-gas-standards-for-vehicles"
+      },
+      {
+        "name": "Kirkland & Ellis -- U.S. Environmental Protection Agency Issues Final Rule to Rescind Endangerment Finding (Mar. 2026)",
+        "url": "https://www.kirkland.com/publications/kirkland-alert/2026/03/us-environmental-protection-agency-issues-final-rule"
       }
     ],
     "short_summary": "Repealed vehicle emissions standards for new cars, trucks, and SUVs.",
-    "last_substantive_update": "2026-09-03",
+    "last_substantive_update": "2026-09-28",
     "glance": {
       "who": "Lee Zeldin (EPA Administrator)",
       "what": "Repealed greenhouse-gas standards for new cars, trucks and SUVs",
@@ -5078,7 +5322,7 @@
         "certainty": "projected",
         "who": "Americans exposed to vehicle pollution"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-09-28"
     }
   },
   {
@@ -5735,39 +5979,59 @@
     "administration": "Trump II (2025-present)",
     "agency": "Congress / Department of the Treasury (tax-credit phase-out); Department of Agriculture (farmland funding cancellation)",
     "domain": "environmental",
-    "status": "Fully Enacted (tax-credit phase-out) / Finalized (USDA program changes)",
+    "status": "Enacted: wind/solar credits end for projects not begun by July 4, 2026 (now passed) unless in service by end of 2027. USDA farmland solar/wind limits imposed Aug. 2025; REAP grant applications halted Mar. 31, 2026 pending new rules.",
     "date_of_action": "2025-07-04 (H.R. 1 signed) through 2025-08-19 (USDA farmland funding announcement)",
-    "original_rule_summary": "The Inflation Reduction Act's clean-energy tax credits (for wind and solar generation, among other technologies) allowed projects placed in service on a multi-year timeline to qualify for federal tax credits, supporting project financing industry-wide. Separately, USDA's Rural Energy for America Program (REAP) and Business and Industry Guaranteed Loan program had provided more than $2 billion in loans and grants supporting solar and wind installations on farmland, including large ground-mount systems.",
-    "what_changed": "Trump signed H.R. 1, the 'One Big Beautiful Bill Act' (OBBBA), into law on July 4, 2025 after Senate passage on July 1 and House passage on July 3. The law accelerates the phase-out of wind and solar tax credits: projects must now begin construction by July 5, 2026 and be placed in service by the end of 2027 to qualify, a sharply compressed timeline compared to the prior multi-year phase-out schedule, while a separately-added credit for metallurgical coal used in steelmaking runs with no phase-out through the end of 2029. Reuters and AP reporting characterized the changes as a major setback for renewable-energy project financing, with thousands of already-planned wind and solar projects at risk of losing eligibility if not completed within the new compressed window, alongside separate provisions expanding oil, gas, and coal leasing and blocking a planned methane-emissions penalty. Separately, on August 18-19, 2025, Agriculture Secretary Brooke Rollins announced USDA would no longer support solar and wind development on productive farmland: ground-mount solar systems larger than 50kW (or those unable to document historical energy usage) became ineligible for REAP's guaranteed-loan program, REAP grants no longer receive priority points for solar/wind projects, solar and wind projects generally became ineligible for the Business and Industry Guaranteed Loan program, and projects containing Chinese-made components or sited on USDA-certified cropland were separately excluded. Rollins justified the change by saying 'our prime farmland should not be wasted and replaced with green new deal subsidized solar panels' and that the projects were 'taking away the futures of the next generation of farmers.' USDA's own prior research undercuts the scale of that claim: a 2024 USDA study found wind turbines and solar farms affected about 424,000 acres of rural land in 2020 -- less than 0.05% of the nearly 900 million acres of U.S. farmland -- and a separate USDA Economic Research Service analysis (Amber Waves, September 2024) found that agricultural land near solar and wind projects usually remained in agricultural production after development, contrary to a wholesale-farmland-loss framing. Added 2026-09-09 (round-4 backlog cluster c0350): the House's own May 22, 2025 passage of the bill (before Senate revisions and the final July 4 enactment) already specified several of the eventually-enacted cuts in the same form -- ending EV tax credits in 2025, phasing out wind, solar, and nuclear power tax breaks by 2032, and eliminating home energy-efficiency subsidies after 2025 -- confirming these provisions were not added or substantially altered between House passage and final enactment. A concrete local example of the law's real-world stakes: Cartersville, Georgia -- in Bartow County, which backed Trump with 75% of the vote across all three of his campaigns -- **is home to a $5 billion Hyundai Motor Group/SK On battery factory and a $2.3 billion Qcells solar-panel plant (combined $7.3 billion investment, pledging average wages of $53,000 and thousands of jobs), both of which were financed in part on the strength of the same federal clean-energy subsidies this law curtails**; AP reported local officials warned the cuts could jeopardize the area's promised jobs and economic growth despite the town's strong political support for Trump.",
+    "original_rule_summary": "The Inflation Reduction Act's clean-energy tax credits (for wind and solar generation, among other technologies) allowed projects placed in service on a multi-year timeline to qualify for federal tax credits, supporting project financing industry-wide. Separately, USDA's Rural Energy for America Program (REAP) had provided over $2 billion for renewable energy projects such as solar and wind, according to the agency's website as cited by Reuters (Canary Media counts about $1.2 billion in grants and $2.5 billion in loan guarantees for rural solar since 2014), and USDA's Business and Industry Guaranteed Loan program had been open to wind and solar projects.",
+    "what_changed": "The House passed its version of H.R. 1, the 'One Big Beautiful Bill Act' (OBBBA), on May 22, 2025. As the House passed it, The Guardian reported, tax credits for cleaner cars would end in 2025, incentives for wind, solar and even nuclear projects would be scaled down and eliminated by 2032, and home energy-efficiency subsidies would end after 2025. As the Senate neared its vote, AP reported (June 30, 2025) on the stakes for Cartersville, Georgia, in Bartow County, which backed Trump with 75% of the vote all three times he appeared on the ballot: **Cartersville is home to a $5 billion Hyundai Motor Group/SK On battery factory under construction and a $2.3 billion Qcells solar-panel plant, an investment that federal subsidies helped land, with both plants pledging thousands of jobs at average wages of $53,000 a year**. The bill would end the $7,500 EV tax credit and the 40% federal credit that buyers of Qcells panels receive; a Republican county commissioner called the cuts 'a little concerning,' and the mayor said he hoped agreements already in place would be carried out to fulfillment. The Senate rewrote several of the House provisions, passed the bill on July 1, the House passed the Senate version on July 3, and Trump signed it into law on July 4, 2025. The enacted law ends the EV credit after September 30, 2025 and the home energy-efficiency and residential clean-energy credits after 2025, and lets nuclear, hydropower, geothermal and storage keep a longer runway than wind and solar, with their credits phasing down for projects that begin construction after 2033. Wind and solar are cut much sooner: a wind or solar facility loses the clean-electricity production and investment credits unless it begins construction by July 4, 2026 or is placed in service by the end of 2027. A newly added 2.5% production credit for metallurgical coal used in steelmaking covers 2026 through 2029. Reuters called the Senate bill a big blow to renewable energy, and community-solar developers warned it would strand thousands of projects already under development. Other provisions of the same law expanded federal oil, gas and coal leasing, cut oil and gas royalty rates, cut the federal coal royalty rate from 12.5% to no more than 7% through September 2034, and postponed the Inflation Reduction Act's methane waste-emissions charge until 2034. On July 7, 2025, Trump signed Executive Order 14315 directing the Treasury to strictly enforce the wind and solar termination. Treasury and the IRS followed with Notice 2025-42, which, for projects not begun before September 2, 2025, took away the long-used 5% cost safe harbor for showing that construction had begun (except for solar facilities of 1.5 megawatts or less), leaving the physical-work test. On Monday, August 18, 2025, at an event in Lebanon, Tennessee, Agriculture Secretary Brooke Rollins announced USDA would no longer fund solar and wind projects on productive farmland; USDA's press release followed on August 19. Effective immediately, wind and solar projects became ineligible for Rural Development's Business and Industry Guaranteed Loan program, and ground-mount solar systems larger than 50kW, or unable to document historical energy usage, became ineligible for the Rural Energy for America Program (REAP) guaranteed-loan program and no longer receive priority points for REAP grants. An internal USDA memo, reported by Agri-Pulse and Canary Media, also denied REAP loan guarantees to projects on land the Farm Service Agency certifies as cropland and to systems with any component made in a country named as a foreign adversary, which Canary Media noted covers almost all solar panels; the memo cited Trump's July 7 executive order and carried an August 31, 2026 expiration date. Rollins justified the change by saying 'our prime farmland should not be wasted and replaced with green new deal subsidized solar panels,' and wrote on X that 'millions of acres of prime farmland is left unusable' and that 'this destruction of our farms and prime soil is taking away the futures of the next generation of farmers.' USDA's own research undercuts the scale of that claim: a 2024 USDA Economic Research Service study, summarized in its Amber Waves magazine in September 2024, found wind turbines and solar farms directly affected about 424,000 acres of rural land in 2020, less than 0.05% of the roughly 897 million acres used for farmland, and that agricultural land near solar and wind projects usually remained in agricultural production after development. On March 31, 2026, USDA halted REAP grant applications, saying there would be no further REAP grants until it rewrote the program's regulations to comply with the same executive order; REAP guaranteed-loan applications stayed open, and DTN reported that USDA had awarded no new REAP grants since the administration took office.",
     "primary_proponent": {
       "name": "Donald Trump, President; Brooke Rollins, Secretary of Agriculture",
       "role": "Trump signed the OBBBA tax-credit phase-out into law; Rollins announced and directed the USDA farmland-funding cancellation",
-      "note": "Trump signed H.R. 1 on July 4, 2025; Rollins held an August 18-19, 2025 press conference and USDA press release directly announcing and justifying the REAP/loan-program changes."
+      "note": "Trump signed H.R. 1 on July 4, 2025 and signed Executive Order 14315 on July 7 directing strict enforcement of the wind/solar termination; Rollins announced the REAP/loan-program changes at an August 18, 2025 event in Lebanon, Tennessee, and USDA's August 19 press release announced and justified them."
     },
     "corporate_beneficiaries": [
-      "Coal producers supplying metallurgical coal for steelmaking (new uncapped tax credit through 2029)",
-      "Oil and gas leaseholders (expanded federal leasing under the same law)"
+      "Coal producers supplying metallurgical coal for steelmaking (new 2.5% production tax credit, 2026-2029)",
+      "Oil and gas leaseholders (expanded federal leasing and lower royalty rates under the same law)"
     ],
     "estimated_health_impact": {
-      "summary": "No direct health-impact figures were identified in sourcing reviewed; the primary documented harm is to renewable-energy project financing and rural landowner income (farmers who lease land for wind/solar installations), not a direct public-health pathway.",
+      "summary": "The entry documents financial harm with human effects rather than a sourced health toll. The law cuts off wind and solar tax credits for projects not begun by July 4, 2026 unless they are in service by the end of 2027, and Energy Innovation's model of the final law's energy provisions projects 760,000 lost jobs by 2030, household energy costs about $170 a year higher by 2035, and consumer electricity rates 9-18% higher by 2035. USDA's curbs take away loan and grant support that farmers and rural businesses had used to install solar and cut their energy bills, even though USDA's own research found wind and solar directly affected less than 0.05% of U.S. farmland. DTN reported that USDA had awarded no new REAP grants since the administration took office, and on March 31, 2026 USDA halted REAP grant applications until it rewrites the program's rules.",
       "figures": [
         {
-          "metric": "Rural land affected by wind/solar development nationally as of 2020 (USDA's own study, cited to rebut the 'wasted farmland' framing)",
-          "value": "~424,000 acres (less than 0.05% of ~900 million acres of U.S. farmland)",
-          "source": "2024 USDA study, cited by Reuters"
+          "metric": "Jobs lost by 2030 from the final law's energy provisions (projection)",
+          "value": "760,000",
+          "source": "Energy Innovation, 'Final Analysis: Economic Impacts Of U.S. One Big Beautiful Bill Act Energy Provisions' (July 2025)"
         },
         {
-          "metric": "USDA REAP/loan-program support for solar and wind projects historically provided",
+          "metric": "Increase in average household energy costs by 2035 (projection)",
+          "value": "$170 per year",
+          "source": "Energy Innovation, final-law analysis (July 2025)"
+        },
+        {
+          "metric": "Increase in electricity rates paid by consumers by 2035 (projection)",
+          "value": "9-18%",
+          "source": "Energy Innovation, final-law analysis (July 2025)"
+        },
+        {
+          "metric": "USDA REAP funding for renewable energy projects such as solar and wind (cumulative, before the cutoff)",
           "value": "$2,000,000,000+",
-          "source": "USDA program figures, cited by Reuters/farm press coverage"
+          "source": "USDA website, as cited by Reuters (Aug. 18, 2025)"
+        },
+        {
+          "metric": "REAP support for rural solar since 2014",
+          "value": "~$1.2 billion in grants and ~$2.5 billion in loan guarantees",
+          "source": "Canary Media (Aug. 22, 2025)"
+        },
+        {
+          "metric": "Rural land directly affected by wind/solar development nationally in 2020 (USDA's own study, cutting against the 'wasted farmland' rationale)",
+          "value": "~424,000 acres (less than 0.05% of ~897 million acres of U.S. farmland)",
+          "source": "USDA Economic Research Service, ERR-330 (2024), summarized in Amber Waves (Sept. 2024); cited by Reuters"
         }
       ],
-      "caveat": "The 424,000-acre and $2 billion figures both come from USDA's own data and programs, predating and cutting against Secretary Rollins's own stated rationale for ending the funding -- this entry presents that tension rather than resolving it, since USDA has not reconciled its prior research with its current policy in sourcing reviewed."
+      "caveat": "The job, energy-cost and rate figures are one think tank's model (Energy Innovation's Energy Policy Simulator) of all the final law's energy provisions, including oil and gas leasing and other credit repeals, not the wind/solar deadlines alone; they are projections, not observed outcomes. Energy Innovation's earlier model of the House-passed bill projected 430 additional premature deaths a year by 2030 and 930 by 2035 from higher air pollution, but that model assumed the House text and a repeal of vehicle emission rules, and its final-law summary gives no health figure, so no health toll is claimed here. The REAP dollar figures measure past support, not a measured loss; the entry has no count of farm projects cancelled by USDA's changes. The 424,000-acre figure is USDA's own research and cuts against Secretary Rollins's rationale; USDA has not reconciled the two in sourcing reviewed."
     },
-    "confidence_note": "HIGH confidence on both actions -- the OBBBA's tax-credit phase-out timeline is corroborated across multiple law-firm client alerts (Sidley Austin, Kirkland & Ellis, Holland & Knight, Williams Mullen) analyzing the enacted statute's text, and the USDA farmland-funding change is corroborated by USDA's own press release alongside Reuters, DTN/Progressive Farmer, High Plains Journal, and pv magazine USA. The 424,000-acre/0.05% and $2 billion figures are both sourced to USDA's own research and program data, not an advocacy estimate. Added 2026-09-09 (round-4 backlog cluster c0350): the May 22, 2025 House-passage details are HIGH confidence (The Guardian's direct reporting); the Cartersville, Georgia example is HIGH confidence, corroborated across AP's original reporting and wide syndication (GPB, WABE, 11Alive, Fortune).",
-    "pull_quote": "AP reported local officials in Cartersville — a town that backed Trump with 75% of the vote across all three of his campaigns — warned the cuts could jeopardize the area's promised jobs and economic growth.",
-    "short_summary": "OBBBA sharply compressed wind/solar's tax-credit window while adding an uncapped metallurgical-coal credit; USDA separately cut farmland solar/wind funding despite its own data showing minimal farmland impact.",
-    "last_verified": "2026-09-09",
+    "confidence_note": "HIGH confidence on both actions. The OBBBA's wind/solar deadlines are stated in the IRS's own Notice 2025-42 and in law-firm analyses of the enacted text (Sidley Austin, Kirkland & Ellis); the USDA changes are stated in USDA's own August 19, 2025 press release and corroborated by Reuters, DTN/Progressive Farmer and pv magazine USA. The internal-memo details (cropland and foreign-adversary component exclusions, August 31, 2026 expiration) rest on Agri-Pulse and Canary Media reporting on an internal memo both outlets obtained. The 424,000-acre/0.05% figure comes from USDA's own Economic Research Service research, not an advocacy estimate. The May 22, 2025 House-passage details rest on The Guardian's reporting; the Cartersville example rests on AP's June 30, 2025 reporting, widely republished (GPB, WABE, 11Alive, Fortune), so the copies are not independent corroboration. The job and energy-cost projections are Energy Innovation's modeling, not an agency estimate.",
+    "pull_quote": "AP reported that Cartersville, Georgia, in a county that backed Trump with 75% of the vote all three times he was on the ballot, is home to a $5 billion battery factory under construction and a $2.3 billion solar-panel plant, an investment that federal subsidies the bill would cut helped land.",
+    "short_summary": "OBBBA compressed wind and solar's tax-credit window while adding a metallurgical-coal credit; USDA separately cut farmland solar and wind support despite its own data showing minimal farmland impact.",
+    "last_verified": "2026-09-28",
     "date_added": "2026-09-09",
     "sources": [
       {
@@ -5809,14 +6073,66 @@
       {
         "name": "USDA Economic Research Service, Amber Waves -- 'Agricultural Land Near Solar and Wind Projects Usually Remained in Agriculture After Development'",
         "url": "https://www.ers.usda.gov/amber-waves/2024/september/agricultural-land-near-solar-and-wind-projects-usually-remained-in-agriculture-after-development"
+      },
+      {
+        "name": "IRS -- Notice 2025-42, Beginning of Construction Requirements for wind and solar credit termination",
+        "url": "https://www.irs.gov/pub/irs-drop/n-25-42.pdf"
+      },
+      {
+        "name": "Kirkland & Ellis -- 'One Big Beautiful Bill Act Brings Big Changes to Green Energy Tax Credits' (Aug. 6, 2025)",
+        "url": "https://www.kirkland.com/publications/kirkland-alert/2025/08/one-big-beautiful-bill-act-brings-big-changes-to-green-energy-tax-credits"
+      },
+      {
+        "name": "Kirkland & Ellis -- 'The One Big Beautiful Bill Act Is Signed Into Law': Key Changes to Environmental Programs (July 25, 2025)",
+        "url": "https://www.kirkland.com/publications/kirkland-alert/2025/07/the-one-big-beautiful-bill-act-is-signed-into-law-by-president-trump"
+      },
+      {
+        "name": "Sidley Environmental, Health, and Safety Brief -- H.R.1 environmental and energy provisions (July 8, 2025)",
+        "url": "https://environmentalhealthsafetybrief.sidley.com/2025/07/08/h-r-1-what-you-should-know-about-the-environmental-and-energy-provisions-in-the-one-big-beautiful-bill-act/"
+      },
+      {
+        "name": "Warrior Met Coal -- Form 10-Q for quarter ended Sept. 30, 2025 (45X metallurgical coal credit)",
+        "url": "https://www.sec.gov/Archives/edgar/data/1691303/000119312525267117/hcc-20250930.htm"
+      },
+      {
+        "name": "Reuters (via TradingView) -- 'Despite last-minute changes, US Senate bill deals big blow to renewable energy' (July 1, 2025)",
+        "url": "https://www.tradingview.com/news/reuters.com,2025:newsml_L1N3SY0T7:0-despite-last-minute-changes-us-senate-bill-deals-big-blow-to-renewable-energy/"
+      },
+      {
+        "name": "Reuters (via Yahoo News) -- 'USDA ends programs for solar, wind projects on farms' (Aug. 18, 2025)",
+        "url": "https://www.yahoo.com/news/articles/usda-ends-programs-solar-wind-193828018.html"
+      },
+      {
+        "name": "Energy Innovation -- 'Final Analysis: Economic Impacts Of U.S. One Big Beautiful Bill Act Energy Provisions' (July 2025)",
+        "url": "https://energyinnovation.org/report/updated-economic-impacts-of-u-s-senate-passed-one-big-beautiful-bill-act-energy-provisions/"
+      },
+      {
+        "name": "Energy Innovation -- 'Assessing Impacts Of The One Big Beautiful Bill Act On U.S. Energy Costs, Jobs, Health, And Emissions' (House-passed bill, June 2025)",
+        "url": "https://energyinnovation.org/wp-content/uploads/Impacts-Of-The-One-Big-Beautiful-Bill-On-U.S.-Energy-Costs-Jobs-Health-And-Emissions.pdf"
+      },
+      {
+        "name": "Canary Media -- 'Trump admin blocks funds for farmers who want solar' (Aug. 22, 2025)",
+        "url": "https://www.canarymedia.com/articles/solar/trump-blocks-reap-funding-farmers"
+      },
+      {
+        "name": "farmdoc Farm Policy News -- 'USDA Ending Loan Support for Solar Projects on Farmland' (summarizing Agri-Pulse, Aug. 2025)",
+        "url": "https://farmpolicynews.illinois.edu/2025/08/usda-ending-loan-support-for-solar-projects-on-farmland/"
+      },
+      {
+        "name": "DTN/Progressive Farmer -- 'USDA Halts REAP Grant Applications as Rising Energy Costs Squeeze Farmers' (Apr. 1, 2026)",
+        "url": "https://www.dtnpf.com/agriculture/web/ag/news/business-inputs/article/2026/04/01/usda-halts-reap-grant-applications"
+      },
+      {
+        "name": "GovInfo -- H.R. 1 (119th Congress), One Big Beautiful Bill Act, enrolled text",
+        "url": "https://www.govinfo.gov/content/pkg/BILLS-119hr1enr/html/BILLS-119hr1enr.htm"
       }
     ],
     "section_summaries": {
-      "what_changed": "OBBBA compressed wind/solar's tax-credit eligibility window to a 2026-2027 construction/service deadline while adding an uncapped metallurgical-coal credit through 2029; USDA separately cut REAP/loan funding for farmland solar and wind projects, citing farmland loss its own prior research contradicts.",
-      "estimated_impact": "No direct health pathway documented; the harm is to renewable-project financing and farmer lease income, and USDA's own data (424,000 acres, 0.05% of farmland; $2B+ in prior REAP support) undercuts its stated farmland-loss rationale.",
-      "confidence_note": "Both actions are independently well-corroborated across law-firm analysis, USDA's own statements, and multiple trade/wire outlets."
+      "what_changed": "OBBBA ended wind/solar credits for projects not begun by July 4, 2026 unless in service by end-2027 and added a met-coal credit; USDA cut farm solar/wind support despite its own contrary data.",
+      "estimated_impact": "The documented harm is financial: Energy Innovation projects 760,000 lost jobs by 2030 and household energy costs $170 a year higher by 2035; USDA curbed farm solar support.",
+      "confidence_note": "Both actions rest on primary documents (IRS notice, USDA release) plus law-firm, wire and trade reporting; memo details rely on Agri-Pulse and Canary Media."
     },
-    "last_substantive_update": "2026-09-09",
+    "last_substantive_update": "2026-09-28",
     "glance": {
       "who": "Donald Trump, Brooke Rollins (USDA Secretary)",
       "what": "Compressed wind and solar tax-credit deadlines; USDA cut farmland solar and wind funding",
@@ -5825,31 +6141,7 @@
         "certainty": "projected",
         "who": "Renewable projects and farm lease income"
       },
-      "reviewed": "2026-09-20"
-    },
-    "timeline": {
-      "what_changed": {
-        "base": "Trump signed H.R. 1, the 'One Big Beautiful Bill Act' (OBBBA), into law on July 4, 2025 after Senate passage on July 1 and House passage on July 3. The law accelerates the phase-out of wind and solar tax credits: projects must now begin construction by July 5, 2026 and be placed in service by the end of 2027 to qualify, a sharply compressed timeline compared to the prior multi-year phase-out schedule, while a separately-added credit for metallurgical coal used in steelmaking runs with no phase-out through the end of 2029. Reuters and AP reporting characterized the changes as a major setback for renewable-energy project financing, with thousands of already-planned wind and solar projects at risk of losing eligibility if not completed within the new compressed window, alongside separate provisions expanding oil, gas, and coal leasing and blocking a planned methane-emissions penalty. Separately, on August 18-19, 2025, Agriculture Secretary Brooke Rollins announced USDA would no longer support solar and wind development on productive farmland: ground-mount solar systems larger than 50kW (or those unable to document historical energy usage) became ineligible for REAP's guaranteed-loan program, REAP grants no longer receive priority points for solar/wind projects, solar and wind projects generally became ineligible for the Business and Industry Guaranteed Loan program, and projects containing Chinese-made components or sited on USDA-certified cropland were separately excluded. Rollins justified the change by saying 'our prime farmland should not be wasted and replaced with green new deal subsidized solar panels' and that the projects were 'taking away the futures of the next generation of farmers.' USDA's own prior research undercuts the scale of that claim: a 2024 USDA study found wind turbines and solar farms affected about 424,000 acres of rural land in 2020 -- less than 0.05% of the nearly 900 million acres of U.S. farmland -- and a separate USDA Economic Research Service analysis (Amber Waves, September 2024) found that agricultural land near solar and wind projects usually remained in agricultural production after development, contrary to a wholesale-farmland-loss framing.",
-        "updates": [
-          {
-            "date": "2026-09-09",
-            "label": "Added",
-            "text": "Added 2026-09-09 (round-4 backlog cluster c0350): the House's own May 22, 2025 passage of the bill (before Senate revisions and the final July 4 enactment) already specified several of the eventually-enacted cuts in the same form -- ending EV tax credits in 2025, phasing out wind, solar, and nuclear power tax breaks by 2032, and eliminating home energy-efficiency subsidies after 2025 -- confirming these provisions were not added or substantially altered between House passage and final enactment. A concrete local example of the law's real-world stakes: Cartersville, Georgia -- in Bartow County, which backed Trump with 75% of the vote across all three of his campaigns -- **is home to a $5 billion Hyundai Motor Group/SK On battery factory and a $2.3 billion Qcells solar-panel plant (combined $7.3 billion investment, pledging average wages of $53,000 and thousands of jobs), both of which were financed in part on the strength of the same federal clean-energy subsidies this law curtails**; AP reported local officials warned the cuts could jeopardize the area's promised jobs and economic growth despite the town's strong political support for Trump.",
-            "effective_date": "2026-09-09"
-          }
-        ]
-      },
-      "confidence_note": {
-        "base": "HIGH confidence on both actions -- the OBBBA's tax-credit phase-out timeline is corroborated across multiple law-firm client alerts (Sidley Austin, Kirkland & Ellis, Holland & Knight, Williams Mullen) analyzing the enacted statute's text, and the USDA farmland-funding change is corroborated by USDA's own press release alongside Reuters, DTN/Progressive Farmer, High Plains Journal, and pv magazine USA. The 424,000-acre/0.05% and $2 billion figures are both sourced to USDA's own research and program data, not an advocacy estimate.",
-        "updates": [
-          {
-            "date": "2026-09-09",
-            "label": "Added",
-            "text": "Added 2026-09-09 (round-4 backlog cluster c0350): the May 22, 2025 House-passage details are HIGH confidence (The Guardian's direct reporting); the Cartersville, Georgia example is HIGH confidence, corroborated across AP's original reporting and wide syndication (GPB, WABE, 11Alive, Fortune).",
-            "effective_date": "2026-09-09"
-          }
-        ]
-      }
+      "reviewed": "2026-09-28"
     }
   },
   {
