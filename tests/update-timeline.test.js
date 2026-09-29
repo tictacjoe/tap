@@ -14,8 +14,8 @@ function extractFunction(source, name) {
 
 const source = fs.readFileSync(path.join(__dirname, "..", "index.html"), "utf8");
 const regionSource = extractFunction(source, "update-timeline");
-const { sortUpdatesNewestFirst, updatesLabel, buildFieldTimelineHtml } = (0, eval)(
-  `${regionSource}\n({ sortUpdatesNewestFirst, updatesLabel, buildFieldTimelineHtml });`);
+const { sortUpdatesNewestFirst, updatesLabel, stripUpdateMarker, buildFieldTimelineHtml } = (0, eval)(
+  `${regionSource}\n({ sortUpdatesNewestFirst, updatesLabel, stripUpdateMarker, buildFieldTimelineHtml });`);
 
 const identity = (text) => text || "";
 const upd = (text, date, label = "Update", effective = date) =>
@@ -54,8 +54,8 @@ test("sortUpdatesNewestFirst does not mutate its input", () => {
 });
 
 test("updatesLabel wording for one update and for several", () => {
-  assert.equal(updatesLabel(1), "Update, dated when TAP added it");
-  assert.equal(updatesLabel(2), "Updates, newest first, dated when TAP added them");
+  assert.equal(updatesLabel(1), "Update");
+  assert.equal(updatesLabel(2), "Updates, newest first");
 });
 
 test("buildFieldTimelineHtml renders base, label, then updates newest first", () => {
@@ -67,13 +67,13 @@ test("buildFieldTimelineHtml renders base, label, then updates newest first", ()
   const html = buildFieldTimelineHtml(entry, "what_changed", identity);
   assert.equal(html,
     "<p>Base.</p>" +
-    '<p class="update-timeline-label">Updates, newest first, dated when TAP added them</p>' +
-    "<p>Update 2026-09-01: new.</p><p>Update 2026-08-01: old.</p>");
+    '<p class="update-timeline-label">Updates, newest first</p>' +
+    "<p>New.</p><p>Old.</p>");
 });
 
 test("buildFieldTimelineHtml uses the single-update label for one update", () => {
   const entry = { status: "raw", timeline: { status: { base: "Base.", updates: [upd("Update 2026-08-01: x.", "2026-08-01")] } } };
-  assert(buildFieldTimelineHtml(entry, "status", identity).includes(">Update, dated when TAP added it</p>"));
+  assert(buildFieldTimelineHtml(entry, "status", identity).includes(">Update</p>"));
 });
 
 test("buildFieldTimelineHtml omits the base paragraph when the field starts with a marker", () => {
@@ -84,13 +84,21 @@ test("buildFieldTimelineHtml omits the base paragraph when the field starts with
 test("buildFieldTimelineHtml passes every paragraph through hl", () => {
   const entry = { status: "raw", timeline: { status: { base: "Base.", updates: [upd("Update 2026-08-01: x.", "2026-08-01")] } } };
   const html = buildFieldTimelineHtml(entry, "status", (t) => t.toUpperCase());
-  assert(html.includes("<p>BASE.</p>") && html.includes("<p>UPDATE 2026-08-01: X.</p>"));
+  assert(html.includes("<p>BASE.</p>") && html.includes("<p>X.</p>"));
 });
 
 test("buildFieldTimelineHtml falls back to one unsplit paragraph without a timeline entry", () => {
   assert.equal(buildFieldTimelineHtml({ status: "Plain. Update 2026-08-01: raw." }, "status", identity),
     "<p>Plain. Update 2026-08-01: raw.</p>");
   assert.equal(buildFieldTimelineHtml({ status: "P", timeline: {} }, "status", identity), "<p>P</p>");
+});
+
+test("stripUpdateMarker removes plain, annotated and undated markers and capitalizes (2026-09-29)", () => {
+  assert.equal(stripUpdateMarker("Update 2026-08-30: after a year."), "After a year.");
+  assert.equal(stripUpdateMarker("Update 2026-09-01 (GSR recheck batch 51): a dollar figure."), "A dollar figure.");
+  assert.equal(stripUpdateMarker("Added 2026-09-10 (round-4 backlog cluster c0646): that collapse."), "That collapse.");
+  assert.equal(stripUpdateMarker("Update: undated note."), "Undated note.");
+  assert.equal(stripUpdateMarker("No marker here."), "No marker here.");
 });
 
 test("buildFieldTimelineHtml renders nothing for an empty or missing field", () => {

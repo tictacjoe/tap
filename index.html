@@ -2045,9 +2045,8 @@ function buildTrailHtml(trail) {
   if (trail.confidenceNote) {
     parts.push('<div class="field-label">Confidence</div><div class="field-value">' + escapeHtml(trail.confidenceNote) + '</div>');
   }
-  if (trail.lastVerified) {
-    parts.push('<div class="field-label">Last updated and verified</div><div class="field-value">' + escapeHtml(trail.lastVerified) + '</div>');
-  }
+  // trail.lastVerified is no longer shown here (2026-09-29, review dates are
+  // bookkeeping); it stays on the item as data only.
   if (trail.sources.length) {
     parts.push('<div class="field-label">Sources</div><ul class="exhibit-list">' +
       trail.sources.map(s => s.url
@@ -2985,11 +2984,20 @@ function summaryLineHtml(summary, term, useRegex) {
    fold's leaner-rigor pass...", "Folded in round-4 backlog cluster c0494
    ... at creation time") are left alone: removing them would change what a
    note says, so they need an editorial rewrite in the data instead. The
-   "Added DATE:" paragraph marker (see buildFieldTimelineHtml) is unaffected.
+   2026-09-29 (Joe: TAP's own dates and process labels are bookkeeping, never
+   reader text): also removes "(... recheck batch NN ...)" labels and any
+   DATED "Update/Added YYYY-MM-DD ...:" marker left in running text -- e.g.
+   the raw confidence note in the Headlines notes panel, or a field whose
+   timeline split fell back to prose. The per-update marker in the timeline
+   itself is removed by stripUpdateMarker(). "Re-verified YYYY-MM-DD" clauses
+   are left alone on purpose (Joe chose to keep them).
    Idempotent. */
 /* strip-process-labels:start */
 const PROCESS_LABEL_WORDS =
-  "round[- ]4\\s+(?:backlog|batch|candidate|discovery|fold|cluster)|clusters?\\s+c\\d{3,4}|residual-record fold|backlog fold|discovery fold";
+  "round[- ]4\\s+(?:backlog|batch|candidate|discovery|fold|cluster)|clusters?\\s+c\\d{3,4}|residual-record fold|backlog fold|discovery fold|recheck\\s+batch\\s+\\d+";
+const DATED_UPDATE_MARKER_RE = /(^|[.!?;:]\s+|\s)(?:Update|Added)\b[^.:]{0,130}?\d{4}-\d{2}-\d{2}[^.:]{0,130}?:\s*(\S)/g;
+// Sentence-lead recheck labels, e.g. "Real correction, GSR recheck batch 28 (2026-08-30): the ..."
+const RECHECK_LEAD_LABEL_RE = /(^|[.!?;:]\s+)(?:[A-Z][a-z-]+(?: [a-z-]+)?,\s*)?(?:(?:GSR|CLA|CDR|cabinet|deregulation)\s+)?recheck batch \d+(?:\s*\([^()]*\))?:\s*(\S)/gi;
 const PROCESS_PAREN_LABEL_RE = new RegExp("\\s*\\((?:[^()]*?(?:" + PROCESS_LABEL_WORDS + ")[^()]*?)\\)", "gi");
 const PROCESS_COLON_LABEL_RE = /(^|[.!?;:]\s+)Round[- ]4\s+(?:backlog\s+)?(?:fold|cluster|candidate discovery|discovery fold)[^:.]{0,70}:\s*(\S)/gi;
 function stripProcessLabels(text) {
@@ -2997,7 +3005,9 @@ function stripProcessLabels(text) {
   const original = String(text);
   const stripped = original
     .replace(PROCESS_PAREN_LABEL_RE, "")
-    .replace(PROCESS_COLON_LABEL_RE, (m, before, first) => before + first.toUpperCase());
+    .replace(PROCESS_COLON_LABEL_RE, (m, before, first) => before + first.toUpperCase())
+    .replace(DATED_UPDATE_MARKER_RE, (m, before, first) => before + first.toUpperCase())
+    .replace(RECHECK_LEAD_LABEL_RE, (m, before, first) => before + first.toUpperCase());
   return stripped === original ? original : stripped.replace(/^\s+/, "");
 }
 /* strip-process-labels:end */
@@ -3323,10 +3333,21 @@ function sortUpdatesNewestFirst(updates) {
     .map(item => item.update);
 }
 
+/* 2026-09-29 (Joe): the date TAP recorded an update is bookkeeping, not
+   reader content -- never shown as text. The label keeps the order
+   explained without a date, and stripUpdateMarker() removes the leading
+   "Update 2026-08-30 (annotation):" marker from each update's text. The
+   dates stay in the data (the sort still uses them). */
 function updatesLabel(count) {
-  return count === 1
-    ? "Update, dated when TAP added it"
-    : "Updates, newest first, dated when TAP added them";
+  return count === 1 ? "Update" : "Updates, newest first";
+}
+
+// Removes the leading marker (same shape update_markers.py splits on) and
+// capitalizes the first letter of what follows, since update bodies were
+// written as the continuation of "Update DATE: ...".
+function stripUpdateMarker(text) {
+  const rest = String(text || "").replace(/^\s*(?:Update|Added)\b[^.:]{0,130}:\s*/, "");
+  return rest.charAt(0).toUpperCase() + rest.slice(1);
 }
 
 /* One field as HTML: base narrative, a muted label, then the updates,
@@ -3351,7 +3372,7 @@ function buildFieldTimelineHtml(entry, field, hl) {
   const sorted = sortUpdatesNewestFirst(part.updates);
   return (part.base ? "<p>" + hl(part.base) + "</p>" : "") +
     '<p class="update-timeline-label">' + updatesLabel(sorted.length) + "</p>" +
-    sorted.map(u => "<p>" + hl(u.text) + "</p>").join("");
+    sorted.map(u => "<p>" + hl(stripUpdateMarker(u.text)) + "</p>").join("");
 }
 /* update-timeline:end */
 
@@ -3455,9 +3476,10 @@ function buildConfidenceNoteHtml(entry, hl, summary, collapsible) {
   const base = hasUpdates ? part.base : (entry.confidence_note || "").trim();
   const updates = hasUpdates ? sortUpdatesNewestFirst(part.updates) : [];
   const summaryLine = summary(entry.section_summaries?.confidence_note);
-  const labelHtml = entry.last_verified
-    ? '<div class="field-label-row"><div class="field-label">Confidence note</div><span class="field-asof">as of ' + escapeHtml(entry.last_verified) + '</span></div>'
-    : '<div class="field-label">Confidence note</div>';
+  // No "as of <last_verified>" here since 2026-09-29: a review date is
+  // bookkeeping (Joe). The one visible freshness line is next to the
+  // "Request an update" button (buildUpdateRequestHtml).
+  const labelHtml = '<div class="field-label">Confidence note</div>';
   let bodyHtml = '<div class="confidence-box">' +
     (collapsible ? "" : summaryLine) +
     (base ? "<p>" + hl(boldConfidenceRatings(boldLeadingSourcingQuality(base))) + "</p>" : "") +
@@ -3465,14 +3487,12 @@ function buildConfidenceNoteHtml(entry, hl, summary, collapsible) {
   if (updates.length) {
     bodyHtml += '<div class="field-label">' + updatesLabel(updates.length) + '</div><div class="confidence-box updates-box">' +
       updates.map(u =>
-        '<div class="update-item"><div class="update-date">' + escapeHtml(u.date || u.label) + '</div><p>' + hl(boldConfidenceRatings(u.text)) + '</p></div>'
+        '<div class="update-item"><p>' + hl(boldConfidenceRatings(stripUpdateMarker(u.text))) + '</p></div>'
       ).join("") +
       '</div>';
   }
   if (!collapsible) return labelHtml + bodyHtml;
-  const summaryTag = entry.last_verified
-    ? '<summary class="field-label-row"><span class="field-label">Confidence note</span><span class="field-asof">as of ' + escapeHtml(entry.last_verified) + '</span></summary>'
-    : '<summary class="field-label">Confidence note</summary>';
+  const summaryTag = '<summary class="field-label">Confidence note</summary>';
   return '<details class="field-toggle">' + summaryTag + bodyHtml + '</details>' + summaryLine;
 }
 /* build-confidence-note-html:end */

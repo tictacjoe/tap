@@ -510,10 +510,12 @@ test("prosecution Status field splits into separate paragraphs at each Update ma
 
   assert.equal((statusHtml.match(/<p>/g) || []).length, 3, "should split into 3 paragraphs, one per Update marker plus the lead-in text");
   assert(statusHtml.includes("<p>Initial finding here.</p>"), "lead-in text before the first marker should be its own paragraph");
-  assert(statusHtml.includes("<p>Update 2026-07-26: first update text.</p>"), "each Update marker should start its own paragraph");
-  assert(statusHtml.includes("<p>Update 2026-08-02 (real correction): second update text.</p>"), "an annotated Update marker should also start its own paragraph");
-  assert(statusHtml.indexOf("second update text") < statusHtml.indexOf("first update text"), "newest update first");
-  assert(statusHtml.includes("Updates, newest first, dated when TAP added them"));
+  assert(statusHtml.includes("<p>First update text.</p>"), "each Update marker should start its own paragraph");
+  assert(statusHtml.includes("<p>Second update text.</p>"), "an annotated Update marker should also start its own paragraph");
+  assert(statusHtml.indexOf("Second update text") < statusHtml.indexOf("First update text"), "newest update first");
+  assert(statusHtml.includes("Updates, newest first"));
+  assert(!statusHtml.includes("2026-07-26") && !statusHtml.includes("2026-08-02"), "no TAP-recorded dates shown");
+  assert(!statusHtml.includes("real correction"), "marker annotations are not shown");
 });
 
 test("tracker (Reporting) highlights the search term in the body", () => {
@@ -645,8 +647,9 @@ test("prosecution What happened splits into separate paragraphs at each Update m
 
   assert.equal((html.match(/<p>/g) || []).length, 2, "should split into 2 paragraphs, one per Update marker plus the lead-in text");
   assert(html.includes("<p>Initial account here.</p>"), "lead-in text before the marker should be its own paragraph");
-  assert(html.includes("<p>Update 2026-07-26: additional detail surfaced.</p>"), "the Update marker should start its own paragraph");
-  assert(html.includes("Update, dated when TAP added it"));
+  assert(html.includes("<p>Additional detail surfaced.</p>"), "the Update marker should start its own paragraph");
+  assert(html.includes('<p class="update-timeline-label">Update</p>'));
+  assert(!html.includes("2026-07-26"), "the date TAP recorded the update is bookkeeping and never shown");
 });
 
 test("govservices What changed renders as a single paragraph when there are no Update markers", () => {
@@ -682,8 +685,9 @@ test("govservices What changed splits into separate paragraphs at each Update ma
 
   assert.equal((html.match(/<p>/g) || []).length, 2, "should split into 2 paragraphs, one per Update marker plus the lead-in text");
   assert(html.includes("<p>Initial cuts announced.</p>"), "lead-in text before the marker should be its own paragraph");
-  assert(html.includes("<p>Update 2026-08-02: further reductions confirmed.</p>"), "the Update marker should start its own paragraph");
-  assert(html.includes("Update, dated when TAP added it"));
+  assert(html.includes("<p>Further reductions confirmed.</p>"), "the Update marker should start its own paragraph");
+  assert(html.includes('<p class="update-timeline-label">Update</p>'));
+  assert(!html.includes("2026-08-02"), "the date TAP recorded the update is bookkeeping and never shown");
 });
 
 test("deregulation What happened renders as a single paragraph when there are no Update markers", () => {
@@ -719,11 +723,12 @@ test("deregulation What happened splits into separate paragraphs at each Update 
 
   assert.equal((html.match(/<p>/g) || []).length, 2, "should split into 2 paragraphs, one per Update marker plus the lead-in text");
   assert(html.includes("<p>Rule repealed outright.</p>"), "lead-in text before the marker should be its own paragraph");
-  assert(html.includes("<p>Update 2026-08-02: a challenge was filed.</p>"), "the Update marker should start its own paragraph");
-  assert(html.includes("Update, dated when TAP added it"));
+  assert(html.includes("<p>A challenge was filed.</p>"), "the Update marker should start its own paragraph");
+  assert(html.includes('<p class="update-timeline-label">Update</p>'));
+  assert(!html.includes("2026-08-02"), "the date TAP recorded the update is bookkeeping and never shown");
 });
 
-test("prosecution Confidence note splits its base text from a separate Updates section, dated by heading", () => {
+test("prosecution Confidence note splits its base text from a separate Updates section, with no date shown", () => {
   const entry = {
     offense_category: "Fraud",
     status_category: "Investigation",
@@ -740,7 +745,7 @@ test("prosecution Confidence note splits its base text from a separate Updates s
   // section_summaries.confidence_note on this test entry) would otherwise sit
   // between the label and the box -- see buildConfidenceNoteHtml's comment.
   const confidenceStart = result.indexOf('<summary class="field-label">Confidence note</summary><div class="confidence-box">');
-  const updatesStart = result.indexOf('<div class="field-label">Update, dated when TAP added it</div>');
+  const updatesStart = result.indexOf('<div class="field-label">Update</div>');
   const causeStart = result.indexOf('<div class="field-label">Broader Pattern</div>');
 
   assert(confidenceStart !== -1 && updatesStart !== -1 && causeStart !== -1, "all three sections should be present");
@@ -751,8 +756,9 @@ test("prosecution Confidence note splits its base text from a separate Updates s
   assert(!confidenceHtml.includes("2026-08-02"), "the dated update should not remain in the Confidence note box");
 
   const updatesHtml = result.slice(updatesStart);
-  assert(updatesHtml.includes('<div class="update-date">2026-08-02</div>'), "the update's date should render as its heading");
-  assert(updatesHtml.includes("<p>Update 2026-08-02: a second outlet corroborated.</p>"), "the update's own text should render under its date heading");
+  assert(!updatesHtml.includes("update-date"), "no date heading (TAP-recorded dates are bookkeeping)");
+  assert(!updatesHtml.includes("2026-08-02"), "the update's recording date is not shown anywhere");
+  assert(updatesHtml.includes("<p>A second outlet corroborated.</p>"), "the update's own text renders without its marker");
 });
 
 test("prosecution Confidence note is a closed-by-default <details>/<summary> toggle, base note and Updates both inside it", () => {
@@ -768,8 +774,8 @@ test("prosecution Confidence note is a closed-by-default <details>/<summary> tog
   const detailsEnd = html.indexOf("</details>", detailsStart);
   const insideToggle = html.slice(detailsStart, detailsEnd);
   assert(insideToggle.includes("Initially sourced to one outlet."), "base note text should be inside the toggle");
-  assert(insideToggle.includes("Update, dated when TAP added it"), "the Updates section should be inside the same toggle, not a separate one");
-  assert(insideToggle.includes("a second outlet corroborated"), "the update text itself should be inside the toggle");
+  assert(insideToggle.includes('<div class="field-label">Update</div>'), "the Updates section should be inside the same toggle, not a separate one");
+  assert(insideToggle.includes("A second outlet corroborated"), "the update text itself should be inside the toggle");
 });
 
 test("prosecution Confidence note's skim-line summary stays visible outside the toggle, under the label (2026-09-22)", () => {
@@ -788,13 +794,14 @@ test("prosecution Confidence note's skim-line summary stays visible outside the 
   assert(!detailsHtml.includes("Short skim condensation."), "the skim-line should not be duplicated inside the toggle");
 });
 
-test("prosecution Confidence note's toggle summary includes the as-of date when last_verified is set", () => {
+test("prosecution Confidence note's toggle summary shows no as-of date even when last_verified is set (bookkeeping, 2026-09-29)", () => {
   const entry = {
     offense_category: "Fraud", status_category: "Investigation", incident_summary: "x", status: "y",
     confidence_note: "Some note.", last_verified: "2026-09-20",
   };
   const html = buildDetailHtml(entry, { kind: "prosecution" });
-  assert(html.includes('<summary class="field-label-row"><span class="field-label">Confidence note</span><span class="field-asof">as of 2026-09-20</span></summary>'));
+  assert(html.includes('<summary class="field-label">Confidence note</summary>'));
+  assert(!html.includes("as of 2026-09-20") && !html.includes("field-asof"), "no as-of review date next to the label");
 });
 
 test("deregulation and government-services Confidence note and Sources are collapsible, same as CLA (2026-09-23)", () => {
@@ -859,7 +866,7 @@ test("govservices Confidence note splits into separate paragraphs at each Update
 
   assert.equal((html.match(/<p>/g) || []).length, 2, "should split into 2 paragraphs, one per Update marker plus the lead-in text");
   assert(html.includes("<p>Initially sourced to one outlet.</p>"), "lead-in text before the marker should be its own paragraph");
-  assert(html.includes("<p>Update 2026-08-02: a second outlet corroborated.</p>"), "the Update marker should start its own paragraph");
+  assert(html.includes("<p>A second outlet corroborated.</p>"), "the Update marker should start its own paragraph");
 });
 
 test("deregulation Confidence note splits into separate paragraphs at each Update marker", () => {
@@ -885,7 +892,7 @@ test("deregulation Confidence note splits into separate paragraphs at each Updat
 
   assert.equal((html.match(/<p>/g) || []).length, 2, "should split into 2 paragraphs, one per Update marker plus the lead-in text");
   assert(html.includes("<p>Initially sourced to one outlet.</p>"), "lead-in text before the marker should be its own paragraph");
-  assert(html.includes("<p>Update 2026-08-02: a second outlet corroborated.</p>"), "the Update marker should start its own paragraph");
+  assert(html.includes("<p>A second outlet corroborated.</p>"), "the Update marker should start its own paragraph");
 });
 
 // ---- Even card distribution across columns (2026-09-19) --------------
@@ -1190,7 +1197,8 @@ test("Confidence note bolds a leading sourcing-quality phrase alongside ratings,
   const result = buildDetailHtml(entry, { kind: "deregulation" });
   assert(result.includes("<strong>Strong</strong> sourcing on the order"), "leading quality phrase should be bold");
   assert(result.includes("<strong>MODERATE</strong> confidence on intent"), "rating should still be bold");
-  assert(result.includes("Update 2026-08-02: Strong sourcing on the follow-up"), "an update's own text is not treated as a note opening");
+  assert(result.includes("<p>Strong sourcing on the follow-up.</p>"), "an update's own text is not treated as a note opening");
+  assert(!result.includes("2026-08-02"), "the update's recording date is not shown");
   assert.equal((result.match(/<strong>Strong<\/strong>/g) || []).length, 1, "only the note's opening is bolded");
 });
 
@@ -1246,7 +1254,7 @@ const stripProcessLabels = (0, eval)(`${extractFunction(source, "strip-process-l
 test("stripProcessLabels removes a parenthetical label and the space before it", () => {
   assert.equal(
     stripProcessLabels("Added 2026-09-10 (round-4 backlog cluster c0309): the root cause was"),
-    "Added 2026-09-10: the root cause was"
+    "The root cause was"
   );
 });
 
@@ -1267,8 +1275,29 @@ test("stripProcessLabels handles every parenthetical variant found in the corpus
     "(cluster c0810, 2 of 8 records; the other 6 went elsewhere -- see doe-oced-dismantlement-trump2.json)",
   ];
   for (const v of variants) {
-    assert.equal(stripProcessLabels(`Fact one (${"x"}). Added 2026-09-01 ${v}: next.`), "Fact one (x). Added 2026-09-01: next.", v);
+    assert.equal(stripProcessLabels(`Fact one (${"x"}). Added 2026-09-01 ${v}: next.`), "Fact one (x). Next.", v);
   }
+});
+
+test("stripProcessLabels removes recheck-batch labels and dated markers but keeps Re-verified clauses (2026-09-29)", () => {
+  assert.equal(
+    stripProcessLabels("Base fact. Update 2026-09-01 (GSR recheck batch 51): a dollar figure."),
+    "Base fact. A dollar figure."
+  );
+  assert.equal(
+    stripProcessLabels("Sourced well. Re-verified 2026-08-17: no material change."),
+    "Sourced well. Re-verified 2026-08-17: no material change.",
+    "Joe chose to keep Re-verified clauses visible"
+  );
+  assert.equal(stripProcessLabels("The Update team met (Tuesday)."), "The Update team met (Tuesday).", "undated prose is untouched");
+  assert.equal(
+    stripProcessLabels("Figures stand. Real correction, GSR recheck batch 28 (2026-08-30): the tracker had it wrong."),
+    "Figures stand. The tracker had it wrong."
+  );
+  assert.equal(
+    stripProcessLabels("Programs grew. Light update, GSR recheck batch 18 (2026-08-17): both continued."),
+    "Programs grew. Both continued."
+  );
 });
 
 test("stripProcessLabels removes every label when a field has several", () => {
@@ -1338,7 +1367,7 @@ test("expanded entry text no longer shows the label, and the Added marker still 
   const result = buildDetailHtml(entry, { kind: "govservices" });
   assert(!/round[- ]?4|cluster c\d/i.test(result), "no label text should remain in the rendered entry");
   assert(result.includes("<p>Original account.</p>"), "lead-in text stays its own paragraph");
-  assert(result.includes("<p>Added 2026-09-10: a later development.</p>"), "the Added marker still starts its own paragraph, minus the label");
+  assert(result.includes("<p>A later development.</p>"), "the Added marker still starts its own paragraph, minus the label");
   assert(result.includes("Separately, more."), "a colon-prefix label is stripped and the sentence re-capitalized");
 });
 
@@ -1360,11 +1389,11 @@ test("govservices What happened shows updates newest first, by date, not by writ
       upd("Update 2026-09-12: a.", "2026-09-12"), upd("Added 2026-08-17: b.", "2026-08-17", "Added"), upd("Update 2026-08-29: c.", "2026-08-29")) },
   };
   const result = buildDetailHtml(entry, { kind: "govservices" });
-  const order = ["Update 2026-09-12: a.", "Update 2026-08-29: c.", "Added 2026-08-17: b."].map(s => result.indexOf(s));
+  const order = ["<p>A.</p>", "<p>C.</p>", "<p>B.</p>"].map(s => result.indexOf(s));
   assert(order.every(i => i !== -1) && order[0] < order[1] && order[1] < order[2], "true date order, newest first");
 });
 
-test("Confidence note Updates box is newest first and headed by the update's own date, else its label", () => {
+test("Confidence note Updates box is newest first, with no date headings (bookkeeping, 2026-09-29)", () => {
   const entry = {
     what_changed: "x", estimated_health_impact: {}, primary_proponent: { name: "A", role: "B" }, sources: [],
     confidence_note: "raw",
@@ -1372,9 +1401,11 @@ test("Confidence note Updates box is newest first and headed by the update's own
       upd("Update 2026-08-01: one.", "2026-08-01"), upd("Update: two, undated.", null, "Update", "2026-08-01"), upd("Added 2026-09-01: three.", "2026-09-01", "Added")) },
   };
   const result = buildDetailHtml(entry, { kind: "deregulation" });
-  assert(result.includes('<div class="field-label">Updates, newest first, dated when TAP added them</div>'));
-  const heads = [...result.matchAll(/<div class="update-date">([^<]*)<\/div>/g)].map(m => m[1]);
-  assert.deepEqual(heads, ["2026-09-01", "Update", "2026-08-01"]);
+  assert(result.includes('<div class="field-label">Updates, newest first</div>'));
+  assert(!result.includes("update-date"), "no date headings");
+  assert(!result.includes("2026-09-01") && !result.includes("2026-08-01"), "no recording dates shown");
+  const order = ["Three.", "Two, undated.", "One."].map(s => result.indexOf(s));
+  assert(order.every(i => i !== -1) && order[0] < order[1] && order[1] < order[2], "still newest first");
 });
 
 test("a field with markers but no timeline entry falls back to one unsplit paragraph", () => {
@@ -1383,7 +1414,7 @@ test("a field with markers but no timeline entry falls back to one unsplit parag
     status: "Found. Update 2026-07-26: more.", confidence_note: "Strong evidence.",
   };
   const result = buildDetailHtml(entry, { kind: "prosecution" });
-  assert(result.includes('<div class="field-label">Status</div><div class="field-value"><p>Found. Update 2026-07-26: more.</p></div>'));
+  assert(result.includes('<div class="field-label">Status</div><div class="field-value"><p>Found. More.</p></div>'));
 });
 
 test("prosecution detail places the Evidence drawer between the columns and the update-request area when the flag is on", () => {

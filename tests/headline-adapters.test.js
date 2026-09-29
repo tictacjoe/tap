@@ -254,7 +254,7 @@ test("stripAdaptedItemLabels strips headline, every tier, trail.confidenceNote a
   const stripped = fns.stripAdaptedItemLabels(item);
   assert.equal(stripped.headline, "Agency acted against schools.");
   assert.equal(stripped.tiers[0], "The New York Times reported.");
-  assert.equal(stripped.tiers[1], "Brief. Update 2026-08-02: a recheck.", "only the parenthetical is removed; the entry's own Update DATE: marker stays");
+  assert.equal(stripped.tiers[1], "Brief. A recheck.", "the parenthetical and the dated marker are both removed (bookkeeping, 2026-09-29)");
   assert.equal(stripped.tiers[2], "Full text unaffected otherwise.");
   assert.equal(stripped.trail.confidenceNote, "HIGH confidence.");
   assert.equal(stripped.trail.sources[0].name, "Evidence: WaPo reported.");
