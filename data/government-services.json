@@ -38533,33 +38533,58 @@
     "title": "State Department Ends 17-Year Global Embassy Air-Quality Monitoring Program, Erasing Historical Data and the Only Independent Pollution Data Many Countries Had",
     "institution": "U.S. Department of State",
     "domain": "data_collection_halted",
-    "status": "Program ended March 4, 2025, historical data subsequently removed from AirNow.gov; a peer-reviewed PNAS study has since found pollution rose 24-33% across 46 affected cities, and the State Department says it is restoring public reporting but has given no timeframe.",
+    "status": "Program ended March 4, 2025, and its historical data was later removed from AirNow.gov. A September 2026 PNAS study found satellite-measured pollution rose 24-33% across 46 affected cities; the State Department says it is restoring public reporting but has given no timeframe.",
     "date_of_action": "2025-03-04",
-    "what_changed": "The State Department ended a 17-year-old program that used air-quality sensors at more than 80 U.S. embassies and consulates worldwide to monitor pollution levels, citing 'funding constraints that have caused the Department to turn off the underlying network.' The program had provided real-time, validated air-quality data to the public via AirNow.gov and, for many countries with limited or unreliable government monitoring of their own, was the only independent source of that data. The Beijing embassy's monitor, launched in 2008, was historically credited with embarrassing Chinese officials into greater transparency and stronger air-quality policy -- reporting on the program's shutdown noted this same catalytic effect had extended to other countries over the years. Following the shutdown, roughly 17 years of accumulated historical air-quality data were removed from AirNow.gov, eliminating a public-health and research benchmark, not just halting future collection. Embassies were reportedly directed to keep the physical sensors running in some cases, but public data transmission and reporting ceased.\n\nUpdate 2026-09-22: A peer-reviewed study published in PNAS (reported by NPR, September 15, 2026) compared satellite-measured air pollution before and after the shutdown across 46 cities that had relied on the embassy network. Researchers found no significant pollution trend over the 300 days before U.S. reporting ended, but pollution levels rose 24-33% over the several months afterward -- the first quantified measurement of the shutdown's real-world public-health impact. The State Department told NPR it is \"in the process of restoring public reporting of air quality monitoring data,\" but gave no timeframe.",
+    "what_changed": "On March 4, 2025, the State Department ended a 17-year-old program that used air-quality sensors at more than 80 U.S. embassies and consulates worldwide to monitor pollution levels, citing 'funding constraints that have caused the Department to turn off the underlying network.' The program had provided real-time, validated air-quality data to the public via AirNow.gov and, for many countries with limited or unreliable government monitoring of their own, was the only independent source of that data. The Beijing embassy's monitor, launched in 2008, was historically credited with embarrassing Chinese officials into greater transparency and stronger air-quality policy -- reporting on the program's shutdown noted this same catalytic effect had extended to other countries over the years. Following the shutdown, roughly 17 years of accumulated historical air-quality data were removed from AirNow.gov, eliminating a public-health and research benchmark, not just halting future collection. The State Department told CBS News the monitors were still running and collecting data, but public transmission and reporting ceased; the State Department said the data \"will be made available when there is a secure and reliable way to transmit it.\"\n\nA peer-reviewed study published in PNAS on September 14, 2026, by researchers led by Zoey Yiyuan Zhou of Columbia University, compared satellite-derived air pollution (aerosol optical depth) before and after the shutdown across 46 cities that had relied on the embassy network, using same-country cities as controls. It found no systematic pollution trend in the 300 days before U.S. reporting ended, then a prompt 24-33% rise in local pollution levels afterward; NPR reported the rise peaked about three to four months after reporting stopped and then eased somewhat. The authors' conservative translation puts the increase at roughly 1.9 micrograms per cubic meter of PM2.5 (about 4%, per NPR), with alternative methods giving 1.5 to 16.3, and the effects were largest and most persistent in cities with poor substitutes for the U.S. data; NPR reported the biggest rises in Southeast Asian cities such as Manila, Rangoon and Vientiane. The study measured pollution, not health outcomes, and cannot say why pollution rose. The State Department declined to comment on the study but, in a statement reported by NPR and Health Policy Watch, said it is working to restore public reporting of the data, without giving a timeframe.",
     "primary_proponent": {
       "name": "U.S. Department of State",
       "role": "Directed the program's termination, citing budget constraints",
       "note": "No single named individual was identified in reporting reviewed as personally directing this decision; attributed institutionally to the State Department given its own public 'funding constraints' statement."
     },
     "estimated_impact": {
-      "summary": "**Ended the only independent, real-time air-quality data source available in many countries with weak government monitoring, and erased 17 years of historical data used as a public-health and research benchmark -- while also removing a program with a documented history of pressuring foreign governments toward greater transparency and stronger pollution policy.**",
+      "summary": "**People in cities that depended on U.S. embassy monitors lost their only independent, real-time air-quality data, and pollution rose afterward: a peer-reviewed study found satellite-measured pollution up 24-33% across 46 cities, rising most where substitute data was poor.** The program had been credited with pushing China and other governments toward cleaner-air policy, and a 2022 study linked it to lower premature-death risk for more than 300 million people. The shutdown also erased 17 years of historical data from AirNow.gov, a public-health and research benchmark, to save what IQAir reports was only tens of thousands of dollars.",
       "figures": [
         {
-          "metric": "Embassies/consulates covered by the program at shutdown",
+          "metric": "Rise in satellite-measured local pollution (aerosol optical depth) after reporting stopped, 46 cities",
+          "value": "24-33%",
+          "source": "Zhou et al., PNAS, September 14, 2026"
+        },
+        {
+          "metric": "Approximate PM2.5-equivalent increase (preferred conservative estimate; alternatives 1.5-16.3)",
+          "value": "~1.9 micrograms per cubic meter (about 4%, per NPR)",
+          "source": "Zhou et al., PNAS, September 14, 2026; NPR, September 15, 2026"
+        },
+        {
+          "metric": "People whose premature-death risk the program helped lower (2022 PNAS study)",
+          "value": "300 million+",
+          "source": "CBS News, March 7, 2025, quoting a 2022 study"
+        },
+        {
+          "metric": "Estimated annual mortality-related savings from the program (2022 study)",
+          "value": "~$127 million per year; ~303 fewer premature deaths per city annually",
+          "source": "NBC News, March 5, 2025, citing a 2022 study"
+        },
+        {
+          "metric": "Embassies/consulates in the program at shutdown",
           "value": "80+",
-          "source": "Washington Post, March 4, 2025"
+          "source": "NPR, September 15, 2026; IQAir, May 12, 2025"
         },
         {
           "metric": "Years of historical program data removed from AirNow.gov",
           "value": "~17",
-          "source": "IQAir / Centre for Research on Energy and Clean Air analysis, 2025"
+          "source": "IQAir, May 12, 2025"
+        },
+        {
+          "metric": "Expected savings from halting data transmission",
+          "value": "Tens of thousands of dollars",
+          "source": "IQAir, May 12, 2025, citing Wired, March 5, 2025"
         }
       ],
-      "caveat": "This entry documents the program's termination and the removal of its historical data as reported; it does not independently quantify downstream health effects (e.g., excess pollution exposure) attributable to the loss of monitoring, which would require separate epidemiological research beyond what sourcing reviewed here establishes."
+      "caveat": "The 24-33% figure is the PNAS authors' estimate from satellite aerosol data, not ground monitors; its PM2.5 translation ranges widely (1.5-16.3 micrograms per cubic meter), NPR reports the rise eased somewhat after peaking three to four months out, and the study cannot say why pollution rose. The premature-death and $127 million figures come from a 2022 study of the program's benefits, not a count of deaths caused by the shutdown, which no source reviewed here estimates. The 'tens of thousands of dollars' savings figure is IQAir's, citing Wired; the State Department did not give CBS a cost."
     },
-    "confidence_note": "HIGH confidence -- corroborated by the State Department's own public statement, contemporaneous reporting from the Washington Post, CBS News, and NBC News, and an independent post-shutdown data analysis from IQAir/CREA documenting the historical-data removal specifically.",
+    "confidence_note": "HIGH confidence -- corroborated by the State Department's own public statement, contemporaneous reporting from the Washington Post, CBS News, and NBC News, and an IQAir post-shutdown analysis documenting the historical-data removal specifically; a peer-reviewed 2026 PNAS study measures the pollution rise after reporting stopped.",
     "pull_quote": "The Beijing embassy's monitor, launched in 2008, was historically credited with embarrassing Chinese officials into greater transparency and stronger air-quality policy — a catalytic effect reporting found had extended to other countries over the years.",
-    "last_verified": "2026-09-22",
+    "last_verified": "2026-09-28",
     "date_added": "2026-08-10",
     "sources": [
       {
@@ -38575,42 +38600,37 @@
         "url": "https://www.nbcnews.com/news/world/us-embassies-end-air-pollution-monitoring-spurred-china-others-action-rcna194825"
       },
       {
-        "name": "IQAir / Centre for Research on Energy and Clean Air -- 'Defunding U.S. Embassy air quality monitoring and its global consequences'",
+        "name": "IQAir -- 'Defunding U.S. Embassy air quality monitoring and its global consequences'",
         "url": "https://www.iqair.com/us/newsroom/defunding-us-embassy-air-quality-monitoring-and-its-global-consequences"
       },
       {
         "name": "NPR -- Air pollution spiked after the Trump administration stopped embassy monitoring",
         "url": "https://www.npr.org/2026/09/15/nx-s1-5966503/air-pollution-spiked-after-the-trump-administration-stopped-embassy-monitoring"
+      },
+      {
+        "name": "PNAS -- Zhou et al., 'Air pollution after the shutdown of US embassy monitoring' (September 14, 2026)",
+        "url": "https://doi.org/10.1073/pnas.2605467123"
+      },
+      {
+        "name": "Health Policy Watch -- 'After US Embassy Monitors Went Offline, Air Pollution Spiked In Parts Of Africa And Asia' (September 24, 2026)",
+        "url": "https://healthpolicy-watch.news/after-us-embassy-monitors-went-offline-air-pollution-spiked/"
       }
     ],
     "section_summaries": {
-      "what_changed": "The State Department shut down its 17-year-old embassy air-quality monitoring program on March 4, 2025, citing budget constraints -- ending real-time public data from 80+ posts worldwide and later removing 17 years of accumulated historical data from AirNow.gov.",
-      "estimated_impact": "Many countries lost the only independent, real-time air-quality data source they had; the program (notably in Beijing) had a documented history of pressuring foreign governments toward transparency and stronger pollution policy.",
-      "confidence_note": "Strongly corroborated across the State Department's own statement and multiple independent outlets, plus a dedicated post-shutdown data-loss analysis."
+      "what_changed": "The State Department shut its 17-year embassy air-quality program on March 4, 2025, citing budget limits, and later removed its historical data; a 2026 study found pollution then rose.",
+      "estimated_impact": "Many countries lost their only independent air-quality data, and a 2026 PNAS study found pollution rose 24-33% in 46 affected cities, most sharply where substitute data was poor.",
+      "confidence_note": "Strongly corroborated by the State Department's own statement, multiple independent outlets, an IQAir data-loss analysis, and a peer-reviewed PNAS study."
     },
-    "last_substantive_update": "2026-09-22",
+    "last_substantive_update": "2026-09-28",
     "glance": {
       "who": "U.S. Department of State",
-      "what": "Ended the 17-year embassy air-quality program; pollution then rose 24-33% in 46 cities",
+      "what": "Ended the 17-year embassy air-quality program; satellite-measured pollution then rose 24-33% in 46 cities",
       "harm": {
         "kind": "environment",
         "certainty": "documented",
         "who": "People without local air-quality data"
       },
-      "reviewed": "2026-09-22"
-    },
-    "timeline": {
-      "what_changed": {
-        "base": "The State Department ended a 17-year-old program that used air-quality sensors at more than 80 U.S. embassies and consulates worldwide to monitor pollution levels, citing 'funding constraints that have caused the Department to turn off the underlying network.' The program had provided real-time, validated air-quality data to the public via AirNow.gov and, for many countries with limited or unreliable government monitoring of their own, was the only independent source of that data. The Beijing embassy's monitor, launched in 2008, was historically credited with embarrassing Chinese officials into greater transparency and stronger air-quality policy -- reporting on the program's shutdown noted this same catalytic effect had extended to other countries over the years. Following the shutdown, roughly 17 years of accumulated historical air-quality data were removed from AirNow.gov, eliminating a public-health and research benchmark, not just halting future collection. Embassies were reportedly directed to keep the physical sensors running in some cases, but public data transmission and reporting ceased.",
-        "updates": [
-          {
-            "date": "2026-09-22",
-            "label": "Update",
-            "text": "Update 2026-09-22: A peer-reviewed study published in PNAS (reported by NPR, September 15, 2026) compared satellite-measured air pollution before and after the shutdown across 46 cities that had relied on the embassy network. Researchers found no significant pollution trend over the 300 days before U.S. reporting ended, but pollution levels rose 24-33% over the several months afterward -- the first quantified measurement of the shutdown's real-world public-health impact. The State Department told NPR it is \"in the process of restoring public reporting of air quality monitoring data,\" but gave no timeframe.",
-            "effective_date": "2026-09-22"
-          }
-        ]
-      }
+      "reviewed": "2026-09-28"
     }
   },
   {
@@ -38679,56 +38699,61 @@
   },
   {
     "id": "student-visa-vetting-pause-enrollment-decline-2025",
-    "title": "State Department Paused All Student Visa Interviews for Social-Media Vetting; New International Enrollment Fell 17%",
+    "title": "State Department Paused New Student Visa Interviews for Social-Media Vetting; New International Enrollment Fell 17%",
     "institution": "U.S. Department of State, affecting colleges and universities nationwide",
     "domain": "staff_office_cuts",
-    "status": "Interview scheduling resumed under expanded permanent vetting rules; nationwide enrollment decline documented through fall 2025",
+    "status": "Online-presence vetting of all F, M, and J applicants remains in force (Sept. 2026). New international enrollment fell 17% in fall 2025 (IIE), and student visas issued fell 23% in 2025 (F-1 down 33%). IIE projected a 9.5% drop in total enrollment for fall 2026.",
     "date_of_action": "2025-05-27 (interview pause announced) through 2025-11-17 (enrollment-decline report published)",
-    "what_changed": "On May 27, 2025, the State Department instructed all U.S. embassies and consulates worldwide to pause scheduling new interviews for F, M, and J nonimmigrant student and exchange-visitor visas, pending an expansion of social-media and security vetting for applicants -- the initial cable specifically referenced Harvard-bound applicants before the pause was clarified as applying to all international-student visa applicants nationwide. The Wall Street Journal reported June 9, 2025 (round-4 backlog fold, cluster c0380, added 2026-09-10) that the crackdown had also expanded to include a June 4, 2025 executive order imposing a travel ban on 12 countries and severe restrictions on 7 more, applying to F-1, J-1, and M-1 visa applicants from those countries, plus reported threats to eliminate or drastically limit Optional Practical Training (OPT) and STEM OPT -- post-graduation work authorization relied on by more than 200,000 international graduates annually -- with a formal OPT-restricting rule anticipated later in 2025. The Journal specifically noted international students had founded roughly half of U.S. billion-dollar startups and cited contributions like the USB's invention as evidence of the talent pipeline at stake. On June 18, 2025, the department issued new permanent guidance requiring consular officers to conduct comprehensive vetting, including applicants' online presence, for all F, M, and J visa applicants, and instructing applicants to set all social-media profiles to public so vetting could proceed; interview scheduling then resumed under these expanded rules. Applicants who already held scheduled interviews were largely unaffected, but new applicants faced delays through the pause and the transition to the new vetting regime. The impact was measurable well before the November 2025 national figure: federal arrival data showed international-student arrivals fell 19% in August 2025 alone compared to a year earlier -- the steepest drop outside the pandemic -- with sharply uneven effects by country of origin (India -44%, Iran -86%, Syria -63%, Nigeria -48%, Africa overall -32%, Asia overall -24%). Individual institutions reported even steeper declines: the University at Buffalo saw enrollment drops up to 15%, and **DePaul University's international enrollment fell 30% (755 fewer students, first-year international graduate enrollment down nearly 62%), forcing a hiring freeze, executive pay cuts, and ultimately 114 staff layoffs (~8% of staff) to close a $12.6 million budget shortfall.** At least 35 other schools announced budget cuts citing reduced international enrollment alongside separate federal research-funding losses, including Johns Hopkins (~2,000 positions, primarily tied to an $800 million NIH grant cut, not enrollment alone), Northwestern (425 positions), and USC (630+ positions) -- both enrollment decline and reduced federal research funding were cited as contributing factors at these three, not enrollment decline in isolation. Small college towns felt an additional, distinct economic ripple effect: reporting from Oxford, Ohio described local restaurants and businesses that depend on international-student spending beginning to close. By November 2025, the cumulative national effect reached 17%: a report found newly enrolled international students at U.S. colleges dropped 17% in fall 2025 compared to the prior year, with nearly all schools reporting declines citing visa-related concerns -- interview delays, revocations, and paused consular processing -- as the primary driver, compounding the separate, institution-specific Harvard SEVP fight (see prosecution/cabinet-level/noem-harvard-sevp-revocation-2025.json) that ran concurrently.",
+    "what_changed": "On May 27, 2025, the State Department instructed all U.S. embassies and consulates worldwide to pause scheduling new interviews for F, M, and J nonimmigrant student and exchange-visitor visas, pending an expansion of social-media and security vetting for applicants. A separate May 30, 2025 cable from Secretary of State Marco Rubio ordered enhanced screening that initially focused on Harvard-bound applicants, with the expanded vetting expected to extend to all international students. On June 4, 2025, President Trump signed Proclamation 10949, fully suspending entry for nationals of 12 countries and partially restricting nationals of 7 more, with the partial restrictions covering F, M, and J student and exchange-visitor visas. The Wall Street Journal, in a June 5, 2025 article on the crackdown's threat to the pipeline of immigrant inventors, reported threats to eliminate or drastically limit Optional Practical Training (OPT) and STEM OPT -- post-graduation work authorization used by more than 200,000 international graduates each year (294,253 students were on OPT in 2024-25, according to IIE's Open Doors) -- with a formal OPT-restricting rule anticipated later in 2025. The Journal noted that immigrants had founded or co-founded more than half of America's billion-dollar startups, according to one study, and that many immigrant inventors and founders first came to the U.S. on student visas, citing USB inventor Ajay Bhatt, who left India for graduate study in New York in 1981. On June 18, 2025, the department issued new permanent guidance requiring consular officers to conduct comprehensive vetting, including applicants' online presence, for all F, M, and J visa applicants, and instructing applicants to set all social-media profiles to public so vetting could proceed; interview scheduling then resumed under these expanded rules. Applicants who already held scheduled interviews were largely unaffected, but new applicants faced delays through the pause and the transition to the new vetting regime. The impact was measurable well before the November 2025 national figure: a New York Times analysis of federal arrival data showed international-student arrivals fell 19% in August 2025 alone compared to a year earlier -- the steepest drop outside the pandemic -- with sharply uneven effects by country of origin (India -44%, Iran -86%, Syria -63%, Nigeria -48%, Africa overall -32%, Asia overall -24%, Middle East -17%, Latin America -9%); the arrival data do not distinguish new students from returning ones. Individual institutions reported steep declines: the University at Buffalo's overall international enrollment fell 19% (first-year international graduate students down 58%), and **DePaul University's international enrollment fell 30% (755 fewer students, first-year international graduate enrollment down nearly 62%), which its president attributed to visa difficulties and waning interest in U.S. study. After a hiring freeze and executive pay cuts, DePaul laid off 114 staff (just under 8%) in December 2025 to help close a $12.6 million fiscal 2026 shortfall that also reflected a roughly 300-student drop in continuing undergraduates and about $7 million in unplanned financial aid.** Reuters counted at least 35 other schools that had announced budget cuts in response to Trump administration policies generally; among them, Northwestern (425 positions) and USC (more than 630 laid off) each cited reduced federal funding, an expected drop in international enrollment, and other financial pressures. Johns Hopkins' cut of more than 2,000 jobs, which Reuters listed alongside them, came in March 2025 -- before the interview pause -- after about $800 million in USAID grants were terminated, and is not attributable to the enrollment decline. Small college towns faced a distinct economic risk: Guardian reporting from Oxford, Ohio, home to Miami University, described local restaurants and businesses that depend on international-student spending as threatened by the falloff, though Miami's international intake had already fallen from 2,895 students in fall 2019 to 750 in 2024, well before the pause. On November 17, 2025, the Institute of International Education's Fall 2025 Snapshot, a preliminary survey of 825 institutions, found new international enrollment down 17% from a year earlier -- the largest non-pandemic decline in 11 years -- while total international enrollment fell 1% (graduate -12%, undergraduate +2%); more than half of the surveyed institutions reported fewer new international students, and 96% cited visa-application concerns as an obstacle. A NAFSA analysis released the same day estimated the decline would cost the U.S. economy $1.1 billion; for scale, international students contributed nearly $55 billion to the U.S. economy in 2024, according to the Commerce Department. The decline compounded the separate, institution-specific Harvard SEVP fight, tracked in its own entry, that ran concurrently. State Department figures released in 2026 showed 23% fewer F, M, and J student visas were issued in 2025 than in 2024, with F-1 visas for degree-seeking students down 33.4% and visas for Indian students down 56.6%; an Inside Higher Ed analysis found issuances roughly in line with 2024 until May 2025, the month of the interview pause, and below 2024 levels for the rest of the year. As of September 2026 the online-presence vetting remained in force and had been extended to many other visa categories, and NAFSA projected that a further drop in 2026-27, which IIE's spring 2026 snapshot put at 9.5% of total enrollment, would cost the U.S. economy $3.4 billion. No OPT-restricting rule was issued in 2025; in September 2026 the White House cleared a DHS proposal to set a new OPT fee, after reports that the administration was weighing a $100,000 charge, with the rule's details still unpublished as of September 17, 2026.",
     "primary_proponent": {
       "name": "Marco Rubio",
       "role": "Secretary of State",
       "note": "The State Department, under Rubio, directed the May 27, 2025 pause and issued the June 18, 2025 permanent expanded social-media vetting guidance that replaced it."
     },
     "estimated_impact": {
-      "summary": "International students represent a major, price-insensitive revenue source for U.S. higher education (most pay full tuition without need-based aid), and the reported enrollment drop threatens both individual universities' finances and the broader U.S. position as the top global destination for international students, with competitor countries positioned to absorb the difference.",
+      "summary": "Tens of thousands of prospective international students were kept from or deterred from starting U.S. study: new international enrollment fell 17% in fall 2025, and the State Department issued 23% fewer student visas in 2025 (a third fewer F-1 degree-student visas), with issuances dropping from May 2025, when interviews were paused. Universities lost tuition revenue and cut jobs -- DePaul laid off 114 staff after its international enrollment fell 30% -- and college towns that depend on student spending face losses. NAFSA estimates the fall 2025 decline cost the U.S. economy $1.1 billion and projects a further $3.4 billion loss in 2026-27.",
       "figures": [
         {
-          "metric": "Drop in newly enrolled international students, fall 2025 vs. fall 2024",
-          "value": "17%",
-          "source": "Reuters, citing a national survey of U.S. colleges (published Nov. 17, 2025)"
+          "metric": "New international student enrollment, fall 2025 vs. fall 2024",
+          "value": "-17% (total international enrollment -1%; graduate -12%, undergraduate +2%)",
+          "source": "Institute of International Education, Fall 2025 Snapshot of 825 institutions (Nov. 17, 2025), reported by NBC News and Reuters"
         },
         {
-          "metric": "Estimated economic loss to the U.S. from the enrollment decline",
-          "value": "$55 billion",
-          "source": "Reuters, citing the same report's economic-impact modeling"
+          "metric": "Student visas (F, M, J) issued, 2025 vs. 2024",
+          "value": "-23% overall; F-1 -33.4%; India -56.6%, China -28%",
+          "source": "U.S. State Department visa-issuance data, analyzed by Inside Higher Ed (Aug. 26, 2026)"
         },
         {
           "metric": "International-student arrivals, August 2025 vs. a year earlier",
-          "value": "-19% overall (steepest drop outside the pandemic); India -44%, Africa -32% (Iran -86%, Syria -63%, Nigeria -48%), Asia -24%, Middle East -17%, Latin America -9%",
-          "source": "Federal arrival data, reported by NYT/The Times, corroborated by PIE News and Inside Higher Ed"
+          "value": "-19% overall (steepest drop outside the pandemic); India -44%, Iran -86%, Syria -63%, Nigeria -48%; Africa -32%, Asia -24%, Middle East -17%, Latin America -9%",
+          "source": "New York Times analysis of federal arrival data, reported by Inside Higher Ed and The PIE News"
+        },
+        {
+          "metric": "Estimated U.S. economic loss from fewer international students",
+          "value": "$1.1 billion (2025-26); $3.4 billion and up to 40,000 jobs projected for 2026-27 (about 110,000 fewer students)",
+          "source": "NAFSA: Association of International Educators, reported by NBC News (Nov. 17, 2025) and Inside Higher Ed (Aug. 26, 2026)"
         },
         {
           "metric": "DePaul University impact",
-          "value": "30% international-enrollment drop (755 fewer students, -62% first-year int'l grad students); $12.6M budget shortfall; 114 staff laid off (~8%)",
-          "source": "Higher Ed Dive, Reuters"
+          "value": "30% international-enrollment drop (755 fewer students; new international graduate students -62%); 114 staff laid off (just under 8%) amid a $12.6M fiscal 2026 shortfall",
+          "source": "Reuters (Oct. 2, 2025); Higher Ed Dive (Dec. 16, 2025)"
         },
         {
-          "metric": "Other universities citing enrollment decline (with federal research-funding cuts) in layoffs",
-          "value": "35+ schools announced cuts; Johns Hopkins ~2,000 positions (primarily NIH-cut-driven), Northwestern 425, USC 630+",
-          "source": "NBC News data graphics, Higher Ed Dive"
+          "metric": "Other universities citing an expected international-enrollment drop among reasons for cuts",
+          "value": "Northwestern 425 positions; USC more than 630 laid off (each also cited reduced federal funding)",
+          "source": "Reuters (Oct. 2, 2025)"
         }
       ],
-      "caveat": "The 17%/$55 billion national figures were initially singly-sourced via Reuters, but the August 2025 federal arrival-data figures (19% drop, corroborated by PIE News and Inside Higher Ed independently of NYT/The Times) provide an earlier, independently-corroborated data point pointing the same direction, meaningfully strengthening confidence. The report attributes the decline primarily to visa policy but does not fully isolate the vetting-pause/expansion's specific share of the drop from other concurrent factors (e.g. the broader chilling effect of high-profile cases like Harvard's, campus-protest-related visa revocations and detentions over social media posts, and general perception of U.S. immigration unpredictability). Johns Hopkins/Northwestern/USC layoffs are multi-causal (research-funding cuts plus enrollment decline both cited) -- not attributed to this action alone. No independently quantified health/mortality dimension applies to this action."
+      "caveat": "Enrollment figures come from IIE's preliminary snapshot of a subset of institutions; arrival data do not separate new from returning students; the economic-loss figures are NAFSA modeling, not measured losses (the often-cited $55 billion is international students' total 2024 contribution to the U.S. economy per the Commerce Department, not a loss). No source isolates the vetting pause's share from the June 2025 travel ban, visa revocations, the Harvard fight, and broader perceptions of U.S. policy. University layoffs are multi-causal; Johns Hopkins' March 2025 cuts stemmed from USAID grant terminations and are excluded. No health or mortality effect is documented."
     },
-    "confidence_note": "HIGH confidence on the policy actions themselves -- corroborated by State Department guidance directly and reported consistently across CNN, The Washington Post, Time, and immigration-law-industry sources (Ogletree, National Law Review). The 17%/$55 billion November national figures were initially singly-sourced via Reuters, but are now corroborated by the earlier August federal arrival-data figures (independently reported by NYT/The Times, PIE News, and Inside Higher Ed) pointing the same direction, plus specific, independently-verified institution-level cases (DePaul via Higher Ed Dive and Reuters; Johns Hopkins/Northwestern/USC via NBC News). Added 2026-09-10 (round-4 backlog cluster c0551): granular country-by-country and institution-level figures independently verified via WebSearch, not just restated from an earlier paraphrase.",
-    "pull_quote": "Reporting from Oxford, Ohio described local restaurants and businesses that depend on international-student spending beginning to close — a ripple effect beyond university budgets themselves.",
+    "confidence_note": "HIGH confidence on the policy actions: the June 18, 2025 guidance is on the State Department's site, the June 4 travel-ban proclamation is in the Federal Register, and the May 27 pause was reported by CNN, The Washington Post, Time, the BBC, and the National Law Review. HIGH confidence on the direction and rough size of the decline: the 17% drop in new fall 2025 enrollment comes from the Institute of International Education's Fall 2025 Snapshot (reported by NBC News and Reuters), the 23% drop in 2025 student-visa issuances from State Department data analyzed by Inside Higher Ed, and the August 2025 arrival figures from a New York Times analysis of federal arrival data (reported by Inside Higher Ed and The PIE News). Institution-level cases (DePaul, Buffalo, Northwestern, USC) come from Reuters and Higher Ed Dive. MEDIUM confidence on attribution: no source isolates the vetting pause's share of the decline from the travel ban, visa revocations, the Harvard fight, and broader perceptions of U.S. policy.",
+    "pull_quote": "Student-visa issuances tracked 2024 levels until May 2025 -- the month interviews were paused -- then stayed below them for the rest of the year.",
     "section_summaries": {
-      "what_changed": "The State Department paused all new student-visa interviews worldwide to expand social-media vetting, then made the expanded vetting permanent -- and new international enrollment fell 17% that fall, with steeper drops (up to 44-86%) from specific countries.",
-      "estimated_impact": "The decline is estimated to cost the U.S. economy $55 billion; specific universities like DePaul cut staff and budgets, and some college towns saw local businesses closing.",
-      "confidence_note": "The policy actions and the enrollment decline are now corroborated across multiple independent data sources and institution-level cases, not just one Reuters report."
+      "what_changed": "The State Department paused new student-visa interviews worldwide to expand social-media vetting, then made it permanent; new international enrollment fell 17% that fall and student visas 23% in 2025.",
+      "estimated_impact": "New international enrollment fell 17% in fall 2025 and student visas 23%; NAFSA puts the U.S. economic loss at $1.1 billion, and schools like DePaul cut staff.",
+      "confidence_note": "The policy actions are documented by the State Department; the declines rest on IIE, State Department and arrival data, but no source isolates the vetting's share."
     },
-    "last_verified": "2026-09-10",
+    "last_verified": "2026-09-28",
     "date_added": "2026-09-10",
     "sources": [
       {
@@ -38786,31 +38811,58 @@
       {
         "name": "The New York Times -- Nearly 20 Percent Fewer International Students Traveled to the U.S. in August",
         "url": "https://www.nytimes.com/interactive/2025/10/06/upshot/us-international-student-travel.html"
+      },
+      {
+        "name": "U.S. State Department -- Announcement of Expanded Screening and Vetting for Visa Applicants (June 18, 2025)",
+        "url": "https://www.state.gov/releases/office-of-the-spokesperson/2025/06/announcement-of-expanded-screening-and-vetting-for-visa-applicants/"
+      },
+      {
+        "name": "Federal Register -- Proclamation 10949, Restricting the Entry of Foreign Nationals (June 4, 2025)",
+        "url": "https://www.federalregister.gov/documents/2025/06/10/2025-10669/restricting-the-entry-of-foreign-nationals-to-protect-the-united-states-from-foreign-terrorists-and"
+      },
+      {
+        "name": "Institute of International Education -- Open Doors 2025 and Fall 2025 Snapshot press release",
+        "url": "https://www.iie.org/news/open-doors-2025-press-release/"
+      },
+      {
+        "name": "Reuters (via Maryland Daily Record) -- Fewer foreign students, fewer dollars: US colleges feel the pinch",
+        "url": "https://thedailyrecord.com/2025/10/21/schools-trump-policies-international-enrollment-decline/"
+      },
+      {
+        "name": "The Guardian -- Johns Hopkins to lose 2,000 jobs after Trump's $800m cut in USAid funding",
+        "url": "https://www.theguardian.com/us-news/2025/mar/13/johns-hopkins-job-cuts-usaid"
+      },
+      {
+        "name": "Inside Higher Ed -- New Student Visas Dropped 23% in 2025",
+        "url": "https://www.insidehighered.com/news/global/international-students-us/2026/08/26/new-student-visas-dropped-23-2025"
+      },
+      {
+        "name": "BAL -- State Department expands social media vetting to TN, TD and foreign media visa applicants (Sept. 21, 2026)",
+        "url": "https://www.bal.com/immigration-news/united-states-state-department-expands-social-media-vetting-to-tn-td-and-foreign-media-visa-applicants/"
+      },
+      {
+        "name": "The PIE News -- OPT fee proposal clears White House review (Sept. 17, 2026)",
+        "url": "https://thepienews.com/opt-fee-proposal-clears-white-house-review/"
+      },
+      {
+        "name": "The PIE News -- US faces $3.4bn hit as international enrolments fall (Aug. 2026)",
+        "url": "https://thepienews.com/us-faces-3-4bn-hit-as-international-enrolments-fall/"
+      },
+      {
+        "name": "The PIE News -- US immigration nominee vows to end OPT (May 23, 2025)",
+        "url": "https://thepienews.com/us-immigration-nominee-vows-to-end-opt/"
       }
     ],
-    "last_substantive_update": "2026-09-10",
+    "last_substantive_update": "2026-09-28",
     "glance": {
       "who": "Marco Rubio (Secretary of State)",
       "what": "Paused student-visa interviews for social-media vetting, then made it permanent; new enrollment fell 17%",
       "harm": {
         "kind": "money",
         "certainty": "documented",
-        "who": "Universities and college towns"
+        "who": "Students, universities, college towns"
       },
-      "reviewed": "2026-09-20"
-    },
-    "timeline": {
-      "confidence_note": {
-        "base": "HIGH confidence on the policy actions themselves -- corroborated by State Department guidance directly and reported consistently across CNN, The Washington Post, Time, and immigration-law-industry sources (Ogletree, National Law Review). The 17%/$55 billion November national figures were initially singly-sourced via Reuters, but are now corroborated by the earlier August federal arrival-data figures (independently reported by NYT/The Times, PIE News, and Inside Higher Ed) pointing the same direction, plus specific, independently-verified institution-level cases (DePaul via Higher Ed Dive and Reuters; Johns Hopkins/Northwestern/USC via NBC News).",
-        "updates": [
-          {
-            "date": "2026-09-10",
-            "label": "Added",
-            "text": "Added 2026-09-10 (round-4 backlog cluster c0551): granular country-by-country and institution-level figures independently verified via WebSearch, not just restated from an earlier paraphrase.",
-            "effective_date": "2026-09-10"
-          }
-        ]
-      }
+      "reviewed": "2026-09-28"
     }
   },
   {
@@ -40865,22 +40917,38 @@
     "title": "Bird Flu Response Hampered by USDA's Accidental Firing of Response Staff, Plus Broader Funding Freezes and a Federal Communication Blackout",
     "institution": "U.S. Department of Agriculture (USDA); Department of Health and Human Services / CDC",
     "domain": "staff_office_cuts",
-    "status": "Reversal attempted on the USDA firings specifically -- USDA moved to rehire the affected employees shortly after the error was reported; the broader funding-freeze and communication-blackout effects on the wider bird-flu response were not confirmed as resolved in sourcing reviewed for this entry",
-    "date_of_action": "2025-02-15 through 2025-02-21 (reported)",
-    "what_changed": "Over the weekend of February 15-16, 2025, USDA mistakenly terminated several employees whose work was critical to the federal government's response to the ongoing bird flu (avian influenza) outbreak, including staff in food-safety and inspection roles. NBC News reported USDA moved afterward to try to reverse the firings and rehire the affected workers, characterizing the terminations as an error made amid the broader probationary-employee purge underway across federal agencies at the time, rather than a deliberate targeting of bird-flu-response staff specifically. Separately, The Hill reported that the same period's broader pattern of mass firings, funding freezes, and a federal communications blackout had stalled the wider federal bird-flu response beyond just the USDA staffing error -- as egg prices surged nationally, the CDC struggled to provide timely public updates, leaving local health officials navigating a patchwork of delayed federal information during an active outbreak. The staffing losses continued beyond the February episode: **around April 2, 2025, roughly 140 staff were fired from the FDA's Center for Veterinary Medicine, which had been overseeing the federal response to the ongoing bird flu outbreak in poultry and dairy cattle.** By April 10, 2025, three key employees in USDA's National Animal Health Laboratory Network -- the lab-coordination staff responsible for bird flu testing -- were also leaving their positions, further thinning response capacity amid what was, at the time, the worst avian flu outbreak in U.S. history.",
+    "status": "USDA said Feb. 18, 2025 it was rescinding the mistaken bird-flu-staff firings; Reuters reported four fired NAHLN lab-network staff were brought back. No reversal was reported for the later losses (about 140 FDA veterinary-center staff fired April 1, 2025; three NAHLN staff leaving April 30).",
+    "date_of_action": "2025-02-15 through 2025-04-30",
+    "what_changed": "Over the weekend of February 15-16, 2025, USDA fired several employees whose work supported the federal response to the ongoing H5N1 bird flu (avian influenza) outbreak. On February 18, USDA told NBC News the firings were a mistake: \"Although several positions supporting [bird flu efforts] were notified of their terminations over the weekend, we are working to swiftly rectify the situation and rescind those letters,\" a spokesperson said. NBC placed the error within the administration's mass firings of federal workers, carried out with Elon Musk's Department of Government Efficiency, which in those days included probationary employees across the government. Politico reported on February 16 that a quarter of the 14-person staff of USDA's National Animal Health Laboratory Network (NAHLN) program office, which coordinates the labs that test animal samples for bird flu, had been fired, and that labs were told bird-flu testing would be slower; Keith Poulsen, director of the Wisconsin Veterinary Diagnostic Laboratory, said the firing of three NAHLN employees would hurt efforts to combat the virus, and Republican lawmakers privately warned the administration that such cuts could hamper the bird-flu response, NBC reported. Four NAHLN employees fired in the February layoffs were brought back soon after, Reuters later reported. Politico reported on February 27 that USDA was struggling to rehire key bird-flu employees and that the dismissals had helped trigger a partial shutdown at one of its research facilities, according to two USDA employees. Separately, The Hill reported on February 20 that mass firings, funding freezes and an external communications blackout across health agencies were hampering the wider public-health response: as egg prices rose, state and local health departments were only beginning to hear from the CDC nearly a month after the inauguration, a person familiar with the situation said critical updates were still being slow-walked, and a federal funding freeze left virus researchers unsure whether their work would continue. The staffing losses continued after the February episode. **On April 1, 2025, about 140 staff at the FDA's Center for Veterinary Medicine, including its leadership, were fired in the Department of Health and Human Services' reduction in force**; the center had helped link bird flu cases in cats to raw pet food, and **the HHS cuts led the FDA to suspend an effort to improve bird-flu testing of pet food and dairy products**, NBC News and Reuters reported. HHS said the cuts were limited to administrative staff. On April 9, 2025, Reuters reported, citing a source familiar with the situation, that three of the 13 NAHLN employees had accepted USDA's financial incentive to quit and would leave on April 30; they worked on keeping bird flu testing consistent across the network, managing its funding and providing administrative support, and the source said their departures would likely disrupt bird-flu monitoring in livestock during what NBC News called the worst bird flu outbreak in U.S. history.",
     "primary_proponent": {
       "name": "U.S. Department of Agriculture",
       "role": "Agency responsible for the erroneous terminations and the subsequent rehire attempt",
       "note": "No single named individual was identified in sourcing reviewed for this entry as personally responsible; reporting characterized this as a mistake within the broader, DOGE-directed probationary-worker purge rather than a deliberate decision by a named official."
     },
     "estimated_impact": {
-      "summary": "Temporary loss of specialized bird-flu-response capacity at a moment of active outbreak response, though USDA's swift attempt to reverse the error limited (per available reporting) the duration of the gap",
-      "figures": [],
-      "caveat": "No precise headcount of affected employees was found in sourcing reviewed for this entry ('several employees'); no reporting reviewed confirmed how many were successfully rehired or how long the capacity gap lasted in practice."
+      "summary": "Lost federal bird-flu response capacity during what NBC News called the worst bird flu outbreak in U.S. history. The April 2025 HHS cuts fired about 140 staff at the FDA's Center for Veterinary Medicine and led the FDA to suspend an effort to improve bird-flu testing of pet food and dairy products; three of 13 staff at the USDA lab network that coordinates animal bird-flu testing took an incentive to quit, leaving April 30, which a source said would likely disrupt livestock monitoring. USDA's February firings of bird-flu staff were a mistake it moved to reverse, and at least four lab-network staff were brought back, but state and local health officials meanwhile went nearly a month with little CDC communication.",
+      "figures": [
+        {
+          "metric": "FDA Center for Veterinary Medicine staff fired, April 1, 2025",
+          "value": "About 140 of roughly 700",
+          "source": "USA Today, citing two sources with first-hand knowledge; NBC News put it at more than 140, citing a fired FDA communications specialist"
+        },
+        {
+          "metric": "USDA NAHLN staff leaving April 30, 2025 via incentive to quit",
+          "value": "3 of 13",
+          "source": "Reuters, citing a source familiar with the situation"
+        },
+        {
+          "metric": "NAHLN staff fired in February 2025 and later reinstated",
+          "value": "4",
+          "source": "Reuters"
+        }
+      ],
+      "caveat": "Staff counts come from news reports relying on unnamed sources (USA Today, NBC News, Reuters); HHS said the FDA cuts were limited to administrative staff. No reporting reviewed gave the number of USDA employees mistakenly fired in February (USDA said 'several'), how many were rehired beyond four lab-network staff, or how long the gaps lasted. No source attributes specific infections, deaths or costs to these cuts; the outbreak had sickened about 70 people in the U.S. and killed one by April 2025 (CDC data, per USA Today)."
     },
-    "confidence_note": "MODERATE-HIGH confidence -- the USDA firing/rehire episode is based on a single NBC News report; the broader funding-freeze/communication-blackout/CDC-delay pattern is independently corroborated by The Hill. Included despite the USDA-specific detail's small, imprecisely-quantified scope because the specific function affected (active bird-flu outbreak response) carries outsized public-health significance and because the episode is illustrative of a broader documented pattern in this tracker of the 2025 probationary-worker purge mistakenly cutting safety-critical staff, matching the pattern already well-documented in the separately-tracked NNSA erroneous-firing entry from the same week. Updated 2026-08-12 (round 4 batch 25, cluster c0146): added two April 2025 staffing losses (FDA Center for Veterinary Medicine, USDA National Animal Health Laboratory Network) showing the February accidental-firing episode was followed by further, not-obviously-accidental reductions to bird-flu response capacity -- see bird-flu-surveillance-collapse-resurgence-2025 for the later (October-November 2025) surveillance-collapse consequences of this pattern.",
-    "pull_quote": "The Hill reported that mass firings, funding freezes, and a federal communications blackout had stalled the wider federal bird-flu response — as egg prices surged nationally, the CDC struggled to provide timely public updates, leaving local health officials navigating a patchwork of delayed federal information during an active outbreak.",
-    "last_verified": "2026-08-12",
+    "confidence_note": "MODERATE-HIGH confidence -- USDA itself confirmed the February firings were a mistake (statement to NBC News, also reported by The Hill). The April FDA veterinary-center cuts are reported by USA Today and NBC News from former staff and other sources, and the NAHLN departures rest on one unnamed source in a Reuters report; USDA said it was reviewing how many staff took the incentive. No figure was found for how many February firings were reversed beyond four NAHLN staff, or how long the gaps lasted. Included because the functions affected (outbreak response, lab-network testing, animal-food safety) carry outsized public-health weight, and because the episode fits a broader pattern of 2025 cuts removing safety-critical staff (compare the NNSA erroneous-firing entry from the same week); see bird-flu-surveillance-collapse-resurgence-2025 for the later surveillance consequences.",
+    "pull_quote": "The Hill reported that mass firings, funding freezes and a communications blackout were hampering the bird-flu response: as egg prices rose, state and local health departments were only beginning to hear from the CDC nearly a month after the inauguration.",
+    "last_verified": "2026-09-28",
     "date_added": "2026-08-08",
     "sources": [
       {
@@ -40890,14 +40958,34 @@
       {
         "name": "The Hill -- Trump moves hamper bird flu response as egg prices spike",
         "url": "https://thehill.com/policy/healthcare/5154415-trump-moves-hamper-bird-flu-response-as-egg-prices-spike/"
+      },
+      {
+        "name": "USA Today -- Trump administration cuts FDA staff handling bird flu outbreaks (April 1, 2025)",
+        "url": "https://www.usatoday.com/story/news/health/2025/04/01/trump-administration-cuts-fda-bird-flu/82760987007/"
+      },
+      {
+        "name": "NBC News -- Bird flu could be heading north this spring with fewer federal health officials working to stop it (April 4, 2025)",
+        "url": "https://www.nbcnews.com/news/us-news/bird-flu-heading-north-spring-fewer-federal-health-officials-working-s-rcna199607"
+      },
+      {
+        "name": "Reuters -- USDA to lose bird flu response employees, source says (April 9, 2025)",
+        "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/usda-lose-bird-flu-response-employees-source-says-2025-04-09/"
+      },
+      {
+        "name": "Politico -- Trump administration firings hit key office handling bird flu response (Feb. 16, 2025)",
+        "url": "https://www.politico.com/news/2025/02/16/trump-administration-firings-bird-flu-response-00204542"
+      },
+      {
+        "name": "Politico -- Trump administration struggles to rehire fired bird flu employees (Feb. 27, 2025)",
+        "url": "https://www.politico.com/news/2025/02/27/trump-fired-bird-flu-hires-00206334"
       }
     ],
     "section_summaries": {
       "what_changed": "USDA mistakenly fired bird-flu-response staff in February 2025, followed by further staffing losses at FDA and USDA lab roles.",
-      "estimated_impact": "Temporarily reduced bird-flu-response capacity during an active outbreak, though USDA's swift reversal limited the gap.",
-      "confidence_note": "MODERATE-HIGH confidence -- the firing/rehire episode rests on one NBC report; the broader pattern is corroborated by The Hill."
+      "estimated_impact": "Cut bird-flu response capacity: HHS cuts fired about 140 FDA veterinary-center staff and halted a pet-food and dairy testing effort; lab-network exits threatened livestock monitoring.",
+      "confidence_note": "MODERATE-HIGH -- USDA confirmed the February firings were a mistake; the later FDA and lab-network losses rest on news reports, one from a single source."
     },
-    "last_substantive_update": "2026-08-12",
+    "last_substantive_update": "2026-09-28",
     "glance": {
       "who": "U.S. Department of Agriculture",
       "what": "Reportedly fired bird-flu response staff by mistake in February 2025, then moved to rehire the staff",
@@ -40906,7 +40994,7 @@
         "certainty": "alleged",
         "who": "Bird-flu outbreak response capacity"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-09-28"
     }
   },
   {
@@ -40914,38 +41002,53 @@
     "title": "USDA Canceled the $3.1B Climate-Smart Commodities Program, Rebranding It Without the Climate Focus",
     "institution": "U.S. Department of Agriculture (USDA)",
     "domain": "funding_redirection",
-    "status": "Implemented -- program canceled and replaced April 14, 2025, using existing (not new) funding",
+    "status": "Implemented -- PCSC canceled April 14, 2025 and folded into the non-climate AMP initiative with no new money; USDA said in April 2026, per E&E News, that around 90 former projects had been awarded new AMP contracts.",
     "date_of_action": "2025-04-14",
-    "what_changed": "**Internal emails later obtained by NOTUS show that in February 2025, Gavin Kliger -- a 25-year-old DOGE staffer on unpaid leave from AI firm Databricks, with no USDA role or formal authority -- directed USDA's climate-grant elimination effort ahead of the program's public cancellation.** On February 19, 2025, USDA Deputy CFO Lynn Moaney asked Kliger to approve agency-wide guidance identifying climate funding that did not 'demonstrably directly or indirectly benefit farmers or producers'; Kliger requested an extension while telling Moaney he hoped they would 'hopefully exceed our 120m goal significantly' by reviewing all USDA climate grants, and coordinated directly with Secretary Rollins on formalizing the resulting memo, with staff internally describing the compressed timeline as difficult to meet. On April 14, 2025, Rollins announced the cancellation of the Biden-era Partnerships for Climate-Smart Commodities (PCSC), a $3.1 billion initiative funding carbon-reducing farming practices, which USDA had already frozen funding for earlier in the administration. USDA said a line-by-line review found many of the Biden-era partnerships had high administrative overhead, with some projects passing less than half of their federal funding directly to farmers; Rollins has separately made clear she does not support climate-change-focused programs. Rather than simply terminating the program, USDA said existing grant recipients could continue under a new initiative, Advancing Markets for Producers (AMP), which drops the climate framing and requires that at least 65% of each grant's federal dollars go directly to farmers; USDA said it would honor expenses incurred before April 13, 2025, and that the AMP transition uses only existing program funding, with no new money appropriated. Missouri alone had roughly $1.2 billion in Climate-Smart Commodities funding at stake, according to state-level reporting.",
+    "what_changed": "**Internal emails made public in court filings and reviewed by NOTUS show that in February 2025, Gavin Kliger -- a 25-year-old DOGE staffer on unpaid leave from AI firm Databricks -- pushed USDA officials to write agency-wide guidance for reviewing climate-related awards and to finish $120 million in cuts within days, ahead of the program's public cancellation.** On February 19, 2025, USDA Deputy CFO Lynn Moaney sent Kliger, for his approval, draft agency-wide guidance directing officials to find grants that 'fund climate-related activities which do not demonstrably directly or indirectly benefit farmers or producers,' telling him her team 'thought Monday is not doable' for the $120 million target and asking for an extension on the larger climate review. Kliger approved the guidance and the extension but asked whether mission areas could review all climate grants in that window '(and hopefully therefore exceed our 120m goal significantly)'; he later told Moaney that Secretary Rollins supported the $120 million goal and the climate-grant review, and that he was 'working on getting a memo formalized for her signature.' A USDA spokesperson told NOTUS that everyone on the USDA Efficiency Team is a USDA employee working at Rollins' direction. On April 14, 2025, Rollins announced the cancellation of the Biden-era Partnerships for Climate-Smart Commodities (PCSC), a $3.1 billion initiative spanning 135 projects that paid for carbon-reducing farming practices (about 14,000 farms had enrolled, on 3.2 million acres, as of June 2024), after nearly three months of frozen payments, according to Civil Eats. USDA said a line-by-line review found the majority of the projects had 'sky-high administration fees' that in many instances passed less than half of the federal funding directly to farmers; Rollins has separately made clear she does not support climate-change-focused programs. Rather than simply terminating the program, USDA said existing grant recipients could continue under a new initiative, Advancing Markets for Producers (AMP), which drops the climate framing and requires that at least 65% of each grant's federal dollars go directly to farmers; USDA said it would honor expenses incurred before April 13, 2025, and that the AMP transition uses only existing program funding, with no new funding made available. St. Louis Public Radio reported that more than $1.2 billion had gone to 36 projects involving Missouri, though the University of Missouri's $25 million Conservation Crop and Livestock project was expected to continue under AMP. A year later, Agri-Pulse reported (April 8, 2026) that only about 10% of the 135 original projects had met the 65% farmer-payment threshold, leaving the rest to amend their projects while USDA buyouts thinned NRCS field staff, and that USDA did not respond to its questions, including how many AMP projects had been approved; on April 16, 2026, E&E News reported USDA's count that around 90 former projects had been awarded new contracts meeting the administration's non-climate guidelines.",
     "primary_proponent": {
       "name": "Brooke Rollins, Secretary of Agriculture",
       "role": "Announced and directed the cancellation and replacement of the Climate-Smart Commodities program",
       "note": "Rollins personally announced the cancellation and has publicly stated her opposition to climate-focused USDA programs, per USDA's own press release and trade-press coverage."
     },
     "estimated_impact": {
-      "summary": "A $3.1 billion program supporting carbon-reducing farming practices was eliminated and replaced with a rebranded initiative that drops the climate framing entirely, though existing grant recipients retain a path to continued funding if they meet new farmer-payout criteria -- a redirection of the same money's purpose rather than a straightforward funding cut.",
+      "summary": "Farmers and the organizations paying them bore the disruption: a $3.1 billion, 135-project program that paid for carbon-reducing practices (about 14,000 farms enrolled as of June 2024) went through nearly three months of frozen payments, was canceled, and was rebuilt around a rule that at least 65% of funds reach producers. Only about 10% of projects met that rule at first, so the rest had to amend their work; a year later USDA said around 90 of the 135 had new contracts, all stripped of their climate-mitigation purpose. The money was redirected, not newly cut, and the entry documents no direct health harm.",
       "figures": [
         {
-          "metric": "Total Partnership for Climate-Smart Commodities program value",
-          "value": "$3.1 billion",
-          "source": "USDA, cited by Reuters and multiple trade-press outlets, April 2025"
+          "metric": "Partnerships for Climate-Smart Commodities program value and project count",
+          "value": "$3.1 billion across 135 projects",
+          "source": "USDA, as reported by Civil Eats, April 14, 2025"
         },
         {
-          "metric": "Missouri-specific Climate-Smart Commodities funding at stake",
-          "value": "~$1.2 billion",
+          "metric": "Farms enrolled and acres covered before cancellation",
+          "value": "~14,000 farms on 3.2 million acres (as of June 2024)",
+          "source": "USDA progress report (June 2024), as reported by Civil Eats and DTN, April 14, 2025"
+        },
+        {
+          "metric": "Share of original projects that initially met the 65% farmer-payment threshold",
+          "value": "~10% of 135",
+          "source": "Agri-Pulse, April 8, 2026"
+        },
+        {
+          "metric": "Former projects awarded new non-climate AMP contracts",
+          "value": "around 90 (as of April 2026)",
+          "source": "USDA, as reported by E&E News, April 16, 2026"
+        },
+        {
+          "metric": "Funding that went to projects involving Missouri",
+          "value": "more than $1.2 billion across 36 projects",
           "source": "STLPR, April 15, 2025"
         },
         {
-          "metric": "Minimum share of federal grant dollars required to reach farmers under the replacement AMP program",
+          "metric": "Minimum share of federal grant dollars required to reach producers under AMP",
           "value": "65%",
           "source": "USDA press release, April 14, 2025"
         }
       ],
-      "caveat": "USDA frames this as a reform that redirects existing funding toward farmers more efficiently rather than a pure cut, and some grant recipients continued receiving funding under AMP -- this entry documents the elimination of the program's climate-mitigation purpose and the administrative disruption to existing grantees, not a claim that all funding was lost outright."
+      "caveat": "USDA frames the change as a reform that sends existing money to farmers more efficiently, and it made no new money available; the ~90 re-contracted projects figure is USDA's own count, and USDA did not respond when Agri-Pulse asked how many AMP projects had been approved. The Missouri figure covers multi-state projects that involve Missouri, not money located only in Missouri. The entry does not quantify lost emissions reductions, payments farmers never received during the freeze, or how many of the remaining original projects ended entirely."
     },
-    "confidence_note": "HIGH confidence -- the cancellation, the $3.1B figure, Rollins' role, and the AMP replacement program's terms are all corroborated across USDA's own press release, Reuters, Civil Eats, DTN/Progressive Farmer, and multiple state/local outlets (STLPR/KBIA on the Missouri-specific figure) covering the same April 14, 2025 announcement. The February 2025 Kliger/DOGE internal-directive backstory is sourced to NOTUS's own review of internal USDA emails, a single-outlet source for that specific detail; presented as documented internal precursor context for how the cancellation was driven, not as proof the $120 million figure Kliger cited maps directly onto the eventual $3.1B PCSC cancellation four months later.",
-    "pull_quote": "Missouri alone had roughly $1.2 billion in Climate-Smart Commodities funding at stake, according to state-level reporting.",
-    "last_verified": "2026-09-12",
+    "confidence_note": "HIGH confidence -- the cancellation, the $3.1B figure, Rollins' role, and the AMP replacement program's terms are all corroborated across USDA's own press release, Reuters, Civil Eats, DTN/Progressive Farmer, and multiple state/local outlets (STLPR/KBIA on the $1.2 billion spread across 36 projects involving Missouri) covering the same April 14, 2025 announcement. The April 2026 re-contracting picture rests on USDA's own count (about 90 projects) as reported by E&E News and on Agri-Pulse's reporting that about 10% of projects initially met the 65% threshold. The February 2025 Kliger/DOGE internal-directive backstory is sourced to NOTUS's own review of internal USDA emails, a single-outlet source for that specific detail; presented as documented internal precursor context for how the cancellation was driven, not as proof the $120 million figure Kliger cited maps directly onto the eventual $3.1B PCSC cancellation two months later.",
+    "pull_quote": "Only about 10% of the 135 original projects met the new 65% farmer-payment threshold, leaving the rest to amend their projects, Agri-Pulse reported a year after the cancellation.",
+    "last_verified": "2026-09-28",
     "date_added": "2026-09-11",
     "sources": [
       {
@@ -40965,17 +41068,29 @@
         "url": "https://www.stlpr.org/health-science-environment/2025-04-15/usda-cancels-climate-smart-partnership-program"
       },
       {
-        "name": "NOTUS -- DOGE staffer Gavin Kliger directed USDA climate policy",
+        "name": "NOTUS (now The Washington Sun) -- How A 25-Year-Old DOGE Staffer Set Policy at USDA (July 25, 2025)",
         "url": "https://www.notus.org/trump-white-house/doge-gavin-kliger-us-department-of-agriculture-climate-policy"
+      },
+      {
+        "name": "E&E News -- USDA reinstates grants wiped clean of climate change (April 16, 2026)",
+        "url": "https://www.eenews.net/articles/usda-reinstates-grants-wiped-clean-of-climate-change/"
+      },
+      {
+        "name": "Agri-Pulse -- Former climate-smart grantees work to gain approval for new projects (April 8, 2026)",
+        "url": "https://www.agri-pulse.com/articles/24483-former-climate-smart-grantees-work-to-gain-approval-for-new-projects"
+      },
+      {
+        "name": "DTN/Progressive Farmer -- USDA Rebrands Partnership for Climate-Smart Commodities to Align With New Priorities (April 14, 2025)",
+        "url": "https://www.dtnpf.com/agriculture/web/ag/news/business-inputs/article/2025/04/14/usda-rebrands-partnership-climate"
       }
     ],
     "last_updated": "2026-09-12",
     "section_summaries": {
-      "what_changed": "A DOGE operative with no formal USDA role set an internal climate-grant elimination target in February 2025; USDA Secretary Rollins then canceled the $3.1B Climate-Smart Commodities program on April 14, 2025, replacing it with a rebranded AMP initiative that drops the climate focus and requires 65% of grant dollars reach farmers.",
-      "estimated_impact": "A major climate-mitigation farming program was eliminated in purpose (not entirely in funding), with Missouri alone having ~$1.2B at stake and existing grantees facing new eligibility terms.",
+      "what_changed": "After a DOGE staffer pushed a $120M climate-grant cut target in Feb. 2025, Secretary Rollins canceled the $3.1B Climate-Smart Commodities program that April, folding it into a non-climate initiative.",
+      "estimated_impact": "A $3.1B, 135-project farm program lost its climate purpose; payments froze for months, and by April 2026 USDA said about 90 projects had new non-climate contracts.",
       "confidence_note": "Well-corroborated across USDA's own release, Reuters, Civil Eats, and state-level reporting on the same announcement."
     },
-    "last_substantive_update": "2026-09-12",
+    "last_substantive_update": "2026-09-28",
     "glance": {
       "who": "Brooke Rollins (Secretary of Agriculture)",
       "what": "Canceled the $3.1B Climate-Smart Commodities program, replacing it with a rebranded non-climate initiative",
@@ -40984,7 +41099,7 @@
         "certainty": "documented",
         "who": "Climate-Smart Commodities grantees"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-09-28"
     }
   },
   {
@@ -41378,43 +41493,58 @@
     "title": "USDA Cancels $1 Billion in Local Food Purchasing Programs for Schools and Food Banks",
     "institution": "U.S. Department of Agriculture (USDA)",
     "domain": "funding_redirection",
-    "status": "Finalized; not restored as of last verification",
-    "date_of_action": "2025-03-11 (cuts publicly reported) through 2025-05-31 (continued downstream reporting)",
-    "what_changed": "**USDA canceled two Biden-era programs that funded schools and food banks to buy fresh food directly from local farmers: the $660 million Local Food for Schools (LFS) Cooperative Agreement Program and the roughly $500 million Local Food Purchase Assistance (LFPA) Cooperative Agreement Program, together over $1 billion in annual funding. Both programs had opened a new funding round on December 10, 2024, and many states and school districts had already signed new agreements before USDA ended them in March 2025**, as part of the administration's broader effort to shrink federal spending. The School Nutrition Association estimated the cut would pull local, fresh-food purchasing away from an estimated 12 million students nationwide. By late May 2025, downstream reporting from North Carolina documented concrete on-the-ground effects: schools and small farms losing funding mid-agreement, farm layoffs, reduced fresh-produce access for students, and food banks bracing for increased demand amid a worsening hunger crisis, since the LFPA program specifically supported food-bank purchasing alongside the school-focused LFS program. Note (added 2026-09-10, round-4 backlog cluster c0347): this LFS/LFPA cut is distinct from USDA's separate cancellation of $500 million in supplemental TEFAP/Commodity Credit Corporation funding around the same time, tracked separately in usda-tefap-ccc-funding-rescission-2025.json -- both hit food banks in the same period and region, and some contemporaneous reporting described their compounding effects together, but they are different programs and different dollar amounts.",
+    "status": "Terminated in spring 2025; not restored as of Sept. 27, 2026. Pennsylvania's suit over its $13M LFPA award was dismissed in Dec. 2025; its Third Circuit appeal is set for argument Nov. 17, 2026. Harvest to Hallways (Aug. 2026) funds equipment and grants, not replacement food buying.",
+    "date_of_action": "2025-03-07 (USDA notified states; publicly reported 2025-03-10)",
+    "what_changed": "**USDA canceled the fiscal 2025 rounds of two Biden-era programs that funded states to buy fresh food directly from local farmers for schools, child care sites and food banks: the $660 million Local Food for Schools (LFS) Cooperative Agreement Program, expanded in this round to child care, and the Local Food Purchase Assistance (LFPA) Cooperative Agreement Program, reported at roughly $420 million to $500 million. USDA had announced $1.13 billion for the two programs in late 2024; the LFS round opened on December 10, 2024, and many states had already signed new agreements when USDA's Agricultural Marketing Service notified states on March 7, 2025, that the funding was no longer available and the agreements would be terminated after 60 days' notice**, as part of the administration's broader effort to shrink federal spending. A USDA spokesperson said the pandemic-era programs \"no longer effectuate the goals of the agency\"; first-round agreements already in place were not affected. The LFS round was to be spent over three years, with about $472 million for K-12 schools and $189 million for child care sites in the Child and Adult Care Food Program. The School Nutrition Association said the lost LFS money would no longer be available to help schools and child care facilities expand fresh, local menus. By late May 2025, CBS News reporting from North Carolina documented on-the-ground effects: the Durham Public Schools nutrition director losing the funds used to buy local produce, a farm that had sold $150,000 of produce to schools the previous year warning it would have to lay off workers, and the Food Bank of Central and Eastern North Carolina putting its share of lost aid at about $2 million amid what its CEO called one of the worst hunger crises in decades. Pennsylvania, whose roughly $13 million LFPA award was cut, sued USDA in June 2025; a federal judge in the Middle District of Pennsylvania dismissed the suit on December 3, 2025, ruling the court lacked jurisdiction over its Administrative Procedure Act claims, and the state appealed to the Third Circuit, which set argument for November 17, 2026. In late August 2026 USDA and HHS announced a \"Harvest to Hallways\" initiative with up to $70 million for school cafeteria equipment, up to $25 million more for Patrick Leahy Farm to School grants and guidance on spending existing meal reimbursements on local food; it did not restore the canceled purchasing money, and in late September 2026 a Tennessee school nutrition director and local-food nonprofit leaders told the Tennessee Lookout they still felt its loss. This cut is distinct from USDA's separate cancellation of $500 million in supplemental TEFAP funding through the Commodity Credit Corporation around the same time, which is tracked in its own entry; both hit food banks in the same period and region, and some contemporaneous reporting described their compounding effects together, but they are different programs.",
     "primary_proponent": {
       "name": "Trump administration / USDA",
       "role": "Executive action canceling previously awarded cooperative-agreement funding",
       "note": "No single named USDA official was identified in sourcing as personally directing the cancellation; both programs were ended as part of the administration's stated cost-cutting agenda shortly after a new funding round had already opened and states had begun signing agreements."
     },
     "estimated_impact": {
-      "summary": "Two programs funding over $1 billion a year in direct farm-to-school and farm-to-food-bank purchasing were eliminated mid-agreement, cutting small farmers out of a stable buyer relationship and reducing fresh, locally sourced food access for schools and food banks nationwide.",
+      "summary": "USDA withdrew over $1 billion that states were set to spend buying fresh, locally grown food for schools, child care sites and food banks, so less fresh produce and meat reaches students and food-bank clients at a time when food prices and food-bank demand were high. Small farms lost a buyer after agreements were signed; a North Carolina farm that sold $150,000 of produce to schools in a year warned of layoffs, and a North Carolina food bank put its lost aid at about $2 million. USDA's August 2026 Harvest to Hallways initiative funds equipment and grants, not replacement food purchasing.",
       "figures": [
         {
-          "metric": "Local Food for Schools (LFS) program funding eliminated",
+          "metric": "Local Food for Schools and Child Care round withdrawn (planned over three years: ~$472M K-12, ~$189M child care)",
           "value": "$660 million",
-          "source": "USDA program figures, reported by Reuters/CNBC, March 2025"
+          "source": "USDA figures via School Nutrition Association and National Farm to School Network, March 2025"
         },
         {
-          "metric": "Local Food Purchase Assistance (LFPA) program funding eliminated",
-          "value": "~$500 million",
-          "source": "USDA program figures, reported by Reuters/CNBC, March 2025"
+          "metric": "Local Food Purchase Assistance round withdrawn (food banks and other local groups)",
+          "value": "~$420 million to ~$500 million",
+          "source": "CBS News (about $420M); Politico citing USDA, via Reuters/CNBC, and USDA's October 2024 announcement as described in Shapiro v. USDA, M.D. Pa. (about $500M)"
         },
         {
-          "metric": "Students estimated to lose access to local-food school meal purchasing",
-          "value": "~12 million",
-          "source": "School Nutrition Association, cited by Reuters/CNBC"
+          "metric": "Combined funding USDA had announced for both programs in late 2024",
+          "value": "$1.13 billion",
+          "source": "The Guardian, March 11, 2025"
+        },
+        {
+          "metric": "Lost aid at the Food Bank of Central and Eastern North Carolina",
+          "value": "~$2 million",
+          "source": "Food bank CEO Amy Beros, CBS News, May 29, 2025"
+        },
+        {
+          "metric": "Massachusetts school and food-bank funding lost",
+          "value": "$12 million",
+          "source": "Gov. Maura Healey, cited by The Guardian, March 11, 2025"
+        },
+        {
+          "metric": "Harvest to Hallways funds announced August 2026 (equipment and Farm to School grants, not food purchasing)",
+          "value": "Up to $70 million equipment + up to $25 million grants",
+          "source": "USDA/HHS Harvest to Hallways release, Aug. 24, 2026; Tennessee Lookout via Chattanooga Times Free Press, Sept. 27, 2026"
         }
       ],
-      "caveat": "The 12-million-student figure is a nonprofit trade association's estimate, not a USDA figure, and reflects potential reach of the programs rather than a confirmed count of students who experienced a documented service reduction. The North Carolina farm/food-bank impacts are a single-state case study (CBS News), not a national damage tally."
+      "caveat": "Dollar figures are the canceled funding rounds as USDA announced them, not a count of meals, students or farm sales lost; the LFS round was to be spent over three years, so the $1 billion-plus total is not an annual figure, and the LFPA amount differs between reports. No national count of students, food-bank clients or farms affected has been found; the North Carolina and Massachusetts figures are single-state examples. A 12-million-student figure once linked to this cut is the School Nutrition Association's estimate for a separate congressional Community Eligibility Provision proposal, not this cancellation."
     },
-    "confidence_note": "HIGH confidence on the cancellation itself and its dollar figures, corroborated by Reuters, CNBC, and the Guardian, all citing USDA's own program numbers. MODERATE-HIGH on downstream harm, since the clearest on-the-ground reporting (farm layoffs, food-bank strain) comes from a single state (North Carolina) rather than a national survey.",
-    "pull_quote": "By late May 2025, downstream reporting from North Carolina documented concrete on-the-ground effects: schools and small farms losing funding mid-agreement, farm layoffs, reduced fresh-produce access for students, and food banks bracing for increased demand amid a worsening hunger crisis.",
-    "last_verified": "2026-09-10",
+    "confidence_note": "HIGH confidence on the cancellation and the $660 million LFS figure, reported by Politico, Reuters (syndicated by CNBC), CBS News and the Guardian from USDA and School Nutrition Association statements; the LFPA amount varies by report (about $420 million per CBS News, about $500 million per Politico citing USDA). MODERATE-HIGH on downstream harm, since the clearest on-the-ground reporting comes from single-state accounts (North Carolina, Tennessee) rather than a national survey.",
+    "pull_quote": "By late May 2025, reporting from North Carolina found schools losing the money they used to buy local produce, a farm warning it would have to lay off workers, and a food bank down about $2 million amid what its CEO called one of the worst hunger crises in decades.",
+    "last_verified": "2026-09-28",
     "date_added": "2026-08-11",
     "section_summaries": {
-      "what_changed": "USDA canceled $660M Local Food for Schools and ~$500M Local Food Purchase Assistance programs in March 2025, mid-agreement, cutting off direct farm-to-school/food-bank purchasing.",
-      "estimated_impact": "An estimated 12 million students lost access to local-food school purchasing; North Carolina reporting documented farm layoffs and food banks bracing for increased demand.",
-      "confidence_note": "Cancellation and dollar figures strongly corroborated across Reuters/CNBC/Guardian; downstream harm reporting is thinner, mostly single-state."
+      "what_changed": "In March 2025 USDA terminated the $660M Local Food for Schools round and the ~$420M-$500M Local Food Purchase Assistance round, ending state farm-to-school and farm-to-food-bank buying.",
+      "estimated_impact": "Over $1 billion in planned local-food buying for schools, child care and food banks was withdrawn; a North Carolina farm warned of layoffs and a food bank lost about $2 million.",
+      "confidence_note": "Cancellation and $660M figure well corroborated; the food-bank program's amount varies by report, and harm reporting is mostly single-state."
     },
     "sources": [
       {
@@ -41422,7 +41552,7 @@
         "url": "https://www.cnbc.com/2025/03/11/usda-cuts-over-1-billion-in-funding-for-schools-local-food-purchases.html"
       },
       {
-        "name": "The Guardian -- Trump administration cuts $1bn in funding for schools' local food purchases",
+        "name": "The Guardian (opinion, Sunny Baker of National Farm to School Network) -- Local food for schools helps farmers and kids. So why is Trump cutting funding?",
         "url": "https://www.theguardian.com/environment/2025/mar/19/farm-to-school-meals-funding-cut"
       },
       {
@@ -41432,18 +41562,50 @@
       {
         "name": "National Farm to School Network -- Action Alert: USDA Terminates $660M Program for Local Food in Schools and Child Care",
         "url": "https://www.farmtoschool.org/news-and-articles/action-alert-usda-terminates-660m-program-for-local-food-in-schools-and-child-care"
+      },
+      {
+        "name": "The Guardian -- USDA cuts more than $1bn in local food purchases for schools, food banks (March 11, 2025)",
+        "url": "https://www.theguardian.com/us-news/2025/mar/11/usda-cuts-food-banks-schools"
+      },
+      {
+        "name": "CBS News -- USDA cancels $1 billion in funding for schools and food banks to buy food from local suppliers (March 13, 2025)",
+        "url": "https://www.cbsnews.com/news/usda-cancels-local-food-purchasing-food-banks-school-meals/"
+      },
+      {
+        "name": "School Nutrition Association -- Proposed School Meal Cuts Prompt Nationwide Advocacy (March 2025)",
+        "url": "https://schoolnutrition.org/sna-news/proposed-school-meal-cuts-prompt-nationwide-advocacy/"
+      },
+      {
+        "name": "Chattanooga Times Free Press / Tennessee Lookout -- Tennessee schools still miss farm-to-school grant eliminated in 2025 as USDA rolls out new programs (Sept. 27, 2026)",
+        "url": "https://www.timesfreepress.com/news/2026/sep/27/tennessee-schools-still-miss-farm-to-school-grant/"
+      },
+      {
+        "name": "USDA -- USDA Announces Harvest to Hallways Initiative to Invest in Child Nutrition Programs (Aug. 24, 2026)",
+        "url": "https://www.usda.gov/about-usda/news/press-releases/2026/08/24/usda-announces-harvest-hallways-initiative-invest-child-nutrition-programs"
+      },
+      {
+        "name": "CourtListener -- Shapiro v. USDA, M.D. Pa. No. 1:25-cv-00998, order dismissing (Dec. 3, 2025)",
+        "url": "https://storage.courtlistener.com/recap/gov.uscourts.pamd.147018/gov.uscourts.pamd.147018.24.0.pdf"
+      },
+      {
+        "name": "CourtListener -- Shapiro v. USDA, 3d Cir. No. 26-1014 docket",
+        "url": "https://www.courtlistener.com/docket/72112774/josh-shapiro-v-us-department-of-agriculture/"
+      },
+      {
+        "name": "CourtListener -- Shapiro v. USDA, M.D. Pa. No. 1:25-cv-00998, memorandum (Dec. 3, 2025)",
+        "url": "https://storage.courtlistener.com/recap/gov.uscourts.pamd.147018/gov.uscourts.pamd.147018.23.0.pdf"
       }
     ],
-    "last_substantive_update": "2026-09-10",
+    "last_substantive_update": "2026-09-28",
     "glance": {
       "who": "USDA under the Trump administration",
-      "what": "Canceled $660M Local Food for Schools and ~$500M Local Food Purchase Assistance mid-agreement in March 2025",
+      "what": "Canceled $660M Local Food for Schools and ~$420M-$500M Local Food Purchase Assistance in March 2025",
       "harm": {
         "kind": "money",
         "certainty": "documented",
         "who": "Schools, food banks and local farmers"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-09-28"
     }
   },
   {
@@ -42294,66 +42456,71 @@
   },
   {
     "id": "uspstf-disruption-rfk-jr-2026",
-    "title": "RFK Jr. Fires USPSTF Vice Chairs, Repeatedly Postpones Meetings, Leaves Vacancies Unfilled Following Supreme Court Ruling Confirming His Authority",
+    "title": "RFK Jr. Fires USPSTF Vice Chairs, Cancels Four Straight Meetings, Then Names Eight Mostly Specialist Members to Idle Panel",
     "institution": "U.S. Preventive Services Task Force (HHS)",
     "domain": "staff_office_cuts",
-    "status": "Ongoing -- the July 10, 2026 meeting (fourth postponement) was rescheduled to 'late August 2026,' with HHS preparing to announce eight new members ahead of it per July 2026 reporting; as of the most recent recheck, no independent reporting confirms the meeting occurred or that new members were actually named; vice chair vacancies and expired-term member seats remain unfilled, and no USPSTF recommendation updates have been issued since August 2025",
-    "date_of_action": "2025 (meeting gap already underway, per Feb. 2026 reporting) through 2026-08 (fourth postponement rescheduled to 'late August 2026')",
-    "what_changed": "Added 2026-09-09: the disruption this entry documents had an even earlier flashpoint than the February 2026 NBC News reporting below. In late July 2025, the Wall Street Journal reported Kennedy planned to remove all 16 sitting USPSTF members, reportedly viewing the panel as too 'woke' over its use of inclusive language and its acknowledgment of systemic racism in health disparities. The American Medical Association urged Kennedy to abandon the plan on July 27, 2025 -- both the Guardian and Reuters covered the AMA's warning, which explicitly cited Kennedy's prior replacement of the CDC's vaccine advisory committee (ACIP, documented separately in this database) as the pattern it feared USPSTF would repeat. Even before the Supreme Court ruling below, NBC News reported in February 2026 that USPSTF had not held a formal meeting in nearly a year and was operating with fewer members, as Kennedy reshaped federal health advisory committees more broadly -- establishing that the panel's disruption predates and is not fully explained by the subsequent Kennedy v. Braidwood ruling. In June 2026, the Supreme Court ruled 6-3 in Kennedy v. Braidwood that the U.S. Preventive Services Task Force -- the independent panel that determines which preventive services (cancer screenings, HIV prevention, diabetes tests, and more) insurers must cover under the ACA without cost-sharing -- was constitutionally structured, while also confirming that its members serve at the HHS Secretary's discretion. Effective May 11, 2026, HHS Secretary Robert F. Kennedy Jr. dismissed the Task Force's two vice chairs, drawing condemnation from the American Medical Association and other public health organizations. Kennedy also declined to fill member seats whose terms expired in December 2025, and indefinitely postponed the panel's last three scheduled meetings, including its July 10, 2026 meeting, without providing a rescheduled date -- HHS cited an 'unprecedented number of nominations' still under review as the reason for the fourth postponement. HHS has also blocked public access to records concerning the panel's nomination and vacancy-filling process. Healthcare organizations have publicly drawn a parallel to Kennedy's earlier dismissal of all 17 members of the CDC's Advisory Committee on Immunization Practices (ACIP), which he replaced with a smaller panel including members who have expressed anti-vaccine views, raising concern that USPSTF will undergo a similar politically-driven overhaul. **Reuters reported the stalled panel has specifically delayed pending updates to guidance on cancer screening, HIV prevention, and heart disease -- three of the major preventive-care areas the panel's recommendations directly govern insurer coverage requirements for.** Update 2026-08-17: Avalere Health Advisory reported the postponed July 2026 meeting was rescheduled to 'late August 2026,' with HHS again citing the backlog of new-member nominations as the reason. New members had originally been expected to begin serving in June 2026 following the Task Force's April 2026 nomination call, but that timeline also slipped. Avalere separately noted no new USPSTF recommendation updates have been issued since August 2025, though existing recommendations remain in effect and evidence reviews reportedly continue in the interim. Update 2026-09-01 (GSR recheck batch 47): a bicameral, 19-senator letter (Sens. King, Murray, Warren, Schumer, Sanders, and 14 others), sent March 24, 2026 and not previously documented in this entry, demanded answers by April 15, 2026 on the meeting cancellations and additionally revealed that USPSTF failed to submit its statutorily required annual evidence-gaps report to Congress for the first time since the requirement took effect, and flagged concern that the Task Force might be directed to re-examine its PrEP (HIV prevention) recommendation; no HHS response to the letter or confirmation the annual report was subsequently filed was found in sourcing reviewed. Separately, at an April 21, 2026 House Ways and Means Committee hearing, responding to Rep. Vern Buchanan (R-FL), Kennedy called USPSTF 'lackadaisical and negligent for 20 years,' said he intends to appoint new members 'with a clear mission,' and predicted the reconstituted panel would hold 'much more frequent meetings' and, 'for the first time, transparency' -- his own on-record rationale for the vice-chair firings that followed three weeks later, though he gave no specifics on either claim. NOTUS reported July 7, 2026 that HHS was preparing to announce eight new members ahead of the late-August meeting, which would be the panel's first in 17 months, with a backlog of anticipated votes including prostate cancer screening, adult weight-loss counseling, cervical cancer screening (already finalized but unpublished), perinatal depression, alcohol misuse, and fall prevention; former USPSTF member Mike Silverstein compared the approach to Kennedy's ACIP purge but 'in slow motion.' A subsequent WebSearch synthesis claim that eight vaccine-critic members were already appointed could not be corroborated against a primary source and is not included here.",
+    "status": "Restaffed but idle -- on Sept. 17, 2026 Kennedy named eight new members (five specialists) and a new chair, restoring 16 seats; the late-August 2026 meeting never happened, no meeting date was set as of Sept. 21, 2026, and no recommendation updates have issued since August 2025.",
+    "date_of_action": "2025-07-07 (first meeting postponement) through 2026-09-17 (eight new members named)",
+    "what_changed": "The disruption began in July 2025. On June 27, 2025, the Supreme Court ruled 6-3 in Kennedy v. Braidwood that the U.S. Preventive Services Task Force -- the independent panel that determines which preventive services (cancer screenings, HIV prevention, diabetes tests, and more) insurers must cover under the ACA without cost-sharing -- is constitutionally structured because its members are supervised by, and removable at will by, the HHS Secretary. Less than two weeks later, HHS Secretary Robert F. Kennedy Jr.'s office emailed participants on July 7, 2025 that the panel's July 10, 2025 meeting was postponed, giving no reason and no rescheduled date. Sen. Patty Murray and more than 100 healthcare organizations protested, and the organizations drew a parallel to Kennedy's June 2025 dismissal of all 17 members of the CDC's Advisory Committee on Immunization Practices (ACIP, documented separately in this database), whom he replaced with a smaller panel of eight that included members who have expressed anti-vaccine views, raising concern that USPSTF would undergo a similar politically driven overhaul. On July 25, 2025, the Wall Street Journal reported Kennedy planned to remove all 16 sitting USPSTF members, reportedly viewing the panel as too 'woke'; an American Conservative essay that month had attacked the Task Force's efforts to remove racial inequities in health care and its use of more inclusive language around gender. On July 27, 2025, the American Medical Association wrote Kennedy urging him to retain the panel's members and keep its regular meetings; the Guardian and Reuters covered the AMA's warning, and HHS said no final decision had been made. The panel's November 2025 meeting was then scrapped during the government shutdown, the terms of five of its 16 members expired in December 2025 without replacements, and the Task Force, which normally meets three times a year, met only once in 2025 (in March) and issued no recommendation updates after August 2025. In February 2026, NBC News reported that USPSTF had not held a formal meeting in nearly a year and was down to 11 members. In early March 2026, HHS called off the March 2026 meeting as well, the third consecutive cancellation. On March 24, 2026, 19 senators (Sens. King, Murray, Warren, Schumer, Sanders, and 14 others) wrote Kennedy demanding answers by April 15, 2026 on the meeting cancellations; their letter also said USPSTF had failed to submit its statutorily required annual evidence-gaps report to Congress for the first time since the requirement took effect, and flagged concern that the Task Force might be directed to re-examine its PrEP (HIV prevention) recommendation. No HHS response to the letter, or confirmation that the annual report was later filed, was found in sourcing reviewed. **Reuters reported on April 2, 2026 that the stalled panel was delaying updates to screening guidelines for cancer, heart disease and other conditions, and that its HIV prevention recommendation had not been updated to cover the newer twice-yearly injectable PrEP drug, leaving patient costs for it up to individual plans.** At an April 21, 2026 House Ways and Means Committee hearing, responding to Rep. Vern Buchanan (R-FL), Kennedy called USPSTF 'lackadaisical and negligent for 20 years,' said he was bringing on new members 'who have a clear mission,' and predicted the reconstituted panel would hold 'much more frequent meetings' and, 'for the first time, transparency' -- his own on-record rationale for the vice-chair firings that followed three weeks later, though he gave no specifics on either claim. In letters dated May 11, 2026, Kennedy dismissed the Task Force's two vice chairs, John Wong and Esa Davis, though both had time left on their terms; the AMA condemned the move, its president saying the changes 'were foreshadowed by the earlier dismantling of the Advisory Committee on Immunization Practices.' New members solicited in an April 2026 nomination call had been expected to start in June 2026, but June passed without appointments, and HHS postponed the July 2026 meeting -- the fourth consecutive cancellation -- to 'late August,' citing an 'unprecedented' number of nominations still under review and the need for more time to review, appoint, and onboard new members. NOTUS reported July 7, 2026 that HHS was preparing to announce eight new members ahead of the late-August meeting, which would have been the panel's first in 17 months; by then the panel had shrunk by half. A backlog awaited it: votes on prostate cancer screening and adult weight-loss counseling, plus updated recommendations on cervical cancer screening, perinatal depression, alcohol misuse, and fall prevention that the Task Force had finalized before its meetings were frozen but that HHS had not published. Former co-chair Mike Silverstein compared the approach to Kennedy's ACIP purge but 'in slow motion.' The late-August meeting did not take place. On September 17, 2026, Kennedy named eight new members, bringing the panel back to 16 and making Cleveland Clinic pediatric hematologist-oncologist Seth Corey its chair; five of the eight are medical specialists and one is a finance professor with health-insurance expertise, which the AMA called 'a significant departure from the Task Force's traditional membership.' HHS announced no meeting date. The Agency for Healthcare Research and Quality, which supports the Task Force's evidence work, had meanwhile shrunk from nearly 300 employees in 2024 to 84 in 2026, according to Office of Personnel Management data cited by STAT.",
     "primary_proponent": {
       "name": "Robert F. Kennedy Jr.",
       "role": "Secretary of Health and Human Services",
-      "note": "Personally dismissed the USPSTF's two vice chairs effective May 11, 2026, left expired member terms unfilled, and ordered or oversaw the panel's repeated, indefinite meeting postponements, following the Supreme Court's Kennedy v. Braidwood ruling confirming his authority over Task Force membership."
+      "note": "Dismissed the USPSTF's two vice chairs by letters dated May 11, 2026, left expired member terms unfilled, and ordered or oversaw four consecutive meeting cancellations, after the Supreme Court's June 2025 Kennedy v. Braidwood ruling confirmed his authority over Task Force membership; named eight new members and a new chair on Sept. 17, 2026."
     },
     "estimated_impact": {
-      "summary": "The Task Force that determines which preventive-care services insurers must cover cost-free under the ACA has had its leadership dismissed, its vacancies left unfilled for months, and its meetings repeatedly and indefinitely postponed -- leaving the panel unable to conduct its normal review and recommendation process, and drawing an explicit comparison from medical organizations to Kennedy's prior wholesale replacement of the CDC's vaccine advisory committee.",
+      "summary": "The panel that decides which preventive services -- cancer screenings, HIV-prevention drugs, heart-disease and other screenings -- insurers must cover at no cost to patients has not met since March 2025, so no new or updated recommendations have issued since August 2025. Reuters reported that updates to cancer and heart-disease screening guidelines are stalled and that the HIV-prevention recommendation was never extended to the newer twice-yearly injectable PrEP drug, leaving whether patients pay for it up to each insurer. Four recommendations the Task Force had already finalized (cervical cancer screening, perinatal depression, alcohol misuse, fall prevention for older adults) sat unpublished, and planned votes on prostate cancer screening and weight-loss counseling never happened. Along the way Kennedy fired both vice chairs and let the panel shrink to half strength before refilling it in September 2026 with a specialist-heavy slate, while the agency that supports its evidence reviews lost roughly 70% of its staff.",
       "figures": [
         {
-          "metric": "Approximate length of the USPSTF meeting gap reported before the Supreme Court ruling",
-          "value": "~1 year (as of February 2026)",
-          "source": "NBC News, February 2026"
+          "metric": "Time since the USPSTF last met",
+          "value": "No meeting since March 2025 (18 months as of Sept. 2026)",
+          "source": "Avalere Health Advisory, July 16, 2026; STAT, Sept. 17, 2026"
         },
         {
-          "metric": "USPSTF vice chairs dismissed",
-          "value": "2 (effective May 11, 2026)",
-          "source": "Medical Economics, 2026"
+          "metric": "Consecutive USPSTF meetings canceled",
+          "value": "4 (July 2025, November 2025, March 2026, July 2026)",
+          "source": "NOTUS, July 7, 2026; Avalere Health Advisory, July 16, 2026"
         },
         {
-          "metric": "Consecutive USPSTF meetings postponed",
-          "value": "4 (including July 10, 2026 meeting, no rescheduled date given)",
-          "source": "FierceHealthcare / Yahoo News, 2026"
+          "metric": "Recommendations issued",
+          "value": "About 22 draft and final recommendations in a typical year; 7 in 2025; none in 2026 as of April 2",
+          "source": "Reuters, April 2, 2026"
         },
         {
-          "metric": "Supreme Court ruling on USPSTF's constitutional structure",
-          "value": "6-3 (Kennedy v. Braidwood, upheld structure; confirmed Secretary's removal authority)",
-          "source": "Multiple outlets, June 2026"
-        },
-        {
-          "metric": "CDC ACIP members Kennedy previously dismissed and replaced (cited as a parallel precedent)",
-          "value": "17 dismissed, replaced with 8",
-          "source": "Reporting on the earlier ACIP purge, cited alongside USPSTF coverage"
-        },
-        {
-          "metric": "New USPSTF members HHS was preparing to announce ahead of the late-August 2026 meeting",
-          "value": "8 (planned, not confirmed appointed as of this recheck)",
+          "metric": "Recommendations finalized by the Task Force but left unpublished",
+          "value": "4 (cervical cancer screening, perinatal depression, alcohol misuse, fall prevention)",
           "source": "NOTUS, July 7, 2026"
         },
         {
-          "metric": "Senators demanding answers on USPSTF disruption by an April 15, 2026 deadline",
-          "value": "19 (bicameral letter, March 24, 2026)",
-          "source": "Sen. Angus King et al., letter to Secretary Kennedy"
+          "metric": "USPSTF vice chairs dismissed",
+          "value": "2 (letters dated May 11, 2026)",
+          "source": "Medical Economics, May 20, 2026; STAT, Sept. 17, 2026"
+        },
+        {
+          "metric": "Panel strength before new appointments",
+          "value": "Shrunk by half from its normal 16 members (July 2026); 5 terms expired Dec. 2025 unfilled",
+          "source": "NOTUS, July 7, 2026; Senate letter, March 24, 2026"
+        },
+        {
+          "metric": "New members named Sept. 17, 2026",
+          "value": "8 (5 medical specialists, 1 finance professor, 1 pediatrician, 1 family physician), restoring 16 seats; no meeting date set",
+          "source": "STAT, Sept. 17, 2026; Reuters, Sept. 17, 2026; CIDRAP, Sept. 2026"
+        },
+        {
+          "metric": "AHRQ staff (the agency that supports the Task Force)",
+          "value": "Nearly 300 in 2024 to 84 in 2026",
+          "source": "Office of Personnel Management data, via STAT, Sept. 17, 2026"
         }
       ],
-      "caveat": "The Supreme Court's Kennedy v. Braidwood ruling is a genuinely two-sided outcome -- it upheld the Task Force's underlying constitutional structure and the ACA's preventive-coverage mandate, while also confirming the Secretary's authority to remove members, which is the specific authority Kennedy has since exercised. Present both halves of the ruling together rather than only the part that enabled the subsequent removals. No official cause has been confirmed for the repeated meeting postponements beyond HHS's own stated 'unprecedented number of nominations' explanation; critics dispute that this fully explains four consecutive delays."
+      "caveat": "Existing USPSTF recommendations remain in effect, so current no-cost coverage has not been withdrawn; the harm is the freeze on new and updated recommendations and uncertainty over what the reconstituted panel will do. No source quantifies patients affected or dollar costs from the delays. The Supreme Court's June 2025 Kennedy v. Braidwood ruling was two-sided: it upheld the Task Force's structure and the ACA's no-cost coverage mandate while confirming the Secretary's power to remove members, the power Kennedy then used. HHS attributed the July 2026 postponement to its review of nominations; critics dispute that this explains four consecutive cancellations. The AHRQ staffing figure is agency-wide, not USPSTF-specific."
     },
-    "confidence_note": "HIGH confidence -- corroborated across FierceHealthcare, Medical Economics, Axios, and a public statement from Sen. Patty Murray, with the underlying Supreme Court ruling a matter of public record. The parallel to the ACIP purge is drawn by healthcare organizations and reporters as a pattern comparison, not an official administration statement. Re-verified 2026-08-17: the rescheduled 'late August 2026' date and the slipped June 2026 new-member timeline are corroborated by Avalere Health Advisory's account of HHS's own stated reasoning; sourcing reviewed did not include independent confirmation that the late-August meeting actually took place, since that date had not yet arrived as of this recheck. Re-verified 2026-08-29: no confirmation found that the rescheduled late-August 2026 meeting has occurred, and no new USPSTF membership or recommendation announcements were identified beyond what this entry already documents. Re-verified 2026-09-01 (GSR recheck batch 47), real correction: the March 24, 2026 Senate letter is a primary source (its PDF was fetched and read directly) corroborated by Sen. Gillibrand's own March 27, 2026 press release; the annual-report failure and PrEP-reexamination concern are the letter's own claims, not yet independently confirmed resolved or acted upon. The April 21, 2026 hearing quote is corroborated via Medical Economics' reporting (headline matches the quoted language) and a contemporaneous Ways and Means Committee hearing record. The eight-new-members figure is HIGH confidence as a stated HHS plan (NOTUS, July 7, 2026) but explicitly NOT confirmed as completed; a separate WebSearch-synthesis claim that eight vaccine-critic members had already been appointed was checked against available sourcing, could not be corroborated to a primary source, and was excluded rather than written in unverified. Added 2026-09-09: the July 2025 purge-threat/AMA-opposition antecedent (WSJ, Guardian, Reuters, all July 27-Aug 2, 2025). HIGH confidence, corroborated across three independent outlets.",
+    "confidence_note": "HIGH confidence -- corroborated across FierceHealthcare, Medical Economics, STAT, NOTUS, Reuters, Avalere Health Advisory, NBC News, the AMA's own statements, and a March 24, 2026 letter from 19 senators (read directly; corroborated by Sen. Gillibrand's March 27, 2026 release). The Kennedy v. Braidwood ruling (June 27, 2025) is a matter of public record. The annual-report failure and PrEP concern are the senators' own claims, not independently confirmed resolved. The April 21, 2026 hearing quote is from Medical Economics' account of the hearing. The Sept. 17, 2026 appointments are reported by STAT, CIDRAP and Reuters from HHS's announcement. The parallel to the ACIP purge is drawn by healthcare organizations and the AMA, not an administration statement. The WSJ's account of why Kennedy views the panel as 'woke' rests on unnamed sources.",
     "pull_quote": "At an April 21, 2026 House hearing, Kennedy called USPSTF ‘lackadaisical and negligent for 20 years’ and predicted the reconstituted panel would hold ‘much more frequent meetings’ and ‘for the first time, transparency’ — though he gave no specifics on either claim.",
     "section_summaries": {
-      "what_changed": "NBC reported the panel already hadn't met in nearly a year by Feb. 2026, before a Supreme Court ruling confirmed RFK Jr.'s removal authority; he then fired USPSTF's two vice chairs, left expired member seats unfilled, and postponed the panel's meetings four times running, most recently to 'late August 2026.' A 19-senator letter revealed the panel also missed its statutorily required annual report to Congress, and Kennedy himself told a House committee he considers the panel 'lackadaisical and negligent' and plans to remake it with new members.",
-      "estimated_impact": "The panel that decides which preventive care insurers must cover free of charge has been left leaderless and unable to meet, drawing comparisons to Kennedy's earlier wholesale replacement of the CDC's vaccine advisory panel; a backlog of pending votes (prostate cancer screening, weight-loss counseling, and others) awaits its rescheduled meeting.",
-      "confidence_note": "Well-corroborated across multiple health-policy outlets, a primary-source Senate letter, and a Senate statement; the ACIP-purge comparison is external commentary, not an admitted administration strategy."
+      "what_changed": "RFK Jr. canceled USPSTF meetings from July 2025, fired its vice chairs in May 2026, then named eight mostly specialist members in Sept. 2026; still no meeting date.",
+      "estimated_impact": "The panel that sets free-to-patient preventive care hasn't met since March 2025, stalling cancer-screening and HIV-prevention updates and leaving four finalized recommendations unpublished.",
+      "confidence_note": "Well-corroborated across STAT, NOTUS, Reuters, Medical Economics, a primary-source Senate letter and AMA statements; the ACIP comparison is critics' framing, not an admitted administration strategy."
     },
-    "last_verified": "2026-09-22",
+    "last_verified": "2026-09-28",
     "date_added": "2026-07-27",
     "sources": [
       {
@@ -42385,7 +42552,7 @@
         "url": "https://advisory.avalerehealth.com/insights/what-does-another-uspstf-meeting-cancellation-mean-for-preventive-care-recommendations"
       },
       {
-        "name": "Sen. Angus King et al. -- bicameral letter to HHS Secretary Kennedy (March 24, 2026)",
+        "name": "Sen. Angus King et al. -- letter from 19 senators to HHS Secretary Kennedy (March 24, 2026)",
         "url": "https://www.king.senate.gov/imo/media/doc/uspstf_letter.pdf"
       },
       {
@@ -42411,55 +42578,43 @@
       {
         "name": "Reuters -- Medical group urges Kennedy not to fire US care task force",
         "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/medical-group-urges-kennedy-not-fire-us-care-task-force-2025-07-27/"
+      },
+      {
+        "name": "STAT -- Kennedy moves to revive preventive services panel with new members, after months of vacancies (Sept. 17, 2026)",
+        "url": "https://www.statnews.com/2026/09/17/kennedy-names-eight-new-members-uspstf-task-force/"
+      },
+      {
+        "name": "Reuters (via KSL) -- Health Secretary Kennedy adds 8 new members to key health committee (Sept. 17, 2026)",
+        "url": "https://www.ksl.com/article/51625301/health-secretary-kennedy-adds-8-new-members-to-key-health-committee"
+      },
+      {
+        "name": "CIDRAP -- Kennedy names 8 new members to preventive services task force (Sept. 2026)",
+        "url": "https://www.cidrap.umn.edu/public-health/kennedy-names-8-new-members-preventive-services-task-force"
+      },
+      {
+        "name": "American Medical Association -- AMA deeply concerned by reported USPSTF changes (July 27, 2025)",
+        "url": "https://www.ama-assn.org/press-center/ama-press-releases/ama-deeply-concerned-reported-uspstf-changes"
+      },
+      {
+        "name": "The Independent -- RFK Jr. looks to boot panel that decides which HIV and cancer screenings will be free: report (July 26, 2025)",
+        "url": "https://www.independent.co.uk/news/world/americas/us-politics/rfk-preventative-services-task-force-b2796595.html"
+      },
+      {
+        "name": "Forbes (via Yahoo News) -- Continued Disruption At Federal Preventive Health Panel May Mean Less Coverage (Sept. 2, 2026)",
+        "url": "https://www.yahoo.com/news/politics/articles/continued-disruption-federal-preventive-health-145739879.html"
       }
     ],
     "last_updated": "2026-09-22",
-    "last_substantive_update": "2026-09-22",
+    "last_substantive_update": "2026-09-28",
     "glance": {
       "who": "Robert F. Kennedy Jr. (HHS Secretary)",
-      "what": "Fired both USPSTF vice chairs, left seats unfilled and postponed the panel's meetings four times",
+      "what": "Fired USPSTF's vice chairs, canceled four meetings, then named 8 mostly specialist members",
       "harm": {
         "kind": "institutional",
         "certainty": "documented",
         "who": "ACA preventive-care coverage reviews"
       },
-      "reviewed": "2026-09-22"
-    },
-    "timeline": {
-      "what_changed": {
-        "base": "",
-        "updates": [
-          {
-            "date": "2026-09-09",
-            "label": "Added",
-            "text": "Added 2026-09-09: the disruption this entry documents had an even earlier flashpoint than the February 2026 NBC News reporting below. In late July 2025, the Wall Street Journal reported Kennedy planned to remove all 16 sitting USPSTF members, reportedly viewing the panel as too 'woke' over its use of inclusive language and its acknowledgment of systemic racism in health disparities. The American Medical Association urged Kennedy to abandon the plan on July 27, 2025 -- both the Guardian and Reuters covered the AMA's warning, which explicitly cited Kennedy's prior replacement of the CDC's vaccine advisory committee (ACIP, documented separately in this database) as the pattern it feared USPSTF would repeat. Even before the Supreme Court ruling below, NBC News reported in February 2026 that USPSTF had not held a formal meeting in nearly a year and was operating with fewer members, as Kennedy reshaped federal health advisory committees more broadly -- establishing that the panel's disruption predates and is not fully explained by the subsequent Kennedy v. Braidwood ruling. In June 2026, the Supreme Court ruled 6-3 in Kennedy v. Braidwood that the U.S. Preventive Services Task Force -- the independent panel that determines which preventive services (cancer screenings, HIV prevention, diabetes tests, and more) insurers must cover under the ACA without cost-sharing -- was constitutionally structured, while also confirming that its members serve at the HHS Secretary's discretion. Effective May 11, 2026, HHS Secretary Robert F. Kennedy Jr. dismissed the Task Force's two vice chairs, drawing condemnation from the American Medical Association and other public health organizations. Kennedy also declined to fill member seats whose terms expired in December 2025, and indefinitely postponed the panel's last three scheduled meetings, including its July 10, 2026 meeting, without providing a rescheduled date -- HHS cited an 'unprecedented number of nominations' still under review as the reason for the fourth postponement. HHS has also blocked public access to records concerning the panel's nomination and vacancy-filling process. Healthcare organizations have publicly drawn a parallel to Kennedy's earlier dismissal of all 17 members of the CDC's Advisory Committee on Immunization Practices (ACIP), which he replaced with a smaller panel including members who have expressed anti-vaccine views, raising concern that USPSTF will undergo a similar politically-driven overhaul. **Reuters reported the stalled panel has specifically delayed pending updates to guidance on cancer screening, HIV prevention, and heart disease -- three of the major preventive-care areas the panel's recommendations directly govern insurer coverage requirements for.**",
-            "effective_date": "2026-09-09"
-          },
-          {
-            "date": "2026-08-17",
-            "label": "Update",
-            "text": "Update 2026-08-17: Avalere Health Advisory reported the postponed July 2026 meeting was rescheduled to 'late August 2026,' with HHS again citing the backlog of new-member nominations as the reason. New members had originally been expected to begin serving in June 2026 following the Task Force's April 2026 nomination call, but that timeline also slipped. Avalere separately noted no new USPSTF recommendation updates have been issued since August 2025, though existing recommendations remain in effect and evidence reviews reportedly continue in the interim.",
-            "effective_date": "2026-08-17"
-          },
-          {
-            "date": "2026-09-01",
-            "label": "Update",
-            "text": "Update 2026-09-01 (GSR recheck batch 47): a bicameral, 19-senator letter (Sens. King, Murray, Warren, Schumer, Sanders, and 14 others), sent March 24, 2026 and not previously documented in this entry, demanded answers by April 15, 2026 on the meeting cancellations and additionally revealed that USPSTF failed to submit its statutorily required annual evidence-gaps report to Congress for the first time since the requirement took effect, and flagged concern that the Task Force might be directed to re-examine its PrEP (HIV prevention) recommendation; no HHS response to the letter or confirmation the annual report was subsequently filed was found in sourcing reviewed. Separately, at an April 21, 2026 House Ways and Means Committee hearing, responding to Rep. Vern Buchanan (R-FL), Kennedy called USPSTF 'lackadaisical and negligent for 20 years,' said he intends to appoint new members 'with a clear mission,' and predicted the reconstituted panel would hold 'much more frequent meetings' and, 'for the first time, transparency' -- his own on-record rationale for the vice-chair firings that followed three weeks later, though he gave no specifics on either claim. NOTUS reported July 7, 2026 that HHS was preparing to announce eight new members ahead of the late-August meeting, which would be the panel's first in 17 months, with a backlog of anticipated votes including prostate cancer screening, adult weight-loss counseling, cervical cancer screening (already finalized but unpublished), perinatal depression, alcohol misuse, and fall prevention; former USPSTF member Mike Silverstein compared the approach to Kennedy's ACIP purge but 'in slow motion.' A subsequent WebSearch synthesis claim that eight vaccine-critic members were already appointed could not be corroborated against a primary source and is not included here.",
-            "effective_date": "2026-09-01"
-          }
-        ]
-      },
-      "confidence_note": {
-        "base": "HIGH confidence -- corroborated across FierceHealthcare, Medical Economics, Axios, and a public statement from Sen. Patty Murray, with the underlying Supreme Court ruling a matter of public record. The parallel to the ACIP purge is drawn by healthcare organizations and reporters as a pattern comparison, not an official administration statement. Re-verified 2026-08-17: the rescheduled 'late August 2026' date and the slipped June 2026 new-member timeline are corroborated by Avalere Health Advisory's account of HHS's own stated reasoning; sourcing reviewed did not include independent confirmation that the late-August meeting actually took place, since that date had not yet arrived as of this recheck. Re-verified 2026-08-29: no confirmation found that the rescheduled late-August 2026 meeting has occurred, and no new USPSTF membership or recommendation announcements were identified beyond what this entry already documents. Re-verified 2026-09-01 (GSR recheck batch 47), real correction: the March 24, 2026 Senate letter is a primary source (its PDF was fetched and read directly) corroborated by Sen. Gillibrand's own March 27, 2026 press release; the annual-report failure and PrEP-reexamination concern are the letter's own claims, not yet independently confirmed resolved or acted upon. The April 21, 2026 hearing quote is corroborated via Medical Economics' reporting (headline matches the quoted language) and a contemporaneous Ways and Means Committee hearing record. The eight-new-members figure is HIGH confidence as a stated HHS plan (NOTUS, July 7, 2026) but explicitly NOT confirmed as completed; a separate WebSearch-synthesis claim that eight vaccine-critic members had already been appointed was checked against available sourcing, could not be corroborated to a primary source, and was excluded rather than written in unverified.",
-        "updates": [
-          {
-            "date": "2026-09-09",
-            "label": "Added",
-            "text": "Added 2026-09-09: the July 2025 purge-threat/AMA-opposition antecedent (WSJ, Guardian, Reuters, all July 27-Aug 2, 2025). HIGH confidence, corroborated across three independent outlets.",
-            "effective_date": "2026-09-09"
-          }
-        ]
-      }
+      "reviewed": "2026-09-28"
     }
   },
   {
@@ -44188,27 +44343,38 @@
     "title": "White House Downplayed and Previously Blocked Release of FBI/NCTC Iran Threat Warnings",
     "institution": "White House / FBI / National Counterterrorism Center",
     "domain": "research_suppression",
-    "status": "Ongoing -- the March 20, 2026 report was distributed despite the White House's public downplaying; the earlier blocked report (now independently identified as a five-page joint FBI/DHS/NCTC bulletin scheduled for release the week of March 7-11, 2026) was still never confirmed to have subsequently reached its intended law-enforcement or public audience",
-    "date_of_action": "2026-03-20 (report date); reported 2026-04-08",
-    "what_changed": "The FBI and National Counterterrorism Center issued a law-enforcement intelligence report on March 20, 2026, warning that the Iranian government 'poses a persistent threat' to U.S. military and government personnel and facilities, Jewish and Israeli institutions, and Iranian dissidents inside the United States (the report did not identify a broad threat to the general American public). Reuters reported the report's public release and law-enforcement distribution came even as the White House publicly minimized the likelihood of an Iranian attack on U.S. soil -- consistent with President Trump's public downplaying of other, similar intelligence assessments in preceding months. The March 20 report followed weeks after Reuters and other outlets reported the White House had blocked release of an earlier intelligence product with similar findings. White House spokeswoman Abigail Jackson defended the administration's posture, saying it was 'ensuring any information was properly vetted before release' and that media outlets should not 'irresponsibly sow fear' by reporting on individual law-enforcement memoranda that may lack broader context. Update 2026-08-30 (GSR recheck batch 35): the earlier blocked report, previously not independently re-verified in this entry, is now corroborated in its own right -- U.S. News & World Report and Business Standard (citing the same underlying wire reporting) identify it as a five-page joint FBI/DHS/National Counterterrorism Center 'Public Safety Awareness Report' that had been scheduled for release the week of March 7-11, 2026 (President Trump was separately asked at the White House on March 11, 2026 whether he was worried about an Iranian attack on U.S. soil and said 'No, I'm not') before Trump officials indefinitely held it up for review. **A senior DHS official, on background, contradicted the administration's stated 'not well written'/needs-vetting rationale, telling reporters the agencies had been prepared to issue a joint statement elevating the threat level when the White House stopped it and imposed a new requirement that all unclassified Iran-related information be reviewed by the White House before release** -- a broader prior-review policy, not a one-off decision specific to this bulletin. Sourcing reviewed does not identify whether the blocked March bulletin was ever subsequently released in any form; that remains an open, unconfirmed point.",
+    "status": "Unresolved as of September 29, 2026: the White House held a joint Iran threat bulletin on March 6, reportedly relenting days later; an FBI report dated March 20 with matching text reached police. Whether it was edited is unknown.",
+    "date_of_action": "2026-03-06 (bulletin blocked); 2026-03-20 (FBI report); reported 2026-04-07",
+    "what_changed": "On March 6, 2026, about a week after U.S. and Israeli strikes on Iran began, the White House stopped the planned release of a five-page joint FBI/DHS/National Counterterrorism Center bulletin, titled 'A Public Safety Awareness Report: Elevated threat in the United States during US-Iran conflict,' that was meant to alert state and local law enforcement to a heightened threat on U.S. soil. The Daily Mail, which reviewed the bulletin and broke the story that night, reported that DHS gave the White House notice hours before the scheduled Friday release (against the wishes of FBI leadership, the Mail reported) and that top Trump officials ordered it placed on hold. The bulletin described 'elevated threats by the government of Iran to US military and government personnel and facilities, Jewish and Israeli institutions and their perceived supporters, and Iranian dissidents and other anti-regime activists in the United States,' with specific details on how Iranian proxies might carry out attacks and a section on how local law enforcement could respond. White House spokeswoman Abigail Jackson did not deny the hold, saying the White House was coordinating with all government agencies 'to ensure information being disseminated is accurate, up to date, and has been properly vetted -- even if that means taking additional time to review to ensure nothing is done in a vacuum.' **A senior DHS official disputed that explanation, telling the Daily Mail the three agencies 'were going to release a joint intelligence statement that would elevate the threat level and start addressing the Iranian threat on American soil,' and that 'the White House stopped it, and verbalized down to DHS that any unclassified \"for official use only\" information going forward concerning Iran has to be reviewed by the White House before any dissemination'** -- a broader prior-review requirement, not a one-off decision on this bulletin. The official warned the move could have a chilling effect on keeping state and local law enforcement informed about Iranian threats. On March 7, a Trump administration official confirmed to Reuters that the administration had asked an agency to hold the bulletin for review, saying the warning, drafted by DHS's Office of Intelligence and Analysis, did not offer sufficient insight and was not well written; a DHS spokesperson told Reuters that sharing intelligence bulletins with the White House for review before release is normal procedure. On March 10, the Daily Mail published details from a leaked copy of the blocked bulletin, including a list of possible attack methods ('stabbings, vehicle rammings, bombings, poisoning, strangling, suffocation, and arson'), and a senior DHS official told the Mail the White House had relented under mounting pressure and planned to release the report to law enforcement later that week. Jackson told the Mail, 'Nothing was blocked.' On March 11, asked outside the White House whether he was worried about Iran carrying out an attack in the United States, President Trump said, 'No, I'm not.' An FBI law-enforcement intelligence report dated March 20, 2026, also titled 'Public Safety Awareness Report' and issued with other federal intelligence agencies, warned state and local law enforcement that the Iranian government 'poses a persistent threat' to U.S. military and government personnel and buildings, Jewish and Israeli institutions, and Iranian dissidents in the United States, and said Iranian security services have attempted to kidnap and kill Americans in recent years; it also stated that the FBI and National Counterterrorism Center had not identified broad threats to the American public. The report was obtained, not published: the national-security transparency nonprofit Property of the People obtained it through open-records requests and shared it with Reuters, which reported on April 7, 2026 that the FBI's warning went out even as the White House sought to downplay the likelihood of an attack, and weeks after the White House blocked the release of a similarly described intelligence product. Responding to Reuters, Jackson said, 'Media outlets should not attempt to irresponsibly sow fear by reporting on individual law enforcement memorandums that may lack broader context.' The March 20 report carries the 'Public Safety Awareness Report' title, lists the same categories of targets, and contains passages that match the leaked bulletin word for word, including the same list of attack methods; neither Reuters nor the Daily Mail says outright that it is the blocked bulletin or whether it was edited before release. Sourcing reviewed does not show whether the blocked March 6 bulletin was ever issued in its original form.",
     "primary_proponent": {
       "name": "The White House (institutional; no single official named in sourcing as personally directing the earlier report's suppression)",
       "role": "Executive Office of the President",
-      "note": "White House spokeswoman Abigail Jackson is the only named official on record, defending -- not directing -- the administration's posture toward the reports' release; sourcing reviewed does not identify who specifically ordered the earlier report blocked, an attribution gap flagged per this tracker's institutional-accountability standard rather than blocking the entry on that basis. A senior DHS official, unnamed and speaking on background, is on record contradicting the administration's stated rationale for the March bulletin's delay, but did not identify who at the White House made the blocking decision."
+      "note": "White House spokeswoman Abigail Jackson is the only named official on record, defending -- not directing -- the administration's posture toward the reports' release; sourcing reviewed does not identify who specifically ordered the earlier report blocked, an attribution gap flagged per this tracker's institutional-accountability standard rather than blocking the entry on that basis. A senior DHS official, unnamed, is on record contradicting the administration's stated rationale for the March bulletin's delay, but did not identify who at the White House made the blocking decision."
     },
     "estimated_impact": {
-      "summary": "State and local law enforcement, and the public, received a narrower, later, and more downplayed account of a documented Iranian threat than the intelligence community itself assessed -- the pattern (blocking one report, then publicly minimizing a second, similarly-worded one) represents the White House exercising political control over dissemination of an intelligence-community threat product rather than deferring to the community's own assessment of what warranted public warning.",
-      "figures": [],
-      "caveat": "No dollar figure or headcount applies to this entry; the harm is informational/preparedness-related (delayed or minimized threat awareness for the public and law enforcement) rather than a quantifiable budget or staffing loss."
+      "summary": "State and local police -- the first line of protection for the military and government personnel, Jewish and Israeli institutions, and Iranian dissidents the FBI says Iran threatens (the FBI report notes Iranian security services have tried to kidnap and kill Americans in recent years) -- did not get a joint FBI/DHS/NCTC warning of elevated Iranian threat when it was due on March 6, 2026, in the first week of the war. An FBI report dated March 20, two weeks later, with the same title and word-for-word passages from the blocked bulletin, including its list of attack methods, did reach law enforcement; whether it was cut or changed first is not known. Beyond the one bulletin, a senior DHS official said in March that the White House had told DHS that all unclassified 'for official use only' information about Iran must get White House review before release, which the official warned could chill threat-sharing with state and local agencies. Meanwhile the public heard the President say he was not worried about an attack, and the White House said 'Nothing was blocked' and told media not to 'irresponsibly sow fear' by reporting on the March 20 warning.",
+      "figures": [
+        {
+          "metric": "Warning held back",
+          "value": "5-page joint FBI/DHS/NCTC bulletin, put on hold hours before its planned March 6, 2026 release",
+          "source": "Daily Mail (reviewed the bulletin); hold confirmed to Reuters by a Trump administration official"
+        },
+        {
+          "metric": "Scope of new White House prior-review requirement",
+          "value": "All unclassified 'for official use only' Iran-related information, per a senior DHS official",
+          "source": "Daily Mail (unnamed senior DHS official)"
+        }
+      ],
+      "caveat": "No dollar, staffing or casualty figure applies, and no attack in sourcing reviewed has been tied to the delayed warning. The prior-review requirement rests on one unnamed DHS official's account to the Daily Mail; the White House called its handling routine vetting, and a DHS spokesperson told Reuters that White House review of bulletins before release is normal procedure. The harm is to the timeliness and neutrality of threat warnings, which public reporting can't measure."
     },
-    "confidence_note": "MODERATE-HIGH confidence: the core facts (report date, contents, and the White House's downplaying) trace to a single Reuters exclusive, though independently republished across many outlets (Japan Times, Arab News, Jerusalem Post, Detroit News among others) and corroborated by an on-record White House spokeswoman quote confirming the administration's posture, not disputing the report's existence. Re-verified 2026-08-17: no material developments found beyond the original April 2026 Reuters reporting; sourcing reviewed did not identify confirmation of whether the earlier, blocked report referenced in this entry was ever subsequently released. Re-verified 2026-08-30 (GSR recheck batch 35): the previously-unverified 'earlier blocked report' claim is now independently corroborated -- U.S. News & World Report and Business Standard, citing their own March 2026 sourcing (distinct from the April Reuters exclusive already cited here), independently identify the report, its five-page length, its scheduled release window, and an on-background senior DHS official directly disputing the administration's stated review rationale. This resolves the entry's prior evidentiary gap on the earlier report (upgrading it from single-sourced-within-one-article to independently corroborated) without resolving whether that report was ever ultimately released, which remains unconfirmed. Re-verified 2026-09-01 (GSR recheck batch 50): no material change -- searched for any subsequent confirmation of the blocked report's release and for later congressional-oversight follow-up; sourcing reviewed did not surface anything newer than the existing March-2026-era reporting already cited here.",
-    "pull_quote": "President Trump was asked at the White House on March 11, 2026 whether he was worried about an Iranian attack on U.S. soil and said ‘No, I'm not’ — days before the administration blocked a report agencies had prepared to elevate the threat level.",
+    "confidence_note": "MODERATE-HIGH confidence: the blocked bulletin rests on the Daily Mail's March 6, 2026 report, whose reporters reviewed the bulletin and quoted an unnamed senior DHS official, and on Reuters' March 7 report, in which a Trump administration official confirmed the hold (U.S. News & World Report and Business Standard carry that same Reuters wire story, so they are copies, not independent confirmation). The March 20 report rests on a single Reuters exclusive (April 7, 2026) based on the document itself, obtained by Property of the People and widely republished (Japan Times, Deccan Herald and others carry the same wire copy). The White House disputed neither document's existence, only the framing. The Daily Mail's March 10 report, based on a leaked copy, says the White House relented and planned to release the bulletin; the March 20 report shares word-for-word passages with it, but no outlet confirms they are the same document or says whether it was edited. No later developments were found as of September 29, 2026.",
+    "pull_quote": "A senior DHS official said the FBI, DHS and NCTC 'were going to release a joint intelligence statement that would elevate the threat level' -- 'The White House stopped it.'",
     "section_summaries": {
-      "what_changed": "The FBI/NCTC's March 20, 2026 report warned Iran poses a persistent threat to U.S. military, government, Jewish/Israeli, and dissident targets, even as the White House publicly downplayed the risk -- weeks after blocking release of a five-page joint FBI/DHS/NCTC bulletin that a senior DHS official says was ready to elevate the threat level before the White House stopped it and imposed prior review on all unclassified Iran-related information.",
-      "estimated_impact": "State and local law enforcement and the public received a narrower, later, and more downplayed account of a documented Iranian threat than the intelligence community itself assessed; the harm is informational/preparedness-related rather than a quantifiable budget or staffing loss.",
-      "confidence_note": "Traces to a single Reuters exclusive, widely republished, with the White House's posture confirmed on the record by its own spokeswoman; the earlier blocked report is now independently corroborated by separate March 2026 reporting, including an on-background senior DHS official disputing the administration's stated rationale."
+      "what_changed": "The White House held a joint FBI/DHS/NCTC Iran threat bulletin on March 6, 2026; a March 20 FBI report with the same title reached police while the White House played down the risk.",
+      "estimated_impact": "Police got an Iran threat warning two weeks late during the war, and a DHS official said the White House ordered its review of all unclassified Iran information.",
+      "confidence_note": "The blocked bulletin rests on the Daily Mail, which reviewed and later quoted it, and a hold Reuters confirmed; the March 20 report rests on a Reuters exclusive based on the document."
     },
-    "last_verified": "2026-09-01",
+    "last_verified": "2026-09-28",
     "date_added": "2026-08-06",
     "sources": [
       {
@@ -44224,16 +44390,24 @@
         "url": "https://www.japantimes.co.jp/news/2026/04/08/world/politics/intelligence-report-iran-threat-us/"
       },
       {
-        "name": "U.S. News & World Report -- White House Halts Security Bulletin Warning of Iran-Related Threats",
+        "name": "U.S. News & World Report (Reuters wire) -- White House Halts Security Bulletin Warning of Iran-Related Threats",
         "url": "https://www.usnews.com/news/world/articles/2026-03-07/white-house-halts-security-bulletin-warning-of-iran-related-threats"
       },
       {
-        "name": "Business Standard -- White House halts federal security bulletin warning of Iran-related threats",
+        "name": "Business Standard (Reuters wire) -- White House halts federal security bulletin warning of Iran-related threats",
         "url": "https://www.business-standard.com/amp/world-news/white-house-halts-federal-security-bulletin-warning-of-iran-related-threats-126030800047_1.html"
+      },
+      {
+        "name": "Daily Mail -- White House blocks warning of rising threat linked to Iran war (March 6, 2026)",
+        "url": "https://www.dailymail.co.uk/news/article-15622933/White-House-blocks-warning-rising-threat-linked-Iran-war.html"
+      },
+      {
+        "name": "Daily Mail -- Read leaked Iran terror report details that Trump didn't want you to see (March 10, 2026)",
+        "url": "https://www.dailymail.co.uk/news/article-15633027/iran-terror-report-trump-leak.html"
       }
     ],
     "last_updated": "2026-09-01",
-    "last_substantive_update": "2026-08-30",
+    "last_substantive_update": "2026-09-28",
     "glance": {
       "who": "The White House",
       "what": "Reportedly blocked an Iran threat bulletin, then publicly downplayed a similar FBI/NCTC report",
@@ -44242,20 +44416,7 @@
         "certainty": "alleged",
         "who": "Threat warnings to police and the public"
       },
-      "reviewed": "2026-09-20"
-    },
-    "timeline": {
-      "what_changed": {
-        "base": "The FBI and National Counterterrorism Center issued a law-enforcement intelligence report on March 20, 2026, warning that the Iranian government 'poses a persistent threat' to U.S. military and government personnel and facilities, Jewish and Israeli institutions, and Iranian dissidents inside the United States (the report did not identify a broad threat to the general American public). Reuters reported the report's public release and law-enforcement distribution came even as the White House publicly minimized the likelihood of an Iranian attack on U.S. soil -- consistent with President Trump's public downplaying of other, similar intelligence assessments in preceding months. The March 20 report followed weeks after Reuters and other outlets reported the White House had blocked release of an earlier intelligence product with similar findings. White House spokeswoman Abigail Jackson defended the administration's posture, saying it was 'ensuring any information was properly vetted before release' and that media outlets should not 'irresponsibly sow fear' by reporting on individual law-enforcement memoranda that may lack broader context.",
-        "updates": [
-          {
-            "date": "2026-08-30",
-            "label": "Update",
-            "text": "Update 2026-08-30 (GSR recheck batch 35): the earlier blocked report, previously not independently re-verified in this entry, is now corroborated in its own right -- U.S. News & World Report and Business Standard (citing the same underlying wire reporting) identify it as a five-page joint FBI/DHS/National Counterterrorism Center 'Public Safety Awareness Report' that had been scheduled for release the week of March 7-11, 2026 (President Trump was separately asked at the White House on March 11, 2026 whether he was worried about an Iranian attack on U.S. soil and said 'No, I'm not') before Trump officials indefinitely held it up for review. **A senior DHS official, on background, contradicted the administration's stated 'not well written'/needs-vetting rationale, telling reporters the agencies had been prepared to issue a joint statement elevating the threat level when the White House stopped it and imposed a new requirement that all unclassified Iran-related information be reviewed by the White House before release** -- a broader prior-review policy, not a one-off decision specific to this bulletin. Sourcing reviewed does not identify whether the blocked March bulletin was ever subsequently released in any form; that remains an open, unconfirmed point.",
-            "effective_date": "2026-08-30"
-          }
-        ]
-      }
+      "reviewed": "2026-09-28"
     }
   },
   {
