@@ -1,6 +1,6 @@
 {
  "version": 1,
- "as_of": "2026-09-28",
+ "as_of": "2026-09-29",
  "checks": {
   "abrego-garcia-vindictive-prosecution-2025-2026": {
    "0": {
@@ -8345,9 +8345,9 @@
    },
    "3": {
     "state": "partly",
-    "why": "NPR confirms Judge Richard Leon's March 31, 2026 ruling that construction 'must stop until Congress authorizes its completion.' However, the article does not mention a $2.5 million maintenance-and-repair appropriation or contain the quoted phrase 'comes close' anywhere in its text -- that specific statutory-authority reasoning is not present in this source.",
+    "why": "The source confirms Judge Leon's March 31, 2026 ruling that ballroom construction 'must stop until Congress authorizes its completion,' but it contains nothing about the $2.5 million maintenance-and-repair appropriation, the 'comes close' finding, or an above-ground limitation (it notes a security exception and a 14-day enforcement delay instead).",
     "host": "npr.org",
-    "date": "2026-09-15",
+    "date": "2026-09-29",
     "kind": "fact",
     "archive": false
    },
@@ -8364,6 +8364,14 @@
     "why": "SCOTUSblog confirms the 5-4 stay on standing grounds and quotes Chief Justice Roberts's dissent, joined by Justices Sotomayor, Kagan, and Jackson, arguing the construction 'is likely unlawful.'",
     "host": "scotusblog.com",
     "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
+    "state": "partly",
+    "why": "The provided (truncated) text confirms McCrery withdrew last October after warning the preliminary design lacked adequate emergency exits and fire containment, and that Trump countered that no building codes apply; but the 'I am the code' quote appears only in the headline, and the week of October 20, the two-source attribution, the Sept. 30 and Nov. 6 meeting notes, the bylines/date, and the code-review finding are not in the text (it says only that it is unclear whether the safety issues were resolved).",
+    "host": "washingtonpost.com",
+    "date": "2026-09-29",
     "kind": "fact",
     "archive": false
    }
@@ -15044,26 +15052,34 @@
     "archive": false
    },
    "15": {
-    "state": "supports",
-    "why": "The ProPublica text states Paoletta conditioned GAO cooperation on not impeding Trump's agenda, told DOT to ignore GAO's ruling on illegally impounded electric-car money, and that Vought declared GAO 'shouldn't exist'.",
-    "host": "propublica.org",
-    "date": "2026-09-28",
+    "state": "partly",
+    "why": "The source confirms the ~$810 million pocket rescission sent to Speaker Johnson across the listed departments and international assistance, the $567 million Refugee and Entrant Assistance cut described as 'overfunded,' and Collins's quote; it does not state that the package was sent on September 25, 2026.",
+    "host": "cnn.com",
+    "date": "2026-09-29",
     "kind": "fact",
     "archive": false
    },
    "16": {
-    "state": "supports",
-    "why": "The December 12, 2025 interview says Dodaro retires at month's end, Orice Williams Brown will lead in the interim, and gives the 5 violation / 4 no-violation / 2 mixed tally.",
-    "host": "govexec.com",
-    "date": "2026-09-28",
+    "state": "partly",
+    "why": "The excerpt directly supports the Paoletta cooperation condition, the instruction to Transportation to ignore a GAO impoundment ruling, and Vought's 'shouldn't exist' remark; however, the source describes the impounded money as 'for electric car development' rather than EV charging, and the October 2025 date and New Yorker co-publication are not stated in the provided text.",
+    "host": "propublica.org",
+    "date": "2026-09-29",
     "kind": "fact",
     "archive": false
    },
    "17": {
     "state": "supports",
-    "why": "Roll Call reports the September 26, 2025 unsigned order, with Kagan dissenting and joined by Sotomayor and Jackson, pausing part of a lower-court order on about $4 billion in foreign aid expiring Sept. 30. It notes the $4.9 billion rescissions request and that the order was not a final merits determination.",
+    "why": "The December 12, 2025 Government Executive exit interview states Dodaro retires at the end of the month, that COO Orice Williams Brown will lead GAO in the interim, and gives the exact 5/4/2 tally of impoundment decisions.",
+    "host": "govexec.com",
+    "date": "2026-09-29",
+    "kind": "fact",
+    "archive": false
+   },
+   "18": {
+    "state": "supports",
+    "why": "The September 26, 2025 Roll Call article states the unsigned order paused part of the lower-court order on about $4 billion expiring Sept. 30, tied to the $4.9 billion rescissions request sent last month, with Kagan dissenting joined by Sotomayor and Jackson, and that the majority said it was not a final determination of the merits.",
     "host": "rollcall.com",
-    "date": "2026-09-28",
+    "date": "2026-09-29",
     "kind": "fact",
     "archive": false
    }

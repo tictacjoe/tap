@@ -10875,62 +10875,104 @@
   },
   {
     "id": "education-department-early-contract-cuts-2025",
-    "title": "Education Department Cuts Over $1 Billion in Contracts, Including $600 Million in Teacher-Training Grants",
+    "title": "Education Department Cuts Over $1 Billion in Contracts and $600 Million in Teacher-Training Grants",
     "institution": "U.S. Department of Education",
     "domain": "funding_redirection",
-    "status": "Implemented -- an early-term action that preceded and set the stage for the department's later, separately-tracked formal dismantlement",
-    "date_of_action": "2025-02-20",
-    "what_changed": "The Trump administration **cut more than $1 billion in Department of Education contracts, including $600 million in teacher-training grants and an additional roughly $350 million affecting the Institute of Education Sciences and its Regional Educational Laboratories** -- the department's primary education-research infrastructure. The administration justified the cuts as eliminating 'woke' and wasteful spending. This action predates and is distinct from the department's later, formal dismantlement documented separately in this database (`education-department-dismantlement-trump2.json`), which began with a March 2025 executive order directing the department's effective abolition -- this entry documents an earlier wave of targeted contract cancellations rather than the subsequent structural reorganization.",
+    "status": "Implemented, then partly ruled unlawful -- on Sept. 17, 2026 a federal judge in Massachusetts vacated the February 2025 anti-DEI directive behind the teacher-training grant cancellations; the money is not automatically restored, and no appeal had been announced as of Sept. 21.",
+    "date_of_action": "2025-02-19 (cuts reported); 2026-09-17 (directive behind the teacher-training cuts vacated)",
+    "what_changed": "The Trump administration **cut more than $1 billion in Department of Education contracts, most of them at the Institute of Education Sciences -- the department's primary education-research arm -- including a round of more than $350 million that ended contracts for several Regional Educational Laboratories and Equity Assistance Centers. The department separately announced $600 million in cuts to teacher-training grants.** The administration justified the cuts as eliminating 'woke' and wasteful spending. This action predates and is distinct from the department's later, formal dismantlement documented separately in this database, which began with a March 2025 executive order directing the department's effective abolition -- this entry documents an earlier wave of targeted contract cancellations rather than the subsequent structural reorganization.\n\nUpdate 2026-09-29: On September 17, 2026, U.S. District Judge Angel Kelley of the District of Massachusetts sided with eight states (California, Colorado, Illinois, Maryland, Massachusetts, New Jersey, New York and Wisconsin) and vacated the Education Department's February 5, 2025 internal directive ordering the termination of grants involving DEI-related programming, which the department used to cancel more than 100 Teacher Quality Partnership and Supporting Effective Educator Development (SEED) grants. **She ruled the directive \"arbitrary and capricious and contrary to law\" under the Administrative Procedure Act**. Explaining why she vacated it outright, she wrote that \"the Department's hasty implementation of the Directive over less than two weeks, the magnitude of the effects of the termination, as well as the lack of evidence of reasoned decisionmaking in the Administrative Record leave serious doubts as to the Department's choice to adopt the Directive.\" The ruling does not restore the terminated grants: the court held in November 2025 that challenges to the individual terminations belong in the Court of Federal Claims, and it declined to issue a permanent injunction. The case had earlier produced a March 2025 temporary restraining order that the Supreme Court stayed in April 2025. A department spokesperson said taxpayer dollars should not support \"divisive ideology or racial preferences.\"",
     "primary_proponent": {
       "name": "Department of Government Efficiency (DOGE)",
       "role": "Directed the contract cuts as part of its broader early-term spending-reduction campaign",
-      "note": "No single named individual was identified in sourcing reviewed for this entry as personally directing this specific action; it predates Linda McMahon's confirmation as Education Secretary (later documented as the lead figure in the department's formal dismantlement)."
+      "note": "DOGE directed the contract cuts, most of them at the Institute of Education Sciences. The teacher-grant terminations followed a February 5, 2025 internal directive on grant priorities issued by then-Acting Secretary Denise Carter, per Judge Kelley's September 2026 opinion; the termination letters were written by a staff member originally from DOGE. Both predate Linda McMahon's confirmation as Education Secretary (later documented as the lead figure in the department's formal dismantlement)."
     },
     "estimated_impact": {
-      "summary": "Eliminated federal funding for teacher-training programs and the department's core education-research infrastructure (the Institute of Education Sciences and its Regional Educational Laboratories), reducing capacity in both classroom-facing and research-facing functions",
+      "summary": "Eliminated federal funding for teacher-training programs and the department's core education-research infrastructure (the Institute of Education Sciences and its Regional Educational Laboratories), reducing capacity in both classroom-facing and research-facing functions; a federal judge ruled in September 2026 that the directive behind the teacher-training cancellations was unlawful, but the money is not automatically restored.",
       "figures": [
         {
           "metric": "Total contracts cut",
           "value": "$1 billion+",
-          "source": "The Hill (2025-02-20)"
+          "source": "The Hill (2025-02-19)"
         },
         {
           "metric": "Teacher-training grants cut",
           "value": "$600 million",
-          "source": "The Hill (2025-02-20)"
+          "source": "The Hill (2025-02-19)"
         },
         {
           "metric": "Institute of Education Sciences / Regional Educational Laboratories funding affected",
-          "value": "~$350 million",
-          "source": "The Hill (2025-02-20)"
+          "value": "More than $350 million",
+          "source": "The Hill (2025-02-19)"
+        },
+        {
+          "metric": "Teacher Quality Partnership and SEED grants canceled under the vacated directive",
+          "value": "104 of 109",
+          "source": "Judge Kelley's opinion, Sept. 17, 2026"
+        },
+        {
+          "metric": "Teacher-training grant funds canceled in California alone, from February 2025",
+          "value": "At least $148 million",
+          "source": "California Attorney General Rob Bonta, via K-12 Dive, Sept. 2026"
         }
       ],
-      "caveat": "This entry rests on a single source (The Hill); the administration's own 'woke and wasteful spending' characterization is presented as the administration's stated rationale, not verified independently in sourcing reviewed for this entry."
+      "caveat": "The $1B total and the $350M research figure rest on a single source (The Hill, February 2025); the teacher-training cancellations and the court ruling are documented in Judge Kelley's September 2026 opinion and reported by K-12 Dive. The administration's 'woke and wasteful spending' characterization is presented as its stated rationale, not verified independently."
     },
-    "confidence_note": "MODERATE-HIGH confidence -- based on a single contemporaneous report with specific, itemized dollar figures ($1B total, $600M teacher training, $350M research infrastructure), which lends it more precision than many single-source entries in this tracker even without multi-outlet corroboration.",
-    "last_verified": "2026-08-08",
+    "confidence_note": "MODERATE-HIGH confidence -- based on a single contemporaneous report with specific, itemized dollar figures ($1B total, $600M teacher training, $350M research infrastructure), which lends it more precision than many single-source entries in this tracker even without multi-outlet corroboration. Update 2026-09-29: HIGH confidence on the September 17, 2026 ruling and the teacher-training cancellations it addressed, reported by K-12 Dive with quotes from Judge Kelley's opinion and the department's response.",
+    "last_verified": "2026-09-29",
     "date_added": "2026-08-08",
     "sources": [
       {
         "name": "The Hill -- Department of Education cuts, Trump, Musk, DOGE, research funding",
         "url": "https://thehill.com/homenews/education/5151673-department-of-education-cuts-trump-musk-doge-research-funding/"
+      },
+      {
+        "name": "K-12 Dive -- Judge vacates anti-DEI directive that led to teacher training grant cuts (Sept. 2026)",
+        "url": "https://www.k12dive.com/news/judge-vacates-anti-dei-directive-that-led-to-teacher-training-grant-cuts/830931/"
+      },
+      {
+        "name": "Memorandum and Order, California v. U.S. Department of Education, No. 1:25-cv-10548 (D. Mass. Sept. 17, 2026)",
+        "url": "https://storage.courtlistener.com/recap/gov.uscourts.mad.281668/gov.uscourts.mad.281668.176.0.pdf"
       }
     ],
     "section_summaries": {
-      "what_changed": "The administration cut over $1 billion in Education Department contracts, including $600 million in teacher-training grants.",
-      "estimated_impact": "Eliminated funding for teacher training and the department's core education-research infrastructure, cutting classroom and research capacity.",
-      "confidence_note": "MODERATE-HIGH confidence -- a single contemporaneous report with specific, itemized dollar figures, not multi-outlet corroborated."
+      "what_changed": "The administration cut over $1 billion in Education Department contracts and $600 million in teacher-training grants; a judge vacated the anti-DEI directive behind the teacher-grant cuts in 2026.",
+      "estimated_impact": "Cut funding for teacher training and core education research; a 2026 ruling voided the directive behind the teacher-grant cancellations but did not restore the money.",
+      "confidence_note": "The $1B total rests on one February 2025 report; the teacher-training cuts and the 2026 ruling are separately reported with quotes from the opinion."
     },
-    "last_substantive_update": "2026-08-08",
+    "last_substantive_update": "2026-09-29",
     "glance": {
       "who": "DOGE (Department of Government Efficiency)",
-      "what": "Reportedly cut $1B+ in Education Department contracts, including $600M in teacher-training grants",
+      "what": "Cut $1B+ in Education contracts, plus $600M in teacher grants; a judge later voided the grant directive",
       "harm": {
         "kind": "institutional",
-        "certainty": "alleged",
+        "certainty": "documented",
         "who": "Teacher training and education research"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-09-29"
+    },
+    "timeline": {
+      "what_changed": {
+        "base": "The Trump administration **cut more than $1 billion in Department of Education contracts, most of them at the Institute of Education Sciences -- the department's primary education-research arm -- including a round of more than $350 million that ended contracts for several Regional Educational Laboratories and Equity Assistance Centers. The department separately announced $600 million in cuts to teacher-training grants.** The administration justified the cuts as eliminating 'woke' and wasteful spending. This action predates and is distinct from the department's later, formal dismantlement documented separately in this database, which began with a March 2025 executive order directing the department's effective abolition -- this entry documents an earlier wave of targeted contract cancellations rather than the subsequent structural reorganization.",
+        "updates": [
+          {
+            "date": "2026-09-29",
+            "label": "Update",
+            "text": "Update 2026-09-29: On September 17, 2026, U.S. District Judge Angel Kelley of the District of Massachusetts sided with eight states (California, Colorado, Illinois, Maryland, Massachusetts, New Jersey, New York and Wisconsin) and vacated the Education Department's February 5, 2025 internal directive ordering the termination of grants involving DEI-related programming, which the department used to cancel more than 100 Teacher Quality Partnership and Supporting Effective Educator Development (SEED) grants. **She ruled the directive \"arbitrary and capricious and contrary to law\" under the Administrative Procedure Act**. Explaining why she vacated it outright, she wrote that \"the Department's hasty implementation of the Directive over less than two weeks, the magnitude of the effects of the termination, as well as the lack of evidence of reasoned decisionmaking in the Administrative Record leave serious doubts as to the Department's choice to adopt the Directive.\" The ruling does not restore the terminated grants: the court held in November 2025 that challenges to the individual terminations belong in the Court of Federal Claims, and it declined to issue a permanent injunction. The case had earlier produced a March 2025 temporary restraining order that the Supreme Court stayed in April 2025. A department spokesperson said taxpayer dollars should not support \"divisive ideology or racial preferences.\"",
+            "effective_date": "2026-09-29"
+          }
+        ]
+      },
+      "confidence_note": {
+        "base": "MODERATE-HIGH confidence -- based on a single contemporaneous report with specific, itemized dollar figures ($1B total, $600M teacher training, $350M research infrastructure), which lends it more precision than many single-source entries in this tracker even without multi-outlet corroboration.",
+        "updates": [
+          {
+            "date": "2026-09-29",
+            "label": "Update",
+            "text": "Update 2026-09-29: HIGH confidence on the September 17, 2026 ruling and the teacher-training cancellations it addressed, reported by K-12 Dive with quotes from Judge Kelley's opinion and the department's response.",
+            "effective_date": "2026-09-29"
+          }
+        ]
+      }
     }
   },
   {
@@ -12828,24 +12870,29 @@
   },
   {
     "id": "epa-ggrf-climate-grants-clawback-blocked-2026",
-    "title": "EPA Tried to Claw Back $20 Billion in Congressionally-Appropriated Climate Grants Over Unsubstantiated Fraud Claims -- Courts Blocked It Twice",
+    "title": "EPA Froze $20 Billion in Climate Grants Over Unsubstantiated Fraud Claims and Canceled $7 Billion Solar for All -- Courts Have Ruled Against Both",
     "institution": "Environmental Protection Agency (EPA), Greenhouse Gas Reduction Fund (GGRF)",
     "domain": "funding_redirection",
-    "status": "Blocked by courts -- EPA Administrator Zeldin has 7 days from the Aug. 5, 2026 D.C. Circuit ruling to seek Supreme Court review; not yet final",
-    "date_of_action": "2025-02 (Zeldin, FBI, and Treasury order Citibank to freeze the grantee accounts) through 2026-08-05 (D.C. Circuit rules against EPA); Solar for All sub-program: 2025-08-07 (terminated) through 2026-06-02 (states' suit dismissed on jurisdictional grounds)",
-    "what_changed": "EPA Administrator Lee Zeldin sought to freeze and then terminate roughly $20 billion in Greenhouse Gas Reduction Fund grants -- awarded to eight National Clean Investment Fund and Clean Communities Investment Accelerator nonprofit entities to fund clean-energy financing, including in communities that had lacked access to green financing -- out of a $27 billion program Congress established in the 2022 Inflation Reduction Act. In February 2025, Zeldin, together with the FBI and Treasury Department, ordered Citibank to freeze the grantee nonprofits' accounts, citing possible fraud, waste, and abuse; EPA's stated justification also relied on the One Big Beautiful Bill Act's repeal of the underlying IRA statutory section as separate legal authority to claw the funds back. A federal district judge (Tonya Chutkan) issued an injunction in April 2025 blocking the freeze, ruling that the government's 'vague and unsubstantiated assertions of fraud are insufficient.' EPA appealed; on August 5, 2026, a divided U.S. Court of Appeals for the D.C. Circuit (6 of 10 judges) upheld the injunction, ruling EPA lacked authority to reclaim funds already disbursed to grantee accounts. No EPA Inspector General, DOJ, or FBI investigation had produced a substantiated fraud finding as of the ruling, more than 17 months after the initial freeze. Separately, on August 7, 2025, EPA terminated the remaining $7 billion Solar for All sub-program -- the third GGRF pillar alongside NCIF and CCIA, which had made 60 awards to states, tribes, territories, and nonprofits (roughly $5.5 billion to 49 state-level awardees, over $500 million to six tribal awardees, and about $1 billion to five multistate awardees) to fund low-income residential solar access -- citing the same One Big Beautiful Bill Act repeal of GGRF's authorizing statute as its legal basis; only about $53 million of the $7 billion had actually been spent at termination. Added 2026-09-10 (round-4 backlog cluster c0558): one of the six tribal Solar for All awardees was the Hopi Tribe in Arizona, which had been approved for a $25 million grant to install solar panels and battery storage connecting roughly 600 previously unelectrified homes; after the termination, **the tribe was left with a far smaller Tribal Electrification Program grant sufficient to power only about 100 homes, forcing Hopi officials to decide which families would remain without electricity**. Twenty-three states sued EPA in the U.S. District Court for the Western District of Washington in October 2025 to reinstate the Solar for All funding, but on June 2, 2026 Judge Tiffany Cartwright dismissed the suit for lack of jurisdiction, holding the states' claim was effectively a Tucker Act money-damages claim belonging in the Court of Federal Claims rather than a district-court APA challenge -- a markedly different legal outcome from the NCIF/CCIA fight, where Chutkan's injunction was upheld on appeal. Grantee nonprofits separately sued in the Court of Federal Claims to recover their withheld Solar for All funds.",
+    "status": "Solar for All: EPA's termination vacated by a federal judge in Rhode Island on Sept. 18, 2026; EPA is weighing an appeal. NCIF/CCIA: the D.C. Circuit upheld the injunction Aug. 4, 2026, with its payment order stayed while the government seeks Supreme Court review.",
+    "date_of_action": "2025-02 (Zeldin, FBI, and Treasury order Citibank to freeze the grantee accounts) through 2026-08-04 (D.C. Circuit rules against EPA); Solar for All sub-program: 2025-08-07 (terminated) through 2026-09-18 (termination vacated in Rhode Island)",
+    "what_changed": "EPA Administrator Lee Zeldin sought to freeze and then terminate roughly $20 billion in Greenhouse Gas Reduction Fund grants -- awarded to eight National Clean Investment Fund and Clean Communities Investment Accelerator nonprofit entities to fund clean-energy financing, including in communities that had lacked access to green financing -- out of a $27 billion program Congress established in the 2022 Inflation Reduction Act. In February 2025, Zeldin, together with the FBI and Treasury Department, ordered Citibank to freeze the grantee nonprofits' accounts, citing possible fraud, waste, and abuse; EPA's stated justification also relied on the One Big Beautiful Bill Act's repeal of the underlying IRA statutory section as separate legal authority to claw the funds back. A federal district judge (Tonya Chutkan) issued an injunction in April 2025 blocking the freeze, ruling that the government's 'vague and unsubstantiated assertions of fraud are insufficient.' EPA appealed; on August 4, 2026, a divided U.S. Court of Appeals for the D.C. Circuit (6 of 10 judges) upheld the injunction, ruling EPA lacked authority to reclaim funds already disbursed to grantee accounts. No EPA Inspector General, DOJ, or FBI investigation had produced a substantiated fraud finding as of the ruling, more than 17 months after the initial freeze. Separately, on August 7, 2025, EPA terminated the remaining $7 billion Solar for All sub-program -- the third GGRF pillar alongside NCIF and CCIA, which had made 60 awards to states, tribes, territories, and nonprofits (roughly $5.5 billion to 49 state-level awardees, over $500 million to six tribal awardees, and about $1 billion to five multistate awardees) to fund low-income residential solar access -- citing the same One Big Beautiful Bill Act repeal of GGRF's authorizing statute as its legal basis; only about $53 million of the $7 billion had actually been spent at termination. Added 2026-09-10: one of the six tribal Solar for All awardees was the Hopi Tribe in Arizona, which had been approved for a $25 million grant to install solar panels and battery storage connecting roughly 600 previously unelectrified homes; after the termination, **the tribe was left with a far smaller Tribal Electrification Program grant sufficient to power only about 100 homes, forcing Hopi officials to decide which families would remain without electricity**. Twenty-three states sued EPA in the U.S. District Court for the Western District of Washington in October 2025 to reinstate the Solar for All funding, but on June 2, 2026 Judge Tiffany Cartwright dismissed the suit for lack of jurisdiction, holding the states' claim was effectively a Tucker Act money-damages claim belonging in the Court of Federal Claims rather than a district-court APA challenge -- a markedly different legal outcome from the NCIF/CCIA fight, where Chutkan's injunction was upheld on appeal. Grantee nonprofits separately sued in the Court of Federal Claims to recover their withheld Solar for All funds.\n\nUpdate 2026-09-29: On September 18, 2026, Judge Mary McElroy of the U.S. District Court for the District of Rhode Island vacated EPA's termination of Solar for All, in a suit brought by the Rhode Island AFL-CIO, the Rhode Island Center for Justice, Solar United Neighbors and others. She held that the One Big Beautiful Bill Act did not convert the program's funding into \"a lump-sum amount subject to EPA's discretion\" and that Congress intended EPA to keep administering grants it had already obligated. **The ruling restores the $7 billion program meant to make solar power accessible to more than 900,000 lower-income Americans**; EPA said it was reviewing the decision and considering an appeal. The 23 states whose Washington suit was dismissed have appealed. On the NCIF/CCIA track, the government filed an unopposed motion on August 6 to stay the D.C. Circuit's mandate pending a petition for Supreme Court review; the court granted it, keeping the injunction's disbursement requirement on hold through Nov. 9, 2026, and longer if a petition is filed.",
     "primary_proponent": {
       "name": "Lee Zeldin",
       "role": "EPA Administrator",
-      "note": "Personally directed the February 2025 account freeze alongside the FBI and Treasury Department, and has pursued termination of the grants through two rounds of litigation on fraud-related grounds that two courts have now found unsubstantiated."
+      "note": "Personally directed the February 2025 account freeze alongside the FBI and Treasury Department, and has pursued termination of the grants through two rounds of litigation on fraud-related grounds that a district court found unsubstantiated and an en banc appeals court declined to disturb."
     },
     "estimated_impact": {
-      "summary": "Across the GGRF's full $27 billion, EPA moved against both major pieces on the same underlying legal theory: roughly $20 billion for eight NCIF/CCIA nonprofit grantees was frozen on unsubstantiated fraud claims and has now been upheld twice in court as wrongfully withheld, while the remaining $7 billion Solar for All sub-program was terminated outright citing OBBBA's repeal of GGRF's authority -- and unlike the NCIF/CCIA track, the Solar for All states' lawsuit was thrown out on jurisdictional grounds rather than resolved in the grantees' favor.",
+      "summary": "Across the GGRF's full $27 billion, EPA moved against both major pieces: roughly $20 billion for eight NCIF/CCIA nonprofit grantees was frozen on unsubstantiated fraud claims and has been upheld twice in court as wrongfully withheld, though the money stays frozen pending Supreme Court review; the $7 billion Solar for All program, meant to reach more than 900,000 lower-income Americans, was terminated outright and then reinstated by a Rhode Island federal judge on Sept. 18, 2026, after a states' suit in Washington was dismissed on jurisdictional grounds.",
       "figures": [
+        {
+          "metric": "Lower-income Americans Solar for All was designed to reach",
+          "value": "900,000+",
+          "source": "AP (via OPB), Sept. 18, 2026"
+        },
         {
           "metric": "Grant funding frozen/targeted for clawback",
           "value": "$20,000,000,000 (of a $27,000,000,000 total GGRF program)",
-          "source": "D.C. Circuit ruling coverage, Reuters/AP wire reporting, Aug. 5, 2026"
+          "source": "D.C. Circuit ruling coverage, Reuters/AP wire reporting, Aug. 4, 2026"
         },
         {
           "metric": "Duration of the freeze as of the D.C. Circuit ruling",
@@ -12853,7 +12900,7 @@
           "source": "Timeline reconstructed from TechCrunch and wire reporting"
         },
         {
-          "metric": "D.C. Circuit panel vote",
+          "metric": "D.C. Circuit en banc vote",
           "value": "6 of 10 judges upheld the injunction against EPA",
           "source": "TechCrunch, Aug. 5, 2026"
         },
@@ -12864,8 +12911,13 @@
         },
         {
           "metric": "Solar for All states' lawsuit outcome",
-          "value": "Dismissed for lack of jurisdiction (W.D. Wash., June 2, 2026) -- court held the claim belonged in the Court of Federal Claims under the Tucker Act",
-          "source": "Bloomberg Tax, Mealey's, June 2026"
+          "value": "Dismissed for lack of jurisdiction (W.D. Wash., June 2, 2026) -- court held the claim belonged in the Court of Federal Claims under the Tucker Act; the states have appealed",
+          "source": "Bloomberg Tax, Mealey's, June 2026; AP, Sept. 18, 2026"
+        },
+        {
+          "metric": "Solar for All termination vacated",
+          "value": "Vacated by Judge Mary McElroy, D.R.I., Sept. 18, 2026; EPA considering appeal",
+          "source": "AP (via OPB); Utility Dive, Sept. 18, 2026"
         },
         {
           "metric": "Hopi Tribe Solar for All grant terminated (named tribal-awardee example)",
@@ -12873,16 +12925,16 @@
           "source": "NPR (Oct. 7, 2025), independently corroborated by AZPM, KPBS, WYPR, and Buffalo's Fire"
         }
       ],
-      "caveat": "The NCIF/CCIA ruling is not yet final -- EPA has a 7-day window from Aug. 5, 2026 to petition the U.S. Supreme Court, and a further reversal there remains possible. No source reviewed cites a completed EPA Inspector General, DOJ, or FBI report either substantiating or formally clearing the fraud allegations; the courts' rulings address the sufficiency of EPA's legal justification for the clawback, not a final resolution of whether any fraud occurred. The Solar for All jurisdictional dismissal, by contrast, is a resolved outcome on a distinct legal track (Tucker Act forum question, not the merits of the termination) and does not affect the NCIF/CCIA case."
+      "caveat": "The NCIF/CCIA ruling is not yet final -- the government is seeking Supreme Court review, with the D.C. Circuit's mandate stayed meanwhile, and a reversal there remains possible. The Rhode Island Solar for All ruling can also still be appealed. No source reviewed cites a completed EPA Inspector General, DOJ, or FBI report either substantiating or formally clearing the fraud allegations; the courts' rulings address the sufficiency of EPA's legal justification for the clawback, not a final resolution of whether any fraud occurred. The states' Solar for All suit, dismissed on a distinct legal track (a Tucker Act forum question, not the merits of the termination), is now on appeal and does not affect the NCIF/CCIA case."
     },
-    "confidence_note": "HIGH confidence on the core sequence (Feb. 2025 freeze, April 2025 district-court injunction, Aug. 5 2026 D.C. Circuit ruling, Zeldin's personal role) -- corroborated across TechCrunch, U.S. News/AP, GV Wire, and WTAQ, all citing the same underlying court ruling. MODERATE confidence on the ultimate outcome, since Supreme Court review is still possible and the case is explicitly not final. HIGH confidence on the Solar for All termination and its jurisdictional dismissal, corroborated across Planet Detroit, CBS News, Colorado Sun, IRA Tracker, and Bloomberg Tax/Mealey's coverage of Judge Cartwright's ruling. Added 2026-09-10 (round-4 backlog cluster c0558): the Hopi Tribe example is HIGH confidence, independently corroborated across NPR, AZPM, KPBS, WYPR, and Buffalo's Fire, all reporting the same $25M/600-homes-to-100-homes figures.",
-    "pull_quote": "A federal judge found the government's \"vague and unsubstantiated assertions of fraud are insufficient\" to justify freezing $20 billion in climate grants -- no fraud finding has been substantiated in the 17 months since.",
+    "confidence_note": "HIGH confidence on the core sequence (Feb. 2025 freeze, April 2025 district-court injunction, Aug. 4 2026 D.C. Circuit ruling, Zeldin's personal role) -- corroborated across TechCrunch, U.S. News/AP, GV Wire, and WTAQ, all citing the same underlying court ruling. MODERATE confidence on the ultimate outcome, since Supreme Court review is still possible and the case is explicitly not final. HIGH confidence on the Solar for All termination and its jurisdictional dismissal, corroborated across Planet Detroit, CBS News, Colorado Sun, IRA Tracker, and Bloomberg Tax/Mealey's coverage of Judge Cartwright's ruling. Added 2026-09-10: the Hopi Tribe example is HIGH confidence, independently corroborated across NPR, AZPM, KPBS, WYPR, and Buffalo's Fire, all reporting the same $25M/600-homes-to-100-homes figures. Update 2026-09-29: HIGH confidence on the Sept. 18, 2026 Rhode Island ruling, reported by AP (via OPB) and Utility Dive, both quoting Judge McElroy's opinion; the Aug. 6 stay motion, its grant, and cert plans are from Columbia's Sabin Center blog and its Climate Case Chart docket.",
+    "pull_quote": "A federal judge found the government's \"vague and unsubstantiated assertions of fraud are insufficient\" to justify freezing $20 billion in climate grants -- no fraud finding had been substantiated as of the D.C. Circuit's August 2026 ruling.",
     "section_summaries": {
-      "what_changed": "EPA Administrator Zeldin froze and tried to claw back $20 billion in already-awarded NCIF/CCIA climate grants over fraud claims that were never substantiated in any investigation cited in reporting, and separately terminated the $7 billion Solar for All sub-program outright citing OBBBA's repeal of GGRF's authority; two courts have rejected EPA's NCIF/CCIA legal basis, while the Solar for All states' suit was dismissed on jurisdictional grounds.",
-      "estimated_impact": "$20 billion in appropriated clean-energy financing sat frozen for roughly 17 months on unsubstantiated fraud grounds before courts intervened twice, while a separate $7 billion Solar for All termination survived a states' legal challenge on a jurisdictional technicality rather than being reinstated; the NCIF/CCIA fight isn't fully over, since EPA can still seek Supreme Court review.",
-      "confidence_note": "Well-corroborated across multiple independent outlets citing the same court rulings on both the NCIF/CCIA and Solar for All tracks; NCIF/CCIA final resolution pending possible Supreme Court review."
+      "what_changed": "EPA froze $20B in NCIF/CCIA climate grants on unproven fraud claims and ended the $7B Solar for All program; courts blocked the freeze and a judge reinstated Solar for All.",
+      "estimated_impact": "$20B in clean-energy financing has sat frozen since Feb. 2025 pending Supreme Court review; the $7B Solar for All program for 900,000+ lower-income Americans was reinstated.",
+      "confidence_note": "Well-corroborated across outlets citing the same court rulings on both tracks; the NCIF/CCIA outcome awaits possible Supreme Court review."
     },
-    "last_verified": "2026-09-10",
+    "last_verified": "2026-09-29",
     "date_added": "2026-08-07",
     "sources": [
       {
@@ -12920,40 +12972,68 @@
       {
         "name": "Bloomberg Tax — State Solar for All Dispute Belongs in Claims Court, Judge Rules",
         "url": "https://news.bloombergtax.com/daily-tax-report-international/state-solar-for-all-dispute-belongs-in-claims-court-judge-rules"
+      },
+      {
+        "name": "OPB/AP -- Judge rules EPA illegally terminated $7 billion solar program intended to help poorer Americans (Sept. 18, 2026)",
+        "url": "https://www.opb.org/article/2026/09/18/judge-rules-epa-illegally-terminated-dollar7-billion-solar-program-intended-to-help-poorer-americans/"
+      },
+      {
+        "name": "Utility Dive -- Federal judge restores $7B Solar for All program, says EPA illegally axed it (Sept. 18, 2026)",
+        "url": "https://www.utilitydive.com/news/federal-judge-restores-7b-solar-for-all-program-says-epa-illegally-axed-i/830879/"
+      },
+      {
+        "name": "Columbia Sabin Center Climate Law Blog -- A Big Win in Few Words: What to Glean from the Climate United Fund Decision (Aug. 7, 2026)",
+        "url": "https://blogs.law.columbia.edu/climatechange/2026/08/07/a-big-win-in-few-words-what-to-glean-from-the-climate-united-fund-decision/"
+      },
+      {
+        "name": "Climate Case Chart (Sabin Center) -- Climate United Fund v. Citibank, N.A. docket summary",
+        "url": "https://climatecasechart.com/case/climate-united-fund-v-citibank-na/"
       }
     ],
-    "last_updated": "2026-09-10",
-    "last_substantive_update": "2026-09-10",
+    "last_updated": "2026-09-29",
+    "last_substantive_update": "2026-09-29",
     "glance": {
       "who": "Lee Zeldin (EPA Administrator)",
-      "what": "Froze and tried to claw back $20B in climate grants over unsubstantiated fraud claims; two courts blocked it",
+      "what": "Froze $20B in climate grants on unproven fraud claims and ended $7B Solar for All; courts ruled against both",
       "harm": {
         "kind": "money",
         "certainty": "documented",
         "who": "Climate-grant recipients ($20B frozen)"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-09-29"
     },
     "timeline": {
       "what_changed": {
-        "base": "EPA Administrator Lee Zeldin sought to freeze and then terminate roughly $20 billion in Greenhouse Gas Reduction Fund grants -- awarded to eight National Clean Investment Fund and Clean Communities Investment Accelerator nonprofit entities to fund clean-energy financing, including in communities that had lacked access to green financing -- out of a $27 billion program Congress established in the 2022 Inflation Reduction Act. In February 2025, Zeldin, together with the FBI and Treasury Department, ordered Citibank to freeze the grantee nonprofits' accounts, citing possible fraud, waste, and abuse; EPA's stated justification also relied on the One Big Beautiful Bill Act's repeal of the underlying IRA statutory section as separate legal authority to claw the funds back. A federal district judge (Tonya Chutkan) issued an injunction in April 2025 blocking the freeze, ruling that the government's 'vague and unsubstantiated assertions of fraud are insufficient.' EPA appealed; on August 5, 2026, a divided U.S. Court of Appeals for the D.C. Circuit (6 of 10 judges) upheld the injunction, ruling EPA lacked authority to reclaim funds already disbursed to grantee accounts. No EPA Inspector General, DOJ, or FBI investigation had produced a substantiated fraud finding as of the ruling, more than 17 months after the initial freeze. Separately, on August 7, 2025, EPA terminated the remaining $7 billion Solar for All sub-program -- the third GGRF pillar alongside NCIF and CCIA, which had made 60 awards to states, tribes, territories, and nonprofits (roughly $5.5 billion to 49 state-level awardees, over $500 million to six tribal awardees, and about $1 billion to five multistate awardees) to fund low-income residential solar access -- citing the same One Big Beautiful Bill Act repeal of GGRF's authorizing statute as its legal basis; only about $53 million of the $7 billion had actually been spent at termination.",
+        "base": "EPA Administrator Lee Zeldin sought to freeze and then terminate roughly $20 billion in Greenhouse Gas Reduction Fund grants -- awarded to eight National Clean Investment Fund and Clean Communities Investment Accelerator nonprofit entities to fund clean-energy financing, including in communities that had lacked access to green financing -- out of a $27 billion program Congress established in the 2022 Inflation Reduction Act. In February 2025, Zeldin, together with the FBI and Treasury Department, ordered Citibank to freeze the grantee nonprofits' accounts, citing possible fraud, waste, and abuse; EPA's stated justification also relied on the One Big Beautiful Bill Act's repeal of the underlying IRA statutory section as separate legal authority to claw the funds back. A federal district judge (Tonya Chutkan) issued an injunction in April 2025 blocking the freeze, ruling that the government's 'vague and unsubstantiated assertions of fraud are insufficient.' EPA appealed; on August 4, 2026, a divided U.S. Court of Appeals for the D.C. Circuit (6 of 10 judges) upheld the injunction, ruling EPA lacked authority to reclaim funds already disbursed to grantee accounts. No EPA Inspector General, DOJ, or FBI investigation had produced a substantiated fraud finding as of the ruling, more than 17 months after the initial freeze. Separately, on August 7, 2025, EPA terminated the remaining $7 billion Solar for All sub-program -- the third GGRF pillar alongside NCIF and CCIA, which had made 60 awards to states, tribes, territories, and nonprofits (roughly $5.5 billion to 49 state-level awardees, over $500 million to six tribal awardees, and about $1 billion to five multistate awardees) to fund low-income residential solar access -- citing the same One Big Beautiful Bill Act repeal of GGRF's authorizing statute as its legal basis; only about $53 million of the $7 billion had actually been spent at termination.",
         "updates": [
           {
             "date": "2026-09-10",
             "label": "Added",
-            "text": "Added 2026-09-10 (round-4 backlog cluster c0558): one of the six tribal Solar for All awardees was the Hopi Tribe in Arizona, which had been approved for a $25 million grant to install solar panels and battery storage connecting roughly 600 previously unelectrified homes; after the termination, **the tribe was left with a far smaller Tribal Electrification Program grant sufficient to power only about 100 homes, forcing Hopi officials to decide which families would remain without electricity**. Twenty-three states sued EPA in the U.S. District Court for the Western District of Washington in October 2025 to reinstate the Solar for All funding, but on June 2, 2026 Judge Tiffany Cartwright dismissed the suit for lack of jurisdiction, holding the states' claim was effectively a Tucker Act money-damages claim belonging in the Court of Federal Claims rather than a district-court APA challenge -- a markedly different legal outcome from the NCIF/CCIA fight, where Chutkan's injunction was upheld on appeal. Grantee nonprofits separately sued in the Court of Federal Claims to recover their withheld Solar for All funds.",
+            "text": "Added 2026-09-10: one of the six tribal Solar for All awardees was the Hopi Tribe in Arizona, which had been approved for a $25 million grant to install solar panels and battery storage connecting roughly 600 previously unelectrified homes; after the termination, **the tribe was left with a far smaller Tribal Electrification Program grant sufficient to power only about 100 homes, forcing Hopi officials to decide which families would remain without electricity**. Twenty-three states sued EPA in the U.S. District Court for the Western District of Washington in October 2025 to reinstate the Solar for All funding, but on June 2, 2026 Judge Tiffany Cartwright dismissed the suit for lack of jurisdiction, holding the states' claim was effectively a Tucker Act money-damages claim belonging in the Court of Federal Claims rather than a district-court APA challenge -- a markedly different legal outcome from the NCIF/CCIA fight, where Chutkan's injunction was upheld on appeal. Grantee nonprofits separately sued in the Court of Federal Claims to recover their withheld Solar for All funds.",
             "effective_date": "2026-09-10"
+          },
+          {
+            "date": "2026-09-29",
+            "label": "Update",
+            "text": "Update 2026-09-29: On September 18, 2026, Judge Mary McElroy of the U.S. District Court for the District of Rhode Island vacated EPA's termination of Solar for All, in a suit brought by the Rhode Island AFL-CIO, the Rhode Island Center for Justice, Solar United Neighbors and others. She held that the One Big Beautiful Bill Act did not convert the program's funding into \"a lump-sum amount subject to EPA's discretion\" and that Congress intended EPA to keep administering grants it had already obligated. **The ruling restores the $7 billion program meant to make solar power accessible to more than 900,000 lower-income Americans**; EPA said it was reviewing the decision and considering an appeal. The 23 states whose Washington suit was dismissed have appealed. On the NCIF/CCIA track, the government filed an unopposed motion on August 6 to stay the D.C. Circuit's mandate pending a petition for Supreme Court review; the court granted it, keeping the injunction's disbursement requirement on hold through Nov. 9, 2026, and longer if a petition is filed.",
+            "effective_date": "2026-09-29"
           }
         ]
       },
       "confidence_note": {
-        "base": "HIGH confidence on the core sequence (Feb. 2025 freeze, April 2025 district-court injunction, Aug. 5 2026 D.C. Circuit ruling, Zeldin's personal role) -- corroborated across TechCrunch, U.S. News/AP, GV Wire, and WTAQ, all citing the same underlying court ruling. MODERATE confidence on the ultimate outcome, since Supreme Court review is still possible and the case is explicitly not final. HIGH confidence on the Solar for All termination and its jurisdictional dismissal, corroborated across Planet Detroit, CBS News, Colorado Sun, IRA Tracker, and Bloomberg Tax/Mealey's coverage of Judge Cartwright's ruling.",
+        "base": "HIGH confidence on the core sequence (Feb. 2025 freeze, April 2025 district-court injunction, Aug. 4 2026 D.C. Circuit ruling, Zeldin's personal role) -- corroborated across TechCrunch, U.S. News/AP, GV Wire, and WTAQ, all citing the same underlying court ruling. MODERATE confidence on the ultimate outcome, since Supreme Court review is still possible and the case is explicitly not final. HIGH confidence on the Solar for All termination and its jurisdictional dismissal, corroborated across Planet Detroit, CBS News, Colorado Sun, IRA Tracker, and Bloomberg Tax/Mealey's coverage of Judge Cartwright's ruling.",
         "updates": [
           {
             "date": "2026-09-10",
             "label": "Added",
-            "text": "Added 2026-09-10 (round-4 backlog cluster c0558): the Hopi Tribe example is HIGH confidence, independently corroborated across NPR, AZPM, KPBS, WYPR, and Buffalo's Fire, all reporting the same $25M/600-homes-to-100-homes figures.",
+            "text": "Added 2026-09-10: the Hopi Tribe example is HIGH confidence, independently corroborated across NPR, AZPM, KPBS, WYPR, and Buffalo's Fire, all reporting the same $25M/600-homes-to-100-homes figures.",
             "effective_date": "2026-09-10"
+          },
+          {
+            "date": "2026-09-29",
+            "label": "Update",
+            "text": "Update 2026-09-29: HIGH confidence on the Sept. 18, 2026 Rhode Island ruling, reported by AP (via OPB) and Utility Dive, both quoting Judge McElroy's opinion; the Aug. 6 stay motion, its grant, and cert plans are from Columbia's Sabin Center blog and its Climate Case Chart docket.",
+            "effective_date": "2026-09-29"
           }
         ]
       }
