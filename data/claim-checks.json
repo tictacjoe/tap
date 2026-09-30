@@ -1,6 +1,6 @@
 {
  "version": 1,
- "as_of": "2026-09-29",
+ "as_of": "2026-09-30",
  "checks": {
   "abrego-garcia-vindictive-prosecution-2025-2026": {
    "0": {
@@ -6448,10 +6448,18 @@
     "archive": false
    },
    "7": {
-    "state": "partly",
-    "why": "The September 18, 2026 order in No. 26-5113 sets oral argument for November 16, 2026, but the source does not mention No. 26-5253 being set for the same date, nor does it name the March 20 and April 9 rulings.",
+    "state": "supports",
+    "why": "The Sept. 18, 2026 order in No. 26-5113 (district case 1:25-cv-04218) schedules oral argument for November 16, 2026. The order itself does not name the March 20 and April 9 rulings being appealed; that identification is context not shown in this one-page order, not contradicted by it.",
     "host": "storage.courtlistener.com",
-    "date": "2026-09-29",
+    "date": "2026-09-30",
+    "kind": "fact",
+    "archive": false
+   },
+   "8": {
+    "state": "supports",
+    "why": "The Sept. 18, 2026 order in No. 26-5253, arising from district case 1:26-cv-01690, schedules oral argument for November 16, 2026. The one-page order does not describe the June 30 escort-requirement injunction under appeal; that detail is not shown, not contradicted.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-09-30",
     "kind": "fact",
     "archive": false
    }
@@ -6640,34 +6648,34 @@
     "archive": false
    },
    "8": {
-    "state": "not_found",
-    "why": "The provided Lawfare text is a general summary of the December IG report and never mentions a separate June 2025 inquiry into aides deleting messages or who transferred the strike details into Signal; the text does not address this claim.",
-    "host": "lawfaremedia.org",
-    "date": "2026-09-15",
+    "state": "unopened",
+    "why": "",
+    "host": "wsj.com",
+    "date": "2026-09-30",
     "kind": "fact",
     "archive": false
    },
    "9": {
-    "state": "supports",
-    "why": "The source directly confirms Buria and Parlatore as the named subjects, the dirty-internet-line and leak-source questions about Buria, the message-deletion inquiry, and Parlatore's clearance-level question.",
-    "host": "politico.com",
-    "date": "2026-09-15",
+    "state": "not_found",
+    "why": "The provided Lawfare text covers the IG's December report findings on Hegseth's Signal use; it does not mention any probe into message deletion, who transferred the strike details, or who had access to Hegseth's phone.",
+    "host": "lawfaremedia.org",
+    "date": "2026-09-30",
     "kind": "fact",
     "archive": false
    },
    "10": {
-    "state": "unopened",
-    "why": "",
-    "host": "wsj.com",
-    "date": "2026-09-23",
+    "state": "partly",
+    "why": "Politico confirms investigators were examining Buria's role in setting up an unsecured internet line, whether he could have been a leak source, and whether Parlatore attended meetings beyond his clearance. But the source calls them 'some of the folks' investigators are zeroing in on (not the two specific subjects), and it says witnesses were asked whether they were ever asked to delete Signal messages without tying that question to Buria or Parlatore.",
+    "host": "politico.com",
+    "date": "2026-09-30",
     "kind": "fact",
     "archive": false
    },
    "11": {
-    "state": "partly",
-    "why": "The source confirms Moulton pressed Hegseth on the Signal texts during a House Armed Services Committee hearing, but it is a video caption with no article body, so it does not confirm a Senate hearing, the April-June 2026 timeframe, or that no new findings emerged.",
-    "host": "cbsnews.com",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "The opinion in Civil Action No. 26-1690 recounts The Times's reporting that Hegseth shared Yemen strike details in a second private Signal chat with Parlatore, described as a Senior Advisor, and his wife and brother.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-09-30",
     "kind": "fact",
     "archive": false
    }
@@ -7944,50 +7952,58 @@
   },
   "loeffler-sba-hatch-act-2025-09": {
    "0": {
-    "state": "unopened",
-    "why": "",
-    "host": "sbc.senate.gov",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "The OSC complaint form (received 10/1/2025, filed by Craig Holman, citizen.org) names Loeffler as subject, alleges political activity while on duty ('Yes'), and contains the quoted description of the SBA web post.",
+    "host": "citizen.org",
+    "date": "2026-09-30",
     "kind": "fact",
     "archive": false
    },
    "1": {
-    "state": "unopened",
-    "why": "",
-    "host": "sbc.senate.gov",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "Velázquez's Oct. 2, 2025 letter quotes the Oct. 1 suggested out-of-office reply, cites the 'Special Announcement' banner, uses the quoted Hatch Act language, and asks who wrote or directed the language. The banner's red color is not visible in the excerpted text but nothing contradicts it.",
+    "host": "congress.gov",
+    "date": "2026-09-30",
     "kind": "fact",
     "archive": false
    },
    "2": {
-    "state": "not_found",
-    "why": "The Wikipedia biography text provided (early life, career, Senate donations/tenure) does not mention Public Citizen, any Hatch Act complaint, 'electioneering,' or the government shutdown at all, so the claim cannot be checked against this excerpt.",
-    "host": "en.wikipedia.org",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "Markey's Oct. 3, 2025 letter cites the Sept. 30 CHCO email to all employees blaming Democrats, a second CHCO email (footnoted Oct. 1) urging out-of-office blame, and says the website banner and district office voicemails carried the same message, calling it partisan messaging on official channels in apparent violation of the law.",
+    "host": "sbc.senate.gov",
+    "date": "2026-09-30",
     "kind": "fact",
     "archive": false
    },
    "3": {
-    "state": "not_found",
-    "why": "This OSC press release concerns three unrelated Hatch Act settlements and does not mention Loeffler, the SBA, or Public Citizen's complaint at all, so it cannot confirm or deny anything about the status of that specific complaint.",
-    "host": "osc.gov",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "The letter requests answers by October 17, 2025, asks which officials instructed employees to promote partisan messages on the website, voicemails and out-of-office signatures, asks whether Loeffler personally approved the Sept. 30 and Oct. 1 emails, and urges compliance with existing law.",
+    "host": "sbc.senate.gov",
+    "date": "2026-09-30",
     "kind": "fact",
     "archive": false
    },
    "4": {
     "state": "not_found",
-    "why": "This OSC press release concerns three unrelated Hatch Act settlements and does not mention Loeffler, the SBA, or Public Citizen's complaint at all, so it cannot confirm or deny anything about the status of that specific complaint.",
+    "why": "The cited OSC page (Feb. 26, 2026) describes three unrelated Hatch Act settlements and does not mention Loeffler, SBA, Public Citizen's complaint, or Markey's request; it cannot establish their status as of July 2026.",
     "host": "osc.gov",
-    "date": "2026-09-15",
+    "date": "2026-09-30",
     "kind": "fact",
     "archive": false
    },
-   "5": {
-    "state": "supports",
-    "why": "Government Executive confirms CREW's finding of six senior officials under open OSC Hatch Act investigation (five pending over 10 months), the exact quote about 'financial constraints and abrupt leadership changes' alongside 'glaring violations of the law,' and that the article does not name Loeffler among the six.",
+   "6": {
+    "state": "partly",
+    "why": "GovExec confirms CREW's letter said OSC has open investigations into six senior officials, five pending over 10 months, and quotes the 'financial constraints and abrupt leadership changes' and 'glaring violations' language. The source does not mention Loeffler, Turner, or the shutdown-messaging complaints, so the claim's link to why their complaints were undetermined is the curator's inference, not something the source says (and part of the article is elided, so the full list of officials cannot be checked).",
     "host": "govexec.com",
-    "date": "2026-09-15",
+    "date": "2026-09-30",
+    "kind": "interpretation",
+    "archive": false
+   },
+   "7": {
+    "state": "partly",
+    "why": "The Sept. 25, 2026 OSC assessment confirms over 1,000 complaints covering 37 agencies and the White House (SBA listed), no discipline, reasonable reliance on the 2024 Advisory while the Hatch Act Unit was furloughed, the 'roles of individual employees' language, the 'measured tone' OMB message, 'might weigh in favor of concluding,' and no final determination. The provided text is excerpted, so the claim that OSC did not describe SBA's messages cannot be checked against the full document.",
+    "host": "osc.gov",
+    "date": "2026-09-30",
     "kind": "fact",
     "archive": false
    }
@@ -8720,66 +8736,90 @@
     "archive": false
    },
    "2": {
-    "state": "supports",
-    "why": "Raskin's December 16, 2025 press release states the bill would remove the White House's statutory exemption from Section 106 review and require public review and comment.",
-    "host": "raskin.house.gov",
-    "date": "2026-09-29",
+    "state": "partly",
+    "why": "The National Trust's press release confirms the Dec. 12, 2025 suit in D.D.C. and that it seeks a halt until legally mandated review processes, including public comment, are completed. But it describes the defendants only as 'various individuals and agencies of the government' and does not name the President, NPS, Interior or GSA.",
+    "host": "savingplaces.org",
+    "date": "2026-09-30",
     "kind": "fact",
     "archive": false
    },
    "3": {
-    "state": "partly",
-    "why": "The National Trust's December 12, 2025 release confirms the D.D.C. suit and its argument that the project skipped legally mandated review processes including public comment, but it names defendants only as 'various individuals and agencies' and does not identify the President, NPS, Interior, or GSA.",
-    "host": "savingplaces.org",
-    "date": "2026-09-29",
+    "state": "supports",
+    "why": "Raskin's Dec. 16, 2025 release says the People's White House Historic Preservation Act would remove the White House's statutory exemption from Section 106 review and require formal review and public comment for renovations.",
+    "host": "raskin.house.gov",
+    "date": "2026-09-30",
     "kind": "fact",
     "archive": false
    },
    "4": {
-    "state": "partly",
-    "why": "NPR confirms Judge Leon's March 31, 2026 ruling that construction must stop until Congress authorizes it, but does not mention an 'above-ground' limitation, the $2.5 million appropriation, or the 'comes close' language.",
-    "host": "npr.org",
-    "date": "2026-09-29",
+    "state": "supports",
+    "why": "Dkt. 60 in No. 25-4316, filed 03/31/26, contains each quoted passage: 'no statute comes close...', 'must stop until Congress authorizes its completion', the $2,475,000 appropriation, 'ordinary maintenance and upkeep of the White House, and nothing more', and the $2.475 million vs. $400 million comparison.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-09-30",
     "kind": "fact",
     "archive": false
    },
    "5": {
     "state": "supports",
-    "why": "HuffPost reports the Post's findings of a March 5 estimate of $600 million with $155M Secret Service, $149M WHMO, $3M Executive Residence and $293M private, and quotes a White House spokesman on 'approximately $400 million'; the article's exact date is not shown but the substance matches.",
-    "host": "huffpost.com",
-    "date": "2026-09-29",
+    "why": "Dkt. 72, filed 04/16/26, amends the order to stop only above-ground construction and leaves out the listed below-ground, presidential-security and site-security work, matching the claim's quotes.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-09-30",
     "kind": "fact",
     "archive": false
    },
    "6": {
-    "state": "partly",
-    "why": "ABC News confirms an August 7, 2026 appeals ruling blocking construction and holding congressional approval is required, but the quoted phrase 'exclusive constitutional authority over federal property like the White House' does not appear, and the article does not use the word 'affirmed'.",
-    "host": "abcnews.com",
-    "date": "2026-09-29",
+    "state": "supports",
+    "why": "FactCheck.org reports Grassley's $1 billion Secret Service proposal with the quoted security language, the Secret Service chief's reported $220 million figure, the parliamentarian's reconciliation finding (May 18 update), and the June 10 removal and signing. The original May 14 publication date is not shown in the excerpt but nothing contradicts it.",
+    "host": "factcheck.org",
+    "date": "2026-09-30",
     "kind": "fact",
     "archive": false
    },
    "7": {
     "state": "supports",
-    "why": "Euronews (22/08/2026) quotes Trump saying the ballroom will be 'close to $400 million' with 'no taxpayer money for the ballroom at all' and reports the Supreme Court's temporary order letting construction continue.",
-    "host": "euronews.com",
-    "date": "2026-09-29",
+    "why": "CNBC reports Senate Republicans stripped up to $1 billion in ballroom and Secret Service security funding from the revised immigration bill, and that administration officials said only about $200 million would have gone to the ballroom.",
+    "host": "cnbc.com",
+    "date": "2026-09-30",
     "kind": "fact",
     "archive": false
    },
    "8": {
     "state": "supports",
-    "why": "SCOTUSblog reports the Aug. 31, 2026 5-4 order pausing Leon's ruling on standing grounds, with Roberts joined by the three Democratic appointees dissenting that construction 'is likely unlawful'.",
-    "host": "scotusblog.com",
-    "date": "2026-09-29",
+    "why": "HuffPost, citing the Post, reports the March Clark Construction summary and the March 5 estimate of $600 million, with $155M Secret Service, $149M WHMO, $3M Executive Residence and $293M 'private sources', and quotes spokesman Davis Ingle's 'approximately $400 million' statement.",
+    "host": "huffpost.com",
+    "date": "2026-09-30",
     "kind": "fact",
     "archive": false
    },
    "9": {
     "state": "partly",
-    "why": "The Post text confirms McCrery withdrew last October after warning about emergency exits and fire containment and that Trump said no codes apply (headline 'I am the code'), but the truncated text does not show the week of October 20, the September 30 and November 6 meeting notes, the authors/date, or the statement about a formal code review.",
+    "why": "The Aug. 7, 2026 opinion in No. 26-5123 (Millett and Garcia; Rao dissenting) affirms the modified preliminary injunction and contains the first quote verbatim. The second quote ('very likely lack statutory authority to construct the ballroom') is not in the excerpted text, though the opinion says the defendants 'likely lack any statutory basis'; the exact wording may be in an elided portion.",
+    "host": "media.cadc.uscourts.gov",
+    "date": "2026-09-30",
+    "kind": "fact",
+    "archive": false
+   },
+   "10": {
+    "state": "supports",
+    "why": "Euronews (published 22/08/2026) quotes Trump saying the ballroom is 'going to be close to $400 million' and 'no taxpayer money for the ballroom at all,' and reports the Supreme Court's temporary order letting construction continue.",
+    "host": "euronews.com",
+    "date": "2026-09-30",
+    "kind": "fact",
+    "archive": false
+   },
+   "11": {
+    "state": "supports",
+    "why": "SCOTUSblog reports the Aug. 31, 2026 5-4 order pausing the injunction on standing grounds, and Roberts's dissent joined by Sotomayor, Kagan and Jackson, saying the construction 'is likely unlawful.'",
+    "host": "scotusblog.com",
+    "date": "2026-09-30",
+    "kind": "fact",
+    "archive": false
+   },
+   "12": {
+    "state": "partly",
+    "why": "The excerpt confirms McCrery withdrew last October after warning about inadequate emergency exits and fire containment, that Trump said no building codes apply (headline: 'I am the code'), and that records don't show whether the safety issues were resolved. The provided text is cut off, so the bylines, the week of October 20, the attribution to two people, the Sept. 30 and Nov. 6 meeting notes, and the 'formal code review' wording are not shown.",
     "host": "washingtonpost.com",
-    "date": "2026-09-29",
+    "date": "2026-09-30",
     "kind": "fact",
     "archive": false
    }
@@ -14842,58 +14882,74 @@
     "archive": false
    },
    "4": {
-    "state": "supports",
-    "why": "The April 6, 2026 Mayer Brown analysis describes the April 2 Section 232 proclamation's 100% duty for companies without MFN agreements, the exemption for companies with executed or in-negotiation MFN/onshoring agreements, and lower onshoring and trade-partner rates.",
-    "host": "mayerbrown.com",
-    "date": "2026-09-29",
+    "state": "partly",
+    "why": "The archived NYT preview confirms the joint review with Süddeutsche Zeitung, NDR and WDR found Trump's 'highest to lowest' claim untrue, and that Germany more often than not pays less. The rest of the article didn't load (paywall), so the 24-of-43 comparison, the six patented drugs, the Ngenla figure, the Wegovy/Zepbound comparison and the White House's economic-adjustment argument are not shown.",
+    "host": "nytimes.com",
+    "date": "2026-09-30",
     "kind": "fact",
-    "archive": false
+    "archive": true
    },
    "5": {
     "state": "partly",
-    "why": "CNBC confirms the Aug. 31 round bringing the total to 26 companies (Trump said 90% of the market), but the quoted phrases 'as big as it gets medically' and 'the largest drug discount... in the history of medicine' do not appear in the provided text.",
-    "host": "cnbc.com",
-    "date": "2026-09-29",
+    "why": "The excerpt of Proclamation 11020 confirms the April 2, 2026 Section 232 action, the 20% onshoring rate, zero until Jan. 20, 2029 for MFN companies (and per Annex II agreements), 15% for EU/Japan/Korea/Switzerland, and the July 31 (Annex III) and Sept. 29, 2026 effective dates. The base 100% rate clause is elided in the excerpt (the text only shows the 20% rate rising to 100%), so the headline 100% figure isn't directly shown.",
+    "host": "federalregister.gov",
+    "date": "2026-09-30",
     "kind": "fact",
     "archive": false
    },
    "6": {
-    "state": "not_found",
-    "why": "The CNBC article on the Aug. 31 deals does not mention a New York Times finding or any comparison of TrumpRx platform prices with prices abroad.",
-    "host": "cnbc.com",
-    "date": "2026-09-29",
-    "kind": "interpretation",
+    "state": "supports",
+    "why": "The Washington Examiner reports Trump at the Monday Oval Office event on nine new MFN deals saying they are 'as big as it gets medically' and quotes 'the largest price reductions in the history of medicine.'",
+    "host": "washingtonexaminer.com",
+    "date": "2026-09-30",
+    "kind": "fact",
     "archive": false
    },
    "7": {
     "state": "supports",
-    "why": "The Newsmax report says Warren pressed Klomp at his Finance Committee confirmation hearing that week on why contracts stayed sealed after Kennedy pledged release, and quotes Klomp's 'billions of dollars have already been saved' and 'not hiding anything.'",
-    "host": "yahoo.com",
-    "date": "2026-09-29",
+    "why": "The Aug. 31, 2026 fact sheet lists the nine manufacturers and says the agreements bring the total to 26, covering 89% of the branded drug market.",
+    "host": "whitehouse.gov",
+    "date": "2026-09-30",
     "kind": "fact",
     "archive": false
    },
    "8": {
-    "state": "partly",
-    "why": "The Public Citizen analysis supports the 'diligent and good faith negotiations' letter, the Feb. 23, 2026 definitive agreement, the GLP-1 loophole ($1.7 billion), and that pharma perks are not public; the Jan. 20, 2029 end date, Zepbound/Mounjaro exclusion, the Hwang $1 billion low estimate, and reference-country supply terms are not in the provided text.",
-    "host": "citizen.org",
-    "date": "2026-09-29",
+    "state": "supports",
+    "why": "The Newsmax report says Warren demanded 'Show me the receipts' at Klomp's Senate Finance confirmation hearing over the sealed contracts, and quotes Klomp's 'billions... saved' and 'not hiding anything.' The article says 'this week' and gives no exact hearing date, so Sept. 15 isn't shown but isn't contradicted.",
+    "host": "yahoo.com",
+    "date": "2026-09-30",
     "kind": "fact",
     "archive": false
    },
    "9": {
-    "state": "supports",
-    "why": "Bloomberg (Sept. 19, 2026) reports the revenue-sharing provision effective Jan. 1, 2026 through Jan. 20, 2029 with rate and medicines redacted, and quotes Desai: 'Foreign prices are going to increase.'",
-    "host": "uk.finance.yahoo.com",
-    "date": "2026-09-29",
+    "state": "partly",
+    "why": "Public Citizen's analysis confirms Pfizer's letter of agreement only obligated 'diligent and good faith negotiations,' the Feb. 23, 2026 definitive agreement, the Jan. 20, 2029 end date, the Zepbound/Mounjaro exclusion from GENEROUS Medicaid pricing, and that neither agreement shows the tariff exemptions or FDA vouchers. The Lilly reference-country provision and Hwang's $1 billion-$1.7 billion estimate fall in elided portions (only the 'More Than $1 Billion' heading is shown), and the Sept. 19 date isn't shown.",
+    "host": "citizen.org",
+    "date": "2026-09-30",
     "kind": "fact",
     "archive": false
    },
    "10": {
     "state": "supports",
-    "why": "Roll Call (posted Sept. 24) reports the committee approved Klomp 15-12 on Thursday and that Wyden said the drug price deals are opaque and serve to benefit the industry.",
+    "why": "Bloomberg (Sept. 19, 2026) reports Pfizer must share a portion of net increased foreign revenue with HHS, effective Jan. 1, 2026 through Jan. 20, 2029, with the rate and medicines redacted, and quotes Desai: 'Foreign prices are going to increase.'",
+    "host": "uk.finance.yahoo.com",
+    "date": "2026-09-30",
+    "kind": "fact",
+    "archive": false
+   },
+   "11": {
+    "state": "supports",
+    "why": "Roll Call (posted Sept. 24, 2026) reports the committee approved Klomp 15-12 on Thursday and that ranking member Wyden said the drug price deals are opaque and serve to benefit the industry.",
     "host": "rollcall.com",
-    "date": "2026-09-29",
+    "date": "2026-09-30",
+    "kind": "fact",
+    "archive": false
+   },
+   "12": {
+    "state": "supports",
+    "why": "The Sept. 24, 2026 Peterson-KFF analysis matches every figure: 32 drugs as of Aug. 25, 2026, 11 peer countries, 17 below and 15 above the peer average (262% higher on average), lowest for five and highest for 13, and German prices higher for 14 of 24.",
+    "host": "healthsystemtracker.org",
+    "date": "2026-09-30",
     "kind": "fact",
     "archive": false
    }
@@ -15385,17 +15441,17 @@
    },
    "1": {
     "state": "supports",
-    "why": "The article confirms Public Citizen's formal OSC complaint and quotes Craig Holman's 'such an obvious violation... how on Earth does HUD think they can get away with this' language nearly verbatim.",
+    "why": "HousingWire reports Public Citizen filed an OSC complaint alleging the banner violated the Hatch Act, and quotes Holman, who filed it, with the 'such an obvious violation' remark.",
     "host": "housingwire.com",
-    "date": "2026-09-15",
+    "date": "2026-09-30",
     "kind": "fact",
     "archive": false
    },
    "2": {
-    "state": "partly",
-    "why": "Turner says he is 'not worried at all' about the Hatch Act and calls the criticism a Democratic 'distraction'. He also rejected the 'propaganda' label ('this is not about propaganda'), so 'did not dispute the characterization' is only partly accurate.",
+    "state": "supports",
+    "why": "The Hill reports that when Cuomo asked about the Hatch Act, Turner said HUD was not worried 'at all,' that the banner was 'not about propaganda' but about letting people know what's going on, and called it a 'distraction' by 'the Democrats and the far left.'",
     "host": "thehill.com",
-    "date": "2026-09-21",
+    "date": "2026-09-30",
     "kind": "fact",
     "archive": false
    },
@@ -15408,10 +15464,10 @@
     "archive": false
    },
    "4": {
-    "state": "supports",
-    "why": "The same article shows the complaint was still pending with only an automatic away-message reply from OSC's Corey Williams, consistent with no OSC determination having been publicly reported at that point.",
+    "state": "not_found",
+    "why": "The HousingWire article is from the October 2025 filing and says nothing about the complaint's status as of July 2026; the provided text cannot establish whether any OSC determination had been reported by then.",
     "host": "housingwire.com",
-    "date": "2026-09-15",
+    "date": "2026-09-30",
     "kind": "fact",
     "archive": false
    },
@@ -15420,6 +15476,22 @@
     "why": "The same HousingWire article, used again for this re-verification, shows no OSC determination reported -- only the pending complaint and an automatic away-message reply -- consistent with the claim.",
     "host": "housingwire.com",
     "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
+    "state": "partly",
+    "why": "The Sept. 25, 2026 OSC assessment confirms the 1,000+ complaints across 37 agencies and the White House, no discipline, reasonable reliance on the 2024 Advisory while Hatch Act staff were furloughed, no final determination, HUD among agencies that did not respond or refused, and the 'might weigh in favor of concluding' language. The provided text is excerpted, so the claim that OSC did not describe HUD's banner can't be checked against the full document.",
+    "host": "osc.gov",
+    "date": "2026-09-30",
+    "kind": "fact",
+    "archive": false
+   },
+   "7": {
+    "state": "supports",
+    "why": "Garcia's Sept. 25, 2026 statement calls OSC's response 'not satisfactory,' cites his Oct. 2, 2025 letter highlighting HUD posts blaming the 'Radical Left' for 'massive pain,' and says the committee will keep pressing OSC.",
+    "host": "oversightdemocrats.house.gov",
+    "date": "2026-09-30",
     "kind": "fact",
     "archive": false
    }
@@ -15616,18 +15688,18 @@
     "archive": false
    },
    "3": {
-    "state": "partly",
-    "why": "The July 31, 2025 minority release quotes the GAO Renew America's Schools finding and lists the EV-charging, museum/library, and Head Start findings, but the $196 million figure is OMB's proposed FY2026 cancellation cited in the decision, not canceled funding that GAO found impounded (the violation found concerned delayed obligation of FY2025 funds).",
-    "host": "appropriations.senate.gov",
-    "date": "2026-09-29",
+    "state": "supports",
+    "why": "GAO's ICA page lists, under programmatic-delay decisions, the Interior water recycling decision (B-337233, Jul 23, 2025) and the DHS reductions-in-force decision for the civil rights and ombudsman offices (B-337366, Jul 31, 2025).",
+    "host": "gao.gov",
+    "date": "2026-09-30",
     "kind": "fact",
     "archive": false
    },
    "4": {
-    "state": "supports",
-    "why": "GAO's ICA page lists both decisions under whether agency actions constitute a programmatic delay, with the stated B-numbers and dates.",
+    "state": "partly",
+    "why": "B-337208 (Jul 31, 2025) confirms DOE violated the ICA by delaying FY 2025 Schools Program funds for a policy review, found no violation for the almost fully obligated FY 2022-2024 funds, and notes OMB's proposed ~$196 million FY 2026 cancellation. The 17%-obligated/none-spent figures fall in elided text, and the source says 'public school facilities' rather than K-12.",
     "host": "gao.gov",
-    "date": "2026-09-29",
+    "date": "2026-09-30",
     "kind": "fact",
     "archive": false
    },
@@ -15740,6 +15812,14 @@
     "why": "CNN confirms the roughly $810 million pocket rescission sent to Speaker Johnson across the named departments and international programs, the $567 million Refugee and Entrant Assistance cut called 'overfunded,' and Collins's quote, but does not state the package was sent on September 25, 2026.",
     "host": "cnn.com",
     "date": "2026-09-29",
+    "kind": "fact",
+    "archive": false
+   },
+   "19": {
+    "state": "supports",
+    "why": "GAO's Sept. 29, 2026 letter (B-338788) reviews the Sept. 25 special message on 11 accounts withheld by an OMB reapportionment letter, finds all expire at the end of FY 2026 with review running to no earlier than Nov. 9, concludes the proposals do not permit withholding beyond FY 2026 (the quoted phrase is split by footnote text in the extraction), and contains the final quoted sentence verbatim.",
+    "host": "gao.gov",
+    "date": "2026-09-30",
     "kind": "fact",
     "archive": false
    }
