@@ -6585,95 +6585,103 @@
   "hegseth-signal-yemen-strike-2025-03": {
    "0": {
     "state": "partly",
-    "why": "The source confirms Hegseth sent sensitive nonpublic operational info over Signal on his personal phone, sourced from a secure CENTCOM email, 2-4 hours before the strikes, but it never gives the classification marking 'SECRET//NOFORN' or mentions any Congressional mandate/Senate Armed Services Committee request for the IG report.",
-    "host": "lawfaremedia.org",
-    "date": "2026-09-15",
+    "why": "The NYT text confirms fighter pilots were angered and bewildered and said the Signal disclosure upended decades of operational-security doctrine, and that flight schedules/strike windows were posted. But the pilots quoted are 'a dozen Air Force and Navy fighter pilots,' current and former, not identified as the pilots who flew the March 15 strikes; the 'personal-device' detail and the March 27-28 date are not shown in the excerpt.",
+    "host": "nytimes.com",
+    "date": "2026-09-30",
     "kind": "fact",
     "archive": false
    },
    "1": {
-    "state": "supports",
-    "why": "The NYT article directly documents fighter pilots' outrage that Hegseth's Signal disclosure of flight schedules and strike timing over an unsecured app violated decades of operational-security doctrine, matching the claim.",
-    "host": "nytimes.com",
-    "date": "2026-09-15",
-    "kind": "fact",
-    "archive": false
-   },
-   "2": {
-    "state": "unopened",
-    "why": "",
-    "host": "wsj.com",
-    "date": "2026-09-15",
-    "kind": "fact",
-    "archive": false
-   },
-   "3": {
-    "state": "not_found",
-    "why": "The provided CBS/Wayback text discusses only the original Goldberg-inclusive Signal chat and the SECRET//NOFORN CENTCOM email; it never mentions a second chat with Hegseth's wife, brother, or personal lawyer, or any failure-to-preserve finding, so the claim's core assertions are not addressed by this text.",
-    "host": "cbsnews.com",
-    "date": "2026-09-15",
-    "kind": "fact",
-    "archive": true
-   },
-   "4": {
     "state": "partly",
-    "why": "The source confirms Schiff's April 21, 2025 letter to NARA, the Rubio conflict-of-interest/recusal request, and the second 'Defense | Team Huddle' chat with Hegseth's wife/brother/lawyer, but the visible text (cut off) never states the letter posed eight questions or set a May 5, 2025 deadline.",
-    "host": "schiff.senate.gov",
-    "date": "2026-09-15",
-    "kind": "fact",
-    "archive": false
-   },
-   "5": {
-    "state": "partly",
-    "why": "The source confirms the Pentagon office system bypassing DOD security protocols to give Hegseth Signal access and the 'dirty line' internet connection, but says nothing about a publicly searchable personal cellphone number, consumer-app links, or reused breached email passwords.",
-    "host": "cbsnews.com",
-    "date": "2026-09-15",
-    "kind": "fact",
-    "archive": false
-   },
-   "6": {
-    "state": "supports",
-    "why": "Fox News's article directly states Hegseth, as the Pentagon's top classification authority, had discretion to declassify the information, supporting the claim that the IG affirmed his authority even while finding a policy violation.",
-    "host": "foxnews.com",
-    "date": "2026-09-15",
-    "kind": "interpretation",
-    "archive": false
-   },
-   "7": {
-    "state": "partly",
-    "why": "The source confirms Hegseth declined an interview and submitted a written statement on July 25, but nowhere in the text does Hegseth call the investigation 'partisan.'",
-    "host": "lawfaremedia.org",
-    "date": "2026-09-15",
-    "kind": "fact",
-    "archive": false
-   },
-   "8": {
-    "state": "unopened",
-    "why": "",
+    "why": "The WSJ headline and dek confirm the Pentagon IG publicly announced a review of Hegseth's sharing of strike plans in the Signal chat. The April 3 date and the link to a December 2025 report are not in the provided excerpt (not contradicted).",
     "host": "wsj.com",
     "date": "2026-09-30",
     "kind": "fact",
     "archive": false
    },
+   "2": {
+    "state": "supports",
+    "why": "The syndicated NYT text states, citing four people, that Hegseth shared March 15 strike details including F/A-18 flight schedules in a private chat with his wife, brother and personal lawyer, named 'Defense | Team Huddle,' created in January, accessed on his private phone, with about a dozen inner-circle members; the brother and lawyer have Pentagon jobs with no clear need to know.",
+    "host": "web.archive.org",
+    "date": "2026-09-30",
+    "kind": "fact",
+    "archive": false
+   },
+   "3": {
+    "state": "partly",
+    "why": "The April 21, 2025 release confirms Schiff's letter to NARA seeking an investigation and preservation of records, flags Rubio's conflict as acting Archivist and asks him to recuse, appoint a senior career official and consider IG assistance, and covers both chats. The 'eight questions' and May 5, 2025 deadline are not in the provided excerpt.",
+    "host": "schiff.senate.gov",
+    "date": "2026-09-30",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "supports",
+    "why": "CBS reports the monitor installed to give Hegseth remote access to Signal and texts on his personal phone, two sources saying it bypasses security protocols, Buria's oversight role, the earlier AP 'dirty line' report, and the spokesperson's denial describing a one-way line with the phone kept outside the office.",
+    "host": "cbsnews.com",
+    "date": "2026-09-30",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "supports",
+    "why": "The WSJ text directly states Hegseth used at least a dozen Signal chats for official business, told aides to inform foreign governments about an unfolding operation, and discussed media, travel, schedule and other sensitive information. The May 5 date is not shown in the excerpt, and the 'habitual use' framing is the tracker's characterization.",
+    "host": "wsj.com",
+    "date": "2026-09-30",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
+    "state": "supports",
+    "why": "The AP report (June 6, 2025) states the IG is examining whether aides were asked to delete Signal messages, citing two people and documents, focused on the March 15 strikes, and is asking staffers who posted the information and who had access to his phone.",
+    "host": "militarytimes.com",
+    "date": "2026-09-30",
+    "kind": "fact",
+    "archive": false
+   },
+   "7": {
+    "state": "supports",
+    "why": "The CBS video caption confirms Moulton pressed Hegseth about Signal texts that may have included sensitive and classified information about the Houthi operation, at a HASC hearing on the 2026 budget. The June 12, 2025 date is not shown in the caption text.",
+    "host": "cbsnews.com",
+    "date": "2026-09-30",
+    "kind": "fact",
+    "archive": false
+   },
+   "8": {
+    "state": "partly",
+    "why": "Politico (July 14, 2025) confirms three sources, the focus on Buria and Parlatore, the 'zeroing in' quote, the IG question about the unsecured line, the OSI questions about leaks and clearance level, the deletion questions, and Buria/Parlatore's responses. The detail that OSI investigators asked by name whether Buria or Parlatore requested deletions is not in the provided excerpt.",
+    "host": "politico.com",
+    "date": "2026-09-30",
+    "kind": "fact",
+    "archive": false
+   },
    "9": {
-    "state": "not_found",
-    "why": "The provided Lawfare text covers the IG's December report findings on Hegseth's Signal use; it does not mention any probe into message deletion, who transferred the strike details, or who had access to Hegseth's phone.",
-    "host": "lawfaremedia.org",
+    "state": "partly",
+    "why": "The IG report excerpt confirms the March 26 SASC request, the quantity/strike times sent 2-4 hours before the strikes on his personal phone, the match with a SECRET//NOFORN CENTCOM email, non-compliance with DoDI 8170.01, auto-deleted messages, and a 'Defense Team Huddle' chat including non-DoD personnel. The report number, Dec 2/Dec 4 dates, the 44 U.S.C. 2911/DoDI 5015.02 findings, the claim that Hegseth posted the same strike information there, and the IG's inability to verify due to lack of phone access are not in the provided excerpt.",
+    "host": "media.defense.gov",
     "date": "2026-09-30",
     "kind": "fact",
     "archive": false
    },
    "10": {
     "state": "partly",
-    "why": "Politico confirms investigators were examining Buria's role in setting up an unsecured internet line, whether he could have been a leak source, and whether Parlatore attended meetings beyond his clearance. But the source calls them 'some of the folks' investigators are zeroing in on (not the two specific subjects), and it says witnesses were asked whether they were ever asked to delete Signal messages without tying that question to Buria or Parlatore.",
-    "host": "politico.com",
+    "why": "Fox confirms the IG affirmed Hegseth's broad authority, as top classification authority, to declassify information. But the same passage pairs that with the finding that policy still prohibited sending it over nonsecure channels, and the claim's conclusion that this 'cuts against' an unauthorized-disclosure theory is the tracker's analysis, not something the source states.",
+    "host": "foxnews.com",
+    "date": "2026-09-30",
+    "kind": "interpretation",
+    "archive": false
+   },
+   "11": {
+    "state": "partly",
+    "why": "Lawfare confirms Hegseth declined an IG interview request and submitted a written statement on July 25. The provided text does not mention Hegseth calling the investigation partisan.",
+    "host": "lawfaremedia.org",
     "date": "2026-09-30",
     "kind": "fact",
     "archive": false
    },
-   "11": {
+   "12": {
     "state": "supports",
-    "why": "The opinion in Civil Action No. 26-1690 recounts The Times's reporting that Hegseth shared Yemen strike details in a second private Signal chat with Parlatore, described as a Senior Advisor, and his wife and brother.",
+    "why": "The opinion in No. 26-1690 recounts The Times's reporting that Hegseth shared Yemen strike details in a second private Signal chat including Parlatore, described as a Senior Advisor, and his wife and brother.",
     "host": "storage.courtlistener.com",
     "date": "2026-09-30",
     "kind": "fact",
@@ -7984,24 +7992,16 @@
     "archive": false
    },
    "4": {
-    "state": "not_found",
-    "why": "The cited OSC page (Feb. 26, 2026) describes three unrelated Hatch Act settlements and does not mention Loeffler, SBA, Public Citizen's complaint, or Markey's request; it cannot establish their status as of July 2026.",
-    "host": "osc.gov",
+    "state": "partly",
+    "why": "GovExec (Aug 21, 2026) confirms CREW's letter citing six OSC investigations, five pending over 10 months, the 'financial constraints and abrupt leadership changes' language and 'glaring violations.' The excerpt is truncated, so whether Loeffler is among the six cannot be checked, and the link to her and Turner's complaints is the tracker's inference.",
+    "host": "govexec.com",
     "date": "2026-09-30",
     "kind": "fact",
     "archive": false
    },
-   "6": {
+   "5": {
     "state": "partly",
-    "why": "GovExec confirms CREW's letter said OSC has open investigations into six senior officials, five pending over 10 months, and quotes the 'financial constraints and abrupt leadership changes' and 'glaring violations' language. The source does not mention Loeffler, Turner, or the shutdown-messaging complaints, so the claim's link to why their complaints were undetermined is the curator's inference, not something the source says (and part of the article is elided, so the full list of officials cannot be checked).",
-    "host": "govexec.com",
-    "date": "2026-09-30",
-    "kind": "interpretation",
-    "archive": false
-   },
-   "7": {
-    "state": "partly",
-    "why": "The Sept. 25, 2026 OSC assessment confirms over 1,000 complaints covering 37 agencies and the White House (SBA listed), no discipline, reasonable reliance on the 2024 Advisory while the Hatch Act Unit was furloughed, the 'roles of individual employees' language, the 'measured tone' OMB message, 'might weigh in favor of concluding,' and no final determination. The provided text is excerpted, so the claim that OSC did not describe SBA's messages cannot be checked against the full document.",
+    "why": "The OSC assessment confirms over 1,000 complaints about 37 agencies and the White House, SBA in the list, no discipline due to reasonable reliance on the 2024 Advisory while Hatch Act staff were furloughed, no final determination, further inquiry into individual roles not changing the outcome, the measured OMB message, and the 'might weigh in favor of concluding' language. Whether OSC described SBA's messages cannot be checked in the windowed excerpt.",
     "host": "osc.gov",
     "date": "2026-09-30",
     "kind": "fact",
@@ -8736,9 +8736,9 @@
     "archive": false
    },
    "2": {
-    "state": "partly",
-    "why": "The National Trust's press release confirms the Dec. 12, 2025 suit in D.D.C. and that it seeks a halt until legally mandated review processes, including public comment, are completed. But it describes the defendants only as 'various individuals and agencies of the government' and does not name the President, NPS, Interior or GSA.",
-    "host": "savingplaces.org",
+    "state": "supports",
+    "why": "The complaint (No. 1:25-cv-04316, Document 1, filed 12/12/25) names the listed defendants including Trump in his official capacity, is signed by Gregory B. Craig of Foley Hoag, and contains the quoted allegation verbatim.",
+    "host": "storage.courtlistener.com",
     "date": "2026-09-30",
     "kind": "fact",
     "archive": false
@@ -8769,55 +8769,103 @@
    },
    "6": {
     "state": "supports",
-    "why": "FactCheck.org reports Grassley's $1 billion Secret Service proposal with the quoted security language, the Secret Service chief's reported $220 million figure, the parliamentarian's reconciliation finding (May 18 update), and the June 10 removal and signing. The original May 14 publication date is not shown in the excerpt but nothing contradicts it.",
-    "host": "factcheck.org",
+    "why": "The April 27, 2026 HSGAC release announces Paul's bill and contains the quoted sentence.",
+    "host": "hsgac.senate.gov",
     "date": "2026-09-30",
     "kind": "fact",
     "archive": false
    },
    "7": {
-    "state": "supports",
-    "why": "CNBC reports Senate Republicans stripped up to $1 billion in ballroom and Secret Service security funding from the revised immigration bill, and that administration officials said only about $200 million would have gone to the ballroom.",
-    "host": "cnbc.com",
+    "state": "partly",
+    "why": "Congress.gov confirms S.4430's title, April 29, 2026 introduction, $400 million for the East Wing Modernization Project (including the quoted purposes) available until January 20, 2029, and the customs-fee extension. The sponsor (Graham) and cosponsors (Britt, Schmitt) and the referral to the Finance Committee are not in the provided text.",
+    "host": "congress.gov",
     "date": "2026-09-30",
     "kind": "fact",
     "archive": false
    },
    "8": {
-    "state": "supports",
-    "why": "HuffPost, citing the Post, reports the March Clark Construction summary and the March 5 estimate of $600 million, with $155M Secret Service, $149M WHMO, $3M Executive Residence and $293M 'private sources', and quotes spokesman Davis Ingle's 'approximately $400 million' statement.",
-    "host": "huffpost.com",
+    "state": "partly",
+    "why": "The bill text confirms Paul introduced S.4486 with the quoted title on May 11, 2026 and it was placed on the calendar May 12, 2026. The 'no further action' status cannot be confirmed from a bill-text version.",
+    "host": "congress.gov",
     "date": "2026-09-30",
     "kind": "fact",
     "archive": false
    },
    "9": {
-    "state": "partly",
-    "why": "The Aug. 7, 2026 opinion in No. 26-5123 (Millett and Garcia; Rao dissenting) affirms the modified preliminary injunction and contains the first quote verbatim. The second quote ('very likely lack statutory authority to construct the ballroom') is not in the excerpted text, though the opinion says the defendants 'likely lack any statutory basis'; the exact wording may be in an elided portion.",
-    "host": "media.cadc.uscourts.gov",
+    "state": "supports",
+    "why": "FactCheck.org confirms Grassley's $1 billion Secret Service proposal with the quoted language, the reported $220 million ballroom figure, the parliamentarian's ruling (May 18 update), and the June 10 update that Republicans removed the funding and Trump signed the bill that day.",
+    "host": "factcheck.org",
     "date": "2026-09-30",
     "kind": "fact",
     "archive": false
    },
    "10": {
     "state": "supports",
-    "why": "Euronews (published 22/08/2026) quotes Trump saying the ballroom is 'going to be close to $400 million' and 'no taxpayer money for the ballroom at all,' and reports the Supreme Court's temporary order letting construction continue.",
-    "host": "euronews.com",
+    "why": "CNBC confirms Senate Republicans stripped up to $1 billion in ballroom/Secret Service security funding from the revised immigration bill, officials said about $200 million would have gone to the ballroom, and the White House spokesperson called the deliberate-removal framing false.",
+    "host": "cnbc.com",
     "date": "2026-09-30",
     "kind": "fact",
     "archive": false
    },
    "11": {
     "state": "supports",
-    "why": "SCOTUSblog reports the Aug. 31, 2026 5-4 order pausing the injunction on standing grounds, and Roberts's dissent joined by Sotomayor, Kagan and Jackson, saying the construction 'is likely unlawful.'",
-    "host": "scotusblog.com",
+    "why": "The Senate roll call page shows vote 139 on June 4, 2026 on the motion to waive budgetary discipline re Merkley Amdt. 5512 with the quoted purpose, 3/5 required, rejected 53-46.",
+    "host": "senate.gov",
     "date": "2026-09-30",
     "kind": "fact",
     "archive": false
    },
    "12": {
+    "state": "supports",
+    "why": "TIME quotes the motion's purpose verbatim, reports it fell short of 60 votes at 53-46, and names the same seven Republicans voting yea.",
+    "host": "time.com",
+    "date": "2026-09-30",
+    "kind": "fact",
+    "archive": false
+   },
+   "13": {
+    "state": "supports",
+    "why": "HuffPost, relaying the Post, reports the March 5 Clark Construction estimate of $600 million with the stated Secret Service, WHMO, Executive Residence and $293 million private shares, and the spokesman's 'approximately $400 million' quote.",
+    "host": "huffpost.com",
+    "date": "2026-09-30",
+    "kind": "fact",
+    "archive": false
+   },
+   "14": {
+    "state": "supports",
+    "why": "The D.C. Circuit's opinion in No. 26-5123 (decided August 7, 2026; opinion by Judges Millett and Garcia, dissent by Judge Rao) affirms the district court's modified preliminary injunction, and contains both quoted phrases: the heading 'Congress has exclusive authority to regulate the construction and demolition of White House structures' and the statement that the defendants 'very likely lack statutory authority to construct the ballroom.'",
+    "host": "media.cadc.uscourts.gov",
+    "date": "2026-09-30",
+    "kind": "fact",
+    "archive": false
+   },
+   "15": {
+    "state": "supports",
+    "why": "Euronews (Aug 22, 2026) quotes Trump saying the ballroom will be 'close to $400 million' and 'no taxpayer money for the ballroom at all,' as the Supreme Court's temporary order let construction continue.",
+    "host": "euronews.com",
+    "date": "2026-09-30",
+    "kind": "fact",
+    "archive": false
+   },
+   "16": {
+    "state": "supports",
+    "why": "SCOTUSblog (Aug 31, 2026) reports the 5-4 order pausing the injunction on standing grounds and Roberts's dissent joined by Sotomayor, Kagan and Jackson saying construction 'is likely unlawful.'",
+    "host": "scotusblog.com",
+    "date": "2026-09-30",
+    "kind": "fact",
+    "archive": false
+   },
+   "17": {
+    "state": "supports",
+    "why": "The per curiam order (No. 26A203, Aug 31, 2026) finds the government likely to show the Trust lacks Article III standing, cites national-security declarations in the stay factors, contains the quoted disclaimer, and stays the injunction pending the certiorari petition.",
+    "host": "supremecourt.gov",
+    "date": "2026-09-30",
+    "kind": "fact",
+    "archive": false
+   },
+   "18": {
     "state": "partly",
-    "why": "The excerpt confirms McCrery withdrew last October after warning about inadequate emergency exits and fire containment, that Trump said no building codes apply (headline: 'I am the code'), and that records don't show whether the safety issues were resolved. The provided text is cut off, so the bylines, the week of October 20, the attribution to two people, the Sept. 30 and Nov. 6 meeting notes, and the 'formal code review' wording are not shown.",
+    "why": "The Post confirms McCrery withdrew last October after warning the preliminary design lacked adequate emergency exits and fire containment, and that Trump countered no building codes apply ('I am the code' is the headline). The week of October 20, the 'two people' attribution, the Sept 30 and Nov 6 meeting notes, the bylines, and the specific finding about a formal code review are not in the excerpt; the text instead says it is unclear whether the safety issues were resolved.",
     "host": "washingtonpost.com",
     "date": "2026-09-30",
     "kind": "fact",
@@ -9494,6 +9542,128 @@
     "why": "",
     "host": "democrats-judiciary.house.gov",
     "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   }
+  },
+  "parnell-stars-and-stripes-independence-2026": {
+   "0": {
+    "state": "supports",
+    "why": "The Federal Register text shows the OATSD(PA) final rule on 32 CFR Part 246, effective January 15, 2026, removing the 1994 regulation because it addresses internal policy and 'does not have an impact or burden to the public.' The 91 Fed. Reg. 1706 citation is not shown in the excerpt.",
+    "host": "federalregister.gov",
+    "date": "2026-09-30",
+    "kind": "fact",
+    "archive": false
+   },
+   "1": {
+    "state": "supports",
+    "why": "The AP report on PBS quotes Parnell's X post: 'refocus its content away from woke distractions' and 'No more repurposed DC gossip columns; no more Associated Press reprints.' (PBS page is timestamped Jan 16; the post was Thursday, Jan 15.)",
+    "host": "pbs.org",
+    "date": "2026-09-30",
+    "kind": "fact",
+    "archive": false
+   },
+   "2": {
+    "state": "supports",
+    "why": "Stars and Stripes reports the March 9 memo limits wire services, bars comics/syndicated features with Parnell-approved exceptions, requires 'good order and discipline,' bars CUI, routes ombudsman information for Congress through Legislative Affairs, moves public affairs into an oversight role, affirms independence, and recounts Parnell's Jan. 15 post.",
+    "host": "stripes.com",
+    "date": "2026-09-30",
+    "kind": "fact",
+    "archive": false
+   },
+   "3": {
+    "state": "supports",
+    "why": "Smith's April 23 column states her last day would be April 28, no reason was given, the firing notice came from Parnell's office, and the March 9 interim policy was issued by Deputy Secretary Feinberg.",
+    "host": "stripes.com",
+    "date": "2026-09-30",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "supports",
+    "why": "The joint motion recounts the June 3, 2026 APA complaint challenging the rescission and the March 9 memo, the August 21, 2026 amendment of Directive 5122.11 that incorporates and cancels the memo, and a proposed schedule ending December 2, 2026.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-09-30",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "supports",
+    "why": "The complaint (filed 06/25/26) names DoD, Hegseth and Feinberg officially and Parnell officially and individually, and alleges notice came ten days after the April 8 column, effective April 28, 2026, on a form provided by Parnell, with no reason given.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-09-30",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
+    "state": "supports",
+    "why": "Stars and Stripes (Aug 21, 2026) reports the Pentagon moved to fire Slavin, Lederer and Korte; Slavin said he was being fired for insubordination over his CBS remarks and received a notice of proposed separation; a Pentagon official confirmed the notices.",
+    "host": "stripes.com",
+    "date": "2026-09-30",
+    "kind": "fact",
+    "archive": false
+   },
+   "7": {
+    "state": "partly",
+    "why": "The complaint (filed 08/27/26) names Parnell, Brey (who signed the notices), DoD and Hegseth, alleges notices were ordered August 12, the day after the Lincoln story, and that Feinberg issued the March 9 memo. The allegation that Parnell approved a July 28 performance review faulting Lederer, and that Brey specifically (rather than 'Defendants') ordered the notices, are not in the provided excerpt.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-09-30",
+    "kind": "fact",
+    "archive": false
+   },
+   "8": {
+    "state": "partly",
+    "why": "The memorandum order (Sept 4, 2026) recounts the repeal, the March memo, the notices (Slavin/Korte citing CBS statements; Lederer citing his Stripes interview and refusal), denies the TRO/PI motion, and notes the declarant's statement that notices were completed August 6. The explicit Garcetti official-duties holding is not stated in the windowed excerpt.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-09-30",
+    "kind": "fact",
+    "archive": false
+   },
+   "9": {
+    "state": "supports",
+    "why": "Stars and Stripes (Sept 4, 2026) reports the ruling, the journalists' statement that they were disappointed, considering next steps, and that the ruling was not final, and the government's hearing argument that notices were prepared before the Lincoln story.",
+    "host": "stripes.com",
+    "date": "2026-09-30",
+    "kind": "fact",
+    "archive": false
+   },
+   "10": {
+    "state": "supports",
+    "why": "CBS reports McFadden let the Pentagon proceed, the three received separation notices in August and were placed on administrative leave, and the DOJ lawyer said the process began more than a month before the Lincoln story.",
+    "host": "cbsnews.com",
+    "date": "2026-09-30",
+    "kind": "fact",
+    "archive": false
+   },
+   "11": {
+    "state": "supports",
+    "why": "Stars and Stripes (Sept 14, 2026) reports notices issued Aug. 21, Lederer's view that coverage was the underlying cause, and Parnell's X post the day after the Sept. 4 hearing with both quoted phrases.",
+    "host": "stripes.com",
+    "date": "2026-09-30",
+    "kind": "fact",
+    "archive": false
+   },
+   "12": {
+    "state": "supports",
+    "why": "The Sept 16, 2026 supplemental brief challenges the memo and the August 21 revised directive it calls the Parnell Directive (and the repeal rule) as issued without notice and comment, arbitrary and capricious, and violating readers' First Amendment right to receive information, and describes plaintiffs as longtime subscribers, two on the publisher's advisory board.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-09-30",
+    "kind": "fact",
+    "archive": false
+   },
+   "13": {
+    "state": "partly",
+    "why": "The Sept 21, 2026 government reply argues Smith was removed after her April 8 column and wrote it as ombudsman, citing Slavin v. Parnell, and references the plaintiff's reply (ECF 13) seeking live witness testimony. The Sept 16 date of that reply, the Sept 24 hearing date, and the full list of named defendants are not in the provided excerpt.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-09-30",
+    "kind": "fact",
+    "archive": false
+   },
+   "14": {
+    "state": "supports",
+    "why": "EJI (Sept 24, 2026) reports their lawyer said the three will continue pursuing procedural claims before McFadden and quotes Parnell's statement including the 'platform for airing employee grievances' language.",
+    "host": "ethicsandjournalism.org",
+    "date": "2026-09-30",
     "kind": "fact",
     "archive": false
    }
@@ -15464,32 +15634,16 @@
     "archive": false
    },
    "4": {
-    "state": "not_found",
-    "why": "The HousingWire article is from the October 2025 filing and says nothing about the complaint's status as of July 2026; the provided text cannot establish whether any OSC determination had been reported by then.",
-    "host": "housingwire.com",
+    "state": "partly",
+    "why": "The OSC assessment confirms over 1,000 complaints about 37 agencies and the White House, no discipline due to reasonable reliance on the 2024 Advisory while Hatch Act staff were furloughed, no final determination, HUD listed among agencies that did not respond or refused, and the 'might weigh in favor of concluding' language. Whether OSC described HUD's banner cannot be checked in the windowed excerpt.",
+    "host": "osc.gov",
     "date": "2026-09-30",
     "kind": "fact",
     "archive": false
    },
    "5": {
     "state": "supports",
-    "why": "The same HousingWire article, used again for this re-verification, shows no OSC determination reported -- only the pending complaint and an automatic away-message reply -- consistent with the claim.",
-    "host": "housingwire.com",
-    "date": "2026-09-15",
-    "kind": "fact",
-    "archive": false
-   },
-   "6": {
-    "state": "partly",
-    "why": "The Sept. 25, 2026 OSC assessment confirms the 1,000+ complaints across 37 agencies and the White House, no discipline, reasonable reliance on the 2024 Advisory while Hatch Act staff were furloughed, no final determination, HUD among agencies that did not respond or refused, and the 'might weigh in favor of concluding' language. The provided text is excerpted, so the claim that OSC did not describe HUD's banner can't be checked against the full document.",
-    "host": "osc.gov",
-    "date": "2026-09-30",
-    "kind": "fact",
-    "archive": false
-   },
-   "7": {
-    "state": "supports",
-    "why": "Garcia's Sept. 25, 2026 statement calls OSC's response 'not satisfactory,' cites his Oct. 2, 2025 letter highlighting HUD posts blaming the 'Radical Left' for 'massive pain,' and says the committee will keep pressing OSC.",
+    "why": "The Sept 25, 2026 statement quotes Garcia calling OSC's response 'not satisfactory,' notes his October 2, 2025 letter highlighting HUD posts blaming the 'Radical Left' for 'massive pain,' and pledges continued oversight.",
     "host": "oversightdemocrats.house.gov",
     "date": "2026-09-30",
     "kind": "fact",
