@@ -3223,17 +3223,17 @@
    },
    "2": {
     "state": "partly",
-    "why": "The source confirms the Pentagon Inspector General's report (released Dec. 4) found Hegseth's Signal use violated DoD Instruction 8170.01, but it does not mention a Federal Records Act violation, does not describe two separate Signal chats (only the March 15 Houthi-strike chat is discussed), and does not address whether any criminal charges or referral followed.",
-    "host": "lawfaremedia.org",
-    "date": "2026-09-15",
+    "why": "The excerpt supports the core IG findings (quantity and strike times of manned aircraft sent over Signal on a personal phone 2 to 4 hours before the strikes, non-compliance with DoDI 8170.01, 'Defense Team Huddle' existing, and inability to verify other chats because the Secretary would not provide his phone). But the provided text states only the records-retention requirement (not an explicit finding that Hegseth failed it), does not show the recommendation was the report's only one or that it recommended no action against Hegseth, and does not contain an official saying Hegseth posted the same strike information in the Huddle chat.",
+    "host": "static.foxnews.com",
+    "date": "2026-09-30",
     "kind": "fact",
     "archive": false
    },
    "3": {
     "state": "not_found",
-    "why": "The source provided is the original March 27, 2025 NBC News article itself, which cannot establish whether any later (2025-2026) reporting existed or not; the claim is an absence-of-evidence assertion about a subsequent August 2026 re-verification search that this source cannot speak to.",
+    "why": "The claim asserts an absence of any follow-up reporting after March 2025 and after the December 2025 IG report; the cited source is the original March 27, 2025 NBC article, which cannot speak to later reporting (it only notes the employee had 30 days to appeal).",
     "host": "nbcnews.com",
-    "date": "2026-09-15",
+    "date": "2026-09-30",
     "kind": "fact",
     "archive": false
    }
@@ -6584,104 +6584,120 @@
   },
   "hegseth-signal-yemen-strike-2025-03": {
    "0": {
-    "state": "partly",
-    "why": "The NYT text confirms fighter pilots were angered and bewildered and said the Signal disclosure upended decades of operational-security doctrine, and that flight schedules/strike windows were posted. But the pilots quoted are 'a dozen Air Force and Navy fighter pilots,' current and former, not identified as the pilots who flew the March 15 strikes; the 'personal-device' detail and the March 27-28 date are not shown in the excerpt.",
-    "host": "nytimes.com",
+    "state": "supports",
+    "why": "The article directly describes the commercial provider returning a Gmail address and mobile number, the email and some passwords in over 20 leaks, the recently deleted WhatsApp account, non-publication and no password testing, the spyware risk, and the Defense Department's non-response. The March 26 date is not shown in the extracted text but nothing contradicts it.",
+    "host": "spiegel.de",
     "date": "2026-09-30",
     "kind": "fact",
     "archive": false
    },
    "1": {
     "state": "partly",
-    "why": "The WSJ headline and dek confirm the Pentagon IG publicly announced a review of Hegseth's sharing of strike plans in the Signal chat. The April 3 date and the link to a December 2025 report are not in the provided excerpt (not contradicted).",
-    "host": "wsj.com",
+    "why": "The text supports the dozen pilots' view that the mistaken inclusion and Hegseth's insistence he did nothing wrong upend decades of operational-security doctrine, and the F/A-18 flight schedules for March 15. It does not contain the pilots saying they could no longer be certain the Pentagon was focused on their safety when strapping into cockpits, and the March 27 date is not shown.",
+    "host": "nytimes.com",
     "date": "2026-09-30",
     "kind": "fact",
     "archive": false
    },
    "2": {
-    "state": "supports",
-    "why": "The syndicated NYT text states, citing four people, that Hegseth shared March 15 strike details including F/A-18 flight schedules in a private chat with his wife, brother and personal lawyer, named 'Defense | Team Huddle,' created in January, accessed on his private phone, with about a dozen inner-circle members; the brother and lawyer have Pentagon jobs with no clear need to know.",
-    "host": "web.archive.org",
+    "state": "partly",
+    "why": "The extracted WSJ text confirms the Inspector General publicly announced a review of Hegseth's sharing of strike plans in the Signal chat, but the April 3 date and the announcement being made 'that day' are not in the text, and the link to the December 2025 report is outside this source.",
+    "host": "wsj.com",
     "date": "2026-09-30",
     "kind": "fact",
     "archive": false
    },
    "3": {
-    "state": "partly",
-    "why": "The April 21, 2025 release confirms Schiff's letter to NARA seeking an investigation and preservation of records, flags Rubio's conflict as acting Archivist and asks him to recuse, appoint a senior career official and consider IG assistance, and covers both chats. The 'eight questions' and May 5, 2025 deadline are not in the provided excerpt.",
-    "host": "schiff.senate.gov",
+    "state": "supports",
+    "why": "The NYT article (via Spokesman-Review) states, citing four people, that Hegseth shared March 15 strike details including F/A-18 flight schedules in the 'Defense | Team Huddle' chat he created in January and accessed on his private phone, with his wife (not a DoD employee), brother Phil and lawyer Tim Parlatore (Pentagon jobs, no clear need to know), and about a dozen others.",
+    "host": "web.archive.org",
     "date": "2026-09-30",
     "kind": "fact",
     "archive": false
    },
    "4": {
-    "state": "supports",
-    "why": "CBS reports the monitor installed to give Hegseth remote access to Signal and texts on his personal phone, two sources saying it bypasses security protocols, Buria's oversight role, the earlier AP 'dirty line' report, and the spokesperson's denial describing a one-way line with the phone kept outside the office.",
-    "host": "cbsnews.com",
+    "state": "partly",
+    "why": "The April 21, 2025 release supports the letter to NARA seeking an investigation and preservation, the Rubio acting-Archivist conflict, and the requests that he recuse, appoint a senior career official and consider IG assistance, and it references both chats. The extracted text does not show the letter posing eight questions or a May 5, 2025 response deadline.",
+    "host": "schiff.senate.gov",
     "date": "2026-09-30",
     "kind": "fact",
     "archive": false
    },
    "5": {
     "state": "supports",
-    "why": "The WSJ text directly states Hegseth used at least a dozen Signal chats for official business, told aides to inform foreign governments about an unfolding operation, and discussed media, travel, schedule and other sensitive information. The May 5 date is not shown in the excerpt, and the 'habitual use' framing is the tracker's characterization.",
-    "host": "wsj.com",
+    "why": "CBS reports the monitor giving remote access to Signal and texts from his personal phone, two sources saying it bypasses DoD security protocols, Buria's oversight per two sources, the AP 'dirty line' report, and the spokesperson's denial describing a one-way line alerting him to messages on a phone kept outside the office.",
+    "host": "cbsnews.com",
     "date": "2026-09-30",
     "kind": "fact",
     "archive": false
    },
    "6": {
-    "state": "supports",
-    "why": "The AP report (June 6, 2025) states the IG is examining whether aides were asked to delete Signal messages, citing two people and documents, focused on the March 15 strikes, and is asking staffers who posted the information and who had access to his phone.",
-    "host": "militarytimes.com",
+    "state": "partly",
+    "why": "The WSJ text supports at least a dozen chats, telling aides to inform foreign governments about an unfolding operation, and discussing media appearances, travel, schedule and other sensitive information. The closing characterization 'consistent with habitual use rather than an isolated error' is not in the source, and the May 5 date is not shown.",
+    "host": "wsj.com",
     "date": "2026-09-30",
     "kind": "fact",
     "archive": false
    },
    "7": {
     "state": "supports",
-    "why": "The CBS video caption confirms Moulton pressed Hegseth about Signal texts that may have included sensitive and classified information about the Houthi operation, at a HASC hearing on the 2026 budget. The June 12, 2025 date is not shown in the caption text.",
-    "host": "cbsnews.com",
+    "why": "The AP story dated June 6, 2025, citing two people and documents reviewed, reports the IG looking into whether aides were asked to delete Signal messages about the March 15 strikes and asking staffers with Hegseth that day who posted the information and who had access to his phone.",
+    "host": "militarytimes.com",
     "date": "2026-09-30",
     "kind": "fact",
     "archive": false
    },
    "8": {
-    "state": "partly",
-    "why": "Politico (July 14, 2025) confirms three sources, the focus on Buria and Parlatore, the 'zeroing in' quote, the IG question about the unsecured line, the OSI questions about leaks and clearance level, the deletion questions, and Buria/Parlatore's responses. The detail that OSI investigators asked by name whether Buria or Parlatore requested deletions is not in the provided excerpt.",
-    "host": "politico.com",
+    "state": "supports",
+    "why": "The CBS video description matches the claim nearly word for word, placing the exchange at a House Armed Services hearing on the DoD 2026 budget; the June 12 date is not shown in the text but is not contradicted.",
+    "host": "cbsnews.com",
     "date": "2026-09-30",
     "kind": "fact",
     "archive": false
    },
    "9": {
     "state": "partly",
-    "why": "The IG report excerpt confirms the March 26 SASC request, the quantity/strike times sent 2-4 hours before the strikes on his personal phone, the match with a SECRET//NOFORN CENTCOM email, non-compliance with DoDI 8170.01, auto-deleted messages, and a 'Defense Team Huddle' chat including non-DoD personnel. The report number, Dec 2/Dec 4 dates, the 44 U.S.C. 2911/DoDI 5015.02 findings, the claim that Hegseth posted the same strike information there, and the IG's inability to verify due to lack of phone access are not in the provided excerpt.",
-    "host": "media.defense.gov",
+    "why": "Politico (July 14, 2025, three people) supports the IG question on Buria and the unsecured line, the OSI questions on Buria as a leak source and Parlatore attending meetings beyond his clearance, the quote, and Buria/Parlatore's responses. But the text describes Buria only as a 'senior Hegseth aide' (not 'former military aide turned senior civilian official'), attributes the deletion questioning to IG investigators, and contains no statement that OSI asked by name whether Buria or Parlatore made deletion requests.",
+    "host": "politico.com",
     "date": "2026-09-30",
     "kind": "fact",
     "archive": false
    },
    "10": {
     "state": "partly",
-    "why": "Fox confirms the IG affirmed Hegseth's broad authority, as top classification authority, to declassify information. But the same passage pairs that with the finding that policy still prohibited sending it over nonsecure channels, and the claim's conclusion that this 'cuts against' an unauthorized-disclosure theory is the tracker's analysis, not something the source states.",
-    "host": "foxnews.com",
+    "why": "The excerpted report supports the March 26, 2025 SASC request, the quantity/strike-time information sent 2 to 4 hours before the strikes, the SECRET//NOFORN match, the DoDI 8170.01 non-compliance, auto-deleted messages, and an official describing a 'Defense Team Huddle' chat with non-DoD personnel. The provided text does not show the Dec 2/Dec 4 dates, an explicit finding that records were not retained as 44 U.S.C. 2911 and DoDI 5015.02 require, an official saying Hegseth posted the same strike information in the Huddle chat, or the IG's inability-to-verify statement tied to phone access.",
+    "host": "media.defense.gov",
     "date": "2026-09-30",
-    "kind": "interpretation",
+    "kind": "fact",
     "archive": false
    },
    "11": {
-    "state": "partly",
-    "why": "Lawfare confirms Hegseth declined an IG interview request and submitted a written statement on July 25. The provided text does not mention Hegseth calling the investigation partisan.",
-    "host": "lawfaremedia.org",
+    "state": "supports",
+    "why": "The PBS segment, which relies on 'a person who has read this document' before release, contains both quoted passages: Hegseth declining the IG interview and calling the probe partisan, and Parnell's 'total exoneration' statement. The December 3 date is not shown but is not contradicted.",
+    "host": "pbs.org",
     "date": "2026-09-30",
     "kind": "fact",
     "archive": false
    },
    "12": {
     "state": "supports",
-    "why": "The opinion in No. 26-1690 recounts The Times's reporting that Hegseth shared Yemen strike details in a second private Signal chat including Parlatore, described as a Senior Advisor, and his wife and brother.",
+    "why": "Fox News states the report affirms Hegseth, as top classification authority, can declassify information while policy still bars nonsecure, nonofficial channels to send it.",
+    "host": "foxnews.com",
+    "date": "2026-09-30",
+    "kind": "fact",
+    "archive": false
+   },
+   "13": {
+    "state": "supports",
+    "why": "Lawfare states, citing the report, that Hegseth declined an IG interview request and sent a written statement on July 25 instead.",
+    "host": "lawfaremedia.org",
+    "date": "2026-09-30",
+    "kind": "fact",
+    "archive": false
+   },
+   "14": {
+    "state": "supports",
+    "why": "The opinion in Civil Action No. 26-1690 (a new lawsuit in the NYT v. DoD dispute) recounts The Times reporting that Hegseth shared Yemen strike plans in a second private Signal chat including Parlatore, described as a Senior Advisor, and Hegseth's wife and brother.",
     "host": "storage.courtlistener.com",
     "date": "2026-09-30",
     "kind": "fact",
@@ -15626,11 +15642,11 @@
     "archive": false
    },
    "3": {
-    "state": "partly",
-    "why": "The source confirms the banner was updated to the quoted wording. It does not say the change was a response to criticism, so the 'partial responsiveness' reading is the claim's own inference.",
+    "state": "supports",
+    "why": "The Hill (dated Thursday 10/02/25) reports the banner was updated Wednesday to the quoted 'Radical Left in Congress shut down the government' text and gives no reason for the change.",
     "host": "thehill.com",
-    "date": "2026-09-21",
-    "kind": "interpretation",
+    "date": "2026-09-30",
+    "kind": "fact",
     "archive": false
    },
    "4": {
