@@ -2085,41 +2085,57 @@
   "bondi-media-subpoena-policy-reversal-2025": {
    "0": {
     "state": "supports",
-    "why": "NPR confirms Bondi's April 25, 2025 memo rescinded the Biden-era policy, authorizing subpoenas/court orders/search warrants against journalists in leak investigations, with approval and narrow-tailoring safeguards described but the full policy not published.",
-    "host": "npr.org",
-    "date": "2026-09-15",
+    "why": "The RCFP analysis states that in April 2025 the department under Bondi rescinded Garland's 2022 press protections, making it easier to obtain and use these tools to identify leakers.",
+    "host": "rcfp.org",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "1": {
     "state": "supports",
-    "why": "CBS News confirms both remaining elements: the 2022 date for Garland's restricting regulations, and Bondi's actual stated justification (safeguarding sensitive information, leaks undermining Trump's agenda) rather than the previously misattributed 'uphold the rule of law' phrasing.",
-    "host": "cbsnews.com",
-    "date": "2026-09-15",
+    "why": "NPR (dated April 25, 2025) reports Bondi's internal memo issued that Friday rescinded the Biden-era policy, allowing subpoenas and testimony from journalists with leadership approval, advance notice and narrowness requirements; the memo was obtained by NPR rather than published.",
+    "host": "npr.org",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "2": {
     "state": "supports",
-    "why": "Courthouse News/AP reports the same policy shift, explicitly framing it as DOJ resuming subpoenas to journalists as part of a broader leaks crackdown.",
-    "host": "courthousenews.com",
-    "date": "2026-09-15",
+    "why": "CBS reports the memo reversed the policy (Garland's 2022 regulations restricting seizures) and quotes Bondi's 'safeguarding classified, privileged, and other sensitive information' justification and leaks that 'undermine' Trump's agenda.",
+    "host": "cbsnews.com",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "3": {
     "state": "supports",
-    "why": "The Press Freedom Tracker confirms the April 25, 2025 date, identifies the rescinded policy as Garland's July 2021 policy responding to prior secret seizure of at least nine journalists' records, and quotes Seth Stern criticizing both Bondi's action and Democrats' failure to pass the PRESS Act.",
-    "host": "pressfreedomtracker.us",
-    "date": "2026-09-15",
+    "why": "The Courthouse News (AP) piece is headlined and framed as DOJ resuming subpoenas to journalists as part of a leaks crackdown.",
+    "host": "courthousenews.com",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "4": {
+    "state": "partly",
+    "why": "The Tracker confirms the April 25, 2025 date, Garland's July 2021 policy, the 'at least nine journalists' (records 'obtained or attempted to obtain'), and Stern's PRESS Act criticism; but Stern's quote targets 'Every Democrat' generally (the page says 'members of Congress', not specifically Senate Democrats), and the condemnation of Bondi is attributed to FPF rather than Stern's quoted words.",
+    "host": "pressfreedomtracker.us",
+    "date": "2026-10-04",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
     "state": "supports",
-    "why": "The Ballard Spahr alert confirms the May 1, 2025 release of the new regulations and describes the retained top-DOJ-approval, narrow-tailoring, and advance-notice safeguards, matching the claim.",
+    "why": "Ballard Spahr describes top-DOJ/AG approval, narrowly drawn process, and notice requirements, and states the Department released the new regulations on May 1.",
     "host": "ballardspahr.com",
-    "date": "2026-09-15",
+    "date": "2026-10-04",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
+    "state": "supports",
+    "why": "The NYT text states each element: March WSJ records demand on Iran-war reporting, the Post reporter subpoena on Venezuela, sealed challenges in Virginia, and June withdrawal after the judge signaled she would likely quash.",
+    "host": "nytimes.com",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    }
@@ -3883,16 +3899,48 @@
    },
    "8": {
     "state": "supports",
-    "why": "CNN states this verbatim and gives no detail on Olsen's Maricopa role.",
-    "host": "cnn.com",
+    "why": "KJZZ (March 23, 2026) describes the subpoena's scope from records-law release, the FBI property receipt showing more than 200 terabytes, and Courchaine's letter allowing documents instead of testimony.",
+    "host": "kjzz.org",
     "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "9": {
     "state": "supports",
-    "why": "CBS contains both quoted passages.",
+    "why": "KJZZ (April 7, 2026) quotes Petersen's referral for 'obstruction of justice and tampering with a witness,' describes the March 9 and March 31 letters, and quotes Mayes 'this is not about 2020.'",
+    "host": "kjzz.org",
+    "date": "2026-10-04",
+    "kind": "fact",
+    "archive": false
+   },
+   "10": {
+    "state": "supports",
+    "why": "KJZZ (April 15, 2026) states Courchaine signed off on the subpoena, quotes his 'carefully reviewing' letter, Mayes' 'all nonsense,' and Fontes' tax-dollars quote.",
+    "host": "kjzz.org",
+    "date": "2026-10-04",
+    "kind": "fact",
+    "archive": false
+   },
+   "11": {
+    "state": "supports",
+    "why": "CNN states Olsen made the Fulton County referral and 'played a role' in the Maricopa subpoena, without describing the role.",
+    "host": "cnn.com",
+    "date": "2026-10-04",
+    "kind": "fact",
+    "archive": false
+   },
+   "12": {
+    "state": "supports",
+    "why": "CBS reports both quoted statements: the Fulton County referral per an FBI affidavit and other referrals including one in Arizona per a source.",
     "host": "cbsnews.com",
+    "date": "2026-10-04",
+    "kind": "fact",
+    "archive": false
+   },
+   "13": {
+    "state": "partly",
+    "why": "The syndicated Reuters text (truncated) confirms it reports on Olsen's role in obtaining Maricopa County records and that the effort failed, but the specific quoted language ('oversaw ... according to three people'), the records list (voter rolls, 2.1 million ballot images, signature data) and the no-foreign-manipulation finding are not in the provided text.",
+    "host": "thedailystar.net",
     "date": "2026-10-04",
     "kind": "fact",
     "archive": false
@@ -8457,21 +8505,29 @@
    },
    "1": {
     "state": "supports",
-    "why": "The release states the $1.6B deal and the $1.5B private raise with Cantor as lead placement agent were announced the same day, that Cantor acted as a compensated broker, and that USAR had held only one prior contract worth under $100,000.",
-    "host": "vanhollen.senate.gov",
+    "why": "InvestmentNews (May 19, 2025) states the ownership transfer to trusts for his adult children and quotes the trust oversight/role language verbatim.",
+    "host": "investmentnews.com",
     "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "2": {
     "state": "supports",
-    "why": "The senators' letter says Lutnick publicly touted and reportedly was personally involved in the deal, including meeting USAR's CEO in early November 2025.",
+    "why": "The letter states the same-day $1.5B raise with Cantor as lead placement agent acting as a compensated broker, and USAR's one prior sub-$100,000 contract.",
     "host": "vanhollen.senate.gov",
     "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "3": {
+    "state": "supports",
+    "why": "The letter says Lutnick publicly touted and reportedly was personally involved in the deal, including meeting USAR's CEO in early November 2025.",
+    "host": "vanhollen.senate.gov",
+    "date": "2026-10-04",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
     "state": "unopened",
     "why": "",
     "host": "vanhollen.senate.gov",
@@ -8479,65 +8535,57 @@
     "kind": "fact",
     "archive": false
    },
-   "4": {
+   "5": {
     "state": "supports",
-    "why": "Warren's release states she and Rep. Dean pressed the Acting IG to investigate Lutnick family conflicts involving AI data centers and cites reported pressure on foreign governments whose investments could flow to a Lutnick-linked firm.",
+    "why": "The release describes Warren and Dean pressing the Acting IG to investigate Lutnick family data-center conflicts, including reported pressure on foreign governments whose investments could flow to a Lutnick-linked firm.",
     "host": "warren.senate.gov",
     "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
-   "5": {
-    "state": "partly",
-    "why": "The letter supports the tariff-betting allegation, the 'reportedly stands to make extraordinary profits' language, and Cantor's Newsweek denial, but the provided text does not cite 18 U.S.C. §208(a) or 5 C.F.R. §2635.702.",
-    "host": "democrats-judiciary.house.gov",
-    "date": "2026-10-04",
-    "kind": "fact",
-    "archive": false
-   },
    "6": {
-    "state": "supports",
-    "why": "The Real Deal states Commerce officials said Lutnick had no direct role and complied with ethics requirements, the White House echoed that, and Cantor denied improper influence.",
-    "host": "therealdeal.com",
+    "state": "partly",
+    "why": "The letter text supports the tariff-bet allegation, the 'reportedly stands to make extraordinary profits' language and the Cantor Newsweek denial, and raises 'federal ethics and insider trading' questions; but the extracted text does not show any citation to 18 U.S.C. §208(a) or 5 C.F.R. §2635.702 (the relevant footnote is elided).",
+    "host": "democrats-judiciary.house.gov",
     "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "7": {
     "state": "supports",
-    "why": "The letter calls for Lutnick's resignation citing the Epstein files contradicting his account, an FBI whistleblower tip on Cantor improprieties, and ethics violations in office, which later cite the congressional AI-data-center letter.",
-    "host": "citizen.org",
+    "why": "The Real Deal states Commerce officials said Lutnick had no direct role and complied with ethics requirements, the White House echoed it, and Cantor denied improper influence.",
+    "host": "therealdeal.com",
     "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "8": {
     "state": "supports",
-    "why": "The June 3, 2026 NIST release states exactly the $277M final award and up-to-$1.3B loan agreement with USAR under the CHIPS and Science Act.",
-    "host": "nist.gov",
+    "why": "The letter calls for resignation citing Epstein-file contradictions, an FBI whistleblower tip on Cantor improprieties, and ethics violations including the congressional data-center concerns.",
+    "host": "citizen.org",
     "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "9": {
     "state": "supports",
-    "why": "The Daily Beast text contains the quoted Cantor/$210 million passage and the White House spokesperson quote; the June 28 date is not shown in the text but the substance matches.",
-    "host": "yahoo.com",
+    "why": "The NIST release dated June 3, 2026 states exactly this award and loan agreement.",
+    "host": "nist.gov",
     "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "10": {
     "state": "supports",
-    "why": "The release says the lawmakers, after Lutnick's refusal to answer, expanded the probe to press Cantor and USAR directly, quotes the transparency demand, and sets a July 23, 2026 deadline.",
-    "host": "warren.senate.gov",
+    "why": "The Daily Beast text summarizes the NYT investigation, contains the quoted Cantor $210 million passage and the White House spokesperson quote (publication date not shown in text).",
+    "host": "yahoo.com",
     "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "11": {
     "state": "supports",
-    "why": "The July 6, 2026 letter to Brandon Lutnick cites the June 3, 2026 finalization, says USAR chose Cantor as lead placement agent alongside Moelis, and states Secretary Lutnick 'has refused to provide answers'.",
+    "why": "The release describes the new letters to Cantor and USAR, the quoted transparency demand, the July 23, 2026 deadline, and the expansion after Lutnick's refusal to answer (release dated July 7; letter itself dated July 6).",
     "host": "warren.senate.gov",
     "date": "2026-10-04",
     "kind": "fact",
@@ -8545,31 +8593,39 @@
    },
    "12": {
     "state": "supports",
-    "why": "The July 7, 2026 Daily Beast article quotes the Cantor spokesperson verbatim as stated in the claim.",
-    "host": "thedailybeast.com",
+    "why": "The July 6, 2026 letter to Brandon Lutnick cites the June 3 finalization, names Cantor as lead placement agent alongside Moelis, and says Secretary Lutnick has refused to provide answers.",
+    "host": "warren.senate.gov",
     "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "13": {
     "state": "supports",
-    "why": "The July 30, 2026 letter cites reporting on at least 14 companies tied to Lutnick or Trump families, $8.9 billion in support, asks preservation of records on Cantor Fitzgerald, USA Rare Earth, Kaz Resources and others, and requests communications details by August 13, 2026.",
-    "host": "blumenthal.senate.gov",
+    "why": "The Daily Beast (published July 7, 2026) quotes the Cantor spokesperson statement verbatim.",
+    "host": "thedailybeast.com",
     "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "14": {
-    "state": "supports",
-    "why": "Alternet reports Kernen said it 'looks like a conflict of interest', Lutnick replied 'It's just not', said his kids bought the company and called it 'minor stuff', and swore he had no idea until Moelis flagged it.",
-    "host": "alternet.org",
+    "state": "partly",
+    "why": "The July 30, 2026 letter's addressees, the 14-company / $8.9 billion figures from NYT reporting, the preservation list and August 13 deadline are all in the text, but the extracted text does not show the signatories (Blumenthal, Schiff, Warren).",
+    "host": "blumenthal.senate.gov",
     "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "15": {
+    "state": "supports",
+    "why": "Alternet (Sept. 2, 2026) reports Kernen's 'looks like a conflict of interest' question and Lutnick's quoted replies, and the 'swore he had no idea' line.",
+    "host": "alternet.org",
+    "date": "2026-10-04",
+    "kind": "fact",
+    "archive": false
+   },
+   "16": {
     "state": "partly",
-    "why": "The Bloomberg text confirms Cantor bankers earned fees raising $1.5 billion for USAR, but the provided (truncated) text does not contain the $4 billion in offers, Moelis co-agent role, $50 million fee figure, or the Commerce spokeswoman's statement.",
+    "why": "The truncated Bloomberg text (Sept. 23, 2026) confirms Cantor bankers earned fees raising $1.5 billion for USAR, but the $4 billion in offers, Moelis co-agent role, $50 million fee figure and Commerce spokeswoman quote are not in the provided text.",
     "host": "finance.yahoo.com",
     "date": "2026-10-04",
     "kind": "fact",
@@ -14951,9 +15007,9 @@
    },
    "3": {
     "state": "supports",
-    "why": "CNBC reports the letter asking Trump to name the managers, the revocable trust with Trump Jr. as sole trustee, 21,000-plus 2025 trades, Trump's July quote and Eric Trump's descriptions of the accounts.",
+    "why": "CNBC covers the Warren-Garcia letter seeking managers who direct trades, the revocable trust with Trump Jr. as sole trustee, 21,000+ 2025 trades, Trump's July quote, Eric Trump's statements, and Anna Kelly's 'same, tired narrative' statement.",
     "host": "cnbc.com",
-    "date": "2026-10-03",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
@@ -16754,10 +16810,10 @@
     "archive": false
    },
    "9": {
-    "state": "partly",
-    "why": "The article supports Paoletta's cooperation condition, his letter telling DOT to ignore a GAO impoundment ruling, and Vought's 'shouldn't exist' remark, but describes the money as for 'electric car development' rather than EV charging, and the extracted text does not show the New Yorker co-publication.",
+    "state": "supports",
+    "why": "The ProPublica text states all three points about Paoletta's letters and Vought's GAO remark (publication date/co-publishing not shown in text).",
     "host": "propublica.org",
-    "date": "2026-10-03",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
