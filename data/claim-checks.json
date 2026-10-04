@@ -928,58 +928,58 @@
   },
   "blanche-journalist-grand-jury-subpoenas-2026": {
    "0": {
-    "state": "unopened",
-    "why": "",
-    "host": "washingtonpost.com",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "The CBS News report states the WSJ said subpoenas received March 4 relate to a Feb. 23 article on the Joint Chiefs chairman and others warning Trump about the risks of an extended Iran campaign, matching the claim.",
+    "host": "wcbi.com",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "1": {
-    "state": "partly",
-    "why": "CNN confirms WSJ reporters were subpoenaed as part of the same leak investigation as the Post's Nakashima, tied to Iran-war coverage, but the article refers only to 'several reporters' at the Journal and never specifies a count of three or the phrase 'Pentagon leak reporting.'",
-    "host": "cnn.com",
-    "date": "2026-09-15",
+    "state": "unopened",
+    "why": "",
+    "host": "washingtonpost.com",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "2": {
     "state": "supports",
-    "why": "The AP article, published June 24, 2026, directly states the reason for the withdrawal was unclear and that the withdrawal itself (first reported June 23) was confirmed, matching the claim precisely.",
-    "host": "firstamendment.mtsu.edu",
-    "date": "2026-09-15",
+    "why": "CNN states DOJ issued and withdrew grand jury subpoenas to Post and Journal journalists, confirms the Nakashima subpoena, and says the leak hunts were fueled by Trump's anger over Iran stories.",
+    "host": "cnn.com",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "3": {
-    "state": "supports",
-    "why": "The AP article states this exact fact directly.",
-    "host": "apnews.com",
-    "date": "2026-09-15",
+    "state": "partly",
+    "why": "The AP text says it was not clear why the government withdrew the subpoenas and that the rescission was first reported June 23, supporting the undisclosed-reason point; it does not state explicitly that the withdrawal itself occurred in June.",
+    "host": "firstamendment.mtsu.edu",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "4": {
     "state": "supports",
-    "why": "The Atlantic newsletter, published ahead of Blanche's July confirmation hearing, documents him personally defending the WaPo/WSJ subpoena effort in this public post, while separately describing his authorization of subpoenas to NYT reporters over the Air Force One leak story and attributing the driving force behind these subpoenas to Trump's personal pressure -- matching the claim's framing.",
-    "host": "theatlantic.com",
-    "date": "2026-09-15",
+    "why": "The AP text directly states Blanche declined to comment on the subpoenas or the withdrawal decision while speaking to reporters, calling it a grand jury matter.",
+    "host": "apnews.com",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "5": {
     "state": "partly",
-    "why": "Democracy Now confirms the Cole subpoena is a distinct matter (different reporter, different story, prosecutors in Virginia) publicly disclosed via this August 5, 2026 report, but it says only the subpoena was served 'earlier this year' rather than specifically February 2026, and it says nothing about whether any new development has emerged in the separate WaPo/WSJ episode.",
-    "host": "democracynow.org",
-    "date": "2026-09-15",
-    "kind": "fact",
+    "why": "The Atlantic says Trump drove the subpoenas and that Blanche publicly defended them, and that his DOJ subpoenaed Times reporters over the Air Force One story; but Blanche's cited defenses came in May/June rather than specifically ahead of the hearing, and the Trump-pressure framing is The Atlantic's, not Blanche's.",
+    "host": "theatlantic.com",
+    "date": "2026-10-04",
+    "kind": "interpretation",
     "archive": false
    },
    "6": {
-    "state": "partly",
-    "why": "The RCFP analysis confirms the Air Force One/NYT subpoenas were withdrawn in July following a motion-to-quash hearing and treats it as a separate episode from the WaPo/WSJ matter, but it contains no mention of Judge Arun Subramanian or the quoted 'subpoenas are the last step' language, so that specific detail is not supported by this source.",
-    "host": "rcfp.org",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "The NYT passage states each element: March WSJ records demand over Iran-war-risk reporting, a Post reporter subpoenaed over Venezuela coverage, sealed challenges in Virginia, and withdrawal in June.",
+    "host": "nytimes.com",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    }
@@ -2774,25 +2774,25 @@
     "archive": false
    },
    "3": {
-    "state": "supports",
-    "why": "The source states veterans filed at least one lawsuit calling for a review of the rule.",
-    "host": "militarytimes.com",
-    "date": "2026-10-04",
-    "kind": "fact",
-    "archive": false
-   },
-   "4": {
     "state": "partly",
-    "why": "Task & Purpose confirms pushback from the American Legion, VFW, Burn Pits 360 and IAVA, but the 10,000-comments figure is not in this source, and DAV and PVA appear mainly praising the reversal rather than as formal condemnations.",
+    "why": "The source confirms pushback from the American Legion, VFW, Burn Pits 360 and IAVA, but does not mention the 10,000-comment figure, and DAV and PVA appear here praising the reversal rather than issuing formal condemnation.",
     "host": "taskandpurpose.com",
     "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
-   "5": {
+   "4": {
     "state": "supports",
-    "why": "Military Times reports that before pulling back, Collins called criticism 'fake news' and said the rule formalized practice since 1958, and that his reversal still disputed how the rule was characterized.",
+    "why": "Military Times reports Collins called criticism 'fake news' and said the rule formalized practice since 1958 before pulling back, and his halt statement said VA did not agree with how the rule was characterized rather than disavowing it.",
     "host": "militarytimes.com",
+    "date": "2026-10-04",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "partly",
+    "why": "Military.com confirms the sub-48-hour Federal Circuit petition by MilVet, Derek Debus (via Stone Rose Law Firm) and Andrew Laffoon seeking vacatur, but the text gives no case caption or number (No. 26-1469) and does not itself establish it is separate from Ingram v. Collins.",
+    "host": "military.com",
     "date": "2026-10-04",
     "kind": "fact",
     "archive": false
@@ -2806,8 +2806,16 @@
     "archive": false
    },
    "7": {
+    "state": "supports",
+    "why": "The Federal Circuit order in No. 2026-1469 dated March 5, 2026 dismisses the Section 502 petition under FRAP 42(b) 'The parties having so agreed' with each side bearing its own costs, and says nothing about the rule's validity.",
+    "host": "cafc.uscourts.gov",
+    "date": "2026-10-04",
+    "kind": "fact",
+    "archive": false
+   },
+   "8": {
     "state": "partly",
-    "why": "The docket confirms a joint stipulation of voluntary dismissal by Collins and a March 30, 2026 order dismissing the appeal, but it says nothing about the substance of the CAVC ruling left in place.",
+    "why": "The docket confirms Ingram v. Collins (appealed from the CAVC) was voluntarily dismissed on March 30, 2026 after a joint stipulation by appellant Collins, but it does not describe the subject matter or the March 2025 CAVC ruling being left in place.",
     "host": "courtlistener.com",
     "date": "2026-10-04",
     "kind": "fact",
@@ -8441,119 +8449,127 @@
   "lutnick-usar-conflict-of-interest-2026-01": {
    "0": {
     "state": "supports",
-    "why": "The senators' press release directly states the $1.6 billion USAR deal was announced the same day as USAR's $1.5 billion private raise with Cantor Fitzgerald as lead placement agent, and that USAR had previously held only one government contract worth under $100,000.",
-    "host": "vanhollen.senate.gov",
-    "date": "2026-09-15",
+    "why": "Bloomberg Law's text contains both quoted passages verbatim: ownership passed to children and outside investors, and transfer to trusts for his children including Brandon and Kyle.",
+    "host": "news.bloomberglaw.com",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "1": {
     "state": "supports",
-    "why": "The letter states almost verbatim that Lutnick publicly touted the deal, was reportedly personally involved, and met with USAR's CEO in early November 2025 prior to the announcement.",
+    "why": "The release states the $1.6B deal and the $1.5B private raise with Cantor as lead placement agent were announced the same day, that Cantor acted as a compensated broker, and that USAR had held only one prior contract worth under $100,000.",
     "host": "vanhollen.senate.gov",
-    "date": "2026-09-15",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "2": {
-    "state": "unopened",
-    "why": "",
+    "state": "supports",
+    "why": "The senators' letter says Lutnick publicly touted and reportedly was personally involved in the deal, including meeting USAR's CEO in early November 2025.",
     "host": "vanhollen.senate.gov",
-    "date": "2026-09-15",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "3": {
-    "state": "supports",
-    "why": "The Warren/Dean press release confirms the IG request over AI-data-center conflicts of interest and explicitly states Lutnick reportedly pressured foreign governments to invest in U.S. data centers with money that could flow to a Lutnick-linked firm.",
-    "host": "warren.senate.gov",
-    "date": "2026-09-15",
+    "state": "unopened",
+    "why": "",
+    "host": "vanhollen.senate.gov",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "4": {
-    "state": "partly",
-    "why": "The letter supports that Cantor reportedly bet against the tariffs Lutnick championed, 'reportedly stands to make extraordinary profits' after the Supreme Court ruling, and Cantor's Newsweek denial, but the provided text does not show any citation to 18 U.S.C. 208(a) or 5 C.F.R. 2635.702 (the relevant footnote is elided).",
-    "host": "democrats-judiciary.house.gov",
-    "date": "2026-09-27",
+    "state": "supports",
+    "why": "Warren's release states she and Rep. Dean pressed the Acting IG to investigate Lutnick family conflicts involving AI data centers and cites reported pressure on foreign governments whose investments could flow to a Lutnick-linked firm.",
+    "host": "warren.senate.gov",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "5": {
-    "state": "supports",
-    "why": "The article states directly that Commerce officials said Lutnick had no direct role and complied with all ethics requirements, that the White House echoed this, and that Cantor denied improper influence, matching the claim.",
-    "host": "therealdeal.com",
-    "date": "2026-09-27",
+    "state": "partly",
+    "why": "The letter supports the tariff-betting allegation, the 'reportedly stands to make extraordinary profits' language, and Cantor's Newsweek denial, but the provided text does not cite 18 U.S.C. §208(a) or 5 C.F.R. §2635.702.",
+    "host": "democrats-judiciary.house.gov",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "6": {
     "state": "supports",
-    "why": "The letter from DDF and Public Citizen calls on Lutnick to resign, citing the Epstein files contradicting his claimed cut-off, an FBI whistleblower tip about Cantor Fitzgerald improprieties, and alleged ethics violations in office including the data-center concerns raised in a letter from members of Congress.",
-    "host": "citizen.org",
-    "date": "2026-09-27",
+    "why": "The Real Deal states Commerce officials said Lutnick had no direct role and complied with ethics requirements, the White House echoed that, and Cantor denied improper influence.",
+    "host": "therealdeal.com",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "7": {
     "state": "supports",
-    "why": "The press release confirms the bicameral letter (Warren, Wyden, Van Hollen, Lofgren) sent directly to Cantor Fitzgerald and USA Rare Earth, quoting the exact demand for 'complete transparency' and setting a July 23, 2026 deadline for transaction documents, expanding the inquiry beyond Lutnick/Commerce.",
-    "host": "warren.senate.gov",
-    "date": "2026-09-15",
+    "why": "The letter calls for Lutnick's resignation citing the Epstein files contradicting his account, an FBI whistleblower tip on Cantor improprieties, and ethics violations in office, which later cite the congressional AI-data-center letter.",
+    "host": "citizen.org",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "8": {
     "state": "supports",
-    "why": "The spokesperson's statement appears verbatim in the article, which is dated Jul. 7 2026, matching the claim.",
-    "host": "thedailybeast.com",
-    "date": "2026-09-27",
+    "why": "The June 3, 2026 NIST release states exactly the $277M final award and up-to-$1.3B loan agreement with USAR under the CHIPS and Science Act.",
+    "host": "nist.gov",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "9": {
     "state": "supports",
-    "why": "The July 6, 2026 letter to Brandon Lutnick cites the June 3, 2026 finalization of the $1.6 billion USAR agreement, states Secretary Lutnick 'has refused to provide answers,' and says USAR chose Cantor as lead placement agent alongside Moelis.",
-    "host": "warren.senate.gov",
-    "date": "2026-09-27",
-    "kind": "fact",
-    "archive": false
-   },
-   "10": {
-    "state": "supports",
-    "why": "The June 3, 2026 NIST release states exactly the final award of up to $277 million and loan agreement of up to $1.3 billion with USAR under the CHIPS and Science Act.",
-    "host": "nist.gov",
-    "date": "2026-09-27",
-    "kind": "fact",
-    "archive": false
-   },
-   "11": {
-    "state": "supports",
-    "why": "The Daily Beast text contains the Cantor Fitzgerald $210 million passage and the White House spokesperson quote exactly as stated.",
+    "why": "The Daily Beast text contains the quoted Cantor/$210 million passage and the White House spokesperson quote; the June 28 date is not shown in the text but the substance matches.",
     "host": "yahoo.com",
     "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
+   "10": {
+    "state": "supports",
+    "why": "The release says the lawmakers, after Lutnick's refusal to answer, expanded the probe to press Cantor and USAR directly, quotes the transparency demand, and sets a July 23, 2026 deadline.",
+    "host": "warren.senate.gov",
+    "date": "2026-10-04",
+    "kind": "fact",
+    "archive": false
+   },
+   "11": {
+    "state": "supports",
+    "why": "The July 6, 2026 letter to Brandon Lutnick cites the June 3, 2026 finalization, says USAR chose Cantor as lead placement agent alongside Moelis, and states Secretary Lutnick 'has refused to provide answers'.",
+    "host": "warren.senate.gov",
+    "date": "2026-10-04",
+    "kind": "fact",
+    "archive": false
+   },
    "12": {
-    "state": "partly",
-    "why": "The July 30, 2026 letter text confirms the recipients, the 14 companies, the $8.9 billion figure, the records-preservation list and the August 13 deadline, but the provided text never names the signatories as Blumenthal, Schiff and Warren.",
-    "host": "blumenthal.senate.gov",
+    "state": "supports",
+    "why": "The July 7, 2026 Daily Beast article quotes the Cantor spokesperson verbatim as stated in the claim.",
+    "host": "thedailybeast.com",
     "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "13": {
     "state": "supports",
-    "why": "Alternet's September 2 report quotes Kernen's 'looks like a conflict of interest' and Lutnick's replies, and contains the Moelis sentence.",
-    "host": "alternet.org",
+    "why": "The July 30, 2026 letter cites reporting on at least 14 companies tied to Lutnick or Trump families, $8.9 billion in support, asks preservation of records on Cantor Fitzgerald, USA Rare Earth, Kaz Resources and others, and requests communications details by August 13, 2026.",
+    "host": "blumenthal.senate.gov",
     "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "14": {
     "state": "supports",
-    "why": "The Bloomberg text reports the $4 billion in offers, the $1.5 billion cap, Moelis as co-placement agent, the $50 million fee filing, and the Commerce spokeswoman's quote.",
+    "why": "Alternet reports Kernen said it 'looks like a conflict of interest', Lutnick replied 'It's just not', said his kids bought the company and called it 'minor stuff', and swore he had no idea until Moelis flagged it.",
+    "host": "alternet.org",
+    "date": "2026-10-04",
+    "kind": "fact",
+    "archive": false
+   },
+   "15": {
+    "state": "partly",
+    "why": "The Bloomberg text confirms Cantor bankers earned fees raising $1.5 billion for USAR, but the provided (truncated) text does not contain the $4 billion in offers, Moelis co-agent role, $50 million fee figure, or the Commerce spokeswoman's statement.",
     "host": "finance.yahoo.com",
     "date": "2026-10-04",
     "kind": "fact",
