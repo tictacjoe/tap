@@ -8257,14 +8257,14 @@
   {
     "id": "fbi-natanson-journalist-home-raid-2026",
     "official": "Gordon D. Kromberg, Assistant U.S. Attorney, Eastern District of Virginia",
-    "offense_category": "First Federal Raid of a Journalist's Home in a National-Security Leak Investigation -- a Privacy Protection Act Violation a Federal Judge Later Confirmed",
+    "offense_category": "First Federal Raid of a Journalist's Home in a National-Security Leak Investigation -- Judges Later Barred DOJ From Searching the Seized Materials Under the Privacy Protection Act",
     "contested": true,
-    "incident_summary": "On Wednesday, January 14, 2026, the FBI executed a search warrant -- sought by Assistant U.S. Attorney Gordon D. Kromberg of the Eastern District of Virginia -- at the Virginia home of Washington Post reporter Hannah Natanson, seizing six electronic devices -- her phone, work computer, personal laptop, and smart watch -- in an early-morning raid. Agents told Natanson she was not the target of the underlying investigation, which concerned government contractor Aurelio Perez-Lugones, a Maryland systems administrator with top-secret clearance charged under the Espionage Act with illegally retaining classified national defense materials (agents found classified intelligence reports in his lunchbox and basement). Trump publicly indicated the leaked information concerned a U.S. military operation in Venezuela (see rubio-maduro-raid-congress-deception-2026.json for this database's documentation of that operation), though court documents reviewed did not confirm the connection. Reporters Committee for Freedom of the Press President Bruce D. Brown called the search 'a tremendous escalation in the administration's intrusions into the independence of the press,' and Washington Post Executive Editor Matt Murray called it an 'extraordinary, aggressive action' raising 'profound questions and concern around the constitutional protections for our work.' This was the first time the Justice Department had raided a journalist's home specifically in connection with a national-security leak investigation. A federal magistrate judge quickly issued a standstill order blocking the government from reviewing the seized devices' contents pending litigation; Judge William B. Porter subsequently ruled that the court itself, not DOJ, would conduct any review, stating this prevented 'the equivalent of leaving the government's fox in charge of the Washington Post's henhouse.' On May 4, 2026, District Judge Anthony J. Trenga sided with Natanson and The Post, affirming the magistrate's ruling and **holding that the Privacy Protection Act 'bars the Government from searching in this particular case the PPA-protected materials that were seized,'** citing concerns about the raid's 'harassing and chilling effects' on journalism. Between February 6-9, 2026, the Freedom of the Press Foundation filed a bar complaint against Kromberg with the Virginia State Bar, alleging he 'failed to disclose key provisions of the Privacy Protection Act when seeking' the warrant; as of sourcing reviewed, the Virginia State Bar had not indicated whether it would pursue a formal investigation.",
+    "incident_summary": "On Wednesday, January 14, 2026, the FBI executed a search warrant -- sought by Assistant U.S. Attorney Gordon D. Kromberg of the Eastern District of Virginia -- at the Virginia home of Washington Post reporter Hannah Natanson, seizing six electronic devices, including her phone, work computer, personal laptop, and smart watch, in an early-morning raid. Agents told Natanson she was not the target of the underlying investigation, which concerned government contractor Aurelio Perez-Lugones, a Maryland systems administrator with top-secret clearance charged under the Espionage Act with illegally retaining classified national defense materials and indicted on January 22, 2026 on five counts of transmitting national defense information (according to the FBI's affidavit, agents searching his home and car found a SECRET-marked document in his lunchbox and more SECRET-marked materials in his basement). Trump publicly indicated the leaked information concerned a U.S. military operation in Venezuela (this database's entry on Secretary Rubio and the Maduro raid documents that operation), though court documents reviewed did not confirm the connection. Reporters Committee for Freedom of the Press President Bruce D. Brown called the search 'a tremendous escalation in the administration's intrusions into the independence of the press,' and Washington Post Executive Editor Matt Murray called it an 'extraordinary, aggressive action' raising 'profound questions and concern around the constitutional protections for our work.' This was the first time the Justice Department had raided a journalist's home specifically in connection with a national-security leak investigation. The court quickly issued a standstill order blocking the government from reviewing the seized devices' contents pending litigation; Magistrate Judge William B. Porter subsequently ruled that the court itself, not DOJ, would conduct any review, stating this prevented 'the equivalent of leaving the government's fox in charge of the Washington Post's henhouse.' On May 4, 2026, District Judge Anthony J. Trenga sided with Natanson and The Post, affirming the magistrate's ruling and **holding that the Privacy Protection Act 'bars the Government from searching in this particular case the PPA-protected materials that were seized,'** citing 'the harassing and chilling effects such a seizure could have on a reporter.' Between February 6-9, 2026, the Freedom of the Press Foundation filed a bar complaint against Kromberg with the Virginia State Bar, alleging he 'failed to disclose key provisions of the Privacy Protection Act when seeking' the warrant; the bar declined to investigate that complaint, but in March told Kromberg it was conducting a preliminary investigation, pointing to Judge Porter's opinion, then dismissed the matter in a July 2026 letter finding the evidence did not show a rules violation 'under the required evidentiary standard of clear and convincing evidence.'",
     "elements_required": [
       "The FBI raided a journalist's home and seized her personal and work devices in a national-security leak investigation, an unprecedented step for the Justice Department",
       "The journalist herself was not the target of the underlying investigation, which concerned a specific, separately charged contractor",
-      "A federal judge subsequently ruled the search violated the Privacy Protection Act, a federal statute specifically enacted to protect journalists' work product and materials from law-enforcement searches",
-      "The court's own language ('harassing and chilling effects,' 'the government's fox in charge of the Washington Post's henhouse') reflects a judicial finding that the search itself, not merely its outcome, was legally improper",
+      "A federal judge subsequently ruled that the Privacy Protection Act, a federal statute specifically enacted to protect journalists' work product and materials from law-enforcement searches, bars the government from searching the PPA-protected materials it seized",
+      "The courts' own language ('the harassing and chilling effects such a seizure could have on a reporter,' 'the government's fox in charge of the Washington Post's henhouse') reflects judicial concern with the seizure itself, not merely with how its contents would be used",
       "A press-freedom organization filed a state bar complaint against the prosecutor who sought the warrant, alleging he failed to disclose the Privacy Protection Act's provisions to the court"
     ],
     "evidence": [
@@ -8276,31 +8276,55 @@
       },
       {
         "type": "news_report",
+        "description": "ClearanceJobs' January 15, 2026 report on the criminal complaint and affidavit describes Perez-Lugones as a TS/SCI-cleared systems administrator for a Maryland contractor and says the FBI's January 8 search found a SECRET-marked document in his lunchbox and more SECRET-marked materials in his basement",
+        "source_url": "https://news.clearancejobs.com/2026/01/15/from-scif-to-lunchbox-fbi-details-unauthorized-removal-of-classified-intelligence/",
+        "maps_to_element": "The journalist herself was not the target of the underlying investigation, which concerned a specific, separately charged contractor"
+      },
+      {
+        "type": "news_report",
+        "description": "U.S. Press Freedom Tracker reports Perez-Lugones was arrested Jan. 8 and charged with unlawful retention of national defense information, then indicted by a Maryland grand jury on Jan. 22, 2026 on five counts of transmission of national defense information",
+        "source_url": "https://pressfreedomtracker.us/all-incidents/dod-contractor-charged-with-leaking-classified-documents-to-reporter/",
+        "maps_to_element": "The journalist herself was not the target of the underlying investigation, which concerned a specific, separately charged contractor"
+      },
+      {
+        "type": "news_report",
         "description": "Military.com's February 17, 2026 report identifies Assistant U.S. Attorney Gordon D. Kromberg as the prosecutor who sought the warrant, documents the Freedom of the Press Foundation's Feb. 6-9, 2026 Virginia State Bar complaint against him for allegedly failing to disclose the Privacy Protection Act's provisions to the court, and notes the bar had not indicated whether it would investigate as of that reporting",
         "source_url": "https://www.military.com/daily-news/headlines/2026/02/17/doj-under-fire-after-reporter-home-raid.html",
         "maps_to_element": "Identifies the specific official who sought the warrant and the resulting individual accountability exposure (the bar complaint)"
       },
       {
         "type": "public_record",
-        "description": "RCFP's amicus brief page documents the standstill order, Judge Porter's 'fox in charge of the henhouse' ruling that the court rather than DOJ would review the seized materials, and Judge Trenga's May 4, 2026 ruling that the search violated the Privacy Protection Act due to its 'harassing and chilling effects' on journalism",
+        "description": "RCFP's amicus brief page documents the standstill order, Judge Porter's 'fox in charge of the henhouse' ruling that the court rather than DOJ would review the seized materials, and Judge Trenga's May 4, 2026 ruling that the Privacy Protection Act bars the government from searching the PPA-protected materials that were seized, citing 'the harassing and chilling effects such a seizure could have on a reporter'",
         "source_url": "https://www.rcfp.org/briefs-comments/in-re-search-natanson/",
-        "maps_to_element": "The legal proceedings and the court's ultimate finding that the search was unlawful"
+        "maps_to_element": "A federal judge subsequently ruled that the Privacy Protection Act, a federal statute specifically enacted to protect journalists' work product and materials from law-enforcement searches, bars the government from searching the PPA-protected materials it seized"
+      },
+      {
+        "type": "news_report",
+        "description": "The Freedom of the Press Foundation says the Virginia State Bar declined to investigate its complaint against Kromberg, reasoning that it was up to the judge, not the bar, to decide whether he misled the court by omitting the PPA from his warrant application",
+        "source_url": "https://freedom.press/issues/disciplinary-office-ignores-complaints-over-journalist-raid/",
+        "maps_to_element": "A press-freedom organization filed a state bar complaint against the prosecutor who sought the warrant, alleging he failed to disclose the Privacy Protection Act's provisions to the court"
+      },
+      {
+        "type": "news_report",
+        "description": "Bloomberg Law reports the Virginia State Bar told Kromberg in a March letter it was conducting a preliminary investigation, then closed the matter in a July 2026 letter finding the evidence did not show he violated two professional conduct rules 'under the required evidentiary standard of clear and convincing evidence'",
+        "source_url": "https://news.bloomberglaw.com/business-and-practice/doj-lawyer-evades-ethics-sanction-over-journalists-home-search",
+        "maps_to_element": "A press-freedom organization filed a state bar complaint against the prosecutor who sought the warrant, alleging he failed to disclose the Privacy Protection Act's provisions to the court"
       }
     ],
-    "status": "Resolved in the press's favor as to the search's legality -- Judge Trenga ruled May 4, 2026 that the Privacy Protection Act barred the government from reviewing the seized PPA-protected materials; no sourcing reviewed indicates the devices' non-protected contents (if any) were separately reviewed or that any charges resulted against Natanson",
+    "status": "Judge Trenga ruled May 4, 2026 that the Privacy Protection Act bars the government from searching the seized PPA-protected materials; the Virginia State Bar closed its ethics matter against Kromberg in July 2026; no sourcing reviewed shows a charge against Natanson",
     "rebuttal_anticipated": "Kromberg's and DOJ's likely position, consistent with obtaining the warrant in the first place, is that Natanson possessed evidence material to a genuine, separately charged Espionage Act violation (Perez-Lugones), that a judicially authorized search warrant, not a subpoena, was the appropriate investigative tool given the severity of the underlying leak, and that any Privacy Protection Act disclosure shortfall was inadvertent rather than a deliberate attempt to circumvent the statute.",
-    "comeback": "Judge Trenga's own ruling directly rejects this framing: the Privacy Protection Act exists precisely to require law enforcement to use subpoenas rather than searches against journalists in most circumstances, and the court found the search's 'harassing and chilling effects' on journalism outweighed the government's stated investigative interest in this instance -- a judicial finding, not merely advocacy characterization, that the search itself was the wrong tool regardless of the underlying leak's seriousness.",
+    "comeback": "Judge Trenga's ruling cuts against this framing: the Privacy Protection Act exists precisely to require law enforcement to use subpoenas rather than searches against journalists in most circumstances, and the court held that the Act bars the government from searching the PPA-protected materials it seized, citing 'the harassing and chilling effects such a seizure could have on a reporter' -- a judicial ruling, not merely advocacy characterization, that the government could not search what it took from Natanson's home regardless of the underlying leak's seriousness.",
     "cause": "[TAP Analysis, not sourced] Consistent with the broader pattern this tracker documents of the administration treating leak investigations as opportunities to pressure or intimidate the press directly (see the Patel entry for a separate, Patel-specific pattern of retaliation against reporters covering his own conduct) -- this entry documents the specific instance where that approach extended to an unprecedented home search of a journalist not herself under investigation.",
-    "confidence_note": "HIGH confidence on the raid's date, the items seized, the Perez-Lugones case connection, and the press-freedom reactions, directly corroborated via RCFP's dedicated explainer -- a press-freedom legal organization directly involved in the case, not a general news aggregator. HIGH confidence on the legal proceedings and Judge Trenga's May 4, 2026 Privacy Protection Act ruling, directly corroborated via RCFP's own brief-tracking page for the case. HIGH confidence on Kromberg's identity as the warrant-seeking prosecutor and the Virginia State Bar complaint against him, directly corroborated via Military.com's dedicated report. washingtonpost.com's own reporting on the raid (Natanson's own employer) could not be fetched directly (403) and is not relied upon here; CNN's coverage of the device-return demand also could not be fetched (451) and is not relied upon.",
+    "confidence_note": "HIGH confidence on the raid's date, the items seized (six devices per a court filing cited on RCFP's brief page for the case), the Perez-Lugones case connection, and the press-freedom reactions, directly corroborated via RCFP's dedicated explainer -- a press-freedom legal organization directly involved in the case, not a general news aggregator. HIGH confidence on the legal proceedings and Judge Trenga's May 4, 2026 Privacy Protection Act ruling, directly corroborated via RCFP's own brief-tracking page for the case. HIGH confidence on Kromberg's identity as the warrant-seeking prosecutor and the Virginia State Bar complaint against him, directly corroborated via Military.com's dedicated report. washingtonpost.com's own reporting on the raid (Natanson's own employer) could not be fetched directly (403) and is not relied upon here; CNN's coverage of the device-return demand also could not be fetched (451) and is not relied upon. The Perez-Lugones search details (lunchbox, basement) come from ClearanceJobs' report on the criminal complaint and affidavit. The Virginia State Bar's July 2026 dismissal of its ethics matter against Kromberg comes from Bloomberg Law's report on the bar's letter. Re-verified 2026-10-04: no new rulings or charges found since September 12.",
     "pull_quote": "Reviewing the seized devices himself rather than DOJ, the judge said this prevented “the equivalent of leaving the government’s fox in charge of the Washington Post’s henhouse.”",
-    "last_verified": "2026-09-12",
+    "last_verified": "2026-10-04",
     "date_added": "2026-09-12",
     "section_summaries": {
-      "incident_summary": "The FBI's Jan 14, 2026 raid on WaPo reporter Hannah Natanson's home -- sought by AUSA Gordon Kromberg, seizing her devices in a leak investigation targeting a separately charged contractor, not Natanson herself -- was the first-ever DOJ home search of a journalist in a national-security leak case; a federal judge later ruled the search violated the Privacy Protection Act, and a press-freedom group filed a bar complaint against Kromberg.",
-      "confidence_note": "HIGH confidence, directly sourced to the Reporters Committee for Freedom of the Press's case documentation and Military.com's report identifying Kromberg; washingtonpost.com and CNN's own reporting could not be fetched (403/451) and are not relied upon."
+      "incident_summary": "The FBI raided WaPo reporter Hannah Natanson's home Jan 14, 2026 on a warrant AUSA Gordon Kromberg sought in a leak case she wasn't the target of; judges later barred DOJ from searching the files.",
+      "confidence_note": "HIGH confidence, sourced to the Reporters Committee for Freedom of the Press's case pages, Military.com, ClearanceJobs and Bloomberg Law; Washington Post and CNN coverage could not be fetched."
     },
     "date_of_action": "2026-01-14 (FBI raids journalist Natanson's home) through 2026-05-04 (judge rules PPA bars government from searching seized materials)",
-    "last_substantive_update": "2026-09-12",
+    "last_substantive_update": "2026-10-04",
     "glance": {
       "who": "Gordon Kromberg (Asst. U.S. Attorney, E.D. Va.)",
       "what": "Sought an FBI raid on Washington Post reporter Hannah Natanson's home; a judge barred review of the files",
@@ -8309,7 +8333,7 @@
         "certainty": "documented",
         "who": "Washington Post reporter Hannah Natanson"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-10-04"
     },
     "cause_references": [
       {
@@ -16963,6 +16987,12 @@
         "maps_to_element": "Continuation/escalation of the White-House-directed investigation"
       },
       {
+        "type": "testimony",
+        "description": "At his July 15, 2026 Senate Select Committee on Intelligence confirmation hearing to be Director of National Intelligence, Jay Clayton -- the U.S. Attorney who issued the subpoenas -- testified 'we followed the procedures' and repeatedly called the subpoenas the 'least intrusive' means possible, but declined to say whether the White House or top Justice Department officials ordered him to send the subpoenas",
+        "source_url": "https://theintercept.com/2026/07/15/jay-clayton-confirmation-hearing-journalist-subpoenas/",
+        "maps_to_element": "White House direction and Patel's personal, White-House-based oversight -- the one on-record answer, evasive as it is, from the prosecutor at the center of this entry's central disputed question"
+      },
+      {
         "type": "public_record",
         "description": "The New York Times reported that DOJ withdrew the subpoenas seeking NYT journalists' phone records and grand jury testimony on July 23, 2026, after a federal judge questioned whether prosecutors had followed the legal requirements (28 C.F.R. 50.10) for subpoenaing the press; the underlying leak investigation itself was not reported as closed",
         "source_url": "https://www.nytimes.com/2026/07/23/business/media/new-york-times-subpoenas-withdraw.html",
@@ -16991,12 +17021,6 @@
         "description": "Senate Judiciary Committee Democrats led by Sen. Adam Schiff sent a letter to Acting Attorney General Todd Blanche demanding information on his and SDNY U.S. Attorney Jay Clayton's roles in the subpoenas, writing that DOJ's conduct was \"seemingly directed by President Trump after he was upset by negative reporting,\" and noting the subpoenas sought records dating back to January 1, 2026 -- broader than DOJ's own guidelines allow for information that must be \"essential\" to an investigation; the release states that Blanche, questioned by Sen. Welch at his nomination hearing, admitted to authorizing the subpoenas.",
         "source_url": "https://www.welch.senate.gov/welch-joins-schiff-senate-judiciary-committee-democrats-in-probing-justice-department-subpoenas-of-new-york-times-journalists-in-air-force-one-scandal/",
         "maps_to_element": "Accountable official's response -- congressional oversight into whether the subpoenas were White House-directed"
-      },
-      {
-        "type": "testimony",
-        "description": "At his July 15, 2026 Senate Select Committee on Intelligence confirmation hearing to be Director of National Intelligence, Jay Clayton -- the U.S. Attorney who issued the subpoenas -- testified 'we followed the procedures' and repeatedly called the subpoenas the 'least intrusive' means possible, but declined to say whether the White House or top Justice Department officials ordered him to send the subpoenas",
-        "source_url": "https://theintercept.com/2026/07/15/jay-clayton-confirmation-hearing-journalist-subpoenas/",
-        "maps_to_element": "White House direction and Patel's personal, White-House-based oversight -- the one on-record answer, evasive as it is, from the prosecutor at the center of this entry's central disputed question"
       },
       {
         "type": "public_record",
@@ -26344,7 +26368,7 @@
       },
       {
         "type": "public_record",
-        "description": "On July 31, 2025, GAO (B-337208) concluded that the Energy Department violated the Impoundment Control Act by delaying, for a policy review, the obligation of fiscal 2025 funds for the Renew America's Schools program, which pays for energy-efficiency improvements at K-12 public school facilities; the department had obligated 17 percent of its FY 2025 funding and spent none. GAO found no violation for the program's FY 2022-2024 funds, which were almost fully obligated, and noted that OMB had separately proposed, for FY 2026, canceling nearly $196 million of the program's unobligated balances.",
+        "description": "On July 31, 2025, GAO (B-337208) concluded that the Energy Department violated the Impoundment Control Act by delaying, for a policy review, the obligation of fiscal 2025 funds for the Renew America's Schools program, which pays for energy-efficiency improvements at public school facilities; the department had obligated 17 percent of its FY 2025 funding and spent none. GAO found no violation for the program's FY 2022-2024 funds, which were almost fully obligated, and noted that OMB had separately proposed, for FY 2026, canceling nearly $196 million of the program's unobligated balances.",
         "source_url": "https://www.gao.gov/products/b-337208",
         "maps_to_element": "GAO's Renew America's Schools finding, alongside OMB's separate proposal to cancel the program's remaining funds"
       },
@@ -26386,9 +26410,15 @@
       },
       {
         "type": "court_filing",
-        "description": "On January 28, 2026, a federal judge ordered the administration to reveal legally binding spending plans in a lawsuit brought by Citizens for Responsibility and Ethics in Washington (represented alongside Public Citizen Litigation Group) against Vought and OMB; CREW says OMB controlled agency spending in secret through 'spend plans' incorporated by reference in legally binding footnotes withheld from the public, in at least 131 apportionment documents approved between March and September 2025.",
+        "description": "Citizens for Responsibility and Ethics in Washington announced that a federal judge had ordered the administration to reveal legally binding spending plans in its lawsuit against Vought and OMB, in which CREW represented itself alongside Public Citizen Litigation Group; CREW says OMB controlled agency spending in secret through 'spend plans' incorporated by reference in legally binding footnotes withheld from the public, in at least 131 apportionment documents.",
         "source_url": "https://www.citizensforethics.org/news/press-releases/court-once-again-shuts-down-omb-attempts-to-keep-spending-secret/",
         "maps_to_element": "Separate, court-confirmed transparency violation regarding binding spending terms"
+      },
+      {
+        "type": "public_record",
+        "description": "Government Executive reported on January 30, 2026 that U.S. District Judge Emmet G. Sullivan had on Wednesday (January 28) sided with CREW and directed OMB to post spend plans as part of its apportionment database, writing that because such spend plans 'contain legally binding limits on the agencies' ability to obligate funds,' they are 'documents apportioning an appropriation' and must be made public; CREW had reported that at least 131 of the 2,245 apportionment documents approved between March 24 and Sept. 5 included undisclosed spend plans.",
+        "source_url": "https://www.govexec.com/management/2026/01/court-orders-omb-publish-more-info-about-how-federal-funding-distributed/411092/",
+        "maps_to_element": "Date and judge for the court order requiring disclosure of OMB's binding spend plans"
       },
       {
         "type": "public_record",
@@ -26434,7 +26464,7 @@
       },
       {
         "type": "public_record",
-        "description": "CNN reported that on September 25, 2026 the White House sent House Speaker Mike Johnson a pocket rescission package of about $810 million across the Commerce, Education, Health and Human Services, Homeland Security, Housing and Urban Development, and Justice departments and international assistance programs, including $567 million from the Refugee and Entrant Assistance account, which the White House said was \"overfunded\"; Sen. Susan Collins said OMB \"intentionally withheld these funds for months to execute this unlawful cancellation of appropriations.\"",
+        "description": "CNN reported on September 26, 2026 that the administration was moving to cancel $810 million through a pocket rescission package sent to House Speaker Mike Johnson in a notification letter, covering the Commerce, Education, Health and Human Services, Homeland Security, Housing and Urban Development, and Justice departments and international assistance programs, including $567 million from the Refugee and Entrant Assistance account, which the White House said was \"overfunded\"; Sen. Susan Collins said OMB \"intentionally withheld these funds for months to execute this unlawful cancellation of appropriations.\"",
         "source_url": "https://www.cnn.com/2026/09/26/politics/trump-administrion-pocket-rescissions",
         "maps_to_element": "Pocket rescission: withholding appropriated funds until they expire"
       },

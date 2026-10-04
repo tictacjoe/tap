@@ -4995,17 +4995,49 @@
    },
    "1": {
     "state": "supports",
-    "why": "Military.com directly identifies AUSA Gordon D. Kromberg, documents the Freedom of the Press Foundation's Feb. 6-9, 2026 Virginia State Bar complaint alleging failure to disclose Privacy Protection Act provisions, and confirms the bar had not indicated whether it would investigate.",
-    "host": "military.com",
-    "date": "2026-09-15",
+    "why": "The ClearanceJobs piece describes Perez-Lugones as a TS/SCI-cleared systems administrator for a contractor in Annapolis Junction, MD, draws on the criminal complaint and affidavit, and states the January 8 search found a SECRET-marked document in his lunchbox and more SECRET-marked material in his basement, as claimed.",
+    "host": "news.clearancejobs.com",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "2": {
     "state": "supports",
-    "why": "The RCFP case page confirms the standstill order, Judge Porter's 'fox in charge of... henhouse' ruling giving the court rather than DOJ review authority, and Judge Trenga's May 4, 2026 ruling that the search violated the Privacy Protection Act due to its harassing and chilling effects.",
+    "why": "The Tracker entry states the Jan. 8 arrest and retention charge, the Jan. 22, 2026 Maryland grand jury indictment, and the five transmission counts, matching the claim.",
+    "host": "pressfreedomtracker.us",
+    "date": "2026-10-04",
+    "kind": "fact",
+    "archive": false
+   },
+   "3": {
+    "state": "supports",
+    "why": "The Feb. 17, 2026 Military.com article names Kromberg, describes the FPF's Feb. 6-9 bar complaint over failing to disclose the PPA, and separately says the bar 'has not indicated whether it will pursue a formal investigation,' supporting every element.",
+    "host": "military.com",
+    "date": "2026-10-04",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "supports",
+    "why": "The RCFP page documents the order blocking device searches, Judge Porter's Feb. 24 'fox in charge of the ... henhouse' ruling that the court would review the devices, and Judge Trenga's May 4, 2026 opinion with the quoted language and PPA holding.",
     "host": "rcfp.org",
-    "date": "2026-09-15",
+    "date": "2026-10-04",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "supports",
+    "why": "The FPF post states nearly verbatim that the bar declined to investigate, reasoning it was up to the judge whether Kromberg misled the court by omitting the PPA.",
+    "host": "freedom.press",
+    "date": "2026-10-04",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
+    "state": "supports",
+    "why": "Bloomberg Law reports the March preliminary-investigation letter and the July closure letter with the quoted evidentiary-standard language; the article gives 'July' without a year, but context places it in 2026.",
+    "host": "news.bloomberglaw.com",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    }
@@ -10536,49 +10568,49 @@
     "archive": false
    },
    "6": {
-    "state": "partly",
-    "why": "The NYT article confirms DOJ withdrew the subpoenas after a judge questioned the government's compliance with the law and its own regulations on subpoenaing the press, and that DOJ said 'this investigation remains ongoing,' but the text never cites the specific regulation '28 C.F.R. 50.10' by number.",
-    "host": "nytimes.com",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "The Intercept reports Clayton's July 15, 2026 Senate Intelligence Committee confirmation hearing, the 'we followed the procedures' quote, his repeated 'least intrusive' characterization, his refusal to say whether the White House or top DOJ officials ordered the subpoenas, and that the subpoenas went out under his signature.",
+    "host": "theintercept.com",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "7": {
     "state": "supports",
-    "why": "NPR reports the July 10 subpoenas two days after the first story, Subramanian repeatedly asking how that could be a last resort under binding precedent and DOJ policy, his declaration he would quash them, DOJ dropping them, and the spokesperson's quoted attack on 'this judge's conduct.'",
-    "host": "npr.org",
-    "date": "2026-09-27",
+    "why": "The Times text reports the Thursday withdrawal of the subpoenas for phone records and grand jury testimony after the judge questioned compliance with the law and DOJ's own news-media regulations, and quotes DOJ that 'this investigation remains ongoing'; the 28 C.F.R. 50.10 citation is the claim's own gloss on those regulations.",
+    "host": "nytimes.com",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "8": {
     "state": "supports",
-    "why": "CNN reports the withdrawal came at the end of the hearing in which Subramanian grilled prosecutors about 'inadvertent errors,' quotes Buckley's statement verbatim, and reports the DOJ spokesperson's statement criticizing the judge and saying the investigation remains ongoing.",
-    "host": "cnn.com",
+    "why": "NPR reports the July 10 filing two days after the first story, the judge repeatedly asking how that could be a last resort under binding precedent and DOJ policy, his declaration that he would quash them, the withdrawal, and the DOJ spokesperson's 'This judge's conduct ... blocking the grand jury from receiving core evidence' statement.",
+    "host": "npr.org",
     "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "9": {
     "state": "supports",
-    "why": "NBC reports Buckley's acknowledgment about the relatives' phone records, including spouses and a mother, after a public-source database error, and quotes his statement verbatim.",
-    "host": "nbcnews.com",
+    "why": "CNN's July 23, 2026 report includes the 'inadvertent errors' grilling, Buckley's quoted withdrawal statement, and the DOJ spokesperson's criticism of the judge with 'this investigation remains ongoing.'",
+    "host": "cnn.com",
     "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "10": {
     "state": "supports",
-    "why": "The Welch release describes the letter probing Blanche's and Clayton's involvement, quotes the 'seemingly directed by President Trump' language and the January 1, 2026 records scope against the 'essential' standard, and states Blanche admitted authorizing the subpoenas when questioned by Welch.",
-    "host": "welch.senate.gov",
+    "why": "NBC News's July 23, 2026 report contains this acknowledgment verbatim, followed by Buckley's quote 'It was a mistake; it was not in furtherance of the investigation.'",
+    "host": "nbcnews.com",
     "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "11": {
     "state": "supports",
-    "why": "The Intercept reports Clayton told the July 15 Intelligence Committee hearing 'we followed the procedures,' repeatedly called the subpoenas the 'least intrusive' means, and declined to say whether the White House or top DOJ officials ordered them.",
-    "host": "theintercept.com",
+    "why": "The Welch release describes the Schiff-led Judiciary Democrats' letter to Blanche probing his and Clayton's roles, quotes the 'seemingly directed by President Trump' language, cites the Jan. 1, 2026 records date against the 'essential' guideline, and states Blanche admitted to authorizing the subpoenas when questioned by Welch.",
+    "host": "welch.senate.gov",
     "date": "2026-10-04",
     "kind": "fact",
     "archive": false
@@ -16818,8 +16850,8 @@
     "archive": false
    },
    "6": {
-    "state": "partly",
-    "why": "The GAO text supports the July 31, 2025 date, the FY 2025 violation for a policy-review delay, no violation for nearly fully obligated FY 2022-2024 funds, and the OMB proposal to cancel nearly $196 million, but the provided excerpts omit the 17-percent-obligated and none-spent figures and do not specify K-12.",
+    "state": "supports",
+    "why": "GAO decision B-337208 (July 31, 2025) finds the violation for FY 2025 funds, reports 17 percent obligated and 0 percent expended, finds no violation for the almost fully obligated FY 2022-2024 funds, and notes OMB's proposed FY 2026 cancellation of nearly $196 million.",
     "host": "gao.gov",
     "date": "2026-10-04",
     "kind": "fact",
@@ -16874,8 +16906,8 @@
     "archive": false
    },
    "13": {
-    "state": "partly",
-    "why": "CREW's release supports the court order in its suit against Vought and OMB, the Public Citizen co-representation, the secret spend plans in withheld footnotes, and the 131 apportionment documents, but the text says only 'today' and does not state the January 28, 2026 date.",
+    "state": "supports",
+    "why": "CREW's release announces the court order to reveal legally binding spend plans in its suit against Vought and OMB, notes it represented itself with Public Citizen Litigation Group, and describes secret spend plans incorporated in footnotes in at least 131 apportionment documents.",
     "host": "citizensforethics.org",
     "date": "2026-10-04",
     "kind": "fact",
@@ -16883,7 +16915,7 @@
    },
    "14": {
     "state": "supports",
-    "why": "Govexec reports the March 2026 guidance quote about overly deferring to GAO, Vought's September statement that GAO shouldn't exist and his 'quasi-legislative independent entity' description, and the $1.5 trillion figure from GAO's spokesperson.",
+    "why": "The Jan. 30, 2026 GovExec story reports Judge Sullivan sided with CREW on Wednesday, directed OMB to post spend plans, quotes this reasoning, and gives the 131-of-2,245 figure for March 24 to Sept. 5.",
     "host": "govexec.com",
     "date": "2026-10-04",
     "kind": "fact",
@@ -16891,7 +16923,7 @@
    },
    "15": {
     "state": "supports",
-    "why": "Govexec (April 15, 2026) reports Vought's claim that reviews comply with the law, his 'typically wrong and very partisan' description of GAO, his view that impoundment limits are unconstitutional, the 'Of course I believe in impoundments' quote, and the 5/4/2 GAO tally.",
+    "why": "The March 13, 2026 article quotes this guidance language, notes GAO sets internal control standards, recounts Vought's September statement calling GAO a 'quasi-legislative independent entity' that should not exist, and cites the roughly $1.5 trillion figure from GAO's spokesperson.",
     "host": "govexec.com",
     "date": "2026-10-04",
     "kind": "fact",
@@ -16899,87 +16931,95 @@
    },
    "16": {
     "state": "supports",
-    "why": "TPM reports Vought repeatedly saying 'We have not impounded anything' at the April 16 Senate Budget hearing, Merkley's 'He just lied to America' quote to TPM, and Grassley's 'You don't have the authority to impound it' over Community Services Block Grant funds.",
-    "host": "talkingpointsmemo.com",
+    "why": "GovExec's April 15, 2026 report of the House Budget hearing supports each element, including the unconstitutionality contention, 'Of course I believe in impoundments,' and GAO's five-violation, four-no-violation, two-mixed tally.",
+    "host": "govexec.com",
     "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "17": {
     "state": "supports",
-    "why": "The August 6, 2026 release states Kamlager-Dove introduced impeachment articles against Vought, with Article I charging abuse of power through improper impoundment.",
-    "host": "kamlager-dove.house.gov",
+    "why": "TPM's report on the April 16, 2026 Senate Budget hearing on the FY2027 budget includes Vought's repeated denial, Merkley's 'They absolutely impounded. He just lied to America,' and Grassley's 'You don't have the authority to impound it' over Community Services Block Grant funds.",
+    "host": "talkingpointsmemo.com",
     "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "18": {
     "state": "supports",
-    "why": "NCLD's August 14, 2026 release reports the summary judgment motion over withheld education funds, filed by Protect Democracy and Jacobson Lawyers Group, against OMB, Vought, the Education Department, McMahon and Soldner.",
-    "host": "ncld.org",
+    "why": "The August 6, 2026 release confirms the introduction, and Article I charges 'Abuse Of Power Through Improper Impoundment of Congressionally Appropriated Funds,' supporting the impoundment basis.",
+    "host": "kamlager-dove.house.gov",
     "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "19": {
-    "state": "partly",
-    "why": "The order confirms the September 17, 2026 date, the partial grant of plaintiffs' motion addressing Counts 3, 4, 7 and 8 including the EO 14151 and 14332 footnotes, the grant to defendants on Count 7, the reserved claims, and the status-report deadline; the elided text does not show the vacatur of the footnotes or the specific contrary-to-law and arbitrary-and-capricious holdings on Counts 3 and 4.",
-    "host": "protectdemocracy.org",
+    "state": "supports",
+    "why": "NCLD's August 14, 2026 release states the summary judgment motion, the Protect Democracy and Jacobson Lawyers Group representation, and names OMB, Vought, the Education Department, McMahon and Soldner as defendants.",
+    "host": "ncld.org",
     "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "20": {
-    "state": "supports",
-    "why": "The September 25, 2026 message to Speaker Johnson under section 1012(a) reports 11 rescissions totaling $810 million across the listed departments, and R26-1 proposes rescinding $567,401,904 of $6.3 billion in FY 2024 Refugee and Entrant Assistance funds, described as overfunded due to border policies.",
-    "host": "whitehouse.gov",
+    "state": "partly",
+    "why": "The provided text confirms the September 17, 2026 Burroughs order in NCLD v. OMB granting each side's motion in part, the status-report deadline, and reservation of remaining claims, but the extracted text omits the passages that would confirm summary judgment for plaintiffs specifically on Counts 3 and 4, vacatur of the EO 14151/14332 apportionment footnotes as contrary to law and arbitrary and capricious, and judgment for defendants on Count 7.",
+    "host": "protectdemocracy.org",
     "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "21": {
-    "state": "partly",
-    "why": "CNN supports the roughly $810 million pocket rescission to Johnson across the listed departments, the $567 million 'overfunded' refugee account cut, and Collins' quote, but the text does not state the September 25 sending date.",
-    "host": "cnn.com",
+    "state": "supports",
+    "why": "The Sept. 25, 2026 special message to Speaker Johnson under section 1012(a) states this, and proposal R26-1 rescinds $567,401,904 of the $6.3 billion FY 2024 Refugee and Entrant Assistance appropriation, which it says 'is overfunded due to the Administration's successful border policies.'",
+    "host": "whitehouse.gov",
     "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "22": {
     "state": "supports",
-    "why": "GAO's B-338788 letter dated September 29, 2026 reviews the 11-account special message and OMB reapportionment withholding, finds all 11 accounts expire at FY 2026's end while review runs to at least November 9, and concludes the President may not force expiration of enacted budget authority.",
-    "host": "gao.gov",
+    "why": "CNN's Sept. 26, 2026 report covers the $810 million pocket rescission sent to Speaker Johnson, the listed departments and international programs, the $567 million Refugee and Entrant Assistance cut called 'overfunded,' and Collins's quoted statement.",
+    "host": "cnn.com",
     "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "23": {
     "state": "supports",
-    "why": "The CQ-Roll Call article reports Vought's immediate X post with both quoted sentences, the White House's not-expressly-prohibited argument, and that with the House on recess there was no practical way to consider the request before fiscal year end.",
-    "host": "spokesman.com",
+    "why": "GAO's B-338788 letter reviews the 11-account Sept. 25 special message and the OMB reapportionment withholding, finds all 11 accounts expire at the end of FY 2026 with review running to no earlier than November 9, and concludes the proposals do not permit withholding beyond FY 2026 (that sentence is split by footnote text in the extract).",
+    "host": "gao.gov",
     "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "24": {
     "state": "supports",
-    "why": "Reuters reports Judge Cobb's late-Wednesday order suspending the September 30 lapse deadline for nearly $56 million in housing counseling grants, her 'not presently in a position to grant or deny' language, and the suit filed Tuesday.",
-    "host": "yahoo.com",
+    "why": "The CQ-Roll Call story carries Vought's X post quotes, the White House's 'not expressly prohibited' argument, and the House-recess point; the extract gives 'Tuesday' rather than an explicit Sept. 29 date, but that is consistent.",
+    "host": "spokesman.com",
     "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "25": {
-    "state": "partly",
-    "why": "The complaint confirms the seven plaintiff states, the defendants, the N.D. Cal. case number and Sept. 30 filing, the APA and Presentment-Clause theories, the $567,401,904 refugee rescission and the Vought quote, but the provided text cites the Presentment and Take Care Clauses and does not show an Appropriations Clause or separation-of-powers count.",
-    "host": "oag.ca.gov",
+    "state": "supports",
+    "why": "Reuters reports Judge Cobb's late-Wednesday order preserving nearly $56 million in housing-counseling grants, the quoted language, her hesitance to let the deadline permanently cost plaintiffs the funds, and the groups' suit filed Tuesday.",
+    "host": "yahoo.com",
     "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "26": {
+    "state": "partly",
+    "why": "The complaint text confirms the seven plaintiff states, the defendants, the N.D. Cal. venue and case number, the September 30, 2026 filing, the $567,401,904 Refugee and Entrant Assistance rescission, and the Vought quote; it also shows an APA case and Presentment/Take Care Clause arguments, but the extracted text does not show the Appropriations Clause or an explicit separation-of-powers count, and the September 25 date is only implied by 'five days left of the federal fiscal year.'",
+    "host": "oag.ca.gov",
+    "date": "2026-10-04",
+    "kind": "fact",
+    "archive": false
+   },
+   "27": {
     "state": "supports",
-    "why": "The CQ-Roll Call article reports the cancellation announced days before the Wednesday fiscal-year-end expiration, lawsuits from housing groups, education grant recipients and states, and the HEP-CAMP Association's Wednesday D.C. suit over $24.9 million.",
+    "why": "The CQ-Roll Call story reports the cancellation announced days before funds expired at fiscal year-end Wednesday, the suits from housing groups, education grantees and states, and the HEP-CAMP suit over $24.9 million; the extract has no explicit Oct. 2 dateline.",
     "host": "spokesman.com",
     "date": "2026-10-04",
     "kind": "fact",
