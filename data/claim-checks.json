@@ -746,11 +746,11 @@
     "archive": false
    },
    "1": {
-    "state": "not_found",
-    "why": "This Just Security article discusses Blanche's pattern of sycophantic prosecutions generally but does not describe the 'no true bill' disclosure rule referenced in the claim -- that specific procedural point is not addressed in this text.",
+    "state": "unopened",
+    "why": "",
     "host": "justsecurity.org",
-    "date": "2026-09-15",
-    "kind": "fact",
+    "date": "2026-10-04",
+    "kind": "interpretation",
     "archive": false
    },
    "2": {
@@ -839,81 +839,81 @@
   "blanche-fulton-county-poll-worker-subpoena-2026": {
    "0": {
     "state": "supports",
-    "why": "The AP article quotes Judge Ray's ruling using this exact language, confirming both the finding that the subpoena is unreasonable given low need versus burden, and the 'staggering' characterization of its scope.",
-    "host": "pressdemocrat.com",
-    "date": "2026-09-15",
+    "why": "The source states the subpoena came after the FBI's January search of the Fulton County election hub in which hundreds of boxes of ballots and other 2020 records were seized.",
+    "host": "pbs.org",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "1": {
     "state": "supports",
-    "why": "The order text states the Grand Jury works with DOJ and the U.S. Attorney to investigate alleged criminal actions, 'but that does not give the DOJ the right to use the Grand Jury to do whatever the DOJ wants,' matching the claim.",
+    "why": "The affidavit, in a document filed 02/10/26, contains the quoted sentence verbatim.",
     "host": "storage.courtlistener.com",
-    "date": "2026-09-27",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "2": {
     "state": "supports",
-    "why": "The AP/PBS report states Fulton County asked to quash the subpoena arguing it was meant to 'target, harass and punish the President's perceived political opponents' and was 'grossly over broad'.",
-    "host": "pbs.org",
-    "date": "2026-09-27",
+    "why": "The CBS text contains each quoted passage: Olsen previously worked in the White House in that post, worked with Paxton in 2020, and made the Fulton referral as an FBI affidavit revealed.",
+    "host": "cbsnews.com",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "3": {
-    "state": "partly",
-    "why": "The source confirms the subpoena came after a January FBI search warrant at the Fulton County election hub seizing hundreds of boxes of 2020 ballots and documents; the claim's added characterization of a 'continuing DOJ effort targeting the same jurisdiction' is an inference the article does not state.",
+    "state": "supports",
+    "why": "The PBS/AP text quotes Fulton County's arguments exactly as the claim states.",
     "host": "pbs.org",
-    "date": "2026-09-27",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "4": {
     "state": "supports",
-    "why": "The affidavit filed 02/10/26 contains the quoted sentence verbatim.",
-    "host": "storage.courtlistener.com",
-    "date": "2026-10-03",
+    "why": "The AP text quotes Judge Ray's ruling with the 'low need', 'highly burdensome', 'unreasonable' and 'staggering' language and notes he was nominated by Trump.",
+    "host": "pressdemocrat.com",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "5": {
-    "state": "supports",
-    "why": "The order describes DOJ's reference to 'a related but different case' (Pitts, over the January 2026 seizure), says that case is related but not binding, and summarizes it for background.",
+    "state": "partly",
+    "why": "The provided order text begins mid-sentence and contains the quoted 'does not give the DOJ the right' language, but the preceding portion about the Grand Jury working with DOJ and the U.S. Attorney is cut off.",
     "host": "storage.courtlistener.com",
-    "date": "2026-10-03",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "6": {
-    "state": "supports",
-    "why": "The CBS article contains each quoted passage about Olsen's White House post, his 2020 work with Paxton, and his Fulton County referral per an FBI affidavit.",
-    "host": "cbsnews.com",
-    "date": "2026-10-03",
+    "state": "partly",
+    "why": "The order text supports the January 7, 2026 limitations date and the 'would not lead to information' quote, but the 'cannot evade the statute of limitations' quote and the DOJ's argument are not in the provided excerpt.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "7": {
     "state": "supports",
-    "why": "ABC's July 7, 2026 article quotes the DOJ spokesperson calling the ruling at odds with numerous Supreme Court holdings and saying the Department is considering all options to challenge.",
-    "host": "abcnews.com",
-    "date": "2026-10-03",
+    "why": "The order states DOJ referenced a related but different case (Pitts), that its findings are not binding, and that the court summarizes it due to DOJ's reliance and for background.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "8": {
     "state": "supports",
-    "why": "The notice of appeal filed 08/06/26 appeals to the Eleventh Circuit from the July 7, 2026 order granting the motion to quash and denying the cross-motion to enforce.",
-    "host": "storage.courtlistener.com",
-    "date": "2026-10-03",
+    "why": "ABC quotes the DOJ spokesperson responding to the July 7 ruling with both quoted phrases.",
+    "host": "abcnews.com",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "9": {
-    "state": "partly",
-    "why": "The order text supports the January 7, 2026 limitations date and the 'would not lead to information that could be used to charge anyone' finding, but the quoted 'someone, somewhere, somehow' sentence and DOJ's counter-argument do not appear in the provided excerpted text.",
+    "state": "supports",
+    "why": "The notice of appeal, filed 08/06/26, appeals to the Eleventh Circuit from the July 7, 2026 order granting the motion to quash and denying the cross-motion to enforce.",
     "host": "storage.courtlistener.com",
-    "date": "2026-10-03",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
@@ -2751,73 +2751,65 @@
   "collins-va-apa-violation-2026-02": {
    "0": {
     "state": "partly",
-    "why": "Task & Purpose confirms the rule was introduced with no public notice two days before the pullback, but the specific quote attributed to Collins ('allowing the litigation to proceed in court and for your voices to be heard prior to the rule taking effect') is not his -- the text attributes that exact quote to American Legion national commander Dan K. Wiley, not to Collins.",
-    "host": "taskandpurpose.com",
-    "date": "2026-09-15",
+    "why": "The opinion (decided March 12, 2025) contains the quoted holding and sets aside the Board's back and ankle decision, but the text does not mention the 38 Vet. App. 130 citation or any link to VA's February 2026 rule.",
+    "host": "uscourts.cavc.gov",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "1": {
-    "state": "supports",
-    "why": "Military Times confirms the regulation itself documented a potential $100 million/year economic impact and the need to readjudicate 350,000 existing claims decisions.",
-    "host": "militarytimes.com",
-    "date": "2026-09-15",
-    "kind": "fact",
+    "state": "partly",
+    "why": "The source confirms the rule was introduced with no public notice two days before the reversal and includes Wiley's quote, but Wiley's words ('prior to the rule taking effect') do not clearly show the rule had taken effect before public input; that inference is the claim's own.",
+    "host": "taskandpurpose.com",
+    "date": "2026-10-04",
+    "kind": "interpretation",
     "archive": false
    },
    "2": {
     "state": "supports",
-    "why": "Military Times directly states veterans filed at least one lawsuit calling for a review of the rule.",
+    "why": "Military Times reports the regulation cited a $100 million/year potential impact, 350,000 claims, and more than 500 conditions, and that without it VA faced readjudicating 350,000 claims.",
     "host": "militarytimes.com",
-    "date": "2026-09-15",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "3": {
-    "state": "partly",
-    "why": "Task & Purpose confirms the rule drew condemnation from the American Legion, VFW, Burn Pits 360, and Iraq and Afghanistan Veterans of America (and, later in the same article, from Disabled American Veterans and Paralyzed Veterans of America), but this specific article contains no mention of the '60 hours'/'more than 10,000 responses' Federal Register comment statistic the claim attributes to it.",
-    "host": "taskandpurpose.com",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "The source states veterans filed at least one lawsuit calling for a review of the rule.",
+    "host": "militarytimes.com",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "4": {
-    "state": "supports",
-    "why": "Military Times directly quotes Collins calling the criticism 'fake news' and maintaining the rule merely formalized VA's practice since 1958, before the subsequent reversal.",
-    "host": "militarytimes.com",
-    "date": "2026-09-15",
+    "state": "partly",
+    "why": "Task & Purpose confirms pushback from the American Legion, VFW, Burn Pits 360 and IAVA, but the 10,000-comments figure is not in this source, and DAV and PVA appear mainly praising the reversal rather than as formal condemnations.",
+    "host": "taskandpurpose.com",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "5": {
     "state": "supports",
-    "why": "The Federal Register's own document page confirms the rescission rule by the Veterans Affairs Department was published/effective February 27, 2026.",
-    "host": "federalregister.gov",
-    "date": "2026-09-15",
+    "why": "Military Times reports that before pulling back, Collins called criticism 'fake news' and said the rule formalized practice since 1958, and that his reversal still disputed how the rule was characterized.",
+    "host": "militarytimes.com",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "6": {
-    "state": "partly",
-    "why": "The docket shows a joint stipulation of voluntary dismissal and a March 30, 2026 order dismissing the Secretary's appeal, but it says nothing about the medication-effects issue or that the lower ruling stands on that basis.",
-    "host": "courtlistener.com",
-    "date": "2026-10-03",
+    "state": "supports",
+    "why": "The Federal Register page shows the final rule rescinding the interim final rule, effective February 27, 2026.",
+    "host": "federalregister.gov",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "7": {
-    "state": "not_found",
-    "why": "The provided source is the same static Federal Register rescission page documenting the February 27, 2026 action; it contains nothing about events after that date and cannot itself confirm a negative finding from an August 25, 2026 re-verification search.",
-    "host": "federalregister.gov",
-    "date": "2026-09-15",
-    "kind": "fact",
-    "archive": false
-   },
-   "8": {
-    "state": "not_found",
-    "why": "The provided source is again the same static Federal Register rescission page; it contains nothing about events after February 27, 2026 and cannot itself confirm a negative finding from a September 1, 2026 re-verification search.",
-    "host": "federalregister.gov",
-    "date": "2026-09-15",
+    "state": "partly",
+    "why": "The docket confirms a joint stipulation of voluntary dismissal by Collins and a March 30, 2026 order dismissing the appeal, but it says nothing about the substance of the CAVC ruling left in place.",
+    "host": "courtlistener.com",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    }
@@ -3818,82 +3810,82 @@
   },
   "doj-fbi-arizona-maricopa-2020-audit-subpoena-2026": {
    "0": {
-    "state": "supports",
-    "why": "CNBC directly quotes Petersen's X post confirming he received and complied with the federal grand jury subpoena for the 2020 Maricopa County audit records.",
-    "host": "cnbc.com",
-    "date": "2026-09-15",
+    "state": "partly",
+    "why": "Votebeat confirms the Aug. 27 Courchaine meeting and Heap's pledge of full cooperation to Dhillon, but the provided text is cut off before any statement that Courchaine's office issued the Senate subpoena or oversees a Phoenix grand jury.",
+    "host": "votebeat.org",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "1": {
-    "state": "supports",
-    "why": "Votebeat reports the grand jury subpoena was served on the Arizona Senate for records tied to its 2021 review of Maricopa's 2020 election, while the county supervisors and recorder said they had received no subpoena.",
-    "host": "votebeat.org",
-    "date": "2026-09-27",
+    "state": "partly",
+    "why": "The ProPublica text includes the experts' 'fatally flawed' assessment, but contains nothing about a property receipt, more than three dozen hard drives and servers, Cyfir, or a March 7 date.",
+    "host": "propublica.org",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "2": {
     "state": "supports",
-    "why": "KJZZ reports the Senate turned over its 2020 audit records to the FBI, quotes Petersen's two statements verbatim, and says both the Board of Supervisors and Recorder's Office had not received subpoenas.",
-    "host": "kjzz.org",
-    "date": "2026-09-27",
+    "why": "CNBC reports Petersen's X post saying he received and complied with a grand jury subpoena for the Senate's audit records.",
+    "host": "cnbc.com",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "3": {
-    "state": "partly",
-    "why": "ProPublica's text supports that election experts said any investigation based on the Cyber Ninjas data 'would be fatally flawed,' but it contains no property receipt, no count of hard drives or servers, no mention of Cyfir, and no March 7 seizure; it instead says Petersen and the Senate gave no details on what the FBI collected.",
-    "host": "propublica.org",
-    "date": "2026-09-27",
+    "state": "supports",
+    "why": "Votebeat reports the subpoena sought materials linked to the Senate's audit, and that county supervisors and the Recorder's Office had not received subpoenas.",
+    "host": "votebeat.org",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "4": {
-    "state": "partly",
-    "why": "The source confirms Maricopa County had not received an FBI subpoena, that Trump personally shared the viral claim, and that the actual subpoena went to the Arizona Senate over its 2020 audit, but it never names \"Cyber Ninjas\" as the audit contractor.",
-    "host": "newsfromthestates.com",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "KJZZ quotes Petersen exactly and reports that the Board of Supervisors and Recorder's Office had not received subpoenas.",
+    "host": "kjzz.org",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "5": {
-    "state": "partly",
-    "why": "The Votebeat text supports the American Oversight emails, the Aug. 27 meeting arranged with Courchaine, and Heap's reply to Dhillon pledging 'full cooperation with the Department of Justice as it conducts its investigation,' but the provided (truncated) text does not state that Courchaine's office issued the Arizona Senate subpoena or oversees a Phoenix grand jury.",
-    "host": "votebeat.org",
-    "date": "2026-09-27",
+    "state": "supports",
+    "why": "CNN's March 9 report contains the quoted language about the Fulton County search.",
+    "host": "cnn.com",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "6": {
     "state": "supports",
-    "why": "Votebeat reports that former Pinal County Attorney Kent Volkmer, tapped by the Maricopa County Attorney's Office, is investigating whether recorder's office employees broke the law by removing a scanner and provisional ballot envelopes during the March 10 Tempe election, amid Heap's lawsuit with the board of supervisors.",
-    "host": "votebeat.org",
-    "date": "2026-09-27",
+    "why": "The Arizona Mirror piece reports Maricopa County had not received a subpoena despite a claim Trump shared, and that Petersen said the Senate complied with a subpoena for its audit records, not the county.",
+    "host": "newsfromthestates.com",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "7": {
     "state": "supports",
-    "why": "CNN states Olsen made the Fulton County referral and played a role in the Maricopa subpoena move, without describing that role, as the claim notes.",
-    "host": "cnn.com",
-    "date": "2026-10-03",
+    "why": "Votebeat reports that Volkmer, appointed by the County Attorney's Office, is investigating alleged removal of a scanner and provisional ballot envelopes during the March 10 Tempe election, amid Heap's lawsuit with the board.",
+    "host": "votebeat.org",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "8": {
     "state": "supports",
-    "why": "The CBS article contains both quoted passages.",
-    "host": "cbsnews.com",
-    "date": "2026-10-03",
+    "why": "CNN states this verbatim and gives no detail on Olsen's Maricopa role.",
+    "host": "cnn.com",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "9": {
     "state": "supports",
-    "why": "CNN's March 9, 2026 report on the Arizona Senate subpoena notes the January Fulton search with the quoted caveat.",
-    "host": "cnn.com",
-    "date": "2026-10-03",
+    "why": "CBS contains both quoted passages.",
+    "host": "cbsnews.com",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    }
@@ -8537,9 +8529,33 @@
    },
    "11": {
     "state": "supports",
-    "why": "Bloomberg's text states Cantor, with Moelis as co-placement agent, received $4 billion in offers and capped the PIPE at $1.5 billion, fees were $50 million per a filing that didn't say how they were split, and quotes the Commerce spokeswoman's denial (the publication date itself is not shown in the text).",
+    "why": "The Daily Beast text contains the Cantor Fitzgerald $210 million passage and the White House spokesperson quote exactly as stated.",
+    "host": "yahoo.com",
+    "date": "2026-10-04",
+    "kind": "fact",
+    "archive": false
+   },
+   "12": {
+    "state": "partly",
+    "why": "The July 30, 2026 letter text confirms the recipients, the 14 companies, the $8.9 billion figure, the records-preservation list and the August 13 deadline, but the provided text never names the signatories as Blumenthal, Schiff and Warren.",
+    "host": "blumenthal.senate.gov",
+    "date": "2026-10-04",
+    "kind": "fact",
+    "archive": false
+   },
+   "13": {
+    "state": "supports",
+    "why": "Alternet's September 2 report quotes Kernen's 'looks like a conflict of interest' and Lutnick's replies, and contains the Moelis sentence.",
+    "host": "alternet.org",
+    "date": "2026-10-04",
+    "kind": "fact",
+    "archive": false
+   },
+   "14": {
+    "state": "supports",
+    "why": "The Bloomberg text reports the $4 billion in offers, the $1.5 billion cap, Moelis as co-placement agent, the $50 million fee filing, and the Commerce spokeswoman's quote.",
     "host": "finance.yahoo.com",
-    "date": "2026-09-27",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    }
@@ -11978,106 +11994,122 @@
   },
   "rfk-jr-vaccine-injury-liability-conflict-2026": {
    "0": {
-    "state": "supports",
-    "why": "The July 17, 2025 ProPublica article says Kennedy wants to overhaul the VICP, has long argued it removes industry's incentive to make safe products, can drop vaccines from coverage, and disclosed referring plaintiffs to a firm suing Merck over its HPV shot for a 10% cut of fees.",
-    "host": "propublica.org",
-    "date": "2026-09-28",
+    "state": "partly",
+    "why": "AP confirms the June $150,000 contract, Downing's Gardasil role, and his listing in the HHS directory, but the text does not include Downing's earlier criticism of VICP's 'hard line'.",
+    "host": "apnews.com",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "1": {
     "state": "supports",
-    "why": "The Reuters text reports Kennedy accused the program and its 'Vaccine Court' of corruption and inefficiency in a post on X and quotes him saying, with AG Bondi, 'we will steer the Vaccine Court back to its original congressional intent.'",
-    "host": "gazette.com",
-    "date": "2026-09-28",
+    "why": "ProPublica's July 17, 2025 text supports each element: the overhaul, Kennedy's longstanding argument, his power to drop vaccines, and the 10% referral fee.",
+    "host": "propublica.org",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "2": {
     "state": "supports",
-    "why": "The STAT headline and lede state the schedule cut creates new uncertainty on liability protections, that Kennedy's allies hope it opens the door to stripping liability shields (a longtime Kennedy aim), and that HHS says the shield remains.",
-    "host": "statnews.com",
-    "date": "2026-09-28",
+    "why": "The Reuters text reports Kennedy's X post accusing the program and 'Vaccine Court' of corruption and inefficiency and quotes the Bondi line.",
+    "host": "gazette.com",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "3": {
-    "state": "unopened",
-    "why": "",
-    "host": "warren.senate.gov",
-    "date": "2026-09-15",
-    "kind": "fact",
+    "state": "supports",
+    "why": "STAT's Jan. 8, 2026 headline, subhead and lede match the claim.",
+    "host": "statnews.com",
+    "date": "2026-10-04",
+    "kind": "interpretation",
     "archive": false
    },
    "4": {
-    "state": "partly",
-    "why": "The March 19, 2026 excerpt supports the polio/28-countries and diphtheria-70-years points and a fragment says manufacturers 'may stop selling shots here like they did in the 1980s,' but the provided windows do not contain the statement that the VICP covers only CDC-recommended routine immunizations for children or pregnant women.",
-    "host": "propublica.org",
-    "date": "2026-09-28",
+    "state": "not_found",
+    "why": "The fetched content is raw, undecoded PDF binary with no readable letter text, so it cannot settle the claim.",
+    "host": "warren.senate.gov",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "5": {
     "state": "partly",
-    "why": "The AP article confirms the $150,000 June 2025 HHS contract to an Arizona law firm for VICP 'expertise,' that attorney Andrew Downing led Gardasil litigation against Merck, and that he was listed in the HHS staff directory. However, the text does not contain any quote or statement from Downing criticizing VICP for taking a 'hard line' against such claims -- that specific detail is not present.",
-    "host": "apnews.com",
-    "date": "2026-09-15",
+    "why": "ProPublica's March 2026 text confirms the manufacturer-exit risk, the 28-country polio warning and the diphtheria outbreak, but the statement that VICP covers only CDC-recommended routine shots for children or pregnant women is not in the provided excerpt.",
+    "host": "propublica.org",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "6": {
     "state": "partly",
-    "why": "The July 28, 2026 letter concerns the Merck Gardasil settlement and notes Kennedy has refused to disclose which settled cases he referred to Wisner Baum, but the extracted text is cut off before the signatories and any August 11, 2026 response deadline or question list appear.",
-    "host": "warren.senate.gov",
-    "date": "2026-09-28",
+    "why": "The notice, published 07/02/2026, terminates the COVID-19 EUA declaration effective June 29, 2027, but the provided text does not show the June 29, 2026 date of the Secretary's determination.",
+    "host": "federalregister.gov",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "7": {
-    "state": "supports",
-    "why": "The July 29, 2026 Reuters report says senators asked whether Kennedy's family stands to profit from the $50 million Gardasil settlement, quotes Brent Wisner that 'at no time' will Kennedy or his son receive fees, and notes son Conor works at Wisner Baum.",
-    "host": "wtaq.com",
-    "date": "2026-09-28",
+    "state": "partly",
+    "why": "The July 28, 2026 letter text confirms the Merck settlement subject and Kennedy's refusal to disclose which cases he referred to Wisner Baum, but the truncated text does not show the signatories or the August 11 deadline.",
+    "host": "warren.senate.gov",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "8": {
-    "state": "partly",
-    "why": "The August 24, 2026 letter cites Kennedy's August 1 X post, notes no identified change to his ethics documents ('Nor has the Senate Finance Committee identified any information indicating you have changed the disposition of your Gardasil stake') and sets a September 9 deadline, but the extracted text omits the signatories and the passage characterizing the post as suggesting he modified or strayed from his ethics agreement.",
-    "host": "warren.senate.gov",
-    "date": "2026-09-28",
+    "state": "supports",
+    "why": "The Reuters text supports each element: the senators' question, Wisner's 'at no time' statement, and Conor at Wisner Baum.",
+    "host": "wtaq.com",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "9": {
-    "state": "supports",
-    "why": "The Aug. 25, 2026 Reuters report states Kennedy said on social media no family member 'received a penny' and he 'relinquished any interest in potential Gardasil fees back to the Wisner Baum law firm,' and that senators said this conflicts with earlier ethics filings.",
-    "host": "wtaq.com",
-    "date": "2026-09-28",
+    "state": "partly",
+    "why": "The August 24, 2026 letter text supports the August 1 X post, the absence of amended filings, and the September 9 deadline, but the truncated text does not show the signatories or the 'modified or strayed' wording.",
+    "host": "warren.senate.gov",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "10": {
     "state": "supports",
-    "why": "The August 25, 2026 HHS letter signed by Gary Andres, Assistant Secretary for Legislation, to Sen. Warren states exactly this February 11, 2025 assignment to WisnerBaum rather than a family member.",
-    "host": "warren.senate.gov",
-    "date": "2026-09-28",
+    "why": "The Reuters text quotes Kennedy's 'received a penny' and 'relinquished' statements and reports the senators said they conflict with earlier filings.",
+    "host": "wtaq.com",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "11": {
-    "state": "partly",
-    "why": "The September 24, 2026 letter says the August 25 HHS response revealed Kennedy transferred the stake to Wisner Baum rather than his son and calls his apparent failure to report the change 'deeply alarming,' but the extracted text is cut off before the signatories and any October 8, 2026 deadline appear.",
+    "state": "supports",
+    "why": "The HHS letter dated August 25, 2026 and signed by Gary Andres states this directly.",
     "host": "warren.senate.gov",
-    "date": "2026-09-28",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    },
    "12": {
     "state": "partly",
-    "why": "The July 2, 2026 Federal Register notice (2026-13374) terminates the COVID-19 drug/biologic EUA declaration effective June 29, 2027, but the extracted text is cut off before the passage stating the Secretary's June 29, 2026 determination date.",
-    "host": "federalregister.gov",
-    "date": "2026-09-28",
+    "why": "The September 24, 2026 letter confirms the August 25 disclosure, the transfer to Wisner Baum, and the 'deeply alarming' language, but the provided text does not show the signatories or the October 8 deadline.",
+    "host": "warren.senate.gov",
+    "date": "2026-10-04",
+    "kind": "fact",
+    "archive": false
+   },
+   "13": {
+    "state": "unopened",
+    "why": "",
+    "host": "kpbs.org",
+    "date": "2026-10-04",
+    "kind": "fact",
+    "archive": false
+   },
+   "14": {
+    "state": "supports",
+    "why": "The AP text quotes Hilliard's statement exactly as the claim states, in response to the senators' Thursday letter.",
+    "host": "abc27.com",
+    "date": "2026-10-04",
     "kind": "fact",
     "archive": false
    }
