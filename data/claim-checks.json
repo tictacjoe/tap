@@ -4071,55 +4071,63 @@
   "doj-fema-nyc-migrant-shelter-subpoenas-2025": {
    "0": {
     "state": "partly",
-    "why": "Fox 5 NY confirms DOJ subpoenaed at least two NYC hotels demanding migrant identifying information and shelter-funder details, but it does not name Row NYC/Stewart Hotel or Hotel Chandler, or give a March 2025 date.",
+    "why": "The excerpt confirms SDNY prosecutors subpoenaed at least two hotels seeking names, identifying information and funding details (and the intro adds birth dates and nationalities), but the provided text never states the March 2025 date the claim asserts.",
     "host": "fox5ny.com",
-    "date": "2026-09-15",
+    "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
    "1": {
     "state": "supports",
-    "why": "The Texas Tribune article matches the claim precisely, describing FEMA's 30-day deadline for names/contact information and the affidavit requirement.",
-    "host": "texastribune.org",
-    "date": "2026-09-15",
+    "why": "The AP text states the Roosevelt and Stewart Hotel subpoenas sought names, birth dates and other personal information, that a similar subpoena went to the former Hotel Chandler which 'does not primarily house migrants', and separately reports the FEMA letter withholding funding during the review and requiring executive officers' sworn statements.",
+    "host": "apnews.com",
+    "date": "2026-10-06",
     "kind": "fact",
-    "archive": false
+    "archive": true
    },
    "2": {
     "state": "partly",
-    "why": "ILRC confirms the Illinois-led coalition lawsuits Illinois v. FEMA and Illinois v. Noem challenging the immigration-related grant conditions, but it does not give the specific docket numbers or state the coalition size as roughly 20 states.",
-    "host": "ilrc.org",
-    "date": "2026-09-15",
+    "why": "The excerpt supports the March 11 FEMA letter, the 30-day deadline for names and contact information, and the affidavit denying knowledge or suspicion of smuggling violations, but the source frames the affidavit as something FEMA will ask recipients to sign going forward, not specifically sworn affidavits by executive officers, and the provided text is the Texas Tribune only (no Yahoo/AP text).",
+    "host": "texastribune.org",
+    "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
    "3": {
     "state": "partly",
-    "why": "The source confirms Judge Smith's September 24, 2025 permanent injunction against DHS/FEMA on the 40 grant programs exactly as described, but it never characterizes the ruling procedurally as \"summary judgment\" -- it describes vacatur/injunction based on vagueness, Spending Clause coercion, and arbitrary/capricious findings.",
-    "host": "hstoday.us",
-    "date": "2026-09-15",
+    "why": "The ILRC excerpt documents the Illinois-led states' challenge to FEMA's immigration-enforcement funding conditions and the related Illinois v. Noem suit, but the provided text gives no docket numbers, no ~20-state count, no Civil Rights Litigation Clearinghouse material, and no 'unlawful federal coercion' framing.",
+    "host": "ilrc.org",
+    "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
    "4": {
     "state": "partly",
-    "why": "The docket confirms case No. 25-2131 and that the brief was originally due March 3, 2026, but it shows the appellate docket was opened December 1, 2025 on the notice of appeal (not explicitly November 21, 2025), and contains no mention of an October 14, 2025 motion to enforce the injunction.",
+    "why": "HSToday reports Judge Smith's September 24, 2025 permanent injunction against DHS/FEMA enforcing immigration-related conditions on 40 federal grant programs, but the provided text does not say the order granted the states summary judgment.",
+    "host": "hstoday.us",
+    "date": "2026-10-06",
+    "kind": "fact",
+    "archive": true
+   },
+   "5": {
+    "state": "partly",
+    "why": "The Justia docket summary confirms First Circuit No. 25-2131 opened on the government's notice of appeal and a briefing schedule with the opening brief originally due March 3, 2026, but it says nothing about the October 14, 2025 motion to enforce being granted and gives a docketing date of December 1, 2025 rather than a November 21, 2025 notice date; no CourtListener text is provided.",
     "host": "dockets.justia.com",
-    "date": "2026-09-15",
+    "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
-   "5": {
+   "6": {
     "state": "supports",
-    "why": "Paragraph 7 of the complaint, filed 07/23/26 in No. 1:26-cv-00485, alleges the FY2026 Standard Terms and Conditions immigration conditions are essentially identical to those vacated and enjoined last year in FEMA; the claim correctly frames it as an allegation.",
+    "why": "Paragraph 7 of the July 23, 2026 complaint in Case 1:26-cv-00485 (D.R.I.) alleges the FY2026 Standard Terms and Conditions include immigration conditions essentially identical to those vacated and enjoined last year, exactly as the claim states (correctly framed as an allegation).",
     "host": "ag.ny.gov",
     "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
-   "8": {
+   "9": {
     "state": "partly",
-    "why": "The provided docket text (truncated) confirms the appeal was docketed and terminated Sept. 16, 2026, but the extracted portion ends in January 2026 and does not show the Rule 42(b) dismissal, mandate, briefing schedule, extensions, 'disinclined' language, or the Sept. 1 motion.",
+    "why": "The docket shows the January 22, 2026 briefing schedule, the July 14 order extending the brief deadline to 09/02/2026 with the court 'disinclined to grant a request for further enlargement', the September 1, 2026 motion to dismiss, and the September 16, 2026 Rule 42(b) judgment and same-day mandate; the earlier extensions to May 4 and July 6 fall in an elided portion of the provided text and cannot be confirmed.",
     "host": "courtlistener.com",
     "date": "2026-10-06",
     "kind": "fact",

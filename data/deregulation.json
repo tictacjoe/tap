@@ -6698,10 +6698,10 @@
     "administration": "Trump II (2025-present)",
     "agency": "Occupational Safety and Health Administration / Department of Labor",
     "domain": "labor",
-    "status": "Finalized as a completed comparison-period figure (late 2025 vs. late 2024); ongoing as an enforcement posture into 2026",
-    "date_of_action": "Late 2025 (comparison period), data released 2026-02-18",
+    "status": "Completed comparison-period figure (April-September 2025 vs. the same months of 2024); senators asked DOL to answer by March 4, 2026, and no public DOL reply has been reported. OSHA head David Keeling said in September 2026 that OSHA had hired more than 120 new inspectors since May.",
+    "date_of_action": "April-September 2025 (comparison period), data released 2026-02-18",
     "original_rule_summary": "OSHA conducts workplace inspections and issues violation findings -- including 'willful' violation findings, reserved for the most serious, knowing violations of safety standards -- as its primary enforcement mechanism for existing workplace-safety rules, independent of any specific rule needing to change.",
-    "what_changed": "Data released by Sen. Elizabeth Warren's office showed OSHA conducted roughly 20% fewer workplace inspections in late 2025 compared to the same period in 2024, alongside a 42% drop in findings of 'willful' violations -- the most serious enforcement category, reserved for violations OSHA determines were committed with plain indifference to or intentional disregard for employee safety. As with this tracker's separately-documented EPA civil-enforcement collapse (epa-civil-enforcement-collapse-2025.json), this decline was achieved through reduced enforcement activity rather than any formal repeal of the underlying workplace-safety standards, meaning the rules remain on the books but are being enforced against far fewer violators.",
+    "what_changed": "OSHA statistics provided confidentially to Sen. Elizabeth Warren's office, and released by Warren and five other Democratic senators in a February 18, 2026 letter to the Labor Department, showed OSHA conducted 20% fewer workplace inspections in April through September 2025 than in the same months of 2024, alongside a 42% drop in findings of 'willful' violations -- the most serious enforcement category, reserved for violations OSHA determines were committed with plain indifference to or intentional disregard for employee safety. As with this tracker's separately documented collapse in EPA civil enforcement, this decline was achieved through reduced enforcement activity rather than any formal repeal of the underlying workplace-safety standards, meaning the rules remain on the books but are being enforced against far fewer violators.",
     "primary_proponent": {
       "name": "Department of Labor / OSHA",
       "role": "Federal agency responsible for the reduced inspection and enforcement activity",
@@ -6714,33 +6714,49 @@
       "summary": "**A 42% drop in 'willful' violation findings -- OSHA's most serious enforcement category -- alongside a 20% drop in inspections overall suggests reduced deterrence against the most serious, knowing workplace-safety violations, at a time when the underlying safety standards remain formally in place but are being enforced against fewer employers.**",
       "caveat": "This entry documents Sen. Warren's office's data release characterizing OSHA's own enforcement statistics; a single comparison period can be affected by staffing transitions and other administrative factors, though the specific and simultaneous decline in both inspection volume and the most serious violation-finding category suggests more than ordinary year-to-year variance."
     },
-    "confidence_note": "MODERATE-HIGH confidence -- the specific percentage figures are drawn from Sen. Warren's office's data release as reported by The New York Times; this is a Democratic senator's office characterization of OSHA's own data rather than an independent nonpartisan audit, though the underlying inspection/violation-finding statistics themselves are OSHA's own enforcement records.",
+    "confidence_note": "MODERATE-HIGH confidence -- the specific percentage figures are drawn from Sen. Warren's office's data release as reported by The New York Times and set out in the senators' February 18, 2026 letter; this is a Democratic senator's office characterization of OSHA's own data rather than an independent nonpartisan audit, though the underlying inspection/violation-finding statistics themselves are OSHA's own enforcement records. Re-verified 2026-10-06: the senators' February 18 letter confirms the 20% and 42% figures and dates the comparison to April-September 2025 (not late 2025), so the period was corrected; Warren's February 19 press release says only \"in 2025\"; no formal DOL response was found.",
     "pull_quote": "This decline mirrors a separately-documented pattern at EPA, where civil enforcement also collapsed without any formal repeal of the underlying environmental standards — the rules stay on the books but are enforced against far fewer violators.",
-    "short_summary": "OSHA conducted 20% fewer inspections and found 42% fewer 'willful' violations in late 2025 than the same period in 2024, per data released by Sen. Warren's office.",
-    "last_verified": "2026-08-05",
+    "short_summary": "OSHA conducted 20% fewer inspections and found 42% fewer 'willful' violations in April-September 2025 than the same months of 2024, per OSHA data released by Sen. Warren and five other senators.",
+    "last_verified": "2026-10-06",
     "date_added": "2026-08-05",
-    "last_updated": "2026-08-05",
+    "last_updated": "2026-10-06",
     "sources": [
       {
-        "name": "New York Times -- 'Data released by Sen. Elizabeth Warren shows OSHA conducted roughly 20% fewer workplace inspections'",
+        "name": "New York Times -- report on decline in OSHA workplace inspections (Feb. 18, 2026)",
         "url": "https://www.nytimes.com/2026/02/18/us/politics/workplace-inspections-decrease-osha.html"
+      },
+      {
+        "name": "Sen. Elizabeth Warren and five senators -- letter to DOL/OSHA on workplace-safety inspections (Feb. 18, 2026)",
+        "url": "https://www.warren.senate.gov/imo/media/doc/letter_from_warren_senators_to_department_of_labor_and_occupational_safety_and_health_administration_on_workplace_safety_inspections.pdf"
+      },
+      {
+        "name": "Sen. Elizabeth Warren -- press release on senators' investigation of DOL workplace-safety cuts (Feb. 19, 2026)",
+        "url": "https://www.warren.senate.gov/newsroom/press-releases/warren-senators-launch-investigation-into-trump-labor-department-slashing-worker-protections-putting-american-workers-at-risk/"
+      },
+      {
+        "name": "EHSLeaders -- 'Senators Demand Answers After OSHA Inspections Drop in 2025' (Feb. 26, 2026)",
+        "url": "https://ehsleaders.org/2026/02/senators-demand-answers-after-osha-inspections-drop-in-2025/"
+      },
+      {
+        "name": "Safety+Health Magazine -- 'David Keeling lays out his vision for OSHA's future in Occupational Keynote' (Sept. 15, 2026)",
+        "url": "https://www.safetyandhealthmagazine.com/david-keeling-lays-out-his-vision-for-oshas-future-in-occupational-keynote/"
       }
     ],
     "section_summaries": {
-      "what_changed": "OSHA conducted 20% fewer workplace inspections and found 42% fewer 'willful' safety violations in late 2025 vs. late 2024, per data released by Sen. Warren's office.",
+      "what_changed": "OSHA conducted 20% fewer inspections and found 42% fewer 'willful' violations in April-September 2025 vs. the same months of 2024, per data released by Sen. Warren.",
       "estimated_impact": "Suggests reduced deterrence against the most serious, knowing workplace-safety violations even as the underlying safety standards remain formally in place.",
       "confidence_note": "Underlying figures are OSHA's own enforcement statistics, released and characterized by a Democratic senator's office rather than an independent nonpartisan audit."
     },
-    "last_substantive_update": "2026-08-05",
+    "last_substantive_update": "2026-10-06",
     "glance": {
       "who": "Department of Labor (OSHA)",
-      "what": "OSHA inspections fell 20% and 'willful' violation findings 42% in late 2025 versus a year earlier",
+      "what": "OSHA inspections fell 20% and 'willful' violation findings 42% in April-September 2025 vs. 2024",
       "harm": {
         "kind": "institutional",
         "certainty": "documented",
         "who": "Workplace safety enforcement"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-10-06"
     }
   },
   {
