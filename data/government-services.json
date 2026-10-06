@@ -1128,8 +1128,8 @@
         "url": "https://rollingstone.com/politics/politics-features/dan-driscoll-modernize-military-hegseth-1235635481"
       },
       {
-        "name": "The New York Times -- 'Inside the Battle to Save One Pioneering General From Hegseth's Purge' (Adam Entous and Greg Jaffe, Sept. 6, 2026; linked via co-author Greg Jaffe's post sharing the article)",
-        "url": "https://x.com/GregJaffe/status/2096563370610524649"
+        "name": "The New York Times -- 'Inside the Battle to Save One Pioneering General From Hegseth's Purge' (Adam Entous and Greg Jaffe, Sept. 6, 2026)",
+        "url": "https://www.nytimes.com/2026/09/06/us/politics/hegseth-army-general-donahue.html"
       },
       {
         "name": "Fox News -- 'The commanding general of the US Army in Europe and Africa is stepping down'",
@@ -8072,26 +8072,26 @@
     "title": "NLRB Deleted DOGE System-Access Records Before GAO Investigators Could Examine Them",
     "institution": "National Labor Relations Board (NLRB)",
     "domain": "data_collection_halted",
-    "status": "Complete -- GAO report published; the underlying account-access records cannot be recovered",
+    "status": "Complete -- GAO report published April 2026; NLRB had deleted the DOGE detailees' system accounts before GAO could examine them, so GAO could not verify the level of access NLRB granted. Wired reported in July 2026 that the NLRB inspector general's separate investigation was still ongoing.",
     "date_of_action": "2025-04-16 (DOGE detail begins) through 2025-08 (access records deleted, after DOGE detail ended and before GAO could examine them)",
-    "what_changed": "Two DOGE staffers were formally detailed to the National Labor Relations Board beginning April 16, 2025, under agreements running through July 25, 2025, and requested access to seven internal HR systems covering personnel records, payroll, and hiring databases -- a request that prompted an NLRB IT staffer to file a whistleblower disclosure with Congress and the agency's inspector general to open an investigation into a potential data breach. A Government Accountability Office report -- titled 'National Labor Relations Board Detailees Did Not Access IT Systems Between April 16 and July 25, 2025' -- found no evidence the DOGE detailees accessed those systems during that specific window. However, GAO also found that **in August 2025, after the DOGE detail had ended but before GAO investigators requested to observe the systems, NLRB deleted the team members' system-access accounts and associated audit-trail records -- eliminating the digital evidence needed to independently verify what access, if any, occurred, and undercutting confidence in the agency's own account**. Access logs for sensitive systems are generally subject to a six-year retention requirement under the General Records Schedule; the deleted records were only months old.",
+    "what_changed": "Two DOGE staffers were formally detailed to the National Labor Relations Board beginning April 16, 2025, under agreements running through July 25, 2025, and requested access to seven internal HR systems covering personnel records, payroll, and hiring databases. The detail began two days after an NLRB IT staffer, Daniel Berulis, filed an April 14, 2025 whistleblower complaint with Congress alleging DOGE had accessed and possibly exfiltrated sensitive NLRB data; the agency's inspector general had opened an investigation by May 2025. An April 2026 Government Accountability Office report -- titled 'National Labor Relations Board Detailees Did Not Access IT Systems Between April 16 and July 25, 2025' -- found no evidence the DOGE detailees accessed those systems during that specific window. However, a GAO footnote disclosed that **in August 2025, after the DOGE detail had ended but before GAO investigators requested to observe the systems, NLRB deleted the team members' accounts for system access -- leaving GAO 'unable to verify the level of access that the Board provisioned to the team members' and reliant on NLRB officials' description of it**. GAO based its no-access finding on sign-in logs for the detailees' primary network accounts, which NLRB had not deleted. Access logs for sensitive systems are generally subject to a six-year retention requirement under the General Records Schedule; the deleted records were only months old.",
     "primary_proponent": {
       "name": "National Labor Relations Board",
       "role": "Independent federal agency (IT/records management under agency leadership)",
-      "note": "NLRB deleted the DOGE detailees' system-access accounts and associated audit-trail records in August 2025, before GAO investigators could examine them -- a records-retention violation that prevented independent verification of the agency's own no-access finding."
+      "note": "NLRB deleted the DOGE detailees' system-access accounts in August 2025, before GAO investigators could examine them -- a deletion that experts quoted by Wired called contrary to records-retention rules, and that left GAO unable to verify the level of system access NLRB had granted them."
     },
     "estimated_impact": {
-      "summary": "GAO's finding of 'no evidence of access' during the specific detail window is undercut by NLRB's own deletion of the access records that would have made that finding independently verifiable -- the deletion itself, occurring within a records-retention period that should have preserved the data for six years, is the more significant and independently confirmed problem, regardless of what DOGE staffers did or did not do.",
+      "summary": "GAO found no evidence the DOGE detailees used NLRB systems between April 16 and July 25, 2025, based on sign-in logs for their network accounts. But NLRB's August 2025 deletion of their system accounts left GAO unable to verify what level of access the agency had granted, so on that point GAO had only NLRB officials' word. Wired reports that the General Records Schedule requires such access records to be kept for six years.",
       "figures": [
         {
           "metric": "DOGE staffers detailed to NLRB",
           "value": "2",
-          "source": "GAO report, cited by Wired/beSpacific, 2026"
+          "source": "GAO-26-108774 (April 2026)"
         },
         {
           "metric": "Internal HR systems DOGE staffers requested access to",
           "value": "7",
-          "source": "GAO report, cited by Wired/beSpacific, 2026"
+          "source": "GAO-26-108774 (April 2026)"
         },
         {
           "metric": "Standard retention period for sensitive system access logs (General Records Schedule)",
@@ -8099,18 +8099,22 @@
           "source": "General Records Schedule, cited in GAO report coverage"
         }
       ],
-      "caveat": "GAO's report is a genuinely two-sided finding: it did NOT find evidence that DOGE staffers improperly accessed NLRB systems during their detail, which some outlets (RedState, Legis1) have characterized as clearing DOGE of the data-breach allegation. The more significant, less-disputed finding is procedural: NLRB deleted the underlying access records months before their required retention period expired and before investigators could examine them, which independently undermines confidence in any conclusion -- favorable or unfavorable to DOGE -- drawn from the remaining evidence. Present both halves of this finding together rather than emphasizing only one side."
+      "caveat": "GAO's report is a genuinely two-sided finding: it did NOT find evidence that DOGE staffers improperly accessed NLRB systems during their detail, which some outlets have characterized as clearing DOGE (Legis1) or as undercutting the data-breach narrative (RedState). The more significant, less-disputed finding is procedural: NLRB deleted the detailees' system accounts years before the six-year retention period Wired cites would have expired and before investigators could examine them, which left GAO relying on NLRB officials' word for what access the agency had granted. Present both halves of this finding together rather than emphasizing only one side."
     },
-    "confidence_note": "HIGH confidence -- based directly on a GAO report (the government's own independent auditor), corroborated in coverage by Wired, beSpacific, FedScoop, and outlets across the political spectrum (including RedState and Legis1, which emphasize the no-access finding). The deleted-records finding and the no-evidence-of-access finding are both drawn from the same GAO report and are not in tension with each other, though commentary on the report differs sharply in emphasis depending on outlet.",
+    "confidence_note": "HIGH confidence -- based directly on a GAO report (the government's own independent auditor), reported by Wired (excerpted by beSpacific) and covered by outlets across the political spectrum (including RedState and Legis1, which emphasize the no-access finding); FedScoop's May 2025 report documents the separate inspector general investigation. The deleted-records finding and the no-evidence-of-access finding are both drawn from the same GAO report and are not in tension with each other, though commentary on the report differs sharply in emphasis depending on outlet. Re-verified 2026-10-06: GAO-26-108774 read directly (archived copy) -- it confirms the 2 detailees, 7 HR-system requests (2 fulfilled), and the August 2025 account deletion, and shows GAO's no-access finding rests on surviving network sign-in logs while the deletion blocked verification of access levels; Wired, Legis1 and beSpacific re-read; corrected the order of events (the whistleblower complaint came two days before the DOGE detail began, so the detail's access requests could not have prompted it) and hedged the records-violation claim as experts' view, since GAO did not address legality. No later NLRB inspector general findings found.",
     "pull_quote": "Access logs for sensitive systems are generally subject to a six-year retention requirement under the General Records Schedule; the deleted records were only months old.",
     "section_summaries": {
-      "what_changed": "GAO found no evidence DOGE staffers accessed NLRB systems during their April-July 2025 detail, but also found NLRB deleted the underlying access-account records in August 2025, before investigators could examine them and years before required retention rules allowed.",
-      "estimated_impact": "The records deletion -- not the access question itself -- is the more clearly established problem, since it eliminated the evidence needed to independently verify the agency's account either way.",
+      "what_changed": "GAO found no evidence DOGE detailees used NLRB systems in April-July 2025, but NLRB deleted their access accounts in August 2025, before GAO could examine them.",
+      "estimated_impact": "The records deletion, not the access question, is the clearer problem: it left GAO unable to verify what level of system access NLRB had granted the DOGE detailees, so GAO relied on officials' word.",
       "confidence_note": "Based directly on a GAO report; the no-access and deleted-records findings are both established facts from that report, though commentary across outlets varies sharply in which half it emphasizes."
     },
-    "last_verified": "2026-07-27",
+    "last_verified": "2026-10-06",
     "date_added": "2026-07-27",
     "sources": [
+      {
+        "name": "GAO -- Department of Government Efficiency: National Labor Relations Board Detailees Did Not Access IT Systems Between April 16 and July 25, 2025 (GAO-26-108774)",
+        "url": "https://www.gao.gov/products/gao-26-108774"
+      },
       {
         "name": "beSpacific — Federal Investigators Say Certain DOGE Records Were Deleted",
         "url": "https://www.bespacific.com/federal-investigators-say-certain-doge-records/"
@@ -8122,19 +8126,31 @@
       {
         "name": "The Mindful Federal Employee — GAO's DOGE-NLRB Report: The Deleted-Logs Footnote",
         "url": "https://www.themindfulfederalemployee.com/blog/gao-report-doge-nlrb-deleted-access-records"
+      },
+      {
+        "name": "Wired — Federal Investigators Say Certain DOGE Records Were Deleted",
+        "url": "https://www.wired.com/story/federal-investigators-say-certain-doge-records-were-deleted/"
+      },
+      {
+        "name": "Legis1 — Federal Audit Clears DOGE of NLRB Access Misconduct",
+        "url": "https://legis1.com/news/doge-nlrb-audit-misconduct-federal-clears-of"
+      },
+      {
+        "name": "RedState — Months of DOGE Panic, Zero Evidence: GAO Undercuts Data Breach Narrative (Ben Smith, May 4, 2026)",
+        "url": "https://redstate.com/ben-smith/2026/05/04/months-of-doge-panic-zero-evidence-gao-undercuts-data-breach-narrative-n2201971"
       }
     ],
-    "last_updated": "2026-07-27",
-    "last_substantive_update": "2026-07-27",
+    "last_updated": "2026-10-06",
+    "last_substantive_update": "2026-10-06",
     "glance": {
       "who": "National Labor Relations Board",
-      "what": "Deleted DOGE staffers' system-access records before GAO could examine them, years before retention allowed",
+      "what": "Deleted DOGE staffers' system accounts before GAO could verify what access they had been granted",
       "harm": {
         "kind": "institutional",
         "certainty": "documented",
-        "who": "Independent verification of DOGE access"
+        "who": "Verification of DOGE access levels"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-10-06"
     }
   },
   {
@@ -11607,7 +11623,7 @@
         {
           "metric": "Civil rights and education organizations that publicly condemned the change",
           "value": "~60",
-          "source": "Washington Post / AP, July 2026"
+          "source": "NAACP Legal Defense Fund joint statement, July 23, 2026; reported by Washington Post / AP"
         },
         {
           "metric": "Years the disparate-impact standard had been part of Title VI regulatory enforcement",
@@ -11617,13 +11633,13 @@
       ],
       "caveat": "This rule implements the broader, government-wide Executive Order 14281 on disparate-impact liability, not an Education-Department-specific policy choice in isolation -- similar disparate-impact rescissions are likely to appear or have appeared at other federal agencies under the same EO, which is relevant context for evaluating whether this is part of a coordinated administration-wide legal strategy rather than an isolated Education Department decision."
     },
-    "confidence_note": "HIGH confidence -- the rule and its effective date are drawn directly from the Department of Education's own press release and the Federal Register final rule text, corroborated across the Washington Post, AP (widely syndicated to ABC News, NBC Bay Area, WKBN), and EdWeek.",
+    "confidence_note": "HIGH confidence -- the rule and its effective date are drawn directly from the Department of Education's own press release and the Federal Register final rule text, corroborated across the Washington Post, AP (widely syndicated to ABC News, NBC Bay Area, WKBN), and EdWeek. Re-verified 2026-10-06: the Federal Register final rule still shows the July 24, 2026 effective date and the intentional-discrimination-only language, and the Legal Defense Fund's July 23 joint statement of 60 organizations still carries the quoted warning; no court challenge, stay or reversal found.",
     "section_summaries": {
-      "what_changed": "Education finalized a rule rescinding the disparate-impact standard from Title VI civil rights enforcement, meaning investigators must now prove intentional discrimination rather than relying on demographic outcome data alone.",
+      "what_changed": "Education finalized a rule rescinding the disparate-impact standard from Title VI enforcement, so investigators must now prove intentional discrimination, not rely on demographic outcome data alone.",
       "estimated_impact": "This raises the evidentiary bar for challenging school policies with racially unequal effects; roughly 60 civil rights and education groups condemned the change as harmful to students of color.",
       "confidence_note": "Well-documented via the agency's own press release and Federal Register filing, corroborated across multiple independent outlets."
     },
-    "last_verified": "2026-07-27",
+    "last_verified": "2026-10-06",
     "date_added": "2026-07-27",
     "sources": [
       {
@@ -11645,10 +11661,14 @@
       {
         "name": "AP (via WKBN) -- 'Education Department rescinds disparate impact rule, key tool used to assess school discrimination'",
         "url": "https://www.wkbn.com/news/national-world/ap-education-department-rescinds-disparate-impact-rule-a-key-tool-used-to-assess-school-discrimination/"
+      },
+      {
+        "name": "NAACP Legal Defense Fund -- 'Civil Rights Groups Condemn Department of Education Final Rule Weakening Civil Rights Protections for Students' (joint statement, July 23, 2026)",
+        "url": "https://www.naacpldf.org/press-release/civil-rights-groups-condemn-department-of-education-final-rule-weakening-civil-rights-protections-for-students/"
       }
     ],
     "last_updated": "2026-07-27",
-    "last_substantive_update": "2026-07-27",
+    "last_substantive_update": "2026-10-06",
     "glance": {
       "who": "Linda McMahon (Education Secretary)",
       "what": "Finalized a rule rescinding the disparate-impact standard in Title VI enforcement, effective July 24, 2026",
@@ -11657,7 +11677,7 @@
         "certainty": "documented",
         "who": "Students facing unequal school policies"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-10-06"
     }
   },
   {
@@ -33814,24 +33834,24 @@
   },
   {
     "id": "opm-douglas-factors-elimination-2026",
-    "title": "OPM/MSPB Propose Scrapping the Douglas Factors, the 44-Year-Old Framework Protecting Federal Employees From Arbitrary Discipline",
+    "title": "MSPB Ends Required Use of the Douglas Factors, the 45-Year-Old Framework Protecting Federal Employees From Arbitrary Discipline",
     "institution": "Office of Personnel Management (OPM) and Merit Systems Protection Board (MSPB)",
     "domain": "staff_office_cuts",
-    "status": "Proposed rule -- published in the Federal Register July 7, 2026, not yet finalized as of this entry",
-    "date_of_action": "2026-07-07 (proposed rule published)",
-    "what_changed": "OPM and the Merit Systems Protection Board jointly proposed eliminating the 'Douglas factors' -- a 12-part framework established by a 1981 MSPB case that agencies have used for over four decades to ensure federal employee discipline is proportionate and considers factors like offense severity, past performance, and rehabilitation potential. The proposed rule, published in the Federal Register on July 7, 2026, would replace the Douglas factors with a vaguer 'totality of the circumstances' standard, which OPM and MSPB argue is more flexible than what they characterized as agencies' 'rigid, mechanistic' application of Douglas. The same proposal includes shortening performance improvement plans to 30 days, banning settlement agreements that remove misconduct documentation from personnel files, and eliminating union officials' paid 'official time' for handling adverse-action appeals.",
+    "status": "Douglas change final -- MSPB's final rule, published September 3, 2026, took effect October 5, 2026 for appeals filed on or after that date; OPM's parts of the joint July 2 proposal (shorter improvement plans, settlement limits) are still proposed; OPM reopened comment September 15-29, 2026",
+    "date_of_action": "2026-07-02 (proposed rule published); 2026-09-03 (MSPB final rule published, effective 2026-10-05)",
+    "what_changed": "OPM and the Merit Systems Protection Board jointly proposed eliminating the 'Douglas factors' -- a 12-part framework established by a 1981 MSPB case that agencies have used for over four decades to ensure federal employee discipline is proportionate and considers factors like offense severity, past performance, and rehabilitation potential. The proposed rule, published in the Federal Register on July 2, 2026, would replace the Douglas factors with a vaguer 'totality of the circumstances' standard, which OPM and MSPB argue is more flexible than what they characterized as agencies' 'rigid, mechanistic' application of Douglas. The same proposal includes shortening performance improvement plans to 30 days, banning settlement agreements that remove misconduct documentation from personnel files, and eliminating union officials' paid 'official time' for handling adverse-action appeals. Update 2026-10-06: MSPB finalized its part of the proposal in a final rule published in the Federal Register on September 3, 2026. The Board 'will no longer require consideration of the 12 factors' and instead reviews whether a penalty is reasonable under the totality of the circumstances. The rule took effect October 5, 2026 and applies to appeals filed on or after that date; appeals already pending stay under the old framework. OPM's proposed changes, including the performance improvement plan and settlement-agreement provisions, were not part of that rule and are being finalized separately; OPM reopened public comment on the proposal from September 15 to 29, 2026, to take comment on new OPM firing data and an outside report.",
     "primary_proponent": {
       "name": "Office of Personnel Management",
       "role": "Federal civil service's central HR agency, acting jointly with the Merit Systems Protection Board",
       "note": "OPM and MSPB jointly authored and published the proposed rule eliminating the Douglas factors, framing the current framework as overly rigid and an obstacle to agency discipline."
     },
     "estimated_impact": {
-      "summary": "The proposal would give federal agency managers substantially more discretion to discipline or remove career employees by replacing an established, 12-factor proportionality test with a vaguer standard -- **critics warn this would let agencies remove employees for a single instance of misconduct with no prior discipline, undermining protections designed to prevent politically motivated firings across the career civil service.**",
+      "summary": "MSPB's final rule gives federal agency managers substantially more discretion to discipline or remove career employees by replacing an established, 12-factor proportionality test with a vaguer standard for appeals filed from October 5, 2026 -- **critics warn this lets agencies remove employees for a single instance of misconduct with no prior discipline, undermining protections designed to prevent politically motivated firings across the career civil service.**",
       "figures": [
         {
-          "metric": "Age of the Douglas factors framework being eliminated",
-          "value": "44 years (established 1981)",
-          "source": "Defense One, July 2026"
+          "metric": "Age of the Douglas factors framework being retired",
+          "value": "45 years (established 1981)",
+          "source": "Federal News Network, September 2026"
         },
         {
           "metric": "Agency success rate defending discipline decisions under current Douglas framework, per former MSPB member Raymond Limon",
@@ -33841,32 +33861,72 @@
       ],
       "caveat": "OPM and MSPB's stated rationale -- that Douglas has been applied too rigidly, discouraging warranted discipline -- is a genuine policy argument, not merely pretextual, and is presented alongside the critical response. Former MSPB member Raymond Limon disputes the premise, noting the Douglas factors were designed to be 'illustrative' rather than rigid and that agencies already win the large majority of contested discipline cases under the current standard. Federal employment attorney Michael Fallings warns the 'totality of circumstances' language would let agencies ignore factors favoring the employee, enabling removal for a single incident with no disciplinary history."
     },
-    "confidence_note": "HIGH confidence -- based on the proposed rule's own Federal Register text and detailed reporting in Defense One, which includes on-record reactions from a former MSPB member and a federal employment attorney. This is a proposed rule, not yet finalized, so its ultimate scope and effective date remain open; treat the specific practical impact as anticipated/contested rather than settled.",
+    "confidence_note": "HIGH confidence -- based on the proposed rule's own Federal Register text and detailed reporting in Defense One, which includes on-record reactions from a former MSPB member and a federal employment attorney. The Douglas change is now a final MSPB rule, but OPM's companion provisions are not yet final; treat the specific practical impact as anticipated/contested rather than settled. Update 2026-10-06: MSPB's September 3, 2026 final rule and its October 5, 2026 effective date confirmed in the Federal Register text; Federal News Network reports OPM's portions still pending, and OPM reopened comment on them September 15-29, 2026 (Federal Register). The proposed rule's Federal Register date corrected to July 2, 2026. No court challenge to the final rule found.",
     "pull_quote": "Federal employment attorney Michael Fallings warned the 'totality of circumstances' language would let agencies ignore factors favoring the employee, enabling removal for a single incident with no disciplinary history.",
     "section_summaries": {
-      "what_changed": "OPM and MSPB proposed replacing the 44-year-old Douglas factors discipline framework with a vaguer 'totality of the circumstances' standard, alongside shortened performance-improvement periods and eliminated union official time for appeals.",
-      "estimated_impact": "Critics warn the change would let agencies fire career employees for a single incident with no prior discipline, weakening protections against politically motivated removals across the federal workforce.",
-      "confidence_note": "Well-sourced to the proposed rule itself and detailed reporting with named experts on both sides; not yet a final rule, so ultimate impact is anticipated, not yet realized."
+      "what_changed": "OPM and MSPB proposed replacing the Douglas factors discipline framework with a vaguer 'totality of the circumstances' standard; MSPB finalized that change effective October 5, 2026.",
+      "estimated_impact": "Critics warn agencies could fire career employees for a single incident with no prior discipline, weakening protections against politically motivated removals.",
+      "confidence_note": "Sourced to the Federal Register texts and reporting with named experts on both sides; the Douglas change is final, OPM's parts are pending, and impact is anticipated."
     },
-    "last_verified": "2026-07-27",
+    "last_verified": "2026-10-06",
     "date_added": "2026-07-27",
     "sources": [
       {
         "name": "Defense One — Trump wants to scrap key framework for federal employee discipline",
         "url": "https://www.defenseone.com/policy/2026/07/trump-wants-scrap-key-framework-federal-employee-discipline/414663/"
+      },
+      {
+        "name": "Federal Register — Promoting Employee Accountability (OPM/MSPB proposed rule, July 2, 2026)",
+        "url": "https://www.federalregister.gov/documents/2026/07/02/2026-13445/promoting-employee-accountability"
+      },
+      {
+        "name": "Federal Register — Determining the Appropriate Penalty for Federal Employees Charged With Misconduct (MSPB final rule, September 3, 2026)",
+        "url": "https://www.federalregister.gov/documents/2026/09/03/2026-18061/determining-the-appropriate-penalty-for-federal-employees-charged-with-misconduct"
+      },
+      {
+        "name": "Federal News Network — MSPB finalizes major shift in federal employee misconduct cases",
+        "url": "https://federalnewsnetwork.com/workforce-rightsgovernance/2026/09/mspb-finalizes-major-shift-in-federal-employee-misconduct-cases/"
+      },
+      {
+        "name": "Federal Register — Promoting Employee Accountability (OPM reopening of comment period, September 15, 2026)",
+        "url": "https://www.federalregister.gov/documents/2026/09/15/2026-18943/promoting-employee-accountability"
       }
     ],
-    "last_updated": "2026-07-27",
-    "last_substantive_update": "2026-07-27",
+    "last_updated": "2026-10-06",
+    "last_substantive_update": "2026-10-06",
     "glance": {
-      "who": "OPM and MSPB",
-      "what": "Proposed scrapping the 44-year-old Douglas factors that guard federal employees against arbitrary discipline",
+      "who": "MSPB (proposed jointly with OPM)",
+      "what": "Ended required use of the 45-year-old Douglas factors guarding federal employees from arbitrary discipline",
       "harm": {
         "kind": "institutional",
         "certainty": "projected",
         "who": "Federal employee discipline protections"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-10-06"
+    },
+    "timeline": {
+      "what_changed": {
+        "base": "OPM and the Merit Systems Protection Board jointly proposed eliminating the 'Douglas factors' -- a 12-part framework established by a 1981 MSPB case that agencies have used for over four decades to ensure federal employee discipline is proportionate and considers factors like offense severity, past performance, and rehabilitation potential. The proposed rule, published in the Federal Register on July 2, 2026, would replace the Douglas factors with a vaguer 'totality of the circumstances' standard, which OPM and MSPB argue is more flexible than what they characterized as agencies' 'rigid, mechanistic' application of Douglas. The same proposal includes shortening performance improvement plans to 30 days, banning settlement agreements that remove misconduct documentation from personnel files, and eliminating union officials' paid 'official time' for handling adverse-action appeals.",
+        "updates": [
+          {
+            "date": "2026-10-06",
+            "label": "Update",
+            "text": "Update 2026-10-06: MSPB finalized its part of the proposal in a final rule published in the Federal Register on September 3, 2026. The Board 'will no longer require consideration of the 12 factors' and instead reviews whether a penalty is reasonable under the totality of the circumstances. The rule took effect October 5, 2026 and applies to appeals filed on or after that date; appeals already pending stay under the old framework. OPM's proposed changes, including the performance improvement plan and settlement-agreement provisions, were not part of that rule and are being finalized separately; OPM reopened public comment on the proposal from September 15 to 29, 2026, to take comment on new OPM firing data and an outside report.",
+            "effective_date": "2026-10-06"
+          }
+        ]
+      },
+      "confidence_note": {
+        "base": "HIGH confidence -- based on the proposed rule's own Federal Register text and detailed reporting in Defense One, which includes on-record reactions from a former MSPB member and a federal employment attorney. The Douglas change is now a final MSPB rule, but OPM's companion provisions are not yet final; treat the specific practical impact as anticipated/contested rather than settled.",
+        "updates": [
+          {
+            "date": "2026-10-06",
+            "label": "Update",
+            "text": "Update 2026-10-06: MSPB's September 3, 2026 final rule and its October 5, 2026 effective date confirmed in the Federal Register text; Federal News Network reports OPM's portions still pending, and OPM reopened comment on them September 15-29, 2026 (Federal Register). The proposed rule's Federal Register date corrected to July 2, 2026. No court challenge to the final rule found.",
+            "effective_date": "2026-10-06"
+          }
+        ]
+      }
     }
   },
   {
@@ -40941,48 +41001,53 @@
     "title": "HHS Cancels 53 Teen Pregnancy Prevention Grants ($67M), Citing \"Normalizing Sexual Activity for Minors\"",
     "institution": "HHS Office of Population Affairs, Teen Pregnancy Prevention Program",
     "domain": "funding_redirection",
-    "status": "Complete for the 53 canceled grants; HHS has opened a new $63M-plus grant round prioritizing abstinence-based programming, with awards expected later in 2026",
+    "status": "53 grants remain canceled; a federal judge blocked HHS's new abstinence-focused grant policy and its ~$63M round on Aug. 19, 2026, then on Sept. 21 kept FY2026 funds from lapsing and set summary-judgment briefing through Dec. 21; grant reinstatement is unresolved",
     "date_of_action": "2026-06 (grants canceled)",
-    "what_changed": "In late June 2026, HHS's Office of Population Affairs canceled 53 teen pregnancy prevention grants totaling $67 million, affecting university, community, and public health grantees across more than two dozen states. HHS's termination notices stated the grants were being canceled for 'normalizing sexual activity for minors.' Trump's proposed 2027 budget calls for eliminating the teen pregnancy prevention program entirely, stating the grants have gone to groups that 'promote radical leftist ideology' and asserting there is no evidence the programs contributed to the historic decline in the U.S. teen pregnancy rate, which the administration notes is now at an all-time low. Trump's first-term administration canceled the same grant program's predecessor round as well. Simultaneously with the June 2026 cancellations, the Office of Population Affairs opened a new round of grant applications worth just over $63 million, prioritizing programs that promote abstinence before marriage, reproductive health awareness, and long-term fertility goals, with awards expected later in 2026.",
+    "what_changed": "In late June 2026, HHS's Office of Population Affairs canceled 53 teen pregnancy prevention grants totaling $67 million, affecting university, community, and public health grantees across more than two dozen states. HHS's termination notices stated the grants were being canceled for 'normalizing sexual activity for minors.' Trump's proposed 2027 budget calls for eliminating the teen pregnancy prevention program entirely, stating the grants have gone to groups that 'promote radical leftist ideology' and asserting there is no evidence the programs contributed to the historic decline in the U.S. teen pregnancy rate, which the administration notes is now at an all-time low. Trump's first-term administration canceled the same grant program's predecessor round as well. On June 23, 2026, three days before the cancellations, the Office of Population Affairs opened a new round of grant applications worth just over $63 million, prioritizing programs that promote abstinence before marriage, reproductive health awareness, and long-term fertility goals. On July 14, Hennepin County, Minn., King County, Wash., Planned Parenthood of the Heartland, and SIECUS sued HHS in federal court in Washington, D.C. On August 19, Judge Christopher Cooper preliminarily blocked HHS from implementing its 2026 policy, including awards under the new funding notices, writing that the policy is 'likely arbitrary and capricious' and that the notices cite studies that 'appear either not to exist or not to support the propositions for which they are cited.' He declined for now to reinstate the canceled grants, citing doubt over whether that claim belongs in the Court of Federal Claims. On September 21 he suspended the September 30 lapse of the program's funds while the case proceeds. A September letter from 92 members of Congress, reported by NPR, said HHS had spent about $500,000 of the $101 million Congress appropriated for the program for 2026.",
     "primary_proponent": {
       "name": "Robert F. Kennedy Jr.",
       "role": "Secretary of Health and Human Services",
       "note": "HHS under Kennedy issued the termination notices citing the 'normalizing sexual activity for minors' rationale; the administration's 2027 budget proposal separately seeks to eliminate the program's funding line entirely."
     },
     "estimated_impact": {
-      "summary": "**Fifty-three university, community, and public-health organizations across more than two dozen states lost $67 million in federal teen pregnancy prevention funding, with the administration simultaneously redirecting a similar dollar amount toward abstinence-focused programming instead** -- a funding reallocation, not a net elimination of federal spending in this area, though critics argue it removes evidence-based, comprehensive sex-education approaches in favor of an ideologically preferred model.",
+      "summary": "**Fifty-three university, community, and public-health organizations across more than two dozen states lost $67 million in federal teen pregnancy prevention funding, and programs serving teens were canceled mid-cycle** -- HHS's planned replacement, a roughly $63 million abstinence-focused grant round, is blocked by a federal court, and members of Congress said in September that about $100 million of the program's $101 million for 2026 had not been spent. Critics argue the policy removes evidence-based, comprehensive sex-education approaches in favor of an ideologically preferred model.",
       "figures": [
         {
           "metric": "Teen pregnancy prevention grants canceled",
           "value": "53",
-          "source": "NPR / The Hill / Stateline, July 2026"
+          "source": "NPR, July 2026; Stateline, June 2026"
         },
         {
           "metric": "Total dollar value of canceled grants",
           "value": "$67,000,000",
-          "source": "NPR / The Hill / Stateline, July 2026"
+          "source": "NPR, July 2026 (Stateline reported about $68M)"
         },
         {
-          "metric": "New abstinence-prioritized grant round opened simultaneously",
+          "metric": "New abstinence-prioritized grant round opened June 23, 2026 (enjoined Aug. 19, 2026)",
           "value": "~$63,000,000+",
-          "source": "NPR, July 2026"
+          "source": "Stateline, June 2026; Hennepin County v. HHS (D.D.C.) order, Aug. 2026"
         },
         {
           "metric": "States with affected grantees",
           "value": "24+",
-          "source": "NPR, July 2026"
+          "source": "Stateline, June 2026"
+        },
+        {
+          "metric": "FY2026 program appropriation spent by HHS as of late September 2026",
+          "value": "~$500,000 of $101,000,000",
+          "source": "Letter from 92 members of Congress, reported by NPR, September 2026"
         }
       ],
-      "caveat": "This is a redirection of funding toward a different programmatic approach (abstinence-focused) rather than a simple net funding elimination, since a comparably sized new grant round opened concurrently -- present it accurately as a redirection, not solely as a cut, even though the specific canceled grantees and their program models lost funding outright. The administration's claim that the canceled programs have no evidence base is contested by public-health researchers and grantees, per reporting, but a detailed evidence review was not independently conducted for this entry."
+      "caveat": "In court the government did not dispute that HHS plans to reallocate the canceled grants' money to a new abstinence-focused round opened alongside the cancellations, so on paper the change is a redirection rather than a net cut; but the court has blocked awards under that round, so for now the canceled grantees' funding has not been replaced, and the court has kept the FY2026 money from lapsing while the case proceeds. The administration's claim that the canceled programs have no evidence base is contested by public-health researchers and grantees, per reporting, but a detailed evidence review was not independently conducted for this entry."
     },
-    "confidence_note": "HIGH confidence -- corroborated across NPR, The Hill, Stateline, IBTimes UK, and other outlets, with HHS's own termination-notice language and the 2027 budget proposal's stated rationale directly quoted in reporting.",
+    "confidence_note": "HIGH confidence -- corroborated across NPR, The Hill, Stateline, IBTimes UK, and other outlets, with HHS's own termination-notice language and the 2027 budget proposal's stated rationale directly quoted in reporting. Re-verified 2026-10-06: the CourtListener docket for Hennepin County v. HHS (No. 1:26-cv-02460) confirms the Aug. 19 preliminary injunction against the 2026 policy, the denial of interim grant reinstatement, and the Sept. 21 order suspending the funds' lapse; the $500,000-spent figure is the congressional letter's, as reported by NPR, not an HHS figure.",
     "pull_quote": "HHS's termination notices stated the grants were being canceled for ‘normalizing sexual activity for minors.’",
     "section_summaries": {
-      "what_changed": "HHS canceled 53 teen pregnancy prevention grants worth $67 million, citing that they 'normalize sexual activity for minors,' while opening a similarly sized new grant round prioritizing abstinence-focused programming.",
-      "estimated_impact": "More than two dozen states' worth of university, community, and public-health grantees lost funding; the administration reallocated a comparable dollar amount toward a different, abstinence-based programmatic approach rather than eliminating spending outright.",
+      "what_changed": "HHS canceled 53 teen pregnancy prevention grants worth $67 million, citing 'normalizing sexual activity for minors'; a judge has blocked its new abstinence-focused grant round.",
+      "estimated_impact": "Grantees in over two dozen states lost $67 million mid-cycle; the replacement round is court-blocked, and nearly all of the program's $101 million for 2026 sat unspent in September.",
       "confidence_note": "Well-corroborated across multiple independent outlets, with HHS's own stated rationale directly quoted."
     },
-    "last_verified": "2026-07-27",
+    "last_verified": "2026-10-06",
     "date_added": "2026-07-27",
     "sources": [
       {
@@ -40996,19 +41061,31 @@
       {
         "name": "Stateline — Federal health agency cancels most of its teen pregnancy prevention grants",
         "url": "https://stateline.org/2026/06/26/federal-health-agency-cancels-most-of-its-teen-pregnancy-prevention-grants/"
+      },
+      {
+        "name": "Hennepin County v. HHS (D.D.C. No. 1:26-cv-02460) — Memorandum Opinion on preliminary injunction, Aug. 19, 2026",
+        "url": "https://storage.courtlistener.com/recap/gov.uscourts.dcd.294455/gov.uscourts.dcd.294455.34.0.pdf"
+      },
+      {
+        "name": "Hennepin County v. HHS — Order suspending lapse of funds and setting schedule, Sept. 21, 2026",
+        "url": "https://storage.courtlistener.com/recap/gov.uscourts.dcd.294455/gov.uscourts.dcd.294455.41.0.pdf"
+      },
+      {
+        "name": "NPR — Congress passed $100 million for teen pregnancy prevention. Most of it is untouched",
+        "url": "https://www.npr.org/2026/09/24/nx-s1-5974336/teen-pregnancy-prevention-unspent-funding"
       }
     ],
-    "last_updated": "2026-07-27",
-    "last_substantive_update": "2026-07-27",
+    "last_updated": "2026-10-06",
+    "last_substantive_update": "2026-10-06",
     "glance": {
       "who": "Robert F. Kennedy Jr. (HHS Secretary)",
-      "what": "Canceled 53 teen pregnancy prevention grants ($67M) and opened a ~$63M abstinence-focused round",
+      "what": "Canceled 53 teen pregnancy grants ($67M); a new ~$63M abstinence-focused round is court-blocked",
       "harm": {
         "kind": "money",
         "certainty": "documented",
         "who": "53 grantees in 24+ states"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-10-06"
     }
   },
   {
