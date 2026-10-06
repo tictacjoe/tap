@@ -387,43 +387,48 @@
     "administration": "Trump II (2025-present)",
     "agency": "ATF (Bureau of Alcohol, Tobacco, Firearms and Explosives) / DOJ",
     "domain": "consumer_safety",
-    "status": "Finalized (policy repeals and license reinstatements already in effect)",
+    "status": "In effect: zero-tolerance dealer policy ended April 2025 and at least 23 revoked dealers relicensed; ATF's May 2026 proposal to largely repeal the 2024 gun-show dealer rule is not final, but a federal court vacated the whole rule in June 2026 and refused DOJ's bid to narrow that Aug. 13",
     "date_of_action": "2025 through 2026-07 (ongoing rollback, per ProPublica's reporting period)",
     "original_rule_summary": "Under Biden-era policy, ATF pursued a 'zero-tolerance' approach to federal firearms licensees who knowingly violated gun laws, revoking dealer licenses for serious violations, and pursued gun-trafficking referrals for prosecution at a higher rate, with a rule addressing the so-called 'gun show loophole' around private/unlicensed sales.",
-    "what_changed": "The Trump administration reversed the ATF's zero-tolerance dealer-license enforcement policy, inviting dealers who had lost their licenses under Biden to reapply; **nearly a dozen previously revoked gun shops had been relicensed and were selling firearms again as of July 2026, with at least 23 stores receiving new licenses after resubmitting applications**. ProPublica found a 69% reduction in dealers losing their licenses under the new approach. Federal gun-trafficking referrals for prosecution fell approximately 30% year-over-year. The administration also repealed the ATF's gun-show-loophole rule and shifted hundreds of ATF agents to immigration enforcement work, reducing the personnel available for firearms-trafficking investigations.",
+    "what_changed": "The Trump administration reversed the ATF's zero-tolerance dealer-license enforcement policy, inviting dealers who had lost their licenses under Biden to reapply; **nearly a dozen previously revoked gun shops had been relicensed and were selling firearms again as of July 2026, with at least 23 stores receiving new licenses after resubmitting applications**. ProPublica found that dealer license revocations fell to 56 in 2025, down 69% from the year before. ATF referrals for common gun-trafficking charges fell 15% in 2025 from 2024, and DOJ declined 30% more ATF trafficking referrals than the year prior, per a ProPublica analysis. In May 2026 ATF proposed repealing most of the Biden-era rule defining who is 'engaged in the business' of dealing guns (the 'gun show loophole' rule); that repeal is not yet final, but on June 12, 2026 a federal judge in Texas vacated the 2024 rule, and on Aug. 13 he refused DOJ's request to modify the judgment, leaving the whole rule vacated. ProPublica also reported that the administration shifted hundreds of ATF agents to immigration work (Robert Cekada, then the nominee and now ATF Director, told senators the reassignment never exceeded 100 agents at a given time), reducing the personnel available for firearms-trafficking investigations.",
     "primary_proponent": {
       "name": "Pam Bondi and Todd Blanche (DOJ leadership overseeing ATF policy during the relevant period)",
       "role": "Attorney General / Acting Attorney General",
-      "note": "DOJ, which oversees ATF, directed the zero-tolerance policy's repeal and the broader enforcement rollback; individual attribution between Bondi's and Blanche's respective tenures was not fully disambiguated in reporting reviewed."
+      "note": "DOJ, which oversees ATF, directed the zero-tolerance policy's repeal, announced by Attorney General Bondi in April 2025. The proposed repeal of the gun-show dealer rule was signed by ATF Director Robert Cekada in April 2026, while Blanche was Acting Attorney General."
     },
     "corporate_beneficiaries": [
-      "Federal firearms licensees (gun dealers) previously revoked for zero-tolerance violations, at least 23 of which received reinstated licenses",
+      "Federal firearms licensees (gun dealers) whose licenses were revoked under Biden, at least 23 of which were granted new licenses after reapplying",
       "The firearms retail industry broadly, which benefits from reduced regulatory compliance burden and enforcement risk"
     ],
     "estimated_health_impact": {
       "summary": "Public-safety advocates and ProPublica's reporting connect the reduced dealer accountability and trafficking-referral decline to an increased risk of firearms flowing into illegal markets, though this entry does not assert a specific quantified crime-outcome figure tied to the policy change.",
       "figures": [
         {
-          "metric": "Reduction in dealers losing licenses under the new approach",
+          "metric": "Reduction in dealer license revocations, 2025 vs. 2024 (56 in 2025)",
           "value": "69%",
-          "source": "ProPublica analysis, 2026"
+          "source": "ProPublica, citing ATF's 2025 revocation tally"
         },
         {
-          "metric": "Reduction in federal gun-trafficking referrals for prosecution",
-          "value": "~30% year-over-year",
-          "source": "ProPublica, citing ATF data"
+          "metric": "ATF referrals for common gun-trafficking charges, 2025 vs. 2024",
+          "value": "-15%",
+          "source": "ProPublica analysis"
         },
         {
-          "metric": "Previously revoked dealers relicensed as of July 2026",
-          "value": "~23 stores",
-          "source": "CNN, July 2026"
+          "metric": "Increase in ATF trafficking referrals declined by DOJ, first year of Trump administration vs. prior year",
+          "value": "+30%",
+          "source": "ProPublica analysis"
+        },
+        {
+          "metric": "Previously revoked dealers granted new licenses as of July 2026",
+          "value": "at least 23 stores",
+          "source": "CNN, citing ATF, July 2026"
         }
       ],
       "caveat": "ProPublica's figures are the strongest quantified evidence in this entry; no source reviewed provides a direct, quantified causal link between the enforcement rollback and a specific increase in trafficking-related crime, which would require longer-term data."
     },
-    "confidence_note": "HIGH confidence -- ProPublica's investigative reporting is corroborated by CNN's independent confirmation of specific relicensed dealers, and by trade/legal-press summaries (The Trace, FindLaw) of the same underlying ATF policy changes.",
-    "short_summary": "ATF reversed its zero-tolerance dealer-license enforcement policy, reinstating licenses for previously revoked gun shops as trafficking referrals fell 30%.",
-    "last_verified": "2026-08-02",
+    "confidence_note": "HIGH confidence -- ProPublica's investigative reporting is corroborated by CNN's independent confirmation of specific relicensed dealers, and by trade/legal-press summaries (The Trace, FindLaw) of the same underlying ATF policy changes. Re-verified 2026-10-06: ProPublica, CNN and The Trace re-read; corrected the trafficking-referral figure (ATF referrals fell 15%; DOJ declined 30% more of them) and the gun-show rule's status (ATF's repeal is still a proposal; the 2024 rule was vacated by a federal court in Texas on June 12, 2026, confirmed on the court docket).",
+    "short_summary": "ATF reversed its zero-tolerance dealer-license policy, relicensing at least 23 revoked gun shops, as ATF trafficking referrals fell 15% and DOJ declined 30% more of them.",
+    "last_verified": "2026-10-06",
     "date_added": "2026-08-02",
     "sources": [
       {
@@ -435,16 +440,28 @@
         "url": "https://www.cnn.com/2026/07/23/politics/gun-licenses-biden-trump-invs"
       },
       {
-        "name": "The Trace -- 'The ATF Repealed Gun Show Loophole Rule. It Won't Change Much'",
+        "name": "The Trace -- 'The Trump Administration Made a Big Show of Repealing a Biden-Era Gun Rule. It Never Amounted to Much Anyway.' (June 2026)",
         "url": "https://www.thetrace.org/2026/06/atf-gun-show-loophole-rule-repeal/"
+      },
+      {
+        "name": "The Trace -- 'Trump Administration Ends Zero-Tolerance Policy for Lawbreaking Gun Dealers' (April 2025)",
+        "url": "https://www.thetrace.org/2025/04/atf-bondi-gun-store-license-biden-policy/"
+      },
+      {
+        "name": "Federal Register -- ATF proposed rule 'Revising Regulations Defining Engaged in the Business as a Dealer in Firearms' (May 6, 2026)",
+        "url": "https://www.federalregister.gov/documents/2026/05/06/2026-08919/revising-regulations-defining-engaged-in-the-business-as-a-dealer-in-firearms"
+      },
+      {
+        "name": "CourtListener -- State of Texas v. ATF, No. 2:24-cv-00089 (N.D. Tex.) docket (final judgment June 12, 2026; order Aug. 13, 2026)",
+        "url": "https://www.courtlistener.com/docket/68490853/state-of-texas-v-bureau-of-alcohol-tobacco-firearms-and-explosives/"
       }
     ],
     "section_summaries": {
-      "what_changed": "ATF reversed its zero-tolerance dealer-license enforcement policy, reinstating licenses for previously revoked gun shops as trafficking referrals fell 30%.",
+      "what_changed": "ATF reversed its zero-tolerance dealer-license policy, relicensing at least 23 revoked gun shops, as ATF trafficking referrals fell 15% and DOJ declined 30% more of them.",
       "estimated_impact": "Public-safety advocates connect reduced dealer accountability and the trafficking-referral decline to an increased risk of firearms flowing into illegal markets.",
       "confidence_note": "ProPublica's investigative reporting is corroborated by CNN's independent confirmation of specific relicensed dealers and by trade/legal-press summaries."
     },
-    "last_substantive_update": "2026-08-02",
+    "last_substantive_update": "2026-10-06",
     "glance": {
       "who": "DOJ leadership (Bondi, Blanche)",
       "what": "Reversed ATF's zero-tolerance dealer-license policy and relicensed revoked gun shops",
@@ -453,7 +470,7 @@
         "certainty": "projected",
         "who": "Communities exposed to trafficked guns"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-10-06"
     }
   },
   {
@@ -4524,10 +4541,10 @@
     "administration": "Trump II (2025-present)",
     "agency": "FDA",
     "domain": "consumer_safety",
-    "status": "Finalized (specific product authorizations issued)",
-    "date_of_action": "2026-05-06",
+    "status": "Finalized: FDA issued marketing orders on May 5, 2026 for four Glas pods, two fruit-flavored and two menthol. Ten senators asked the acting commissioner to rescind them; no rescission has been reported. Makary, who had opposed the move, resigned May 12.",
+    "date_of_action": "2026-05-05",
     "original_rule_summary": "Under FDA's premarket tobacco product application standard, the agency had for years denied the large majority of applications for flavored e-cigarette products -- including fruit and mint flavors -- on the grounds that their appeal to youth outweighed any public-health benefit to adult smokers switching from combustible cigarettes, banning most flavored vaping products from the market.",
-    "what_changed": "FDA authorized the marketing of fruit-flavored e-cigarettes for the first time in the agency's history, approving pods including 'Gold' (mango) and 'Sapphire' (blueberry) flavors manufactured by Glas, Inc., alongside menthol variants. The decision followed a Wall Street Journal report that Trump had personally rebuked FDA Commissioner Marty Makary over the weekend for not approving flavored vapes more quickly, consistent with a 2024 campaign promise to 'save' vaping. The Vapor Technology Association and other industry groups had met with administration officials in the preceding weeks specifically pushing for faster action on flavors. FDA's stated safeguard is a digital age-verification system requiring users to verify age via government ID and pair the device to their phone via Bluetooth before use.",
+    "what_changed": "FDA authorized the marketing of fruit-flavored e-cigarettes for the first time in the agency's history, approving pods including 'Gold' (mango) and 'Sapphire' (blueberry) flavors manufactured by Glas, Inc., alongside menthol variants. The decision followed a Wall Street Journal report that Trump had personally rebuked FDA Commissioner Marty Makary over the weekend for not approving flavored vapes more quickly, consistent with a 2024 campaign promise to 'save' vaping. The Vapor Technology Association and other industry groups had met with administration officials in the preceding weeks calling for more action on flavors. FDA's stated safeguard is a digital age-verification system requiring users to verify age via government ID and pair the device to their phone via Bluetooth before use. Makary had initially opposed the authorization despite career staff signing off on it, the Wall Street Journal reported; he resigned on May 12, and the New York Times reported he had told confidants his conscience would not allow him to approve the vapes because of their appeal to young people. Within two weeks of the authorization, FDA also issued guidance allowing unauthorized vapes with pending applications to stay on the market, and ten senators led by Richard Blumenthal and Jeff Merkley asked Acting Commissioner Kyle Diamantas to rescind the Glas authorization. In September, the Wall Street Journal reported the administration planned to make marketing authorization easier and faster for e-cigarettes, nicotine pouches and other products; on September 28, FDA announced it intends to evaluate changes to its 2021 premarket application rule, including new rulemaking to replace that framework.",
     "primary_proponent": {
       "name": "Donald Trump",
       "role": "President",
@@ -4542,10 +4559,10 @@
       "figures": [],
       "caveat": "No quantified projection of youth-uptake impact from this specific 2026 authorization was found in reporting reviewed; health groups' warnings are qualitative, based on the well-documented general pattern that flavored products appeal disproportionately to minors, not a modeled figure specific to this authorization."
     },
-    "confidence_note": "HIGH confidence on the facts of the authorization, Trump's personal pressure on Makary, and industry lobbying -- corroborated across many independent outlets (CNBC, CBS News, NPR, STAT News, Scientific American, Fox Business). No quantified health-harm projection specific to this action was identified, so the health-impact framing should stay qualitative rather than citing a specific figure.",
+    "confidence_note": "HIGH confidence on the facts of the authorization, Trump's personal pressure on Makary, and industry lobbying -- corroborated across many independent outlets (CNBC, CBS News, NPR, STAT News, Scientific American, Fox Business). No quantified health-harm projection specific to this action was identified, so the health-impact framing should stay qualitative rather than citing a specific figure. Re-verified 2026-10-06: CNBC, STAT News and NPR still support the authorization facts; FDA issued the Glas marketing orders on May 5, 2026, not May 6; Makary's May 12 resignation, the senators' rescission demand, the reported overhaul of the premarket review rule and FDA's September 28 announcement that it intends to evaluate replacing that rule were added; no rescission of the Glas orders was found.",
     "pull_quote": "Trump personally rebuked FDA Commissioner Marty Makary for not approving flavored vapes more quickly, the Wall Street Journal reported -- consistent with his 2024 campaign promise to “save” vaping.",
     "short_summary": "FDA authorized fruit-flavored e-cigarettes for the first time after Trump personally pressured the FDA Commissioner to move faster following industry lobbying.",
-    "last_verified": "2026-08-02",
+    "last_verified": "2026-10-06",
     "date_added": "2026-08-02",
     "sources": [
       {
@@ -4563,14 +4580,38 @@
       {
         "name": "CBS News -- 'Fruit-flavored e-cigarettes for adults OK'd by FDA in major shift under Trump'",
         "url": "https://www.cbsnews.com/news/fruit-flavored-e-cigarettes-fda-major-shift-trump/"
+      },
+      {
+        "name": "Keller and Heckman -- 'FDA Authorizes Glas Flavored ENDS Products, Opening an Age-Gating Pathway for Flavors'",
+        "url": "https://www.khlaw.com/fda-authorizes-glas-flavored-ends-products-opening-age-gating-pathway-flavors"
+      },
+      {
+        "name": "PhillyVoice -- 'FDA Commissioner Marty Makary resigns after dispute over fruit-flavored vapes'",
+        "url": "https://www.phillyvoice.com/fda-marty-makary-resignation-vapes/"
+      },
+      {
+        "name": "Sen. Richard Blumenthal -- 'Blumenthal & Merkley Lead of 10 Senators in Demanding FDA Reverse Dangerous Authorization of Flavored E-Cigarettes'",
+        "url": "https://www.blumenthal.senate.gov/newsroom/press/release/blumenthal-and-merkley-lead-of-10-senators-in-demanding-fda-reverse-dangerous-authorization-of-flavored-e-cigarettes"
+      },
+      {
+        "name": "The Hill -- 'FDA drops guardrails on vaping industry in major Trump pivot'",
+        "url": "https://thehill.com/policy/healthcare/5880802-flavored-vapes-fda-guidance/"
+      },
+      {
+        "name": "Nicotine Insider -- 'FDA Reportedly Plans Major PMTA Overhaul'",
+        "url": "https://nicotineinsider.com/2026/09/24/fda-reportedly-plans-major-pmta-overhaul/"
+      },
+      {
+        "name": "FDA -- 'FDA intends to evaluate changes to the PMTA regulatory framework'",
+        "url": "https://www.fda.gov/news-events/press-announcements/fda-intends-evaluate-changes-pmta-regulatory-framework"
       }
     ],
     "section_summaries": {
-      "what_changed": "FDA authorized fruit-flavored e-cigarettes for the first time after Trump personally pressured the FDA Commissioner to move faster following industry lobbying.",
+      "what_changed": "FDA authorized fruit-flavored e-cigarettes for the first time after Trump pressured the FDA Commissioner, who had opposed it and resigned a week later; ten senators have asked FDA to rescind it.",
       "estimated_impact": "Public health and parent advocacy groups warn the authorization risks reversing progress on youth vaping rates, given the category's documented youth appeal.",
       "confidence_note": "The facts of the authorization, Trump's personal pressure on Makary, and industry lobbying are corroborated across many independent outlets (CNBC, CBS News, NPR, STAT News)."
     },
-    "last_substantive_update": "2026-08-02",
+    "last_substantive_update": "2026-10-06",
     "glance": {
       "who": "Donald Trump",
       "what": "Pressed FDA to move faster; FDA then authorized fruit-flavored e-cigarettes for the first time",
@@ -4579,7 +4620,7 @@
         "certainty": "alleged",
         "who": "Young people at risk of vaping"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-10-06"
     }
   },
   {
@@ -5036,24 +5077,24 @@
     "status": "Finalized (guidance permanently rescinded and replaced)",
     "date_of_action": "2026-05-22",
     "original_rule_summary": "HUD's longstanding guidance treated a broad category of 'assistance animals' -- including untrained emotional support animals (ESAs) providing comfort to people with mental health or emotional disabilities -- as presumptively reasonable accommodation requests under the Fair Housing Act, requiring housing providers to accommodate them on largely the same footing as trained service animals, without a training requirement.",
-    "what_changed": "HUD's FHEO permanently rescinded its longstanding ESA guidance and issued a new enforcement standard realigning federal fair-housing practice closer to the ADA's stricter service-animal framework. Under the new standard, requests involving trained assistance animals remain presumptively reasonable, but requests involving untrained emotional support animals are not -- the operative requirement is now training to perform a disability-related task, not emotional comfort alone (though unlike the ADA, the new HUD standard still permits species other than dogs, provided the animal is trained). The memorandum directs all open ESA cases to be reevaluated under the new, stricter standard. Disability-rights advocates (DREDF) characterized HUD as now 'an enforcement agency that won't enforce' emotional-support-animal accommodation claims it previously treated as presumptively valid.",
+    "what_changed": "In a May 22, 2026 memorandum signed by Assistant Secretary Craig W. Trainor, HUD's FHEO permanently rescinded its 2020 assistance-animal notice (reconfirming a September 17, 2025 rescission of both the 2013 and 2020 notices) and issued a new enforcement standard realigning federal fair-housing practice closer to the ADA's stricter service-animal framework. Under the new standard, requests involving trained assistance animals remain presumptively reasonable, but requests involving untrained emotional support animals are not -- the operative requirement is now training to perform a disability-related task, not emotional comfort alone (though unlike the ADA, the new HUD standard still permits species other than dogs, provided the animal is trained). The memorandum sends all open ESA cases to HUD's acting enforcement chief for case-by-case review under the new standard, preserves tenants' right to sue in court, and says HUD intends to pursue notice-and-comment rulemaking to harmonize its rules with the ADA. Disability-rights advocates (DREDF) characterized HUD as now 'an enforcement agency that won't enforce' emotional-support-animal accommodation claims it previously treated as presumptively valid.",
     "primary_proponent": {
-      "name": "HUD FHEO leadership (agency action)",
-      "role": "U.S. Department of Housing and Urban Development, Office of Fair Housing and Equal Opportunity",
-      "note": "FHEO issued the May 22, 2026 guidance rescission and new enforcement memorandum; no single named political appointee was identified in reporting reviewed as personally authoring the change, as distinct from the agency action itself."
+      "name": "Craig W. Trainor",
+      "role": "Assistant Secretary for Fair Housing and Equal Opportunity, U.S. Department of Housing and Urban Development",
+      "note": "Signed the May 22, 2026 enforcement memorandum that rescinded the assistance-animal guidance and set the new trained-animal standard. The memo cites President Trump's February 19, 2025 executive order directing agencies to de-prioritize enforcing regulations based on anything other than the best reading of a statute."
     },
     "corporate_beneficiaries": [
       "Landlords and housing providers who previously had to accommodate untrained emotional support animals under threat of fair-housing liability now face a narrower accommodation obligation"
     ],
     "estimated_health_impact": {
-      "summary": "**Disability-rights advocates warn the change will leave people with mental health and emotional disabilities -- who relied on ESA accommodations that required no formal training -- more vulnerable to housing denial, with all previously-filed and pending ESA cases now subject to reevaluation under the stricter standard.**",
+      "summary": "**Disability-rights advocates warn the change will leave people with mental health and emotional disabilities -- who relied on ESA accommodations that required no formal training -- more vulnerable to housing denial, with all open ESA cases at HUD now sent for case-by-case review under the stricter standard.**",
       "figures": [],
       "caveat": "No quantified figure for the number of current ESA accommodation-holders or pending cases affected was identified in reporting reviewed; the impact assessment here is qualitative, from disability-housing advocacy organizations (DREDF, National Low Income Housing Coalition) rather than a government-produced estimate."
     },
-    "confidence_note": "HIGH confidence on the guidance rescission and its substantive terms, corroborated across legal-industry and disability-advocacy sources (Mondaq/Duane Morris, DREDF, National Low Income Housing Coalition) describing the same May 22, 2026 memorandum consistently. Notably, Fair Housing Act statutory protections for disabled tenants remain technically intact even as enforcement practice narrows -- this is a guidance/enforcement-standard change, not a change to the underlying statute.",
+    "confidence_note": "HIGH confidence on the guidance rescission and its substantive terms, corroborated across legal-industry and disability-advocacy sources (Mondaq/Duane Morris, DREDF, National Low Income Housing Coalition) describing the same May 22, 2026 memorandum consistently. Notably, Fair Housing Act statutory protections for disabled tenants remain technically intact even as enforcement practice narrows -- this is a guidance/enforcement-standard change, not a change to the underlying statute. Re-verified 2026-10-06: HUD's own memorandum confirms the May 22, 2026 date, the trained-animal standard, the non-dog species allowance and the open-case review; it was signed by Assistant Secretary Craig W. Trainor and reconfirms a September 17, 2025 rescission of the 2013 and 2020 notices. No court ruling, reversal or published rulemaking on the memo was found; HUD's regulatory agenda lists an advance notice of proposed rulemaking on assistance animals at the pre-rule stage.",
     "pull_quote": "“An enforcement agency that won't enforce,” the Disability Rights Education and Defense Fund called HUD's new posture toward emotional-support-animal accommodation claims it previously treated as presumptively valid.",
     "short_summary": "HUD rescinded its longstanding guidance treating untrained emotional support animals as presumptively valid housing accommodations, adopting a stricter, ADA-like training requirement instead.",
-    "last_verified": "2026-08-02",
+    "last_verified": "2026-10-06",
     "date_added": "2026-08-02",
     "sources": [
       {
@@ -5067,6 +5108,10 @@
       {
         "name": "National Low Income Housing Coalition -- 'HUD Announces Shift Away from Disability Discrimination Cases Involving Emotional Support Animals'",
         "url": "https://nlihc.org/resource/hud-announces-shift-away-disability-discrimination-cases-involving-emotional-support"
+      },
+      {
+        "name": "HUD FHEO -- Enforcement Guidance memorandum, 'Assessing Requests for the Use of an Animal as a Reasonable Accommodation Under the Fair Housing Act' (May 22, 2026)",
+        "url": "https://www.hud.gov/sites/default/files/hudclips/documents/AS-Trainor-Enforcement-Guidance-Assessing-Requests-for-the-use-of-an-animal-as-a-reasonable-accommodation-under-the-fair-housing-act.pdf"
       }
     ],
     "section_summaries": {
@@ -5074,16 +5119,16 @@
       "estimated_impact": "Disability-rights advocates warn the change leaves people with mental health and emotional disabilities more vulnerable to housing-accommodation denials.",
       "confidence_note": "The guidance rescission and its substantive terms are corroborated across legal-industry and disability-advocacy sources (Mondaq/Duane Morris, DREDF, National Low Income Housing Coalition)."
     },
-    "last_substantive_update": "2026-08-02",
+    "last_substantive_update": "2026-10-06",
     "glance": {
-      "who": "HUD Fair Housing office (FHEO leadership)",
+      "who": "HUD fair housing chief Craig Trainor",
       "what": "Rescinded guidance treating untrained emotional support animals as valid housing accommodations",
       "harm": {
         "kind": "rights",
         "certainty": "alleged",
         "who": "People with mental health disabilities"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-10-06"
     }
   },
   {
