@@ -1779,7 +1779,7 @@
    },
    "12": {
     "state": "partly",
-    "why": "The provided text supports Kao's confession naming lawmakers, the agents' late-2024 push for a broader probe, the prosecutor's departure, the dead investigation, no Collins aide charged, and the FBI's statement. But it says the interviews 'lasted into late 2024', not 'through September 2024', it never mentions Patel or a CR-15 squad, it names only one agent pushed out, and it is truncated before any Collins denial.",
+    "why": "The source supports Kao's FBI interviews, his claim that politicians (Collins in particular) were willing participants, the 50-page document in September 2024, the agents' belief in a broader bribery probe, the Patel purge, the quit attorney, and the dead investigation, plus Collins' office and the FBI denials. The provided text does not say that no one working for Collins was charged, and the other agent's fate and Kao's specific charges are not visible in it.",
     "host": "propublica.org",
     "date": "2026-10-06",
     "kind": "fact",
@@ -5958,8 +5958,8 @@
     "archive": false
    },
    "6": {
-    "state": "partly",
-    "why": "Rand Paul's quoted remarks support the fake-news denial, the next-day White House podium confirmation, and the lying-or-incompetence charge. But the source attributes that accusation only to Paul (it mentions bipartisan investigations, not bipartisan accusations), and it does not address whether Hegseth's denial directly refuted the order.",
+    "state": "supports",
+    "why": "TIME reports Hegseth called the Post report fake news without denying any specific detail, quotes Rand Paul's 'either he was lying to us' remark, and describes bipartisan investigations in both houses, all matching the claim.",
     "host": "time.com",
     "date": "2026-10-06",
     "kind": "fact",
@@ -6086,19 +6086,19 @@
     "archive": false
    },
    "22": {
-    "state": "supports",
-    "why": "AP reports the Saturday strike that killed four, the absence of drug evidence, and the cumulative 231 deaths in 69 strikes.",
-    "host": "apnews.com",
+    "state": "partly",
+    "why": "The note's quoted findings on serial extrajudicial killings, the 68 attacks and 223 deaths, the absence of an armed attack, the shipwrecked survivors, and the call for prosecution of those who ordered the attacks all appear. The provided text does not show a finding of no armed conflict or the parenthetical that the count runs to August 2026 (it says only 'in one year since September 2025').",
+    "host": "ohchr.org",
     "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
    "23": {
-    "state": "partly",
-    "why": "The provided text confirms the title, the 'serial extrajudicial killings' finding, the 68 attacks and 223 deaths to August 2026, and the self-defense rejection with the quoted 'armed attack' language. It is truncated before the quoted crimes-against-humanity, shipwrecked-survivors, and prosecution passages (it says only 'plausibly constitute crimes against humanity'), and it is dated only 'September 2026'.",
-    "host": "ohchr.org",
+    "state": "supports",
+    "why": "AP reports a Saturday strike killed four, that the military did not provide evidence the vessel carried drugs, and puts the toll at at least 231 in 69 strikes since the campaign began almost a year ago.",
+    "host": "apnews.com",
     "date": "2026-10-06",
-    "kind": "interpretation",
+    "kind": "fact",
     "archive": false
    },
    "24": {
@@ -11257,23 +11257,23 @@
    },
    "4": {
     "state": "supports",
-    "why": "The opinion's conclusion contains the quoted language verbatim (modulo line breaks) and states the Court 'finds that the subpoenas were issued for an improper purpose and will quash them'; the docket description confirms Boasberg signed it 3/11/2026 and it was filed/released March 13, 2026, and the opinion refers to 'the two subpoenas at issue here.'",
-    "host": "courtlistener.com",
+    "why": "CNBC reports Trump told reporters in the Oval Office on Monday that Pirro should 'take it to the end and see' and that the Powell probe should continue despite Tillis's vow to block a Fed pick.",
+    "host": "cnbc.com",
     "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
    "5": {
     "state": "supports",
-    "why": "The April 3, 2026 ECF No. 33 memorandum opinion signed by Chief Judge Boasberg denies reconsideration of the March 11 order quashing the subpoenas. It contains all three quoted passages verbatim: 'neither offers new evidence nor points to any material error', 'do not come close to convincing the Court', and 'has presented no evidence whatsoever of fraud'.",
+    "why": "The opinion's conclusion contains the quoted passage verbatim and finds the subpoenas were issued for an improper purpose and quashes them; the page metadata shows signing on 3/11/2026, filing March 13, and docket 1:26-mc-00012.",
     "host": "courtlistener.com",
     "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
    "6": {
-    "state": "partly",
-    "why": "NBC (dated April 14, describing a Tuesday visit) supports the visit by three officials from Pirro's office, the 'tour' and 'check on progress' requests, the turn-away, and the timing after the quashing. The source does not address the CBS News or CNBC reporting, including the 'hitting roadblocks' quote; it says only that the probe was 'rapidly losing steam'.",
+    "state": "supports",
+    "why": "NBC News quotes Powell at a Wednesday March 18, 2026 news conference saying exactly the quoted sentence.",
     "host": "nbcnews.com",
     "date": "2026-10-06",
     "kind": "fact",
@@ -11281,47 +11281,79 @@
    },
    "7": {
     "state": "supports",
-    "why": "CNN reports Pirro announcing the closure on X, with the Fed inspector general scrutinizing the cost overruns in its place.",
-    "host": "cnn.com",
+    "why": "The April 3, 2026 order denies the motion for reconsideration, and the quoted phrases appear verbatim in the opinion text.",
+    "host": "courtlistener.com",
     "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
    "8": {
-    "state": "partly",
-    "why": "CNBC confirms the motion to vacate, which abandons the appeal plan, and paraphrases Pirro's willingness to reopen. It does not contain the State of the Union quote or Trump's 'Take it to the end and see' remark.",
-    "host": "cnbc.com",
+    "state": "supports",
+    "why": "NBC reports three officials from Pirro's office arrived unannounced Tuesday seeking a 'tour' and to 'check on progress', that Hur's email indicated they were turned away, and that the probe 'has been rapidly losing steam'.",
+    "host": "nbcnews.com",
     "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
    "9": {
     "state": "supports",
-    "why": "Forbes reports Pirro's CNN quotes ('continue to litigate', 'it depends on what he finds', 'I'll go home') and the Boasberg 'dominant (if not sole) purpose' quote.",
-    "host": "forbes.com",
+    "why": "CNN reports Pirro announced on X that she was closing the Powell probe and that the Fed's inspector general would scrutinize the renovation cost overruns in its place, following the quashed subpoenas.",
+    "host": "cnn.com",
     "date": "2026-10-06",
     "kind": "fact",
-    "archive": true
+    "archive": false
    },
    "10": {
-    "state": "partly",
-    "why": "NBC confirms Powell's March 2026 'no intention of leaving' statement. The cited text contains no NPR reporting on his staying after May 15 or the 'unprecedented' remark, so that half is unverified.",
-    "host": "nbcnews.com",
+    "state": "supports",
+    "why": "Fortune quotes Pirro's X post containing the exact sentence about restarting a criminal investigation.",
+    "host": "fortune.com",
+    "date": "2026-10-06",
+    "kind": "fact",
+    "archive": false
+   },
+   "11": {
+    "state": "supports",
+    "why": "Fortune reports Powell's April 29 announcement, quotes the 113-year-history remark and the 'well and truly over' phrasing, and states the decision blocks Trump from filling Powell's board seat.",
+    "host": "fortune.com",
     "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
    "12": {
+    "state": "supports",
+    "why": "Forbes reports Pirro's CNN remarks ('continue to litigate the issue', 'it depends on what he finds', 'If there isn't, I'll go home') and cites Boasberg's 'dominant (if not sole) purpose' ruling.",
+    "host": "forbes.com",
+    "date": "2026-10-06",
+    "kind": "fact",
+    "archive": true
+   },
+   "13": {
+    "state": "supports",
+    "why": "CNBC reports Pirro's Monday motion to vacate, that it walks back an often-repeated plan to appeal, her statement about continuing to litigate the 'illegal quashing', and that she declined to commit to ending the probe if the inspector general finds no criminal wrongdoing.",
+    "host": "cnbc.com",
+    "date": "2026-10-06",
+    "kind": "fact",
+    "archive": false
+   },
+   "15": {
     "state": "partly",
-    "why": "The OIG summary confirms the report number, the Sept. 29 date, and the finding that the Board did not effectively manage the project. But it gives construction costs of $921 million (Feb. 2020) to $2.018 billion (2024), not the claimed $1.317B-$2.381B budget figures, and the text lacks the no-criminal-referral quote, the guaranteed-maximum-price finding, and the CNBC/CBS reporting.",
+    "why": "The quoted no-referral and no-misconduct language, the July 2025 start at Powell's request, and the budget growth figures are all present. The provided text does not show the findings on ineffective contract management or on the guaranteed maximum price being unset as of July 2026 more than four years after construction began.",
     "host": "oig.federalreserve.gov",
     "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
-   "13": {
-    "state": "partly",
-    "why": "CNBC confirms Blanche's quote to Bloomberg, the department spokesperson's confirmation, his not ruling out action if the audit finds crimes, and Trump's Wednesday 'forced to resign' post. The source does not say Trump asked Blanche to study the report.",
+   "16": {
+    "state": "supports",
+    "why": "CNBC reports the IG report released Wednesday morning, Trump's Truth Social post saying Powell should be 'forced to resign, IMMEDIATELY!' and sued 'for either corruption or incompetence', that he asked AG Blanche to 'study' the report, and that Pirro's office said it was reviewing it.",
+    "host": "cnbc.com",
+    "date": "2026-10-06",
+    "kind": "fact",
+    "archive": false
+   },
+   "17": {
+    "state": "supports",
+    "why": "CNBC quotes Blanche telling Bloomberg 'We're not reopening a criminal investigation into him', says Blanche did not rule out separate DOJ action if the audit finds criminal wrongdoing, and notes Trump's Wednesday post saying Powell should be 'forced to resign' 'at a minimum'.",
     "host": "cnbc.com",
     "date": "2026-10-06",
     "kind": "fact",
@@ -11506,8 +11538,8 @@
     "archive": false
    },
    "6": {
-    "state": "partly",
-    "why": "Reuters confirms Pulte bypassed the inspector general and went directly to DOJ, but the provided text does not include a former DOJ inspector general calling the approach 'highly irregular.'",
+    "state": "supports",
+    "why": "Reuters states, citing seven people familiar, that Pulte skipped over the FHFA inspector general in making criminal referrals, bypassing rules meant to prevent partisan abuse, and quotes legal experts saying an agency head would typically ask an inspector general to investigate.",
     "host": "reuters.com",
     "date": "2026-10-06",
     "kind": "fact",
@@ -11515,143 +11547,167 @@
    },
    "7": {
     "state": "supports",
-    "why": "The Hill confirms Swalwell's lawsuit and quotes the exact allegations: that Pulte 'abused his position by scouring databases at Fannie Mae and Freddie Mac ... for the private mortgage records of several prominent Democrats' and that the Privacy Act 'was designed to bar federal officials from leveraging their access to citizens' private information as a tool for harming their political opponents.'",
-    "host": "thehill.com",
-    "date": "2026-09-15",
+    "why": "The November 17, 2025 letter to Comptroller General Dodaro, signed by eight senators with Warren as Banking ranking member, asks GAO to promptly investigate whether FHFA and its employees misused federal authority and resources, specifically over the referrals of James, Schiff, Cook and Swalwell.",
+    "host": "banking.senate.gov",
+    "date": "2026-10-06",
     "kind": "fact",
-    "archive": true
+    "archive": false
    },
    "8": {
-    "state": "partly",
-    "why": "The archived Post text confirms a Virginia grand jury declined on Thursday to reindict James after the dismissal, but the snippet does not mention Halligan's appointment or the $19,000 mortgage-rate allegation.",
-    "host": "washingtonpost.com",
+    "state": "supports",
+    "why": "The Hill article quotes Swalwell's legal team on Pulte scouring Fannie Mae and Freddie Mac databases and quotes the Privacy Act 'designed to bar federal officials' language, and says he sued 'last week'.",
+    "host": "thehill.com",
     "date": "2026-10-06",
     "kind": "fact",
     "archive": true
    },
    "9": {
     "state": "partly",
-    "why": "CNN confirms GAO said on Dec 4, 2025 it would act on Senate Democrats' request to investigate Pulte and quotes the scope/methodology timing statement verbatim, but the source does not mention eight senators, Warren as leader, or the quoted 'potentially misused federal authority' language.",
-    "host": "cnn.com",
+    "why": "The Post snippet confirms a Virginia grand jury on Thursday declined to indict James again after a judge dismissed the charges the week before. The provided text does not mention Halligan's unlawful appointment, the $19,000 benefit, or the second-home versus investment property theory.",
+    "host": "washingtonpost.com",
     "date": "2026-10-06",
     "kind": "fact",
-    "archive": false
+    "archive": true
    },
    "10": {
     "state": "supports",
-    "why": "HousingWire, citing WSJ, reports Libby's removal, McCoy's pressured resignation, and acting IG Allen being asked to step down after forwarding the report.",
-    "host": "housingwire.com",
+    "why": "CNN reports GAO said on Thursday it would act on the Senate Democrats' request and quotes the GAO spokesperson's statement on scope, methodology and the lack of a completion estimate.",
+    "host": "cnn.com",
     "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
    "11": {
     "state": "supports",
-    "why": "The Hill reports the Maryland grand jury on the Schiff allegations involving Pulte and Martin, and the subpoena language about possible improper deputization.",
+    "why": "The HousingWire article, citing the Wall Street Journal, says Libby was removed, McCoy resigned under pressure, and acting IG Joe Allen, who forwarded the report to prosecutors, was asked to step down.",
+    "host": "housingwire.com",
+    "date": "2026-10-06",
+    "kind": "fact",
+    "archive": false
+   },
+   "12": {
+    "state": "supports",
+    "why": "The Hill reports prosecutors assembled a Maryland grand jury to review the Schiff allegations, the probe involves Pulte and Ed Martin, and a witness subpoena asked about people 'claiming to be working for or at the direction' of DOJ, Martin or Pulte.",
     "host": "thehill.com",
     "date": "2026-10-06",
     "kind": "fact",
     "archive": true
    },
-   "12": {
+   "13": {
     "state": "unopened",
     "why": "",
     "host": "wichitaliberty.org",
-    "date": "2026-10-06",
-    "kind": "interpretation",
-    "archive": false
-   },
-   "13": {
-    "state": "supports",
-    "why": "CNN reports the review finding, Martin's initial denial and the emails, his January 1 removal and relocation, no charges, Blanche's statement, and Bondi's X post.",
-    "host": "cnn.com",
     "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
    "14": {
-    "state": "partly",
-    "why": "CNBC confirms Swalwell dropped the suit and his spokesperson's 'called his bluff' quote, but it does not mention a March 20 joint stipulation, dismissal without prejudice, or refiling.",
-    "host": "cnbc.com",
+    "state": "supports",
+    "why": "CNN reports, citing at least two sources, that a DOJ review found Martin improperly handled grand jury material, that he initially denied sharing it until emails surfaced, his January 1 removal and relocation, Blanche's statement, and Bondi's 'There is no investigation into Bill Pulte' post.",
+    "host": "cnn.com",
     "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
    "15": {
-    "state": "partly",
-    "why": "Wikipedia confirms the June 29, 2026 denial allowing Cook to stay while litigation continues, but the provided text does not cover Pulte renewing his allegations, Cook remaining uncharged, or her 'baseless' remark.",
-    "host": "en.wikipedia.org",
+    "state": "supports",
+    "why": "Scotsman Guide reports the March 20 joint stipulation to dismiss without prejudice and quotes spokesperson Micah Beasley, via the Sacramento Bee, saying 'We called his bluff' and 'He never brought it. Case closed.'",
+    "host": "scotsmanguide.com",
     "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
    "16": {
-    "state": "partly",
-    "why": "CNBC confirms Clayton's Tuesday confirmation ended Pulte's acting-DNI tenure, but contains nothing about the FVRA or a January 26, 2027 ceiling.",
+    "state": "supports",
+    "why": "CNBC reports Swalwell dropped his lawsuit against Pulte and quotes Beasley saying 'Pulte threatened a case. We called his bluff. He never brought it.'",
     "host": "cnbc.com",
     "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
    "17": {
-    "state": "unopened",
-    "why": "",
-    "host": "cato.org",
+    "state": "supports",
+    "why": "CBS reports Trump's Tuesday announcement naming Pulte acting DNI while he remains FHFA director, the GAO request quote, the GAO spokesperson's 'late 2026 or early 2027' timing, the 210-day limit through Jan. 26, 2027, and that only the James case produced charges and was dismissed.",
+    "host": "cbsnews.com",
     "date": "2026-10-06",
-    "kind": "interpretation",
-    "archive": false
+    "kind": "fact",
+    "archive": true
    },
    "18": {
     "state": "supports",
-    "why": "Deadline Detroit relays the WSJ report on Pulte examining Blanche's mortgage information, the officials' belief about pressuring, the lawyer's denial, and the DOJ spokeswoman's statements.",
-    "host": "deadlinedetroit.com",
+    "why": "The Wikipedia article states the Supreme Court on June 29, 2026 held that Cook could remain in her job while the removal efforts are litigated, and that on August 15, 2025 Pulte accused Cook of mortgage fraud and said he submitted a criminal referral; the infobox lists five justices in the majority and four dissenting.",
+    "host": "en.wikipedia.org",
     "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
    "19": {
-    "state": "partly",
-    "why": "The letter confirms the August 31 notice, the $20 million level, the 63.6% and 61.3% reductions, the 70-80% staffing cut ending essentially all criminal investigations, and that FHFA had always funded the request before FY2027. But the provided text does not name Hodge, give the $51.7 million figure or the 30+ USAO support, or the agent, conviction, and monetary-results statistics.",
-    "host": "banking.senate.gov",
+    "state": "supports",
+    "why": "CNBC reports the Senate confirmed Clayton on a party-line 51-47 vote on Tuesday evening and that the confirmation ended interim DNI Pulte's brief tenure, which featured several rounds of layoffs of high-ranking intelligence officials.",
+    "host": "cnbc.com",
     "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
    "20": {
-    "state": "partly",
-    "why": "Government Executive confirms FHFA's release called the office an 'extraordinary outlier' versus peer OIGs and said it 'fully supports the independence and mission' of the OIG, and separately reports the former acting IG's removal after sharing information with the James prosecutors; but the text contains no 16%-versus-2% figures, and Greenblatt's quoted remark is different ('Everyone should be up in arms...'), with no 'five-alarm fire' phrase. No Federal News Network text was provided.",
-    "host": "govexec.com",
-    "date": "2026-10-03",
+    "state": "unopened",
+    "why": "",
+    "host": "cato.org",
+    "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
    "21": {
-    "state": "partly",
-    "why": "The release confirms all eleven Banking Democrats led by Warren wrote on October 1 of 'unlawfully slashing' the budget and demanded funding no less than the original request, but it gives no $57.6 million figure.",
-    "host": "banking.senate.gov",
+    "state": "supports",
+    "why": "Deadline Detroit, relaying the WSJ report, says Pulte examined Blanche's mortgage information while Blanche was deputy AG, that they clashed over the investigations, and includes the Pulte lawyer, FHFA/DOJ representative, and DOJ spokeswoman responses described in the claim.",
+    "host": "deadlinedetroit.com",
     "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
    "22": {
-    "state": "supports",
-    "why": "Durbin's release carries the October 1 joint statement, with the listed signatories and all three quoted phrases.",
-    "host": "durbin.senate.gov",
+    "state": "partly",
+    "why": "The letter supports the $20 million funding level, the 63.6% and 61.3% reductions, the $57.6 million July 31 request, the August 31 notice, the 70-80% staffing cut, discontinuance of criminal investigations, about 40 agents plus three SAUSAs, 1,270 convictions and $75 billion since 2011, and FHFA funding the requested amount before FY 2027. The provided text does not show the $51.7 million and $55 million figures or the more than 30 U.S. Attorney's offices detail.",
+    "host": "banking.senate.gov",
     "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
    "23": {
     "state": "partly",
-    "why": "Scotsman Guide's Oct 1, 2026 article supports the GAO spokesperson's active-and-ongoing, methodology-outreach, and late 2026/early 2027 statements, but contains nothing about a CBS News report or a June 2, 2026 GAO statement.",
-    "host": "scotsmanguide.com",
+    "why": "Government Executive supports the FHFA release's 'extraordinary outlier' framing, the 'fully supports the independence and mission' quote, and the removal of the former acting IG after he reportedly shared information with the James prosecutors. The provided text does not contain the 16% versus 2% budget comparison or the 'five-alarm fire' quote (Greenblatt's quoted words differ).",
+    "host": "govexec.com",
     "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
    "24": {
     "state": "supports",
-    "why": "The Reuters syndicated copy reports Warren's understanding that FHFA is not complying with GAO requests, her 'obstruction is illegal' quote, the FHFA and GAO spokesperson statements, and Cortez Masto and Reed asking to summon Pulte after the OIG budget cut.",
+    "why": "The Banking Committee press release lists Warren and ten other Democratic senators (eleven total), quotes 'unlawfully slashing' the OIG's FY27 budget, and demands funding no less than the OIG's original FY27 request.",
+    "host": "banking.senate.gov",
+    "date": "2026-10-06",
+    "kind": "fact",
+    "archive": false
+   },
+   "25": {
+    "state": "supports",
+    "why": "Durbin's October 1 release lists the signers (including Schumer, Jeffries, Durbin, Warren, Waters) and contains the quoted statements about shutting down the watchdog, firing about 40 law enforcement personnel, and Pulte resigning.",
+    "host": "durbin.senate.gov",
+    "date": "2026-10-06",
+    "kind": "fact",
+    "archive": false
+   },
+   "26": {
+    "state": "supports",
+    "why": "Scotsman Guide reports a GAO spokesperson confirmed the review is active and ongoing, quotes the methodology outreach statement, and says a report is expected in late 2026 or early 2027.",
+    "host": "scotsmanguide.com",
+    "date": "2026-10-06",
+    "kind": "fact",
+    "archive": false
+   },
+   "27": {
+    "state": "supports",
+    "why": "The Reuters copy reports Warren's letter, quotes the 'Such obstruction is illegal' sentence, the FHFA and GAO spokesperson statements, and that Cortez Masto and Reed asked to summon Pulte to testify.",
     "host": "1027wbow.com",
     "date": "2026-10-06",
     "kind": "fact",
@@ -17186,48 +17242,48 @@
     "archive": true
    },
    "2": {
-    "state": "partly",
-    "why": "The Bloomberg Government snippet supports a 49-51 procedural discharge vote that gained some Republican support but failed; it says only 'Thursday' and does not state the November 6, 2025 date.",
+    "state": "supports",
+    "why": "Bloomberg Government reports Democrats forced a 49-51 Thursday vote on S.J.Res. 90 that gained some Republican support but failed, and describes it as a procedural vote to bypass the Foreign Relations Committee.",
     "host": "news.bgov.com",
     "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
    "3": {
-    "state": "partly",
-    "why": "Content supports a renewed War Powers push and the 'non-international armed conflict' framing, but the article is dated Dec 15, 2025, not December 12 as claimed.",
-    "host": "military.com",
+    "state": "supports",
+    "why": "The Senate roll call page shows vote 608 on November 6, 2025 on the motion to discharge S.J.Res. 90, result 'Motion to Discharge Rejected', 49 yeas and 51 nays.",
+    "host": "senate.gov",
     "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
    "4": {
     "state": "supports",
-    "why": "CBS reports both December 17 House votes (Meeks 210-216, McGovern 211-213) with the named crossover votes exactly as claimed.",
+    "why": "The Military.com article is dated Dec 15, 2025, discusses S.J.Res. 90 and the 'hostilities within or against Venezuela' fast-track vote, notes the failed Nov. 6 discharge vote, and cites CRS on the administration reportedly telling Congress of a 'non-international armed conflict' with cartels.",
+    "host": "military.com",
+    "date": "2026-10-06",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "supports",
+    "why": "CBS reports the Meeks resolution failed 210-216 with Massie and Bacon in support and Cuellar and Gonzalez opposed, and McGovern's failed 211-213 with Massie, Bacon and Greene in support.",
     "host": "cbsnews.com",
     "date": "2026-10-06",
     "kind": "fact",
     "archive": true
    },
-   "5": {
-    "state": "supports",
-    "why": "The Senate roll call shows the January 8, 2026 motion to discharge S.J.Res. 98 agreed to, 52-47.",
-    "host": "senate.gov",
-    "date": "2026-10-06",
-    "kind": "fact",
-    "archive": false
-   },
    "6": {
     "state": "supports",
-    "why": "NPR's January 14, 2026 report states the vote was 51-50 with Vance breaking a tie and Hawley and Young reversing their earlier support.",
-    "host": "npr.org",
+    "why": "The Senate roll call page shows vote 5 on January 8, 2026 on the motion to discharge S.J.Res. 98, a Venezuela war powers resolution, result 'Motion to Discharge Agreed to', 52 yeas and 47 nays.",
+    "host": "senate.gov",
     "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
    "7": {
     "state": "supports",
-    "why": "NPR's January 22, 2026 report states McGovern's resolution failed 215-215 with all Democrats plus Massie and Bacon in support.",
+    "why": "NPR (Jan. 14, 2026) reports Republicans blocked the resolution 51-50 with Vice President Vance breaking the tie, after Hawley and Young, two of the five Republicans who had advanced it, switched.",
     "host": "npr.org",
     "date": "2026-10-06",
     "kind": "fact",
@@ -17235,7 +17291,15 @@
    },
    "8": {
     "state": "supports",
-    "why": "The HFAC Democrats release dated September 2, 2026 announces the four ranking members introduced a War Powers Resolution to block strikes in the Caribbean and eastern Pacific, marking one year since the first strike.",
+    "why": "NPR (Jan. 22, 2026) reports the House rejected McGovern's resolution on a 215-215 tie, with Massie and Bacon joining all Democrats.",
+    "host": "npr.org",
+    "date": "2026-10-06",
+    "kind": "fact",
+    "archive": false
+   },
+   "9": {
+    "state": "supports",
+    "why": "The House Foreign Affairs Democrats' Sept. 2, 2026 release says Meeks, Smith, Himes and Thompson introduced a War Powers Resolution to block strikes in the Caribbean and eastern Pacific, marking one year since the first boat strike.",
     "host": "democrats-foreignaffairs.house.gov",
     "date": "2026-10-06",
     "kind": "fact",
