@@ -4953,36 +4953,54 @@
     "title": "Trump Administration Shut Down the CIA World Factbook, a Widely-Used Public Reference on Countries and Global Affairs",
     "institution": "Central Intelligence Agency",
     "domain": "data_collection_halted",
-    "status": "Finalized -- the resource was shut down",
-    "date_of_action": "2026-04 (closure reported)",
-    "what_changed": "**CBS News reported the Trump administration shut down the CIA World Factbook, a long-running, publicly available reference maintained by the CIA that provided basic, regularly updated information on every country's government, economy, geography, demographics, and military -- widely used by students, researchers, journalists, and policymakers as a trusted, free, English-language reference on global affairs.**",
+    "status": "Finalized -- the CIA took The World Factbook offline on Feb. 4, 2026; its web address now redirects to the agency's farewell page, and no restoration or replacement has been reported.",
+    "date_of_action": "2026-02-04",
+    "what_changed": "**The CIA abruptly ended The World Factbook on Feb. 4, 2026, with no advance notice and no stated reason, replacing the site with a farewell page. The Factbook, begun in 1962 and online since 1997, was a free reference on countries' economies, people, militaries and resources, used by students, teachers, librarians, researchers and journalists.**",
     "primary_proponent": {
       "name": "Central Intelligence Agency / Trump administration",
       "role": "Agency maintaining and discontinuing the resource",
-      "note": "Sourcing reviewed did not identify a single named official personally directing the Factbook's closure or a specific stated rationale from the administration; documented as an institutional agency action."
+      "note": "No named official is reported as directing the closure. The CIA's announcement gave no reason; the Associated Press noted it followed a vow from Director John Ratcliffe to end programs that don't advance the agency's core missions."
     },
     "estimated_impact": {
-      "summary": "One of the federal government's most widely used and trusted free public reference resources on global affairs was discontinued, removing a shared, nonpartisan factual baseline that students, researchers, and policymakers relied on -- a loss CBS's reporting connects to a broader concern about mis/disinformation more easily filling gaps left by disappearing trusted public data sources.",
-      "figures": [],
-      "caveat": "Sourcing reviewed did not include a specific usage-volume figure (e.g., annual page views) quantifying the Factbook's reach, nor a stated administration rationale for the closure beyond the fact of the shutdown itself."
+      "summary": "A free, widely trusted reference that drew millions of views a year disappeared overnight. Teachers and librarians told CNN they now have to gather country data piecemeal from sources they trust less; CNN's research director called the Factbook \"the gold standard for country statistics.\"",
+      "figures": [
+        {
+          "metric": "Annual reach of the online Factbook",
+          "value": "Millions of views each year",
+          "source": "CIA farewell page, Feb. 4, 2026"
+        }
+      ],
+      "caveat": "The CIA has given no precise usage count or cost figure, and no public rationale beyond its farewell page. Older copies remain reachable through the Internet Archive and a programmer's online copy of the data, whose newest material is from 2020."
     },
-    "confidence_note": "MODERATE-HIGH confidence -- the closure itself is documented directly in CBS News's dedicated reporting; sourcing reviewed did not include independent corroboration from additional outlets or a specific stated administration rationale for the decision as of this entry's addition.",
-    "pull_quote": "CBS's reporting connects the loss to a broader concern about mis/disinformation more easily filling gaps left by disappearing trusted public data sources.",
-    "last_verified": "2026-08-06",
+    "confidence_note": "HIGH confidence -- the closure is confirmed by the CIA's own farewell page dated Feb. 4, 2026, and reported the same week by the Associated Press and CNN; CBS News later carried an AP feature on it. No stated administration rationale has been found. Re-verified 2026-10-06: the Factbook's address still redirects to the farewell page; no restoration reported.",
+    "pull_quote": "“Though the World Factbook is gone, in the spirit of its global reach and legacy, we hope you will stay curious about the world” -- the CIA's farewell page",
+    "last_verified": "2026-10-06",
     "date_added": "2026-08-06",
     "sources": [
       {
-        "name": "CBS News -- 'CIA World Factbook shuttered Trump administration'",
+        "name": "CIA -- 'Spotlighting The World Factbook as We Bid a Fond Farewell' (Feb. 4, 2026)",
+        "url": "https://www.cia.gov/stories/story/spotlighting-the-world-factbook-as-we-bid-a-fond-farewell/"
+      },
+      {
+        "name": "Associated Press via NBC News -- 'CIA discontinues publication of its World Factbook reference tool' (Feb. 4, 2026)",
+        "url": "https://www.nbcnews.com/politics/politics-news/cia-discontinues-publication-world-factbook-reference-tool-rcna257515"
+      },
+      {
+        "name": "CNN -- 'CIA terminates its World Factbook' (Feb. 5, 2026)",
+        "url": "https://www.cnn.com/2026/02/05/us/cia-world-factbook-countries-cec"
+      },
+      {
+        "name": "CBS News (AP) -- 'CIA World Factbook, trusted source of knowledge about nations, shuttered by Trump administration' (April 6, 2026)",
         "url": "https://www.cbsnews.com/news/cia-world-factbook-shuttered-trump-administration/"
       }
     ],
-    "last_updated": "2026-08-06",
+    "last_updated": "2026-10-06",
     "section_summaries": {
-      "what_changed": "The Trump administration shut down the CIA World Factbook, a widely used free public reference on countries and global affairs maintained by the CIA for decades.",
-      "estimated_impact": "A trusted, shared factual baseline used by students, researchers, and policymakers was removed, raising concern about disinformation filling the gap.",
-      "confidence_note": "Sourced to CBS News's dedicated reporting; independent corroboration and a stated administration rationale weren't identified beyond that reporting."
+      "what_changed": "The CIA abruptly ended The World Factbook on Feb. 4, 2026, without notice or a stated reason, taking down a free country reference begun in 1962.",
+      "estimated_impact": "Teachers, librarians and journalists lost a free, trusted one-stop source of country data that drew millions of views a year.",
+      "confidence_note": "Confirmed by the CIA's own farewell page and reported by the AP and CNN; the agency has given no reason for the closure."
     },
-    "last_substantive_update": "2026-08-06",
+    "last_substantive_update": "2026-10-06",
     "glance": {
       "who": "Central Intelligence Agency",
       "what": "Shut down the CIA World Factbook, a free public reference on countries maintained for decades",
@@ -4991,7 +5009,7 @@
         "certainty": "documented",
         "who": "Public reference on countries"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-10-06"
     }
   },
   {
@@ -6816,16 +6834,16 @@
     "title": "DHS Tied Counterterrorism/Homeland-Security Grants to Immigration-Enforcement Cooperation; Courts Blocked It Twice, DHS Kept Trying",
     "institution": "U.S. Department of Homeland Security (FEMA Homeland Security Grant Program / State Homeland Security Program)",
     "domain": "funding_redirection",
-    "status": "Ongoing litigation -- a federal judge ruled against DHS in September 2025, and again after DHS disabled states' ability to formally accept their already-approved grant awards; DHS then imposed new population-estimate and shortened-spending-deadline conditions on all states. A coalition of 26 states plus two governors filed a further suit July 23, 2026 in the U.S. District Court for the District of Rhode Island, challenging both the immigration-cooperation condition and new voter-data-sharing/election-practice conditions.",
+    "status": "Ongoing -- Judge William E. Smith's September 2025 ruling is final (DHS dropped its appeal, dismissed Sept. 16, 2026), and Judge Mary McElroy voided the grant reallocation in December 2025. A July 23, 2026 suit by 23 states, D.C. and two governors over new FY2026 conditions is pending.",
     "date_of_action": "2025 (conditions first imposed) through 2026-07-23 (latest multi-state suit filed)",
-    "what_changed": "**DHS's FEMA-administered Homeland Security Grant Program -- post-9/11 funding used by states for items like bomb detectors, security-analyst salaries, and emergency-preparedness capacity -- was conditioned on states cooperating with the administration's immigration-enforcement crackdown**. Oregon and 19 other states (a coalition including California, Colorado, Connecticut, Delaware, Hawaii, Illinois, Maine, Massachusetts, Michigan, Minnesota, Nevada, New Jersey, New Mexico, New York, Rhode Island, Washington, Wisconsin, and Vermont) sued, arguing DHS was holding emergency-preparedness funding hostage in violation of the Constitution and the Administrative Procedure Act. A federal judge ruled in September 2025 that DHS could not attach immigration-cooperation strings to the grants. After that ruling, Oregon officials found the button to formally accept their already-approved award had been disabled on the federal grant website; states went back to court and won again, treating the disabled button as a defiance of the original order. Nearly $18 million was at stake for Oregon alone in the 2025 round; Portland had received an average of $5 million a year in homeland security grants over the prior two decades. DHS subsequently imposed two new conditions applying to all states regardless of the immigration dispute: states must estimate their populations net of people who had been deported, and the spending deadline for awarded funds was cut from three years to ten months. Separately, in September 2025, Trump ordered National Guard troops deployed to Portland, citing 'violent radical left terrorism' -- a characterization the city disputed -- adding a second front to the same underlying dispute over whether Oregon and similarly-positioned jurisdictions would be treated as partners or adversaries in federal counterterrorism/homeland-security funding. The dispute escalated further in 2026: on July 23, 2026, Oregon Attorney General Dan Rayfield led a coalition of 26 states plus the governors of Kentucky and Pennsylvania in a new suit, filed in the U.S. District Court for the District of Rhode Island, challenging DHS grant conditions requiring states to assist with federal immigration enforcement, alter election practices, and provide DHS with personal information on registered voters, as well as challenging FEMA's asserted authority to cancel grants at any time -- again on Administrative Procedure Act and Spending Clause grounds. Oregon alone receives roughly $10 million annually through the Homeland Security Grant Program; the 2026 suit put the nationwide funding at issue above $1 billion. Rayfield's office noted it had already won two similar cases in Rhode Island federal court in 2025.",
+    "what_changed": "**DHS's FEMA-administered Homeland Security Grant Program -- post-9/11 funding used by states for items like bomb detectors, security-analyst salaries, and emergency-preparedness capacity -- was conditioned on states cooperating with the administration's immigration-enforcement crackdown**. Oregon and 19 other states, including Illinois, New York and California, sued in federal court in Rhode Island (State of Illinois et al. v. Federal Emergency Management Agency), arguing DHS was holding emergency-preparedness funding hostage in violation of the Constitution and the Administrative Procedure Act. On September 24, 2025, Senior U.S. District Judge William E. Smith permanently enjoined DHS and FEMA from enforcing the immigration-related conditions on 40 federal grant programs. After that ruling, Oregon officials found the button to formally accept their already-approved award had been disabled on the federal grant website; DHS signaled it was likely to appeal and told states that to get the money now they would have to sign a declaration promising to cooperate with immigration enforcement if they lost in the future. States argued this violated the judge's order and won in court again, in October 2025, after which the department removed the immigration wording. Nearly $18 million was at stake for Oregon alone in the 2025 round; Portland had received an average of $5 million a year in homeland security grants over the prior two decades. DHS then rolled out new criteria affecting all states: they had to certify their populations net of people who had been deported, and the window for spending awarded funds was cut from three years to ten months. FEMA also cut roughly $233 million in expected Homeland Security Grant Program allocations to states it treated as 'sanctuary jurisdictions.' In a related case, Illinois v. Noem, U.S. District Judge Mary McElroy blocked that reallocation with a temporary restraining order on September 30, 2025, and on December 22, 2025 ruled it unlawful, ordering awards to revert to an earlier funding notice and eliminating the new population-certification condition on Emergency Management Performance Grant awards. The government appealed Judge Smith's ruling to the First Circuit (No. 25-2131), then moved on September 1, 2026 to dismiss its own appeal, which the court dismissed on September 16, 2026. Separately, in September 2025, Trump ordered National Guard troops deployed to Portland, citing 'violent radical left terrorism' -- a characterization the city disputed -- adding a second front to the same underlying dispute over whether Oregon and similarly-positioned jurisdictions would be treated as partners or adversaries in federal counterterrorism/homeland-security funding. The dispute escalated further in 2026: on July 23, 2026, 23 states (Oregon among them), the District of Columbia, and the governors of Kentucky and Pennsylvania filed a new suit, Illinois et al. v. FEMA (No. 1:26-cv-00485), in the U.S. District Court for the District of Rhode Island, co-led by Rhode Island Attorney General Peter Neronha and joined by Oregon Attorney General Dan Rayfield. It challenges DHS's fiscal 2026 grant conditions requiring states to assist with federal immigration enforcement -- which the complaint alleges are essentially identical to those vacated and enjoined in 2025 -- and to change election practices, including transmitting lists of registered voters to DHS (refusing the election terms would cost at least 20% of each state's Homeland Security Grant Program funding), as well as FEMA's asserted authority to terminate grants at any time, again on Administrative Procedure Act and Spending Clause grounds. Oregon receives nearly $10 million annually through the Homeland Security Grant Program; the 2026 suit put the nationwide funding at issue above $1 billion. In a separate suit brought by counties in Texas and Tennessee and the city of Columbus, Ohio, U.S. District Judge Amir Ali in Washington, D.C. vacated FEMA's election-administration conditions on September 28, 2026, ruling the agency exceeded its legal authority.",
     "primary_proponent": {
       "name": "Kristi Noem",
       "role": "DHS Secretary (through March 31, 2026)",
-      "note": "DHS, under Noem's leadership during the period these conditions were first imposed and initially litigated (2025), tied Homeland Security Grant Program funding to state cooperation with federal immigration enforcement; no more specific named individual within DHS was identified in sourcing reviewed as personally authoring the specific conditions. Noem left DHS in March 2026 (see doj-dhs-public-safety-grant-cancellations-2025.json for her successor's confirmation); no reporting reviewed here confirms whether the department's position changed under her successor, Markwayne Mullin, ahead of the July 2026 suit."
+      "note": "DHS, under Noem's leadership during the period these conditions were first imposed and initially litigated (2025), tied Homeland Security Grant Program funding to state cooperation with federal immigration enforcement; no more specific named individual within DHS was identified in sourcing reviewed as personally authoring the specific conditions. Noem left DHS in March 2026 (her successor's confirmation is covered in the companion entry on DOJ/DHS public-safety grant cancellations); the July 2026 suit over the fiscal 2026 conditions names her successor, Secretary Markwayne Mullin, as a defendant."
     },
     "estimated_impact": {
-      "summary": "Direct dollar figures are well-documented (Oregon-specific and nationwide), but the litigation remains unresolved as of this entry's last verification, so no final dollar amount has been definitively withheld or restored long-term -- this documents an ongoing coercion/conditioning dispute over emergency-preparedness and counterterrorism funding, not a finalized cut.",
+      "summary": "Direct dollar figures are well-documented (Oregon-specific and nationwide). The 2025 rulings stand after the government dropped its appeals, but the July 2026 suit over new conditions is pending, so no final dollar amount has been definitively withheld or restored long-term -- this documents an ongoing coercion/conditioning dispute over emergency-preparedness and counterterrorism funding, not a finalized cut.",
       "figures": [
         {
           "metric": "Oregon funding at stake in the 2025 dispute",
@@ -6839,25 +6857,25 @@
         },
         {
           "metric": "Oregon's approximate annual Homeland Security Grant Program funding (as of the 2026 suit)",
-          "value": "~$10,000,000/year",
+          "value": "nearly $10,000,000/year",
           "source": "KPTV, July 2026"
         },
         {
           "metric": "Nationwide Homeland Security Grant Program funding at issue in the July 2026 multi-state suit",
           "value": "$1,000,000,000+",
-          "source": "KPTV, July 2026"
+          "source": "Rhode Island Attorney General release, July 23, 2026 (also reported by KPTV)"
         },
         {
-          "metric": "States (plus governors) party to the 2026 suit",
-          "value": "26 states + governors of Kentucky and Pennsylvania",
-          "source": "KPTV, July 2026"
+          "metric": "Plaintiffs in the 2026 suit",
+          "value": "23 states, the District of Columbia, and the governors of Kentucky and Pennsylvania",
+          "source": "Illinois et al. v. FEMA complaint, July 2026"
         }
       ],
       "caveat": "No sourcing reviewed identifies a projected health/mortality impact specific to this funding dispute (distinct from the broader CP3/terrorism-prevention capacity concerns already documented in the companion entry) -- this is a funding-conditionality and federalism/constitutional dispute, not a program with a directly quantifiable casualty projection. The 2025 dollar figures ($18M Oregon-specific) and 2026 figures ($10M/year Oregon, $1B+ nationwide) describe different snapshots of the same recurring dispute, not additive amounts."
     },
-    "confidence_note": "Well-corroborated: ProPublica's original investigation (republished by OPB and Oregon Capital Chronicle), a Daily Record report on the September 2025 ruling, and KPTV's independent July 2026 reporting on the follow-up multi-state suit, naming Oregon AG Dan Rayfield and quoting the suit's specific legal claims. The exact case name and presiding judge for the September 2025 ruling were not confirmed in sourcing accessible for this entry (a Courthouse News Service piece that likely names them returned a 403 error on direct fetch) -- so the ruling is described here without a confirmed case name. Companion to doj-dhs-public-safety-grant-cancellations-2025.json: same department and overlapping 2025 timeframe, but that entry documents DOJ/DHS grant cancellations and CP3 workforce cuts, while this entry documents a distinct legal dispute over conditioning FEMA's separate state-formula homeland security grants on immigration-enforcement cooperation.",
-    "pull_quote": "By 2026, the dispute had escalated to 26 states plus two governors suing over more than $1 billion in nationwide counterterrorism and emergency-preparedness funding.",
-    "last_verified": "2026-09-22",
+    "confidence_note": "Well-corroborated: ProPublica's original investigation (republished by OPB and Oregon Capital Chronicle), HSToday's account naming Senior U.S. District Judge William E. Smith and the case (State of Illinois et al. v. Federal Emergency Management Agency), the First Circuit docket showing the government's appeal dismissed September 16, 2026, Courthouse News on Judge McElroy's December 2025 reallocation ruling, the July 2026 complaint and the Rhode Island Attorney General's release on it, and KPTV's report on Oregon's role. The 2026 suit's claims are allegations pending a ruling. KPTV described the 2026 coalition as '26 states'; the complaint lists 23 states, D.C. and two governors (26 plaintiffs). Companion to the entry on DOJ/DHS public-safety grant cancellations: same department and overlapping 2025 timeframe, but that entry documents DOJ/DHS grant cancellations and CP3 workforce cuts, while this entry documents a distinct legal dispute over conditioning FEMA's separate state-formula homeland security grants on immigration-enforcement cooperation.",
+    "pull_quote": "By 2026, the dispute had escalated to 23 states, D.C. and two governors suing over more than $1 billion in nationwide counterterrorism and emergency-preparedness funding.",
+    "last_verified": "2026-10-06",
     "date_added": "2026-09-11",
     "sources": [
       {
@@ -6879,23 +6897,47 @@
       {
         "name": "Courthouse News Service -- 'DHS unlawfully favored certain states in counterterrorism grant awards'",
         "url": "https://www.courthousenews.com/dhs-unlawfully-favored-certain-states-in-counterterrorism-grant-awards/"
+      },
+      {
+        "name": "HSToday -- Federal Courts Block FEMA & DHS Immigration Grant Conditions",
+        "url": "https://www.hstoday.us/perspective/eyes-on-preparedness-federal-courts-block-fema-dhs-immigration-grant-conditions-safeguarding-billions-in-emergency-preparedness-funds/"
+      },
+      {
+        "name": "CourtListener -- State of Illinois v. FEMA, First Circuit No. 25-2131 docket",
+        "url": "https://www.courtlistener.com/docket/71982910/state-of-illinois-v-federal-emergency-management-agency/"
+      },
+      {
+        "name": "Immigrant Legal Resource Center -- Illinois sued FEMA (case tracker)",
+        "url": "https://www.ilrc.org/immigration-enforcement/federal-tracking/federal-litigation/illinois-sued-fema-immigration"
+      },
+      {
+        "name": "Complaint -- Illinois et al. v. FEMA, D.R.I. No. 1:26-cv-00485 (July 23, 2026)",
+        "url": "https://ag.ny.gov/sites/default/files/court-filings/illinois-et-al-v-federal-emergency-management-agency-et-al-complaint-2026.pdf"
+      },
+      {
+        "name": "Rhode Island Attorney General -- Neronha co-leads lawsuit to stop unlawful conditions on critical emergency grants",
+        "url": "https://riag.ri.gov/press-releases/attorney-general-neronha-co-leads-lawsuit-stop-unlawful-conditions-critical"
+      },
+      {
+        "name": "CNBC -- Judge voids linking FEMA counterterrorism funds to election rule changes",
+        "url": "https://www.cnbc.com/2026/09/28/elections-dhs-counterterrorism.html"
       }
     ],
     "section_summaries": {
-      "what_changed": "DHS conditioned FEMA homeland-security grant funding on states cooperating with immigration enforcement; courts blocked it twice in 2025, DHS added new population/deadline hurdles, and a 26-state-plus-2-governor coalition sued again in July 2026 over expanded conditions including voter-data sharing.",
+      "what_changed": "DHS tied FEMA homeland-security grants to immigration cooperation; courts struck it and a punitive reallocation in 2025, and 23 states, D.C. and two governors sued again in July 2026 over new terms.",
       "estimated_impact": "Oregon alone has ~$10-18 million at stake depending on the year; the July 2026 suit puts over $1 billion in nationwide Homeland Security Grant Program funding at issue.",
-      "confidence_note": "Well-corroborated across ProPublica/OPB, Oregon Capital Chronicle, Daily Record, and KPTV; the exact September 2025 case name/judge wasn't independently confirmable due to a blocked source."
+      "confidence_note": "Well-corroborated by ProPublica/OPB, the First Circuit docket, the 2026 complaint, the Rhode Island AG's release, HSToday and Courthouse News; the 2026 suit's claims are allegations pending a ruling."
     },
-    "last_substantive_update": "2026-09-22",
+    "last_substantive_update": "2026-10-06",
     "glance": {
-      "who": "DHS under Kristi Noem",
+      "who": "DHS under Kristi Noem, then Markwayne Mullin",
       "what": "Tied homeland-security grants to immigration-enforcement cooperation; courts blocked it twice, DHS kept trying",
       "harm": {
         "kind": "money",
         "certainty": "projected",
         "who": "States' homeland-security grants ($1B+)"
       },
-      "reviewed": "2026-09-22"
+      "reviewed": "2026-10-06"
     }
   },
   {
@@ -12241,31 +12283,35 @@
       ],
       "caveat": "This entry documents the cancellation of federal civil-rights agreements and one district's documented policy rollback in response; broader downstream effects at the other five institutions were not individually itemized in sourcing reviewed."
     },
-    "confidence_note": "HIGH confidence -- the cancellations, the specific protections the agreements had required, and the Delaware Valley district's rollback are all documented directly in AP News's dedicated reporting.",
-    "last_verified": "2026-08-06",
+    "confidence_note": "HIGH confidence -- the cancellations, the specific protections the agreements had required, and the Delaware Valley district's rollback are all documented directly in AP News's dedicated reporting. Re-verified 2026-10-06: AP's report still names the five districts and Taft College and the Delaware Valley board's late-March vote; The Hill independently confirms the six rescinded agreements. No reinstatement or court challenge found.",
+    "last_verified": "2026-10-06",
     "date_added": "2026-08-06",
     "sources": [
       {
         "name": "AP News -- 'Trump education transgender student' civil rights agreement cancellations",
         "url": "https://apnews.com/article/trump-education-transgender-student-d4f00994daa64a68f557de5f98ec7d94"
+      },
+      {
+        "name": "The Hill -- 'Title IX agreements on shaky ground after Education Department rescinds gender-identity deals'",
+        "url": "https://thehill.com/homenews/education/5824262-title-ix-agreements-trump-gender-identity/"
       }
     ],
     "last_updated": "2026-08-06",
     "section_summaries": {
-      "what_changed": "The Education Department canceled civil rights agreements requiring transgender-student protections at 5 school districts and 1 college; Delaware Valley schools already rolled back their own protections in response.",
+      "what_changed": "The Education Department canceled civil rights agreements requiring transgender-student protections at 5 school districts and 1 college; Delaware Valley schools then rolled back their own protections.",
       "estimated_impact": "Transgender students at the affected institutions lost federally-secured protections the department itself had previously required as civil-rights remedies.",
       "confidence_note": "Well-documented via AP News's dedicated reporting, including the concrete local policy rollback at Delaware Valley."
     },
-    "last_substantive_update": "2026-08-06",
+    "last_substantive_update": "2026-10-06",
     "glance": {
       "who": "Education Department Office for Civil Rights",
-      "what": "Reportedly canceled civil-rights agreements protecting transgender students at 5 districts and 1 college",
+      "what": "Canceled civil-rights agreements protecting transgender students at 5 districts and 1 college",
       "harm": {
         "kind": "rights",
-        "certainty": "alleged",
+        "certainty": "documented",
         "who": "Transgender students at six institutions"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-10-06"
     }
   },
   {
@@ -17746,17 +17792,22 @@
     "title": "Trump Used Rescissions to Cancel Billions in Bipartisan Foreign Aid, Gutting Pacific-China-Countering, Myanmar, and Africa Programs",
     "institution": "State Department / USAID successor functions",
     "domain": "funding_redirection",
-    "status": "Finalized -- rescissions enacted; underlying programs terminated",
-    "date_of_action": "2026 (rescissions process, reported April 2026)",
-    "what_changed": "Extending the original 2025 USAID dismantlement documented separately in this tracker (usaid-dismantlement-trump2.json), Trump pursued a formal rescissions process to permanently claw back billions in previously appropriated, congressionally directed foreign aid funding: first winning party-line approval from the GOP-controlled Congress to cancel a package of spending, then unilaterally expanding the cuts without giving lawmakers the statutory window to object. The New York Times's review of new data found the cuts hit once-bipartisan programs particularly hard: a U.S. initiative helping Pacific island nations counter Chinese influence lost $92 million -- more than half its budget -- and **funding to prevent and respond to atrocities committed by Myanmar's military junta was eliminated entirely, directly affecting aid to Rohingya refugees in Myanmar and Bangladesh, forcing UN agencies, international NGOs, and local aid groups to scale back healthcare, food aid, and education programs.** Nearly 90% of U.S. economic aid to Africa was cut.",
+    "status": "Finalized -- rescissions enacted and canceled funds not restored. Sen. Mitch McConnell pressed to reinsert $121 million for Myanmar in the next foreign aid bill, restarting funding without restoring what was canceled.",
+    "date_of_action": "2025 (rescissions enacted, then expanded unilaterally; program-level cuts reported April 2026)",
+    "what_changed": "Extending the 2025 USAID dismantlement documented separately in this tracker (the entry on USAID being dismantled and absorbed into the State Department), Trump moved in 2025 to permanently claw back billions in previously appropriated foreign aid: first winning party-line approval from the GOP-controlled Congress to cancel the spending, then canceling more unilaterally without giving lawmakers time to object. A New York Times review of new data, published April 2026, found the cuts fell hardest on once-bipartisan programs: a U.S. initiative helping Pacific island nations counter China lost $92 million -- more than half its budget -- and funding to prevent and respond to atrocities by Myanmar's military junta was cut entirely, part of programs for the Burmese, especially the Rohingya, long championed by Sen. Mitch McConnell. Of the $7.8 billion lawmakers approved for economic and development assistance, $4.2 billion was canceled; only two of the 104 funding directives Congress wrote into the foreign aid bill survived; and almost 90% of U.S. economic aid to Africa was slashed. Myanmar and the Rohingya camps in Bangladesh had already been hit by the early-2025 aid freeze and stop-work orders, which forced UN agencies, international NGOs and local aid groups to scale back some healthcare, food aid and education programs.",
     "primary_proponent": {
       "name": "Donald Trump",
       "role": "President",
-      "note": "Personally directed the rescissions strategy -- first securing party-line congressional approval for an initial package, then unilaterally expanding the cuts without providing Congress the statutory objection window."
+      "note": "Moved to claw back the funding -- first securing party-line congressional approval for a rescissions package, then canceling more unilaterally without giving Congress time to object."
     },
     "estimated_impact": {
-      "summary": "Long-standing, historically bipartisan foreign aid tools -- used to counter Chinese influence in the Pacific, prevent atrocities in Myanmar, support Rohingya refugees, and sustain broad economic assistance across Africa -- were permanently canceled via a rescissions process that bypassed normal congressional objection procedures, reducing U.S. diplomatic leverage and humanitarian capacity in regions where China and Russia are actively competing for influence.",
+      "summary": "Long-standing, historically bipartisan foreign aid tools -- used to counter Chinese influence in the Pacific, prevent atrocities in Myanmar, support the Rohingya, and sustain economic assistance across Africa -- were permanently canceled, mostly through a party-line rescissions package and partly through a unilateral cancellation that gave Congress no time to object, reducing U.S. diplomatic leverage and humanitarian capacity in regions where China and Russia are competing for influence.",
       "figures": [
+        {
+          "metric": "Economic and development assistance canceled",
+          "value": "$4.2 billion of the $7.8 billion Congress approved",
+          "source": "The New York Times, April 2026"
+        },
         {
           "metric": "Funding lost by the Pacific islands China-countering initiative",
           "value": "$92 million (more than half its budget)",
@@ -17775,8 +17826,8 @@
       ],
       "caveat": "This entry documents the rescissions process and its specific, quantified program-level effects as reported by the Times' data review; broader claims about resulting geopolitical consequences (reduced U.S. influence relative to China/Russia) reflect analysts' characterization rather than a directly measured outcome."
     },
-    "confidence_note": "HIGH confidence -- the rescissions mechanism (party-line congressional approval followed by unilateral expansion), the $92 million Pacific-program cut, the full elimination of Myanmar atrocity-prevention funding, and the ~90% Africa aid cut are all drawn from The New York Times's dedicated data review, with independent corroboration of the Myanmar/Rohingya humanitarian impact from Myanmar Now and The New Humanitarian's on-the-ground reporting.",
-    "last_verified": "2026-08-06",
+    "confidence_note": "HIGH confidence -- the rescissions mechanism (party-line congressional approval followed by a unilateral cancellation without time to object), the $92 million Pacific-program cut, the full elimination of Myanmar atrocity-prevention funding, the $4.2 billion economic-aid cancellation and the ~90% Africa aid cut are all drawn from The New York Times's data review. The New Humanitarian's on-the-ground reporting documents the earlier 2025 aid freeze's toll on Myanmar and the Rohingya camps; it predates the rescissions and is not evidence of their specific effects. Re-verified 2026-10-06: both pages re-read and support the text; no later rescission of State Department/USAID foreign aid, restoration of the canceled funds or court ruling found.",
+    "last_verified": "2026-10-06",
     "date_added": "2026-08-06",
     "sources": [
       {
@@ -17790,11 +17841,11 @@
     ],
     "last_updated": "2026-08-06",
     "section_summaries": {
-      "what_changed": "Trump used a rescissions process -- party-line congressional approval followed by unilateral expansion bypassing the objection window -- to permanently cancel billions in bipartisan foreign aid, including $92M (over half) from a Pacific China-countering program, all Myanmar atrocity-prevention funding, and ~90% of Africa economic aid.",
-      "estimated_impact": "Long-standing bipartisan foreign aid tools used to counter Chinese/Russian influence and prevent humanitarian crises were permanently eliminated via a process that bypassed normal congressional objection procedures.",
-      "confidence_note": "Well-documented via the NYT's own data review and independently corroborated Myanmar/Rohingya humanitarian reporting."
+      "what_changed": "In 2025 Trump canceled billions in bipartisan foreign aid by rescission: $92M of a Pacific China-countering program, all Myanmar atrocity funds and ~90% of Africa economic aid.",
+      "estimated_impact": "Once-bipartisan aid tools for countering China in the Pacific, preventing Myanmar atrocities and funding African development were permanently canceled; $4.2B of $7.8B in economic aid lost.",
+      "confidence_note": "Program-level figures from a New York Times data review; Rohingya-camp harm from the earlier 2025 aid freeze documented by The New Humanitarian."
     },
-    "last_substantive_update": "2026-08-06",
+    "last_substantive_update": "2026-10-06",
     "glance": {
       "who": "Donald Trump (President)",
       "what": "Cancelled billions in foreign aid by rescission, incl. ~90% of Africa economic aid, all Myanmar atrocity funds",
@@ -17803,7 +17854,7 @@
         "certainty": "documented",
         "who": "Myanmar, Pacific and Africa aid programs"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-10-06"
     }
   },
   {
@@ -18152,13 +18203,13 @@
     "title": "USDA Plans to Relocate Forest Service Headquarters to Utah and Close All Nine Regional Offices",
     "institution": "U.S. Forest Service / Department of Agriculture",
     "domain": "staff_office_cuts",
-    "status": "Planned/announced as of this entry's addition -- staff warned the changes could trigger mass departures; implementation status not yet confirmed",
-    "date_of_action": "2026-04 (announced)",
-    "what_changed": "**Government Executive reported Trump administration officials are relocating U.S. Forest Service headquarters from the Washington, D.C. area to Utah and shutting down all nine of the agency's regional offices, as part of a sweeping USDA reorganization affecting thousands of employees.** Forest Service staff warned the forced relocations and office closures could trigger mass departures among employees unable or unwilling to relocate, echoing the same institutional-knowledge-loss dynamic already documented elsewhere in this tracker for other agencies. This entry is distinct from, but part of the same broader pattern as, the Forest Service's previously documented ~700-person wildland-fire-support layoffs (forest-service-firefighter-shortage-trump2.json) and its plan to close 57 of 77 research stations (forest-service-research-station-closures-2026.json) -- this action specifically concerns the agency's administrative headquarters and regional-office structure, not its fire-operations staff or research infrastructure.",
+    "status": "In progress, but a federal judge has paused deadlines on USDA relocation orders through Oct. 13 while weighing an injunction. Relocation counts are disputed: the agency says under 200 must move, Schultz told lawmakers about 500, and whistleblowers say up to 1,900.",
+    "date_of_action": "2026-03-31 (announced)",
+    "what_changed": "**Government Executive reported Trump administration officials are relocating U.S. Forest Service headquarters from the Washington, D.C. area to Salt Lake City, Utah, and shutting down all nine of the agency's regional offices, as part of a sweeping USDA reorganization that will shift 2,600 USDA employees out of the capital region.** Forest Service staff warned the forced relocations and office closures could trigger mass departures among employees unable or unwilling to relocate, echoing the same institutional-knowledge-loss dynamic already documented elsewhere in this tracker for other agencies. The regional offices give way to 15 state offices, many covering several states. The agency later scaled back: its reorganization page says staff of the closing Atlanta, Milwaukee and Portland regional offices will continue their work at local facilities (some Portland staff will commute to a new state office in Salem, OPB reported), rather than the moves to Utah, Colorado or New Mexico first described to them. Schultz told WyoFile, in an interview published July 6, that fewer than 300 people may have to physically relocate and probably fewer than 50 out of the D.C. area; a union poll found only 7% of 3,000 respondents would relocate if asked. This entry is distinct from, but part of the same broader pattern as, the Forest Service's previously documented ~700-person wildland-fire-support layoffs and its research-station closure plan, each tracked in its own entry -- this action specifically concerns the agency's administrative headquarters and regional-office structure, not its fire-operations staff or research infrastructure.",
     "primary_proponent": {
       "name": "U.S. Department of Agriculture",
       "role": "Forest Service's parent department, directing the reorganization",
-      "note": "Sourcing reviewed did not identify a single named USDA or Forest Service official personally announcing or driving the relocation decision beyond the department's institutional reorganization plan."
+      "note": "The department's institutional reorganization plan drives the move; Forest Service Chief Tom Schultz announced it to employees and has publicly defended it."
     },
     "estimated_impact": {
       "summary": "Relocating the Forest Service's national headquarters out of the Washington area to Utah and eliminating all nine regional offices restructures how the agency manages forests, wildfires, and other public-land responsibilities nationwide, with staff warning the disruption could cause an exodus of experienced personnel and the institutional knowledge that leaves with them.",
@@ -18167,36 +18218,66 @@
           "metric": "Regional Forest Service offices slated for closure",
           "value": "9 (all of them)",
           "source": "Government Executive, April 2026"
+        },
+        {
+          "metric": "Forest Service employees being asked to relocate (Chief Schultz to lawmakers)",
+          "value": "about 500",
+          "source": "Government Executive, July 27, 2026"
+        },
+        {
+          "metric": "Union poll respondents who said they would relocate if asked",
+          "value": "7% of about 3,000 (NFFE Forest Service Council)",
+          "source": "Government Executive, July 27, 2026"
         }
       ],
-      "caveat": "This entry documents an announced plan; sourcing reviewed did not confirm a completed relocation, a final headcount of departures, or a specific implementation timeline as of this entry's addition."
+      "caveat": "Relocation figures conflict by source and date: the agency's reorganization page says fewer than 200 employees are expected to need to relocate, Schultz told lawmakers about 500 and told WyoFile fewer than 300, and whistleblowers put the figure as high as 1,900. The union poll measures stated intent, not actual departures; no final count of departures had been reported."
     },
-    "confidence_note": "MODERATE-HIGH confidence -- Government Executive's reporting on the relocation and regional-office-closure plan is the primary source identified; broader corroboration from additional outlets, and confirmation of actual implementation versus an announced plan, was not independently verified beyond that reporting as of this entry's addition.",
+    "confidence_note": "MODERATE-HIGH confidence -- Government Executive's reporting on the relocation and regional-office-closure plan is the primary source identified; broader corroboration from additional outlets, and confirmation of actual implementation versus an announced plan, was not independently verified beyond that reporting as of this entry's addition. Re-verified 2026-10-06: the April Government Executive report still says what the entry says; later reporting (Government Executive July 27, WyoFile via Daily Montanan July 6, OPB Sept. 3) and the Forest Service's own reorganization page confirm implementation is under way, with relocation counts disputed and the Atlanta, Milwaukee and Portland staff now kept at local facilities. A federal judge in San Francisco has paused deadlines on USDA relocation orders through Oct. 13 while weighing a request for an injunction from unions, nonprofits and local governments (Government Executive, Sept. 30).",
     "pull_quote": "Forest Service staff warned the forced relocations and office closures could trigger mass departures among employees unable or unwilling to relocate, echoing the same institutional-knowledge-loss dynamic documented elsewhere in this tracker.",
-    "last_verified": "2026-08-06",
+    "last_verified": "2026-10-06",
     "date_added": "2026-08-06",
     "sources": [
       {
         "name": "Government Executive -- 'Forest Service to move HQ out of DC, shutter regional offices in sweeping overhaul'",
         "url": "https://www.govexec.com/management/2026/04/forest-service-move-hq-out-dc-shutter-regional-offices-sweeping-overhaul/412566/?oref=ge-home-top-story"
+      },
+      {
+        "name": "Government Executive -- 'As USDA relocation deadlines near, employees say questions remain unanswered' (July 27, 2026)",
+        "url": "https://www.govexec.com/workforce/2026/07/usda-relocation-deadlines-near-employees-say-questions-remain-unanswered/415013/"
+      },
+      {
+        "name": "Daily Montanan (WyoFile) -- 'Chief Tom Schultz details, defends largest Forest Service reorganization in a century' (July 6, 2026)",
+        "url": "https://dailymontanan.com/2026/07/06/chief-tom-schultz-details-defends-largest-forest-service-reorganization-in-a-century/"
+      },
+      {
+        "name": "OPB / Northwest News Network -- 'US Forest Service releases long-awaited restructuring plan' (Sept. 3, 2026)",
+        "url": "https://www.opb.org/article/2026/09/03/us-forest-service-restructuring-plan/"
+      },
+      {
+        "name": "Government Executive -- 'Judge extends temporary pause in USDA relocations as he considers indefinite freeze' (Sept. 30, 2026)",
+        "url": "https://www.govexec.com/management/2026/09/judge-extends-temporary-pause-usda-relocations-he-considers-indefinite-freeze/416349/"
+      },
+      {
+        "name": "U.S. Forest Service -- 'Forest Service Reorganization' (agency page)",
+        "url": "https://www.fs.usda.gov/about-agency/reorganization"
       }
     ],
-    "last_updated": "2026-08-06",
+    "last_updated": "2026-10-06",
     "section_summaries": {
-      "what_changed": "USDA plans to relocate Forest Service headquarters from D.C. to Utah and close all nine regional offices as part of a broader reorganization, with staff warning of potential mass departures -- distinct from the agency's separately-documented fire-staff layoffs and research-station closures.",
+      "what_changed": "USDA is moving Forest Service HQ from D.C. to Salt Lake City and closing all nine regional offices; staff warn of mass departures, though the agency has cut how many must move.",
       "estimated_impact": "The plan restructures the agency's nationwide management structure and risks losing experienced staff and institutional knowledge.",
-      "confidence_note": "Sourced to Government Executive's reporting; implementation status and broader corroboration weren't confirmed beyond that single primary source as of this entry."
+      "confidence_note": "Government Executive, WyoFile, OPB and the agency's page confirm the plan is under way, though a court has paused relocation deadlines; counts remain disputed."
     },
-    "last_substantive_update": "2026-08-06",
+    "last_substantive_update": "2026-10-06",
     "glance": {
       "who": "U.S. Department of Agriculture",
-      "what": "Reportedly plans to move Forest Service headquarters to Utah and close all nine regional offices",
+      "what": "Is moving Forest Service headquarters to Utah and closing all nine regional offices",
       "harm": {
         "kind": "institutional",
         "certainty": "alleged",
         "who": "Forest Service experienced staff"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-10-06"
     }
   },
   {
