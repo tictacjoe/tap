@@ -1682,8 +1682,8 @@
   },
   "bondi-doj-public-integrity-section-gutted-2026": {
    "0": {
-    "state": "partly",
-    "why": "NBC confirms the three-source gutting report, the 'dozens of employees,' that only a small fraction would remain, and that it would no longer handle investigations or prosecutions, but the source gives no 'roughly a half-dozen' figure.",
+    "state": "supports",
+    "why": "NBC reports, per three anonymous sources, that the administration is gutting the section, and per two sources that only a small fraction of employees of the formerly dozens-strong unit will remain and it will stop directly handling cases.",
     "host": "nbcnews.com",
     "date": "2026-10-06",
     "kind": "fact",
@@ -1698,8 +1698,8 @@
     "archive": false
    },
    "2": {
-    "state": "partly",
-    "why": "The Post reports the proposal to let prosecutors indict members of Congress without PIN approval and to drop consultation requirements, but it frames the approval change around members of Congress specifically, and the source contains nothing about Bloomberg Law corroboration.",
+    "state": "supports",
+    "why": "The Post reports, per three people familiar with a proposal section attorneys learned of last week, that prosecutors could indict members of Congress without PIN approval and would not need to consult PIN during key steps.",
     "host": "washingtonpost.com",
     "date": "2026-10-06",
     "kind": "fact",
@@ -1707,63 +1707,95 @@
    },
    "3": {
     "state": "supports",
-    "why": "NOTUS reports the drop from 36 full-time attorneys to two and that the section is smaller than at any time since its 1976 creation.",
-    "host": "notus.org",
+    "why": "Bloomberg Law reports the review, the DOJ official's 'under review'/'no final decisions' quotes, and Blanche's late-March memo with the quoted core-team language.",
+    "host": "news.bloomberglaw.com",
     "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
    "4": {
     "state": "supports",
-    "why": "NPR explicitly presents the dismantling of the Public Integrity Section alongside Trump's corruption pardons as pieces of the same weakening of anti-corruption enforcement.",
-    "host": "npr.org",
+    "why": "The 9-85.110 Members-of-Congress text states that any criminal charge in a matter where a Member of Congress is a subject or target requires prior PIN approval, and the 9-85.210 section carries the verbatim note 'The Consultation Requirement is suspended while revisions are ongoing. [June 2025]', so both parts of the claim match the source.",
+    "host": "justice.gov",
     "date": "2026-10-06",
-    "kind": "interpretation",
+    "kind": "fact",
     "archive": false
    },
    "5": {
-    "state": "partly",
-    "why": "The Hill reports Vance's referral to DOJ's new Fraud Division and Ellison's pushback, but Vance announced the referral on X rather than in a referral letter, and Ellison described targeting of 'perceived opponents,' not specifically Democratic officials.",
-    "host": "thehill.com",
+    "state": "supports",
+    "why": "NOTUS (Sept. 22, 2025) reports the drop from 36 full-time attorneys to two and that the section is smaller than at any time since its 1976 creation.",
+    "host": "notus.org",
     "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
    "6": {
-    "state": "partly",
-    "why": "The source confirms Blanche's August 16 refusal to pledge independence and his 'integrity' remarks, and notes 49 senators opposed him, but it does not give the 50-49 tally, the August 8 or August 13 dates, a 'core mission' pledge to staff, or anything about Public Integrity Section restaffing.",
-    "host": "washingtontimes.com",
+    "state": "supports",
+    "why": "NPR explicitly links Trump's corruption-related pardons, more than half going to Republicans or Trump supporters, with the dismantling of the Public Integrity Section as parts of the same pattern.",
+    "host": "npr.org",
     "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
    "7": {
     "state": "supports",
-    "why": "The Examiner reports the 10-page final rule letting McDonald's division prosecute any offenses uncovered in fraud-initiated investigations, and that it formalizes existing powers.",
-    "host": "washingtonexaminer.com",
+    "why": "The Hill reports Vance's X post quoting the referral to 'DOJ's new Fraud Division,' prompted by a House Oversight report, and Ellison's 'political stunt' response with the quoted language.",
+    "host": "thehill.com",
     "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
    "8": {
-    "state": "partly",
-    "why": "The source supports Kao's cooperation through late 2024, the agents' push for a broader bribery probe, the purge, the career attorney quitting, the investigation being dead, and the FBI's denial; it does not mention the CR-15 squad or Kash Patel by name, describes Kao as indicted (not his guilty plea) in this excerpt, and says one agent was pushed out rather than the agents generally being removed.",
-    "host": "propublica.org",
-    "date": "2026-10-03",
+    "state": "supports",
+    "why": "NPR reports the 50-49 early-Saturday vote, with all Democrats plus Collins and Murkowski opposed.",
+    "host": "npr.org",
+    "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
    "9": {
     "state": "supports",
-    "why": "ABC reports Collins's quotes, that ABC had not independently confirmed ProPublica's reporting, and that the FBI spokesperson did not respond on the separate 2024 investigation.",
-    "host": "abcnews.com",
+    "why": "TNND (Aug. 13, 2026) quotes Blanche's remarks to DOJ staff with both quoted phrases.",
+    "host": "cbsaustin.com",
     "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
    "10": {
     "state": "supports",
-    "why": "The ProPublica follow-up states the investigation rested on Kao's 2022-2024 claims, concluded under Trump in 2025 after the purge, and that a December 2024 FBI document said records corroborated Kao.",
+    "why": "The Washington Times reports the swearing-in timing, the 49 opposing senators (two Republicans and all Democrats), and Blanche's Meet the Press refusal to pledge independence, with the exact quote.",
+    "host": "washingtontimes.com",
+    "date": "2026-10-06",
+    "kind": "fact",
+    "archive": true
+   },
+   "11": {
+    "state": "supports",
+    "why": "The Examiner reports the 10-page final rule scheduled for Tuesday publication, which formalizes McDonald's powers and lets the division prosecute any federal offenses uncovered in fraud investigations.",
+    "host": "washingtonexaminer.com",
+    "date": "2026-10-06",
+    "kind": "fact",
+    "archive": false
+   },
+   "12": {
+    "state": "partly",
+    "why": "The provided text supports Kao's confession naming lawmakers, the agents' late-2024 push for a broader probe, the prosecutor's departure, the dead investigation, no Collins aide charged, and the FBI's statement. But it says the interviews 'lasted into late 2024', not 'through September 2024', it never mentions Patel or a CR-15 squad, it names only one agent pushed out, and it is truncated before any Collins denial.",
+    "host": "propublica.org",
+    "date": "2026-10-06",
+    "kind": "fact",
+    "archive": false
+   },
+   "13": {
+    "state": "supports",
+    "why": "ABC reports Collins' quoted denial, that ABC had not independently confirmed ProPublica's reporting, and that the FBI did not respond to questions about the separate 2024 investigation.",
+    "host": "abcnews.com",
+    "date": "2026-10-06",
+    "kind": "fact",
+    "archive": false
+   },
+   "14": {
+    "state": "supports",
+    "why": "The republished ProPublica piece states the probe rested on Kao's 2022-2024 claims and ended under Trump in 2025 after the purge, and it quotes the December 2024 FBI document on corroboration.",
     "host": "bangordailynews.com",
     "date": "2026-10-06",
     "kind": "fact",
@@ -5886,22 +5918,30 @@
     "archive": false
    },
    "1": {
-    "state": "partly",
-    "why": "CNN confirms the civilian paint, the classified program, and the perfidy definition in DoD's manual, but it says nothing about munitions carried internally or a low, visible flight, gives the Pentagon's explanation as hurried timing and availability, and notes experts say it is unclear the law of war was violated.",
+    "state": "supports",
+    "why": "CNN reports the civilian paint and classified program, officials' transponder/tail-number rebuttal, the 'hurried'/'most available' explanation, the Law of War Manual perfidy example, experts' doubt that the law of war applied, and the NYT credit.",
     "host": "cnn.com",
     "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
    "2": {
-    "state": "partly",
-    "why": "CNN confirms McGee was pushed out amid clashes with Hegseth and Caine over the Caribbean and Ukraine, that Parnell denied the clashes, and that Holsey also departed. But it describes the Biden nomination as a promotion to director of the Joint Staff that was never renominated, says nothing about Senate confirmation, and does not cite The Hill.",
-    "host": "cnn.com",
+    "state": "supports",
+    "why": "HRW relays the Times' reporting on the 11-death strike, the unmarked aircraft with concealed weapons, and the low flight, and makes the perfidy and Law of War Manual argument as described.",
+    "host": "hrw.org",
     "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
    "3": {
+    "state": "supports",
+    "why": "CNN reports McGee's push-out, his pushback, the stalled Biden nomination, Parnell's denial, and Holsey's offer to resign over the strikes' legality.",
+    "host": "cnn.com",
+    "date": "2026-10-06",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
     "state": "unopened",
     "why": "",
     "host": "washingtonpost.com",
@@ -5909,161 +5949,169 @@
     "kind": "fact",
     "archive": false
    },
-   "4": {
-    "state": "supports",
-    "why": "The Post reports Wicker/Reed's late-Friday statement and Rogers/Smith's late-Saturday statement with the quoted language, plus the prior month's two public letters.",
-    "host": "washingtonpost.com",
-    "date": "2026-10-06",
-    "kind": "fact",
-    "archive": false
-   },
    "5": {
     "state": "supports",
-    "why": "TIME quotes Rand Paul saying Hegseth called it fake news and the White House podium confirmed it the next day, so either he lied or was incompetent, and notes Hegseth did not deny specific details.",
-    "host": "time.com",
+    "why": "The Post reports the late-Friday Wicker/Reed statement and the late-Saturday Rogers/Smith statement with the quoted language, and notes the two letters made public the month before.",
+    "host": "washingtonpost.com",
     "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
    "6": {
     "state": "partly",
-    "why": "Military Times confirms the memo's 'patently illegal' language, its call for prosecution for war crimes or murder, and its Geneva Conventions citation, but the memo was issued Saturday (before the December 1 article), not on December 1.",
-    "host": "militarytimes.com",
-    "date": "2026-10-06",
-    "kind": "fact",
-    "archive": false
-   },
-   "7": {
-    "state": "partly",
-    "why": "The Guardian confirms the White House and Pentagon named Bradley as the official who directed the re-strike, distancing Hegseth, but the White House statement came Monday (Pentagon on Tuesday), and the source does not cover the December 6 Reagan Forum remarks or lawmakers' descriptions of the footage.",
-    "host": "theguardian.com",
-    "date": "2026-10-06",
-    "kind": "fact",
-    "archive": false
-   },
-   "8": {
-    "state": "partly",
-    "why": "CBS reports Himes relaying that Bradley said there was no 'kill them all' order, but attributes it to a single Democratic lawmaker and to Bradley alone, not to Caine or to multiple lawmakers from both parties.",
-    "host": "cbsnews.com",
-    "date": "2026-10-06",
-    "kind": "fact",
-    "archive": true
-   },
-   "9": {
-    "state": "partly",
-    "why": "TIME confirms the Suriname transfer and Bradley's 'ultimately' argument, but the provided text does not mention survivors waving from the hull or Cotton's four-strike quote.",
+    "why": "Rand Paul's quoted remarks support the fake-news denial, the next-day White House podium confirmation, and the lying-or-incompetence charge. But the source attributes that accusation only to Paul (it mentions bipartisan investigations, not bipartisan accusations), and it does not address whether Hegseth's denial directly refuted the order.",
     "host": "time.com",
     "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
+   "7": {
+    "state": "supports",
+    "why": "Military Times reports the Saturday memo and quotes its 'patently illegal' and prosecution language, its Geneva Conventions reliance, and the prisoner-of-war argument.",
+    "host": "militarytimes.com",
+    "date": "2026-10-06",
+    "kind": "fact",
+    "archive": false
+   },
+   "8": {
+    "state": "supports",
+    "why": "The Guardian reports Leavitt's Monday naming of Bradley, Wilson's Tuesday statements, its characterization that this distanced Hegseth from accountability, and Hegseth's 'fog of war' remark.",
+    "host": "theguardian.com",
+    "date": "2026-10-06",
+    "kind": "fact",
+    "archive": false
+   },
+   "9": {
+    "state": "supports",
+    "why": "CBS reports Himes' account of Bradley's statement to lawmakers after the Caine/Bradley briefing.",
+    "host": "cbsnews.com",
+    "date": "2026-10-06",
+    "kind": "fact",
+    "archive": true
+   },
    "10": {
     "state": "supports",
-    "why": "CBC quotes Cotton saying survivors were trying to flip the boat to stay in the fight and Himes describing two individuals in clear distress without locomotion.",
-    "host": "cbc.ca",
+    "why": "The article (dated Dec. 6, describing a Thursday briefing) reports per CNN that Bradley said the boat was heading to Suriname to transfer drugs to a larger vessel and that the shipment could ultimately have reached the U.S. It also reports the CNN/NYT accounts of survivors waving from the overturned boat, the split interpretation, and Hegseth's 'of course not' denial at the Reagan National Defense Forum on Saturday.",
+    "host": "time.com",
     "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
    "11": {
-    "state": "partly",
-    "why": "The ACLU release confirms the December 9, 2025 SDNY suit by ACLU, CCR, and NYCLU for the OLC opinion after the FOIA request went unanswered, but it gives no October 15 request date and says nothing about a June 24, 2026 hearing before Judge Engelmayer.",
-    "host": "aclu.org",
+    "state": "supports",
+    "why": "The AP/CBC report contains Cotton's and Himes' quoted characterizations, Cotton's account of Bradley's denial, and the 'several minutes' and four-missile details.",
+    "host": "cbc.ca",
     "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
    "12": {
-    "state": "partly",
-    "why": "Snopes confirms the December 12 retirement, its unrated verdict, that neither statement gave a reason, and CNN's report of Hegseth's frustration with pace, but it attributes the concerns reporting to the NYT and CNN, not WSJ.",
-    "host": "snopes.com",
+    "state": "supports",
+    "why": "The ACLU release confirms the Dec. 9, 2025 SDNY filing by the three groups seeking the OLC opinion, and the lack of any records despite FOIA deadlines.",
+    "host": "aclu.org",
     "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
    "13": {
-    "state": "partly",
-    "why": "Stripes confirms the 25% FY2026 withholding and the Senate's proposed 75% for FY2027 tied to unedited strike video, but it states the House committee's FY2027 draft did not include similar language, contrary to 'both chambers,' and does not cover private footage viewings.",
-    "host": "stripes.com",
+    "state": "supports",
+    "why": "Snopes reports the Oct. 16 announcement of a Dec. 12 retirement, the NYT/CNN sourcing, the Oct. 6 resignation offer, the 'quickly or aggressively enough' line, Parnell's 'Fake News' response, the absence of a stated reason, and the unrated verdict.",
+    "host": "snopes.com",
     "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
    "14": {
     "state": "supports",
-    "why": "Military Times confirms the 18-9 committee vote and the provision requiring the civilian harm investigation into the February 28 Minab school strike that killed at least 165, mostly schoolgirls.",
-    "host": "militarytimes.com",
+    "why": "Roll Call reports Warner's Friday remarks calling for release of the unedited video, and the Gang of Eight Democrats' letter urging release before the Christmas break.",
+    "host": "rollcall.com",
     "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
    "15": {
-    "state": "partly",
-    "why": "NBC confirms the self-initiated IG evaluation in a May 11 letter, the 'joint process for targeted vessels' scope, the six targeting phases, and the 59 vessels and 193 killed, but it does not name Assistant IG Bryan T. Clark.",
-    "host": "nbcnews.com",
+    "state": "supports",
+    "why": "Stars and Stripes reports the 75% withholding tied to boat-strike videos and the school bombing details, the House draft lacking similar language, and last year's 25% version.",
+    "host": "stripes.com",
     "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
    "16": {
-    "state": "partly",
-    "why": "NOTUS confirms Wicker's 'no evidence of war crimes' and 'satisfied' statements and Rogers's 'It's done,' with Democrats dissenting, but it says nothing about Warner, the Intelligence Committee, the IG evaluation, or NDAA leverage.",
-    "host": "notus.org",
+    "state": "supports",
+    "why": "Military Times reports the 18-9 committee vote and a provision requiring the civilian-harm investigation into the Feb. 28 Minab school strike, which killed at least 165, mostly schoolgirls.",
+    "host": "militarytimes.com",
     "date": "2026-10-06",
-    "kind": "interpretation",
+    "kind": "fact",
     "archive": false
    },
    "17": {
-    "state": "partly",
-    "why": "TechTimes confirms the failed 50-46 cloture vote and the broken 66-year streak, driven by the Iran war, but it ties the dispute to the resumed Iran war rather than to the school strike, and the provided text does not include the House 198-224 vote or the House text's omission of the travel-fund provision.",
-    "host": "techtimes.com",
+    "state": "supports",
+    "why": "NBC reports the self-initiated IG evaluation set out in the May 11 letter, the quoted scope, the six-phase targeting process, lawmakers' legality concerns, and the 59 vessels and 193 deaths.",
+    "host": "nbcnews.com",
     "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
    "18": {
-    "state": "partly",
-    "why": "Breaking Defense confirms the House passed its FY2027 NDAA 216-212 and that conference is expected, but it does not give H.R. 8800, the July 22 date, or any travel-fund withholding provision details.",
-    "host": "breakingdefense.com",
+    "state": "supports",
+    "why": "NOTUS reports Wicker's quoted statements, Rogers' 'It's done' remark, the signal that Republicans were concluding oversight, and Himes' and Murphy's contrary views.",
+    "host": "notus.org",
     "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
    "19": {
-    "state": "partly",
-    "why": "The Intercept confirms delivery on Tuesday, the 'no civilians were killed' finding, the officials' quoted reactions, the 220+ toll, and the 153 Yemen civilian deaths, but gives Yemen wounded as almost 250 rather than 243, and contains nothing about corroboration by other outlets.",
-    "host": "theintercept.com",
+    "state": "supports",
+    "why": "TechTimes reports the failed 50-46 Tuesday cloture vote, the first such failure in 66 years, the airstrikes resumed the day before, and spending-level objections.",
+    "host": "techtimes.com",
     "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
    "20": {
     "state": "supports",
-    "why": "AP reports a Saturday (Sept. 19, 2026) Caribbean strike killing four, that the military provided no evidence of drugs, and a cumulative toll of at least 231 killed in 69 strikes.",
-    "host": "apnews.com",
-    "date": "2026-10-03",
+    "why": "Breaking Defense reports the 216-212 House passage, the Senate committee version blocked over Iran and spending, and the later reconciliation of the versions.",
+    "host": "breakingdefense.com",
+    "date": "2026-10-06",
     "kind": "fact",
-    "archive": false
+    "archive": true
    },
    "21": {
-    "state": "partly",
-    "why": "The truncated briefing note supports the 'serial extrajudicial killings in violation of the right to life' finding, the 68 attacks/223 killed count to August 2026, plausible crimes against humanity, and the rejection of self-defence because the groups mounted no 'armed attack'; the quoted crimes-against-humanity sentence, the shipwrecked-survivors passage, the calls for prosecution and reparation, and a Sept. 20 release date are not in the provided text.",
-    "host": "ohchr.org",
-    "date": "2026-10-03",
+    "state": "supports",
+    "why": "The Intercept reports the Tuesday delivery, the 2025-only scope, the finding of no boat-strike civilian deaths, the officials' quoted criticisms, the toll above 220, and the Yemen figures of 153 killed and almost 250 wounded.",
+    "host": "theintercept.com",
+    "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
    "22": {
-    "state": "partly",
-    "why": "The opinion confirms Judge Engelmayer on 9/30/26 rejected the deliberative-process and attorney-client privilege claims and did not resolve the presidential communications privilege; however, the provided text says the court ordered the agencies to furnish information on waiver, and does not show a 14-day order to produce the memo for in camera review.",
-    "host": "courthousenews.com",
-    "date": "2026-10-03",
+    "state": "supports",
+    "why": "AP reports the Saturday strike that killed four, the absence of drug evidence, and the cumulative 231 deaths in 69 strikes.",
+    "host": "apnews.com",
+    "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
    "23": {
     "state": "partly",
-    "why": "Stars and Stripes confirms the Sunday strike killing four, the toll of at least 235 in 70 strikes, and the SOUTHCOM quote, but contains nothing about The Hill's differing tally.",
+    "why": "The provided text confirms the title, the 'serial extrajudicial killings' finding, the 68 attacks and 223 deaths to August 2026, and the self-defense rejection with the quoted 'armed attack' language. It is truncated before the quoted crimes-against-humanity, shipwrecked-survivors, and prosecution passages (it says only 'plausibly constitute crimes against humanity'), and it is dated only 'September 2026'.",
+    "host": "ohchr.org",
+    "date": "2026-10-06",
+    "kind": "interpretation",
+    "archive": false
+   },
+   "24": {
+    "state": "partly",
+    "why": "The extracted opinion confirms that Judge Engelmayer (S.D.N.Y.) filed it on 09/30/26 in a FOIA case over the September 2025 OLC memo, which the agencies withheld in full. But the truncated text does not show the rulings on the deliberative-process, attorney-client or presidential-communications privileges, the declaration and in camera directives, the October 15, 2025 request date, or the June 24, 2026 argument date.",
+    "host": "courthousenews.com",
+    "date": "2026-10-06",
+    "kind": "fact",
+    "archive": false
+   },
+   "25": {
+    "state": "supports",
+    "why": "Stars and Stripes reports SOUTHCOM's account of the Sunday strike that killed four, the 235-in-70 toll, and the quoted 'confirmed intelligence' language.",
     "host": "stripes.com",
     "date": "2026-10-06",
     "kind": "fact",
@@ -11216,58 +11264,66 @@
     "archive": false
    },
    "5": {
-    "state": "partly",
-    "why": "NBC confirms three of Pirro's officials made an unannounced visit to the Fed construction site seeking a 'tour' and to 'check on progress,' were turned away, after Boasberg's March 13 ruling; this source does not contain the CBS reporting or CNBC's 'hitting roadblocks' phrasing attributed in the claim.",
-    "host": "nbcnews.com",
-    "date": "2026-10-03",
+    "state": "supports",
+    "why": "The April 3, 2026 ECF No. 33 memorandum opinion signed by Chief Judge Boasberg denies reconsideration of the March 11 order quashing the subpoenas. It contains all three quoted passages verbatim: 'neither offers new evidence nor points to any material error', 'do not come close to convincing the Court', and 'has presented no evidence whatsoever of fraud'.",
+    "host": "courtlistener.com",
+    "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
    "6": {
-    "state": "supports",
-    "why": "CNN reports Pirro announced on X she was closing the Powell probe, with the Fed inspector general scrutinizing the renovation cost overruns in its place, after a judge had quashed the subpoenas.",
-    "host": "cnn.com",
-    "date": "2026-10-03",
+    "state": "partly",
+    "why": "NBC (dated April 14, describing a Tuesday visit) supports the visit by three officials from Pirro's office, the 'tour' and 'check on progress' requests, the turn-away, and the timing after the quashing. The source does not address the CBS News or CNBC reporting, including the 'hitting roadblocks' quote; it says only that the probe was 'rapidly losing steam'.",
+    "host": "nbcnews.com",
+    "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
    "7": {
-    "state": "partly",
-    "why": "CNBC confirms Pirro filed a motion to vacate Boasberg's rulings, abandoning her planned appeal, and that she has said she will reopen the probe if warranted after the IG report; the specific CNN 'State of the Union' quote and Trump's 'Take it to the end and see' remark are not in this source.",
-    "host": "cnbc.com",
-    "date": "2026-10-03",
+    "state": "supports",
+    "why": "CNN reports Pirro announcing the closure on X, with the Fed inspector general scrutinizing the cost overruns in its place.",
+    "host": "cnn.com",
+    "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
    "8": {
+    "state": "partly",
+    "why": "CNBC confirms the motion to vacate, which abandons the appeal plan, and paraphrases Pirro's willingness to reopen. It does not contain the State of the Union quote or Trump's 'Take it to the end and see' remark.",
+    "host": "cnbc.com",
+    "date": "2026-10-06",
+    "kind": "fact",
+    "archive": false
+   },
+   "9": {
     "state": "supports",
-    "why": "The Forbes article of May 3, 2026 contains Pirro's 'continue to litigate the issue', 'it depends on what he finds', and 'If there isn't, I'll go home' remarks and the Boasberg quote.",
+    "why": "Forbes reports Pirro's CNN quotes ('continue to litigate', 'it depends on what he finds', 'I'll go home') and the Boasberg 'dominant (if not sole) purpose' quote.",
     "host": "forbes.com",
     "date": "2026-10-06",
     "kind": "fact",
     "archive": true
    },
-   "9": {
+   "10": {
     "state": "partly",
-    "why": "NBC confirms Powell said in March 2026 he had 'no intention of leaving the board until the investigation is well and truly over'; the NPR reporting that he remained on the board after May 15 citing 'unprecedented' attacks is not in this source.",
+    "why": "NBC confirms Powell's March 2026 'no intention of leaving' statement. The cited text contains no NPR reporting on his staying after May 15 or the 'unprecedented' remark, so that half is unverified.",
     "host": "nbcnews.com",
-    "date": "2026-10-03",
-    "kind": "fact",
-    "archive": false
-   },
-   "11": {
-    "state": "partly",
-    "why": "The OIG page confirms Report 2026-FMIC-B-016 dated September 29, 2026 and the finding that the Board did not effectively manage the project; however, it gives construction-cost figures of $921 million (Feb. 2020) to $2.018 billion (2024) rather than the claim's $1.317B/$2.381B budget figures, and the summary does not contain the quoted no-criminal-referral sentence, the guaranteed-maximum-price finding, the July 2025 start, or the CNBC/CBS reporting.",
-    "host": "oig.federalreserve.gov",
-    "date": "2026-10-03",
+    "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
    "12": {
     "state": "partly",
-    "why": "CNBC confirms Blanche told Bloomberg Friday 'We're not reopening a criminal investigation into him,' did not rule out action if the independent audit finds wrongdoing, a spokesperson confirmed the decision, and Trump posted Wednesday that Powell should be 'forced to resign'; the source does not say Trump asked Blanche to study the report.",
+    "why": "The OIG summary confirms the report number, the Sept. 29 date, and the finding that the Board did not effectively manage the project. But it gives construction costs of $921 million (Feb. 2020) to $2.018 billion (2024), not the claimed $1.317B-$2.381B budget figures, and the text lacks the no-criminal-referral quote, the guaranteed-maximum-price finding, and the CNBC/CBS reporting.",
+    "host": "oig.federalreserve.gov",
+    "date": "2026-10-06",
+    "kind": "fact",
+    "archive": false
+   },
+   "13": {
+    "state": "partly",
+    "why": "CNBC confirms Blanche's quote to Bloomberg, the department spokesperson's confirmation, his not ruling out action if the audit finds crimes, and Trump's Wednesday 'forced to resign' post. The source does not say Trump asked Blanche to study the report.",
     "host": "cnbc.com",
-    "date": "2026-10-03",
+    "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    }
