@@ -4593,25 +4593,57 @@
   "doj-voter-data-lawsuits-election-records-preservation-2025-2026": {
    "0": {
     "state": "supports",
-    "why": "The AP story reports the letters to 29 states and D.C., Neff's spoliation and sanctions warning, Dhillon's 'standard litigation practice' post, and Blanche suggesting the fight might go to the Supreme Court.",
-    "host": "abcnews.com",
-    "date": "2026-09-21",
+    "why": "The NBC article dated Feb. 10, 2026 reports Jarbou dismissed the Michigan suit as the third such dismissal, quotes her holding on HAVA, NVRA and the CRA, and says Michigan is one of 23 states plus D.C. sued.",
+    "host": "nbcnews.com",
+    "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
    "1": {
-    "state": "partly",
-    "why": "This Feb. 10, 2026 NBC article confirms the statutory theories (HAVA, NVRA, Civil Rights Act), but it says DOJ had sued 23 states plus D.C., not 29, and says nothing about a Feb. 26 wave of suits, 23 dismissals, or an appeal to the Sixth Circuit.",
-    "host": "nbcnews.com",
-    "date": "2026-09-21",
+    "state": "supports",
+    "why": "The page is the Brennan Center's own tracker of DOJ requests, explicitly tracking requests, responses and lawsuits state by state.",
+    "host": "brennancenter.org",
+    "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
    "2": {
     "state": "supports",
-    "why": "The Brennan Center page is a tracker of DOJ requests for voter information and lawsuits, with state-by-state status.",
-    "host": "brennancenter.org",
-    "date": "2026-09-21",
+    "why": "The opinion caption shows No. 26-1225, decided June 24, 2026, Mathis writing with Cole concurring and Nalbandian dissenting, affirming the district court's dismissal.",
+    "host": "opn.ca6.uscourts.gov",
+    "date": "2026-10-06",
+    "kind": "fact",
+    "archive": false
+   },
+   "3": {
+    "state": "supports",
+    "why": "The Albuquerque Journal article published July 14, 2026 reports Judge Herrera dismissed the DOJ suit and quotes her finding that DOJ articulated no factual suggestion of NVRA or HAVA violations.",
+    "host": "abqjournal.com",
+    "date": "2026-10-06",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "supports",
+    "why": "The Michigan AG release dated August 17, 2026 reports the Sixth Circuit denied DOJ's petition for rehearing en banc.",
+    "host": "michigan.gov",
+    "date": "2026-10-06",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "supports",
+    "why": "The AP story dated September 10, 2026 reports letters to 29 states and D.C., Neff's spoliation/sanctions warning, Dhillon's 'standard litigation practice' post, and Blanche's suggestion of a Supreme Court appeal.",
+    "host": "clickondetroit.com",
+    "date": "2026-10-06",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
+    "state": "supports",
+    "why": "The GPB/Georgia Recorder story (dated Oct. 1, 2026, ruling on 'Wednesday', i.e. Sept. 30) reports Calvert dismissed DOJ's second Georgia suit, that DOJ lost 25 other cases, and that DOJ will most likely appeal.",
+    "host": "gpb.org",
+    "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    }
@@ -11152,10 +11184,10 @@
     "archive": false
    },
    "4": {
-    "state": "not_found",
-    "why": "The cited NPR article is dated January 11, 2026 and covers the subpoenas' issuance; it contains nothing about Judge Boasberg quashing them or any March 13, 2026 ruling.",
-    "host": "npr.org",
-    "date": "2026-10-03",
+    "state": "supports",
+    "why": "The opinion's conclusion contains the quoted language verbatim (modulo line breaks) and states the Court 'finds that the subpoenas were issued for an improper purpose and will quash them'; the docket description confirms Boasberg signed it 3/11/2026 and it was filed/released March 13, 2026, and the opinion refers to 'the two subpoenas at issue here.'",
+    "host": "courtlistener.com",
+    "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
@@ -11184,12 +11216,12 @@
     "archive": false
    },
    "8": {
-    "state": "not_found",
-    "why": "The Forbes article covers Pirro's suggestion she could restart the Powell probe; it says nothing about a Bondi-era James entry or a pattern of investigations into James, Comey, Schiff, Clapper and Brennan.",
+    "state": "supports",
+    "why": "The Forbes article of May 3, 2026 contains Pirro's 'continue to litigate the issue', 'it depends on what he finds', and 'If there isn't, I'll go home' remarks and the Boasberg quote.",
     "host": "forbes.com",
-    "date": "2026-10-03",
-    "kind": "interpretation",
-    "archive": false
+    "date": "2026-10-06",
+    "kind": "fact",
+    "archive": true
    },
    "9": {
     "state": "partly",
@@ -17050,28 +17082,68 @@
     "archive": false
    },
    "1": {
-    "state": "partly",
-    "why": "The Bloomberg Government item confirms the 49-51 vote, that it gained some Republican support but failed to advance, and that S.J.Res. 90 needed only a simple majority; it does not itself state the specific date 'November 6, 2025' (only 'Thursday').",
-    "host": "news.bgov.com",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "The CBS article (captured Oct. 9, 2025, describing Wednesday's vote) reports the Schiff-Kaine resolution failed 48-51 and would have barred hostilities with drug-trafficking organizations absent authorization.",
+    "host": "cbsnews.com",
+    "date": "2026-10-06",
     "kind": "fact",
-    "archive": false
+    "archive": true
    },
    "2": {
     "state": "partly",
-    "why": "The Military.com article confirms the War Powers Resolution mechanism (S.J.Res. 90) and the administration's 'non-international armed conflict' framing as reported by CRS, but the article's byline is dated December 15, 2025, not December 12, 2025 as the claim states.",
-    "host": "military.com",
-    "date": "2026-09-15",
+    "why": "The Bloomberg Government snippet supports a 49-51 procedural discharge vote that gained some Republican support but failed; it says only 'Thursday' and does not state the November 6, 2025 date.",
+    "host": "news.bgov.com",
+    "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
    "3": {
+    "state": "partly",
+    "why": "Content supports a renewed War Powers push and the 'non-international armed conflict' framing, but the article is dated Dec 15, 2025, not December 12 as claimed.",
+    "host": "military.com",
+    "date": "2026-10-06",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
     "state": "supports",
-    "why": "The CBS News article (via Wayback) confirms both House vote margins exactly -- Meeks's resolution 210-216 with Bacon and Massie for and Cuellar and Gonzalez against, and McGovern's resolution 211-213 with Bacon, Massie, and Greene for.",
+    "why": "CBS reports both December 17 House votes (Meeks 210-216, McGovern 211-213) with the named crossover votes exactly as claimed.",
     "host": "cbsnews.com",
-    "date": "2026-09-15",
+    "date": "2026-10-06",
     "kind": "fact",
     "archive": true
+   },
+   "5": {
+    "state": "supports",
+    "why": "The Senate roll call shows the January 8, 2026 motion to discharge S.J.Res. 98 agreed to, 52-47.",
+    "host": "senate.gov",
+    "date": "2026-10-06",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
+    "state": "supports",
+    "why": "NPR's January 14, 2026 report states the vote was 51-50 with Vance breaking a tie and Hawley and Young reversing their earlier support.",
+    "host": "npr.org",
+    "date": "2026-10-06",
+    "kind": "fact",
+    "archive": false
+   },
+   "7": {
+    "state": "supports",
+    "why": "NPR's January 22, 2026 report states McGovern's resolution failed 215-215 with all Democrats plus Massie and Bacon in support.",
+    "host": "npr.org",
+    "date": "2026-10-06",
+    "kind": "fact",
+    "archive": false
+   },
+   "8": {
+    "state": "supports",
+    "why": "The HFAC Democrats release dated September 2, 2026 announces the four ranking members introduced a War Powers Resolution to block strikes in the Caribbean and eastern Pacific, marking one year since the first strike.",
+    "host": "democrats-foreignaffairs.house.gov",
+    "date": "2026-10-06",
+    "kind": "fact",
+    "archive": false
    }
   },
   "vought-impoundment-control-act-2025-2026": {
