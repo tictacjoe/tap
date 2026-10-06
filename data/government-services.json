@@ -6424,7 +6424,7 @@
   },
   {
     "id": "cpsc-commissioner-mass-firing-quorum-crisis-trump2",
-    "title": "CPSC's Three Democratic Commissioners Fired, Battery-Safety Standard Withdrawn, Agency Left in Republican-Only Rump",
+    "title": "CPSC's Three Democratic Commissioners Fired, Battery-Safety Rule Delayed a Year, Seats Refilled Only With Administration Picks",
     "institution": "Consumer Product Safety Commission",
     "domain": "staff_office_cuts",
     "status": "Complete: on a joint motion by both sides after Trump v. Slaughter, the Fourth Circuit reversed the commissioners' reinstatement in September 2026; the commission regained a quorum August 7, 2026 with two Trump nominees, so all three sitting members are administration-aligned, with two seats vacant",
@@ -6461,6 +6461,14 @@
       ],
       "caveat": "The administration's position, stated by Acting Chairman Feldman, is that the Supreme Court's Trump v. Slaughter decision confirms 'officials who exercise executive power are accountable to the President' and that the prior for-cause removal protections were themselves unconstitutional -- i.e., that the firings were lawful all along, not merely permitted going forward. The e-bike/lithium-battery standard was not abandoned: after its withdrawal from public comment and interagency review it was published as a proposed rule on June 24, 2026 (written comments closed August 24, 2026; an oral-comment hearing is set for October 21, 2026), so the harm is a delay of about a year rather than a reversal of CPSC safety findings. Consumer-safety groups (Consumer Federation of America, National Consumers League, Public Citizen, which represented the fired commissioners) and the fired commissioners themselves argue the firings undermine the bipartisan design Congress built into the agency; the HHS-transfer budget proposal has seen no visible congressional movement as of mid-2026 per Covington & Burling's analysis, so its practical effect remains prospective rather than realized."
     },
+    "cause": "[TAP Analysis, not sourced] The firings are part of the same run of removals of independent-agency members as the entry on the EEOC commissioner firings, and both challenges ended after the Supreme Court's June 29, 2026 Trump v. Slaughter ruling: the EEOC suit by the commissioner's own dismissal, the CPSC case by a reversal both sides asked for.",
+    "cause_references": [
+      {
+        "match": "the entry on the EEOC commissioner firings",
+        "tracker": "government-services",
+        "id": "eeoc-commissioner-firing-quorum-loss-trump2"
+      }
+    ],
     "confidence_note": "High confidence throughout: the firings, litigation history, and Supreme Court stay are well documented across NPR, PBS, SCOTUSblog, and CBS News, with direct quotes from the fired commissioners and from CPSC's own statement on the Trump v. Slaughter ruling. The budget-cut percentages are sourced to a single trade outlet (Bicycle Retailer and Industry News) corroborated by the underlying CPSC budget request, treated as solid but narrower sourcing than the litigation timeline; the e-bike standard's withdrawal is reported by the same outlet and by Covington & Burling. Re-verified 2026-10-05: corrected the commission's membership (Dziak resigned in August 2025, leaving Feldman alone under delegations the two had approved, per Keller & Heckman, until Sessions and Lorenze were confirmed on August 7, 2026, per Toy Association and Product Perspective reports and Feldman's own statement), added the September 22, 2026 Fourth Circuit reversal on a joint motion (court docket, Constitutional Accountability Center, Public Citizen, Bicycle Retailer) and the June 24, 2026 publication of the battery proposed rule (Federal Register); CPSC's Slaughter statement page returned 403 on recheck, but its quoted lines were re-read in CPSC's own statements feed.",
     "section_summaries": {
       "what_changed": "Trump fired 3 of 5 CPSC commissioners after they blocked DOGE access; the Supreme Court let the firings take effect, and in 2026 an appeals court reversed their reinstatement at both sides' request.",
@@ -12555,7 +12563,7 @@
   },
   {
     "id": "eeoc-commissioner-firing-quorum-loss-trump2",
-    "title": "EEOC Loses Quorum for Nine Months After Trump Fires Two Democratic Commissioners",
+    "title": "EEOC Loses Quorum for Eight Months After Trump Fires Two Democratic Commissioners",
     "institution": "Equal Employment Opportunity Commission",
     "domain": "staff_office_cuts",
     "status": "Resolved as a quorum matter (quorum restored October 7, 2025 with Senate confirmation of a third commissioner); Samuels voluntarily dismissed her challenge to the firings July 6, 2026, saying the Supreme Court's Trump v. Slaughter ruling left her no viable path forward",
@@ -12592,6 +12600,14 @@
       ],
       "caveat": "The administration's position, reflected in DOJ's litigation strategy, is that the President has inherent constitutional authority to remove principal officers of agencies exercising executive power, and the Supreme Court's Trump v. Slaughter ruling vindicated that view as a general matter. Samuels's dismissal of her own suit reflects her own assessment that the ruling foreclosed her specific claim, not an independent court finding that her particular firing was lawful on its individual facts. Quorum has been restored and the EEOC is now fully operational; the lasting impact is less about EEOC's current functioning and more about the eight-month policymaking gap and the broader precedent Trump v. Slaughter sets for every other independent agency in this dataset (cross-reference the CPSC, NCUA and NLRB/Wilcox entries, all shaped by the same ruling, and the Federal Reserve/Cook entry, where the Court ruled the same day that Cook could stay)."
     },
+    "cause": "[TAP Analysis, not sourced] The firings are part of the same run of removals of independent-agency members as the entry on the Consumer Product Safety Commission firings, and both challenges ended after the Supreme Court's June 29, 2026 Trump v. Slaughter ruling.",
+    "cause_references": [
+      {
+        "match": "the entry on the Consumer Product Safety Commission firings",
+        "tracker": "government-services",
+        "id": "cpsc-commissioner-mass-firing-quorum-crisis-trump2"
+      }
+    ],
     "confidence_note": "High confidence on the firing dates, quorum-loss duration, and litigation timeline, corroborated across congressional statements, EPI, NELP, Littler, Seyfarth Shaw, Holland & Knight, and multiple wire-service reports on Samuels's dismissal of her suit (AP via Federal News Network, Washington Post, The Hill, HR Dive). The characterization of Trump v. Slaughter as overturning Humphrey's Executor reflects the consistent framing across legal-analysis sources cited in this dataset's other quorum-loss entries (NCUA, NLRB), not an independent read of the opinion by this project. Re-verified 2026-10-05: the firing date corrected to January 27, 2025 (late Monday night, per NPR and Proskauer Rose in the National Law Review; Gilbride confirmed her own dismissal January 28); AP's report of Samuels dropping her suit re-read via Federal News Network; the EEOC's commission page still lists Lucas, Kotagal and Panuccio with two seats vacant; no later removal ruling or EEOC quorum change found.",
     "pull_quote": "The Supreme Court's 6-3 Trump v. Slaughter ruling on June 29, 2026 substantially expanded presidential removal power over independent-agency officials, overturning the 91-year-old Humphrey's Executor precedent; a week later Samuels dropped her own lawsuit, saying the ruling left her without a viable path forward.",
     "section_summaries": {
