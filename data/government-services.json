@@ -7566,19 +7566,19 @@
   },
   {
     "id": "doe-nuclear-waste-cleanup-staffing-collapse-2026",
-    "title": "DOE's nuclear waste cleanup office loses nearly half its workforce, GAO finds",
+    "title": "DOE's nuclear waste cleanup office loses a third of its staff, GAO finds",
     "institution": "Department of Energy, Office of Environmental Management",
     "domain": "staff_office_cuts",
-    "status": "Ongoing -- 45% vacancy rate at end of FY2025 per GAO, with site-level rates as high as 100%; DOE plans to hire 174 workers in FY2026",
+    "status": "Ongoing -- GAO found a 45% vacancy rate at the end of FY2025 (62% at Los Alamos; 48% at Carlsbad, where all four facility-representative posts were empty); DOE planned 174 FY2026 hires, but ExchangeMonitor put staff at about 820 in September 2026.",
     "date_of_action": "2025-03-04 (first Carlsbad Field Office lease-termination attempt) through 2026-05 (GAO report)",
-    "what_changed": "The Carlsbad Field Office's eventual collapse to 100% vacancy had an earlier warning sign than the GAO report alone shows: on March 4, 2025, DOGE included the Carlsbad Field Office's 90,000-square-foot Skeen-Whitlock Building lease on a spreadsheet of more than 7,000 federal leases marked for termination, citing roughly $810,000 in annual savings. The office, staffed by about 200 workers, directly manages the Waste Isolation Pilot Plant (WIPP) -- the only U.S. site licensed to permanently dispose of transuranic nuclear waste, including plutonium-contaminated material, stored in a deep salt formation -- and includes an emergency response center for handling nuclear-material accidents. Following bipartisan New Mexico congressional pushback (Rep. Gabe Vasquez among others) over the national-security and public-safety risk of disrupting the only facility of its kind, GSA reinstated the lease within days, confirming by March 6, 2025 the office was no longer slated for termination. That reversal, however, did not stop the underlying workforce attrition documented below: a Government Accountability Office report found the Department of Energy's Office of Environmental Management -- responsible for cleaning up nuclear contamination from World War II- and Cold War-era weapons programs at sites across the country -- ended FY2025 with a 45% vacancy rate, roughly half its needed workforce. Of 409 staff who left in 2025, 76% (312) departed through the White House's deferred resignation program; nearly half of those departures (180) were in positions GAO classified as mission-critical, spanning engineering, contracting, physical sciences, and IT management. Vacancy rates varied sharply by site: 62% at Los Alamos National Laboratory, and **100% -- every position empty -- at the Carlsbad Field Office**, the same office whose building lease had been targeted, then spared, a year earlier. GAO further warned that 35% of DOE-EM's remaining 856 employees will be eligible to retire by the end of 2030, meaning attrition is likely to continue independent of any further resignation programs. DOE has said it plans to hire 174 workers in FY2026, which GAO's analysis indicates would still leave significant workforce gaps.",
+    "what_changed": "On March 4, 2025, DOGE included the Department of Energy's Carlsbad Field Office's 90,000-square-foot Skeen-Whitlock Building lease on a spreadsheet of more than 7,000 federal leases marked for termination, citing roughly $810,000 in annual savings. The building, where about 200 people work, houses the office that directly manages the Waste Isolation Pilot Plant (WIPP) -- the nation's only deep geologic repository for transuranic radioactive waste, including plutonium-contaminated material, stored in a deep salt formation -- and includes an emergency response center for handling nuclear-material accidents. Following pushback from New Mexico's congressional delegation (Rep. Gabe Vasquez among others) over the national-security and public-safety risk of disrupting the only facility of its kind, GSA reinstated the lease within days, confirming by March 6, 2025 the office was no longer slated for termination. That reversal, however, did not stop the workforce attrition documented below: a Government Accountability Office report found the Department of Energy's Office of Environmental Management -- responsible for cleaning up nuclear contamination from World War II- and Cold War-era weapons programs at sites across the country -- ended FY2025 with a 45% vacancy rate, its staff down 33% since FY2023, from 1,272 to 856, against an identified need of 1,515. Of 409 staff who left in FY2025, 76% (312) departed through the White House's deferred resignation program, and almost half of all departures (180) were in positions GAO classified as mission-critical, spanning engineering, contracting, physical sciences, and IT management. Vacancy rates ranged by site from 38% to 62% at Los Alamos National Laboratory; the Carlsbad Field Office stood at 48% (42 staff, 39 vacancies), and as of December 2025 **all four of its facility-representative positions -- EM's on-site presence for safety and compliance -- were vacant**, as was its federal project director position. GAO further warned that 35% of DOE-EM's remaining 856 employees will be eligible to retire by 2030, meaning attrition is likely to continue independent of any further resignation programs. DOE told GAO it plans to hire about 174 workers in FY2026, toward a proposed staffing level of 950 -- still well short of the 1,515 positions EM identified as needed in FY2023.\n\nUpdate 2026-10-06: ExchangeMonitor reported in September 2026 that the office, about a third smaller than a few years earlier, was at about 820 federal employees, with more hiring possible after a pending regional reorganization.",
     "primary_proponent": {
       "name": "Trump administration (White House deferred resignation program)",
       "role": "Government-wide policy driving the departures",
       "note": "The deferred resignation program offered government-wide accounted for more than three-quarters of DOE-EM's 2025 departures; no single named DOE or EM official was identified in reporting reviewed as personally directing this specific office's staffing reduction, distinguishing this from entries with an individually accountable official."
     },
     "estimated_impact": {
-      "summary": "The federal office responsible for overseeing radioactive waste disposal and contamination cleanup at some of the nation's most hazardous nuclear sites lost nearly half its workforce, with some sites left entirely unstaffed, per the government's own independent watchdog.",
+      "summary": "The federal office overseeing radioactive waste disposal and contamination cleanup at some of the nation's most hazardous nuclear sites lost a third of its staff in two years and was 45% understaffed by GAO's count, with site vacancy rates up to 62% and every on-site safety-oversight (facility representative) position empty at the field office managing the nation's only deep geologic repository for transuranic waste.",
       "figures": [
         {
           "metric": "DOE-EM vacancy rate, end of FY2025",
@@ -7596,8 +7596,13 @@
           "source": "GAO report GAO-26-108674"
         },
         {
-          "metric": "Carlsbad Field Office vacancy rate",
-          "value": "100%",
+          "metric": "Carlsbad Field Office vacancy rate, end of FY2025",
+          "value": "48% (42 staff, 39 vacancies)",
+          "source": "GAO report GAO-26-108674"
+        },
+        {
+          "metric": "Carlsbad Field Office facility-representative positions vacant, December 2025",
+          "value": "4 of 4",
           "source": "GAO report GAO-26-108674"
         },
         {
@@ -7613,9 +7618,9 @@
       ],
       "caveat": "GAO's report documents current staffing levels and departure patterns rigorously; it does not itself quantify a specific cleanup-delay or safety-risk impact in dollar or timeline terms, so any claim about concrete cleanup delays should be sourced to GAO's qualitative risk-warning language rather than presented as a quantified projection."
     },
-    "confidence_note": "HIGH confidence -- based directly on a GAO report (GAO-26-108674), the strongest source type this tracker prioritizes, corroborated by NOTUS, E&E News/POLITICO, Government Executive, and Nuclear Newswire reporting on the same report. The March 2025 lease-termination-attempt origin detail is separately corroborated by Source New Mexico, NOTUS, KRQE, and U.S. News reporting at the time, including GSA's own confirmation of the reversal. Re-verified 2026-08-17: no material developments identified since the May 2026 GAO report. DOE-EM has since published a dedicated 'EM Jobs, Internships & Fellowships' recruitment webpage and Schedule A hiring-authority job postings consistent with its stated FY2026 plan to hire 174 workers, but no reporting reviewed quantifies actual hires made or a revised vacancy rate as of this update. Re-verified 2026-08-30 (GSR recheck batch 35): light-touch recheck, no material change -- current job postings for Carlsbad Field Office leadership and technical roles are consistent with, not a departure from, this entry's existing account of ongoing recruitment against the FY2026 hiring plan; no new GAO follow-up, revised vacancy figures, or Carlsbad-specific staffing update identified in sourcing reviewed.",
-    "pull_quote": "The only U.S. site licensed to permanently dispose of transuranic nuclear waste is now 100% vacant -- GAO found the Carlsbad Field Office had lost every position.",
-    "last_verified": "2026-08-30",
+    "confidence_note": "HIGH confidence -- based directly on a GAO report (GAO-26-108674), the strongest source type this tracker prioritizes, corroborated by NOTUS, E&E News/POLITICO, Government Executive, and Nuclear Newswire reporting on the same report. The March 2025 lease-termination-attempt origin detail is separately corroborated by Source New Mexico, NOTUS, KRQE, and U.S. News reporting at the time, including GSA's own confirmation of the reversal. Re-verified 2026-08-17: no material developments identified since the May 2026 GAO report. DOE-EM has since published a dedicated 'EM Jobs, Internships & Fellowships' recruitment webpage and Schedule A hiring-authority job postings consistent with its stated FY2026 plan to hire 174 workers, but no reporting reviewed quantifies actual hires made or a revised vacancy rate as of this update. Re-verified 2026-08-30 (GSR recheck batch 35): light-touch recheck, no material change -- current job postings for Carlsbad Field Office leadership and technical roles are consistent with, not a departure from, this entry's existing account of ongoing recruitment against the FY2026 hiring plan; no new GAO follow-up, revised vacancy figures, or Carlsbad-specific staffing update identified in sourcing reviewed. Update 2026-10-06 (correction): the full GAO report puts the Carlsbad Field Office's vacancy rate at 48% (42 staff, 39 vacancies) and the highest site-level rate at 62% (Los Alamos); the all-vacant finding at Carlsbad applies to its four facility-representative positions, not the whole office. The 2025 lease pushback is now credited to New Mexico's congressional delegation, as the cited reporting describes it. ExchangeMonitor's September 2026 report of about 820 federal employees was added; no GAO follow-up was found. The EM jobs page cited in the 2026-08-17 note dates to April 2023, not after the cuts.",
+    "pull_quote": "Every facility-representative position -- the on-site safety overseers -- at the office managing the nation's only deep geologic repository for transuranic waste was vacant, GAO found.",
+    "last_verified": "2026-10-06",
     "date_added": "2026-08-02",
     "sources": [
       {
@@ -7645,24 +7650,52 @@
       {
         "name": "E&E News by POLITICO -- 'Congressional watchdog raises alarm over staff shortage at DOE nuclear waste cleanup office'",
         "url": "https://www.eenews.net/articles/congressional-watchdog-raises-alarm-over-staff-shortage-at-doe-nuclear-waste-cleanup-office/"
+      },
+      {
+        "name": "ExchangeMonitor -- 'Slimmed-down EM could soon hire more people' (September 15, 2026)",
+        "url": "https://www.exchangemonitor.com/slimmed-down-em-could-soon-hire-more-people/"
       }
     ],
     "section_summaries": {
-      "what_changed": "DOGE first targeted the Carlsbad Field Office (which runs the nation's only permanent nuclear-waste disposal site) for lease termination in March 2025, reversed within days after bipartisan pushback -- but by FY2025's end, the same office was 100% vacant anyway, part of a 45% vacancy rate across DOE's whole nuclear-cleanup office after 312 staff left via the deferred resignation program, per a GAO report.",
-      "estimated_impact": "The office overseeing cleanup of the nation's most hazardous radioactive sites, and the only field office managing the nation's sole permanent nuclear-waste repository, is operating at roughly half its needed staffing (and, at Carlsbad specifically, none), per the government's own watchdog.",
+      "what_changed": "DOGE tried to end the lease of the office running the nation's only transuranic waste repository in March 2025, then backed off; by FY2025's end GAO found DOE's cleanup office 45% understaffed.",
+      "estimated_impact": "DOE's nuclear cleanup office is at about half its needed staff, per GAO, and the field office running the nation's only deep repository had no on-site safety representatives.",
       "confidence_note": "Based directly on a GAO report, the strongest source type this tracker prioritizes; the earlier lease-termination episode is separately well-corroborated."
     },
     "last_updated": "2026-08-09",
-    "last_substantive_update": "2026-08-30",
+    "last_substantive_update": "2026-10-06",
     "glance": {
       "who": "Trump administration deferred-resignation program",
-      "what": "Nearly half of DOE's nuclear-cleanup office left; GAO found 45% vacancy, 100% at the Carlsbad field office",
+      "what": "GAO found DOE's nuclear-cleanup office 45% understaffed after 312 staff took deferred resignation",
       "harm": {
         "kind": "institutional",
         "certainty": "documented",
         "who": "Nuclear waste cleanup oversight"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-10-06"
+    },
+    "timeline": {
+      "what_changed": {
+        "base": "On March 4, 2025, DOGE included the Department of Energy's Carlsbad Field Office's 90,000-square-foot Skeen-Whitlock Building lease on a spreadsheet of more than 7,000 federal leases marked for termination, citing roughly $810,000 in annual savings. The building, where about 200 people work, houses the office that directly manages the Waste Isolation Pilot Plant (WIPP) -- the nation's only deep geologic repository for transuranic radioactive waste, including plutonium-contaminated material, stored in a deep salt formation -- and includes an emergency response center for handling nuclear-material accidents. Following pushback from New Mexico's congressional delegation (Rep. Gabe Vasquez among others) over the national-security and public-safety risk of disrupting the only facility of its kind, GSA reinstated the lease within days, confirming by March 6, 2025 the office was no longer slated for termination. That reversal, however, did not stop the workforce attrition documented below: a Government Accountability Office report found the Department of Energy's Office of Environmental Management -- responsible for cleaning up nuclear contamination from World War II- and Cold War-era weapons programs at sites across the country -- ended FY2025 with a 45% vacancy rate, its staff down 33% since FY2023, from 1,272 to 856, against an identified need of 1,515. Of 409 staff who left in FY2025, 76% (312) departed through the White House's deferred resignation program, and almost half of all departures (180) were in positions GAO classified as mission-critical, spanning engineering, contracting, physical sciences, and IT management. Vacancy rates ranged by site from 38% to 62% at Los Alamos National Laboratory; the Carlsbad Field Office stood at 48% (42 staff, 39 vacancies), and as of December 2025 **all four of its facility-representative positions -- EM's on-site presence for safety and compliance -- were vacant**, as was its federal project director position. GAO further warned that 35% of DOE-EM's remaining 856 employees will be eligible to retire by 2030, meaning attrition is likely to continue independent of any further resignation programs. DOE told GAO it plans to hire about 174 workers in FY2026, toward a proposed staffing level of 950 -- still well short of the 1,515 positions EM identified as needed in FY2023.",
+        "updates": [
+          {
+            "date": "2026-10-06",
+            "label": "Update",
+            "text": "Update 2026-10-06: ExchangeMonitor reported in September 2026 that the office, about a third smaller than a few years earlier, was at about 820 federal employees, with more hiring possible after a pending regional reorganization.",
+            "effective_date": "2026-10-06"
+          }
+        ]
+      },
+      "confidence_note": {
+        "base": "HIGH confidence -- based directly on a GAO report (GAO-26-108674), the strongest source type this tracker prioritizes, corroborated by NOTUS, E&E News/POLITICO, Government Executive, and Nuclear Newswire reporting on the same report. The March 2025 lease-termination-attempt origin detail is separately corroborated by Source New Mexico, NOTUS, KRQE, and U.S. News reporting at the time, including GSA's own confirmation of the reversal. Re-verified 2026-08-17: no material developments identified since the May 2026 GAO report. DOE-EM has since published a dedicated 'EM Jobs, Internships & Fellowships' recruitment webpage and Schedule A hiring-authority job postings consistent with its stated FY2026 plan to hire 174 workers, but no reporting reviewed quantifies actual hires made or a revised vacancy rate as of this update. Re-verified 2026-08-30 (GSR recheck batch 35): light-touch recheck, no material change -- current job postings for Carlsbad Field Office leadership and technical roles are consistent with, not a departure from, this entry's existing account of ongoing recruitment against the FY2026 hiring plan; no new GAO follow-up, revised vacancy figures, or Carlsbad-specific staffing update identified in sourcing reviewed.",
+        "updates": [
+          {
+            "date": "2026-10-06",
+            "label": "Update",
+            "text": "Update 2026-10-06 (correction): the full GAO report puts the Carlsbad Field Office's vacancy rate at 48% (42 staff, 39 vacancies) and the highest site-level rate at 62% (Los Alamos); the all-vacant finding at Carlsbad applies to its four facility-representative positions, not the whole office. The 2025 lease pushback is now credited to New Mexico's congressional delegation, as the cited reporting describes it. ExchangeMonitor's September 2026 report of about 820 federal employees was added; no GAO follow-up was found. The EM jobs page cited in the 2026-08-17 note dates to April 2023, not after the cuts.",
+            "effective_date": "2026-10-06"
+          }
+        ]
+      }
     }
   },
   {
@@ -8389,19 +8422,19 @@
   },
   {
     "id": "doge-va-contract-cancellations-2025",
-    "title": "DOGE Canceled 585 VA Contracts After Backlash Forced It Down From an Initial 875 -- Officials Gave Congress Inconsistent Figures",
+    "title": "DOGE Pushed VA to Cancel Hundreds of Contracts; Inspector General Found 435 Terminated and VA Gave Congress Inaccurate Figures",
     "institution": "Department of Veterans Affairs (VA), with DOGE (Department of Government Efficiency)",
     "domain": "funding_redirection",
-    "status": "Implemented, with ongoing congressional oversight pressure over transparency and inconsistent figures",
-    "date_of_action": "2025-02 (initial ~875-contract cancellation list) through 2025-05-16 (Collins gives Congress a differing figure)",
-    "what_changed": "DOGE, under Elon Musk, moved to cancel roughly 875 VA contracts as part of its cost-cutting campaign. Reporting and VA employees flagged that many targeted contracts covered essential services, including cancer-registry maintenance, sterility certification for medical equipment, air-quality testing, suicide-prevention support, physician recruitment and retention, and safety inspections at VA medical facilities. **Frontline Veterans Health Administration employees warned the cuts would imperil safety at the VA's nearly 1,400 hospitals and clinics.** Facing that backlash, the VA paused its planned cuts, then announced the termination list had fallen by about a third, to 585 contracts, with an alleged combined value of $1.8 billion; the VA said the reductions would let it redirect more than $900 million to health care, benefits, and services for VA beneficiaries. The VA declined to disclose the full list of canceled contracts despite congressional requests, drawing criticism from senators including Richard Blumenthal and Angus King over the lack of transparency and consultation. VA Secretary Doug Collins subsequently gave Congress inconsistent figures on the scope of the cuts -- telling lawmakers on May 16, 2025 that the VA had canceled more than 440 contracts worth $120 billion, a figure sharply at odds with the earlier 585-contract/$1.8 billion accounting, without a public reconciliation of the discrepancy identified in sourcing reviewed. Update 2026-08-30: identified the specific mechanism behind the cancellation list -- an AI review tool built and operated by a DOGE software engineer with no prior healthcare or government experience, which ProPublica reported was error-prone and, per Government Executive/Nextgov reporting on a June 11, 2025 forum, appeared to select contracts for termination by matching keywords rather than individualized review. House and Senate Veterans' Affairs Committee Democrats raised the AI tool's use directly at that forum. A concrete example of the tool's effect: Task Order 169, a contract held by Aptive Resources (a veteran-owned and woman-owned small business) supporting VA's Electronic Health Record Modernization program by resolving identity-record anomalies in the VA's master person index, was terminated abruptly and without a transition plan despite having resolved 13,400 such anomalies -- inaccuracies that can otherwise block veterans from receiving medical care, disability compensation, or other earned benefits. At least six contracts directly supporting the EHR-modernization rollout, all held by service-disabled or veteran-owned small businesses, were similarly terminated. Separately, DOGE's broader public accounting of its savings claims, including the VA figures described above, was reported to have quietly removed some previously touted savings figures from its own public tracking website after they were found to be inflated or erroneous, though no source reviewed specifically confirms whether the VA contract figures in this entry were among those quietly revised.",
+    "status": "Implemented. A September 22, 2026 VA Inspector General review found VA terminated 435 contract actions (about $1.1 billion in total contract value), reinstated 100 more, and gave Congress inaccurate 2025 lists, including the $120.9 billion one. It made no recommendations.",
+    "date_of_action": "2025-02 (initial ~875-contract cancellation list) through 2025-05-16 (VA gives Congress a differing figure)",
+    "what_changed": "DOGE, under Elon Musk, moved to cancel roughly 875 VA contracts as part of its cost-cutting campaign. Reporting and VA employees flagged that many targeted contracts covered essential services, including cancer-registry maintenance, sterility certification for medical equipment, air-quality testing, suicide-prevention support, physician recruitment and retention, and safety inspections at VA medical facilities. **Frontline Veterans Health Administration employees warned the cuts would imperil safety at the VA's nearly 1,400 hospitals and clinics.** Facing that backlash, the VA paused its planned cuts, then announced the termination list had fallen by about a third, to 585 contracts, with an alleged combined value of $1.8 billion; the VA said the reductions would let it redirect more than $900 million to health care, benefits, and services for VA beneficiaries. The VA declined to disclose the full list of canceled contracts despite congressional requests, drawing criticism from senators including Richard Blumenthal and Angus King over the lack of transparency and consultation. VA Secretary Doug Collins's staff subsequently gave Congress inconsistent figures on the scope of the cuts -- a May 16, 2025 list of more than 440 contracts worth about $120 billion in contract value, sharply at odds with the earlier 585-contract/$1.8 billion accounting. Update 2026-08-30: ProPublica reported that a DOGE software engineer with no health care or government experience, who started on March 17, 2025, built an error-prone AI tool that flagged more than 2,000 contracts as \"munchable\" for cancellation. At a June 2025 Senate Veterans' Affairs Committee Democratic spotlight forum, per Government Executive and Nextgov/FCW, Democratic lawmakers said the tool appeared to select contracts by matching keywords rather than individualized review. A concrete example of the cancellations' effect, which Rep. Mark Takano suggested the tool had flagged by keyword: Task Order 169, a contract held by Aptive Resources (a veteran-owned and woman-owned small business) supporting VA's Electronic Health Record Modernization program by resolving identity-record anomalies in the VA's master person index, was terminated abruptly and without a transition plan despite having resolved 13,400 such anomalies -- inaccuracies that can otherwise block veterans from receiving medical care, disability compensation, or other earned benefits. At least six contracts directly supporting the EHR-modernization rollout, all held by service-disabled or veteran-owned small businesses, were similarly terminated. Separately, DOGE's broader public accounting of its savings claims, including the VA figures described above, was reported to have quietly removed some previously touted savings figures from its own public tracking website after they were found to be inflated or erroneous, though no source reviewed specifically confirms whether the VA contract figures in this entry were among those quietly revised. Update 2026-10-06: A VA Office of Inspector General review issued September 22, 2026, requested by Blumenthal and King, found that VA terminated 435 contract actions for convenience, with total contract values of about $1.1 billion -- the full value over each contract's period, not savings -- and that contracting officers terminated and later reinstated 100 more. About 86% of the terminated actions were consulting services. GSA, VA senior advisers and DOGE representatives sent dozens of termination instructions from January through June 2025; on February 21, 2025, VA offices were given less than 11 hours to review 1,049 contract actions, and the director of VA's Category Management Support Office said senior advisers and DOGE representatives directed the terminations on February 25 regardless of incomplete reviews. The OIG found both 2025 lists VA gave Congress incomplete and inaccurate: of the 446 actions on the May 16 list, only 357 had been terminated as of April 30, 2026, and none of the 16 listed at $1 billion or more exceeded $150 million; the July 3 list of 1,664 actions included only 366 terminations (17 later reinstated), plus 974 supply and 151 health care actions, such as prosthetics and nursing-home orders, that were never terminated. The OIG said VA built its initial February 6, 2025 list of consulting contracts from standard contract codes, \"not a Department of Government Efficiency artificial intelligence program,\" and that most ultimately terminated contracts were on that list. It found contracting officials generally complied with acquisition rules, recorded about $10.6 million in settlement costs on 117 settlements, and made no recommendations. VA's press secretary said the cancellations saved more than $1 billion and had no negative impact on care and benefits; Blumenthal said Collins owes answers on how VA will replace lost services.",
     "primary_proponent": {
       "name": "Elon Musk / DOGE, with VA Secretary Doug Collins",
-      "role": "DOGE directed the contract-cancellation campaign; Collins, as VA Secretary, presented the resulting figures to Congress",
+      "role": "DOGE representatives and VA senior advisers directed the terminations; Collins, as VA Secretary, ordered the contract review, and his department gave Congress the resulting figures",
       "note": "DOGE has drawn broader criticism, cited in reporting on this action specifically, for moving to cut contracts supporting critical government services and for overstating the value of claimed savings to taxpayers."
     },
     "estimated_impact": {
-      "summary": "A large-scale, rapidly reversed contract-cancellation campaign that initially targeted safety-critical VA services (cancer registries, medical-equipment sterility certification, suicide-prevention support, physician recruitment) before backlash cut the list by a third -- compounded by VA leadership giving Congress materially different figures for the same underlying action across different testimony dates, undermining confidence in any single figure.",
+      "summary": "A rushed contract-cancellation campaign that initially targeted safety-critical VA services (cancer registries, medical-equipment sterility certification, suicide-prevention support, physician recruitment) and cut off veteran-record-accuracy work with no transition plan, before backlash shrank the list. The VA Inspector General later counted 435 terminated contract actions worth about $1.1 billion in total contract value -- mostly consulting -- and found VA's 2025 figures to Congress, including $120.9 billion, inaccurate.",
       "figures": [
         {
           "metric": "Initial contract-cancellation list",
@@ -8424,9 +8457,9 @@
           "source": "VA statement, March 2025"
         },
         {
-          "metric": "Later, inconsistent figure given to Congress by Secretary Collins",
-          "value": "440+ contracts, $120 billion",
-          "source": "Collins congressional testimony, May 16, 2025"
+          "metric": "Figure on VA's May 16, 2025 list to Congress (OIG: only 357 actually terminated; none of the 16 listed at $1 billion or more exceeded $150 million)",
+          "value": "446 contract actions, about $120.9 billion",
+          "source": "VA Office of Inspector General, report 25-03033-230, September 22, 2026"
         },
         {
           "metric": "Identity-record anomalies resolved by the terminated Aptive Resources EHR-modernization contract before cancellation",
@@ -8437,12 +8470,27 @@
           "metric": "EHR-modernization contracts terminated, held by service-disabled/veteran-owned small businesses",
           "value": "at least 6",
           "source": "Healthcare IT News, June 2025"
+        },
+        {
+          "metric": "Contract actions VA actually terminated for convenience (total contract value, not savings)",
+          "value": "435 actions, about $1.1 billion",
+          "source": "VA Office of Inspector General, report 25-03033-230, September 22, 2026"
+        },
+        {
+          "metric": "Contract actions terminated and later reinstated",
+          "value": "100",
+          "source": "VA Office of Inspector General, report 25-03033-230, September 22, 2026"
+        },
+        {
+          "metric": "Settlement costs VA agreed to pay on 117 completed settlements",
+          "value": "about $10.6 million",
+          "source": "VA Office of Inspector General, report 25-03033-230, September 22, 2026"
         }
       ],
-      "caveat": "The $120 billion figure Collins gave Congress in May 2025 is dramatically larger than the $1.8 billion figure the VA itself announced in March for a similar-scale contract count, and no source reviewed reconciles the two -- DOGE has faced broader, separate criticism for overstating savings figures in its public accounting, which this entry notes as relevant context without independently adjudicating which VA figure (if either) is accurate."
+      "caveat": "The VA Inspector General's September 2026 review largely resolves the earlier figure conflict: the $120.9 billion on VA's May 2025 list to Congress came from a tracking dashboard that miscalculated contract values, per an official in VA's Category Management Support Office, while the OIG's $1.1 billion is total contract value, not savings, and does not show how much had already been paid or include settlement costs. VA's claimed $1.8 billion value and $900 million+ redirection are VA's own March 2025 figures, which the OIG did not test, and the OIG reviewed only VA's selection process and the accuracy of its counts, not VA's April 2026 updated list or the cancellations' effect on veterans."
     },
-    "confidence_note": "HIGH confidence on the cancellation campaign itself, the backlash, and the reduction from 875 to 585 contracts, corroborated across CNBC, NBC News, and Senate oversight correspondence (Blumenthal, King). MODERATE confidence on any single dollar figure given the documented inconsistency between the VA's own March 2025 accounting and Collins's May 2025 congressional testimony -- flagged explicitly rather than resolved, since no source reviewed explains the discrepancy. Updated 2026-08-30 (GSR recheck batch 38): the AI-review-tool mechanism and the Aptive Resources/Task Order 169 example are corroborated across Government Executive, Nextgov/FCW, CDO Magazine, and Healthcare IT News, all independently reporting on the same June 11, 2025 congressional forum and ProPublica's underlying investigation; treated as filling in a previously undocumented mechanism and concrete harm example from the same March-June 2025 period this entry already covers, not a new post-2025 development.",
-    "last_verified": "2026-08-30",
+    "confidence_note": "HIGH confidence on the cancellation campaign itself, the backlash, and the reduction from 875 to 585 contracts, corroborated across CNBC, NBC News, and Senate oversight correspondence (Blumenthal, King). Before the Inspector General's review, confidence in any single dollar figure was MODERATE, given the gap between the VA's March 2025 accounting and the list VA staff gave Congress on May 16, 2025. Updated 2026-08-30: the AI review tool and the Aptive Resources/Task Order 169 example are corroborated across Government Executive, Nextgov/FCW, CDO Magazine, and Healthcare IT News, all reporting on the same June 2025 congressional forum and ProPublica's underlying investigation. Update 2026-10-06: HIGH confidence on the VA Inspector General's September 22, 2026 counts (435 terminated actions, about $1.1 billion total contract value, 100 reinstated) and on its finding that VA's May and July 2025 lists to Congress were inaccurate, read in the full report. The AI tool's role is now contested: the OIG says VA's initial list came from standard contract codes, not a DOGE AI program, and ProPublica dates the tool to after March 17, 2025, later than the February and March lists, so this entry no longer calls it the mechanism behind the cancellation list. Government Executive notes the OIG is led by a former senior adviser to Collins; the report says Inspector General Cheryl Mason recused herself from the review for that reason.",
+    "last_verified": "2026-10-06",
     "date_added": "2026-08-10",
     "sources": [
       {
@@ -8476,33 +8524,66 @@
       {
         "name": "Nextgov/FCW -- 'Lawmakers demand review of VA's AI-driven contract cuts'",
         "url": "https://www.nextgov.com/artificial-intelligence/2025/06/lawmakers-demand-review-vas-ai-driven-contract-cuts/406249/"
+      },
+      {
+        "name": "VA Office of Inspector General -- 'Review of Contracts Terminated for Convenience' (report 25-03033-230, September 22, 2026)",
+        "url": "https://www.vaoig.gov/sites/default/files/reports/2026-09/vaoig-25-03033-230_final.pdf"
+      },
+      {
+        "name": "Military Times -- 'VA terminated $1.1 billion in contracts after DOGE requests, watchdog finds'",
+        "url": "https://www.militarytimes.com/veterans/2026/09/24/va-terminated-11-billion-in-contracts-after-doge-requests-watchdog-finds/"
+      },
+      {
+        "name": "Government Executive -- 'VA's contracting crackdown gave some staff hours to do hundreds of reviews'",
+        "url": "https://www.govexec.com/management/2026/09/vas-contracting-crackdown-hours-hundreds-reviews/416219/"
+      },
+      {
+        "name": "ProPublica -- DOGE AI tool used to 'munch' VA contracts",
+        "url": "https://www.propublica.org/article/trump-doge-veterans-affairs-ai-contracts-health-care"
       }
     ],
     "section_summaries": {
-      "what_changed": "DOGE moved to cancel ~875 VA contracts covering essential services (cancer registries, equipment sterility certification, suicide-prevention support); backlash cut the list to 585, and VA leadership later gave Congress a starkly different figure ($120B vs. the earlier $1.8B) with no public reconciliation. A DOGE-built AI review tool with no individualized human review drove the selections, terminating at least six EHR-modernization contracts held by veteran-owned small businesses, including one that had resolved 13,400 veteran-record identity errors.",
-      "estimated_impact": "Safety-critical service contracts were targeted before a partial reversal; the VA's own inconsistent figures across two 2025 accountings undermine confidence in any single number describing the action's scale. The AI tool's keyword-driven selections abruptly cut off veteran-record-accuracy work with no transition plan.",
-      "confidence_note": "Well-corroborated on the campaign and backlash itself; the dollar-figure discrepancy is flagged explicitly as unresolved rather than picking one number as authoritative. The AI-tool mechanism is independently corroborated across four outlets reporting on the same congressional forum and underlying ProPublica investigation."
+      "what_changed": "DOGE pushed VA to cancel ~875 contracts, some safety-critical; backlash cut the list. The VA Inspector General counted 435 terminated ($1.1B contract value) and found VA's figures to Congress wrong.",
+      "estimated_impact": "Safety-critical and veteran-record contracts were targeted; the OIG counted 435 terminations ($1.1B total value, mostly consulting) and found VA's $120.9B figure to Congress wrong.",
+      "confidence_note": "Well corroborated on the campaign and backlash; the VA Inspector General's 2026 review settles the counts. The AI tool's role is contested: the OIG says VA's first list didn't use it."
     },
-    "last_substantive_update": "2026-08-30",
+    "last_substantive_update": "2026-10-06",
     "glance": {
       "who": "DOGE, with VA Secretary Doug Collins",
-      "what": "Canceled 585 VA contracts, cut from 875 after backlash; officials gave Congress conflicting figures",
+      "what": "Pushed VA to end contracts; 435 terminated ($1.1B value), and VA gave Congress inaccurate figures",
       "harm": {
         "kind": "livelihood",
         "certainty": "projected",
         "who": "Veterans' care and record services"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-10-06"
     },
     "timeline": {
       "what_changed": {
-        "base": "DOGE, under Elon Musk, moved to cancel roughly 875 VA contracts as part of its cost-cutting campaign. Reporting and VA employees flagged that many targeted contracts covered essential services, including cancer-registry maintenance, sterility certification for medical equipment, air-quality testing, suicide-prevention support, physician recruitment and retention, and safety inspections at VA medical facilities. **Frontline Veterans Health Administration employees warned the cuts would imperil safety at the VA's nearly 1,400 hospitals and clinics.** Facing that backlash, the VA paused its planned cuts, then announced the termination list had fallen by about a third, to 585 contracts, with an alleged combined value of $1.8 billion; the VA said the reductions would let it redirect more than $900 million to health care, benefits, and services for VA beneficiaries. The VA declined to disclose the full list of canceled contracts despite congressional requests, drawing criticism from senators including Richard Blumenthal and Angus King over the lack of transparency and consultation. VA Secretary Doug Collins subsequently gave Congress inconsistent figures on the scope of the cuts -- telling lawmakers on May 16, 2025 that the VA had canceled more than 440 contracts worth $120 billion, a figure sharply at odds with the earlier 585-contract/$1.8 billion accounting, without a public reconciliation of the discrepancy identified in sourcing reviewed.",
+        "base": "DOGE, under Elon Musk, moved to cancel roughly 875 VA contracts as part of its cost-cutting campaign. Reporting and VA employees flagged that many targeted contracts covered essential services, including cancer-registry maintenance, sterility certification for medical equipment, air-quality testing, suicide-prevention support, physician recruitment and retention, and safety inspections at VA medical facilities. **Frontline Veterans Health Administration employees warned the cuts would imperil safety at the VA's nearly 1,400 hospitals and clinics.** Facing that backlash, the VA paused its planned cuts, then announced the termination list had fallen by about a third, to 585 contracts, with an alleged combined value of $1.8 billion; the VA said the reductions would let it redirect more than $900 million to health care, benefits, and services for VA beneficiaries. The VA declined to disclose the full list of canceled contracts despite congressional requests, drawing criticism from senators including Richard Blumenthal and Angus King over the lack of transparency and consultation. VA Secretary Doug Collins's staff subsequently gave Congress inconsistent figures on the scope of the cuts -- a May 16, 2025 list of more than 440 contracts worth about $120 billion in contract value, sharply at odds with the earlier 585-contract/$1.8 billion accounting.",
         "updates": [
           {
             "date": "2026-08-30",
             "label": "Update",
-            "text": "Update 2026-08-30: identified the specific mechanism behind the cancellation list -- an AI review tool built and operated by a DOGE software engineer with no prior healthcare or government experience, which ProPublica reported was error-prone and, per Government Executive/Nextgov reporting on a June 11, 2025 forum, appeared to select contracts for termination by matching keywords rather than individualized review. House and Senate Veterans' Affairs Committee Democrats raised the AI tool's use directly at that forum. A concrete example of the tool's effect: Task Order 169, a contract held by Aptive Resources (a veteran-owned and woman-owned small business) supporting VA's Electronic Health Record Modernization program by resolving identity-record anomalies in the VA's master person index, was terminated abruptly and without a transition plan despite having resolved 13,400 such anomalies -- inaccuracies that can otherwise block veterans from receiving medical care, disability compensation, or other earned benefits. At least six contracts directly supporting the EHR-modernization rollout, all held by service-disabled or veteran-owned small businesses, were similarly terminated. Separately, DOGE's broader public accounting of its savings claims, including the VA figures described above, was reported to have quietly removed some previously touted savings figures from its own public tracking website after they were found to be inflated or erroneous, though no source reviewed specifically confirms whether the VA contract figures in this entry were among those quietly revised.",
+            "text": "Update 2026-08-30: ProPublica reported that a DOGE software engineer with no health care or government experience, who started on March 17, 2025, built an error-prone AI tool that flagged more than 2,000 contracts as \"munchable\" for cancellation. At a June 2025 Senate Veterans' Affairs Committee Democratic spotlight forum, per Government Executive and Nextgov/FCW, Democratic lawmakers said the tool appeared to select contracts by matching keywords rather than individualized review. A concrete example of the cancellations' effect, which Rep. Mark Takano suggested the tool had flagged by keyword: Task Order 169, a contract held by Aptive Resources (a veteran-owned and woman-owned small business) supporting VA's Electronic Health Record Modernization program by resolving identity-record anomalies in the VA's master person index, was terminated abruptly and without a transition plan despite having resolved 13,400 such anomalies -- inaccuracies that can otherwise block veterans from receiving medical care, disability compensation, or other earned benefits. At least six contracts directly supporting the EHR-modernization rollout, all held by service-disabled or veteran-owned small businesses, were similarly terminated. Separately, DOGE's broader public accounting of its savings claims, including the VA figures described above, was reported to have quietly removed some previously touted savings figures from its own public tracking website after they were found to be inflated or erroneous, though no source reviewed specifically confirms whether the VA contract figures in this entry were among those quietly revised.",
             "effective_date": "2026-08-30"
+          },
+          {
+            "date": "2026-10-06",
+            "label": "Update",
+            "text": "Update 2026-10-06: A VA Office of Inspector General review issued September 22, 2026, requested by Blumenthal and King, found that VA terminated 435 contract actions for convenience, with total contract values of about $1.1 billion -- the full value over each contract's period, not savings -- and that contracting officers terminated and later reinstated 100 more. About 86% of the terminated actions were consulting services. GSA, VA senior advisers and DOGE representatives sent dozens of termination instructions from January through June 2025; on February 21, 2025, VA offices were given less than 11 hours to review 1,049 contract actions, and the director of VA's Category Management Support Office said senior advisers and DOGE representatives directed the terminations on February 25 regardless of incomplete reviews. The OIG found both 2025 lists VA gave Congress incomplete and inaccurate: of the 446 actions on the May 16 list, only 357 had been terminated as of April 30, 2026, and none of the 16 listed at $1 billion or more exceeded $150 million; the July 3 list of 1,664 actions included only 366 terminations (17 later reinstated), plus 974 supply and 151 health care actions, such as prosthetics and nursing-home orders, that were never terminated. The OIG said VA built its initial February 6, 2025 list of consulting contracts from standard contract codes, \"not a Department of Government Efficiency artificial intelligence program,\" and that most ultimately terminated contracts were on that list. It found contracting officials generally complied with acquisition rules, recorded about $10.6 million in settlement costs on 117 settlements, and made no recommendations. VA's press secretary said the cancellations saved more than $1 billion and had no negative impact on care and benefits; Blumenthal said Collins owes answers on how VA will replace lost services.",
+            "effective_date": "2026-10-06"
+          }
+        ]
+      },
+      "confidence_note": {
+        "base": "HIGH confidence on the cancellation campaign itself, the backlash, and the reduction from 875 to 585 contracts, corroborated across CNBC, NBC News, and Senate oversight correspondence (Blumenthal, King). Before the Inspector General's review, confidence in any single dollar figure was MODERATE, given the gap between the VA's March 2025 accounting and the list VA staff gave Congress on May 16, 2025. Updated 2026-08-30: the AI review tool and the Aptive Resources/Task Order 169 example are corroborated across Government Executive, Nextgov/FCW, CDO Magazine, and Healthcare IT News, all reporting on the same June 2025 congressional forum and ProPublica's underlying investigation.",
+        "updates": [
+          {
+            "date": "2026-10-06",
+            "label": "Update",
+            "text": "Update 2026-10-06: HIGH confidence on the VA Inspector General's September 22, 2026 counts (435 terminated actions, about $1.1 billion total contract value, 100 reinstated) and on its finding that VA's May and July 2025 lists to Congress were inaccurate, read in the full report. The AI tool's role is now contested: the OIG says VA's initial list came from standard contract codes, not a DOGE AI program, and ProPublica dates the tool to after March 17, 2025, later than the February and March lists, so this entry no longer calls it the mechanism behind the cancellation list. Government Executive notes the OIG is led by a former senior adviser to Collins; the report says Inspector General Cheryl Mason recused herself from the review for that reason.",
+            "effective_date": "2026-10-06"
           }
         ]
       }
