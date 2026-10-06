@@ -1,6 +1,6 @@
 {
  "version": 1,
- "as_of": "2026-10-05",
+ "as_of": "2026-10-06",
  "checks": {
   "abrego-garcia-vindictive-prosecution-2025-2026": {
    "0": {
@@ -3570,18 +3570,18 @@
     "archive": false
    },
    "5": {
-    "state": "unopened",
-    "why": "",
+    "state": "partly",
+    "why": "The source confirms the July 6, 2026 appeal (26-1829) and the August 5 partial grant with fee entitlement deferred until appeals are exhausted, but nothing in the text states a 2.5% preservation figure; it only says plaintiffs sought 15%.",
     "host": "clearinghouse.net",
-    "date": "2026-09-15",
+    "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
    "6": {
-    "state": "not_found",
-    "why": "This source (dated June 30, 2026, about NEH's reinstatement process) does not address the Second Circuit appeal or the May 29, 2026 oral argument at all, and cannot establish what had or had not happened by a later August 2026 re-verification.",
-    "host": "insidehighered.com",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "The MLA page states the plaintiffs continue to pursue the Second Circuit appeal to restore three offices and twenty-two programs and that oral argument was held 29 May 2026; no ruling is mentioned.",
+    "host": "mla.org",
+    "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
@@ -3590,6 +3590,14 @@
     "why": "",
     "host": "clearinghouse.net",
     "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "8": {
+    "state": "supports",
+    "why": "The summary states the lead case number, the September 9 opening brief, the November response date, and that the appeal and both orders remained in effect as of September 26, 2026.",
+    "host": "clearinghouse.net",
+    "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    }
@@ -4102,18 +4110,18 @@
     "archive": false
    },
    "5": {
-    "state": "partly",
-    "why": "The docket shows no oral argument date or ruling recorded, consistent with the claim, but the source's own data is explicitly \"last retrieved May 7, 2026\" -- months before the claimed August 30, 2026 re-verification date -- so it cannot itself establish the state of the docket as of that later date.",
-    "host": "dockets.justia.com",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "Paragraph 7 of the complaint, filed 07/23/26 in No. 1:26-cv-00485, alleges the FY2026 Standard Terms and Conditions immigration conditions are essentially identical to those vacated and enjoined last year in FEMA; the claim correctly frames it as an allegation.",
+    "host": "ag.ny.gov",
+    "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
-   "6": {
+   "8": {
     "state": "partly",
-    "why": "As with the prior recheck, the docket shows no oral argument date or ruling, consistent with the claim, but the underlying data is explicitly \"last retrieved May 7, 2026,\" predating the claimed September 2, 2026 re-verification date by months, so it cannot itself confirm the docket's state as of that date.",
-    "host": "dockets.justia.com",
-    "date": "2026-09-15",
+    "why": "The provided docket text (truncated) confirms the appeal was docketed and terminated Sept. 16, 2026, but the extracted portion ends in January 2026 and does not show the Rule 42(b) dismissal, mandate, briefing schedule, extensions, 'disinclined' language, or the Sept. 1 motion.",
+    "host": "courtlistener.com",
+    "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    }
@@ -9119,9 +9127,9 @@
   "musk-doge-deposition-evasion-2026": {
    "0": {
     "state": "supports",
-    "why": "CNN confirms the Texas property service attempts beginning mid-November 2025, repeated denials of entry, and DOJ's court intervention arguing Musk should not have to be deposed, citing Cheney-precedent case law.",
+    "why": "The CNN article describes attempts to serve Musk beginning mid-November 2025, denials of entry at gated properties, and the administration asking a judge to block the deposition; the excerpt shows the service attempts.",
     "host": "cnn.com",
-    "date": "2026-09-15",
+    "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
@@ -9141,27 +9149,19 @@
     "kind": "fact",
     "archive": false
    },
-   "3": {
+   "6": {
     "state": "supports",
-    "why": "The Clearinghouse docket's last substantive entry is the February 4, 2026 ruling on the protective-order motion, its most recent summary-author date is 2/11/2026, and it simply states the case 'is ongoing' with nothing logged after early February 2026 -- directly matching the claim's characterization of the docket's status.",
+    "why": "The summary reports the March 4 mandamus grant, quotes the court's statement about depositions not being barred, and states that as of September 2026 the parties are in discovery and the case is ongoing; the summary was authored 9/29/2026.",
     "host": "clearinghouse.net",
-    "date": "2026-09-15",
+    "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
-   "4": {
+   "7": {
     "state": "unopened",
     "why": "",
-    "host": "ca4.uscourts.gov",
-    "date": "2026-09-15",
-    "kind": "fact",
-    "archive": false
-   },
-   "5": {
-    "state": "partly",
-    "why": "The Clearinghouse docket confirms the January 29, 2026 denial of interlocutory-appeal certification and the February 4, 2026 denial of the protective order, and states the case is ongoing, but this source's summary only runs through February 2026 and never mentions any Fourth Circuit ruling on March 4, 2026, so that specific reference point in the claim is not addressed here.",
-    "host": "clearinghouse.net",
-    "date": "2026-09-15",
+    "host": "courtlistener.com",
+    "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    }
@@ -9390,6 +9390,22 @@
     "why": "The ABC News article confirms the en banc oral argument was set for September 29, and the underlying contempt-inquiry background, but it does not mention a September 11, 2026 reply-brief deadline or otherwise address the specific briefing-schedule claim.",
     "host": "abcnews.com",
     "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "9": {
+    "state": "partly",
+    "why": "The docket confirms oral argument on Sept. 29, 2026, the June 22 en banc order vacating the April order while keeping the Dec 12 administrative stay in effect, and a panel list matching the judges named; it does not show Judge Henderson not participating or affirmatively establish that no decision has been entered.",
+    "host": "courtlistener.com",
+    "date": "2026-10-06",
+    "kind": "fact",
+    "archive": false
+   },
+   "10": {
+    "state": "supports",
+    "why": "The AP article reports Shumate's argument, the court's apparent skepticism, the Noem attribution, the judges' suggestion about other targets, and that judges did not indicate when they would rule.",
+    "host": "wsls.com",
+    "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    }
@@ -12267,33 +12283,49 @@
   "rfk-jr-retsef-levi-vaccine-safety-task-force-2026": {
    "0": {
     "state": "supports",
-    "why": "The Guardian investigation confirms more than a dozen scientists and public health experts criticized Levi's published COVID-19 vaccine safety research, and details his appointment to lead ACIP's COVID-19 vaccine review work.",
-    "host": "theguardian.com",
-    "date": "2026-09-15",
+    "why": "The NYT article says the task force would be led by Levi, appointed by Kennedy, and that HHS spokesman Andrew Nixon defended the choice.",
+    "host": "nytimes.com",
+    "date": "2026-10-06",
     "kind": "fact",
-    "archive": false
+    "archive": true
    },
    "1": {
     "state": "supports",
-    "why": "The Boston Globe profile confirms Levi is an MIT professor of operations management (not a clinical/epidemiological specialist), that he became a central figure in Kennedy's ACIP/vaccine-safety effort, and documents his prior public criticism of COVID-19 vaccines.",
-    "host": "bostonglobe.com",
-    "date": "2026-09-15",
+    "why": "The Guardian reports Levi's research failed to meet basic scientific standards according to more than a dozen experts, and that Kennedy appointed him to review Covid vaccine safety.",
+    "host": "theguardian.com",
+    "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
    "2": {
-    "state": "partly",
-    "why": "The Georgetown CCF article confirms the March 16, 2026 stay froze the ACIP appointments, the January 2026 memo, and all reconstituted-panel votes, which would necessarily have paused Levi's COVID-19 workgroup's operations. However, the visible text says nothing about a cancelled March 18-19, 2026 ACIP meeting on 'prolonged or chronic vaccine injuries,' nor does it contain any quote from Levi calling the ruling 'unfortunate' -- those specific details are unaddressed by this source.",
-    "host": "ccf.georgetown.edu",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "The Globe profile describes Levi as a professor of operations management, an unlikely choice for a committee of clinical or scientific experts, who leads the federal COVID-19 vaccine review work and is a vocal critic of the vaccines.",
+    "host": "bostonglobe.com",
+    "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    },
    "3": {
-    "state": "unopened",
-    "why": "",
-    "host": "litigationtracker.law.georgetown.edu",
-    "date": "2026-09-15",
+    "state": "partly",
+    "why": "The source confirms the March 16, 2026 ruling staying the CDC memo, new ACIP appointments, and all votes, but it does not name Judge Murphy, mention Levi, the COVID workgroup, the cancelled March 18-19 meeting, or any Levi quote.",
+    "host": "ccf.georgetown.edu",
+    "date": "2026-10-06",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "supports",
+    "why": "The docket entry description matches the claim: Judge Murphy granted the motion to stay pending the First Circuit appeal, with the quoted stay language, entered 09/11/2026.",
+    "host": "courtlistener.com",
+    "date": "2026-10-06",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
+    "state": "supports",
+    "why": "The First Circuit calendar lists No. 26-1503 for Tuesday, October 6, 2026 at 9:30 a.m. before Judges Barron, Kayatta, and Dunlap; the calendar is silent on any ruling.",
+    "host": "ca1.uscourts.gov",
+    "date": "2026-10-06",
     "kind": "fact",
     "archive": false
    }
