@@ -11449,9 +11449,9 @@
     "title": "Education Department Canceled $168 Million in Community Schools Grants Mid-Year, Cutting Programs Across 11 States and D.C.",
     "institution": "U.S. Department of Education",
     "domain": "funding_redirection",
-    "status": "In effect as of December 2025/February 2026 reporting -- legal challenges and some partial fund restoration reported by March 2026, with more funds remaining frozen",
+    "status": "Largely in effect. Idaho's grant was restored and Illinois grantees got $6 million through June 30, 2026, but a judge denied them a preliminary injunction on June 26, 2026 and that funding ended July 1; their 7th Circuit appeal (argument set Nov. 12, 2026) and two other lawsuits are pending.",
     "date_of_action": "2025-12-12 (notification to grantees) through 2026-02-13 (Washington Post reporting on downstream impact)",
-    "what_changed": "On December 12, 2025, the Education Department notified recipients of 19 Full-Service Community Schools grants -- spread across 11 states (including California, Connecticut, Illinois, Kentucky, Maryland, North Carolina, New Jersey, New York, Texas, and Wisconsin) and Washington, D.C. -- that they would not receive their remaining two to three years of expected funding, totaling $168 million: roughly $61 million that was due to flow by January 1, 2026, and another $107 million due by 2028. The Full-Service Community Schools Program funds school districts, colleges, and nonprofits to provide food and housing assistance, medical care, and other wraparound services delivered through schools. **The abrupt, mid-academic-year cancellation resulted in hundreds of public school employees losing their jobs, with more layoffs anticipated.** Legal challenges followed; by March 2026, some halted funds began flowing again for certain grantees, though EdWeek's reporting confirmed more funds remained frozen.",
+    "what_changed": "On December 12, 2025, the Education Department notified recipients of 19 Full-Service Community Schools grants -- spread across 11 states (including California, Connecticut, Illinois, Kentucky, Maryland, North Carolina, New Jersey, New York, Texas, and Wisconsin) and Washington, D.C. -- that they would not receive their remaining two to three years of expected funding, totaling $168 million: roughly $61 million that was due to flow by January 1, 2026, and another $107 million due by 2028. The Full-Service Community Schools Program funds school districts, colleges, and nonprofits to provide food and housing assistance, medical care, and other wraparound services delivered through schools. **The abrupt, mid-academic-year cancellation resulted in hundreds of public school employees losing their jobs, with more layoffs anticipated.** Recipients of 11 of the 19 grants challenged the cuts in three federal lawsuits. The department restored Idaho's $28 million grant and, in March 2026, agreed to restore $6 million for Illinois grantees through June 30, leaving 16 grants worth at least $84 million discontinued. On March 11, 2026, North Carolina's attorney general secured a similar temporary $2.5 million restoration through June 30. On June 26, 2026, a federal judge in Illinois denied those grantees a preliminary injunction and dismissed most of their claims; Illinois schools had laid off 230 employees, according to ACT Now Illinois, the nonprofit that administers the state's grant, which appealed to the 7th Circuit on July 13, 2026.",
     "primary_proponent": {
       "name": "U.S. Department of Education",
       "role": "Federal agency canceling the previously-awarded, multi-year grants mid-cycle",
@@ -11474,14 +11474,24 @@
           "metric": "Grants affected",
           "value": "19, across 11 states + D.C.",
           "source": "EdWeek/Washington Post"
+        },
+        {
+          "metric": "Grants still discontinued after Idaho and Illinois restorations (March 2026)",
+          "value": "16, worth at least $84 million",
+          "source": "EdWeek"
+        },
+        {
+          "metric": "Illinois school employees laid off",
+          "value": "230",
+          "source": "ACT Now Illinois via EdWeek (July 2026)"
         }
       ],
-      "caveat": "A federal judge has ruled the Trump administration cannot revoke federal education grants specifically for anti-DEI-priority reasons in a separate case; some funds began flowing again for certain grantees by March 2026 following legal challenges, indicating partial, ongoing reversal rather than a fully static outcome."
+      "caveat": "A federal judge has ruled the Trump administration cannot revoke federal education grants specifically for anti-DEI-priority reasons in a separate case; Idaho's grant was restored and Illinois grantees regained $6 million through June 30, 2026, but the Illinois grantees lost their preliminary-injunction bid in June 2026, so the reversal so far is partial and temporary."
     },
-    "confidence_note": "HIGH confidence -- the $168 million figure, the December 12, 2025 notification date, the 11-state-plus-D.C. scope, and the resulting layoffs are independently corroborated across EdWeek's extensive dedicated coverage and The Washington Post's own reporting.",
-    "last_verified": "2026-08-05",
+    "confidence_note": "HIGH confidence -- the $168 million figure, the December 12, 2025 notification date, the 11-state-plus-D.C. scope, and the resulting layoffs are independently corroborated across EdWeek's extensive dedicated coverage and The Washington Post's own reporting. Re-verified 2026-10-06: EdWeek's March and July 2026 reporting, St. Louis Public Radio and the plaintiffs' July 14, 2026 appeal announcement confirm Idaho's restoration, the temporary Illinois agreement, the June 2026 injunction denial and the pending appeal, which the 7th Circuit docket shows set for argument November 12, 2026; no later ruling was found.",
+    "last_verified": "2026-10-06",
     "date_added": "2026-08-05",
-    "last_updated": "2026-08-05",
+    "last_updated": "2026-10-06",
     "sources": [
       {
         "name": "Washington Post -- 'Services cut. Staff laid off. New Trump cuts hit schools in 11 states.'",
@@ -11494,14 +11504,34 @@
       {
         "name": "EdWeek -- 'Some Halted Federal Funds for Community Schools Will Flow, But More Remain Frozen'",
         "url": "https://www.edweek.org/policy-politics/some-halted-federal-funds-for-community-schools-will-flow-but-more-remain-frozen/2026/03"
+      },
+      {
+        "name": "EdWeek -- 'Schools Lay Off Staff as Lawsuits Challenging Federal Grant Cuts Continue'",
+        "url": "https://www.edweek.org/policy-politics/schools-lay-off-staff-as-lawsuits-challenging-federal-grant-cuts-continue/2026/07"
+      },
+      {
+        "name": "St. Louis Public Radio -- 'East St. Louis School District loses federal grant funding after judge's ruling'",
+        "url": "https://www.stlpr.org/news-briefs/2026-06-29/east-st-louis-school-loses-federal-grant-funding"
+      },
+      {
+        "name": "Chicago Lawyers' Committee for Civil Rights -- 'ACT Now Appeals Full-Service Community Schools Decision to the Seventh Circuit'",
+        "url": "https://www.clccrul.org/press/act-now-appeals-full-service-community-schools-decision-to-the-seventh-circuit-seeks-reversal-of-decision-that-eliminated-school-funding"
+      },
+      {
+        "name": "CourtListener -- ACT Now Coalition v. U.S. Department of Education, 7th Cir. No. 26-2473 (docket)",
+        "url": "https://www.courtlistener.com/docket/73624914/act-now-coalition-v-educ/"
+      },
+      {
+        "name": "Carolina Journal -- Jackson recovers school funds Trump officials called 'divisive'",
+        "url": "https://www.carolinajournal.com/jackson-recovers-school-funds-trump-officials-called-divisive/"
       }
     ],
     "section_summaries": {
-      "what_changed": "Education Department canceled $168 million in Full-Service Community Schools grants mid-academic-year across 19 grantees in 11 states and D.C., cutting wraparound food/housing/medical services delivered through schools.",
-      "estimated_impact": "Forced hundreds of school-employee layoffs; some funds later resumed for certain grantees by March 2026 following legal challenges, but more remained frozen.",
-      "confidence_note": "Well-corroborated across EdWeek's dedicated coverage and The Washington Post; a separate court ruling limits anti-DEI-motivated grant revocations, with unclear direct applicability confirmed here."
+      "what_changed": "Education Department canceled $168 million in Full-Service Community Schools grants mid-year for 19 grantees in 11 states and D.C., cutting food, housing and medical services offered through schools.",
+      "estimated_impact": "Forced hundreds of school-staff layoffs, 230 in Illinois alone; Idaho's grant and some Illinois funds were restored, but a judge denied Illinois grantees an injunction in June 2026.",
+      "confidence_note": "Well-corroborated across EdWeek's dedicated coverage and The Washington Post; a separate court ruling limits anti-DEI-motivated grant revocations, but its applicability here is unconfirmed."
     },
-    "last_substantive_update": "2026-08-05",
+    "last_substantive_update": "2026-10-06",
     "glance": {
       "who": "U.S. Department of Education",
       "what": "Canceled $168M in Full-Service Community Schools grants mid-year across 19 grantees in 11 states and D.C.",
@@ -11510,7 +11540,7 @@
         "certainty": "documented",
         "who": "Community-school staff and services"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-10-06"
     }
   },
   {
@@ -20399,43 +20429,48 @@
     "title": "Hegseth Ended the Military's 80-Year Flu Vaccine Mandate; A Recruit Outbreak Followed Within Weeks",
     "institution": "Department of Defense (Army, Navy, Air Force)",
     "domain": "protection_rollback",
-    "status": "Reversed for basic trainees -- the Army, Navy, and Air Force reinstated the flu-shot requirement for recruits after the outbreak; the broader end of the mandate for active-duty/reserve personnel generally has not been reported as reversed",
-    "date_of_action": "2026-04 (mandate ended) through 2026-07 (outbreak reported, recruit training branches reinstate the requirement)",
-    "what_changed": "In April 2026, Defense Secretary Pete Hegseth ended the flu vaccine requirement that had applied to all active-duty and reserve U.S. military personnel since 1945, making the annual flu shot optional and citing 'medical autonomy' and religious freedom, describing the prior mandate as 'overly broad and not rational.' At Joint Base San Antonio-Lackland -- the Air Force's primary basic training base -- the flu vaccination rate among incoming recruits fell from nearly 100% under the mandate to about 40% after it became optional. **A flu outbreak began among recruits in early June 2026; by the time it was reported, at least 159 recruits had confirmed cases (with reporting citing a total of at least 275 cases as the outbreak grew) and at least two recruits were hospitalized**. The death of recruit Keon McDaniel, who experienced a medical emergency during his sixth week of Basic Military Training on June 12 and died after being transported to Brooke Army Medical Center, is under investigation; it is not confirmed whether his death is linked to the flu outbreak. In response, the Army, Navy, and Air Force reinstated mandatory flu vaccination for recruits in basic training, while the underlying policy change for the broader active-duty and reserve force was not reported as reversed.",
+    "status": "Partly reversed for recruits only -- boot camps again require flu shots under Pentagon exceptions (a Pentagon official said the move was unrelated to the outbreak); the end of the mandate for the wider force stands, and a House amendment to restore it was not allowed a vote",
+    "date_of_action": "2026-04 (mandate ended) through 2026-07 (outbreak and recruit-shot reinstatement in June; trainee's flu death reported June 30; case counts updated into July)",
+    "what_changed": "In April 2026, Defense Secretary Pete Hegseth ended the flu vaccine requirement that had applied to all active-duty and reserve U.S. military personnel since 1945, making the annual flu shot optional and citing 'medical autonomy' and religious freedom, describing the prior mandate as 'overly broad and not rational.' At Joint Base San Antonio-Lackland -- the Air Force's primary basic training base -- the flu vaccination rate among incoming recruits fell from nearly 100% under the mandate to about 40% after it became optional. **A flu outbreak began among recruits in early June 2026; by June 17 at least 159 recruits had cases and two were hospitalized, and by June 24 ABC News, citing unnamed sources, reported 275 cumulative cases and four hospitalizations**. Recruit Keon McDaniel experienced a medical emergency during his sixth week of Basic Military Training on June 12 and died at Brooke Army Medical Center on June 16; the Air Force at first said only that the cause was under investigation. Under exceptions the Pentagon granted to the services, the Army, Navy, and Air Force again required flu shots for basic trainees, and AP reported that a Pentagon official said boot camps for all the military services were again requiring the shot; that official, speaking anonymously, maintained the exceptions were unrelated to the outbreak. The underlying policy change for the broader active-duty and reserve force was not reported as reversed.\n\nUpdate 2026-10-06: On June 30, Rep. Joaquin Castro said the Air Force had confirmed to him that McDaniel \"died from the flu\"; Castro's office also cited 284 confirmed cases and four hospitalizations. Reps. Castro, Chrissy Houlahan and Gil Cisneros sought an amendment to the FY2027 National Defense Authorization Act requiring flu vaccination for all service members; Houlahan said the House Rules Committee refused to make it in order. A July 15 release from Castro's office, announcing a lawmakers' letter to Hegseth seeking answers on McDaniel's death, cited 285 cases and six hospitalizations.",
     "primary_proponent": {
       "name": "Pete Hegseth",
       "role": "Secretary of Defense",
       "note": "Personally announced ending the 80-year-old mandatory flu vaccine requirement in April 2026, citing 'medical autonomy' and calling the prior policy 'overly broad and not rational.'"
     },
     "estimated_impact": {
-      "summary": "Ending a decades-old vaccination requirement caused recruit flu-vaccination rates at a major training base to collapse from near-universal to a minority of recruits, followed within about two months by a documented outbreak that hospitalized recruits and prompted three of the four service branches' training commands to reinstate the mandate specifically for basic trainees.",
+      "summary": "A recruit died of the flu, according to the Air Force as relayed by Rep. Castro, after ending a decades-old vaccination requirement saw recruit flu-vaccination rates at the Air Force's basic training base fall from near-universal to about 40%. The outbreak that followed sickened roughly 275-285 recruits and hospitalized at least four before boot camps again required flu shots for trainees.",
       "figures": [
         {
           "metric": "Flu vaccination rate among Lackland AFB recruits before the mandate ended",
           "value": "~100%",
-          "source": "ABC News, citing base health data"
+          "source": "ABC News, citing two unnamed sources"
         },
         {
           "metric": "Flu vaccination rate among Lackland AFB recruits after the mandate became optional",
           "value": "~40%",
-          "source": "ABC News, citing base health data"
+          "source": "ABC News, citing two unnamed sources"
         },
         {
           "metric": "Confirmed flu cases among recruits at Joint Base San Antonio-Lackland",
-          "value": "159 confirmed as of initial reporting; at least 275 cited as the outbreak grew",
-          "source": "ABC News / The Mirror US"
+          "value": "159 as of June 17; 275 cumulative as of June 24; 284 per Rep. Castro (June 30); 285 per his office (July 15)",
+          "source": "ABC News; Rep. Joaquin Castro's office"
         },
         {
           "metric": "Recruits hospitalized",
-          "value": "at least 2",
-          "source": "ABC News"
+          "value": "at least 4 as of June 23 (ABC News); 6 per Rep. Castro's office (July 15)",
+          "source": "ABC News; Rep. Joaquin Castro's office"
+        },
+        {
+          "metric": "Recruit deaths attributed to the flu",
+          "value": "1 (Keon McDaniel, died June 16)",
+          "source": "Rep. Joaquin Castro, citing Air Force confirmation, via The Hill"
         }
       ],
-      "caveat": "A causal link between the vaccination-rate drop and the outbreak's scale is a reasonable inference from the timeline and vaccination-rate data, not a formal epidemiological finding in reporting reviewed. Recruit Keon McDaniel's death is under investigation and is NOT confirmed as flu-outbreak-related -- present it as a death under investigation during the outbreak period, not as a confirmed causal result, per The Conversation and ABC News's own careful framing."
+      "caveat": "A causal link between the vaccination-rate drop and the outbreak's scale is a reasonable inference from the timeline and vaccination-rate data, not a formal epidemiological finding in reporting reviewed. McDaniel's flu cause of death is reported through Rep. Castro's account of what the Air Force told him; reporting reviewed does not quote a direct Air Force statement naming influenza."
     },
-    "confidence_note": "Strong sourcing: the mandate's end, Hegseth's stated rationale, the vaccination-rate collapse, and the outbreak figures are corroborated across ABC News, The Conversation, and Wonkette, with ABC News independently reporting the subsequent reinstatement of the recruit-specific mandate. The McDaniel death is reported factually but explicitly as unconfirmed-cause, which this entry preserves rather than overstates.",
+    "confidence_note": "Strong sourcing: the mandate's end, Hegseth's stated rationale, the vaccination-rate collapse, and the outbreak figures are corroborated across ABC News, The Conversation, and AP, with ABC News independently reporting the subsequent reinstatement of the recruit-specific mandate. The McDaniel death was first reported as cause-unknown and later attributed to the flu by Rep. Castro, citing the Air Force.\n\nUpdate 2026-10-06: Re-verified against both ABC News reports and The Conversation, which still say what the entry cites; corrected the hospitalization count (four by June 23, not two), the reinstatement scope and attribution (AP: all boot camps, Pentagon official calls it unrelated to the outbreak), and added the flu attribution of McDaniel's death (The Hill, Spectrum News) and the blocked NDAA amendment (Rep. Houlahan's release). No later reversal of the force-wide policy was found.",
     "pull_quote": "Hegseth called the 80-year-old mandate “overly broad and not rational” when he ended it in April 2026; the Lackland recruit vaccination rate then fell from near 100% to about 40%, and a flu outbreak followed within weeks.",
-    "last_verified": "2026-08-05",
+    "last_verified": "2026-10-06",
     "date_added": "2026-08-05",
     "sources": [
       {
@@ -20449,24 +20484,72 @@
       {
         "name": "The Conversation -- The military traded its flu vaccine mandate for 'medical freedom' -- an outbreak quickly followed",
         "url": "https://theconversation.com/the-military-traded-its-flu-vaccine-mandate-for-medical-freedom-an-outbreak-quickly-followed-286094"
+      },
+      {
+        "name": "AP News -- Pentagon restores mandatory flu shots for all recruits as boot camp outbreak sickens nearly 300",
+        "url": "https://apnews.com/article/pentagon-flu-shot-requirement-boot-camp-outbreak-4255f063ef99ea2d00cb24fec8793c32"
+      },
+      {
+        "name": "The Hill -- Castro says Air Force confirmed death from flu outbreak at Texas base",
+        "url": "https://thehill.com/policy/defense/5951782-flu-outbreak-death-lackland-air-force-base/"
+      },
+      {
+        "name": "Spectrum News -- Trainee dies of flu amid outbreak at Lackland Air Force Base, Rep. Castro says",
+        "url": "https://spectrumlocalnews.com/tx/south-texas-el-paso/news/2026/07/01/castro--trainee-dies-of-flu-amid-outbreak-at-lackland"
+      },
+      {
+        "name": "Rep. Chrissy Houlahan -- Houlahan, Castro, Cisneros Slam Pentagon for Lackland Flu Outbreak, Push for Flu Vaccine Requirement",
+        "url": "https://houlahan.house.gov/news/documentsingle.aspx?DocumentID=5106"
+      },
+      {
+        "name": "Rep. Joaquin Castro -- Congressman Castro Demands Answers on the Death of Airman First Class Keon McDaniel",
+        "url": "https://castro.house.gov/media-center/press-releases/congressman-castro-demands-answers-on-the-death-of-airman-first-class-keon-mcdaniel-at-lackland-airforce-base-in-san-antonio"
+      },
+      {
+        "name": "Military Times -- Following an outbreak, lawmakers push to require flu vaccine for all service members in budget bill provision",
+        "url": "https://www.militarytimes.com/news/pentagon-congress/2026/07/01/following-an-outbreak-lawmakers-push-to-require-flu-vaccine-for-all-service-members-in-budget-bill-provision/"
       }
     ],
     "section_summaries": {
-      "what_changed": "Hegseth ended the military's 80-year mandatory flu vaccine requirement in April 2026; recruit vaccination rates at a major training base collapsed from ~100% to ~40%, and a flu outbreak followed within weeks.",
-      "estimated_impact": "At least 159-275 recruits were infected and at least 2 hospitalized before three service branches reinstated the mandate specifically for basic trainees; a recruit's death during the outbreak period remains under investigation, not confirmed as outbreak-related.",
-      "confidence_note": "Strong: mandate change, vaccination-rate collapse, and outbreak figures are corroborated across multiple outlets; the one unconfirmed causal claim (the recruit's death) is presented as such, not overstated."
+      "what_changed": "Hegseth ended the military's 80-year flu-shot mandate in April 2026; recruit vaccination at the Air Force's basic training base fell from ~100% to ~40%, and an outbreak followed.",
+      "estimated_impact": "About 275-285 recruits were sickened, at least four hospitalized, and one died of the flu, per Rep. Castro citing the Air Force; boot camps then again required recruit flu shots.",
+      "confidence_note": "Strong: the mandate change, vaccination drop and outbreak figures are corroborated across outlets; the flu cause of the recruit's death comes via Rep. Castro citing the Air Force."
     },
-    "last_updated": "2026-08-05",
-    "last_substantive_update": "2026-08-05",
+    "last_updated": "2026-10-06",
+    "last_substantive_update": "2026-10-06",
     "glance": {
       "who": "Pete Hegseth (Secretary of Defense)",
-      "what": "Ended the 80-year military flu-vaccine mandate; a recruit outbreak followed and trainee shots were reinstated",
+      "what": "Ended the 80-year military flu-shot mandate; a recruit outbreak and a reported flu death followed",
       "harm": {
         "kind": "physical",
         "certainty": "documented",
         "who": "Basic-training recruits at Lackland"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-10-06"
+    },
+    "timeline": {
+      "what_changed": {
+        "base": "In April 2026, Defense Secretary Pete Hegseth ended the flu vaccine requirement that had applied to all active-duty and reserve U.S. military personnel since 1945, making the annual flu shot optional and citing 'medical autonomy' and religious freedom, describing the prior mandate as 'overly broad and not rational.' At Joint Base San Antonio-Lackland -- the Air Force's primary basic training base -- the flu vaccination rate among incoming recruits fell from nearly 100% under the mandate to about 40% after it became optional. **A flu outbreak began among recruits in early June 2026; by June 17 at least 159 recruits had cases and two were hospitalized, and by June 24 ABC News, citing unnamed sources, reported 275 cumulative cases and four hospitalizations**. Recruit Keon McDaniel experienced a medical emergency during his sixth week of Basic Military Training on June 12 and died at Brooke Army Medical Center on June 16; the Air Force at first said only that the cause was under investigation. Under exceptions the Pentagon granted to the services, the Army, Navy, and Air Force again required flu shots for basic trainees, and AP reported that a Pentagon official said boot camps for all the military services were again requiring the shot; that official, speaking anonymously, maintained the exceptions were unrelated to the outbreak. The underlying policy change for the broader active-duty and reserve force was not reported as reversed.",
+        "updates": [
+          {
+            "date": "2026-10-06",
+            "label": "Update",
+            "text": "Update 2026-10-06: On June 30, Rep. Joaquin Castro said the Air Force had confirmed to him that McDaniel \"died from the flu\"; Castro's office also cited 284 confirmed cases and four hospitalizations. Reps. Castro, Chrissy Houlahan and Gil Cisneros sought an amendment to the FY2027 National Defense Authorization Act requiring flu vaccination for all service members; Houlahan said the House Rules Committee refused to make it in order. A July 15 release from Castro's office, announcing a lawmakers' letter to Hegseth seeking answers on McDaniel's death, cited 285 cases and six hospitalizations.",
+            "effective_date": "2026-10-06"
+          }
+        ]
+      },
+      "confidence_note": {
+        "base": "Strong sourcing: the mandate's end, Hegseth's stated rationale, the vaccination-rate collapse, and the outbreak figures are corroborated across ABC News, The Conversation, and AP, with ABC News independently reporting the subsequent reinstatement of the recruit-specific mandate. The McDaniel death was first reported as cause-unknown and later attributed to the flu by Rep. Castro, citing the Air Force.",
+        "updates": [
+          {
+            "date": "2026-10-06",
+            "label": "Update",
+            "text": "Update 2026-10-06: Re-verified against both ABC News reports and The Conversation, which still say what the entry cites; corrected the hospitalization count (four by June 23, not two), the reinstatement scope and attribution (AP: all boot camps, Pentagon official calls it unrelated to the outbreak), and added the flu attribution of McDaniel's death (The Hill, Spectrum News) and the blocked NDAA amendment (Rep. Houlahan's release). No later reversal of the force-wide policy was found.",
+            "effective_date": "2026-10-06"
+          }
+        ]
+      }
     }
   },
   {
@@ -24948,24 +25031,29 @@
   },
   {
     "id": "irs-ice-data-sharing-errors-2026",
-    "title": "Treasury Watchdog Finds ICE Didn't Meet Data-Safeguarding Standards Before Signing Taxpayer Data-Sharing Deal; Judge Separately Found 47,000 Unlawful Disclosures",
+    "title": "Treasury Watchdog Finds ICE Didn't Meet Data-Safeguarding Standards Before Signing Taxpayer Data-Sharing Deal; Judge Found About 42,695 Unlawful Disclosures, and Appeals Court Upheld Block",
     "institution": "Internal Revenue Service (IRS) / Immigration and Customs Enforcement (ICE), under a Treasury-DHS data-sharing agreement",
     "domain": "data_collection_halted",
-    "status": "Data-sharing agreement remains in effect as of this entry's sourcing; the Treasury Inspector General's findings and the federal court's unlawful-disclosure ruling are both matters of record, with no indication in reporting reviewed that the underlying agreement has been suspended or restructured in response",
-    "date_of_action": "2025-04 (ICE-IRS memorandum of understanding signed) through 2026-06 (Treasury IG report released)",
-    "what_changed": "In April 2025, ICE and the IRS signed a memorandum of understanding allowing ICE to submit names and addresses of immigrants it identified as in the U.S. illegally to the IRS for cross-verification against confidential tax records, supporting the administration's mass-deportation operation. In June 2026, the Treasury Inspector General for Tax Administration (TIGTA) released a partially-redacted report finding that ICE did not meet required data-safeguarding standards before the MOU was signed, and that inconsistent formatting in ICE's submitted data and mismatches with the IRS's own matching criteria produced errors, incomplete records, and improper disclosures of taxpayer information. Separately, **a federal judge ruled in February 2026 that the IRS broke the law by disclosing confidential taxpayer information to ICE, specifically identifying 47,000 unlawful disclosures.**",
+    "status": "A federal court has blocked further IRS address disclosures to ICE since November 2025, and on September 8, 2026 the D.C. Circuit upheld that block; the lawsuit continues. A judge found about 42,695 of the 47,289 addresses already shared were disclosed unlawfully.",
+    "date_of_action": "2025-04 (ICE-IRS memorandum of understanding signed) through 2026-09 (D.C. Circuit upheld the block on disclosures)",
+    "what_changed": "In April 2025, Treasury and DHS signed a memorandum of understanding allowing ICE to submit names and addresses of immigrants it identified as in the U.S. illegally to the IRS for cross-verification against confidential tax records, supporting the administration's mass-deportation operation; the acting IRS commissioner left the agency after it was signed. In summer 2025 ICE requested 1.28 million taxpayer records, and the IRS shared last known addresses for 47,289 people. In November 2025 U.S. District Judge Colleen Kollar-Kotelly blocked further disclosures, and in February 2026 she found **the IRS had violated taxpayer-confidentiality law \"approximately 42,695 times\"** by disclosing addresses through TIN Matching without confirming that ICE had supplied the taxpayer's address. In June 2026, the Treasury Inspector General for Tax Administration (TIGTA) released a partially redacted report finding that ICE did not meet safeguarding standards before the MOU was signed: findings from a November 2023 IRS safeguard review of ICE remained open, ICE had submitted no corrective action plan, and the IRS was \"unable to accurately and consistently match ICE records\" because ICE's data lacked uniform formatting. On September 8, 2026, a unanimous D.C. Circuit panel upheld the block, finding the IRS's data-exchange procedure \"indisputably contravenes the requirements\" of the tax code's confidentiality section.",
     "primary_proponent": {
-      "name": "IRS and DHS/ICE leadership (agreement signed under then-Acting IRS leadership and DHS Secretary Kristi Noem's department)",
-      "role": "Agencies party to the April 2025 data-sharing MOU",
+      "name": "Treasury Secretary Scott Bessent and DHS Secretary Kristi Noem",
+      "role": "Signed the April 2025 IRS-ICE data-sharing MOU",
       "note": "The watchdog's finding that ICE failed to meet safeguarding standards before the MOU was signed places responsibility on the agencies' own pre-agreement vetting process, not solely on downstream implementation errors."
     },
     "estimated_impact": {
-      "summary": "The combination of a documented pre-agreement safeguarding failure (per TIGTA) and a court's independent finding of 47,000 unlawful taxpayer-data disclosures (per the February 2026 ruling) establishes both a systemic design flaw and a concrete, quantified harm: confidential taxpayer information -- information millions of Americans, including immigrants who file taxes using ITINs, provide under a decades-old expectation of confidentiality -- was shared through a system that failed basic data-quality and legal-compliance standards.",
+      "summary": "The combination of a documented pre-agreement safeguarding failure (per TIGTA) and a court's finding that about 42,695 of the 47,289 taxpayer addresses the IRS gave ICE were disclosed unlawfully (per the February 2026 ruling) establishes both a systemic design flaw and a concrete, quantified harm: confidential taxpayer information -- information millions of Americans, including immigrants who file taxes using ITINs, provide under a decades-old expectation of confidentiality -- was shared through a system that failed basic data-quality and legal-compliance standards.",
       "figures": [
         {
-          "metric": "Unlawful taxpayer-data disclosures to ICE, per February 2026 federal court ruling",
-          "value": "47,000",
-          "source": "Federal court ruling, cited by PBS NewsHour/Fox News court-filing coverage"
+          "metric": "Taxpayer addresses the IRS shared with ICE from a 1.28 million-record request (summer 2025)",
+          "value": "47,289",
+          "source": "FedScoop, citing the February 2026 court opinion"
+        },
+        {
+          "metric": "Unlawful address disclosures to ICE found by the district court (February 2026)",
+          "value": "approximately 42,695",
+          "source": "Judge Colleen Kollar-Kotelly's opinion, quoted by FedScoop and CPA Practice Advisor"
         },
         {
           "metric": "Data-sharing agreement effective date",
@@ -24973,10 +25061,10 @@
           "source": "FedScoop, citing TIGTA report"
         }
       ],
-      "caveat": "The TIGTA report reviewed is described as 'partially redacted,' meaning the full scope of the safeguarding failures and error rates is not entirely public; DHS/ICE and IRS leadership's specific response to the watchdog's findings was not identified in reporting reviewed. The 47,000-disclosure court finding and the TIGTA report describe related but distinct failures within the same data-sharing relationship -- a legal violation and a data-quality/safeguarding deficiency, respectively -- and should not be conflated as a single figure."
+      "caveat": "The TIGTA report reviewed is described as 'partially redacted,' meaning the full scope of the safeguarding failures and error rates is not entirely public; DHS/ICE and IRS leadership's specific response to the watchdog's findings was not identified in reporting reviewed. The court's finding of about 42,695 unlawful disclosures and the TIGTA report describe related but distinct failures within the same data-sharing relationship -- a legal violation and a data-quality/safeguarding deficiency, respectively -- and should not be conflated as a single figure."
     },
-    "confidence_note": "HIGH confidence on the TIGTA report's core findings and the February 2026 court ruling's 47,000-disclosure figure, corroborated across FedScoop, Washington Times, PBS NewsHour, and Fox News's direct court-filing coverage. MODERATE confidence on the full scope of data-quality errors given the report's partial redaction.",
-    "last_verified": "2026-08-02",
+    "confidence_note": "HIGH confidence on the TIGTA report's core findings and the February 2026 ruling's figure of about 42,695 unlawful disclosures (of 47,289 addresses shared), corroborated across FedScoop, CPA Practice Advisor, and Courthouse News; Fox News's coverage of an IRS court declaration confirms the roughly 47,000 addresses shared. MODERATE confidence on the full scope of data-quality errors given the report's partial redaction. Re-verified 2026-10-06: the court's figure is about 42,695 unlawful disclosures, not 47,000 (the total shared); the D.C. Circuit upheld the block on further disclosures on September 8, 2026 (FedScoop, Courthouse News, CPA Practice Advisor).",
+    "last_verified": "2026-10-06",
     "sources": [
       {
         "name": "FedScoop -- Watchdog flags security issues with IRS-ICE data-sharing agreement",
@@ -24993,25 +25081,41 @@
       {
         "name": "Fox News -- 'IRS erroneously shared confidential immigrant taxpayer data with DHS: court filing'",
         "url": "https://www.foxnews.com/politics/irs-erroneously-shared-confidential-immigrant-taxpayer-data-dhs-court-filing"
+      },
+      {
+        "name": "FedScoop -- IRS broke the law more than 40K times by sharing addresses with ICE, judge says",
+        "url": "https://fedscoop.com/irs-broke-law-ice-data-sharing-taxpayer-addresses-judge-rules/"
+      },
+      {
+        "name": "Courthouse News -- DC Circuit rules IRS data sharing plan with ICE unlawful",
+        "url": "https://www.courthousenews.com/dc-circuit-rules-irs-data-sharing-plan-with-ice-unlawful/"
+      },
+      {
+        "name": "FedScoop -- Appeals court keeps block on IRS from sharing taxpayer data with ICE",
+        "url": "https://fedscoop.com/irs-ice-data-sharing-appeals-court-block/"
+      },
+      {
+        "name": "CPA Practice Advisor -- Appeals court upholds block on IRS-ICE taxpayer data-sharing deal",
+        "url": "https://www.cpapracticeadvisor.com/2026/09/09/appeals-court-upholds-block-on-irs-ice-taxpayer-data-sharing-deal/189889/"
       }
     ],
     "section_summaries": {
-      "what_changed": "A Treasury watchdog found ICE failed to meet data-safeguarding standards before an April 2025 IRS-ICE taxpayer data-sharing deal, and a federal judge separately found 47,000 unlawful disclosures of confidential taxpayer data under the same relationship.",
+      "what_changed": "A Treasury watchdog found ICE hadn't met safeguarding standards before a 2025 IRS-ICE data deal; a judge found about 42,695 unlawful address disclosures, and courts have blocked more.",
       "estimated_impact": "The failures span both pre-agreement vetting and downstream data quality, exposing confidential taxpayer information through a system a federal court has already found violated the law.",
       "confidence_note": "Well-corroborated core findings from a watchdog report and a court ruling; the TIGTA report's partial redaction limits full visibility into the error rate."
     },
     "last_updated": "2026-08-02",
     "date_added": "2026-08-02",
-    "last_substantive_update": "2026-08-02",
+    "last_substantive_update": "2026-10-06",
     "glance": {
       "who": "IRS and ICE, under a 2025 data-sharing deal",
-      "what": "IRS-ICE data deal: Treasury IG found safeguards unmet; a judge found 47,000 unlawful disclosures",
+      "what": "IRS-ICE data deal: Treasury IG found safeguards unmet; a judge found ~42,695 unlawful disclosures",
       "harm": {
         "kind": "institutional",
         "certainty": "documented",
         "who": "Taxpayer data confidentiality"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-10-06"
     }
   },
   {
@@ -32172,16 +32276,16 @@
     "title": "NSF Announced Dismantling 80% of $368M Ocean Monitoring Network, Then Reversed Course After Bipartisan Congressional Revolt",
     "institution": "National Science Foundation (NSF)",
     "domain": "data_collection_halted",
-    "status": "Reversed -- NSF announced in mid-June 2026 it would terminate the dismantlement plan and reinstall already-removed Pacific Northwest instruments, following bipartisan Senate and House letters demanding the array's preservation",
+    "status": "Reversed -- NSF dropped the plan June 18, 2026, after bipartisan Senate and House letters and Senate passage of the Saving the OOI Act; redeployment of the removed Pacific Northwest equipment began with gliders in July, with moorings scheduled for October 2026 and spring 2027",
     "date_of_action": "2026-05 (dismantlement announced) through 2026-06-18 (reversal announced)",
-    "what_changed": "In May 2026, NSF announced plans to remove roughly 900 deep-sea instruments from the Ocean Observatories Initiative (OOI), a $368 million network operating continuously since 2016 that monitors ocean currents, marine heat waves, carbon absorption, coastal flooding risk, fisheries conditions, and broader climate indicators across sites off Oregon, Washington, Alaska, North Carolina, and the Irminger Sea between Greenland and Iceland. **NSF said it would begin removing instruments in June 2026, projecting roughly $48 million in annual operational savings, and had in fact begun removing equipment from Pacific Northwest waters before Congress intervened.** On June 16, 2026, a bipartisan group of senators -- led by Democrat Jeff Merkley and Republican Lisa Murkowski, joined by Sens. Markey, Warren, Baldwin, Murray, Cantwell, Whitehouse, Van Hollen, and Wyden -- sent a letter to NSF directing it to terminate the dismantlement plan and maintain the array; House lawmakers sent a parallel letter the same day. On June 18, 2026, NSF issued an unsigned statement reversing course: it would terminate the plan to disband 80% of OOI and reinstall the equipment already removed from Pacific Northwest waters.",
+    "what_changed": "In May 2026, NSF announced plans to remove roughly 900 deep-sea instruments from the Ocean Observatories Initiative (OOI), a $368 million network operating continuously since 2016 that monitors ocean currents, marine heat waves, carbon absorption, coastal flooding risk, fisheries conditions, and broader climate indicators across sites off Oregon, Washington, Alaska, North Carolina, and the Irminger Sea between Greenland and Iceland. **NSF said the removal would take about 15 months and would save $48 million a year in operating costs, and it had already begun removing equipment from Pacific Northwest waters before Congress intervened.** Most of the Endurance Array off the Pacific Northwest had already been paused before the announcement: the OOI program says that in September 2025 NSF allowed the Oregon Shelf mooring to remain in the water through spring 2026, \"even as most other moorings in the array were paused,\" and the Daily Barometer reported that the array \"consisted of seven moorings and four gliders in summer 2025. By early June 2026, only one mooring and one glider were still in the water.\" On June 15, 2026, a bipartisan group of senators -- led by Democrat Jeff Merkley and Republican Lisa Murkowski, joined by Sens. Markey, Warren, Baldwin, Murray, Cantwell, Whitehouse, Van Hollen, Wyden, and Reed -- sent a letter to NSF directing it to terminate the dismantlement plan and maintain the array; House Democrats sent a parallel letter the same day. On June 17, the Senate passed Merkley and Murkowski's Saving the OOI Act by voice vote; the bill, which has not passed the House, would bar federal funds for decommissioning the system until NSF conducts a thorough review. On June 18, 2026, NSF issued an unsigned statement reversing course: it would terminate the plan to disband 80% of OOI, would \"not proceed with further removal or descoping of equipment from the remaining arrays,\" and was \"developing plans to redeploy\" the Endurance Array equipment already removed from Pacific Northwest waters.\n\nUpdate 2026-10-06: NSF began a phased redeployment of the Endurance Array in summer 2026, starting with gliders off Oregon and Washington; the OOI program said several moorings were scheduled to go back in aboard the R/V Revelle in early October, with spring 2027 redeployments planned to fully restore the array. On July 30, Merkley and Murkowski wrote to Acting Director Brian Stone asking for an update on restoring all OOI capabilities, citing budget uncertainty, and noting NSF had not yet begun collecting the stakeholder input it promised. NSF issued the promised Dear Colleague Letter seeking that input (NSF 26-024) on August 27, with responses due September 30. Oregon State oceanographer Ed Dever told OPB the gap in the removed instruments' record is permanent: \"Once it's out, it's out.\"",
     "primary_proponent": {
-      "name": "National Science Foundation leadership (unsigned June 18, 2026 reversal statement; original dismantlement announcement made under NSF's Trump-appointed leadership)",
+      "name": "National Science Foundation under Acting Director Brian Stone (unsigned June 18, 2026 reversal statement; no source names who ordered the May 21 descoping)",
       "role": "Federal agency responsible for basic-science funding and infrastructure, including OOI",
-      "note": "NSF's original decision to dismantle 80% of a $368 million active climate-monitoring network -- and its reversal only after direct, bipartisan congressional intervention -- is the accountability record this entry documents; no single named official's public statement defending the original dismantlement decision was identified in reporting reviewed."
+      "note": "NSF's original decision to dismantle 80% of a $368 million active climate-monitoring network -- and its reversal only after direct, bipartisan congressional intervention -- is the accountability record this entry documents; the main named defense of the original decision found is a June emailed statement from NSF spokesperson Mike England (reported by OPB) that the descoping \"aligns with NSF's wider strategy of a nimbler approach.\""
     },
     "estimated_impact": {
-      "summary": "Scientists and lawmakers characterized the initial plan as eliminating one of the only continuous, real-time ocean-climate monitoring systems along U.S. coasts at a moment of accelerating climate risk, warning it would create a lasting data gap for tracking phenomena like Atlantic Meridional Overturning Circulation (AMOC) slowdown, marine heat waves, and coastal flooding risk. The bipartisan, cross-chamber reversal within roughly five weeks of the announcement is itself notable: an unusually fast congressional check on an agency-level dismantlement decision, in contrast to many other entries in this tracker where similar actions proceeded without reversal.",
+      "summary": "Scientists and lawmakers characterized the initial plan as eliminating one of the only continuous, real-time ocean-climate monitoring systems along U.S. coasts at a moment of accelerating climate risk, warning it would create a lasting data gap for tracking phenomena like Atlantic Meridional Overturning Circulation (AMOC) slowdown, marine heat waves, and coastal flooding risk. The bipartisan, cross-chamber reversal within four weeks of the announcement is itself notable: an unusually fast congressional check on an agency-level dismantlement decision, in contrast to many other entries in this tracker where similar actions proceeded without reversal.",
       "figures": [
         {
           "metric": "Ocean Observatories Initiative total program value",
@@ -32196,24 +32300,24 @@
         {
           "metric": "Projected annual operational savings from the (reversed) dismantlement",
           "value": "~$48,000,000/year",
-          "source": "NSF, cited by multiple outlets"
+          "source": "NSF's May 21, 2026 announcement, as reported by the Provincetown Independent"
         },
         {
           "metric": "Share of OOI NSF initially planned to disband",
           "value": "~80%",
-          "source": "NSF's June 18, 2026 reversal statement, cited by multiple outlets"
+          "source": "E&E News/POLITICO's account of NSF's June 18, 2026 reversal statement"
         },
         {
           "metric": "Time from dismantlement announcement to reversal",
-          "value": "~5 weeks (May 2026 to June 18, 2026)",
-          "source": "Timeline derived from Eos/CNN/E&E News reporting"
+          "value": "4 weeks (May 21, 2026 to June 18, 2026)",
+          "source": "Timeline derived from Eos and NSF's June 18 statement"
         }
       ],
-      "caveat": "This entry documents a reversed action -- unlike most staff/funding cuts in this tracker, the dismantlement did not proceed to completion, and the instruments already removed from Pacific Northwest waters were slated for reinstallation per NSF's own June 18 statement. It remains a legitimate accountability record because the initial decision to dismantle 80% of an active, congressionally-funded climate-monitoring system was made and partially executed before being reversed only under direct, bipartisan legislative pressure -- not on NSF's own initiative. Reporting reviewed does not specify a timeline for full reinstallation completion or confirm all Pacific Northwest instruments have in fact been reinstalled as of this entry's sourcing."
+      "caveat": "This entry documents a reversed action -- unlike most staff/funding cuts in this tracker, the dismantlement did not proceed to completion, and the instruments already removed from Pacific Northwest waters were slated for reinstallation per NSF's own June 18 statement. It remains a legitimate accountability record because the initial decision to dismantle 80% of an active, congressionally-funded climate-monitoring system was made and partially executed before being reversed only under direct, bipartisan legislative pressure -- not on NSF's own initiative. Reinstallation is phased: gliders returned in summer 2026, several moorings were scheduled for early October 2026, and the OOI program planned spring 2027 redeployments to fully restore the Endurance Array. Scientists told OPB the months the array spent out of the water leave a permanent gap in its data record."
     },
-    "confidence_note": "HIGH confidence on both the original dismantlement announcement and the June 18, 2026 reversal, corroborated across CNN, Eos, Newsweek, Inside Climate News, ABC News, PBS NewsHour, and E&E News/POLITICO, including direct citation of the bipartisan Senate letter's signatories. HIGH confidence on the reversal being a direct response to congressional pressure specifically, given the tight timeline between the June 16 letters and June 18 NSF statement reported consistently across outlets.",
+    "confidence_note": "HIGH confidence on both the original dismantlement announcement and the June 18, 2026 reversal, corroborated across CNN, Eos, Newsweek, Inside Climate News, ABC News, PBS NewsHour, and E&E News/POLITICO, including direct citation of the bipartisan Senate letter's signatories. HIGH confidence on the reversal being a direct response to congressional pressure specifically, given the tight timeline between the June 15 letters and June 18 NSF statement reported consistently across outlets. Re-verified 2026-10-06: NSF's June 18 statement, E&E News and CNN still confirm the reversal; corrected the letters' date to June 15 (Merkley's release and Eos), added Sen. Jack Reed as a signatory and the June 17 Senate passage of the Saving the OOI Act, corrected the announcement-to-reversal span to four weeks (May 21 to June 18), and added the phased Endurance Array redeployment (OOI program, OPB) and NSF's August 27 Dear Colleague Letter. HIGH confidence that redeployment began; whether the October moorings went in was not yet reported.",
     "pull_quote": "Scientists and lawmakers warned the dismantlement would create a lasting data gap for tracking phenomena like Atlantic Meridional Overturning Circulation (AMOC) slowdown, marine heat waves, and coastal flooding risk.",
-    "last_verified": "2026-08-02",
+    "last_verified": "2026-10-06",
     "sources": [
       {
         "name": "Eos -- Trump Administration to Remove Hundreds of Deep-Ocean Observation Instruments, Dismantling $368 Million Program",
@@ -32242,16 +32346,52 @@
       {
         "name": "Newsweek -- 'Trump Admin Just Rolled Back $368M Ocean Monitoring System'",
         "url": "https://www.newsweek.com/ocean-observatories-initiative-cut-back-donald-trump-climate-12023015"
+      },
+      {
+        "name": "NSF -- Update on Ocean Observatories Initiative (June 18, 2026)",
+        "url": "https://www.nsf.gov/news/update-ocean-observatories-initiative"
+      },
+      {
+        "name": "Sen. Merkley -- Merkley, Murkowski Lead Bipartisan Push to Protect U.S. Ocean Monitoring Systems (June 15, 2026)",
+        "url": "https://www.merkley.senate.gov/merkley-murkowski-lead-bipartisan-push-to-protect-u-s-ocean-monitoring-systems/"
+      },
+      {
+        "name": "Provincetown Independent -- Trump Administration Removes, Then Restores, Ocean Science Instruments",
+        "url": "https://provincetownindependent.org/featured/2026/07/08/trump-administration-removes-then-restores-ocean-science-instruments/"
+      },
+      {
+        "name": "Sen. Merkley -- Merkley, Murkowski Continue Oversight of Restoring NSF Ocean Monitoring Systems (July 30, 2026)",
+        "url": "https://www.merkley.senate.gov/merkley-murkowski-continue-oversight-of-restoring-nsf-ocean-monitoring-systems/"
+      },
+      {
+        "name": "Ocean Observatories Initiative -- NSF Advances Endurance Array Redeployment (July 30, 2026)",
+        "url": "https://oceanobservatories.org/2026/07/nsf-advances-endurance-array-redeployment/"
+      },
+      {
+        "name": "OPB -- Northwest's yanked ocean observatories start to return to sea",
+        "url": "https://www.opb.org/article/2026/07/31/northwest-scientists-ocean-observatories-return-to-sea/"
+      },
+      {
+        "name": "NSF -- Share your thoughts on future NSF ocean observing priorities (Dear Colleague Letter NSF 26-024)",
+        "url": "https://www.nsf.gov/geo/updates/share-your-thoughts-future-nsf-ocean-observing-priorities"
+      },
+      {
+        "name": "Ocean Observatories Initiative -- Endurance Array posts (Oregon Shelf mooring kept in through spring 2026)",
+        "url": "https://oceanobservatories.org/tag/endurance-array/"
+      },
+      {
+        "name": "Daily Barometer -- Ocean Observatories Initiative to resume after descoping (July 20, 2026)",
+        "url": "https://dailybaro.orangemedianetwork.com/32413/daily-barometer-news/ocean-observatories-initiative-to-resume-after-descoping/"
       }
     ],
     "section_summaries": {
-      "what_changed": "NSF announced dismantling 80% of a 900-instrument, $368M ocean-climate monitoring network, then reversed the plan within about five weeks after bipartisan congressional demands.",
+      "what_changed": "NSF announced dismantling 80% of a 900-instrument, $368M ocean-climate monitoring network, then reversed the plan within four weeks after bipartisan congressional demands.",
       "estimated_impact": "The reversal came only after direct legislative pressure, not on NSF's own initiative, following removal of some Pacific Northwest instruments before Congress intervened.",
       "confidence_note": "Both the original decision and the reversal are well-corroborated across many independent outlets with consistent timelines."
     },
     "last_updated": "2026-08-02",
     "date_added": "2026-08-02",
-    "last_substantive_update": "2026-08-02",
+    "last_substantive_update": "2026-10-06",
     "glance": {
       "who": "NSF leadership",
       "what": "Removed some Pacific NW ocean instruments in a plan to disband 80% of the $368M network; reversed June 18",
@@ -32260,7 +32400,20 @@
         "certainty": "documented",
         "who": "Ocean climate monitoring network"
       },
-      "reviewed": "2026-09-21"
+      "reviewed": "2026-10-06"
+    },
+    "timeline": {
+      "what_changed": {
+        "base": "In May 2026, NSF announced plans to remove roughly 900 deep-sea instruments from the Ocean Observatories Initiative (OOI), a $368 million network operating continuously since 2016 that monitors ocean currents, marine heat waves, carbon absorption, coastal flooding risk, fisheries conditions, and broader climate indicators across sites off Oregon, Washington, Alaska, North Carolina, and the Irminger Sea between Greenland and Iceland. **NSF said the removal would take about 15 months and would save $48 million a year in operating costs, and it had already begun removing equipment from Pacific Northwest waters before Congress intervened.** Most of the Endurance Array off the Pacific Northwest had already been paused before the announcement: the OOI program says that in September 2025 NSF allowed the Oregon Shelf mooring to remain in the water through spring 2026, \"even as most other moorings in the array were paused,\" and the Daily Barometer reported that the array \"consisted of seven moorings and four gliders in summer 2025. By early June 2026, only one mooring and one glider were still in the water.\" On June 15, 2026, a bipartisan group of senators -- led by Democrat Jeff Merkley and Republican Lisa Murkowski, joined by Sens. Markey, Warren, Baldwin, Murray, Cantwell, Whitehouse, Van Hollen, Wyden, and Reed -- sent a letter to NSF directing it to terminate the dismantlement plan and maintain the array; House Democrats sent a parallel letter the same day. On June 17, the Senate passed Merkley and Murkowski's Saving the OOI Act by voice vote; the bill, which has not passed the House, would bar federal funds for decommissioning the system until NSF conducts a thorough review. On June 18, 2026, NSF issued an unsigned statement reversing course: it would terminate the plan to disband 80% of OOI, would \"not proceed with further removal or descoping of equipment from the remaining arrays,\" and was \"developing plans to redeploy\" the Endurance Array equipment already removed from Pacific Northwest waters.",
+        "updates": [
+          {
+            "date": "2026-10-06",
+            "label": "Update",
+            "text": "Update 2026-10-06: NSF began a phased redeployment of the Endurance Array in summer 2026, starting with gliders off Oregon and Washington; the OOI program said several moorings were scheduled to go back in aboard the R/V Revelle in early October, with spring 2027 redeployments planned to fully restore the array. On July 30, Merkley and Murkowski wrote to Acting Director Brian Stone asking for an update on restoring all OOI capabilities, citing budget uncertainty, and noting NSF had not yet begun collecting the stakeholder input it promised. NSF issued the promised Dear Colleague Letter seeking that input (NSF 26-024) on August 27, with responses due September 30. Oregon State oceanographer Ed Dever told OPB the gap in the removed instruments' record is permanent: \"Once it's out, it's out.\"",
+            "effective_date": "2026-10-06"
+          }
+        ]
+      }
     }
   },
   {
