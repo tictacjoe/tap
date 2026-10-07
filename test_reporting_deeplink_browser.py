@@ -48,7 +48,7 @@ def _goto(browser, site_url, fragment):
     page = browser.new_context(viewport={"width": 1280, "height": 900}).new_page()
     errors = []
     page.on("pageerror", lambda e: errors.append(str(e)))
-    page.goto(f"{site_url}/index.html#{fragment}", wait_until="networkidle")
+    page.goto(f"{site_url}/index.html" + (f"#{fragment}" if fragment else ""), wait_until="networkidle")
     page.wait_for_timeout(1500)
     return page, errors
 
@@ -89,7 +89,10 @@ def test_an_old_reporting_item_past_the_render_cap_is_drawn_and_opened(browser, 
     card = page.locator(f'.entry[data-entry-id="{old}"]')
     assert card.count() == 1
     assert "linked-item" in card.get_attribute("class") and "open" in card.get_attribute("class")
+    assert "deep-linked" in card.get_attribute("class")
     assert page.locator("#entries > .entry").first.get_attribute("data-entry-id") == old
+    # Once the highlight ends the card must still say why it sits above newer items.
+    assert card.locator(".linked-item-tag").text_content().strip() == "Linked item"
     assert errors == []
 
 
@@ -114,6 +117,9 @@ def test_the_highlight_fades(browser, site_url):
     page, _ = _goto(browser, site_url, "prosecution/" + CURATED_ID)
     page.wait_for_timeout(page.evaluate("DEEP_LINK_HIGHLIGHT_MS") + 300)
     assert page.locator(".entry.deep-linked").count() == 0
+    # The transition must outlive the class, or the highlight snaps off instead of fading.
+    card = page.locator(f'.entry[data-entry-id="{CURATED_ID}"]')
+    assert card.evaluate("c => getComputedStyle(c).transitionDuration") != "0s"
 
 
 def test_reporting_cards_offer_copy_link_with_their_id(browser, site_url):
@@ -138,3 +144,36 @@ def test_a_second_link_replaces_the_first_drawn_card_and_back_redraws_it(browser
     page.wait_for_timeout(800)
     assert page.locator(".entry.linked-item").count() == 1
     assert page.locator(f'.entry[data-entry-id="{old[0]}"].open').count() == 1
+
+
+def test_a_headlines_jump_to_an_old_reporting_row_opens_it_and_back_forward_replay(browser, site_url):
+    """The real Headlines button, not a simulated jump: load Headlines rows until a Reporting row whose
+    card is outside the 300 drawn appears, click it, then Back (Headlines) and Forward (the card again)."""
+    page, errors = _goto(browser, site_url, "")  # the plain page; Headlines is reached from there
+    page.evaluate("selectDatabaseTab('headlines')")
+    page.wait_for_timeout(800)
+    for _ in range(15):
+        more = page.locator("#headlines-load-more-btn")
+        if not more.is_visible():
+            break
+        more.click()
+        page.wait_for_timeout(300)
+    buttons = page.locator(".headline-row-tracker")
+    last = next((i for i in range(buttons.count() - 1, -1, -1)
+                 if "Reporting" in (buttons.nth(i).get_attribute("title") or "") and buttons.nth(i).is_visible()), None)
+    if last is None:
+        pytest.skip("no visible Reporting row among the loaded Headlines rows")
+    buttons.nth(last).click()
+    page.wait_for_timeout(1000)
+    item = page.evaluate("history.state.id")
+    if page.locator(f'#entries > .entry:not(.linked-item)[data-entry-id="{item}"]').count():
+        pytest.skip("the oldest loaded Reporting row is among the 300 drawn")
+    assert page.locator(f'.entry.linked-item.open[data-entry-id="{item}"]').count() == 1
+    page.go_back()
+    page.wait_for_timeout(1000)
+    assert page.evaluate("activeTracker") == "headlines"
+    page.go_forward()
+    page.wait_for_timeout(1000)
+    assert page.locator(f'.entry.linked-item.open[data-entry-id="{item}"]').count() == 1
+    assert page.locator(".entry.linked-item").count() == 1
+    assert errors == []

@@ -732,8 +732,15 @@
   }
   .entry.open .entry-detail { display: block; }
   .entry.open .entry-head { background: var(--brass-light); }
-  /* Brief highlight on a card opened by a deep link (openCardById). */
-  .entry.deep-linked { box-shadow: 0 0 0 3px var(--highlight); transition: box-shadow 0.6s ease-out; }
+  /* Brief highlight on a card opened by a deep link (openCardById). The
+     transition sits on .entry, not .entry.deep-linked, so it outlives the
+     class and the highlight fades out instead of snapping off. */
+  .entry { transition: box-shadow 0.6s ease-out; }
+  .entry.deep-linked { box-shadow: 0 0 0 3px var(--highlight); }
+  /* Marks a Reporting card drawn on demand above the list (it is older than
+     the items around it, so it says why it is there). */
+  .linked-item-tag { display: inline-block; margin-right: 8px; padding: 0 6px; border: 1px solid var(--highlight);
+    border-radius: 3px; font-size: 0.85em; text-transform: uppercase; letter-spacing: 0.04em; }
 
   /* Cabinet-Level Accountability's "List by individual" grouping --
      same collapsed-header/expand-on-click idiom as .entry-head, one
@@ -4900,6 +4907,11 @@ function openCardById(id) {
     }
     card = buildEntryCard(entry, cfg, "LINKED ITEM", null, "", false);
     card.classList.add("linked-item");
+    const tag = document.createElement("span");
+    tag.className = "linked-item-tag";
+    tag.textContent = "Linked item";
+    const meta = card.querySelector(".entry-meta") || card.querySelector(".entry-head");
+    meta.prepend(tag);
     container.prepend(card);
   }
   if (!card) return false;
