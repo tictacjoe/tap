@@ -732,6 +732,8 @@
   }
   .entry.open .entry-detail { display: block; }
   .entry.open .entry-head { background: var(--brass-light); }
+  /* Brief highlight on a card opened by a deep link (openCardById). */
+  .entry.deep-linked { box-shadow: 0 0 0 3px var(--highlight); transition: box-shadow 0.6s ease-out; }
 
   /* Cabinet-Level Accountability's "List by individual" grouping --
      same collapsed-header/expand-on-click idiom as .entry-head, one
@@ -4868,19 +4870,49 @@ function goToTrackerHome(key) {
 // and openEntryFromHash() (after the initial page load lands on a
 // shared-link URL) -- both need the exact same "find it, expand its
 // group if collapsed, open it, scroll to it" sequence. Silently no-ops
-// if the id isn't found (renamed/removed entry, or a stale/bad link)
-// rather than crashing or showing a misleading result.
+// if a curated id isn't found (renamed/removed entry, or a stale/bad
+// link) rather than crashing or showing a misleading result.
+//
+// Reporting (connector phase 5, 2026-10-07): the tab draws only its top
+// 300 items, so a linked item outside them is drawn on demand at the top
+// of the list (.linked-item). An id Reporting doesn't list -- changed,
+// moved, or in a category the tab leaves out -- gets a short note
+// (.deep-link-note) instead of a silent jump. Any card opened here gets a
+// brief highlight (.deep-linked). Returns true when a card was opened.
+const DEEP_LINK_HIGHLIGHT_MS = 2500;
+const DEEP_LINK_NOTE = "This Reporting item isn't on TAP's Reporting tab: it may have changed or moved, " +
+  "or be in a category the tab leaves out. Search Reporting for related coverage.";
+
 function openCardById(id) {
-  const card = document.querySelector('.entry[data-entry-id="' + CSS.escape(id) + '"]');
-  if (!card) return;
+  const container = document.getElementById("entries");
+  // A second jump in the same visit must not stack earlier on-demand cards or notes.
+  container.querySelectorAll(":scope > .linked-item, :scope > .deep-link-note").forEach(el => el.remove());
+  let card = container.querySelector('.entry[data-entry-id="' + CSS.escape(id) + '"]');
+  if (!card && activeTracker === "tracker") {
+    const cfg = TRACKERS.tracker;
+    const entry = cfg.data.find(e => e.id === id);
+    if (!entry) {
+      const note = document.createElement("div");
+      note.className = "empty-state deep-link-note";
+      note.textContent = DEEP_LINK_NOTE;
+      container.prepend(note);
+      return false;
+    }
+    card = buildEntryCard(entry, cfg, "LINKED ITEM", null, "", false);
+    card.classList.add("linked-item");
+    container.prepend(card);
+  }
+  if (!card) return false;
   // Cabinet-Level Accountability can be in the grouped "List by individual"
   // view -- if this card landed inside a collapsed .official-group, opening
   // just the card leaves it in a display:none ancestor. Open the group too so
   // the deep link actually shows something.
   const group = card.closest(".official-group");
   if (group) group.classList.add("open");
-  card.classList.add("open");
+  card.classList.add("open", "deep-linked");
+  setTimeout(() => card.classList.remove("deep-linked"), DEEP_LINK_HIGHLIGHT_MS);
   card.scrollIntoView({ behavior: "smooth", block: "start" });
+  return true;
 }
 
 function jumpToRelatedEntry(trackerField, id) {
