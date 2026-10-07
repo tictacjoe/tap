@@ -39,6 +39,7 @@ test_publish.py
 test_timeline_corpus.py
 test_claim_checks_corpus.py
 test_evidence_drawer_browser.py
+test_reporting_deeplink_browser.py
 ```
 
 ## Glance cards
