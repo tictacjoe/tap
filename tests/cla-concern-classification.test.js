@@ -67,11 +67,13 @@ test("the new rules do not change classification for any entry the site actually
   // Regression guard: rerun both classifiers over the full published dataset and confirm the residual
   // "matched by neither classifier" bucket only shrank (88 -> 34 as of the 2026-09-21 narrowing pass),
   // never grew, and no entry that already had a real Violation Type lost it.
+  // 34 -> 42 on 2026-10-07 from data alone: the tracker grew 273 -> 288 entries and rechecks reworded some
+  // offense_category text; the current classifiers still give exactly 34 on the 2026-09-21 data (beea173).
   const data = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "data", "prosecution.json"), "utf8"));
   let residual = 0;
   for (const e of data) {
     const v = classifyOffenseCategory(e.offense_category);
     if (v === "Other/Unclassified" && classifyConcernType(e.offense_category) === "Other/Unclassified") residual++;
   }
-  assert.equal(residual, 34, "residual Other/Unclassified count drifted -- update this number deliberately if the ruleset or data changed");
+  assert.equal(residual, 42, "residual Other/Unclassified count drifted -- update this number deliberately if the ruleset or data changed");
 });
