@@ -1599,7 +1599,7 @@ const TRACKERS = {
     label: "Reporting",
     data: [],
     titleField: "what_happened",
-    idField: null,
+    idField: "id",
     dateField: "date",
     dateAddedField: null,
     filterField: null,
@@ -1659,6 +1659,7 @@ function flattenTrackerPosts(posts) {
   (posts || []).forEach(post => {
     (post.entries || []).forEach(entry => {
       flat.push({
+        id: entry.id || null,
         date: entry.date || post.date,
         category: entry.category || post.category || "Uncategorized",
         what_happened: entry.what_happened || "",
@@ -2014,11 +2015,10 @@ function adaptReportingEntry(entry) {
     date: entry.date || null,
     tracker: "tracker",
     category: entry.category || null,
-    // Reporting has no idField (raw scraped posts, not individually
-    // stamped with a stable id) -- explicitly null rather than omitted,
-    // so buildHeadlineRow()'s "can this row deep-link to its own card?"
-    // check has a real value to test instead of relying on undefined.
-    id: null,
+    // Each item's permanent Reporting id (tracker/reporting_ids.py, published
+    // since 2026-10-07), so the Headlines jump button and #tracker/<id> links
+    // can open this exact card. null only for an item published without one.
+    id: entry.id || null,
   });
 }
 /* adapt-reporting-entry:end */
@@ -2154,16 +2154,13 @@ function buildHeadlineRow(item, displayDate) {
   }
 
   // The tracker abbreviation is a real jump-tab, not just a label.
-  // Deregulation/Cabinet-Level Accountability/Government Service
-  // Redirection items carry the source entry's own id (see the
-  // adapt*Entry() functions above), so for those it reuses the same
-  // goToTrackerHome() + openCardById() pair the "Copy link" hash-based
-  // deep link already relies on -- lands directly on that entry's own
-  // card, opened and scrolled to. Reporting items have no id (raw
-  // scraped posts, no idField on that tracker at all -- see
-  // adaptReportingEntry()), so there's nothing to deep-link to; those
-  // fall back to just switching the database dropdown to Reporting's
-  // home view instead.
+  // Every item carries its source entry's own id (see the adapt*Entry()
+  // functions above; Reporting items since 2026-10-07), so it reuses the
+  // same goToTrackerHome() + openCardById() pair the "Copy link"
+  // hash-based deep link relies on -- lands directly on that entry's own
+  // card, opened and scrolled to (a Reporting card outside the 300 drawn
+  // is drawn on demand by openCardById()). An item with no id falls back
+  // to just switching the database dropdown to that tracker's home view.
   const dbBtn = document.createElement("button");
   dbBtn.type = "button";
   dbBtn.className = "share-link-btn headline-row-tracker";
@@ -4900,11 +4897,11 @@ function jumpToRelatedEntry(trackerField, id) {
 // goToTrackerHome() (not a bare activeTracker assignment -- that resets
 // filter, sort and grouping to the tracker's defaults, so a stale choice
 // from the page's first tracker cannot carry over), and opens + scrolls to the card via the
-// same openCardById() used for in-page related-entry jumps. Only
-// trackers with a unique idField are linkable -- Reporting (kind
-// "tracker") has none, so a hash naming it (or any unknown/malformed
-// hash) is silently ignored rather than producing a misleading partial
-// jump. Deliberately one-shot: doesn't keep rewriting the hash as the
+// same openCardById() used for in-page related-entry jumps. Every
+// tracker has a unique idField (Reporting's since 2026-10-07: links are
+// #tracker/<id>); an unknown tracker key or a malformed hash is
+// silently ignored rather than producing a misleading partial jump.
+// Deliberately one-shot: doesn't keep rewriting the hash as the
 // visitor browses afterward.
 function openEntryFromHash() {
   const hash = window.location.hash.replace(/^#/, "");

@@ -329,3 +329,27 @@ test("adaptDeregulationEntry without cause keeps its fullest tier unchanged", ()
   const r = fns.adaptDeregulationEntry({ what_changed: "W.", estimated_health_impact: { summary: "S." } });
   assert.equal(r.tiers[2], "W. At stake: S.");
 });
+
+// Connector phase 5 (2026-10-07): Reporting items carry their permanent id so
+// #tracker/<id> links and the Headlines jump button can open the exact card.
+test("flattenTrackerPosts keeps each Reporting item's permanent id", () => {
+  const flat = fns.flattenTrackerPosts([
+    { date: "2026-01-02", title: "Day 1", entries: [
+      { id: "aaaaaaaaaaaaaaa1", what_happened: "One.", category: "Corruption" },
+      { what_happened: "Two, no id.", category: "Corruption" },
+    ] },
+  ]);
+  assert.equal(flat[0].id, "aaaaaaaaaaaaaaa1");
+  assert.equal(flat[1].id, null);
+});
+
+test("adaptReportingEntry carries the item id so Headlines can jump to its card", () => {
+  assert.equal(fns.adaptReportingEntry({ id: "bbbbbbbbbbbbbbb2", what_happened: "x", date: "2026-01-01" }).id,
+               "bbbbbbbbbbbbbbb2");
+  assert.equal(fns.adaptReportingEntry({ what_happened: "x", date: "2026-01-01" }).id, null);
+});
+
+test("the Reporting tracker declares id as its idField", () => {
+  const block = source.slice(source.indexOf("  tracker: {"), source.indexOf("  communitytopics: {"));
+  assert.match(block, /idField: "id",/);
+});
