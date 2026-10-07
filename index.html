@@ -2843,6 +2843,29 @@ function classifyConcernType(raw) {
     [/alleged obstruction\/cover-up|obstruction-adjacent|cover-up of/, "Alleged Obstruction or Cover-Up (Non-Adjudicated)"],
     [/evasion of court-ordered (testimony|deposition)/, "Evasion of Court-Ordered Testimony"],
     [/no criminal or civil legal violation established|not an allegation of illegality|judicially-sustained administration action/, "Executive Action With No Established Legal Violation (Policy Dispute)"],
+    // Added 2026-10-07 for the 42 entries (of 288) neither classifier matched. Appended
+    // last, so they only see text every rule above missed: no classified entry moves.
+    // Three new labels name patterns several entries share (election administration,
+    // court orders/statutory deadlines) or that no label covered (withheld information,
+    // an alleged campaign-finance violation); the rest reuse labels above.
+    [/federal election campaign act|soft-money violation/, "Alleged Campaign-Finance Violation (Non-Adjudicated)"],
+    [/election administration|voter.registration (data|systems)|investigations into ineligible vot/, "Federal Reach Into Election Administration"],
+    [/resisting a federal court's orders|non-?compliance with (federal court orders|a statutory deadline)|failure to honor a legally required/, "Noncompliance With Court Orders or Statutory Deadlines"],
+    [/withholding combat casualty information|withholding .{0,40}information from the public/, "Information Withheld From the Public"],
+    [/indictment of a civil rights attorney|federal investigative overreach|abuse of federal investigative power|'special' grand jury/, "Investigative Power Used Against Critics/Institutions"],
+    [/judicial.independence/, "Institutional Independence / Prosecutorial Integrity Concern"],
+    [/prosecution of a journalist/, "Press Freedom / Newsgathering Interference"],
+    [/blocking investigation of|potential obstruction/, "Alleged Obstruction or Cover-Up (Non-Adjudicated)"],
+    [/false public claims/, "Public Misrepresentation to Public or Congress"],
+    [/historically racist legal arguments|terrorism-related charges to protest/, "Civil Liberties / Discriminatory Targeting Concern"],
+    [/deport u\.s\. citizens/, "Due Process Concern"],
+    [/selective enforcement|partisan political attacks|used to retaliate against|punish or pressure foreign judges/, "Retaliation Against Critics or Political Opponents"],
+    [/alleged bribery|influence-peddling|gift and outside-income rules/, "Public Integrity Concern"],
+    [/televised political spectacle|personal publicist|personal.{0,15}use of (fbi|federal|government) aircraft/, "Misuse of Official Resources or Authority"],
+    [/staffing a federal agency with activists/, "Politicized or Unqualified Appointment/Hiring"],
+    [/face-masking|pursuit guidelines/, "Immigration Enforcement Oversight Weakened"],
+    [/institutional policy failure|institutional dysfunction/, "Institutional Accountability Concern (General)"],
+    [/wholesale deprioritization of federal criminal enforcement|without congressional authorization|lawful executive functions|ai policy of its ethics framework|national defense strategy|adopted without new legislation|suspending military aid/, "Executive Action With No Established Legal Violation (Policy Dispute)"],
   ];
 
   for (const [pattern, label] of rules) {

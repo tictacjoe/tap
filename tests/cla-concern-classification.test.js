@@ -69,11 +69,75 @@ test("the new rules do not change classification for any entry the site actually
   // never grew, and no entry that already had a real Violation Type lost it.
   // 34 -> 42 on 2026-10-07 from data alone: the tracker grew 273 -> 288 entries and rechecks reworded some
   // offense_category text; the current classifiers still give exactly 34 on the 2026-09-21 data (beea173).
+  // 42 -> 0 later on 2026-10-07: rules appended to classifyConcernType for those 42 (see the next test);
+  // compared over all 288 entries, no entry that already had a label changed. A new entry nothing matches
+  // lands here again: give it a rule, or raise this number deliberately.
   const data = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "data", "prosecution.json"), "utf8"));
   let residual = 0;
   for (const e of data) {
     const v = classifyOffenseCategory(e.offense_category);
     if (v === "Other/Unclassified" && classifyConcernType(e.offense_category) === "Other/Unclassified") residual++;
   }
-  assert.equal(residual, 42, "residual Other/Unclassified count drifted -- update this number deliberately if the ruleset or data changed");
+  assert.equal(residual, 0, "residual Other/Unclassified count drifted -- update this number deliberately if the ruleset or data changed");
+});
+
+// 2026-10-07: rules appended to classifyConcernType for the 42 entries matched by neither classifier.
+// Appended rules only see text every earlier rule missed, so no already-classified entry can move.
+const EXPECTED_2026_10_07 = {
+  "blanche-doj-hundreds-voter-investigations-2026": "Federal Reach Into Election Administration",
+  "dhs-unlawful-voter-initiative-uscis-2026": "Federal Reach Into Election Administration",
+  "doj-voter-data-lawsuits-election-records-preservation-2025-2026": "Federal Reach Into Election Administration",
+  "trump-election-eo-14248-military-voters-2025": "Federal Reach Into Election Administration",
+  "blanche-phang-epstein-files-court-orders-2026": "Noncompliance With Court Orders or Statutory Deadlines",
+  "doj-fbi-epstein-files-delay-presentation-2026": "Noncompliance With Court Orders or Statutory Deadlines",
+  "ice-minnesota-metro-surge-court-order-violations-2026": "Noncompliance With Court Orders or Statutory Deadlines",
+  "lutnick-commerce-health-insurance-stripped-2025": "Noncompliance With Court Orders or Statutory Deadlines",
+  "hegseth-undisclosed-jordan-strikes-2026": "Information Withheld From the Public",
+  "trump-maga-inc-super-pac-control-2026": "Alleged Campaign-Finance Violation (Non-Adjudicated)",
+  "bondi-doj-carl-charles-lambda-legal-indictment-2025": "Investigative Power Used Against Critics/Institutions",
+  "dhs-capi-subpoena-la-county-2025": "Investigative Power Used Against Critics/Institutions",
+  "olsen-white-house-2020-election-referrals-2026": "Investigative Power Used Against Critics/Institutions",
+  "pirro-special-grand-jury-reflecting-pool-2026": "Investigative Power Used Against Critics/Institutions",
+  "dugan-judge-ice-obstruction-prosecution-2025": "Institutional Independence / Prosecutorial Integrity Concern",
+  "rosen-don-lemon-church-protest-prosecution-2026": "Press Freedom / Newsgathering Interference",
+  "bondi-doj-renee-good-widow-investigation-2026": "Alleged Obstruction or Cover-Up (Non-Adjudicated)",
+  "exum-martinez-midway-blitz-shooting-evidence-2025": "Public Misrepresentation to Public or Congress",
+  "doj-birthright-citizenship-segregationist-arguments-2026": "Civil Liberties / Discriminatory Targeting Concern",
+  "doj-prairieland-antifa-terrorism-prosecutions-2026": "Civil Liberties / Discriminatory Targeting Concern",
+  "trump-us-citizen-deportation-proposal-2025": "Due Process Concern",
+  "dhs-staffer-hegseth-security-double-standard-2025": "Retaliation Against Critics or Political Opponents",
+  "gabbard-directors-initiatives-group-2026": "Retaliation Against Critics or Political Opponents",
+  "miccosukee-tribe-everglades-veto-alligator-alcatraz-2025": "Retaliation Against Critics or Political Opponents",
+  "trump-foreign-judiciary-sanctions-pattern-2025": "Retaliation Against Critics or Political Opponents",
+  "homan-fbi-bribery-sting-doj-shutdown-2024-2025": "Public Integrity Concern",
+  "rfk-jr-donor-gifts-book-advances-2026": "Public Integrity Concern",
+  "camp-pendleton-live-fire-i5-shrapnel-2025": "Misuse of Official Resources or Authority",
+  "patel-erica-knight-personal-publicist-fbi-payroll-2025": "Misuse of Official Resources or Authority",
+  "patel-milan-olympics-jet-2026": "Misuse of Official Resources or Authority",
+  "mcmahon-education-dept-activist-capture-2025-2026": "Politicized or Unqualified Appointment/Hiring",
+  "ice-mask-anonymity-policy-impersonation-crimes-2025-2026": "Immigration Enforcement Oversight Weakened",
+  "ice-newark-pursuit-crash-2026": "Immigration Enforcement Oversight Weakened",
+  "coast-guard-swastika-policy-reversal-2026": "Institutional Accountability Concern (General)",
+  "grenell-rubio-venezuela-swap-collapse-2025": "Institutional Accountability Concern (General)",
+  "bondi-doj-23000-declinations-2026": "Executive Action With No Established Legal Violation (Policy Dispute)",
+  "dea-maltz-mexico-strike-proposal-2025": "Executive Action With No Established Legal Violation (Policy Dispute)",
+  "gabbard-odni-reorganization-covert-officer-exposure-2025": "Executive Action With No Established Legal Violation (Policy Dispute)",
+  "hegseth-grok-pentagon-ai-safeguards-2026": "Executive Action With No Established Legal Violation (Policy Dispute)",
+  "hegseth-national-defense-strategy-china-pivot-caine-dissent-2025": "Executive Action With No Established Legal Violation (Policy Dispute)",
+  "private-sector-hackback-authorization-2026": "Executive Action With No Established Legal Violation (Policy Dispute)",
+  "trump-ukraine-intel-arms-pause-oval-office-clash-2025": "Executive Action With No Established Legal Violation (Policy Dispute)",
+};
+
+test("each of the 42 previously unmatched published entries gets its 2026-10-07 concern type", () => {
+  const data = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "data", "prosecution.json"), "utf8"));
+  const byId = Object.fromEntries(data.map(e => [e.id, e]));
+  const wrong = [];
+  for (const [id, label] of Object.entries(EXPECTED_2026_10_07)) {
+    const e = byId[id];
+    assert.ok(e, `${id} is not in the published data`);
+    assert.equal(classifyOffenseCategory(e.offense_category), "Other/Unclassified", `${id} now has a Violation Type`);
+    const got = classifyConcernType(e.offense_category);
+    if (got !== label) wrong.push(`${id}: got ${got}`);
+  }
+  assert.deepEqual(wrong, []);
 });
