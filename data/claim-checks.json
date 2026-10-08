@@ -1,6 +1,6 @@
 {
  "version": 1,
- "as_of": "2026-10-06",
+ "as_of": "2026-10-08",
  "checks": {
   "abrego-garcia-vindictive-prosecution-2025-2026": {
    "0": {
@@ -421,49 +421,89 @@
    },
    "22": {
     "state": "supports",
-    "why": "CBS reports Olsen's resignation per sources, his White House post, his 2020 work with Paxton, his Fulton County referral, other prosecutors leaving (some temporary), two new hires, and the later editor's note that he only meant to leave the investigation.",
-    "host": "cbsnews.com",
-    "date": "2026-10-03",
+    "why": "The AP article describes the filing for current and former agents and analysts, the July/August voluntary-interview requests, two subpoenas received Monday, and DOJ broaching but not formally offering immunity; it also covers the Fort Pierce grand jury, the Mar-a-Lago scrutiny and the request that Cannon clarify her order.",
+    "host": "abcnews.com",
+    "date": "2026-10-08",
     "kind": "fact",
     "archive": false
    },
    "23": {
     "state": "supports",
-    "why": "CNN reports Olsen left the investigation after months at the Miami office, the second high-profile departure, the Sept. 30 update that his email was misinterpreted as a resignation, and Brennan's lawyers citing Olsen's target communications.",
-    "host": "cnn.com",
-    "date": "2026-10-03",
+    "why": "CBS reports Olsen resigned per sources, his Fulton County referral, his 2020 work with Paxton, the uncharged grand conspiracy probe, other departures, the temporary-assignment explanation and two new hires; the editor's note at the top records Olsen saying he meant only to step down from the investigation.",
+    "host": "cbsnews.com",
+    "date": "2026-10-08",
     "kind": "fact",
     "archive": false
    },
    "24": {
     "state": "supports",
-    "why": "The AP article reports Olsen resigned from the probe per a person familiar, weeks after diGenova, describes his 2020 push and White House post, and notes his lack of DOJ prosecutor experience made him an unconventional pick.",
-    "host": "clickorlando.com",
-    "date": "2026-10-03",
+    "why": "CNN reports Olsen departed the investigation after several months in the Miami-based office, was the second high-profile departure, and that the source later said his email was mistakenly read as a resignation; the article also notes Brennan's lawyers cited Olsen indicating Brennan was a target in a false statements probe.",
+    "host": "cnn.com",
+    "date": "2026-10-08",
     "kind": "fact",
     "archive": false
    },
    "25": {
     "state": "supports",
-    "why": "ABC (Sept. 29, 2026) reports, per sources, Olsen's resignation, that he had no prior prosecutorial experience, other line prosecutors' departures on expired details, and additional attorneys added.",
-    "host": "abcnews.com",
-    "date": "2026-10-03",
+    "why": "The AP piece reports Olsen's resignation from the grand conspiracy probe weeks after diGenova's departure and says his lack of DOJ prosecutorial experience made him an unconventional pick; it separately describes his 2020 push and White House post.",
+    "host": "clickorlando.com",
+    "date": "2026-10-08",
     "kind": "fact",
     "archive": false
    },
    "26": {
     "state": "supports",
-    "why": "Mediaite's transcription shows Blanche saying Olsen has not resigned, is still employed, the investigation is well-staffed like every DOJ investigation, and answering 'Did he leave the investigation?' with 'still employed exactly where he was before.'",
-    "host": "mediaite.com",
-    "date": "2026-10-03",
+    "why": "ABC reports Olsen, assigned to the South Florida probe earlier in the year and with no prior prosecutorial experience, resigned per sources, that other line prosecutors left on expired details, and that additional attorneys were recently added.",
+    "host": "abcnews.com",
+    "date": "2026-10-08",
     "kind": "fact",
     "archive": false
    },
    "27": {
     "state": "supports",
-    "why": "CBS (Sept. 30) reports a DOJ official said Olsen's Monday email to the SDFL U.S. attorney announced he was leaving the case, was misread as a department resignation, and he stays as senior counsel not assigned to the matter, after Blanche's remarks.",
+    "why": "Mediaite's transcript shows Blanche saying Olsen has not resigned, 'Yes, he is still employed,' that the investigation is well-staffed like every DOJ investigation, and answering 'Did he leave the investigation? He's still employed exactly where he was before.'",
+    "host": "mediaite.com",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "28": {
+    "state": "supports",
+    "why": "CBS reports a DOJ official said Olsen's Monday email to the SDFL U.S. attorney announced his departure from the case, officials misread it as a resignation, and he remains senior counsel but off the matter; two sources said a security-clearance problem arose first, preventing work on classified evidence.",
     "host": "cbsnews.com",
-    "date": "2026-10-03",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "29": {
+    "state": "supports",
+    "why": "Raw Story reports Cannon struck the motion in a brief docket order citing 'lack of conferral,' that the motion said counsel made a good-faith effort, and that DOJ declined to seek clarification and later said it 'take[s] no position'; it also notes the probe has yet to produce charges.",
+    "host": "rawstory.com",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "30": {
+    "state": "not_found",
+    "why": "The provided docket text covers only early 2023 entries (e.g. DE 8-74) and contains no DE 806, DE 808, October 1, 2026 paperless order, or reference to Local Rule 88.9(a) striking for lack of conferral, so it cannot settle the claim.",
+    "host": "courtlistener.com",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "31": {
+    "state": "supports",
+    "why": "The Mediaite summary of Fitzpatrick's Atlantic report says several attorneys left the probe, with DiGenova resigning and quoted as saying 'If you want indictments where there's no evidence, you have an ethical problem,' and that departing prosecutors squabbled with leadership over pre-midterm indictments.",
+    "host": "yahoo.com",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "32": {
+    "state": "supports",
+    "why": "The Reuters syndicated copy contains each quoted passage: clearance terminated after a failed polygraph per two people, the failed test played a role though other factors were unclear, the DOJ spokesperson's confirmation, and Olsen's statements about an active clearance and his decision to leave.",
+    "host": "kelo.com",
+    "date": "2026-10-08",
     "kind": "fact",
     "archive": false
    }
@@ -4238,6 +4278,72 @@
     "why": "CBS San Francisco confirms Dhillon's public statement and the investigation of four Northern California districts, but it makes no mention of a Michigan gender-curriculum probe.",
     "host": "cbsnews.com",
     "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   }
+  },
+  "doj-minnesota-judges-misconduct-complaint-2026": {
+   "0": {
+    "state": "supports",
+    "why": "The DOJ release dated September 30, 2026 names Schiltz, Tunheim and Anonymous District Judges, references the September 17 Times article, quotes Blanche, McCotter ('pander to the press') and Woodward ('launching a partisan press campaign'), and states the recusal and Eighth Circuit investigation requests.",
+    "host": "justice.gov",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "1": {
+    "state": "supports",
+    "why": "The AP report quotes Blanche on recusal from all DHS cases because of 'obvious bias they have shown,' notes Schiltz's January accusation about nearly 100 court orders and the court spokesperson's 'well within the ethical rules' statement, and later says the complaint was filed with the 8th Circuit chief judge.",
+    "host": "ksat.com",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "2": {
+    "state": "supports",
+    "why": "Courthouse News quotes the complaint's 'grave threat' line and its assertion that habeas petitions and 'several instances of unintentional noncompliance with court orders' resulted from the judges' 'own legal errors,' requests recusal from current and future DHS matters, and says it is addressed to Chief Judge Colloton.",
+    "host": "courthousenews.com",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "3": {
+    "state": "supports",
+    "why": "Bloomberg Law reports the complaint says Schiltz and Tunheim 'flagrantly violated' the code, was signed by McCotter and Woodward, Schiltz said he acted 'well within the ethical rules' citing the February guidance, and DOJ's prior complaints against two Washington judges including Boasberg were thrown out.",
+    "host": "news.bloomberglaw.com",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "supports",
+    "why": "Raw Story recounts the reporter's question about Blanche's talk of a 'war' on the judiciary and quotes his answer that 'the reason that we are, quote, violating court orders is because these judges are violating Supreme Court law.'",
+    "host": "rawstory.com",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "supports",
+    "why": "FOX 9 quotes Tunheim's remark as cited in the complaint, the district court's statement that the judges acted within the ethical rules, and Ellison calling the complaint 'A desperate and dangerous attack on American judicial independence.'",
+    "host": "fox9.com",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
+    "state": "supports",
+    "why": "Fox News explains the circuit chief judge first decides whether to dismiss or refer to a special committee and quotes the judiciary that the process 'cannot be used to obtain automatic disqualification of a judge presiding over a case.'",
+    "host": "foxnews.com",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "7": {
+    "state": "supports",
+    "why": "The Reformer reports Schiltz spoke at a St. Thomas law school symposium two days after the complaint and quotes the 'right' and 'duty' remark; it also notes the Times wrote that Schiltz didn't comment on specific cases.",
+    "host": "minnesotareformer.com",
+    "date": "2026-10-08",
     "kind": "fact",
     "archive": false
    }
@@ -8784,6 +8890,88 @@
     "archive": false
    }
   },
+  "mccotter-adani-charges-dropped-2026": {
+   "0": {
+    "state": "supports",
+    "why": "The June 12, 2026 Warren release describes the letter to Acting Attorney General Blanche and quotes the 'bought his way to criminal immunity' language exactly.",
+    "host": "warren.senate.gov",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "1": {
+    "state": "supports",
+    "why": "The Wire reports the June 11 letter sought the final decisionmakers and whether Blanche, Trump or Vance played a role, and that Garaufis on June 26 declined to immediately approve the dismissal.",
+    "host": "m.thewire.in",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "2": {
+    "state": "supports",
+    "why": "The PTI report quotes McCotter's July filing calling the investment-motive suggestion 'false' and stating 'The mention of potential investments could not have played any role.'",
+    "host": "outlookbusiness.com",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "3": {
+    "state": "partly",
+    "why": "The opinion text supports the October 2024 indictment, ~$265 million in bribes, almost $4 billion in financing, Giuffra's dual role, Nocella's 5/11/2026 email categorically rejecting the $10 billion proposal, and the 'no person involved in bringing the charges signed on to dismiss them' language; but the April 17 slide deck link is not visible, and the 'no person' line is the court's own characterization, not language from McCotter's May 18 motion as the claim implies.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "partly",
+    "why": "The text confirms the 'irregularities ... are concerning' conclusion, Giuffra's statement that the Adani Group 'would be amenable' to the $10 billion pledge, and McCotter's 'non-consideration' framing; but 'sole decisionmaker' appears as McCotter's own averral in his unsworn letter rather than a court finding, and Nocella's sworn 'was not the decisionmaker' statement, the July 15 date, and the 'twice' detail are not visible in the provided text.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "supports",
+    "why": "Reuters reports the Monday (August 10) dismissal, Garaufis's criticism of McCotter for working with defense lawyers without input from the investigating prosecutors or agents, and Adani's statement welcoming the decision.",
+    "host": "bnnbloomberg.ca",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
+    "state": "supports",
+    "why": "National Herald, citing the Guardian, reports the senators wrote to Blanche a second time after no response to their June letter, quotes the 'two of President Trump's personal lawyers' concern, and reports Epshteyn's spokesperson denied involvement.",
+    "host": "nationalheraldindia.com",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "7": {
+    "state": "partly",
+    "why": "The petition (Doc. 59-1, filed 09/28/26, signed by McCotter as Acting Deputy Attorney General) quotes McCotter's 'consulted at length with attorneys in the Department' letter, describes the refusal as to five defendants and two counts, and argues a right to dismissal of the remaining counts; the September 3 date of the denial is not visible in the provided text.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "8": {
+    "state": "supports",
+    "why": "The MLex summary dated October 1, 2026 states the Second Circuit denied DOJ's effort to expedite its mandamus petition.",
+    "host": "mlex.com",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "9": {
+    "state": "supports",
+    "why": "Madhyamam, citing The Wire, reports the September 23 letter to Blanche citing Giuffra's declaration that his firm twice informed DOJ of the investment willingness.",
+    "host": "madhyamamonline.com",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   }
+  },
   "mcmahon-education-dept-activist-capture-2025-2026": {
    "0": {
     "state": "partly",
@@ -10147,113 +10335,129 @@
    },
    "7": {
     "state": "supports",
-    "why": "The August 21, 2025 order denies rehearing en banc; VanDyke, joined by five judges, dissents, describes the 'send a message' purpose and the $122,200 joint and several fee award, and writes that the decision openly weaponizes sanctions.",
-    "host": "cdn.ca9.uscourts.gov",
-    "date": "2026-10-04",
+    "why": "The Reuters account contains the quoted 'grew into an investigation spanning' passage and the White House statement that ODNI under Gabbard initiated the investigation to identify vulnerabilities, not revisit 2020; it also says Olsen pushed toward foreign-manipulation evidence.",
+    "host": "thedailystar.net",
+    "date": "2026-10-08",
     "kind": "fact",
     "archive": false
    },
    "8": {
     "state": "supports",
-    "why": "The quoted passage appears verbatim in the syndicated Reuters text.",
-    "host": "thedailystar.net",
-    "date": "2026-10-04",
+    "why": "The order (filed August 21, 2025) denies rehearing en banc; VanDyke's dissent, joined by five judges, recounts the joint $122,200 fee award, the district court's 'send a message' rationale, and states the decision 'openly weaponizes sanctions to chill disfavored litigants and litigation.'",
+    "host": "cdn.ca9.uscourts.gov",
+    "date": "2026-10-08",
     "kind": "fact",
     "archive": false
    },
    "9": {
     "state": "supports",
-    "why": "The affidavit (Doc. 22-1, filed 02/10/26, No. 1:26-mi-00012) contains the quoted referral sentence verbatim, and Attachment B authorizes seizure of all physical 2020 ballots, ballot images and voter rolls from Fulton County.",
-    "host": "storage.courtlistener.com",
-    "date": "2026-10-04",
+    "why": "The Reuters article (syndicated by The Daily Star) contains the quoted passage verbatim.",
+    "host": "thedailystar.net",
+    "date": "2026-10-08",
     "kind": "fact",
     "archive": false
    },
    "10": {
     "state": "supports",
-    "why": "The Maricopa subpoena passage, the description of the records, and the no-evidence finding all appear verbatim in the syndicated Reuters text.",
-    "host": "thedailystar.net",
-    "date": "2026-10-04",
+    "why": "The affidavit (Doc. 22-1, filed 02/10/26) contains the quoted referral sentence, and Attachment B authorizes seizure of all 2020 physical ballots, ballot images and voter rolls from Fulton County.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-10-08",
     "kind": "fact",
     "archive": false
    },
    "11": {
-    "state": "partly",
-    "why": "The provided text confirms the case/doc/page/date details, the 9:03 AM January 5, 2026 referral, 'defective in some respects', 'troubling' ballot-image/tabulator-tape statements, 'not a situation where an officer left out all the facts... or ... intentionally lied', the 'unprecedented' line, and the callous-disregard standard. Several quoted phrases ('was misleading', 'The seizure in this case was certainly not perfect' -- the text has 'the Affidavit was certainly far from perfect' -- and the referral-before-Clerk's-motion / 'cuts against... pretextual' language) and the explicit denial holding do not appear in the truncated text.",
-    "host": "storage.courtlistener.com",
-    "date": "2026-10-05",
+    "state": "supports",
+    "why": "The article contains the Maricopa subpoena passage and the records description verbatim, and separately states 'Olsen’s investigation ultimately found no evidence that foreign actors had infiltrated US voting systems, manipulated machines or swayed the 2020 election.'",
+    "host": "thedailystar.net",
+    "date": "2026-10-08",
     "kind": "fact",
     "archive": false
    },
    "12": {
-    "state": "supports",
-    "why": "Democracy Docket's text contains both quoted passages verbatim, including Boulee's 'While the Affidavit was certainly far from perfect' and the 'callous disregard' threshold.",
-    "host": "democracydocket.com",
-    "date": "2026-10-04",
+    "state": "partly",
+    "why": "The provided order text (Doc. 108, 68 pages, filed 05/06/26) confirms the 9:03 AM referral, 'defective in some respects,' 'troubling' ballot-image/tabulator statements, 'not a situation where an officer left out all the facts...,' 'in a variety of ways, unprecedented,' and the callous-disregard standard; but the 'was misleading' recount finding, the quoted 'The seizure in this case was certainly not perfect' sentence (the visible text says the Affidavit 'was certainly far from perfect'), the referral-before-Clerk's-motion pretext finding, and the denial disposition itself are not visible in the excerpted text.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-10-08",
     "kind": "fact",
     "archive": false
    },
    "13": {
     "state": "supports",
-    "why": "The May 18, 2026 release lists the recipients (Wiles, Warrington, Scavino) and ten co-signers (nine Democrats plus Sanders), the excerpt contains the 130-day/365-day and 'as early as October 18, 2025, over 200 days ago' language with the removal-or-explanation request, and the letter says court filings confirmed Olsen 'made debunked conspiracy theories the basis of the FBI's search warrant.'",
-    "host": "padilla.senate.gov",
-    "date": "2026-10-05",
+    "why": "Democracy Docket's report contains both quoted passages: Boulee declined to order return while criticizing parts of DOJ's case as 'misleading' and 'troubling,' and 'While the Affidavit was certainly far from perfect' its shortcomings did not meet the 'callous disregard' threshold.",
+    "host": "democracydocket.com",
+    "date": "2026-10-08",
     "kind": "fact",
     "archive": false
    },
    "14": {
     "state": "supports",
-    "why": "The source states 'Olsen left the White House in May,' quotes him on the 130-day special-government-employee limit and 'my 130 days were up,' and says that in May he joined federal prosecutors in southern Florida examining what Trump allies call a 'grand conspiracy' theory, matching the claim.",
-    "host": "thedailystar.net",
-    "date": "2026-10-05",
+    "why": "The May 18, 2026 release reproduces the letter to Wiles, Warrington and Scavino quoting the 130-day limit, the October 18, 2025 date 'over 200 days ago,' and the request for removal or 'a full explanation'; the signer list shows ten colleagues including independent Sanders, and the letter states court filings confirmed Olsen 'made debunked conspiracy theories the basis of the FBI's search warrant.'",
+    "host": "padilla.senate.gov",
+    "date": "2026-10-08",
     "kind": "fact",
     "archive": false
    },
    "15": {
     "state": "supports",
-    "why": "NBC reports Wainstein's declaration that Olsen, 'now part of the prosecutorial team in the Southern District of Florida,' described multiple 'viable' investigations and said Brennan was a 'target' of the narrower one.",
-    "host": "nbcnews.com",
-    "date": "2026-10-05",
+    "why": "The article states Olsen left in May, quotes him on the 130-day limit, and says that in May he joined southern Florida prosecutors examining the 'grand conspiracy' theory.",
+    "host": "thedailystar.net",
+    "date": "2026-10-08",
     "kind": "fact",
     "archive": false
    },
    "16": {
     "state": "supports",
-    "why": "The AP text contains each quoted phrase: Olsen's 2020 push on DOJ, his help with Paxton's Supreme Court bid, his lack of DOJ prosecutor experience, and the Arizona sanctions in the Lake case.",
-    "host": "clickorlando.com",
-    "date": "2026-10-05",
+    "why": "NBC's September 14, 2026 report on Wainstein's declaration quotes Olsen as part of the SDFL prosecutorial team, his description of multiple 'viable' investigations, and that Brennan was a 'target' of the narrower investigation.",
+    "host": "nbcnews.com",
+    "date": "2026-10-08",
     "kind": "fact",
     "archive": false
    },
    "17": {
     "state": "supports",
-    "why": "CBS reports the Monday email announcing his departure from the case, the misinterpretation as a resignation, the official's statement that he stays as senior counsel but off the grand conspiracy matter, and the security clearance problem per two sources.",
-    "host": "cbsnews.com",
-    "date": "2026-10-05",
+    "why": "The AP text contains each quoted passage: the 2020 push, helping Paxton's Supreme Court bid, and Arizona courts sanctioning Olsen for false statements; it also contains the 'unconventional pick' sentence.",
+    "host": "clickorlando.com",
+    "date": "2026-10-08",
     "kind": "fact",
     "archive": false
    },
    "18": {
     "state": "supports",
-    "why": "CNN's report, published Sept. 28 and updated Sept. 30, contains the quoted language about Olsen departing the investigation and the email being mistakenly interpreted as a resignation.",
-    "host": "cnn.com",
-    "date": "2026-10-05",
+    "why": "CBS reports the DOJ official's account of the Monday (Sept. 28) email, the misinterpretation as a resignation, that Olsen 'will still be on staff as senior counsel' but 'will not be assigned to the grand conspiracy matter,' and the two-source security-clearance problem.",
+    "host": "cbsnews.com",
+    "date": "2026-10-08",
     "kind": "fact",
     "archive": false
    },
    "19": {
     "state": "supports",
-    "why": "Mediaite's Sept. 30 transcription includes Blanche saying 'Kurt Olson has not resigned' and, when asked if Olsen left the investigation, 'He's still employed exactly where he was before.'",
-    "host": "mediaite.com",
-    "date": "2026-10-05",
+    "why": "CNN's report (published Sept 28, updated Sept 30) contains the quoted 'departed the so-called grand conspiracy investigation' language and the source's initial and later accounts.",
+    "host": "cnn.com",
+    "date": "2026-10-08",
     "kind": "fact",
     "archive": false
    },
    "20": {
     "state": "supports",
-    "why": "The docket for No. 25-882 shows the petition filed Jan. 16, 2026, a response requested Mar. 23, the respondents' opposition filed Jun. 22, 2026, and an Oct. 5, 2026 distribution for the 10/9/2026 conference with no disposition entered.",
+    "why": "Mediaite's transcript of the September 30 press conference contains both quoted statements, including the 'Kurt Olson' spelling.",
+    "host": "mediaite.com",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "21": {
+    "state": "supports",
+    "why": "The Supreme Court docket shows the petition filed January 16, 2026, a response requested, the respondents' opposition filed June 22, 2026, and an October 5 distribution for the October 9, 2026 conference, with no disposition.",
     "host": "supremecourt.gov",
-    "date": "2026-10-05",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "22": {
+    "state": "supports",
+    "why": "The Reuters syndicated copy contains each quoted passage: clearance terminated after a failed polygraph per two people, the failed test played a role though other factors were unclear, the DOJ spokesperson's confirmation, and Olsen's statements about an active clearance and his decision to leave.",
+    "host": "kelo.com",
+    "date": "2026-10-08",
     "kind": "fact",
     "archive": false
    }
@@ -10512,6 +10716,38 @@
     "why": "CBS reports the removal and replacement with DiGenova, and that two agents, one involved in the Comey prosecution, served on Patel's Director's Advisory Team.",
     "host": "cbsnews.com",
     "date": "2026-09-27",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "supports",
+    "why": "NPR's September 15, 2026 AP story reports Brennan was subpoenaed in the conspiracy probe, is a target of a separate false-statements inquiry, and must appear October 15 in Fort Pierce.",
+    "host": "npr.org",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "supports",
+    "why": "CNN reports Fields' complaint that after the February 2025 Alhambra protest a squad was ordered to run pre-assessment checks without evidence of a crime and Patel relayed that the president wanted protesters 'investigated and arrested'; the article also includes the White House calling the allegations false and DOJ's statement.",
+    "host": "cnn.com",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
+    "state": "supports",
+    "why": "NBC reports Fields made a whistleblower complaint to Senate Judiciary leaders over the anti-ICE protest response, asked Congress and the DOJ watchdog to investigate, and that a DOJ spokesperson called it politically motivated.",
+    "host": "nbcnews.com",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "7": {
+    "state": "supports",
+    "why": "The Mediaite summary describes the Atlantic report based on more than 40 interviews, Patel telling staff to 'look harder,' his willingness to accommodate White House requests, DiGenova's resignation and departing prosecutors' clashes over pre-midterm indictments; it also includes the White House denial.",
+    "host": "yahoo.com",
+    "date": "2026-10-08",
     "kind": "fact",
     "archive": false
    }
@@ -12296,18 +12532,42 @@
     "archive": false
    },
    "5": {
-    "state": "partly",
-    "why": "The NPR article supports the Sept. 17 ethics-official signature, de Becker's statement, the advances, Clark's comment and the July Fauci-book post, but the provided text is cut off just after 'It was due May 15', so the Aug. 13 filing, four revisions and OGE sign-off are not shown.",
-    "host": "npr.org",
-    "date": "2026-10-03",
+    "state": "supports",
+    "why": "The Times reports $4 million in advances and over $270,000 in gifts from close allies, advances from a company owned by Lyons, and Hines's $210,000 from MAHA Action; elsewhere it reports the August 2024 agreement, Painter's 'reeks of conflict of interest' comment and HHS's compliance statement.",
+    "host": "nytimes.com",
+    "date": "2026-10-08",
     "kind": "fact",
     "archive": false
    },
    "6": {
+    "state": "supports",
+    "why": "The Guardian reports Lyons is president of MAHA Center, the $126,500 housing, nearly $45,000 and $97,000 airfares from de Becker, his $10m Super PAC donation with $9.65m returned per Politico, and Hines's $210,000 from MAHA Action.",
+    "host": "theguardian.com",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "7": {
     "state": "partly",
-    "why": "The letter is dated Sept. 25, 2026 to the HHS OIG and cites the Aug. 13, 2026 Form 278e as Ex. A, but the provided text does not include the exhibit contents (gift amounts, advances, certification details).",
+    "why": "NPR's text confirms the Sept. 17 HHS ethics sign-off, the May 15 due date, de Becker's statement, Clark's comment and the July post despite the ethics pledge, but the fetched text cuts off before the Aug. 13 filing date, the four September revisions and the lack of OGE sign-off.",
+    "host": "npr.org",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "8": {
+    "state": "partly",
+    "why": "Exhibit A shows the Aug. 13, 2026 signature with a 90-day extension, the three de Becker gifts at the stated amounts, the two $2,000,000 Skyhorse advances, and the three-book agreement with two completed before government service; the four revisions Sept. 9-15, the Sept. 17 HHS ethics certification, and the absence of OGE certification are not visible in the provided text.",
     "host": "campaignlegal.org",
-    "date": "2026-10-03",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "9": {
+    "state": "supports",
+    "why": "CLC's September 25, 2026 release says it filed a complaint with HHS OIG over whether Kennedy violated his ethics agreement and federal law to benefit his wife's consulting work, and that Youngster Productions received $210,000 in 2025 consulting fees from MAHA Action.",
+    "host": "campaignlegal.org",
+    "date": "2026-10-08",
     "kind": "fact",
     "archive": false
    }
@@ -13090,6 +13350,56 @@
     "archive": false
    }
   },
+  "rubio-fmf-ukraine-aid-latin-america-reprogramming-2026": {
+   "0": {
+    "state": "partly",
+    "why": "The law text confirms the $4,000,000,000 FMF appropriation 'for assistance for Ukraine and countries impacted by the situation in Ukraine' and the wording of sections 505(e) and 505(f); section 505(d) is truncated, so the visible text confirms its 'to respond to the situation in Ukraine...' purpose but not that it covers the FMF, narcotics-control and nonproliferation accounts.",
+    "host": "congress.gov",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": true
+   },
+   "1": {
+    "state": "supports",
+    "why": "The AP report (dated September 15, 2026) says the department notified Congress it would reprogram $52 million from Slovakia, North Macedonia, Tunisia and Iraq to Panama, Peru, Ecuador and Colombia, quotes the narcoterrorism and Panama Canal rationale, and notes the original recipients keep some financing.",
+    "host": "wcax.com",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "2": {
+    "state": "partly",
+    "why": "The SFRC minority release reproduces the letter with the $52,100,000 notification, majority from P.L. 117-128, the section 505(d) reading, briefers citing the NSS and NDS, the September 29 written responses, the four-country confirmation and the re-notified hold; the claim's statement about a House Foreign Affairs Committee Democrats' release is not addressed by this source.",
+    "host": "foreign.senate.gov",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "3": {
+    "state": "supports",
+    "why": "The archived Post opening by John Hudson says the administration, acting in defiance of top Democrats on both foreign affairs committees, stripped the aid and will give it to Latin American governments, per three U.S. officials.",
+    "host": "washingtonpost.com",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": true
+   },
+   "4": {
+    "state": "supports",
+    "why": "The Newsmax summary says the hold followed the Sept. 15 notification, the administration told lawmakers Wednesday it was moving ahead, and quotes the State Department that the reprogramming 'is consistent with the National Security Strategy.'",
+    "host": "yahoo.com",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "partly",
+    "why": "UNN's summary of the Post confirms the September 30 notice that the administration was disregarding the suspension and that State did not respond on the statutory-violation claim; the Hromadske October 2 summary is a separate source not addressed in this text.",
+    "host": "unn.ua",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   }
+  },
   "rubio-maduro-raid-congress-deception-2026": {
    "0": {
     "state": "partly",
@@ -13406,10 +13716,10 @@
     "archive": false
    },
    "1": {
-    "state": "partly",
-    "why": "The Guardian confirms the $1.3bn figure, the OMB Foreign Assistance Review, and the China/Yemen exceptions, but the article's own \"80%\" quote is scoped to \"all US government foreign assistance at the state department\" broadly, not specifically to DRL's grant programs as the claim frames it, creating a scope mismatch between the two figures.",
+    "state": "supports",
+    "why": "The Guardian reports the OMB-produced Foreign Assistance Review advised cutting nearly all DRL grants, about $1.3bn, with only two programs (China and Yemen) not recommended for cuts.",
     "host": "theguardian.com",
-    "date": "2026-09-15",
+    "date": "2026-10-08",
     "kind": "fact",
     "archive": false
    },
@@ -13418,6 +13728,22 @@
     "why": "KNEWS.MEDIA confirms State Department representatives traveled to Paris to support Le Pen after a court barred her from office (later overturned on appeal), and confirms DRL's grant program later excluded French applicant organizations over foreign-interference concerns. However, this article never uses the word 'lawfare' or otherwise attributes that specific 'politically motivated lawfare' characterization to the administration.",
     "host": "knews.media",
     "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "3": {
+    "state": "supports",
+    "why": "The Guardian reports the 43 awards totaling $176.9m out of $205m, and Shaheen's 10 holds on $22m with Rubio personally signing a memo to disregard them per an aide; it also reports the hours-before-deadline obligation per a source, the $40m VOC award, the Afrikaner and 'Promoting Western Civilization Allies' grants, and Samson as deputy assistant secretary overseeing the grants.",
+    "host": "theguardian.com",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "supports",
+    "why": "CNN via KEYT reports funds from the nearly $177 million were obligated despite Shaheen's holds on 10 awards worth $22 million after Rubio signed off on a memo, for causes including Afrikaner rights and 'Western civilizational norms,' and quotes Pigott's 'never apologize for defending Western civilization' statement.",
+    "host": "keyt.com",
+    "date": "2026-10-08",
     "kind": "fact",
     "archive": false
    }
@@ -16771,17 +17097,41 @@
    },
    "14": {
     "state": "supports",
-    "why": "The source quotes Trump's Truth Social post saying he would 'pay for them myself, and with money I raised for MAGA, Inc.' and reports AdImpact's estimate of at least $10.1 million in taxpayer money spent on the ads.",
-    "host": "abcnews4.com",
-    "date": "2026-10-05",
+    "why": "The CNN article supports every element: at least 13 ads, 12 clips from LMD's Dropbox each ending 'Paid for by the U.S. Government,' 'God Made Trump' listed among yet-to-be-aired spots and described as messianic, 'King of the Jungle' imagery of Obama, Biden, Pelosi, Clinton and Newsom, and $20 million from CBP per two sources.",
+    "host": "cnn.com",
+    "date": "2026-10-08",
     "kind": "fact",
     "archive": false
    },
    "15": {
     "state": "supports",
-    "why": "The source reports MAGA Inc. did not immediately respond and the White House did not answer on reimbursement for ads already aired, quotes a White House official saying 'MAGA Inc. will pay for the PSA ads moving forward,' and separately reports LMD Agency's $20 million 'national media campaign' contract per public contracting records.",
+    "why": "The National News Desk quotes Trump's Truth Social post about paying 'myself, and with money I raised for MAGA, Inc.' and reports AdImpact's estimate of at least $10.1 million in taxpayer money spent.",
+    "host": "abcnews4.com",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "16": {
+    "state": "supports",
+    "why": "NBC reports MAGA Inc. and the White House did not answer the reimbursement question, a White House official said 'MAGA Inc. will pay for the PSA ads moving forward,' and LMD Agency was awarded a $20 million contract listed as a 'national media campaign.'",
     "host": "nbcnews.com",
-    "date": "2026-10-05",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "17": {
+    "state": "supports",
+    "why": "CNBC reports the White House clarified MAGA Inc. would pay only going forward, Trump said 'we'll decide' on repayment, Schumer called for GAO and OSC investigations, and relays the Times report that Trump 'personally instructed his budget director to use taxpayer money.'",
+    "host": "cnbc.com",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "18": {
+    "state": "supports",
+    "why": "The AP report says AdImpact put aired ads at nearly $12 million of the $20 million DHS tapped and a White House official said the MAGA Inc. plan 'doesn't mean there's any reimbursement coming'; it also reports the fifth (Maduro) ad began airing Tuesday, Schumer's illegal-coordination view and Britt's 'We'll take a look at that.'",
+    "host": "ksat.com",
+    "date": "2026-10-08",
     "kind": "fact",
     "archive": false
    }
