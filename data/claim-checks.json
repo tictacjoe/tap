@@ -492,8 +492,8 @@
     "archive": false
    },
    "31": {
-    "state": "not_found",
-    "why": "The provided docket text is only page 1 of 9 and covers 2023 entries (e.g., DE 8-74); it contains no DE 806, DE 808, October 1, 2026 paperless order, or 'striking for lack of conferral' language, so the claim cannot be settled from it.",
+    "state": "supports",
+    "why": "The docket's DE 808 entry, dated Oct. 1, 2026, is a paperless order signed by Judge Cannon striking 'for lack of conferral' DE 806 (the Sept. 24 motion to intervene and for clarification) and citing S.D. Fla. L.R. 88.9(a), exactly as claimed.",
     "host": "courtlistener.com",
     "date": "2026-10-08",
     "kind": "fact",
@@ -8925,7 +8925,7 @@
    },
    "3": {
     "state": "partly",
-    "why": "The opinion text supports the October 2024 indictment, ~$265 million in bribes, almost $4 billion in financing, Giuffra's dual role, Nocella's 5/11/2026 email categorically rejecting the $10 billion proposal, and the 'no person involved in bringing the charges signed on to dismiss them' language; but the April 17 slide deck link is not visible, and the 'no person' line is the court's own characterization, not language from McCotter's May 18 motion as the claim implies.",
+    "why": "The opinion text supports the October 2024 indictment, the ~$265 million bribes and almost $4 billion financing, Giuffra's dual role, Nocella's May 11, 2026 email 'categorically' rejecting the $10 billion proposal, and the 'no person involved in bringing the charges signed on to dismiss them' line; but the provided (truncated) text does not contain the quoted 'April 17, 2026, slide deck presentation' language or the May 18 date of the motion.",
     "host": "storage.courtlistener.com",
     "date": "2026-10-08",
     "kind": "fact",
@@ -8933,7 +8933,7 @@
    },
    "4": {
     "state": "partly",
-    "why": "The text confirms the 'irregularities ... are concerning' conclusion, Giuffra's statement that the Adani Group 'would be amenable' to the $10 billion pledge, and McCotter's 'non-consideration' framing; but 'sole decisionmaker' appears as McCotter's own averral in his unsworn letter rather than a court finding, and Nocella's sworn 'was not the decisionmaker' statement, the July 15 date, and the 'twice' detail are not visible in the provided text.",
+    "why": "The text supports 'would be amenable,' Nocella's statement that he 'was not the decisionmaker,' the finding that McCotter was 'in fact, the \"sole decisionmaker\",' and that the 'irregularities in the decision to dismiss the Indictment are concerning'; but the truncated text does not show 'on two occasions,' the July 15 and July 17 dates, or a finding that the pledge was 'in fact, a non-consideration.'",
     "host": "storage.courtlistener.com",
     "date": "2026-10-08",
     "kind": "fact",
@@ -8949,31 +8949,39 @@
    },
    "6": {
     "state": "supports",
-    "why": "National Herald, citing the Guardian, reports the senators wrote to Blanche a second time after no response to their June letter, quotes the 'two of President Trump's personal lawyers' concern, and reports Epshteyn's spokesperson denied involvement.",
-    "host": "nationalheraldindia.com",
+    "why": "The MLex summary dated September 3, 2026 states Judge Garaufis denied DOJ's motion to dismiss charges against five defendants, matching the claim.",
+    "host": "mlex.com",
     "date": "2026-10-08",
     "kind": "fact",
     "archive": false
    },
    "7": {
-    "state": "partly",
-    "why": "The petition (Doc. 59-1, filed 09/28/26, signed by McCotter as Acting Deputy Attorney General) quotes McCotter's 'consulted at length with attorneys in the Department' letter, describes the refusal as to five defendants and two counts, and argues a right to dismissal of the remaining counts; the September 3 date of the denial is not visible in the provided text.",
-    "host": "storage.courtlistener.com",
+    "state": "supports",
+    "why": "National Herald, citing the Guardian, reports the senators wrote to Blanche a second time after no response to their June letter, quotes the 'two of President Trump's personal lawyers' line, and reports Epshteyn's spokesperson's denial.",
+    "host": "nationalheraldindia.com",
     "date": "2026-10-08",
     "kind": "fact",
     "archive": false
    },
    "8": {
     "state": "supports",
-    "why": "The MLex summary dated October 1, 2026 states the Second Circuit denied DOJ's effort to expedite its mandamus petition.",
-    "host": "mlex.com",
+    "why": "The petition, filed 09/28/26 and signed by McCotter as Acting Deputy Attorney General, objects that the court 'refused to grant the Rule 48(a) motion as to five defendants and two counts,' quotes McCotter having 'consulted at length with attorneys in the Department,' and seeks mandamus to remedy the refusal to dismiss.",
+    "host": "storage.courtlistener.com",
     "date": "2026-10-08",
     "kind": "fact",
     "archive": false
    },
    "9": {
     "state": "supports",
-    "why": "Madhyamam, citing The Wire, reports the September 23 letter to Blanche citing Giuffra's declaration that his firm twice informed DOJ of the investment willingness.",
+    "why": "MLex's October 1, 2026 summary states the Second Circuit denied DOJ's effort to expedite its mandamus petition.",
+    "host": "mlex.com",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "10": {
+    "state": "supports",
+    "why": "Madhyamam, citing The Wire, reports the senators' September 23 letter to Blanche citing Giuffra's declaration that his firm had twice informed DOJ of the investment willingness.",
     "host": "madhyamamonline.com",
     "date": "2026-10-08",
     "kind": "fact",
@@ -10383,7 +10391,7 @@
    },
    "12": {
     "state": "partly",
-    "why": "The provided order text (Doc. 108, 68 pages, filed 05/06/26) confirms the 9:03 AM referral, 'defective in some respects,' 'troubling' ballot-image/tabulator statements, 'not a situation where an officer left out all the facts...,' 'in a variety of ways, unprecedented,' and the callous-disregard standard; but the 'was misleading' recount finding, the quoted 'The seizure in this case was certainly not perfect' sentence (the visible text says the Affidavit 'was certainly far from perfect'), the referral-before-Clerk's-motion pretext finding, and the denial disposition itself are not visible in the excerpted text.",
+    "why": "The order (Doc. 108, filed 05/06/26, 68 pages, 1:26-CV-00809) contains the 9:03 AM referral line, 'defective in some respects,' 'misleading,' 'troubling,' 'certainly not perfect,' 'unprecedented,' the callous-disregard holding and the 'not a situation where an officer ... intentionally lied' language; but the provided text does not contain the quoted finding that 'the criminal referral to the FBI was made before the Clerk filed her motion' or that this 'cuts against the contention that the criminal investigation was a pretextual response.'",
     "host": "storage.courtlistener.com",
     "date": "2026-10-08",
     "kind": "fact",
@@ -12556,16 +12564,16 @@
     "archive": false
    },
    "7": {
-    "state": "partly",
-    "why": "The source supports the filing timeline (due May 15, filed Aug. 13 after extension, revised four times in September, signed Sept. 17, OGE not signed off), Clark's comment, and the July post about The Real Anthony Fauci; the 'nothing whatsoever to do with HHS' quote appears but its speaker is cut off in the truncated text, so the de Becker attribution cannot be confirmed.",
+    "state": "supports",
+    "why": "NPR's Sept. 24, 2026 story reports the May 15 due date, Aug. 13 filing after an extension, four September revisions, the Sept. 17 HHS ethics-official signature and lack of OGE sign-off, and also carries de Becker's statement, Kathleen Clark's comment on the advances, and Kennedy's July X post about The Real Anthony Fauci despite his ethics-agreement pledge.",
     "host": "npr.org",
     "date": "2026-10-08",
     "kind": "fact",
     "archive": false
    },
    "8": {
-    "state": "partly",
-    "why": "Exhibit A shows the Aug. 13, 2026 signature with a 90-day extension, the three de Becker gifts at the stated amounts, the two $2,000,000 Skyhorse advances, and the three-book agreement with two completed before government service; the four revisions Sept. 9-15, the Sept. 17 HHS ethics certification, and the absence of OGE certification are not visible in the provided text.",
+    "state": "supports",
+    "why": "The CLC's Sept. 25, 2026 letter cites the 278e as Ex. A; the form shows Kennedy's Aug. 13, 2026 signature with a 90-day extension, data revisions 09/09-09/15, certifying-official signature 09/17/2026 with no OGE certification, the three de Becker gifts at the stated values, the two $2,000,000 Skyhorse advances, and the three-book agreement with two completed before government service.",
     "host": "campaignlegal.org",
     "date": "2026-10-08",
     "kind": "fact",
@@ -13360,8 +13368,8 @@
   },
   "rubio-fmf-ukraine-aid-latin-america-reprogramming-2026": {
    "0": {
-    "state": "partly",
-    "why": "The law text confirms the $4,000,000,000 FMF appropriation 'for assistance for Ukraine and countries impacted by the situation in Ukraine' and the wording of sections 505(e) and 505(f); section 505(d) is truncated, so the visible text confirms its 'to respond to the situation in Ukraine...' purpose but not that it covers the FMF, narcotics-control and nonproliferation accounts.",
+    "state": "supports",
+    "why": "The law text appropriates $4 billion to FMF for Ukraine and impacted countries, and sections 505(d)-(f) contain the transfer, additional-authority, and consultation/notification provisions as described.",
     "host": "congress.gov",
     "date": "2026-10-08",
     "kind": "fact",
@@ -13408,9 +13416,17 @@
     "archive": false
    },
    "6": {
-    "state": "partly",
-    "why": "The UNN text directly supports the Sept. 30 notice disregarding the hold and the State Department's non-response on statutory requirements; the Hromadske October 2 summary is not addressed by this source.",
+    "state": "supports",
+    "why": "UNN, summarizing the Post, reports that late on Wednesday, September 30 the administration told Congress it was disregarding the suspension, and that State did not respond to questions about the statutory-violation assertion.",
     "host": "unn.ua",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "7": {
+    "state": "supports",
+    "why": "Hromadske's October 2, 2026 piece reports the late-Wednesday notification of funds going to Panama, Peru, Ecuador and Colombia per three officials, the Shaheen/Meeks hold, State's National Security Strategy defense, and its failure to address the statutory allegation.",
+    "host": "hromadske.ua",
     "date": "2026-10-08",
     "kind": "fact",
     "archive": false
@@ -17250,8 +17266,8 @@
     "archive": false
    },
    "11": {
-    "state": "partly",
-    "why": "The brief (filed 09/21/26) is by 53 former prosecutors and law enforcement agents supporting the PI motion, says the scheme 'poses an obvious risk of corruption', lists the Securities Exchange Act, illegal gratuities, conflicts of interest, outside compensation and Trade Secrets Act, and its footnote says it does not address whether the statutes apply to the President or immunity. However, the source is the [PROPOSED] brief exhibit and says nothing about leave being granted by Judge Oetken.",
+    "state": "supports",
+    "why": "The proposed brief (Exhibit A to the 09/21/26 motion) says the scheme 'poses an obvious risk of corruption' and implicates the Securities Exchange Act, illegal-gratuity, conflict-of-interest, outside-compensation statutes and the Trade Secrets Act, for 'both executive branch officials and paid subscribers,' and footnote 2 says it 'does not address whether these statutes apply to the President' or immunity.",
     "host": "storage.courtlistener.com",
     "date": "2026-10-08",
     "kind": "fact",
@@ -17290,32 +17306,40 @@
     "archive": false
    },
    "16": {
-    "state": "partly",
-    "why": "TMTG's amicus brief argues Truth API delivers already-public posts, reflects ordinary practices across information markets, and calls plaintiffs' theory 'wrong and frivolous'. The source shows it was filed 09/29/26 (dated Sept. 28) but says nothing about it being accepted on Sept. 30, 2026.",
+    "state": "supports",
+    "why": "TMTG's brief in support of defendants (Doc. 61-1, filed 09/29/26) says Truth API 'delivers already-public posts' as APIs do 'throughout modern information markets' and calls plaintiffs' theory 'wrong and frivolous.'",
     "host": "storage.courtlistener.com",
     "date": "2026-10-08",
     "kind": "fact",
     "archive": false
    },
    "17": {
-    "state": "supports",
-    "why": "The plaintiffs' reply, filed 10/01/26, states the President is selling early access to official government information for his own profit and that more than a dozen subscribers pay up to $100,000 per month 'for this supposedly negligible benefit'.",
-    "host": "storage.courtlistener.com",
+    "state": "partly",
+    "why": "The docket shows the Sept. 30 text-only order accepting Trump Media's amicus brief in support of defendants and a Sept. 22 entry granting the 53 former prosecutors' unopposed motion; however, the signing date of that order is truncated in the provided text, so the 'signed Sept. 21' detail cannot be confirmed.",
+    "host": "courtlistener.com",
     "date": "2026-10-08",
     "kind": "fact",
     "archive": false
    },
    "18": {
     "state": "supports",
-    "why": "The Washington Sun (Oct. 7) quotes Oetken's 'valuable' and 'negligible delay to any human' remarks and his question about Trump's ties to Trump Media justifying an injunction.",
-    "host": "washingtonsun.com",
+    "why": "The Oct. 1, 2026 reply (Doc. 66) states that 'more than a dozen subscribers are already paying up to $100,000 per month for this supposedly negligible benefit' and that 'the President is selling early access to official government information for his own profit.'",
+    "host": "storage.courtlistener.com",
     "date": "2026-10-08",
     "kind": "fact",
     "archive": false
    },
    "19": {
     "state": "supports",
-    "why": "Courthouse News (Oct. 7) states Oetken did not rule from the bench and would issue a written decision later.",
+    "why": "The Washington Sun's October 7, 2026 report quotes Oetken's 'whatever the time difference is' remark, his 'negligible delay to any human' comment, and his question about Trump's ties to Trump Media justifying an injunction.",
+    "host": "washingtonsun.com",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "20": {
+    "state": "supports",
+    "why": "Courthouse News's October 7, 2026 article states Oetken did not immediately rule from the bench and would issue a written decision later.",
     "host": "courthousenews.com",
     "date": "2026-10-08",
     "kind": "fact",
