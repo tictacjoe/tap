@@ -59,6 +59,10 @@ test("classifyConcernType recognizes the new concern patterns, on text with no n
   assert.equal(classifyConcernType("no criminal or civil legal violation established; the order was issued while a separate court stay"), "Executive Action With No Established Legal Violation (Policy Dispute)");
 });
 
+test("classifyConcernType labels reprogramming over a congressional hold (2026-10-08)", () => {
+  assert.equal(classifyConcernType("Reprogramming Congressionally Appropriated Foreign Military Financing Over a Committee Hold"), "Appropriations Purpose or Congressional Hold Bypassed");
+});
+
 test("classifyConcernType still falls back to Other/Unclassified for genuinely unmatched text", () => {
   assert.equal(classifyConcernType("Authorizing Live Artillery Fire Directly Over a Major Public Interstate Highway"), "Other/Unclassified");
 });

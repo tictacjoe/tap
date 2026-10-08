@@ -2866,6 +2866,9 @@ function classifyConcernType(raw) {
     [/face-masking|pursuit guidelines/, "Immigration Enforcement Oversight Weakened"],
     [/institutional policy failure|institutional dysfunction/, "Institutional Accountability Concern (General)"],
     [/wholesale deprioritization of federal criminal enforcement|without congressional authorization|lawful executive functions|ai policy of its ethics framework|national defense strategy|adopted without new legislation|suspending military aid/, "Executive Action With No Established Legal Violation (Policy Dispute)"],
+    // Added 2026-10-08 (round4 batch 45): moving appropriated money against Congress's
+    // stated purpose or over a committee hold, where no ICA claim is made.
+    [/reprogramming congressionally appropriated|over a (congressional |committee )hold/, "Appropriations Purpose or Congressional Hold Bypassed"],
   ];
 
   for (const [pattern, label] of rules) {
