@@ -15127,97 +15127,129 @@
   "trump-family-ai-investments-conflict-2026": {
    "0": {
     "state": "supports",
-    "why": "TechCrunch reports the all-stock Trump Media-TAE merger valued above $6 billion amid data-center electricity demand, and fusion insiders' conflict-of-interest concerns about the Energy Department.",
-    "host": "techcrunch.com",
-    "date": "2026-10-03",
+    "why": "The Bloomberg piece (in Spanish) states Trump Jr. said 1789 still backs Musk's companies despite the feud, that the firm backed xAI and SpaceX with more than $50 million, and that Malik said it also invested in X and Neuralink, matching every element of the claim.",
+    "host": "elfinanciero.com.mx",
+    "date": "2026-10-08",
     "kind": "fact",
     "archive": false
    },
    "1": {
-    "state": "partly",
-    "why": "The garbled OCR text shows a Feb. 10, 2026 NVIDIA purchase in the $1,000,001-$5,000,000 range on the Trump 278-T, but the extracted text is truncated before the Jan. 6 unsolicited Nvidia trade and the Dell purchase, and shows no May 8 signature date.",
-    "host": "extapps2.oge.gov",
-    "date": "2026-10-03",
+    "state": "supports",
+    "why": "The Reuters text states 1789 Capital passed $1 billion in assets, lists SpaceX, xAI and Neuralink deals per two people familiar, and contains both the four-ethics-specialists finding and the no-evidence caveat quoted in the excerpt, plus a spokesperson denial of any advantage.",
+    "host": "bnnbloomberg.ca",
+    "date": "2026-10-08",
     "kind": "fact",
     "archive": false
    },
    "2": {
-    "state": "partly",
-    "why": "The letter text confirms the 3,555 Q1 trades, the 'unprecedented' language, and the Jan. 6 Nvidia/AMD purchases a week before the Jan. 13 China export-policy change, but is truncated before the Feb. 10 Vance/Dell, Micron, Aug. 28 deadline and STOCK Act points.",
-    "host": "warren.senate.gov",
-    "date": "2026-10-03",
+    "state": "supports",
+    "why": "The excerpt directly states the all-stock, $6 billion-plus TAE merger and the data-center electricity context, and the article separately reports fusion insiders voicing conflict-of-interest concerns with the Energy Department.",
+    "host": "techcrunch.com",
+    "date": "2026-10-08",
     "kind": "fact",
     "archive": false
    },
    "3": {
     "state": "supports",
-    "why": "CNBC reports the revocable trust with Trump Jr. as sole trustee giving more control than a blind trust, the 21,000-plus 2025 trades, Trump's July quotes, and the White House's flat denial.",
-    "host": "cnbc.com",
-    "date": "2026-10-03",
+    "why": "The Reuters item states the 0.1433 exchange ratio per a source familiar with the matter and that some xAI executives may opt for $75.46 per share in cash, matching the claim.",
+    "host": "finance.yahoo.com",
+    "date": "2026-10-08",
     "kind": "fact",
     "archive": false
    },
    "4": {
-    "state": "supports",
-    "why": "The archived Truth Social post dated Sept. 14, 2026 contains both quoted passages.",
-    "host": "trumpstruth.org",
-    "date": "2026-10-03",
+    "state": "partly",
+    "why": "The extracted (OCR-degraded, truncated) form shows an Nvidia purchase of $1,000,001-$5,000,000 dated 2/10 (OCR '2/10/2028'), but the visible portion does not show the Jan. 6 'unsolicited' Nvidia purchase, the Dell purchase, or a May 8 signature date, so only part of the claim is supported.",
+    "host": "extapps2.oge.gov",
+    "date": "2026-10-08",
     "kind": "fact",
     "archive": false
    },
    "5": {
-    "state": "unopened",
-    "why": "",
-    "host": "washingtonpost.com",
-    "date": "2026-10-03",
+    "state": "partly",
+    "why": "The letter supports the 3,555 Q1 trades, the 'unprecedented' characterization, the Feb. 10 Nvidia purchase the day Vance announced 41,000 more chips for Armenia, the Feb. 10 Dell purchase nine days before 'Go out and buy a Dell Computer', the March Micron purchases before 'one of the hottest companies', the Aug. 28 deadline, and the STOCK Act disclosure-not-prohibition note. The Jan. 6 Nvidia/AMD purchases tied to a Jan. 13 Commerce chip-export change do not appear in the provided (truncated) text.",
+    "host": "warren.senate.gov",
+    "date": "2026-10-08",
     "kind": "fact",
     "archive": false
    },
    "6": {
     "state": "supports",
-    "why": "The Herald Business summary reports about 30,000 transactions including Dell and Micron plus Broadcom and Texas Instruments purchases, Trump Jr.'s 1789 Capital $1.2 billion data-center-focused fund, and assets in a trust managed by his eldest son rather than a blind trust.",
-    "host": "mbiz.heraldcorp.com",
-    "date": "2026-10-03",
+    "why": "The CNBC text contains the revocable-trust passage in the excerpt, the 21,000-plus 2025 trades figure from the 927-page disclosure, both quoted Trump July remarks, and the statement that the White House has flatly denied any conflicts.",
+    "host": "cnbc.com",
+    "date": "2026-10-08",
     "kind": "fact",
     "archive": false
    },
    "7": {
     "state": "supports",
-    "why": "Financial News lists the Dell, Micron, GE Vernova, Broadcom, TI, Credo and Super Micro purchases, the TMTG fusion merger, Don Fox's comment, and the White House statement on independent managers and index-tracking models.",
-    "host": "en.fnnews.com",
-    "date": "2026-10-03",
+    "why": "The archived post dated September 14, 2026 contains both quoted sentences verbatim, including 'There is a SICK conspiracy going on against AI and Data Centers.'",
+    "host": "trumpstruth.org",
+    "date": "2026-10-08",
     "kind": "fact",
     "archive": false
    },
    "8": {
     "state": "supports",
-    "why": "Adnkronos reports about 30,000 transactions including Dell, Micron and GE Vernova, Don Fox's unprecedented comment, the sons' 1789 Capital/American Ventures investments including Cerebras, Perplexity and xAI, American Data Centers, and spokesman Ingle's statement.",
-    "host": "adnkronos.com",
-    "date": "2026-10-03",
+    "why": "The archived lede, bylined Cat Zakrzewski and Shira Ovide, contains the quoted 'increasingly intertwined' language and describes the analysis of financial disclosures and corporate announcements, as claimed.",
+    "host": "washingtonpost.com",
+    "date": "2026-10-08",
     "kind": "fact",
-    "archive": false
+    "archive": true
    },
    "9": {
     "state": "supports",
-    "why": "TechStory states 1789 Capital's investments include Cerebras, Perplexity and xAI, its $1.2 billion fund closed in August includes data centers, Eric Trump invests via American Ventures, and the brothers pursued American Data Centers.",
-    "host": "techstory.in",
-    "date": "2026-10-03",
+    "why": "The Herald article reports roughly 30,000 transactions including Dell and Micron, later purchases of Broadcom and Texas Instruments, 1789 Capital's $1.2 billion digital-infrastructure fund including data centers, and assets placed in a trust managed by the eldest son rather than a blind trust.",
+    "host": "mbiz.heraldcorp.com",
+    "date": "2026-10-08",
     "kind": "fact",
     "archive": false
    },
    "10": {
     "state": "supports",
-    "why": "IBTimes reports the Post's nearly 30,000 transactions including Dell, Micron and GE Vernova, the sons' American Data Centers launch, and Ingle's 'managed independently' and 'no conflicts of interest' statement.",
-    "host": "ibtimes.co.uk",
-    "date": "2026-10-03",
+    "why": "The article lists all seven named companies, the TMTG fusion merger tied to AI data-center power, Don Fox's quoted remark (with the 1962 date supplied in the same passage), and Davis Ingle's statement about independent managers and index-tracking computer models.",
+    "host": "en.fnnews.com",
+    "date": "2026-10-08",
     "kind": "fact",
     "archive": false
    },
    "11": {
     "state": "supports",
-    "why": "Section 202(c) says the terms 'officer' and 'employee' in sections 203, 205, 207 through 209 and 218 shall not include the President, which by its terms takes the President outside section 208's covered persons.",
+    "why": "The Adnkronos text reports nearly 30,000 transactions including Dell, Micron and GE Vernova, Don Fox's comment, investments via 1789 Capital and American Ventures including Cerebras, Perplexity and xAI, American Data Centers, and Ingle's model-portfolio statement.",
+    "host": "adnkronos.com",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "12": {
+    "state": "supports",
+    "why": "TechStory states 1789's investments include Cerebras, Perplexity and xAI, the August $1.2 billion fund per the excerpt, Eric Trump's investing via American Ventures, and the brothers' American Data Centers venture.",
+    "host": "techstory.in",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "13": {
+    "state": "supports",
+    "why": "The Reuters copy states the July 10 purchase and July 17 sale with the claimed ranges, the earlier June purchase, the June 12 IPO valuing the 'space, satellite and AI provider' at $1.77 trillion, and that SpaceX is a military contractor that often seeks federal approvals.",
+    "host": "aol.com",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "14": {
+    "state": "supports",
+    "why": "IBTimes reports the Post finding of nearly 30,000 transactions including Dell, Micron and GE Vernova, the brothers' launch of American Data Centers, and Ingle's statement as excerpted.",
+    "host": "ibtimes.co.uk",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "15": {
+    "state": "supports",
+    "why": "Subsection (c) excludes the President from 'officer' and 'employee' for sections 203, 205 and 207 through 209 (which includes 208), as quoted in the claim; the page itself does not describe 208's content, but the exclusion follows from the quoted text.",
     "host": "law.cornell.edu",
-    "date": "2026-10-03",
+    "date": "2026-10-08",
     "kind": "fact",
     "archive": false
    }
@@ -17034,6 +17066,176 @@
     "why": "CNN confirms Santos's own comparison of criticism of his commutation to hypothetical criticism of a pardon of \"Jesus Christ off the cross,\" but this source (largely a video-page listing) contains no content about Hakeem Jeffries's criticism contrasting the commutation's speed with other priorities.",
     "host": "cnn.com",
     "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   }
+  },
+  "trump-sons-drone-holdings-pentagon-awards-2025-2026": {
+   "0": {
+    "state": "supports",
+    "why": "The archived article contains each quoted passage: the 200,000 shares worth about $2.6 million, the 101st Airborne's intent to buy 3,500 drone engines, the roughly $225,000 initial order, the Army public affairs officer's statement that the parts met requirements, and the spokesman's 'does not interface with the federal government' statement.",
+    "host": "nytimes.com",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": true
+   },
+   "1": {
+    "state": "partly",
+    "why": "The letter states Unusual Machines, in which Trump Jr. 'reportedly holds a multimillion-dollar stake,' received a $12.8 million DoD contract in September 2025, and asks about conversations with Trump Jr. before the 'Unleashing U.S. Military Drone Dominance' directive. The question asking for each contract and whether it was competed is not visible in the provided truncated text, and the Washington Post characterization cannot be checked against this source.",
+    "host": "warren.senate.gov",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "2": {
+    "state": "supports",
+    "why": "Benzinga reports the definitive merger with Powerus as surviving entity, the Powerus Corporation name and PUSA ticker per the excerpt, the roughly $9.0 million private placement, and the expected summer 2026 close.",
+    "host": "finviz.com",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "3": {
+    "state": "supports",
+    "why": "The AP text contains each quoted element: Powerus partly owned by the two oldest sons, the $1.1 billion Pentagon drone fund, Aureus Greenway as a Florida firm partly owned by Eric and Don Jr., Velicovich's 'There's no conflict there,' and Eric Trump's 'Drones are clearly the wave of the future.'",
+    "host": "rapidcitypost.com",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "partly",
+    "why": "The letter supports the March 10 response failing to answer 'the vast majority of questions,' the 'no controls in place to prevent it' line, American Ventures and Unusual Machines as merger investors, Dominari's involvement, the Powerus DoD-award question, and the April 7 deadline. The questions about Hegseth conversations with Powerus or the Trump sons are cut off in the provided text.",
+    "host": "warren.senate.gov",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "supports",
+    "why": "The archived AP article contains the Gulf-states pitch, Velicovich's demos quote, Painter's 'enormous pressure' quote, the $60 million raise, and the Trump Organization's non-response.",
+    "host": "apnews.com",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": true
+   },
+   "6": {
+    "state": "supports",
+    "why": "The article contains the quoted lede, says the deal is the first such sale by Powerus to the U.S. military, that the company declined to detail terms or size, and Velicovich's 'They're not going to pick a system because of who's on an investor list.'",
+    "host": "dailygazette.com",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "7": {
+    "state": "supports",
+    "why": "Garcia's letter contains the quoted sentence, notes the contract followed a March 2026 announcement of the Trump sons' backing, and requests that the inspector general investigate the corruption risk associated with such contracts.",
+    "host": "oversightdemocrats.house.gov",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "8": {
+    "state": "supports",
+    "why": "The release contains the quoted selection language with the MatrixFold drone and states the merger remains subject to customary closing conditions.",
+    "host": "nasdaq.com",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "9": {
+    "state": "supports",
+    "why": "Benzinga reports UMAC shares spiked Thursday after the WSJ report, the Office of Strategic Capital and 'a mix of debt and equity financing,' the quoted naming sentence, and shares 'up 39.71%.'",
+    "host": "benzinga.com",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "10": {
+    "state": "supports",
+    "why": "The quoted passage appears verbatim in the ProPublica article.",
+    "host": "propublica.org",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "11": {
+    "state": "supports",
+    "why": "The letter, signed by Warren, Blumenthal, Hirono, Crow and Levin and dated June 2, 2026, describes OSC loans and equity investments for drone companies including Unusual Machines, the stock rising more than 50 percent, and asks for White House contacts with OSC and other Pentagon offices about Vulcan Elements, Unusual Machines and PsiQuantum.",
+    "host": "warren.senate.gov",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "12": {
+    "state": "supports",
+    "why": "The article states 19 companies advanced to Gauntlet II of the $1.1 billion program after a qualifier where 49 manufacturers competed, and the finalist list in the excerpt does not include Powerus.",
+    "host": "thedefensepost.com",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "13": {
+    "state": "supports",
+    "why": "The archived Post article contains the $3.2 billion figure, the $30 million Unusual Machines investment in Powerus, Evans never asking for favors and being in talks for a fast-tracked OSC loan, American Ventures as a Dominari branch in Trump Tower, the four drone makers, and both the White House and Pentagon statements.",
+    "host": "washingtonpost.com",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": true
+   },
+   "14": {
+    "state": "supports",
+    "why": "The release states the Tandem Defense award as quoted, the IDIQ structure through mid-2028 managed by AFLCMC, that the ceiling 'is not a guaranteed or committed amount,' and that the Air Force 'has obligated initial funding.'",
+    "host": "accessnewswire.com",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "15": {
+    "state": "supports",
+    "why": "The release names Warren, Garcia, Blumenthal and Duckworth writing to the DoD inspector general, references 1789 Capital and American Ventures, and asks for a review of whether officials complied with ethical guidelines.",
+    "host": "warren.senate.gov",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "16": {
+    "state": "supports",
+    "why": "The Inquirer copy contains the 'repeatedly sought, and failed to obtain' language, Benza's statement including 'no role whatsoever in the awarding,' and the line that no evidence has surfaced that either brother used political connections inappropriately.",
+    "host": "inquirer.com",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "17": {
+    "state": "supports",
+    "why": "The article reports Velicovich telling Reuters of the Pakistan Army MOU and initial order, the 9.9% American Ventures stake per filings, and the Trump Jr. spokesman quote about playing 'absolutely no role in the procurement of contracts in the United States or abroad.'",
+    "host": "businesstoday.in",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "18": {
+    "state": "supports",
+    "why": "The release states the merger was completed effective October 1, 2026, with AGH renamed Powerus Corporation and shares continuing under PUSA, as claimed.",
+    "host": "webull.com",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "19": {
+    "state": "supports",
+    "why": "The Benzinga transcript (Oct. 5, 2026) records Evans saying exactly this in response to an analyst question about potential U.S. government investment.",
+    "host": "benzinga.com",
+    "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "20": {
+    "state": "supports",
+    "why": "Subsection (c) contains the quoted exclusion verbatim, and '207 through 209' covers section 208; the page does not itself describe 208, but the exclusion of the President follows directly from the quoted text.",
+    "host": "law.cornell.edu",
+    "date": "2026-10-08",
     "kind": "fact",
     "archive": false
    }
