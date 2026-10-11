@@ -1,6 +1,6 @@
 {
  "version": 1,
- "as_of": "2026-10-10",
+ "as_of": "2026-10-11",
  "checks": {
   "abrego-garcia-vindictive-prosecution-2025-2026": {
    "0": {
@@ -16017,97 +16017,121 @@
   "trump-in-office-stock-trading-2026": {
    "0": {
     "state": "supports",
-    "why": "The CBS analysis states 3,642 transactions across 1,026 firms and funds signed May 8, the $212-$695 million range, Warren's insider-trading call, and the two investment professionals' views.",
-    "host": "cbsnews.com",
-    "date": "2026-10-03",
+    "why": "The Reuters copy states Trump bought at least $82 million in corporate and municipal bonds in more than 175 purchases from Aug. 28 through Oct. 2, with a maximum above $337 million and mostly public-agency-tied issuers, and quotes a White House official saying he 'fully complies with his reporting obligations.'",
+    "host": "finance.yahoo.com",
+    "date": "2026-10-11",
     "kind": "fact",
-    "archive": true
+    "archive": false
    },
    "1": {
     "state": "partly",
-    "why": "The source confirms the four firms linked to Account Nos. 3, 5, 6 and 8, the $858 million in assets, the 21,000+ trades, and the disclosure's ambiguity about each firm's role; however, it says only that CNBC found no evidence 'that Trump directed any specific transaction' and says nothing about his family, so the claim's 'Trump or his family' wording extends beyond the source.",
-    "host": "cnbc.com",
-    "date": "2026-10-04",
+    "why": "The OCR'd 278-T shows an Omaha Public Power District electric revenue bond purchase in the $250,001-$500,000 range (date OCR-garbled as '1/912028'), a West Virginia hospital/health-system revenue bond purchase, and stock and bond-ETF purchases, with 'OGE RECEIVED 2/27/2026'; however, the Feb. 26, 2026 filer signature date is not legible in the provided text and the Jan. 9 date is only inferable from garbled OCR.",
+    "host": "extapps2.oge.gov",
+    "date": "2026-10-11",
     "kind": "fact",
     "archive": false
    },
    "2": {
-    "state": "partly",
-    "why": "The letter text confirms the Aug. 12 date, 3,555 Q1 2026 trades, the estimate of 14,000+ trades worth up to $1.06 billion, and footnote 4 citing Bloomberg's 21,000 trades, but the provided text is truncated and does not show the 17-page length, the 30 examples, or the quoted request.",
-    "host": "warren.senate.gov",
-    "date": "2026-10-04",
+    "state": "supports",
+    "why": "CBS reports the May 8-signed filing's 3,642 transactions across 1,026 firms and funds between Jan. 6 and March 30 worth $212 million to $695 million, Warren's call to investigate 'potential insider trading,' and the two investment professionals' contrasting views as claimed.",
+    "host": "cbsnews.com",
+    "date": "2026-10-11",
     "kind": "fact",
-    "archive": false
+    "archive": true
    },
    "3": {
     "state": "supports",
-    "why": "The Aug. 13 release cites 30 examples of suspicious transactions, the $25 million in Meta sales before an adviser's data-center cost remarks, 29 GEO Group and CoreCivic trades worth up to $990,000 in 2025, and an Aug. 28 deadline for answers.",
-    "host": "warren.senate.gov",
-    "date": "2026-10-04",
+    "why": "CNBC links the four firms to Account Nos. 3, 5, 6 and 8, reports at least $858 million in assets and more than 21,000 trades, notes the disclosure does not always specify each firm's role, and says it found no evidence Trump directed any specific transaction.",
+    "host": "cnbc.com",
+    "date": "2026-10-11",
     "kind": "fact",
     "archive": false
    },
    "4": {
-    "state": "supports",
-    "why": "CNBC reports each element: the request to list managers directing trades, the revocable trust with Trump Jr. as sole trustee, more than 21,000 trades in 2025, Trump's July 'I don't talk to them' quote, Eric Trump's descriptions, and Kelly's 'same, tired narrative' statement.",
-    "host": "cnbc.com",
-    "date": "2026-10-04",
+    "state": "partly",
+    "why": "The letter text supports the 3,555 first-quarter trades, the 14,000-trade/$1.06 billion analysis, Bloomberg's 21,000-trade count in footnote 4, the '30 examples' and the request for 'all third-party institutions and managers that direct your trades'; the 17-page length cannot be confirmed from the truncated text provided.",
+    "host": "warren.senate.gov",
+    "date": "2026-10-11",
     "kind": "fact",
     "archive": false
    },
    "5": {
     "state": "supports",
-    "why": "The Reuters report carried by the Globe gives the $15,001-$50,000 June 23 purchase, the Aug. 12 signing and Aug. 22 release, more than 1,000 June trades, the June 12 IPO at $1.77 trillion, and Ingle's statement that neither Trump nor family can direct the portfolio.",
-    "host": "theglobeandmail.com",
-    "date": "2026-10-04",
+    "why": "The Aug. 13 release describes the Warren-Garcia letter's 30 examples, the $25 million in Meta sales before an adviser's data-center cost remarks, the 29 GEO Group/CoreCivic trades worth up to $990,000, and the Aug. 28 deadline.",
+    "host": "warren.senate.gov",
+    "date": "2026-10-11",
     "kind": "fact",
     "archive": false
    },
    "6": {
     "state": "supports",
-    "why": "The Reuters text reports the Aug. 20 memo, the goal of at least 1,000 launches and re-entries annually by 2030, expedited permitting and environmental reviews, and the prior year's 178 launches dominated by SpaceX.",
-    "host": "dailymaverick.co.za",
-    "date": "2026-10-04",
+    "why": "CNBC reports the letter's request to list the managers who direct his trades, the revocable trust with Trump Jr. as sole trustee, the 21,000-plus 2025 trades, Trump's July 'I don't talk to them' remark, Eric Trump's account descriptions and Anna Kelly's 'same, tired narrative' statement.",
+    "host": "cnbc.com",
+    "date": "2026-10-11",
     "kind": "fact",
     "archive": false
    },
    "7": {
     "state": "supports",
-    "why": "SpacePolicyOnline states the Secretary of War and NASA Administrator are directed to 'favor commercial space transportation services' and quotes the 1,000-launches-by-2030 goal.",
-    "host": "spacepolicyonline.com",
-    "date": "2026-10-04",
+    "why": "The Globe and Mail's Reuters copy states the June 23 purchase, the Aug. 12 signing and Aug. 22 release, the 1,000-plus June trades, the June 12 IPO at $1.77 trillion, and Ingle's statement that neither Trump nor family can direct the portfolio.",
+    "host": "theglobeandmail.com",
+    "date": "2026-10-11",
     "kind": "fact",
     "archive": false
    },
    "8": {
     "state": "supports",
-    "why": "Fortune reports the 21,000 trades worth $600 million-$1.86 billion, the chip-tariff, Iran-war and egg-shortage trades, the presidential exemption from 18 U.S.C. 208, Painter's 'doesn't matter who manages it' view, and the White House's shifting descriptions.",
-    "host": "fortune.com",
-    "date": "2026-10-04",
+    "why": "The Reuters report states Trump signed the memo, sets the 1,000-launch-and-re-entry goal by 2030, calls for expedited permitting and environmental reviews, and notes last year's 178 launches were dominated by SpaceX.",
+    "host": "dailymaverick.co.za",
+    "date": "2026-10-11",
     "kind": "fact",
     "archive": false
    },
    "9": {
     "state": "supports",
-    "why": "Yahoo Finance reports the June 23 purchase, cites a recent WSJ analysis on SpaceX winning more contracts and benefiting from deregulation, and notes SpaceX lobbied indexes for faster inclusion so many people likely own its stock unknowingly.",
-    "host": "finance.yahoo.com",
-    "date": "2026-10-04",
+    "why": "SpacePolicyOnline reports the policy directs the Secretary of War and NASA Administrator to 'favor commercial space transportation services' and quotes the 1,000-launches-and-reentries goal for 2030.",
+    "host": "spacepolicyonline.com",
+    "date": "2026-10-11",
     "kind": "fact",
     "archive": false
    },
    "10": {
     "state": "supports",
-    "why": "The Reuters copy reports the Sept. 8-signed disclosure, the July 10 purchase and July 17 sale ranges, the 15% share-price drop over that span, more than 1,000 July trades, the OGE posting on Tuesday (Sept. 22), and SpaceX's status as a military contractor seeking federal approvals.",
-    "host": "aol.com",
-    "date": "2026-10-04",
+    "why": "Fortune reports the 21,000-plus 2025 trades worth $600 million-$1.86 billion, trades around the chip-tariff leak, the Iran war's start and the egg shortage, the presidential exemption from 18 U.S.C. 208, Painter's ownership-interest view, and the White House's shifting management descriptions.",
+    "host": "fortune.com",
+    "date": "2026-10-11",
     "kind": "fact",
     "archive": false
    },
    "11": {
     "state": "supports",
-    "why": "The source's key points state Trump disclosed 1,156 July transactions totaling roughly $79 million to $270 million by CNBC's calculation, and that the largest were July 20 sales of $5 million to $25 million each of Microsoft and Amazon, matching the claim.",
+    "why": "Yahoo Finance covers the June 23 SpaceX purchase, the index-inclusion lobbying point, and cites a WSJ analysis that SpaceX has been winning more government contracts and benefiting from the administration's deregulatory stance.",
+    "host": "finance.yahoo.com",
+    "date": "2026-10-11",
+    "kind": "fact",
+    "archive": false
+   },
+   "12": {
+    "state": "supports",
+    "why": "The Reuters copy states the July 10 purchase and July 17 sale under the Sept. 8-signed disclosure, the 15% share-price drop, the 1,000-plus July trades, OGE posting it Tuesday, and SpaceX as a military contractor that often seeks federal approvals.",
+    "host": "aol.com",
+    "date": "2026-10-11",
+    "kind": "fact",
+    "archive": false
+   },
+   "13": {
+    "state": "supports",
+    "why": "The CNBC key points state exactly the 1,156 July transactions, the $79 million-$270 million total and the July 20 Microsoft and Amazon sales.",
     "host": "cnbc.com",
-    "date": "2026-10-05",
+    "date": "2026-10-11",
+    "kind": "fact",
+    "archive": false
+   },
+   "14": {
+    "state": "partly",
+    "why": "The CNBC text supports the 807 positions/$240.7M-$797.6M, 243 purchases/$68.2M-$233.8M, >1,000 positions/$300M-$1B totals, Plant Bowen and two other coal plants, Omaha bonds after the data-center order, hospitals exposed to Medicaid changes, Marlowe and Painter quotes, the Ingle and Trump Organization statements, and the no-evidence finding; the Minnesota state debt purchase after a federal Medicaid deferral does not appear in the provided text.",
+    "host": "cnbc.com",
+    "date": "2026-10-11",
     "kind": "fact",
     "archive": false
    }
@@ -17098,6 +17122,96 @@
     "why": "CNN confirms Santos's own comparison of criticism of his commutation to hypothetical criticism of a pardon of \"Jesus Christ off the cross,\" but this source (largely a video-page listing) contains no content about Hakeem Jeffries's criticism contrasting the commutation's speed with other priorities.",
     "host": "cnn.com",
     "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   }
+  },
+  "trump-sons-defense-tech-portfolio-federal-awards-2025-2026": {
+   "0": {
+    "state": "supports",
+    "why": "The Fox Business text contains the quoted $24 million contract sentence, identifies Pathak and 'chief strategy advisor Eric Trump,' and carries the 'We are America First' quote from 'Mornings with Maria.'",
+    "host": "foxbusiness.com",
+    "date": "2026-10-11",
+    "kind": "fact",
+    "archive": false
+   },
+   "1": {
+    "state": "supports",
+    "why": "The Next Web article (published April 26, 2026) contains both quoted passages verbatim, including the $24 million Army/Navy/Air Force research contracts and the Boardwalk-inherited SBIR award.",
+    "host": "thenextweb.com",
+    "date": "2026-10-11",
+    "kind": "fact",
+    "archive": false
+   },
+   "2": {
+    "state": "supports",
+    "why": "The letter, dated May 8, 2026 and addressed to Inspector General Moring, contains the quoted Fox Business passage, states such companies 'have amassed over $725 million in loans, grants, and awards since President Trump took office,' and its question 3 lists Anduril, Cerebras, PsiQuantum, Firehawk, Vulcan Elements and Foundation Future Industries.",
+    "host": "oversightdemocrats.house.gov",
+    "date": "2026-10-11",
+    "kind": "fact",
+    "archive": false
+   },
+   "3": {
+    "state": "partly",
+    "why": "The archived Post article by the named authors, dated July 13, 2026, contains each quoted passage verbatim: the $3.2 billion/$3.1 billion figures, the 97 percent share, 'Ten of the 15 companies,' the Dominari/Trump Tower description, Trump Jr.'s 'helped craft' remark, and the White House, Pentagon statements; however, 1789's 'There are zero conflicts at 1789' statement does not appear in the provided text.",
+    "host": "washingtonpost.com",
+    "date": "2026-10-11",
+    "kind": "fact",
+    "archive": true
+   },
+   "4": {
+    "state": "supports",
+    "why": "The July 30 letter to the Defense, Energy, Commerce and Interior secretaries and the EXIM president contains both quoted passages about the 14 companies and the $8.9 billion.",
+    "host": "blumenthal.senate.gov",
+    "date": "2026-10-11",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "partly",
+    "why": "The Aug. 4, 2026 letter from the four named members contains the $3.2 billion passage, the 'repeatedly sought, and failed to obtain' sentence, the IG request, Hadrian's $39.2 million Army and $900 million Navy awards, Foundation Future Industries' $24 million, and Anduril/SpaceX's $1 billion and $2.1 billion; the PsiQuantum $125 million DARPA item does not appear in the provided text.",
+    "host": "warren.senate.gov",
+    "date": "2026-10-11",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
+    "state": "supports",
+    "why": "The Inquirer's Post copy carries Benza's 'passive, minority investors' and 'no role whatsoever' statement and the sentence that no evidence has surfaced that either brother used political connections inappropriately, which is not against the law.",
+    "host": "inquirer.com",
+    "date": "2026-10-11",
+    "kind": "fact",
+    "archive": false
+   },
+   "7": {
+    "state": "supports",
+    "why": "The gCaptain Reuters copy states the $3.7 billion shipyard ceremony attended by Trump, the $2.9 billion Navy contract, the combined up to $6.6 billion, and Trump's 40% stake remark without an ownership mechanism.",
+    "host": "gcaptain.com",
+    "date": "2026-10-11",
+    "kind": "fact",
+    "archive": false
+   },
+   "8": {
+    "state": "supports",
+    "why": "The source (The National News Desk, Oct 8, 2026) opens by stating ABC News deleted the report on the Trump sons' alleged investment ties, and the excerpt contains Henning's 'does not have a \"major stake\" in Anduril' line and Trump Jr.'s 'ABC deleted this article in less than 24 hours because it's false' post; the source also quotes the brothers' spokesperson verbatim saying they 'do not seek to influence, direct, or participate in any government decision, procurement, award.'",
+    "host": "local12.com",
+    "date": "2026-10-11",
+    "kind": "fact",
+    "archive": false
+   },
+   "9": {
+    "state": "supports",
+    "why": "The corrected Oct. 9, 2026 ABC story carries the correction note, the $50 million Anduril investment in a $2.5 billion round, the 'relatively small stake' language, the 'no ability to decide' quote, Raskin's August letter quote, the lawyers' 'political association' line, the Firehawk-2023 statement and PsiQuantum's '$100 million letter of intent with the Department of Commerce in May.'",
+    "host": "abcnews.com",
+    "date": "2026-10-11",
+    "kind": "fact",
+    "archive": false
+   },
+   "10": {
+    "state": "supports",
+    "why": "Subsection (c) of 18 U.S.C. 202 states exactly the quoted exclusion, which places the President outside the officer/employee definition used by section 208.",
+    "host": "law.cornell.edu",
+    "date": "2026-10-11",
     "kind": "fact",
     "archive": false
    }
