@@ -1370,10 +1370,10 @@
     "administration": "Trump II (2025-present)",
     "agency": "Treasury / FinCEN",
     "domain": "financial",
-    "status": "Finalized -- interim final rule in effect since March 21, 2025 exempting domestic companies from reporting",
-    "date_of_action": "2025-03-02 (non-enforcement announced) through 2025-03-21 (interim final rule published)",
+    "status": "Finalized -- FinCEN's final rule, effective August 14, 2026, permanently exempts U.S. companies and U.S. persons from beneficial ownership reporting, adopting the March 2025 interim final rule; only foreign-formed companies registered in the U.S. still report.",
+    "date_of_action": "2025-03-02 (non-enforcement announced); 2025-03-26 (interim final rule published and effective); 2026-08-14 (final rule effective)",
     "original_rule_summary": "The Corporate Transparency Act, enacted in 2021 with an implementing rule that took effect in 2024, required roughly 32 million U.S. companies to report their true beneficial owners to the Treasury's Financial Crimes Enforcement Network (FinCEN), aimed at preventing anonymous shell companies from being used for money laundering, terrorism financing, and sanctions evasion.",
-    "what_changed": "On March 2, 2025, Treasury Secretary Scott Bessent announced Treasury would not enforce any penalties or fines against U.S. citizens or domestic reporting companies (or their beneficial owners) under the CTA, and would narrow the rule's scope to foreign reporting companies only. FinCEN's March 21, 2025 interim final rule formalized this: it exempted all domestic entities and their beneficial owners from reporting entirely, and removed any requirement for foreign entities to report their U.S. beneficial owners. The change reduced the number of companies required to report from roughly 32 million to under 12,000 -- more than 99% of previously-covered entities exempted. **NOTUS reported the rollback came despite documented evidence that Mexican drug cartels and Chinese money launderers have used anonymous U.S. shell companies to launder fentanyl-trafficking proceeds, cutting against the administration's own stated anti-fentanyl priorities.** A subsequent GAO report found Treasury's expanded exemptions created gaps in the beneficial-ownership information the CTA was designed to collect.",
+    "what_changed": "On March 2, 2025, Treasury Secretary Scott Bessent announced Treasury would not enforce any penalties or fines against U.S. citizens or domestic reporting companies (or their beneficial owners) under the CTA, and would narrow the rule's scope to foreign reporting companies only. FinCEN's interim final rule, announced March 21, 2025 and effective on its Federal Register publication March 26, formalized this: it exempted all domestic entities and their beneficial owners from reporting entirely, and removed any requirement for foreign entities to report their U.S. beneficial owners. FinCEN's own figures put the original reporting population at about 32.6 million companies and the narrowed one at an estimated 28,000 foreign companies in the first year -- more than 99% of previously-covered entities exempted. **NOTUS reported the rollback came despite documented evidence that Mexican drug cartels and Chinese money launderers have used anonymous U.S. shell companies to launder fentanyl-trafficking proceeds, cutting against the administration's own stated anti-fentanyl priorities.** A subsequent GAO report found Treasury's expanded exemptions created gaps in the beneficial-ownership information the CTA was designed to collect; Treasury disagreed with GAO's recommendation to identify actions to address them.\n\nUpdate 2026-10-10: FinCEN's final rule, effective August 14, 2026, adopted the interim rule's blanket domestic exemption as permanent, rejecting commenters' narrower alternatives. It also exempted U.S.-person company applicants from reporting, and FinCEN said it would delete previously reported U.S.-person information from its beneficial ownership database in a one-time sweep.",
     "primary_proponent": {
       "name": "Scott Bessent",
       "role": "Secretary of the Treasury",
@@ -1387,26 +1387,30 @@
       "figures": [
         {
           "metric": "Reporting companies before the rule change",
-          "value": "~32,000,000",
-          "source": "Treasury/FinCEN"
+          "value": "~32,600,000",
+          "source": "FinCEN 2022 Reporting Rule estimate (32,556,929), as cited in FinCEN's August 2026 final rule"
         },
         {
-          "metric": "Reporting companies after the rule change",
-          "value": "<12,000",
-          "source": "Treasury/FinCEN, cited by multiple law-firm client alerts (Wiley, Sidley, Seyfarth, Ballard Spahr)"
+          "metric": "Expected reporting companies after the rule change (first year)",
+          "value": "~28,000",
+          "source": "FinCEN August 2026 final rule (revised up from the interim rule's ~25,000 estimate)"
         }
       ],
       "caveat": "GAO's finding documents an information gap, not a quantified dollar amount of money laundering enabled by it. The administration's stated rationale -- relieving small businesses of a compliance requirement industry groups had long criticized as burdensome -- is a genuine competing policy consideration, not addressed as settled here."
     },
-    "confidence_note": "HIGH confidence -- corroborated by Treasury's own press release, FinCEN's published interim final rule, multiple national law firm client alerts, congressional correspondence demanding an explanation (Sens. Whitehouse and Grassley), and a GAO report documenting the resulting information gaps.",
+    "confidence_note": "HIGH confidence -- corroborated by Treasury's own press release, FinCEN's published interim final rule, multiple national law firm client alerts, congressional correspondence demanding an explanation (Sens. Whitehouse and Grassley), and a GAO report documenting the resulting information gaps. Update 2026-10-10: the August 2026 final rule, published in the Federal Register, confirms the exemptions are now permanent; reporting-population figures now use FinCEN's own estimates from that rule.",
     "pull_quote": "Bessent called the enforcement suspension ‘a victory for common sense,’ framing it as part of the administration's agenda to reduce regulatory burdens on small businesses.",
     "short_summary": "Treasury exempted over 99% of U.S. companies from beneficial-ownership disclosure rules cartels have used shell companies to evade.",
-    "last_verified": "2026-08-10",
+    "last_verified": "2026-10-10",
     "date_added": "2026-08-10",
     "sources": [
       {
         "name": "Treasury -- Treasury Department Announces Suspension of Enforcement of Corporate Transparency Act Against U.S. Citizens and Domestic Reporting Companies",
         "url": "https://home.treasury.gov/news/press-releases/sb0038"
+      },
+      {
+        "name": "FinCEN -- FinCEN Removes Beneficial Ownership Reporting Requirements for U.S. Companies and U.S. Persons, Sets New Deadlines for Foreign Companies",
+        "url": "https://www.fincen.gov/news/news-releases/fincen-removes-beneficial-ownership-reporting-requirements-us-companies-and-us"
       },
       {
         "name": "Holland & Knight -- Treasury Department Announcement on Enforcement and Scope of Corporate Transparency Act",
@@ -1423,14 +1427,22 @@
       {
         "name": "Sen. Sheldon Whitehouse's office -- Whitehouse, Grassley Demand Explanation of Treasury's CTA Enforcement Suspension",
         "url": "https://www.whitehouse.senate.gov/news/release/whitehouse-grassley-demand-explanation-of-treasury-departments-decision-to-suspend-enforcement-of-corporate-transparency-act/"
+      },
+      {
+        "name": "Federal Register -- Beneficial Ownership Information Reporting Requirement Revision (FinCEN final rule, Aug. 14, 2026)",
+        "url": "https://www.federalregister.gov/documents/2026/08/14/2026-16576/beneficial-ownership-information-reporting-requirement-revision"
+      },
+      {
+        "name": "ABA Banking Journal -- GAO: Expanded exemptions leave holes in beneficial ownership reporting",
+        "url": "https://bankingjournal.aba.com/2026/06/gao-expanded-exemptions-leave-holes-in-beneficial-ownership-reporting/"
       }
     ],
     "section_summaries": {
-      "what_changed": "Treasury exempted all domestic companies from Corporate Transparency Act beneficial-ownership reporting in March 2025, cutting the number of covered entities from ~32 million to under 12,000.",
+      "what_changed": "Treasury exempted all domestic companies from Corporate Transparency Act ownership reporting in 2025 and made it permanent in 2026, cutting coverage from ~32.6 million to ~28,000 companies.",
       "estimated_impact": "GAO found the expanded exemptions created information gaps that reporting links to law-enforcement concerns over cartel and money-laundering use of anonymous shell companies.",
-      "confidence_note": "Well-corroborated by Treasury's own announcement, the published rule, law-firm analyses, and a GAO report on the resulting gaps."
+      "confidence_note": "Well-corroborated by Treasury's announcement, the interim and final rules, law-firm analyses, and a GAO report on the resulting gaps."
     },
-    "last_substantive_update": "2026-08-10",
+    "last_substantive_update": "2026-10-10",
     "glance": {
       "who": "Scott Bessent (Treasury)",
       "what": "Exempted over 99% of U.S. companies from beneficial-ownership reporting",
@@ -1439,7 +1451,31 @@
         "certainty": "alleged",
         "who": "Anti-money-laundering oversight"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-10-10"
+    },
+    "timeline": {
+      "what_changed": {
+        "base": "On March 2, 2025, Treasury Secretary Scott Bessent announced Treasury would not enforce any penalties or fines against U.S. citizens or domestic reporting companies (or their beneficial owners) under the CTA, and would narrow the rule's scope to foreign reporting companies only. FinCEN's interim final rule, announced March 21, 2025 and effective on its Federal Register publication March 26, formalized this: it exempted all domestic entities and their beneficial owners from reporting entirely, and removed any requirement for foreign entities to report their U.S. beneficial owners. FinCEN's own figures put the original reporting population at about 32.6 million companies and the narrowed one at an estimated 28,000 foreign companies in the first year -- more than 99% of previously-covered entities exempted. **NOTUS reported the rollback came despite documented evidence that Mexican drug cartels and Chinese money launderers have used anonymous U.S. shell companies to launder fentanyl-trafficking proceeds, cutting against the administration's own stated anti-fentanyl priorities.** A subsequent GAO report found Treasury's expanded exemptions created gaps in the beneficial-ownership information the CTA was designed to collect; Treasury disagreed with GAO's recommendation to identify actions to address them.",
+        "updates": [
+          {
+            "date": "2026-10-10",
+            "label": "Update",
+            "text": "Update 2026-10-10: FinCEN's final rule, effective August 14, 2026, adopted the interim rule's blanket domestic exemption as permanent, rejecting commenters' narrower alternatives. It also exempted U.S.-person company applicants from reporting, and FinCEN said it would delete previously reported U.S.-person information from its beneficial ownership database in a one-time sweep.",
+            "effective_date": "2026-10-10"
+          }
+        ]
+      },
+      "confidence_note": {
+        "base": "HIGH confidence -- corroborated by Treasury's own press release, FinCEN's published interim final rule, multiple national law firm client alerts, congressional correspondence demanding an explanation (Sens. Whitehouse and Grassley), and a GAO report documenting the resulting information gaps.",
+        "updates": [
+          {
+            "date": "2026-10-10",
+            "label": "Update",
+            "text": "Update 2026-10-10: the August 2026 final rule, published in the Federal Register, confirms the exemptions are now permanent; reporting-population figures now use FinCEN's own estimates from that rule.",
+            "effective_date": "2026-10-10"
+          }
+        ]
+      }
     }
   },
   {
@@ -4922,10 +4958,10 @@
     "administration": "Trump II",
     "agency": "FCC",
     "domain": "consumer_safety / national security (telecom infrastructure)",
-    "status": "Finalized -- FCC voted to rescind in November 2025",
+    "status": "Finalized -- the FCC voted 2-1 on November 20, 2025 to rescind the January 2025 Section 105 ruling and withdraw its proposed rules. A July 29, 2026 GAO legal decision found the rescission is a rule subject to the Congressional Review Act; it did not reinstate the January ruling.",
     "date_of_action": "2025-01 (rule adopted) through 2025-11-20 (rescission vote)",
     "original_rule_summary": "In January 2025, in the final days of the Biden administration, the FCC adopted a rule under Section 105 of the Communications Assistance for Law Enforcement Act (CALEA) requiring telecommunications carriers to affirmatively secure their networks against unauthorized access, in direct response to the Salt Typhoon intrusion -- **a China-linked state-sponsored hacking campaign that had infiltrated at least eight major U.S. telecom carriers, geolocating millions of Americans and intercepting call and text data, in one of the largest telecom breaches in U.S. history**.",
-    "what_changed": "On November 20, 2025, the FCC, under Chairman Brendan Carr, voted along party lines to rescind the Section 105 network-security rule adopted less than a year earlier in direct response to Salt Typhoon. Carr argued the rule 'exceeded the agency's authority' and 'did not present an effective or agile response to the relevant cybersecurity threats,' framing it as a rushed, ineffective, last-minute Biden-era action. Sen. Maria Cantwell (D-WA), the Senate Commerce Committee's ranking member, publicly opposed the rollback, sending a formal letter to Carr in November 2025 and noting the reversal came after direct lobbying from the same telecom carriers whose networks had been breached by the Salt Typhoon hackers the rule was written to guard against.",
+    "what_changed": "On November 20, 2025, the FCC, under Chairman Brendan Carr, voted along party lines to rescind the Section 105 network-security rule adopted less than a year earlier in direct response to Salt Typhoon. Carr argued the rule 'exceeded the agency's authority' and 'did not present an effective or agile response to the relevant cybersecurity threats,' framing it as a rushed, ineffective, last-minute Biden-era action. Sen. Maria Cantwell (D-WA), the Senate Commerce Committee's ranking member, publicly opposed the rollback, sending a formal letter to Carr in November 2025 and noting the reversal came after direct lobbying from the same telecom carriers whose networks had been breached by the Salt Typhoon hackers the rule was written to guard against.\n\nUpdate 2026-10-10: In a July 29, 2026 legal decision (B-338053) requested by Sen. Cantwell, the Government Accountability Office rejected the FCC's position that the rescission was an order resulting from an adjudication and concluded it is a rule that must be submitted to Congress and the Comptroller General under the Congressional Review Act before taking effect. The decision does not restore the January 2025 ruling or find that any carrier violated a cybersecurity obligation.",
     "primary_proponent": {
       "name": "Brendan Carr",
       "role": "FCC Chairman",
@@ -4941,21 +4977,21 @@
       "summary": "Not a direct public-health rollback; the harm alleged is to U.S. communications-infrastructure security and consumer privacy/surveillance risk, given the rule was adopted specifically in response to a documented foreign state-actor breach that intercepted Americans' calls and location data.",
       "figures": [
         {
-          "metric": "Major U.S. telecom carriers confirmed breached by Salt Typhoon prior to the original rule's adoption",
+          "metric": "U.S. communications companies Salt Typhoon was disclosed in September 2024 to have infiltrated",
           "value": "8+",
-          "source": "Federal News Network, Cybersecurity Dive, November 2025 reporting on the rescission vote"
+          "source": "FCC Order on Reconsideration (FCC 25-81), November 2025"
         }
       ],
       "caveat": "The FCC's stated rationale (that the rule exceeded statutory authority and was an ineffective, rushed response) is a genuine legal and policy argument, not addressed here as pretextual; the timing relative to industry lobbying, documented by Sen. Cantwell's letter, is presented as a relevant fact for evaluating the rescission, not proof of improper motive."
     },
-    "confidence_note": "HIGH confidence -- the rescission vote, Carr's stated rationale, and Cantwell's opposition letter and lobbying allegation are corroborated across Federal News Network, Bloomberg, Cybersecurity Dive, and the Senate Commerce Committee's own published letter. This entry is closely related to, but distinct from, this tracker's Government Service Redirection entry on CISA workforce cuts ([[cisa-cyber-workforce-cuts-trump2]]), which documents the separate story of CISA's own staffing losses rather than this FCC regulatory rollback.",
+    "confidence_note": "HIGH confidence -- the rescission vote, Carr's stated rationale, and Cantwell's opposition letter and lobbying allegation are corroborated across Federal News Network, Bloomberg, Cybersecurity Dive, and the Senate Commerce Committee's own published letter. This entry is closely related to, but distinct from, this tracker's Government Service Redirection entry on CISA workforce cuts ([[cisa-cyber-workforce-cuts-trump2]]), which documents the separate story of CISA's own staffing losses rather than this FCC regulatory rollback.\n\nUpdate 2026-10-10: Rechecked against the FCC's own order (FCC 25-81, adopted November 20 and released November 21, 2025, with Commissioner Gomez dissenting), its December 15, 2025 Federal Register summary, Federal News Network and Sen. Cantwell's November 18, 2025 letter, all of which still hold; the order itself is now the source for the 'at least eight' companies figure. The GAO decision is cited from GAO's own published decision (B-338053), with SaveOnPhone.com's report on its limits; no court challenge, FCC submission to Congress or congressional disapproval resolution was found.",
     "pull_quote": "Sen. Maria Cantwell, in a formal letter to Chairman Carr, noted the rollback came after direct lobbying from the same telecom carriers whose networks had been breached by the hackers the rule was meant to guard against.",
     "section_summaries": {
-      "what_changed": "The FCC voted along party lines in November 2025 to rescind a telecom network-security rule adopted less than a year earlier specifically in response to the Salt Typhoon Chinese hacking campaign, after lobbying from the same carriers the rule targeted.",
-      "estimated_impact": "The rollback removes a mandatory security requirement adopted directly in response to a documented breach that let Chinese state hackers geolocate and intercept communications for millions of Americans.",
+      "what_changed": "The FCC voted 2-1 in November 2025 to rescind a telecom security rule adopted after China's Salt Typhoon hack, after carrier lobbying; GAO later found the rescission is a rule Congress can review.",
+      "estimated_impact": "The rollback removes a mandatory security requirement adopted after a breach that let Chinese state hackers geolocate and intercept communications of millions of Americans.",
       "confidence_note": "Well-corroborated across multiple outlets and a formal Senate letter; the FCC's legal/policy rationale for rescinding is a genuine, stated position, not addressed here as pretextual."
     },
-    "last_verified": "2026-08-09",
+    "last_verified": "2026-10-10",
     "date_added": "2026-08-09",
     "sources": [
       {
@@ -4973,10 +5009,22 @@
       {
         "name": "Senate Commerce Committee (Cantwell) -- Cantwell Slams Efforts by Brendan Carr's FCC to Roll Back Network Protection Rules Put in Place After Salt Typhoon Hacks",
         "url": "https://www.commerce.senate.gov/2025/11/cantwell-slams-efforts-by-brendan-carr-s-fcc-to-roll-back-network-protection-rules-put-in-place-after-salt-typhoon-hacks"
+      },
+      {
+        "name": "FCC -- Order on Reconsideration, Protecting the Nation's Communications Systems from Cybersecurity Threats (FCC 25-81)",
+        "url": "https://docs.fcc.gov/public/attachments/FCC-25-81A1_Rcd.pdf"
+      },
+      {
+        "name": "U.S. GAO -- Federal Communications Commission--Applicability of the Congressional Review Act to Order on Reconsideration in Protecting the Nation's Communications Systems from Cybersecurity Threats (B-338053, July 29, 2026)",
+        "url": "https://www.gao.gov/assets/890/887932.pdf"
+      },
+      {
+        "name": "SaveOnPhone.com -- GAO Says FCC Cybersecurity Rollback Must Go to Congress",
+        "url": "https://saveonphone.com/2026/08/16/gao-says-fcc-cybersecurity-rollback-must-go-to-congress/"
       }
     ],
     "short_summary": "FCC rescinded a mandatory telecom network-security rule adopted after China's Salt Typhoon breach, after lobbying from the breached carriers.",
-    "last_substantive_update": "2026-08-09",
+    "last_substantive_update": "2026-10-10",
     "glance": {
       "who": "Brendan Carr (FCC Chairman)",
       "what": "Rescinded the telecom network-security rule adopted after China's Salt Typhoon hack",
@@ -4985,7 +5033,31 @@
         "certainty": "projected",
         "who": "U.S. telecom network security"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-10-10"
+    },
+    "timeline": {
+      "what_changed": {
+        "base": "On November 20, 2025, the FCC, under Chairman Brendan Carr, voted along party lines to rescind the Section 105 network-security rule adopted less than a year earlier in direct response to Salt Typhoon. Carr argued the rule 'exceeded the agency's authority' and 'did not present an effective or agile response to the relevant cybersecurity threats,' framing it as a rushed, ineffective, last-minute Biden-era action. Sen. Maria Cantwell (D-WA), the Senate Commerce Committee's ranking member, publicly opposed the rollback, sending a formal letter to Carr in November 2025 and noting the reversal came after direct lobbying from the same telecom carriers whose networks had been breached by the Salt Typhoon hackers the rule was written to guard against.",
+        "updates": [
+          {
+            "date": "2026-10-10",
+            "label": "Update",
+            "text": "Update 2026-10-10: In a July 29, 2026 legal decision (B-338053) requested by Sen. Cantwell, the Government Accountability Office rejected the FCC's position that the rescission was an order resulting from an adjudication and concluded it is a rule that must be submitted to Congress and the Comptroller General under the Congressional Review Act before taking effect. The decision does not restore the January 2025 ruling or find that any carrier violated a cybersecurity obligation.",
+            "effective_date": "2026-10-10"
+          }
+        ]
+      },
+      "confidence_note": {
+        "base": "HIGH confidence -- the rescission vote, Carr's stated rationale, and Cantwell's opposition letter and lobbying allegation are corroborated across Federal News Network, Bloomberg, Cybersecurity Dive, and the Senate Commerce Committee's own published letter. This entry is closely related to, but distinct from, this tracker's Government Service Redirection entry on CISA workforce cuts ([[cisa-cyber-workforce-cuts-trump2]]), which documents the separate story of CISA's own staffing losses rather than this FCC regulatory rollback.",
+        "updates": [
+          {
+            "date": "2026-10-10",
+            "label": "Update",
+            "text": "Update 2026-10-10: Rechecked against the FCC's own order (FCC 25-81, adopted November 20 and released November 21, 2025, with Commissioner Gomez dissenting), its December 15, 2025 Federal Register summary, Federal News Network and Sen. Cantwell's November 18, 2025 letter, all of which still hold; the order itself is now the source for the 'at least eight' companies figure. The GAO decision is cited from GAO's own published decision (B-338053), with SaveOnPhone.com's report on its limits; no court challenge, FCC submission to Congress or congressional disapproval resolution was found.",
+            "effective_date": "2026-10-10"
+          }
+        ]
+      }
     }
   },
   {
@@ -5167,10 +5239,10 @@
       "figures": [],
       "caveat": "No independently quantified national estimate of cavity-rate increase or dollar cost attributable specifically to this restriction was identified in sourcing reviewed; the harm case here rests on the established dental-health consensus (ADA, AAP, NIH) that fluoride supplementation is a safe, effective, and until now clinically recommended prevention tool being narrowed on disputed scientific grounds, rather than on a modeled figure."
     },
-    "confidence_note": "HIGH confidence on the sequence of events (Utah's law, RFK Jr.'s public statements, the FDA's October 31, 2025 marketing-restriction action, and ADA/AAP opposition), corroborated by CNN, NBC News, STAT News, and ProPublica's detailed reporting on the FDA action and Paxton's parallel toothpaste-marketing investigations. MODERATE confidence on classifying this as a Corporate Deregulation consumer_safety rollback rather than a Government Services Redirection entry -- Utah's own ban is a state action outside this tracker's federal scope and is included here only as context for the coordinated national campaign RFK Jr. publicly announced; the entry's tracked action is anchored specifically to the FDA's federal marketing restriction.",
+    "confidence_note": "HIGH confidence on the sequence of events (Utah's law, RFK Jr.'s public statements, the FDA's October 31, 2025 marketing-restriction action, and ADA/AAP opposition), corroborated by CNN, NBC News, STAT News, and ProPublica's detailed reporting on the FDA action and Paxton's parallel toothpaste-marketing investigations. MODERATE confidence on classifying this as a Corporate Deregulation consumer_safety rollback rather than a Government Services Redirection entry -- Utah's own ban is a state action outside this tracker's federal scope and is included here only as context for the coordinated national campaign RFK Jr. publicly announced; the entry's tracked action is anchored specifically to the FDA's federal marketing restriction. Re-verified 2026-10-10: ProPublica's report and the ADA's October 31, 2025 statement still describe the FDA action as notices to four companies plus letters to health care professionals, short of the earlier-proposed full market removal; no later FDA rule, enforcement outcome or withdrawal of the supplement action was found.",
     "pull_quote": "RFK Jr. has repeatedly claimed fluoride causes “profound IQ loss” -- a claim the National Institutes of Health's own data on toxic fluoride overdoses (rare accidents, not a risk from standard dosing) cuts against.",
     "short_summary": "FDA restricted marketing of children's fluoride supplements as RFK Jr. pushed to end water fluoridation nationally.",
-    "last_verified": "2026-08-10",
+    "last_verified": "2026-10-10",
     "date_added": "2026-08-10",
     "sources": [
       {
@@ -5188,6 +5260,10 @@
       {
         "name": "STAT News -- Utah becomes the first state to ban fluoride in public drinking water (2025-03-28)",
         "url": "https://www.statnews.com/2025/03/28/utah-first-state-ban-fluoride-public-drinking-water/"
+      },
+      {
+        "name": "ADA News -- FDA to restrict sale of fluoride supplements, halting previously promised ban (2025-10-31)",
+        "url": "https://adanews.ada.org/ada-news/2025/october/fda-to-restrict-sale-of-fluoride-supplements-halting-previously-promised-ban/"
       }
     ],
     "section_summaries": {
@@ -8684,7 +8760,7 @@
     "administration": "Trump II (2025-present)",
     "agency": "EPA / Army Corps of Engineers",
     "domain": "environmental",
-    "status": "Proposed Repeal (original Nov. 2025 proposal's comment period closed 2026-01-05; a supplemental proposal published 2026-09-09 adds narrower options limiting jurisdiction to perennial waters, with comments due 2026-10-09 -- no final rule yet)",
+    "status": "Proposed Repeal (original Nov. 2025 proposal's comment period closed 2026-01-05; a supplemental proposal published 2026-09-09, adding narrower options limiting jurisdiction to perennial waters, closed to comment 2026-10-09 with no extension -- no final rule yet)",
     "date_of_action": "2025-11-17 (proposed)",
     "original_rule_summary": "The 'waters of the United States' (WOTUS) definition determines which streams, wetlands, and other water bodies are protected under the Clean Water Act. Following the Supreme Court's 2023 Sackett v. EPA decision, the Biden administration issued a 2023 rule conforming WOTUS to Sackett's narrower 'relatively permanent' and 'continuous surface connection' standards.",
     "what_changed": "EPA and the Army Corps proposed a further narrowing of the 2023 rule -- the sixth WOTUS redefinition in a decade -- including removing 'interstate waters' from the definition entirely and tightening the definitions of 'continuous surface connection' and 'relatively permanent waters.' The stated aim is to end a split implementation (the 2023 rule is currently enjoined in 26 states) and further reduce federal permitting jurisdiction. Re-verified 2026-08-16: rather than proceeding to finalize the November 2025 proposal after its January 5, 2026 comment period closed, EPA sent a second, supplemental proposed rule to OMB for interagency review around June 30, 2026, revising unspecified aspects of the original proposal and seeking renewed public comment -- an unusual procedural step per InsideEPA.com and E&E News/POLITICO coverage. This substantially delays the final rule beyond the 'roughly mid-2026' timeline legal analysts had previously projected; no publication date for the supplemental proposal in the Federal Register was found as of this update. Update 2026-10-06: EPA and the Army announced the supplemental proposal on September 4, 2026, and it was published in the Federal Register on September 9 (91 FR 57284), with comments due October 9, 2026. It does not withdraw the November 2025 proposal; it offers additional alternatives to be weighed alongside it, including defining \"relatively permanent\" waters as perennial waters (standing or continuously flowing every day of the year under ordinary conditions, apart from anomalous events such as drought, or a single dry period of no more than 30 consecutive days a year; two shorter dry periods in a year would disqualify a stream) and covering only wetlands whose perennial surface water is continuously connected to a jurisdictional water. The agencies themselves say they \"anticipate that the majority of wetlands\" now federally protected as adjacent wetlands would not meet that test, \"as most wetlands do not contain perennial surface water,\" though they did not quantify the change. Per the National Association of Home Builders, these alternatives would drop the original proposal's \"wet season\" test and \"substantially narrow and clarify\" when seasonal waters and wetlands are federally regulated. The agencies say they will take final action after considering these comments together with the roughly 220,000 received on the original proposal.",
@@ -8701,14 +8777,14 @@
       "figures": [],
       "caveat": "No agency-produced quantified health impact figure exists for this proposal; for the 2026 supplemental options the agencies say they could not quantify the change in jurisdiction, while anticipating that most currently protected adjacent wetlands would lose coverage. The rule is not yet finalized -- frame as proposed, not enacted."
     },
-    "confidence_note": "Use a structural/general-risk framing (reduced filtration, increased runoff exposure) rather than citing a specific casualty figure, since none exists yet for this action. Note explicitly that it is a proposed rule, not finalized. [Rechecked 2026-07-06: no material change -- still awaiting a final rule; comment period closed Jan 5, 2026 as previously noted, no evidence of finalization found.] Re-verified 2026-07-18: no finalization yet. Nearly 11,000 public comments were filed by mid-December 2025 per docket tracking; legal analysts expected a final rule 'within the next six months' of the January 5, 2026 comment-period close (i.e., around mid-2026), but no publication has been confirmed as of this update -- still proposed, not finalized. Re-verified 2026-07-26: no material change -- EPA and the Army Corps are still reviewing comments from the January 5, 2026 close; no final rule published yet. Re-verified 2026-08-16: corroborated via E&E News/POLITICO and InsideEPA.com reporting on the June 2026 OMB submission of a supplemental proposal -- still not finalized, and now on a slower track than earlier analyst projections. Re-verified 2026-08-22: no material change -- EPA and the Army Corps' supplemental proposed rule remains under OMB/OIRA review (sent late June 2026); no Federal Register publication or new comment period found as of this update. Re-verified 2026-08-30: no material change -- EPA and the Army Corps' supplemental proposed rule (addressing 'wet season' and related definitions) remains under OMB/OIRA review, sent late June 2026; no Federal Register publication or new comment period found as of this update. Update 2026-10-06: the supplemental proposal was published in the Federal Register on September 9, 2026, with comments due October 9, 2026, per the Federal Register and EPA's WOTUS page -- still proposed, not finalized.",
+    "confidence_note": "Use a structural/general-risk framing (reduced filtration, increased runoff exposure) rather than citing a specific casualty figure, since none exists yet for this action. Note explicitly that it is a proposed rule, not finalized. [Rechecked 2026-07-06: no material change -- still awaiting a final rule; comment period closed Jan 5, 2026 as previously noted, no evidence of finalization found.] Re-verified 2026-07-18: no finalization yet. Nearly 11,000 public comments were filed by mid-December 2025 per docket tracking; legal analysts expected a final rule 'within the next six months' of the January 5, 2026 comment-period close (i.e., around mid-2026), but no publication has been confirmed as of this update -- still proposed, not finalized. Re-verified 2026-07-26: no material change -- EPA and the Army Corps are still reviewing comments from the January 5, 2026 close; no final rule published yet. Re-verified 2026-08-16: corroborated via E&E News/POLITICO and InsideEPA.com reporting on the June 2026 OMB submission of a supplemental proposal -- still not finalized, and now on a slower track than earlier analyst projections. Re-verified 2026-08-22: no material change -- EPA and the Army Corps' supplemental proposed rule remains under OMB/OIRA review (sent late June 2026); no Federal Register publication or new comment period found as of this update. Re-verified 2026-08-30: no material change -- EPA and the Army Corps' supplemental proposed rule (addressing 'wet season' and related definitions) remains under OMB/OIRA review, sent late June 2026; no Federal Register publication or new comment period found as of this update. Update 2026-10-06: the supplemental proposal was published in the Federal Register on September 9, 2026, with comments due October 9, 2026, per the Federal Register and EPA's WOTUS page -- still proposed, not finalized. Re-verified 2026-10-10: the supplemental proposal's comment period closed on October 9, 2026, as scheduled, per its Federal Register record; no extension notice or final rule has been published in the rulemaking docket -- still proposed, not finalized.",
     "pull_quote": "Rather than finalizing its 2025 proposal, EPA in September 2026 proposed an even narrower option: federal protection only for perennial waters and for wetlands with year-round surface water connected to them.",
     "section_summaries": {
       "what_changed": "EPA proposed the sixth WOTUS narrowing in a decade, dropping 'interstate waters'; a 2026 supplemental proposal adds options limiting protection to perennial waters.",
       "estimated_impact": "Shrinking federal wetland jurisdiction reduces natural filtration of runoff before it reaches drinking water -- a structural, not quantified, risk.",
       "confidence_note": "Still proposed, not finalized, as of October 2026; use a structural-risk framing rather than citing any specific casualty figure."
     },
-    "last_verified": "2026-10-06",
+    "last_verified": "2026-10-10",
     "date_added": "2026-07-03",
     "sources": [
       {
@@ -8741,7 +8817,7 @@
       }
     ],
     "short_summary": "Proposed narrowing which wetlands and streams get federal water protections.",
-    "last_substantive_update": "2026-10-06",
+    "last_substantive_update": "2026-10-10",
     "glance": {
       "who": "Lee Zeldin (EPA Administrator)",
       "what": "Proposed narrowing federal protection of wetlands and streams, dropping 'interstate waters'",
@@ -8750,7 +8826,7 @@
         "certainty": "projected",
         "who": "Wetlands and intermittent streams"
       },
-      "reviewed": "2026-10-06"
+      "reviewed": "2026-10-10"
     },
     "timeline": {
       "what_changed": {
@@ -8770,7 +8846,7 @@
           {
             "date": "2026-10-06",
             "label": "Update",
-            "text": "Update 2026-10-06: the supplemental proposal was published in the Federal Register on September 9, 2026, with comments due October 9, 2026, per the Federal Register and EPA's WOTUS page -- still proposed, not finalized.",
+            "text": "Update 2026-10-06: the supplemental proposal was published in the Federal Register on September 9, 2026, with comments due October 9, 2026, per the Federal Register and EPA's WOTUS page -- still proposed, not finalized. Re-verified 2026-10-10: the supplemental proposal's comment period closed on October 9, 2026, as scheduled, per its Federal Register record; no extension notice or final rule has been published in the rulemaking docket -- still proposed, not finalized.",
             "effective_date": "2026-10-06"
           }
         ]

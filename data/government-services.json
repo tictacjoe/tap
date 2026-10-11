@@ -8302,35 +8302,45 @@
   {
     "id": "doge-gsa-smartpay-spending-cap-2025",
     "title": "DOGE Imposes a $1 Spending Cap on Government Credit Cards at GSA and the Pentagon",
-    "institution": "General Services Administration (GSA) and Department of Defense (Department of War), following a governmentwide Trump executive order",
+    "institution": "General Services Administration (GSA) and Department of Defense (Department of War); the Pentagon's caps followed a governmentwide Trump executive order",
     "domain": "funding_redirection",
-    "status": "Implemented as of February-March 2025 reporting",
+    "status": "Implemented February-March 2025: GSA set a $1 limit on its SmartPay cards, and two DoD memos cut purchase-card and civilian travel-card limits to $1 under the Feb 26, 2025 executive order's 30-day card freeze. No reporting found on when the caps were lifted.",
     "date_of_action": "2025-02-21 (GSA implementation) through 2025-03-05 (Pentagon/DoD implementation)",
-    "what_changed": "DOGE imposed a $1 spending cap on SmartPay government credit cards used by General Services Administration employees and contractors, effectively freezing routine purchasing on those cards. Wired reported similar spending limits had already been put in place at several other federal agencies as part of the same broader cost-control push -- one of those agencies was the Pentagon: following a February 26, 2025 executive order from President Trump outlining governmentwide cost-saving initiatives, Under Secretary of Defense for Personnel and Readiness Darin Selnick signed a March 5, 2025 memorandum (with acting acquisition/sustainment head Steven Morani separately confirming the policy) **reducing the spending limit on all DoD civilian government purchase and travel cards to $1 and ordering cancellation of non-exempted official travel, with employees already traveling directed to return to their duty stations as soon as feasible**. Travel directly supporting military operations or a permanent change of station was exempted. Pentagon spokesperson Sean Parnell said the Pentagon, in coordination with DOGE, had identified an initial $80 million in wasteful spending.",
+    "what_changed": "DOGE put a $1 spending limit on most SmartPay travel and purchase cards held by General Services Administration employees and contractors, effectively freezing routine purchasing on those cards, Wired reported. A source told Wired the restrictions also applied immediately to the Office of Personnel Management, the Consumer Financial Protection Bureau and USAID. In a February 21, 2025 statement, GSA said it had set a $1 limit on all cardholder accounts, called this \"a commonly used risk mitigation best practice,\" and said it had asked 15 other agency leaders to reduce their card limits and the number and usage of cards. A February 26, 2025 executive order from President Trump then directed a governmentwide 30-day pause on agency cards, with exceptions for critical services; the Washington Post reported that DOGE said 146,000 cards across 16 agencies had been frozen by early March. At the Pentagon, a memo signed by Steven Morani, the interim head of acquisition and sustainment, **temporarily reduced the spending limit on all government purchase cards to $1**, and a March 5, 2025 memo signed by acting Under Secretary of Defense for Personnel and Readiness Darin Selnick **reduced DoD civilian employees' travel-card limits to $1 and ordered cancellation of non-exempted official travel, with employees already traveling directed to return to their duty stations as soon as feasible**. Travel directly supporting military operations or a permanent change of station was exempted. Separately, Pentagon Press Secretary Sean Parnell said in a March 3, 2025 video that an initial DOGE review of Pentagon contracts had found $80 million in wasteful spending; Military Times found public records supported about $25 million.",
     "primary_proponent": {
       "name": "Elon Musk, former DOGE leader / Special Government Employee",
       "role": "Directed the SmartPay spending-cap policy as part of DOGE's broader cost-control campaign",
       "note": "Wired's reporting attributed the policy directly to DOGE's operation within GSA; no additional named individual below Musk was identified in sourcing reviewed for this entry."
     },
     "estimated_impact": {
-      "summary": "Effectively halted routine government-card purchasing at GSA and the Pentagon (and reportedly other agencies), a blunt mechanism for controlling spending that also constrains ordinary operational purchases unrelated to any specific wasteful expenditure, and forced DoD civilian employees on travel status to return to duty stations regardless of trip purpose.",
+      "summary": "Halted routine card purchasing at GSA, the Pentagon and other agencies, a blunt control that also cut off ordinary operational purchases. The Washington Post reported that Army-paid genealogists helping identify long-missing soldiers were told to pause, and FDA employees said they could not order protective equipment or disinfectant for labs; DoD civilians on non-exempt travel were ordered back to their duty stations.",
       "figures": [
         {
-          "metric": "New per-transaction spending cap",
+          "metric": "New per-cardholder spending limit",
           "value": "$1",
-          "source": "Wired (2025-02-21); Military Times/Defense One (2025-03)"
+          "source": "Wired (Feb 2025); GSA statement (2025-02-21); Defense One and Military Times (2025-03)"
         },
         {
-          "metric": "Initial wasteful spending identified by Pentagon/DOGE coordination",
-          "value": "~$80 million",
-          "source": "Pentagon spokesperson Sean Parnell, March 2025"
+          "metric": "Cards frozen governmentwide by early March 2025 (DOGE's own count)",
+          "value": "146,000 cards across 16 agencies",
+          "source": "DOGE X account, as reported by the Washington Post (2025-03-09)"
+        },
+        {
+          "metric": "Annual federal card purchasing",
+          "value": "~$40 billion in the last budget year",
+          "source": "GSA figure, as reported by the Washington Post (2025-03-09)"
+        },
+        {
+          "metric": "Savings the Pentagon claimed from a separate initial DOGE contract review (not the card caps)",
+          "value": "$80 million claimed; about $25 million traceable in public records",
+          "source": "Military Times (2025-03-05)"
         }
       ],
-      "caveat": "No figure for the total dollar volume of purchasing affected governmentwide was found in sourcing reviewed -- Wired's original reporting flagged that similar caps existed at unspecified 'several other agencies' beyond GSA; this entry now confirms the Pentagon as one of them, but a full agency-by-agency inventory was not found."
+      "caveat": "No figure for the dollar volume of purchasing actually blocked by the caps was found. The $80 million Pentagon figure comes from a contract review, not the card freeze, and the Pentagon declined to share the list behind it."
     },
-    "confidence_note": "HIGH confidence -- corroborated across Wired's original GSA reporting and multiple independent outlets on the Pentagon implementation specifically (Military Times, Defense One, Federal News Network, Military.com), including the underlying Feb 26, 2025 executive order and the named March 5 DoD memo signatory (Selnick).",
-    "pull_quote": "Pentagon spokesperson Sean Parnell said the Pentagon, in coordination with DOGE, had identified an initial $80 million in wasteful spending.",
-    "last_verified": "2026-08-10",
+    "confidence_note": "HIGH confidence -- corroborated across Wired's original GSA reporting and multiple independent outlets on the Pentagon implementation specifically (Military Times, Defense One, Federal News Network), including the underlying Feb 26, 2025 executive order and the named March 5 DoD memo signatory (Selnick). Update 2026-10-10: Re-checked against all cited sources. Corrected the agencies Wired named (OPM, CFPB and USAID, not the Pentagon), split the two DoD memos (Morani: purchase cards; Selnick: travel cards and travel), and re-scoped the $80 million Pentagon claim as a separate contract-review figure that public records supported only in part. No reporting found on when the caps were lifted.",
+    "pull_quote": "\"DOD civilian employees must cancel all future non-exempted official travel reservations, and those currently on non-exempted travel must return to their respective permanent duty stations as soon as feasible.\" -- March 5, 2025 DoD memo, as quoted by Military Times",
+    "last_verified": "2026-10-10",
     "date_added": "2026-08-08",
     "sources": [
       {
@@ -8348,14 +8358,26 @@
       {
         "name": "Federal News Network -- 'DoD's purchase card freeze, travel pause create more uncertainty for civilian workforce'",
         "url": "https://federalnewsnetwork.com/defense-main/2025/03/dods-purchase-card-freeze-travel-pause-create-more-uncertainty-for-civilian-workforce/"
+      },
+      {
+        "name": "GSA -- 'Statement regarding recent reporting about the GSA SmartPay program' (2025-02-21)",
+        "url": "https://www.gsa.gov/about-gsa/newsroom/news-releases/statement-regarding-recent-reporting-about-the-gsa-smartpayr-program-02212025"
+      },
+      {
+        "name": "Washington Post via Anchorage Daily News -- 'DOGE's $1 spending card limit touches everything from military research to trash pickup'",
+        "url": "https://www.adn.com/nation-world/2025/03/09/doges-1-spending-card-limit-touches-everything-from-military-research-to-trash-pickup/"
+      },
+      {
+        "name": "Military Times -- 'Pentagon touts $80M in DOGE cuts, but public receipts don't add up'",
+        "url": "https://www.militarytimes.com/pentagon/2025/03/05/pentagon-touts-80m-in-doge-cuts-but-public-receipts-dont-add-up"
       }
     ],
     "section_summaries": {
-      "what_changed": "Following a Feb 26, 2025 Trump executive order, DOGE imposed a $1 credit-card spending cap first at GSA (Feb 21 rollout reported) and then at the Pentagon (March 5 DoD memo), freezing routine purchasing and non-exempted civilian employee travel at both agencies.",
-      "estimated_impact": "Halted routine card purchasing at both agencies and forced traveling DoD civilians back to their duty stations; Pentagon/DOGE claimed an initial $80M in identified wasteful spending, though no full governmentwide total was found.",
+      "what_changed": "DOGE set a $1 card cap at GSA and reportedly three other agencies in Feb 2025; a Feb 26 Trump order froze cards governmentwide, and two DoD memos cut Pentagon card limits to $1 and halted travel.",
+      "estimated_impact": "Halted routine card purchases across agencies, pausing work like identifying missing soldiers and FDA lab supply orders, and sent traveling DoD civilians home; no total blocked was found.",
       "confidence_note": "Strongly corroborated across Wired's original reporting and multiple independent defense-press outlets confirming the Pentagon-specific implementation and its named officials."
     },
-    "last_substantive_update": "2026-08-10",
+    "last_substantive_update": "2026-10-10",
     "glance": {
       "who": "DOGE under Elon Musk",
       "what": "Imposed a $1 government credit-card cap at GSA and the Pentagon, halting routine purchases and travel",
@@ -8364,7 +8386,20 @@
         "certainty": "documented",
         "who": "GSA and Pentagon routine operations"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-10-10"
+    },
+    "timeline": {
+      "confidence_note": {
+        "base": "HIGH confidence -- corroborated across Wired's original GSA reporting and multiple independent outlets on the Pentagon implementation specifically (Military Times, Defense One, Federal News Network), including the underlying Feb 26, 2025 executive order and the named March 5 DoD memo signatory (Selnick).",
+        "updates": [
+          {
+            "date": "2026-10-10",
+            "label": "Update",
+            "text": "Update 2026-10-10: Re-checked against all cited sources. Corrected the agencies Wired named (OPM, CFPB and USAID, not the Pentagon), split the two DoD memos (Morani: purchase cards; Selnick: travel cards and travel), and re-scoped the $80 million Pentagon claim as a separate contract-review figure that public records supported only in part. No reporting found on when the caps were lifted.",
+            "effective_date": "2026-10-10"
+          }
+        ]
+      }
     }
   },
   {
@@ -11414,35 +11449,35 @@
   },
   {
     "id": "drc-equateur-mystery-illness-usaid-cuts-2025",
-    "title": "USAID/CDC Staff Removals Slowed Response to an Unidentified Deadly Illness Cluster in DRC's Equateur Province -- Cause Never Definitively Confirmed",
+    "title": "USAID Staff Removals Slowed Response to a Deadly Illness Cluster in DRC's Equateur Province, Experts Say",
     "institution": "USAID (in dismantlement) / CDC global health security programs",
     "domain": "staff_office_cuts",
-    "status": "Outbreak clusters resolved/contained by spring 2025; underlying cause never definitively confirmed",
-    "date_of_action": "2025-01 (USAID/CDC staff removed from DRC posts, CDC ordered to halt WHO collaboration) through 2025-03 (illness clusters investigated and contained)",
-    "what_changed": "Beginning in January 2025, two clusters of an unidentified illness caused a wave of deaths in the Bolomba and Basankusu health zones of DRC's Equateur province, eventually totaling **roughly 2,969 reported cases and 66 deaths across both clusters**. Wired reported that the USAID and CDC staff who would normally work directly with DRC's health ministry to identify and contain such an outbreak had been removed from their DRC posts as part of the agency's dismantlement, and that a separate January 2025 executive order required CDC to cease collaboration with the WHO -- reducing U.S. visibility into and support for the response. USAID had also supported the physical logistics of outbreak response, including training health workers on proper viral-sample storage/shipment and funding the transport of samples from remote areas to central labs; with that support degraded, identifying the cause took longer than it otherwise would have. Laboratory testing ruled out Ebola and Marburg virus disease. WHO and CDC investigators ultimately could not definitively confirm a single cause; leading hypotheses included bacterial meningitis and chemical or food-borne poisoning, with one thread of the investigation tracing part of the Bolomba cluster to three children who died after eating a bat carcass. The clusters were brought under control by late March 2025 without ever being conclusively attributed to a single pathogen or cause.",
+    "status": "WHO reported deaths declining from late February 2025; DRC's public health institute said tests confirmed malaria, but the ministry and WHO had called the cause undetermined, with Ebola and Marburg ruled out",
+    "date_of_action": "2025-01 (CDC ordered on 26 January to halt WHO collaboration; USAID dismantlement under way, with many USAID staff removed from DRC posts in early 2025) through 2025-03 (illness clusters investigated; deaths declining)",
+    "what_changed": "Beginning in January 2025 (Bolomba) and February 2025 (Basankusu), two clusters of an unidentified illness caused a wave of deaths in the Bolomba and Basankusu health zones of DRC's Equateur province, eventually totaling **roughly 2,969 reported cases and 66 deaths across both clusters**. National Geographic reported that USAID and CDC staff would normally be in close contact with DRC's health ministry and help supply an investigation, but that many USAID staff had been removed from their DRC posts as part of the agency's dismantlement; separately, a 26 January 2025 CDC memo, issued after President Trump's executive order starting U.S. withdrawal from the WHO, ordered CDC staff to stop working with the WHO immediately. Experts told Wired the dismantling of USAID \"stymied the response\" to the illness; a former USAID global health official said \"We don't have the in-country presence.\" Laboratory testing ruled out Ebola and Marburg virus disease. WHO's working hypotheses included bacterial meningitis and chemical poisoning, on a background of endemic malaria, and AP reported that the first, Bolomba-cluster outbreak was detected after three children ate a bat and died within 48 hours. On 24 March 2025, DRC's National Public Health Institute said lab testing had confirmed malaria, though results of water and food samples sent abroad for toxicology were still pending; WHO published no final determination of the cause. The ministry reported 37 new cases and one death in the week of 10-16 March 2025, and no new cases in Bolomba.",
     "primary_proponent": {
       "name": "Trump administration (USAID dismantlement and CDC-WHO collaboration halt)",
-      "role": "Executive branch policy removing USAID/CDC staff from DRC and ordering CDC to cease WHO collaboration, both in January 2025",
-      "note": "No single named official was identified in reporting reviewed as personally responsible for the DRC staff removals specifically, as distinct from the broader USAID dismantlement documented in this tracker's usaid-dismantlement-trump2.json entry."
+      "role": "Executive branch policy dismantling USAID, which removed many USAID staff from DRC posts, and a January 2025 order halting CDC collaboration with the WHO",
+      "note": "No single named official was identified in reporting reviewed as personally responsible for the USAID staff removals in the DRC specifically, as distinct from the broader USAID dismantlement documented in this tracker's USAID dismantlement entry."
     },
     "estimated_impact": {
-      "summary": "An unidentified illness killed dozens across two DRC health zones while the U.S. staff and logistics support that would normally accelerate identification and containment had just been withdrawn -- though because the cause was never conclusively determined, this entry cannot claim the cuts caused any specific number of deaths, only that they plausibly slowed the response to an outbreak whose nature remains undetermined to this day.",
+      "summary": "An unidentified illness killed dozens across two DRC health zones while USAID staff who would normally help supply such an investigation had just been withdrawn and CDC had been ordered to stop working with the WHO -- though because the cause was disputed (DRC's public health institute said malaria, with toxicology results pending), this entry cannot claim the cuts caused any specific number of deaths, only that they plausibly slowed the response.",
       "figures": [
         {
           "metric": "Combined reported cases, Bolomba and Basankusu clusters",
           "value": "~2,969",
-          "source": "WHO Disease Outbreak News / CIDRAP situation reporting, March 2025"
+          "source": "DRC Ministry of Public Health update to the Council of Ministers, 21 March 2025, as relayed by Outbreak News Today"
         },
         {
           "metric": "Combined reported deaths, Bolomba and Basankusu clusters",
           "value": "66",
-          "source": "WHO Disease Outbreak News / CIDRAP situation reporting, March 2025"
+          "source": "DRC Ministry of Public Health update to the Council of Ministers, 21 March 2025, as relayed by Outbreak News Today"
         }
       ],
-      "caveat": "IMPORTANT -- this entry must not be conflated with this tracker's separate, later usaid-cdc-cuts-drc-ebola-response-2026.json entry, which documents a genuinely distinct, confirmed Ebola outbreak (Bundibugyo strain, Ituri province) detected in April 2026, over a year after this Equateur cluster resolved. Laboratory testing on this Equateur cluster specifically ruled out Ebola and Marburg; despite early 'Ebola-like symptoms' framing in initial press coverage, the true cause was never confirmed, with chemical/food-borne poisoning and bacterial meningitis as the leading unconfirmed hypotheses. Framing this as an Ebola story, or as the origin of the 2026 outbreak, would be a factual error -- this entry is corrected from that framing after independent verification found no evidence connecting the two events."
+      "caveat": "IMPORTANT -- this entry must not be conflated with this tracker's separate, later entry on USAID/CDC cuts and the 2026 DRC Ebola response, which documents a genuinely distinct, confirmed Ebola outbreak (Bundibugyo strain, Ituri province) detected in April 2026, over a year after this Equateur cluster was reported. Laboratory testing on this Equateur cluster specifically ruled out Ebola and Marburg; despite early 'Ebola-like symptoms' framing in initial press coverage, WHO never published a final cause; its working hypotheses were chemical poisoning and bacterial meningitis, and DRC's National Public Health Institute said in March 2025 that testing confirmed malaria. Framing this as an Ebola story, or as the origin of the 2026 outbreak, would be a factual error -- this entry is corrected from that framing after independent verification found no evidence connecting the two events."
     },
-    "confidence_note": "MODERATE-HIGH confidence on the structural facts (USAID/CDC staff removal from DRC, the CDC-WHO collaboration halt, and the logistics-support degradation), corroborated by Wired's on-the-ground reporting; the case/death figures are well-corroborated via WHO's own Disease Outbreak News situation reports and independent aggregation by CIDRAP and FluTrackers. LOW confidence on any claim that this was an Ebola outbreak or that it is connected to the later, separate 2026 DRC Ebola outbreak already tracked in this database -- independent verification (WHO reporting, CIDRAP, FluTrackers) confirms Ebola and Marburg were both ruled out and the true cause was never conclusively identified. Note for pilot assessment: this entry corrects a factual error in the agy research-brief pilot (batch 12), which reported with HIGH confidence and no caveat that this cluster 'was later identified in May 2026 as a major Ebola outbreak' -- that claim does not hold up under independent verification and should not be relied on without a live check.",
-    "last_verified": "2026-08-10",
+    "confidence_note": "MODERATE confidence on the structural facts: National Geographic reported that many USAID staff were removed from DRC posts, and AP reported the 26 January 2025 CDC memo halting WHO collaboration; Wired quoted experts saying the USAID cuts slowed the response, but no source documents a specific delay in identifying this illness. The combined case/death figures (2,969 cases, 66 deaths) come from the DRC Ministry of Public Health's 21 March 2025 update to the Council of Ministers, as relayed by Outbreak News Today; WHO's 3 March 2025 Disease Outbreak News and CIDRAP give earlier, lower counts (53 Basankusu deaths as of 25 February, plus 12 cases and eight deaths in Bolomba). LOW confidence on any claim that this was an Ebola outbreak or that it is connected to the later, separate 2026 DRC Ebola outbreak already tracked in this database -- independent verification (WHO reporting, CIDRAP, the DRC ministry's March update) confirms Ebola and Marburg were both ruled out. Re-verified 2026-10-10: Reuters reported on 25 March 2025 that DRC's National Public Health Institute said testing confirmed malaria, with toxicology on water and food samples pending; the ministry's 21 March update and WHO's March notice had called the cause undetermined; no later WHO determination found.",
+    "last_verified": "2026-10-10",
     "date_added": "2026-08-10",
     "sources": [
       {
@@ -11460,23 +11495,43 @@
       {
         "name": "CBS News -- 'Mystery disease in Congo may be from poisoned water source, WHO says'",
         "url": "https://www.cbsnews.com/news/mystery-disease-congo-what-we-know/"
+      },
+      {
+        "name": "Outbreak News Today -- 'Democratic Republic of the Congo: Cluster of illness and deaths due to unknown etiology' (DRC Ministry of Public Health update, 21 March 2025)",
+        "url": "https://outbreaknewstoday.substack.com/p/democratic-republic-of-the-congo-00f"
+      },
+      {
+        "name": "National Geographic -- 'What we do -- and don't -- know about the mysterious illness in the DRC' (4 March 2025)",
+        "url": "https://www.nationalgeographic.com/health/article/mysterious-illness-drc-who-what-we-know"
+      },
+      {
+        "name": "AP -- 'CDC ordered to stop working with WHO immediately, upending expectations of an extended withdrawal' (27 January 2025, via WCAX)",
+        "url": "https://www.wcax.com/2025/01/27/cdc-ordered-stop-working-with-who-immediately-upending-expectations-an-extended-withdrawal"
+      },
+      {
+        "name": "Reuters -- 'Congo lab testing confirms deadly disease outbreak was malaria' (25 March 2025, via Polity)",
+        "url": "https://www.polity.org.za/article/congo-lab-testing-confirms-deadly-disease-outbreak-was-malaria-2025-03-25"
+      },
+      {
+        "name": "AP -- 'Malaria endures in northwest Congo as officials seek cause of illnesses that have sickened hundreds' (27 February 2025, via News4Jax)",
+        "url": "https://www.news4jax.com/news/world/2025/02/27/malaria-endures-in-northwest-congo-as-officials-seek-cause-of-illnesses-that-have-sickened-hundreds/"
       }
     ],
     "section_summaries": {
-      "what_changed": "An unidentified illness killed dozens across two DRC health zones in early 2025, just after USAID/CDC staff were pulled from their DRC posts and CDC was ordered to stop working with WHO -- degrading the logistics support that normally speeds outbreak identification. The cause was never conclusively confirmed; Ebola and Marburg were ruled out.",
-      "estimated_impact": "Roughly 2,969 cases and 66 deaths across two health zones, with U.S. response capacity plausibly reduced right when it was needed -- but because the cause itself was never confirmed, no specific death toll can be attributed to the cuts.",
-      "confidence_note": "Well-corroborated on the structural staffing/logistics facts and case/death figures; low confidence on any Ebola link, which testing ruled out. Explicitly corrects a HIGH-confidence factual error from this tracker's agy research-brief pilot, which wrongly claimed this cluster was later identified as the 2026 Ebola outbreak."
+      "what_changed": "An unidentified illness killed dozens in two DRC health zones in early 2025 as USAID staff were pulled and CDC halted WHO work; Ebola and Marburg were ruled out; DRC later blamed malaria.",
+      "estimated_impact": "About 2,969 cases and 66 deaths across two health zones; U.S. response capacity was plausibly reduced, but no death toll can be attributed to the cuts.",
+      "confidence_note": "Moderate on the staffing cuts, high on the case/death figures; Ebola and Marburg were ruled out, so any link to the separate 2026 DRC Ebola outbreak is wrong."
     },
-    "last_substantive_update": "2026-08-10",
+    "last_substantive_update": "2026-10-10",
     "glance": {
-      "who": "Trump administration (USAID/CDC staff removals)",
-      "what": "Pulled USAID/CDC staff from DRC posts as an unidentified illness killed dozens; cause never confirmed",
+      "who": "Trump administration (USAID cuts, CDC-WHO halt)",
+      "what": "Pulled USAID staff from DRC and halted CDC work with WHO as an unidentified illness killed dozens",
       "harm": {
         "kind": "physical",
         "certainty": "alleged",
         "who": "People in two DRC health zones"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-10-10"
     }
   },
   {
@@ -17779,16 +17834,16 @@
     "title": "FEMA Cancelled $3.6B in Disaster-Resilience Grants, Then Was Ordered by a Federal Court to Restore Them a Year Later",
     "institution": "Federal Emergency Management Agency (FEMA), Department of Homeland Security",
     "domain": "funding_redirection",
-    "status": "Reversed by court order and subsequent agency action -- FEMA reinstated the program in March 2026 with $1B in new funding, after a federal judge's December 2025 order",
+    "status": "Restored under court order -- after a December 2025 ruling and a March 2026 enforcement order, FEMA reopened BRIC with a new $1B application round that closed July 23, 2026; when it opened, the timing of payment on previously awarded projects was still unclear",
     "date_of_action": "2025-04 (program termination) through 2026-03 (reinstatement)",
-    "what_changed": "In April 2025, the Trump administration ended FEMA's Building Resilient Infrastructure and Communities (BRIC) program, which funded predisaster projects -- floodwalls, elevated infrastructure, fire-resistant building retrofits, and similar hardening work -- for hundreds of communities nationwide. The termination halted $3.6 billion in funding that had already been awarded to specific, in-progress projects but not yet paid out, and separately refused to award another $882 million in grants that had been planned for the following fiscal year. Twenty states, led by New York Attorney General Letitia James among others, sued the administration, arguing FEMA lacked legal authority to cancel a program funded and directed by Congress, that the cancellation undermined already-underway projects, and **that it left disaster-prone communities more vulnerable to floods, fires, and storms.** In December 2025, a federal judge in Massachusetts sided with the 22 states and D.C. that had joined the suit by that point, ordering FEMA to restore the canceled funding. In March 2026, FEMA announced it would reinstate the program -- rebranded as the 'Building Resilient Communities and Infrastructure' program -- making $1 billion available for states, local governments, territories, and tribes to pursue hardening projects against wildfires, floods, earthquakes, and hurricanes, though at less than a third of the originally canceled $3.6 billion figure.",
+    "what_changed": "In April 2025, the Trump administration ended FEMA's Building Resilient Infrastructure and Communities (BRIC) program, which funded predisaster projects -- floodwalls, elevated infrastructure, fire-resistant building retrofits, and similar hardening work -- for hundreds of communities nationwide. The termination halted $3.6 billion in funding that had already been awarded to specific, in-progress projects but not yet paid out, and separately refused to award another $882 million in grants that had been planned for the following fiscal year. Twenty states, in a coalition co-led by Washington and Massachusetts, sued the administration in July 2025, arguing FEMA lacked legal authority to cancel a program funded and directed by Congress, that the cancellation undermined already-underway projects, and **that it left disaster-prone communities more vulnerable to floods, fires, and storms.** In December 2025, a federal judge in Massachusetts sided with the 22 states and D.C. that had joined the suit by that point, ordering FEMA to restore the canceled funding. When FEMA had still not complied by February 2026, the states asked the court to enforce its order, and on March 6, 2026, the judge ordered FEMA to issue a funding notice within 21 days. On March 25, 2026, FEMA reopened BRIC, making $1 billion available for states, local governments, territories, and tribes to pursue hardening projects against fires, floods, earthquakes, and hurricanes. That $1 billion is a new application round covering fiscal years 2024 and 2025, not a repayment of the $3.6 billion in already-awarded projects; AP reported at the time that it was 'still unclear how quickly applicants can expect grant money they were already awarded.'",
     "primary_proponent": {
       "name": "FEMA leadership (Trump administration)",
       "role": "Directed the April 2025 program termination as part of broader disaster-mitigation funding cuts",
       "note": "This action predates and is distinct from FEMA's separately documented staffing collapse ([[fema-capacity-collapse-texas-floods-trump2]]) and partisan-approval-gap pattern ([[fema-disaster-aid-partisan-approval-gap-trump2]]) already in this tracker -- BRIC's cancellation is a specific funding-program termination, not a staffing or approval-timing issue, though all three reflect the same broader disaster-response degradation under this administration."
     },
     "estimated_impact": {
-      "summary": "The cancellation directly threatened hundreds of already-planned, partially-underway community resilience projects nationwide for nearly a year, until a federal court intervened; the eventual reinstatement restored the program in principle but at less than a third of the originally terminated funding level.",
+      "summary": "The cancellation directly threatened hundreds of already-planned, partially-underway community resilience projects nationwide for nearly a year, until a federal court intervened; FEMA reopened the program in March 2026 with a new $1 billion application round, while the timing of payment on already-awarded projects was still unclear.",
       "figures": [
         {
           "metric": "Already-awarded funding halted by the April 2025 termination",
@@ -17806,15 +17861,15 @@
           "source": "Yahoo News/AP; NY AG press release"
         },
         {
-          "metric": "Funding made available upon March 2026 reinstatement",
+          "metric": "New application round opened in March 2026 (fiscal years 2024 and 2025)",
           "value": "$1 billion",
-          "source": "The Hill, March 2026"
+          "source": "AP, March 2026; Congressional Research Service, June 2026"
         }
       ],
-      "caveat": "FEMA's stated rationale for the original cancellation (cost, program-design criticism) is a genuine policy dispute this entry does not resolve; what is independently documented is that a federal court found the cancellation itself legally unauthorized, and that the program was restored only at roughly 28% of its original funding level."
+      "caveat": "FEMA's stated rationale for the original cancellation (cost, program-design criticism) is a genuine policy dispute this entry does not resolve; what is independently documented is that a federal court found the cancellation itself unlawful and ordered it reversed. The $1 billion March 2026 round is new competitive funding for fiscal years 2024 and 2025, so it is not directly comparable to the $3.6 billion in already-awarded projects the termination halted."
     },
-    "confidence_note": "HIGH confidence. The cancellation, the 20/22-state lawsuit, the December 2025 court order, and the March 2026 reinstatement are all corroborated across CBS News, WBUR, the National Low Income Housing Coalition, The Hill, and the New York Attorney General's own press release announcing the litigation outcome.",
-    "last_verified": "2026-08-09",
+    "confidence_note": "HIGH confidence. The cancellation, the 20/22-state lawsuit, the December 2025 court order, and the March 2026 reinstatement are all corroborated across CBS News, WBUR, the National Low Income Housing Coalition, The Hill, and the New York Attorney General's own press release announcing the litigation outcome. Update 2026-10-10: The March 2026 enforcement order and the March 25, 2026 reopening are confirmed by the Congressional Research Service, the Association of State Floodplain Managers and AP's own report; AP, CRS and the International Code Council all use the program's original name, and AP and CRS describe the $1 billion as a new FY2024-2025 application round rather than a partial restoration of the halted $3.6 billion. No appeal of the December 2025 ruling appears on the Oregon Justice Department's tracker of the case.",
+    "last_verified": "2026-10-10",
     "date_added": "2026-08-09",
     "sources": [
       {
@@ -17840,23 +17895,48 @@
       {
         "name": "New York Attorney General -- Attorney General James Wins Lawsuit to Protect Billions of Dollars for Natural Disaster Preparedness Programs",
         "url": "https://ag.ny.gov/press-release/2025/attorney-general-james-wins-lawsuit-protect-billions-dollars-natural-disaster"
+      },
+      {
+        "name": "AP (via WAFB) -- FEMA will resume major grant program after yearlong hiatus, following a court order",
+        "url": "https://www.wafb.com/2026/03/26/fema-will-resume-major-grant-program-after-yearlong-hiatus-following-court-order/"
+      },
+      {
+        "name": "Association of State Floodplain Managers -- FEMA Ordered to Restart BRIC Program",
+        "url": "https://www.floods.org/news-views/fema-news/fema-ordered-to-restart-bric-program/"
+      },
+      {
+        "name": "Congressional Research Service -- FEMA's Building Resilient Infrastructure and Communities (BRIC): Recent Developments (updated June 30, 2026)",
+        "url": "https://www.everycrsreport.com/files/2026-06-30_IN12609_c844507e82144d668b0599f8a13f447394de4c98.pdf"
       }
     ],
     "section_summaries": {
-      "what_changed": "FEMA cancelled its main predisaster resilience-grant program in April 2025, halting $3.6B in already-awarded funding; 22 states sued, a federal judge ordered the funding restored in December 2025, and FEMA reinstated the program in March 2026 with $1B -- less than a third of the original amount.",
-      "estimated_impact": "Hundreds of in-progress community hardening projects were threatened for nearly a year before a court intervened; the restored program remains far smaller than before.",
+      "what_changed": "FEMA cancelled its main predisaster resilience-grant program in April 2025, halting $3.6B in awarded funding; states sued and won, and FEMA reopened it in March 2026 with a new $1B round.",
+      "estimated_impact": "Hundreds of in-progress community hardening projects were threatened for nearly a year before a court intervened; payment timing for already-awarded projects stayed unclear.",
       "confidence_note": "Well-corroborated across multiple outlets and the New York Attorney General's own litigation announcement."
     },
-    "last_substantive_update": "2026-08-09",
+    "last_substantive_update": "2026-10-10",
     "glance": {
       "who": "FEMA leadership (Trump administration)",
-      "what": "Canceled the $3.6B BRIC resilience-grant program; a court ordered it restored, and FEMA reinstated it with $1B",
+      "what": "Canceled the $3.6B BRIC resilience-grant program; a court ordered it restored, and FEMA reopened it with $1B",
       "harm": {
         "kind": "money",
         "certainty": "documented",
         "who": "Disaster-resilience projects nationwide"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-10-10"
+    },
+    "timeline": {
+      "confidence_note": {
+        "base": "HIGH confidence. The cancellation, the 20/22-state lawsuit, the December 2025 court order, and the March 2026 reinstatement are all corroborated across CBS News, WBUR, the National Low Income Housing Coalition, The Hill, and the New York Attorney General's own press release announcing the litigation outcome.",
+        "updates": [
+          {
+            "date": "2026-10-10",
+            "label": "Update",
+            "text": "Update 2026-10-10: The March 2026 enforcement order and the March 25, 2026 reopening are confirmed by the Congressional Research Service, the Association of State Floodplain Managers and AP's own report; AP, CRS and the International Code Council all use the program's original name, and AP and CRS describe the $1 billion as a new FY2024-2025 application round rather than a partial restoration of the halted $3.6 billion. No appeal of the December 2025 ruling appears on the Oregon Justice Department's tracker of the case.",
+            "effective_date": "2026-10-10"
+          }
+        ]
+      }
     }
   },
   {
@@ -18543,11 +18623,11 @@
     "domain": "funding_redirection",
     "status": "Reversed -- classes resumed June 2, 2025, after nearly three months closed",
     "date_of_action": "2025-03-07 (classes cancelled) through 2025-06-02 (classes resume)",
-    "what_changed": "On March 7, 2025, FEMA abruptly cancelled all in-person classes at the National Fire Academy (NFA) in Emmitsburg, Maryland -- along with the co-located National Disaster and Emergency Management University and the Center for Domestic Preparedness in Anniston, Alabama -- as part of a Department of Government Efficiency-driven review of FEMA's spending intended to align it with administration priorities; instructors were told to cancel all future travel, and the suspension was initially described as indefinite, with FEMA saying it would support only 'mission-critical' functions during the review. The NFA provides free, federally funded training that firefighters, EMS providers, and other first responders nationwide travel to Maryland to attend. Lawmakers from both parties pressed FEMA and DHS leadership for an explanation and received none for weeks; **the Congressional Fire Services Institute and fire-service leaders warned the shutdown 'undermines first responder public safety' and posed 'an equal threat to public safety' given elevated wildfire risk nationally.** FEMA reopened the NFA, NDEMU, and the Center for Domestic Preparedness on June 2, 2025 -- nearly three months after the closure -- following what the agency described as a comprehensive review determining that certain courses 'provide effective training to enhance national readiness for state, local, tribal and territorial emergency managers and first responders.'",
+    "what_changed": "On March 7, 2025, FEMA abruptly cancelled all in-person classes at the National Fire Academy (NFA) in Emmitsburg, Maryland -- along with the co-located Emergency Management Institute and the Center for Domestic Preparedness in Anniston, Alabama -- as part of a Department of Government Efficiency-driven review of FEMA's spending intended to align it with administration priorities; instructors were told to cancel all future travel, and the suspension was initially described as indefinite, with FEMA saying it would support only 'mission-critical' functions during the review. The NFA provides free, federally funded training that firefighters, EMS providers, and other first responders nationwide travel to Maryland to attend. In a bipartisan, bicameral March 14 letter to Homeland Security Secretary Kristi Noem and Acting FEMA Administrator Cameron Hamilton, more than 60 members of Congress pressed for an explanation; **the lawmakers warned that the action 'undermines first responder public safety and potentially poses an equal threat to public safety,' and that with wildfires threatening communities, canceling the courses would leave communities 'with fewer defenses against devastating wildfires.'** They received no response beyond a confirmation of receipt, and the letter was never answered. FEMA reopened the NFA, NDEMU, and the Center for Domestic Preparedness on June 2, 2025 -- nearly three months after the closure -- following what the agency described as a comprehensive review determining that certain courses 'provide effective training to enhance national readiness for state, local, tribal and territorial emergency managers, first responders and local leaders.'",
     "primary_proponent": {
       "name": "FEMA leadership (Trump administration)",
       "role": "Directed the March 2025 shutdown as part of a DOGE-driven spending review",
-      "note": "No single named FEMA or DHS official was identified on the record as personally ordering the closure in sourcing reviewed; FEMA and DHS leadership did not respond to lawmakers' repeated requests for an explanation during the nearly three-month closure, per FireRescue1 and congressional correspondence."
+      "note": "No single named FEMA or DHS official was identified on the record as personally ordering the closure in sourcing reviewed; FEMA and DHS leadership did not respond to lawmakers' requests for an explanation during the nearly three-month closure, per FireRescue1 and congressional correspondence."
     },
     "estimated_impact": {
       "summary": "Cut off the nation's primary free federal training pipeline for firefighters and emergency responders for nearly three months, with no advance notice or public rationale, before being reversed following bipartisan pressure.",
@@ -18560,9 +18640,9 @@
       ],
       "caveat": "The closure was fully reversed and FEMA characterized it as a deliberate budget/program review rather than a permanent cut; this entry documents the disruption and its resolution together, not an ongoing unresolved harm. No dollar figure for funds withheld during the review was identified in sourcing reviewed."
     },
-    "confidence_note": "HIGH confidence -- corroborated across CBS News, The Washington Post, Claims Journal, FireRescue1, Maryland Matters, WYPR, and congressional correspondence documenting both the closure and the June 2025 reopening.",
-    "pull_quote": "Upon reopening, FEMA described a comprehensive review determining that certain courses ‘provide effective training to enhance national readiness for state, local, tribal and territorial emergency managers and first responders’ -- offering no explanation for the nearly three-month closure itself.",
-    "last_verified": "2026-08-10",
+    "confidence_note": "HIGH confidence -- corroborated across CBS News, The Washington Post, FireRescue1, Maryland Matters, WYPR, and congressional correspondence documenting both the closure and the June 2025 reopening. Re-verified 2026-10-10: Maryland Matters, WYPR and FireRescue1 still support the closure, the unanswered congressional letter and the June 2 reopening; the 'undermines first responder public safety' warning comes from the March 14 congressional letter, per its text as published by Sen. Van Hollen's office.",
+    "pull_quote": "Upon reopening, FEMA described a comprehensive review determining that certain courses ‘provide effective training to enhance national readiness for state, local, tribal and territorial emergency managers, first responders and local leaders’ -- lawmakers' March 14 letter asking why the academy had closed was never answered.",
+    "last_verified": "2026-10-10",
     "date_added": "2026-08-10",
     "sources": [
       {
@@ -18584,6 +18664,10 @@
       {
         "name": "WYPR -- National Fire Academy in Maryland to reopen on June 2nd",
         "url": "https://wypr.org/wypr-news/2025-05-30/national-fire-academy-in-maryland-to-reopen-on-june-2nd"
+      },
+      {
+        "name": "Sen. Chris Van Hollen -- Van Hollen, McClain Delaney lead 64 congressional colleagues in bipartisan, bicameral letter on NFA and EMI training cancellations",
+        "url": "https://www.vanhollen.senate.gov/news/press-releases/van-hollen-mcclain-delaney-lead-64-congressional-colleagues-in-a-bipartisan-bicameral-letter-demanding-answers-from-trump-administration-on-decision-to-cancel-trainings-for-firefighters-first-responders-at-the-national-fire-academy-and-emergency-management-institute"
       }
     ],
     "section_summaries": {
@@ -18591,7 +18675,7 @@
       "estimated_impact": "Cut off the nation's main free federal firefighter/first-responder training pipeline for ~87 days with no advance notice, before bipartisan pressure led to reopening.",
       "confidence_note": "Well-corroborated across CBS News, Washington Post, FireRescue1, Maryland Matters, and WYPR, covering both the closure and the reopening."
     },
-    "last_substantive_update": "2026-08-10",
+    "last_substantive_update": "2026-10-10",
     "glance": {
       "who": "FEMA leadership (Trump administration)",
       "what": "Shut down all National Fire Academy training for ~87 days before reopening after bipartisan pressure",
@@ -18600,7 +18684,7 @@
         "certainty": "documented",
         "who": "Firefighter and responder training"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-10-10"
     }
   },
   {
@@ -20623,19 +20707,19 @@
   },
   {
     "id": "gsa-property-sale-list-cia-facility-2025",
-    "title": "GSA Briefly Published a 443-Property Sale List That Included a Sensitive CIA Facility, Then Pulled It the Next Day",
+    "title": "GSA Briefly Published a 443-Property Sale List That Included Most of a Complex Housing a CIA Facility, Then Pulled It the Next Day",
     "institution": "General Services Administration (GSA)",
     "domain": "data_collection_halted",
-    "status": "List retracted within a day; a smaller, scaled-back 'accelerated disposition' list released later without full details on the original larger list's fate",
+    "status": "List retracted within a day; GSA later posted a separate eight-property 'accelerated disposition' list. As of June 2026, an independent federal review board was weighing disposal of the 'B side' of the same Springfield warehouse complex; no buyer interest had been received.",
     "date_of_action": "2025-03-04 (list published) through 2025-03-05 (list removed)",
-    "what_changed": "On March 4, 2025, GSA published a list of 443 federally owned properties -- comprising nearly 80 million rentable square feet and representing more than $8.3 billion in deferred recapitalization needs -- that the agency identified as 'not core to government operations' and intended to dispose of, as part of DOGE's broader push to shrink the federal government's real-estate footprint. **The list included the Parr-Franconia Warehouse Complex in Springfield, Virginia, a facility long rumored to house a clandestine CIA training site used for surveillance, hacking, and break-in tradecraft instruction, according to Wired.** Local officials and national-security experts immediately raised alarms about the security implications of publicly listing such a facility for sale, even if inadvertently. Facing that backlash -- and broader public and congressional pushback covering other listed sites, including FBI and Red Cross headquarters buildings -- GSA pulled the entire list on March 5, one day after publication, quietly scrubbing more than 120 properties including the Springfield site. An internal GSA email said the list would be republished later 'with adjustments to make it easier for stakeholders to understand the nuances of the assets listed,' citing 'an overwhelming amount of interest.' GSA subsequently released a smaller list of properties identified for an 'accelerated disposition' process, while withholding details about its plans for the larger original list.",
+    "what_changed": "On March 4, 2025, GSA published a list of 443 federally owned properties -- comprising nearly 80 million rentable square feet and representing more than $8.3 billion in recapitalization needs -- that the agency identified as 'not core to government operations' and intended to dispose of, as part of DOGE's broader push to shrink the federal government's real-estate footprint. **The list included most of the Parr-Franconia Warehouse Complex in Springfield, Virginia, which also houses a building long reported to be a clandestine CIA training site used for surveillance, hacking, and break-in tradecraft instruction, according to Wired; the CIA building itself did not appear to be listed.** The list also included the FBI and American Red Cross headquarters buildings. Within hours, GSA posted a revised list of 320 entries that dropped every Washington, D.C., building, and by the morning of March 5 the whole list was gone; GSA did not respond to the AP's questions about why the properties had been removed. Maryland lawmakers criticized the walk-back, with Sen. Chris Van Hollen calling it 'yet another example of chaos and confusion.' After the list came down, Wired reported the CIA connection: Fairfax County Board of Supervisors chair Jeff McKay told Wired that 'someone did no research about the long and well-documented history of this property,' and a former intelligence analyst who worked at Langley called it 'reckless that this information is out there at all.' An internal GSA email obtained by the AP said the list had generated 'an overwhelming amount of interest' and would be republished in the 'near future' after the agency was able to 'evaluate this initial input and determine how we can make it easier for stakeholders to understand the nuances of the assets listed.' About three weeks later, GSA posted a separate list of eight properties slated for 'accelerated disposition,' none of them from the original 443, saying it was taking a more 'incremental approach.'\n\nUpdate 2026-10-10: At a June 25, 2026 public meeting, the Public Buildings Reform Board -- an independent advisory board established by Congress and separate from GSA -- identified the 308,483-square-foot 'B side' of the Parr-Franconia Warehouse complex, at 7000 Loisdale Road, as a priority for disposal, describing it as a 'valuable location with redevelopment potential,' FFXnow reported. The board's executive director said GSA is 'in the process' of vacating the warehouses and that the board had received no letters of interest from potential buyers; FFXnow noted the CIA reportedly has a facility on the campus.",
     "primary_proponent": {
       "name": "General Services Administration, with DOGE (Department of Government Efficiency)",
       "role": "GSA published and administered the list; DOGE's broader federal-property-disposal push provided the policy context",
-      "note": "No single named individual was identified in sourcing reviewed as personally responsible for including the Springfield/CIA-linked facility on the list -- attributed institutionally to GSA's rapid, DOGE-driven property-review process."
+      "note": "No single named individual was identified in sourcing reviewed as personally responsible for including the Springfield complex on the list -- attributed institutionally to GSA's rapid, DOGE-driven property-review process."
     },
     "estimated_impact": {
-      "summary": "A government agency briefly, publicly disclosed the location and disposal-candidacy of a facility reportedly used for sensitive CIA training activity, before pulling the listing within 24 hours -- an example of the disposal process moving fast enough to bypass the kind of security review that would normally catch this before publication.",
+      "summary": "A government agency briefly listed for disposal most of a federal complex that houses a building reportedly used for sensitive CIA training, before pulling the whole list within a day; a GSA source told Wired the agency is not always aware of what operations are conducted in tenant spaces.",
       "figures": [
         {
           "metric": "Properties on the original published list",
@@ -20648,21 +20732,21 @@
           "source": "GSA"
         },
         {
-          "metric": "Deferred recapitalization needs represented by the list",
-          "value": "$8.3 billion",
+          "metric": "Recapitalization needs represented by the list",
+          "value": "Over $8.3 billion",
           "source": "GSA"
         },
         {
-          "metric": "Properties scrubbed when the list was pulled",
+          "metric": "Properties scrubbed within hours, before the whole list was pulled",
           "value": "120+",
-          "source": "Multiple outlets, March 2025"
+          "source": "Wired; AP (443 to 320 entries)"
         }
       ],
-      "caveat": "No source reviewed established that the CIA-linked facility's inclusion caused any actual operational or security compromise beyond the brief public disclosure itself -- the caveat here is about exposure risk from the process, not a documented downstream security incident."
+      "caveat": "No source reviewed established that the inclusion of the complex around the CIA-linked facility caused any actual operational or security compromise beyond the brief public disclosure itself -- the caveat here is about exposure risk from the process, not a documented downstream security incident."
     },
-    "confidence_note": "HIGH confidence -- corroborated across Wired's original reporting identifying the Parr-Franconia/CIA connection, multiple independent outlets (KBTX/AP, PBS NewsHour, Yahoo/AP) confirming the list's publication and rapid removal, and GSA's own public statements and internal email describing the retraction and planned republication.",
-    "pull_quote": "An internal GSA email said the list would be republished later ‘with adjustments to make it easier for stakeholders to understand the nuances of the assets listed,’ citing ‘an overwhelming amount of interest.’",
-    "last_verified": "2026-08-10",
+    "confidence_note": "HIGH confidence -- corroborated across Wired's original reporting identifying the Parr-Franconia/CIA connection, multiple independent outlets (KBTX/AP, PBS NewsHour, Yahoo/AP) confirming the list's publication and rapid removal, and GSA's own public statements and internal email describing the retraction and planned republication. Update 2026-10-10: Re-checked against Wired, AP (via KBTX), FFXnow and GSA's own statement; the later review-board evaluation of the Franconia warehouse comes from FFXnow's report on the board's public meeting, and the shorter 'accelerated disposition' list from Bisnow.",
+    "pull_quote": "An internal GSA email said the list had generated ‘an overwhelming amount of interest’ and would be republished after the agency could ‘evaluate this initial input and determine how we can make it easier for stakeholders to understand the nuances of the assets listed.’",
+    "last_verified": "2026-10-10",
     "date_added": "2026-08-10",
     "sources": [
       {
@@ -20674,29 +20758,65 @@
         "url": "https://www.kbtx.com/2025/03/05/trump-administration-deletes-list-hundreds-federal-buildings-targeted-potential-sale/"
       },
       {
+        "name": "CNS Maryland -- 'Maryland federal properties targeted for sale, but the list changed then disappeared'",
+        "url": "https://cnsmaryland.org/2025/03/05/maryland-federal-properties-targeted-for-sale-but-the-list-changed-then-disappeared/"
+      },
+      {
         "name": "PBS NewsHour -- 'FBI and Red Cross headquarters are among more than 440 federal buildings listed for potential sale'",
         "url": "https://www.pbs.org/newshour/amp/politics/fbi-and-red-cross-headquarters-are-among-more-than-440-federal-buildings-listed-for-potential-sale-by-trump-administration"
       },
       {
         "name": "GSA -- 'Statement regarding GSA's disposal of non-core assets'",
         "url": "https://www.gsa.gov/about-gsa/newsroom/news-releases/statement-regarding-gsas-disposal-of-noncore-assets-03042025"
+      },
+      {
+        "name": "Bisnow -- 'GSA Releases New List Of Properties Slated For 'Accelerated Disposition''",
+        "url": "https://www.bisnow.com/news/washington-dc/office/gsa-updates-noncore-assets-with-8-properties-slated-for-accelerated-disposition-128614"
+      },
+      {
+        "name": "FFXnow -- 'Federal review board weighs future of USGS HQ in Reston, Franconia warehouse' (June 30, 2026)",
+        "url": "https://www.ffxnow.com/2026/06/30/federal-review-board-weighs-future-of-usgs-hq-in-reston-franconia-warehouse/"
       }
     ],
     "section_summaries": {
-      "what_changed": "GSA published a 443-property 'non-core asset' sale list on March 4, 2025, including a Springfield, VA facility reportedly used for sensitive CIA training -- and pulled the entire list the next day after security and public backlash, later releasing a smaller, scaled-back version.",
-      "estimated_impact": "The list covered ~80 million sq ft and $8.3B in deferred maintenance needs; over 120 properties, including the CIA-linked site, were scrubbed when it was pulled.",
+      "what_changed": "GSA posted, then pulled within a day, a 443-property sale list that included a Springfield, VA complex housing a reported CIA facility; by June 2026 a review board was weighing selling part of it.",
+      "estimated_impact": "The list covered ~80 million sq ft and $8.3B in recapitalization needs; more than 120 properties were scrubbed within hours, before the whole list came down.",
       "confidence_note": "Strongly corroborated across Wired's original identification of the CIA link, multiple independent outlets, and GSA's own public statements."
     },
-    "last_substantive_update": "2026-08-10",
+    "last_substantive_update": "2026-10-10",
     "glance": {
       "who": "GSA, with DOGE",
-      "what": "Published a 443-property sale list that included a reported CIA training facility, then pulled it the next day",
+      "what": "Published a 443-property sale list that included most of a complex housing a reported CIA site, then pulled it",
       "harm": {
         "kind": "institutional",
         "certainty": "documented",
         "who": "Security of a CIA-linked facility"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-10-10"
+    },
+    "timeline": {
+      "what_changed": {
+        "base": "On March 4, 2025, GSA published a list of 443 federally owned properties -- comprising nearly 80 million rentable square feet and representing more than $8.3 billion in recapitalization needs -- that the agency identified as 'not core to government operations' and intended to dispose of, as part of DOGE's broader push to shrink the federal government's real-estate footprint. **The list included most of the Parr-Franconia Warehouse Complex in Springfield, Virginia, which also houses a building long reported to be a clandestine CIA training site used for surveillance, hacking, and break-in tradecraft instruction, according to Wired; the CIA building itself did not appear to be listed.** The list also included the FBI and American Red Cross headquarters buildings. Within hours, GSA posted a revised list of 320 entries that dropped every Washington, D.C., building, and by the morning of March 5 the whole list was gone; GSA did not respond to the AP's questions about why the properties had been removed. Maryland lawmakers criticized the walk-back, with Sen. Chris Van Hollen calling it 'yet another example of chaos and confusion.' After the list came down, Wired reported the CIA connection: Fairfax County Board of Supervisors chair Jeff McKay told Wired that 'someone did no research about the long and well-documented history of this property,' and a former intelligence analyst who worked at Langley called it 'reckless that this information is out there at all.' An internal GSA email obtained by the AP said the list had generated 'an overwhelming amount of interest' and would be republished in the 'near future' after the agency was able to 'evaluate this initial input and determine how we can make it easier for stakeholders to understand the nuances of the assets listed.' About three weeks later, GSA posted a separate list of eight properties slated for 'accelerated disposition,' none of them from the original 443, saying it was taking a more 'incremental approach.'",
+        "updates": [
+          {
+            "date": "2026-10-10",
+            "label": "Update",
+            "text": "Update 2026-10-10: At a June 25, 2026 public meeting, the Public Buildings Reform Board -- an independent advisory board established by Congress and separate from GSA -- identified the 308,483-square-foot 'B side' of the Parr-Franconia Warehouse complex, at 7000 Loisdale Road, as a priority for disposal, describing it as a 'valuable location with redevelopment potential,' FFXnow reported. The board's executive director said GSA is 'in the process' of vacating the warehouses and that the board had received no letters of interest from potential buyers; FFXnow noted the CIA reportedly has a facility on the campus.",
+            "effective_date": "2026-10-10"
+          }
+        ]
+      },
+      "confidence_note": {
+        "base": "HIGH confidence -- corroborated across Wired's original reporting identifying the Parr-Franconia/CIA connection, multiple independent outlets (KBTX/AP, PBS NewsHour, Yahoo/AP) confirming the list's publication and rapid removal, and GSA's own public statements and internal email describing the retraction and planned republication.",
+        "updates": [
+          {
+            "date": "2026-10-10",
+            "label": "Update",
+            "text": "Update 2026-10-10: Re-checked against Wired, AP (via KBTX), FFXnow and GSA's own statement; the later review-board evaluation of the Franconia warehouse comes from FFXnow's report on the board's public meeting, and the shorter 'accelerated disposition' list from Bisnow.",
+            "effective_date": "2026-10-10"
+          }
+        ]
+      }
     }
   },
   {
@@ -45690,31 +45810,41 @@
   },
   {
     "id": "usda-food-for-progress-grants-canceled-2025",
-    "title": "USDA Canceled All Food for Progress Foreign Food-Aid Grants, Then Partially Reversed Course Days Later",
+    "title": "USDA Canceled 27 Food for Progress Foreign Food-Aid Projects in May 2025, Months After Lifting a Freeze on the Program",
     "institution": "U.S. Department of Agriculture (USDA)",
     "domain": "funding_redirection",
-    "status": "Partially reversed within days of the initial cancellation",
-    "date_of_action": "2025-05-14 (grants canceled) through 2025-05-16 (partial resumption announced)",
-    "what_changed": "**USDA canceled all existing grants under its Food for Progress program, which sends American-grown commodities -- including milled rice, soybean meal, wheat, and yellow soybeans -- abroad to support agricultural development and food security in developing countries, according to an internal email reviewed by Reuters. The cancellations affected all existing awards, including some agreements dating back to 2018, and struck recipient countries including Tanzania, Tunisia, and Sri Lanka.** USDA had issued more than $218 million in Food for Progress grants in 2024 alone. The cancellation followed the administration's broader budget proposal to eliminate Food for Progress along with USDA's McGovern-Dole Food for Education program and USAID's Food for Peace program. Two days later, on May 16, 2025, USDA reversed part of the decision, telling recipients in a separate email reviewed by Reuters that the Food for Progress program could resume for agreements made in fiscal year 2024 or earlier -- leaving the status of newer or planned awards, and the broader elimination proposal in the administration's budget, unresolved.",
+    "status": "Not reversed. USDA terminated 27 Food for Progress projects in May 2025 and kept administering 14 others in 17 countries; no restoration of the canceled awards was found. USDA later opened a fiscal 2026 Food for Progress funding round of up to $226 million.",
+    "date_of_action": "2025-05-14",
+    "what_changed": "**On May 14, 2025, USDA terminated existing grants under its Food for Progress program, which sends U.S. commodities abroad for agricultural and economic development projects, according to an email seen by Reuters.** Grantees were told their awards were terminated and that USDA staff would work with them on the \"security, integrity, and disposition of any commodities\" tied to the awards. One source told Reuters the cancellations appeared to affect all existing awards, including some dating back to 2018; Reuters could not then confirm how many were canceled. About a week later, a USDA email to congressional staff seen by Reuters put the Food for Progress cuts at 27 projects, alongside 17 projects terminated under USDA's McGovern-Dole school-meals program (44 in all, in countries including Honduras, Kyrgyzstan, Sierra Leone and Nepal), and said USDA was still administering 14 remaining Food for Progress projects in 17 countries. The email said the canceled projects were \"not in alignment with the foreign assistance objectives of the Trump Administration,\" and a USDA spokesperson said they were canceled in accordance with a January 20 executive order on aligning foreign aid with U.S. interests. USDA had issued more than $218 million in Food for Progress grants in 2024, sending crops like milled rice, soybean meal, wheat and yellow soybeans to countries including Tanzania, Tunisia and Sri Lanka. The program had already been halted earlier in 2025 under the administration's pause on foreign assistance; on February 7, 2025, USDA told grantees that work could continue on agreements signed in fiscal year 2024 and earlier. The administration's budget had proposed eliminating Food for Progress, McGovern-Dole and USAID's Food for Peace program; USDA nonetheless posted a fiscal 2026 Food for Progress funding notice on May 21, 2026, anticipating up to $226 million in new cooperative agreements.",
     "primary_proponent": {
       "name": "U.S. Department of Agriculture",
-      "role": "Directed the grant cancellation and the subsequent partial reversal",
-      "note": "No single named USDA official was identified in sourcing reviewed as personally directing the cancellation; the administration's broader budget proposal to eliminate the program entirely provides the policy context, but the specific mid-cycle cancellation of already-awarded grants was a distinct, more abrupt action than a forward-looking budget elimination proposal would have been."
+      "role": "Terminated the Food for Progress grants",
+      "note": "No single named USDA official was identified in sourcing reviewed as personally directing the cancellation. A USDA spokesperson tied it to the January 20, 2025 executive order on aligning foreign aid with U.S. interests, and a source told Reuters the White House and the Department of Government Efficiency had pressured USDA to reduce spending on overseas programs."
     },
     "estimated_impact": {
-      "summary": "An abrupt cancellation of all active foreign food-aid grants -- including agreements years into execution -- disrupted agricultural development and food-security programming in multiple developing countries before USDA partially reversed course within 48 hours, though without fully restoring the program to its pre-cancellation status.",
+      "summary": "USDA ended 27 active agricultural-development and food-security projects in developing countries in May 2025, some of them years into execution; it told Congress it was still administering 14 other Food for Progress projects in 17 countries, and no restoration of the canceled awards was found.",
       "figures": [
+        {
+          "metric": "Food for Progress projects terminated (May 2025)",
+          "value": "27",
+          "source": "USDA email to congressional staff, seen by Reuters"
+        },
+        {
+          "metric": "Food for Progress projects still administered after the cuts",
+          "value": "14, in 17 countries",
+          "source": "USDA email to congressional staff, seen by Reuters"
+        },
         {
           "metric": "Food for Progress grants issued in 2024",
           "value": "$218,000,000+",
           "source": "USDA data, cited by Reuters"
         }
       ],
-      "caveat": "Sourcing reviewed did not quantify how many individual grant agreements or how many recipient countries were affected by the initial cancellation, nor the precise scope of what was restored in the May 16 partial reversal (e.g., whether it covered all pre-FY2025 agreements or only some) -- this entry documents the cancellation and reversal as reported, without a fuller accounting that wasn't available in sourcing reviewed."
+      "caveat": "Sourcing reviewed did not give the dollar value of the 27 terminated projects or name every affected country; the $218 million figure is total 2024 Food for Progress grant issuance, not the value of the canceled awards."
     },
-    "confidence_note": "HIGH confidence -- based on Reuters' review of two separate internal USDA emails (the cancellation notice and the partial-reversal notice), corroborated by U.S. News, Yahoo (both carrying Reuters' story), and congressional office statements (Rep. Tokuda, Sen. Gillibrand) responding to the cancellation.",
-    "pull_quote": "USDA's May 16 reversal covered only agreements made in fiscal year 2024 or earlier — leaving the status of newer or planned awards, and the administration's broader proposal to eliminate the program entirely, unresolved.",
-    "last_verified": "2026-08-10",
+    "confidence_note": "HIGH confidence -- based on Reuters' reporting on internal USDA emails: the May 14, 2025 termination notice to grantees and a USDA email to congressional staff about a week later giving the project counts, carried in syndicated copies (U.S. News, Agweek, Yahoo). Update 2026-10-10 (correction): the USDA email allowing work to continue on agreements signed in fiscal year 2024 and earlier was sent February 7, 2025, ending the foreign-aid-pause halt; it was not a partial reversal of the May 14 cancellation. Reuters' follow-up put the May cancellations at 27 projects, with 14 still administered in 17 countries. USDA's fiscal 2026 Food for Progress funding notice (up to $226 million) was posted May 21, 2026; no restoration of the canceled awards was found.",
+    "pull_quote": "The canceled projects are \"not in alignment with the foreign assistance objectives of the Trump Administration,\" USDA told congressional staff.",
+    "last_verified": "2026-10-10",
     "date_added": "2026-08-10",
     "sources": [
       {
@@ -45722,29 +45852,50 @@
         "url": "https://www.usnews.com/news/politics/articles/2025-05-14/us-farm-agency-cancels-food-for-progress-food-aid-grants"
       },
       {
-        "name": "Reuters (via AOL) -- 'USDA says much of Food for Progress aid program can resume, email shows'",
-        "url": "https://www.aol.com/news/usda-says-much-food-progress-193121466.html"
+        "name": "Agweek/Reuters -- 'US farm agency cancels Food for Progress food aid grants' (May 15, 2025)",
+        "url": "https://www.agweek.com/news/policy/us-farm-agency-cancels-food-for-progress-food-aid-grants"
       },
       {
         "name": "Reuters (via Yahoo) -- 'Exclusive-US farm agency cancels food aid for children in poor countries'",
         "url": "https://www.yahoo.com/news/exclusive-us-farm-agency-cancels-164545502.html"
+      },
+      {
+        "name": "Reuters (via SRN News) -- 'USDA to resume support for Food for Progress projects' (Feb. 7, 2025)",
+        "url": "https://srnnews.com/usda-says-much-of-food-for-progress-aid-program-can-resume-email-shows/"
+      },
+      {
+        "name": "Grants.gov -- 'Food for Progress Program Notice of Funding Opportunity Fiscal Year 2026'",
+        "url": "https://simpler.grants.gov/opportunity/362536"
       }
     ],
     "section_summaries": {
-      "what_changed": "USDA canceled all active Food for Progress foreign food-aid grants on May 14, 2025, including agreements dating to 2018, then partially reversed course two days later for pre-FY2025 agreements specifically.",
-      "estimated_impact": "Disrupted over $218M/year in agricultural-development food aid to countries including Tanzania, Tunisia, and Sri Lanka before a partial, incompletely-scoped reversal.",
-      "confidence_note": "Strongly sourced to Reuters' review of two separate internal USDA emails documenting both the cancellation and the reversal."
+      "what_changed": "USDA terminated 27 Food for Progress food-aid projects in May 2025, citing Trump foreign-aid priorities, while keeping 14 others running in 17 countries.",
+      "estimated_impact": "Ended 27 agricultural-development food-aid projects abroad, some years underway; USDA had issued over $218M in program grants in 2024.",
+      "confidence_note": "Strongly sourced to Reuters' reporting on internal USDA emails to grantees and to congressional staff."
     },
-    "last_substantive_update": "2026-08-10",
+    "last_substantive_update": "2026-10-10",
     "glance": {
       "who": "U.S. Department of Agriculture",
-      "what": "Reportedly canceled all active Food for Progress grants on May 14, 2025; partly reversed two days later",
+      "what": "Terminated 27 Food for Progress food-aid projects in May 2025; kept 14 others running",
       "harm": {
         "kind": "money",
         "certainty": "alleged",
         "who": "Food-aid recipient countries"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-10-10"
+    },
+    "timeline": {
+      "confidence_note": {
+        "base": "HIGH confidence -- based on Reuters' reporting on internal USDA emails: the May 14, 2025 termination notice to grantees and a USDA email to congressional staff about a week later giving the project counts, carried in syndicated copies (U.S. News, Agweek, Yahoo).",
+        "updates": [
+          {
+            "date": "2026-10-10",
+            "label": "Update",
+            "text": "Update 2026-10-10 (correction): the USDA email allowing work to continue on agreements signed in fiscal year 2024 and earlier was sent February 7, 2025, ending the foreign-aid-pause halt; it was not a partial reversal of the May 14 cancellation. Reuters' follow-up put the May cancellations at 27 projects, with 14 still administered in 17 countries. USDA's fiscal 2026 Food for Progress funding notice (up to $226 million) was posted May 21, 2026; no restoration of the canceled awards was found.",
+            "effective_date": "2026-10-10"
+          }
+        ]
+      }
     }
   },
   {
@@ -45753,8 +45904,8 @@
     "institution": "U.S. Department of Agriculture (USDA) -- Food Safety and Inspection Service (FSIS)",
     "domain": "research_suppression",
     "status": "Terminated; no reinstatement found as of last verification despite lawmaker and stakeholder calls to restore them",
-    "date_of_action": "2025-02-20 (formal termination) / 2025-03-06 (members notified, publicly reported)",
-    "what_changed": "On March 6, 2025, USDA notified members that it had terminated the National Advisory Committee on Microbiological Criteria for Foods (NACMCF, established 1988) and the National Advisory Committee on Meat and Poultry Inspection (NACMPI, established 1971), consistent with a February 20, 2025 termination date reported by trade press, as part of the administration's broader elimination of federal advisory committees under Executive Order 14217. Both committees provided independent scientific expertise to USDA, FDA, CDC, and other federal agencies: NACMCF developed microbiological safety standards and risk-assessment guidance used across the food-safety system, while NACMPI -- with industry, government, academic, and consumer representatives -- reviewed meat and poultry inspection program issues. Sen. Richard Blumenthal specifically flagged that NACMCF had been actively tasked, as of December 2024, with reviewing FSIS's regulatory approach to Listeria monocytogenes to inform policy improvements and facility oversight -- work that was halted by the termination, coming just months after a 2024 Listeria outbreak linked to Boar's Head deli meat killed 10 people and sickened dozens nationwide. Consumer Reports food policy director Brian Ronholm called the termination 'very alarming' and warned it signaled food safety would not be a USDA priority, while dozens of food-safety stakeholders and Sen. Blumenthal separately urged Secretary Brooke Rollins to reinstate both committees, noting their combined annual budgets ($225,000 for NACMCF, $75,000 for NACMPI) were minimal relative to the scientific oversight they provided. As of this entry's last verification, no source reviewed reported either committee being reinstated.",
+    "date_of_action": "2025-02-20 (NACMCF formal termination, per USDA's FACA report) / 2025-03-06 (members notified; publicly reported 2025-03-07)",
+    "what_changed": "On March 6, 2025, USDA notified members that it had terminated the National Advisory Committee on Microbiological Criteria for Foods (NACMCF, established 1988) and the National Advisory Committee on Meat and Poultry Inspection (NACMPI, established 1971) as part of the administration's broader elimination of federal advisory committees under Executive Order 14217; USDA's own FY2025 report to the federal advisory-committee database records NACMCF's formal termination as February 20, 2025, under a Secretary's memorandum of that date eliminating USDA advisory committees. Both committees provided independent scientific expertise to USDA, FDA, CDC, and other federal agencies: NACMCF developed microbiological safety standards and risk-assessment guidance used across the food-safety system, while NACMPI -- with industry, government, academic, and consumer representatives -- reviewed meat and poultry inspection program issues. Sen. Richard Blumenthal specifically flagged that NACMCF had been actively tasked, as of December 2024, with reviewing FSIS's regulatory approach to Listeria monocytogenes to inform policy improvements and facility oversight -- work that was halted by the termination, coming just months after a 2024 Listeria outbreak linked to Boar's Head deli meat killed 10 people and sickened dozens nationwide. Consumer Reports food policy director Brian Ronholm called the termination 'very alarming' and warned it signaled food safety would not be a USDA priority, while dozens of food-safety stakeholders and Sen. Blumenthal separately urged Secretary Brooke Rollins to reinstate both committees, noting their combined annual budgets ($225,000 for NACMCF, $75,000 for NACMPI) were minimal relative to the scientific oversight they provided. As of this entry's last verification, no source reviewed reported either committee being reinstated.",
     "primary_proponent": {
       "name": "U.S. Department of Agriculture, under Executive Order 14217",
       "role": "USDA implemented the termination as part of the administration's government-wide advisory-committee elimination directive",
@@ -45781,12 +45932,12 @@
       ],
       "caveat": "No source reviewed documented a specific, attributable food-safety failure resulting from the committees' absence as of last verification -- the harm identified by critics is the loss of independent scientific review capacity and the interruption of the in-progress Listeria review itself, not yet a downstream outbreak or regulatory failure traceable to the gap."
     },
-    "confidence_note": "HIGH confidence -- corroborated across CNBC, Reuters, Food Safety News, Food Safety Magazine, and Perishable News reporting on the termination itself; Sen. Blumenthal's office press release provides the Listeria-review connection and outbreak figures with an official congressional source.",
+    "confidence_note": "HIGH confidence -- corroborated across CNBC, Reuters, Food Safety News, and Food Safety Magazine reporting on the termination itself; Sen. Blumenthal's office press release provides the Listeria-review connection and outbreak figures with an official congressional source. Re-verified 2026-10-10: CNBC, Food Safety News, Food Safety Magazine and Sen. Blumenthal's release still support the termination, the halted Listeria review and the budget figures; no reinstatement or replacement committee was found; USDA's FY2025 FACA report for NACMCF gives a formal termination date of February 20, 2025.",
     "pull_quote": "Food-safety stakeholders and Sen. Blumenthal noted the committees' combined annual budgets ($225,000 for NACMCF, $75,000 for NACMPI) were minimal relative to the scientific oversight they provided.",
-    "last_verified": "2026-08-10",
+    "last_verified": "2026-10-10",
     "date_added": "2026-08-10",
     "section_summaries": {
-      "what_changed": "USDA terminated its two scientific food-safety advisory committees (NACMCF, NACMPI) in March 2025 under EO 14217, halting an in-progress Listeria oversight review months after a deadly 2024 outbreak.",
+      "what_changed": "USDA terminated its two scientific food-safety advisory committees (NACMCF, NACMPI) in early 2025 under EO 14217, halting an in-progress Listeria oversight review months after a deadly 2024 outbreak.",
       "estimated_impact": "USDA lost its only standing independent scientific-advice channels on food microbiology and meat/poultry inspection, interrupting the Listeria review specifically.",
       "confidence_note": "Strongly corroborated across multiple food-safety trade press outlets and Sen. Blumenthal's official congressional office."
     },
@@ -45814,9 +45965,13 @@
       {
         "name": "Food Safety Magazine -- Dozens of Prominent Food Safety Stakeholders Call for Reinstatement of NACMCF and NACMPI",
         "url": "https://www.food-safety.com/articles/10298-dozens-of-prominent-food-safety-stakeholders-call-for-reinstatement-of-nacmcf-and-nacmpi"
+      },
+      {
+        "name": "GSA FACA Database -- USDA FY2025 Report: National Advisory Committee on Microbiological Criteria for Foods",
+        "url": "https://www.facadatabase.gov/FACA/apex/FACACommitteeLevelReportAsPDF?id=a10t0000001gzxCAAQ"
       }
     ],
-    "last_substantive_update": "2026-08-10",
+    "last_substantive_update": "2026-10-10",
     "glance": {
       "who": "USDA under Executive Order 14217",
       "what": "Terminated USDA's two scientific food-safety advisory committees, halting an in-progress Listeria review",
@@ -45825,7 +45980,7 @@
         "certainty": "documented",
         "who": "Food-safety scientific review"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-10-10"
     }
   },
   {
