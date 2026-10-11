@@ -17161,55 +17161,63 @@
    },
    "4": {
     "state": "supports",
-    "why": "The July 30 letter to the Defense, Energy, Commerce and Interior secretaries and the EXIM president contains both quoted passages about the 14 companies and the $8.9 billion.",
-    "host": "blumenthal.senate.gov",
+    "why": "The source states that when WIRED asked about Foundation's contracts the company shared two inherited from Boardwalk and three via IHMC and did not appear to have independently secured new government money; elsewhere it calls Eric Trump 'both an investor and the company's chief strategy adviser,' matching every quoted element.",
+    "host": "wired.com",
     "date": "2026-10-11",
     "kind": "fact",
     "archive": false
    },
    "5": {
-    "state": "partly",
-    "why": "The Aug. 4, 2026 letter from the four named members contains the $3.2 billion passage, the 'repeatedly sought, and failed to obtain' sentence, the IG request, Hadrian's $39.2 million Army and $900 million Navy awards, Foundation Future Industries' $24 million, and Anduril/SpaceX's $1 billion and $2.1 billion; the PsiQuantum $125 million DARPA item does not appear in the provided text.",
-    "host": "warren.senate.gov",
+    "state": "supports",
+    "why": "The letter's text contains both quoted passages verbatim (the 14 companies with ties to the Lutnick or Trump families, and the at-least-$8.9 billion figure), and its date and addressees match the claim.",
+    "host": "blumenthal.senate.gov",
     "date": "2026-10-11",
     "kind": "fact",
     "archive": false
    },
    "6": {
-    "state": "supports",
-    "why": "The Inquirer's Post copy carries Benza's 'passive, minority investors' and 'no role whatsoever' statement and the sentence that no evidence has surfaced that either brother used political connections inappropriately, which is not against the law.",
-    "host": "inquirer.com",
+    "state": "partly",
+    "why": "The letter supports the $3.2 billion figure, the 'repeatedly sought' quote, the IG request, and the Hadrian, Foundation Future Industries and Anduril/SpaceX items, but the provided text contains no mention of PsiQuantum or a $125 million DARPA award.",
+    "host": "warren.senate.gov",
     "date": "2026-10-11",
     "kind": "fact",
     "archive": false
    },
    "7": {
     "state": "supports",
-    "why": "The gCaptain Reuters copy states the $3.7 billion shipyard ceremony attended by Trump, the $2.9 billion Navy contract, the combined up to $6.6 billion, and Trump's 40% stake remark without an ownership mechanism.",
-    "host": "gcaptain.com",
+    "why": "The Post article quotes Benza saying the brothers 'are passive, minority investors' with 'no role whatsoever in the awarding, oversight, or management of any government contracts,' and separately states that no evidence has surfaced of inappropriate advocacy and that doing so is not against the law.",
+    "host": "inquirer.com",
     "date": "2026-10-11",
     "kind": "fact",
     "archive": false
    },
    "8": {
     "state": "supports",
-    "why": "The source (The National News Desk, Oct 8, 2026) opens by stating ABC News deleted the report on the Trump sons' alleged investment ties, and the excerpt contains Henning's 'does not have a \"major stake\" in Anduril' line and Trump Jr.'s 'ABC deleted this article in less than 24 hours because it's false' post; the source also quotes the brothers' spokesperson verbatim saying they 'do not seek to influence, direct, or participate in any government decision, procurement, award.'",
-    "host": "local12.com",
+    "why": "The Reuters text states Anduril unveiled a $3.7 billion Maryland shipyard at a ceremony attended by Trump, was awarded a $2.9 billion Navy contract, together valued at up to $6.6 billion, and quotes Trump on a 40% taxpayer stake without indicating the ownership mechanism.",
+    "host": "gcaptain.com",
     "date": "2026-10-11",
     "kind": "fact",
     "archive": false
    },
    "9": {
     "state": "supports",
-    "why": "The corrected Oct. 9, 2026 ABC story carries the correction note, the $50 million Anduril investment in a $2.5 billion round, the 'relatively small stake' language, the 'no ability to decide' quote, Raskin's August letter quote, the lawyers' 'political association' line, the Firehawk-2023 statement and PsiQuantum's '$100 million letter of intent with the Department of Commerce in May.'",
-    "host": "abcnews.com",
+    "why": "The TNND article contains each quoted element: ABC deleted the report, Henning's 'does not have a major stake' statement, Trump Jr.'s 'ABC deleted this article in less than 24 hours because it's false,' and the brothers' spokesperson's statement that they do not seek to influence government decisions.",
+    "host": "local12.com",
     "date": "2026-10-11",
     "kind": "fact",
     "archive": false
    },
    "10": {
     "state": "supports",
-    "why": "Subsection (c) of 18 U.S.C. 202 states exactly the quoted exclusion, which places the President outside the officer/employee definition used by section 208.",
+    "why": "The corrected ABC article contains the correction note, the $50 million Anduril investment and $60 billion valuation, the spokesperson and Raskin quotes, the attorneys' quote, the 2023 Firehawk statement and the $100 million Commerce letter of intent, all as the claim states.",
+    "host": "abcnews.com",
+    "date": "2026-10-11",
+    "kind": "fact",
+    "archive": false
+   },
+   "11": {
+    "state": "supports",
+    "why": "Subsection (c) of 18 U.S.C. 202 states verbatim that 'officer' and 'employee' in sections 203, 205, 207 through 209, and 218 shall not include the President, which excludes the President from section 208 as the claim says.",
     "host": "law.cornell.edu",
     "date": "2026-10-11",
     "kind": "fact",
