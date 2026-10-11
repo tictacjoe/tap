@@ -1135,7 +1135,7 @@
       },
       {
         "type": "news_report",
-        "description": "Latin Times coverage of Blanche's CBS News comments, which followed the Supreme Court's September 14, 2026 ruling declining to lift the injunction against the Postal Service mail-ballot rule, including his 'hundreds of ongoing investigations' remark.",
+        "description": "Latin Times coverage of Blanche's CBS News comments defending the administration's mail-ballot rules after the Supreme Court rejected the administration's request to enforce the Postal Service requirements, including his 'hundreds of ongoing investigations' remark.",
         "source_url": "https://www.latintimes.com/attorney-general-blanche-defends-trump-mail-ballot-rules-courts-block-them-theres-lot-599245",
         "maps_to_element": "The claim was made while defending the administration's contested, court-blocked mail-ballot restrictions, in the same CBS News interview and again at the next day's White House briefing"
       },
@@ -1150,13 +1150,19 @@
         "description": "Spectrum News, September 30, 2026: Blanche said DOJ has charged over 90 people with voter-related fraud offenses during Trump's second term and that hundreds of investigations are ongoing across the country.",
         "source_url": "https://spectrumlocalnews.com/us/snplus/politics/2026/09/30/doj-foreign-voters-indictments",
         "maps_to_element": "AG Blanche publicly stated DOJ has 'hundreds' of ongoing investigations into people allegedly ineligible to vote who nonetheless voted"
+      },
+      {
+        "type": "news_report",
+        "description": "Fox News, October 11, 2026: citing figures DOJ provided to Fox News Digital, reports DOJ has charged 64 foreign nationals across 17 states with unlawful voting, fraudulent registration and election-related offenses in roughly the last five weeks, and 104 people with voting fraud-related offenses since Trump returned to office in 2025; the tallies count people charged and give no figure for ongoing investigations.",
+        "source_url": "https://www.foxnews.com/politics/map-doj-illegal-voting-crackdown-sweeps-17-states-razor-thin-elections-face-scrutiny",
+        "maps_to_element": "Blanche did not provide case-level detail, names, or evidence supporting the aggregate figure when pressed"
       }
     ],
-    "status": "Blanche cited 'hundreds' of investigations in a CBS News interview published Sept. 14, 2026 and at a Sept. 15 White House briefing. On Sept. 30 he said DOJ had charged over 90 people with voter-fraud offenses in Trump's second term; DOJ has not released case-level support for 'hundreds.'",
-    "rebuttal_anticipated": "DOJ would likely argue that ongoing criminal investigations are routinely not detailed publicly to protect their integrity, that 'hundreds' is a defensible aggregate consistent with DOJ's broader election-integrity initiative, and that the Northern District of Texas announcement he previewed at the Sept. 15 White House briefing demonstrates the claim has concrete cases behind it.",
-    "comeback": "The concern is not that DOJ investigates voter fraud -- it is that the Attorney General cited a large, specific-sounding aggregate figure while defending a contested, court-blocked policy, on the same day the Supreme Court declined to let that policy take effect for the 2026 midterms, without offering any case count by state, named defendant, or independently verifiable detail.",
+    "status": "Blanche cited 'hundreds' of investigations in a CBS interview published Sept. 14, 2026, a Sept. 15 briefing and again Sept. 30. DOJ charge counts have grown (over 90 per Blanche Sept. 30; 104 since 2025 per DOJ figures to Fox Oct. 11), but no case-level support for 'hundreds' has been released.",
+    "rebuttal_anticipated": "DOJ would likely argue that ongoing criminal investigations are routinely not detailed publicly to protect their integrity, that 'hundreds' is a defensible aggregate consistent with DOJ's broader election-integrity initiative, and that the Northern District of Texas announcement he previewed at the Sept. 15 White House briefing demonstrates the claim has concrete cases behind it, alongside DOJ's growing tally of people charged with voting-related offenses (104 since 2025 in figures DOJ gave Fox News in October).",
+    "comeback": "The concern is not that DOJ investigates voter fraud -- it is that the Attorney General cited a large, specific-sounding aggregate figure while defending a contested, court-blocked policy, on the same day the Supreme Court declined to let that policy take effect for the 2026 midterms, without offering any case count by state, named defendant, or independently verifiable detail. DOJ's later tallies -- 104 people charged since 2025, and 64 foreign nationals charged in about five weeks across 17 states, per figures given to Fox News -- count charges, not investigations, and still leave 'hundreds' of investigations unsupported.",
     "cause": "[TAP Analysis, not sourced] Consistent with this database's broader pattern of administration officials citing large, unverified aggregate figures to justify contested election-integrity policy without correspondingly detailed public substantiation -- see also the DHS Unlawful Voter Initiative and DOJ voter-data-lawsuits entries for two other agency-specific mechanisms in the same pre-midterm push.",
-    "confidence_note": "HIGH confidence Blanche made this statement publicly and on the record, corroborated across CBS News's September 14, 2026 exclusive interview, Yahoo and Latin Times coverage of it, and The National News Desk's report on the September 15 White House briefing, where he repeated the figure. LOW-to-MODERATE confidence in the underlying 'hundreds of investigations' figure itself, since Blanche did not provide case-level substantiation -- this entry documents the unsubstantiated public claim as the accountability concern, not a confirmed count of prosecutable voter fraud.",
+    "confidence_note": "HIGH confidence Blanche made this statement publicly and on the record, corroborated across CBS News's September 14, 2026 exclusive interview, Yahoo and Latin Times coverage of it, and The National News Desk's report on the September 15 White House briefing, where he repeated the figure. LOW-to-MODERATE confidence in the underlying 'hundreds of investigations' figure itself, since Blanche did not provide case-level substantiation -- this entry documents the unsubstantiated public claim as the accountability concern, not a confirmed count of prosecutable voter fraud.\n\nUpdate 2026-10-11: DOJ's subsequent charge counts -- over 90 people charged in Trump's second term per Blanche on Sept. 30 (Spectrum News), when he again said hundreds of investigations were ongoing, and 104 since 2025 per DOJ figures provided to Fox News Digital in October -- are counts of charged defendants, not investigations, and do not substantiate the 'hundreds of ongoing investigations' figure.",
     "last_verified": "2026-10-11",
     "date_added": "2026-09-19",
     "date_of_action": "2026-09-14 (CBS News interview; repeated at Sept. 15 White House briefing)",
@@ -1174,6 +1180,19 @@
         "who": "Public trust in election claims"
       },
       "reviewed": "2026-10-11"
+    },
+    "timeline": {
+      "confidence_note": {
+        "base": "HIGH confidence Blanche made this statement publicly and on the record, corroborated across CBS News's September 14, 2026 exclusive interview, Yahoo and Latin Times coverage of it, and The National News Desk's report on the September 15 White House briefing, where he repeated the figure. LOW-to-MODERATE confidence in the underlying 'hundreds of investigations' figure itself, since Blanche did not provide case-level substantiation -- this entry documents the unsubstantiated public claim as the accountability concern, not a confirmed count of prosecutable voter fraud.",
+        "updates": [
+          {
+            "date": "2026-10-11",
+            "label": "Update",
+            "text": "Update 2026-10-11: DOJ's subsequent charge counts -- over 90 people charged in Trump's second term per Blanche on Sept. 30 (Spectrum News), when he again said hundreds of investigations were ongoing, and 104 since 2025 per DOJ figures provided to Fox News Digital in October -- are counts of charged defendants, not investigations, and do not substantiate the 'hundreds of ongoing investigations' figure.",
+            "effective_date": "2026-10-11"
+          }
+        ]
+      }
     }
   },
   {
@@ -5981,6 +6000,12 @@
         "maps_to_element": "The practice may violate state laws restricting who may access voter-lookup systems and for what purpose"
       },
       {
+        "type": "court_filing",
+        "description": "Declaration of USCIS Fraud Detection and National Security (FDNS) Associate Director Nicolas Bartell, filed September 14, 2026 with a Justice Department notice in League of Women Voters v. DHS (D.D.C., No. 1:25-cv-03501): FDNS \"has been investigating potential illegal voting by aliens who are not lawfully permitted to vote\" and has obtained Social Security Administration information \"in certain cases to verify information and help determine whether illegal voting may have occurred,\" through an SSA data connection that \"did not interact with or involve SAVE.\" The declaration does not mention state voter-lookup tools.",
+        "source_url": "https://storage.courtlistener.com/recap/gov.uscourts.dcd.285454/gov.uscourts.dcd.285454.146.1.pdf",
+        "maps_to_element": "The process generates federal law-enforcement-style records on flagged individuals despite DHS's own underlying data being characterized by the whistleblower as unreliable"
+      },
+      {
         "type": "news_report",
         "description": "Democracy Docket, September 17, 2026: in a letter that Thursday, Senate Democrats urged DHS Inspector General Joseph Cuffari to \"immediately\" open an investigation into the whistleblower's allegations.",
         "source_url": "https://www.democracydocket.com/news-alerts/exclusive-senate-dems-demand-watchdog-probe-into-new-dhs-whistleblower-allegations/",
@@ -5993,18 +6018,18 @@
         "maps_to_element": "The practice may violate state laws restricting who may access voter-lookup systems and for what purpose"
       }
     ],
-    "status": "Disclosed Sept. 14, 2026 by Sens. Schumer and Padilla. DHS said it \"accessed publicly available data from states' voter rolls\" and called the work diligent, not rushed. Senators asked DHS's inspector general to investigate; Virginia's attorney general said DHS may have broken state law.",
+    "status": "Disclosed Sept. 14, 2026 by Sens. Schumer and Padilla. DHS says it used public voter-roll data; a DHS court declaration says USCIS has used Social Security data to probe possible illegal voting. Senators sought an IG probe; Virginia's AG said DHS may have broken state law.",
     "rebuttal_anticipated": "DHS has said it \"accessed publicly available data from states' voter rolls and cross referenced them with known aliens in our systems\" and that the work is \"conducted diligently and professionally.\" It would likely also argue this is a legitimate election-integrity effort within its authority to identify noncitizen voting, that it is using the best data-sharing mechanism available given state cooperation gaps, and that any legal or accuracy concerns are addressed by human review before any enforcement action is taken.",
     "comeback": "The whistleblower's own account -- a mandated reassignment of USCIS staff with under two hours of training and a 40-person daily quota (about 12 minutes per case) -- describes a process built for volume rather than accuracy, using DHS data the whistleblower says is itself unreliable, and directing staff to access state systems by posing as individual voters rather than through any state-authorized verification channel. That combination, not the underlying goal of preventing noncitizen voting, is what raises the state-law and wrongful-flagging concerns.",
     "cause": "[TAP Analysis, not sourced] Part of the broader administration pattern this database documents of using multiple federal agencies to investigate individual voters' eligibility ahead of the 2026 midterms -- alongside DOJ's separate 'hundreds of investigations' claim (the Blanche entry) and its civil lawsuits against states for voter data (the Dhillon entry) -- three distinct federal mechanisms converging on the same pre-midterm voter-eligibility theme via different agencies, statutes, and legal theories.",
-    "confidence_note": "HIGH confidence on the whistleblower disclosure's existence, its public release via Sens. Schumer and Padilla, and DHS's practice as described, corroborated by AP's reporting citing the nearly 30-page disclosure with screenshots and transcripts of DHS training materials. MODERATE confidence on the specific legal-violation characterization (state impersonation/unauthorized-access laws), since that is the whistleblower's own legal assessment, not a court or independent legal finding. Virginia's attorney general has since said DHS \"may have violated several state laws\" (AP, Sept. 17, 2026). DHS responded on record (AP, Sept. 14, 2026) that it \"accessed publicly available data from states' voter rolls\" and that the work was \"conducted diligently and professionally\"; the statement does not directly address the allegation that staff posed as voters.",
+    "confidence_note": "HIGH confidence on the whistleblower disclosure's existence, its public release via Sens. Schumer and Padilla, and DHS's practice as described, corroborated by AP's reporting citing the nearly 30-page disclosure with screenshots and transcripts of DHS training materials. MODERATE confidence on the specific legal-violation characterization (state impersonation/unauthorized-access laws), since that is the whistleblower's own legal assessment, not a court or independent legal finding. Virginia's attorney general has since said DHS \"may have violated several state laws\" (AP, Sept. 17, 2026). DHS responded on record (AP, Sept. 14, 2026) that it \"accessed publicly available data from states' voter rolls\" and that the work was \"conducted diligently and professionally\"; the statement does not directly address the allegation that staff posed as voters. A DHS declaration filed in federal court on Sept. 14, 2026 (League of Women Voters v. DHS) states that USCIS's fraud and national security directorate has been investigating potential illegal voting by noncitizens and has obtained Social Security Administration data \"to verify information and help determine whether illegal voting may have occurred\"; it does not describe how state voter records were accessed, so it bears on the existence of the investigative effort, not on the alleged posing as voters.",
     "last_verified": "2026-10-11",
     "date_added": "2026-09-19",
     "date_of_action": "2026-08 (USCIS staff training begins, per whistleblower disclosure) through 2026-09-14 (whistleblower disclosure made public)",
     "last_substantive_update": "2026-10-11",
     "section_summaries": {
       "incident_summary": "A whistleblower says USCIS staff were told to pose as voters to search state voter records under DHS's 'Unlawful Voter Initiative,' after under 2 hours of training, with a 40-a-day quota.",
-      "confidence_note": "The disclosure is well corroborated (AP, the Padilla/Schumer release); the claim that it broke state laws is the whistleblower's own assessment, not yet adjudicated."
+      "confidence_note": "The disclosure is well corroborated, and a DHS court filing says USCIS used Social Security data to probe possible illegal voting; the state-law violation claim is unadjudicated."
     },
     "glance": {
       "who": "DHS under Markwayne Mullin (Secretary)",

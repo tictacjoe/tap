@@ -776,8 +776,8 @@
     "archive": false
    },
    "2": {
-    "state": "partly",
-    "why": "The Latin Times piece covers Blanche's CBS comments and the 'hundreds of ongoing investigations' remark, and says they came a day after the Supreme Court declined to enforce the USPS rule, but it does not state the September 14, 2026 date of the ruling that the claim supplies.",
+    "state": "supports",
+    "why": "The article reports Blanche's CBS News comments defending the mail-ballot rules a day after the Supreme Court rejected the administration's request to enforce the Postal Service requirements, and quotes his 'hundreds of ongoing investigations' remark.",
     "host": "latintimes.com",
     "date": "2026-10-11",
     "kind": "fact",
@@ -795,6 +795,14 @@
     "state": "supports",
     "why": "The Spectrum News article of September 30, 2026 reports Blanche saying DOJ has charged over 90 people with voter-related fraud offenses in Trump's second term and that hundreds of investigations are ongoing.",
     "host": "spectrumlocalnews.com",
+    "date": "2026-10-11",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "partly",
+    "why": "The excerpt confirms the 64 foreign nationals / 17 states / roughly five weeks figures provided to Fox News Digital, and the article separately states DOJ has charged 104 people since Trump returned to office. However, the provided text carries no publication date (October 11, 2026 is unverified) and is truncated, so the claim that the article gives no figure for ongoing investigations cannot be fully checked.",
+    "host": "foxnews.com",
     "date": "2026-10-11",
     "kind": "fact",
     "archive": false
@@ -3777,15 +3785,23 @@
    },
    "3": {
     "state": "supports",
-    "why": "Democracy Docket reports that in a letter Thursday, Senate Democrats urged DHS IG Joseph Cuffari to 'immediately' open an investigation into the whistleblower's claims.",
-    "host": "democracydocket.com",
+    "why": "The transcribed declaration (Document 146-1, filed 09/14/26, No. 1:25-cv-03501) contains both quoted passages and states the SSA queries 'did not interact with or involve SAVE'; nothing in the full two-page text mentions state voter-lookup tools.",
+    "host": "storage.courtlistener.com",
     "date": "2026-10-11",
     "kind": "fact",
     "archive": false
    },
    "4": {
     "state": "supports",
-    "why": "The AP article on WSOC-TV dated September 17, 2026 contains the quoted sentence and ties it to the whistleblower's voter-lookup allegations.",
+    "why": "The article states that in a letter Thursday, Senate Democrats urged DHS Inspector General Joseph Cuffari to 'immediately' open an investigation into the whistleblower's allegations, matching the claim.",
+    "host": "democracydocket.com",
+    "date": "2026-10-11",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "supports",
+    "why": "The AP story, dated September 17, 2026, contains the quoted sentence verbatim, tying it to the whistleblower's account of voter lookup tools.",
     "host": "wsoctv.com",
     "date": "2026-10-11",
     "kind": "fact",
