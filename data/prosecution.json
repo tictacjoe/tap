@@ -15152,7 +15152,7 @@
   {
     "id": "mullin-ice-polling-places-2026-03",
     "official": "Markwayne Mullin, Secretary of Homeland Security",
-    "offense_category": "Potential violation of 18 U.S.C. §592 (federal statute prohibiting the stationing of armed forces/law enforcement at polling places to influence an election) — NOT charged; as of this entry, no ICE deployment at polling places has actually occurred, so this documents a stated refusal to rule out conduct that would violate the statute, not a completed violation",
+    "offense_category": "Potential violation of 18 U.S.C. §592 (federal statute prohibiting the stationing of armed forces/law enforcement at polling places to influence an election) — NOT charged; as of this entry, TAP's sources document no confirmed ICE deployment at a polling place (media reports of ICE agents at primary-season voting sites are unverified by TAP), so this documents a stated refusal to rule out conduct that would violate the statute, not a completed violation",
     "incident_summary": "During his March 2026 confirmation hearing and in subsequent public statements, Mullin repeatedly declined to rule out positioning ICE agents near or at polling places ahead of the 2026 midterm elections, stating he didn't understand the concern about immigration enforcement at voting sites. His comments were at odds with federal law expressly barring the stationing of law enforcement officers or military personnel at polling places. State election officials had asked Mullin, before his confirmation, to confirm in writing that ICE agents would not be sent to the polls; no indication has been found that he did so.",
     "contested": false,
     "elements_required": [
@@ -15194,39 +15194,94 @@
       },
       {
         "type": "public_record",
-        "description": "On CNN's 'State of the Union' on June 14, 2026 -- two weeks before this entry's own prior last_verified date -- Mullin narrowed his position for the first time, saying ICE would 'only' be deployed at polling places if a 'threat' arose, giving the example: 'if a threat were to arise, for whatever reason, at a polling station -- say a bomb threat would be called in -- our ICE agents are more than just immigration customs enforcement.' This statement predates this entry's original sourcing but was not incorporated when the entry was first written.",
+        "description": "On CNN's 'State of the Union' on June 14, 2026, Mullin said ICE agents would only be deployed to polling stations during the midterms if 'a threat' arises: 'No, what I said was that we would only be there if a threat has arised.' He later said that if a threat did arise at a polling station, ICE agents are trained to be special response teams that can be mobilized quickly.",
         "source_url": "https://www.washingtontimes.com/news/2026/jun/14/markwayne-mullin-says-ice-would-deployed-midterm-polls-threat-arises/",
         "maps_to_element": "First narrowing of Mullin's position from a flat refusal to rule out deployment to a conditional, threat-based carve-out"
       },
       {
         "type": "public_record",
-        "description": "In a July 27, 2026 statement to Raw Story, DHS moved further, stating in writing: 'ICE is not planning operations targeting polling locations. ICE conducts intelligence-driven targeted enforcement and if an active public safety threat endangered a polling location, they may be arrested as a result of that targeted enforcement action.' This is DHS's clearest statement to date that ICE does not intend to target polling places, but it preserves the same threat-based exception Mullin described in June, which voting-rights advocates have characterized as vague enough to function as a loophole for a pretextual 'threat.'",
+        "description": "In an email Raw Story reported on July 27, 2026 (sent the week before and attributed to a 'DHS official'), DHS stated: 'ICE is not planning operations targeting polling locations. ICE conducts intelligence-driven targeted enforcement and if an active public safety threat endangered a polling location, they may be arrested as a result of that targeted enforcement action.' Raw Story noted that 'The details of what would constitute such a threat were left vague' and called the statement 'the strongest signal yet of the administration's intentions to potentially deploy federal agents or soldiers to polling places.' The article also says the DNC pointed to media reports on ICE agents showing up at voting sites during primary elections in Texas and California, and entering a polling place in New York state; TAP has not verified those reports.",
         "source_url": "https://www.rawstory.com/raw-investigates/ice-2677262539/",
         "maps_to_element": "DHS's most recent official position -- narrower non-deployment language than a flat refusal to commit, but still short of the unconditional written assurance state election officials originally requested"
+      },
+      {
+        "type": "public_record",
+        "description": "Speaking to reporters in New York on September 1, 2026, Mullin said 'ICE isn't there to patrol the polling places,' but that 'The only reason why we would be at polling places is if there is a threat to that polling place or we're serving a warrant on someone that we have been actively tracking down,' and 'If we're serving a warrant we will be where we need to be.' DHS separately told Democracy Docket that 'ICE is not planning operations targeting polling locations.'",
+        "source_url": "https://www.democracydocket.com/news-alerts/dhs-chief-says-ice-could-make-arrests-at-polling-places-ignoring-federal-ban/",
+        "maps_to_element": "Statement indicating willingness -- widens the stated exception from a threat to a polling place to also include serving a warrant"
+      },
+      {
+        "type": "reporting",
+        "description": "On September 10, 2026, the League of United Latin American Citizens, Common Cause, UnidosUS and the city of Denver, represented by Democracy Forward, filed a preemptive suit in federal court in Washington, D.C., naming DHS and ICE and their leaders, Mullin and David Venturella. It asks the court to declare unlawful any plans to have armed agents at polling places, citing the federal law that makes it a crime to deploy 'any troops or armed men' to 'any place where a general or special election is held.'",
+        "source_url": "https://www.news9.com/national-politics-oklahoma/lawsuit-block-ice-agents-polling-sites",
+        "maps_to_element": "Statutory framework (18 U.S.C. §592) -- a pending civil suit invoking it against the official (allegations, not findings)"
+      },
+      {
+        "type": "court_filing",
+        "description": "On September 18, 2026, the NAACP and eight other civil rights, immigrant and labor groups sued DHS, ICE, DOJ, the FBI and officials including Mullin, Attorney General Todd Blanche, FBI Director Kash Patel and Thomas Homan in the U.S. District Court for D.C. (NAACP v. DHS, No. 1:26-cv-03263), alleging violations of Section 11(b) of the Voting Rights Act. The complaint alleges that Mullin 'has repeatedly declined to rule out deploying DHS agents in the vicinity of voting locations' and asks the court to enjoin the defendants 'from deploying agents in a manner that unlawfully intimidates voters or anyone urging or aiding voters.'",
+        "source_url": "https://www.courtlistener.com/docket/74811483/1/national-association-for-the-advancement-of-colored-people-v-us/",
+        "maps_to_element": "Absence of a clear, affirmative commitment not to deploy -- now the subject of a pending Voting Rights Act suit (allegations, not findings)"
+      },
+      {
+        "type": "public_record",
+        "description": "The Legal Defense Fund, co-counsel for the nine plaintiffs, said the suit challenges actions and statements 'that have put voters of color in reasonable fear that they will face federal interference when they go to vote.' LDF President Janai Nelson said: 'Using federal law enforcement as a scare tactic to target and intimidate Black communities is illegal and antithetical to the promise of a multiracial democracy that was enshrined in the Voting Rights Act.'",
+        "source_url": "https://www.naacpldf.org/press-release/civil-rights-coalition-files-federal-lawsuit-challenging-threatened-use-of-ice-and-federal-law-enforcement-at-polling-locations/",
+        "maps_to_element": "Plaintiffs' stated basis for the suit (advocacy position, not a finding)"
+      },
+      {
+        "type": "reporting",
+        "description": "Responding to the NAACP suit, a DOJ spokesperson told States Newsroom 'The DOJ has never said it would send federal law enforcement to polling locations' and 'Any suggestion otherwise is fearmongering'; a DHS spokesperson said ICE was not planning any operations that targeted polling locations.",
+        "source_url": "https://sourcenm.com/2026/09/18/repub/trump-administration-faces-second-lawsuit-to-block-ice-agents-at-polls/",
+        "maps_to_element": "Government's response -- denial of any plan, still short of an unconditional written commitment"
+      },
+      {
+        "type": "court_filing",
+        "description": "On September 23, 2026, the DSCC, the DCCC, the Democratic Governors Association, Senate Democratic Leader Charles Schumer and House Democratic Leader Hakeem Jeffries sued DHS, ICE, the FBI, Mullin, acting ICE director David Venturella and FBI Director Kash Patel in the U.S. District Court for D.C. (DSCC v. ICE, No. 1:26-cv-03330), citing Mullin's September 1 remarks and alleging that what it calls the defendants' 'Polling Place Policy' violates 18 U.S.C. §592 and Section 11(b) of the Voting Rights Act. It asks the court to 'Declare the Polling Place Policy unlawful' and to bar the defendants from 'operating or carrying weapons in the vicinity of open polling places.'",
+        "source_url": "https://storage.courtlistener.com/recap/gov.uscourts.dcd.296909/gov.uscourts.dcd.296909.1.0.pdf",
+        "maps_to_element": "Statutory framework and statement indicating willingness -- a third pending suit naming the official (allegations, not findings)"
+      },
+      {
+        "type": "court_filing",
+        "description": "The CourtListener docket for NAACP v. DHS shows government counsel appearing for all defendants, a plaintiffs' motion for discovery filed October 5, 2026, and Judge Loren L. AliKhan's October 8 order setting the defendants' response for October 13 and any reply for October 16. On October 9 the judge said the court is contemplating consolidating the case with League of United Latin American Citizens v. DHS (26-cv-3157) and DSCC v. ICE (26-cv-3330) and ordered a joint status report on consolidation by October 16. The docket lists no ruling and no motion for a temporary restraining order or preliminary injunction.",
+        "source_url": "https://www.courtlistener.com/docket/74811483/national-association-for-the-advancement-of-colored-people-v-us/",
+        "maps_to_element": "Current procedural posture of the pending suit -- no ruling yet"
       }
     ],
-    "status": "As of this update, DHS's position has evolved from Mullin's March 2026 flat refusal to rule out ICE presence at polls to a narrower, conditional formulation: Mullin said on June 14, 2026 that ICE would deploy 'only' in response to a 'threat' (e.g., a bomb threat), and DHS put a similar position in writing to Raw Story on July 27, 2026 -- 'ICE is not planning operations targeting polling locations' but may make arrests at a polling location as the result of a 'targeted enforcement action' tied to an 'active public safety threat.' No completed deployment of ICE to a polling place has been identified as of this update, and no unconditional written non-deployment commitment of the kind state election officials originally requested has been given -- DHS's own language keeps a threat-based exception open. No new deployment has occurred; this remains a documented pattern of conditional, narrowing-but-incomplete assurances rather than either a completed violation or a clean resolution.",
-    "rebuttal_anticipated": "Likely defense: Mullin's comments reflected general support for citizenship verification and election security, not a specific plan to station agents at polls; ICE has broad jurisdiction and a blanket promise to never be near any polling location anywhere would be operationally unrealistic; no deployment has actually occurred.",
-    "comeback": "The distinction between 'general support for election security' and 'willingness to station immigration enforcement at polling places' collapses when a specific, simple written commitment was directly requested by state election officials and never given. State election administrators aren't asking for a policy philosophy -- they're asking for an operational assurance they can plan around, and the refusal to provide it is itself the documented concern. Worth keeping this entry framed carefully in debate as 'a documented refusal to provide the standard written assurance that federal law enforcement won't be used to chill voter participation' -- not as 'ICE went to the polls,' which would be inaccurate and easily rebutted.",
+    "status": "Litigation ongoing. Rights groups and unions sued Mullin, Blanche, Patel and Homan Sept 18 under the Voting Rights Act; suits by LULAC and Denver (Sept 10) and Democratic Party committees (Sept 23) also name him. No ruling yet. DHS says ICE is not planning operations targeting polls.",
+    "rebuttal_anticipated": "Likely defense: Mullin's comments reflected general support for citizenship verification and election security, not a specific plan to station agents at polls; ICE has broad jurisdiction and a blanket promise to never be near any polling location anywhere would be operationally unrealistic; no deployment at a polling place has been confirmed. DOJ has called the suggestion that it would send federal law enforcement to polling locations 'fearmongering,' and DHS says ICE is not planning operations targeting polling locations.",
+    "comeback": "The distinction between 'general support for election security' and 'willingness to station immigration enforcement at polling places' collapses when a specific, simple written commitment was directly requested by state election officials and never given. State election administrators aren't asking for a policy philosophy -- they're asking for an operational assurance they can plan around, and the refusal to provide it is itself the documented concern. Worth keeping this entry framed carefully in debate as 'a documented refusal to provide the standard written assurance that federal law enforcement won't be used to chill voter participation' -- not as 'ICE went to the polls,' since TAP's sources do not confirm a deployment at a polling place.",
     "cause": "[TAP Analysis, not sourced] The Bannon characterization ('test run') is a third-party statement rather than established fact, and shouldn't be treated as sourced evidence about Mullin's intent. A more supportable reading: an administration that has used immigration enforcement in an expanding set of public venues (courthouses, churches, schools, airports during funding lapses) in ways courts have repeatedly found legally questionable, and that has declined to draw a bright line excluding polling places. Whether this reflects a deliberate incremental-expansion strategy or ad hoc enforcement overreach is genuinely uncertain.",
-    "last_verified": "2026-08-18",
+    "last_verified": "2026-10-11",
     "date_added": "2026-07-03",
-    "confidence_note": "HIGH confidence on the documented statements themselves (Mullin's March and June comments, DHS's July 27 statement to Raw Story) -- directly sourced and uncontested. This recheck found that Mullin's June 14, 2026 'only if a threat arises' carve-out predates this entry's own original last_verified date (2026-06-30) by two weeks but was not incorporated when the entry was first written -- an omission-at-build-time, not a new development since. The DHS statement to Raw Story on July 27, 2026 is a genuinely new, post-last_verified development: DHS's clearest written non-deployment language yet, though it preserves the same threat-based exception rather than the unconditional commitment originally requested. LOW-MODERATE confidence remains on whether any of this constitutes an actual statutory violation, since no deployment has occurred. What is documented: DHS has repeatedly declined to give an unconditional non-deployment commitment, offering instead a narrowing series of threat-based carve-outs that critics say could be used pretextually -- not that DHS deployed agents to polling places, which has not happened.",
+    "confidence_note": "HIGH confidence on the documented statements themselves (Mullin's March and June comments, DHS's July 2026 statement to Raw Story) -- directly sourced and uncontested. Mullin's June 14, 2026 'only if a threat arises' remark and DHS's July 2026 written statement to Raw Story both say ICE is not targeting polling places, but both keep a threat-based exception rather than the unconditional commitment originally requested. LOW-MODERATE confidence remains on whether any of this constitutes an actual statutory violation, since no deployment at a polling place is documented by TAP's sources. What is documented: DHS has repeatedly declined to give an unconditional non-deployment commitment, offering instead a narrowing series of threat-based carve-outs that critics say could be used pretextually -- not that DHS deployed agents to polling places. TAP's sources document no confirmed deployment at a polling place; Raw Story, cited above, reports that the DNC pointed to media reports of ICE agents at primary-season voting sites in Texas and California and at a New York polling place, which TAP has not verified.\n\nUpdate 2026-10-11: HIGH confidence on Mullin's September 1, 2026 remarks (Democracy Docket; also reported by CBS News and AP) adding a second exception, serving a warrant, and on the three federal suits naming him (parties, claims and schedule from the CourtListener dockets and complaints and the Legal Defense Fund's release). The suits' claims, including that the statements themselves intimidate voters in violation of Section 11(b) of the Voting Rights Act and that armed agents at polls would break 18 U.S.C. §592, are allegations; no court has ruled. The complaint's account of a Lee County, Florida, roadside immigration checkpoint near a precinct during the primary comes from NAACP members and does not establish an ICE deployment at a polling place. DOJ's separate plan for about 1,000 election monitors, and the NAACP's records suit over it, are covered in TAP's entry on Harmeet Dhillon's monitor plan.",
     "section_summaries": {
       "incident_summary": "Asked point-blank to promise ICE wouldn't show up at 2026 polling places, Mullin wouldn't commit, even in writing when officials requested it.",
-      "confidence_note": "His refusal to give an unconditional commitment is on record and has only narrowed to a threat-based carve-out over time (June and July 2026 statements) -- still short of what election officials asked for, but no deployment has actually happened."
+      "confidence_note": "His refusals are on record and his exceptions now cover threats and warrants; three pending suits call this unlawful, but no court has ruled and no deployment at a polling place is confirmed."
     },
     "date_of_action": "2026-03 (Mullin declines to rule out ICE at polling places)",
-    "last_substantive_update": "2026-08-18",
+    "last_substantive_update": "2026-10-11",
     "glance": {
       "who": "Markwayne Mullin (Secretary of Homeland Security)",
-      "what": "Declined to rule out ICE at 2026 polling places, later offering only a threat-based exception in writing",
+      "what": "Wouldn't rule out ICE at 2026 polls, citing threats or warrants as exceptions; now sued over it",
       "harm": {
         "kind": "rights",
         "certainty": "alleged",
         "who": "Voters at 2026 polling places"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-10-11"
+    },
+    "timeline": {
+      "confidence_note": {
+        "base": "HIGH confidence on the documented statements themselves (Mullin's March and June comments, DHS's July 2026 statement to Raw Story) -- directly sourced and uncontested. Mullin's June 14, 2026 'only if a threat arises' remark and DHS's July 2026 written statement to Raw Story both say ICE is not targeting polling places, but both keep a threat-based exception rather than the unconditional commitment originally requested. LOW-MODERATE confidence remains on whether any of this constitutes an actual statutory violation, since no deployment at a polling place is documented by TAP's sources. What is documented: DHS has repeatedly declined to give an unconditional non-deployment commitment, offering instead a narrowing series of threat-based carve-outs that critics say could be used pretextually -- not that DHS deployed agents to polling places. TAP's sources document no confirmed deployment at a polling place; Raw Story, cited above, reports that the DNC pointed to media reports of ICE agents at primary-season voting sites in Texas and California and at a New York polling place, which TAP has not verified.",
+        "updates": [
+          {
+            "date": "2026-10-11",
+            "label": "Update",
+            "text": "Update 2026-10-11: HIGH confidence on Mullin's September 1, 2026 remarks (Democracy Docket; also reported by CBS News and AP) adding a second exception, serving a warrant, and on the three federal suits naming him (parties, claims and schedule from the CourtListener dockets and complaints and the Legal Defense Fund's release). The suits' claims, including that the statements themselves intimidate voters in violation of Section 11(b) of the Voting Rights Act and that armed agents at polls would break 18 U.S.C. §592, are allegations; no court has ruled. The complaint's account of a Lee County, Florida, roadside immigration checkpoint near a precinct during the primary comes from NAACP members and does not establish an ICE deployment at a polling place. DOJ's separate plan for about 1,000 election monitors, and the NAACP's records suit over it, are covered in TAP's entry on Harmeet Dhillon's monitor plan.",
+            "effective_date": "2026-10-11"
+          }
+        ]
+      }
     }
   },
   {
