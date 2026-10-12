@@ -8099,7 +8099,7 @@
     "id": "doj-voter-data-lawsuits-election-records-preservation-2025-2026",
     "official": "Harmeet Dhillon, Assistant Attorney General for Civil Rights; Todd Blanche, Attorney General",
     "offense_category": "Weaponization of Federal Litigation Authority -- DOJ has sued 30 states and D.C. for sensitive voter registration data (addresses, dates of birth, driver's license numbers, partial Social Security numbers) under a legal theory federal courts have repeatedly rejected, then escalated to records-preservation letters threatening election officials with civil and criminal sanctions -- NOT charged, contested facts, included for reference only",
-    "incident_summary": "Since 2025, **DOJ's Civil Rights Division has filed federal lawsuits against 30 states and D.C. seeking each state's full voter registration database, including sensitive personal data (home addresses, dates of birth, driver's license numbers, and partial Social Security numbers)**, asserting authority under the Civil Rights Act of 1960, the National Voter Registration Act, and the Help America Vote Act. Federal district courts have dismissed 26 of these lawsuits, including rulings against DOJ in California, Oregon, Michigan, New Mexico, West Virginia, New Jersey, Arizona, and Georgia; U.S. District Judge Hala Jarbou (Michigan) held the federal voting laws DOJ cited do not require states to turn over this information, and U.S. District Judge Judith C. Herrera dismissed the New Mexico suit in July 2026, finding DOJ had given no factual basis to suspect the state of violating the NVRA or HAVA. On June 24, 2026, a divided Sixth Circuit panel affirmed the Michigan dismissal, and the court later denied DOJ's petition for rehearing en banc. In early September 2026, notwithstanding this string of losses, Eric Neff, acting chief of the Civil Rights Division's Voting Section, sent letters to election officials in 29 states and D.C. that DOJ had sued, instructing them not to destroy 2024 election records, warning that failure to preserve the data 'may constitute spoliation of evidence' that could subject officials to 'civil and criminal sanctions.' Dhillon publicly characterized the letters as 'standard litigation practice, not a \"threat,\"' while Attorney General Todd Blanche has suggested DOJ may seek Supreme Court review if its appeals fail.",
+    "incident_summary": "Since 2025, **DOJ's Civil Rights Division has filed federal lawsuits against 30 states and D.C. seeking each state's full voter registration database, including sensitive personal data (home addresses, dates of birth, driver's license numbers, and partial Social Security numbers)**, asserting authority under the Civil Rights Act of 1960, the National Voter Registration Act, and the Help America Vote Act. Federal district courts have dismissed 26 of these lawsuits, including rulings against DOJ in California, Oregon, Michigan, New Mexico, West Virginia, New Jersey, Arizona, and Georgia; U.S. District Judge Hala Jarbou (Michigan) held the federal voting laws DOJ cited do not require states to turn over this information, and U.S. District Judge Judith C. Herrera dismissed the New Mexico suit in July 2026, finding DOJ had given no factual basis to suspect the state of violating the NVRA or HAVA. On June 24, 2026, a divided Sixth Circuit panel affirmed the Michigan dismissal, and the court later denied DOJ's petition for rehearing en banc. In early September 2026, notwithstanding this string of losses, Eric Neff, acting chief of the Civil Rights Division's Voting Section, sent letters to election officials in 29 states and D.C. that DOJ had sued, instructing them not to destroy 2024 election records, warning that failure to preserve the data 'may constitute spoliation of evidence' that could subject officials to 'civil and criminal sanctions.' Dhillon publicly characterized the letters as 'standard litigation practice, not a \"threat,\"' while Attorney General Todd Blanche has suggested DOJ may seek Supreme Court review if its appeals fail.\n\nUpdate 2026-10-11: Nevada's suit is among those dismissed: on August 14, 2026, U.S. District Judge Anne R. Traum granted Nevada's motion to dismiss, finding the statewide voter registration list is not the type of record subject to disclosure under Title III of the Civil Rights Act of 1960 and that DOJ failed to provide the factual basis and purpose required to support its demand. DOJ filed a notice of appeal to the Ninth Circuit on August 18, 2026. In early September 2026, the office of Nevada Secretary of State Francisco Aguilar said it had received 'seven voter-related DOJ subpoenas from the FBI over the last three months'; the office gave no further details, and CNN reported it was unclear what information the subpoenas sought.",
     "contested": true,
     "elements_required": [
       "DOJ sued dozens of states demanding sensitive individual-level voter data under a specific statutory theory",
@@ -8133,10 +8133,28 @@
         "maps_to_element": "Multiple federal courts found DOJ lacked the legal authority it claimed and dismissed the suits on the merits"
       },
       {
+        "type": "court_ruling",
+        "description": "CourtListener docket for United States v. Aguilar, No. 3:25-cv-00728 (D. Nev.): Judge Anne R. Traum's August 14, 2026 order granting the motions to dismiss and denying DOJ's motion to compel (ECF 93), and DOJ's August 18, 2026 notice of appeal to the Ninth Circuit (ECF 96; No. 26-5375)",
+        "source_url": "https://www.courtlistener.com/docket/72026664/united-states-v-aguilar/",
+        "maps_to_element": "Multiple federal courts found DOJ lacked the legal authority it claimed and dismissed the suits on the merits"
+      },
+      {
+        "type": "reporting",
+        "description": "FOX5 Las Vegas (August 15, 2026) on U.S. District Judge Anne R. Traum's dismissal of DOJ's suit for Nevada's unredacted statewide voter registration list, finding the list is not the type of record subject to disclosure under Title III of the Civil Rights Act of 1960 and that DOJ failed to provide the factual basis and purpose required for its demand",
+        "source_url": "https://www.fox5vegas.com/2026/08/15/federal-judge-dismisses-lawsuit-seeking-nevadas-unredacted-voter-registration-list/",
+        "maps_to_element": "Multiple federal courts found DOJ lacked the legal authority it claimed and dismissed the suits on the merits"
+      },
+      {
         "type": "press_release",
         "description": "Michigan Attorney General release (August 17, 2026) reporting the Sixth Circuit's denial of DOJ's petition for rehearing en banc in the Michigan case",
         "source_url": "https://www.michigan.gov/ag/news/press-releases/2026/08/17/federal-court-upholds-dismissal-of-doj-voter-roll-suit",
         "maps_to_element": "Multiple federal courts found DOJ lacked the legal authority it claimed and dismissed the suits on the merits"
+      },
+      {
+        "type": "reporting",
+        "description": "CNN (via KEYT, September 5, 2026) reporting that Nevada Secretary of State Francisco Aguilar's office said it received 'seven voter-related DOJ subpoenas from the FBI over the last three months,' and that it is unclear what information the subpoenas seek",
+        "source_url": "https://keyt.com/politics/cnn-us-politics/2026/09/05/justice-department-has-issued-subpoenas-for-nevada-voter-data-states-elections-chief-says/",
+        "maps_to_element": "The pattern -- pursuing sensitive individual voter data at national scale via a legal theory courts have repeatedly rejected, then threatening the same officials with sanctions -- raises separation-of-powers and voter-privacy concerns beyond the merits of any single case"
       },
       {
         "type": "reporting",
@@ -8151,20 +8169,20 @@
         "maps_to_element": "Multiple federal courts found DOJ lacked the legal authority it claimed and dismissed the suits on the merits"
       }
     ],
-    "status": "Active, with DOJ mostly losing. Courts have dismissed 26 of its suits against 30 states and D.C., most recently Georgia's on Sept. 30, 2026; the Sixth Circuit upheld the Michigan dismissal 2-1 in June and denied rehearing in August. The early-September preservation letters still stand.",
+    "status": "Active, with DOJ mostly losing: courts have dismissed 26 of its suits against 30 states and D.C., most recently Georgia's on Sept. 30, 2026, and the Sixth Circuit upheld Michigan's dismissal. The preservation letters stand; Nevada, whose win DOJ is appealing, says it got 7 DOJ subpoenas via the FBI.",
     "rebuttal_anticipated": "DOJ's Civil Rights Division has statutory authority to enforce federal voter-list-maintenance requirements, and pursuing that authority through litigation -- even litigation that loses at the district-court level -- is the normal, lawful way to test a contested legal theory; sending preservation letters tied to ongoing litigation is standard practice to prevent spoliation regardless of which side is likely to prevail, as Dhillon stated publicly.",
     "comeback": "The scale is the distinguishing feature here, not the underlying litigation tactic in isolation: DOJ is not defending one contested legal theory in one case, but pursuing the identical claim against 30 states and D.C. simultaneously, has now lost that claim in the clear majority of courts to rule on it (26 suits dismissed, and the Michigan dismissal affirmed on appeal), and only after that losing record began escalated to formal sanctions-threat letters against the same officials it is suing -- a sequence that reads less like routine litigation hygiene and more like continued pressure on state election officials despite an accumulating judicial rejection of DOJ's legal theory.",
     "cause": "[TAP Analysis, not sourced] Part of a broader pattern of the administration asserting federal control over state-run elections ahead of the November 2026 midterms -- alongside the separate EO 14248 citizenship-documentation litigation, DHS's SAVE-database voter-roll-scrub push, USCIS staff directed to pose as individual voters in state lookup systems, and Blanche's unsubstantiated claim of hundreds of individual-voter criminal investigations -- where DOJ litigation losses have not yet translated into DOJ backing off the underlying demand for sensitive voter data.",
-    "confidence_note": "HIGH confidence on the core facts -- the 30-state-plus-D.C. lawsuit scope, the early-September 2026 preservation letters (reported by AP on September 10) and their sanctions language, Dhillon's and Blanche's on-record statements, and the district-court dismissal count are all corroborated across AP-syndicated wire reporting, NBC News' coverage of the Michigan ruling, and the Brennan Center's contemporaneously-maintained state-by-state tracker. MODERATE confidence on the precise current dismissal count and appeal posture, since this is an actively litigated, multi-state campaign whose case-by-case status will keep changing before the midterms -- recheck against the Brennan Center tracker directly rather than assuming this entry's snapshot remains current. Update 2026-10-06: The Brennan Center tracker now counts suits against 30 states and D.C., 26 of them dismissed, plus a settlement with Oklahoma; the Sixth Circuit's own opinion and the Michigan Attorney General's releases confirm the June 24, 2026 affirmance and the August rehearing denial, and Georgia Recorder reporting (via GPB) confirms the Georgia dismissal. NBC's February article supports the statutory theories and the Michigan district ruling, not the later counts.",
+    "confidence_note": "HIGH confidence on the core facts -- the 30-state-plus-D.C. lawsuit scope, the early-September 2026 preservation letters (reported by AP on September 10) and their sanctions language, Dhillon's and Blanche's on-record statements, and the district-court dismissal count are all corroborated across AP-syndicated wire reporting, NBC News' coverage of the Michigan ruling, and the Brennan Center's contemporaneously-maintained state-by-state tracker. MODERATE confidence on the precise current dismissal count and appeal posture, since this is an actively litigated, multi-state campaign whose case-by-case status will keep changing before the midterms -- recheck against the Brennan Center tracker directly rather than assuming this entry's snapshot remains current. Update 2026-10-06: The Brennan Center tracker now counts suits against 30 states and D.C., 26 of them dismissed, plus a settlement with Oklahoma; the Sixth Circuit's own opinion and the Michigan Attorney General's releases confirm the June 24, 2026 affirmance and the August rehearing denial, and Georgia Recorder reporting (via GPB) confirms the Georgia dismissal. NBC's February article supports the statutory theories and the Michigan district ruling, not the later counts. Update 2026-10-11: Judge Traum's August 14 Nevada order and DOJ's August 18 notice of appeal are confirmed on the court docket, with FOX5 Las Vegas reporting matching; the seven FBI-issued subpoenas rest on the Nevada Secretary of State's office's own statement as reported by CNN and News 3, and their subject has not been publicly confirmed.",
     "pull_quote": "DOJ warned election officials that failing to preserve 2024 records “may constitute spoliation of evidence” that could bring “civil and criminal sanctions” — even after judges had repeatedly dismissed DOJ's data-demand lawsuits.",
-    "last_verified": "2026-10-06",
+    "last_verified": "2026-10-12",
     "date_added": "2026-09-17",
     "date_of_action": "2025 (DOJ voter-data lawsuit campaign begins) through early September 2026 (records-preservation letters sent to 29 states and D.C., reported 2026-09-10)",
     "section_summaries": {
-      "incident_summary": "DOJ sued 30 states and D.C. for sensitive voter data; courts dismissed 26 suits and an appeals court upheld Michigan's. DOJ then sent sanctions-warning preservation letters.",
+      "incident_summary": "DOJ sued 30 states and D.C. for sensitive voter data; courts dismissed 26 suits, Nevada's included, and upheld Michigan's on appeal. DOJ then sent sanctions-warning letters; Nevada got 7 subpoenas.",
       "confidence_note": "Core facts rest on AP wire reporting, the Sixth Circuit's Michigan opinion and the Brennan Center tracker; the dismissal count keeps moving, so check the tracker."
     },
-    "last_substantive_update": "2026-10-06",
+    "last_substantive_update": "2026-10-12",
     "glance": {
       "who": "Harmeet Dhillon (DOJ) and Todd Blanche (AG)",
       "what": "Sued 30 states and D.C. for voter data, losing 26 suits, and sent sanctions-warning preservation letters",
@@ -8173,7 +8191,7 @@
         "certainty": "alleged",
         "who": "Voters in 30 states and D.C."
       },
-      "reviewed": "2026-10-06"
+      "reviewed": "2026-10-12"
     },
     "cause_references": [
       {
@@ -8198,6 +8216,17 @@
       }
     ],
     "timeline": {
+      "incident_summary": {
+        "base": "Since 2025, **DOJ's Civil Rights Division has filed federal lawsuits against 30 states and D.C. seeking each state's full voter registration database, including sensitive personal data (home addresses, dates of birth, driver's license numbers, and partial Social Security numbers)**, asserting authority under the Civil Rights Act of 1960, the National Voter Registration Act, and the Help America Vote Act. Federal district courts have dismissed 26 of these lawsuits, including rulings against DOJ in California, Oregon, Michigan, New Mexico, West Virginia, New Jersey, Arizona, and Georgia; U.S. District Judge Hala Jarbou (Michigan) held the federal voting laws DOJ cited do not require states to turn over this information, and U.S. District Judge Judith C. Herrera dismissed the New Mexico suit in July 2026, finding DOJ had given no factual basis to suspect the state of violating the NVRA or HAVA. On June 24, 2026, a divided Sixth Circuit panel affirmed the Michigan dismissal, and the court later denied DOJ's petition for rehearing en banc. In early September 2026, notwithstanding this string of losses, Eric Neff, acting chief of the Civil Rights Division's Voting Section, sent letters to election officials in 29 states and D.C. that DOJ had sued, instructing them not to destroy 2024 election records, warning that failure to preserve the data 'may constitute spoliation of evidence' that could subject officials to 'civil and criminal sanctions.' Dhillon publicly characterized the letters as 'standard litigation practice, not a \"threat,\"' while Attorney General Todd Blanche has suggested DOJ may seek Supreme Court review if its appeals fail.",
+        "updates": [
+          {
+            "date": "2026-10-11",
+            "label": "Update",
+            "text": "Update 2026-10-11: Nevada's suit is among those dismissed: on August 14, 2026, U.S. District Judge Anne R. Traum granted Nevada's motion to dismiss, finding the statewide voter registration list is not the type of record subject to disclosure under Title III of the Civil Rights Act of 1960 and that DOJ failed to provide the factual basis and purpose required to support its demand. DOJ filed a notice of appeal to the Ninth Circuit on August 18, 2026. In early September 2026, the office of Nevada Secretary of State Francisco Aguilar said it had received 'seven voter-related DOJ subpoenas from the FBI over the last three months'; the office gave no further details, and CNN reported it was unclear what information the subpoenas sought.",
+            "effective_date": "2026-10-11"
+          }
+        ]
+      },
       "confidence_note": {
         "base": "HIGH confidence on the core facts -- the 30-state-plus-D.C. lawsuit scope, the early-September 2026 preservation letters (reported by AP on September 10) and their sanctions language, Dhillon's and Blanche's on-record statements, and the district-court dismissal count are all corroborated across AP-syndicated wire reporting, NBC News' coverage of the Michigan ruling, and the Brennan Center's contemporaneously-maintained state-by-state tracker. MODERATE confidence on the precise current dismissal count and appeal posture, since this is an actively litigated, multi-state campaign whose case-by-case status will keep changing before the midterms -- recheck against the Brennan Center tracker directly rather than assuming this entry's snapshot remains current.",
         "updates": [
@@ -8206,6 +8235,12 @@
             "label": "Update",
             "text": "Update 2026-10-06: The Brennan Center tracker now counts suits against 30 states and D.C., 26 of them dismissed, plus a settlement with Oklahoma; the Sixth Circuit's own opinion and the Michigan Attorney General's releases confirm the June 24, 2026 affirmance and the August rehearing denial, and Georgia Recorder reporting (via GPB) confirms the Georgia dismissal. NBC's February article supports the statutory theories and the Michigan district ruling, not the later counts.",
             "effective_date": "2026-10-06"
+          },
+          {
+            "date": "2026-10-11",
+            "label": "Update",
+            "text": "Update 2026-10-11: Judge Traum's August 14 Nevada order and DOJ's August 18 notice of appeal are confirmed on the court docket, with FOX5 Las Vegas reporting matching; the seven FBI-issued subpoenas rest on the Nevada Secretary of State's office's own statement as reported by CNN and News 3, and their subject has not been publicly confirmed.",
+            "effective_date": "2026-10-11"
           }
         ]
       }
@@ -24596,25 +24631,55 @@
     "official": "Donald Trump, President",
     "offense_category": "Exceeding presidential authority over state and federal election administration -- multiple federal courts have found provisions of the order unconstitutional or beyond executive power (separation of powers) -- NOT charged; a civil/constitutional dispute, not a criminal matter",
     "contested": true,
-    "incident_summary": "On March 25, 2025, President Trump signed Executive Order 14248, 'Preserving and Protecting the Integrity of American Elections,' which sought to require documentary proof of citizenship for federal voter registration, directed the Department of Homeland Security (with the Social Security Administration) to compile state-by-state citizenship lists, and directed states to reject mail/absentee ballots received after Election Day even if postmarked on time. **Military-family voting advocates joined a lawsuit challenging the order in April 2025, arguing the postmark/receipt-deadline change and citizenship-documentation requirements would disproportionately disenfranchise servicemembers and their families stationed abroad or deployed, who already face mail delays military voters have long relied on postmark-based deadlines to accommodate.** Multiple federal courts subsequently ruled against key provisions: a coalition of 19 state attorneys general won a permanent injunction in the District of Massachusetts blocking the citizenship-documentation and mail-ballot-deadline provisions, and a separate ruling permanently blocked the provision requiring the Election Assistance Commission to mandate proof-of-citizenship documents on the federal voter registration form. In August 2026, the Supreme Court handed Trump a procedural win, staying the injunction 6-3 ahead of the November 2026 midterms -- but on standing grounds, finding the states had sued too early and had not yet shown concrete harm, not on the merits of whether the order itself is constitutional. A separate nationwide ruling by a U.S. District Judge in Boston continues to block the U.S. Postal Service specifically from following the order's mail-ballot directives.",
+    "incident_summary": "On March 25, 2025, President Trump signed Executive Order 14248, 'Preserving and Protecting the Integrity of American Elections,' which directed the Election Assistance Commission to require documentary proof of citizenship on the federal voter registration form, directed the Secretary of Defense to add the same requirement to the form military and overseas voters use, directed the Department of Homeland Security to review state voter rolls against federal immigration databases, and directed the Attorney General to act against states that count mail/absentee ballots received after Election Day even when cast on time. **A military-family group, the Secure Families Initiative, was among the plaintiffs in a lawsuit filed March 31, 2025, arguing the receipt-deadline change and citizenship-documentation requirements would disproportionately burden servicemembers and their families stationed abroad or deployed, who face mail delays and have long relied on postmark-based deadlines.** Multiple federal courts subsequently ruled against key provisions: in Washington, D.C., Judge Colleen Kollar-Kotelly permanently blocked the proof-of-citizenship requirement for the federal registration form in October 2025 and later the military-voter-form and public-assistance-agency provisions; in January 2026 a federal judge in Washington state permanently blocked key provisions for Washington and Oregon; and in June 2026 Judge Denise Casper in Massachusetts ruled for a coalition of 19 state attorneys general, permanently blocking the citizenship-documentation provisions and, for most of the plaintiff states, the funding-condition and ballot-receipt-deadline provisions (Wisconsin and states without post-Election Day receipt deadlines were excluded from parts of the ruling for lack of standing). The administration has appealed. Trump's second elections order, signed March 31, 2026, targets mail voting through the Postal Service and is being litigated separately.",
     "elements_required": [
       "The order directs changes to how states administer federal elections, an area the Constitution's Elections Clause assigns primarily to state legislatures and Congress, not the President",
       "Multiple federal courts have found specific provisions exceed presidential authority or are otherwise unconstitutional",
       "Documented harm or disproportionate impact on a specific population (military/overseas voters) from the challenged provisions",
-      "The Supreme Court's 2026 stay was granted on standing/procedural grounds, not as a ruling upholding the order's substance"
+      "The administration has appealed the rulings to three federal appeals courts, and no appellate ruling upholding the order has been reported"
     ],
     "evidence": [
       {
         "type": "public_record",
-        "description": "Executive Order 14248, signed March 25, 2025, directs DHS (with SSA) to compile State Citizenship Lists for voter-roll verification, directs the EAC to require documentary proof of citizenship on the federal voter registration form, and directs states to disregard mail ballots received after Election Day regardless of postmark.",
-        "source_url": "https://en.wikipedia.org/wiki/Executive_Order_14399",
-        "maps_to_element": "The order directs changes to how states administer federal elections"
+        "description": "Executive Order 14248 of March 25, 2025, 'Preserving and Protecting the Integrity of American Elections,' directs the Election Assistance Commission to require documentary proof of U.S. citizenship on its national mail voter registration form (Sec. 2(a)); directs DHS, in coordination with the DOGE Administrator, to review each state's publicly available voter registration list against federal immigration databases (Sec. 2(b)(iii)); directs the Secretary of Defense to add documentary proof of citizenship to the Federal Post Card Application used by military and overseas voters (Sec. 3(d)); directs the Attorney General to enforce federal Election Day statutes against states that count absentee or mail-in ballots received after Election Day (Sec. 7(a)); and directs the EAC to condition funding on an Election Day ballot-receipt deadline, excluding ballots cast under the military and overseas voting law, UOCAVA (Sec. 7(b)).",
+        "source_url": "https://www.govinfo.gov/content/pkg/FR-2025-03-28/html/2025-05523.htm",
+        "maps_to_element": "The order directs changes to how states administer federal elections, an area the Constitution's Elections Clause assigns primarily to state legislatures and Congress, not the President"
       },
       {
         "type": "news_report",
         "description": "Military Times reported April 17, 2025 that military-family voting advocates joined a lawsuit against the order, arguing the ballot-receipt-deadline change and citizenship-documentation requirements would disproportionately burden servicemembers and families overseas who rely on postmark-based deadlines due to mail delays.",
         "source_url": "https://www.militarytimes.com/news/pentagon-congress/2025/04/17/military-families-challenge-trumps-stricter-federal-voting-rules/",
-        "maps_to_element": "Documented harm or disproportionate impact on a specific population (military/overseas voters)"
+        "maps_to_element": "Documented harm or disproportionate impact on a specific population (military/overseas voters) from the challenged provisions"
+      },
+      {
+        "type": "court_filing",
+        "description": "Democracy Docket's case page for LULAC v. Executive Office of the President records that the Justice Department appealed the October 31, 2025 Section 2(a) ruling on December 23, 2025; that after the January 30, 2026 ruling on Sections 2(d) and 3(d), the RNC appealed to the D.C. Circuit on March 31, 2026 and the Justice Department on May 28, 2026; and that the remaining Section 7(b) claims were dismissed by stipulation on July 13, 2026.",
+        "source_url": "https://www.democracydocket.com/cases/washington-d-c-trump-election-integrity-executive-order-challenge/",
+        "maps_to_element": "The administration has appealed the rulings to three federal appeals courts, and no appellate ruling upholding the order has been reported"
+      },
+      {
+        "type": "court_filing",
+        "description": "On January 9, 2026, U.S. District Judge John H. Chun in Washington state permanently blocked the administration from enforcing the order's proof-of-citizenship and Election Day ballot-receipt provisions against Washington and Oregon, which run elections entirely by mail. 'As the Constitution assigns no authority to the president over federal election administration, the president's authority to promulgate a national ballot-receipt deadline cannot stem from the Constitution,' Chun wrote.",
+        "source_url": "https://washingtonstatestandard.com/2026/01/09/repub/federal-judge-blocks-trump-election-order-siding-with-oregon-washington/",
+        "maps_to_element": "Multiple federal courts have found specific provisions exceed presidential authority or are otherwise unconstitutional"
+      },
+      {
+        "type": "court_filing",
+        "description": "On January 30, 2026, U.S. District Judge Colleen Kollar-Kotelly in Washington, D.C., permanently enjoined Section 2(d) of the order (citizenship checks by public-assistance agencies before providing voter registration forms) and Section 3(d) (documentary proof of citizenship on the Federal Post Card Application used by military and overseas voters), declaring both 'inconsistent with the constitutional separation of powers and cannot lawfully be implemented.' The ruling built on her October 2025 decision permanently blocking Section 2(a), the proof-of-citizenship requirement for the federal voter registration form, according to the plaintiffs' counsel's release.",
+        "source_url": "https://elias.law/press-release/federal-court-permanently-blocks-additional-provisions-of-president-trumps-executive-order-on-elections/",
+        "maps_to_element": "Multiple federal courts have found specific provisions exceed presidential authority or are otherwise unconstitutional"
+      },
+      {
+        "type": "court_filing",
+        "description": "In a February 2, 2026 statement of issues in the D.C. Circuit (LULAC v. Executive Office of the President, No. 25-5476, consolidated with No. 25-5478), the Justice Department framed its appeal as 'Whether the district court erred when it enjoined enforcement of Section 2(a) of Executive Order 14,248 on the ground that it violated the constitutional separation of powers.'",
+        "source_url": "https://electioncases.osu.edu/wp-content/uploads/2025/11/Statement-of-Issues-filed-by-Pamela-Bondi-DOD-DOJ-Executive-Office-of-the-President-etc.-020226.pdf",
+        "maps_to_element": "The administration has appealed the rulings to three federal appeals courts, and no appellate ruling upholding the order has been reported"
+      },
+      {
+        "type": "court_filing",
+        "description": "On March 10, 2026, the government appealed Judge Chun's January 9 ruling to the Ninth Circuit (No. 26-1429); on May 6, 2026, the Ninth Circuit granted a joint motion to stay the appeal pending remaining district-court claims and the Supreme Court's decision in Watson v. Republican National Committee, according to the Civil Rights Litigation Clearinghouse's case summary.",
+        "source_url": "https://clearinghouse.net/case/46343/",
+        "maps_to_element": "The administration has appealed the rulings to three federal appeals courts, and no appellate ruling upholding the order has been reported"
       },
       {
         "type": "court_filing",
@@ -24624,55 +24689,67 @@
       },
       {
         "type": "court_filing",
-        "description": "A separate federal court ruling permanently blocked the provision directing the Election Assistance Commission to require documentary citizenship proof on the federal voter registration form.",
-        "source_url": "https://elias.law/press-release/federal-court-permanently-blocks-additional-provisions-of-president-trumps-executive-order-on-elections/",
+        "description": "On June 24, 2026, U.S. District Judge Denise Casper in Boston permanently barred the administration from implementing most of the order, converting her 2025 preliminary injunction into a permanent ban and rejecting the argument that the states' suit was premature. The Constitution 'does not grant the President any specific powers over elections,' she wrote. A White House spokeswoman said the order 'lawfully protects our elections' and that the administration was confident it would 'ultimately prevail.'",
+        "source_url": "https://wtop.com/national/2026/06/federal-judge-bars-trump-from-implementing-proof-of-citizenship-requirement-to-vote-2/",
         "maps_to_element": "Multiple federal courts have found specific provisions exceed presidential authority or are otherwise unconstitutional"
       },
       {
         "type": "court_filing",
-        "description": "In August 2026, the Supreme Court voted 6-3 to stay the injunction blocking key provisions ahead of the November 2026 midterms, but the majority based the stay on the states having sued too early and not yet demonstrated concrete harm -- a standing/procedural ruling, not a merits ruling upholding the order's constitutionality.",
-        "source_url": "https://www.npr.org/2026/08/24/nx-s1-5909592/trump-mail-voting-order-supreme-court",
-        "maps_to_element": "The Supreme Court's 2026 stay was granted on standing/procedural grounds, not as a ruling upholding the order's substance"
+        "description": "Democracy Docket reported that Casper's ruling permanently blocked the order's proof-of-citizenship requirements for the federal registration form and the Federal Post Card Application used by military and overseas voters, and its provisions targeting states that count timely cast mail ballots arriving after Election Day, for the plaintiff states with such deadlines. Casper wrote that 'The undisputed record shows that disqualifying ballots that are postmarked by Election Day but arrive thereafter would disproportionately harm military voters, elderly voters, voters with disabilities and voters in rural areas, all of whom face unique obstacles to mailing access and service.'",
+        "source_url": "https://www.democracydocket.com/news-alerts/court-permanently-blocks-key-parts-of-trumps-first-anti-voting-executive-order/",
+        "maps_to_element": "Documented harm or disproportionate impact on a specific population (military/overseas voters) from the challenged provisions"
       },
       {
         "type": "court_filing",
-        "description": "U.S. District Judge Indira Talwani in Boston separately blocked the U.S. Postal Service specifically from following the order's mail-ballot directives, in a nationwide ruling that remained in effect as midterm mail ballots began going out to voters in September 2026 amid ongoing litigation uncertainty.",
-        "source_url": "https://www.washingtontimes.com/news/2026/sep/4/midterm-mail-ballots-begin-go-voters-litigation-trumps-order-creates/",
-        "maps_to_element": "Multiple federal courts have found specific provisions exceed presidential authority or are otherwise unconstitutional"
+        "description": "In Watson v. Republican National Committee, No. 24-1260 (decided June 29, 2026, 5-4, opinion by Justice Barrett), the Supreme Court held that the federal election-day statutes do not preempt a Mississippi law counting absentee ballots 'postmarked by election day but received up to five days later,' writing that 'The election-day statutes say nothing about ballot receipt, and we cannot add to the words Congress chose.' The ruling reversed the Fifth Circuit's 2024 decision in Republican National Committee v. Wetzel, which Section 1 of the order cites for the view that those statutes (2 U.S.C. 7 and 3 U.S.C. 1) require ballots to be received by Election Day; Sections 7(a) and 7(b) rest on the same statutes. The case concerned Mississippi's law, not the order.",
+        "source_url": "https://www.supremecourt.gov/opinions/25pdf/24-1260_g3cn.pdf",
+        "maps_to_element": "The order directs changes to how states administer federal elections, an area the Constitution's Elections Clause assigns primarily to state legislatures and Congress, not the President"
       },
       {
         "type": "court_filing",
-        "description": "On September 14, 2026, the Supreme Court rejected the administration's request to lift the injunction blocking the Postal Service's mail-ballot rule (a specialized per-voter barcode, election-mail logo, and a state-uploaded-voter-information portal) for the 2026 midterms. Justice Kavanaugh, concurring, wrote there was 'at least a fair prospect that the final rule falls within the Postal Service's statutory authority' but that applying it in the 2026 elections 'would be arbitrary and capricious in violation of the Administrative Procedure Act because state and local election officials do not have sufficient time to reasonably implement the rule before the elections.' Justices Alito and Thomas dissented from denying the stay.",
-        "source_url": "https://www.npr.org/2026/09/14/nx-s1-5962190/supreme-court-mail-in-voting-trump",
-        "maps_to_element": "The Supreme Court's 2026 stay was granted on standing/procedural grounds, not as a ruling upholding the order's substance"
+        "description": "The Civil Rights Litigation Clearinghouse's summary of State of California v. Trump records that Judge Casper entered judgment and a permanent injunction on July 13, 2026; that the government appealed it to the First Circuit on September 9, 2026 (No. 26-2038); that oral argument in the government's earlier appeal of the 2025 preliminary injunction (No. 25-1726) was rescheduled for December 9, 2026; and that both appeals were pending as of September 22, 2026.",
+        "source_url": "https://clearinghouse.net/case/46337/",
+        "maps_to_element": "The administration has appealed the rulings to three federal appeals courts, and no appellate ruling upholding the order has been reported"
       }
     ],
-    "status": "Unresolved and actively litigated. Two separate Supreme Court interventions in 2026 have both been procedural rather than merits rulings: an August 2026 6-3 stay let the administration past a standing hurdle, but a September 14, 2026 ruling denied the administration's bid to lift the district-court injunction blocking the Postal Service's mail-ballot barcode/tracking rule for the 2026 midterms -- Justice Kavanaugh, concurring, wrote the rule likely falls within the Postal Service's statutory authority but that applying it this close to the election would be **'arbitrary and capricious' under the Administrative Procedure Act**, since state and local election officials lack enough time to implement it; Justices Alito and Thomas dissented. As a result, mail voting in the 2026 midterms proceeds under the pre-existing rules, and the order's underlying constitutionality remains unresolved and under active litigation.",
-    "rebuttal_anticipated": "The administration argues the order is a legitimate exercise of executive authority to ensure election integrity and citizenship verification, that states retain flexibility in implementation, and that the Supreme Court's stay shows the challengers' legal theory was premature or overstated.",
-    "comeback": "The Supreme Court's two 2026 interventions were both procedural, not merits rulings: the August stay rested on standing, and the September 14 denial of a stay on the Postal Service rule rested on APA timing concerns -- even Kavanaugh, concurring, said the rule likely falls within the Postal Service's authority but came too late to implement fairly -- not any repudiation of the states' underlying constitutional claim. Two separate district courts have already ruled specific provisions unconstitutional or beyond presidential power on the merits, and the Postal Service rule will not apply in the 2026 midterms -- the underlying legal dispute over the order's constitutionality remains open, not resolved in the administration's favor.",
-    "cause": "[TAP Analysis, not sourced] Part of a broader pattern this database documents of executive orders attempting to unilaterally reshape institutional processes -- election administration here, similar to the Civil Rights Commission chair-designation dispute and federal union bargaining rights elsewhere in this tracker -- that courts have repeatedly found exceed the scope of unilateral executive action, requiring litigation rather than legislation to resolve.",
-    "confidence_note": "HIGH confidence on the order's text, the military-voter lawsuit, the district-court injunctions, and the September 2026 Supreme Court ruling on the Postal Service rule, all independently corroborated across Brennan Center, Votebeat, NPR, CNBC, and other outlets. MODERATE confidence on the ultimate outcome, since both 2026 Supreme Court interventions have been procedural rather than final merits rulings -- this entry should be rechecked as the underlying constitutional litigation continues past the 2026 midterms.",
-    "pull_quote": "The Supreme Court's August 2026 stay was based on the states having sued too early and not yet shown concrete harm — a standing/procedural ruling, not a merits ruling upholding the order's constitutionality.",
-    "last_verified": "2026-09-19",
+    "status": "Key provisions remain permanently blocked under rulings by federal judges in Washington, D.C., Washington state and Massachusetts. The administration's appeals are pending; the 1st Circuit has set argument for Dec. 9, 2026.",
+    "rebuttal_anticipated": "The administration argues the order is a legitimate exercise of executive authority to ensure election integrity and citizenship verification, that states retain flexibility in implementation, that federal law sets a single national Election Day, and that the challenges were premature because the agencies had not yet acted -- an argument Judge Casper rejected. A White House spokeswoman said the order 'lawfully protects our elections' and that the administration expects to 'ultimately prevail.'",
+    "comeback": "Three federal judges ruling on the merits have each found key provisions beyond the President's power: Judge Kollar-Kotelly held the public-assistance and military-voter-form provisions 'inconsistent with the constitutional separation of powers,' Judge Chun wrote that the Constitution 'assigns no authority to the president over federal election administration,' and Judge Casper wrote that it 'does not grant the President any specific powers over elections.' The government has appealed, but no appellate reversal has been reported, and Casper found on an undisputed record that rejecting ballots postmarked by Election Day would disproportionately harm military, elderly, disabled and rural voters. And on June 29, 2026, in a case over a Mississippi law, the Supreme Court ruled 5-4 in Watson v. Republican National Committee that the federal Election Day statutes 'say nothing about ballot receipt,' reversing the Fifth Circuit decision the order cites for its claim that ballots must arrive by Election Day.",
+    "cause": "[TAP Analysis, not sourced] Part of a broader pattern this database documents of executive orders attempting to unilaterally reshape institutional processes -- election administration here, similar to the Civil Rights Commission chair-designation dispute and federal union bargaining rights elsewhere in this tracker -- that courts have repeatedly found exceed the scope of unilateral executive action, requiring litigation rather than legislation to resolve. Trump's March 2026 mail-ballot order later moved the same effort to the Postal Service and DHS, alongside DOJ's lawsuits against states for voter data.",
+    "cause_references": [
+      {
+        "match": "Trump's March 2026 mail-ballot order",
+        "tracker": "prosecution",
+        "id": "trump-mail-ballot-eo-usps-voter-list-rule-2026"
+      },
+      {
+        "match": "DOJ's lawsuits against states for voter data",
+        "tracker": "prosecution",
+        "id": "doj-voter-data-lawsuits-election-records-preservation-2025-2026"
+      }
+    ],
+    "confidence_note": "HIGH confidence on the order's text (Federal Register), the military-voter lawsuit, and the permanent injunctions in Washington, D.C., Washington state and Massachusetts, each confirmed by a party's release or independent reporting (States Newsroom, AP-based reports). Appeal status rests on the Civil Rights Litigation Clearinghouse's and Democracy Docket's case summaries and a Justice Department appellate filing; searches through October 11, 2026 found no appellate ruling, and no D.C. Circuit argument date was found. MODERATE confidence on the ultimate outcome while the appeals are pending.",
+    "pull_quote": "“The undisputed record shows that disqualifying ballots that are postmarked by Election Day but arrive thereafter would disproportionately harm military voters, elderly voters, voters with disabilities and voters in rural areas.” — U.S. District Judge Denise Casper",
+    "last_verified": "2026-10-12",
     "date_added": "2026-09-10",
     "section_summaries": {
-      "incident_summary": "Trump's March 2025 election-integrity EO drew a military-voter-led lawsuit and multiple district-court injunctions; SCOTUS's Aug. 2026 stay was procedural, not a merits win.",
-      "confidence_note": "Well corroborated on the order's text, litigation history, and the Sept. 2026 SCOTUS ruling; the ultimate constitutional outcome remains unresolved and should be rechecked as litigation continues."
+      "incident_summary": "Trump's March 2025 election order drew a military-family lawsuit; judges in D.C., Washington state and Massachusetts permanently blocked key provisions.",
+      "confidence_note": "The order's text, the lawsuit and three permanent injunctions are well documented; appeals are pending, so the final outcome is open."
     },
     "narrative_override": {
-      "headline": "Trump's election-integrity order drew a military-voter lawsuit and multiple court injunctions."
+      "headline": "Trump's 2025 election-integrity order drew a military-voter lawsuit and permanent injunctions from three federal courts."
     },
-    "date_of_action": "2025-03-25 (Trump signs EO 14248 election order) through 2026-09-14 (Supreme Court denies stay of Postal Service mail-ballot rule injunction ahead of 2026 midterms)",
-    "last_substantive_update": "2026-09-19",
+    "date_of_action": "2025-03-25 (Trump signs EO 14248 election order) through 2026-07-13 (Massachusetts court enters final judgment and permanent injunction in the 19-state case)",
+    "last_substantive_update": "2026-10-12",
     "glance": {
       "who": "Donald Trump (President)",
-      "what": "Signed an election order that courts blocked in part as beyond presidential power; litigation continues",
+      "what": "Signed an election order that courts permanently blocked in part as beyond presidential power; appeals pending",
       "harm": {
         "kind": "institutional",
         "certainty": "documented",
         "who": "Election administration by the states"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-10-12"
     }
   },
   {
@@ -27143,6 +27220,177 @@
       "reviewed": "2026-09-29"
     },
     "narrative_combined": true
+  },
+  {
+    "id": "trump-mail-ballot-eo-usps-voter-list-rule-2026",
+    "official": "Donald Trump, President; David Steiner, Postmaster General (the Postal Service under Steiner wrote and finalized the mail-ballot rule the order directed; he answers to the USPS Board of Governors, not the President)",
+    "offense_category": "Exceeding presidential authority over federal election administration -- an executive order directing the Postal Service to deliver mail ballots only to voters on state-submitted lists and DHS to compile state citizenship lists; federal judges found the order and the Postal Service rule implementing it likely unconstitutional or beyond the agency's authority (Elections Clause, separation of powers, Administrative Procedure Act) -- NOT charged; a civil/constitutional dispute, not a criminal matter",
+    "narrative_combined": true,
+    "contested": true,
+    "incident_summary": "On March 31, 2026, President Trump signed Executive Order 14399, 'Ensuring Citizenship Verification and Integrity in Federal Elections,' his second elections order after a March 2025 order that courts had largely blocked. It directs the Secretary of Homeland Security, with the Social Security Administration, to compile and send each state a 'State Citizenship List' of adult citizens; directs the Attorney General to prioritize investigating and prosecuting election officials who issue ballots to ineligible people; and directs the Postmaster General to propose a rule under which states would submit lists of their mail voters at least 60 days before a federal election, ballot envelopes would carry unique Postal Service barcodes, and the Postal Service would not transmit mail ballots for anyone not enrolled on a state list. Twenty-three states and the District of Columbia, voting-rights groups led by the League of Women Voters, and Democratic Party organizations sued. **At a June 24 Senate Homeland Security & Governmental Affairs Committee hearing, Sen. Gary Peters asked Postmaster General David Steiner whether the Postal Service would still mail ballots for a state that refused to turn over its absentee voter list under the proposed rule; Steiner replied, 'Under our proposed regulation, no.'** He said the Postal Service would obey a court order blocking the rule. U.S. District Judge Indira Talwani in Boston then declared Sections 2 and 3 of the order 'legally void as they are ultra vires and unconstitutionally violate the separation of powers' and barred federal agencies from implementing them in the plaintiff states, and in late July the 1st U.S. Circuit Court of Appeals refused to pause that ruling. In a separate case, U.S. District Judge Emmet Sullivan in Washington, D.C., blocked the proposed rule on July 1 as a likely violation of the Postal Service's 2021 settlement with the NAACP; on July 17 a D.C. Circuit panel paused his order, finding the Postal Service likely to succeed in arguing the challenge was premature and the rule would not breach the settlement, and on Oct. 1, at the NAACP's request, the appeals court vacated his ruling and dismissed the appeal as moot because the NAACP had effectively abandoned the challenge for the 2026 election. On Aug. 11, in the voting-rights groups' case, Talwani issued a preliminary injunction barring the Postal Service from taking any steps to implement the order before the midterms. The Postal Service finalized its rule anyway, effective Aug. 21, saying it would not apply the rule in 2026 while the injunctions stood. On Aug. 24 the Supreme Court, 6-3, paused Talwani's June ruling, finding the states likely could not yet challenge what it called 'an internal directive from the President to his subordinates'; it did not decide the order's legality ('On that score, time will tell'), and Justice Ketanji Brown Jackson, dissenting, called it a 'blatantly unconstitutional Order.' Talwani found the Postal Service had 'feigned compliance' with her injunction by issuing the rule but declined to block it, and on Aug. 26 canceled her Aug. 11 injunction in light of the Supreme Court's ruling. Twenty-four states and D.C. sued over the final rule that day; Talwani blocked its mandatory envelope, voter-list portal and ballot-verification provisions with a temporary restraining order on Aug. 27 and a preliminary injunction on Sept. 4, writing that 'Congress has never delegated its Elections Clause power to the USPS.' On Sept. 13, U.S. District Judge Carl Nichols in Washington, D.C., separately enjoined the rule. On Sept. 14 the Supreme Court refused to lift Talwani's injunction, saying the administration was unlikely to succeed on the merits; Justice Brett Kavanaugh, concurring, wrote there is 'at least a fair prospect that the final rule falls within the Postal Service's statutory authority' but that applying it in the 2026 elections 'would be arbitrary and capricious,' and Justices Samuel Alito and Clarence Thomas would have granted the stay. Trump called the ruling 'a big loss for Republicans.'",
+    "elements_required": [
+      "The order directs federal agencies to change how states run mail voting in federal elections -- an area the Constitution's Elections Clause assigns to state legislatures and Congress, not the President",
+      "Federal judges have repeatedly ruled against the order and the Postal Service rule implementing it, finding them likely unconstitutional or beyond the Postal Service's authority",
+      "The Postal Service's own chief executive confirmed that, under the proposed rule, ballots would not be mailed for a state that refused to hand over its voter list",
+      "The Supreme Court's two 2026 emergency orders turned on timing, standing and likely success, not on a final ruling that the order or the rule is lawful"
+    ],
+    "evidence": [
+      {
+        "type": "public_record",
+        "description": "Executive Order 14399 of March 31, 2026, 'Ensuring Citizenship Verification and Integrity in Federal Elections' (published April 3, 2026), directs the Secretary of Homeland Security, in coordination with the Social Security Administration, to compile and send each state's chief election official a 'State Citizenship List' of adult citizens; directs the Attorney General to prioritize investigating and prosecuting state and local officials who issue federal ballots to ineligible individuals; and directs the Postmaster General to propose a rule within 60 days, and finalize it within 120 days, under which outbound ballot mail must carry a unique Intelligent Mail barcode, states may submit lists of their mail voters no fewer than 60 days before a federal election, and the Postal Service 'shall not transmit mail-in or absentee ballots from any individual unless those individuals have been enrolled on a State-specific list.' It also calls for withholding federal funds from noncompliant states 'where such withholding is authorized by law.'",
+        "source_url": "https://www.govinfo.gov/content/pkg/FR-2026-04-03/html/2026-06601.htm",
+        "maps_to_element": "The order directs federal agencies to change how states run mail voting in federal elections -- an area the Constitution's Elections Clause assigns to state legislatures and Congress, not the President"
+      },
+      {
+        "type": "news_report",
+        "description": "Votebeat reported on March 31, 2026 that Trump had issued a second executive order on elections giving the Postal Service 'unprecedented oversight over who is voting by mail.' Danielle Lang of the Campaign Legal Center said 'The president has no power to direct the creation of any of these lists or to restrict the delivery of mail ballots to any given list,' election-law professor Rick Hasen called the order 'still unconstitutional and not something that could really be implemented in time,' and officials in Arizona, Colorado, Nevada, Minnesota, Oregon and Wisconsin signaled plans to sue.",
+        "source_url": "https://www.votebeat.org/national/2026/03/31/donald-trump-2026-midterm-election-executive-order-absentee-mail-ballots-postal-service-citizenship-list/",
+        "maps_to_element": "The order directs federal agencies to change how states run mail voting in federal elections -- an area the Constitution's Elections Clause assigns to state legislatures and Congress, not the President"
+      },
+      {
+        "type": "news_report",
+        "description": "At a June 24, 2026 Senate Homeland Security & Governmental Affairs Committee hearing, Sen. Gary Peters asked Postmaster General David Steiner: “If a state refuses to turn their absentee voter list over to the federal government, will the Postal Service still mail their ballots under this proposed rule?” Steiner replied, “Under our proposed regulation, no.” Steiner said the Postal Service would adhere to a court order blocking the rule if one were issued, and that on the rule's legal authority he would 'have to defer that to the courts.' The article notes Steiner answers to the USPS Board of Governors, not the president.",
+        "source_url": "https://sourcenm.com/2026/06/24/repub/states-that-wont-obey-trump-order-will-have-their-mail-ballots-halted-postmaster-says/",
+        "maps_to_element": "The Postal Service's own chief executive confirmed that, under the proposed rule, ballots would not be mailed for a state that refused to hand over its voter list"
+      },
+      {
+        "type": "news_report",
+        "description": "Democracy Docket reported that U.S. District Judge Indira Talwani, in a 37-page opinion in California v. Trump, found most of the order exceeded the president's power and violated federalism and the separation of powers, and declared 'that Sections 2 and 3 of the EO are legally void as they are ultra vires and unconstitutionally violate the separation of powers.' Her injunction barred the Postal Service from withholding mail ballots, and DHS from creating citizenship lists, in the plaintiff states and D.C., and required DOJ to notify agencies of their duty to comply. DOJ planned to appeal to the 1st Circuit. (Democracy Docket's founder chairs the law firm representing Democratic plaintiffs in a related case.)",
+        "source_url": "https://www.democracydocket.com/news-alerts/a-court-blocked-trumps-attack-on-mail-voting-but-voting-advocates-arent-celebrating-yet/",
+        "maps_to_element": "Federal judges have repeatedly ruled against the order and the Postal Service rule implementing it, finding them likely unconstitutional or beyond the Postal Service's authority"
+      },
+      {
+        "type": "news_report",
+        "description": "Democracy Docket reported that on Friday, July 17, 2026, a three-judge D.C. Circuit panel paused U.S. District Judge Emmet Sullivan's July 1 order in the NAACP's 2020 case against the Postal Service, which had blocked the agency from implementing standards and procedures in its proposed mail ballot rule after Sullivan agreed with the NAACP that the rule would violate a 2021 settlement requiring the Postal Service to prioritize timely delivery of election mail through 2028. The panel found the Postal Service had made a strong showing that it is likely to succeed in arguing that the NAACP's challenge is not yet ripe for review and that the rule likely would not violate the settlement even if finalized, and wrote that 'there can be no do over' once the election occurs. The ruling 'does not end the case or decide whether the rule is ultimately lawful.'",
+        "source_url": "https://www.democracydocket.com/news-alerts/appeals-court-allows-usps-to-move-forward-with-trumps-anti-mail-voting-order/",
+        "maps_to_element": "Federal judges have repeatedly ruled against the order and the Postal Service rule implementing it, finding them likely unconstitutional or beyond the Postal Service's authority"
+      },
+      {
+        "type": "court_filing",
+        "description": "On August 11, 2026 (a Tuesday), Judge Talwani ruled for the League of Women Voters and other voting-rights groups and issued a preliminary injunction stopping the Postal Service from taking any steps to implement the order before the midterms, writing that '[t]he executive branch has no authority to regulate elections.' The AP-based report notes the administration's lawyers had not defended the order's constitutionality, and that in late July the 1st U.S. Circuit Court of Appeals had refused to block her June ruling in the states' case.",
+        "source_url": "https://www.foxla.com/news/udge-blocks-trumps-mail-in-voting-executive-order-again",
+        "maps_to_element": "Federal judges have repeatedly ruled against the order and the Postal Service rule implementing it, finding them likely unconstitutional or beyond the Postal Service's authority"
+      },
+      {
+        "type": "court_filing",
+        "description": "On August 24, 2026, the Supreme Court paused Talwani's June ruling, which had blocked key parts of the order in 23 mainly Democratic-led states plus D.C. The decision 'did not weigh in on the legality' of the order and focused on the states' ability to challenge it when they did; the unsigned order said its disposition 'does not mean that any measure taken by the Government to implement the Order will necessarily be lawful. ... On that score, time will tell.' Justice Ketanji Brown Jackson, dissenting, called it a 'blatantly unconstitutional Order.' NPR reported that the June ruling had found Trump overstepped his constitutional authority and that the Postal Service has no legal authority to control mail-in voting.",
+        "source_url": "https://www.npr.org/2026/08/24/nx-s1-5909592/trump-mail-voting-order-supreme-court",
+        "maps_to_element": "The Supreme Court's two 2026 emergency orders turned on timing, standing and likely success, not on a final ruling that the order or the rule is lawful"
+      },
+      {
+        "type": "court_filing",
+        "description": "Jurist reported that in Trump v. California, No. 26A124, decided August 24, 2026, the Court found the government likely to succeed in arguing the states' claims were not justiciable, describing the order as 'an internal directive from the President to his subordinates' that 'neither requires nor forbids anything of anyone outside the Executive Branch.' Justices Sotomayor, Kagan and Jackson each dissented; Jackson wrote that 'the Government does not defend the lawfulness of the Order before this Court, and no judge or Justice has held (or holds today) that the Order comports with the Constitution.' The 1st Circuit had denied a stay in late July.",
+        "source_url": "https://www.jurist.org/news/2026/08/us-supreme-court-lifts-block-on-trump-mail-voting-executive-order/",
+        "maps_to_element": "The Supreme Court's two 2026 emergency orders turned on timing, standing and likely success, not on a final ruling that the order or the rule is lawful"
+      },
+      {
+        "type": "news_report",
+        "description": "Reuters reported (via the Hawaii Tribune-Herald) that on August 25, 2026 (Tuesday), Judge Talwani concluded the Postal Service had 'feigned compliance' with her injunction and ignored her directive not to initiate or complete rulemaking under the order when it released its final rule the previous Friday, but declined to block the rule because the Postal Service acknowledged it could not implement it while her injunction stood. The rule would require states to give the Postal Service lists of voters sent mail ballots and to put unique barcodes on outbound and return ballot envelopes.",
+        "source_url": "https://www.hawaiitribune-herald.com/2026/08/26/nation-world-news/judge-chides-us-postal-service-over-mail-in-voting-rule-but-wont-block-it/",
+        "maps_to_element": "Federal judges have repeatedly ruled against the order and the Postal Service rule implementing it, finding them likely unconstitutional or beyond the Postal Service's authority"
+      },
+      {
+        "type": "court_filing",
+        "description": "On August 26, 2026 (Wednesday), after a Justice Department request to reconsider, Judge Talwani canceled her August preliminary injunction against the Postal Service in light of the Supreme Court's ruling that the earlier challenge came before the Postal Service had proposed or published its rule; the final rule had taken effect August 21 despite her injunction.",
+        "source_url": "https://www.jurist.org/news/2026/08/us-district-judge-cancels-nationwide-ruling-in-lawsuit-against-trumps-mail-in-voting-executive-order/",
+        "maps_to_element": "The Supreme Court's two 2026 emergency orders turned on timing, standing and likely success, not on a final ruling that the order or the rule is lawful"
+      },
+      {
+        "type": "court_filing",
+        "description": "On September 4, 2026, Judge Talwani issued a preliminary injunction blocking the Postal Service from making the final rule's outbound and return ballot-envelope standards, Federal Ballot Mail Portal registration, voter enrollment and outbound ballot verification mandatory, replacing a temporary restraining order she issued August 27, the day the rule was announced as in effect. She wrote that 'Congress has never delegated its Elections Clause power to the USPS' and that the rule 'is unconstitutional where it intrudes not only on Congress's Elections Clause powers but also that power left to the States.' The Justice Department asked the Supreme Court for a stay on September 6.",
+        "source_url": "https://www.lawdork.com/p/new-usps-mail-ballot-restrictions-blocked",
+        "maps_to_element": "Federal judges have repeatedly ruled against the order and the Postal Service rule implementing it, finding them likely unconstitutional or beyond the Postal Service's authority"
+      },
+      {
+        "type": "news_report",
+        "description": "States Newsroom reported on September 7, 2026 that Solicitor General D. John Sauer described the rule to the Supreme Court as containing 'only modest envelope-design and addressee-information requirements for federal-election ballots sent via U.S. Mail.' In a statement that Friday, Postmaster General Steiner wrote that 'The USPS does not edit, change, review or question the contents of the list -- the list is merely a list of voters that a State says are receiving a ballot through the mail,' calling it 'a manifest identifying the recipients of ballot mail.'",
+        "source_url": "https://alaskabeacon.com/2026/09/07/repub/trump-administration-asks-supreme-court-to-allow-postal-service-vote-by-mail-rule/",
+        "maps_to_element": "The Postal Service's own chief executive confirmed that, under the proposed rule, ballots would not be mailed for a state that refused to hand over its voter list"
+      },
+      {
+        "type": "court_filing",
+        "description": "On Sunday, September 13, 2026, U.S. District Judge Carl J. Nichols in Washington, D.C., issued a preliminary injunction barring the Postal Service from implementing the rule, writing that 'absent an injunction, there is an increased risk that a significant number of otherwise appropriate absentee or mail-in ballots will ultimately not be counted in the upcoming elections.'",
+        "source_url": "https://katv.com/news/nation-world/second-federal-judge-blocks-president-trump-mail-ballot-postal-service-rule-as-supreme-court-weighs-appeal-midterm-elections-absentee-voting",
+        "maps_to_element": "Federal judges have repeatedly ruled against the order and the Postal Service rule implementing it, finding them likely unconstitutional or beyond the Postal Service's authority"
+      },
+      {
+        "type": "court_filing",
+        "description": "On September 14, 2026, the Supreme Court kept the Boston federal judge's injunction against the Postal Service's mail-ballot rule in place for the midterms, saying the administration was unlikely to succeed on the merits. Justice Kavanaugh, concurring, wrote there is 'at least a fair prospect that the final rule falls within the Postal Service's statutory authority' but that 'applying the rule in the 2026 elections would be arbitrary and capricious in violation of the Administrative Procedure Act because state and local election officials do not have sufficient time to reasonably implement the rule before the elections.' Justices Alito and Thomas would have granted the stay. NPR reported the administration's lawyers provided the courts no evidence of mail-voting fraud, and Trump called the ruling 'a big loss for Republicans.'",
+        "source_url": "https://www.npr.org/2026/09/14/nx-s1-5962190/supreme-court-mail-in-voting-trump",
+        "maps_to_element": "The Supreme Court's two 2026 emergency orders turned on timing, standing and likely success, not on a final ruling that the order or the rule is lawful"
+      },
+      {
+        "type": "public_record",
+        "description": "The National Association of Counties' September 15, 2026 update records that the Supreme Court denied the emergency application in USPS v. California, No. 26A305, without ruling on the merits, and that 'For the 2026 midterms, however, the rule will not take effect,' while the Court may still rule later, leaving potential for the Postal Service to try to implement it for future federal elections. It also records that the Postal Service released its final rule on August 21 with the caveat that it would not implement it for the 2026 election unless the courts lifted both injunctions then in place, and that 24 states and D.C. filed a new suit against the final rule on August 26.",
+        "source_url": "https://www.naco.org/news/supreme-court-declines-emergency-review-usps-mail-ballot-rule-leaving-nationwide-block-place",
+        "maps_to_element": "The Supreme Court's two 2026 emergency orders turned on timing, standing and likely success, not on a final ruling that the order or the rule is lawful"
+      },
+      {
+        "type": "news_report",
+        "description": "The National Conference of State Legislatures' September 15, 2026 explainer records that a federal judge in Massachusetts blocked parts of the March executive order on June 25; that 'The same court blocked the mail ballot rules from going into effect nationwide in a separate case on Aug. 11'; that on Aug. 24 the Supreme Court, 6-3, put a hold on the June ruling and 'did not rule on the legality of the executive order or the postal rules'; and that on Aug. 26 the Massachusetts judge 'reversed the nationwide injunction on the mail ballot rule that had been in effect since Aug. 11,' the same day a new legal challenge to the rule was filed.",
+        "source_url": "https://www.ncsl.org/state-legislatures-news/details/6-questions-whats-going-on-with-the-new-mail-ballot-rules",
+        "maps_to_element": "Federal judges have repeatedly ruled against the order and the Postal Service rule implementing it, finding them likely unconstitutional or beyond the Postal Service's authority"
+      },
+      {
+        "type": "news_report",
+        "description": "Democracy Docket reported, after the Sept. 13 injunction, that 'no court order bars DHS from moving to advance Section 2' of the order -- the state citizenship lists -- and that Democratic plaintiffs in the D.C. case asked Judge Nichols to make DHS disclose its implementation steps, saying they had learned of them only through public reporting. (The Elias Law Group represents those plaintiffs; its chair founded Democracy Docket.)",
+        "source_url": "https://www.democracydocket.com/news-alerts/dhs-ignored-court-by-continuing-work-on-voter-citizenship-lists-without-notice-democrats-allege/",
+        "maps_to_element": "The order directs federal agencies to change how states run mail voting in federal elections -- an area the Constitution's Elections Clause assigns to state legislatures and Congress, not the President"
+      },
+      {
+        "type": "court_filing",
+        "description": "On October 1, 2026, a D.C. Circuit panel (Judges Millett, Walker and Childs) granted the NAACP's motion to vacate and dismiss in NAACP v. U.S. Postal Service, No. 26-5257, writing: 'Because appellee has effectively abandoned its underlying motion to enforce as to the 2026 general election, we dismiss this appeal as moot, vacate the district court's July 1, 2026, memorandum opinion and order, and remand the case to the district court with instructions to dismiss the motion to enforce as moot.' The unpublished order ends the Postal Service's appeal of Judge Emmet Sullivan's settlement ruling without deciding whether the rule violates the settlement.",
+        "source_url": "https://storage.courtlistener.com/recap/gov.uscourts.cadc.43382/gov.uscourts.cadc.43382.01208893689.0.pdf",
+        "maps_to_element": "Federal judges have repeatedly ruled against the order and the Postal Service rule implementing it, finding them likely unconstitutional or beyond the Postal Service's authority"
+      }
+    ],
+    "status": "The Postal Service mail-ballot rule stays blocked for the Nov. 3, 2026 midterms under injunctions from judges in Boston and Washington, D.C.; the Supreme Court declined to lift the Boston one. Appeals continue over future elections, and the order's citizenship-list section is not blocked.",
+    "rebuttal_anticipated": "The administration and allied Republican state attorneys general argue the rule regulates the mail, not elections: Solicitor General D. John Sauer called it 'only modest envelope-design and addressee-information requirements' that codify long-standing Postal Service recommendations, and Postmaster General Steiner said the Postal Service 'does not edit, change, review or question' a state's list, which he called 'a manifest identifying the recipients of ballot mail.' Trump says the order is meant to stop noncitizen voting. The Supreme Court's August ruling found the states sued too early, and Justice Kavanaugh wrote there is 'at least a fair prospect' the rule falls within the Postal Service's statutory authority.",
+    "comeback": "Every court to rule on the constitutional and statutory challenges in 2026 has ruled against the administration: Talwani held Sections 2 and 3 of the order void and found the Postal Service has no authority to control mail-in voting, Nichols separately enjoined the rule, and the Supreme Court's September majority said the administration was unlikely to succeed on the merits. The August stay turned on when the states sued, not on legality -- 'time will tell,' the Court said -- and Justice Jackson noted the government did not defend the order's lawfulness there. The administration's lawyers offered the courts no evidence of mail-voting fraud. And the list was no mere manifest under the proposed rule: Steiner told the Senate that a state withholding its list would not have its ballots mailed.",
+    "cause": "[TAP Analysis, not sourced] The second step in Trump's effort to set federal election rules by executive order: after courts permanently blocked key parts of Trump's March 2025 election-integrity order, this order moved the effort to the Postal Service and DHS. It sits alongside AG Blanche's claims of hundreds of voter investigations, made the day the Supreme Court left the mail-ballot rule blocked, DOJ's lawsuits against states for voter data, and DHS's SAVE-database voter-roll-scrub push.",
+    "cause_references": [
+      {
+        "match": "Trump's March 2025 election-integrity order",
+        "tracker": "prosecution",
+        "id": "trump-election-eo-14248-military-voters-2025"
+      },
+      {
+        "match": "AG Blanche's claims of hundreds of voter investigations",
+        "tracker": "prosecution",
+        "id": "blanche-doj-hundreds-voter-investigations-2026"
+      },
+      {
+        "match": "DOJ's lawsuits against states for voter data",
+        "tracker": "prosecution",
+        "id": "doj-voter-data-lawsuits-election-records-preservation-2025-2026"
+      },
+      {
+        "match": "DHS's SAVE-database voter-roll-scrub push",
+        "tracker": "prosecution",
+        "id": "mullin-save-system-voter-roll-scrub-2026"
+      }
+    ],
+    "confidence_note": "HIGH confidence on the order's text (Federal Register), Postmaster General Steiner's June 24 testimony (States Newsroom, Fox News and Democracy Docket) and the sequence of court rulings, each reported by more than one outlet among NPR, Jurist, NCSL, the National Association of Counties, Law Dork, States Newsroom, Reuters and AP-based reports. Some coverage blurs Talwani's two Boston cases and her August and September injunctions; this entry follows Jurist's and NCSL's account that she canceled the Aug. 11 injunction on Aug. 26 and blocked the final rule in a new suit. That no court order bars DHS's citizenship-list work rests on Democracy Docket, whose founder chairs the plaintiffs' law firm. Apart from the D.C. Circuit's July 17 and Oct. 1 orders in the NAACP case, court opinions were not read directly; quotations come from news reports. Searches through October 11, 2026 found no later ruling.",
+    "pull_quote": "“If a state refuses to turn their absentee voter list over to the federal government, will the Postal Service still mail their ballots under this proposed rule?” Sen. Gary Peters asked. Postmaster General David Steiner: “Under our proposed regulation, no.”",
+    "last_verified": "2026-10-12",
+    "last_substantive_update": "2026-10-12",
+    "date_added": "2026-10-12",
+    "date_of_action": "2026-03-31 (Trump signs Executive Order 14399) through 2026-09-14 (Supreme Court leaves the Postal Service mail-ballot rule blocked for the 2026 midterms)",
+    "section_summaries": {
+      "incident_summary": "Trump's 2026 order told USPS to deliver mail ballots only to voters on state lists; after a 6-3 interim win, courts kept the resulting rule blocked for the midterms.",
+      "confidence_note": "The order, Steiner's testimony and the rulings are well documented; some coverage blurs the Boston cases, and the DHS citizenship-list status rests on one outlet.",
+      "status": "The USPS ballot rule is blocked for the 2026 midterms by two judges, and the Supreme Court left it blocked; appeals continue."
+    },
+    "glance": {
+      "who": "Donald Trump (President); David Steiner (USPS)",
+      "what": "Ordered mail ballots limited to voters on state lists; courts blocked the Postal Service rule for the midterms",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "averted",
+        "who": "States' administration of mail voting"
+      },
+      "reviewed": "2026-10-12"
+    }
   },
   {
     "id": "trump-mcmahon-china-fox-hunt-pardon-2025",

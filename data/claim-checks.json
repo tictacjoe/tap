@@ -1,6 +1,6 @@
 {
  "version": 1,
- "as_of": "2026-10-11",
+ "as_of": "2026-10-12",
  "checks": {
   "abrego-garcia-vindictive-prosecution-2025-2026": {
    "0": {
@@ -5031,25 +5031,49 @@
    },
    "4": {
     "state": "supports",
-    "why": "The Michigan AG release dated August 17, 2026 reports the Sixth Circuit denied DOJ's petition for rehearing en banc.",
-    "host": "michigan.gov",
-    "date": "2026-10-06",
+    "why": "The docket shows ECF 93 on Aug 14, 2026 granting the motions to dismiss and denying the United States' motion to compel, signed off in a case assigned to Judge Anne R. Traum; it also shows ECF 96, the August 18, 2026 notice of appeal to the Ninth Circuit, and ECF 97 assigning Ninth Circuit No. 26-5375.",
+    "host": "courtlistener.com",
+    "date": "2026-10-12",
     "kind": "fact",
     "archive": false
    },
    "5": {
     "state": "supports",
-    "why": "The AP story dated September 10, 2026 reports letters to 29 states and D.C., Neff's spoliation/sanctions warning, Dhillon's 'standard litigation practice' post, and Blanche's suggestion of a Supreme Court appeal.",
-    "host": "clickondetroit.com",
-    "date": "2026-10-06",
+    "why": "FOX5 reports Traum granted the motion to dismiss and that she found the statewide list is not the type of record subject to disclosure under Title III and that DOJ failed to provide the required factual basis and purpose, matching the claim.",
+    "host": "fox5vegas.com",
+    "date": "2026-10-12",
     "kind": "fact",
     "archive": false
    },
    "6": {
     "state": "supports",
-    "why": "The GPB/Georgia Recorder story (dated Oct. 1, 2026, ruling on 'Wednesday', i.e. Sept. 30) reports Calvert dismissed DOJ's second Georgia suit, that DOJ lost 25 other cases, and that DOJ will most likely appeal.",
+    "why": "The August 17, 2026 Michigan AG release states the Sixth Circuit denied DOJ's petition for rehearing en banc of its decision affirming dismissal.",
+    "host": "michigan.gov",
+    "date": "2026-10-12",
+    "kind": "fact",
+    "archive": false
+   },
+   "7": {
+    "state": "supports",
+    "why": "The CNN piece (published September 5, 2026 via KEYT) quotes Aguilar's office on 'seven voter-related DOJ subpoenas from the FBI over the last three months' and says it is unclear what information is sought.",
+    "host": "keyt.com",
+    "date": "2026-10-12",
+    "kind": "fact",
+    "archive": false
+   },
+   "8": {
+    "state": "supports",
+    "why": "The AP story dated September 10, 2026 covers letters to 29 states and D.C., Neff's spoliation and civil/criminal sanctions warning, Dhillon's 'standard litigation practice' post, and Blanche's suggestion of a Supreme Court appeal.",
+    "host": "clickondetroit.com",
+    "date": "2026-10-12",
+    "kind": "fact",
+    "archive": false
+   },
+   "9": {
+    "state": "supports",
+    "why": "The Georgia Recorder/GPB story (Oct. 1, 2026) reports Calvert's Wednesday (i.e., Sept. 30) dismissal of the second suit, that DOJ lost 25 other such cases, and that DOJ will most likely appeal.",
     "host": "gpb.org",
-    "date": "2026-10-06",
+    "date": "2026-10-12",
     "kind": "fact",
     "archive": false
    }
@@ -15881,9 +15905,9 @@
   "trump-election-eo-14248-military-voters-2025": {
    "0": {
     "state": "partly",
-    "why": "The Wikipedia text confirms EO 14248 required documentary proof of citizenship for voter registration and threatened states over post-Election-Day mail ballots, but it dates the signing to March 26, 2025 (not March 25), describes the list-comparison partner as the Department of Government Efficiency rather than SSA, and its description of the EAC directive is cut off mid-sentence.",
-    "host": "en.wikipedia.org",
-    "date": "2026-09-15",
+    "why": "The visible text confirms Sec. 2(b)(iii) (DHS with the DOGE Administrator reviewing voter lists against immigration databases), Sec. 3(d) (Federal Post Card Application proof of citizenship), the Election Day enforcement fragment of 7(a), and 7(b)'s EAC funding condition excluding UOCAVA ballots; but the Sec. 2(a) EAC directive itself and the Attorney General attribution in 7(a) fall in truncated portions of the extract.",
+    "host": "govinfo.gov",
+    "date": "2026-10-12",
     "kind": "fact",
     "archive": false
    },
@@ -15897,41 +15921,81 @@
    },
    "2": {
     "state": "supports",
-    "why": "The Maryland Attorney General's release confirms the District of Massachusetts court's permanent injunction, sought by a 19-state coalition including Maryland, blocking the documentary-proof-of-citizenship and post-Election-Day mail-ballot provisions.",
-    "host": "oag.maryland.gov",
-    "date": "2026-09-15",
+    "why": "Democracy Docket's case page records each date stated: DOJ's Dec. 23, 2025 appeal of the Section 2(a) ruling, the Jan. 30, 2026 ruling on 2(d)/3(d), the RNC's March 31 and DOJ's May 28, 2026 appeals, and the July 13, 2026 dismissal of the 7(b) claims.",
+    "host": "democracydocket.com",
+    "date": "2026-10-12",
     "kind": "fact",
     "archive": false
    },
    "3": {
     "state": "supports",
-    "why": "The release explicitly references an earlier, separate October 2025 ruling that permanently blocked Section 2(a) of the order, the provision imposing documentary proof-of-citizenship requirements on the federal voter registration form.",
-    "host": "elias.law",
-    "date": "2026-09-15",
+    "why": "The Jan. 9, 2026 (Friday) Washington State Standard story reports Chun permanently blocked the proof-of-citizenship and Election Day receipt provisions for Oregon and Washington, all-mail states, and carries the quoted language verbatim.",
+    "host": "washingtonstatestandard.com",
+    "date": "2026-10-12",
     "kind": "fact",
     "archive": false
    },
    "4": {
     "state": "supports",
-    "why": "NPR confirms the Supreme Court's August 2026 stay was explicitly procedural (\"did not weigh in on the legality... focused on the ability of the... states to challenge Trump's order when they did\"), with three justices dissenting (implying a 6-3 split), and Jackson's dissent framing the majority's rationale as the states having had to wait rather than a ruling on the order's constitutionality.",
-    "host": "npr.org",
-    "date": "2026-09-15",
+    "why": "The Elias Law release dated January 30, 2026 states Kollar-Kotelly permanently enjoined Sections 2(d) and 3(d) with the quoted separation-of-powers language and that the ruling builds on the October 2025 Section 2(a) decision.",
+    "host": "elias.law",
+    "date": "2026-10-12",
     "kind": "fact",
     "archive": false
    },
    "5": {
-    "state": "partly",
-    "why": "The source confirms that midterm mail ballots began going out in September 2026 amid ongoing litigation uncertainty over Trump's order, but it never mentions Judge Indira Talwani or a specific ruling blocking USPS from following the mail-ballot directives.",
-    "host": "washingtontimes.com",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "The D.C. Circuit filing in Nos. 25-5476/25-5478, filed 02/02/2026, presents exactly the quoted issue on appeal.",
+    "host": "electioncases.osu.edu",
+    "date": "2026-10-12",
     "kind": "fact",
     "archive": false
    },
    "6": {
     "state": "supports",
-    "why": "NPR reports the Sept. 14 ruling rejecting the request, Kavanaugh's concurrence quoting both the 'fair prospect' and 'arbitrary and capricious' language, and the Alito and Thomas dissents; the logo and portal descriptions of the rule are not in the text but are peripheral.",
-    "host": "npr.org",
-    "date": "2026-09-21",
+    "why": "The Clearinghouse summary records the March 10, 2026 appeal (USCA 26-1429) and the May 6, 2026 grant of a joint stay pending district-court claims and Watson v. RNC.",
+    "host": "clearinghouse.net",
+    "date": "2026-10-12",
+    "kind": "fact",
+    "archive": false
+   },
+   "7": {
+    "state": "supports",
+    "why": "Maryland's AG release states the D. Mass. court granted the 19-AG coalition summary judgment and a permanent injunction blocking key EO provisions, which it describes as the documentary-proof-of-citizenship and mail-ballot-receipt mandates.",
+    "host": "oag.maryland.gov",
+    "date": "2026-10-12",
+    "kind": "fact",
+    "archive": false
+   },
+   "8": {
+    "state": "supports",
+    "why": "The AP/WTOP story reports Casper's Wednesday (June 24, 2026) permanent bar on most of the order, conversion of her preliminary injunction, rejection of the prematurity argument, the 'does not grant the President any specific powers over elections' quote, and the White House statement.",
+    "host": "wtop.com",
+    "date": "2026-10-12",
+    "kind": "fact",
+    "archive": false
+   },
+   "9": {
+    "state": "supports",
+    "why": "Democracy Docket reports Casper permanently blocked the federal form and FPCA proof-of-citizenship provisions and the post-Election Day ballot provisions for plaintiff states with extended deadlines, and quotes the passage verbatim.",
+    "host": "democracydocket.com",
+    "date": "2026-10-12",
+    "kind": "fact",
+    "archive": false
+   },
+   "10": {
+    "state": "partly",
+    "why": "The syllabus confirms the June 29, 2026 decision, the holding on ballots postmarked by election day but received up to five days later, Barrett's majority with four Justices joining against a four-Justice dissent, and the reversal of the Fifth Circuit's Wetzel decision; but the quoted line 'The election-day statutes say nothing about ballot receipt...' does not appear in the provided text, and the source does not address the executive order's reliance on Wetzel.",
+    "host": "supremecourt.gov",
+    "date": "2026-10-12",
+    "kind": "fact",
+    "archive": false
+   },
+   "11": {
+    "state": "supports",
+    "why": "The Clearinghouse summary states the July 13, 2026 judgment and permanent injunction by Judge Casper, the September 9, 2026 appeal to the First Circuit (No. 26-2038), and that both appeals were pending as of September 22, 2026; it separately records that oral argument in appeal 25-1726 was rescheduled for December 9, 2026.",
+    "host": "clearinghouse.net",
+    "date": "2026-10-12",
     "kind": "fact",
     "archive": false
    }
@@ -17676,6 +17740,152 @@
     "why": "The Sept. 25, 2026 CLC release quotes Saurav Ghosh, director of federal campaign finance reform, with this exact language.",
     "host": "campaignlegal.org",
     "date": "2026-09-29",
+    "kind": "fact",
+    "archive": false
+   }
+  },
+  "trump-mail-ballot-eo-usps-voter-list-rule-2026": {
+   "0": {
+    "state": "partly",
+    "why": "The order text confirms the State Citizenship List compiled by DHS in coordination with SSA, the 60-day proposed rule and 120-day final rule, the Intelligent Mail barcode, the 60-day state voter list, the quoted USPS transmission restriction, and funding withholding 'where such withholding is authorized by law'; the Attorney General's prioritization of prosecuting officials who issue ballots to ineligible individuals is only hinted at by the Sec. 2 heading, with the operative text truncated.",
+    "host": "govinfo.gov",
+    "date": "2026-10-12",
+    "kind": "fact",
+    "archive": false
+   },
+   "1": {
+    "state": "supports",
+    "why": "Votebeat reports the second executive order giving USPS 'unprecedented oversight over who is voting by mail,' quotes Danielle Lang and Rick Hasen as stated, and says officials in Arizona, Colorado, Nevada, Minnesota, Oregon, and Wisconsin signaled plans to sue.",
+    "host": "votebeat.org",
+    "date": "2026-10-12",
+    "kind": "fact",
+    "archive": false
+   },
+   "2": {
+    "state": "supports",
+    "why": "Source New Mexico reports the Peters-Steiner exchange verbatim, Steiner's pledge to obey a court order and defer authority questions to courts, and that Steiner answers to the USPS Board of Governors.",
+    "host": "sourcenm.com",
+    "date": "2026-10-12",
+    "kind": "fact",
+    "archive": false
+   },
+   "3": {
+    "state": "supports",
+    "why": "Democracy Docket reports the 37-page opinion's findings, the quoted 'Sections 2 and 3 ... legally void' declaration, the injunction barring USPS and DHS action in the 23 plaintiff jurisdictions, the DOJ notification requirement, the planned 1st Circuit appeal, and the Elias disclosure footnote marker.",
+    "host": "democracydocket.com",
+    "date": "2026-10-12",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "partly",
+    "why": "Democracy Docket supports the substance (Friday panel stay of Sullivan's order, ripeness and settlement findings, 'no do over', not ending the case), but the source gives no specific dates, saying only 'Friday' and 'earlier this month', so July 17 and the July 1 order date are not confirmed by this text.",
+    "host": "democracydocket.com",
+    "date": "2026-10-12",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "supports",
+    "why": "The AP-based FOX 11 report states Talwani's Tuesday preliminary injunction for LWV, the quoted 'no authority to regulate elections' line, that administration lawyers had not defended constitutionality, and the 1st Circuit's late-July refusal to disturb her June ruling.",
+    "host": "foxla.com",
+    "date": "2026-10-12",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
+    "state": "supports",
+    "why": "NPR (Aug. 24, 2026) reports the stay of the June ruling covering 23 states plus D.C., that it did not weigh in on legality, the 'time will tell' language, and Jackson's 'blatantly unconstitutional Order' dissent; elsewhere it describes the June ruling's findings as claimed.",
+    "host": "npr.org",
+    "date": "2026-10-12",
+    "kind": "fact",
+    "archive": false
+   },
+   "7": {
+    "state": "supports",
+    "why": "JURIST reports the Monday (Aug. 24) per curiam in No. 26A124 with the quoted 'internal directive' language, separate dissents by Sotomayor, Kagan and Jackson, the 1st Circuit's late-July stay denial, and Jackson's quoted sentence.",
+    "host": "jurist.org",
+    "date": "2026-10-12",
+    "kind": "fact",
+    "archive": false
+   },
+   "8": {
+    "state": "supports",
+    "why": "Reuters (via Hawaii Tribune-Herald, Aug. 26) reports Talwani's Tuesday finding that USPS 'feigned compliance' by releasing its final rule Friday, her decision not to block it because USPS concedes it cannot implement while her injunction stands, and the rule's list and barcode requirements.",
+    "host": "hawaiitribune-herald.com",
+    "date": "2026-10-12",
+    "kind": "fact",
+    "archive": false
+   },
+   "9": {
+    "state": "supports",
+    "why": "JURIST reports Talwani on Wednesday canceled her preliminary injunction after a DOJ reconsideration request following the Supreme Court ruling, reasoning USPS had not yet proposed or published its rule, and that the final rule took effect August 21 despite her injunction.",
+    "host": "jurist.org",
+    "date": "2026-10-12",
+    "kind": "fact",
+    "archive": false
+   },
+   "10": {
+    "state": "supports",
+    "why": "Law Dork (Sept. 4, 2026) reports the Friday preliminary injunction replacing the Aug. 27 TRO issued the day USPS announced the rule in effect, carries both quoted passages, lists the blocked envelope, portal, enrollment and verification provisions elsewhere in the piece, and records DOJ's Sept. 6 Supreme Court application.",
+    "host": "lawdork.com",
+    "date": "2026-10-12",
+    "kind": "fact",
+    "archive": false
+   },
+   "11": {
+    "state": "supports",
+    "why": "The States Newsroom story (Alaska Beacon, Sept. 7) quotes Sauer's 'only modest envelope-design and addressee-information requirements' and Steiner's Friday statement verbatim, including the 'manifest' language.",
+    "host": "alaskabeacon.com",
+    "date": "2026-10-12",
+    "kind": "fact",
+    "archive": false
+   },
+   "12": {
+    "state": "supports",
+    "why": "The TNND story dated Monday, Sept. 14, 2026 reports Nichols' Sunday (Sept. 13) preliminary injunction against the rule and quotes the passage verbatim.",
+    "host": "katv.com",
+    "date": "2026-10-12",
+    "kind": "fact",
+    "archive": false
+   },
+   "13": {
+    "state": "supports",
+    "why": "NPR (Sept. 14, 2026) reports the Court kept the Boston injunction, finding the administration unlikely to succeed, Kavanaugh's quoted concurrence, and Alito and Thomas dissenting; it also reports the no-evidence point and Trump's 'a big loss for Republicans' post.",
+    "host": "npr.org",
+    "date": "2026-10-12",
+    "kind": "fact",
+    "archive": false
+   },
+   "14": {
+    "state": "supports",
+    "why": "NACo's Sept. 15 update records the denial in USPS v. California, No. 26A305, without a merits ruling and the quoted midterm language; the same page records the Aug. 21 final rule caveat and the Aug. 26 suit by 24 states and D.C.",
+    "host": "naco.org",
+    "date": "2026-10-12",
+    "kind": "fact",
+    "archive": false
+   },
+   "15": {
+    "state": "supports",
+    "why": "NCSL's Sept. 15, 2026 explainer contains the June 25 and Aug. 11 statements verbatim and, elsewhere, the Aug. 24 6-3 hold that 'did not rule on the legality' and the Aug. 26 reversal of the nationwide injunction with a same-day new challenge.",
+    "host": "ncsl.org",
+    "date": "2026-10-12",
+    "kind": "fact",
+    "archive": false
+   },
+   "16": {
+    "state": "supports",
+    "why": "Democracy Docket, after noting Nichols' Sept. 13 injunction, states no court order bars DHS from advancing Section 2, reports the Democrats' request to force DHS disclosure after learning of steps through public reporting, and carries the Elias/Democracy Docket disclosure.",
+    "host": "democracydocket.com",
+    "date": "2026-10-12",
+    "kind": "fact",
+    "archive": false
+   },
+   "17": {
+    "state": "partly",
+    "why": "The Oct. 1, 2026 unpublished per curiam order by Millett, Walker and Childs in No. 26-5257 contains the quoted disposition verbatim, but it does not identify the NAACP as the movant, and the claim's characterization that it leaves the settlement question undecided is inference rather than stated text.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-10-12",
     "kind": "fact",
     "archive": false
    }
