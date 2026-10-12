@@ -1161,12 +1161,19 @@
     "status": "Blanche cited 'hundreds' of investigations in a CBS interview published Sept. 14, 2026, a Sept. 15 briefing and again Sept. 30. DOJ charge counts have grown (over 90 per Blanche Sept. 30; 104 since 2025 per DOJ figures to Fox Oct. 11), but no case-level support for 'hundreds' has been released.",
     "rebuttal_anticipated": "DOJ would likely argue that ongoing criminal investigations are routinely not detailed publicly to protect their integrity, that 'hundreds' is a defensible aggregate consistent with DOJ's broader election-integrity initiative, and that the Northern District of Texas announcement he previewed at the Sept. 15 White House briefing demonstrates the claim has concrete cases behind it, alongside DOJ's growing tally of people charged with voting-related offenses (104 since 2025 in figures DOJ gave Fox News in October).",
     "comeback": "The concern is not that DOJ investigates voter fraud -- it is that the Attorney General cited a large, specific-sounding aggregate figure while defending a contested, court-blocked policy, on the same day the Supreme Court declined to let that policy take effect for the 2026 midterms, without offering any case count by state, named defendant, or independently verifiable detail. DOJ's later tallies -- 104 people charged since 2025, and 64 foreign nationals charged in about five weeks across 17 states, per figures given to Fox News -- count charges, not investigations, and still leave 'hundreds' of investigations unsupported.",
-    "cause": "[TAP Analysis, not sourced] Consistent with this database's broader pattern of administration officials citing large, unverified aggregate figures to justify contested election-integrity policy without correspondingly detailed public substantiation -- see also the DHS Unlawful Voter Initiative and DOJ voter-data-lawsuits entries for two other agency-specific mechanisms in the same pre-midterm push.",
+    "cause": "[TAP Analysis, not sourced] Consistent with this database's broader pattern of administration officials citing large, unverified aggregate figures to justify contested election-integrity policy without correspondingly detailed public substantiation; here the policy being defended was the President's mail-ballot executive order and its Postal Service rule, a rule the Supreme Court had declined that same day to let take effect for the midterms -- see also the DHS Unlawful Voter Initiative and DOJ voter-data-lawsuits entries for two other agency-specific mechanisms in the same pre-midterm push.",
+    "cause_references": [
+      {
+        "match": "the President's mail-ballot executive order and its Postal Service rule",
+        "tracker": "prosecution",
+        "id": "trump-mail-ballot-eo-usps-voter-list-rule-2026"
+      }
+    ],
     "confidence_note": "HIGH confidence Blanche made this statement publicly and on the record, corroborated across CBS News's September 14, 2026 exclusive interview, Yahoo and Latin Times coverage of it, and The National News Desk's report on the September 15 White House briefing, where he repeated the figure. LOW-to-MODERATE confidence in the underlying 'hundreds of investigations' figure itself, since Blanche did not provide case-level substantiation -- this entry documents the unsubstantiated public claim as the accountability concern, not a confirmed count of prosecutable voter fraud.\n\nUpdate 2026-10-11: DOJ's subsequent charge counts -- over 90 people charged in Trump's second term per Blanche on Sept. 30 (Spectrum News), when he again said hundreds of investigations were ongoing, and 104 since 2025 per DOJ figures provided to Fox News Digital in October -- are counts of charged defendants, not investigations, and do not substantiate the 'hundreds of ongoing investigations' figure.",
-    "last_verified": "2026-10-11",
+    "last_verified": "2026-10-12",
     "date_added": "2026-09-19",
     "date_of_action": "2026-09-14 (CBS News interview; repeated at Sept. 15 White House briefing)",
-    "last_substantive_update": "2026-10-11",
+    "last_substantive_update": "2026-10-12",
     "section_summaries": {
       "incident_summary": "AG Blanche cited 'hundreds' of DOJ investigations into ineligible voters who voted while defending the administration's court-blocked mail-ballot rules, without offering case-level evidence.",
       "confidence_note": "The statement itself is well corroborated as made on the record; the underlying 'hundreds' figure remains unsubstantiated by any public case-level detail as of October 2026."
@@ -1179,7 +1186,7 @@
         "certainty": "documented",
         "who": "Public trust in election claims"
       },
-      "reviewed": "2026-10-11"
+      "reviewed": "2026-10-12"
     },
     "timeline": {
       "confidence_note": {
@@ -12068,6 +12075,12 @@
         "maps_to_element": "Hegseth named Elon Musk and Palmer Luckey, whose companies (SpaceX and Anduril) hold large current Pentagon contracts, to co-lead a Pentagon study of the weapons and technology the military will need"
       },
       {
+        "type": "public_record",
+        "description": "Hegseth memorandum, September 30, 2026 (\"Commissioning of Project Meridian: The Future of Warfare\"): directs the department's Chief Technology Officer, Emil Michael, to commission Project Meridian \"through a partner organization\" (not named); the project will \"identify which weapons and technologies warfighters will need\" and \"propose actionable solutions to start developing, testing and fielding these capabilities,\" drawing on \"top technologists, innovators, business leaders, policy makers, and national security experts\"; findings and recommendations are due to his office \"on January 28, 2027.\" The memo names no co-leads.",
+        "source_url": "https://media.defense.gov/2026/Sep/30/2004009287/-1/-1/1/COMMISSIONING-OF-PROJECT-MERIDIAN.PDF",
+        "maps_to_element": "The study's recommendations on what to develop, test and field could steer future Pentagon buying toward product lines the co-leads' own companies sell, such as drones, autonomous systems and space assets"
+      },
+      {
         "type": "news_report",
         "description": "AFP (via CP24), October 1, 2026: at Quantico, Hegseth said Project Meridian will be \"an effort led by America’s best minds to study the future of warfare\" under Emil Michael, co-led by Musk, Luckey and Gingrich, and stressed it is not about developing new strategies or policies; findings are due within 120 days.",
         "source_url": "https://www.cp24.com/news/world/2026/10/01/us-military-cuts-20-of-its-generals-admirals-hegseth/",
@@ -12104,9 +12117,9 @@
     ],
     "confidence_note": "HIGH confidence on the appointment, the co-leads and the 120-day timeline, reported by TechCrunch, AFP, GovConWire and NPR; MITRE's role is reported by NPR, citing Hegseth. The SpaceX contract figure is NPR's tally of government contract announcements. The conflict concern is an appearance-of-conflict argument from named and anonymous ethics and defense sources; no violation is alleged, and the co-leads' employment status and any ethics terms are undisclosed, so this should be framed as an unanswered conflict question, not misconduct.",
     "pull_quote": "\"It's a massive conflict of interest,\" a former senior Defense Department official told NPR of Musk and Luckey co-leading the study.",
-    "last_verified": "2026-10-11",
+    "last_verified": "2026-10-12",
     "date_added": "2026-10-11",
-    "last_substantive_update": "2026-10-11",
+    "last_substantive_update": "2026-10-12",
     "date_of_action": "2026-09-30",
     "section_summaries": {
       "incident_summary": "Hegseth named Musk and Luckey, whose firms hold billions in Pentagon contracts, to co-lead a 120-day study of future weapons; DoD won't say what ethics rules bind them.",
@@ -12121,7 +12134,7 @@
         "certainty": "alleged",
         "who": "Impartial defense procurement advice"
       },
-      "reviewed": "2026-10-11"
+      "reviewed": "2026-10-12"
     }
   },
   {
@@ -27261,7 +27274,7 @@
       },
       {
         "type": "news_report",
-        "description": "Democracy Docket reported that on Friday, July 17, 2026, a three-judge D.C. Circuit panel paused U.S. District Judge Emmet Sullivan's July 1 order in the NAACP's 2020 case against the Postal Service, which had blocked the agency from implementing standards and procedures in its proposed mail ballot rule after Sullivan agreed with the NAACP that the rule would violate a 2021 settlement requiring the Postal Service to prioritize timely delivery of election mail through 2028. The panel found the Postal Service had made a strong showing that it is likely to succeed in arguing that the NAACP's challenge is not yet ripe for review and that the rule likely would not violate the settlement even if finalized, and wrote that 'there can be no do over' once the election occurs. The ruling 'does not end the case or decide whether the rule is ultimately lawful.'",
+        "description": "Democracy Docket reported that on Friday a three-judge D.C. Circuit panel granted the Postal Service's request to pause U.S. District Judge Emmet Sullivan's order in the NAACP's 2020 case against the Postal Service (issued, the article said, 'earlier this month'), which had blocked the agency from implementing standards and procedures in its proposed mail ballot rule after Sullivan agreed with the NAACP that the rule would violate a 2021 settlement requiring the Postal Service to prioritize timely delivery of election mail through 2028. The panel found the Postal Service had made a strong showing that it is likely to succeed in arguing that the NAACP's challenge is not yet ripe for review and that the rule likely would not violate the settlement even if finalized, and wrote that 'there can be no do over' once the election occurs. The ruling 'does not end the case or decide whether the rule is ultimately lawful.'",
         "source_url": "https://www.democracydocket.com/news-alerts/appeals-court-allows-usps-to-move-forward-with-trumps-anti-mail-voting-order/",
         "maps_to_element": "Federal judges have repeatedly ruled against the order and the Postal Service rule implementing it, finding them likely unconstitutional or beyond the Postal Service's authority"
       },
@@ -27339,8 +27352,14 @@
       },
       {
         "type": "court_filing",
-        "description": "On October 1, 2026, a D.C. Circuit panel (Judges Millett, Walker and Childs) granted the NAACP's motion to vacate and dismiss in NAACP v. U.S. Postal Service, No. 26-5257, writing: 'Because appellee has effectively abandoned its underlying motion to enforce as to the 2026 general election, we dismiss this appeal as moot, vacate the district court's July 1, 2026, memorandum opinion and order, and remand the case to the district court with instructions to dismiss the motion to enforce as moot.' The unpublished order ends the Postal Service's appeal of Judge Emmet Sullivan's settlement ruling without deciding whether the rule violates the settlement.",
+        "description": "On October 1, 2026, a D.C. Circuit panel (Judges Millett, Walker and Childs) granted a motion to vacate and dismiss in NAACP v. U.S. Postal Service, No. 26-5257, writing: 'Because appellee has effectively abandoned its underlying motion to enforce as to the 2026 general election, we dismiss this appeal as moot, vacate the district court's July 1, 2026, memorandum opinion and order, and remand the case to the district court with instructions to dismiss the motion to enforce as moot.' The unpublished order ends the Postal Service's appeal of Judge Emmet Sullivan's settlement ruling without deciding whether the rule violates the settlement.",
         "source_url": "https://storage.courtlistener.com/recap/gov.uscourts.cadc.43382/gov.uscourts.cadc.43382.01208893689.0.pdf",
+        "maps_to_element": "Federal judges have repeatedly ruled against the order and the Postal Service rule implementing it, finding them likely unconstitutional or beyond the Postal Service's authority"
+      },
+      {
+        "type": "court_filing",
+        "description": "CourtListener's docket for NAACP v. USPS, No. 26-5257 (D.C. Cir.), terminated October 1, 2026, lists the district court order under appeal as dated July 1, 2026; a July 17, 2026 per curiam order (Judges Henderson, Walker and Garcia) granting a motion for stay; an Aug. 10, 2026 'MOTION [2187424] to vacate, to dismiss case filed by NAACP'; and the Oct. 1, 2026 per curiam order (Judges Millett, Walker and Childs) granting 'the motion to vacate and dismiss [2187424-2].'",
+        "source_url": "https://www.courtlistener.com/docket/73595574/naacp-v-usps/",
         "maps_to_element": "Federal judges have repeatedly ruled against the order and the Postal Service rule implementing it, finding them likely unconstitutional or beyond the Postal Service's authority"
       }
     ],

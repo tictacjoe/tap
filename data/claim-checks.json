@@ -7463,25 +7463,33 @@
    },
    "1": {
     "state": "supports",
-    "why": "AFP reports Hegseth's Quantico remarks describing Meridian, the leadership, that it is not about new strategies or policies, and the 120-day timeline.",
-    "host": "cp24.com",
-    "date": "2026-10-11",
+    "why": "The memo directs CTO Emil Michael to commission Project Meridian 'through a partner organization' (unnamed), to identify needed weapons/technologies and propose solutions to develop, test and field them, drawing on technologists, business leaders, policy makers and national security experts, with findings due 'on January 28, 2027'; the memo text names no co-leads.",
+    "host": "media.defense.gov",
+    "date": "2026-10-12",
     "kind": "fact",
     "archive": false
    },
    "2": {
     "state": "supports",
-    "why": "GovConWire states the team will identify gaps and recommend development paths, with findings due Jan. 28, 2027 and a public unclassified report with a classified annex.",
-    "host": "govconwire.com",
-    "date": "2026-10-11",
+    "why": "The AFP text quotes Hegseth's 'effort led by America's best minds' line under Emil Michael, names Musk, Luckey and Gingrich as co-leaders, notes he stressed it is not about new strategies or policies, and says findings are due within 120 days.",
+    "host": "cp24.com",
+    "date": "2026-10-12",
     "kind": "fact",
     "archive": false
    },
    "3": {
     "state": "supports",
-    "why": "NPR reports the $8 billion SpaceX figure, MITRE commissioning, undisclosed employment status, unanswered conflict questions, and the quoted critics and DoD statement.",
+    "why": "GovConWire states the team will identify gaps in critical capabilities and recommend ways to develop, test and field new systems, with findings due to Hegseth's office by Jan. 28, 2027 and a public unclassified report plus a classified annex.",
+    "host": "govconwire.com",
+    "date": "2026-10-12",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "supports",
+    "why": "NPR reports SpaceX's $8B+ in 2026 defense contracts and that Hegseth directed Michael to commission the study through MITRE; elsewhere the article states the department did not disclose SGE/contractor status, did not respond to conflict questions, and quotes Painter, the anonymous former senior DoD official ('a massive conflict of interest'), a GAO official, a less concerned former official, and the MITRE-safeguards statement.",
     "host": "npr.org",
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "kind": "fact",
     "archive": false
    }
@@ -17778,8 +17786,8 @@
     "archive": false
    },
    "4": {
-    "state": "partly",
-    "why": "Democracy Docket supports the substance (Friday panel stay of Sullivan's order, ripeness and settlement findings, 'no do over', not ending the case), but the source gives no specific dates, saying only 'Friday' and 'earlier this month', so July 17 and the July 1 order date are not confirmed by this text.",
+    "state": "supports",
+    "why": "Democracy Docket reports Sullivan's earlier-this-month ruling that the rule would violate the 2021 settlement, the Friday three-judge panel stay, its findings on ripeness and the settlement, the 'there can be no do over' quote, and that the ruling does not end the case or decide lawfulness.",
     "host": "democracydocket.com",
     "date": "2026-10-12",
     "kind": "fact",
@@ -17882,9 +17890,17 @@
     "archive": false
    },
    "17": {
-    "state": "partly",
-    "why": "The Oct. 1, 2026 unpublished per curiam order by Millett, Walker and Childs in No. 26-5257 contains the quoted disposition verbatim, but it does not identify the NAACP as the movant, and the claim's characterization that it leaves the settlement question undecided is inference rather than stated text.",
+    "state": "supports",
+    "why": "The October 1, 2026 order before Millett, Walker and Childs grants the motion to vacate and dismiss with the quoted mootness language, and is designated unpublished under Circuit Rule 36; dismissal as moot means the settlement question was not decided.",
     "host": "storage.courtlistener.com",
+    "date": "2026-10-12",
+    "kind": "fact",
+    "archive": false
+   },
+   "18": {
+    "state": "supports",
+    "why": "The docket shows Date Terminated Oct. 1, 2026, originating Date Order/Judgment July 1, 2026, a Jul 17, 2026 per curiam order granting the motion for stay before Judges Henderson, Walker and Garcia, the Aug 10, 2026 'MOTION [2187424] to vacate, to dismiss case filed by NAACP', and the quoted Oct 1 order before Judges Millett, Walker and Childs granting 'the motion to vacate and dismiss [2187424-2]'; every element matches.",
+    "host": "courtlistener.com",
     "date": "2026-10-12",
     "kind": "fact",
     "archive": false
