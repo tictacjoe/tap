@@ -738,12 +738,17 @@
           "metric": "Bank asset threshold the rule covered",
           "value": "greater than $10 billion in assets",
           "source": "CFPB final rule, December 2024"
+        },
+        {
+          "metric": "Overdraft revenue change at the top 20 consumer banks, 2025 vs. 2023 (call-report data)",
+          "value": "+6.2% (about $4 billion collected in 2025)",
+          "source": "National Consumer Law Center issue brief, June 2026"
         }
       ],
-      "caveat": "The administration's own OMB statement of policy opposing the rule projected the opposite framing -- that the rule would cause roughly six million consumers to face higher fees and more bounced checks, on the theory that banks would respond to a fee cap by tightening overdraft approval rather than absorbing the cost. Both figures are the interested party's own projection (CFPB's for the rule, OMB's against it), not an independent third-party estimate; no post-repeal empirical study of actual fee revenue or consumer cost was identified in reporting reviewed."
+      "caveat": "The administration's own OMB statement of policy opposing the rule projected the opposite framing -- that the rule would cause roughly six million consumers to face higher fees and more bounced checks, on the theory that banks would respond to a fee cap by tightening overdraft approval rather than absorbing the cost. Both figures are the interested party's own projection (CFPB's for the rule, OMB's against it), not an independent third-party estimate. Call-report data compiled by the National Consumer Law Center, a consumer advocacy group, shows overdraft revenue at the top 20 consumer banks up 6.2% in 2025 over 2023; extrapolating that trend, NCLC estimates $12.4 billion in overdraft and NSF fees paid industry-wide in 2025; NCLC says some banks have begun raising fees with federal pressure off. Because the rule never took effect, those figures show fees continuing at scale, not a measured before/after effect of the repeal."
     },
-    "confidence_note": "HIGH confidence on the legislative sequence itself -- the Senate and House vote counts/dates and the May 9, 2025 signing are corroborated across Congress.gov CRS products, Holland & Knight, and Consumer Finance Monitor legal-industry reporting, all of which track CRA actions closely for compliance purposes. The $5 billion/$225 consumer-savings figure is the CFPB's own estimate, not an independent academic study; the OMB's six-million-consumers counter-figure is likewise the repeal side's own projection. Both are competing agency estimates rather than settled fact.",
-    "last_verified": "2026-08-12",
+    "confidence_note": "HIGH confidence on the legislative sequence itself -- the Senate and House vote counts/dates and the May 9, 2025 signing are corroborated across Congress.gov CRS products, Holland & Knight, and Consumer Finance Monitor legal-industry reporting, all of which track CRA actions closely for compliance purposes. The $5 billion/$225 consumer-savings figure is the CFPB's own estimate, not an independent academic study; the OMB's six-million-consumers counter-figure is likewise the repeal side's own projection. Both are competing agency estimates rather than settled fact. Re-verified 2026-10-13: the Senate 52-48 vote (Consumer Finance Monitor; Holland & Knight's \"54-48\" is a typo), the 217-211 House vote and the May 9, 2025 signing (Holland & Knight) still hold; no new federal overdraft rulemaking was found. The NCLC 2025 fee-revenue figures are an advocacy group's analysis of public call-report data.",
+    "last_verified": "2026-10-13",
     "date_added": "2026-08-12",
     "sources": [
       {
@@ -765,15 +770,23 @@
       {
         "name": "Politico -- Senate votes to overturn CFPB overdraft rule",
         "url": "https://www.politico.com/live-updates/2025/03/27/congress/senate-overturn-cfpb-overdraft-rule-00251896"
+      },
+      {
+        "name": "National Consumer Law Center -- Overdraft Fees Rising In Absence of CFPB Rule (issue brief, June 2026)",
+        "url": "https://www.nclc.org/resources/overdraft-fees-rising-in-absence-of-cfpb-rule/"
+      },
+      {
+        "name": "Consumer Finance Monitor -- Senate adopts resolution to nullify CFPB overdraft rule",
+        "url": "https://www.consumerfinancemonitor.com/2025/03/28/senate-adopts-resolution-to-nullify-cfpb-overdraft-rule/"
       }
     ],
     "short_summary": "Congress killed the CFPB's $5 overdraft-fee cap via the CRA before it took effect, and barred the agency from issuing a similar rule again.",
     "section_summaries": {
-      "what_changed": "Senate (52-48, Mar. 27) and House (217-211, Apr. 9) passed a CRA resolution killing the CFPB's overdraft fee cap before its October 2025 effective date; Trump signed it May 9, 2025, also barring a future 'substantially similar' rule.",
-      "estimated_impact": "CFPB projected $5B/year in consumer savings from the capped rule; OMB's opposing projection said the cap would cause 6 million consumers to face higher fees and more bounced checks. Both are the interested party's own estimate.",
-      "confidence_note": "Legislative sequence is well-corroborated across CRS and legal-industry sources; the competing savings/cost figures are each side's own projection, not independent estimates."
+      "what_changed": "Senate (52-48) and House (217-211) passed a CRA resolution killing the CFPB overdraft fee cap before it took effect; Trump signed it May 9, 2025, barring a 'substantially similar' rule.",
+      "estimated_impact": "CFPB projected $5B/year in savings; OMB said 6 million would face higher fees. NCLC call-report data shows top-20 bank overdraft revenue up 6.2% in 2025 over 2023.",
+      "confidence_note": "Legislative sequence is well-corroborated; the competing savings/cost figures are each side's own projection, and NCLC's 2025 fee data is an advocacy group's analysis."
     },
-    "last_substantive_update": "2026-08-12",
+    "last_substantive_update": "2026-10-13",
     "glance": {
       "who": "Congressional Republicans and Trump",
       "what": "Killed the CFPB's $5 overdraft-fee cap through a Congressional Review Act vote",
@@ -782,7 +795,7 @@
         "certainty": "projected",
         "who": "Bank customers who overdraft"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-10-13"
     }
   },
   {
