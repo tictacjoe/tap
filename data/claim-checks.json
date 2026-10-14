@@ -3316,10 +3316,10 @@
   },
   "dhillon-doj-cassidy-hutchinson-grand-jury-2026": {
    "0": {
-    "state": "partly",
-    "why": "The excerpt supports the Loudermilk referral, Jordan co-signature, the secondhand wheel-lunge account and witnesses not remembering it, and Smith's 'We hadn't made final determinations'; the available text does not show Smith saying many of her stories were secondhand.",
+    "state": "supports",
+    "why": "The CNN piece states Loudermilk made the referral in recent days per two sources, accusing her of lying in 2022 testimony about Trump's awareness of potential violence, co-signed by Jordan; it also reports the secondhand wheel account, the non-recollection by the agent and deputy, and Smith's hearsay and 'final determinations' remarks.",
     "host": "krdo.com",
-    "date": "2026-10-13",
+    "date": "2026-10-14",
     "kind": "fact",
     "archive": false
    },
@@ -6788,50 +6788,58 @@
   },
   "hegseth-congress-communication-gag-2025": {
    "0": {
-    "state": "partly",
-    "why": "The source confirms the October 15 memo's scope (all DoD personnel except the IG), the comptroller/general counsel/whistleblower carve-outs, and coverage of communications with Congress and state elected officials, but it never specifically names the Joint Chiefs Chairman as included.",
-    "host": "breakingdefense.com",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "The Hill text reports the halt on think-tank participation, the timing relative to the Aspen pullout, and Parnell's statement that OPA would vet every event; the date parenthetical is consistent with the 2025 copyright line.",
+    "host": "yahoo.com",
+    "date": "2026-10-14",
     "kind": "fact",
     "archive": false
    },
    "1": {
     "state": "supports",
-    "why": "The source confirms both quotes verbatim -- Reed's \"serious questions about transparency\" and Smith's \"intent to further restrict communication\" -- plus the memo's \"unauthorized engagements with Congress\" warning language.",
-    "host": "cbsnews.com",
-    "date": "2026-09-15",
+    "why": "Breaking Defense describes the Oct. 15 Hegseth/Feinberg memo requiring legislative affairs approval, its application to the JCS chairman, and carve-outs for the IG, comptroller, general counsel and whistleblower protections.",
+    "host": "breakingdefense.com",
+    "date": "2026-10-14",
     "kind": "fact",
-    "archive": false
+    "archive": true
    },
    "2": {
     "state": "supports",
-    "why": "ABC News confirms Rep. Don Bacon's on-record 'amateur move' quote about the new restrictions putting 'a large barrier between the military & Congress,' and Sean Parnell's on-record defense that the review is internal and does not change how or from whom Congress receives information.",
-    "host": "abcnews.com",
-    "date": "2026-09-15",
+    "why": "CBS quotes Reed's 'serious questions about transparency', Smith's 'further restrict communication', and the memo's 'Unauthorized engagements with Congress' language, as claimed.",
+    "host": "cbsnews.com",
+    "date": "2026-10-14",
     "kind": "fact",
     "archive": false
    },
    "3": {
     "state": "supports",
-    "why": "The source confirms the bipartisan November 4, 2025 criticism of Hegseth's information-control approach, including withheld briefings on the Romania troop drawdown.",
-    "host": "reuters.com",
-    "date": "2026-09-15",
+    "why": "ABC reports Bacon's 'amateur move' and 'large barrier' statements and Parnell's defense quoted in the claim verbatim.",
+    "host": "abcnews.com",
+    "date": "2026-10-14",
     "kind": "fact",
     "archive": false
    },
    "4": {
     "state": "supports",
-    "why": "The Reuters text (Oct 6) reports the base-access denial, the refused briefing, the official's account tied to Hegseth's March 3, 2026 directive, and the quoted 'applies the Secretary's guidance evenly' statement.",
-    "host": "al-monitor.com",
-    "date": "2026-10-11",
+    "why": "Reuters on Nov. 4, 2025 reports bipartisan criticism over missing briefings, including on the Romania troop cut, alongside Hegseth's permission-before-contact policy.",
+    "host": "reuters.com",
+    "date": "2026-10-14",
     "kind": "fact",
     "archive": false
    },
    "5": {
     "state": "supports",
-    "why": "The Military Times article supports the letter and CENTCOM appeal, the official's statement that the decision was communicated in advance by the Office of the Secretary of War for Legislative Affairs under the March 3, 2026 directive, Murphy's 'cover-up' description, and his plan to draft base-access language.",
+    "why": "The Reuters report (via Al-Monitor) dated Oct. 6, 2026 contains the denial, the refused briefing, the March 3 directive explanation, and the 'applies the Secretary's guidance evenly' quote.",
+    "host": "al-monitor.com",
+    "date": "2026-10-14",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
+    "state": "supports",
+    "why": "Military Times on Oct. 8, 2026 reports Murphy's letter and CENTCOM appeal, the official's statement about the March 3 directive and legislative affairs, the 'cover-up' charge, and his plan to draft base-access language.",
     "host": "militarytimes.com",
-    "date": "2026-10-11",
+    "date": "2026-10-14",
     "kind": "fact",
     "archive": false
    }
@@ -7196,6 +7204,22 @@
     "why": "The AP text reports the Army's decline to comment pending family briefings, quotes the 'will be scheduled for briefs on the official findings of the completed investigation' statement, and states the June completion and redaction rationale.",
     "host": "wcax.com",
     "date": "2026-10-11",
+    "kind": "fact",
+    "archive": false
+   },
+   "13": {
+    "state": "partly",
+    "why": "The text confirms the 13-soldier basis, Frank's sign-off per Halbur and another senior officer, Key's account of at least five quadcopters reported up the chain, and that neither Hinson nor Barnes could change air defenses; the five soldiers' warning to Hinson and Barnes and the never-briefed medical evacuation plan fall in truncated portions and cannot be verified.",
+    "host": "wcax.com",
+    "date": "2026-10-14",
+    "kind": "fact",
+    "archive": false
+   },
+   "14": {
+    "state": "supports",
+    "why": "The AP text directly reports the July 20 IG letter clearing Barnes based on limited evidence and noting the Hinson complaint was withdrawn, which the officer disputed.",
+    "host": "wcax.com",
+    "date": "2026-10-14",
     "kind": "fact",
     "archive": false
    }
@@ -8925,17 +8949,17 @@
    },
    "4": {
     "state": "supports",
-    "why": "CNN reports at least 430 trees cut over the weekend, Reyes's 'No, you did your absolute worst,' Lands's testimony about the October 5 meeting with political appointee and deputy chief of staff Greg Wischer and the 'practicable' instruction, his showing the course to Tom Fazio two or three months earlier, and the $20-49 million cost range.",
+    "why": "CNN reports the 430 trees, Reyes's 'No, you did your absolute worst,' Lands's testimony about the Oct. 5 Wischer meeting and 'practicable', the Fazio tour, and the $20-49 million cost range.",
     "host": "cnn.com",
-    "date": "2026-10-13",
+    "date": "2026-10-14",
     "kind": "fact",
     "archive": false
    },
    "5": {
-    "state": "unopened",
-    "why": "",
+    "state": "supports",
+    "why": "The October 12 minute order halts all tree removal until 7 a.m. October 13 with routine maintenance not exempt, finds likely immediate irreparable harm, and requires Griess to explain who ordered removal and when counsel was informed; a separate order requires Wischer and Bowron to attend the October 19 hearing prepared to give sworn testimony.",
     "host": "courtlistener.com",
-    "date": "2026-10-13",
+    "date": "2026-10-14",
     "kind": "fact",
     "archive": false
    },
@@ -8956,10 +8980,18 @@
     "archive": false
    },
    "8": {
-    "state": "unopened",
-    "why": "",
+    "state": "supports",
+    "why": "The Oct. 13 minute order contains each quoted finding, the no-felling order through Oct. 26, and the three-business-day notice requirement; ECF 79 memorandum opinion is entered the same day.",
     "host": "courtlistener.com",
-    "date": "2026-10-13",
+    "date": "2026-10-14",
+    "kind": "fact",
+    "archive": false
+   },
+   "9": {
+    "state": "supports",
+    "why": "The memorandum opinion contains the quoted NEPA finding, the five-day October 5-9 approval, about 430 trees removed, the TRO through October 26 with a $1.00 bond by October 19, and Wischer's 'as soon as practical' instruction with no explanation for urgency.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-10-14",
     "kind": "fact",
     "archive": false
    }
@@ -9227,9 +9259,9 @@
    },
    "4": {
     "state": "partly",
-    "why": "The text supports the co-chief of staff naming, HQE status, the unanswered August request, Bliss's quote and the official's recusal/no-ties statements, but the BOND directorship is truncated and A&M Capital saying he left before publication is not in the provided text.",
+    "why": "The text confirms the roles Feinberg gave Kollitides including BOND, his HQE status with generally confidential disclosures, Bliss's compliance statement, and the Defense official's statements and unanswered questions; the Pentagon's unanswered August request and A&M Capital's statement that he stopped working there are not in the provided text.",
     "host": "propublica.org",
-    "date": "2026-10-13",
+    "date": "2026-10-14",
     "kind": "fact",
     "archive": false
    }
@@ -10092,10 +10124,10 @@
     "archive": false
    },
    "6": {
-    "state": "partly",
-    "why": "The text supports the undercover request, pressure on DOJ in the Wien case, the twice-rejected warrant, and the Davidson, FBI, Cox and Raia statements, but nothing in it says the local prosecutor declined charges.",
+    "state": "supports",
+    "why": "The CBS text reports the undercover request last year, Miller pressing DOJ on the Wien case after a magistrate twice rejected a warrant, Dehghani-Tafti's declination quote, Davidson's 'violation of an important norm' remark, and the FBI, Cox and Raia statements as quoted.",
     "host": "cbsnews.com",
-    "date": "2026-10-13",
+    "date": "2026-10-14",
     "kind": "fact",
     "archive": false
    },
@@ -14471,17 +14503,17 @@
   "rosen-don-lemon-church-protest-prosecution-2026": {
    "0": {
     "state": "supports",
-    "why": "ABC News (Feb. 13, 2026) reports the not-guilty pleas before Micko, the two counts, the Jan. 29 indictment, Micko's earlier no-probable-cause finding, Schiltz's Jan. 23 letter quotes, Lemon's independent-journalist account, and Joe Thompson's representation.",
-    "host": "abcnews.com",
-    "date": "2026-09-28",
+    "why": "CBS reports Schiltz's account of three of eight warrants, Rosen's call, 'There is absolutely no emergency,' and the Eighth Circuit denial with Grasz's concurrence finding probable cause.",
+    "host": "cbsnews.com",
+    "date": "2026-10-14",
     "kind": "fact",
     "archive": false
    },
    "1": {
     "state": "supports",
-    "why": "CBS reports Schiltz's filing that Micko found probable cause for only three of eight warrants presented Jan. 20, that Rosen personally called demanding district-judge review, the quote 'There is absolutely no emergency,' and that the panel denied DOJ's request with Grasz concurring that probable cause existed.",
-    "host": "cbsnews.com",
-    "date": "2026-09-28",
+    "why": "ABC reports the Feb. 13 not-guilty pleas before Micko, the two counts, the Jan. 29 indictment, Micko's earlier probable-cause refusal, Schiltz's quoted Jan. 23 letter, Lemon's journalist stance and Thompson's representation.",
+    "host": "abcnews.com",
+    "date": "2026-10-14",
     "kind": "fact",
     "archive": false
    },
@@ -14495,57 +14527,57 @@
    },
    "3": {
     "state": "supports",
-    "why": "ABC News (Aug. 7, 2026) reports Lemon's filing seeking dismissal as vindictive prosecution, citing Trump's attacks and DOJ officials' hostility, and alleging 'extraordinary channels,' an ignored self-surrender offer, and circumvention of normal warrant procedure via an administrative warrant.",
-    "host": "abcnews.com",
-    "date": "2026-09-28",
+    "why": "The order denies the complex-case designation without prejudice, describing nine defendants charged with the same offenses as not particularly complex, while granting a 30-day Rule 16 continuance.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-10-14",
     "kind": "fact",
     "archive": false
    },
    "4": {
     "state": "supports",
-    "why": "The order filed 02/23/26 in the case assigned to magistrate judge DLM denies the complex-case designation without prejudice, recites the requested 90-day exclusion, finds nine defendants charged with the same offenses 'not particularly complex,' and grants a 30-day Rule 16 continuance.",
-    "host": "storage.courtlistener.com",
-    "date": "2026-09-28",
+    "why": "CBS reports the Feb. 27 unsealing of a superseding indictment adding 30 defendants, the misdemeanor FACE Act and felony conspiracy counts, and the original nine's not-guilty pleas.",
+    "host": "cbsnews.com",
+    "date": "2026-10-14",
     "kind": "fact",
     "archive": false
    },
    "5": {
     "state": "supports",
-    "why": "The CNN report describes Provinzino's Aug. 18 'short but extraordinary order,' the Tuesday deadline and listed materials for January and February grand juries, the defense's 'irregularities' request, that she did not say she found misconduct, and Mark Wolf's comment on rarity.",
-    "host": "abc17news.com",
-    "date": "2026-09-28",
+    "why": "ABC's Aug. 7, 2026 report describes the vindictive-prosecution motion citing Trump's attacks and DOJ officials' statements, the 'extraordinary channels' argument, the ignored self-surrender, and the warrant procedure complaints.",
+    "host": "abcnews.com",
+    "date": "2026-10-14",
     "kind": "fact",
     "archive": false
    },
    "6": {
     "state": "supports",
-    "why": "Judge Provinzino's August 18, 2026 order recites Micko's June 10 denial of three grand-jury disclosure motions, objections jointly signed by Lemon and Fort and by 32 other defendants, and orders production by August 25, 2026 of transcripts and multimedia from the January 29 and February 26, 2026 presentations.",
-    "host": "storage.courtlistener.com",
-    "date": "2026-09-28",
+    "why": "Minnesota Reformer reports Lemon's three motions on First Amendment, vindictiveness, and FACE Act commerce-power grounds, and Fort's three motions the prior day without a FACE Act challenge.",
+    "host": "web.archive.org",
+    "date": "2026-10-14",
     "kind": "fact",
     "archive": false
    },
    "7": {
     "state": "supports",
-    "why": "Micko's September 24, 2026 order grants the extension for responses to the 101 pending motions to October 16, 2026 and resets the October 19-22 hearing to November 3, 5, 9 and 10, 2026.",
-    "host": "storage.courtlistener.com",
-    "date": "2026-09-28",
+    "why": "The CNN report via ABC17 covers the Aug. 18 order, the Tuesday deadline and listed materials, the defense's 'irregularities' request, the absence of any misconduct finding, and Wolf's comments on rarity.",
+    "host": "abc17news.com",
+    "date": "2026-10-14",
     "kind": "fact",
     "archive": false
    },
    "8": {
     "state": "supports",
-    "why": "CBS (updated February 27, 2026) reports DOJ moved to unseal a superseding indictment adding 30 defendants, accusing all 39 of a misdemeanor FACE Act count and a felony conspiracy count, and that the original nine including Lemon pleaded not guilty.",
-    "host": "cbsnews.com",
-    "date": "2026-09-28",
+    "why": "The order recites Micko's June 10 denial, the two joint objections (32 co-defendants; Lemon and Fort), and orders production by Aug. 25 of transcripts and multimedia for the Jan. 29 and Feb. 26 presentations.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-10-14",
     "kind": "fact",
     "archive": false
    },
    "9": {
     "state": "supports",
-    "why": "The Minnesota Reformer piece (Aug. 7, 2026 URL, 'filed on Friday') describes Lemon's three motions on First Amendment, vindictiveness and the FACE Act house-of-worship commerce-power challenge, and Fort's three Thursday motions that did not challenge the FACE Act.",
-    "host": "web.archive.org",
-    "date": "2026-09-28",
+    "why": "The Sept. 24 order grants the extension for responses to the 101 pending motions to Oct. 16 and resets the Oct. 19-22 hearings to Nov. 3, 5, 9 and 10.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-10-14",
     "kind": "fact",
     "archive": false
    },
@@ -15187,49 +15219,57 @@
    },
    "3": {
     "state": "supports",
-    "why": "Bloomberg Law reports DOJ's 64 and Democracy Forward's 69 (33 in June), the 250-by-October goal, the 1967/2017 limits and the OIL attrition.",
-    "host": "news.bloomberglaw.com",
-    "date": "2026-10-11",
+    "why": "The complaint states the July 28, 1999 IJ denial and removal order under the Degel identity, the second application as Kadiye, the Sept. 6, 2012 naturalization, the 'illegally procured' allegation, and revocation under 8 U.S.C. 1451(a).",
+    "host": "justice.gov",
+    "date": "2026-10-14",
     "kind": "fact",
     "archive": false
    },
    "4": {
     "state": "supports",
-    "why": "The press release matches the 25 complaints (July 20 to Aug. 3), the 123 total complaints, both quotes, and the allegations-only disclaimer.",
-    "host": "justice.gov",
-    "date": "2026-10-11",
+    "why": "Bloomberg Law reports DOJ's 64-case figure, Democracy Forward's 69 including 33 in June, the 250 goal, the 1967 and 2017 Supreme Court limits, and the loss of roughly a third of OIL attorneys.",
+    "host": "news.bloomberglaw.com",
+    "date": "2026-10-14",
     "kind": "fact",
     "archive": false
    },
    "5": {
-    "state": "partly",
-    "why": "The release confirms the 40 individuals, Aug. 21 to Oct. 2 window, both quotes, the district list, and the disclaimer, but the provided text is truncated and does not allow confirming the nine-Mexico, four-Pakistan counts or the 26 minimum age.",
+    "state": "supports",
+    "why": "The August 3, 2026 release states the 25 complaints were filed July 20-Aug. 3, cites 123 complaints since Jan. 20, 2025 as the most in recorded history, includes Shumate's quote, and carries the allegations-only disclaimer.",
     "host": "justice.gov",
-    "date": "2026-10-11",
+    "date": "2026-10-14",
     "kind": "fact",
     "archive": false
    },
    "6": {
-    "state": "supports",
-    "why": "Newsweek reports 40 targeted, ages 26-76 from 20 countries including nine Mexico and four Pakistan, both DOJ quotes, the Brennan Center figure and Maslenjak.",
-    "host": "newsweek.com",
-    "date": "2026-10-11",
+    "state": "partly",
+    "why": "The October 5 release confirms the 40 individuals, the Aug. 21-Oct. 2 filing window language, the Blanche and Shumate quotes, and the disclaimer; the defendant list and district list are truncated, so the age range, the nine-Mexico/four-Pakistan counts, and the total of 19 districts cannot be fully verified.",
+    "host": "justice.gov",
+    "date": "2026-10-14",
     "kind": "fact",
     "archive": false
    },
    "7": {
     "state": "supports",
-    "why": "The article reports the filing window, the 'largest number' characterization, and that the filings do not mean the 40 have been stripped of citizenship.",
-    "host": "wlos.com",
-    "date": "2026-10-11",
+    "why": "Newsweek reports the 40 targets, ages and countries, both quotes, the Brennan Center's ~11 cases a year from 1990-2017, and Maslenjak v. United States (2017).",
+    "host": "newsweek.com",
+    "date": "2026-10-14",
     "kind": "fact",
     "archive": false
    },
    "8": {
     "state": "supports",
-    "why": "Outlook India reports the mix of convictions and fraud-based cases, and Osman's denial with his lawyer's comments to USA TODAY.",
+    "why": "TNND/WLOS reports the Aug. 21-Oct. 2 filings described as the largest single-period number and includes the quoted caveat.",
+    "host": "wlos.com",
+    "date": "2026-10-14",
+    "kind": "fact",
+    "archive": false
+   },
+   "9": {
+    "state": "supports",
+    "why": "Outlook India lists the espionage, manslaughter and minor-offense convictions, the quoted note about fraud-based cases, and Osman's denial through his lawyer.",
     "host": "outlookindia.com",
-    "date": "2026-10-11",
+    "date": "2026-10-14",
     "kind": "fact",
     "archive": false
    }
@@ -16205,15 +16245,15 @@
    },
    "23": {
     "state": "partly",
-    "why": "The provided (truncated) opinion text confirms the PI grant, the likely success on due process and both First Amendment claims, and extending relief to 'preserve the status quo while this case proceeds'; however, the $1.00 bond, the quoted viewpoint-discrimination findings, the 'no evidence in the record'/'post-hoc justification' language, and the denial of a stay pending appeal do not appear in the provided text.",
+    "why": "The provided (truncated) opinion text confirms the PI grant extending relief to preserve the status quo while the case proceeds, the denial of a stay pending appeal (fn. 10), and that there is 'no evidence in the record' of a national-security decision 'from the get-go' and that it was 'merely a post-hoc justification'. It does not contain the quoted 'Simply put, that is unlawful viewpoint discrimination' or 'because he believes their coverage...' language, any merits finding on both First Amendment claims or on due process at the PI stage (due process is shown only for the TRO), or an order requiring another $1.00 bond (only the TRO bond is mentioned).",
     "host": "storage.courtlistener.com",
     "date": "2026-10-14",
     "kind": "fact",
     "archive": false
    },
    "24": {
-    "state": "partly",
-    "why": "The CNBC text supports the late-Tuesday PI replacing the TRO, likely success on retaliation, viewpoint-discrimination and due-process claims, the excerpted not-final/no-Oval-Office-or-Air-Force-One caveat, and Trump's prior vow to appeal; the claim's statement that CNBC shares a corporate parent with MS NOW is not addressed anywhere in the provided text.",
+    "state": "supports",
+    "why": "CNBC reports the Tuesday preliminary injunction replacing the TRO, likely success on retaliation, viewpoint-discrimination and due-process claims, the quoted limits, and Trump's prior vow to appeal.",
     "host": "cnbc.com",
     "date": "2026-10-14",
     "kind": "fact",
@@ -19122,6 +19162,14 @@
     "date": "2026-10-08",
     "kind": "fact",
     "archive": false
+   },
+   "21": {
+    "state": "supports",
+    "why": "Both quoted sentences appear verbatim in the ProPublica text.",
+    "host": "propublica.org",
+    "date": "2026-10-14",
+    "kind": "fact",
+    "archive": false
    }
   },
   "trump-sons-kazakhstan-tungsten-federal-financing-2025-2026": {
@@ -19473,9 +19521,9 @@
    },
    "30": {
     "state": "partly",
-    "why": "The opinion rejects mootness, finds a clear and substantial likelihood of success on Section 1301 and 718 claims, contains the commemorative-events reading and the partisan-ads concession, but the provided text shows competitor standing only for SEIU 32BJ and Empire PAC, not Hunter.",
+    "why": "The opinion contains the mootness rejection, the standing holding, the competitive-injury and 'closer question' language, the likelihood-of-success finding on Sections 1301 and 718, the commemorative-events reading, and the uncontested-partisanship note; it does not, in the provided text, identify Hunter as an Alabama House candidate.",
     "host": "storage.courtlistener.com",
-    "date": "2026-10-13",
+    "date": "2026-10-14",
     "kind": "fact",
     "archive": false
    },
