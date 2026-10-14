@@ -3713,17 +3713,33 @@
    },
    "4": {
     "state": "supports",
-    "why": "The Democracy Docket text contains the 'hundreds of nonprofits' framing, the undercover-agents quote, the excerpted statement that no undercover operations were indicated, the nonprofit-search-engine and 'derogatory information' method, and the flagging of CAIR Pennsylvania and Zumiez for 'further investigation.'",
-    "host": "democracydocket.com",
-    "date": "2026-10-11",
+    "why": "The CNN text contains the ELITE ingest-plan passage, Palantir website description, Palantir spokesperson denial, the \"may include public voter lists\" caveat on the 48.4 million records, and the DHS spokesperson statement crediting USCIS FDNS, all as quoted in the claim.",
+    "host": "cnn.com",
+    "date": "2026-10-13",
     "kind": "fact",
     "archive": false
    },
    "5": {
     "state": "supports",
-    "why": "The States Newsroom text contains the undercover-agents quote, the ~41 New Jersey NGOs with no derogatory information (excerpt), Education Minnesota as one of 22 organizations, the 26,563 ICE-derived records, the iLab quote, the DHS statement, and the CAIR Pennsylvania and Education Minnesota responses.",
+    "why": "Democracy Docket text reports the hundreds of nonprofits, the undercover-agent quote, that records do not indicate undercover operations occurred, the nonprofit-search-engine/derogatory-information method, and the flagging of CAIR and Zumiez for further investigation.",
+    "host": "democracydocket.com",
+    "date": "2026-10-13",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
+    "state": "supports",
+    "why": "The States Newsroom article (republished by Missouri Independent) contains every quoted element: the June 1 report's undercover-agent objective, the ~41 New Jersey NGOs with 'no derogatory information' (excerpt), Education Minnesota as one of 22 organizations, the 26,563 ICE-derived records for 'downstream vetting', the iLab 'secondary enrichment' language, DHS's 'actively rooting out' statement, CAIR Pennsylvania's compliance statement, and Byron's surveillance concern.",
     "host": "missouriindependent.com",
-    "date": "2026-10-11",
+    "date": "2026-10-13",
+    "kind": "fact",
+    "archive": false
+   },
+   "7": {
+    "state": "supports",
+    "why": "The Democracy Docket text lists the 48.4 million Honey-connected records, the 50.6 million DOJ records, the more than 26,000 USCIS-derived records, the ELITE passage, the no-comment line, and the Elias disclosure, matching the claim.",
+    "host": "democracydocket.com",
+    "date": "2026-10-13",
     "kind": "fact",
     "archive": false
    }
@@ -8038,6 +8054,22 @@
     "why": "The Intercept names Maj. Sorffly Davius as missing from the Pentagon's list, with the Camp Buehring March 6 death, and states at least 19 personnel have died per the official count.",
     "host": "theintercept.com",
     "date": "2026-10-03",
+    "kind": "fact",
+    "archive": false
+   },
+   "12": {
+    "state": "supports",
+    "why": "The archived NYT text reports 21 killed (up from 18) and 865 wounded (up by 98 since August), posted Friday evening to DCAS, cause not completely clear, and the Smith/Houlahan quote and committee discrepancy finding.",
+    "host": "nytimes.com",
+    "date": "2026-10-13",
+    "kind": "fact",
+    "archive": true
+   },
+   "13": {
+    "state": "supports",
+    "why": "The Post syndicated text reports the DCAS count of 21 including Davius and an unidentified Navy suicide, 865 wounded, the Seibel training death bringing the Middle East total to 22, and the Pentagon not acknowledging the change while adding a \"pending adjudication\" category.",
+    "host": "adn.com",
+    "date": "2026-10-13",
     "kind": "fact",
     "archive": false
    }
@@ -17454,6 +17486,22 @@
     "why": "The CNBC text supports the 807 positions/$240.7M-$797.6M, 243 purchases/$68.2M-$233.8M, >1,000 positions/$300M-$1B totals, Plant Bowen and two other coal plants, Omaha bonds after the data-center order, hospitals exposed to Medicaid changes, Marlowe and Painter quotes, the Ingle and Trump Organization statements, and the no-evidence finding; the Minnesota state debt purchase after a federal Medicaid deferral does not appear in the provided text.",
     "host": "cnbc.com",
     "date": "2026-10-11",
+    "kind": "fact",
+    "archive": false
+   },
+   "15": {
+    "state": "supports",
+    "why": "The CNN syndicated text reports the Aug. 18 purchase of $1,000,001-$5 million of 5.35% SpaceX bonds due 2031 two days before the memorandum, the 517 trades including Meta and Microsoft, and the Painter, Ingle and Warren quotes as described.",
+    "host": "abc17news.com",
+    "date": "2026-10-13",
+    "kind": "fact",
+    "archive": false
+   },
+   "16": {
+    "state": "supports",
+    "why": "The Post syndicated text reports the $1-5 million SpaceX bond purchase two days before the memorandum, its difference in scale and asset type, the 500+ transactions, Ingle not answering who decided or whether an algorithm executed it, the adviser's comment, and SpaceX's summer bond sale for AI data centers.",
+    "host": "adn.com",
+    "date": "2026-10-13",
     "kind": "fact",
     "archive": false
    }
