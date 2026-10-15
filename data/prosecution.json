@@ -3737,7 +3737,7 @@
     "evidence": [
       {
         "type": "court_filing",
-        "description": "Released grand jury transcripts documenting prosecutorial vouching, an improper juror conversation, and the alleged excusing of skeptical grand jurors (disputed by the prosecutor) after an initial panel declined to indict",
+        "description": "Released grand jury transcripts documenting prosecutorial vouching, the prosecutor's admitted conversations with two grand jurors outside the grand jury room, and her alleged excusing of skeptical grand jurors after arguing with them",
         "source_url": "https://www.cbsnews.com/chicago/news/broadview-6-grand-jury-transcripts-partially-released-alleged-prosecutor-misconduct/",
         "maps_to_element": "Documents the specific grand jury misconduct via the transcripts themselves, not characterization alone"
       },
@@ -6629,7 +6629,7 @@
   {
     "id": "doj-bannon-contempt-dismissal-2026",
     "official": "Pam Bondi, then-Attorney General (served 2025-2026, removed April 2026) / DOJ leadership",
-    "offense_category": "DOJ Moving to Erase a Political Ally's Criminal Conviction for Defying Congressional Oversight -- a discretionary prosecutorial decision benefiting a Trump ally, analogous in kind to this tracker's pardon-power entry (trump-kidan-donor-pardon-2026.json) though pursued through a motion to dismiss rather than clemency",
+    "offense_category": "DOJ Moving to Erase a Political Ally's Criminal Conviction for Defying Congressional Oversight -- a discretionary prosecutorial decision benefiting a Trump ally, analogous in kind to this tracker's pardon-power entry on the Kidan donor pardon though pursued through a motion to dismiss rather than clemency",
     "incident_summary": "A jury had convicted Bannon on two counts in July 2022 of criminal contempt of Congress for defying a lawful subpoena from the House January 6 committee; he served prison time and paid a $6,500 fine. Bannon, a former senior Trump adviser and ally, had been one of the most prominent defendants prosecuted for defying the House's Jan. 6 investigation. On February 9, 2026, U.S. Attorney for the District of Columbia Jeanine Pirro filed an unopposed motion in D.C. federal district court to dismiss Bannon's indictment, stating only that the government \"has determined in its prosecutorial discretion that dismissal of this criminal case is in the interests of justice.\" The same day, Solicitor General D. John Sauer asked the Supreme Court, where Bannon's petition challenging the D.C. Circuit's affirmance of his conviction was pending, to vacate that ruling and send the case back so the district court could grant the motion; his filing described the Jan. 6 committee as \"a putative congressional committee.\" On April 6, 2026, the Supreme Court vacated the D.C. Circuit's ruling and remanded the case to that court \"for further consideration in light of the pending motion to dismiss\" -- clearing a path toward dismissal without itself dismissing the conviction. On July 16, 2026, the D.C. Circuit directed the parties to file motions to govern further proceedings; Bannon and the government jointly asked it to send the case back so the district court could address the pending, unopposed motion and terminate the prosecution, and on August 12, 2026 the D.C. Circuit remanded the case with instructions to address the motion to dismiss the indictment with prejudice under Federal Rule of Criminal Procedure 48(a).\n\nU.S. District Judge Carl Nichols denied DOJ's motion to dismiss on August 26, 2026, finding that the motion did not explain DOJ's motivations for seeking dismissal and that its single sentence of explanation was the kind of \"conclusory statement by the prosecutor\" that D.C. Circuit precedent holds insufficient under Rule 48(a), which requires a statement of reasons. The denial was without prejudice -- DOJ is free to submit a renewed motion that complies with Rule 48(a) -- but Nichols directed any renewed motion to address whether the D.C. Circuit's 2025 decision in United States v. Thorpe, which held that the government may dismiss a prosecution only while it is pending, bars dismissal here, noting that his own judgment of conviction has not been vacated. As of late September 2026, no renewed motion appears on the court docket, and the district court's judgment of conviction remains in place.",
     "contested": true,
     "elements_required": [
@@ -6680,7 +6680,7 @@
     "rebuttal_anticipated": "Likely defense: DOJ has broad prosecutorial discretion to reassess past cases, including on separation-of-powers or legal-sufficiency grounds that may not require detailed public explanation, and the Supreme Court's own decision to clear the path for dismissal indicates the Court found the underlying legal question at least colorable rather than DOJ acting alone on political grounds.",
     "comeback": "The specific fact pattern distinguishing this from an ordinary discretionary reassessment is that DOJ sought to erase a completed, jury-convicted case -- not decline a future prosecution -- for a prominent ally of the President, with DOJ's motion offering only a one-sentence 'interests of justice' rationale that the district judge found too conclusory to satisfy Rule 48(a); the practical effect would be to remove any consequence for defying a House investigative subpoena in this particular, politically significant instance.",
     "cause": "[TAP Analysis, not sourced] Consistent with the broader pattern this tracker documents of DOJ prosecutorial and clemency power being used to benefit Trump allies and donors (see also the Kidan pardon entry), here attempted through a motion to dismiss a completed conviction rather than a pardon -- an effort a district judge has so far refused to grant.",
-    "last_verified": "2026-09-27",
+    "last_verified": "2026-10-15",
     "date_added": "2026-08-05",
     "confidence_note": "HIGH confidence -- the February 2026 DOJ motion and its one-sentence rationale, the Supreme Court's April 2026 vacate-and-remand, the D.C. Circuit's August 12, 2026 remand, and Judge Nichols's August 26, 2026 denial are documented in the district court docket and Nichols's written order, and corroborated by ABC News, The Washington Post, NOTUS, SCOTUSblog, and the Associated Press. The Supreme Court's order sent the case back for consideration of the pending motion; it did not itself dismiss the conviction.",
     "pull_quote": "A judge denied DOJ’s motion to dismiss the conviction in August 2026, without prejudice -- Bannon’s conviction still stands.",
@@ -6690,7 +6690,7 @@
       "status": "Bannon's conviction stands after the judge denied DOJ's dismissal motion; DOJ hasn't refiled, leaving the case's disposition pending."
     },
     "date_of_action": "2026-02 (DOJ moves to dismiss Bannon's conviction) through 2026-04 (Supreme Court clears path for dismissal)",
-    "last_substantive_update": "2026-09-27",
+    "last_substantive_update": "2026-10-15",
     "glance": {
       "who": "DOJ under Pam Bondi (then-AG)",
       "what": "Moved to dismiss Steve Bannon's contempt-of-Congress conviction; a judge denied it, refiling allowed",
@@ -6699,7 +6699,7 @@
         "certainty": "averted",
         "who": "Congress's subpoena power"
       },
-      "reviewed": "2026-09-27"
+      "reviewed": "2026-10-15"
     },
     "cause_references": [
       {
@@ -24736,7 +24736,7 @@
     ],
     "status": "Pardons final and not subject to reversal. No legal challenge to the pardons themselves has been identified in sourcing reviewed (pardons are not generally subject to judicial review).",
     "rebuttal_anticipated": "Presidential clemency is an unreviewable constitutional power exercised across many administrations for allies and non-allies alike; a White House spokesperson's characterization of a case's merits, even if imprecise, is advocacy rhetoric rather than a falsifiable legal claim requiring correction.",
-    "comeback": "This entry does not dispute the President's legal authority to pardon -- it documents that the administration's own stated justification for these specific pardons is factually false on verifiable, undisputed timeline facts: the investigation, raids, and trial all occurred during Trump's own first term and under a judge he himself appointed, making 'Biden over-prosecution' impossible as a literal description of events, regardless of one's view of the pardons' wisdom. This is the same 'weaponized Biden DOJ' framing pattern this tracker documents in other pardons of political allies (e.g. trump-kelsey-campaign-finance-pardon-2025.json, involving a different Tennessee Republican official), where the pardoned individual's or administration's own rhetoric recast a conviction obtained through ordinary legal process as persecution.",
+    "comeback": "This entry does not dispute the President's legal authority to pardon -- it documents that the administration's own stated justification for these specific pardons is factually false on verifiable, undisputed timeline facts: the investigation, raids, and trial all occurred during Trump's own first term and under a judge he himself appointed, making 'Biden over-prosecution' impossible as a literal description of events, regardless of one's view of the pardons' wisdom. This is the same 'weaponized Biden DOJ' framing pattern this tracker documents in other pardons of political allies (e.g. the Kelsey pardon entry, involving a different Tennessee Republican official), where the pardoned individual's or administration's own rhetoric recast a conviction obtained through ordinary legal process as persecution.",
     "cause": "[TAP Analysis, not sourced] Consistent with this tracker's broader documented pattern of the administration pardoning political allies convicted of corruption while publicly reframing the underlying prosecutions as politically motivated, regardless of when or under which administration the prosecution actually occurred.",
     "confidence_note": "HIGH confidence -- the convictions, sentence, pardon, raid timeline, and judge's appointing president are all corroborated by NBC News's direct reporting and are not factually disputed by any party; the White House's own quoted statement is the source of the contradicted claim, not a third-party characterization.",
     "pull_quote": "A White House official justified the pardons by claiming ‘the Biden Department of Justice significantly over-prosecuted these individuals for a minor issue involving constituent mailers — which were billed at competitive prices, never received a complaint from legislators, and resulted in a net profit loss of less than $5,000.’",
@@ -24744,13 +24744,13 @@
       "incident_summary": "Trump pardoned former Tennessee House Speaker Glen Casada and aide Cade Cothren, convicted on 17 corruption charges, while the White House falsely blamed 'Biden over-prosecution' for a case that began, was raided, and was sentenced entirely under Trump-era officials.",
       "confidence_note": "High confidence -- NBC News reporting directly corroborates the conviction, sentence, timeline, and the White House's own quoted (and factually contradicted) statement."
     },
-    "last_verified": "2026-09-11",
+    "last_verified": "2026-10-15",
     "date_added": "2026-09-11",
     "narrative_override": {
       "headline": "Trump pardoned two Tennessee officials on 17 corruption charges, blaming 'Biden over-prosecution.'"
     },
     "date_of_action": "2025-09 (Casada sentenced) through 2025-11-10 (Trump pardons Casada and Cothren)",
-    "last_substantive_update": "2026-09-11",
+    "last_substantive_update": "2026-10-15",
     "glance": {
       "who": "Donald Trump (President)",
       "what": "Pardoned two Tennessee officials convicted on 17 counts; the White House blamed 'Biden over-prosecution'",
@@ -24759,7 +24759,7 @@
         "certainty": "documented",
         "who": "Accountability for public corruption"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-10-15"
     }
   },
   {
@@ -26333,9 +26333,9 @@
     "rebuttal_anticipated": "Likely defense: the presidential clemency power is constitutionally unreviewable and has always been exercised in ways critics of any administration characterize as favoring the well-connected, each individual pardon can be independently justified on its own facts (rehabilitation, disproportionate sentencing, procedural concerns), and a new anti-fraud task force targeting future conduct is not logically inconsistent with clemency for past convictions.",
     "comeback": "The specific concern is not that clemency power exists or is exercised, but the scale (70+ fraud pardons) and the documented pattern connecting a meaningful share of them to campaign or PAC contributions from the recipients or their families -- a pattern inconsistent with the fraud-enforcement priority the same administration simultaneously announced, and one that collectively erased roughly $700 million victims and taxpayers were owed in restitution.",
     "cause": "[TAP Analysis, not sourced] Consistent with the pattern this tracker documents elsewhere of clemency being extended to individually named donors and allies (the Kidan pardon entry, the Hernandez pardon entry) -- this entry documents the aggregate scale of that pattern specifically in fraud cases.",
-    "last_verified": "2026-09-12",
+    "last_verified": "2026-10-15",
     "date_added": "2026-08-06",
-    "confidence_note": "HIGH confidence on the aggregate pardon count, the $700 million restitution figure, and the specific named cases (Esformes, Melgen, Milton, Herrera Velutini) -- independently corroborated across The New York Times's own investigation and Rolling Stone's reporting, which documents specific contribution amounts and dates. MODERATE confidence on characterizing every individual pardon as contribution-motivated, since the Times' reporting establishes a pattern and specific documented examples rather than a confirmed quid pro quo finding for all 70+ cases. Re-verified 2026-08-06: the Schwartz pardon is independently corroborated via ProPublica's own dedicated investigation, including the unpaid civil judgments to victims' families. Updated 2026-08-12 (round 4 batch 28, cluster c0168): added the September 12, 2025 SEC dismissal of its own civil case against Milton, independently corroborated via Reuters -- shows the favorable treatment extending beyond the criminal pardon into a separate federal agency's civil enforcement action. Updated 2026-08-19 (round 4 batch 27): added the May 2026 bicameral congressional 'pay-to-play' oversight investigation (Sen. Welch, Reps. Min and Ruiz), independently corroborated across CBS News, Forbes, and the senators' own press release -- a real addition, since the entry previously documented only press investigative reporting and not the formal legislative-oversight response it prompted. Re-verified 2026-09-08 (batch 65): added the June 2026 records-preservation-request escalation, independently confirmed directly against the senators' own press release -- a real addition since the entry previously documented only the May 2026 investigation's launch, not this follow-on step. Added 2026-09-11 (round-4 backlog fold, cluster c0747): the Gentile restitution wipeout is HIGH confidence, directly confirmed via Politico's own December 3, 2025 reporting; see also doj-gentile-commutation-investigation-halted-2026.json for the fuller commutation/halted-investigation angle on the same clemency grant. Added 2026-09-12 (round-4 backlog fold, cluster c0746): the December 2, 2025 Leiweke pardon, the indictment/plea/$15 million OVG penalty, and the Gowdy-lobbying/golf detail are HIGH confidence, corroborated across NBC News, CNN, Bloomberg, and Billboard's independent confirmation of the Wall Street Journal's reporting. Unlike this entry's other named cases, no direct campaign-donation link to Trump was identified for Leiweke -- the connection documented here is personal lobbying access (a hired former congressman golfing with Trump), not a financial contribution, a distinct mechanism within the same broader pattern. Added 2026-09-12 (round-4 backlog fold, cluster c0770): the $660 million Milton restitution figure, the Marian Morgan Ponzi-scheme commutation, and Elizabeth Oyer's quote are HIGH confidence, directly read from the Washington Post article's own verbatim text (washingtonpost.com itself returned a 403; the text was instead directly fetched from its reproduction in a House Oversight Committee hearing record).",
+    "confidence_note": "HIGH confidence on the aggregate pardon count, the $700 million restitution figure, and the specific named cases (Esformes, Melgen, Milton, Herrera Velutini) -- independently corroborated across The New York Times's own investigation and Rolling Stone's reporting, which documents specific contribution amounts and dates. MODERATE confidence on characterizing every individual pardon as contribution-motivated, since the Times' reporting establishes a pattern and specific documented examples rather than a confirmed quid pro quo finding for all 70+ cases. Re-verified 2026-08-06: the Schwartz pardon is independently corroborated via ProPublica's own dedicated investigation, including the unpaid civil judgments to victims' families. Updated 2026-08-12 (round 4 batch 28, cluster c0168): added the September 12, 2025 SEC dismissal of its own civil case against Milton, independently corroborated via Reuters -- shows the favorable treatment extending beyond the criminal pardon into a separate federal agency's civil enforcement action. Updated 2026-08-19 (round 4 batch 27): added the May 2026 bicameral congressional 'pay-to-play' oversight investigation (Sen. Welch, Reps. Min and Ruiz), independently corroborated across CBS News, Forbes, and the senators' own press release -- a real addition, since the entry previously documented only press investigative reporting and not the formal legislative-oversight response it prompted. Re-verified 2026-09-08 (batch 65): added the June 2026 records-preservation-request escalation, independently confirmed directly against the senators' own press release -- a real addition since the entry previously documented only the May 2026 investigation's launch, not this follow-on step. Added 2026-09-11 (round-4 backlog fold, cluster c0747): the Gentile restitution wipeout is HIGH confidence, directly confirmed via Politico's own December 3, 2025 reporting; see also the entry on the halted Gentile investigation for the fuller commutation/halted-investigation angle on the same clemency grant. Added 2026-09-12 (round-4 backlog fold, cluster c0746): the December 2, 2025 Leiweke pardon, the indictment/plea/$15 million OVG penalty, and the Gowdy-lobbying/golf detail are HIGH confidence, corroborated across NBC News, CNN, Bloomberg, and Billboard's independent confirmation of the Wall Street Journal's reporting. Unlike this entry's other named cases, no direct campaign-donation link to Trump was identified for Leiweke -- the connection documented here is personal lobbying access (a hired former congressman golfing with Trump), not a financial contribution, a distinct mechanism within the same broader pattern. Added 2026-09-12 (round-4 backlog fold, cluster c0770): the $660 million Milton restitution figure, the Marian Morgan Ponzi-scheme commutation, and Elizabeth Oyer's quote are HIGH confidence, directly read from the Washington Post article's own verbatim text (washingtonpost.com itself returned a 403; the text was instead directly fetched from its reproduction in a House Oversight Committee hearing record).",
     "pull_quote": "Elizabeth Oyer, who served as U.S. Pardon Attorney for three years until being fired two months into Trump's second term, said of the pattern: ‘It's having a detrimental effect on victims and taxpayers, and it's a windfall to the people who committed crimes.’",
     "section_summaries": {
       "incident_summary": "The NYT found Trump has pardoned 70+ people convicted of fraud -- many donors or allies, wiping out $700M in restitution -- including major Medicare fraudsters Esformes and Melgen, and donors Milton and Herrera Velutini, even as Trump launched a new Vance-led anti-fraud task force days before the pattern was reported. WaPo later added the specific $660M restitution figure prosecutors sought from Milton and a further named case, Ponzi-schemer Marian Morgan, whose $17.5M restitution obligation was also wiped out.",
@@ -26343,7 +26343,7 @@
       "status": "The pardons are final; the congressional oversight probe has escalated with a records-preservation deadline, but no findings or responses have surfaced yet."
     },
     "date_of_action": "2025-04-23 (Trump pardons Walczak, waiving $4.4M restitution) through 2026-05 (Marian Morgan sentence commuted)",
-    "last_substantive_update": "2026-09-12",
+    "last_substantive_update": "2026-10-15",
     "glance": {
       "who": "Donald Trump (President)",
       "what": "The NYT counts 70+ fraud pardons, many to donors or allies, wiping out about $700M in restitution and fines",
@@ -26352,7 +26352,7 @@
         "certainty": "documented",
         "who": "Fraud victims owed restitution"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-10-15"
     },
     "cause_references": [
       {
@@ -26374,7 +26374,7 @@
           {
             "date": "2026-09-11",
             "label": "Added",
-            "text": "Added 2026-09-11 (round-4 backlog fold, cluster c0747): the Gentile restitution wipeout is HIGH confidence, directly confirmed via Politico's own December 3, 2025 reporting; see also doj-gentile-commutation-investigation-halted-2026.json for the fuller commutation/halted-investigation angle on the same clemency grant.",
+            "text": "Added 2026-09-11 (round-4 backlog fold, cluster c0747): the Gentile restitution wipeout is HIGH confidence, directly confirmed via Politico's own December 3, 2025 reporting; see also the entry on the halted Gentile investigation for the fuller commutation/halted-investigation angle on the same clemency grant.",
             "effective_date": "2026-09-11"
           },
           {
@@ -27704,7 +27704,7 @@
       },
       {
         "type": "news_report",
-        "description": "The Hill reported on March 12, 2025 that Kelsey had been indicted in 2021 over transferring $91,000 to a national organization that financed his 2016 House campaign ads, that Judge Waverly Crenshaw denied his attempts to change the charges as late as the previous month, and Kelsey's post: 'God used @realDonaldTrump to save me from the weaponized Biden DOJ'",
+        "description": "The Hill reported, in a story Yahoo syndicated on March 13, 2025, that Kelsey had been indicted in 2021 over transferring $91,000 to a national organization that financed his 2016 House campaign ads, that Judge Waverly Crenshaw denied his attempts to change the charges as late as the previous month, and Kelsey's post: 'God used @realDonaldTrump to save me from the weaponized Biden DOJ'",
         "source_url": "https://www.yahoo.com/news/former-lawmaker-says-trump-pardoned-142645252.html",
         "maps_to_element": "The underlying offense and the pardoned individual's public framing"
       },
