@@ -1,6 +1,6 @@
 {
  "version": 1,
- "as_of": "2026-10-14",
+ "as_of": "2026-10-15",
  "checks": {
   "abrego-garcia-vindictive-prosecution-2025-2026": {
    "0": {
@@ -2403,9 +2403,9 @@
   "boutros-broadview-six-grand-jury-misconduct-2026": {
    "0": {
     "state": "partly",
-    "why": "The transcripts directly document vouching, an improper ex parte juror conversation, and excusing a skeptical juror, but the source does not explicitly state an initial grand jury panel declined to indict -- that is only implied by an aside about \"unlimited tries\" and \"the second time is the charm.\"",
+    "why": "CBS describes the released transcripts showing vouching, ex parte conversations with two grand jurors, and Mecklenburg allegedly excusing a skeptical juror; it alludes to a 'previous grand jury' but does not state that an initial panel declined to indict, and it reports no denial by the prosecutor of the juror-excusal allegation.",
     "host": "cbsnews.com",
-    "date": "2026-09-15",
+    "date": "2026-10-15",
     "kind": "fact",
     "archive": false
    },
@@ -2430,6 +2430,30 @@
     "why": "The Sun-Times article directly confirms Judge Perry is weighing sanctions and a special counsel to investigate Boutros and others for contempt, that Boutros argued earlier this month that contempt power should be used with discretion, and that her ruling could come as soon as September.",
     "host": "chicago.suntimes.com",
     "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "supports",
+    "why": "The article reports Mecklenburg's retirement in a 16-page filing (dated Thursday in a Sept. 24 URL), her attorneys' acknowledgment of out-of-room juror contact and vouching, her denial of excusing jurors for 'opposition to the government's case,' the 'at every turn' front-office claim, and that the U.S. Attorney directed her to order an expedited copy of the transcript (the Oct. 9 session at which grand jurors rejected the case).",
+    "host": "chicago.suntimes.com",
+    "date": "2026-10-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "supports",
+    "why": "The article reports Perry's 'sole focus' quote, her requirement that evidence be 'under oath, under penalties of perjury,' leaving open a special prosecutor to investigate Boutros and others, enlisting William Baude to brief against Boutros' office, and Whalen's acknowledgment that communications might exist despite the March filing; the hearing (Thursday) was earlier set for Oct. 1.",
+    "host": "chicago.suntimes.com",
+    "date": "2026-10-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
+    "state": "supports",
+    "why": "The Tribune reports Perry's first formal discovery requests on Friday (a week after the Oct. 1 hearing) for outside communications on 'investigatory or charging decisions' and the email sending Boutros the expedited transcript, with replies, forwards and metadata, due Oct. 30, and that she unsealed a filing the same day disclosing the OPR investigation of the prosecutors 'and other Department employees.'",
+    "host": "yahoo.com",
+    "date": "2026-10-15",
     "kind": "fact",
     "archive": false
    }
@@ -9217,9 +9241,17 @@
    },
    "5": {
     "state": "supports",
-    "why": "Bloomberg Law confirms the exact case caption and filing date: Marrazzo v. Kennedy, D. Md., No. 1:25-cv-04144, Complaint 12/16/25; the article, reporting on the filing itself, contains no ruling on the merits, consistent with the re-verification finding no such ruling had occurred.",
+    "why": "Bloomberg Law's case line identifies Marrazzo v. Kennedy in D. Md. with the complaint dated 12/16/25.",
     "host": "news.bloomberglaw.com",
-    "date": "2026-09-15",
+    "date": "2026-10-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
+    "state": "partly",
+    "why": "The docket confirms the April 20, 2026 motion to dismiss by the named defendants, the May 26, 2026 opposition, and assignment to Judge Gallagher, but the provided text is truncated after a June 9 consent motion, so the June 12 reply and the absence of any ruling cannot be confirmed.",
+    "host": "courtlistener.com",
+    "date": "2026-10-15",
     "kind": "fact",
     "archive": false
    }
@@ -15497,9 +15529,9 @@
    },
    "1": {
     "state": "supports",
-    "why": "The Portland Press Herald directly quotes Dudek's statement, given to The New York Times, that he was 'ticked at the governor of Maine for not being real cordial to the president,' matching the claim.",
+    "why": "The Press Herald quotes Dudek telling the New York Times he was 'ticked at the governor of Maine for not being real cordial to the president' in explaining his cancellation of the newborn-registration program.",
     "host": "pressherald.com",
-    "date": "2026-09-15",
+    "date": "2026-10-15",
     "kind": "fact",
     "archive": false
    },
@@ -15513,9 +15545,17 @@
    },
    "3": {
     "state": "supports",
-    "why": "Central Maine (citing a ProPublica article) confirms Dudek offered a new, additional explanation in September 2025 -- that he deliberately worded the cancellation email so it would generate backlash and be quickly reversed, and that 'Do I care about Janet Mills? No' -- distinct from his earlier retaliation admission.",
+    "why": "The April 2, 2025 Oversight Democrats release quotes the staffer's warning and Dudek's 'Please cancel the contracts...petulant child' reply, and states Connolly called on him to resign and sit for a transcribed interview.",
+    "host": "oversightdemocrats.house.gov",
+    "date": "2026-10-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "supports",
+    "why": "Central Maine (URL dated 2025/09/09) reports Dudek told ProPublica he wrote the cancellation email knowing it would gain negative attention so the contracts would be reinstated, and quotes 'Do I care about Janet Mills? No.'",
     "host": "centralmaine.com",
-    "date": "2026-09-15",
+    "date": "2026-10-15",
     "kind": "fact",
     "archive": false
    }
@@ -15530,10 +15570,18 @@
     "archive": false
    },
    "1": {
-    "state": "partly",
-    "why": "Wizcase's own article confirms extensive detail on Stanley's role as a senior DOJ adviser and his prior hacking/piracy activity coming under scrutiny following the Reuters report (his active security clearance, AG Bondi's statement of confidence, the Internet Archive takedowns, and reactions from experts). This source, however, never mentions Fast Company, so it cannot confirm that outlet's reporting as well.",
+    "state": "supports",
+    "why": "Wizcase, citing Reuters' exclusive, describes Stanley as a DOJ senior advisor under scrutiny for past hacking and pirated-software distribution and says DOJ confirmed his active security clearance.",
     "host": "wizcase.com",
-    "date": "2026-09-15",
+    "date": "2026-10-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "2": {
+    "state": "supports",
+    "why": "Politico reports at least eight core DOGE staffers left per internal records and anonymous sources, names Chris Stanley as the Musk aide who helped install Starlink on the EEOB roof, and cites a senior White House official attributing departures to SGE end dates.",
+    "host": "yahoo.com",
+    "date": "2026-10-15",
     "kind": "fact",
     "archive": false
    }
@@ -15730,10 +15778,10 @@
   },
   "trump-blagojevich-ambassador-pardon-2025": {
    "0": {
-    "state": "partly",
-    "why": "The source confirms the ambassadorship consideration, the 2020 commutation, and the Vučić meeting, but never uses or references the term 'Trump-ocrat.'",
+    "state": "supports",
+    "why": "Politico reports, citing two people familiar, that Trump was considering Blagojevich for Serbia ambassador, notes the 2020 commutation, his 2024 rallying of Serbian Americans, and that Trump was also looking at Mark Brnovich; it separately reports his meeting with Vucic that week.",
     "host": "politico.com",
-    "date": "2026-09-15",
+    "date": "2026-10-15",
     "kind": "fact",
     "archive": false
    },
@@ -15754,10 +15802,26 @@
     "archive": false
    },
    "3": {
-    "state": "partly",
-    "why": "Fox News confirms RRB Strategies LLC's FARA registration to provide communications/public-affairs support for Dodik, the Republika Srpska president nicknamed the \"Bosnian Bear\" with Putin ties who has advocated secession to join Serbia, but the article does not state the specific April 2, 2025 registration date the claim asserts.",
+    "state": "supports",
+    "why": "Fox quotes the RRB Strategies registration statement on Republic of Srpska support, describes Srpska as a Serb-majority territory, the 'Bosnian Bear' nickname and Putin ties, and elsewhere notes Dodik long advocated Srpska's separation to join Serbia.",
     "host": "foxnews.com",
-    "date": "2026-09-15",
+    "date": "2026-10-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "supports",
+    "why": "EWB, dated 02.06.2026, reports the White House announced Young's nomination as ambassador to Serbia and describes his senior State Department posts and university presidencies.",
+    "host": "europeanwesternbalkans.com",
+    "date": "2026-10-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "supports",
+    "why": "Deseret News, published Sept 17, 2026, reports Young appeared Thursday before the Senate Foreign Relations Committee on his Trump nomination as ambassador to Serbia and seeks Senate confirmation.",
+    "host": "deseret.com",
+    "date": "2026-10-15",
     "kind": "fact",
     "archive": false
    }
@@ -17681,9 +17745,9 @@
   "trump-inspectors-general-mass-firing-2025": {
    "0": {
     "state": "supports",
-    "why": "Ossoff's release, dated February 5, 2025 (the week of the firings), states the terminations \"likely violated\" the 30-day congressional notice requirement of the IG Act and the 2022 independence act, and asks Trump to rescind the terminations.",
+    "why": "The February 5, 2025 release says Ossoff pressed the administration to rescind the 17 IG terminations and cites legal experts that they likely violated the 30-day written notice requirement.",
     "host": "ossoff.senate.gov",
-    "date": "2026-09-15",
+    "date": "2026-10-15",
     "kind": "fact",
     "archive": false
    },
@@ -17697,17 +17761,41 @@
    },
    "2": {
     "state": "supports",
-    "why": "Government Executive confirms Judge Ana C. Reyes's Wednesday, September 24, 2025 ruling finding the firings \"obviously\" unlawful for lacking the 30-day notice/rationale, while declining to order reinstatement because Trump could simply re-fire the same officials after providing the required notice.",
+    "why": "GovExec reports Reyes found it 'obvious' Trump broke the law by ignoring the 30-day notice and case-specific rationale requirements, but denied reinstatement because Trump could remove them again after notice.",
     "host": "govexec.com",
-    "date": "2026-09-15",
+    "date": "2026-10-15",
     "kind": "fact",
     "archive": false
    },
    "3": {
+    "state": "partly",
+    "why": "The opinion contains the quoted 'That much is obvious' line, the 'likely—indeed, certain' finding, the statement that it addresses 'only the non-merits factors,' and that the permanent-injunction motion fails; the excerpted text does not show the back-pay ruling or a stay pending Trump v. Slaughter.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-10-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
     "state": "supports",
-    "why": "The source confirms Hegseth's October 2025 memo, the 7-day credibility determination, the tracking of repeat complainants, and its explicit link to the broader 17-IG purge context.",
+    "why": "Reuters reports Hegseth's memo requires IG offices to decide within seven days whether tips have 'credible evidence' and to track 'repeat complainants,' and frames it as coming as Trump has fired at least 17 IGs government-wide.",
     "host": "reuters.com",
-    "date": "2026-09-15",
+    "date": "2026-10-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "supports",
+    "why": "The August 10, 2026 defendants' response agrees the case can be resolved on cross-motions for summary judgment, says Defendants 'have never disputed' the lack of notice, and argues post-Slaughter the President must have 'unfettered authority to remove Inspectors General.'",
+    "host": "storage.courtlistener.com",
+    "date": "2026-10-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
+    "state": "supports",
+    "why": "The plaintiffs' August 10, 2026 response states all parties agree cross-motions are the next step, argues the notice-and-reasons requirement is constitutional and that Trump v. Slaughter (June 29, 2026) does not resolve it, and presses back pay.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-10-15",
     "kind": "fact",
     "archive": false
    }
@@ -18074,10 +18162,10 @@
   },
   "trump-kelsey-campaign-finance-pardon-2025": {
    "0": {
-    "state": "partly",
-    "why": "CNBC confirms the guilty plea to a campaign-finance conspiracy and Kelsey's statement crediting Trump with saving him from a \"weaponized\" Biden DOJ, but this article does not state the ~$91,000 figure or name Judge Crenshaw or a February 2025 denial of reopening attempts.",
+    "state": "supports",
+    "why": "CNBC reports Kelsey, who pleaded guilty in a campaign finance conspiracy case, entered the Ashland camp Feb. 24, was pardoned 15 days into a 21-month sentence, and said he was targeted by the 'weaponized Biden DOJ.'",
     "host": "cnbc.com",
-    "date": "2026-09-15",
+    "date": "2026-10-15",
     "kind": "fact",
     "archive": false
    },
@@ -18091,17 +18179,41 @@
    },
    "2": {
     "state": "partly",
-    "why": "Tennessee Lookout confirms Kelsey lobbying lawmakers (Briggs, Hicks) to amend campaign-finance legislation to use his state account for legal fees after being denied by the Bureau of Ethics and Campaign Finance, but this specific article does not mention Sen. Brent Taylor or bill number SB 229 at all.",
-    "host": "tennesseelookout.com",
-    "date": "2026-09-15",
+    "why": "The Hill confirms the 2021 indictment over the $91,000 transfer, Crenshaw's denial 'as late as last month,' and the 'God used @realDonaldTrump' post; the provided text carries no publication date, so the March 12, 2025 date is not supported.",
+    "host": "yahoo.com",
+    "date": "2026-10-15",
     "kind": "fact",
     "archive": false
    },
    "3": {
     "state": "supports",
-    "why": "Tennessee Lookout confirms Briggs and Hicks declined to help further, Sen. Brent Taylor's amendment offer went nowhere, and the final-day amendment plus Speaker Sexton's exact quoted statement.",
+    "why": "WKRN quotes Johnson's 'Dude plead guilty, but sure' and Faison's 'Breaking the law is wrong, but the law that put Kelsey behind bars is unjust' X responses.",
+    "host": "yahoo.com",
+    "date": "2026-10-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "partly",
+    "why": "The Lookout confirms Briggs said Kelsey called him twice seeking an amendment to his campaign finance bill, that Kelsey contacted Hicks, and that the Bureau had turned down his request to use state funds for legal fees; the provided text gives no publication date, so April 9, 2025 is not supported.",
     "host": "tennesseelookout.com",
-    "date": "2026-09-15",
+    "date": "2026-10-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "supports",
+    "why": "The Lookout column reports Taylor drafted an amendment for Kelsey to go on SB229, would not carry it, did it as a 'courtesy to a former senator,' and that it covers people acquitted, with charges dropped or pardoned; the text says 'Thursday' rather than giving the April 11 date explicitly.",
+    "host": "tennesseelookout.com",
+    "date": "2026-10-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
+    "state": "supports",
+    "why": "The Lookout reports lawmakers declined his amendment and on the final day amended the bill to bar him tapping his account for the criminal case, quotes Sexton, and separately notes Briggs and Hicks declined while Taylor's amendment went nowhere.",
+    "host": "tennesseelookout.com",
+    "date": "2026-10-15",
     "kind": "fact",
     "archive": false
    }
@@ -18167,9 +18279,9 @@
    },
    "1": {
     "state": "supports",
-    "why": "Spotlight PA confirms the $217 million combined restitution order and Mackenzie's office denying it discussed the pardon with the White House while declining to say whether it would keep the donation.",
+    "why": "Spotlight PA, via its NOTUS partnership, gives the June 30 donation and July 3 pardon, calls Kidan a key Abramoff-scandal figure (elsewhere noting his guilty plea to conspiracy and wire fraud), and reports Mackenzie's office denied discussing the pardon and declined to say if it would keep the donation.",
     "host": "spotlightpa.org",
-    "date": "2026-09-15",
+    "date": "2026-10-15",
     "kind": "fact",
     "archive": false
    },
@@ -18182,11 +18294,27 @@
     "archive": false
    },
    "3": {
-    "state": "partly",
-    "why": "The Daily Beast article confirms the pardon came days after Kidan's gift to Mackenzie, but the article does not explicitly frame this as \"part of a broader pattern of clemency decisions benefiting political and financial allies\" -- that broader characterization is not present in the article's text.",
+    "state": "supports",
+    "why": "The Daily Beast states Trump pardoned Kidan days after a $2,600 check landed with Rep. Ryan Mackenzie, a vulnerable Pennsylvania Republican, and that Kidan went to prison over the Abramoff scandal.",
     "host": "thedailybeast.com",
-    "date": "2026-09-15",
-    "kind": "interpretation",
+    "date": "2026-10-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "partly",
+    "why": "The DOJ list records Kidan's district, sentence, restitution, sentencing date and offenses exactly as claimed, but the date-and-count header for his group (July 3, 2026, 17 pardons) is cut from the provided text.",
+    "host": "justice.gov",
+    "date": "2026-10-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "supports",
+    "why": "Florida Bulldog reports the pardon dissolved Kidan's felon status and $21.7 million-plus-interest restitution, that his Miami court file shows no payment, that his name is absent from the Pardon Attorney's clemency case search, and separately quotes the White House's staffing-career rationale.",
+    "host": "floridabulldog.org",
+    "date": "2026-10-15",
+    "kind": "fact",
     "archive": false
    }
   },

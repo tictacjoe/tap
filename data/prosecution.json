@@ -3725,11 +3725,11 @@
   {
     "id": "boutros-broadview-six-grand-jury-misconduct-2026",
     "official": "Andrew Boutros, U.S. Attorney for the Northern District of Illinois",
-    "offense_category": "Prosecutorial Misconduct in Grand Jury Proceedings -- U.S. Attorney personally confirmed the misconduct and dismissed all charges; contested as to individual prosecutor culpability versus office-wide accountability, but the misconduct finding itself is not disputed by DOJ",
+    "offense_category": "Prosecutorial Misconduct in Grand Jury Proceedings -- U.S. Attorney personally confirmed the misconduct and dismissed all charges; contested as to individual prosecutor culpability versus office-wide accountability, but the misconduct finding itself is not disputed by DOJ, though the now-retired lead prosecutor disputes the juror-exclusion part",
     "contested": false,
-    "incident_summary": "Federal prosecutors dismissed all charges against the 'Broadview Six,' a group of ICE-facility protesters, after a federal judge detailed prosecutorial misconduct during the grand jury proceedings that had produced the indictment. **Released grand jury transcripts showed prosecutors improperly 'vouched' for the case to grand jurors (suggesting the case wouldn't have been brought if it weren't just), a prosecutor had an improper conversation with a grand juror outside the jury room, and grand jurors who expressed skepticism about the case were prevented from participating further after an initial panel declined to indict.** Defense attorneys further alleged prosecutors intentionally redacted portions of the grand jury transcripts to conceal the misconduct from the court; presiding Judge Perry said she was 'incredibly shocked' by the government's redactions. U.S. Attorney for the Northern District of Illinois Andrew Boutros personally attended the dismissal hearing to acknowledge the case was dismissed due to improper handling of the grand jury process by the lead prosecutor.",
+    "incident_summary": "Federal prosecutors dismissed all charges against the 'Broadview Six,' a group of ICE-facility protesters, after a federal judge detailed prosecutorial misconduct during the grand jury proceedings that had produced the indictment. **Released grand jury transcripts showed prosecutors improperly 'vouched' for the case to grand jurors (suggesting the case wouldn't have been brought if it weren't just), a prosecutor had an improper conversation with a grand juror outside the jury room, and, according to Judge Perry, grand jurors who expressed skepticism about the case were excused after an initial panel declined to indict (the prosecutor denies excusing any juror for opposing the case).** Defense attorneys further alleged prosecutors intentionally redacted portions of the grand jury transcripts to conceal the misconduct from the court; presiding Judge Perry said she was 'incredibly shocked' by the government's redactions. U.S. Attorney for the Northern District of Illinois Andrew Boutros personally attended the dismissal hearing to acknowledge the case was dismissed due to improper handling of the grand jury process by the lead prosecutor.",
     "elements_required": [
-      "A federal judge and the U.S. Attorney's own office both confirmed specific grand jury misconduct occurred -- improper prosecutorial vouching, an improper out-of-room conversation with a juror, and exclusion of skeptical jurors after an initial panel declined to indict -- not merely a defense characterization",
+      "A federal judge and the U.S. Attorney's own office both confirmed specific grand jury misconduct occurred -- improper prosecutorial vouching and an improper out-of-room conversation with a juror, both later admitted by the prosecutor, plus the judge's account that skeptical jurors were excused after an initial panel declined to indict, which the prosecutor disputes -- not merely a defense characterization",
       "Defense attorneys allege the transcript redactions were intentional attempts to conceal the misconduct from judicial review, a claim the presiding judge's own reaction ('incredibly shocked') lends credibility to, though it remains a characterization rather than an independent finding of intent",
       "The U.S. Attorney personally appeared to acknowledge the misconduct and dismiss the case, rather than the matter being resolved through a lower-level or unexplained withdrawal",
       "The underlying prosecution targeted protesters at an ICE facility, tying this entry to the broader documented pattern of DOJ action against immigration-policy critics and protesters"
@@ -3737,7 +3737,7 @@
     "evidence": [
       {
         "type": "court_filing",
-        "description": "Released grand jury transcripts documenting prosecutorial vouching, an improper juror conversation, and the exclusion of skeptical grand jurors from further participation after an initial panel declined to indict",
+        "description": "Released grand jury transcripts documenting prosecutorial vouching, an improper juror conversation, and the alleged excusing of skeptical grand jurors (disputed by the prosecutor) after an initial panel declined to indict",
         "source_url": "https://www.cbsnews.com/chicago/news/broadview-6-grand-jury-transcripts-partially-released-alleged-prosecutor-misconduct/",
         "maps_to_element": "Documents the specific grand jury misconduct via the transcripts themselves, not characterization alone"
       },
@@ -3758,22 +3758,40 @@
         "description": "U.S. District Judge April Perry is now weighing whether to impose sanctions and/or appoint an independent special counsel to investigate potential criminal contempt by U.S. Attorney Andrew Boutros and other DOJ officials involved in the grand jury misconduct; the former defendants requested both remedies plus attorney's fees, which Boutros's office has agreed not to contest. In a 52-page filing in August 2026, Boutros acknowledged 'mistakes were made' but argued sanctions and a special counsel are unnecessary, citing reforms already implemented and stating the court's disapproval 'has been clearly heard.' Defense attorneys' concluding briefs are due September 1, 2026, and Perry's ruling could come as soon as September 2026.",
         "source_url": "https://chicago.suntimes.com/crime/2026/08/17/broadview-six-judge-april-perry-trump-vance",
         "maps_to_element": "Disciplinary/accountability status for the individual prosecutor(s) and U.S. Attorney -- previously unresolved, now actively pending a court decision"
+      },
+      {
+        "type": "court_filing",
+        "description": "In a September 24, 2026 court filing announcing her retirement from the Justice Department, lead prosecutor Sheri Mecklenburg acknowledged through her attorneys that she spoke with grand jurors outside the grand jury room and engaged in vouching, but denied that she excused any grand juror based on 'opposition to the government's case'; her attorneys said she followed the instructions of Boutros's front office 'at every turn' and that Boutros directed her to order an expedited copy of the transcript of an earlier grand jury session that declined to indict.",
+        "source_url": "https://chicago.suntimes.com/immigration/2026/09/24/broadview-six-sheri-mecklenburg",
+        "maps_to_element": "The prosecutor's own admission of the vouching and out-of-room juror contact, her denial of the juror-exclusion finding, and her account of the U.S. Attorney's front-office involvement"
+      },
+      {
+        "type": "court_filing",
+        "description": "At an October 1, 2026 hearing, Judge Perry ruled that further fact-finding 'under oath, under penalties of perjury' is needed before deciding on sanctions or criminal contempt, said her 'sole focus' is 'lack of candor, concealment of material facts, or other misconduct that occurred before me,' left open appointing a special prosecutor to investigate Boutros and others, and enlisted University of Chicago law professor William Baude to brief the opposing side; a lawyer for Boutros's office acknowledged communications with outside officials might exist despite a March filing saying there were none.",
+        "source_url": "https://chicago.suntimes.com/crime/2026/10/01/broadview-six-perry-boutros-mecklenburg",
+        "maps_to_element": "Disciplinary/accountability status for the U.S. Attorney's office -- still unresolved, now in a court-ordered under-oath fact-finding phase"
+      },
+      {
+        "type": "court_filing",
+        "description": "On October 9, 2026, in her first formal discovery requests, Judge Perry ordered Boutros's office to produce, by October 30, any communications with anyone outside the office about investigatory or charging decisions, plus the email sending Boutros an expedited grand jury transcript, with replies, forwards and metadata; an unsealed government filing the same day confirmed DOJ's Office of Professional Responsibility is investigating the conduct of the prosecutors 'and other Department employees' in the case.",
+        "source_url": "https://www.yahoo.com/news/us/articles/broadview-six-judge-requests-us-145600016.html",
+        "maps_to_element": "Disciplinary/accountability status for the U.S. Attorney and prosecutors -- court discovery under way and a parallel DOJ OPR inquiry confirmed"
       }
     ],
-    "status": "Resolved as to the charges -- all charges against the Broadview Six were dismissed. As of this update, disciplinary accountability remains unresolved but is now actively before the court: Judge April Perry is weighing sanctions and/or appointment of an independent special counsel to investigate potential criminal contempt by Boutros and other prosecutors, with defense final briefs due September 1, 2026 and a ruling possible as soon as September 2026. Boutros has acknowledged 'mistakes were made' while opposing sanctions and a special counsel, citing internal reforms.",
+    "status": "All charges dismissed May 21, 2026. No sanctions ruling yet: Judge Perry has ordered under-oath fact-finding on whether Boutros's office misled her, kept a contempt special prosecutor open, and set an Oct. 30 deadline for office communications and an email to Boutros. DOJ's OPR is also probing.",
     "rebuttal_anticipated": "DOJ could argue that dismissing the case and publicly acknowledging the misconduct demonstrates the system's self-correcting integrity working as intended, and that isolated prosecutorial errors by one individual don't establish an office-wide or administration-wide pattern.",
     "comeback": "The self-correction argument cuts against DOJ here: the misconduct was severe enough (vouching, improper juror contact, alleged intentional transcript concealment) that the presiding judge herself was 'incredibly shocked,' and it occurred in a case specifically targeting protesters criticizing the administration's immigration enforcement -- a pattern of targeting critics that recurs across other entries in this tracker, distinguishing this from an isolated, politically-neutral prosecutorial error.",
     "cause": "[TAP Analysis, not sourced] Consistent with the broader documented pattern in this tracker of DOJ using irregular or improper process against individuals and groups protesting the administration's immigration policies.",
-    "confidence_note": "HIGH confidence -- the misconduct is confirmed by the U.S. Attorney's own office, not merely alleged by the defense, and corroborated across many independent local and national outlets (CBS Chicago, ABC7 Chicago, WBEZ, Block Club Chicago, WTTW, Chicago Sun-Times, Capitol News Illinois). The intentional-concealment characterization of the redactions is a defense allegation the judge's reaction lends credibility to, but is not itself an independent judicial finding of intent. Real correction, August 2026 recheck: the entry's prior status line said no disciplinary action had been identified; Judge Perry is now actively considering sanctions and/or a special counsel appointment, with a decision expected as soon as September 2026 and Boutros having filed a formal response opposing both remedies. Directly sourced to the Chicago Sun-Times's August 17, 2026 reporting.",
+    "confidence_note": "HIGH confidence -- the misconduct is confirmed by the U.S. Attorney's own office, not merely alleged by the defense, and corroborated across many independent local and national outlets (CBS Chicago, ABC7 Chicago, WBEZ, Block Club Chicago, WTTW, Chicago Sun-Times, Capitol News Illinois). The intentional-concealment characterization of the redactions is a defense allegation the judge's reaction lends credibility to, but is not itself an independent judicial finding of intent. Real correction, August 2026 recheck: the entry's prior status line said no disciplinary action had been identified; Judge Perry is now actively considering sanctions and/or a special counsel appointment, with a decision expected as soon as September 2026 and Boutros having filed a formal response opposing both remedies. Directly sourced to the Chicago Sun-Times's August 17, 2026 reporting. Update 2026-10-15: Mecklenburg, the lead prosecutor, has since admitted the vouching and out-of-room juror contact but denies excusing any grand juror for opposing the case, so the juror-exclusion point now rests on Judge Perry's account and the transcripts and is disputed by the prosecutor; it is not a settled finding. Judge Perry has made no finding of intentional misconduct and has said she is reaching no conclusions yet. Directly sourced to Chicago Sun-Times reporting of September 24 and October 1, 2026 and Chicago Tribune reporting of the October 9 discovery order.",
     "pull_quote": "Judge Perry said she was “incredibly shocked” by the government's redactions, after defense attorneys alleged prosecutors had intentionally concealed the grand jury misconduct from the court.",
-    "last_verified": "2026-08-18",
+    "last_verified": "2026-10-15",
     "date_added": "2026-08-02",
     "section_summaries": {
-      "incident_summary": "Federal prosecutors dismissed all charges against the 'Broadview Six' ICE-facility protesters after a judge and the U.S. Attorney's own office confirmed grand jury misconduct, including improper vouching, an improper juror conversation, and alleged intentional transcript concealment.",
-      "confidence_note": "The misconduct is confirmed by DOJ's own office; as of August 2026, a federal judge is actively weighing sanctions and a special counsel investigation, with a decision possible by September 2026."
+      "incident_summary": "Prosecutors dropped all charges against the 'Broadview Six' ICE protesters after grand jury transcripts showed vouching and improper juror contact; the judge also said skeptical jurors were excused.",
+      "confidence_note": "Vouching and juror contact are admitted; the juror-exclusion point is disputed. A judge is now running under-oath fact-finding on possible sanctions or contempt, with no ruling yet."
     },
-    "date_of_action": "2026-05-21 (source publish date, event date not stated in reporting)",
-    "last_substantive_update": "2026-08-18",
+    "date_of_action": "2026-05-21",
+    "last_substantive_update": "2026-10-15",
     "glance": {
       "who": "Andrew Boutros (U.S. Attorney, N.D. Illinois)",
       "what": "Boutros's office committed grand jury misconduct in the Broadview Six case; all charges were dismissed",
@@ -3782,7 +3800,20 @@
         "certainty": "documented",
         "who": "Broadview Six ICE-facility protesters"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-10-15"
+    },
+    "timeline": {
+      "confidence_note": {
+        "base": "HIGH confidence -- the misconduct is confirmed by the U.S. Attorney's own office, not merely alleged by the defense, and corroborated across many independent local and national outlets (CBS Chicago, ABC7 Chicago, WBEZ, Block Club Chicago, WTTW, Chicago Sun-Times, Capitol News Illinois). The intentional-concealment characterization of the redactions is a defense allegation the judge's reaction lends credibility to, but is not itself an independent judicial finding of intent. Real correction, August 2026 recheck: the entry's prior status line said no disciplinary action had been identified; Judge Perry is now actively considering sanctions and/or a special counsel appointment, with a decision expected as soon as September 2026 and Boutros having filed a formal response opposing both remedies. Directly sourced to the Chicago Sun-Times's August 17, 2026 reporting.",
+        "updates": [
+          {
+            "date": "2026-10-15",
+            "label": "Update",
+            "text": "Update 2026-10-15: Mecklenburg, the lead prosecutor, has since admitted the vouching and out-of-room juror contact but denies excusing any grand juror for opposing the case, so the juror-exclusion point now rests on Judge Perry's account and the transcripts and is disputed by the prosecutor; it is not a settled finding. Judge Perry has made no finding of intentional misconduct and has said she is reaching no conclusions yet. Directly sourced to Chicago Sun-Times reporting of September 24 and October 1, 2026 and Chicago Tribune reporting of the October 9 discovery order.",
+            "effective_date": "2026-10-15"
+          }
+        ]
+      }
     }
   },
   {
@@ -14637,7 +14668,7 @@
     "id": "kennedy-niaid-whistleblower-retaliation-2025",
     "official": "Robert F. Kennedy Jr., Secretary of Health and Human Services",
     "offense_category": "Whistleblower Protection Act / First Amendment Retaliation Against Federal Employees -- NOT charged criminally; challenged via a federal civil lawsuit and Office of Special Counsel complaints, not criminal prosecution",
-    "incident_summary": "On September 4, 2025, two former senior NIH officials -- Dr. Jeanne Marrazzo, former director of the National Institute of Allergy and Infectious Diseases (NIAID, the position Dr. Anthony Fauci previously held), and Dr. Kathleen Neuzil, former director of NIH's Fogarty International Center -- filed a joint whistleblower complaint with the U.S. Office of Special Counsel alleging they were forced out of their positions in retaliation for objecting to the cancellation of research grants and clinical trials, the politicization of scientific decisions, and what they described as baseless hostility toward vaccines from newly installed NIH leadership. Marrazzo, who had been placed on indefinite leave in March 2025, alleged Principal Deputy NIAID Director Dr. Matthew Memoli made statements mirroring Kennedy's views that 'vaccines are unnecessary if populations are healthy' and that NIH 'should not focus on vaccines.' Neuzil, placed on administrative leave April 12, 2025 before involuntarily resigning, separately objected to NIH canceling grants based on what she called 'anti-South Africa hostility' and an incorrect belief that certain grants advanced diversity, equity, and inclusion goals. Both officials' complaint also alleged that a $500 million universal-flu-vaccine program NIH awarded in May 2025 bypassed normal scientific peer review despite relying on technology multiple scientists described as badly outdated. **Twenty-two days after filing the OSC complaint, on September 26, 2025, Secretary Kennedy fired Marrazzo outright.** Marrazzo subsequently sued in the U.S. District Court for the District of Maryland, naming Kennedy, NIH Director Jay Bhattacharya, Memoli, and NIH as defendants, alleging the termination violated the Fifth Amendment's due process guarantee, the Civil Service Reform Act of 1978, the Administrative Procedure Act, the First Amendment, and the Whistleblower Protection Act.",
+    "incident_summary": "On September 4, 2025, two former senior NIH officials -- Dr. Jeanne Marrazzo, former director of the National Institute of Allergy and Infectious Diseases (NIAID, the position Dr. Anthony Fauci previously held), and Dr. Kathleen Neuzil, former director of NIH's Fogarty International Center -- filed a joint whistleblower complaint with the U.S. Office of Special Counsel alleging they were forced out of their positions in retaliation for objecting to the cancellation of research grants and clinical trials, the politicization of scientific decisions, and what they described as baseless hostility toward vaccines from newly installed NIH leadership. Marrazzo, who had been placed on indefinite leave in March 2025, alleged Principal Deputy NIAID Director Dr. Matthew Memoli made statements mirroring Kennedy's views that 'vaccines are unnecessary if populations are healthy' and that NIH 'should not focus on vaccines.' Neuzil, placed on administrative leave April 12, 2025 before involuntarily resigning, separately objected to NIH canceling grants based on what she called 'anti-South Africa hostility' and an incorrect belief that certain grants advanced diversity, equity, and inclusion goals. Both officials' complaint also alleged that a $500 million universal-flu-vaccine program NIH awarded in May 2025 bypassed normal scientific peer review despite relying on technology multiple scientists described as badly outdated. **Twenty-two days after filing the OSC complaint, on September 26, 2025, Secretary Kennedy fired Marrazzo outright.** Marrazzo subsequently sued in the U.S. District Court for the District of Maryland, naming Kennedy, HHS, NIH Director Jay Bhattacharya, NIH, and Memoli as defendants, alleging the termination violated the Fifth Amendment's due process guarantee, the Civil Service Reform Act of 1978, the Administrative Procedure Act, the First Amendment, and the Whistleblower Protection Act.",
     "contested": false,
     "elements_required": [
       "A federal employee engaged in protected whistleblowing activity (filing an OSC complaint alleging agency wrongdoing)",
@@ -14678,18 +14709,24 @@
       },
       {
         "type": "public_record",
-        "description": "Re-verification confirms Marrazzo v. Kennedy (D. Md., 1:25-cv-04144) was filed December 16, 2025; no ruling on the merits or any dispositive motion was identified in sourcing reviewed as of this recheck",
+        "description": "Bloomberg Law reported that Marrazzo's suit, Marrazzo v. Kennedy (D. Md.), was filed December 16, 2025",
         "source_url": "https://news.bloomberglaw.com/health-law-and-business/rfk-jr-sued-by-fauci-successor-alleging-illegal-removal-at-nih",
+        "maps_to_element": "Current litigation status"
+      },
+      {
+        "type": "court_filing",
+        "description": "The Marrazzo v. Kennedy docket (D. Md., No. 8:25-cv-04144) shows the defendants (Kennedy, Bhattacharya, Memoli, HHS and NIH) filed a motion to dismiss for lack of jurisdiction on April 20, 2026; Marrazzo filed her opposition May 26, 2026 and the defendants replied June 12, 2026. The case is assigned to Judge Stephanie A. Gallagher, and no ruling on the motion appears on the docket",
+        "source_url": "https://www.courtlistener.com/docket/72048676/marrazzo-v-kennedy/",
         "maps_to_element": "Current litigation status"
       }
     ],
-    "status": "Marrazzo's federal lawsuit was filed in the U.S. District Court for the District of Maryland; no ruling on the merits was identified in sourcing reviewed as of this entry's addition. Neuzil's OSC complaint remains a separate, non-litigated administrative filing as of the same date. No criminal charges, as this is a civil whistleblower-retaliation and employment matter.",
-    "rebuttal_anticipated": "The administration would likely argue Kennedy retains independent management authority over NIH leadership appointments and removals, that Marrazzo's and Memoli's underlying policy disagreement over vaccine research priorities reflects a legitimate difference in scientific judgment rather than retaliation, and that the termination timing, while proximate to the OSC filing, does not by itself establish retaliatory intent.",
+    "status": "Marrazzo's federal suit (D. Md., filed December 16, 2025) is pending: the defendants moved to dismiss for lack of jurisdiction on April 20, 2026, briefing closed June 12, and no ruling appears on the public docket. Neuzil's OSC complaint has no reported outcome. No criminal charges.",
+    "rebuttal_anticipated": "The administration would likely argue Kennedy retains independent management authority over NIH leadership appointments and removals, that Marrazzo's and Memoli's underlying policy disagreement over vaccine research priorities reflects a legitimate difference in scientific judgment rather than retaliation, and that the termination timing, while proximate to the OSC filing, does not by itself establish retaliatory intent. In the lawsuit itself, the defendants' first response has been a motion to dismiss for lack of jurisdiction, filed April 20, 2026.",
     "comeback": "The 22-day gap between a formal federal whistleblower filing and an outright termination is a short enough window that, combined with the complaint's specific factual allegations (named officials' anti-vaccine statements, a $500 million contract that bypassed peer review) and Marrazzo's own on-record account of being told the administration found her 'inconvenient,' supports the retaliation inference the elements above require -- this is the same close-in-time-plus-specific-allegations pattern already documented in this dataset's Zeldin dissent-letter entry, applied here to NIH leadership rather than rank-and-file scientists.",
     "cause": "[TAP Analysis, not sourced] Consistent with the pattern already documented across multiple entries in this dataset (Zeldin's discipline of EPA dissent-letter signatories, Chavez-DeRemer's retaliation-driven resignation): named officials who publicly objected to politically-driven changes in their agencies' scientific or research decisions were removed shortly after doing so, regardless of the underlying policy merits of the dispute itself.",
-    "last_verified": "2026-08-19",
+    "last_verified": "2026-10-15",
     "date_added": "2026-08-11",
-    "confidence_note": "HIGH confidence on the timeline and core facts -- the OSC complaint's filing date, its specific allegations, Marrazzo's firing date and the 22-day gap, and the subsequent federal lawsuit and its named defendants are all independently corroborated across STAT News, CBS News, Katz Banks Kumin (the officials' own law firm, corroborated rather than sole-sourced), FierceBiotech, and Science (AAAS). The underlying policy dispute over vaccine research priorities is genuinely contested and outside this entry's scope; this entry documents the retaliation claim's factual timeline and legal posture, not a judgment on the vaccine-policy merits themselves. Re-verified 2026-08-19: confirmed Marrazzo v. Kennedy (D. Md., 1:25-cv-04144) filed December 16, 2025; no ruling identified since.",
+    "confidence_note": "HIGH confidence on the timeline and core facts -- the OSC complaint's filing date, its specific allegations, Marrazzo's firing date and the 22-day gap, and the subsequent federal lawsuit and its named defendants are all independently corroborated across STAT News, CBS News, Katz Banks Kumin (the officials' own law firm, corroborated rather than sole-sourced), FierceBiotech, and Science (AAAS). The underlying policy dispute over vaccine research priorities is genuinely contested and outside this entry's scope; this entry documents the retaliation claim's factual timeline and legal posture, not a judgment on the vaccine-policy merits themselves. Re-verified 2026-08-19: confirmed Marrazzo v. Kennedy (D. Md., 8:25-cv-04144) filed December 16, 2025; no ruling identified since. Re-verified 2026-10-15: the court docket shows the defendants' April 20, 2026 motion to dismiss for lack of jurisdiction, fully briefed by June 12, 2026, with no ruling on the docket (CourtListener's copy was last refreshed June 30, 2026); no reported outcome for Neuzil's OSC complaint.",
     "pull_quote": "Marrazzo alleged Principal Deputy NIAID Director Dr. Matthew Memoli told her “vaccines are unnecessary if populations are healthy” and that NIH “should not focus on vaccines.”",
     "section_summaries": {
       "incident_summary": "Two former senior NIH officials say they were forced out for objecting to vaccine-hostile policy and grant cuts; one was fired 22 days after filing her complaint.",
@@ -14699,7 +14736,7 @@
       "headline": "Two senior NIH officials say they were forced out for objecting to vaccine-hostile cuts."
     },
     "date_of_action": "2025-09-04 (Marrazzo/Neuzil file whistleblower complaint) through 2025-09-26 (Kennedy fires Marrazzo)",
-    "last_substantive_update": "2026-08-19",
+    "last_substantive_update": "2026-10-15",
     "glance": {
       "who": "Robert F. Kennedy Jr. (HHS Secretary)",
       "what": "Fired senior NIH official Marrazzo 22 days after a whistleblower complaint over vaccine-hostile policy",
@@ -14708,7 +14745,7 @@
         "certainty": "alleged",
         "who": "NIH officials Marrazzo and Neuzil"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-10-15"
     }
   },
   {
@@ -24001,7 +24038,7 @@
     "official": "Leland Dudek, Acting Commissioner of the Social Security Administration",
     "offense_category": "Canceling a State's Vital-Records Service Contract as Admitted Political Retaliation Against Its Governor -- an abuse-of-power and improper-use-of-office claim, not a criminal charge",
     "contested": false,
-    "incident_summary": "On March 5, 2025, Acting SSA Commissioner Leland Dudek ordered the cancellation of the agency's longstanding contracts with the State of Maine that automatically processed Social Security numbers for newborns at hospitals and death certificates from funeral homes -- contracts that, if actually terminated, would have forced Maine parents to travel to a federal Social Security office in person to register a newborn. Emails later obtained by the Bangor Daily News showed Dudek ordered the cancellation explicitly as retaliation against Democratic Governor Janet Mills, after watching her publicly clash with President Trump over transgender-athlete policy at a White House event -- **Dudek wrote to staff, 'Please cancel the contracts. While our improper payments will go up, and fraudsters may compromise identities, no money will go from the public trust to a petulant child,' and separately told reporters he had been 'ticked' at Mills for 'not being real cordial to the president.'** SSA reversed the cancellation within 48 hours amid bipartisan backlash and calls for Dudek's resignation, and Dudek apologized to Mainers -- though he later offered additional, non-retaliatory justifications for the brief cancellation in September 2025 reporting.",
+    "incident_summary": "On February 27, 2025, Acting SSA Commissioner Leland Dudek ordered the cancellation of the agency's longstanding contracts with the State of Maine that automatically processed Social Security numbers for newborns at hospitals and death certificates from funeral homes -- contracts whose termination, which took effect March 6, required Maine parents to go to a federal Social Security office in person to register a newborn. Emails later obtained by House Oversight Committee Democrats showed Dudek ordered the cancellation over a staffer's warning of improper payments and identity theft; Dudek has said he made the decision after watching Democratic Governor Janet Mills publicly clash with President Trump over transgender-athlete policy at a White House event -- **Dudek wrote to staff, 'Please cancel the contracts. While our improper payments will go up, and fraudsters may compromise identities, no money will go from the public trust to a petulant child,' and separately told The New York Times he had been 'ticked' at Mills for 'not being real cordial to the president.'** SSA reinstated both contracts on March 7 amid bipartisan backlash, and Dudek apologized to Mainers; Democrats later called for his resignation. Dudek has since offered other explanations, including a September 2025 claim that he deliberately worded his order so it would be reversed.",
     "elements_required": [
       "Dudek, as Acting Commissioner, ordered cancellation of a specific state's federal service contract",
       "Dudek's own contemporaneous email and on-the-record remarks admit the decision was motivated by personal irritation at the governor's political conduct, not a stated policy or fraud rationale",
@@ -24017,7 +24054,7 @@
       },
       {
         "type": "news_report",
-        "description": "Portland Press Herald reported Dudek told reporters he ended the newborn-registration program because he was 'ticked' at Mills for 'not being real cordial to the president'",
+        "description": "Portland Press Herald reported Dudek told The New York Times he ended the newborn-registration program because he was 'ticked' at Mills for 'not being real cordial to the president'",
         "source_url": "https://www.pressherald.com/2025/03/25/social-security-official-ended-program-for-maine-newborns-because-he-was-ticked-at-mills/",
         "maps_to_element": "On-the-record admission of retaliatory motive, corroborating the email"
       },
@@ -24028,29 +24065,35 @@
         "maps_to_element": "Contemporaneous accountability response"
       },
       {
+        "type": "public_record",
+        "description": "On April 2, 2025, House Oversight Committee Democrats released SSA emails showing that on February 27, 2025, after a staffer warned that terminating the Maine contracts 'would result in improper payments and potential for identity theft,' Dudek replied, 'Please cancel the contracts. While our improper payments will go up, and fraudsters may compromise identities, no money will go from the public trust to a petulant child'; Ranking Member Connolly called on him to resign and sit for a transcribed interview",
+        "source_url": "https://oversightdemocrats.house.gov/news/press-releases/ranking-member-connolly-calls-ssa-acting-commissioner-dudek-resign-after-emails",
+        "maps_to_element": "Dudek's own contemporaneous email admitting the decision was punitive, despite staff warnings"
+      },
+      {
         "type": "news_report",
-        "description": "Central Maine reported Dudek later, in September 2025, offered additional non-retaliatory reasons for the brief cancellation",
+        "description": "Central Maine reported that Dudek told ProPublica in September 2025 that he wrote his February cancellation email so it would draw negative attention and the order would be quickly reversed; he also said, 'Do I care about Janet Mills? No.'",
         "source_url": "https://www.centralmaine.com/2025/09/09/former-social-security-leader-gives-new-reasons-for-brief-cancellation-of-maine-birth-registry-contracts/",
         "maps_to_element": "Subsequent official response/rebuttal on the record"
       }
     ],
-    "status": "Reversed within 48 hours of the March 5, 2025 order, following public disclosure and bipartisan criticism. Dudek apologized to Mainers. No further contracts or agency action against Maine specifically have been identified in sourcing reviewed as of this entry's addition.",
-    "rebuttal_anticipated": "Dudek could argue (and later did, per the September 2025 Central Maine follow-up) that the cancellation was also motivated by legitimate agency concerns -- e.g., that the automated hospital/funeral-home data-sharing arrangement created fraud or improper-payment risk -- rather than purely personal retaliation, and that the 48-hour reversal shows the system self-corrected.",
-    "comeback": "Dudek's own contemporaneous email explicitly frames the cancellation as punitive ('no money will go from the public trust to a petulant child') and his own on-the-record quote to reporters cites personal irritation at Mills, not a fraud or improper-payment analysis conducted in advance -- any fraud-risk rationale he raised months later, after the fact, does not establish that it was the actual basis for the March 5 decision. That the action was reversed only after press exposure and bipartisan backlash, rather than through internal review before implementation, is itself part of the accountability concern.",
+    "status": "Reversed: SSA reinstated both Maine contracts on March 7, 2025, a day after the cancellation Dudek ordered on Feb. 27 took effect, and Dudek apologized. House Oversight Democrats sought his resignation in April; he was placed on leave in May 2025. No IG or committee finding has been located.",
+    "rebuttal_anticipated": "Dudek has denied it was political retaliation: in March 2025 he said the Maine contract 'looked like a strange contract' and that he 'screwed up' by not asking staff first, and in September 2025 he told ProPublica (as reported by Central Maine) that he deliberately worded his cancellation email so it would draw negative attention and the order would be quickly reversed. He could also argue that the reversal within days shows the system self-corrected.",
+    "comeback": "Dudek's own February 27 email orders the cancellation while acknowledging that 'improper payments will go up, and fraudsters may compromise identities,' and frames it as punitive ('no money will go from the public trust to a petulant child'); his own on-the-record quote cites personal irritation at Mills, not a fraud or improper-payment analysis. The 'strange contract' explanation came only after the backlash, and he did not say what was strange about it, though each state has a similar contract; the claim that he set up his own order to fail came six months later, and Maine was still the only state targeted. That the action was reversed only after press exposure and bipartisan backlash, rather than through internal review before implementation, is itself part of the accountability concern.",
     "cause": "[TAP Analysis, not sourced] Illustrates a pattern of a federal official using control over a routine, universally-relied-on public service (newborn Social Security registration) as leverage against a state whose governor had drawn the President's public displeasure.",
-    "last_verified": "2026-08-22",
+    "last_verified": "2026-10-15",
     "date_added": "2026-08-22",
-    "confidence_note": "HIGH confidence -- Dudek's own email (obtained via public records request by the Bangor Daily News) and his own on-the-record quotes to two separate outlets (Bangor Daily News, Portland Press Herald) establish the admitted retaliatory motive directly, without relying on characterization by political opponents. The 48-hour reversal and bipartisan resignation calls are independently corroborated by NBC Boston and additional Bangor Daily News follow-up reporting. Dudek's later (September 2025) alternative justification is noted as his own subsequent rebuttal, not adopted as fact.",
-    "pull_quote": "SSA reversed the cancellation within 48 hours amid bipartisan backlash and calls for Dudek's resignation, and Dudek apologized to Mainers — though he later offered additional, non-retaliatory justifications for the brief cancellation in September 2025 reporting.",
+    "confidence_note": "HIGH confidence -- Dudek's own February 27, 2025 email to staff (obtained by House Oversight Committee Democrats and quoted in their April 2, 2025 release) and his own on-the-record quote to The New York Times, reported by the Bangor Daily News and the Portland Press Herald, establish the admitted retaliatory motive directly, without relying on characterization by political opponents. The quick reversal is reported by the Press Herald and the Bangor Daily News, and the resignation calls by the Associated Press (carried by the Bangor Daily News) and the House Oversight Democrats' own release. Dudek's later explanations (a 'strange contract' in March 2025; a deliberately self-undermining email, per September 2025 reporting) are noted as his own rebuttals, not adopted as fact. Re-verified 2026-10-15: no inspector general report or congressional finding on the Maine orders found.",
+    "pull_quote": "SSA reversed the cancellation within 48 hours amid backlash, and Dudek apologized to Mainers -- then later blamed a 'strange contract' and, in September 2025, said he had worded his order so it would be reversed.",
     "section_summaries": {
       "incident_summary": "SSA's acting commissioner canceled Maine's newborn Social Security contract as admitted retaliation against its governor, reversing it within 48 hours.",
-      "confidence_note": "HIGH confidence -- Dudek's own email and on-the-record quotes to two outlets establish the retaliatory motive directly."
+      "confidence_note": "HIGH confidence -- Dudek's own email to staff and his on-the-record quote to The New York Times establish the retaliatory motive directly."
     },
     "narrative_override": {
       "headline": "SSA's acting chief canceled Maine's newborn SSN contract as admitted retaliation, then reversed it."
     },
-    "date_of_action": "2025-03-05 (Dudek cancels Maine newborn SSN contracts as retaliation)",
-    "last_substantive_update": "2026-08-22",
+    "date_of_action": "2025-02-27 (Dudek emails staff to cancel Maine's newborn SSN and death-record contracts) through 2025-03-07 (contracts reinstated)",
+    "last_substantive_update": "2026-10-15",
     "glance": {
       "who": "Leland Dudek (Acting SSA Commissioner)",
       "what": "Canceled Maine's newborn SSN contract, admitting retaliation against the governor; reversed in 48 hours",
@@ -24059,18 +24102,18 @@
         "certainty": "documented",
         "who": "Maine's newborn SSN registration"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-10-15"
     }
   },
   {
     "id": "stanley-doj-doge-hacking-past-vetting-2025",
-    "official": "Pam Bondi, Attorney General (retaining Christopher Stanley's DOJ role and security clearance); Elon Musk, former DOGE leader (placed Stanley at DOJ)",
-    "offense_category": "Granting and Maintaining an Active Federal Security Clearance and a Senior DOJ Advisory Role for an Individual With an Extensively Documented History of Hacking and Piracy-Site Operation -- an institutional-accountability and vetting-failure claim, not a criminal charge against Stanley personally",
+    "official": "Pam Bondi, Attorney General (retaining Christopher Stanley's DOJ role and security clearance); Elon Musk, former DOGE leader (led the DOGE team that assigned Stanley to DOJ)",
+    "offense_category": "Maintaining an Active Federal Security Clearance and a Senior DOJ Advisory Role for an Individual With an Extensively Documented History of Hacking and Piracy-Site Operation -- an institutional-accountability and vetting-failure claim, not a criminal charge against Stanley personally",
     "contested": false,
-    "incident_summary": "Christopher Stanley, a 33-year-old engineer who previously worked at Musk's companies X and SpaceX, was placed as a senior adviser in the Deputy Attorney General's office at the Department of Justice as part of DOGE's government-wide personnel push. **Reuters reported on April 2, 2025 that Stanley operated a series of websites and forums beginning in 2006, at age 15, several of which distributed pirated ebooks, bootleg software, and video-game cheats, and that he had bragged online about hacking exploits -- conduct he had publicly tried to distance himself from in a 2010 post, but records show he continued discussing software piracy and cyber exploits afterward.** The Justice Department confirmed Stanley holds an active security clearance, and Attorney General Pam Bondi stated she has 'full trust and confidence in Chris's ability to help the federal government.' The Internet Archive removed Stanley's old websites following Reuters' outreach for comment, ahead of publication.",
+    "incident_summary": "Christopher Stanley, a 33-year-old engineer who previously worked at Musk's companies X and SpaceX, was placed as a senior adviser in the Deputy Attorney General's office at the Department of Justice as part of DOGE's government-wide personnel push. **Reuters reported on April 2, 2025 that Stanley operated a series of websites and forums beginning in 2006, at age 15, several of which distributed pirated ebooks, bootleg software, and video-game cheats, and that he had bragged online about hacking exploits -- conduct he had publicly tried to distance himself from in a 2010 post, but records show he continued discussing software piracy and cyber exploits afterward.** The Justice Department confirmed Stanley had an active security clearance that predated his DOGE employment, and Attorney General Pam Bondi stated she had 'full trust and confidence in Chris's ability to help the federal government.' In the hours after Reuters contacted Stanley, several of his old websites vanished from the Internet Archive, whose Wayback Machine director declined to explain why but said site owners can request exclusion.",
     "elements_required": [
       "Stanley was placed in a senior advisory role inside the Deputy Attorney General's office, a position with access to sensitive DOJ functions",
-      "Stanley holds an active federal security clearance, confirmed by DOJ",
+      "Stanley held an active federal security clearance, confirmed by DOJ",
       "Reporting documents a specific, extensive, named history of piracy-site operation and self-described hacking activity, continuing well past the age at which it could be dismissed as youthful conduct",
       "DOJ leadership (Bondi) publicly affirmed confidence in Stanley after the reporting, rather than reviewing or revoking his clearance"
     ],
@@ -24083,28 +24126,34 @@
       },
       {
         "type": "news_report",
-        "description": "Wizcase and Fast Company reported additional detail on Stanley's role as a senior DOJ adviser and his prior hacking/piracy activity coming under scrutiny following the Reuters report",
+        "description": "Wizcase, summarizing Reuters' report, described Stanley as a senior advisor at the Justice Department whose past hacking and pirated-software distribution had come under scrutiny, and noted that DOJ confirmed his active security clearance",
         "source_url": "https://www.wizcase.com/news/doj-adviser-christopher-stanley-hacking-past/",
-        "maps_to_element": "Independent corroboration of the role and history"
+        "maps_to_element": "Secondary coverage of the role, clearance and history"
+      },
+      {
+        "type": "news_report",
+        "description": "Politico reported that at least eight core original DOGE staffers had left government, according to internal records it reviewed and anonymous sources, naming Chris Stanley, a Musk aide who helped install Starlink satellites on the Eisenhower Executive Office Building; a senior White House official attributed the departures to special-government-employee terms with required end dates",
+        "source_url": "https://www.yahoo.com/news/core-doge-staffers-musk-door-095500725.html",
+        "maps_to_element": "Outcome: Stanley left government without any reported clearance review"
       }
     ],
-    "status": "Stanley remained in his DOJ advisory role with an active security clearance as of the original April 2025 reporting; no subsequent removal, clearance review, or further disciplinary action has been identified in sourcing reviewed as of this entry's addition. This entry follows the same institutional-vetting-failure pattern already documented for DOGE personnel elsewhere in this tracker (see doge-coristine-vetting-failure-2025 for a parallel case involving a different individual placed at OPM and later SSA).",
+    "status": "Politico reported July 11, 2025, citing internal records, that Stanley was among at least eight core DOGE staffers who had left government. DOJ had said his clearance predated his DOGE work; no clearance review or other action on his vetting was ever reported.",
     "rebuttal_anticipated": "DOJ or DOGE could argue Stanley's early-career conduct (starting at age 15) is immaterial to his present technical qualifications, that no instance of him personally misusing DOJ systems or data has been documented, and that AG Bondi's public confidence statement reflects a considered judgment rather than a failure to vet.",
-    "comeback": "This entry does not allege Stanley has misused DOJ data or systems -- the accountability question is that DOJ placed, and continues to retain with an active security clearance, an individual with an extensively documented and self-acknowledged history of hacking and piracy-site operation that continued well past adolescence (Reuters found continued discussion of the conduct after Stanley's own 2010 attempt to distance himself from it), in a senior advisory role inside the office that oversees DOJ's most sensitive operations, without evidence of any additional review following the public disclosure.",
+    "comeback": "This entry does not allege Stanley has misused DOJ data or systems -- the accountability question is that DOJ placed, and publicly stood behind with an active security clearance, an individual with an extensively documented and self-acknowledged history of hacking and piracy-site operation that continued well past adolescence (Reuters found continued discussion of the conduct after Stanley's own 2010 attempt to distance himself from it), in a senior advisory role inside the office that oversees DOJ's most sensitive operations, without evidence of any additional review following the public disclosure.",
     "cause": "[TAP Analysis, not sourced] A second, independent instance -- alongside Edward Coristine's -- of DOGE placing personnel with documented, specific red flags into sensitive federal roles without apparent additional vetting, suggesting an institutional pattern rather than an isolated lapse.",
-    "last_verified": "2026-08-22",
+    "last_verified": "2026-10-15",
     "date_added": "2026-08-22",
-    "confidence_note": "HIGH confidence -- Reuters' original reporting is a named-source, on-the-record investigation that DOJ itself responded to (confirming the clearance and providing Bondi's statement), independently corroborated by Wizcase and Fast Company. No subsequent developments (removal, clearance review) were found in this recheck's research, which is itself notable given the parallel Coristine case's eventual escalation -- worth a follow-up search in a future batch to check for any later developments specific to Stanley.",
-    "pull_quote": "Attorney General Pam Bondi stated she has ‘full trust and confidence in Chris's ability to help the federal government’ — with no subsequent removal or clearance review identified in sourcing reviewed.",
+    "confidence_note": "HIGH confidence -- Reuters' original reporting is a named-source, on-the-record investigation that DOJ itself responded to (confirming the clearance and providing Bondi's statement), and summarized by Wizcase, whose account relies on Reuters rather than independently corroborating it. No removal, clearance review or disciplinary action specific to Stanley has been reported. Re-verified 2026-10-15: Reuters and Wizcase still say what the entry cites; Politico reported on July 11, 2025, citing internal records, that Stanley had left government, with no clearance review or removal reported.",
+    "pull_quote": "Attorney General Pam Bondi stated she has ‘full trust and confidence in Chris's ability to help the federal government’ — and no clearance review was ever reported before he left government.",
     "section_summaries": {
       "incident_summary": "A DOGE-placed DOJ adviser with an extensive documented hacking and piracy-site history retained an active federal security clearance.",
-      "confidence_note": "HIGH confidence -- Reuters' named-source investigation, which DOJ itself responded to, is independently corroborated by two other outlets."
+      "confidence_note": "HIGH confidence -- Reuters' named-source investigation, which DOJ itself responded to, with Politico later reporting Stanley's departure from government."
     },
     "narrative_override": {
       "headline": "A DOGE-placed DOJ adviser with a documented hacking history kept an active security clearance."
     },
     "date_of_action": "2025-04-02 (Reuters reveals Stanley's hacking-forum past)",
-    "last_substantive_update": "2026-08-22",
+    "last_substantive_update": "2026-10-15",
     "glance": {
       "who": "Pam Bondi (AG) and Elon Musk (ex-DOGE leader)",
       "what": "Kept a DOGE-placed DOJ adviser with a hacking and piracy-site history on the job with an active clearance",
@@ -24113,7 +24162,7 @@
         "certainty": "documented",
         "who": "Vetting for security clearances"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-10-15"
     }
   },
   {
@@ -24411,17 +24460,17 @@
     "official": "Donald Trump, President",
     "offense_category": "Pardon of and Reported Consideration of a Diplomatic Appointment for a Convicted Public-Corruption Felon Turned Political Ally -- clemency and appointment power are constitutional presidential prerogatives, not themselves unlawful; the accountability claim concerns rewarding political loyalty from a convicted corrupt official rather than any specific legal violation",
     "contested": false,
-    "incident_summary": "Rod Blagojevich, the former Illinois governor convicted on 17 corruption charges -- including trying to sell Barack Obama's vacated U.S. Senate seat -- had his 14-year prison sentence commuted by Trump in 2020, during Trump's first term. Blagojevich subsequently rebranded himself as a vocal Trump supporter, describing himself as a 'Trump-ocrat.' **On February 7, 2025, Politico reported Trump was reportedly considering Blagojevich for U.S. ambassador to Serbia, noting Blagojevich had recently met with Serbian President Aleksandar Vučić. Days later, on February 10-11, 2025, Trump went further and granted Blagojevich a full pardon, formally erasing the corruption convictions his sentence had only previously been commuted for.**",
+    "incident_summary": "Rod Blagojevich, the former Illinois governor convicted on 17 corruption charges -- including trying to sell Barack Obama's vacated U.S. Senate seat -- had his 14-year prison sentence commuted by Trump in 2020, during Trump's first term. Blagojevich subsequently rebranded himself as a vocal Trump supporter, describing himself as a 'Trump-ocrat.' **On February 7, 2025, Politico reported Trump was reportedly considering Blagojevich for U.S. ambassador to Serbia, noting Blagojevich had recently met with Serbian President Aleksandar Vučić. Days later, on February 10-11, 2025, Trump went further and granted Blagojevich a full pardon, forgiving the corruption convictions for which his sentence had previously only been commuted.**",
     "elements_required": [
       "Blagojevich was convicted on 17 federal corruption charges, including attempting to sell a vacant U.S. Senate seat",
       "Trump commuted his sentence in his first term (2020), and Blagojevich subsequently became a public, self-described political ally",
       "Trump's administration was reported to be considering Blagojevich for a U.S. ambassadorship shortly before the pardon",
-      "Trump then granted Blagojevich a full pardon, formally erasing the underlying convictions rather than merely ending the remaining sentence"
+      "Trump then granted Blagojevich a full pardon, forgiving the underlying convictions rather than merely ending the remaining sentence"
     ],
     "evidence": [
       {
         "type": "news_report",
-        "description": "Politico reported Trump was considering Blagojevich for U.S. ambassador to Serbia, noting his 2020 sentence commutation, his self-identification as a 'Trump-ocrat,' and a recent meeting with Serbian President Vučić",
+        "description": "Politico reported, citing two people familiar with the discussions, that Trump was considering Blagojevich for U.S. ambassador to Serbia, noting his 2020 sentence commutation, his 2024 rallying of Serbian American groups for Trump, his meeting that week with Serbian President Vučić, and that Trump was also looking at former Arizona Attorney General Mark Brnovich for the post",
         "source_url": "https://www.politico.com/news/2025/02/07/trump-blagojevich-ambassador-serbia-00203103",
         "maps_to_element": "The reported diplomatic-appointment consideration"
       },
@@ -24439,25 +24488,37 @@
       },
       {
         "type": "public_record",
-        "description": "Fox News reported that on April 2, 2025, Blagojevich's firm RRB Strategies LLC registered under the Foreign Agents Registration Act to provide communications and public-affairs support to Milorad Dodik, president of Bosnia's Republika Srpska entity, an outspoken Putin ally nicknamed the 'Bosnian Bear' who has advocated Republika Srpska's secession to join Serbia",
+        "description": "Fox News reported that Blagojevich's firm, RRB Strategies LLC, filed a Foreign Agents Registration Act registration statement to 'provide communications and public affairs support on behalf of the Republic of Srpska,' a Serb-majority territory in Bosnia and Herzegovina whose president, Milorad Dodik, is known as the 'Bosnian Bear,' has close ties to Putin and has long advocated for Srpska to separate from Bosnia and join Serbia",
         "source_url": "https://www.foxnews.com/politics/blagojevich-has-new-job-working-bosnian-bear-politician-ties-putin",
-        "maps_to_element": "A different, confirmed post-pardon reward -- paid foreign-influence work for a Putin-aligned foreign politician -- in place of the ambassadorship"
+        "maps_to_element": "A different, confirmed post-pardon role -- registered foreign-agent work for Republika Srpska -- in place of the ambassadorship"
+      },
+      {
+        "type": "news_report",
+        "description": "European Western Balkans reported on June 2, 2026 that the White House announced Trump had nominated Michael Young, a former State Department official and university president, as U.S. ambassador to Serbia",
+        "source_url": "https://europeanwesternbalkans.com/2026/06/02/trump-nominates-new-us-ambassadors-to-serbia-montenegro-and-bih/",
+        "maps_to_element": "Resolution of the reported ambassadorship consideration -- Blagojevich was passed over"
+      },
+      {
+        "type": "news_report",
+        "description": "Deseret News reported that Michael Young appeared before the Senate Foreign Relations Committee on September 17, 2026 for his nomination by Trump to serve as ambassador to Serbia, seeking Senate confirmation",
+        "source_url": "https://www.deseret.com/politics/2026/09/17/former-university-of-utah-president-faces-senate-confirmation/",
+        "maps_to_element": "Resolution of the reported ambassadorship consideration -- Blagojevich was passed over"
       }
     ],
-    "status": "Resolved as a completed clemency action, and the reported ambassadorship consideration has since been resolved as well -- though not in Blagojevich's favor. Trump instead nominated former Arizona AG Mark Brnovich for the Serbia post on April 29, 2025; the White House withdrew that nomination in early October 2025 without Senate confirmation, and the post remained vacant as of the sourcing reviewed. Separately, on April 2, 2025, Blagojevich registered under the Foreign Agents Registration Act to provide communications and public-affairs support to Milorad Dodik, president of Republika Srpska and a Putin-aligned secessionist politician known as the 'Bosnian Bear' -- a different, independently confirmed post-pardon reward from the ambassadorship this entry originally flagged as unresolved.",
+    "status": "Completed clemency: Trump fully pardoned Blagojevich on Feb. 10, 2025. He did not get the Serbia post: Brnovich's nomination was withdrawn in October 2025, and nominee Michael Young had a Senate hearing Sept. 17, 2026. Blagojevich's firm instead registered under FARA to work for Republika Srpska.",
     "rebuttal_anticipated": "The presidential pardon and appointment powers are both constitutional prerogatives; supporters could argue Blagojevich had already served significant time before the original 2020 commutation and that a full pardon simply completed a clemency process begun years earlier, unrelated to any appointment consideration.",
-    "comeback": "This entry does not dispute the constitutional pardon power -- the accountability question is the specific sequence and pattern: a convicted public-corruption felon, already granted clemency once, was then reportedly considered for a U.S. diplomatic post representing the country abroad, followed within days by a full pardon erasing his corruption record entirely, consistent with this tracker's broader documented pattern of clemency extended to political allies and donors.",
+    "comeback": "This entry does not dispute the constitutional pardon power -- the accountability question is the specific sequence and pattern: a convicted public-corruption felon, already granted clemency once, was then reportedly considered for a U.S. diplomatic post representing the country abroad, followed within days by a full pardon forgiving his corruption convictions entirely, consistent with this tracker's broader documented pattern of clemency extended to political allies and donors.",
     "cause": "[TAP Analysis, not sourced] Illustrates a policy-level accountability question about rewarding political loyalty from a convicted corrupt official with both a full pardon and apparent consideration for federal office, rather than any specific legal violation.",
-    "last_verified": "2026-08-19",
+    "last_verified": "2026-10-15",
     "date_added": "2026-08-08",
-    "confidence_note": "HIGH confidence -- both the ambassadorship consideration and the pardon are independently corroborated by Politico and NPR respectively, with no facts in dispute. This entry is distinct from the existing `trump-fraudster-pardons-pattern-2026.json` entry, which documents a different set of pardoned fraud convictions (Esformes, Melgen, Milton, Herrera Velutini) -- Blagojevich's convictions were for public corruption/bribery rather than fraud, and his case includes the additional ambassadorship-consideration element not present in that entry. Update 2026-08-19: both the ambassadorship's actual resolution (Brnovich nominated April 29, 2025, withdrawn early October 2025) and Blagojevich's FARA-registered lobbying work for Dodik predate this entry's own August 8, 2026 write date by well over a year and were not previously incorporated -- the entry had framed the ambassadorship as an open question that had in fact already been resolved. Confirmed via direct fetch of the Arizona Capitol Times and Fox News reporting rather than search synthesis alone.",
-    "pull_quote": "Blagojevich's firm registered under the Foreign Agents Registration Act to provide communications support to Milorad Dodik, a Putin-aligned Bosnian secessionist politician known as the ‘Bosnian Bear’ — a different, confirmed post-pardon reward in place of the ambassadorship he was passed over for.",
+    "confidence_note": "HIGH confidence -- both the ambassadorship consideration and the pardon are independently corroborated by Politico and NPR respectively, with no facts in dispute. This entry is distinct from the existing entry on Trump's pattern of pardoning convicted fraudsters, which documents a different set of pardoned fraud convictions (among them Esformes, Melgen, Milton and Herrera Velutini) -- Blagojevich's convictions were for public corruption/bribery rather than fraud, and his case includes the additional ambassadorship-consideration element not present in that entry. Update 2026-08-19: added the ambassadorship's resolution (Brnovich nominated April 29, 2025, withdrawn early October 2025) and Blagojevich's FARA-registered work for Republika Srpska, confirmed via direct fetch of the Arizona Capitol Times and Fox News reporting. Re-verified 2026-10-15: NPR, Arizona Capitol Times and Fox News re-fetched and hold; Politico holds but does not use 'Trump-ocrat' (that is NPR's reporting). Since then, Trump nominated Michael Young for the Serbia post on June 2, 2026 (European Western Balkans), and Young had his Senate Foreign Relations hearing on September 17, 2026 (Deseret News); no confirmation vote was found. The firm's FARA registration statement (efile.fara.gov) was received March 31, 2025 and names the Republic of Srpska, not Dodik personally, as the foreign principal.",
+    "pull_quote": "Blagojevich's firm registered under the Foreign Agents Registration Act to provide communications and public affairs support on behalf of the Republic of Srpska, then led by Milorad Dodik, a politician with close Putin ties known as the ‘Bosnian Bear’ — a different, confirmed post-pardon role in place of the ambassadorship he was passed over for.",
     "section_summaries": {
       "incident_summary": "Trump considered a convicted-felon political ally for an ambassadorship, then fully pardoned his corruption convictions days later.",
       "confidence_note": "HIGH confidence -- both the ambassadorship consideration and the pardon are independently corroborated by Politico and NPR."
     },
     "date_of_action": "2025-02-07 (Trump considers Blagojevich for ambassador) through 2025-02-10 (Trump pardons Blagojevich)",
-    "last_substantive_update": "2026-08-19",
+    "last_substantive_update": "2026-10-15",
     "glance": {
       "who": "Donald Trump (President)",
       "what": "Pardoned convicted ex-Gov. Blagojevich, an ally, days after reportedly weighing him for an ambassadorship",
@@ -24466,16 +24527,16 @@
         "certainty": "alleged",
         "who": "Accountability for public corruption"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-10-15"
     },
     "timeline": {
       "confidence_note": {
-        "base": "HIGH confidence -- both the ambassadorship consideration and the pardon are independently corroborated by Politico and NPR respectively, with no facts in dispute. This entry is distinct from the existing `trump-fraudster-pardons-pattern-2026.json` entry, which documents a different set of pardoned fraud convictions (Esformes, Melgen, Milton, Herrera Velutini) -- Blagojevich's convictions were for public corruption/bribery rather than fraud, and his case includes the additional ambassadorship-consideration element not present in that entry.",
+        "base": "HIGH confidence -- both the ambassadorship consideration and the pardon are independently corroborated by Politico and NPR respectively, with no facts in dispute. This entry is distinct from the existing entry on Trump's pattern of pardoning convicted fraudsters, which documents a different set of pardoned fraud convictions (among them Esformes, Melgen, Milton and Herrera Velutini) -- Blagojevich's convictions were for public corruption/bribery rather than fraud, and his case includes the additional ambassadorship-consideration element not present in that entry.",
         "updates": [
           {
             "date": "2026-08-19",
             "label": "Update",
-            "text": "Update 2026-08-19: both the ambassadorship's actual resolution (Brnovich nominated April 29, 2025, withdrawn early October 2025) and Blagojevich's FARA-registered lobbying work for Dodik predate this entry's own August 8, 2026 write date by well over a year and were not previously incorporated -- the entry had framed the ambassadorship as an open question that had in fact already been resolved. Confirmed via direct fetch of the Arizona Capitol Times and Fox News reporting rather than search synthesis alone.",
+            "text": "Update 2026-08-19: added the ambassadorship's resolution (Brnovich nominated April 29, 2025, withdrawn early October 2025) and Blagojevich's FARA-registered work for Republika Srpska, confirmed via direct fetch of the Arizona Capitol Times and Fox News reporting. Re-verified 2026-10-15: NPR, Arizona Capitol Times and Fox News re-fetched and hold; Politico holds but does not use 'Trump-ocrat' (that is NPR's reporting). Since then, Trump nominated Michael Young for the Serbia post on June 2, 2026 (European Western Balkans), and Young had his Senate Foreign Relations hearing on September 17, 2026 (Deseret News); no confirmation vote was found. The firm's FARA registration statement (efile.fara.gov) was received March 31, 2025 and names the Republic of Srpska, not Dodik personally, as the foreign principal.",
             "effective_date": "2026-08-19"
           }
         ]
@@ -27048,20 +27109,20 @@
   {
     "id": "trump-inspectors-general-mass-firing-2025",
     "official": "Donald Trump, President",
-    "offense_category": "Unlawful Mass Removal of Inspectors General Without Statutorily Required Congressional Notice -- a federal court later found the firings violated the Inspector General Act, a civil/administrative legal violation, not a criminal one",
+    "offense_category": "Unlawful Mass Removal of Inspectors General Without Statutorily Required Congressional Notice -- a federal judge later called the firings an \"obvious\" violation of the Inspector General Act, without a final merits ruling; a civil/administrative matter, not a criminal one",
     "contested": false,
-    "incident_summary": "On January 24, 2025, Trump fired inspectors general at 17 federal agencies in a single night, including at the Department of Labor and other major departments. The Inspector General Act of 1978, as amended in 2022, requires the President to give Congress 30 days' advance notice of an IG's removal along with substantive, case-specific reasons -- neither was provided. Sen. Jon Ossoff and other lawmakers immediately warned the firings violated federal law and demanded they be rescinded. Eight of the fired inspectors general sued on February 12, 2025, seeking reinstatement. **On September 24, 2025, U.S. District Judge Ana C. Reyes ruled the firings had in fact violated the law, but declined to order reinstatement, reasoning that Trump could simply re-fire the same inspectors general after providing the 30-day notice the law required the first time -- leaving the plaintiffs without a practical remedy despite winning on the merits.** Separately, in October 2025, Defense Secretary Pete Hegseth issued a memo overhauling the Pentagon's own inspector general complaint process, requiring complaints against senior officials to be deemed 'credible' within seven days of filing and directing that 'repeat complainants' be tracked -- changes oversight advocates said would discourage legitimate whistleblowing, coming as the broader 17-IG purge remained unremedied.",
+    "incident_summary": "On January 24, 2025, Trump fired inspectors general at 17 federal agencies in a single night, including at the Department of Labor and other major departments. The Inspector General Act of 1978, as amended in 2022, requires the President to give Congress 30 days' advance notice of an IG's removal along with substantive, case-specific reasons -- neither was provided. Sen. Jon Ossoff warned in early February that the firings likely violated federal law and asked that they be rescinded. Eight of the fired inspectors general sued on February 12, 2025, seeking reinstatement. **On September 24, 2025, U.S. District Judge Ana C. Reyes wrote that Trump's violation of the law was \"obvious,\" but declined to order reinstatement, reasoning that Trump could simply re-fire the same inspectors general after providing the 30-day notice the law required the first time, and stayed the case without deciding the merits or back pay.** Separately, in October 2025, Defense Secretary Pete Hegseth issued a memo overhauling the Pentagon's own inspector general complaint process, requiring inspector general offices to decide within seven days whether complaints are backed by 'credible evidence' and directing that 'repeat complainants' be tracked -- changes oversight advocates said would discourage legitimate whistleblowing, coming as the broader 17-IG purge remained unremedied.",
     "elements_required": [
       "Trump removed inspectors general at 17 federal agencies simultaneously, without the 30-day advance congressional notice the Inspector General Act requires",
       "No case-specific substantive rationale for the removals was provided to Congress at the time, as the amended statute also requires",
-      "A federal court, after full litigation, found the firings unlawful under the statute",
+      "A federal court found the statutory violation \"obvious,\" while leaving the final merits, including the constitutional question, undecided",
       "Despite that finding, the court declined to reinstate the fired IGs, leaving the practical effect of the mass removal in place",
-      "A subsequent agency-level action (Hegseth's Pentagon IG memo) narrowed IG complaint-handling procedures for senior officials specifically, in the same period the broader unlawful firings remained unremedied"
+      "A subsequent agency-level action (Hegseth's Pentagon IG memo) narrowed the Pentagon's IG complaint-handling procedures, in the same period the broader firings remained unremedied"
     ],
     "evidence": [
       {
         "type": "public_record",
-        "description": "Sen. Jon Ossoff's press release, issued the week of the firings, warning the removals violated the Inspector General Act's 30-day congressional notice requirement and demanding they be rescinded",
+        "description": "Sen. Jon Ossoff's February 5, 2025 press release, citing legal experts that the 17 terminations likely violated the 30-day written-notice requirement for removing an inspector general, and asking the administration to rescind them",
         "source_url": "https://www.ossoff.senate.gov/press-releases/sen-ossoff-warns-trumps-inspectors-general-purge-risks-corruption-abuse/",
         "maps_to_element": "Contemporaneous notice that the firings violated the statute's procedural requirements"
       },
@@ -27073,40 +27134,71 @@
       },
       {
         "type": "public_record",
-        "description": "Government Executive and Federal News Network reported Judge Ana C. Reyes's September 24, 2025 ruling that the firings were unlawful, but that she would not order reinstatement since Trump could lawfully re-fire the same officials after providing the required notice",
+        "description": "Government Executive reported Judge Ana C. Reyes's September 24, 2025 ruling, which said it is 'obvious' Trump broke the law by firing the inspectors general without 30 days' notice to Congress and a case-specific rationale, but declined to reinstate them because Trump could remove them again after giving the notice",
         "source_url": "https://www.govexec.com/oversight/2025/09/fired-watchdogs-cant-be-reinstated-despite-trumps-obvious-law-breaking-court-decides/408387/",
-        "maps_to_element": "Judicial finding that the firings were unlawful, and the practical limits of the remedy"
+        "maps_to_element": "A judge's statement that the statutory violation was obvious, and the practical limits of the remedy"
+      },
+      {
+        "type": "court_ruling",
+        "description": "Judge Reyes's September 24, 2025 memorandum opinion in Storch v. Hegseth: 'President Trump violated the IGA. That much is obvious.' The court found it 'likely—indeed, certain' the plaintiffs would succeed on that claim, but addressed 'only the non-merits factors,' denied a permanent injunction, declined to decide the merits or back pay, and stayed the case pending the Supreme Court's decision in Trump v. Slaughter",
+        "source_url": "https://storage.courtlistener.com/recap/gov.uscourts.dcd.277385/gov.uscourts.dcd.277385.54.0.pdf",
+        "maps_to_element": "A federal court found the statutory violation obvious but declined reinstatement, leaving the merits undecided"
       },
       {
         "type": "news_report",
         "description": "Reuters reported Defense Secretary Hegseth's October 2025 memo overhauling the Pentagon inspector general's complaint-handling process, including a 7-day 'credibility' determination requirement and tracking of 'repeat complainants,' explicitly noting it followed the broader 17-IG purge",
         "source_url": "https://www.reuters.com/world/assault-oversight-hegseth-overhaul-military-watchdogs-spurs-concern-2025-10-02/",
         "maps_to_element": "A subsequent, narrower agency-level action further constraining IG oversight capacity"
+      },
+      {
+        "type": "court_filing",
+        "description": "The government's August 10, 2026 pre-motion response agreed the case can be resolved on cross-motions for summary judgment, said it has 'never disputed' that the President gave no notice, and argued that after Trump v. Slaughter (2026) the President must have 'unfettered authority to remove Inspectors General' under Article II",
+        "source_url": "https://storage.courtlistener.com/recap/gov.uscourts.dcd.277385/gov.uscourts.dcd.277385.61.0.pdf",
+        "maps_to_element": "Trump removed inspectors general without the 30-day advance congressional notice the Inspector General Act requires"
+      },
+      {
+        "type": "court_filing",
+        "description": "The fired inspectors general's August 10, 2026 pre-motion response said all parties agree cross-motions for summary judgment are the next step, argued the IG Act's notice-and-reasons requirement is constitutional and that Trump v. Slaughter (June 29, 2026) does not resolve it, and pressed their claim for back pay",
+        "source_url": "https://storage.courtlistener.com/recap/gov.uscourts.dcd.277385/gov.uscourts.dcd.277385.62.0.pdf",
+        "maps_to_element": "Despite that finding, the court declined to reinstate the fired IGs, leaving the practical effect of the mass removal in place"
       }
     ],
-    "status": "Resolved on the merits but not remedied. A federal court found the January 2025 firings unlawful (September 24, 2025), but the fired inspectors general were not reinstated. The Pentagon's IG process was separately narrowed by the October 2025 Hegseth memo, which remains in effect as of this entry's research.",
-    "rebuttal_anticipated": "The administration could argue that inspectors general, while statutorily protected from removal without notice, still ultimately serve within the executive branch and that a President retains broad authority over executive personnel generally; it could also note that the court, while finding the removal process unlawful, did not require reinstatement, which some officials may cite as evidence the practical harm was limited.",
-    "comeback": "This entry does not dispute that a president can remove an inspector general through the lawful process -- the accountability question is that Trump fired 17 of them simultaneously, without the congressional notice or case-specific justification the law explicitly requires, and a federal court later confirmed this violated the statute. That the court's remedy was limited does not change the underlying legal violation it found, and the subsequent Pentagon IG memo shows the erosion of independent oversight capacity continuing well after the original violation was identified.",
-    "cause": "[TAP Analysis, not sourced] Illustrates a policy-level pattern of weakening independent oversight infrastructure across the executive branch, established here by a specific judicial finding of unlawfulness rather than as characterization alone.",
-    "last_verified": "2026-08-19",
+    "status": "Pending. A judge found it \"obvious\" in September 2025 that the firings broke the Inspector General Act but denied reinstatement and left the merits undecided. In August 2026 both sides readied summary-judgment motions; the government says Trump v. Slaughter lets the president fire IGs at will.",
+    "rebuttal_anticipated": "The administration argues that, after the Supreme Court's 2026 Trump v. Slaughter decision, Article II gives the President unfettered authority to remove inspectors general, so the Inspector General Act's notice requirement cannot limit the firings, and that the fired IGs' APA, ultra vires and mandamus claims fail. It can also note that the court declined to order reinstatement, which some officials may cite as evidence the practical harm was limited.",
+    "comeback": "This entry does not dispute that a president can remove an inspector general through the lawful process -- the accountability question is that Trump fired 17 of them simultaneously, without the congressional notice or case-specific justification the law explicitly requires. The government has never disputed that no notice was given, and a federal judge called the violation \"obvious.\" The fired IGs argue the notice-and-reasons rule is constitutional and that Slaughter does not resolve it. That the court's remedy was limited does not change the violation it identified, and the subsequent Pentagon IG memo shows the erosion of independent oversight capacity continuing well after it.",
+    "cause": "[TAP Analysis, not sourced] Illustrates a policy-level pattern of weakening independent oversight infrastructure across the executive branch, grounded here in a federal judge's finding that the statutory violation was obvious rather than in characterization alone.",
+    "last_verified": "2026-10-15",
     "date_added": "2026-08-08",
-    "confidence_note": "HIGH confidence -- the firings, the lawsuit, and the September 2025 unlawfulness finding are all corroborated by primary/near-primary sources (Sen. Ossoff's office, CNN's contemporaneous reporting, and Government Executive/Federal News Network's detailed coverage of Judge Reyes's ruling). This is one of the stronger entries in this tracker in that a court has actually adjudicated the underlying legal claim, rather than the claim resting on reporting and analysis alone. Re-verified 2026-08-19: no appeal to the D.C. Circuit or further ruling identified in the underlying case (Storch v. Hegseth, 1:25-cv-00415, D.D.C.) since Judge Reyes's September 24, 2025 unlawfulness finding; the fired inspectors general remain unreinstated and the Pentagon IG memo remains in effect as of this recheck.",
-    "pull_quote": "Defense Secretary Pete Hegseth issued a memo overhauling the Pentagon's own inspector general complaint process, requiring complaints against senior officials to be deemed ‘credible’ within seven days of filing and directing that ‘repeat complainants’ be tracked — changes oversight advocates said would discourage legitimate whistleblowing.",
+    "confidence_note": "HIGH confidence -- the firings, the lawsuit, and the September 2025 ruling are corroborated by primary/near-primary sources (Sen. Ossoff's office, CNN's contemporaneous reporting, Government Executive's coverage, and Judge Reyes's memorandum opinion itself). The court called the statutory violation obvious but ruled only on the non-merits injunction factors, leaving the merits, including the constitutional question, undecided. Re-verified 2026-08-19: no appeal to the D.C. Circuit or further ruling identified in the underlying case (Storch v. Hegseth, 1:25-cv-00415, D.D.C.) since Judge Reyes's September 24, 2025 unlawfulness finding; the fired inspectors general remain unreinstated and the Pentagon IG memo remains in effect as of this recheck. Update 2026-10-15: the case was stayed until the Supreme Court decided Trump v. Slaughter (June 29, 2026). In August 2026 pre-motion filings, both sides agreed to cross-move for summary judgment: the government argues Slaughter gives the President unfettered authority to remove IGs, and the plaintiffs dispute that and seek a declaratory judgment and back pay. No ruling on those motions was found as of this recheck.",
+    "pull_quote": "Defense Secretary Pete Hegseth issued a memo overhauling the Pentagon's own inspector general complaint process, requiring inspector general offices to decide within seven days whether complaints are backed by ‘credible evidence’ and directing that ‘repeat complainants’ be tracked — changes oversight advocates said would discourage legitimate whistleblowing.",
     "section_summaries": {
-      "incident_summary": "Trump fired 17 inspectors general in one night without the legally required 30-day notice; a court later ruled it unlawful but declined reinstatement.",
-      "confidence_note": "HIGH confidence -- the firings and the unlawfulness ruling are corroborated by Sen. Ossoff's office, CNN, and detailed court coverage."
+      "incident_summary": "Trump fired 17 inspectors general in one night without the legally required 30-day notice; a judge called the violation obvious but declined reinstatement.",
+      "confidence_note": "HIGH confidence -- the firings and the ruling are corroborated by Sen. Ossoff's office, CNN, court coverage and the opinion; the case's merits remain undecided."
     },
     "date_of_action": "2025-01-24 (Trump fires 17 inspectors general) through 2025-10 (Hegseth overhauls Pentagon IG complaint process)",
-    "last_substantive_update": "2026-08-19",
+    "last_substantive_update": "2026-10-15",
     "glance": {
       "who": "Donald Trump (President)",
-      "what": "Fired 17 inspectors general without 30 days' notice; a court found it unlawful but declined reinstatement",
+      "what": "Fired 17 inspectors general without 30 days' notice; a judge found the violation obvious, denied reinstatement",
       "harm": {
         "kind": "institutional",
         "certainty": "documented",
         "who": "Inspector general independence"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-10-15"
+    },
+    "timeline": {
+      "confidence_note": {
+        "base": "HIGH confidence -- the firings, the lawsuit, and the September 2025 ruling are corroborated by primary/near-primary sources (Sen. Ossoff's office, CNN's contemporaneous reporting, Government Executive's coverage, and Judge Reyes's memorandum opinion itself). The court called the statutory violation obvious but ruled only on the non-merits injunction factors, leaving the merits, including the constitutional question, undecided. Re-verified 2026-08-19: no appeal to the D.C. Circuit or further ruling identified in the underlying case (Storch v. Hegseth, 1:25-cv-00415, D.D.C.) since Judge Reyes's September 24, 2025 unlawfulness finding; the fired inspectors general remain unreinstated and the Pentagon IG memo remains in effect as of this recheck.",
+        "updates": [
+          {
+            "date": "2026-10-15",
+            "label": "Update",
+            "text": "Update 2026-10-15: the case was stayed until the Supreme Court decided Trump v. Slaughter (June 29, 2026). In August 2026 pre-motion filings, both sides agreed to cross-move for summary judgment: the government argues Slaughter gives the President unfettered authority to remove IGs, and the plaintiffs dispute that and seek a declaratory judgment and back pay. No ruling on those motions was found as of this recheck.",
+            "effective_date": "2026-10-15"
+          }
+        ]
+      }
     }
   },
   {
@@ -27590,17 +27682,17 @@
     "official": "Donald Trump, President",
     "offense_category": "Presidential Pardon of a Political Ally Convicted of Federal Campaign-Finance Fraud, Issued Two Weeks Into His Sentence -- clemency is a constitutional power, not itself unlawful; the accountability question is the pattern of near-immediate, favor-adjacent clemency for political allies rather than the pardon act itself",
     "contested": false,
-    "incident_summary": "Former Tennessee state Sen. Brian Kelsey pleaded guilty in November 2022 to illegally funneling roughly $91,000 from his state Senate campaign account into a national organization supporting his failed 2016 U.S. House bid, and to filing false campaign-finance reports to conceal the transfer -- a scheme prosecutors said was designed to evade federal contribution limits. U.S. District Judge Waverly Crenshaw denied Kelsey's repeated attempts to withdraw his guilty plea or otherwise reopen the case, as recently as February 2025, and Kelsey reported to federal prison to begin his 21-month sentence. On March 11, 2025 -- just two weeks into that sentence -- Trump granted Kelsey a 'full and unconditional pardon.' In a public statement, Kelsey said 'God used Donald Trump to save me from the weaponized Biden DOJ,' explicitly echoing Trump's own rhetoric about his personal legal cases, despite having pleaded guilty rather than being convicted at trial. Tennessee Democratic state Rep. Gloria Johnson responded, 'Dude plead guilty, but sure.' **Within a month of his release, Kelsey began lobbying sitting Tennessee state senators to amend a pending campaign-finance bill (SB 229) to let him use leftover funds in his state campaign account to pay his personal legal fees from the case -- after Tennessee's own Bureau of Ethics and Campaign Finance had already denied his request to do so.** State Sen. Brent Taylor drafted the requested amendment at Kelsey's request; state Sen. Richard Briggs confirmed Kelsey called him personally to press for it.",
+    "incident_summary": "Former Tennessee state Sen. Brian Kelsey pleaded guilty in November 2022 to secretly funneling $91,000 from multiple sources, including his state Senate campaign committee, through a national political organization to support his failed 2016 U.S. House bid, and to causing false contribution and expenditure reports to be filed with the FEC -- a scheme prosecutors said was designed to evade federal contribution limits. U.S. District Judge Waverly Crenshaw denied Kelsey's repeated attempts to withdraw his guilty plea or otherwise reopen the case, as recently as February 2025, and Kelsey reported to federal prison to begin his 21-month sentence. On March 11, 2025 -- just two weeks into that sentence -- Trump granted Kelsey a 'full and unconditional pardon.' In a public statement, Kelsey said 'God used Donald Trump to save me from the weaponized Biden DOJ,' explicitly echoing Trump's own rhetoric about his personal legal cases, despite having pleaded guilty rather than being convicted at trial. Tennessee Democratic state Rep. Gloria Johnson responded, 'Dude plead guilty, but sure.' **Within a month of his release, Kelsey began lobbying sitting Tennessee state lawmakers to amend a pending campaign-finance bill (SB 229) to let him use leftover funds in his state campaign account to pay his personal legal fees from the case -- after Tennessee's own Bureau of Ethics and Campaign Finance had already denied his request to do so.** State Sen. Brent Taylor drafted the requested amendment at Kelsey's request; state Sen. Richard Briggs confirmed Kelsey called him personally to press for it.",
     "elements_required": [
       "A Trump political ally/co-partisan convicted (here, via guilty plea) of a federal campaign-finance crime",
       "Clemency granted within days to weeks of the ally beginning to serve the sentence, before any new evidence or legal defect was identified",
       "The pardoned individual publicly adopted Trump's own 'weaponized' framing to recast a guilty plea as persecution",
-      "Post-pardon, the individual used the clemency's practical effect (freedom, no restitution/legal-fee obligation resolved through the courts) to actively seek further personal financial benefit through the political process (the state legislative amendment)"
+      "Post-pardon, the individual used the clemency's practical effect (release from the rest of his sentence) to actively seek further personal financial benefit through the political process (the state legislative amendment)"
     ],
     "evidence": [
       {
         "type": "news_report",
-        "description": "CNBC and the Tennessee Lookout reported the underlying conviction (guilty plea to illegally funneling ~$91,000 in campaign funds and filing false reports), Judge Crenshaw's denial of Kelsey's attempts to reopen the case as late as February 2025, and Kelsey's own statement crediting Trump with saving him from a 'weaponized' DOJ",
+        "description": "CNBC reported that Kelsey, who had pleaded guilty in a federal campaign finance conspiracy case, entered the Ashland, Kentucky prison camp on February 24, 2025 to serve a 21-month sentence and was pardoned by Trump 15 days later, and that Kelsey said he was targeted for prosecution by the 'weaponized Biden DOJ'",
         "source_url": "https://www.cnbc.com/2025/03/12/trump-pardon-tennessee-brian-kelsey-prison-campaign-doj.html",
         "maps_to_element": "The underlying offense and the pardoned individual's public framing"
       },
@@ -27612,40 +27704,78 @@
       },
       {
         "type": "news_report",
-        "description": "The Tennessee Lookout reported Kelsey lobbying state senators in April 2025 to amend pending campaign-finance legislation (SB 229) to let him use his state campaign account to pay personal legal fees, after Tennessee's Bureau of Ethics and Campaign Finance had already denied that request; Sen. Brent Taylor drafted the amendment at Kelsey's request",
+        "description": "The Hill reported on March 12, 2025 that Kelsey had been indicted in 2021 over transferring $91,000 to a national organization that financed his 2016 House campaign ads, that Judge Waverly Crenshaw denied his attempts to change the charges as late as the previous month, and Kelsey's post: 'God used @realDonaldTrump to save me from the weaponized Biden DOJ'",
+        "source_url": "https://www.yahoo.com/news/former-lawmaker-says-trump-pardoned-142645252.html",
+        "maps_to_element": "The underlying offense and the pardoned individual's public framing"
+      },
+      {
+        "type": "news_report",
+        "description": "WKRN reported reactions on X to the pardon: Democratic Rep. Gloria Johnson wrote 'Dude plead guilty, but sure,' and Republican Rep. Jeremy Faison wrote 'Breaking the law is wrong, but the law that put Kelsey behind bars is unjust'",
+        "source_url": "https://www.yahoo.com/news/former-state-lawmaker-convicted-campaign-021747703.html",
+        "maps_to_element": "Public reactions to the pardon from Tennessee legislators"
+      },
+      {
+        "type": "news_report",
+        "description": "The Tennessee Lookout reported on April 9, 2025 that Kelsey was lobbying lawmakers to pass legislation letting him use his state campaign account to pay legal fees: Sen. Richard Briggs confirmed Kelsey called him twice to ask for an amendment to Briggs's campaign finance bill, Kelsey also contacted Rep. Tim Hicks, and the Bureau of Ethics and Campaign Finance had already turned down his request to use those funds for legal fees",
         "source_url": "https://tennesseelookout.com/2025/04/09/pardoned-ex-sen-kelsey-wrangles-for-amendment-to-campaign-finance-bill/",
         "maps_to_element": "Post-pardon pursuit of further financial benefit through the political process"
       },
       {
         "type": "news_report",
-        "description": "Tennessee Lookout reported the outcome of Kelsey's SB 229 lobbying effort: Sen. Richard Briggs and Rep. Tim Hicks declined to help him further, and while Sen. Brent Taylor had offered an amendment, it went nowhere; on the session's final day, lawmakers instead amended the bill to explicitly prevent Kelsey from using his state campaign account for the federal criminal case, with House Speaker Cameron Sexton stating 'campaign funds should not be used to cover legal expenses or matters related to criminal proceedings.'",
+        "description": "Tennessee Lookout reported on April 11, 2025 that Sen. Brent Taylor drafted an amendment for Kelsey, to go on Senate Bill 229, letting people who were acquitted, had charges dropped or were pardoned pay legal fees with state campaign funds; Taylor said he did it as a 'courtesy to a former senator' but would not carry it himself",
+        "source_url": "https://tennesseelookout.com/2025/04/11/stockard-on-the-stump-shelby-senator-helps-kelsey-with-amendment-to-pay-legal-fees/",
+        "maps_to_element": "Post-pardon pursuit of further financial benefit through the political process"
+      },
+      {
+        "type": "news_report",
+        "description": "Tennessee Lookout reported the outcome of Kelsey's SB 229 lobbying effort: Sen. Richard Briggs and Rep. Tim Hicks declined to help him further, and while Sen. Brent Taylor had offered an amendment, it went nowhere; on the session's final day, lawmakers instead amended the bill to prevent him from tapping his state campaign account for the criminal case, with House Speaker Cameron Sexton stating 'campaign funds should not be used to cover legal expenses or matters related to criminal proceedings.'",
         "source_url": "https://tennesseelookout.com/2025/04/25/stockard-on-the-stump-kelsey-effort-to-use-campaign-funds-for-legal-defense-backfires/",
         "maps_to_element": "Resolves the previously-unconfirmed outcome of the post-pardon lobbying effort"
       }
     ],
-    "status": "Pardon final and not subject to reversal; Kelsey's post-pardon lobbying effort to amend SB 229 to let him use his state campaign account for personal legal fees failed: Sens. Richard Briggs and Rep. Tim Hicks declined to help him further, and Sen. Brent Taylor's amendment went nowhere; on the legislative session's final day, lawmakers instead amended the bill to affirmatively bar him from tapping his campaign account for the federal criminal case, with House Speaker Cameron Sexton stating 'campaign funds should not be used to cover legal expenses or matters related to criminal proceedings.'",
-    "rebuttal_anticipated": "Presidential clemency is an unreviewable constitutional power, and Trump has pardoned across party lines in other cases; supporters frame the DOJ's original prosecution as itself part of a broader pattern of politically motivated campaign-finance enforcement against conservatives, per Kelsey's and Rep. Jeremy Faison's public comments that 'the law that put Kelsey behind bars is unjust.'",
-    "comeback": "Kelsey pleaded guilty rather than being convicted at trial or on disputed evidence, and a federal judge rejected his repeated attempts to withdraw that plea as recently as weeks before the pardon -- there is no post-conviction finding of prosecutorial misconduct or evidentiary defect resembling the 'weaponization' framing Kelsey adopted. The two-week gap between reporting to prison and receiving a full pardon, followed within a month by an active lobbying effort to extract further financial benefit (state funds to cover personal legal fees) through allies in the state legislature, is a documented sequence independent of how the underlying prosecution is characterized. Added 2026-09-11 (round-4 backlog fold, cluster c0688): this tracker documents a second Tennessee Republican corruption pardon following the same rhetorical pattern -- former House Speaker Glen Casada and aide Cade Cothren, pardoned Nov. 10, 2025, with the White House falsely blaming 'Biden over-prosecution' for a case investigated, raided, and sentenced entirely under Trump-era officials -- tracked in its own entry, trump-casada-cothren-tennessee-corruption-pardon-2025.json.",
-    "cause": "[TAP Analysis, not sourced] One instance in a broader documented pattern (see [[trump-fraudster-pardons-pattern-2026]]) of near-immediate presidential clemency for political allies and donors convicted of financial/campaign-finance crimes, adopting Trump's own 'weaponized justice system' framing regardless of whether the case involved a trial, contested evidence, or (as here) an uncontested guilty plea.",
-    "last_verified": "2026-08-19",
+    "status": "Pardon final. Kelsey's push to let him pay legal fees from his state campaign account failed: Briggs and Hicks declined to help, Taylor's amendment went nowhere, and on the session's final day lawmakers amended the bill to prevent him from using the account for the criminal case.",
+    "rebuttal_anticipated": "Presidential clemency is an unreviewable constitutional power, and Trump has pardoned across party lines in other cases; supporters frame the DOJ's original prosecution as itself part of a broader pattern of politically motivated campaign-finance enforcement against conservatives, per Kelsey's 'weaponized Biden DOJ' framing and Rep. Jeremy Faison's public comment that 'the law that put Kelsey behind bars is unjust.'",
+    "comeback": "Kelsey pleaded guilty rather than being convicted at trial or on disputed evidence, and a federal judge rejected his attempt to withdraw that plea and, as recently as weeks before the pardon, his later attempts to undo the case -- there is no post-conviction finding of prosecutorial misconduct or evidentiary defect resembling the 'weaponization' framing Kelsey adopted. The two-week gap between reporting to prison and receiving a full pardon, followed within a month by an active lobbying effort to extract further financial benefit (state funds to cover personal legal fees) through allies in the state legislature, is a documented sequence independent of how the underlying prosecution is characterized. This tracker documents a second Tennessee Republican corruption pardon following the same rhetorical pattern -- former House Speaker Glen Casada and aide Cade Cothren, pardoned Nov. 10, 2025, with the White House falsely blaming 'Biden over-prosecution' for a case investigated, raided, and sentenced entirely under Trump-era officials -- tracked in its own entry on the Casada and Cothren pardons.",
+    "cause": "[TAP Analysis, not sourced] One instance in a broader documented pattern (see the fraud pardons pattern entry) of near-immediate presidential clemency for political allies and donors convicted of financial/campaign-finance crimes, adopting Trump's own 'weaponized justice system' framing regardless of whether the case involved a trial, contested evidence, or (as here) an uncontested guilty plea.",
+    "last_verified": "2026-10-15",
     "date_added": "2026-08-11",
-    "confidence_note": "HIGH confidence on the pardon's timing, the underlying guilty plea, and Kelsey's own public statement -- corroborated across Axios, CNBC, WSMV, and the Tennessee Lookout. HIGH confidence on the post-pardon legislative-lobbying episode, sourced to Tennessee Lookout's direct reporting including on-record confirmation from state Sen. Richard Briggs; the outcome of the amendment itself (passed, failed, withdrawn) was not confirmed in sourcing reviewed. Updated 2026-08-19 (round 4 batch 27): the outcome of Kelsey's SB 229 lobbying effort, previously unconfirmed, is now resolved -- the effort failed, and the legislature affirmatively amended the bill to bar him from using campaign funds for the federal case, per Tennessee Lookout's direct reporting including House Speaker Sexton's on-record statement.",
-    "pull_quote": "House Speaker Cameron Sexton stated ‘campaign funds should not be used to cover legal expenses or matters related to criminal proceedings’ after lawmakers instead amended the bill to affirmatively bar Kelsey from doing so.",
+    "confidence_note": "HIGH confidence on the pardon's timing, the underlying guilty plea, and Kelsey's own public statement -- corroborated across Axios, CNBC, The Hill, WKRN, WSMV, and the Tennessee Lookout. HIGH confidence on the post-pardon legislative-lobbying episode, sourced to Tennessee Lookout's direct reporting including on-record confirmation from state Sen. Richard Briggs and Sen. Brent Taylor. Updated 2026-08-19: the outcome of Kelsey's SB 229 lobbying effort, previously unconfirmed, is now resolved -- the effort failed, and the legislature amended the bill to bar him from using campaign funds for the federal criminal case, per Tennessee Lookout's direct reporting including House Speaker Sexton's on-record statement. Update 2026-10-15: re-checked the cited reporting; each evidence item now describes only what its own source says, with The Hill, WKRN and an April 11 Tennessee Lookout report added for the $91,000 figure, the court history, the legislators' reactions and Taylor's amendment. No later developments found.",
+    "pull_quote": "House Speaker Cameron Sexton stated ‘campaign funds should not be used to cover legal expenses or matters related to criminal proceedings’ after lawmakers instead amended the bill to prevent Kelsey from tapping his campaign account for the criminal case.",
     "section_summaries": {
-      "incident_summary": "Trump gave Tennessee state Sen. Brian Kelsey a full pardon just two weeks into his sentence for a campaign-finance fraud guilty plea; Kelsey then lobbied Tennessee legislators to let him use state campaign funds to cover his personal legal fees, after state regulators had already denied that request.",
-      "confidence_note": "Well-corroborated across national and Tennessee outlets; the outcome of Kelsey's post-pardon legislative lobbying effort is unconfirmed and worth a future recheck."
+      "incident_summary": "Trump pardoned ex-Tennessee state Sen. Brian Kelsey two weeks into his sentence for a campaign-finance guilty plea; Kelsey then lobbied lawmakers to let him pay legal fees from campaign funds.",
+      "confidence_note": "Well-corroborated across national and Tennessee outlets, including the failed outcome of Kelsey's post-pardon lobbying effort."
     },
     "date_of_action": "2025-03-11 (Trump pardons Kelsey) through 2025-04 (Kelsey lobbies to redirect campaign funds to legal fees)",
-    "last_substantive_update": "2026-08-19",
+    "last_substantive_update": "2026-10-15",
     "glance": {
       "who": "Donald Trump (President)",
-      "what": "Pardoned Tennessee Sen. Kelsey two weeks into a 21-month sentence for campaign-finance fraud",
+      "what": "Pardoned ex-Tennessee state Sen. Kelsey two weeks into a 21-month sentence for campaign-finance fraud",
       "harm": {
         "kind": "institutional",
         "certainty": "documented",
         "who": "Campaign-finance fraud accountability"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-10-15"
+    },
+    "cause_references": [
+      {
+        "match": "the fraud pardons pattern entry",
+        "tracker": "prosecution",
+        "id": "trump-fraudster-pardons-pattern-2026"
+      }
+    ],
+    "timeline": {
+      "confidence_note": {
+        "base": "HIGH confidence on the pardon's timing, the underlying guilty plea, and Kelsey's own public statement -- corroborated across Axios, CNBC, The Hill, WKRN, WSMV, and the Tennessee Lookout. HIGH confidence on the post-pardon legislative-lobbying episode, sourced to Tennessee Lookout's direct reporting including on-record confirmation from state Sen. Richard Briggs and Sen. Brent Taylor. Updated 2026-08-19: the outcome of Kelsey's SB 229 lobbying effort, previously unconfirmed, is now resolved -- the effort failed, and the legislature amended the bill to bar him from using campaign funds for the federal criminal case, per Tennessee Lookout's direct reporting including House Speaker Sexton's on-record statement.",
+        "updates": [
+          {
+            "date": "2026-10-15",
+            "label": "Update",
+            "text": "Update 2026-10-15: re-checked the cited reporting; each evidence item now describes only what its own source says, with The Hill, WKRN and an April 11 Tennessee Lookout report added for the $91,000 figure, the court history, the legislators' reactions and Taylor's amendment. No later developments found.",
+            "effective_date": "2026-10-15"
+          }
+        ]
+      }
     }
   },
   {
@@ -27741,7 +27871,7 @@
     "id": "trump-kidan-donor-pardon-2026",
     "official": "Donald Trump, President",
     "offense_category": "Pardon Power Used as Political/Financial Patronage -- no criminal charge implicated by the pardon itself; this tracks accountability for the timing and apparent quid pro quo pattern of the President's clemency decision",
-    "incident_summary": "**President Trump pardoned Adam Kidan, a Republican megadonor convicted in the 2005 Jack Abramoff lobbying-and-fraud scandal (casino-boat fraud tied to illegal lobbying and bribery of public officials over Native American gaming interests, for which Kidan and Abramoff were sentenced to 70 months in prison and ordered to pay a combined $217 million in restitution), on July 3, 2026 -- three days after Kidan donated $2,600 to a leadership PAC affiliated with Rep. Ryan Mackenzie (R-PA).** Trump had personally campaigned in Mackenzie's eastern Pennsylvania district on June 23, about a week before the donation. Mackenzie's office said the congressman did not speak with the White House or Trump about the pardon, but declined at first to say whether he would keep the donation; after the timing became public, Mackenzie returned it. The pardon is likely to erase Kidan's remaining restitution obligations from the original $217 million judgment.",
+    "incident_summary": "**President Trump pardoned Adam Kidan, a Republican megadonor and former business partner of lobbyist Jack Abramoff who pleaded guilty to conspiracy and wire fraud over the fraudulent 2000 purchase of the SunCruz casino-boat fleet (sentenced in March 2006 to 70 months in prison and $21,701,015.45 in restitution), on July 3, 2026 -- three days after Kidan donated $2,600 to a leadership PAC affiliated with Rep. Ryan Mackenzie (R-PA).** Trump had personally campaigned in Mackenzie's eastern Pennsylvania district on June 23, about a week before the donation. Mackenzie's office said the congressman did not speak with the White House or Trump about the pardon, but declined at first to say whether he would keep the donation; after the timing became public, Mackenzie returned it. The pardon releases Kidan from any restitution he has not paid.",
     "contested": false,
     "elements_required": [
       "The President personally exercised the pardon power for a convicted political donor",
@@ -27758,9 +27888,9 @@
       },
       {
         "type": "public_record",
-        "description": "Spotlight PA reporting confirms Kidan's 2005 Abramoff-scandal conviction, the $217 million combined restitution order against Kidan and Abramoff, and that Mackenzie's office denied discussing the pardon with the White House while initially declining to say whether it would keep the donation",
+        "description": "Spotlight PA, republishing NOTUS's report through a partnership, repeats the June 30 donation and July 3 pardon timeline, describes Kidan as a key figure in the Jack Abramoff fraud and lobbying scandal who pleaded guilty to conspiracy and wire fraud, and reports that Mackenzie's office denied discussing the pardon with the White House while declining to say whether it would keep the donation",
         "source_url": "https://www.spotlightpa.org/news/2026/07/adam-kidan-pardon-trump-ryan-mackenzie-house-bob-brooks-federal-government/",
-        "maps_to_element": "Pardon relieves a substantial court-ordered restitution obligation"
+        "maps_to_element": "Donation preceded the pardon by a short, documented interval"
       },
       {
         "type": "public_record",
@@ -27770,34 +27900,59 @@
       },
       {
         "type": "reporting",
-        "description": "The Daily Beast's reporting frames the pardon as following days after Kidan's gift to Mackenzie, part of a broader pattern of clemency decisions benefiting political and financial allies",
+        "description": "The Daily Beast reports that Trump pardoned Republican megadonor Adam Kidan days after a $2,600 check from him landed with Rep. Ryan Mackenzie, a vulnerable Pennsylvania Republican, and that Kidan went to prison over the Jack Abramoff lobbying scandal",
         "source_url": "https://www.thedailybeast.com/trump-pardons-megadonor-adam-kidan-days-after-gift-to-maga-rep-ryan-mackenzie/",
-        "maps_to_element": "Pattern characterization"
+        "maps_to_element": "Donation preceded the pardon by a short, documented interval"
+      },
+      {
+        "type": "public_record",
+        "description": "The Justice Department's list of Trump clemency grants records Adam R. Kidan among 17 pardons dated July 3, 2026, sentenced in the Southern District of Florida on March 29, 2006 to 70 months' imprisonment, three years' supervised release and $21,701,015.45 restitution for conspiracy to commit wire fraud and mail fraud, and wire fraud",
+        "source_url": "https://www.justice.gov/pardon/clemency-grants-president-donald-j-trump-2025-present",
+        "maps_to_element": "The pardon relieves the recipient of a substantial, court-ordered financial obligation (restitution) in addition to the underlying conviction"
+      },
+      {
+        "type": "reporting",
+        "description": "Florida Bulldog's reporting on the pardon says the pardon dissolved Kidan's felon status and his restitution obligation ($21.7 million plus interest), that his Miami court file shows no indication he paid any of it, that his name does not appear in a search of the Office of the Pardon Attorney's clemency cases, and quotes the White House's stated rationale crediting his post-prison staffing career",
+        "source_url": "https://www.floridabulldog.org/2026/07/suncruz-fraudster-adam-kidan-who-paid-trump-millions-draws-pardon/",
+        "maps_to_element": "The pardon relieves the recipient of a substantial, court-ordered financial obligation (restitution) in addition to the underlying conviction"
       }
     ],
-    "status": "Pardon issued and final as of July 3, 2026; no legal mechanism exists to reverse a presidential pardon. Rep. Mackenzie has returned the donation. No congressional or DOJ Inspector General inquiry into the pardon's circumstances identified in sourcing reviewed as of this entry's addition.",
-    "rebuttal_anticipated": "Likely defense: presidents have unreviewable constitutional pardon power, the donation was a routine political contribution below the amount likely to constitute an explicit quid pro quo under bribery statutes, and correlation in timing between a donation and a pardon does not by itself prove the two were causally connected.",
-    "comeback": "The specific facts distinguishing this from an ordinary pardon are the tight, documented three-day window between donation and clemency, the President's own campaign visit to the donation recipient's district immediately beforehand, and the fact that the recipient congressman's office would not initially commit to keeping or returning the money -- only doing so after the timing was reported. No source has offered an alternative account of Kidan's clemency case (such as a claim of actual innocence, cooperation, or age/health factors) that would explain the pardon's timing independent of the donation.",
+    "status": "Pardon granted July 3, 2026; it is final and releases Kidan from any unpaid share of his $21.7 million restitution order. Rep. Mackenzie returned the $2,600 donation. No congressional, DOJ Inspector General or other formal inquiry into this pardon has been identified.",
+    "rebuttal_anticipated": "The White House's stated rationale credits Kidan's post-prison career in staffing businesses that it says secured entry-level jobs for over 250,000 people. Press Secretary Karoline Leavitt said pardons go through \"a rigorous review process involving the Department of Justice and the White House Counsel's Office\" and that \"The President finds it detestable that anyone would even attempt to profit off pardons.\" Mackenzie's spokesperson called any link between the contribution and the pardon \"ridiculous.\" Other likely defenses: presidents have unreviewable constitutional pardon power, the $2,600 donation was a routine political contribution below the amount likely to constitute an explicit quid pro quo under bribery statutes, and timing alone does not prove the donation and the pardon were causally connected.",
+    "comeback": "The specific facts distinguishing this from an ordinary pardon are the tight, documented three-day window between donation and clemency, the President's own campaign visit to the donation recipient's district a week beforehand, and the fact that the recipient congressman's office would not initially say whether it would keep the money -- returning it only after the timing was reported. The White House's only stated rationale is Kidan's post-prison business career; it did not respond to NOTUS's questions about Mackenzie and Kidan, and Florida Bulldog reported that Kidan's name does not appear in a search of the Justice Department's Office of the Pardon Attorney clemency cases, suggesting he did not go through the usual application process.",
     "cause": "[TAP Analysis, not sourced] Consistent with a broader pattern of this administration's pardon power benefiting donors, political allies, and supporters rather than being reserved for cases involving claims of wrongful conviction, excessive sentencing, or demonstrated rehabilitation.",
-    "last_verified": "2026-08-19",
+    "last_verified": "2026-10-15",
     "date_added": "2026-08-05",
-    "confidence_note": "HIGH confidence -- the donation date, pardon date, and campaign-visit date are independently corroborated across multiple outlets (NOTUS, Spotlight PA, Daily Beast), and Mackenzie's office's own responses (declining then reversing course on the donation) are on the record rather than disputed. Re-verified 2026-08-19: no Kidan-specific congressional inquiry, DOJ Inspector General probe, or other formal oversight action identified in follow-up searches -- a July 30, 2026 opinion piece calling for such oversight (published after this pardon and before this entry's own write date) confirms none existed as of that date either. A broader, pre-existing bicameral 'pay-to-play pardons' oversight investigation by Sen. Welch and Rep. Min (launched May 2026, covering 17 other clemency recipients, with a records-preservation demand to DOJ's Pardon Attorney, the White House, and the Secret Service due July 24, 2026) runs parallel to and predates this pardon, but has not been confirmed to name Kidan specifically as of this update.",
-    "pull_quote": "The pardon is likely to erase Kidan's remaining restitution obligations from the original $217 million judgment; Mackenzie's office initially declined to say whether it would keep the donation, only returning it after the timing became public.",
+    "confidence_note": "HIGH confidence -- the pardon date, sentence and restitution amount are on the Justice Department's own clemency list; the donation and campaign-visit dates come from NOTUS's reporting (based on FEC records), which Spotlight PA republished and the Daily Beast followed; and Mackenzie's office's own responses (declining then reversing course on the donation) are on the record rather than disputed. Re-verified 2026-08-19: no Kidan-specific congressional inquiry, DOJ Inspector General probe, or other formal oversight action identified in follow-up searches -- a July 30, 2026 opinion piece calling for such oversight (published after this pardon and before this entry's own write date) confirms none existed as of that date either. A broader, pre-existing bicameral 'pay-to-play pardons' oversight investigation by Sen. Welch and Rep. Min (launched May 2026, covering 17 other clemency recipients, with a records-preservation demand to DOJ's Pardon Attorney, the White House, and the Secret Service due July 24, 2026) runs parallel to and predates this pardon, but has not been confirmed to name Kidan specifically as of this update. Update 2026-10-15: the Justice Department's clemency list puts Kidan's restitution at $21,701,015.45, matching Florida Bulldog and LNP | LancasterOnline; the \"$217 million\" figure in NOTUS's reporting appears to be a decimal error. Follow-up searches found no congressional, Inspector General or other formal inquiry naming this pardon, and no report that the Welch-Min pay-to-play pardons probe has added it.",
+    "pull_quote": "The pardon releases Kidan from any unpaid share of his $21.7 million restitution order; Mackenzie's office initially declined to say whether it would keep the donation, only returning it after the timing became public.",
     "section_summaries": {
-      "incident_summary": "Trump pardoned Abramoff-scandal felon and GOP megadonor Adam Kidan three days after Kidan donated to a leadership PAC for a congressman Trump had just campaigned for, erasing a $217 million restitution obligation; the congressman later returned the donation once the timing became public.",
-      "confidence_note": "Donation, campaign-visit, and pardon dates are independently corroborated across multiple outlets and not disputed by any party involved."
+      "incident_summary": "Trump pardoned GOP megadonor and Abramoff-scandal felon Adam Kidan three days after Kidan gave to a congressman Trump had just campaigned for; the congressman returned the money.",
+      "confidence_note": "Pardon, sentence and restitution are on DOJ's clemency list; the donation timeline rests on NOTUS's FEC review, and Mackenzie's on-record responses are undisputed."
     },
     "date_of_action": "2026-07-03 (Trump pardons donor Kidan days after PAC donation)",
-    "last_substantive_update": "2026-08-19",
+    "last_substantive_update": "2026-10-15",
     "glance": {
       "who": "Donald Trump (President)",
-      "what": "Pardoned megadonor Adam Kidan three days after a PAC donation, likely erasing restitution from a $217M order",
+      "what": "Pardoned megadonor Adam Kidan three days after a PAC donation, freeing him of any unpaid $21.7M restitution",
       "harm": {
         "kind": "institutional",
         "certainty": "alleged",
         "who": "Clemency free of financial ties"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-10-15"
+    },
+    "timeline": {
+      "confidence_note": {
+        "base": "HIGH confidence -- the pardon date, sentence and restitution amount are on the Justice Department's own clemency list; the donation and campaign-visit dates come from NOTUS's reporting (based on FEC records), which Spotlight PA republished and the Daily Beast followed; and Mackenzie's office's own responses (declining then reversing course on the donation) are on the record rather than disputed. Re-verified 2026-08-19: no Kidan-specific congressional inquiry, DOJ Inspector General probe, or other formal oversight action identified in follow-up searches -- a July 30, 2026 opinion piece calling for such oversight (published after this pardon and before this entry's own write date) confirms none existed as of that date either. A broader, pre-existing bicameral 'pay-to-play pardons' oversight investigation by Sen. Welch and Rep. Min (launched May 2026, covering 17 other clemency recipients, with a records-preservation demand to DOJ's Pardon Attorney, the White House, and the Secret Service due July 24, 2026) runs parallel to and predates this pardon, but has not been confirmed to name Kidan specifically as of this update.",
+        "updates": [
+          {
+            "date": "2026-10-15",
+            "label": "Update",
+            "text": "Update 2026-10-15: the Justice Department's clemency list puts Kidan's restitution at $21,701,015.45, matching Florida Bulldog and LNP | LancasterOnline; the \"$217 million\" figure in NOTUS's reporting appears to be a decimal error. Follow-up searches found no congressional, Inspector General or other formal inquiry naming this pardon, and no report that the Welch-Min pay-to-play pardons probe has added it.",
+            "effective_date": "2026-10-15"
+          }
+        ]
+      }
     }
   },
   {
