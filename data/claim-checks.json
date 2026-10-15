@@ -18885,73 +18885,137 @@
    },
    "1": {
     "state": "supports",
-    "why": "General License No. 135, dated October 9, 2026 and signed by OFAC Director Bradley T. Smith, authorizes transactions prohibited under 31 CFR parts 587 and 589 related to the sale, delivery, offloading or importation (including into the U.S.) of Russian-origin diesel through 12:01 a.m. EDT, April 7, 2027.",
+    "why": "The license text quotes the authorized transactions verbatim, sets the March 12 loading cutoff and the April 11 expiry, and is signed and dated March 12, 2026 by OFAC Director Bradley T. Smith.",
     "host": "ofac.treasury.gov",
-    "date": "2026-10-13",
+    "date": "2026-10-15",
     "kind": "fact",
     "archive": false
    },
    "2": {
     "state": "supports",
-    "why": "The eCFR text of section 587.106 matches the quoted delegation language verbatim.",
-    "host": "ecfr.gov",
-    "date": "2026-10-13",
+    "why": "Interfax reports the license is in effect through 12:01 a.m. EDT on April 11, 2026 and quotes Bessent's X post with the exact wording in the claim.",
+    "host": "interfax.com",
+    "date": "2026-10-15",
     "kind": "fact",
     "archive": false
    },
    "3": {
     "state": "supports",
-    "why": "Ship & Bunker (Oct 9, 2026) quotes Treasury's X post verbatim, reports Trump's Truth Social claim of 300,000 tonnes immediately and up to 4.8 million tonnes total after a call with Putin, and states the 2022 Act remains in effect with the license considered a 'temporary executive waiver.'",
-    "host": "shipandbunker.com",
-    "date": "2026-10-13",
+    "why": "The Reuters article on Global News quotes Bessent verbatim at a White House briefing saying the U.S. will not renew either general license.",
+    "host": "globalnews.ca",
+    "date": "2026-10-15",
     "kind": "fact",
     "archive": false
    },
    "4": {
     "state": "supports",
-    "why": "AP (Oct 11, 2026) names the four Republican and two Democratic signers, quotes 'runs directly counter to that law,' reports their statement that the administration failed to consult Congress or submit a justification as required, and quotes Barrasso on 'Face the Nation.'",
-    "host": "ksat.com",
-    "date": "2026-10-13",
+    "why": "GL 134B authorizes the same transactions for oil loaded on or before April 17, 2026 through May 16, 2026, and paragraph (c) states 134A expired on April 11, 2026 and is replaced by 134B.",
+    "host": "ofac.treasury.gov",
+    "date": "2026-10-15",
     "kind": "fact",
     "archive": false
    },
    "5": {
     "state": "supports",
-    "why": "NBC News (Oct 11, 2026) quotes both Tillis statements from 'Meet the Press' and notes Congress has not changed the 2022 law.",
-    "host": "nbcnews.com",
-    "date": "2026-10-13",
+    "why": "The Senate Foreign Relations statement condemns extending \"the ill-conceived Russia General License 134\" two days after Bessent's quoted pledge and contains the quoted \"180-degree reversal\" sentence.",
+    "host": "foreign.senate.gov",
+    "date": "2026-10-15",
     "kind": "fact",
     "archive": false
    },
    "6": {
     "state": "supports",
-    "why": "The CNN text (Oct 11, 2026) contains Bessent's legal-authorities-and-mandate contention with the 'good for the American people' quote on Fox News Sunday, and Fitzpatrick's discharge-petition plan to block 'any and all purchases of Russian oil.'",
-    "host": "kioncentralcoast.com",
-    "date": "2026-10-13",
+    "why": "The AP story states Treasury renewed the waiver two days after Bessent said he had no plans to extend it, and quotes Bessent with the exact words in the claim.",
+    "host": "ktar.com",
+    "date": "2026-10-15",
     "kind": "fact",
     "archive": false
    },
    "7": {
     "state": "supports",
-    "why": "CNBC quotes Trump's Truth Social post defending the deal with the stated wording.",
-    "host": "cnbc.com",
-    "date": "2026-10-13",
+    "why": "GL 134C keeps the April 17 loading cutoff, authorizes transactions through June 17, 2026, and paragraph (c) says 134B expired May 16, 2026 and is replaced and superseded in its entirety effective May 18, 2026.",
+    "host": "ofac.treasury.gov",
+    "date": "2026-10-15",
     "kind": "fact",
     "archive": false
    },
    "8": {
     "state": "supports",
-    "why": "AP quotes Doggett as chief sponsor saying Trump is directly violating the law, Trump saying critics 'can't really be serious,' and the Oct. 18 effective date now 'in question.'",
-    "host": "apnews.com",
-    "date": "2026-10-13",
+    "why": "The Reuters story on Al-Monitor contains both quoted passages verbatim.",
+    "host": "al-monitor.com",
+    "date": "2026-10-15",
     "kind": "fact",
-    "archive": true
+    "archive": false
    },
    "9": {
     "state": "supports",
-    "why": "CNBC names all twelve senators (six Republicans including Armstrong, McConnell and Cornyn, and six Democrats) and quotes both the 'gift to our adversary' line and the 'rescind General License No. 135' demand.",
+    "why": "GL 135 authorizes transactions under 31 CFR parts 587 and 589 related to Russian-origin diesel, including importation into the U.S., through April 7, 2027, and is signed and dated October 9, 2026 by Bradley T. Smith.",
+    "host": "ofac.treasury.gov",
+    "date": "2026-10-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "10": {
+    "state": "supports",
+    "why": "The eCFR text of section 587.106 contains the quoted delegation language verbatim (the elided portion is 'of April 15, 2021'), confirming the claim as stated.",
+    "host": "ecfr.gov",
+    "date": "2026-10-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "11": {
+    "state": "supports",
+    "why": "Ship & Bunker quotes the Treasury X post verbatim, reports Trump's Truth Social account of 300,000 tonnes immediately and up to 4.8 million tonnes total after a Putin call, and reports that the 2022 Act remains in effect with the license considered a \"temporary executive waiver.\"",
+    "host": "shipandbunker.com",
+    "date": "2026-10-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "12": {
+    "state": "supports",
+    "why": "AP names the four Republican and two Democratic signers, quotes \"runs directly counter to that law,\" reports the failure-to-consult point, and quotes Barrasso on \"Face the Nation.\"",
+    "host": "ksat.com",
+    "date": "2026-10-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "13": {
+    "state": "supports",
+    "why": "NBC quotes both Tillis lines verbatim from \"Meet the Press\" and notes Congress has not changed the 2022 law.",
+    "host": "nbcnews.com",
+    "date": "2026-10-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "14": {
+    "state": "supports",
+    "why": "The CNN text contains the quoted Bessent characterization and \"Fox News Sunday\" quote, and reports Fitzpatrick's plan to force a House vote via discharge petition on a bill blocking \"any and all purchases of Russian oil.\"",
+    "host": "kioncentralcoast.com",
+    "date": "2026-10-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "15": {
+    "state": "supports",
+    "why": "CNBC quotes Trump's Truth Social post defending the deal with the exact words in the claim.",
     "host": "cnbc.com",
-    "date": "2026-10-13",
+    "date": "2026-10-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "16": {
+    "state": "supports",
+    "why": "The archived AP article (captured Oct. 13, 2026) quotes Doggett, identified as the bill's chief sponsor, saying 'Trump is directly violating that law,' quotes Trump saying Republican critics 'can't really be serious,' and states the Graham law's bulk provisions take effect Oct. 18 at the end of the 30-day review but that action 'now appears to be in question.'",
+    "host": "apnews.com",
+    "date": "2026-10-15",
+    "kind": "fact",
+    "archive": true
+   },
+   "17": {
+    "state": "supports",
+    "why": "CNBC lists all twelve named signers and quotes the letter's \"gift to our adversary\" line and the call to rescind General License No. 135 and execute the Graham Act authorities.",
+    "host": "cnbc.com",
+    "date": "2026-10-15",
     "kind": "fact",
     "archive": false
    }
