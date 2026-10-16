@@ -9290,8 +9290,16 @@
     "archive": false
    },
    "4": {
-    "state": "partly",
-    "why": "The article confirms Feinberg naming Kollitides co-chief of staff and BOND director, the HQE confidentiality of disclosures, Bliss's compliance quote, the Defense official's 'does not and has never had' and recusal statements, and the unanswered questions; the provided text does not show the August disclosure request or A&M Capital saying he stopped working there days before publication.",
+    "state": "supports",
+    "why": "The source states Feinberg named Kollitides co-chief of staff and senior adviser and director of BOND, 'the office with the $281 million no-bid contract'; it also says HQE disclosures are generally confidential and the Pentagon has not responded to ProPublica's August request.",
+    "host": "propublica.org",
+    "date": "2026-10-16",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "supports",
+    "why": "The source quotes Bliss saying Kollitides 'is in full compliance with all ethical laws and regulations' and quotes the Defense official's 'does not and has never had' and 'recused' statements. It also reports that the official did not answer the compensation, role and exemption questions, and that A&M Capital said he had stopped working there days earlier.",
     "host": "propublica.org",
     "date": "2026-10-16",
     "kind": "fact",
@@ -15282,14 +15290,22 @@
     "archive": false
    },
    "6": {
-    "state": "partly",
-    "why": "The October 5, 2026 release confirms 40 individuals, the Aug. 21-Oct. 2 filing window language, the Blanche and Shumate quotes, and the allegations-only disclaimer; the provided windows do not show the full age range, the nine-Mexico/four-Pakistan counts, or a complete count of 19 districts.",
+    "state": "supports",
+    "why": "The October 5, 2026 release states that 40 individuals were the subject of actions 'Filed between Aug. 21 and Oct. 2, 2026'. It carries the Blanche and Shumate quotes verbatim and the allegations-only disclaimer.",
     "host": "justice.gov",
     "date": "2026-10-16",
     "kind": "fact",
     "archive": false
    },
    "7": {
+    "state": "partly",
+    "why": "The windowed text shows defendants listed with country and age, such as 'Raul Cisneros (Mexico/Age 76)', and includes Pakistani and Mexican defendants. Because the text is truncated, it does not settle the 26-to-76 age range, the counts of nine from Mexico and four from Pakistan, or the 19-district list.",
+    "host": "justice.gov",
+    "date": "2026-10-16",
+    "kind": "fact",
+    "archive": false
+   },
+   "8": {
     "state": "supports",
     "why": "Newsweek reports the 40 targets, ages and countries, both quotes, the Brennan Center's ~11 cases a year from 1990-2017, and Maslenjak v. United States (2017).",
     "host": "newsweek.com",
@@ -15297,7 +15313,7 @@
     "kind": "fact",
     "archive": false
    },
-   "8": {
+   "9": {
     "state": "supports",
     "why": "TNND/WLOS reports the Aug. 21-Oct. 2 filings described as the largest single-period number and includes the quoted caveat.",
     "host": "wlos.com",
@@ -15305,7 +15321,7 @@
     "kind": "fact",
     "archive": false
    },
-   "9": {
+   "10": {
     "state": "supports",
     "why": "Outlook India lists the espionage, manslaughter and minor-offense convictions, the quoted note about fraud-based cases, and Osman's denial through his lawyer.",
     "host": "outlookindia.com",
@@ -15313,7 +15329,7 @@
     "kind": "fact",
     "archive": false
    },
-   "10": {
+   "11": {
     "state": "supports",
     "why": "The updated Axios story quotes the DOJ spokesperson verbatim on 'more than 200 denaturalization complaints to date' and being 'on track to meet its objectives,' and separately states the administration set 'a goal of 250 cases by this month'; the editor's note confirms the DOJ comment was added in an update.",
     "host": "axios.com",

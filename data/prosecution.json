@@ -14787,7 +14787,13 @@
       },
       {
         "type": "news_report",
-        "description": "Same ProPublica report: Feinberg named Kollitides his co-chief of staff and senior adviser and director of the Business Operators for National Defense (BOND), the office with the $281 million no-bid contract; Kollitides is now a highly qualified expert, whose disclosures are generally confidential, and the Pentagon has not answered ProPublica's August request for them. Pentagon spokesperson Jacob Bliss said Kollitides \"is in full compliance with all ethical laws and regulations\"; a Defense official said he \"does not and has never had\" any investments or financial relations with A&M consulting and is \"recused on any conflicted matters related to A&M Capital,\" but did not answer whether A&M Capital was paying him when the contracts were signed, whether he played any role in the contract decisions or whether he received an exemption. A&M Capital said Kollitides had stopped working there days before publication.",
+        "description": "Same ProPublica report: Feinberg named Kollitides his co-chief of staff and senior adviser and director of the Business Operators for National Defense (BOND), the office with the $281 million no-bid contract; Kollitides is now a highly qualified expert, whose disclosures are generally confidential, and the Pentagon has not answered ProPublica's August request for them.",
+        "source_url": "https://www.propublica.org/article/george-kollitides-pentagon-contracts-alvarez-marsal",
+        "maps_to_element": "Whether Kollitides took part in the awards, was paid by A&M Capital or had a waiver is undisclosed: his financial disclosures are confidential, and Deputy Secretary Feinberg, who appointed him, defends the A&M arrangement"
+      },
+      {
+        "type": "news_report",
+        "description": "Same ProPublica report: Pentagon spokesperson Jacob Bliss said Kollitides \"is in full compliance with all ethical laws and regulations\"; a Defense official said he \"does not and has never had\" any investments or financial relations with A&M consulting and is \"recused on any conflicted matters related to A&M Capital,\" but did not answer whether A&M Capital was paying him when the contracts were signed, whether he played any role in the contract decisions or whether he received an exemption. A&M Capital said Kollitides had stopped working there days before publication.",
         "source_url": "https://www.propublica.org/article/george-kollitides-pentagon-contracts-alvarez-marsal",
         "maps_to_element": "Whether Kollitides took part in the awards, was paid by A&M Capital or had a waiver is undisclosed: his financial disclosures are confidential, and Deputy Secretary Feinberg, who appointed him, defends the A&M arrangement"
       }
@@ -14810,9 +14816,9 @@
     ],
     "confidence_note": "MODERATE confidence. The contract amounts, dates and contracting method come from ProPublica's reading of federal procurement records, and the Wall Street Journal, seen only through Raw Story's summary, separately reported the A&M contracting, though its $300 million paid figure is far above the roughly $31 million ProPublica found paid and is not used for amounts. Kollitides' April adviser listing rests on a securities filing quoted by ProPublica; Bloomberg Government separately documented his special-employee start and private board seat. Whether he had a conflict depends on facts the Pentagon has not disclosed, so treat it as a reported conflict, not a finding. ProPublica's account of a BOND recruiter asking applicants how they voted comes from one anonymous source and is not used here. Re-verified 2026-10-14: the ProPublica page still supports the BOND directorship, the recusal statements and A&M Capital's statement that he had stopped working there; no investigation or ethics finding found.",
     "pull_quote": "\"It looks way too cozy to be legitimate. I think taxpayers should be appalled.\" -- Virginia Canter, former federal government ethics lawyer, to ProPublica",
-    "last_verified": "2026-10-14",
+    "last_verified": "2026-10-16",
     "date_added": "2026-10-13",
-    "last_substantive_update": "2026-10-14",
+    "last_substantive_update": "2026-10-16",
     "date_of_action": "2025-12 (first $67.6 million award to Alvarez & Marsal Federal) through 2026-06 ($281 million no-bid award to advise Kollitides' BOND office)",
     "section_summaries": {
       "incident_summary": "A firm tied to Kollitides' old private-equity employer won almost $350M in Pentagon consulting deals, one no-bid, for offices he heads or helps lead.",
@@ -14827,7 +14833,7 @@
         "certainty": "alleged",
         "who": "U.S. taxpayers"
       },
-      "reviewed": "2026-10-14"
+      "reviewed": "2026-10-16"
     }
   },
   {
@@ -23732,7 +23738,13 @@
       },
       {
         "type": "official_statement",
-        "description": "Justice Department press release, October 5, 2026: denaturalization actions against 40 individuals, 'Filed between Aug. 21 and Oct. 2, 2026, these complaints represent the largest volume of complaints submitted in a single period under the Trump administration'; Blanche: 'Today's announcement marks the largest denaturalization effort in modern history'; Shumate: 'Every single one of these individuals lied their way into U.S. citizenship'; lists each defendant's country and age (26 to 76; nine from Mexico, four from Pakistan) and the 19 federal districts; 'The claims made in the complaints are allegations only, and there has been no determination of liability'",
+        "description": "Justice Department press release, October 5, 2026: denaturalization actions against 40 individuals, 'Filed between Aug. 21 and Oct. 2, 2026, these complaints represent the largest volume of complaints submitted in a single period under the Trump administration'; Blanche: 'Today's announcement marks the largest denaturalization effort in modern history'; Shumate: 'Every single one of these individuals lied their way into U.S. citizenship'; 'The claims made in the complaints are allegations only, and there has been no determination of liability'",
+        "source_url": "https://www.justice.gov/opa/pr/justice-department-moves-strip-citizenship-40-criminals-largest-single-period",
+        "maps_to_element": "DOJ filed civil denaturalization suits at a rate far above historical levels, including 40 suits in about six weeks in fall 2026"
+      },
+      {
+        "type": "official_statement",
+        "description": "The same October 5, 2026 release lists each defendant's country and age where known (26 to 76; nine from Mexico, four from Pakistan) and the 19 federal districts",
         "source_url": "https://www.justice.gov/opa/pr/justice-department-moves-strip-citizenship-40-criminals-largest-single-period",
         "maps_to_element": "DOJ filed civil denaturalization suits at a rate far above historical levels, including 40 suits in about six weeks in fall 2026"
       },
@@ -23773,9 +23785,9 @@
     ],
     "confidence_note": "HIGH confidence on the memo, the filing counts, the defendants' ages and countries, the 19 districts and the quoted statements: they come from DOJ's own August 3 and October 5, 2026 press releases and from NPR's report of the memo. The 384-target list rests on anonymous-source New York Times reporting relayed by FOX 7, and the 250-case goal on a DOJ spokesperson quoted by Bloomberg Law; neither was read in a DOJ document. DOJ dates the 40 complaints August 21 to October 2, though one complaint on its list is dated August 10. No court has ruled on any of the 40 suits, and the due-process and speech concerns are critics' arguments, not findings. Re-verified 2026-10-14: DOJ's October 5 release still reads as described, and no ruling in any of the 40 suits was found; Axios reports a DOJ spokesperson's figure of more than 200 complaints to date; the June 3, 2026 complaint against Abdikadir Ali Kadiye predates the 40 and is not on that list.",
     "pull_quote": "Assistant Attorney General Brett A. Shumate: “Every single one of these individuals lied their way into U.S. citizenship.” The Justice Department itself says the claims are allegations only.",
-    "last_verified": "2026-10-14",
+    "last_verified": "2026-10-16",
     "date_added": "2026-10-11",
-    "last_substantive_update": "2026-10-14",
+    "last_substantive_update": "2026-10-16",
     "date_of_action": "2025-06-11 (Shumate memo makes denaturalization a top Civil Division priority) through 2026-10-05 (DOJ announces 40 suits filed August 21 to October 2)",
     "section_summaries": {
       "incident_summary": "Under a 2025 memo to 'maximally pursue' denaturalization and a 250-case goal, DOJ filed 40 suits to strip citizenship in six weeks, its biggest batch yet.",
@@ -23790,7 +23802,7 @@
         "certainty": "projected",
         "who": "40 naturalized U.S. citizens sued"
       },
-      "reviewed": "2026-10-14"
+      "reviewed": "2026-10-16"
     }
   },
   {
