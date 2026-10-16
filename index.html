@@ -688,7 +688,18 @@
      neutral like institutional, never the alarming physical/rights red. Must
      stay after the kind rules above (same specificity, later wins). */
   .glance-badge-averted { background: var(--paper); color: var(--ink-soft); border: 1px solid var(--rule); }
-  .glance-harm-who { color: var(--ink-soft); }
+  /* Who/What was harmed: highlighter-marker tint so the harmed party is the
+     first thing the eye lands on in the harm line (2026-10-16, Joe's call).
+     box-decoration-break keeps the tint padded on every line when it wraps. */
+  .glance-harm-who {
+    color: var(--ink);
+    font-weight: 600;
+    background: var(--brass-light);
+    padding: 0.05rem 0.3rem;
+    border-radius: 2px;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
   .glance-orig-title { margin: 0 0 0.6rem; font-weight: bold; color: var(--ink-soft); }
 
   /* User Topics card-level coverage indicator -- same color language as
