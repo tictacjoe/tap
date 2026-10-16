@@ -9836,8 +9836,8 @@
     "archive": false
    },
    "4": {
-    "state": "partly",
-    "why": "The opinion quotes the 'would be amenable' statement, Nocella's 'was not the decisionmaker' statement, the court's 'sole decisionmaker' finding, and the 'irregularities ... are concerning' conclusion; the July 15 and July 17 dates, the 'on two occasions' wording, and the 'non-consideration' finding are not visible in the provided windows.",
+    "state": "supports",
+    "why": "The August 10 opinion states Giuffra submitted his declaration on July 15, 2026, quoting him that \"[o]n two occasions\" he told the Department the Adani Group \"would be amenable\" to following through on the $10 billion investment pledge; elsewhere it records Nocella's July 17, 2026 declaration confirming \"[he] was not the decisionmaker for the motion to dismiss.\"",
     "host": "storage.courtlistener.com",
     "date": "2026-10-16",
     "kind": "fact",
@@ -9845,49 +9845,57 @@
    },
    "5": {
     "state": "supports",
-    "why": "Reuters reports the Monday (August 10) dismissal, Garaufis's criticism of McCotter for working with defense lawyers without input from the investigating prosecutors or agents, and Adani's statement welcoming the decision.",
-    "host": "bnnbloomberg.ca",
-    "date": "2026-10-08",
+    "why": "The opinion states the court is convinced McCotter was 'in fact, the \"sole decisionmaker\"' and the pledge 'in fact, a \"non-consideration,\"' and its conclusion says 'the irregularities in the decision to dismiss the Indictment are concerning.'",
+    "host": "storage.courtlistener.com",
+    "date": "2026-10-16",
     "kind": "fact",
     "archive": false
    },
    "6": {
     "state": "supports",
-    "why": "The MLex summary dated September 3, 2026 states Judge Garaufis denied DOJ's motion to dismiss charges against five defendants, matching the claim.",
-    "host": "mlex.com",
-    "date": "2026-10-08",
+    "why": "The Reuters article on BNN Bloomberg reports the dismissal, the judge's criticism of McCotter for working with defense lawyers without input from prosecutors or agents, and Adani's statement welcoming the decision.",
+    "host": "bnnbloomberg.ca",
+    "date": "2026-10-16",
     "kind": "fact",
     "archive": false
    },
    "7": {
-    "state": "supports",
-    "why": "National Herald, citing the Guardian, reports the senators wrote to Blanche a second time after no response to their June letter, quotes the 'two of President Trump's personal lawyers' line, and reports Epshteyn's spokesperson's denial.",
-    "host": "nationalheraldindia.com",
-    "date": "2026-10-08",
+    "state": "partly",
+    "why": "The MLex summary dated September 3, 2026 says Garaufis denied a DOJ motion to dismiss charges against 'five...', but the text is truncated behind a paywall, so it does not explicitly say these were the remaining defendants.",
+    "host": "mlex.com",
+    "date": "2026-10-16",
     "kind": "fact",
     "archive": false
    },
    "8": {
     "state": "supports",
-    "why": "The petition, filed 09/28/26 and signed by McCotter as Acting Deputy Attorney General, objects that the court 'refused to grant the Rule 48(a) motion as to five defendants and two counts,' quotes McCotter having 'consulted at length with attorneys in the Department,' and seeks mandamus to remedy the refusal to dismiss.",
-    "host": "storage.courtlistener.com",
-    "date": "2026-10-08",
+    "why": "The article, citing the Guardian, says Warren and Blumenthal wrote to Blanche for the second time after getting no response to their June letter, quotes their concern about 'two of President Trump’s personal lawyers', and reports Epshteyn's spokesperson's denial.",
+    "host": "nationalheraldindia.com",
+    "date": "2026-10-16",
     "kind": "fact",
     "archive": false
    },
    "9": {
-    "state": "supports",
-    "why": "MLex's October 1, 2026 summary states the Second Circuit denied DOJ's effort to expedite its mandamus petition.",
-    "host": "mlex.com",
-    "date": "2026-10-08",
+    "state": "partly",
+    "why": "The provided text confirms the petition is signed by McCotter as Acting Deputy Attorney General, was filed 09/28/26, and seeks dismissal of the remaining counts, but it only covers the cover page and tables, so the quoted phrases 'as to five defendants and two counts' and 'consulted at length with attorneys in the Department' do not appear.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-10-16",
     "kind": "fact",
     "archive": false
    },
    "10": {
     "state": "supports",
-    "why": "Madhyamam, citing The Wire, reports the senators' September 23 letter to Blanche citing Giuffra's declaration that his firm had twice informed DOJ of the investment willingness.",
+    "why": "The MLex summary dated October 1, 2026 states the Second Circuit denied the Justice Department's effort to expedite its mandamus petition.",
+    "host": "mlex.com",
+    "date": "2026-10-16",
+    "kind": "fact",
+    "archive": false
+   },
+   "11": {
+    "state": "supports",
+    "why": "Madhyamam, citing The Wire, reports the senators' September 23 letter to Blanche, which cited Giuffra's declaration that his firm had twice told DOJ about the investment.",
     "host": "madhyamamonline.com",
-    "date": "2026-10-08",
+    "date": "2026-10-16",
     "kind": "fact",
     "archive": false
    }
@@ -16333,7 +16341,7 @@
    },
    "23": {
     "state": "partly",
-    "why": "The opinion confirms the October 13 grant of a preliminary injunction extending prior relief to 'preserve the status quo,' the 'no evidence in the record' and 'from the get-go' finding, the 'merely a post-hoc justification' language, and refusal of a stay; the $1.00 bond, the likelihood-of-success findings on each claim, and the viewpoint-discrimination quotes are not in the provided windows.",
+    "why": "The opinion grants the preliminary injunction, extends the relief to 'preserve the status quo while this case proceeds', finds likely success on the due-process and both First Amendment claims, and rejects the stay request (fn. 10); but the provided text shows only the $1.00 bond for the earlier TRO and is cut off before any ruling on bond for the injunction.",
     "host": "storage.courtlistener.com",
     "date": "2026-10-16",
     "kind": "fact",
@@ -16341,9 +16349,17 @@
    },
    "24": {
     "state": "supports",
-    "why": "CNBC reports the Tuesday preliminary injunction replacing the TRO, likely success on retaliation, viewpoint-discrimination and due-process claims, the quoted limits, and Trump's prior vow to appeal.",
+    "why": "The October 13 opinion finds it likely Plaintiffs were selected because Trump \"believes their coverage of him and his administration is generally inaccurate and biased\" and states \"Simply put, that is unlawful viewpoint discrimination\"; it also says \"there is no evidence in the record\" of a national-security decision \"from the get-go\" and that this \"suggests that 'national security' was merely a post-hoc justification.\"",
+    "host": "storage.courtlistener.com",
+    "date": "2026-10-16",
+    "kind": "fact",
+    "archive": false
+   },
+   "25": {
+    "state": "supports",
+    "why": "CNBC reports Kelly's late-Tuesday preliminary injunction replacing the TRO, the findings of likely success on the retaliation, viewpoint-discrimination and due-process claims, that it is not a final ruling and does not restore Oval Office/Air Force One access, and that Trump said last month he would appeal.",
     "host": "cnbc.com",
-    "date": "2026-10-14",
+    "date": "2026-10-16",
     "kind": "fact",
     "archive": false
    }

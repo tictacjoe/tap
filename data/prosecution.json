@@ -15605,7 +15605,13 @@
       },
       {
         "type": "court_record",
-        "description": "The same August 10 opinion quotes Giuffra's declaration, submitted July 15, that \"on two occasions\" he told DOJ the Adani Group \"would be amenable\" to following through on the $10 billion pledge, and Nocella's July 17 sworn statement that he \"was not the decisionmaker\"; the court found McCotter was \"in fact, the 'sole decisionmaker'\" and the pledge \"in fact, a 'non-consideration,'\" and concluded that the \"irregularities in the decision to dismiss the Indictment are concerning\"",
+        "description": "The same August 10 opinion quotes Giuffra's declaration, submitted July 15, that \"on two occasions\" he told DOJ the Adani Group \"would be amenable\" to following through on the $10 billion pledge, and Nocella's July 17 sworn statement that he \"was not the decisionmaker\"",
+        "source_url": "https://storage.courtlistener.com/recap/gov.uscourts.nyed.522756/gov.uscourts.nyed.522756.49.0.pdf",
+        "maps_to_element": "The defense, led by a lawyer who also represents the President, raised a $10 billion U.S. investment as part of a possible resolution before DOJ moved to dismiss"
+      },
+      {
+        "type": "court_record",
+        "description": "In the same August 10 opinion, the court found McCotter was \"in fact, the 'sole decisionmaker'\" and the pledge \"in fact, a 'non-consideration,'\" and concluded that the \"irregularities in the decision to dismiss the Indictment are concerning\"",
         "source_url": "https://storage.courtlistener.com/recap/gov.uscourts.nyed.522756/gov.uscourts.nyed.522756.49.0.pdf",
         "maps_to_element": "The presiding federal judge called the irregularities in the decision process concerning and the process apparently highly unusual in a written opinion, while granting dismissal"
       },
@@ -15659,8 +15665,8 @@
     ],
     "confidence_note": "HIGH confidence on the core facts, which come from Judge Garaufis's 47-page August 10, 2026 opinion and DOJ's own mandamus petition on the court docket, corroborated by Reuters. The `contested: true` flag reflects that DOJ denies the investment offer played any role and the judge agreed; the entry's claim is about the irregular process, not a proven quid pro quo. The Second Circuit outcome rests on a single MLex summary; the senators' September letter rests on secondary reports of a Guardian article that could not be fetched.",
     "pull_quote": "“It is up to the public to decide what effect offers of this kind have on the equal administration of justice and the rule of law,” Judge Nicholas Garaufis wrote in dismissing the charges against Gautam Adani.",
-    "last_verified": "2026-10-08",
-    "last_substantive_update": "2026-10-08",
+    "last_verified": "2026-10-16",
+    "last_substantive_update": "2026-10-16",
     "date_added": "2026-10-08",
     "date_of_action": "2026-05-18 (DOJ moves to dismiss the Adani indictment) through 2026-08-10 (judge dismisses the charges against Gautam Adani with prejudice)",
     "section_summaries": {
@@ -15676,7 +15682,7 @@
         "certainty": "documented",
         "who": "Equal administration of justice"
       },
-      "reviewed": "2026-10-08"
+      "reviewed": "2026-10-16"
     }
   },
   {
@@ -25113,7 +25119,13 @@
       },
       {
         "type": "court_filing",
-        "description": "Judge Timothy J. Kelly's October 13, 2026 memorandum opinion granted the outlets' motion for a preliminary injunction, extending the relief already awarded to \"preserve the status quo while this case proceeds\" and requiring another nominal bond of $1.00. It found the outlets likely to succeed on their due-process claim and on both First Amendment claims, concluding that Trump likely selected them \"because he believes their coverage of him and his administration is generally inaccurate and biased\" and that \"Simply put, that is unlawful viewpoint discrimination\"; it found \"no evidence in the record\" that Trump made the decision on national security grounds \"from the get-go,\" called that rationale \"merely a post-hoc justification,\" and declined to stay the injunction pending appeal.",
+        "description": "Judge Timothy J. Kelly's October 13, 2026 memorandum opinion granted the outlets' motion for a preliminary injunction, extending the relief already awarded to \"preserve the status quo while this case proceeds\" and requiring another nominal bond of $1.00. It found the outlets likely to succeed on their due-process claim and on both First Amendment claims, and declined to stay the injunction pending appeal.",
+        "source_url": "https://storage.courtlistener.com/recap/gov.uscourts.dcd.296754/gov.uscourts.dcd.296754.50.0_2.pdf",
+        "maps_to_element": "Established case law (Sherrill v. Knight and progeny) holds White House press access cannot be denied arbitrarily or based on viewpoint once a general practice of access exists"
+      },
+      {
+        "type": "court_filing",
+        "description": "The same October 13 opinion concluded that Trump likely selected the outlets \"because he believes their coverage of him and his administration is generally inaccurate and biased\" and that \"Simply put, that is unlawful viewpoint discrimination\"; it found \"no evidence in the record\" that Trump made the decision on national security grounds \"from the get-go\" and said the record suggests that rationale was \"merely a post-hoc justification.\"",
         "source_url": "https://storage.courtlistener.com/recap/gov.uscourts.dcd.296754/gov.uscourts.dcd.296754.50.0_2.pdf",
         "maps_to_element": "Restriction was based on the content/viewpoint of the outlets' editorial coverage, not a neutral, generally applicable rule"
       },
@@ -25147,8 +25159,8 @@
       "confidence_note": "Facts are documented in court filings and non-party reporting; the TRO and the injunction rest on preliminary findings that the outlets are likely to win, not a final judgment."
     },
     "date_of_action": "2026-09-18 (ban announced) through 2026-10-09 (Justice Department antitrust demands to the five TV pool networks)",
-    "last_verified": "2026-10-14",
-    "last_substantive_update": "2026-10-14",
+    "last_verified": "2026-10-16",
+    "last_substantive_update": "2026-10-16",
     "date_added": "2026-09-22",
     "glance": {
       "who": "Donald Trump, President",
@@ -25158,7 +25170,7 @@
         "certainty": "documented",
         "who": "Three banned outlets and the TV pool"
       },
-      "reviewed": "2026-10-14"
+      "reviewed": "2026-10-16"
     },
     "timeline": {
       "incident_summary": {
