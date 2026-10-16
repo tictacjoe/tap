@@ -305,7 +305,7 @@ _PAGE_TEMPLATE = """<!DOCTYPE html>
 <header class="masthead">
 <p class="wordmark"><a href="../index.html">TAP</a></p>
 <p class="tagline-name">The Accountability Project</p>
-<p class="tagline">Executive branch actions from Jan. 2025, assembled into topic dossiers through primary records and verified reporting. Built to hold up when challenged.</p>
+<p class="tagline">Executive branch actions from Jan. 2025, assembled into topic dossiers through primary records and verified reporting, and built to hold up when challenged.</p>
 </header>
 <main>
 <h1>{title}</h1>
