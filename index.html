@@ -694,12 +694,14 @@
   .glance-harm-who {
     color: var(--ink);
     font-weight: 600;
-    background: var(--brass-light);
+    background: #F2DE9B;  /* stronger highlighter yellow-brass; ink on it is well over 4.5:1 */
     padding: 0.05rem 0.3rem;
     border-radius: 2px;
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
   }
+  /* Its label reads in full ink and bold, unlike the other faint labels. */
+  .glance-harm-label.glance-harm-label-harmed { color: var(--ink); font-weight: 700; }
   .glance-orig-title { margin: 0 0 0.6rem; font-weight: bold; color: var(--ink-soft); }
 
   /* User Topics card-level coverage indicator -- same color language as
@@ -4257,7 +4259,7 @@ function buildGlanceHeadHtml(entry, cfg, opts) {
         // call): harm.who isn't always a person -- the environment harm kind
         // names a place or ecosystem (e.g. "Arctic Refuge coastal plain"), so the
         // old label was already inaccurate for that case.
-        '<span class="glance-harm-item"><span class="glance-harm-label">Who/What was harmed:</span> ' +
+        '<span class="glance-harm-item"><span class="glance-harm-label glance-harm-label-harmed">Who/What was harmed:</span> ' +
           '<span class="glance-harm-who">' + hl(g.harm.who) + '</span></span>' +
         claExtraHtml +
       '</p>' +
