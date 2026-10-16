@@ -117,10 +117,18 @@
     background: var(--paper-card);
     padding: 0.1rem 0.3rem;
     font-size: 0.9em;
+    /* Long file paths/field names break onto the next line instead of
+       pushing the page sideways on a phone. */
+    overflow-wrap: break-word;
   }
+  /* In table cells, "anywhere" instead: it also lets a column shrink below a
+     long name's width, so a many-column table still fits the desktop column
+     rather than hiding its last column behind the .table-scroll scroll. */
+  main td code, main th code { overflow-wrap: anywhere; }
   main pre code {
     background: none;
     padding: 0;
+    overflow-wrap: normal;  /* code blocks scroll (main pre), never re-wrap */
   }
 
   main hr {
@@ -129,10 +137,15 @@
     margin: 2.5rem 0;
   }
 
+  /* render_page wraps every table in this box: a table too wide for a
+     phone scrolls sideways inside it instead of widening the whole page. */
+  main .table-scroll {
+    overflow-x: auto;
+    margin: 1.2rem 0;
+  }
   main table {
     width: 100%;
     border-collapse: collapse;
-    margin: 1.2rem 0;
     font-size: 0.95rem;
   }
   main th, main td {
@@ -221,7 +234,7 @@
 </ol>
 <hr />
 <h2>3. Cabinet-Level Accountability</h2>
-<table>
+<div class="table-scroll"><table>
 <thead>
 <tr>
 <th>Stage</th>
@@ -256,11 +269,11 @@
 <td>Good fit for the mechanical sequencing and count-sanity checks (this is exactly the kind of step that's forgotten by humans and Claude alike and would benefit from a script enforcing the order); the commit-message content and the "does this count look right" judgment stay Claude/Joe-required.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>4. Corporate Deregulation</h2>
 <p>Same four-stage shape as Cabinet-Level, different script and schema (<code>deregulation/find_stale_entries.py</code>, <code>deregulation/SCHEMA.md</code>).</p>
-<table>
+<div class="table-scroll"><table>
 <thead>
 <tr>
 <th>Stage</th>
@@ -295,11 +308,11 @@
 <td>Same as Cabinet-Level Stage 4.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>5. Government Service Redirection</h2>
 <p>Same shape again, with its own finder (<code>government-services/find_stale_entries.py</code>, added 2026-07-18 to close a documented gap — see <code>tap-database-update-process.md</code> sec-11 #1).</p>
-<table>
+<div class="table-scroll"><table>
 <thead>
 <tr>
 <th>Stage</th>
@@ -334,10 +347,10 @@
 <td>Same as Cabinet-Level Stage 4.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>6. Reporting — Substack Ingestion</h2>
-<table>
+<div class="table-scroll"><table>
 <thead>
 <tr>
 <th>Stage</th>
@@ -366,11 +379,11 @@
 <td>Same as other trackers' Stage 4.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>7. Reporting Backlog / Candidate Discovery</h2>
 <p>This process is the project's richest source of automation-suitability evidence, because it already ran a real experiment.</p>
-<table>
+<div class="table-scroll"><table>
 <thead>
 <tr>
 <th>Stage</th>
@@ -411,10 +424,10 @@
 <td>Same as other trackers.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>8. User Topic Submissions</h2>
-<table>
+<div class="table-scroll"><table>
 <thead>
 <tr>
 <th>Stage</th>
@@ -449,7 +462,7 @@
 <td>Publish/deploy: same as other trackers. Writing the outcome row: good fit — fully mechanical once the decision and reason text exist.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>9. Universal Publish &amp; Deploy Sequence</h2>
 <p>Shared by all six processes (<code>tap-database-update-process.md</code> sec-7–8; <code>tap-ops-runbook.md</code> sec-5). Not executed live this session, since every step either commits or pushes to one of the two repos. Verified by reading <code>publish.py</code>'s invocation and the documented output format only.</p>

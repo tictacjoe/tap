@@ -117,10 +117,18 @@
     background: var(--paper-card);
     padding: 0.1rem 0.3rem;
     font-size: 0.9em;
+    /* Long file paths/field names break onto the next line instead of
+       pushing the page sideways on a phone. */
+    overflow-wrap: break-word;
   }
+  /* In table cells, "anywhere" instead: it also lets a column shrink below a
+     long name's width, so a many-column table still fits the desktop column
+     rather than hiding its last column behind the .table-scroll scroll. */
+  main td code, main th code { overflow-wrap: anywhere; }
   main pre code {
     background: none;
     padding: 0;
+    overflow-wrap: normal;  /* code blocks scroll (main pre), never re-wrap */
   }
 
   main hr {
@@ -129,10 +137,15 @@
     margin: 2.5rem 0;
   }
 
+  /* render_page wraps every table in this box: a table too wide for a
+     phone scrolls sideways inside it instead of widening the whole page. */
+  main .table-scroll {
+    overflow-x: auto;
+    margin: 1.2rem 0;
+  }
   main table {
     width: 100%;
     border-collapse: collapse;
-    margin: 1.2rem 0;
     font-size: 0.95rem;
   }
   main th, main td {
@@ -241,7 +254,7 @@ python3 agy_watch.py \
 <p>Total wall-clock time: ~268 seconds (4m28s), comparable to the earlier successful <code>agy_watch.py</code> validation run (216s / 3m36s) on a different, non-citation-focused test. <code>agy_watch.py</code> exited 0 (full PASS) without needing its retry path — real signal appeared well within the grace period, same as every other healthy run observed so far.</p>
 <hr />
 <h2>5. Results: Before vs. After</h2>
-<table>
+<div class="table-scroll"><table>
 <thead>
 <tr>
 <th>Metric</th>
@@ -286,7 +299,7 @@ python3 agy_watch.py \
 <td>0 (full PASS, no retry needed)</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>The one remaining "could not find" case in the after-run brief (cluster <code>c0068</code>, the DRC illness/Ebola-conflation cluster the original pilot's own batch-12 correction is about) reads: <em>"Possible link, unconfirmed: In May 2026, a separate and confirmed Ebola outbreak ... was declared ... which appears to be a distinct event from the early 2025 illness. (I could not find the specific article URL, but the events are treated as distinct)."</em> That is exactly the prompt's step 3 behavior working as intended — a claim without a source explicitly asserting the link stays hedged rather than settled fact — not a citation failure. Every other finding across all six clusters carries a specific, dated, outlet-attributed, resolving URL, matching the prompt's required format (e.g. <code>https://friendsofcancerresearch.org/blog/stakeholder-connect-from-guidance-to-action-what-operation-trialblazer-means-for-the-future-of-oncology-drug-development/</code> — Friends of Cancer Research, June 2026).</p>
 <hr />
 <h2>6. Verdict</h2>

@@ -117,10 +117,18 @@
     background: var(--paper-card);
     padding: 0.1rem 0.3rem;
     font-size: 0.9em;
+    /* Long file paths/field names break onto the next line instead of
+       pushing the page sideways on a phone. */
+    overflow-wrap: break-word;
   }
+  /* In table cells, "anywhere" instead: it also lets a column shrink below a
+     long name's width, so a many-column table still fits the desktop column
+     rather than hiding its last column behind the .table-scroll scroll. */
+  main td code, main th code { overflow-wrap: anywhere; }
   main pre code {
     background: none;
     padding: 0;
+    overflow-wrap: normal;  /* code blocks scroll (main pre), never re-wrap */
   }
 
   main hr {
@@ -129,10 +137,15 @@
     margin: 2.5rem 0;
   }
 
+  /* render_page wraps every table in this box: a table too wide for a
+     phone scrolls sideways inside it instead of widening the whole page. */
+  main .table-scroll {
+    overflow-x: auto;
+    margin: 1.2rem 0;
+  }
   main table {
     width: 100%;
     border-collapse: collapse;
-    margin: 1.2rem 0;
     font-size: 0.95rem;
   }
   main th, main td {
@@ -209,7 +222,7 @@
 <hr />
 <h2>2. Schema Fields — CLA (Cabinet-Level Accountability)</h2>
 <p>Source: <code>prosecution/cabinet-level/SCHEMA.md</code>, written this session — previously this tracker had no dedicated schema file, only prose in <code>tap-system-doc.md</code> sec-3.2 and <code>build_prosecution_index.py</code>'s field list. Confirmed against live entries this session.</p>
-<table>
+<div class="table-scroll"><table>
 <thead>
 <tr>
 <th>Field</th>
@@ -294,11 +307,11 @@
 <td><code>incident_summary</code>, <code>confidence_note</code> — added 2026-07-21, see Section 4 of the batch-picker/audit reports this session for the backfill history.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>3. Schema Fields — CDR (Corporate Deregulation)</h2>
 <p>Source: <code>deregulation/SCHEMA.md</code>.</p>
-<table>
+<div class="table-scroll"><table>
 <thead>
 <tr>
 <th>Field</th>
@@ -398,11 +411,11 @@
 <td><code>what_changed</code>, <code>estimated_impact</code>, <code>confidence_note</code> — added 2026-07-21.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>4. Schema Fields — GSR (Government Service Redirection)</h2>
 <p>Source: <code>government-services/SCHEMA.md</code>.</p>
-<table>
+<div class="table-scroll"><table>
 <thead>
 <tr>
 <th>Field</th>
@@ -482,11 +495,11 @@
 <td><code>what_changed</code>, <code>estimated_impact</code>, <code>confidence_note</code> — added 2026-07-21.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>5. Schema Fields — User Topics</h2>
 <p>Source: <code>community-topics/SCHEMA.md</code>. Deliberately a lighter rigor tier — no <code>elements_required</code>/<code>evidence</code>, <code>primary_proponent</code>, or <code>corporate_beneficiaries</code>/<code>estimated_*_impact</code>.</p>
-<table>
+<div class="table-scroll"><table>
 <thead>
 <tr>
 <th>Field</th>
@@ -551,13 +564,13 @@
 <td><code>tracker/id</code> if this topic became (or was folded into) a curated entry. Omitted entirely if not applicable.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>No <code>section_summaries</code> field — explicitly out of scope for this tracker (spec sec-4, see Section 7 below).</p>
 <hr />
 <h2>6. Schema Fields — Reporting</h2>
 <p>Source: <code>tracker/SCHEMA.md</code>, written this session (previously only documented in <code>tap-system-doc.md</code> sec-3.4). No per-entry file, unlike the other four — this is a raw scraped archive, a single <code>tracker/output/posts.json</code> with a two-level post/entry schema.</p>
 <p><strong>Post level:</strong></p>
-<table>
+<div class="table-scroll"><table>
 <thead>
 <tr>
 <th>Field</th>
@@ -590,9 +603,9 @@
 <td>Catches anything the parser doesn't recognize, rather than silently dropping it.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>Entry level (inside each <code>entries[]</code> item):</strong></p>
-<table>
+<div class="table-scroll"><table>
 <thead>
 <tr>
 <th>Field</th>
@@ -625,11 +638,11 @@
 <td>Present on ~99.7% of entries as of the 2026-08-10 backfill.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>7. Software Gates — Full Inventory</h2>
 <p>Every script below actually exists on disk and was run or read directly this session or a prior session's audit. "Blocks" describes what actually happens on failure — several are advisory, not hard stops; see the Notes column and Section 8.</p>
-<table>
+<div class="table-scroll"><table>
 <thead>
 <tr>
 <th>Gate</th>
@@ -725,7 +738,7 @@
 <td>Reporting candidate discovery</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>8. Where the "Gates" Framing Overstates What the Code Does</h2>
 <p>Two things worth being precise about if describing this system to someone else:</p>

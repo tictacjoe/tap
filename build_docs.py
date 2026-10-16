@@ -234,10 +234,18 @@ _TEMPLATE_CSS = """
     background: var(--paper-card);
     padding: 0.1rem 0.3rem;
     font-size: 0.9em;
+    /* Long file paths/field names break onto the next line instead of
+       pushing the page sideways on a phone. */
+    overflow-wrap: break-word;
   }
+  /* In table cells, "anywhere" instead: it also lets a column shrink below a
+     long name's width, so a many-column table still fits the desktop column
+     rather than hiding its last column behind the .table-scroll scroll. */
+  main td code, main th code { overflow-wrap: anywhere; }
   main pre code {
     background: none;
     padding: 0;
+    overflow-wrap: normal;  /* code blocks scroll (main pre), never re-wrap */
   }
 
   main hr {
@@ -246,10 +254,15 @@ _TEMPLATE_CSS = """
     margin: 2.5rem 0;
   }
 
+  /* render_page wraps every table in this box: a table too wide for a
+     phone scrolls sideways inside it instead of widening the whole page. */
+  main .table-scroll {
+    overflow-x: auto;
+    margin: 1.2rem 0;
+  }
   main table {
     width: 100%;
     border-collapse: collapse;
-    margin: 1.2rem 0;
     font-size: 0.95rem;
   }
   main th, main td {
@@ -304,8 +317,8 @@ _PAGE_TEMPLATE = """<!DOCTYPE html>
 <body>
 <header class="masthead">
 <p class="wordmark"><a href="../index.html">TAP</a></p>
-<p class="tagline-name">The Accountability Project</p>
-<p class="tagline">Executive branch actions from Jan. 2025, assembled into topic dossiers through primary records and verified reporting, and built to hold up when challenged.</p>
+<p class="tagline-name">{banner_name}</p>
+<p class="tagline">{banner_mission}</p>
 </header>
 <main>
 <h1>{title}</h1>
@@ -318,17 +331,50 @@ _PAGE_TEMPLATE = """<!DOCTYPE html>
 """
 
 
-def render_page(title: str, body_html: str, back_links: list) -> str:
+# The homepage lives in this same repo, next to this script. Its masthead
+# holds the one canonical copy of the project name and mission line; the
+# docs masthead reuses them, so a reword is a single edit to index.html
+# followed by a docs rebuild (2026-10-16, Joe's call).
+_HOMEPAGE = Path(__file__).resolve().parent / "index.html"
+_BANNER_NAME_RE = re.compile(r'<p class="tagline-name">(.*?)</p>', re.DOTALL)
+_BANNER_MISSION_RE = re.compile(r'<p class="tagline">(.*?)</p>', re.DOTALL)
+
+
+def read_homepage_banner(homepage: Path = _HOMEPAGE) -> tuple:
+    """Return (project name, mission line) from the homepage masthead, as
+    the homepage's own inner HTML. Raises ValueError if either line is
+    missing, so a homepage restructure fails the docs build loudly rather
+    than silently publishing pages with a blank banner."""
+    text = homepage.read_text(encoding="utf-8")
+    name = _BANNER_NAME_RE.search(text)
+    mission = _BANNER_MISSION_RE.search(text)
+    if not name or not mission:
+        raise ValueError(
+            f"{homepage}: masthead banner not found (expected "
+            '<p class="tagline-name"> and <p class="tagline">)'
+        )
+    return name.group(1).strip(), mission.group(1).strip()
+
+
+def render_page(title: str, body_html: str, back_links: list, banner: tuple = None) -> str:
     """`back_links` is a list of (label, href) tuples, rendered in order
-    as `.back-link` anchors after the body."""
+    as `.back-link` anchors after the body. `banner` is a (name, mission)
+    pair; omitted, it is read from the homepage (read_homepage_banner)."""
+    if banner is None:
+        banner = read_homepage_banner()
     links_html = "\n".join(
         f'<a class="back-link" href="{href}">&larr; {label}</a>'
         for label, href in back_links
     )
+    # Each table goes in a .table-scroll box (see its CSS) so a wide one
+    # scrolls on its own on a phone. markdown.markdown() emits bare <table>.
+    body_html = body_html.replace("<table>", '<div class="table-scroll"><table>').replace("</table>", "</table></div>")
     # title comes from the report's raw Markdown H1 and is interpolated
     # raw into HTML below (<title>, <h1>) -- escape it. body_html already
-    # comes from markdown.markdown(), which handles its own escaping.
-    return _PAGE_TEMPLATE.format(title=html.escape(title), css=_TEMPLATE_CSS, body=body_html, back_links=links_html)
+    # comes from markdown.markdown(), which handles its own escaping. The
+    # banner is trusted HTML copied from our own homepage, used as-is.
+    return _PAGE_TEMPLATE.format(title=html.escape(title), css=_TEMPLATE_CSS, body=body_html,
+                                 back_links=links_html, banner_name=banner[0], banner_mission=banner[1])
 
 
 def render_index(reports: list) -> str:

@@ -109,7 +109,9 @@ def test_extract_title_returns_empty_string_when_no_h1():
     assert extract_title(text) == ""
 
 
-from build_docs import render_page, render_index
+import pytest
+
+from build_docs import render_page, render_index, read_homepage_banner
 
 
 def test_render_page_includes_title_body_and_back_links():
@@ -124,6 +126,49 @@ def test_render_page_includes_title_body_and_back_links():
     assert "<p>Body content here.</p>" in html
     assert '<a class="back-link" href="index.html">&larr; All Docs</a>' in html
     assert '<a class="back-link" href="../index.html">&larr; Back to The Accountability Project</a>' in html
+
+
+def test_render_page_banner_comes_from_homepage(tmp_path):
+    # The docs masthead's project name and mission line are read from the
+    # homepage, so a reword there is the only edit needed (2026-10-16).
+    homepage = tmp_path / "index.html"
+    homepage.write_text(
+        '<header class="masthead">\n  <h1>TAP</h1>\n'
+        '  <p class="tagline-name">Test Project Name</p>\n'
+        '  <p class="tagline">A test mission line.</p>\n</header>\n',
+        encoding="utf-8",
+    )
+    html_out = render_page("Some Report", "<p>Body.</p>", back_links=[],
+                           banner=read_homepage_banner(homepage))
+
+    assert '<p class="tagline-name">Test Project Name</p>' in html_out
+    assert '<p class="tagline">A test mission line.</p>' in html_out
+
+
+def test_read_homepage_banner_fails_loudly_when_missing(tmp_path):
+    homepage = tmp_path / "index.html"
+    homepage.write_text("<html><body>no banner here</body></html>", encoding="utf-8")
+
+    with pytest.raises(ValueError):
+        read_homepage_banner(homepage)
+
+
+def test_render_page_real_homepage_banner_is_used_by_default():
+    # No banner argument: falls back to the real tap-site homepage.
+    name, mission = read_homepage_banner()
+    html_out = render_page("Some Report", "<p>Body.</p>", back_links=[])
+
+    assert f'<p class="tagline-name">{name}</p>' in html_out
+    assert f'<p class="tagline">{mission}</p>' in html_out
+
+
+def test_render_page_wraps_tables_in_scroll_container():
+    # Wide tables scroll inside their own box on a phone instead of
+    # pushing the whole page sideways.
+    html_out = render_page("T", "<table>\n<tr><td>x</td></tr>\n</table>", back_links=[])
+
+    assert '<div class="table-scroll"><table>' in html_out
+    assert "</table></div>" in html_out
 
 
 def test_render_page_escapes_ampersand_in_title():
