@@ -1459,13 +1459,21 @@
   "blanche-rubio-betancourt-probe-closure-venezuela-oil-2026": {
    "0": {
     "state": "supports",
+    "why": "Semafor's Mueller piece says the US intervened in an international money-laundering probe into Betancourt to finalize Monday's deal, per another US official, and that this second official called him a \"proven operator\"; the article names neither the investigation nor the officials involved.",
+    "host": "semafor.com",
+    "date": "2026-10-16",
+    "kind": "fact",
+    "archive": false
+   },
+   "1": {
+    "state": "supports",
     "why": "The KEYT-carried CNN report contains the quoted passage verbatim, the DOJ spokesperson's 'complete fabrication' denial, that Betancourt was never charged but was an unnamed co-conspirator, that ten people were indicted, and Sale's statement that he didn't break US laws.",
     "host": "keyt.com",
     "date": "2026-10-16",
     "kind": "fact",
     "archive": false
    },
-   "1": {
+   "2": {
     "state": "supports",
     "why": "The source text contains each quoted element of the claim verbatim: Rubio and White House officials pressing DOJ under Bondi and then Blanche, Blanche reaching out to Swiss authorities to drop warrants, State providing visas, Rubio's Novelli interview quote, the senior official's 'We vetted him' remark, and State declining comment.",
     "host": "krdo.com",
@@ -1473,7 +1481,7 @@
     "kind": "fact",
     "archive": false
    },
-   "2": {
+   "3": {
     "state": "supports",
     "why": "The Reuters text states the one-fifth reserves access, the 35% OSC stake and 20% at-cost purchase right, the paused investigation, supervisors' discouragement, no rationale given, Swiss extradition withdrawal in May with Zurich's UK-law explanation, Reuters' inability to determine timing, and the official's 'no legal problems' remark.",
     "host": "thestar.com.my",
@@ -1481,7 +1489,7 @@
     "kind": "fact",
     "archive": false
    },
-   "3": {
+   "4": {
     "state": "supports",
     "why": "The excerpt reproduces the claim's quoted Washington Post attribution verbatim, and the article separately reports Judge Pedraz's August 10 filing saying the wait 'cannot extend beyond December of this year' and that he will close the case again absent a U.S. answer.",
     "host": "english.elpais.com",
@@ -1489,7 +1497,7 @@
     "kind": "fact",
     "archive": false
    },
-   "4": {
+   "5": {
     "state": "supports",
     "why": "The NYT text republished by The Star states the Aug 28 announcement crediting Hegseth and Rubio, the up-to-35% warrant stake, the 'zero cost' White House line, the quoted Rubio/State pressure passage, Reed's 'blatant abuse' criticism and demand for an accounting, and the NABEP 'never been charged' statement.",
     "host": "thestar.com.my",
@@ -3814,6 +3822,14 @@
     "why": "The Democracy Docket text lists the 48.4 million Honey-connected records, the 50.6 million DOJ records, the more than 26,000 USCIS-derived records, the ELITE passage, the no-comment line, and the Elias disclosure, matching the claim.",
     "host": "democracydocket.com",
     "date": "2026-10-13",
+    "kind": "fact",
+    "archive": false
+   },
+   "8": {
+    "state": "supports",
+    "why": "The complaint (filed 10/15/26, Case 1:26-cv-03602, by LWV, EPIC and LULAC against DHS, Mullin, ICE, HSI and others) states verbatim that DHS 'has obtained some version of the SVRLs of at least 47 states', quotes the June 1, 2026 HSI report's 50.6 million-record DOJ Dataset Intake and 48.4 million-record DHS Dataset Intake attributed to Heather Honey, and prays for a declaration that the policy is without statutory authority and violates the Privacy Act, PRA and APA. The claim correctly frames these as allegations.",
+    "host": "democracyforward.org",
+    "date": "2026-10-16",
     "kind": "fact",
     "archive": false
    }
@@ -9016,6 +9032,14 @@
     "date": "2026-10-05",
     "kind": "fact",
     "archive": false
+   },
+   "23": {
+    "state": "supports",
+    "why": "GAO's page says most CBP and ICE offices lack operational guidance on camera use, which increases the risk personnel will fail to use cameras as policy requires, and that DHS agreed with six of seven recommendations but not automated activation controls; the page also gives the Sep 15 / Oct 14, 2026 dates.",
+    "host": "gao.gov",
+    "date": "2026-10-16",
+    "kind": "fact",
+    "archive": true
    }
   },
   "ice-newark-pursuit-crash-2026": {
@@ -9547,9 +9571,9 @@
    },
    "3": {
     "state": "partly",
-    "why": "The AP/Yahoo article confirms the charges against Culture Minister Nikola Selaković and three others for abuse of office and falsifying documents used to lift the site's protection status, but it does not name the 'Republic Institute for the Protection of Cultural Monuments' or describe a specific 'forged expert opinion' from that body as the claim does.",
+    "why": "AP confirms organized-crime prosecutors charged Selakovic and three others with abuse of office and falsifying documents, alleging the protection status was lifted by forging documentation, but it does not say the forgery was an expert opinion from the Republic Institute for the Protection of Cultural Monuments.",
     "host": "yahoo.com",
-    "date": "2026-09-15",
+    "date": "2026-10-16",
     "kind": "fact",
     "archive": false
    },
@@ -9558,6 +9582,30 @@
     "why": "",
     "host": "bloomberg.com",
     "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "supports",
+    "why": "BIRN reports Selakovic appeared in court April 15 with three others, lists the same charges (abuse of office for all; forgery for Selakovic, Jelaca and Vasic; abetting forgery for Ivanovic), quotes his denial and his claim of political motivation, and says the trial opened in February.",
+    "host": "balkaninsight.com",
+    "date": "2026-10-16",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
+    "state": "supports",
+    "why": "RFE/RL says the trial resumed June 10 in the Special Department of Belgrade's Higher Court at the third hearing, where Jelaca denied guilt and Vasic called the proceeding tendentious; it also says all defendants pleaded not guilty on February 4 and prosecutors seek three years for Selakovic.",
+    "host": "slobodnaevropa.org",
+    "date": "2026-10-16",
+    "kind": "fact",
+    "archive": false
+   },
+   "7": {
+    "state": "supports",
+    "why": "Tanjug's September 21, 2026 item says the 'Generalstab' trial continued in Belgrade's Higher Court with Ivanovic's defense, that he said he is not guilty, and names caretaker minister Selakovic, Jelaca and Vasic as the other defendants.",
+    "host": "tanjug.rs",
+    "date": "2026-10-16",
     "kind": "fact",
     "archive": false
    }
@@ -9572,16 +9620,16 @@
     "archive": false
    },
    "1": {
-    "state": "partly",
-    "why": "The docket confirms the case number, the October 14, 2026 filing date, assignment to Judge Amir H. Ali, and the listed defendants (Witkoff, Wiles, Rubio, Hegseth, State, Defense, Office for Special Peace Missions), but the docket page does not contain the complaint's quoted language about Kushner's role or Trump's 'envoy of peace' remarks.",
+    "state": "supports",
+    "why": "The CourtListener docket shows the complaint filed Oct 14, 2026 against the listed defendants, assignment to Judge Amir H. Ali, summonses issued Oct 15 and a standing order signed Oct 15, with no government answer or ruling among the entries shown.",
     "host": "courtlistener.com",
     "date": "2026-10-16",
     "kind": "fact",
     "archive": false
    },
    "2": {
-    "state": "partly",
-    "why": "The complaint's paragraph 4 contains the quoted Senate-confirmation/financial-disclosure language, and the text elsewhere quotes Kushner saying he is not \"technically\" a government official but \"just a volunteer like other businessmen.\" The provided (truncated) text does not show the July 20, 2026 CREW requests and replies or Witkoff's Ethics Act disclosure filing, so those parts are unverified.",
+    "state": "supports",
+    "why": "The complaint filed 10/14/26 contains the quoted paragraph about Kushner representing the U.S. in the Israel-Hamas, Ukraine-Russia and U.S.-Iran conflicts and negotiating directly with foreign leaders, and quotes Trump saying 'we're making Jared an envoy also, envoy of peace' and 'we always bring Jared when we want to get that deal closed.'",
     "host": "storage.courtlistener.com",
     "date": "2026-10-16",
     "kind": "fact",
@@ -9589,7 +9637,7 @@
    },
    "3": {
     "state": "partly",
-    "why": "The complaint states Kushner's firm has over $6 billion under management with about 99% owned by foreign investors including Saudi sovereign wealth funds, and the quoted 'interplay and overlap' sentence appears in paragraph 7. The provided text does not show the end-of-2025 timing, the Forbes ~$60 million fee figure, the 'sole owner' quote, or the Board of Peace $1 billion pledges.",
+    "why": "The complaint's paragraph 4 contains the quoted Senate-confirmation/financial-disclosure language, and the text elsewhere quotes Kushner saying he is not \"technically\" a government official but \"just a volunteer like other businessmen.\" The provided (truncated) text does not show the July 20, 2026 CREW requests and replies or Witkoff's Ethics Act disclosure filing, so those parts are unverified.",
     "host": "storage.courtlistener.com",
     "date": "2026-10-16",
     "kind": "fact",
@@ -9597,13 +9645,21 @@
    },
    "4": {
     "state": "partly",
-    "why": "Paragraph 9 says the suit seeks to bar Kushner from exercising government authority in violation of the Appointments Clause, and the text also mentions barring authority 'unlawfully delegated' and records (footnote 69) Kushner's statement that he 'never taken a diplomatic action to benefit Affinity.' The provided text is truncated and does not show the actual prayer for relief (the 'unless and until he is appointed and confirmed' language, the alternative declarations) or the ethics-counsel/White House Counsel compliance statement.",
+    "why": "The complaint states Kushner's firm has over $6 billion under management with about 99% owned by foreign investors including Saudi sovereign wealth funds, and the quoted 'interplay and overlap' sentence appears in paragraph 7. The provided text does not show the end-of-2025 timing, the Forbes ~$60 million fee figure, the 'sole owner' quote, or the Board of Peace $1 billion pledges.",
     "host": "storage.courtlistener.com",
     "date": "2026-10-16",
     "kind": "fact",
     "archive": false
    },
    "5": {
+    "state": "partly",
+    "why": "Paragraph 9 says the suit seeks to bar Kushner from exercising government authority in violation of the Appointments Clause, and the text also mentions barring authority 'unlawfully delegated' and records (footnote 69) Kushner's statement that he 'never taken a diplomatic action to benefit Affinity.' The provided text is truncated and does not show the actual prayer for relief (the 'unless and until he is appointed and confirmed' language, the alternative declarations) or the ethics-counsel/White House Counsel compliance statement.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-10-16",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
     "state": "supports",
     "why": "Common Dreams reports the Wednesday filing, CREW's 'unlawful exercise of government power' allegation, and Sherman's quoted statement verbatim.",
     "host": "commondreams.org",
@@ -9611,7 +9667,7 @@
     "kind": "fact",
     "archive": false
    },
-   "6": {
+   "7": {
     "state": "supports",
     "why": "Raw Story contains both quoted passages verbatim: Kushner's volunteer claim and the suit's request to bar him or order disclosures.",
     "host": "rawstory.com",
@@ -9671,13 +9727,21 @@
    },
    "6": {
     "state": "supports",
+    "why": "The March 19, 2026 NBC article, citing a person familiar with the discussions, quotes the Salus representative's 'We are guaranteed this contract...' line naming Lewandowski, reports hiring a Lewandowski-linked consultant was a condition of the contract, and carries the 'patently false' and 'entirely false' denials; the call followed a September conference call, which in a March 2026 article places it in September 2025.",
+    "host": "nbcnews.com",
+    "date": "2026-10-16",
+    "kind": "fact",
+    "archive": false
+   },
+   "7": {
+    "state": "supports",
     "why": "The March 25, 2026 release says Neguse and Raskin asked Jordan to subpoena Lewandowski for a deposition, that $143 million went to an LLC formed days earlier, and that ProPublica-reviewed records show he approved contracts and signed off on spending before it reached the Secretary.",
     "host": "neguse.house.gov",
     "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
-   "7": {
+   "8": {
     "state": "supports",
     "why": "NBC News confirms Trump personally questioned aides repeatedly about whether Lewandowski profited from the $220 million ad campaign, distinct from the DHS OIG's institutional probe.",
     "host": "nbcnews.com",
@@ -9685,7 +9749,7 @@
     "kind": "fact",
     "archive": false
    },
-   "8": {
+   "9": {
     "state": "supports",
     "why": "CNN reports, citing two sources, the IG's sprawling probe into contract handling including Noem and Lewandowski, and states it is not clear which specific contracts are under investigation.",
     "host": "cnn.com",
@@ -9693,7 +9757,7 @@
     "kind": "fact",
     "archive": false
    },
-   "9": {
+   "10": {
     "state": "supports",
     "why": "HuffPost relays the WSJ's 'shadow secretary' characterization, the agreed $2.7 billion Palantir deal left unsigned while Lewandowski demanded a meeting with Karp and later cut to $1 billion, and Lewandowski's 'anonymous-source, politically driven reporting' response.",
     "host": "huffpost.com",
@@ -9701,7 +9765,7 @@
     "kind": "fact",
     "archive": false
    },
-   "10": {
+   "11": {
     "state": "supports",
     "why": "The Independent (via Yahoo), citing the Journal, reports the Qatar overture offering help with DHS-remit matters including visas, a similar UAE approach, and that both rebuffed him.",
     "host": "yahoo.com",
@@ -9709,11 +9773,19 @@
     "kind": "fact",
     "archive": false
    },
-   "11": {
+   "12": {
     "state": "supports",
     "why": "Hassan's August 12, 2026 letter follows up on Cavanaugh's June 17, 2026 testimony and states he confirmed Mullin had begun reviewing contracts Lewandowski might have approved in connection with potential self-dealing and pay-to-play schemes.",
     "host": "hassan.senate.gov",
     "date": "2026-09-27",
+    "kind": "fact",
+    "archive": false
+   },
+   "13": {
+    "state": "supports",
+    "why": "The MS NOW analysis dated Oct. 15, 2026 contains the quoted sentences verbatim.",
+    "host": "ms.now",
+    "date": "2026-10-16",
     "kind": "fact",
     "archive": false
    }
@@ -15550,9 +15622,9 @@
   },
   "salus-dhs-self-deportation-contract-2026": {
    "0": {
-    "state": "not_found",
-    "why": "The provided source text consists only of the string 'USAspending.gov' and contains none of the award record's dates, amounts, or competition fields, so the claim cannot be checked against it.",
-    "host": "usaspending.gov",
+    "state": "supports",
+    "why": "The USAspending record shows PIID 70RDA225FR0000018 to Salus for CSRO support, signed 2025-05-22, total obligation 748131718.65, total outlay 543366100.95, end date 2026-11-21, and extent competed 'full and open competition after exclusion of sources' with the URGENCY (FAR 6.302-2) code.",
+    "host": "api.usaspending.gov",
     "date": "2026-10-16",
     "kind": "fact",
     "archive": false
@@ -15623,21 +15695,29 @@
    },
    "9": {
     "state": "supports",
+    "why": "The Raw Story repost (crediting The PunchUp) contains the quoted sentence and says Response AI Solutions replaces Salus.",
+    "host": "dnyuz.com",
+    "date": "2026-10-16",
+    "kind": "fact",
+    "archive": false
+   },
+   "10": {
+    "state": "supports",
     "why": "The October 8, 2026 letter to Mullin on the Daedalus aircraft purchases contains the quoted sentence about Salus's separate no-bid contracts amplifying the appearance of impropriety.",
     "host": "hsgac.senate.gov",
     "date": "2026-10-16",
     "kind": "fact",
     "archive": false
    },
-   "10": {
-    "state": "partly",
-    "why": "The Daily Beast text supports the September pull, the protest of the Response AI award, the Jan. 11 decision date and the Nov. 21 expiry; the Raw Story $2.062 billion figure and the VisaVerge September 29 / October 2 dates are not in this source.",
+   "11": {
+    "state": "supports",
+    "why": "The Daily Beast piece, citing its sister Substack PunchUp, says Salus's $915 million contract was pulled in September, that Salus is protesting the award to Response AI with a decision due Jan. 11, and that its existing contract expires Nov. 21.",
     "host": "thedailybeast.com",
     "date": "2026-10-16",
     "kind": "fact",
     "archive": false
    },
-   "11": {
+   "12": {
     "state": "supports",
     "why": "The MS NOW text contains both quoted passages verbatim and separately says that when a competitor challenged the Salus award 'a judge ruled it had no right to sue.'",
     "host": "ms.now",
@@ -17722,46 +17802,6 @@
     "archive": false
    },
    "1": {
-    "state": "partly",
-    "why": "The source confirms the $15.5 million restitution elimination via Trump's late-November commutation of Gentile's sentence, but it describes 'thousands' of defrauded investors rather than confirming the specific figure of 'more than 10,000.'",
-    "host": "politico.com",
-    "date": "2026-09-15",
-    "kind": "fact",
-    "archive": false
-   },
-   "2": {
-    "state": "supports",
-    "why": "The NYT investigation states Trump has granted clemency to \"more than 70\" people in fraud cases, cites the more than $700 million in wiped-out restitution/fines, and profiles both Esformes and Melgen's health-care-fraud convictions by name, exactly as the claim states.",
-    "host": "nytimes.com",
-    "date": "2026-09-15",
-    "kind": "fact",
-    "archive": false
-   },
-   "3": {
-    "state": "supports",
-    "why": "Rolling Stone opens with Trump's new \"Task Force to Eliminate Fraud\"/\"War on Fraud\" framing and then pivots directly into the NYT's pardon-pattern findings, and it specifically documents both the Milton (his and his wife's $1.8 million in donations) and Herrera Velutini (his daughter's $3.5 million to MAGA Inc.) donor connections.",
-    "host": "rollingstone.com",
-    "date": "2026-09-15",
-    "kind": "fact",
-    "archive": false
-   },
-   "4": {
-    "state": "not_found",
-    "why": "This source is a March 5, 2026 California governor's press release entirely about a $2 billion restitution/forfeiture analysis of Trump's pardons; it does not mention the \"Task Force to Eliminate Fraud,\" any March 16, 2026 executive order, or anything about the NYT's pardon-pattern investigation's publication timing -- the claim's subject matter is simply not addressed anywhere in this text.",
-    "host": "gov.ca.gov",
-    "date": "2026-09-15",
-    "kind": "fact",
-    "archive": false
-   },
-   "5": {
-    "state": "supports",
-    "why": "ProPublica's reporting highlights state exactly this: Schwartz was convicted of a $39 million fraud but pardoned just three months into a three-year sentence, and patients' families have been awarded millions in lawsuit damages they have been unable to collect from him.",
-    "host": "propublica.org",
-    "date": "2026-09-15",
-    "kind": "fact",
-    "archive": false
-   },
-   "6": {
     "state": "supports",
     "why": "The source confirms the SEC's Thursday (September 11/12, 2025) move to dismiss its case against Milton, a Trump pardon recipient, with Milton waiving legal costs and releasing all claims against the agency.",
     "host": "reuters.com",
@@ -17769,15 +17809,31 @@
     "kind": "fact",
     "archive": false
    },
-   "7": {
+   "2": {
     "state": "partly",
-    "why": "CNN confirms the full pardon of Leiweke, his indictment for rigging an arena bidding process at a public university in Austin, Texas, Trey Gowdy's role lobbying DOJ on his behalf, and the $15 million OVG penalty -- but this source never states the $375 million figure or names \"Moody Center,\" and it says nothing about a round of golf between Trump and Gowdy (that detail is attributed to Billboard/WSJ in the claim, not to this CNN piece).",
+    "why": "Skilled Nursing News contains the quoted pardon sentence, the April three-year sentence and the lack of any stated reason (as of press time), but the provided text carries no publication date, so the November 2025 timing cannot be confirmed from it.",
+    "host": "skillednursingnews.com",
+    "date": "2026-10-16",
+    "kind": "fact",
+    "archive": false
+   },
+   "3": {
+    "state": "partly",
+    "why": "CNN confirms the full pardon (dated Tuesday, in a Dec 3, 2025 story), the July indictment over rigging an Austin public-university arena bid, OVG's $15 million in penalties and Gowdy's lobbying for clemency, but the provided text does not name the Moody Center or its $375 million value, and has nothing from NBC, Billboard or the WSJ about a golf round factoring into the pardon.",
     "host": "cnn.com",
+    "date": "2026-10-16",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "partly",
+    "why": "The source confirms the $15.5 million restitution elimination via Trump's late-November commutation of Gentile's sentence, but it describes 'thousands' of defrauded investors rather than confirming the specific figure of 'more than 10,000.'",
+    "host": "politico.com",
     "date": "2026-09-15",
     "kind": "fact",
     "archive": false
    },
-   "8": {
+   "5": {
     "state": "unopened",
     "why": "",
     "host": "docs.house.gov",
@@ -17785,7 +17841,39 @@
     "kind": "fact",
     "archive": false
    },
+   "6": {
+    "state": "supports",
+    "why": "The White House text shows Executive Order 14395 dated March 16, 2026 establishing the Task Force within the Executive Office of the President, with the Vice President as Chairman and the FTC Chairman as Vice Chairman.",
+    "host": "whitehouse.gov",
+    "date": "2026-10-16",
+    "kind": "fact",
+    "archive": false
+   },
+   "7": {
+    "state": "supports",
+    "why": "The NYT investigation states Trump has granted clemency to \"more than 70\" people in fraud cases, cites the more than $700 million in wiped-out restitution/fines, and profiles both Esformes and Melgen's health-care-fraud convictions by name, exactly as the claim states.",
+    "host": "nytimes.com",
+    "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "8": {
+    "state": "supports",
+    "why": "Rolling Stone opens with Trump's new \"Task Force to Eliminate Fraud\"/\"War on Fraud\" framing and then pivots directly into the NYT's pardon-pattern findings, and it specifically documents both the Milton (his and his wife's $1.8 million in donations) and Herrera Velutini (his daughter's $3.5 million to MAGA Inc.) donor connections.",
+    "host": "rollingstone.com",
+    "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   },
    "9": {
+    "state": "supports",
+    "why": "ProPublica's reporting highlights state exactly this: Schwartz was convicted of a $39 million fraud but pardoned just three months into a three-year sentence, and patients' families have been awarded millions in lawsuit damages they have been unable to collect from him.",
+    "host": "propublica.org",
+    "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "10": {
     "state": "partly",
     "why": "The press release confirms the May 2026 launch, the 17 letters, Sens. Welch and Min (joined by Rep. Ruiz), and that the letters probe financial contributions/lobbyists/intermediaries in the clemency process, and it names Changpeng Zhao specifically -- but it never names Joseph Schwartz or Trevor Milton, never uses the phrase \"pay-to-play,\" and contains no White House response at all (no Abigail Jackson quote or \"absolute\" pardon-power position), all of which the claim also asserts.",
     "host": "welch.senate.gov",
@@ -17793,7 +17881,7 @@
     "kind": "fact",
     "archive": false
    },
-   "10": {
+   "11": {
     "state": "supports",
     "why": "The press release confirms the four preservation letters sent in June 2026 to DOJ's Pardon Attorney, the White House Records Management office, the White House Pardon Czar, and the Secret Service, seeking petitions, case files, internal communications, staff recommendations and visitor logs, with a July 24, 2026 deadline.",
     "host": "welch.senate.gov",
@@ -17801,7 +17889,7 @@
     "kind": "fact",
     "archive": false
    },
-   "11": {
+   "12": {
     "state": "supports",
     "why": "CBS reports the Tuesday letters from Blumenthal, Welch, Min and Scanlon asking for answers by Oct. 20, the Milton donations of almost $2 million and $750,000 to the MAHA Alliance PAC per FEC records, the cited June Reuters report, the source saying Kennedy will not advocate for pardons, and the EPA official saying Zeldin made no recommendation.",
     "host": "cbsnews.com",
@@ -17809,7 +17897,7 @@
     "kind": "fact",
     "archive": false
    },
-   "12": {
+   "13": {
     "state": "supports",
     "why": "Raw Story, relaying the Post, states the daughter committed $2.5 million a month after the charges were reduced to a misdemeanor, paid $835,000, Trump pardoned Herrera Velutini in January, the second payment was due this month, and the Post's caveat that its reporting does not show the donations led to government action.",
     "host": "rawstory.com",
