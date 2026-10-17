@@ -1650,3 +1650,8 @@ test("update-request button uses trackerKey when the config has one", () => {
     { kind: "govservices", trackerKey: "oea", idField: "id", titleField: "title" });
   assert.match(html, /data-tracker="oea"/);
 });
+
+test("share-link button writes the TRACKERS key (trackerKey), not the shared kind", () => {
+  // buildEntryCard is not evaluable in this harness, so pin the source line.
+  assert.match(source, /data-share-tracker="' \+ escapeHtml\(cfg\.trackerKey \|\| cfg\.kind\)/);
+});

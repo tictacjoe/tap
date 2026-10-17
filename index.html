@@ -4407,7 +4407,7 @@ function buildEntryCard(entry, cfg, docketLabel, sourceLabel, term, useRegex, ca
   }
 
   const shareBtnHtml = cfg.idField
-    ? ' <button type="button" class="share-link-btn" data-share-tracker="' + escapeHtml(cfg.kind) + '" data-share-id="' + escapeHtml(entry[cfg.idField] || "") + '" title="Copy a link to this entry">🔗 Copy link</button>'
+    ? ' <button type="button" class="share-link-btn" data-share-tracker="' + escapeHtml(cfg.trackerKey || cfg.kind) + '" data-share-id="' + escapeHtml(entry[cfg.idField] || "") + '" title="Copy a link to this entry">🔗 Copy link</button>'
     : "";
 
   // Glance card (see the glance-head script block): null when the tracker's
@@ -5017,8 +5017,8 @@ function jumpToRelatedEntry(trackerField, id) {
 }
 
 // Shareable-link support: a card's "Copy link" button writes
-// #<trackerKey>/<entryId> (trackerKey is a TRACKERS key, which is
-// always identical to that tracker's own cfg.kind); this reads that
+// #<trackerKey>/<entryId> (trackerKey is a TRACKERS key: cfg.trackerKey
+// when the config has one, e.g. "oea" whose kind is "govservices", else cfg.kind); this reads that
 // hash back on initial load, switches to the right tab via
 // goToTrackerHome() (not a bare activeTracker assignment -- that resets
 // filter, sort and grouping to the tracker's defaults, so a stale choice
