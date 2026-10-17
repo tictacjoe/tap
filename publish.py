@@ -17,6 +17,7 @@ Directory assumptions (override with flags if yours differ):
     deregulation/entries/*.json
     government-services/entries/*.json
     oea/entries/*.json
+    trumpfamily/entries/*.json
     community-topics/entries/*.json
     tracker/output/posts.json
 
@@ -25,6 +26,7 @@ Directory assumptions (override with flags if yours differ):
     data/deregulation.json
     data/government-services.json
     data/oea.json
+    data/trumpfamily.json
     data/community-topics.json
     data/tracker.json
     publish_exclude.txt   <- entry IDs to exclude, one per line, '#' for comments
@@ -303,6 +305,24 @@ def main():
         print(f"  {len(included)} entries published, {excl_count} excluded")
     else:
         print(f"  WARNING: {oea_src} not found, skipping")
+    print()
+
+    # --- trump family (TFS, 2026-10-17) ---
+    # Own schema (trumpfamily/SCHEMA.md); published even while the site
+    # hides the tab, so Phase B entries can be checked before unhiding.
+    # An empty folder still publishes [] so the site's fetch never 404s.
+    print("=== trumpfamily ===")
+    tfs_src = working / "trumpfamily" / "entries"
+    if tfs_src.exists():
+        included, excl_count = publish_json_entries(
+            tfs_src, site / "data" / "trumpfamily.json",
+            excluded_ids, dry_run=args.dry_run, check_glance=check_glance,
+            update_markers=update_markers,
+            timeline_fields=update_markers.TIMELINE_FIELDS["trumpfamily"]
+        )
+        print(f"  {len(included)} entries published, {excl_count} excluded")
+    else:
+        print(f"  WARNING: {tfs_src} not found, skipping")
     print()
 
     # --- community topics ---

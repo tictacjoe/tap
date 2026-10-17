@@ -1635,6 +1635,29 @@ const TRACKERS = {
     kind: "govservices",
     glanceEnabled: true,
   },
+  // Trump Family (TFS, 2026-10-17; spec in tap-data
+  // docs/superpowers/specs/2026-10-17-tap-trump-family-tracker-design.md).
+  // Own schema, mapped into GSR's shape at load by mapTrumpFamilyEntry(),
+  // so kind "govservices" reuses every GSR rendering branch; fieldLabels
+  // renames GSR's three aside/impact labels. hidden: no tab, Headlines,
+  // search or deep link until Phase B -- keep equal to the connector's
+  // HIDDEN_TRACKERS (test_hidden_trackers_sync.py).
+  trumpfamily: {
+    label: "Trump Family",
+    data: [],
+    titleField: "title",
+    idField: "id",
+    dateField: "date_of_action",
+    dateAddedField: "date_added",
+    filterField: "domain",
+    filterLabel: "category",
+    statusField: "status",
+    kind: "govservices",
+    trackerKey: "trumpfamily",
+    glanceEnabled: true,
+    hidden: true,
+    fieldLabels: { institution: "Business", proponent: "Government link", impact: "Financial stake" },
+  },
   // Other Executive Actions (2026-10-17): GSR's format with free-text
   // `category` in place of `domain`, so kind "govservices" reuses every
   // GSR rendering branch. loadAllData() copies category into domain so
@@ -1818,7 +1841,14 @@ function govservicesDomainLabel(domain) {
     funding_redirection: "Funding Redirection",
     staff_office_cuts: "Staff/Office Cuts",
     data_collection_halted: "Data Collection Halted",
-    protection_rollback: "Protection Rollback"
+    protection_rollback: "Protection Rollback",
+    // Trump Family categories (2026-10-17)
+    crypto: "Crypto",
+    foreign_deals: "Foreign Deals",
+    federal_contracts_investments: "Federal Contracts & Investments",
+    real_estate_licensing: "Real Estate & Licensing",
+    pardons_policy_favors: "Pardons & Policy Favors",
+    official_roles: "Official Roles",
   };
   return map[domain] || domain;
 }
@@ -1998,6 +2028,64 @@ function adaptOeaEntry(entry) {
 }
 /* adapt-oea-entry:end */
 
+/* visible-tracker-keys:start */
+/* Tracker keys minus any with hidden: true, in TRACKERS order. Every
+   place that lists trackers to a visitor goes through this. */
+function visibleTrackerKeys(trackers) {
+  return Object.keys(trackers).filter(k => !trackers[k].hidden);
+}
+/* visible-tracker-keys:end */
+
+/* map-trumpfamily-entry:start */
+/* Copies a Trump Family entry's own fields into the GSR names the
+   "govservices" rendering branches read; the TFS fields stay too. */
+function mapTrumpFamilyEntry(e) {
+  const nexus = e.government_nexus || {};
+  const official = nexus.official || {};
+  const ss = e.section_summaries || {};
+  return Object.assign({}, e, {
+    domain: e.category,
+    institution: (e.business_entity || {}).name || "",
+    primary_proponent: { name: official.name || "", role: official.role || "", note: nexus.note || "" },
+    estimated_impact: e.financial_stake || {},
+    section_summaries: Object.assign({}, ss, { estimated_impact: ss.financial_stake }),
+  });
+}
+/* map-trumpfamily-entry:end */
+
+/* adapt-trumpfamily-entry:start */
+function adaptTrumpFamilyEntry(entry) {
+  return Object.assign(adaptGovServicesEntry(entry), {
+    tracker: "trumpfamily",
+    category: entry.category || null,
+  });
+}
+/* adapt-trumpfamily-entry:end */
+
+/* build-trumpfamily-card-html:start */
+/* TFS-only aside card: who in the family, their stake, the official act,
+   and legal context labeled so it can't read as a finding. */
+function buildTrumpFamilyCardHtml(entry, hl) {
+  const chips = (entry.family_members || []).map(n => '<span class="domain-tag">' + hl(n) + '</span>').join(" ");
+  const stake = entry.business_entity && entry.business_entity.family_stake;
+  const action = entry.government_nexus && entry.government_nexus.action;
+  return '<div class="field-group entry-aside-card">' +
+    '<div class="field-label">Family members</div><div class="field-value">' + chips + '</div>' +
+    (stake ? '<div class="field-label">Family stake</div><div class="field-value">' + hl(stake) + '</div>' : '') +
+    (action ? '<div class="field-label">Government action</div><div class="field-value">' + hl(action) + '</div>' : '') +
+    (entry.legal_context ? '<div class="field-label">Legal context (not a finding)</div><div class="field-value">' + hl(entry.legal_context) + '</div>' : '') +
+    '</div>';
+}
+/* build-trumpfamily-card-html:end */
+
+/* family-group-keys:start */
+/* "List by family member": an entry appears under each of its members. */
+function familyGroupKeys(entry) {
+  const names = entry.family_members || [];
+  return names.length ? names.slice() : ["Unnamed"];
+}
+/* family-group-keys:end */
+
 /* adapt-prosecution-entry:start */
 function adaptProsecutionEntry(entry) {
   const override = entry.narrative_override || {};
@@ -2096,6 +2184,7 @@ function buildHeadlineItems() {
   TRACKERS.deregulation.data.forEach(e => items.push(adaptDeregulationEntry(e)));
   TRACKERS.govservices.data.forEach(e => items.push(adaptGovServicesEntry(e)));
   TRACKERS.oea.data.forEach(e => items.push(adaptOeaEntry(e)));
+  if (!TRACKERS.trumpfamily.hidden) TRACKERS.trumpfamily.data.forEach(e => items.push(adaptTrumpFamilyEntry(e)));
   TRACKERS.prosecution.data.forEach(e => items.push(adaptProsecutionEntry(e)));
   TRACKERS.tracker.data.forEach(e => items.push(adaptReportingEntry(e)));
   // Claim-checks (community-submitted topics) are included here so they
@@ -2151,6 +2240,7 @@ const HEADLINE_TRACKER_MEDIUM = {
   deregulation: "Deregulation",
   prosecution: "Accountability",
   govservices: "Service Cuts",
+  trumpfamily: "Family Deals",
   oea: "Other Actions",
   tracker: "Reporting",
   communitytopics: "Claim-checks",
@@ -2159,6 +2249,7 @@ const HEADLINE_TRACKER_ABBR = {
   deregulation: "CDR",
   prosecution: "CLA",
   govservices: "GSR",
+  trumpfamily: "TFS",
   oea: "OEA",
   tracker: "RPT",
   communitytopics: "CC",
@@ -2486,7 +2577,7 @@ function renderHeadlinesControls() {
   // tracker that's in the default aggregate.
   const trackerSel = document.getElementById("headlines-tracker-filter");
   trackerSel.innerHTML = '<option value="">All databases</option>' +
-    Object.keys(TRACKERS).map(key => '<option value="' + key + '">' + TRACKERS[key].label + '</option>').join("");
+    visibleTrackerKeys(TRACKERS).map(key => '<option value="' + key + '">' + TRACKERS[key].label + '</option>').join("");
   trackerSel.value = headlinesTrackerFilter;
 
   // The Records category subfilter (Corruption, Disinformation, etc., for
@@ -3917,6 +4008,10 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
       buildTriageButtonHtml(entry, isOwnerDevice());
   }
   if (cfg.kind === "govservices") {
+    // fieldLabels (Trump Family, 2026-10-17): a tracker sharing this
+    // branch can rename the Institution / Primary proponent / Estimated
+    // impact labels; GSR and OEA have none, so they keep the defaults.
+    const L = cfg.fieldLabels || {};
     // "What happened" (renamed from "What changed" 2026-09-18, Joe's
     // call): these entries are usually reporting an event/finding, not
     // a rule change the way Deregulation's field is, so "happened" fits
@@ -3933,13 +4028,14 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
     const mainHtml =
       '<div class="field-group entry-main-card"><div class="field-label">What happened</div><div class="field-value">' + summary(entry.section_summaries?.what_changed) + buildFieldTimelineHtml(entry, "what_changed", hl) + '</div></div>' +
       '<div class="field-group entry-main-card"><div class="field-label">Status</div><div class="field-value">' + buildFieldTimelineHtml(entry, "status", hl) + '</div>' +
-      '<div class="field-label">Estimated impact</div><div class="field-value">' + summary(entry.section_summaries?.estimated_impact) + hl(entry.estimated_impact?.summary) + '</div>' +
+      '<div class="field-label">' + escapeHtml(L.impact || "Estimated impact") + '</div><div class="field-value">' + summary(entry.section_summaries?.estimated_impact) + hl(entry.estimated_impact?.summary) + '</div>' +
       (entry.estimated_impact?.caveat ? '<div class="field-label">Caveat</div><div class="field-value" style="font-style:italic;">' + hl(entry.estimated_impact.caveat) + '</div>' : '') +
       '</div>' +
       buildGsrCdrPatternCardHtml(entry, term, useRegex);
     const asideHtml =
-      '<div class="field-group entry-aside-card"><div class="field-label">Institution</div><div class="field-value">' + hl(entry.institution) + '</div></div>' +
-      '<div class="field-group entry-aside-card"><div class="field-label">Primary proponent</div><div class="field-value"><strong>' + hl(entry.primary_proponent?.name) + '</strong> — ' + hl(entry.primary_proponent?.role) + (entry.primary_proponent?.note ? '<br><em>' + hl(entry.primary_proponent.note) + '</em>' : '') + '</div></div>' +
+      (cfg.trackerKey === "trumpfamily" ? buildTrumpFamilyCardHtml(entry, hl) : "") +
+      '<div class="field-group entry-aside-card"><div class="field-label">' + escapeHtml(L.institution || "Institution") + '</div><div class="field-value">' + hl(entry.institution) + '</div></div>' +
+      '<div class="field-group entry-aside-card"><div class="field-label">' + escapeHtml(L.proponent || "Primary proponent") + '</div><div class="field-value"><strong>' + hl(entry.primary_proponent?.name) + '</strong> — ' + hl(entry.primary_proponent?.role) + (entry.primary_proponent?.note ? '<br><em>' + hl(entry.primary_proponent.note) + '</em>' : '') + '</div></div>' +
       (entry.estimated_impact?.figures?.length ? '<div class="field-group entry-aside-card">' + buildFiguresHtml(entry.estimated_impact.figures, hl) + '</div>' : '') +
       buildSourcesCardHtml(entry, hl);
     const noteHtml = '<div class="field-group entry-aside-card">' + buildConfidenceNoteHtml(entry, hl, summary, true) + '</div>' + buildPullQuoteHtml(entry, hl);
@@ -4616,7 +4712,7 @@ function renderTabs() {
   placeholder.disabled = true;
   placeholder.selected = !TRACKERS[activeTracker];
   select.appendChild(placeholder);
-  Object.keys(TRACKERS).forEach(key => {
+  visibleTrackerKeys(TRACKERS).forEach(key => {
     const opt = document.createElement("option");
     opt.value = key;
     opt.textContent = TRACKERS[key].label + " (" + TRACKERS[key].data.length + ")";
@@ -4739,6 +4835,15 @@ function renderGroupToggle(cfg) {
   const sel = document.getElementById("group-mode");
   const statusLabel = document.getElementById("status-group-label");
   const statusCheckbox = document.getElementById("status-group-toggle");
+  // Trump Family (2026-10-17): "List by family member" only; no status checkbox.
+  if (cfg.trackerKey === "trumpfamily") {
+    sel.style.display = "";
+    sel.innerHTML = '<option value="">Individual cards</option><option value="family">List by family member</option>';
+    sel.value = groupMode;
+    sel.disabled = false;
+    statusLabel.style.display = "none";
+    return;
+  }
   if (cfg.kind !== "prosecution") {
     sel.style.display = "none";
     statusLabel.style.display = "none";
@@ -4798,10 +4903,13 @@ function sortGroupsByStatusRank(groupEntries) {
    untouched. */
 function renderGroupedEntries(entries, cfg, container, keyFn, sortGroups, cardOpts) {
   const groups = new Map();
+  // keyFn may return one key or an array (familyGroupKeys: an entry with
+  // several family members appears under each of them).
   entries.forEach(e => {
-    const key = keyFn(e);
-    if (!groups.has(key)) groups.set(key, []);
-    groups.get(key).push(e);
+    [].concat(keyFn(e)).forEach(key => {
+      if (!groups.has(key)) groups.set(key, []);
+      groups.get(key).push(e);
+    });
   });
   const sortedGroups = sortGroups([...groups.entries()]);
 
@@ -4885,8 +4993,8 @@ function renderEntries() {
     ? toRender.length + " shown of " + filtered.length + " entries — search or filter to narrow further"
     : filtered.length + " of " + cfg.data.length + " entries shown";
 
-  if (filtered.length === 0 && cfg.data.length === 0 && cfg.trackerKey === "oea") {
-    // OEA ships empty: no search or filter is involved, so don't suggest changing one.
+  if (filtered.length === 0 && cfg.data.length === 0 && ["oea", "trumpfamily"].includes(cfg.trackerKey)) {
+    // OEA and TFS ship empty: no search or filter is involved, so don't suggest changing one.
     container.innerHTML = '<div class="empty-state">No entries yet.</div>';
     return;
   }
@@ -4902,6 +5010,11 @@ function renderEntries() {
 
   if (groupMode === "individual" && cfg.kind === "prosecution") {
     renderGroupedEntries(toRender, cfg, container, officialGroupKey, sortGroupsByCount, { hideWho: true });
+    return;
+  }
+
+  if (groupMode === "family" && cfg.trackerKey === "trumpfamily") {
+    renderGroupedEntries(toRender, cfg, container, familyGroupKeys, sortGroupsByCount);
     return;
   }
 
@@ -4965,6 +5078,7 @@ const RELATED_TRACKER_FIELD_TO_KEY = {
   prosecution: "prosecution",
   "government-services": "govservices",
   oea: "oea",
+  trumpfamily: "trumpfamily",
 };
 
 /* Switches to a tracker's tab with search/filter cleared, landing on
@@ -5061,7 +5175,7 @@ function openCardById(id) {
 
 function jumpToRelatedEntry(trackerField, id) {
   const key = RELATED_TRACKER_FIELD_TO_KEY[trackerField];
-  if (!key || !TRACKERS[key]) return;
+  if (!key || !TRACKERS[key] || TRACKERS[key].hidden) return;
   goToTrackerHome(key);
   openCardById(id);
 }
@@ -5085,7 +5199,7 @@ function openEntryFromHash() {
   if (slash === -1) return;
   const key = decodeURIComponent(hash.slice(0, slash));
   const id = decodeURIComponent(hash.slice(slash + 1));
-  if (!TRACKERS[key] || !TRACKERS[key].idField || !id) return;
+  if (!TRACKERS[key] || TRACKERS[key].hidden || !TRACKERS[key].idField || !id) return;
   goToTrackerHome(key);
   openCardById(id);
 }
@@ -5118,7 +5232,9 @@ function wireRelatedEntryLinks(container) {
     a.addEventListener("click", (e) => {
       e.preventDefault();
       e.stopPropagation();
-      goToTrackerHome(a.dataset.trackerKey);
+      const key = a.dataset.trackerKey;
+      if (TRACKERS[key] && TRACKERS[key].hidden) return;
+      goToTrackerHome(key);
     });
   });
 }
@@ -5212,7 +5328,7 @@ function renderGlobalResults(term, useRegex, useOneLiners, useImpactSort) {
 
   // Reporting is deliberately excluded here -- see buildReportingLink()
   // above for why -- and searched separately below just for its count.
-  Object.keys(TRACKERS).forEach(key => {
+  visibleTrackerKeys(TRACKERS).forEach(key => {
     if (key === "tracker") return;
     const cfg = TRACKERS[key];
     cfg.data.forEach(entry => {
@@ -5473,7 +5589,7 @@ const browseOptionsEl = document.getElementById("browse-options");
 
 function openBrowseModal() {
   browseOptionsEl.innerHTML = "";
-  Object.keys(TRACKERS).forEach(key => {
+  visibleTrackerKeys(TRACKERS).forEach(key => {
     const btn = document.createElement("button");
     btn.type = "button";
     btn.className = "browse-option-btn";
@@ -5610,12 +5726,13 @@ suggestSubmitBtn.addEventListener("click", () => {
 async function loadAllData() {
   document.getElementById("entries").innerHTML = '<div class="empty-state">Loading data\u2026</div>';
 
-  const [prosecutionResult, deregulationResult, trackerResult, govservicesResult, oeaResult, communitytopicsResult] = await Promise.allSettled([
+  const [prosecutionResult, deregulationResult, trackerResult, govservicesResult, oeaResult, trumpfamilyResult, communitytopicsResult] = await Promise.allSettled([
     fetch("data/prosecution.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
     fetch("data/deregulation.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
     fetch("data/tracker.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
     fetch("data/government-services.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
     fetch("data/oea.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
+    fetch("data/trumpfamily.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
     fetch("data/community-topics.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
   ]);
 
@@ -5662,6 +5779,14 @@ async function loadAllData() {
     TRACKERS.oea.data = oeaResult.value.map(e => Object.assign({}, e, { domain: e.category }));
   } else {
     loadErrors.push("oea.json (" + oeaResult.reason.message + ")");
+  }
+
+  // Trump Family: see TRACKERS.trumpfamily's comment. While hidden, a
+  // failed fetch stays silent -- a banner would reveal the tracker.
+  if (trumpfamilyResult.status === "fulfilled") {
+    TRACKERS.trumpfamily.data = trumpfamilyResult.value.map(mapTrumpFamilyEntry);
+  } else if (!TRACKERS.trumpfamily.hidden) {
+    loadErrors.push("trumpfamily.json (" + trumpfamilyResult.reason.message + ")");
   }
 
   if (communitytopicsResult.status === "fulfilled") {

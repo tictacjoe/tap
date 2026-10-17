@@ -321,3 +321,13 @@ def test_publish_empty_oea_dir_writes_empty_array(tmp_path):
     included, excluded = publish_json_entries(src, dest, set())
     assert included == [] and excluded == 0
     assert json.loads(dest.read_text()) == []
+
+
+def test_publish_empty_trumpfamily_dir_writes_empty_array(tmp_path):
+    src = tmp_path / "trumpfamily" / "entries"
+    src.mkdir(parents=True)
+    (src / ".gitkeep").write_text("")
+    dest = tmp_path / "trumpfamily.json"
+    included, excluded = publish_json_entries(src, dest, set())
+    assert included == [] and excluded == 0
+    assert json.loads(dest.read_text()) == []
