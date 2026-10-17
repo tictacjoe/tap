@@ -232,3 +232,18 @@ def test_triage_button_shows_and_locks_when_configured(browser, site_url):
     assert page.locator("#triage-hidden-post-id").get_attribute("name") == "entry.1"
     page.wait_for_timeout(1200)
     assert btn.inner_text() == "Queued, thanks ✓"
+
+
+def test_empty_oea_tab_says_no_entries_yet_but_other_empties_keep_the_filter_message(browser, site_url):
+    """Spec sec-6: an OEA tab with no data says "No entries yet", not "try a different search"."""
+    page, errors = _goto(browser, site_url, "")
+    # Force the empty-data case regardless of what oea.json holds today.
+    page.evaluate("() => { TRACKERS.oea.data = []; switchToTracker('oea'); }")
+    page.wait_for_timeout(300)
+    assert page.locator("#entries .empty-state").inner_text().strip() == "No entries yet."
+    # A tracker with data and a search matching nothing keeps the generic message.
+    page.evaluate("() => switchToTracker('deregulation')")
+    page.fill("#search", "zzzqqqxxxnomatch")
+    page.wait_for_timeout(600)
+    assert "No entries match" in page.locator("#entries .empty-state").inner_text()
+    assert not errors

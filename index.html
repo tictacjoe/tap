@@ -4402,14 +4402,14 @@ function buildEntryCard(entry, cfg, docketLabel, sourceLabel, term, useRegex, ca
 
   let metaHtml = sourceLabel ? '<span class="source-tag">' + sourceLabel + '</span>' : "";
   if (cfg.kind === "deregulation") {
-    metaHtml += '<span class="domain-tag" style="background:' + domainColor(entry.domain) + '22; color:' + domainColor(entry.domain) + '">' + entry.domain + '</span>' +
+    metaHtml += '<span class="domain-tag" style="background:' + domainColor(entry.domain) + '22; color:' + domainColor(entry.domain) + '">' + escapeHtml(entry.domain) + '</span>' +
                '<span>' + hl(entry.agency) + '</span><span>' + hl(entry.date_of_action) + '</span>' +
                (entry.last_verified ? '<span>verified ' + hl(entry.last_verified) + '</span>' : '') +
                '<span>' + hl(entry.short_summary || truncate(entry.what_changed || "", 100)) + '</span>';
   } else if (cfg.kind === "tracker") {
     metaHtml += '<span>' + (entry.date || "") + '</span>';
   } else if (cfg.kind === "govservices") {
-    metaHtml += '<span class="domain-tag" style="background:' + domainColor(entry.domain) + '22; color:' + domainColor(entry.domain) + '">' + govservicesDomainLabel(entry.domain) + '</span>' +
+    metaHtml += '<span class="domain-tag" style="background:' + domainColor(entry.domain) + '22; color:' + domainColor(entry.domain) + '">' + escapeHtml(govservicesDomainLabel(entry.domain)) + '</span>' +
                '<span>' + hl(entry.institution) + '</span><span>' + hl(entry.date_of_action) + '</span>';
   } else if (cfg.kind === "communitytopics") {
     // Coverage indicator -- surfaces on the card itself (not just the
@@ -4664,7 +4664,7 @@ function renderFilterOptions(cfg) {
     values = [...new Set(cfg.data.map(e => filterBaseValue(e[cfg.filterField])).filter(Boolean))].sort();
   }
   sel.innerHTML = '<option value="">all ' + pluralize(cfg.filterLabel) + '</option>' +
-    values.map(v => '<option value="' + v + '">' + (cfg.kind === "govservices" ? govservicesDomainLabel(v) : cfg.kind === "communitytopics" ? verdictLabel(v) : v) + '</option>').join("");
+    values.map(v => '<option value="' + escapeHtml(v) + '">' + escapeHtml(cfg.kind === "govservices" ? govservicesDomainLabel(v) : cfg.kind === "communitytopics" ? verdictLabel(v) : v) + '</option>').join("");
   sel.value = filterValue;
 }
 
@@ -4885,6 +4885,11 @@ function renderEntries() {
     ? toRender.length + " shown of " + filtered.length + " entries — search or filter to narrow further"
     : filtered.length + " of " + cfg.data.length + " entries shown";
 
+  if (filtered.length === 0 && cfg.data.length === 0 && cfg.trackerKey === "oea") {
+    // OEA ships empty: no search or filter is involved, so don't suggest changing one.
+    container.innerHTML = '<div class="empty-state">No entries yet.</div>';
+    return;
+  }
   if (filtered.length === 0) {
     container.innerHTML = '<div class="empty-state">No entries match. Try a different search or filter.</div>';
     return;
@@ -5245,7 +5250,7 @@ function renderGlobalResults(term, useRegex, useOneLiners, useImpactSort) {
   if (allMatches.length === 0) {
     const empty = document.createElement("div");
     empty.className = "empty-state";
-    empty.textContent = "No matches in Corporate Deregulation, Cabinet-Level Accountability, Government Service Redirection, or Claim-checks.";
+    empty.textContent = "No matches in Corporate Deregulation, Cabinet-Level Accountability, Government Service Redirection, Other Executive Actions, or Claim-checks.";
     container.appendChild(empty);
     if (reportingLink) container.appendChild(reportingLink);
     return;
@@ -5672,7 +5677,7 @@ async function loadAllData() {
       if (location.hash === "#owner-setup") localStorage.setItem("tap-owner", "1");
       else localStorage.removeItem("tap-owner");
     } catch (e) {}
-    history.replaceState(null, "", location.pathname);
+    history.replaceState(null, "", location.pathname + location.search);
   }
 
   renderDispatch();
