@@ -3399,9 +3399,16 @@ function buildUpdateRequestHtml(entry, cfg) {
 /* triage-form-config:start */
 /* The "Triage this" queue's Google Form (2026-10-17, spec
    docs/superpowers/specs/2026-10-17-tap-triage-button-oea-design.md in
-   tap-data). Empty action = not set up yet: buildTriageButtonHtml()
-   renders nothing, so the site never shows a button that posts nowhere. */
-const TRIAGE_FORM = { action: "", postId: "", postTitle: "", requester: "" };
+   tap-data). The form "TAP Triage Requests" was created 2026-10-17.
+   Empty action = not set up yet: buildTriageButtonHtml()
+   renders nothing, so the site never shows a button that posts nowhere.
+   Emptying action again (e.g. to pull the button) hides it on the next load. */
+const TRIAGE_FORM = {
+  action: "https://docs.google.com/forms/d/e/1FAIpQLSfCs7t0aFJdiNTJWn719TId9zC0UEHOVOtI6epncgAIEm1knQ/formResponse",
+  postId: "entry.136952817",
+  postTitle: "entry.1751102515",
+  requester: "entry.1026576232",
+};
 /* triage-form-config:end */
 
 /* build-triage-button-html:start */

@@ -180,23 +180,35 @@ def test_a_headlines_jump_to_an_old_reporting_row_opens_it_and_back_forward_repl
 
 
 # --- "Triage this" button (2026-10-17) ---
+# The committed TRIAGE_FORM is now configured (real Google Form, 2026-10-17). Tests never
+# submit to it: each case rewrites the committed line in the served HTML (the file on disk is
+# untouched) to either an EMPTY form (button hidden) or a DUMMY form pointing at example.invalid.
+COMMITTED_TRIAGE = (
+    'const TRIAGE_FORM = {\n'
+    '  action: "https://docs.google.com/forms/d/e/1FAIpQLSfCs7t0aFJdiNTJWn719TId9zC0UEHOVOtI6epncgAIEm1knQ/formResponse",\n'
+    '  postId: "entry.136952817",\n'
+    '  postTitle: "entry.1751102515",\n'
+    '  requester: "entry.1026576232",\n'
+    '};'
+)
 EMPTY_TRIAGE = 'const TRIAGE_FORM = { action: "", postId: "", postTitle: "", requester: "" };'
 DUMMY_TRIAGE = ('const TRIAGE_FORM = { action: "https://example.invalid/formResponse", '
                 'postId: "entry.1", postTitle: "entry.2", requester: "entry.3" };')
 
 
 def _goto_with_triage(browser, site_url, configured):
-    """Load the Reporting tab; when `configured`, serve index.html with a dummy TRIAGE_FORM
-    (never touches the file on disk)."""
+    """Load the Reporting tab with TRIAGE_FORM swapped in the served HTML:
+    `configured=True` -> DUMMY_TRIAGE (button shows); `configured=False` -> EMPTY_TRIAGE (hidden)."""
     context = browser.new_context(viewport={"width": 1280, "height": 900})
-    if configured:
-        def fulfil(route):
-            body = (SITE_DIR / "index.html").read_text(encoding="utf-8")
-            assert EMPTY_TRIAGE in body
-            route.fulfill(body=body.replace(EMPTY_TRIAGE, DUMMY_TRIAGE), content_type="text/html")
-        context.route("**/index.html", fulfil)
-        # Don't let the dummy form submission leave the machine.
-        context.route("https://example.invalid/**", lambda r: r.fulfill(status=200, body="ok"))
+
+    def fulfil(route):
+        body = (SITE_DIR / "index.html").read_text(encoding="utf-8")
+        assert COMMITTED_TRIAGE in body
+        replacement = DUMMY_TRIAGE if configured else EMPTY_TRIAGE
+        route.fulfill(body=body.replace(COMMITTED_TRIAGE, replacement), content_type="text/html")
+    context.route("**/index.html", fulfil)
+    # Don't let the dummy form submission leave the machine.
+    context.route("https://example.invalid/**", lambda r: r.fulfill(status=200, body="ok"))
     page = context.new_page()
     page.goto(f"{site_url}/index.html#tracker/x", wait_until="networkidle")
     page.wait_for_timeout(1500)
