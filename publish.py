@@ -18,6 +18,7 @@ Directory assumptions (override with flags if yours differ):
     government-services/entries/*.json
     oea/entries/*.json
     trumpfamily/entries/*.json
+    trumpfamily/moved_ids.json
     community-topics/entries/*.json
     tracker/output/posts.json
 
@@ -27,6 +28,7 @@ Directory assumptions (override with flags if yours differ):
     data/government-services.json
     data/oea.json
     data/trumpfamily.json
+    data/moved-ids.json
     data/community-topics.json
     data/tracker.json
     publish_exclude.txt   <- entry IDs to exclude, one per line, '#' for comments
@@ -41,6 +43,9 @@ import json
 import sys
 import argparse
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import hidden_trackers  # noqa: E402
 
 
 def load_exclude_list(site_dir: Path) -> set:
@@ -199,6 +204,17 @@ def publish_claim_checks(module, claims_file: Path, published_entries: list,
     return report
 
 
+def moved_targets_hidden(working, site):
+    """Move targets (tap-data trumpfamily/moved_ids.json) still hidden on the
+    site: publishing then would drop moved entries from their old tab before
+    the new tab is visible (Phase B spec sec-7)."""
+    path = Path(working) / "trumpfamily" / "moved_ids.json"
+    if not path.exists():
+        return set()
+    targets = {info["to"] for info in json.loads(path.read_text(encoding="utf-8")).values()}
+    return targets & hidden_trackers.site_hidden_trackers(Path(site) / "index.html")
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--working", default=str(Path.home() / "gjoe/tap-data"),
@@ -237,6 +253,16 @@ def main():
     except ImportError as exc:
         print(f"ERROR: cannot load claim_checks_public from {working / 'tracker'}: {exc}")
         sys.exit(1)
+
+    blocked = moved_targets_hidden(working, site)
+    if blocked:
+        msg = ("moved entries target hidden tracker(s): " + ", ".join(sorted(blocked)) +
+               ". Finish the Phase B cutover (spec sec-9) before publishing.")
+        if args.dry_run:
+            print("WARNING: " + msg)
+        else:
+            print("ERROR: " + msg)
+            sys.exit(1)
 
     excluded_ids = load_exclude_list(site)
     print(f"Exclude list: {len(excluded_ids)} entry ID(s) — {sorted(excluded_ids) if excluded_ids else '(none)'}")
@@ -323,6 +349,15 @@ def main():
         print(f"  {len(included)} entries published, {excl_count} excluded")
     else:
         print(f"  WARNING: {tfs_src} not found, skipping")
+    print()
+
+    # --- moved-ids (Phase B): old-link redirects for site and connector ---
+    moved_src = working / "trumpfamily" / "moved_ids.json"
+    moved = json.loads(moved_src.read_text(encoding="utf-8")) if moved_src.exists() else {}
+    print(f"=== moved-ids === {len(moved)} redirect(s)")
+    if not args.dry_run:
+        (site / "data" / "moved-ids.json").write_text(json.dumps(moved, indent=2, sort_keys=True) + "\n",
+                                                      encoding="utf-8")
     print()
 
     # --- community topics ---

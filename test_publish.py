@@ -331,3 +331,52 @@ def test_publish_empty_trumpfamily_dir_writes_empty_array(tmp_path):
     included, excluded = publish_json_entries(src, dest, set())
     assert included == [] and excluded == 0
     assert json.loads(dest.read_text()) == []
+
+
+# --- Phase B: moved-ids publish and the hidden-target guard (end to end) ---
+import subprocess
+import sys
+
+_MOVE = {"m1": {"from": "prosecution", "to": "trumpfamily", "date": "2026-10-20"}}
+_INDEX_HIDDEN = "const TRACKERS = {\n  trumpfamily: {\n    hidden: true,\n  },\n};\n"
+
+
+def _e2e_dirs(tmp_path, moved):
+    """Temp working + site dirs; the working repo's tracker/ is symlinked so the
+    real glance/marker/claim loaders import."""
+    w = tmp_path / "working"
+    (w / "trumpfamily").mkdir(parents=True)
+    (w / "trumpfamily/moved_ids.json").write_text(json.dumps(moved))
+    (w / "tracker").symlink_to(Path(__file__).parent.parent / "tap-data" / "tracker")
+    s = tmp_path / "site"
+    (s / "data").mkdir(parents=True)
+    (s / "index.html").write_text(_INDEX_HIDDEN)
+    return w, s
+
+
+def _run_publish(w, s, *extra):
+    return subprocess.run([sys.executable, str(Path(__file__).parent / "publish.py"),
+                           "--working", str(w), "--site", str(s), *extra],
+                          capture_output=True, text=True)
+
+
+def test_publish_refuses_when_moved_target_is_hidden(tmp_path):
+    w, s = _e2e_dirs(tmp_path, _MOVE)
+    r = _run_publish(w, s)
+    assert r.returncode == 1
+    assert "ERROR: moved entries target hidden tracker(s): trumpfamily." in r.stdout
+    assert list((s / "data").glob("*.json")) == []
+
+
+def test_publish_dry_run_only_warns_about_hidden_moved_target(tmp_path):
+    w, s = _e2e_dirs(tmp_path, _MOVE)
+    r = _run_publish(w, s, "--dry-run")
+    assert r.returncode == 0, r.stdout + r.stderr
+    assert "WARNING: moved entries target hidden tracker(s): trumpfamily" in r.stdout
+
+
+def test_publish_writes_empty_moved_ids(tmp_path):
+    w, s = _e2e_dirs(tmp_path, {})
+    r = _run_publish(w, s)
+    assert r.returncode == 0, r.stdout + r.stderr
+    assert json.loads((s / "data/moved-ids.json").read_text()) == {}
