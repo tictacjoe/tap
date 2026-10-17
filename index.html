@@ -1526,6 +1526,13 @@
   <input type="text" name="entry.694581047" id="update-request-hidden-title">
 </form>
 
+<iframe name="triage-target-frame" id="triage-target-frame" style="display:none;" title="Triage request target (hidden)"></iframe>
+<form id="triage-hidden-form" method="POST" target="triage-target-frame" style="display:none;">
+  <input type="text" id="triage-hidden-post-id">
+  <input type="text" id="triage-hidden-post-title">
+  <input type="text" id="triage-hidden-requester">
+</form>
+
 <select class="tabs-select" id="tabs"></select>
 <div class="records-tab-row" id="records-tab-row"></div>
 
@@ -3389,6 +3396,35 @@ function buildUpdateRequestHtml(entry, cfg) {
 }
 /* build-update-request-html:end */
 
+/* triage-form-config:start */
+/* The "Triage this" queue's Google Form (2026-10-17, spec
+   docs/superpowers/specs/2026-10-17-tap-triage-button-oea-design.md in
+   tap-data). Empty action = not set up yet: buildTriageButtonHtml()
+   renders nothing, so the site never shows a button that posts nowhere. */
+const TRIAGE_FORM = { action: "", postId: "", postTitle: "", requester: "" };
+/* triage-form-config:end */
+
+/* build-triage-button-html:start */
+/* Reporting cards' "Triage this" button. Pure/testable like
+   buildUpdateRequestHtml(); wireTriageButtons() does the browser-only
+   click wiring. isOwner = Joe's device (localStorage "tap-owner"). */
+function buildTriageButtonHtml(entry, isOwner, form) {
+  form = form || TRIAGE_FORM;
+  if (!entry.id || !form.action) return "";
+  const title = (entry.what_happened || "").slice(0, 200);
+  return '<div class="update-request-row">' +
+    '<button class="suggest-submit-btn triage-btn" type="button" data-post-id="' + escapeHtml(entry.id) +
+    '" data-post-title="' + escapeHtml(title) + '">' + (isOwner ? "Queue for triage" : "Triage this") + '</button>' +
+    '</div>';
+}
+/* build-triage-button-html:end */
+
+/* Joe's device flag for the triage queue. try/catch: storage can be
+   unavailable (private window, blocked site data). */
+function isOwnerDevice() {
+  try { return localStorage.getItem("tap-owner") === "1"; } catch (e) { return false; }
+}
+
 /* Shared detail-html builder -- used both by the full docket card
    (tabbed/global card view) and by the one-liner expand-on-click,
    so there's exactly one place that knows how to render each
@@ -3870,7 +3906,8 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
   }
   if (cfg.kind === "tracker") {
     return '<div class="field-label">What happened</div><div class="field-value">' + hl(entry.what_happened) + '</div>' +
-      (entry.source_name ? '<div class="field-label">Source</div><ul class="exhibit-list"><li><a href="' + escapeHtml(safeHref(entry.source_url)) + '" target="_blank" rel="noopener">' + hl(entry.source_name) + '</a></li></ul>' : '<div class="field-label">Source</div><div class="field-value" style="color:var(--ink-faint);font-style:italic;">not cited in original post</div>');
+      (entry.source_name ? '<div class="field-label">Source</div><ul class="exhibit-list"><li><a href="' + escapeHtml(safeHref(entry.source_url)) + '" target="_blank" rel="noopener">' + hl(entry.source_name) + '</a></li></ul>' : '<div class="field-label">Source</div><div class="field-value" style="color:var(--ink-faint);font-style:italic;">not cited in original post</div>') +
+      buildTriageButtonHtml(entry, isOwnerDevice());
   }
   if (cfg.kind === "govservices") {
     // "What happened" (renamed from "What changed" 2026-09-18, Joe's
@@ -4438,6 +4475,7 @@ function buildEntryCard(entry, cfg, docketLabel, sourceLabel, term, useRegex, ca
   });
   wireRelatedEntryLinks(div);
   wireUpdateRequestButtons(div);
+  wireTriageButtons(div);
   wireShareLinkButtons(div);
   wireEvidenceDrawers(div, entry, cfg, term, useRegex);
   return div;
@@ -5115,6 +5153,42 @@ function wireUpdateRequestButtons(container) {
   });
 }
 
+/* Browser-only counterpart to buildTriageButtonHtml(). Same silent-post
+   and optimistic-confirmation pattern as wireUpdateRequestButtons();
+   the lock is permanent per post (a post is triaged once). */
+function wireTriageButtons(container) {
+  container.querySelectorAll(".triage-btn").forEach(btn => {
+    const postId = btn.dataset.postId;
+    const storageKey = "tap-triage-requested:" + postId;
+    let already = false;
+    try { already = localStorage.getItem(storageKey) === "1"; } catch (e) {}
+    if (already) {
+      btn.disabled = true;
+      btn.textContent = "Queued ✓";
+      return;
+    }
+    btn.addEventListener("click", () => {
+      const form = document.getElementById("triage-hidden-form");
+      form.action = TRIAGE_FORM.action;
+      const fields = [
+        ["triage-hidden-post-id", TRIAGE_FORM.postId, postId],
+        ["triage-hidden-post-title", TRIAGE_FORM.postTitle, btn.dataset.postTitle],
+        ["triage-hidden-requester", TRIAGE_FORM.requester, isOwnerDevice() ? "owner" : "public"],
+      ];
+      fields.forEach(([id, name, value]) => {
+        const input = document.getElementById(id);
+        input.name = name;
+        input.value = value;
+      });
+      btn.disabled = true;
+      btn.textContent = "Submitting…";
+      form.submit();
+      try { localStorage.setItem(storageKey, "1"); } catch (e) {}
+      setTimeout(() => { btn.textContent = "Queued, thanks ✓"; }, 900);
+    });
+  });
+}
+
 function renderGlobalResults(term, useRegex, useOneLiners, useImpactSort) {
   const container = document.getElementById("entries");
   const countEl = document.getElementById("count");
@@ -5211,6 +5285,7 @@ function renderGlobalResults(term, useRegex, useOneLiners, useImpactSort) {
       buildDetailHtml(m.entry, m.cfg, term, useRegex);
     wireRelatedEntryLinks(detail);
     wireEvidenceDrawers(detail, m.entry, m.cfg, term, useRegex);
+    wireTriageButtons(detail);
 
     row.addEventListener("click", () => {
       row.classList.toggle("open");
@@ -5581,6 +5656,16 @@ async function loadAllData() {
     TRACKERS.communitytopics.data = communitytopicsResult.value;
   } else {
     loadErrors.push("community-topics.json (" + communitytopicsResult.reason.message + ")");
+  }
+
+  // Triage queue owner flag (2026-10-17). Unlinked; honor-system by design.
+  // Runs before the first render so the label is right on this load.
+  if (location.hash === "#owner-setup" || location.hash === "#owner-clear") {
+    try {
+      if (location.hash === "#owner-setup") localStorage.setItem("tap-owner", "1");
+      else localStorage.removeItem("tap-owner");
+    } catch (e) {}
+    history.replaceState(null, "", location.pathname);
   }
 
   renderDispatch();

@@ -24,6 +24,8 @@ const escapeHtmlFunctionSource = extractFunction(source, "escape-html");
 const summaryLineFunctionSource = extractFunction(source, "summary-line");
 const highlightMatchesFunctionSource = extractFunction(source, "highlight-matches");
 const buildUpdateRequestHtmlFunctionSource = extractFunction(source, "build-update-request-html");
+const triageFormConfigSource = extractFunction(source, "triage-form-config");
+const buildTriageButtonHtmlSource = extractFunction(source, "build-triage-button-html");
 const updateTimelineFunctionSource = extractFunction(source, "update-timeline");
 const buildConfidenceNoteHtmlFunctionSource = extractFunction(source, "build-confidence-note-html");
 const buildDetailHtmlFunctionSource = extractFunction(source, "build-detail-html");
@@ -68,11 +70,13 @@ const buildFiguresHtmlStubSource = "function buildFiguresHtml(figs) { return fig
 // field on all three curated-tracker kinds; calls escapeHtml directly).
 const combined = escapeHtmlFunctionSource + "\n" + summaryLineFunctionSource + "\n" +
   highlightMatchesFunctionSource + "\n" + buildUpdateRequestHtmlFunctionSource + "\n" +
+  triageFormConfigSource + "\n" + buildTriageButtonHtmlSource + "\n" + "function isOwnerDevice() { return false; }" + "\n" +
   updateTimelineFunctionSource + "\n" + buildConfidenceNoteHtmlFunctionSource + "\n" +
   safeHrefFunctionSource + "\n" + buildPullQuoteHtmlFunctionSource + "\n" + buildEntryColsHtmlFunctionSource + "\n" +
   buildFiguresHtmlStubSource + "\n" + evidenceDrawerFunctionSource + "\n" + glanceHeadFunctionSource + "\n" +
   buildSourcesCardHtmlFunctionSource + "\n" + buildDetailHtmlFunctionSource;
 const buildDetailHtml = (0, eval)(`${combined}\nbuildDetailHtml;`);
+const buildTriageButtonHtml = (0, eval)(`${combined}\nbuildTriageButtonHtml;`);
 
 
 // Tests feed buildDetailHtml the PUBLISHED shape: prose fields plus a `timeline`
@@ -1654,4 +1658,38 @@ test("update-request button uses trackerKey when the config has one", () => {
 test("share-link button writes the TRACKERS key (trackerKey), not the shared kind", () => {
   // buildEntryCard is not evaluable in this harness, so pin the source line.
   assert.match(source, /data-share-tracker="' \+ escapeHtml\(cfg\.trackerKey \|\| cfg\.kind\)/);
+});
+
+
+// --- Triage this button (2026-10-17) ---
+const CONFIGURED = { action: "https://docs.google.com/forms/d/e/X/formResponse",
+                     postId: "entry.1", postTitle: "entry.2", requester: "entry.3" };
+
+test("triage button renders for a Reporting entry with an id", () => {
+  const html = buildTriageButtonHtml({ id: "cf93853a6528954c", what_happened: "Something" }, false, CONFIGURED);
+  assert.match(html, /class="[^"]*triage-btn/);
+  assert.match(html, /data-post-id="cf93853a6528954c"/);
+  assert.match(html, />Triage this</);
+});
+
+test("owner mode changes the label", () => {
+  const html = buildTriageButtonHtml({ id: "a1", what_happened: "x" }, true, CONFIGURED);
+  assert.match(html, />Queue for triage</);
+});
+
+test("no id, no button", () => {
+  assert.equal(buildTriageButtonHtml({ id: null, what_happened: "x" }, false, CONFIGURED), "");
+});
+
+test("unconfigured form, no button", () => {
+  assert.equal(buildTriageButtonHtml({ id: "a1", what_happened: "x" }, false,
+    { action: "", postId: "", postTitle: "", requester: "" }), "");
+});
+
+test("title is escaped and truncated to 200 chars before escaping", () => {
+  const long = '"<b>&' + "y".repeat(300);
+  const html = buildTriageButtonHtml({ id: "a1", what_happened: long }, false, CONFIGURED);
+  assert.ok(!html.includes("<b>"));
+  const title = html.match(/data-post-title="([^"]*)"/)[1];
+  assert.equal(title, "&quot;&lt;b&gt;&amp;" + "y".repeat(195));
 });

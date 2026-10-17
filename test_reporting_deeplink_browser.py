@@ -177,3 +177,46 @@ def test_a_headlines_jump_to_an_old_reporting_row_opens_it_and_back_forward_repl
     assert page.locator(f'.entry.linked-item.open[data-entry-id="{item}"]').count() == 1
     assert page.locator(".entry.linked-item").count() == 1
     assert errors == []
+
+
+# --- "Triage this" button (2026-10-17) ---
+EMPTY_TRIAGE = 'const TRIAGE_FORM = { action: "", postId: "", postTitle: "", requester: "" };'
+DUMMY_TRIAGE = ('const TRIAGE_FORM = { action: "https://example.invalid/formResponse", '
+                'postId: "entry.1", postTitle: "entry.2", requester: "entry.3" };')
+
+
+def _goto_with_triage(browser, site_url, configured):
+    """Load the Reporting tab; when `configured`, serve index.html with a dummy TRIAGE_FORM
+    (never touches the file on disk)."""
+    context = browser.new_context(viewport={"width": 1280, "height": 900})
+    if configured:
+        def fulfil(route):
+            body = (SITE_DIR / "index.html").read_text(encoding="utf-8")
+            assert EMPTY_TRIAGE in body
+            route.fulfill(body=body.replace(EMPTY_TRIAGE, DUMMY_TRIAGE), content_type="text/html")
+        context.route("**/index.html", fulfil)
+        # Don't let the dummy form submission leave the machine.
+        context.route("https://example.invalid/**", lambda r: r.fulfill(status=200, body="ok"))
+    page = context.new_page()
+    page.goto(f"{site_url}/index.html#tracker/x", wait_until="networkidle")
+    page.wait_for_timeout(1500)
+    return page
+
+
+def test_no_triage_button_while_the_form_is_unconfigured(browser, site_url):
+    page = _goto_with_triage(browser, site_url, configured=False)
+    assert page.locator("#entries .entry").count() > 0
+    assert page.locator(".triage-btn").count() == 0
+
+
+def test_triage_button_shows_and_locks_when_configured(browser, site_url):
+    page = _goto_with_triage(browser, site_url, configured=True)
+    btn = page.locator("#entries .entry .triage-btn").first
+    assert btn.inner_text() == "Triage this"
+    post_id = btn.get_attribute("data-post-id")
+    btn.evaluate("b => b.click()")  # card is collapsed; click without needing it visible
+    assert btn.is_disabled()
+    assert page.evaluate("(id) => localStorage.getItem('tap-triage-requested:' + id)", post_id) == "1"
+    assert page.locator("#triage-hidden-post-id").get_attribute("name") == "entry.1"
+    page.wait_for_timeout(1200)
+    assert btn.inner_text() == "Queued, thanks ✓"
