@@ -29,6 +29,7 @@ const names = [
   "flatten-tracker-posts",  // Reporting's real shape: tracker.json is digests of dated entries, not flat posts
   "adapt-deregulation-entry",
   "adapt-govservices-entry",
+  "adapt-oea-entry",
   "adapt-prosecution-entry",
   "adapt-communitytopic-entry",
   "adapt-reporting-entry",
@@ -36,7 +37,7 @@ const names = [
 const combined = names.map(n => extractFunction(source, n)).join("\n");
 const exposeNames = [
   "combineTierText", "fullestTierText", "packHeadline", "stripAdaptedItemLabels", "flattenTrackerPosts",
-  "adaptDeregulationEntry", "adaptGovServicesEntry", "adaptProsecutionEntry",
+  "adaptDeregulationEntry", "adaptGovServicesEntry", "adaptOeaEntry", "adaptProsecutionEntry",
   "adaptCommunityTopicEntry", "adaptReportingEntry",
 ];
 const fns = (0, eval)(`${combined}\n({ ${exposeNames.join(", ")} });`);
@@ -352,4 +353,17 @@ test("adaptReportingEntry carries the item id so Headlines can jump to its card"
 test("the Reporting tracker declares id as its idField", () => {
   const block = source.slice(source.indexOf("  tracker: {"), source.indexOf("  communitytopics: {"));
   assert.match(block, /idField: "id",/);
+});
+
+test("adaptOeaEntry reuses the GSR shape with OEA's tracker and category", () => {
+  const item = fns.adaptOeaEntry({
+    id: "election-office-cuts", title: "Election office cuts",
+    what_changed: "CISA ended election security support.", category: "Elections",
+    date_of_action: "2025-03-01", sources: [{ name: "Reuters", url: "https://example.com" }],
+  });
+  assert.equal(item.tracker, "oea");
+  assert.equal(item.category, "Elections");
+  assert.equal(item.headline, "Election office cuts");
+  assert.equal(item.id, "election-office-cuts");
+  assert.equal(item.trail.sources[0].name, "Reuters");
 });

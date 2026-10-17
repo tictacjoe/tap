@@ -16,6 +16,7 @@ Directory assumptions (override with flags if yours differ):
     prosecution/cabinet-level/*.json
     deregulation/entries/*.json
     government-services/entries/*.json
+    oea/entries/*.json
     community-topics/entries/*.json
     tracker/output/posts.json
 
@@ -23,6 +24,7 @@ Directory assumptions (override with flags if yours differ):
     data/prosecution.json
     data/deregulation.json
     data/government-services.json
+    data/oea.json
     data/community-topics.json
     data/tracker.json
     publish_exclude.txt   <- entry IDs to exclude, one per line, '#' for comments
@@ -283,6 +285,24 @@ def main():
         print(f"  {len(included)} entries published, {excl_count} excluded")
     else:
         print(f"  WARNING: {govservices_src} not found, skipping")
+    print()
+
+    # --- other executive actions (OEA, 2026-10-17) ---
+    # Same format as government-services; its entries arrive only via the
+    # Reporting tab's "Triage this" button. An empty folder still publishes
+    # [] so the site's fetch never 404s.
+    print("=== oea ===")
+    oea_src = working / "oea" / "entries"
+    if oea_src.exists():
+        included, excl_count = publish_json_entries(
+            oea_src, site / "data" / "oea.json",
+            excluded_ids, dry_run=args.dry_run, check_glance=check_glance,
+            update_markers=update_markers,
+            timeline_fields=update_markers.TIMELINE_FIELDS["oea"]
+        )
+        print(f"  {len(included)} entries published, {excl_count} excluded")
+    else:
+        print(f"  WARNING: {oea_src} not found, skipping")
     print()
 
     # --- community topics ---

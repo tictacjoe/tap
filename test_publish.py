@@ -311,3 +311,13 @@ def test_publish_claim_checks_drops_a_check_whose_evidence_changed(tmp_path, cap
     report = publish_claim_checks(module, _claims_file(tmp_path, [_claim_record()]), [changed], dest)
     assert report["dropped_stale"] == 1 and json.loads(dest.read_text())["checks"] == {}
     assert "entry-a::ev000" in capsys.readouterr().out
+
+
+def test_publish_empty_oea_dir_writes_empty_array(tmp_path):
+    src = tmp_path / "oea" / "entries"
+    src.mkdir(parents=True)
+    (src / ".gitkeep").write_text("")
+    dest = tmp_path / "oea.json"
+    included, excluded = publish_json_entries(src, dest, set())
+    assert included == [] and excluded == 0
+    assert json.loads(dest.read_text()) == []

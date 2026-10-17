@@ -1628,6 +1628,25 @@ const TRACKERS = {
     kind: "govservices",
     glanceEnabled: true,
   },
+  // Other Executive Actions (2026-10-17): GSR's format with free-text
+  // `category` in place of `domain`, so kind "govservices" reuses every
+  // GSR rendering branch. loadAllData() copies category into domain so
+  // those branches' domain tag and filter read it. trackerKey keeps the
+  // update-request queue's tracker column honest ("oea", not the kind).
+  oea: {
+    label: "Other Executive Actions",
+    data: [],
+    titleField: "title",
+    idField: "id",
+    dateField: "date_of_action",
+    dateAddedField: "date_added",
+    filterField: "domain",
+    filterLabel: "category",
+    statusField: "status",
+    kind: "govservices",
+    trackerKey: "oea",
+    glanceEnabled: true,
+  },
   tracker: {
     label: "Reporting",
     data: [],
@@ -1963,6 +1982,15 @@ function adaptGovServicesEntry(entry) {
 }
 /* adapt-govservices-entry:end */
 
+/* adapt-oea-entry:start */
+function adaptOeaEntry(entry) {
+  return Object.assign(adaptGovServicesEntry(entry), {
+    tracker: "oea",
+    category: entry.category || null,
+  });
+}
+/* adapt-oea-entry:end */
+
 /* adapt-prosecution-entry:start */
 function adaptProsecutionEntry(entry) {
   const override = entry.narrative_override || {};
@@ -2060,6 +2088,7 @@ function buildHeadlineItems() {
   const items = [];
   TRACKERS.deregulation.data.forEach(e => items.push(adaptDeregulationEntry(e)));
   TRACKERS.govservices.data.forEach(e => items.push(adaptGovServicesEntry(e)));
+  TRACKERS.oea.data.forEach(e => items.push(adaptOeaEntry(e)));
   TRACKERS.prosecution.data.forEach(e => items.push(adaptProsecutionEntry(e)));
   TRACKERS.tracker.data.forEach(e => items.push(adaptReportingEntry(e)));
   // Claim-checks (community-submitted topics) are included here so they
@@ -2115,6 +2144,7 @@ const HEADLINE_TRACKER_MEDIUM = {
   deregulation: "Deregulation",
   prosecution: "Accountability",
   govservices: "Service Cuts",
+  oea: "Other Actions",
   tracker: "Reporting",
   communitytopics: "Claim-checks",
 };
@@ -2122,6 +2152,7 @@ const HEADLINE_TRACKER_ABBR = {
   deregulation: "CDR",
   prosecution: "CLA",
   govservices: "GSR",
+  oea: "OEA",
   tracker: "RPT",
   communitytopics: "CC",
 };
@@ -3353,7 +3384,7 @@ function buildUpdateRequestHtml(entry, cfg) {
   const lastVerified = entry.last_verified || "not yet recorded";
   return '<div class="update-request-row">' +
     '<span class="field-value">Last updated and verified ' + escapeHtml(lastVerified) + '</span>' +
-    '<button class="suggest-submit-btn request-update-btn" type="button" data-tracker="' + escapeHtml(cfg.kind) + '" data-entry-id="' + escapeHtml(entry[cfg.idField] || "") + '" data-entry-title="' + escapeHtml(entry[cfg.titleField] || "") + '" data-last-verified="' + escapeHtml(entry.last_verified || "") + '">Request an update for this entry</button>' +
+    '<button class="suggest-submit-btn request-update-btn" type="button" data-tracker="' + escapeHtml(cfg.trackerKey || cfg.kind) + '" data-entry-id="' + escapeHtml(entry[cfg.idField] || "") + '" data-entry-title="' + escapeHtml(entry[cfg.titleField] || "") + '" data-last-verified="' + escapeHtml(entry.last_verified || "") + '">Request an update for this entry</button>' +
     '</div>';
 }
 /* build-update-request-html:end */
@@ -4883,6 +4914,7 @@ const RELATED_TRACKER_FIELD_TO_KEY = {
   deregulation: "deregulation",
   prosecution: "prosecution",
   "government-services": "govservices",
+  oea: "oea",
 };
 
 /* Switches to a tracker's tab with search/filter cleared, landing on
@@ -5491,11 +5523,12 @@ suggestSubmitBtn.addEventListener("click", () => {
 async function loadAllData() {
   document.getElementById("entries").innerHTML = '<div class="empty-state">Loading data\u2026</div>';
 
-  const [prosecutionResult, deregulationResult, trackerResult, govservicesResult, communitytopicsResult] = await Promise.allSettled([
+  const [prosecutionResult, deregulationResult, trackerResult, govservicesResult, oeaResult, communitytopicsResult] = await Promise.allSettled([
     fetch("data/prosecution.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
     fetch("data/deregulation.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
     fetch("data/tracker.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
     fetch("data/government-services.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
+    fetch("data/oea.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
     fetch("data/community-topics.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
   ]);
 
@@ -5535,6 +5568,13 @@ async function loadAllData() {
     TRACKERS.govservices.data = govservicesResult.value;
   } else {
     loadErrors.push("government-services.json (" + govservicesResult.reason.message + ")");
+  }
+
+  if (oeaResult.status === "fulfilled") {
+    // category -> domain: see TRACKERS.oea's comment.
+    TRACKERS.oea.data = oeaResult.value.map(e => Object.assign({}, e, { domain: e.category }));
+  } else {
+    loadErrors.push("oea.json (" + oeaResult.reason.message + ")");
   }
 
   if (communitytopicsResult.status === "fulfilled") {
