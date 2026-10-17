@@ -49,6 +49,12 @@ const glanceHeadFunctionSource = extractFunction(source, "glance-head");
 // added buildSourcesCardHtml as a direct dependency of buildDetailHtml's
 // deregulation/govservices branches.
 const buildSourcesCardHtmlFunctionSource = extractFunction(source, "build-sources-card-html");
+// Added 2026-10-17: cross-reference links (cause_references, User Topics
+// callouts) check isHiddenRelatedTarget() against TRACKERS, so a link to a
+// hidden tracker (Trump Family, Phase A) renders as plain text / no callout.
+const relatedTrackerFieldToKeySource = extractFunction(source, "related-tracker-field-to-key");
+const trackersStubSource = 'const TRACKERS = { trumpfamily: { label: "Trump Family", hidden: true }, prosecution: { label: "Cabinet-Level Accountability" } };\n' +
+  'function verdictLabel(v) { return String(v || ""); }';
 
 // safeHref resolves relative URLs against location.href, which doesn't
 // exist in Node -- give it a fixed base so absolute test URLs round-trip.
@@ -74,7 +80,8 @@ const combined = escapeHtmlFunctionSource + "\n" + summaryLineFunctionSource + "
   updateTimelineFunctionSource + "\n" + buildConfidenceNoteHtmlFunctionSource + "\n" +
   safeHrefFunctionSource + "\n" + buildPullQuoteHtmlFunctionSource + "\n" + buildEntryColsHtmlFunctionSource + "\n" +
   buildFiguresHtmlStubSource + "\n" + evidenceDrawerFunctionSource + "\n" + glanceHeadFunctionSource + "\n" +
-  buildSourcesCardHtmlFunctionSource + "\n" + buildDetailHtmlFunctionSource;
+  buildSourcesCardHtmlFunctionSource + "\n" + relatedTrackerFieldToKeySource + "\n" + trackersStubSource + "\n" +
+  buildDetailHtmlFunctionSource;
 const buildDetailHtml = (0, eval)(`${combined}\nbuildDetailHtml;`);
 const buildTriageButtonHtml = (0, eval)(`${combined}\nbuildTriageButtonHtml;`);
 
@@ -1692,4 +1699,36 @@ test("title is escaped and truncated to 200 chars before escaping", () => {
   assert.ok(!html.includes("<b>"));
   const title = html.match(/data-post-title="([^"]*)"/)[1];
   assert.equal(title, "&quot;&lt;b&gt;&amp;" + "y".repeat(195));
+});
+
+
+// Hidden-target guard (TFS Phase A): no link or callout may point into a
+// hidden tracker, since jumpToRelatedEntry() would do nothing.
+test("buildCauseFieldHtml renders a reference into a hidden tracker as plain text", () => {
+  const entry = {
+    cause: "Same pattern as the WLF stake entry; see the Bondi-James entry.",
+    cause_references: [
+      { match: "the WLF stake entry", tracker: "trumpfamily", id: "wlf-uae" },
+      { match: "the Bondi-James entry", tracker: "prosecution", id: "bondi-james-thing" },
+    ],
+  };
+  const result = buildCauseFieldHtml(entry);
+  assert(!result.includes('data-tracker="trumpfamily"'), result);
+  assert(result.startsWith("Same pattern as the WLF stake entry; see "), result);
+  assert(result.includes('data-id="bondi-james-thing"'), "visible-tracker reference still links");
+});
+
+test("User Topics callouts omit hidden-tracker targets", () => {
+  const base = { verdict: "true", summary: "S.", sources: [], date_submitted: "2026-10-01" };
+  const promoted = buildDetailHtml({ ...base, promoted_to: "trumpfamily/wlf-uae" }, { kind: "communitytopics" });
+  assert(!promoted.includes("promoted-callout"), "no promoted callout for a hidden target");
+  const related = buildDetailHtml({ ...base, related_entries: [{ tracker: "trumpfamily", id: "wlf-uae", note: "WLF" }] }, { kind: "communitytopics" });
+  assert(!related.includes("related-callout"), "no related callout when every target is hidden");
+  const mixed = buildDetailHtml({ ...base, related_entries: [
+    { tracker: "trumpfamily", id: "wlf-uae", note: "WLF" },
+    { tracker: "prosecution", id: "bondi-james-thing", note: "Bondi" },
+  ] }, { kind: "communitytopics" });
+  assert(mixed.includes('data-id="bondi-james-thing"') && !mixed.includes('data-id="wlf-uae"'), mixed);
+  const visible = buildDetailHtml({ ...base, promoted_to: "prosecution/bondi-james-thing" }, { kind: "communitytopics" });
+  assert(visible.includes("promoted-callout") && visible.includes("Cabinet-Level Accountability"));
 });

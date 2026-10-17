@@ -62,3 +62,28 @@ test("familyGroupKeys returns every member, with a fallback", () => {
   assert.deepEqual(fns.familyGroupKeys(RAW), ["Eric Trump", "Donald Trump Jr."]);
   assert.deepEqual(fns.familyGroupKeys({}), ["Unnamed"]);
 });
+
+// visibleSearchText: TFS's own visible fields are in the haystack; a GSR
+// entry's haystack ignores them (they only exist on TFS entries).
+const searchApi = (0, eval)(["escape-html", "highlight-matches", "glance-head", "visible-search-text"]
+  .map(n => extractFunction(source, n)).join("\n") + "\n({ visibleSearchText });");
+const TFS_CFG = { kind: "govservices", titleField: "title", trackerKey: "trumpfamily", glanceEnabled: true };
+const GSR_CFG = { kind: "govservices", titleField: "title", trackerKey: "govservices", glanceEnabled: true };
+
+test("visibleSearchText covers TFS family, stake, action and legal context", () => {
+  const text = searchApi.visibleSearchText(fns.mapTrumpFamilyEntry(RAW), TFS_CFG);
+  for (const needle of ["Donald Trump Jr.", "Eric Trump", "40% family stake", "Chip export approval", "Emoluments"]) {
+    assert.ok(text.includes(needle), needle);
+  }
+});
+
+test("visibleSearchText for a GSR entry is unchanged by the TFS fields", () => {
+  const gsr = { title: "SNAP freeze", institution: "USDA", domain: "food", what_changed: "Benefits paused." };
+  const base = searchApi.visibleSearchText(gsr, GSR_CFG);
+  const withTfsFields = searchApi.visibleSearchText(Object.assign({}, gsr, {
+    family_members: RAW.family_members, business_entity: RAW.business_entity,
+    government_nexus: RAW.government_nexus, legal_context: RAW.legal_context,
+  }), GSR_CFG);
+  assert.equal(withTfsFields, base);
+  assert.equal(base, "SNAP freeze \n USDA \n food \n Benefits paused.");
+});

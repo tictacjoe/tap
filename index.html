@@ -2054,11 +2054,25 @@ function mapTrumpFamilyEntry(e) {
 /* map-trumpfamily-entry:end */
 
 /* adapt-trumpfamily-entry:start */
+/* GSR's shape, but the medium/full tiers name the family and call the
+   official the "Government link" (GSR's "Driven by" would credit the
+   family's deal to the official) and label the money "Financial stake". */
 function adaptTrumpFamilyEntry(entry) {
-  return Object.assign(adaptGovServicesEntry(entry), {
+  const override = entry.narrative_override || {};
+  const brief = override.brief || entry.what_changed || "";
+  const members = (entry.family_members || []).join(", ");
+  const familyText = members ? "Family: " + members + "." : "";
+  const o = entry.government_nexus?.official;
+  const linkText = o?.name ? "Government link: " + o.name + (o.role ? " (" + o.role + ")" : "") + "." : "";
+  const medium = override.medium || combineTierText([brief, familyText, linkText]);
+  const stakeText = entry.financial_stake?.summary ? "Financial stake: " + entry.financial_stake.summary : "";
+  const causeText = entry.cause ? "Pattern: " + entry.cause : "";
+  const full = override.full || combineTierText([medium, stakeText, causeText]);
+  return stripAdaptedItemLabels(Object.assign(adaptGovServicesEntry(entry), {
+    tiers: [brief, medium, full],
     tracker: "trumpfamily",
     category: entry.category || null,
-  });
+  }));
 }
 /* adapt-trumpfamily-entry:end */
 
@@ -3440,6 +3454,11 @@ function visibleSearchText(entry, cfg) {
     );
     (entry.estimated_impact?.figures || []).forEach(f => parts.push(f.metric, f.value, f.source));
     (entry.sources || []).forEach(s => parts.push(s.name));
+    // TFS card (buildTrumpFamilyCardHtml) shows these on top of GSR's fields.
+    if (cfg.trackerKey === "trumpfamily") {
+      (entry.family_members || []).forEach(n => parts.push(n));
+      parts.push(entry.business_entity?.family_stake, entry.government_nexus?.action, entry.legal_context);
+    }
   } else if (cfg.kind === "tracker") {
     parts.push(entry.date, entry.what_happened, entry.source_name);
   } else if (cfg.kind === "communitytopics") {
@@ -4058,6 +4077,7 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
           const slash = entry.promoted_to.indexOf("/");
           const trackerField = slash === -1 ? entry.promoted_to : entry.promoted_to.slice(0, slash);
           const id = slash === -1 ? "" : entry.promoted_to.slice(slash + 1);
+          if (isHiddenRelatedTarget(trackerField)) return '';
           const targetKey = RELATED_TRACKER_FIELD_TO_KEY[trackerField];
           const trackerLabel = targetKey ? TRACKERS[targetKey].label : trackerField;
           return '<div class="promoted-callout"><div class="field-label">Added to a curated tracker</div>' +
@@ -4068,9 +4088,10 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
     // match in a curated tracker, that fuller, more rigorously-researched
     // record is more valuable than this entry's own lighter research, so
     // it belongs at the top rather than buried after everything else.
-    const relatedHtml = entry.related_entries?.length
+    const shownRelated = (entry.related_entries || []).filter(r => !isHiddenRelatedTarget(r.tracker));
+    const relatedHtml = shownRelated.length
       ? '<div class="related-callout"><div class="field-label">Already documented — see the fuller record</div><ul>' +
-        entry.related_entries.map(r =>
+        shownRelated.map(r =>
           '<li><a href="#" class="related-entry-link" data-tracker="' + escapeHtml(r.tracker || "") + '" data-id="' + escapeHtml(r.id || "") + '">' + hl(r.note) + '</a></li>'
         ).join("") + '</ul></div>'
       : '';
@@ -4297,7 +4318,7 @@ function buildCauseFieldHtml(entry, term, useRegex) {
   const stripped = stripProcessLabels(entry.cause);
   return splitCauseReferences(stripped, entry.cause_references).map(seg => {
     const inner = highlightMatches(seg.text, term, useRegex);
-    if (!seg.ref) return inner;
+    if (!seg.ref || isHiddenRelatedTarget(seg.ref.tracker)) return inner;
     return '<a href="#" class="related-entry-link cause-reference-link" data-tracker="' + escapeHtml(seg.ref.tracker) + '" data-id="' + escapeHtml(seg.ref.id) + '">' + inner + '</a>';
   }).join("");
 }
@@ -4522,12 +4543,13 @@ function buildEntryCard(entry, cfg, docketLabel, sourceLabel, term, useRegex, ca
         const slash = entry.promoted_to.indexOf("/");
         const trackerField = slash === -1 ? entry.promoted_to : entry.promoted_to.slice(0, slash);
         const id = slash === -1 ? "" : entry.promoted_to.slice(slash + 1);
+        if (isHiddenRelatedTarget(trackerField)) return '';
         const targetKey = RELATED_TRACKER_FIELD_TO_KEY[trackerField];
         const trackerLabel = targetKey ? TRACKERS[targetKey].label : trackerField;
         return '<a href="#" class="related-entry-link coverage-tag coverage-tag-promoted" data-tracker="' + escapeHtml(trackerField) + '" data-id="' + escapeHtml(id) + '">→ In ' + escapeHtml(trackerLabel) + '</a>';
       }
-      if (entry.related_entries?.length) {
-        const r = entry.related_entries[0];
+      const r = (entry.related_entries || []).find(x => !isHiddenRelatedTarget(x.tracker));
+      if (r) {
         const targetKey = RELATED_TRACKER_FIELD_TO_KEY[r.tracker];
         const trackerLabel = targetKey ? TRACKERS[targetKey].label : r.tracker;
         return '<a href="#" class="related-entry-link coverage-tag coverage-tag-related" data-tracker="' + escapeHtml(r.tracker || "") + '" data-id="' + escapeHtml(r.id || "") + '">→ Also in ' + escapeHtml(trackerLabel) + '</a>';
@@ -5073,6 +5095,7 @@ function jumpToReportingSearch(term) {
    ("government-services", matching its directory name) rather than the
    TRACKERS object's internal key ("govservices") -- this maps between
    the two. */
+/* related-tracker-field-to-key:start */
 const RELATED_TRACKER_FIELD_TO_KEY = {
   deregulation: "deregulation",
   prosecution: "prosecution",
@@ -5080,6 +5103,15 @@ const RELATED_TRACKER_FIELD_TO_KEY = {
   oea: "oea",
   trumpfamily: "trumpfamily",
 };
+
+/* True when a cross-reference's tracker field names a hidden tracker (TFS in
+   Phase A): callers render no link or callout, since jumpToRelatedEntry()
+   would do nothing for it. */
+function isHiddenRelatedTarget(trackerField) {
+  const key = RELATED_TRACKER_FIELD_TO_KEY[trackerField];
+  return !!(key && TRACKERS[key] && TRACKERS[key].hidden);
+}
+/* related-tracker-field-to-key:end */
 
 /* Switches to a tracker's tab with search/filter cleared, landing on
    its plain, unfiltered list. The shared "go to this tracker's home

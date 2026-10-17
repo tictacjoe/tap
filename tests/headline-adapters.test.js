@@ -30,6 +30,7 @@ const names = [
   "adapt-deregulation-entry",
   "adapt-govservices-entry",
   "adapt-oea-entry",
+  "adapt-trumpfamily-entry",
   "adapt-prosecution-entry",
   "adapt-communitytopic-entry",
   "adapt-reporting-entry",
@@ -37,7 +38,7 @@ const names = [
 const combined = names.map(n => extractFunction(source, n)).join("\n");
 const exposeNames = [
   "combineTierText", "fullestTierText", "packHeadline", "stripAdaptedItemLabels", "flattenTrackerPosts",
-  "adaptDeregulationEntry", "adaptGovServicesEntry", "adaptOeaEntry", "adaptProsecutionEntry",
+  "adaptDeregulationEntry", "adaptGovServicesEntry", "adaptOeaEntry", "adaptTrumpFamilyEntry", "adaptProsecutionEntry",
   "adaptCommunityTopicEntry", "adaptReportingEntry",
 ];
 const fns = (0, eval)(`${combined}\n({ ${exposeNames.join(", ")} });`);
@@ -366,4 +367,30 @@ test("adaptOeaEntry reuses the GSR shape with OEA's tracker and category", () =>
   assert.equal(item.headline, "Election office cuts");
   assert.equal(item.id, "election-office-cuts");
   assert.equal(item.trail.sources[0].name, "Reuters");
+});
+
+// TFS: mapped entry (mapTrumpFamilyEntry fills primary_proponent from the
+// official), but the deal is the family's, so the tiers name the family and
+// call the official the government link, never "Driven by".
+test("adaptTrumpFamilyEntry names the family and the government link, not a proponent", () => {
+  const item = fns.adaptTrumpFamilyEntry({
+    id: "wlf-uae", title: "UAE fund buys into WLF", category: "crypto", domain: "crypto",
+    what_changed: "A UAE fund invested in the family's crypto venture.",
+    family_members: ["Eric Trump", "Donald Trump Jr."],
+    government_nexus: { action: "Chip export approval", official: { name: "Steve Witkoff", role: "Special Envoy" }, note: "Approval followed." },
+    primary_proponent: { name: "Steve Witkoff", role: "Special Envoy", note: "Approval followed." },
+    financial_stake: { summary: "A $2 billion investment." },
+    estimated_impact: { summary: "A $2 billion investment." },
+    cause: "Pay-to-play pattern.",
+  });
+  const [brief, medium, full] = item.tiers;
+  assert.equal(brief, "A UAE fund invested in the family's crypto venture.");
+  assert.ok(medium.includes("Family: Eric Trump, Donald Trump Jr."), medium);
+  assert.ok(medium.includes("Government link: Steve Witkoff (Special Envoy)."), medium);
+  assert.ok(!medium.includes("Driven by"), medium);
+  assert.ok(full.includes("Financial stake: A $2 billion investment."), full);
+  assert.ok(!full.includes("Impact:") && !full.includes("Driven by"), full);
+  assert.ok(full.includes("Pattern: Pay-to-play pattern."), full);
+  assert.equal(item.tracker, "trumpfamily");
+  assert.equal(item.category, "crypto");
 });
