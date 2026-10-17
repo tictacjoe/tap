@@ -656,6 +656,18 @@
     font-size: 0.68rem;
     letter-spacing: 0.02em;
   }
+  /* Trump Family member chips: neutral (no category colour), outlined. */
+  .family-chip {
+    display: inline-block;
+    margin: 0 0.3rem 0.3rem 0;
+    padding: 0.1rem 0.5rem;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    font-size: 0.68rem;
+    letter-spacing: 0.02em;
+  }
+  /* CLA "List by individual": link to the official's Trump Family entries. */
+  .also-in-tfs { margin-left: 0.75rem; font-size: 0.85rem; }
 
   /* Glance card (see the glance-head script block). The harm badge names
      the kind in words; colour is only a second signal. Two tones plus a
@@ -1782,6 +1794,10 @@ let groupMode = defaultGroupModeFor(activeTracker);
    controls never end up disagreeing about which grouping is active. */
 let statusGroupOn = false;
 
+/* Phase B old-link redirects: data/moved-ids.json, {"<id>": {from, to, date}},
+   loaded in loadAllData(); resolveEntryTarget() reads it. Empty = no redirects. */
+let MOVED_IDS = {};
+
 function stampClass(entry, cfg) {
   if (cfg.kind === "deregulation") {
     const s = (entry.status || "").toLowerCase();
@@ -1826,7 +1842,10 @@ function domainColor(domain) {
     consumer_safety: "#7A4B3E", "cross-cutting": "#5C5A52",
     research_suppression: "#6B4B7A", funding_redirection: "#8B6F3E",
     staff_office_cuts: "#3E5C76", data_collection_halted: "#7A4B3E",
-    protection_rollback: "#7A3E4B"
+    protection_rollback: "#7A3E4B",
+    // Trump Family categories (reuse the palette above, one hue each).
+    crypto: "#6B4B7A", foreign_deals: "#3E5C76", federal_contracts_investments: "#8B6F3E",
+    real_estate_licensing: "#4B6B4F", pardons_policy_favors: "#7A3E4B", official_roles: "#5C5A52"
   };
   return map[domain] || "#5C5A52";
 }
@@ -2036,6 +2055,14 @@ function visibleTrackerKeys(trackers) {
 }
 /* visible-tracker-keys:end */
 
+/* global-search-database-count:start */
+/* Databases the global search covers: visible trackers minus Reporting
+   (searched separately, for its link count only). */
+function globalSearchDatabaseCount(trackers) {
+  return visibleTrackerKeys(trackers).filter(k => k !== "tracker").length;
+}
+/* global-search-database-count:end */
+
 /* map-trumpfamily-entry:start */
 /* Copies a Trump Family entry's own fields into the GSR names the
    "govservices" rendering branches read; the TFS fields stay too. */
@@ -2080,7 +2107,7 @@ function adaptTrumpFamilyEntry(entry) {
 /* TFS-only aside card: who in the family, their stake, the official act,
    and legal context labeled so it can't read as a finding. */
 function buildTrumpFamilyCardHtml(entry, hl) {
-  const chips = (entry.family_members || []).map(n => '<span class="domain-tag">' + hl(n) + '</span>').join(" ");
+  const chips = (entry.family_members || []).map(n => '<span class="family-chip">' + hl(n) + '</span>').join(" ");
   const stake = entry.business_entity && entry.business_entity.family_stake;
   const action = entry.government_nexus && entry.government_nexus.action;
   return '<div class="field-group entry-aside-card">' +
@@ -4538,24 +4565,7 @@ function buildEntryCard(entry, cfg, docketLabel, sourceLabel, term, useRegex, ca
     // the related-entry-link jump mechanism, so clicking it here jumps
     // straight to the linked entry exactly like the detail-view callout
     // does.
-    const coverageHtml = (() => {
-      if (entry.promoted_to) {
-        const slash = entry.promoted_to.indexOf("/");
-        const trackerField = slash === -1 ? entry.promoted_to : entry.promoted_to.slice(0, slash);
-        const id = slash === -1 ? "" : entry.promoted_to.slice(slash + 1);
-        if (isHiddenRelatedTarget(trackerField)) return '';
-        const targetKey = RELATED_TRACKER_FIELD_TO_KEY[trackerField];
-        const trackerLabel = targetKey ? TRACKERS[targetKey].label : trackerField;
-        return '<a href="#" class="related-entry-link coverage-tag coverage-tag-promoted" data-tracker="' + escapeHtml(trackerField) + '" data-id="' + escapeHtml(id) + '">→ In ' + escapeHtml(trackerLabel) + '</a>';
-      }
-      const r = (entry.related_entries || []).find(x => !isHiddenRelatedTarget(x.tracker));
-      if (r) {
-        const targetKey = RELATED_TRACKER_FIELD_TO_KEY[r.tracker];
-        const trackerLabel = targetKey ? TRACKERS[targetKey].label : r.tracker;
-        return '<a href="#" class="related-entry-link coverage-tag coverage-tag-related" data-tracker="' + escapeHtml(r.tracker || "") + '" data-id="' + escapeHtml(r.id || "") + '">→ Also in ' + escapeHtml(trackerLabel) + '</a>';
-      }
-      return '';
-    })();
+    const coverageHtml = buildCoverageTagHtml(entry);
     metaHtml += '<span class="domain-tag" style="background:' + verdictColor(entry.verdict) + '22; color:' + verdictColor(entry.verdict) + '">' + hl(verdictLabel(entry.verdict)) + '</span>' +
                coverageHtml +
                '<span>submitted ' + (entry.date_submitted || "") + '</span>' +
@@ -4888,6 +4898,17 @@ function renderGroupToggle(cfg) {
    "Department of Justice leadership (...)") have no comma and fall back
    to using their full string as their own one-off group, so nothing is
    silently dropped. */
+/* tfs-count-for-official:start */
+/* How many Trump Family entries name this CLA official as the government
+   link (name before the first comma, like officialGroupKey). */
+function tfsCountForOfficial(name, tfsEntries) {
+  return (tfsEntries || []).filter(e => {
+    const n = (((e.government_nexus || {}).official || {}).name || "").split(",")[0].trim();
+    return n && n === name;
+  }).length;
+}
+/* tfs-count-for-official:end */
+
 function officialGroupKey(entry) {
   const raw = (entry.official || "").trim();
   const idx = raw.indexOf(",");
@@ -4939,14 +4960,28 @@ function renderGroupedEntries(entries, cfg, container, keyFn, sortGroups, cardOp
   sortedGroups.forEach(([name, groupEntries]) => {
     const div = document.createElement("div");
     div.className = "official-group";
+    // CLA "List by individual": point at this official's Trump Family
+    // entries (only once TFS is visible).
+    const tfsN = keyFn === officialGroupKey && !TRACKERS.trumpfamily.hidden
+      ? tfsCountForOfficial(name, TRACKERS.trumpfamily.data) : 0;
     div.innerHTML =
       '<div class="official-group-head">' +
         '<span class="official-group-caret">▶</span>' +
         '<span class="official-group-name">' + escapeHtml(name) + '</span>' +
         '<span class="official-group-count">' + groupEntries.length + (groupEntries.length === 1 ? ' entry' : ' entries') + '</span>' +
+        (tfsN > 0 ? '<a href="#" class="also-in-tfs" data-official="' + escapeHtml(name) + '">Also in Trump Family: ' + tfsN + (tfsN === 1 ? ' entry' : ' entries') + ' →</a>' : '') +
       '</div>' +
       '<div class="official-group-body"></div>';
     div.querySelector(".official-group-head").addEventListener("click", () => div.classList.toggle("open"));
+    const also = div.querySelector(".also-in-tfs");
+    if (also) also.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      goToTrackerHome("trumpfamily");
+      searchTerm = also.dataset.official;
+      document.getElementById("search").value = searchTerm;
+      renderDispatch();
+    });
     const body = div.querySelector(".official-group-body");
     groupEntries.forEach(entry => {
       body.appendChild(buildEntryCard(entry, cfg, null, null, searchTerm, false, cardOpts));
@@ -5113,6 +5148,30 @@ function isHiddenRelatedTarget(trackerField) {
 }
 /* related-tracker-field-to-key:end */
 
+/* build-coverage-tag-html:start */
+/* Community Topics card coverage tag ("-> In <tracker>" / "-> Also in
+   <tracker>"), extracted from buildEntryCard(). A link into a hidden
+   tracker renders nothing. */
+function buildCoverageTagHtml(entry) {
+  if (entry.promoted_to) {
+    const slash = entry.promoted_to.indexOf("/");
+    const trackerField = slash === -1 ? entry.promoted_to : entry.promoted_to.slice(0, slash);
+    const id = slash === -1 ? "" : entry.promoted_to.slice(slash + 1);
+    if (isHiddenRelatedTarget(trackerField)) return '';
+    const targetKey = RELATED_TRACKER_FIELD_TO_KEY[trackerField];
+    const trackerLabel = targetKey ? TRACKERS[targetKey].label : trackerField;
+    return '<a href="#" class="related-entry-link coverage-tag coverage-tag-promoted" data-tracker="' + escapeHtml(trackerField) + '" data-id="' + escapeHtml(id) + '">→ In ' + escapeHtml(trackerLabel) + '</a>';
+  }
+  const r = (entry.related_entries || []).find(x => !isHiddenRelatedTarget(x.tracker));
+  if (r) {
+    const targetKey = RELATED_TRACKER_FIELD_TO_KEY[r.tracker];
+    const trackerLabel = targetKey ? TRACKERS[targetKey].label : r.tracker;
+    return '<a href="#" class="related-entry-link coverage-tag coverage-tag-related" data-tracker="' + escapeHtml(r.tracker || "") + '" data-id="' + escapeHtml(r.id || "") + '">→ Also in ' + escapeHtml(trackerLabel) + '</a>';
+  }
+  return '';
+}
+/* build-coverage-tag-html:end */
+
 /* Switches to a tracker's tab with search/filter cleared, landing on
    its plain, unfiltered list. The shared "go to this tracker's home
    view" step behind both jumpToRelatedEntry() (which then also opens a
@@ -5205,10 +5264,29 @@ function openCardById(id) {
   return true;
 }
 
+/* resolve-entry-target:start */
+/* Where a #<key>/<id> link (or related-entry jump) should land. A moved id
+   (data/moved-ids.json, Phase B) redirects to its new tracker when the old
+   one no longer holds it and the new one is visible; otherwise today's
+   behavior: a visible tracker opens (an unknown id shows its usual note),
+   a hidden or unknown tracker does nothing (null). */
+function resolveEntryTarget(key, id, trackers, moved) {
+  const cfg = trackers[key];
+  const holds = !!(cfg && (cfg.data || []).some(e => e[cfg.idField] === id));
+  const move = moved && moved[id];
+  if (!holds && move && move.from === key && trackers[move.to] && !trackers[move.to].hidden) {
+    return { key: move.to, id, moved: true };
+  }
+  if (!cfg || cfg.hidden) return null;
+  return { key, id, moved: false };
+}
+/* resolve-entry-target:end */
+
 function jumpToRelatedEntry(trackerField, id) {
   const key = RELATED_TRACKER_FIELD_TO_KEY[trackerField];
-  if (!key || !TRACKERS[key] || TRACKERS[key].hidden) return;
-  goToTrackerHome(key);
+  const target = key ? resolveEntryTarget(key, id, TRACKERS, MOVED_IDS) : null;
+  if (!target) return;
+  goToTrackerHome(target.key);
   openCardById(id);
 }
 
@@ -5231,8 +5309,13 @@ function openEntryFromHash() {
   if (slash === -1) return;
   const key = decodeURIComponent(hash.slice(0, slash));
   const id = decodeURIComponent(hash.slice(slash + 1));
-  if (!TRACKERS[key] || TRACKERS[key].hidden || !TRACKERS[key].idField || !id) return;
-  goToTrackerHome(key);
+  if (!id) return;
+  // A moved id (Phase B) lands on its new tracker and the address bar is
+  // rewritten to the new link, so a copied URL is the current one.
+  const target = resolveEntryTarget(key, id, TRACKERS, MOVED_IDS);
+  if (!target || !TRACKERS[target.key].idField) return;
+  if (target.moved) history.replaceState(null, "", "#" + encodeURIComponent(target.key) + "/" + encodeURIComponent(id));
+  goToTrackerHome(target.key);
   openCardById(id);
 }
 
@@ -5390,7 +5473,7 @@ function renderGlobalResults(term, useRegex, useOneLiners, useImpactSort) {
     allMatches.sort((a, b) => impactScore(b.entry, b.cfg) - impactScore(a.entry, a.cfg));
   }
 
-  countEl.textContent = allMatches.length + " result(s) across 4 databases for \"" + term + "\"" +
+  countEl.textContent = allMatches.length + " result(s) across " + globalSearchDatabaseCount(TRACKERS) + " databases for \"" + term + "\"" +
     (useRegex ? " (regex)" : "") + (useOneLiners ? " — 1-liner view" : "");
 
   container.innerHTML = "";
@@ -5826,6 +5909,13 @@ async function loadAllData() {
   } else {
     loadErrors.push("community-topics.json (" + communitytopicsResult.reason.message + ")");
   }
+
+  // Phase B redirects: a missing or malformed file just means no redirects
+  // (never a load-error banner). Loaded before openEntryFromHash() below.
+  try {
+    const r = await fetch("data/moved-ids.json");
+    MOVED_IDS = r.ok ? (await r.json()) || {} : {};
+  } catch (e) { MOVED_IDS = {}; }
 
   // Triage queue owner flag (2026-10-17). Unlinked; honor-system by design.
   // Runs before the first render so the label is right on this load.

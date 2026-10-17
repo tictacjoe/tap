@@ -11,9 +11,11 @@ function extractFunction(source, name) {
 }
 const source = fs.readFileSync(path.join(__dirname, "..", "index.html"), "utf8");
 const names = ["escape-html", "visible-tracker-keys", "map-trumpfamily-entry",
-               "build-trumpfamily-card-html", "family-group-keys"];
+               "build-trumpfamily-card-html", "family-group-keys",
+               "resolve-entry-target", "global-search-database-count", "tfs-count-for-official"];
 const fns = (0, eval)(names.map(n => extractFunction(source, n)).join("\n") +
-  "\n({ visibleTrackerKeys, mapTrumpFamilyEntry, buildTrumpFamilyCardHtml, familyGroupKeys });");
+  "\n({ visibleTrackerKeys, mapTrumpFamilyEntry, buildTrumpFamilyCardHtml, familyGroupKeys,\n" +
+  "   resolveEntryTarget, globalSearchDatabaseCount, tfsCountForOfficial });");
 
 const RAW = {
   id: "wlf-uae", title: "UAE fund buys into WLF", category: "crypto",
@@ -86,4 +88,39 @@ test("visibleSearchText for a GSR entry is unchanged by the TFS fields", () => {
   }), GSR_CFG);
   assert.equal(withTfsFields, base);
   assert.equal(base, "SNAP freeze \n USDA \n food \n Benefits paused.");
+});
+
+// --- Phase B (Task 6): old-link redirects, database count, CLA also-in-TFS ---
+const TRK = {
+  prosecution: { idField: "id", data: [{ id: "cla1" }] },
+  trumpfamily: { idField: "id", data: [{ id: "m1" }] },
+  hiddenone: { idField: "id", hidden: true, data: [{ id: "h1" }] },
+};
+const MOVED = { m1: { from: "prosecution", to: "trumpfamily", date: "2026-10-20" },
+                h1: { from: "prosecution", to: "hiddenone", date: "2026-10-20" } };
+
+test("resolveEntryTarget: normal link unchanged, no rewrite", () => {
+  assert.deepEqual(fns.resolveEntryTarget("prosecution", "cla1", TRK, MOVED), { key: "prosecution", id: "cla1", moved: false });
+});
+test("resolveEntryTarget: moved id redirects to its new tracker", () => {
+  assert.deepEqual(fns.resolveEntryTarget("prosecution", "m1", TRK, MOVED), { key: "trumpfamily", id: "m1", moved: true });
+});
+test("resolveEntryTarget: move into a hidden tracker does not redirect", () => {
+  assert.deepEqual(fns.resolveEntryTarget("prosecution", "h1", TRK, MOVED), { key: "prosecution", id: "h1", moved: false });
+});
+test("resolveEntryTarget: unknown id on a visible tracker keeps today's behavior; hidden or missing tracker -> null", () => {
+  assert.deepEqual(fns.resolveEntryTarget("prosecution", "zzz", TRK, MOVED), { key: "prosecution", id: "zzz", moved: false });
+  assert.equal(fns.resolveEntryTarget("hiddenone", "h1", TRK, MOVED), null);
+  assert.equal(fns.resolveEntryTarget("nope", "x", TRK, MOVED), null);
+  assert.deepEqual(fns.resolveEntryTarget("prosecution", "m1", TRK, {}), { key: "prosecution", id: "m1", moved: false });
+});
+test("globalSearchDatabaseCount counts visible non-Reporting trackers", () => {
+  assert.equal(fns.globalSearchDatabaseCount({ a: {}, b: { hidden: true }, tracker: {}, c: {} }), 2);
+});
+test("tfsCountForOfficial matches the name before the first comma", () => {
+  const tfs = [{ government_nexus: { official: { name: "Steve Witkoff" } } },
+               { government_nexus: { official: { name: "Steve Witkoff" } } },
+               { government_nexus: { official: { name: "Pete Hegseth" } } }, {}];
+  assert.equal(fns.tfsCountForOfficial("Steve Witkoff", tfs), 2);
+  assert.equal(fns.tfsCountForOfficial("Kristi Noem", tfs), 0);
 });
