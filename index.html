@@ -2063,6 +2063,17 @@ function globalSearchDatabaseCount(trackers) {
 }
 /* global-search-database-count:end */
 
+/* global-search-no-matches-text:start */
+/* Zero-result message naming the databases the global search covers (the
+   same visible non-Reporting set globalSearchDatabaseCount counts). */
+function globalSearchNoMatchesText(trackers) {
+  const labels = visibleTrackerKeys(trackers).filter(k => k !== "tracker").map(k => trackers[k].label);
+  const list = labels.length > 2 ? labels.slice(0, -1).join(", ") + ", or " + labels[labels.length - 1]
+    : labels.join(" or ");
+  return "No matches in " + list + ".";
+}
+/* global-search-no-matches-text:end */
+
 /* map-trumpfamily-entry:start */
 /* Copies a Trump Family entry's own fields into the GSR names the
    "govservices" rendering branches read; the TFS fields stay too. */
@@ -2110,10 +2121,13 @@ function buildTrumpFamilyCardHtml(entry, hl) {
   const chips = (entry.family_members || []).map(n => '<span class="family-chip">' + hl(n) + '</span>').join(" ");
   const stake = entry.business_entity && entry.business_entity.family_stake;
   const action = entry.government_nexus && entry.government_nexus.action;
+  const also = ((entry.government_nexus && entry.government_nexus.also_officials) || [])
+    .filter(o => o && o.name).map(o => hl(o.name) + (o.role ? " (" + hl(o.role) + ")" : "")).join(", ");
   return '<div class="field-group entry-aside-card">' +
     '<div class="field-label">Family members</div><div class="field-value">' + chips + '</div>' +
     (stake ? '<div class="field-label">Family stake</div><div class="field-value">' + hl(stake) + '</div>' : '') +
     (action ? '<div class="field-label">Government action</div><div class="field-value">' + hl(action) + '</div>' : '') +
+    (also ? '<div class="field-value">Also involved: ' + also + '</div>' : '') +
     (entry.legal_context ? '<div class="field-label">Legal context (not a finding)</div><div class="field-value">' + hl(entry.legal_context) + '</div>' : '') +
     '</div>';
 }
@@ -3485,6 +3499,7 @@ function visibleSearchText(entry, cfg) {
     if (cfg.trackerKey === "trumpfamily") {
       (entry.family_members || []).forEach(n => parts.push(n));
       parts.push(entry.business_entity?.family_stake, entry.government_nexus?.action, entry.legal_context);
+      (entry.government_nexus?.also_officials || []).forEach(o => parts.push(o?.name, o?.role));
     }
   } else if (cfg.kind === "tracker") {
     parts.push(entry.date, entry.what_happened, entry.source_name);
@@ -4899,15 +4914,37 @@ function renderGroupToggle(cfg) {
    to using their full string as their own one-off group, so nothing is
    silently dropped. */
 /* tfs-count-for-official:start */
-/* How many Trump Family entries name this CLA official as the government
-   link (name before the first comma, like officialGroupKey). */
+/* Officials a Trump Family entry names in its government link: the
+   official plus any also_officials (name before the first comma, like
+   officialGroupKey), each once. */
+function tfsEntryOfficialNames(e) {
+  const nexus = (e && e.government_nexus) || {};
+  const names = [nexus.official || {}].concat(nexus.also_officials || [])
+    .map(o => String((o && o.name) || "").split(",")[0].trim()).filter(Boolean);
+  return [...new Set(names)];
+}
+
+/* How many Trump Family entries name this CLA official in their
+   government link (official or also_officials). */
 function tfsCountForOfficial(name, tfsEntries) {
-  return (tfsEntries || []).filter(e => {
-    const n = (((e.government_nexus || {}).official || {}).name || "").split(",")[0].trim();
-    return n && n === name;
-  }).length;
+  return (tfsEntries || []).filter(e => name && tfsEntryOfficialNames(e).includes(name)).length;
 }
 /* tfs-count-for-official:end */
+
+/* tfs-only-officials:start */
+/* Officials named in Trump Family entries who have no CLA "List by
+   individual" group, sorted by name, with their TFS entry counts (CLA
+   shows each as an empty group with the "Also in Trump Family" link).
+   Uses tfsEntryOfficialNames (tfs-count-for-official block). */
+function tfsOnlyOfficials(claGroupNames, tfsEntries) {
+  const cla = new Set(claGroupNames || []);
+  const counts = new Map();
+  (tfsEntries || []).forEach(e => tfsEntryOfficialNames(e).forEach(n => {
+    if (!cla.has(n)) counts.set(n, (counts.get(n) || 0) + 1);
+  }));
+  return [...counts.entries()].sort((a, b) => a[0].localeCompare(b[0])).map(([name, count]) => ({ name, count }));
+}
+/* tfs-only-officials:end */
 
 function officialGroupKey(entry) {
   const raw = (entry.official || "").trim();
@@ -4955,6 +4992,13 @@ function renderGroupedEntries(entries, cfg, container, keyFn, sortGroups, cardOp
     });
   });
   const sortedGroups = sortGroups([...groups.entries()]);
+  // CLA "List by individual" (TFS visible): officials named only in Trump
+  // Family entries get an empty group after the CLA ones, so their
+  // "Also in Trump Family" link is still reachable.
+  if (keyFn === officialGroupKey && !TRACKERS.trumpfamily.hidden) {
+    tfsOnlyOfficials([...groups.keys()], TRACKERS.trumpfamily.data)
+      .forEach(o => sortedGroups.push([o.name, []]));
+  }
 
   container.innerHTML = "";
   sortedGroups.forEach(([name, groupEntries]) => {
@@ -4968,7 +5012,7 @@ function renderGroupedEntries(entries, cfg, container, keyFn, sortGroups, cardOp
       '<div class="official-group-head">' +
         '<span class="official-group-caret">▶</span>' +
         '<span class="official-group-name">' + escapeHtml(name) + '</span>' +
-        '<span class="official-group-count">' + groupEntries.length + (groupEntries.length === 1 ? ' entry' : ' entries') + '</span>' +
+        '<span class="official-group-count">' + groupEntries.length + (groupEntries.length === 1 ? ' entry' : ' entries') + (groupEntries.length ? '' : ' here') + '</span>' +
         (tfsN > 0 ? '<a href="#" class="also-in-tfs" data-official="' + escapeHtml(name) + '">Also in Trump Family: ' + tfsN + (tfsN === 1 ? ' entry' : ' entries') + ' →</a>' : '') +
       '</div>' +
       '<div class="official-group-body"></div>';
@@ -5481,7 +5525,7 @@ function renderGlobalResults(term, useRegex, useOneLiners, useImpactSort) {
   if (allMatches.length === 0) {
     const empty = document.createElement("div");
     empty.className = "empty-state";
-    empty.textContent = "No matches in Corporate Deregulation, Cabinet-Level Accountability, Government Service Redirection, Other Executive Actions, or Claim-checks.";
+    empty.textContent = globalSearchNoMatchesText(TRACKERS);
     container.appendChild(empty);
     if (reportingLink) container.appendChild(reportingLink);
     return;
