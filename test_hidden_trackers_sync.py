@@ -7,22 +7,14 @@ from pathlib import Path
 
 import pytest
 
+import hidden_trackers
+
 SITE = Path(__file__).parent
 DATA_PY = Path.home() / "gjoe/tap-data/connector/tap_connector/data.py"
 
 
 def site_hidden():
-    html = (SITE / "index.html").read_text(encoding="utf-8")
-    block = html[html.index("const TRACKERS = {"):]
-    block = block[:block.index("\n};")]
-    hidden, current = set(), None
-    for line in block.splitlines():
-        m = re.match(r"^  ([a-z]+): \{", line)
-        if m:
-            current = m.group(1)
-        elif re.match(r"^\s+hidden: true,", line):
-            hidden.add(current)
-    return hidden
+    return hidden_trackers.site_hidden_trackers(SITE / "index.html")
 
 
 @pytest.mark.skipif(not DATA_PY.exists(), reason="tap-data working repo not present")

@@ -11,9 +11,13 @@ function extractFunction(source, name) {
 }
 const source = fs.readFileSync(path.join(__dirname, "..", "index.html"), "utf8");
 const names = ["escape-html", "visible-tracker-keys", "map-trumpfamily-entry",
-               "build-trumpfamily-card-html", "family-group-keys"];
+               "build-trumpfamily-card-html", "family-group-keys",
+               "resolve-entry-target", "global-search-database-count", "tfs-count-for-official",
+               "tfs-only-officials", "global-search-no-matches-text"];
 const fns = (0, eval)(names.map(n => extractFunction(source, n)).join("\n") +
-  "\n({ visibleTrackerKeys, mapTrumpFamilyEntry, buildTrumpFamilyCardHtml, familyGroupKeys });");
+  "\n({ visibleTrackerKeys, mapTrumpFamilyEntry, buildTrumpFamilyCardHtml, familyGroupKeys,\n" +
+  "   resolveEntryTarget, globalSearchDatabaseCount, tfsCountForOfficial, tfsOnlyOfficials,\n" +
+  "   globalSearchNoMatchesText });");
 
 const RAW = {
   id: "wlf-uae", title: "UAE fund buys into WLF", category: "crypto",
@@ -77,6 +81,12 @@ test("visibleSearchText covers TFS family, stake, action and legal context", () 
   }
 });
 
+test("visibleSearchText covers TFS also_officials names (the CLA 'Also in Trump Family' link searches them)", () => {
+  const e = Object.assign({}, RAW, { government_nexus: Object.assign({}, RAW.government_nexus, {
+    also_officials: [{ name: "Howard Lutnick", role: "Secretary of Commerce" }] }) });
+  assert.ok(searchApi.visibleSearchText(fns.mapTrumpFamilyEntry(e), TFS_CFG).includes("Howard Lutnick"));
+});
+
 test("visibleSearchText for a GSR entry is unchanged by the TFS fields", () => {
   const gsr = { title: "SNAP freeze", institution: "USDA", domain: "food", what_changed: "Benefits paused." };
   const base = searchApi.visibleSearchText(gsr, GSR_CFG);
@@ -86,4 +96,83 @@ test("visibleSearchText for a GSR entry is unchanged by the TFS fields", () => {
   }), GSR_CFG);
   assert.equal(withTfsFields, base);
   assert.equal(base, "SNAP freeze \n USDA \n food \n Benefits paused.");
+});
+
+// --- Phase B (Task 6): old-link redirects, database count, CLA also-in-TFS ---
+const TRK = {
+  prosecution: { idField: "id", data: [{ id: "cla1" }] },
+  trumpfamily: { idField: "id", data: [{ id: "m1" }] },
+  hiddenone: { idField: "id", hidden: true, data: [{ id: "h1" }] },
+};
+const MOVED = { m1: { from: "prosecution", to: "trumpfamily", date: "2026-10-20" },
+                h1: { from: "prosecution", to: "hiddenone", date: "2026-10-20" } };
+
+test("resolveEntryTarget: normal link unchanged, no rewrite", () => {
+  assert.deepEqual(fns.resolveEntryTarget("prosecution", "cla1", TRK, MOVED), { key: "prosecution", id: "cla1", moved: false });
+});
+test("resolveEntryTarget: moved id redirects to its new tracker", () => {
+  assert.deepEqual(fns.resolveEntryTarget("prosecution", "m1", TRK, MOVED), { key: "trumpfamily", id: "m1", moved: true });
+});
+test("resolveEntryTarget: move into a hidden tracker does not redirect", () => {
+  assert.deepEqual(fns.resolveEntryTarget("prosecution", "h1", TRK, MOVED), { key: "prosecution", id: "h1", moved: false });
+});
+test("resolveEntryTarget: unknown id on a visible tracker keeps today's behavior; hidden or missing tracker -> null", () => {
+  assert.deepEqual(fns.resolveEntryTarget("prosecution", "zzz", TRK, MOVED), { key: "prosecution", id: "zzz", moved: false });
+  assert.equal(fns.resolveEntryTarget("hiddenone", "h1", TRK, MOVED), null);
+  assert.equal(fns.resolveEntryTarget("nope", "x", TRK, MOVED), null);
+  assert.deepEqual(fns.resolveEntryTarget("prosecution", "m1", TRK, {}), { key: "prosecution", id: "m1", moved: false });
+});
+test("globalSearchDatabaseCount counts visible non-Reporting trackers", () => {
+  assert.equal(fns.globalSearchDatabaseCount({ a: {}, b: { hidden: true }, tracker: {}, c: {} }), 2);
+});
+test("tfsCountForOfficial matches the name before the first comma", () => {
+  const tfs = [{ government_nexus: { official: { name: "Steve Witkoff" } } },
+               { government_nexus: { official: { name: "Steve Witkoff" } } },
+               { government_nexus: { official: { name: "Pete Hegseth" } } }, {}];
+  assert.equal(fns.tfsCountForOfficial("Steve Witkoff", tfs), 2);
+  assert.equal(fns.tfsCountForOfficial("Kristi Noem", tfs), 0);
+});
+test("tfsCountForOfficial also counts government_nexus.also_officials, once per entry", () => {
+  const tfs = [{ government_nexus: { official: { name: "Donald Trump" },
+                                     also_officials: [{ name: "Howard Lutnick", role: "Secretary of Commerce" }] } },
+               { government_nexus: { official: { name: "Howard Lutnick, Secretary" },
+                                     also_officials: [{ name: "Howard Lutnick" }] } },
+               { government_nexus: { official: { name: "Pete Hegseth" }, also_officials: [{}] } }];
+  assert.equal(fns.tfsCountForOfficial("Howard Lutnick", tfs), 2);
+  assert.equal(fns.tfsCountForOfficial("Donald Trump", tfs), 1);
+  assert.equal(fns.tfsCountForOfficial("", tfs), 0);
+});
+
+test("buildTrumpFamilyCardHtml lists also_officials as 'Also involved', escaped, only when present", () => {
+  const hl = t => String(t || "").replace(/&/g, "&amp;").replace(/</g, "&lt;");
+  const withAlso = Object.assign({}, RAW, { government_nexus: Object.assign({}, RAW.government_nexus, {
+    also_officials: [{ name: "Howard Lutnick", role: "Secretary of Commerce" }, { name: "Scott <i>Bessent" }] }) });
+  const html = fns.buildTrumpFamilyCardHtml(withAlso, hl);
+  assert.match(html, /Also involved: Howard Lutnick \(Secretary of Commerce\), Scott &lt;i>Bessent/);
+  assert.doesNotMatch(fns.buildTrumpFamilyCardHtml(RAW, hl), /Also involved/);
+});
+
+test("tfsOnlyOfficials: TFS officials with no CLA group, sorted by name, with counts", () => {
+  const tfs = [{ government_nexus: { official: { name: "Steve Witkoff" } } },
+               { government_nexus: { official: { name: "Donald Trump" },
+                                     also_officials: [{ name: "Howard Lutnick, Commerce" }, { name: "Steve Witkoff" }] } },
+               { government_nexus: { official: { name: "Howard Lutnick" } } }, {}];
+  assert.deepEqual(fns.tfsOnlyOfficials(["Steve Witkoff", "Pete Hegseth"], tfs),
+                   [{ name: "Donald Trump", count: 1 }, { name: "Howard Lutnick", count: 2 }]);
+  assert.deepEqual(fns.tfsOnlyOfficials(["Donald Trump", "Howard Lutnick", "Steve Witkoff"], tfs), []);
+  assert.deepEqual(fns.tfsOnlyOfficials([], undefined), []);
+});
+
+test("globalSearchNoMatchesText lists visible non-Reporting tracker labels", () => {
+  const trk = { deregulation: { label: "Corporate Deregulation" }, prosecution: { label: "Cabinet-Level Accountability" },
+                govservices: { label: "Government Service Redirection" },
+                trumpfamily: { label: "Trump Family", hidden: true }, oea: { label: "Other Executive Actions" },
+                tracker: { label: "Reporting" }, communitytopics: { label: "Claim-checks" } };
+  assert.equal(fns.globalSearchNoMatchesText(trk),
+    "No matches in Corporate Deregulation, Cabinet-Level Accountability, Government Service Redirection, Other Executive Actions, or Claim-checks.");
+  trk.trumpfamily.hidden = false;
+  assert.match(fns.globalSearchNoMatchesText(trk), /Redirection, Trump Family, Other Executive Actions, or Claim-checks\.$/);
+  assert.equal(fns.globalSearchNoMatchesText({ a: { label: "A" }, tracker: { label: "Reporting" }, b: { label: "B" } }),
+    "No matches in A or B.");
+  assert.equal(fns.globalSearchNoMatchesText({ a: { label: "A" } }), "No matches in A.");
 });
