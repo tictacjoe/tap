@@ -1,5 +1,5 @@
 """Phase B redirects and the CLA 'Also in Trump Family' line. Injects state in-page
-(TFS stays hidden in the committed site until cutover). Served from this repo on a free
+(TFS is public since the 2026-10-17 cutover; _setup injects fixture state). Served from this repo on a free
 port; skips without Playwright/Chromium."""
 
 import functools
