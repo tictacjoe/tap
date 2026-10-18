@@ -76,6 +76,7 @@ test("the new rules do not change classification for any entry the site actually
   // 42 -> 0 later on 2026-10-07: rules appended to classifyConcernType for those 42 (see the next test);
   // compared over all 288 entries, no entry that already had a label changed. A new entry nothing matches
   // lands here again: give it a rule, or raise this number deliberately.
+  // 0 -> 12 by 2026-10-18 (data drift + new entries); 12 -> 0 the same day with appended rules (see EXPECTED_2026_10_18).
   const data = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "data", "prosecution.json"), "utf8"));
   let residual = 0;
   for (const e of data) {
@@ -137,6 +138,38 @@ test("each of the 42 previously unmatched published entries gets its 2026-10-07 
   const byId = Object.fromEntries(data.map(e => [e.id, e]));
   const wrong = [];
   for (const [id, label] of Object.entries(EXPECTED_2026_10_07)) {
+    const e = byId[id];
+    assert.ok(e, `${id} is not in the published data`);
+    assert.equal(classifyOffenseCategory(e.offense_category), "Other/Unclassified", `${id} now has a Violation Type`);
+    const got = classifyConcernType(e.offense_category);
+    if (got !== label) wrong.push(`${id}: got ${got}`);
+  }
+  assert.deepEqual(wrong, []);
+});
+
+// 2026-10-18: rules appended to classifyConcernType for the 12 entries matched by neither
+// classifier (data drift since 2026-10-07 plus the new Carr gala-gifts entry). Compared over
+// all 307 published entries, only these 12 changed classification.
+const EXPECTED_2026_10_18 = {
+  "blanche-rubio-betancourt-probe-closure-venezuela-oil-2026": "Institutional Independence / Prosecutorial Integrity Concern",
+  "miller-fbi-counterterrorism-conference-proia-2026": "Institutional Independence / Prosecutorial Integrity Concern",
+  "selig-cftc-iran-oil-trades-referral-retraction-2026": "Institutional Independence / Prosecutorial Integrity Concern",
+  "carr-fcc-paramount-gala-gifts-ethics-complaints-2026": "Public Integrity Concern",
+  "dhs-hsi-voter-registration-nonprofit-probe-2026": "Federal Reach Into Election Administration",
+  "fbi-ohio-organizing-collaborative-raid-2026": "Federal Reach Into Election Administration",
+  "hegseth-osc-betancourt-nabep-stake-2026": "Disputed Statutory Authority (Non-Adjudicated)",
+  "trump-russian-diesel-import-ban-waiver-2026": "Disputed Statutory Authority (Non-Adjudicated)",
+  "kollitides-alvarez-marsal-pentagon-contracts-2026": "Conflict of Interest / Undisclosed Ties (Non-Adjudicated)",
+  "mullin-hsi-ilhan-omar-home-search-2026": "Retaliation Against Critics or Political Opponents",
+  "noem-daedalus-aircraft-donor-contract-2026": "Contracting Integrity Concern (Non-Adjudicated)",
+  "salus-dhs-self-deportation-contract-2026": "Contracting Integrity Concern (Non-Adjudicated)",
+};
+
+test("each of the 12 previously unmatched published entries gets its 2026-10-18 concern type", () => {
+  const data = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "data", "prosecution.json"), "utf8"));
+  const byId = Object.fromEntries(data.map(e => [e.id, e]));
+  const wrong = [];
+  for (const [id, label] of Object.entries(EXPECTED_2026_10_18)) {
     const e = byId[id];
     assert.ok(e, `${id} is not in the published data`);
     assert.equal(classifyOffenseCategory(e.offense_category), "Other/Unclassified", `${id} now has a Violation Type`);

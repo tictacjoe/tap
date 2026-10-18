@@ -3079,6 +3079,18 @@ function classifyConcernType(raw) {
     // Added 2026-10-08 (round4 batch 45): moving appropriated money against Congress's
     // stated purpose or over a committee hold, where no ICA claim is made.
     [/reprogramming congressionally appropriated|over a (congressional |committee )hold/, "Appropriations Purpose or Congressional Hold Bypassed"],
+    // Added 2026-10-18 for the 12 entries (of 307) neither classifier matched, same
+    // appended-last approach as 2026-10-07. Two new labels name patterns two entries
+    // each share (urgency-exception contract awards; disputed statutory authority);
+    // the rest reuse labels above. The FAR rule sits before the 18 U.S.C. 208 rule
+    // because the Salus entry also mentions FAR 9.5 "conflict-of-interest rules".
+    [/unusual and compelling urgency|far 6\.302-2/, "Contracting Integrity Concern (Non-Adjudicated)"],
+    [/statutory authority and stewardship|ending importation of russian oil act/, "Disputed Statutory Authority (Non-Adjudicated)"],
+    [/integrity of (a|an) [a-z -]{0,30}(investigation|inquiry)|political interference in fbi/, "Institutional Independence / Prosecutorial Integrity Concern"],
+    [/gifts? from a prohibited source/, "Public Integrity Concern"],
+    [/conflict-of-interest rules \(18 u\.s\.c\. 208/, "Conflict of Interest / Undisclosed Ties (Non-Adjudicated)"],
+    [/chill protected voter-registration/, "Federal Reach Into Election Administration"],
+    [/law enforcement against a political opponent/, "Retaliation Against Critics or Political Opponents"],
   ];
 
   for (const [pattern, label] of rules) {
