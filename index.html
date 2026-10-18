@@ -1651,8 +1651,11 @@ const TRACKERS = {
   // docs/superpowers/specs/2026-10-17-tap-trump-family-tracker-design.md).
   // Own schema, mapped into GSR's shape at load by mapTrumpFamilyEntry(),
   // so kind "govservices" reuses every GSR rendering branch; fieldLabels
-  // renames GSR's three aside/impact labels. hidden: no tab, Headlines,
-  // search or deep link until Phase B -- keep equal to the connector's
+  // renames GSR's three aside/impact labels. Public since the Phase B
+  // cutover (2026-10-17): the 13 entries moved from CLA arrive here, and
+  // old #prosecution/<id> links redirect via data/moved-ids.json. A
+  // `hidden: true` flag would remove the tab, Headlines, search and deep
+  // link again -- keep any such flag equal to the connector's
   // HIDDEN_TRACKERS (test_hidden_trackers_sync.py).
   trumpfamily: {
     label: "Trump Family",
@@ -1667,7 +1670,6 @@ const TRACKERS = {
     kind: "govservices",
     trackerKey: "trumpfamily",
     glanceEnabled: true,
-    hidden: true,
     fieldLabels: { institution: "Business", proponent: "Government link", impact: "Financial stake" },
   },
   // Other Executive Actions (2026-10-17): GSR's format with free-text

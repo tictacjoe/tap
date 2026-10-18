@@ -67,7 +67,8 @@ def _inject(page):
 def test_hidden_tracker_has_no_tab_browse_or_headlines(browser, site_url):
     page, errors = _goto(browser, site_url, "")
     _inject(page)
-    page.evaluate("renderTabs()")
+    # Public since the Phase B cutover: hide it in-page to keep testing the mechanism.
+    page.evaluate("TRACKERS.trumpfamily.hidden = true; renderTabs(); renderHeadlinesControls()")
     assert page.locator('#tabs option[value="trumpfamily"]').count() == 0
     assert page.locator('#headlines-tracker-filter option[value="trumpfamily"]').count() == 0
     assert page.evaluate("buildHeadlineItems().filter(i => i.tracker === 'trumpfamily').length") == 0
@@ -86,7 +87,11 @@ def test_hidden_tracker_has_no_tab_browse_or_headlines(browser, site_url):
 
 
 def test_hidden_tracker_deep_link_is_inert(browser, site_url):
-    page, errors = _goto(browser, site_url, "trumpfamily/tfs-fixture")
+    page, errors = _goto(browser, site_url, "")
+    _inject(page)
+    # Public since the Phase B cutover: hide it in-page, then replay the deep link.
+    page.evaluate("""() => { TRACKERS.trumpfamily.hidden = true;
+        history.replaceState(null, '', '#trumpfamily/tfs-fixture'); openEntryFromHash(); }""")
     assert page.evaluate("activeTracker") != "trumpfamily"
     assert errors == []
 

@@ -67,9 +67,10 @@ def _setup(page):
     }""")
 
 
-def test_committed_site_keeps_tfs_hidden_and_loads_moved_ids(browser, site_url):
+def test_committed_site_shows_tfs_and_loads_moved_ids(browser, site_url):
+    # Public since the Phase B cutover (2026-10-17).
     page, errors = _goto(browser, site_url, "")
-    assert page.evaluate("TRACKERS.trumpfamily.hidden") is True
+    assert page.evaluate("!!TRACKERS.trumpfamily.hidden") is False
     assert page.evaluate("JSON.stringify(MOVED_IDS)") == json.dumps(
         json.loads((SITE_DIR / "data" / "moved-ids.json").read_text()), separators=(",", ":"))
     assert errors == []
@@ -144,9 +145,18 @@ def test_cla_individual_view_lists_tfs_only_official(browser, site_url):
     assert errors == []
 
 
-def test_cla_individual_view_has_no_tfs_link_while_hidden(browser, site_url):
+def test_cla_individual_view_links_to_tfs_once_public(browser, site_url):
+    # Real published data: TFS entries name CLA officials (e.g. Hegseth in also_officials).
     page, errors = _goto(browser, site_url, "")
     page.evaluate("switchToTracker('prosecution'); groupMode = 'individual'; renderEntries();")
+    assert page.locator(".also-in-tfs").count() > 0
+    assert errors == []
+
+
+def test_cla_individual_view_has_no_tfs_link_while_hidden(browser, site_url):
+    page, errors = _goto(browser, site_url, "")
+    # Hide in-page to keep testing the mechanism.
+    page.evaluate("TRACKERS.trumpfamily.hidden = true; switchToTracker('prosecution'); groupMode = 'individual'; renderEntries();")
     assert page.locator(".official-group").count() > 0
     assert page.locator(".also-in-tfs").count() == 0
     assert "entries here" not in page.locator("#entries").inner_text()

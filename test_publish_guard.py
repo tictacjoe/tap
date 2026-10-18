@@ -48,4 +48,4 @@ def test_moved_targets_hidden(tmp_path):
 
 
 def test_real_index_matches_sync_parser():
-    assert hidden_trackers.site_hidden_trackers(SITE / "index.html") == {"trumpfamily"}
+    assert hidden_trackers.site_hidden_trackers(SITE / "index.html") == set()
