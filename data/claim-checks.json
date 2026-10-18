@@ -139,7 +139,7 @@
   "bessent-irs-settlement-audit-immunity-2026-06": {
    "0": {
     "state": "supports",
-    "why": "The AP report states Judge Kathleen Williams admonished DOJ for a lack of transparency and quotes her that no agency submitted settlement documents or filings ensuring the settlement was appropriate where a case-or-controversy question was outstanding, matching the claim.",
+    "why": "The source reports Morrissey stepped down Monday, the same day the fund was announced, that he did not respond to comment requests, and that Blanche told senators Tuesday 'I don't know if it's a coincidence.'",
     "host": "yahoo.com",
     "date": "2026-09-27",
     "kind": "fact",
@@ -147,15 +147,15 @@
    },
    "1": {
     "state": "supports",
-    "why": "The Deseret News article reports that Bessent repeatedly declined to detail whether Trump and his family would retain audit immunity, citing ongoing litigation.",
-    "host": "deseret.com",
-    "date": "2026-09-15",
+    "why": "The May 19, 2026 Time article quotes Blanche saying 'Anybody in this country can apply' with a commission setting rules, and Vance saying applications would be judged case-by-case and 'I'm not committing to giving anybody money or committing to giving no one money'; the fund was announced the prior Monday.",
+    "host": "time.com",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "2": {
     "state": "supports",
-    "why": "The source quotes Platkin, identified as a former NJ attorney general whose firm represents lawmakers and judges challenging the settlement, calling it one of the greatest scams and saying Blanche's testimony underscores the need for the court to continue its inquiry (in Florida).",
+    "why": "The AP report states Judge Kathleen Williams admonished DOJ for a lack of transparency and quotes her that no agency submitted settlement documents or filings ensuring the settlement was appropriate where a case-or-controversy question was outstanding, matching the claim.",
     "host": "yahoo.com",
     "date": "2026-09-27",
     "kind": "fact",
@@ -163,47 +163,47 @@
    },
    "3": {
     "state": "supports",
-    "why": "The article directly quotes Bessent declining the 'acting commissioner' label and instead describing himself as performing the commissioner's duties.",
+    "why": "The Deseret News article reports that Bessent repeatedly declined to detail whether Trump and his family would retain audit immunity, citing ongoing litigation.",
     "host": "deseret.com",
     "date": "2026-09-15",
     "kind": "fact",
     "archive": false
    },
    "4": {
-    "state": "unopened",
-    "why": "",
-    "host": "storage.courtlistener.com",
-    "date": "2026-09-27",
-    "kind": "fact",
-    "archive": false
-   },
-   "5": {
-    "state": "unopened",
-    "why": "",
-    "host": "storage.courtlistener.com",
-    "date": "2026-09-27",
-    "kind": "fact",
-    "archive": false
-   },
-   "6": {
     "state": "supports",
-    "why": "The May 19, 2026 Time article quotes Blanche saying 'Anybody in this country can apply' with a commission setting rules, and Vance saying applications would be judged case-by-case and 'I'm not committing to giving anybody money or committing to giving no one money'; the fund was announced the prior Monday.",
-    "host": "time.com",
-    "date": "2026-09-27",
-    "kind": "fact",
-    "archive": false
-   },
-   "7": {
-    "state": "supports",
-    "why": "The source reports Morrissey stepped down Monday, the same day the fund was announced, that he did not respond to comment requests, and that Blanche told senators Tuesday 'I don't know if it's a coincidence.'",
+    "why": "The source quotes Platkin, identified as a former NJ attorney general whose firm represents lawmakers and judges challenging the settlement, calling it one of the greatest scams and saying Blanche's testimony underscores the need for the court to continue its inquiry (in Florida).",
     "host": "yahoo.com",
     "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
-   "8": {
+   "5": {
     "state": "supports",
-    "why": "The filing itself is a Joint Notice of Appeal dated July 31, 2026 by the named plaintiffs and attorneys Brito and Epstein to the Eleventh Circuit from the July 13, 2026 order (D.E. 106), in the Miami Division.",
+    "why": "The article directly quotes Bessent declining the 'acting commissioner' label and instead describing himself as performing the commissioner's duties.",
+    "host": "deseret.com",
+    "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
+    "state": "partly",
+    "why": "The combined July 6, 2026 letters signed by Warren, Wyden and Schumer include one addressed to Eric Trump and Donald Trump Jr. at Tag Air, and the excerpted questions (July 20 deadline, 'related or affiliated...parties', immunity from audits/penalties/prosecution before May 19, 2026, pending investigations) match the claim; however, the Tag Air letter's own question list is truncated in the provided text, so the excerpt comes from the parallel 1789 Capital letter and Tag Air's identical wording is inferred rather than shown.",
+    "host": "warren.senate.gov",
+    "date": "2026-10-18",
+    "kind": "fact",
+    "archive": false
+   },
+   "7": {
+    "state": "unopened",
+    "why": "",
+    "host": "storage.courtlistener.com",
+    "date": "2026-09-27",
+    "kind": "fact",
+    "archive": false
+   },
+   "8": {
+    "state": "unopened",
+    "why": "",
     "host": "storage.courtlistener.com",
     "date": "2026-09-27",
     "kind": "fact",
@@ -211,21 +211,45 @@
    },
    "9": {
     "state": "partly",
+    "why": "The letter dated July 15, 2026 from Warren and Wyden to Bessent and Bisignano contains the quoted sentence, the July 22 deadline, and the questions on implementation, cessation and Chief Counsel analysis under § 7217, and quotes a July 13 ruling that the provision 'directly contravenes 26 U.S.C. § 7217'; however the provided text never names the judge as Williams.",
+    "host": "warren.senate.gov",
+    "date": "2026-10-18",
+    "kind": "fact",
+    "archive": false
+   },
+   "10": {
+    "state": "supports",
+    "why": "The July 29, 2026 press release states the senators wrote to eleven organizations, names the same six that 'responded by suggesting they were not involved with or granted immunity by the controversial order' and five including the Trump Organization, World Liberty Financial and 1789 Capital that 'refused to respond', and contains the quoted DOJ/administration line.",
+    "host": "warren.senate.gov",
+    "date": "2026-10-18",
+    "kind": "fact",
+    "archive": false
+   },
+   "11": {
+    "state": "supports",
+    "why": "The filing itself is a Joint Notice of Appeal dated July 31, 2026 by the named plaintiffs and attorneys Brito and Epstein to the Eleventh Circuit from the July 13, 2026 order (D.E. 106), in the Miami Division.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-09-27",
+    "kind": "fact",
+    "archive": false
+   },
+   "12": {
+    "state": "partly",
     "why": "Time reports Blanche kept the audit shield, shared a document limiting it to the lawsuit's parties and stating it is retroactive only, that NYU's Tax Law Center said it 'does nothing to change' the deal, and that it could shield up to $100 million tied to the Chicago skyscraper audit; the source does not mention an August 8 confirmation date.",
     "host": "time.com",
     "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
-   "10": {
+   "13": {
     "state": "supports",
-    "why": "The filing is Defendants' Notice of Appeal dated September 11, 2026, signed by R. Trent McCotter as Acting Deputy Attorney General, appearing solely to notice appeal to the Eleventh Circuit from ECF No. 106 of July 13, 2026.",
-    "host": "storage.courtlistener.com",
+    "why": "The source quotes Williams finding plaintiffs 'have not shown good cause for an expedited ruling under Southern District of Florida Local Rule 7.1,' denying expedition of the stay of her sanctions order (Brito bar referral and reimbursement of amici) and setting an Aug. 14 amici response deadline.",
+    "host": "yahoo.com",
     "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
-   "11": {
+   "14": {
     "state": "partly",
     "why": "The provided text confirms an August 12, 2026 Eleventh Circuit filing titled Defendants' Response to Appellants' Time-Sensitive Motion for Stay by Acting Deputy AG McCotter, but it is truncated in the interested-persons list and contains none of the stay/vacatur/reassignment arguments or the 'improper political motivation' quote.",
     "host": "storage.courtlistener.com",
@@ -233,11 +257,19 @@
     "kind": "fact",
     "archive": false
    },
-   "12": {
+   "15": {
     "state": "supports",
-    "why": "The source quotes Williams finding plaintiffs 'have not shown good cause for an expedited ruling under Southern District of Florida Local Rule 7.1,' denying expedition of the stay of her sanctions order (Brito bar referral and reimbursement of amici) and setting an Aug. 14 amici response deadline.",
-    "host": "yahoo.com",
+    "why": "The filing is Defendants' Notice of Appeal dated September 11, 2026, signed by R. Trent McCotter as Acting Deputy Attorney General, appearing solely to notice appeal to the Eleventh Circuit from ECF No. 106 of July 13, 2026.",
+    "host": "storage.courtlistener.com",
     "date": "2026-09-27",
+    "kind": "fact",
+    "archive": false
+   },
+   "16": {
+    "state": "supports",
+    "why": "The Bloomberg News article (published Wednesday September 30, describing 'the order on Tuesday') names the panel of Jordan, Rosenbaum and Newsom, quotes the 'strong showing'/'committed clear error' finding and the no-evidence holding verbatim, and states Blanche's immunity protection order 'is also still in effect.'",
+    "host": "accountingtoday.com",
+    "date": "2026-10-18",
     "kind": "fact",
     "archive": false
    }
