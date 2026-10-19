@@ -5157,11 +5157,11 @@ function renderGroupedEntries(entries, cfg, container, keyFn, sortGroups, cardOp
   // their "Also in <tracker>" link is still reachable.
   const crossKeys = keyFn === officialGroupKey
     ? CROSS_VIEW_TRACKERS.filter(k => TRACKERS[k] && !TRACKERS[k].hidden) : [];
-  const seen = new Set(groups.keys());
-  crossKeys.forEach(k => crossViewOnlyOfficials(k, [...seen], TRACKERS[k].data).forEach(o => {
-    seen.add(o.name);
-    sortedGroups.push([o.name, []]);
-  }));
+  // One joint, alphabetical tail across trackers (a name in both appears once).
+  const tail = new Set();
+  crossKeys.forEach(k => crossViewOnlyOfficials(k, [...groups.keys()], TRACKERS[k].data)
+    .forEach(o => tail.add(o.name)));
+  [...tail].sort((x, y) => x.localeCompare(y)).forEach(name => sortedGroups.push([name, []]));
 
   container.innerHTML = "";
   sortedGroups.forEach(([name, groupEntries]) => {
