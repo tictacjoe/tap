@@ -49,3 +49,12 @@ def test_moved_targets_hidden(tmp_path):
 
 def test_real_index_matches_sync_parser():
     assert hidden_trackers.site_hidden_trackers(SITE / "index.html") == {"dai"}  # DAI hidden until its Phase B cutover
+
+
+def test_moved_targets_hidden_gsr_origin(tmp_path):
+    # DAI Phase B: a GSR-origin move into hidden DAI still holds publishing.
+    w = _working(tmp_path, {"g2": {"from": "government-services", "to": "dai", "date": "2026-10-18"}})
+    site = tmp_path / "site"
+    site.mkdir()
+    (site / "index.html").write_text("const TRACKERS = {\n  dai: {\n    hidden: true,\n  },\n};\n")
+    assert publish.moved_targets_hidden(w, site) == {"dai"}

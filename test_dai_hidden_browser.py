@@ -140,3 +140,27 @@ def test_unhidden_dai_shows_tab_groups_people_and_cross_view(browser, site_url):
     assert page.evaluate("activeTracker") == "dai"
     assert page.evaluate("searchTerm") == "Zed Fixture-Commander"
     assert errors == []
+
+
+def test_cross_view_tail_groups_sorted_jointly(browser, site_url):
+    page, errors = _goto(browser, site_url, "")
+    page.evaluate("""() => {
+      TRACKERS.trumpfamily.data = TRACKERS.trumpfamily.data.concat([mapTrumpFamilyEntry({id: "tfs-tail", title: "t",
+        category: "crypto", family_members: ["Eric Trump"], business_entity: {name: "x"},
+        government_nexus: {action: "a", official: {name: "Zz TFS-Only", role: "r"}},
+        financial_stake: {summary: "s", figures: [], caveat: "c"}, sources: []})]);
+      TRACKERS.dai.hidden = false;
+      TRACKERS.dai.data = [mapDaiEntry({id: "dai-tail", title: "d", category: "removals", agencies: ["ICE"],
+        location: {place: "x"}, people: {officials: [{name: "Aa DAI-Only", role: "r", sources: []}]},
+        human_toll: {summary: "s", figures: [], caveat: "c"}, sources: []})];
+    }""")
+    page.evaluate("switchToTracker('prosecution'); groupMode = 'individual'; renderEntries();")
+    names = page.locator(".official-group-name").all_inner_texts()
+    tail = [n for n in names if n in ("Aa DAI-Only", "Zz TFS-Only")]
+    assert tail == ["Aa DAI-Only", "Zz TFS-Only"]
+    # The joint tail stays alphabetical with the real TFS-only officials too.
+    empties = page.evaluate("""() => [...document.querySelectorAll('.official-group')]
+        .filter(g => g.querySelector('.official-group-count').textContent.endsWith('here'))
+        .map(g => g.querySelector('.official-group-name').textContent)""")
+    assert empties == sorted(empties)
+    assert errors == []
