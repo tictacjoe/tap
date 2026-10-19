@@ -342,12 +342,17 @@ _INDEX_HIDDEN = "const TRACKERS = {\n  trumpfamily: {\n    hidden: true,\n  },\n
 
 
 def _e2e_dirs(tmp_path, moved):
-    """Temp working + site dirs; the working repo's tracker/ is symlinked so the
-    real glance/marker/claim loaders import."""
+    """Temp working + site dirs. The working repo's tracker/ items are symlinked
+    one by one so the real glance/marker/claim loaders import, while
+    tracker/moved_ids.json is this test's own file (never the real one)."""
     w = tmp_path / "working"
     (w / "trumpfamily").mkdir(parents=True)
-    (w / "trumpfamily/moved_ids.json").write_text(json.dumps(moved))
-    (w / "tracker").symlink_to(Path(__file__).parent.parent / "tap-data" / "tracker")
+    (w / "tracker").mkdir()
+    real_tracker = Path(__file__).parent.parent / "tap-data" / "tracker"
+    for item in real_tracker.iterdir():
+        if item.name != "moved_ids.json":
+            (w / "tracker" / item.name).symlink_to(item)
+    (w / "tracker/moved_ids.json").write_text(json.dumps(moved))
     s = tmp_path / "site"
     (s / "data").mkdir(parents=True)
     (s / "index.html").write_text(_INDEX_HIDDEN)
@@ -380,3 +385,19 @@ def test_publish_writes_empty_moved_ids(tmp_path):
     r = _run_publish(w, s)
     assert r.returncode == 0, r.stdout + r.stderr
     assert json.loads((s / "data/moved-ids.json").read_text()) == {}
+
+
+def test_publish_empty_dai_dir_writes_empty_array(tmp_path):
+    src = tmp_path / "dai" / "entries"
+    src.mkdir(parents=True)
+    (src / ".gitkeep").write_text("")
+    dest = tmp_path / "dai.json"
+    included, excluded = publish_json_entries(src, dest, set())
+    assert included == [] and excluded == 0
+    assert json.loads(dest.read_text()) == []
+
+
+def test_publish_main_has_a_dai_block():
+    text = (Path(__file__).parent / "publish.py").read_text(encoding="utf-8")
+    assert 'working / "dai" / "entries"' in text and 'site / "data" / "dai.json"' in text
+    assert 'TIMELINE_FIELDS["dai"]' in text

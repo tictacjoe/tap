@@ -113,7 +113,7 @@ def test_cla_individual_view_links_to_tfs(browser, site_url):
     page, errors = _goto(browser, site_url, "")
     _setup(page)
     page.evaluate("switchToTracker('prosecution'); groupMode = 'individual'; renderEntries();")
-    link = page.locator(".also-in-tfs").first
+    link = page.locator('.also-in-cross[data-tracker="trumpfamily"]').first
     assert "Also in Trump Family: 1 entry" in link.inner_text()
     link.click()
     assert page.evaluate("activeTracker") == "trumpfamily"
@@ -136,7 +136,7 @@ def test_cla_individual_view_lists_tfs_only_official(browser, site_url):
     assert last.locator(".official-group-name").inner_text() == "Zed Fixture-Official"
     assert last.locator(".official-group-count").inner_text() == "0 entries here"
     assert last.locator(".official-group-body .entry").count() == 0
-    link = last.locator(".also-in-tfs")
+    link = last.locator('.also-in-cross[data-tracker="trumpfamily"]')
     assert "Also in Trump Family: 1 entry" in link.inner_text()
     link.click()
     assert page.evaluate("activeTracker") == "trumpfamily"
@@ -149,7 +149,7 @@ def test_cla_individual_view_links_to_tfs_once_public(browser, site_url):
     # Real published data: TFS entries name CLA officials (e.g. Hegseth in also_officials).
     page, errors = _goto(browser, site_url, "")
     page.evaluate("switchToTracker('prosecution'); groupMode = 'individual'; renderEntries();")
-    assert page.locator(".also-in-tfs").count() > 0
+    assert page.locator('.also-in-cross[data-tracker="trumpfamily"]').count() > 0
     assert errors == []
 
 
@@ -158,6 +158,6 @@ def test_cla_individual_view_has_no_tfs_link_while_hidden(browser, site_url):
     # Hide in-page to keep testing the mechanism.
     page.evaluate("TRACKERS.trumpfamily.hidden = true; switchToTracker('prosecution'); groupMode = 'individual'; renderEntries();")
     assert page.locator(".official-group").count() > 0
-    assert page.locator(".also-in-tfs").count() == 0
+    assert page.locator('.also-in-cross[data-tracker="trumpfamily"]').count() == 0
     assert "entries here" not in page.locator("#entries").inner_text()
     assert errors == []

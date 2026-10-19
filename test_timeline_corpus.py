@@ -15,6 +15,7 @@ FILES = {
     "prosecution": "prosecution.json",
     "oea": "oea.json",
     "trumpfamily": "trumpfamily.json",
+    "dai": "dai.json",
 }
 DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 

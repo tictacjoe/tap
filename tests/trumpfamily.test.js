@@ -12,11 +12,11 @@ function extractFunction(source, name) {
 const source = fs.readFileSync(path.join(__dirname, "..", "index.html"), "utf8");
 const names = ["escape-html", "visible-tracker-keys", "map-trumpfamily-entry",
                "build-trumpfamily-card-html", "family-group-keys",
-               "resolve-entry-target", "global-search-database-count", "tfs-count-for-official",
-               "tfs-only-officials", "global-search-no-matches-text"];
+               "resolve-entry-target", "global-search-database-count", "cross-view-officials",
+               "global-search-no-matches-text"];
 const fns = (0, eval)(names.map(n => extractFunction(source, n)).join("\n") +
   "\n({ visibleTrackerKeys, mapTrumpFamilyEntry, buildTrumpFamilyCardHtml, familyGroupKeys,\n" +
-  "   resolveEntryTarget, globalSearchDatabaseCount, tfsCountForOfficial, tfsOnlyOfficials,\n" +
+  "   resolveEntryTarget, globalSearchDatabaseCount, crossViewCount, crossViewOnlyOfficials,\n" +
   "   globalSearchNoMatchesText });");
 
 const RAW = {
@@ -125,22 +125,22 @@ test("resolveEntryTarget: unknown id on a visible tracker keeps today's behavior
 test("globalSearchDatabaseCount counts visible non-Reporting trackers", () => {
   assert.equal(fns.globalSearchDatabaseCount({ a: {}, b: { hidden: true }, tracker: {}, c: {} }), 2);
 });
-test("tfsCountForOfficial matches the name before the first comma", () => {
+test("crossViewCount (TFS) matches the name before the first comma", () => {
   const tfs = [{ government_nexus: { official: { name: "Steve Witkoff" } } },
                { government_nexus: { official: { name: "Steve Witkoff" } } },
                { government_nexus: { official: { name: "Pete Hegseth" } } }, {}];
-  assert.equal(fns.tfsCountForOfficial("Steve Witkoff", tfs), 2);
-  assert.equal(fns.tfsCountForOfficial("Kristi Noem", tfs), 0);
+  assert.equal(fns.crossViewCount("trumpfamily", "Steve Witkoff", tfs), 2);
+  assert.equal(fns.crossViewCount("trumpfamily", "Kristi Noem", tfs), 0);
 });
-test("tfsCountForOfficial also counts government_nexus.also_officials, once per entry", () => {
+test("crossViewCount (TFS) also counts government_nexus.also_officials, once per entry", () => {
   const tfs = [{ government_nexus: { official: { name: "Donald Trump" },
                                      also_officials: [{ name: "Howard Lutnick", role: "Secretary of Commerce" }] } },
                { government_nexus: { official: { name: "Howard Lutnick, Secretary" },
                                      also_officials: [{ name: "Howard Lutnick" }] } },
                { government_nexus: { official: { name: "Pete Hegseth" }, also_officials: [{}] } }];
-  assert.equal(fns.tfsCountForOfficial("Howard Lutnick", tfs), 2);
-  assert.equal(fns.tfsCountForOfficial("Donald Trump", tfs), 1);
-  assert.equal(fns.tfsCountForOfficial("", tfs), 0);
+  assert.equal(fns.crossViewCount("trumpfamily", "Howard Lutnick", tfs), 2);
+  assert.equal(fns.crossViewCount("trumpfamily", "Donald Trump", tfs), 1);
+  assert.equal(fns.crossViewCount("trumpfamily", "", tfs), 0);
 });
 
 test("buildTrumpFamilyCardHtml lists also_officials as 'Also involved', escaped, only when present", () => {
@@ -152,15 +152,15 @@ test("buildTrumpFamilyCardHtml lists also_officials as 'Also involved', escaped,
   assert.doesNotMatch(fns.buildTrumpFamilyCardHtml(RAW, hl), /Also involved/);
 });
 
-test("tfsOnlyOfficials: TFS officials with no CLA group, sorted by name, with counts", () => {
+test("crossViewOnlyOfficials (TFS): TFS officials with no CLA group, sorted by name, with counts", () => {
   const tfs = [{ government_nexus: { official: { name: "Steve Witkoff" } } },
                { government_nexus: { official: { name: "Donald Trump" },
                                      also_officials: [{ name: "Howard Lutnick, Commerce" }, { name: "Steve Witkoff" }] } },
                { government_nexus: { official: { name: "Howard Lutnick" } } }, {}];
-  assert.deepEqual(fns.tfsOnlyOfficials(["Steve Witkoff", "Pete Hegseth"], tfs),
+  assert.deepEqual(fns.crossViewOnlyOfficials("trumpfamily", ["Steve Witkoff", "Pete Hegseth"], tfs),
                    [{ name: "Donald Trump", count: 1 }, { name: "Howard Lutnick", count: 2 }]);
-  assert.deepEqual(fns.tfsOnlyOfficials(["Donald Trump", "Howard Lutnick", "Steve Witkoff"], tfs), []);
-  assert.deepEqual(fns.tfsOnlyOfficials([], undefined), []);
+  assert.deepEqual(fns.crossViewOnlyOfficials("trumpfamily", ["Donald Trump", "Howard Lutnick", "Steve Witkoff"], tfs), []);
+  assert.deepEqual(fns.crossViewOnlyOfficials("trumpfamily", [], undefined), []);
 });
 
 test("globalSearchNoMatchesText lists visible non-Reporting tracker labels", () => {
@@ -175,4 +175,14 @@ test("globalSearchNoMatchesText lists visible non-Reporting tracker labels", () 
   assert.equal(fns.globalSearchNoMatchesText({ a: { label: "A" }, tracker: { label: "Reporting" }, b: { label: "B" } }),
     "No matches in A or B.");
   assert.equal(fns.globalSearchNoMatchesText({ a: { label: "A" } }), "No matches in A.");
+});
+
+test("resolveEntryTarget: a move recorded with the tap-data name redirects the site-key link", () => {
+  // tracker/moved_ids.json records `from` as tap-data names ("government-services");
+  // site links use site keys ("govservices"). DAI Phase B moves entries out of GSR.
+  const trk = { govservices: { idField: "id", data: [] }, dai: { idField: "id", data: [{ id: "g1" }] } };
+  const moved = { g1: { from: "government-services", to: "dai", date: "2026-10-18" } };
+  assert.deepEqual(fns.resolveEntryTarget("govservices", "g1", trk, moved), { key: "dai", id: "g1", moved: true });
+  assert.deepEqual(fns.resolveEntryTarget("prosecution", "g1", Object.assign({ prosecution: { idField: "id", data: [] } }, trk), moved),
+                   { key: "prosecution", id: "g1", moved: false });
 });

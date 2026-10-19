@@ -31,8 +31,8 @@ def test_parser_reads_hidden_flags(tmp_path):
 
 def _working(tmp_path, moved):
     w = tmp_path / "working"
-    (w / "trumpfamily").mkdir(parents=True)
-    (w / "trumpfamily/moved_ids.json").write_text(json.dumps(moved))
+    (w / "tracker").mkdir(parents=True)
+    (w / "tracker/moved_ids.json").write_text(json.dumps(moved))
     return w
 
 
@@ -48,4 +48,4 @@ def test_moved_targets_hidden(tmp_path):
 
 
 def test_real_index_matches_sync_parser():
-    assert hidden_trackers.site_hidden_trackers(SITE / "index.html") == set()
+    assert hidden_trackers.site_hidden_trackers(SITE / "index.html") == {"dai"}  # DAI hidden until its Phase B cutover
