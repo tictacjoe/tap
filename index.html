@@ -5490,7 +5490,10 @@ function resolveEntryTarget(key, id, trackers, moved) {
   const cfg = trackers[key];
   const holds = !!(cfg && (cfg.data || []).some(e => e[cfg.idField] === id));
   const move = moved && moved[id];
-  if (!holds && move && move.from === key && trackers[move.to] && !trackers[move.to].hidden) {
+  // tracker/moved_ids.json records `from` as the tap-data name; links use site keys.
+  const MOVE_FROM_TO_KEY = { "government-services": "govservices", cla: "prosecution" };
+  const from = move && (MOVE_FROM_TO_KEY[move.from] || move.from);
+  if (!holds && move && from === key && trackers[move.to] && !trackers[move.to].hidden) {
     return { key: move.to, id, moved: true };
   }
   if (!cfg || cfg.hidden) return null;

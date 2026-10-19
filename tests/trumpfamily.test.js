@@ -176,3 +176,13 @@ test("globalSearchNoMatchesText lists visible non-Reporting tracker labels", () 
     "No matches in A or B.");
   assert.equal(fns.globalSearchNoMatchesText({ a: { label: "A" } }), "No matches in A.");
 });
+
+test("resolveEntryTarget: a move recorded with the tap-data name redirects the site-key link", () => {
+  // tracker/moved_ids.json records `from` as tap-data names ("government-services");
+  // site links use site keys ("govservices"). DAI Phase B moves entries out of GSR.
+  const trk = { govservices: { idField: "id", data: [] }, dai: { idField: "id", data: [{ id: "g1" }] } };
+  const moved = { g1: { from: "government-services", to: "dai", date: "2026-10-18" } };
+  assert.deepEqual(fns.resolveEntryTarget("govservices", "g1", trk, moved), { key: "dai", id: "g1", moved: true });
+  assert.deepEqual(fns.resolveEntryTarget("prosecution", "g1", Object.assign({ prosecution: { idField: "id", data: [] } }, trk), moved),
+                   { key: "prosecution", id: "g1", moved: false });
+});
