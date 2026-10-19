@@ -67,24 +67,28 @@ test("buildGlanceHeadHtml returns null when glance is not active", () => {
   assert.equal(api.buildGlanceHeadHtml({}, cfgOn, { hl: hlPlain }), null);
 });
 
-test("buildGlanceHeadHtml renders who, what, the harm badge and harm who", () => {
+test("buildGlanceHeadHtml renders who, what, Harm to and harm status, with no Harm type badge", () => {
   const html = api.buildGlanceHeadHtml({ glance: validGlance() }, cfgOn, { hl: hlPlain });
   assert.ok(html.startsWith('<div class="entry-head">'));
   assert.ok(html.includes('<span class="glance-who">Example Agency Administrator</span> — Rolled back'));
-  assert.ok(html.includes("glance-badge-rights"));
-  assert.ok(html.includes(">Harm type:</span> <span class=\"glance-badge glance-badge-rights\">Rights &amp; liberty</span>"));
+  assert.ok(html.includes(">Harm to:</span> <span class=\"glance-harm-who\">Example detainees</span>"));
   assert.ok(html.includes(">Harm status:</span> alleged"));
-  assert.ok(html.includes(">Who/What was harmed:</span> <span class=\"glance-harm-who\">Example detainees</span>"));
+  assert.ok(!html.includes("Harm type"));
+  assert.ok(!html.includes("glance-badge"));
+  assert.ok(!html.includes("was harmed"));
 });
 
-test("Principal renders the same name as the who-lead-in, right before Who/What was harmed", () => {
+test("Harm to leads the harm line, then Harm status, then Principal", () => {
   const html = api.buildGlanceHeadHtml({ glance: validGlance() }, cfgOn, { hl: hlPlain });
   assert.ok(html.includes(">Principal:</span> Example Agency Administrator"));
+  const line = html.slice(html.indexOf('<p class="glance-harm">'));
+  assert.ok(line.startsWith('<p class="glance-harm"><span class="glance-harm-item"><span class="glance-harm-label glance-harm-label-harmed">Harm to:</span>'),
+    "Harm to should be the first item on the line");
+  const harmToIdx = html.indexOf("Harm to:");
   const statusIdx = html.indexOf("Harm status:");
   const principalIdx = html.indexOf("Principal:");
-  const whoHarmedIdx = html.indexOf("Who/What was harmed:");
+  assert.ok(harmToIdx < statusIdx, "Harm status should come after Harm to");
   assert.ok(statusIdx < principalIdx, "Principal should come after Harm status");
-  assert.ok(principalIdx < whoHarmedIdx, "Principal should come before Who/What was harmed");
 });
 
 test("Principal still renders when hideWho hides the title's who-lead-in", () => {
@@ -99,7 +103,7 @@ test("Principal renders for non-Cabinet-Level trackers too (no cfg.kind guard, u
   assert.ok(html.includes(">Principal:</span> Example Agency Administrator"));
 });
 
-test("Cabinet-Level: Violation/Concern Type and Status Stage render after Who/What was harmed", () => {
+test("Cabinet-Level: Violation/Concern Type and Status Stage render after Principal", () => {
   const entry = {
     glance: validGlance(),
     offense_category: "Fraud",
@@ -108,10 +112,10 @@ test("Cabinet-Level: Violation/Concern Type and Status Stage render after Who/Wh
   const html = api.buildGlanceHeadHtml(entry, cfgOn, { hl: hlPlain });
   assert.ok(html.includes(">Violation/Concern Type:</span> Fraud"));
   assert.ok(html.includes(">Status Stage:</span> Investigation"));
-  const whoIdx = html.indexOf("Who/What was harmed:");
+  const principalIdx = html.indexOf("Principal:");
   const violationIdx = html.indexOf("Violation/Concern Type:");
   const statusIdx = html.indexOf("Status Stage:");
-  assert.ok(whoIdx < violationIdx, "Violation/Concern Type should come after Who/What was harmed");
+  assert.ok(principalIdx < violationIdx, "Violation/Concern Type should come after Principal");
   assert.ok(violationIdx < statusIdx, "Status Stage should come after Violation/Concern Type");
 });
 
@@ -134,30 +138,24 @@ test("non-Cabinet-Level trackers don't get the Violation/Concern Type or Status 
   assert.ok(!html.includes("Status Stage"));
 });
 
-test("the environment harm kind is accepted and renders its own badge class and label", () => {
+test("the environment harm kind is accepted and renders a place as Harm to", () => {
   const glance = validGlance({
     harm: { kind: "environment", certainty: "projected", who: "Arctic Refuge coastal plain" },
   });
   assert.equal(api.isValidGlance(glance), true);
   const html = api.buildGlanceHeadHtml({ glance }, cfgOn, { hl: hlPlain });
-  assert.ok(html.includes("glance-badge-environment"));
-  assert.ok(html.includes(">Harm type:</span> <span class=\"glance-badge glance-badge-environment\">Environment</span>"));
+  assert.ok(html.includes(">Harm to:</span> <span class=\"glance-harm-who\">Arctic Refuge coastal plain</span>"));
   assert.ok(html.includes(">Harm status:</span> projected"));
 });
 
-test("the averted certainty is accepted and renders a muted badge, not the alarming kind colour", () => {
+test("the averted certainty is accepted and renders as its Harm status", () => {
   const glance = validGlance({
     harm: { kind: "physical", certainty: "averted", who: "People breathing fine-particle soot" },
   });
   assert.equal(api.isValidGlance(glance), true);
   const html = api.buildGlanceHeadHtml({ glance }, cfgOn, { hl: hlPlain });
-  assert.ok(html.includes(">Harm type:</span> <span class=\"glance-badge glance-badge-physical glance-badge-averted\">Physical / life</span>"));
+  assert.ok(html.includes(">Harm to:</span> <span class=\"glance-harm-who\">People breathing fine-particle soot</span>"));
   assert.ok(html.includes(">Harm status:</span> averted"));
-  assert.ok(html.includes("glance-badge-averted"));
-  // the other certainties must not pick up the muted class
-  const projected = api.buildGlanceHeadHtml({ glance: validGlance({
-    harm: { kind: "physical", certainty: "projected", who: "Example workers" } }) }, cfgOn, { hl: hlPlain });
-  assert.ok(!projected.includes("glance-badge-averted"));
 });
 
 test("hideWho drops the responsible-party lead-in but keeps the what line", () => {

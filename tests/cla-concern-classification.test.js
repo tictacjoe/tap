@@ -133,11 +133,18 @@ const EXPECTED_2026_10_07 = {
   "trump-ukraine-intel-arms-pause-oval-office-clash-2025": "Executive Action With No Established Legal Violation (Policy Dispute)",
 };
 
+// Entries pinned below that later moved to another tracker (TFS, DAI cutovers) are no
+// longer CLA entries, so they are skipped; moved-ids.json is the record of every move.
+const MOVED_OUT_OF_CLA = new Set(Object.entries(
+  JSON.parse(fs.readFileSync(path.join(__dirname, "..", "data", "moved-ids.json"), "utf8")))
+  .filter(([, m]) => m.from === "prosecution").map(([id]) => id));
+
 test("each of the 42 previously unmatched published entries gets its 2026-10-07 concern type", () => {
   const data = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "data", "prosecution.json"), "utf8"));
   const byId = Object.fromEntries(data.map(e => [e.id, e]));
   const wrong = [];
   for (const [id, label] of Object.entries(EXPECTED_2026_10_07)) {
+    if (MOVED_OUT_OF_CLA.has(id)) continue;
     const e = byId[id];
     assert.ok(e, `${id} is not in the published data`);
     assert.equal(classifyOffenseCategory(e.offense_category), "Other/Unclassified", `${id} now has a Violation Type`);
@@ -170,6 +177,7 @@ test("each of the 12 previously unmatched published entries gets its 2026-10-18 
   const byId = Object.fromEntries(data.map(e => [e.id, e]));
   const wrong = [];
   for (const [id, label] of Object.entries(EXPECTED_2026_10_18)) {
+    if (MOVED_OUT_OF_CLA.has(id)) continue;
     const e = byId[id];
     assert.ok(e, `${id} is not in the published data`);
     assert.equal(classifyOffenseCategory(e.offense_category), "Other/Unclassified", `${id} now has a Violation Type`);

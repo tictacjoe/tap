@@ -669,12 +669,14 @@
   /* CLA "List by individual": link to the official's Trump Family entries. */
   .also-in-cross { margin-left: 0.75rem; font-size: 0.85rem; }
 
-  /* Glance card (see the glance-head script block). The harm badge names
+  /* Glance card (see the glance-head script block). The harm-kind badge
+     rules below are unused since 2026-10-19 (Joe hid "Harm type" on the card)
+     and kept so it can come back. The harm badge names
      the kind in words; colour is only a second signal. Two tones plus a
      neutral, reusing existing palette variables: severe (physical,
      rights) = flag red, middle (livelihood, money) = darker brass,
      institutional and environment = neutral. */
-  /* Labeled segments (Harm type / Harm status / Principal / Who/What was harmed,
+  /* Labeled segments (Harm to / Harm status / Principal,
      plus Violation/Concern Type and Status Stage on Cabinet-Level) on one line,
      wrapping onto more lines on a narrow screen; same flex+bullet-separator pattern
      as .entry-meta, kept as its own rule since .entry-meta's own selector excludes
@@ -700,7 +702,7 @@
      neutral like institutional, never the alarming physical/rights red. Must
      stay after the kind rules above (same specificity, later wins). */
   .glance-badge-averted { background: var(--paper); color: var(--ink-soft); border: 1px solid var(--rule); }
-  /* Who/What was harmed: highlighter-marker tint so the harmed party is the
+  /* Harm to: highlighter-marker tint so the harmed party is the
      first thing the eye lands on in the harm line (2026-10-16, Joe's call).
      box-decoration-break keeps the tint padded on every line when it wraps. */
   .glance-harm-who {
@@ -4602,7 +4604,7 @@ function buildGlanceHeadHtml(entry, cfg, opts) {
   const hl = opts.hl;
   const who = opts.hideWho ? "" : '<span class="glance-who">' + hl(g.who) + '</span> — ';
   // Cabinet-Level only (2026-09-22, Joe's call): Violation/Concern Type and Status
-  // Stage move here, after Who/What was harmed, from their own expanded-entry aside
+  // Stage move here, at the end of the harm line, from their own expanded-entry aside
   // cards -- see buildDetailHtml's asideHtml, which skips both cards whenever
   // glanceActive() is true for the same entry, so the information is never shown
   // twice, and never dropped outright if an entry's glance block is ever invalid.
@@ -4622,10 +4624,14 @@ function buildGlanceHeadHtml(entry, cfg, opts) {
       // it took effect) -- an outcome, not a confidence level. "Harm status" reads
       // naturally for all four and does not collide with an entry's own Status field.
       '<p class="glance-harm">' +
-        '<span class="glance-harm-item"><span class="glance-harm-label">Harm type:</span> ' +
-          '<span class="glance-badge glance-badge-' + g.harm.kind +
-          (g.harm.certainty === "averted" ? " glance-badge-averted" : "") + '">' +
-          escapeHtml(GLANCE_HARM_LABELS[g.harm.kind]) + '</span></span>' +
+        // "Harm to" leads the line (2026-10-19, Joe's call; was "Who/What was
+        // harmed", renamed from "Who was harmed" 2026-09-22). Tense-neutral, so it
+        // reads right for projected and averted harm, and fits a place (the
+        // environment kind) as well as people. The "Harm type" badge (harm.kind)
+        // is no longer drawn here; the kind stays in the data, search text and
+        // the connector.
+        '<span class="glance-harm-item"><span class="glance-harm-label glance-harm-label-harmed">Harm to:</span> ' +
+          '<span class="glance-harm-who">' + hl(g.harm.who) + '</span></span>' +
         '<span class="glance-harm-item"><span class="glance-harm-label">Harm status:</span> ' + escapeHtml(g.harm.certainty) + '</span>' +
         // Principal (2026-09-22, Joe's call): the same name as the card's own
         // who-lead-in (g.who, already required and validated by isValidGlance for
@@ -4636,12 +4642,6 @@ function buildGlanceHeadHtml(entry, cfg, opts) {
         // entirely absent from an individual card just because its group header
         // already names the person.
         '<span class="glance-harm-item"><span class="glance-harm-label">Principal:</span> ' + hl(g.who) + '</span>' +
-        // "Who/What was harmed" (renamed from "Who was harmed" 2026-09-22, Joe's
-        // call): harm.who isn't always a person -- the environment harm kind
-        // names a place or ecosystem (e.g. "Arctic Refuge coastal plain"), so the
-        // old label was already inaccurate for that case.
-        '<span class="glance-harm-item"><span class="glance-harm-label glance-harm-label-harmed">Who/What was harmed:</span> ' +
-          '<span class="glance-harm-who">' + hl(g.harm.who) + '</span></span>' +
         claExtraHtml +
       '</p>' +
       '<div class="entry-meta">' + (opts.metaHtml || "") + '</div>' +
