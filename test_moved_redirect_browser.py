@@ -155,8 +155,10 @@ def test_cla_individual_view_links_to_tfs_once_public(browser, site_url):
 
 def test_cla_individual_view_has_no_tfs_link_while_hidden(browser, site_url):
     page, errors = _goto(browser, site_url, "")
-    # Hide in-page to keep testing the mechanism.
-    page.evaluate("TRACKERS.trumpfamily.hidden = true; switchToTracker('prosecution'); groupMode = 'individual'; renderEntries();")
+    # Hide in-page to keep testing the mechanism. DAI is hidden too: since its
+    # cutover (2026-10-19) its DAI-only officials add their own "0 entries here" groups.
+    page.evaluate("TRACKERS.trumpfamily.hidden = true; TRACKERS.dai.hidden = true; "
+                  "switchToTracker('prosecution'); groupMode = 'individual'; renderEntries();")
     assert page.locator(".official-group").count() > 0
     assert page.locator('.also-in-cross[data-tracker="trumpfamily"]').count() == 0
     assert "entries here" not in page.locator("#entries").inner_text()

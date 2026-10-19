@@ -1,8 +1,10 @@
-"""Hidden DHS and ICE tracker (tap-data spec
-docs/superpowers/specs/2026-10-18-tap-dai-tracker-design.md): no tab, no
-browse option, no Headlines row, no global-search hit, deep link inert, no
-CLA "Also in DHS and ICE" link; flipping hidden shows the tab with a fixture
-entry grouped per agency, its People card, and the CLA cross-view link.
+"""DHS and ICE tracker (tap-data spec
+docs/superpowers/specs/2026-10-18-tap-dai-tracker-design.md). Public since
+the Phase B cutover (2026-10-19); the hide mechanism is still tested by
+setting hidden = true in the page: no tab, no browse option, no Headlines
+row, no global-search hit, deep link inert, no CLA "Also in DHS and ICE"
+link. Unhidden, the tab shows a fixture entry grouped per agency, its People
+card, and the CLA cross-view link.
 Served from this repo on a free port; skips without Playwright/Chromium."""
 
 import functools
@@ -74,9 +76,10 @@ def _inject(page):
     page.evaluate("""(fx) => { TRACKERS.dai.data = [mapDaiEntry(fx)]; }""", FIXTURE)
 
 
-def test_dai_is_hidden_on_load(browser, site_url):
+def test_dai_is_public_on_load(browser, site_url):
     page, errors = _goto(browser, site_url, "")
-    assert page.evaluate("TRACKERS.dai.hidden") is True
+    assert not page.evaluate("TRACKERS.dai.hidden")
+    assert page.locator('#tabs option[value="dai"]').count() == 1
     assert page.evaluate("Array.isArray(TRACKERS.dai.data)") is True
     assert errors == []
 
@@ -84,7 +87,7 @@ def test_dai_is_hidden_on_load(browser, site_url):
 def test_hidden_dai_has_no_tab_browse_headlines_or_search_hit(browser, site_url):
     page, errors = _goto(browser, site_url, "")
     _inject(page)
-    page.evaluate("renderTabs(); renderHeadlinesControls()")
+    page.evaluate("TRACKERS.dai.hidden = true; renderTabs(); renderHeadlinesControls()")
     assert page.locator('#tabs option[value="dai"]').count() == 0
     assert page.locator('#headlines-tracker-filter option[value="dai"]').count() == 0
     assert page.evaluate("buildHeadlineItems().filter(i => i.tracker === 'dai').length") == 0
@@ -102,7 +105,8 @@ def test_hidden_dai_has_no_tab_browse_headlines_or_search_hit(browser, site_url)
 def test_hidden_dai_deep_link_is_inert(browser, site_url):
     page, errors = _goto(browser, site_url, "")
     _inject(page)
-    page.evaluate("""() => { history.replaceState(null, '', '#dai/dai-fixture'); openEntryFromHash(); }""")
+    page.evaluate("""() => { TRACKERS.dai.hidden = true;
+      history.replaceState(null, '', '#dai/dai-fixture'); openEntryFromHash(); }""")
     assert page.evaluate("activeTracker") != "dai"
     assert errors == []
 
@@ -110,7 +114,7 @@ def test_hidden_dai_deep_link_is_inert(browser, site_url):
 def test_hidden_dai_adds_no_cla_cross_view_link(browser, site_url):
     page, errors = _goto(browser, site_url, "")
     _inject(page)
-    page.evaluate("switchToTracker('prosecution'); groupMode = 'individual'; renderEntries();")
+    page.evaluate("TRACKERS.dai.hidden = true; switchToTracker('prosecution'); groupMode = 'individual'; renderEntries();")
     assert page.locator('.also-in-cross[data-tracker="dai"]').count() == 0
     assert "Zed Fixture-Commander" not in page.locator("#entries").inner_text()
     assert errors == []
