@@ -48,7 +48,7 @@ def test_moved_targets_hidden(tmp_path):
 
 
 def test_real_index_matches_sync_parser():
-    assert hidden_trackers.site_hidden_trackers(SITE / "index.html") == {"dai"}  # DAI hidden until its Phase B cutover
+    assert hidden_trackers.site_hidden_trackers(SITE / "index.html") == set()  # DAI public since its Phase B cutover (2026-10-19)
 
 
 def test_moved_targets_hidden_gsr_origin(tmp_path):

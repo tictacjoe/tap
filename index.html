@@ -1677,8 +1677,10 @@ const TRACKERS = {
   // schema, mapped into GSR's shape at load by mapDaiEntry(), so kind
   // "govservices" reuses every GSR rendering branch; buildDaiPeopleHtml()
   // adds the People card (officials, agents, affected, each name linked to
-  // the source that justifies naming them). hidden: no tab, Headlines,
-  // search or deep link until the Phase B cutover -- keep equal to the
+  // the source that justifies naming them). Public since the Phase B
+  // cutover (2026-10-19): the 54 entries moved from CLA and GSR arrive
+  // here, and old #prosecution/<id> and #govservices/<id> links redirect
+  // via data/moved-ids.json. Any `hidden: true` flag must stay equal to the
   // connector's HIDDEN_TRACKERS (test_hidden_trackers_sync.py).
   dai: {
     label: "DHS and ICE",
@@ -1693,7 +1695,6 @@ const TRACKERS = {
     kind: "govservices",
     trackerKey: "dai",
     glanceEnabled: true,
-    hidden: true,
     fieldLabels: { institution: "Agencies", proponent: "Lead official", impact: "Human toll" },
   },
   // Other Executive Actions (2026-10-17): GSR's format with free-text
