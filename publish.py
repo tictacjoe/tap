@@ -18,7 +18,7 @@ Directory assumptions (override with flags if yours differ):
     government-services/entries/*.json
     oea/entries/*.json
     trumpfamily/entries/*.json
-    trumpfamily/moved_ids.json
+    tracker/moved_ids.json
     community-topics/entries/*.json
     tracker/output/posts.json
 
@@ -205,10 +205,10 @@ def publish_claim_checks(module, claims_file: Path, published_entries: list,
 
 
 def moved_targets_hidden(working, site):
-    """Move targets (tap-data trumpfamily/moved_ids.json) still hidden on the
+    """Move targets (tap-data tracker/moved_ids.json) still hidden on the
     site: publishing then would drop moved entries from their old tab before
     the new tab is visible (Phase B spec sec-7)."""
-    path = Path(working) / "trumpfamily" / "moved_ids.json"
+    path = Path(working) / "tracker" / "moved_ids.json"
     if not path.exists():
         return set()
     targets = {info["to"] for info in json.loads(path.read_text(encoding="utf-8")).values()}
@@ -352,7 +352,7 @@ def main():
     print()
 
     # --- moved-ids (Phase B): old-link redirects for site and connector ---
-    moved_src = working / "trumpfamily" / "moved_ids.json"
+    moved_src = working / "tracker" / "moved_ids.json"
     moved = json.loads(moved_src.read_text(encoding="utf-8")) if moved_src.exists() else {}
     print(f"=== moved-ids === {len(moved)} redirect(s)")
     if not args.dry_run:
