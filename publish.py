@@ -18,6 +18,7 @@ Directory assumptions (override with flags if yours differ):
     government-services/entries/*.json
     oea/entries/*.json
     trumpfamily/entries/*.json
+    dai/entries/*.json
     tracker/moved_ids.json
     community-topics/entries/*.json
     tracker/output/posts.json
@@ -28,6 +29,7 @@ Directory assumptions (override with flags if yours differ):
     data/government-services.json
     data/oea.json
     data/trumpfamily.json
+    data/dai.json
     data/moved-ids.json
     data/community-topics.json
     data/tracker.json
@@ -349,6 +351,24 @@ def main():
         print(f"  {len(included)} entries published, {excl_count} excluded")
     else:
         print(f"  WARNING: {tfs_src} not found, skipping")
+    print()
+
+    # --- dhs and ice (DAI, 2026-10-18) ---
+    # Own schema (dai/SCHEMA.md); published even while the site hides the
+    # tab, so Phase B entries can be checked before the cutover. An empty
+    # folder still publishes [] so the site's fetch never 404s.
+    print("=== dai ===")
+    dai_src = working / "dai" / "entries"
+    if dai_src.exists():
+        included, excl_count = publish_json_entries(
+            dai_src, site / "data" / "dai.json",
+            excluded_ids, dry_run=args.dry_run, check_glance=check_glance,
+            update_markers=update_markers,
+            timeline_fields=update_markers.TIMELINE_FIELDS["dai"]
+        )
+        print(f"  {len(included)} entries published, {excl_count} excluded")
+    else:
+        print(f"  WARNING: {dai_src} not found, skipping")
     print()
 
     # --- moved-ids (Phase B): old-link redirects for site and connector ---

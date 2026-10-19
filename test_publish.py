@@ -385,3 +385,19 @@ def test_publish_writes_empty_moved_ids(tmp_path):
     r = _run_publish(w, s)
     assert r.returncode == 0, r.stdout + r.stderr
     assert json.loads((s / "data/moved-ids.json").read_text()) == {}
+
+
+def test_publish_empty_dai_dir_writes_empty_array(tmp_path):
+    src = tmp_path / "dai" / "entries"
+    src.mkdir(parents=True)
+    (src / ".gitkeep").write_text("")
+    dest = tmp_path / "dai.json"
+    included, excluded = publish_json_entries(src, dest, set())
+    assert included == [] and excluded == 0
+    assert json.loads(dest.read_text()) == []
+
+
+def test_publish_main_has_a_dai_block():
+    text = (Path(__file__).parent / "publish.py").read_text(encoding="utf-8")
+    assert 'working / "dai" / "entries"' in text and 'site / "data" / "dai.json"' in text
+    assert 'TIMELINE_FIELDS["dai"]' in text

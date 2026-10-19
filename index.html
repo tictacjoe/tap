@@ -667,7 +667,7 @@
     letter-spacing: 0.02em;
   }
   /* CLA "List by individual": link to the official's Trump Family entries. */
-  .also-in-tfs { margin-left: 0.75rem; font-size: 0.85rem; }
+  .also-in-cross { margin-left: 0.75rem; font-size: 0.85rem; }
 
   /* Glance card (see the glance-head script block). The harm badge names
      the kind in words; colour is only a second signal. Two tones plus a
@@ -1672,6 +1672,30 @@ const TRACKERS = {
     glanceEnabled: true,
     fieldLabels: { institution: "Business", proponent: "Government link", impact: "Financial stake" },
   },
+  // DHS and ICE (DAI, 2026-10-18; spec in tap-data
+  // docs/superpowers/specs/2026-10-18-tap-dai-tracker-design.md). Own
+  // schema, mapped into GSR's shape at load by mapDaiEntry(), so kind
+  // "govservices" reuses every GSR rendering branch; buildDaiPeopleHtml()
+  // adds the People card (officials, agents, affected, each name linked to
+  // the source that justifies naming them). hidden: no tab, Headlines,
+  // search or deep link until the Phase B cutover -- keep equal to the
+  // connector's HIDDEN_TRACKERS (test_hidden_trackers_sync.py).
+  dai: {
+    label: "DHS and ICE",
+    data: [],
+    titleField: "title",
+    idField: "id",
+    dateField: "date_of_action",
+    dateAddedField: "date_added",
+    filterField: "domain",
+    filterLabel: "category",
+    statusField: "status",
+    kind: "govservices",
+    trackerKey: "dai",
+    glanceEnabled: true,
+    hidden: true,
+    fieldLabels: { institution: "Agencies", proponent: "Lead official", impact: "Human toll" },
+  },
   // Other Executive Actions (2026-10-17): GSR's format with free-text
   // `category` in place of `domain`, so kind "govservices" reuses every
   // GSR rendering branch. loadAllData() copies category into domain so
@@ -1847,7 +1871,11 @@ function domainColor(domain) {
     protection_rollback: "#7A3E4B",
     // Trump Family categories (reuse the palette above, one hue each).
     crypto: "#6B4B7A", foreign_deals: "#3E5C76", federal_contracts_investments: "#8B6F3E",
-    real_estate_licensing: "#4B6B4F", pardons_policy_favors: "#7A3E4B", official_roles: "#5C5A52"
+    real_estate_licensing: "#4B6B4F", pardons_policy_favors: "#7A3E4B", official_roles: "#5C5A52",
+    // DHS and ICE categories (same palette, one hue each).
+    raids_arrests: "#3E5C76", use_of_force: "#7A3E4B", detention_deaths_conditions: "#7A4B3E",
+    removals: "#6B4B7A", detention_contracts_money: "#8B6F3E", courts_defiance: "#4B6B4F",
+    policy_leadership: "#5C5A52"
   };
   return map[domain] || "#5C5A52";
 }
@@ -1870,6 +1898,14 @@ function govservicesDomainLabel(domain) {
     real_estate_licensing: "Real Estate & Licensing",
     pardons_policy_favors: "Pardons & Policy Favors",
     official_roles: "Official Roles",
+    // DHS and ICE categories (2026-10-18)
+    raids_arrests: "Raids & Arrests",
+    use_of_force: "Use of Force",
+    detention_deaths_conditions: "Detention Deaths & Conditions",
+    removals: "Removals",
+    detention_contracts_money: "Detention Contracts & Money",
+    courts_defiance: "Courts & Defiance",
+    policy_leadership: "Policy & Leadership",
   };
   return map[domain] || domain;
 }
@@ -2143,6 +2179,91 @@ function familyGroupKeys(entry) {
 }
 /* family-group-keys:end */
 
+/* map-dai-entry:start */
+/* Copies a DHS and ICE entry's own fields into the GSR names the
+   "govservices" rendering branches read; the DAI fields stay too. The
+   first named official is the "Lead official"; an entry with none (many
+   custody deaths) shows an empty one rather than the agency head. */
+function mapDaiEntry(e) {
+  const officials = ((e.people || {}).officials) || [];
+  const lead = officials[0] || {};
+  const ss = e.section_summaries || {};
+  return Object.assign({}, e, {
+    domain: e.category,
+    institution: (e.agencies || []).join(", "),
+    primary_proponent: { name: lead.name || "", role: lead.role || "" },
+    estimated_impact: e.human_toll || {},
+    section_summaries: Object.assign({}, ss, { estimated_impact: ss.human_toll }),
+  });
+}
+/* map-dai-entry:end */
+
+/* adapt-dai-entry:start */
+/* GSR's shape; the medium/full tiers name the agencies and the lead
+   official ("Lead official", not GSR's "Driven by") and the human toll. */
+function adaptDaiEntry(entry) {
+  const override = entry.narrative_override || {};
+  const brief = override.brief || entry.what_changed || "";
+  const agencies = (entry.agencies || []).join(", ");
+  const agencyText = agencies ? "Agencies: " + agencies + "." : "";
+  const o = entry.primary_proponent;
+  const leadText = o?.name ? "Lead official: " + o.name + (o.role ? " (" + o.role + ")" : "") + "." : "";
+  const medium = override.medium || combineTierText([brief, agencyText, leadText]);
+  const tollText = entry.human_toll?.summary ? "Human toll: " + entry.human_toll.summary : "";
+  const causeText = entry.cause ? "Pattern: " + entry.cause : "";
+  const full = override.full || combineTierText([medium, tollText, causeText]);
+  return stripAdaptedItemLabels(Object.assign(adaptGovServicesEntry(entry), {
+    tiers: [brief, medium, full],
+    tracker: "dai",
+    category: entry.category || null,
+  }));
+}
+/* adapt-dai-entry:end */
+
+/* build-dai-people-html:start */
+/* DAI-only aside card: the people named in the entry, in three groups,
+   each name linked to the first source that justifies naming them (the
+   naming standard, dai/SCHEMA.md); people not publicly identified are
+   described, not named; legal status labeled so it can't read as a
+   finding. Only http(s) sources become links. */
+function buildDaiPeopleHtml(entry, hl) {
+  const people = entry.people || {};
+  const link = (p) => {
+    const url = ((p && p.sources) || [])[0];
+    const name = hl(p && p.name);
+    return url && /^https?:\/\//i.test(url)
+      ? '<a href="' + escapeHtml(url) + '" target="_blank" rel="noopener">' + name + '</a>' : name;
+  };
+  const group = (label, list, detail) => {
+    const rows = (list || []).filter(p => p && p.name).map(p => {
+      const extra = detail(p);
+      return '<div class="field-value">' + link(p) + (extra ? ' — ' + hl(extra) : '') + '</div>';
+    });
+    return rows.length ? '<div class="field-label">' + label + '</div>' + rows.join("") : '';
+  };
+  const body =
+    group("Officials", people.officials, p => p.role) +
+    group("Agents", people.agents, p => [p.role, p.incident_role].filter(Boolean).join(", ")) +
+    group("Affected", people.affected, p => p.description) +
+    (people.unnamed_affected ? (people.affected && people.affected.length ? '' : '<div class="field-label">Affected</div>') +
+      '<div class="field-value"><em>' + hl(people.unnamed_affected) + '</em></div>' : '') +
+    (entry.legal_status ? '<div class="field-label">Legal status (not a finding)</div><div class="field-value">' + hl(entry.legal_status) + '</div>' : '');
+  return body ? '<div class="field-group entry-aside-card">' + body + '</div>' : '';
+}
+/* build-dai-people-html:end */
+
+/* dai-group-keys:start */
+/* "List by agency" / "List by official": an entry appears under each. */
+function daiAgencyGroupKeys(entry) {
+  const names = entry.agencies || [];
+  return names.length ? names.slice() : ["Unnamed"];
+}
+function daiOfficialGroupKeys(entry) {
+  const names = (((entry.people || {}).officials) || []).map(o => o && o.name).filter(Boolean);
+  return names.length ? names : ["Unnamed"];
+}
+/* dai-group-keys:end */
+
 /* adapt-prosecution-entry:start */
 function adaptProsecutionEntry(entry) {
   const override = entry.narrative_override || {};
@@ -2242,6 +2363,7 @@ function buildHeadlineItems() {
   TRACKERS.govservices.data.forEach(e => items.push(adaptGovServicesEntry(e)));
   TRACKERS.oea.data.forEach(e => items.push(adaptOeaEntry(e)));
   if (!TRACKERS.trumpfamily.hidden) TRACKERS.trumpfamily.data.forEach(e => items.push(adaptTrumpFamilyEntry(e)));
+  if (!TRACKERS.dai.hidden) TRACKERS.dai.data.forEach(e => items.push(adaptDaiEntry(e)));
   TRACKERS.prosecution.data.forEach(e => items.push(adaptProsecutionEntry(e)));
   TRACKERS.tracker.data.forEach(e => items.push(adaptReportingEntry(e)));
   // Claim-checks (community-submitted topics) are included here so they
@@ -2298,6 +2420,7 @@ const HEADLINE_TRACKER_MEDIUM = {
   prosecution: "Accountability",
   govservices: "Service Cuts",
   trumpfamily: "Family Deals",
+  dai: "Enforcement",
   oea: "Other Actions",
   tracker: "Reporting",
   communitytopics: "Claim-checks",
@@ -2307,6 +2430,7 @@ const HEADLINE_TRACKER_ABBR = {
   prosecution: "CLA",
   govservices: "GSR",
   trumpfamily: "TFS",
+  dai: "DAI",
   oea: "OEA",
   tracker: "RPT",
   communitytopics: "CC",
@@ -3515,6 +3639,13 @@ function visibleSearchText(entry, cfg) {
       parts.push(entry.business_entity?.family_stake, entry.government_nexus?.action, entry.legal_context);
       (entry.government_nexus?.also_officials || []).forEach(o => parts.push(o?.name, o?.role));
     }
+    // DAI People card (buildDaiPeopleHtml) and location.
+    if (cfg.trackerKey === "dai") {
+      (entry.agencies || []).forEach(a => parts.push(a));
+      parts.push(entry.location?.place, entry.location?.facility, entry.legal_status, entry.people?.unnamed_affected);
+      ["officials", "agents", "affected"].forEach(g => (entry.people?.[g] || []).forEach(p =>
+        parts.push(p?.name, p?.role, p?.incident_role, p?.description)));
+    }
   } else if (cfg.kind === "tracker") {
     parts.push(entry.date, entry.what_happened, entry.source_name);
   } else if (cfg.kind === "communitytopics") {
@@ -4109,6 +4240,7 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
       buildGsrCdrPatternCardHtml(entry, term, useRegex);
     const asideHtml =
       (cfg.trackerKey === "trumpfamily" ? buildTrumpFamilyCardHtml(entry, hl) : "") +
+      (cfg.trackerKey === "dai" ? buildDaiPeopleHtml(entry, hl) : "") +
       '<div class="field-group entry-aside-card"><div class="field-label">' + escapeHtml(L.institution || "Institution") + '</div><div class="field-value">' + hl(entry.institution) + '</div></div>' +
       '<div class="field-group entry-aside-card"><div class="field-label">' + escapeHtml(L.proponent || "Primary proponent") + '</div><div class="field-value"><strong>' + hl(entry.primary_proponent?.name) + '</strong> — ' + hl(entry.primary_proponent?.role) + (entry.primary_proponent?.note ? '<br><em>' + hl(entry.primary_proponent.note) + '</em>' : '') + '</div></div>' +
       (entry.estimated_impact?.figures?.length ? '<div class="field-group entry-aside-card">' + buildFiguresHtml(entry.estimated_impact.figures, hl) + '</div>' : '') +
@@ -4897,6 +5029,15 @@ function renderGroupToggle(cfg) {
   const statusLabel = document.getElementById("status-group-label");
   const statusCheckbox = document.getElementById("status-group-toggle");
   // Trump Family (2026-10-17): "List by family member" only; no status checkbox.
+  // DHS and ICE (2026-10-18): "List by agency" / "List by official".
+  if (cfg.trackerKey === "dai") {
+    sel.style.display = "";
+    sel.innerHTML = '<option value="">Individual cards</option><option value="agency">List by agency</option><option value="official">List by official</option>';
+    sel.value = groupMode;
+    sel.disabled = false;
+    statusLabel.style.display = "none";
+    return;
+  }
   if (cfg.trackerKey === "trumpfamily") {
     sel.style.display = "";
     sel.innerHTML = '<option value="">Individual cards</option><option value="family">List by family member</option>';
@@ -4927,38 +5068,43 @@ function renderGroupToggle(cfg) {
    "Department of Justice leadership (...)") have no comma and fall back
    to using their full string as their own one-off group, so nothing is
    silently dropped. */
-/* tfs-count-for-official:start */
-/* Officials a Trump Family entry names in its government link: the
-   official plus any also_officials (name before the first comma, like
-   officialGroupKey), each once. */
-function tfsEntryOfficialNames(e) {
-  const nexus = (e && e.government_nexus) || {};
-  const names = [nexus.official || {}].concat(nexus.also_officials || [])
-    .map(o => String((o && o.name) || "").split(",")[0].trim()).filter(Boolean);
+/* cross-view-officials:start */
+/* CLA "List by individual" cross-view (TFS Phase B, generalized for DAI
+   2026-10-18): trackers whose entries name officials outside CLA, in the
+   order their "Also in <tracker>" links appear. */
+const CROSS_VIEW_TRACKERS = ["trumpfamily", "dai"];
+
+/* Officials an entry names (name before the first comma, like
+   officialGroupKey), each once: TFS's government link (official plus
+   also_officials), DAI's people.officials. */
+function crossViewOfficialNames(trackerKey, e) {
+  let people = [];
+  if (trackerKey === "trumpfamily") {
+    const nexus = (e && e.government_nexus) || {};
+    people = [nexus.official || {}].concat(nexus.also_officials || []);
+  } else if (trackerKey === "dai") {
+    people = ((e && e.people) || {}).officials || [];
+  }
+  const names = people.map(o => String((o && o.name) || "").split(",")[0].trim()).filter(Boolean);
   return [...new Set(names)];
 }
 
-/* How many Trump Family entries name this CLA official in their
-   government link (official or also_officials). */
-function tfsCountForOfficial(name, tfsEntries) {
-  return (tfsEntries || []).filter(e => name && tfsEntryOfficialNames(e).includes(name)).length;
+/* How many of a cross-view tracker's entries name this official. */
+function crossViewCount(trackerKey, name, entries) {
+  return (entries || []).filter(e => name && crossViewOfficialNames(trackerKey, e).includes(name)).length;
 }
-/* tfs-count-for-official:end */
 
-/* tfs-only-officials:start */
-/* Officials named in Trump Family entries who have no CLA "List by
-   individual" group, sorted by name, with their TFS entry counts (CLA
-   shows each as an empty group with the "Also in Trump Family" link).
-   Uses tfsEntryOfficialNames (tfs-count-for-official block). */
-function tfsOnlyOfficials(claGroupNames, tfsEntries) {
+/* Officials named in a cross-view tracker who have no CLA group, sorted by
+   name, with counts (CLA shows each as an empty group with the link). */
+function crossViewOnlyOfficials(trackerKey, claGroupNames, entries) {
   const cla = new Set(claGroupNames || []);
   const counts = new Map();
-  (tfsEntries || []).forEach(e => tfsEntryOfficialNames(e).forEach(n => {
+  (entries || []).forEach(e => crossViewOfficialNames(trackerKey, e).forEach(n => {
     if (!cla.has(n)) counts.set(n, (counts.get(n) || 0) + 1);
   }));
-  return [...counts.entries()].sort((a, b) => a[0].localeCompare(b[0])).map(([name, count]) => ({ name, count }));
+  return [...counts.entries()].sort((x, y) => x[0].localeCompare(y[0])).map(([name, count]) => ({ name, count }));
 }
-/* tfs-only-officials:end */
+/* cross-view-officials:end */
 
 function officialGroupKey(entry) {
   const raw = (entry.official || "").trim();
@@ -5006,40 +5152,45 @@ function renderGroupedEntries(entries, cfg, container, keyFn, sortGroups, cardOp
     });
   });
   const sortedGroups = sortGroups([...groups.entries()]);
-  // CLA "List by individual" (TFS visible): officials named only in Trump
-  // Family entries get an empty group after the CLA ones, so their
-  // "Also in Trump Family" link is still reachable.
-  if (keyFn === officialGroupKey && !TRACKERS.trumpfamily.hidden) {
-    tfsOnlyOfficials([...groups.keys()], TRACKERS.trumpfamily.data)
-      .forEach(o => sortedGroups.push([o.name, []]));
-  }
+  // CLA "List by individual": officials named only in a visible
+  // cross-view tracker (TFS, DAI) get an empty group after the CLA ones, so
+  // their "Also in <tracker>" link is still reachable.
+  const crossKeys = keyFn === officialGroupKey
+    ? CROSS_VIEW_TRACKERS.filter(k => TRACKERS[k] && !TRACKERS[k].hidden) : [];
+  const seen = new Set(groups.keys());
+  crossKeys.forEach(k => crossViewOnlyOfficials(k, [...seen], TRACKERS[k].data).forEach(o => {
+    seen.add(o.name);
+    sortedGroups.push([o.name, []]);
+  }));
 
   container.innerHTML = "";
   sortedGroups.forEach(([name, groupEntries]) => {
     const div = document.createElement("div");
     div.className = "official-group";
-    // CLA "List by individual": point at this official's Trump Family
-    // entries (only once TFS is visible).
-    const tfsN = keyFn === officialGroupKey && !TRACKERS.trumpfamily.hidden
-      ? tfsCountForOfficial(name, TRACKERS.trumpfamily.data) : 0;
+    // CLA "List by individual": point at this official's entries in each
+    // visible cross-view tracker.
+    const alsoHtml = crossKeys.map(k => {
+      const n = crossViewCount(k, name, TRACKERS[k].data);
+      return n > 0 ? '<a href="#" class="also-in-cross" data-tracker="' + k + '" data-official="' + escapeHtml(name) +
+        '">Also in ' + escapeHtml(TRACKERS[k].label) + ': ' + n + (n === 1 ? ' entry' : ' entries') + ' →</a>' : '';
+    }).join("");
     div.innerHTML =
       '<div class="official-group-head">' +
         '<span class="official-group-caret">▶</span>' +
         '<span class="official-group-name">' + escapeHtml(name) + '</span>' +
         '<span class="official-group-count">' + groupEntries.length + (groupEntries.length === 1 ? ' entry' : ' entries') + (groupEntries.length ? '' : ' here') + '</span>' +
-        (tfsN > 0 ? '<a href="#" class="also-in-tfs" data-official="' + escapeHtml(name) + '">Also in Trump Family: ' + tfsN + (tfsN === 1 ? ' entry' : ' entries') + ' →</a>' : '') +
+        alsoHtml +
       '</div>' +
       '<div class="official-group-body"></div>';
     div.querySelector(".official-group-head").addEventListener("click", () => div.classList.toggle("open"));
-    const also = div.querySelector(".also-in-tfs");
-    if (also) also.addEventListener("click", (e) => {
+    div.querySelectorAll(".also-in-cross").forEach(also => also.addEventListener("click", (e) => {
       e.preventDefault();
       e.stopPropagation();
-      goToTrackerHome("trumpfamily");
+      goToTrackerHome(also.dataset.tracker);
       searchTerm = also.dataset.official;
       document.getElementById("search").value = searchTerm;
       renderDispatch();
-    });
+    }));
     const body = div.querySelector(".official-group-body");
     groupEntries.forEach(entry => {
       body.appendChild(buildEntryCard(entry, cfg, null, null, searchTerm, false, cardOpts));
@@ -5108,8 +5259,8 @@ function renderEntries() {
     ? toRender.length + " shown of " + filtered.length + " entries — search or filter to narrow further"
     : filtered.length + " of " + cfg.data.length + " entries shown";
 
-  if (filtered.length === 0 && cfg.data.length === 0 && ["oea", "trumpfamily"].includes(cfg.trackerKey)) {
-    // OEA and TFS ship empty: no search or filter is involved, so don't suggest changing one.
+  if (filtered.length === 0 && cfg.data.length === 0 && ["oea", "trumpfamily", "dai"].includes(cfg.trackerKey)) {
+    // OEA, TFS and DAI ship empty: no search or filter is involved, so don't suggest changing one.
     container.innerHTML = '<div class="empty-state">No entries yet.</div>';
     return;
   }
@@ -5130,6 +5281,12 @@ function renderEntries() {
 
   if (groupMode === "family" && cfg.trackerKey === "trumpfamily") {
     renderGroupedEntries(toRender, cfg, container, familyGroupKeys, sortGroupsByCount);
+    return;
+  }
+
+  if ((groupMode === "agency" || groupMode === "official") && cfg.trackerKey === "dai") {
+    renderGroupedEntries(toRender, cfg, container,
+      groupMode === "agency" ? daiAgencyGroupKeys : daiOfficialGroupKeys, sortGroupsByCount);
     return;
   }
 
@@ -5195,6 +5352,7 @@ const RELATED_TRACKER_FIELD_TO_KEY = {
   "government-services": "govservices",
   oea: "oea",
   trumpfamily: "trumpfamily",
+  dai: "dai",
 };
 
 /* True when a cross-reference's tracker field names a hidden tracker (TFS in
@@ -5899,13 +6057,14 @@ suggestSubmitBtn.addEventListener("click", () => {
 async function loadAllData() {
   document.getElementById("entries").innerHTML = '<div class="empty-state">Loading data\u2026</div>';
 
-  const [prosecutionResult, deregulationResult, trackerResult, govservicesResult, oeaResult, trumpfamilyResult, communitytopicsResult] = await Promise.allSettled([
+  const [prosecutionResult, deregulationResult, trackerResult, govservicesResult, oeaResult, trumpfamilyResult, daiResult, communitytopicsResult] = await Promise.allSettled([
     fetch("data/prosecution.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
     fetch("data/deregulation.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
     fetch("data/tracker.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
     fetch("data/government-services.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
     fetch("data/oea.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
     fetch("data/trumpfamily.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
+    fetch("data/dai.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
     fetch("data/community-topics.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
   ]);
 
@@ -5960,6 +6119,13 @@ async function loadAllData() {
     TRACKERS.trumpfamily.data = trumpfamilyResult.value.map(mapTrumpFamilyEntry);
   } else if (!TRACKERS.trumpfamily.hidden) {
     loadErrors.push("trumpfamily.json (" + trumpfamilyResult.reason.message + ")");
+  }
+
+  // DHS and ICE: see TRACKERS.dai's comment; same hidden-aware handling.
+  if (daiResult.status === "fulfilled") {
+    TRACKERS.dai.data = daiResult.value.map(mapDaiEntry);
+  } else if (!TRACKERS.dai.hidden) {
+    loadErrors.push("dai.json (" + daiResult.reason.message + ")");
   }
 
   if (communitytopicsResult.status === "fulfilled") {
