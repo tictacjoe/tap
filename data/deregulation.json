@@ -7130,9 +7130,9 @@
     "agency": "EPA",
     "domain": "environmental",
     "status": "Fully Repealed",
-    "date_of_action": "2026-02-19 (final rule); effective 2026-04-27",
-    "original_rule_summary": "2024 Biden-era EPA strengthening of the original 2012 MATS rule, which tightened the mercury emissions limit for lignite-fired power plant units from 4.0 lb/TBtu to 1.2 lb/TBtu and added continuous particulate matter monitoring requirements.",
-    "what_changed": "EPA finalized a full repeal of the 2024 strengthening, reverting the lignite-unit mercury limit back to the original 2012 baseline of 4.0 lb/TBtu and eliminating the continuous PM monitoring requirement added in 2024. This is a distinct, more recent action from the 2020 MATS cost-benefit finding reversal (see separate entry mats-cost-benefit-rollback-trump1), which addressed the rule's legal justification rather than its numeric limits.",
+    "date_of_action": "2026-02-20 (final rule); published 2026-02-24; effective 2026-04-27",
+    "original_rule_summary": "2024 Biden-era EPA strengthening of the original 2012 MATS rule, which tightened the filterable particulate matter limit for all existing coal-fired units from 0.030 to 0.010 lb/MMBtu, tightened the mercury emissions limit for lignite-fired power plant units from 4.0 lb/TBtu to 1.2 lb/TBtu and added continuous particulate matter monitoring requirements.",
+    "what_changed": "EPA finalized a full repeal of the 2024 strengthening, returning each revised standard to its 2012 level: the filterable particulate matter limit for all existing coal-fired units went back from 0.010 to 0.030 lb/MMBtu (along with the matching limits on other toxic metals), the lignite-unit mercury limit went back to 4.0 lb/TBtu, and plants no longer have to use continuous PM monitors to show compliance. This is a distinct, more recent action from the 2020 reversal of the MATS cost-benefit finding (covered in a separate entry), which addressed the rule's legal justification rather than its numeric limits. A coalition of states and nonprofit groups has challenged the repeal in the D.C. Circuit (Air Alliance Houston v. EPA, consolidated with Illinois v. EPA); the case is on hold while EPA considers a petition for reconsideration.",
     "primary_proponent": {
       "name": "Lee Zeldin",
       "role": "EPA Administrator",
@@ -7142,39 +7142,43 @@
       "Coal-fired power plant operators, particularly lignite-fired units"
     ],
     "estimated_health_impact": {
-      "summary": "**The original 2012 MATS rule was credited with a roughly 90% cut in power-plant mercury emissions and up to 11,000 lives saved annually.** This repeal reverses the 2024 strengthening and allows lignite-fired units to emit more than double the mercury permitted under the 2024 standard. EPA's own 2024 Regulatory Impact Analysis for the standards now being repealed estimated $300 million/year in health benefits and $130 million/year in climate benefits, against $860 million in total compliance costs to industry between 2028-2037. Notably, EPA's 2026 RIA for the repeal itself declines to monetize the health benefits being given up.",
+      "summary": "**The original 2012 MATS rule was credited with a roughly 90% cut in power-plant mercury emissions and up to 11,000 lives saved annually.** This repeal reverses the 2024 strengthening and allows lignite-fired units to emit more than three times the mercury permitted under the 2024 standard. EPA's own 2024 Regulatory Impact Analysis for the standards now being repealed estimated $300 million in health benefits and $130 million in climate benefits, against $860 million in compliance costs to industry, each a present value over 2028-2037. Notably, EPA's 2026 RIA for the repeal itself declines to monetize the health benefits being given up.",
       "figures": [
         {
-          "metric": "EPA's own 2024 estimate of annual health benefits from the now-repealed standards",
-          "value": "$300,000,000/year",
+          "metric": "EPA's own 2024 estimate of health benefits from the now-repealed standards (present value, 2028-2037)",
+          "value": "$300,000,000",
           "source": "EPA 2024 Regulatory Impact Analysis, cited by Inside Climate News"
         },
         {
-          "metric": "EPA's own 2024 estimate of annual climate benefits from the now-repealed standards",
-          "value": "$130,000,000/year",
+          "metric": "EPA's own 2024 estimate of climate benefits from the now-repealed standards (present value, 2028-2037)",
+          "value": "$130,000,000",
           "source": "EPA 2024 Regulatory Impact Analysis, cited by Inside Climate News"
         },
         {
-          "metric": "Total industry compliance cost estimate, 2028-2037",
+          "metric": "Industry compliance cost estimate (present value, 2028-2037)",
           "value": "$860,000,000",
           "source": "EPA 2024 Regulatory Impact Analysis, cited by Inside Climate News"
         }
       ],
       "caveat": "These figures come from EPA's own 2024 analysis of the standards being repealed, not an outside advocacy estimate -- strong for debate use. EPA's own 2026 RIA for the repeal itself notably declines to monetize the health benefits being forfeited, which is itself a useful procedural point (an agency choosing not to quantify what it's giving up)."
     },
-    "confidence_note": "Strong on the facts of the rule change itself (EPA.gov primary source, clear before/after numeric limits) and now strong on health impact too, with EPA's own prior cost-benefit figures. The 'EPA's new RIA declines to monetize health benefits' point remains a good secondary procedural argument. Re-verified with a targeted search for developments since last_verified, CDR batch 2 (2026-09-08) -- no developments found since the last recheck.",
-    "pull_quote": "This repeal reverses the 2024 strengthening and allows lignite-fired units to emit more than double the mercury permitted under the 2024 standard.",
+    "confidence_note": "Strong on the facts of the rule change itself (EPA.gov primary source, clear before/after numeric limits) and now strong on health impact too, with EPA's own prior cost-benefit figures. The 'EPA's new RIA declines to monetize health benefits' point remains a good secondary procedural argument. Re-verified with a targeted search for developments since last_verified, CDR batch 2 (2026-09-08) -- no developments found since the last recheck. Re-verified against EPA's Federal Register final rule: the repeal also restored the 2012 particulate limit for all existing coal units, and EPA finalized it on Feb. 20, 2026 (published Feb. 24).",
+    "pull_quote": "This repeal reverses the 2024 strengthening and allows lignite-fired units to emit more than three times the mercury permitted under the 2024 standard.",
     "section_summaries": {
-      "what_changed": "EPA repealed the 2024 mercury-limit strengthening for lignite plants, reverting to the 2012 baseline and dropping continuous PM monitoring.",
-      "estimated_impact": "EPA's own 2024 analysis valued the now-repealed strengthening at $300M/year in health benefits, but its 2026 repeal analysis won't monetize the loss.",
+      "what_changed": "EPA repealed the 2024 tightening, returning coal plants' particulate limit and lignite plants' mercury limit to 2012 levels and dropping continuous PM monitoring.",
+      "estimated_impact": "EPA's own 2024 analysis valued the now-repealed strengthening at $300M in health benefits over 2028-2037, but its 2026 repeal analysis won't monetize the loss.",
       "confidence_note": "Strong on both the rule change and health impact, both from EPA's own figures across two rulemakings; a solid before/after comparison exists."
     },
-    "last_verified": "2026-09-08",
+    "last_verified": "2026-10-19",
     "date_added": "2026-07-03",
     "sources": [
       {
         "name": "US EPA — Mercury and Air Toxics Standards (MATS) rule page",
         "url": "https://www.epa.gov/mats"
+      },
+      {
+        "name": "Federal Register — Final Repeal of Amendments to the MATS Rule (91 FR 9088, Feb. 24, 2026)",
+        "url": "https://www.federalregister.gov/documents/2026/02/24/2026-03638/national-emission-standards-for-hazardous-air-pollutants-coal--and-oil-fired-electric-utility-steam"
       },
       {
         "name": "Earthjustice — EPA Dismantles Protections for Mercury and Air Toxics From Power Plants",
@@ -7189,8 +7193,8 @@
         "url": "https://eelp.law.harvard.edu/tracker/mercury-and-air-toxics-standards/"
       }
     ],
-    "short_summary": "Reverted coal plant mercury limits to 2012 levels, undoing 2024 tightening.",
-    "last_substantive_update": "2026-09-08",
+    "short_summary": "Reverted coal plant mercury and particulate limits to 2012 levels, undoing 2024 tightening.",
+    "last_substantive_update": "2026-10-19",
     "glance": {
       "who": "Lee Zeldin (EPA Administrator)",
       "what": "Repealed the 2024 tightening of coal-plant mercury and particulate limits, reverting to 2012 levels",
@@ -7199,7 +7203,7 @@
         "certainty": "projected",
         "who": "People near coal-fired power plants"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-10-19"
     }
   },
   {
