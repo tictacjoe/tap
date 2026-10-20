@@ -1,6 +1,6 @@
 {
  "version": 1,
- "as_of": "2026-10-19",
+ "as_of": "2026-10-20",
  "checks": {
   "abrego-garcia-vindictive-prosecution-2025-2026": {
    "0": {
@@ -10002,10 +10002,34 @@
     "archive": false
    },
    "7": {
+    "state": "partly",
+    "why": "The fetched text is the attached joint motion (Document 253-1, filed 09/30/26), which confirms the Rule 62.1 indicative-ruling request, the 'stayed since March 28, 2025' language, and that Plaintiffs 'will pursue final judgment' instead of a new preliminary injunction; the pre-motion letter itself (ECF 253) and its request for leave to file are not in the provided text.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-10-20",
+    "kind": "fact",
+    "archive": false
+   },
+   "8": {
     "state": "unopened",
     "why": "",
     "host": "courtlistener.com",
     "date": "2026-10-06",
+    "kind": "fact",
+    "archive": false
+   },
+   "9": {
+    "state": "supports",
+    "why": "The October 7, 2026 joint letter (Document 256) on the motion to depose Jackson and Davis contains Plaintiffs' argument 'given the present unavailability of Lewin, Marocco and Musk' and Defendants' position that the Fourth Circuit's In re Musk order 'applies equally' to Davis and Jackson, exactly as the claim states.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-10-20",
+    "kind": "fact",
+    "archive": false
+   },
+   "10": {
+    "state": "partly",
+    "why": "The notice (ECF 257, filed 10/14/26) confirms the October 13, 2026 cert grant in No. 25-1103, the question including 'a deposition of USDS's head,' and that defendants cite it as a reason to deny deposing Davis; the claim's final sentence about the Supreme Court docket listing 'Petition GRANTED' is not addressed by this source.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-10-20",
     "kind": "fact",
     "archive": false
    }
@@ -10946,6 +10970,14 @@
     "why": "Military.com reports Parnell's appointment of Devine while he keeps his Pentagon job, continued DoD compensation, the official's description of editorial versus business-operations roles, and Judge Mehta's October 6 ruling; it notes an October 14 update.",
     "host": "military.com",
     "date": "2026-10-16",
+    "kind": "fact",
+    "archive": false
+   },
+   "18": {
+    "state": "supports",
+    "why": "The docket shows the October 15 extension motion, Smith's October 19 opposition, and Judge Mehta's October 19 minute order setting a November 12, 2026 deadline and calling her December 19 reinstatement concern 'not well taken' as 'a remedies question that will arise only if she prevails on the merits.'",
+    "host": "courtlistener.com",
+    "date": "2026-10-20",
     "kind": "fact",
     "archive": false
    }
