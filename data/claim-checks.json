@@ -6240,10 +6240,10 @@
     "archive": false
    },
    "1": {
-    "state": "unopened",
-    "why": "",
-    "host": "spokesman.com",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "The syndicated copy carries the Robles/Turkewitz/Kanno-Youngs byline and contains all three quoted passages: Grenell's Chevron offer, terms Venezuela 'deemed more attractive,' and the lack of coordination leaving Venezuelan officials unclear who spoke for Trump.",
+    "host": "sanjuandailystar.com",
+    "date": "2026-10-19",
     "kind": "fact",
     "archive": false
    },
@@ -10183,13 +10183,21 @@
    },
    "2": {
     "state": "supports",
+    "why": "The opinion's caption shows No. 25-1338C, CSI Aviation v. United States with Salus Worldwide Solutions as intervenor, public version filed May 12, 2026, and states verbatim that the CSRO contract's expected maximum value was $915,000,000.00, with tasks covering both voluntary returns and involuntary removals; the quoted figure matches exactly (the Walters ownership link is identifying context the source does not address).",
+    "host": "storage.courtlistener.com",
+    "date": "2026-10-19",
+    "kind": "fact",
+    "archive": false
+   },
+   "3": {
+    "state": "supports",
     "why": "The excerpt describes the $108 million Boeing 737-8 MAX Business Jet 'Trump gifted to Melania' as at the center of a TSA investigation, operated by Daedalus Aviation until DHS transferred it to CSI Aviation; the subhead attributes the restricted-airspace problem to 'Botched paperwork' over D.C.'s restricted airspace.",
     "host": "thepunchup.substack.com",
     "date": "2026-10-16",
     "kind": "fact",
     "archive": false
    },
-   "3": {
+   "4": {
     "state": "supports",
     "why": "The source states the $464 million no-bid contract for 10 used planes, the 'unusual and compelling urgency' exemption, the refusal to release the rationale on security grounds, the $29 billion/500-contract and two-thirds-of-$34-billion figures with 2025 and 2024 comparisons, that no other major agency used it as frequently, and the separate nearly $700 million Walters company contract.",
     "host": "dnyuz.com",
@@ -10197,7 +10205,7 @@
     "kind": "fact",
     "archive": false
    },
-   "4": {
+   "5": {
     "state": "supports",
     "why": "The Daily Beast article reports the 10-plane rushed procurement with 'unusual and compelling urgency', the DHS spokesperson quote, the Noem spokeswoman's 'finalized' statement, the $303 million increase, and Walters's $10,000 donation and denial of open affiliation.",
     "host": "thedailybeast.com",
@@ -10205,7 +10213,7 @@
     "kind": "fact",
     "archive": false
    },
-   "5": {
+   "6": {
     "state": "supports",
     "why": "The August 25, 2026 letter to Secretary Mullin quotes contracting records showing the cost 'increased by $303 million on the day that Mr. Mullin was sworn in as secretary,' and elsewhere describes the $464 million no-bid purchase of 10 airplanes, Walters's $10,000 donation to a PAC supporting Noem, cites FAR 6.302-2(a)(2) for the urgency exception, and requests information by September 8, 2026.",
     "host": "hsgac.senate.gov",
@@ -10213,7 +10221,7 @@
     "kind": "fact",
     "archive": false
    },
-   "6": {
+   "7": {
     "state": "supports",
     "why": "The Daily Wire relays the $108M/<$90M, $106M/~$83M, and $45M-each figures, Noem's last-hours contract change, Mullin's consultation with Wiles who advised against blocking, Noem's quoted statement and retraction demand, and Daedalus's price defense.",
     "host": "dailywire.com",
@@ -10221,7 +10229,7 @@
     "kind": "fact",
     "archive": false
    },
-   "7": {
+   "8": {
     "state": "supports",
     "why": "The New Republic states all five planes were bought on Noem's last morning, describes Daedalus as a no-bid middleman, and says Walters's companies got over $900 million in agency contracts after Noem's appointment.",
     "host": "newrepublic.com",
@@ -10229,7 +10237,7 @@
     "kind": "fact",
     "archive": false
    },
-   "8": {
+   "9": {
     "state": "supports",
     "why": "IBTimes UK reports the five aircraft pushed the contract to $464 million for 10 planes without competitive bidding, no federal contracts before 2025, the 737s idle in Lake Charles without crews, the unsubstantiated $279 million savings claim, and Noem's retraction demand with the Times standing by its reporting.",
     "host": "ibtimes.co.uk",
@@ -10237,7 +10245,7 @@
     "kind": "fact",
     "archive": false
    },
-   "9": {
+   "10": {
     "state": "supports",
     "why": "The Daily Beast quotes Noem calling the Times 'DISHONEST', referring to a 'libelous story', and saying the wording 'creates an inference of impropriety that is not supported by the underlying facts.'",
     "host": "thedailybeast.com",
@@ -10245,7 +10253,7 @@
     "kind": "fact",
     "archive": false
    },
-   "10": {
+   "11": {
     "state": "supports",
     "why": "The letter says it is the senators' fourth since Mullin took office, cites the Oct 4 reporting, lists the $108 million 737 (asking price below $90 million), two $45 million 737s and two $53 million Gulfstreams with an $11 million+ markup each, the 'more than $2 million in both May and June' storage payments, Salus's separate no-bid contracts, and requests contracts, per-aircraft costs and disposition, and Walters communications with Noem and Lewandowski by October 22, 2026.",
     "host": "hsgac.senate.gov",
@@ -10253,11 +10261,19 @@
     "kind": "fact",
     "archive": false
    },
-   "11": {
+   "12": {
     "state": "supports",
     "why": "The MS NOW piece states the <1% (2024) to nearly two-thirds (through August) shift per the Times, DHS's 92% share of $18.4 billion per CRS, Salus's $915 million self-deportation deal, Walters running Daedalus with no federal contracting history, and DHS declining to explain the plane purchase citing national security.",
     "host": "ms.now",
     "date": "2026-10-16",
+    "kind": "fact",
+    "archive": false
+   },
+   "13": {
+    "state": "supports",
+    "why": "The USAspending record for PIID 70RDA225FR0000018 shows recipient Salus, date signed 2025-05-22, total obligation 748131718.65, base and all options 757006758.65, and potential end date 2026-11-21, matching every figure in the claim.",
+    "host": "api.usaspending.gov",
+    "date": "2026-10-19",
     "kind": "fact",
     "archive": false
    }
@@ -13939,9 +13955,9 @@
   "rubio-ortiz-venezuela-prisoner-swap-2025": {
    "0": {
     "state": "supports",
-    "why": "CNN confirms the completion of the swap on July 18, 2025 -- about 250 Venezuelans returned from El Salvador in exchange for 10 Americans -- and Rubio's public confirmation on social media that the Americans were 'on their way to freedom.'",
+    "why": "CNN reports the July 18 swap of about 250 Venezuelans from El Salvador for 10 US nationals, includes the quoted 252-citizens line, and records Rubio's public statement on the release.",
     "host": "cnn.com",
-    "date": "2026-09-15",
+    "date": "2026-10-19",
     "kind": "fact",
     "archive": false
    },
@@ -13954,28 +13970,36 @@
     "archive": false
    },
    "2": {
-    "state": "partly",
-    "why": "Newsweek, citing Venezuelan and Spanish court records it reviewed, confirms Ortiz's triple-murder conviction and sentence. However, Cabello's quoted remark ('We delivered murderers for you... They were in hell. Today they are in Venezuela') is a taunting aside, not a stated confirmation that U.S. officials were told of Ortiz's conviction in advance and still insisted on his release; the article does not actually make that specific assertion.",
+    "state": "supports",
+    "why": "Newsweek states Ortiz was sentenced to 30 years for a 2016 Madrid triple homicide per Venezuelan and Spanish court records it reviewed, and that a State Department spokesperson declined to comment on his specific case.",
     "host": "newsweek.com",
-    "date": "2026-09-15",
+    "date": "2026-10-19",
     "kind": "fact",
     "archive": false
    },
    "3": {
-    "state": "not_found",
-    "why": "The NBC News source discusses Ortiz's repatriation and background generally but never states that 8 of the 10 freed Americans were officially classified as wrongfully detained versus Ortiz, nor does it mention a 2023 Biden-administration swap that supposedly excluded Ortiz. The source does not address the specific facts asserted in the claim.",
-    "host": "nbcnews.com",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "The ABC syndicated text contains each quoted element: the Jan. 9, 2024 Caracas sentencing, Cabello's statement that U.S. officials were told of the conviction, the U.S. official's statement that the U.S. was aware of Ortiz's past, and eight of 10 classified as wrongfully detained but not Ortiz.",
+    "host": "yahoo.com",
+    "date": "2026-10-19",
     "kind": "fact",
     "archive": false
    },
    "4": {
     "state": "supports",
-    "why": "The NYT reports that by the time of the extraction some State Department officials had realized one prisoner was a convicted triple murderer.",
-    "host": "nytimes.com",
-    "date": "2026-09-23",
+    "why": "The July 25, 2025 Turkewitz/NYT syndicated piece states that at least some Trump officials knew his criminal past, that one person placed him in Orlando, that Biden officials in 2023 decided not to take him in a different swap, and that eight of 10 had been declared wrongfully detained but Ortiz had not.",
+    "host": "westhawaiitoday.com",
+    "date": "2026-10-19",
     "kind": "fact",
     "archive": false
+   },
+   "5": {
+    "state": "supports",
+    "why": "The archived NYT article quotes the internal email in which Kozak wrote he would 'stick with 10 as we did ask for and receive 10,' and states the State Department has not answered when exactly they learned about his record.",
+    "host": "nytimes.com",
+    "date": "2026-10-19",
+    "kind": "fact",
+    "archive": true
    }
   },
   "rubio-signal-autodelete-court-contradiction-2026": {
@@ -16089,17 +16113,41 @@
    },
    "4": {
     "state": "supports",
-    "why": "Metro Weekly confirms the 49-page April 18 ruling fully vacating the Kennedy Declaration, the finding that HHS lacks authority to set standards overriding states, and the permanent injunction against implementing the Declaration or any \"materially similar policy\" -- plus, elsewhere in the article, the notice-and-comment/APA and statutory-authority findings.",
-    "host": "metroweekly.com",
-    "date": "2026-09-15",
+    "why": "The Lambda Legal history timeline lists the April 16, 2026 Fourth Circuit denial of a stay, the May 21, 2026 denial of full-court consideration, and the March 4, 2025 grant of the nationwide injunction together with denial of a stay pending appeal.",
+    "host": "lambdalegal.org",
+    "date": "2026-10-19",
     "kind": "fact",
     "archive": false
    },
    "5": {
-    "state": "unopened",
-    "why": "",
-    "host": "law360.com",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "Metro Weekly reports Judge Kasubhai's 49-page April 18 ruling vacated the Kennedy Declaration in its entirety, found HHS lacked authority to set standards of care overriding state standards, referenced the APA notice-and-comment violation, and permanently blocked HHS and its OIG from implementing it or any 'materially similar policy,' with relief for providers in the plaintiff jurisdictions.",
+    "host": "metroweekly.com",
+    "date": "2026-10-19",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
+    "state": "partly",
+    "why": "The provided text confirms CMS-2451-F, the 2026-08-13 publication date, the under-18 Medicaid and under-19 CHIP funding bar, reliance on section 5(a) of EO 14187, the 'consistent with the directive in EO 14187' language, and the statement that the rule does not conflict with the preliminary injunctions; however, the truncated text does not show the October 13, 2026 effective date, the 91 FR 52406 citation, the six-month continued-funding provision for current hormone patients, or name the Washington injunction (only PFLAG is visible).",
+    "host": "public-inspection.federalregister.gov",
+    "date": "2026-10-19",
+    "kind": "fact",
+    "archive": false
+   },
+   "7": {
+    "state": "supports",
+    "why": "The complaint, No. 1:26-cv-14051 in the District of Massachusetts filed 09/02/26, lists Illinois first among 21 states plus D.C. (Pennsylvania via Governor Shapiro), alleges CMS acted 'without precedent or Congressional authorization,' and asks the court to 'vacate and set aside the Rule.'",
+    "host": "coag.gov",
+    "date": "2026-10-19",
+    "kind": "fact",
+    "archive": false
+   },
+   "8": {
+    "state": "supports",
+    "why": "The Clearinghouse summary states defendants moved on May 18, 2026 to amend the judgment to clarify its scope, the court denied the motion on September 17, 2026, and the case remained within its appeal window as of September 30, 2026.",
+    "host": "clearinghouse.net",
+    "date": "2026-10-19",
     "kind": "fact",
     "archive": false
    }
@@ -18732,58 +18780,42 @@
   },
   "waltz-nsc-signal-chat-proliferation-2025": {
    "0": {
-    "state": "partly",
-    "why": "The Reuters wire item confirms the '20 group chats' figure and that four people who were added to the chats were the sources, but this particular source's list of covered topics is 'China, Gaza, Middle East policy, Africa and Europe' -- it does not mention Ukraine, does not distinguish 'two with direct knowledge of at least 20,' and does not include the quoted claim that all four sources said they witnessed sensitive information or the 'Waltz built the entire NSC communications process on Signal' quote.",
-    "host": "yahoo.com",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "Politico's April 2, 2025 piece cites four people added to the chats, two with knowledge of at least 20, lists Ukraine, China, Gaza, Middle East, Africa and Europe, says all four saw sensitive information discussed, and carries the quoted 'built the entire NSC communications process on Signal' line.",
+    "host": "politico.com",
+    "date": "2026-10-19",
     "kind": "fact",
-    "archive": false
+    "archive": true
    },
    "1": {
-    "state": "partly",
-    "why": "The HuffPost article does state that Signal/Gmail use 'may also violate federal record-keeping regulations that stipulate official communications must be preserved,' but this is the article's own framing, not attributed to quoted 'veteran national security officials,' and the article does not address a regulation specifically protecting sensitive information from foreign adversaries or the auto-delete configuration detail.",
-    "host": "huffpost.com",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "The article states veteran national security officials warned the practice potentially violates regulations on protecting sensitive information from foreign adversaries and federal recordkeeping laws if chats auto-delete.",
+    "host": "politico.com",
+    "date": "2026-10-19",
     "kind": "fact",
-    "archive": false
+    "archive": true
    },
    "2": {
-    "state": "not_found",
-    "why": "This source quotes Reps. Ted Lieu and Jimmy Gomez reacting to the Politico report; it does not mention Rep. Gerry Connolly or contain any of the three quotes ('reckless dissemination of potentially classified material,' 'raises immediate and deeply alarming concerns,' 'as far away from our nation's secrets as humanly possible') the claim attributes to him.",
+    "state": "supports",
+    "why": "The reposted Common Dreams piece quotes Lieu's 'Waltz must resign. Hegseth must resign' and Gomez's 'How many more are there?' and his statement that Waltz and Hegseth 'need to be fired.'",
     "host": "lieu.house.gov",
-    "date": "2026-09-15",
+    "date": "2026-10-19",
     "kind": "fact",
     "archive": false
    },
    "3": {
-    "state": "partly",
-    "why": "The NBC News article confirms the 47-43 confirmation vote and the exact named crossover votes (Fetterman, Kelly, Shaheen for; Rand Paul against), but it does not mention a July 15, 2025 hearing date, a Sen. Chris Coons exchange, or Waltz's cybersecurity-standards defense -- none of that specific hearing content appears in this source.",
-    "host": "nbcnews.com",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "The July 15, 2025 transcript has Coons's 'not an appropriate, secure means' line and 'demonstrably sensitive information,' and Waltz's replies that Signal 'was recommended in the Biden-era CISA guidance,' that 'there was no classified information shared,' and that DoD was still conducting an investigation.",
+    "host": "coons.senate.gov",
+    "date": "2026-10-19",
     "kind": "fact",
     "archive": false
    },
    "4": {
-    "state": "not_found",
-    "why": "The source is the same original HuffPost article about the initial Politico report; it predates and has no bearing on whether new reporting emerged by the 2026-08-19-to-2026-08-22 re-verification window the claim addresses.",
-    "host": "huffpost.com",
-    "date": "2026-09-15",
-    "kind": "fact",
-    "archive": false
-   },
-   "5": {
-    "state": "not_found",
-    "why": "The source is the same original HuffPost article about the initial Politico report; it predates and has no bearing on whether new reporting emerged by the 2026-08-22-to-2026-08-26 re-verification window the claim addresses.",
-    "host": "huffpost.com",
-    "date": "2026-09-15",
-    "kind": "fact",
-    "archive": false
-   },
-   "6": {
-    "state": "not_found",
-    "why": "The source is the same original HuffPost article about the initial Politico report; it predates and has no bearing on whether new reporting emerged by the 2026-08-26-to-2026-09-02 re-verification window the claim addresses.",
-    "host": "huffpost.com",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "NBC reports the Sept. 19, 2025 47-43 confirmation vote, Fetterman, Kelly and Shaheen as the only Democratic yes votes, Rand Paul as the sole Republican no, and that Waltz had been on thin ice since March over adding a journalist to the Yemen-strikes Signal thread.",
+    "host": "nbcnews.com",
+    "date": "2026-10-19",
     "kind": "fact",
     "archive": false
    }
