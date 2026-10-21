@@ -202,7 +202,8 @@ def publish_claim_checks(module, claims_file: Path, published_entries: list,
             json.dump(public, fh, indent=1, ensure_ascii=False)
             fh.write("\n")
     print(f"  claim checks: {report['published']} published, {report['dropped_stale']} dropped as stale, "
-          f"{report['unchecked']} evidence items without a check, {report['withheld']} withheld for review")
+          f"{report['unchecked']} evidence items without a check, {report.get('recheck_notes', 0)} recheck notes (never checked), "
+          f"{report['withheld']} withheld for review")
     return report
 
 
