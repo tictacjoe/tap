@@ -3035,7 +3035,7 @@
       ],
       "caveat": "Counts come from DHS's own notice (CHNV), news reports and advocacy groups, and overlap: the 532,000 CHNV figure counts everyone ever paroled, many of whom had other status or whose parole had already ended, and CBP One counts range from nearly 900,000 to more than 936,000 depending on the source and period; the 985,000 email figure is Politico's, as relayed by a policy tracker. The Reuters U4U figures were read only in a Ukrainian outlet's summary. No official count of former parolees arrested or removed was found. DHS's stated rationale: the CHNV programs \"do not serve a significant public benefit\" and are inconsistent with the President's foreign policy goals (Federal Register); DHS Assistant Secretary Tricia McLaughlin said CHNV \"was abused by the previous administration to admit hundreds of thousands of poorly vetted illegal aliens\"; USCIS cited fraud such as \"serial sponsors\" for the benefits pause; and DHS called the CBP One ruling \"blatant judicial activism,\" saying it \"had full authority to revoke parole.\" The First Circuit agreed DHS likely could end CHNV parole categorically, and Burroughs held that courts cannot review DHS's choice to end parole categorically rather than case by case."
     },
-    "cause": "[TAP Analysis, not sourced] Part of the same drive to strip legal status from people admitted through lawful humanitarian channels as the country-by-country moves in the TPS terminations entry; the loss of parolee and TPS workers in nursing homes is in the TPS and parole caregiver entry.",
+    "cause": "[TAP Analysis, not sourced] Part of the same drive to strip legal status from people admitted through lawful humanitarian channels as the country-by-country moves in the TPS terminations entry; the loss of parolee and TPS workers in nursing homes is in the TPS and parole caregiver entry; DHS's parallel move to terminate refugee status is in the refugee status terminations entry.",
     "cause_references": [
       {
         "match": "the TPS terminations entry",
@@ -3046,6 +3046,11 @@
         "match": "the TPS and parole caregiver entry",
         "tracker": "dai",
         "id": "tps-parole-revocation-nursing-home-staffing-crisis-2025"
+      },
+      {
+        "match": "the refugee status terminations entry",
+        "tracker": "dai",
+        "id": "uscis-refugee-status-terminations-2025-2026"
       }
     ],
     "pull_quote": "\"[W]hen Defendants terminated the impacted noncitizens' parole without observing the process mandated by statute and by their own regulations, they took action that was 'not in accordance with law.'\" -- U.S. District Judge Allison Burroughs, March 31, 2026, as quoted by NPR",
@@ -4522,7 +4527,7 @@
     "date_added": "2026-10-21",
     "last_substantive_update": "2026-10-21",
     "last_verified": "2026-10-21",
-    "cause": "[TAP Analysis, not sourced] Part of a broader effort to remove legal status from people who entered or stayed through lawful humanitarian programs, turning them into removable migrants; the CHNV parole termination's toll on nursing-home staffing is in the TPS and parole caregiver entry, the parole terminations themselves (CHNV, CBP One, Uniting for Ukraine) are in the humanitarian parole terminations entry, and the Somalia termination came alongside the Somali-American denaturalization threat.",
+    "cause": "[TAP Analysis, not sourced] Part of a broader effort to remove legal status from people who entered or stayed through lawful humanitarian programs, turning them into removable migrants; the CHNV parole termination's toll on nursing-home staffing is in the TPS and parole caregiver entry, the parole terminations themselves (CHNV, CBP One, Uniting for Ukraine) are in the humanitarian parole terminations entry, and the Somalia termination came alongside the Somali-American denaturalization threat; the review and termination of refugee status for refugees without green cards is in the refugee status terminations entry.",
     "cause_references": [
       {
         "match": "the TPS and parole caregiver entry",
@@ -4538,6 +4543,11 @@
         "match": "the humanitarian parole terminations entry",
         "tracker": "dai",
         "id": "dhs-humanitarian-parole-terminations-2025-2026"
+      },
+      {
+        "match": "the refugee status terminations entry",
+        "tracker": "dai",
+        "id": "uscis-refugee-status-terminations-2025-2026"
       }
     ],
     "pull_quote": "\"I cannot abide our repeated, gratuitous and harmful interference with cases pending in the lower courts while lives hang in the balance.\" -- Justice Ketanji Brown Jackson, dissenting from the Oct. 3, 2025 Venezuela order",
@@ -16342,6 +16352,213 @@
       {
         "name": "Texas Tribune -- ICE deported man to Mexico who says he's a U.S. citizen (April 23, 2026)",
         "url": "https://www.texastribune.org/2026/04/23/texas-united-states-citizen-deported-ice-detention-brian-morales/"
+      }
+    ]
+  },
+  {
+    "id": "uscis-refugee-status-terminations-2025-2026",
+    "title": "USCIS reopened refugee cases, ICE arrested Minnesota refugees, and DHS cut the time to contest status termination to 10 days",
+    "agencies": [
+      "USCIS",
+      "ICE",
+      "DHS"
+    ],
+    "category": "policy_leadership",
+    "location": {
+      "place": "Nationwide; Operation PARRIS began in Minnesota"
+    },
+    "people": {
+      "officials": [
+        {
+          "name": "Joseph Edlow",
+          "role": "USCIS Director; signed the Nov. 21, 2025 memo ordering review and re-interview of Biden-era refugees and co-signed the Feb. 18, 2026 refugee detention memo",
+          "sources": [
+            "https://www.news4jax.com/news/politics/2025/11/24/trump-administration-plans-to-review-refugees-admitted-under-biden-memo-obtained-by-the-ap-says/",
+            "https://www.govinfo.gov/content/pkg/FR-2026-10-14/pdf/2026-20956.pdf"
+          ]
+        },
+        {
+          "name": "Todd Lyons",
+          "role": "Senior official performing the duties of ICE director; co-signed the Feb. 18, 2026 refugee detention memo",
+          "sources": [
+            "https://www.govinfo.gov/content/pkg/FR-2026-10-14/pdf/2026-20956.pdf"
+          ]
+        },
+        {
+          "name": "Markwayne Mullin",
+          "role": "Secretary of Homeland Security; signed the Oct. 14, 2026 interim final rule cutting the NOIT response period to 10 days",
+          "sources": [
+            "https://www.govinfo.gov/content/pkg/FR-2026-10-14/pdf/2026-20956.pdf"
+          ]
+        }
+      ],
+      "agents": [],
+      "affected": [
+        {
+          "name": "Agnes Mukantagara",
+          "description": "Refugee from Rwanda admitted in 2005 whose status USCIS terminated in 2016; plaintiff in the Tenth Circuit case holding that the termination finding is reviewable in federal court",
+          "sources": [
+            "https://www.ca10.uscourts.gov/sites/ca10/files/opinions/010111520406.pdf",
+            "https://refugeerights.org/news-resources/mukantagara-v-mullin-seeking-judicial-review-of-terminations-of-refugee-status"
+          ]
+        }
+      ],
+      "unnamed_affected": "Refugees in Minnesota arrested by ICE in January 2026, many flown to Texas, including the 20-year-old son of a Venezuelan refugee family, later released, whose parents NPR identified only by initials; the pseudonymous plaintiffs in the Minnesota and Massachusetts suits; Mukantagara's adult son, ordered removed; and an Ethiopian refugee in Minnesota, identified only under a pseudonym, whose status was terminated in June 2026."
+    },
+    "status": "A rule giving refugees 10 days, not 30, to contest termination took effect Oct. 14, 2026; comments close Nov. 13; no court challenge reported. A nationwide stay on detaining refugees for lacking green cards stands, and the Tenth Circuit held Oct. 5 that courts can review termination findings.",
+    "date_of_action": "2025-11-21 (USCIS memo orders review and re-interview of refugees admitted under Biden) through 2026-10-15 (challengers file final summary-judgment brief in Jean A. v. Noem)",
+    "date_added": "2026-10-21",
+    "last_substantive_update": "2026-10-21",
+    "last_verified": "2026-10-21",
+    "what_changed": "Backstory: People admitted through the U.S. refugee program are screened and approved abroad before they arrive, and must apply for a green card after a year here. By law, DHS can terminate refugee status only if it finds the person was not a refugee when admitted. USCIS first sends a Notice of Intent to Terminate (NOIT); until October 2026 the person had 30 days to respond, and there is no administrative appeal of a termination (Federal Register; National Immigration Forum). Terminations had historically been \"exceedingly rare\" (National Immigration Forum), and DHS said it could not analyze past NOIT outcomes \"because USCIS terminated so few cases\" (Federal Register). A 2010 ICE policy held that a refugee's failure to apply for a green card was not a proper basis for detention (Jean A. v. Noem docket).\n\nOn November 21, 2025, USCIS Director Joseph Edlow signed a memo ordering a comprehensive review and \"re-interview of all refugees admitted from January 20, 2021, to February 20, 2025,\" and immediately suspending green card approvals for them; it said a person found not to have qualified \"has no right to appeal\" USCIS's decision, though they could plead their case in immigration court (AP, via News4JAX). The Biden administration had admitted 185,640 refugees from October 2021 through September 2024 (AP). On December 18, 2025, an ICE memo began rescinding the 2010 detention policy (Jean A. v. Noem docket).\n\nOn January 9, 2026, DHS announced Operation PARRIS (Post-Admission Refugee Reverification and Integrity Strengthening), a \"sweeping initiative\" to reexamine refugee cases through new background checks and reinterviews, starting with about 5,600 refugees in Minnesota who had not yet received green cards (Federal Register; Reuters, via Yahoo; KSTP). It came as thousands of federal immigration agents were deployed to Minneapolis and St. Paul (Reuters, via Yahoo). **ICE agents then arrested refugees at their homes and elsewhere and flew many to detention centers in Texas.** A class-action lawsuit said more than 100 refugees with no criminal background were arrested (NPR); USCIS records later released under the Freedom of Information Act count 72 unadjusted Minnesota refugees arrested and detained (IRAP). Some were released in Texas with \"no money, no documents, no way to get home,\" the head of a Minnesota resettlement agency told NPR. On January 28, U.S. District Judge John Tunheim in Minneapolis issued a temporary restraining order in U.H.A. v. Bondi barring the arrest or detention of Minnesota refugees on the basis that they had not adjusted to permanent residence, and ordering detained class members released and returned to Minnesota (CourtListener; FOX 9; Reuters, via Yahoo). On February 9 he refused to dissolve the order (CourtListener; KSTP).\n\nOn February 18, Edlow and Todd Lyons, the senior official performing the duties of ICE director, issued a joint memo taking the position that DHS may arrest and detain refugees who have lived in the U.S. for a year without obtaining a green card (Federal Register; IRAP). Tunheim granted a preliminary injunction in part on February 27, and the government appealed (CourtListener). On March 23, U.S. District Judge Richard Stearns in Massachusetts, in Jean A. v. Noem, stayed the December and February memos nationwide for the duration of the case, finding the challengers likely to succeed; the government had not opposed the stay (CourtListener). In April the Minnesota plaintiffs voluntarily dismissed their suit because the Massachusetts stay already covered Minnesota refugees, Sahan Journal reported, and on a joint stipulation the Eighth Circuit dismissed the government's appeal and vacated the Minnesota injunction (CourtListener; Sahan Journal).\n\nRe-vetting interviews continued in Minnesota, peaking in February and March, often on no more than 48 hours' notice and lasting up to eight hours; USCIS then began sending NOITs from an office in Georgia that conducts computer-based reviews of refugee cases, attorneys told Sahan Journal. They said many notices were left at landlord offices or never reached the refugees, and that terminations rested on credibility findings, small differences between old and new interviews, and social media posts (Sahan Journal). One Ethiopian refugee admitted in 2022, identified by Sahan Journal only under a pseudonym, missed an interview notice, had his refugee status terminated in June 2026, and was placed in removal proceedings at Fort Snelling Immigration Court (Sahan Journal). IRAP sued USCIS, ICE and DHS in the Southern District of New York on May 14 over unanswered records requests about PARRIS; on August 24 USCIS produced 249 pages and data, including records describing Operation PARRIS as \"a model for additional vetting operations\" and counting 185,539 unadjusted refugees nationwide as of October 2025 (IRAP).\n\nOn October 5, the Tenth Circuit ruled 2-1 in Mukantagara v. Mullin that federal courts can review USCIS's finding that a person did not meet the refugee definition when admitted, the mandatory first step of a termination, and sent the case back to the district court; Judge Tymkovich dissented (Tenth Circuit opinion). The lead plaintiff, Agnes Mukantagara, a refugee from Rwanda admitted in 2005, had her status terminated in 2016 when USCIS found the persecutor bar applied to her, which she denies; an immigration judge later found her credible and granted her asylum, and granted it again after a Board of Immigration Appeals remand, with the government's appeal of that grant on hold pending this case. Her son, who had aged out, was ordered removed (Tenth Circuit opinion; IRAP). The same panel had ruled for her in January 2026, then vacated that decision in July to consider a new Supreme Court ruling (Tenth Circuit order).\n\n**On October 14, 2026, an interim final rule signed by Homeland Security Secretary Markwayne Mullin cut the time to respond to a NOIT from 30 days to 10, effective immediately and without prior public comment** (Federal Register). Termination ends the person's work authorization at once, and USCIS then processes them for removal (Federal Register). DHS said about 186,000 refugees who arrived in fiscal years 2015 through 2025 have not adjusted status, the maximum population the rule could reach, and that USCIS and ICE are identifying subsets for vetting (Federal Register). Three days are added for mailed notices, but the period runs from the mailing date, not receipt (National Immigration Forum). Comments are due November 13, 2026 (Federal Register). The separate cuts to refugee admissions and resettlement funding are not covered here.",
+    "legal_status": "Minnesota arrests: sued (U.H.A. v. Bondi, D. Minn., Judge John Tunheim). Temporary restraining order Jan. 28, 2026; motion to dissolve denied Feb. 9; preliminary injunction granted in part Feb. 27; the government appealed, the plaintiffs voluntarily dismissed in April, and the Eighth Circuit dismissed the appeal and vacated the injunction on a joint stipulation Apr. 21. National detention policy: sued (Jean A. v. Noem, D. Mass., Judge Richard Stearns); the December 2025 and February 2026 memos stayed Mar. 23, 2026 for the duration of the case; cross-motions for summary judgment pending, with the government's final brief due Nov. 5, 2026. Judicial review: the Tenth Circuit held Oct. 5, 2026 in Mukantagara v. Mullin that USCIS's finding that a person was not a refugee at admission is reviewable in federal court (2-1; remanded). Records: IRAP sued for PARRIS records (S.D.N.Y., May 14, 2026); USCIS produced documents Aug. 24. The Oct. 14, 2026 rule: no lawsuit reported; comment period open to Nov. 13.",
+    "human_toll": {
+      "summary": "Refugees who were screened abroad and admitted lawfully face reinterviews, notices that USCIS intends to end their status, loss of work authorization and removal proceedings. In Minnesota, dozens to more than 100 were arrested in early 2026, many flown to Texas, before courts ordered them released. Under the new rule they have 10 days from service (13 if mailed, counted from the mailing date) to contest a termination, with no administrative appeal.",
+      "figures": [
+        {
+          "metric": "Refugees who arrived FY2015-FY2025 and have not adjusted status (DHS's maximum population for the rule)",
+          "value": "about 186,000",
+          "source": "DHS interim final rule, Federal Register, Oct. 14, 2026"
+        },
+        {
+          "metric": "Unadjusted refugees in the U.S. as of October 2025, per USCIS data released under FOIA",
+          "value": "185,539",
+          "source": "International Refugee Assistance Project, summarizing USCIS FOIA production"
+        },
+        {
+          "metric": "Refugees in Minnesota without green cards targeted by Operation PARRIS",
+          "value": "roughly 5,600",
+          "source": "Reuters (via Yahoo), Jan. 28, 2026"
+        },
+        {
+          "metric": "Unadjusted Minnesota refugees arrested and detained by ICE, per USCIS records",
+          "value": "72",
+          "source": "International Refugee Assistance Project, summarizing USCIS FOIA production"
+        },
+        {
+          "metric": "Refugees arrested in Minnesota, per the class-action lawsuit",
+          "value": "more than 100",
+          "source": "NPR, Feb. 2, 2026"
+        },
+        {
+          "metric": "Refugees admitted by the Biden administration, October 2021 through September 2024",
+          "value": "185,640",
+          "source": "Associated Press, Nov. 24, 2025"
+        }
+      ],
+      "caveat": "The 186,000 figure is DHS's own ceiling, everyone admitted in fiscal years 2015-2025 who has not adjusted, not a projection of notices or terminations; the 185,539 count and the 72 arrests come from USCIS records as summarized by IRAP, an advocacy group and litigant, and differ from the more than 100 arrests the class action alleged. No official count of NOITs, terminations or removals has been published: a Minnesota legal aid attorney said hundreds there are potentially affected, and IRAP said it had not yet seen large numbers of notices outside Minnesota (Sahan Journal). DHS's stated rationale: Biden-era processing put admission numbers ahead of screening, a preliminary review of Minnesota cases found the evidence insufficient in most, and a longer notice period \"could provide opportunities for aliens to evade enforcement or engage in harmful activities\" (Federal Register). A USCIS spokesman said the administration is \"ensuring that refugee status is reserved only for those who were eligible under the law\" (AP), and DHS called Minnesota \"ground zero for the war on fraud\" (KSTP). Resettlement groups dispute the claim of lax vetting."
+    },
+    "cause": "[TAP Analysis, not sourced] Part of the same effort to strip legal status from people admitted through lawful humanitarian channels as the TPS terminations entry and the humanitarian parole terminations entry; the Minnesota refugee arrests came during the federal enforcement surge described in the Metro Surge court-order entry.",
+    "cause_references": [
+      {
+        "match": "the TPS terminations entry",
+        "tracker": "dai",
+        "id": "dhs-tps-terminations-2025-2026"
+      },
+      {
+        "match": "the humanitarian parole terminations entry",
+        "tracker": "dai",
+        "id": "dhs-humanitarian-parole-terminations-2025-2026"
+      },
+      {
+        "match": "the Metro Surge court-order entry",
+        "tracker": "dai",
+        "id": "ice-minnesota-metro-surge-court-order-violations-2026"
+      }
+    ],
+    "pull_quote": "\"Refugees have a legal right to be in the United States, a right to work, a right to live peacefully -- and importantly, a right not to be subjected to the terror of being arrested and detained without warrants or cause in their homes or on their way to religious services or to buy groceries.\" -- U.S. District Judge John Tunheim, Jan. 28, 2026, as quoted by FOX 9",
+    "confidence_note": "HIGH confidence on the rule's terms, DHS's population figure and stated rationale (DHS's own Federal Register text), on the court orders (CourtListener dockets for U.H.A. v. Bondi, its Eighth Circuit appeal and Jean A. v. Noem; the Tenth Circuit's opinion and order), and on the November 2025 memo (AP's report quoting it). The Minnesota arrests are corroborated by NPR, Reuters, FOX 9 and KSTP. MODERATE on how terminations are being carried out: the Georgia office, delivery problems and grounds for termination rest on attorneys quoted by Sahan Journal, and no official count of notices, terminations or removals has been published. The 72-arrest figure, the 185,539 count and PARRIS's expansion plans come from USCIS records as summarized by IRAP, an advocacy group and litigant; the records themselves were not read. DHS's January 9 announcement and the Reuters, CBS News, Guardian and New York Times pages could not be fetched; the launch details come from the Federal Register and Reuters via Yahoo. The reason the Minnesota plaintiffs dismissed their case (the Massachusetts stay covered Minnesota refugees) comes from Sahan Journal, not the docket. Agnes Mukantagara is named in the court's published opinion; other affected refugees appear in sources only under pseudonyms or initials and are not named.",
+    "glance": {
+      "who": "USCIS Director Edlow; DHS Secretary Mullin",
+      "what": "Reopened refugee cases, arrested Minnesota refugees, and cut the time to contest termination to 10 days",
+      "harm": {
+        "kind": "rights",
+        "certainty": "documented",
+        "who": "Up to 186,000 unadjusted refugees"
+      },
+      "reviewed": "2026-10-21"
+    },
+    "section_summaries": {
+      "what_changed": "USCIS ordered Biden-era refugees re-vetted, ICE arrested Minnesota refugees until courts stepped in, notices to end status followed, and a new rule cut the reply time to 10 days.",
+      "human_toll": "Up to 186,000 refugees without green cards could face termination; dozens to 100-plus Minnesota refugees were arrested and many flown to Texas.",
+      "confidence_note": "Rule terms and court orders come from the Federal Register and dockets; how terminations work rests on attorneys' accounts, and no official count exists."
+    },
+    "sources": [
+      {
+        "name": "Federal Register -- Removing 30-Day Refugee Termination Notice (interim final rule, Oct. 14, 2026)",
+        "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-14/pdf/2026-20956.pdf"
+      },
+      {
+        "name": "AP (via News4JAX) -- Trump administration plans to review refugees admitted under Biden, memo obtained by The AP says",
+        "url": "https://www.news4jax.com/news/politics/2025/11/24/trump-administration-plans-to-review-refugees-admitted-under-biden-memo-obtained-by-the-ap-says/"
+      },
+      {
+        "name": "AP (via KSAT) -- Trump administration cuts refugees' deadline to contest status termination, raising fears",
+        "url": "https://www.ksat.com/news/politics/2026/10/13/trump-administration-cuts-refugees-deadline-to-contest-status-termination-raising-fears/"
+      },
+      {
+        "name": "NPR -- Refugees relive the trauma they fled as ICE targets them in Minnesota",
+        "url": "https://www.npr.org/2026/02/02/nx-s1-5686396/ice-arrest-refugees-legal-minneapolis-minnesota-immigration"
+      },
+      {
+        "name": "Reuters (via Yahoo News) -- US judge blocks Trump policy targeting Minnesota's refugees",
+        "url": "https://www.yahoo.com/news/articles/us-judge-blocks-trump-policy-014813864.html"
+      },
+      {
+        "name": "FOX 9 Minneapolis-St. Paul -- Judge halts arrests of Minnesota refugees in Trump's fraud crackdown",
+        "url": "https://www.fox9.com/news/judge-halts-arrests-mn-refugees-trump-fraud-crackdown-jan-2026"
+      },
+      {
+        "name": "KSTP -- Judge upholds order blocking ICE from detaining lawful refugees",
+        "url": "https://kstp.com/kstp-news/local-news/judge-upholds-order-blocking-ice-from-detaining-lawful-refugees/"
+      },
+      {
+        "name": "CourtListener -- U.H.A. v. Blanche (formerly v. Bondi), No. 0:26-cv-00417 (D. Minn.) docket",
+        "url": "https://www.courtlistener.com/docket/72157874/uha-v-blanche/"
+      },
+      {
+        "name": "CourtListener -- U.H.A. v. Todd Blanche, No. 26-1482 (8th Cir.) docket",
+        "url": "https://www.courtlistener.com/docket/72514152/uha-v-todd-blanche/"
+      },
+      {
+        "name": "CourtListener -- Jean A. v. Noem, No. 3:26-cv-30031 (D. Mass.) docket",
+        "url": "https://www.courtlistener.com/docket/72343601/a-v-noem/"
+      },
+      {
+        "name": "Sahan Journal -- Feds target Minnesota in effort to terminate refugee status",
+        "url": "https://sahanjournal.com/immigration/refugee-status-termination-operation-parris-minnesota/"
+      },
+      {
+        "name": "International Refugee Assistance Project -- Newly released documents from Operation PARRIS confirm the scope of DHS's targeting of refugee communities",
+        "url": "https://refugeerights.org/news-resources/lkt-foia-newly-released-documents-from-operation-parris-confirm-the-scope-of-the-governments-targeting-of-refugee-communities"
+      },
+      {
+        "name": "U.S. Court of Appeals for the Tenth Circuit -- Mukantagara v. Mullin, No. 24-4071, opinion (Oct. 5, 2026)",
+        "url": "https://www.ca10.uscourts.gov/sites/ca10/files/opinions/010111520406.pdf"
+      },
+      {
+        "name": "U.S. Court of Appeals for the Tenth Circuit -- Mukantagara v. Mullin, No. 24-4071, order granting panel rehearing (July 14, 2026)",
+        "url": "https://www.ca10.uscourts.gov/sites/ca10/files/opinions/010111468891.pdf"
+      },
+      {
+        "name": "International Refugee Assistance Project -- Mukantagara v. Mullin: seeking judicial review of terminations of refugee status",
+        "url": "https://refugeerights.org/news-resources/mukantagara-v-mullin-seeking-judicial-review-of-terminations-of-refugee-status"
+      },
+      {
+        "name": "International Refugee Assistance Project -- Trump administration lays groundwork for mass deportation of resettled refugees",
+        "url": "https://refugeerights.org/news-resources/trump-administration-lays-groundwork-for-mass-deportation-of-resettled-refugees"
+      },
+      {
+        "name": "National Immigration Forum -- Explainer: New rule shortens refugees' time to contest termination of their status",
+        "url": "https://forumtogether.org/article/explainer-new-rule-shortens-refugees-time-to-contest-termination-of-their-status/"
+      },
+      {
+        "name": "AILA -- Practice alert: DHS interim final rule shortens NOIT response period for refugees to 10 days",
+        "url": "https://www.aila.org/library/practice-alert-dhs-interim-final-rule-shortens-noit-response-period-for-refugees-to-10-days"
+      },
+      {
+        "name": "Sahan Journal -- Canceled Operation PARRIS interviews leave refugees in limbo",
+        "url": "https://sahanjournal.com/immigration/operation-parris-minnesota-refugees-interviews-canceled/"
       }
     ]
   },
