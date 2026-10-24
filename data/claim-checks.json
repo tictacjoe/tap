@@ -3581,9 +3581,9 @@
    },
    "2": {
     "state": "partly",
-    "why": "The source (Time) confirms the exact quote and Hannity/Fox News setting on Jan. 9, 2026, but this source text only reflects Time's reporting; it contains no reference to CNBC's reporting of the same statement, so that part of the claim is unconfirmed here.",
+    "why": "Time reports Trump told Hannity on Fox News on Thursday night (Jan 8, 2026, per the Jan 9 dateline) that the U.S. would 'start now hitting land' with regard to cartels and links it to Mexico, but the provided text is Time only; CNBC's reporting is not in the source.",
     "host": "time.com",
-    "date": "2026-09-15",
+    "date": "2026-10-24",
     "kind": "fact",
     "archive": false
    },
@@ -3592,6 +3592,14 @@
     "why": "The source directly confirms Sheinbaum's public rejection of any unilateral U.S. military action in Mexico and her reassertion of Mexican sovereignty.",
     "host": "globalnews.ca",
     "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "supports",
+    "why": "The Reuters report states a U.S. defense official, speaking anonymously, said the JITF-CC played a role in the Feb 22 Mexican raid that killed El Mencho and stressed the raid was a Mexican military operation.",
+    "host": "wdez.com",
+    "date": "2026-10-24",
     "kind": "fact",
     "archive": false
    }
@@ -8073,9 +8081,9 @@
    },
    "2": {
     "state": "partly",
-    "why": "CBS News confirms Rep. Vindman accused DOD Rapid Response of 'an outright lie' at the May 16, 2025 hearing and that Chairman Bacon confirmed a one-day February 2025 pause, but this article never mentions a witness named Laurie Buckhout or her testimony that she lacked personal knowledge of the pause -- that specific detail is absent here.",
+    "why": "CBS confirms Bacon said at the hearing there was a one-day pause in February and that Vindman called the DoD denial a lie, but the text never mentions Laurie Buckhout or her response.",
     "host": "cbsnews.com",
-    "date": "2026-09-15",
+    "date": "2026-10-24",
     "kind": "fact",
     "archive": true
    },
@@ -12558,10 +12566,10 @@
     "archive": false
    },
    "1": {
-    "state": "partly",
-    "why": "MS NOW confirms the original filing's exact 'mob of rioters' language, that Valdivia and White were placed on leave, and that two new DOJ lawyers (Travis Wolf and Jonathan Hornok) appeared on the docket after the memo was withdrawn -- but the article explicitly states that as of its publication no substitute sentencing memo had yet appeared on the docket, so it does not confirm the claimed content of a completed substitute filing that omitted Taranto's Jan. 6 involvement.",
+    "state": "supports",
+    "why": "MS NOW quotes the 'mob of rioters' language and reports the docket entry marking the memo 'entered in error' followed by the appearance of Travis Wolf and Jonathan Hornok.",
     "host": "ms.now",
-    "date": "2026-09-15",
+    "date": "2026-10-24",
     "kind": "fact",
     "archive": false
    },
@@ -12570,6 +12578,22 @@
     "why": "The source confirms Taranto's 2023 arrest near the Obamas' home with firearms and ammunition and his prior Jan. 6 clemency, but this article was published the morning before sentencing and only discusses the recommended 27-month term, not the actual time-served outcome.",
     "host": "forbes.com",
     "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "3": {
+    "state": "supports",
+    "why": "The judgment is Document 160 in Case 1:23-cr-00229-CJN, dated 11/5/2025 by Judge Nichols, and imposes 36 months of supervised release on Counts 2s, 3s, and 6s.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-10-24",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "not_found",
+    "why": "The fetched text is only page 1 of 4 of the docket (entries from July-Aug 2023); it contains no Doc 163, no Nov. 6, 2025 notice of appeal, and no D.C. Circuit No. 25-3110, so the claim cannot be settled from the provided text.",
+    "host": "courtlistener.com",
+    "date": "2026-10-24",
     "kind": "fact",
     "archive": false
    }
@@ -12986,26 +13010,34 @@
   },
   "rfk-jr-aaron-siri-outside-influence-2025": {
    "0": {
-    "state": "not_found",
-    "why": "This NBC News article (about Siri's December 5, 2025 ACIP presentation) does not mention Susan Monarez or her Senate testimony that Kennedy instructed her to meet with Siri; that content is absent from this source text.",
-    "host": "nbcnews.com",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "The NYT article states that Monarez, the fired CDC director, told senators 'last month' (September, given the Oct. 3, 2025 date) that Kennedy instructed her to meet with Siri.",
+    "host": "nytimes.com",
+    "date": "2026-10-24",
     "kind": "fact",
-    "archive": false
+    "archive": true
    },
    "1": {
     "state": "partly",
-    "why": "The New York Times confirms Siri's vetting role for departmental jobs and the vaccine committee, his firm's Tylenol/fluoride/polio litigation and FDA petitions, his roughly 90 pending lawsuits for ICAN, and quotes ethics expert Elizabeth Chamblee Burch's concerns -- but it does not give specific ICAN funding figures as the claim describes.",
+    "why": "The provided NYT text confirms Siri's vetting role, his firm's lawsuits (fluoride, vaccine exemption) and the FDA Tylenol petition, ICAN as his client, and legal-ethics experts' concerns, but no ICAN funding figures appear in the provided (truncated) text.",
     "host": "nytimes.com",
-    "date": "2026-09-15",
+    "date": "2026-10-24",
     "kind": "fact",
-    "archive": false
+    "archive": true
    },
    "2": {
     "state": "supports",
     "why": "KFF Health News confirms the FDA FOIA staffing cuts spared workers handling litigation connected to Aaron Siri's Covid-vaccine-related FOIA lawsuits.",
     "host": "kffhealthnews.org",
     "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "3": {
+    "state": "supports",
+    "why": "NBC's Dec. 5, 2025 report states Siri spoke at the CDC vaccine advisory panel meeting and disclosed numerous ongoing lawsuits against HHS and its subsidiary agencies, and elsewhere identifies him as Kennedy's personal attorney.",
+    "host": "nbcnews.com",
+    "date": "2026-10-24",
     "kind": "fact",
     "archive": false
    }
@@ -15124,10 +15156,10 @@
     "archive": false
    },
    "4": {
-    "state": "unopened",
-    "why": "",
-    "host": "spotlightpa.org",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "Votebeat reports Laiss, federally charged with double voting in 2020, argued via motion that the broadly worded pardon's plain language extended to him; the byline notes the Spotlight PA partnership.",
+    "host": "votebeat.org",
+    "date": "2026-10-24",
     "kind": "fact",
     "archive": false
    },
@@ -15140,18 +15172,18 @@
     "archive": false
    },
    "6": {
-    "state": "partly",
-    "why": "The article confirms DOJ argued the pardon does not apply to Laiss and that this view is shared by the U.S. pardon attorney, but the specific quoted phrase that prosecutors could \"explicitly confirm\" Laiss was not covered does not appear anywhere in the provided text.",
+    "state": "supports",
+    "why": "Votebeat reports prosecutors' Nov. 28 filing urged dismissal of the motion and said they consulted the Office of the Pardon Attorney and could 'explicitly confirm' Laiss was not covered.",
     "host": "votebeat.org",
-    "date": "2026-09-15",
+    "date": "2026-10-24",
     "kind": "fact",
     "archive": false
    },
    "7": {
     "state": "supports",
-    "why": "The article confirms prosecutors moved on Wednesday, January 7, 2026, to dismiss Floyd's assault case, explicitly tying the rare dismissal to Trump's November clemency grant.",
+    "why": "The ABC News report syndicated on WHIO, dated Jan. 7, 2026, says prosecutors moved Wednesday to dismiss Floyd's assault case and that this came shortly after Trump's November clemency grant.",
     "host": "whio.com",
-    "date": "2026-09-15",
+    "date": "2026-10-24",
     "kind": "fact",
     "archive": false
    },
@@ -15160,6 +15192,38 @@
     "why": "The article, dated January 13, 2026, quotes Judge Leeson's ruling directly finding Laiss had not applied for or received a pardon certificate as the plain language of the pardon requires.",
     "host": "votebeat.org",
     "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "9": {
+    "state": "supports",
+    "why": "Michigan Advance reports Nessel will not appeal the September 2025 dismissal of charges against the 15 false electors and that her office confirmed this concludes the state prosecution.",
+    "host": "michiganadvance.com",
+    "date": "2026-10-24",
+    "kind": "fact",
+    "archive": false
+   },
+   "10": {
+    "state": "supports",
+    "why": "The AP report says Mayes is dismissing the case against Meadows, Giuliani and others while vowing to bring it back to a grand jury to seek another indictment.",
+    "host": "wtop.com",
+    "date": "2026-10-24",
+    "kind": "fact",
+    "archive": false
+   },
+   "11": {
+    "state": "supports",
+    "why": "The Inquirer (July 15, 2026) reports Laiss was sentenced to six months of house arrest and three years of probation after the judge denied his pardon motion and a federal jury found him guilty in March.",
+    "host": "inquirer.com",
+    "date": "2026-10-24",
+    "kind": "fact",
+    "archive": false
+   },
+   "12": {
+    "state": "supports",
+    "why": "The AP report says the judge dismissed the case against six Nevada fake electors for lack of evidence of intent to deceive, that the AG's office plans to appeal, and that a Wisconsin case is ongoing.",
+    "host": "wowt.com",
+    "date": "2026-10-24",
     "kind": "fact",
     "archive": false
    }
@@ -18020,10 +18084,10 @@
     "archive": false
    },
    "1": {
-    "state": "partly",
-    "why": "The Hill confirms the Truth Social post content, Monaco's role as Biden's deputy attorney general tied to the Jan. 6 investigation, and Microsoft declining comment. It does not mention an Obama-era homeland-security role, and no Fortune text was provided.",
+    "state": "supports",
+    "why": "The Hill quotes Trump's post, describes Monaco's role as Biden's deputy AG closely involved in the Jan. 6 investigations, and notes Microsoft declined to comment.",
     "host": "thehill.com",
-    "date": "2026-09-21",
+    "date": "2026-10-24",
     "kind": "fact",
     "archive": false
    },
@@ -18032,6 +18096,22 @@
     "why": "Fortune confirms the demand came one day after Comey's indictment and situates it within Trump's broader public pressure campaign against former Biden administration officials in corporate roles.",
     "host": "fortune.com",
     "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "3": {
+    "state": "supports",
+    "why": "Just the News (May 19, 2026) reports AAF wrote to Blier, Blanche and two assistant AGs asking the OIG to review DOJ officials involved in investigating Microsoft, naming Monaco among those who later joined the company.",
+    "host": "justthenews.com",
+    "date": "2026-10-24",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "supports",
+    "why": "Breitbart reports the AAF letter alleged Monaco buried investigations into Microsoft's cybersecurity failures, cites at least five major intrusions 2019-2023, and quotes the DOJ spokesperson's statement welcoming credible fraud referrals.",
+    "host": "breitbart.com",
+    "date": "2026-10-24",
     "kind": "fact",
     "archive": false
    }
