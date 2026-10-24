@@ -1,6 +1,6 @@
 {
  "version": 1,
- "as_of": "2026-10-21",
+ "as_of": "2026-10-24",
  "checks": {
   "abrego-garcia-vindictive-prosecution-2025-2026": {
    "0": {
@@ -1720,14 +1720,6 @@
     "archive": false
    },
    "1": {
-    "state": "partly",
-    "why": "Most figures match exactly ($487.2M total fine, $444.5M victim fund, Independent Compliance Consultant, two-year cooperation, May 29, 2025 date), but the source states Boeing must invest at least $455 million in compliance/safety/quality programs, not \"$445 million+\" as the claim states.",
-    "host": "contracts.justia.com",
-    "date": "2026-09-15",
-    "kind": "fact",
-    "archive": false
-   },
-   "2": {
     "state": "unopened",
     "why": "",
     "host": "warren.senate.gov",
@@ -1735,11 +1727,35 @@
     "kind": "fact",
     "archive": false
    },
+   "2": {
+    "state": "partly",
+    "why": "The source confirms the May 29, 2025 DOJ-Boeing Non-Prosecution Agreement, the $243.6 million criminal penalty, the $444.5 million victim compensation, the Independent Compliance Consultant, and two years of cooperation. The provided (truncated) text does not state the $487.2 million total fine, the credit for $243.6 million paid under the 2021 agreement, or the $455 million+ compliance/safety commitment.",
+    "host": "contracts.justia.com",
+    "date": "2026-10-24",
+    "kind": "fact",
+    "archive": true
+   },
    "3": {
     "state": "supports",
     "why": "CNBC quotes Judge O'Connor's dismissal order using this exact language, including his agreement that the deal 'disregards the need for Boeing to be subject to independent monitoring,' his finding that the agreement 'fails to secure the necessary accountability,' and his statement that he lacked authority to deny the dismissal request.",
     "host": "cnbc.com",
     "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "supports",
+    "why": "The March 31, 2026 per curiam opinion in Nos. 25-11253/25-11254 states the panel agrees with the district court that DOJ did not violate the families' CVRA rights and denies the mandamus petitions.",
+    "host": "ca5.uscourts.gov",
+    "date": "2026-10-24",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "supports",
+    "why": "The Leagle record of 176 F.4th 405, filed May 22, 2026, states that en banc rehearing was denied with no poll requested and that panel rehearing was denied, matching the claim.",
+    "host": "leagle.com",
+    "date": "2026-10-24",
     "kind": "fact",
     "archive": false
    }
@@ -2815,9 +2831,9 @@
   "camp-pendleton-live-fire-i5-shrapnel-2025": {
    "0": {
     "state": "partly",
-    "why": "CNN's own article (the only outlet's text actually provided here) confirms the demonstration's scale, the artillery-over-I-5 plan, and the round's premature detonation striking a patrol vehicle, but it does not attribute that vehicle to Vance's own security detail -- it identifies it only as a California Highway Patrol vehicle.",
+    "why": "The CNN text supports the premature detonation over I-5, the struck CHP vehicle, and the demonstration's scale ('the largest in a decade'), but does not say the vehicle belonged to Vance's security detail, and no NBC News reporting is included in the source.",
     "host": "cnn.com",
-    "date": "2026-09-15",
+    "date": "2026-10-24",
     "kind": "fact",
     "archive": false
    },
@@ -5705,9 +5721,9 @@
    },
    "2": {
     "state": "supports",
-    "why": "CNN directly confirms Martin demoted at least eight senior January 6 prosecutors to entry-level jobs, seen as retaliation intended to force resignations.",
+    "why": "CNN reports the demotion of at least eight senior Jan. 6 prosecutors to entry-level jobs and that sources saw the moves as retaliation meant to force them to resign, as the claim states.",
     "host": "cnn.com",
-    "date": "2026-09-15",
+    "date": "2026-10-24",
     "kind": "fact",
     "archive": false
    },
@@ -5720,10 +5736,10 @@
     "archive": false
    },
    "4": {
-    "state": "partly",
-    "why": "Rolling Stone confirms Martin said he was unaware of Hale-Cusanelli's history and denounced his views completely, but no source text contains the specific phrase 'in the strongest terms possible.'",
+    "state": "supports",
+    "why": "Rolling Stone quotes Martin telling The Forward 'At the time, I didn't know it' and that he 'denounced it completely,' in the context of his Senate confirmation push, matching the claim.",
     "host": "rollingstone.com",
-    "date": "2026-09-15",
+    "date": "2026-10-24",
     "kind": "fact",
     "archive": false
    },
@@ -5736,6 +5752,14 @@
     "archive": false
    },
    "6": {
+    "state": "supports",
+    "why": "The NPR report (published May 1, 2025) quotes Martin's written Senate answers as stated and says NPR's reporting, including its September 2024 email listing Hale-Cusanelli's comments, casts doubt on his testimony.",
+    "host": "wamc.org",
+    "date": "2026-10-24",
+    "kind": "fact",
+    "archive": false
+   },
+   "7": {
     "state": "partly",
     "why": "Courthouse News confirms Tillis withheld support specifically over Martin's Jan. 6 views and mentions 'hundreds of appearances on Russian state media,' but the article does not contain the '100 former prosecutors' letter, its quoted language, or the specific 150-appearance disclosure detail described in the claim.",
     "host": "courthousenews.com",
@@ -5743,7 +5767,7 @@
     "kind": "fact",
     "archive": false
    },
-   "7": {
+   "8": {
     "state": "partly",
     "why": "Fox 5 DC confirms Trump withdrew Martin's nomination on the cited date and cites opposition from a key Senate Republican over Jan. 6, but it does not mention Martin being redirected to the Pardon Attorney role and Weaponization Working Group, or Jeanine Pirro's appointment as interim U.S. Attorney.",
     "host": "fox5dc.com",
@@ -5751,7 +5775,7 @@
     "kind": "fact",
     "archive": false
    },
-   "8": {
+   "9": {
     "state": "supports",
     "why": "ABC News confirms Wise's pardon, his prior charges for encouraging rioters, his DOJ role under the Weaponization Working Group as counselor to Martin, and that the New York Times first reported the appointment.",
     "host": "abcnews.com",
@@ -5969,11 +5993,11 @@
    },
    "1": {
     "state": "partly",
-    "why": "The content matches precisely -- the polygraph feasibility review, expanded press-leak questioning, and ODNI's on-record response -- but the article is dated October 7, 2025, not October 10, 2025 as the claim states.",
+    "why": "CBS details Gabbard's memo directing a feasibility review of random polygraphs with emphasis on press-leak questions and includes ODNI's on-record response, but it says CBS 'has learned' of the memo from sources rather than that it obtained it, and the October 7 date is not stated in the text.",
     "host": "cbsnews.com",
-    "date": "2026-09-15",
+    "date": "2026-10-24",
     "kind": "fact",
-    "archive": false
+    "archive": true
    },
    "2": {
     "state": "supports",
@@ -6720,12 +6744,12 @@
   },
   "hegseth-army-cid-security-detail-diversion-2025": {
    "0": {
-    "state": "unopened",
-    "why": "",
+    "state": "partly",
+    "why": "The archived Post text is only the article's lede; it supports the multi-state scope and strain on the agency but does not contain the agent counts, multimillion-dollar figure, former-spouse residences, or the quoted source line.",
     "host": "washingtonpost.com",
-    "date": "2026-09-15",
+    "date": "2026-10-24",
     "kind": "fact",
-    "archive": false
+    "archive": true
    },
    "1": {
     "state": "supports",
@@ -6737,17 +6761,25 @@
    },
    "2": {
     "state": "supports",
-    "why": "The Hill (08/20/25) reports Parnell saying the security arrangement was 'in response to the threat environment and at the full recommendation' of CID, citing the assassination attempts, ICE assaults and Iranian threats, and accusing the Post of doxing the defense secretary.",
+    "why": "The Hill's August 20, 2025 report quotes Parnell's doxxing accusation, his statement that the arrangement was made 'at the full recommendation' of CID, and the cited threat environment of assassination attempts, ICE assaults and Iranian retaliation threats.",
     "host": "thehill.com",
-    "date": "2026-09-21",
+    "date": "2026-10-24",
     "kind": "fact",
     "archive": false
    },
    "3": {
     "state": "partly",
-    "why": "Just The News confirms the Post withheld the precise home addresses and the size of Hegseth's security detail, but the article does not state that the Pentagon specifically asked the Post to remove those details before publication -- it only describes Wilson's after-the-fact criticism and threat to pull access.",
+    "why": "The Fox News Digital text contains the quoted Kingsley Wilson statement, but the provided text does not include the Post's note about withholding the size of the protective details and their precise locations.",
+    "host": "foxnews.com",
+    "date": "2026-10-24",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "supports",
+    "why": "Just the News (August 22, 2025) quotes Wilson calling the reporting 'totally inappropriate' and saying 'it puts lives at risk,' reports all options including pulling access are on the table, and notes the Post did not give precise home locations or detail size.",
     "host": "justthenews.com",
-    "date": "2026-09-15",
+    "date": "2026-10-24",
     "kind": "fact",
     "archive": false
    }
@@ -7546,6 +7578,14 @@
     "why": "The New Republic piece confirms career military officials expressed 'serious unease' and reports the Washington Post's finding that Hegseth's shirking of longtime allies has alienated Pentagon seniors amid the Ukraine/Europe resource pull.",
     "host": "newrepublic.com",
     "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "3": {
+    "state": "supports",
+    "why": "The CSIS piece published January 26, 2026 contains each quoted passage verbatim, including the 'marked shift' language and the January 23 release of the unclassified NDS.",
+    "host": "csis.org",
+    "date": "2026-10-24",
     "kind": "fact",
     "archive": false
    }
@@ -12918,6 +12958,30 @@
     "date": "2026-09-21",
     "kind": "fact",
     "archive": false
+   },
+   "4": {
+    "state": "partly",
+    "why": "The source is the government's petition for rehearing and rehearing en banc in No. 25-1527, Doc. 48, filed 08/17/2026, but the provided text (cover, table of contents, authorities) does not contain the 'without prior judicial approval' argument, the Doc. 49 stay, or the Doc. 53 opposition.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-10-24",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "supports",
+    "why": "Mealey's August 19, 2026 report states ODNI, the CIA and their directors sought rehearing to restore their ability to fire the workers without reassignment, appeal procedures or district court approval, as claimed.",
+    "host": "mealeys.com",
+    "date": "2026-10-24",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
+    "state": "partly",
+    "why": "The October 20, 2026 government letter confirms the prospective AR 4-16 revision, the 'excess personnel' language, and that the case still warrants rehearing en banc, but the officers' October 21 reply letter (Doc. 55) and the Doc. 54 number are not in the provided text.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-10-24",
+    "kind": "fact",
+    "archive": false
    }
   },
   "rfk-jr-aaron-siri-outside-influence-2025": {
@@ -14184,26 +14248,26 @@
   },
   "rubio-berisha-sanctions-lobbying-reversal-2026": {
    "0": {
-    "state": "supports",
-    "why": "Mother Jones confirms the two-year, $6 million Continental Strategy contract; LaCivita's separate role; Katie Wiles and Alberto Martinez (former Rubio Senate chief of staff) as Continental staff; and the funding channel through the New Jersey-based Make Albania Great Again Foundation.",
+    "state": "partly",
+    "why": "Mother Jones supports the $6 million-plus two-year Continental contract, Martinez and Katie Wiles at the firm, and LaCivita separately advising Berisha, but it ties the Make Albania Great Again Foundation funding to Continental's contract, not to LaCivita's work (whose payment he declined to disclose); the AP caveat is not from this source.",
     "host": "motherjones.com",
-    "date": "2026-09-15",
+    "date": "2026-10-24",
     "kind": "fact",
     "archive": false
    },
    "1": {
     "state": "supports",
-    "why": "The AP's own wire report confirms the two-year, $6 million Continental Strategy contract, the LaCivita-led team, and explicitly states that Katie Wiles 'is not involved with the client.'",
+    "why": "The AP report confirms the two-year $6 million Continental contract, LaCivita and Manafort advising Berisha's campaign, LaCivita saying he is not lobbying U.S. officials, and that Katie Wiles is not involved with the client; the syndication and comparison to Mother Jones are framing, not checked against this text.",
     "host": "wsls.com",
-    "date": "2026-09-15",
+    "date": "2026-10-24",
     "kind": "fact",
     "archive": false
    },
    "2": {
-    "state": "partly",
-    "why": "Balkan Insight confirms the State Department issued a Section 7031(c) waiver on the stated basis of national interest, ending Berisha's persona non grata status. However, this article's own account attributes the decision to 'national interest,' not to an 'in-depth case review' (that phrasing appears only in Berisha's own quote in a different outlet's coverage), so that specific characterization is not supported by this source.",
+    "state": "supports",
+    "why": "Balkan Insight quotes the State Department waiver statement, reports it as ending Berisha's persona non grata status, and quotes Berisha telling parliament 'I am back'; the June 12, 2026 date is not stated in the text but is not contradicted.",
     "host": "balkaninsight.com",
-    "date": "2026-09-15",
+    "date": "2026-10-24",
     "kind": "fact",
     "archive": false
    },
@@ -14220,6 +14284,14 @@
     "why": "The Daily Signal directly quotes Berisha's 'in-depth review of my case' statement verbatim, confirms the original 2021 sanction was for 'corrupt acts,' such as misappropriation of public funds to enrich relatives, and the article makes no mention of the Continental Strategy lobbying campaign at all.",
     "host": "dailysignal.com",
     "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "partly",
+    "why": "The Mother Jones text supports Berisha's attendance at the GOP's Dallas midterm convention on a State Department waiver and Continental's employment of a former top Rubio aide, but the provided text cuts off before the Dan Holler contacts, the $750,000 figure, the 'appeared to bear fruit' language, and the State Department's non-confirmation.",
+    "host": "motherjones.com",
+    "date": "2026-10-24",
     "kind": "fact",
     "archive": false
    }
@@ -17454,6 +17526,14 @@
   },
   "trump-krebs-security-clearance-doj-investigation-2025": {
    "0": {
+    "state": "supports",
+    "why": "The April 9, 2025 White House fact sheet contains the quoted sentence verbatim.",
+    "host": "whitehouse.gov",
+    "date": "2026-10-24",
+    "kind": "fact",
+    "archive": false
+   },
+   "1": {
     "state": "partly",
     "why": "TechCrunch confirms the order revoked Krebs' clearance, stripped SentinelOne employees' clearances, and directed DHS/AG investigation, but this source does not contain the quoted phrase \"contrary to the administration's commitment to free speech and ending federal censorship,\" nor any content from The Record.",
     "host": "techcrunch.com",
@@ -17461,7 +17541,7 @@
     "kind": "fact",
     "archive": false
    },
-   "1": {
+   "2": {
     "state": "supports",
     "why": "The source confirms the same-day (Wednesday, April 9, 2025) parallel memoranda against both Krebs and Taylor, and identifies Taylor as the pseudonymous 'Anonymous' author.",
     "host": "axios.com",
@@ -17469,7 +17549,15 @@
     "kind": "fact",
     "archive": false
    },
-   "2": {
+   "3": {
+    "state": "supports",
+    "why": "The April 10, 2025 Votebeat piece contains the quoted 'shocked many' and 'hiring an attorney, scrubbing social media, and warning their spouse' passages, the Arizona spokesperson's 'heightened sense of anxiety' quote, and the 'chilling the work of public servants already under threat' language.",
+    "host": "votebeat.org",
+    "date": "2026-10-24",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
     "state": "partly",
     "why": "CNBC confirms Krebs resigned on April 16, 2025 and quotes him almost verbatim describing the departure as \"a fight for democracy, for freedom of speech, and for the rule of law,\" but the specific quote \"this is my fight, not the company's\" does not appear in the text (the closest wording is \"this is one I need to take on fully -- outside of SentinelOne\"), and there is no Register content.",
     "host": "cnbc.com",
@@ -17477,21 +17565,21 @@
     "kind": "fact",
     "archive": false
    },
-   "3": {
-    "state": "partly",
-    "why": "CNN confirms Krebs discovered his Global Entry membership had been revoked, but the article explicitly states CNN had only \"reached out\" to DHS for comment and does not contain any DHS spokesperson quote calling the investigation itself disqualifying.",
+   "5": {
+    "state": "supports",
+    "why": "CNN's April 30, 2025 report says Krebs learned his Global Entry membership was revoked and that CNN reached out to the White House and DHS for comment.",
     "host": "cnn.com",
-    "date": "2026-09-15",
+    "date": "2026-10-24",
     "kind": "fact",
     "archive": false
    },
-   "4": {
-    "state": "partly",
-    "why": "The source confirms the Global Entry revocation and DHS's stated 'under active investigation' justification, but it says nothing about Votebeat's reporting or a chilling effect on state/local election officials.",
+   "6": {
+    "state": "supports",
+    "why": "CBS reports DHS confirmed the revocation on Thursday (captured May 1-2, 2025) and quotes the DHS spokesperson exactly as claimed.",
     "host": "cbsnews.com",
-    "date": "2026-09-15",
+    "date": "2026-10-24",
     "kind": "fact",
-    "archive": false
+    "archive": true
    }
   },
   "trump-loudermilk-jan6-subcommittee-cheney-2025": {
@@ -17993,9 +18081,9 @@
    },
    "3": {
     "state": "supports",
-    "why": "Newsweek confirms Meink's under-$400-million estimate to Congress, other reporting (NBC-consulted experts) putting the full cost above $1 billion, and Air Force officials tapping funds from the Sentinel nuclear missile program to help pay for the overhaul.",
+    "why": "Newsweek reports Meink's under-$400 million estimate, other estimates near or above $1 billion for installing top-secret systems, and that the Air Force tapped Sentinel program funds to help pay for the overhaul.",
     "host": "newsweek.com",
-    "date": "2026-09-15",
+    "date": "2026-10-24",
     "kind": "fact",
     "archive": false
    },
@@ -18008,10 +18096,10 @@
     "archive": false
    },
    "5": {
-    "state": "partly",
-    "why": "ABC News confirms the exact \"no final decision\" quote and Trump's stated intent to transfer the jet to his presidential library foundation, but this article does not contain any legal-expert commentary stating that arrangement would make the aircraft available for his personal use.",
+    "state": "supports",
+    "why": "ABC's August 6, 2026 report contains the White House official's quote, Trump's library pledge, sources saying ownership would pass to the Trump Presidential Library Foundation shortly before he leaves office, and open questions including personal use.",
     "host": "abcnews.com",
-    "date": "2026-09-15",
+    "date": "2026-10-24",
     "kind": "fact",
     "archive": false
    }
@@ -18610,12 +18698,12 @@
   },
   "trump-ukraine-intel-arms-pause-oval-office-clash-2025": {
    "0": {
-    "state": "partly",
-    "why": "The provided source is CBS News reporting only (not TechCrunch or CBC), and it confirms Ratcliffe's confirmation of the intelligence pause, the preceding Oval Office clash, and the military-aid suspension, but does not itself state the specific date 'March 5, 2025' and provides no TechCrunch/CBC corroboration.",
+    "state": "supports",
+    "why": "The CBS report covers Ratcliffe's Wednesday confirmation of the intelligence-sharing pause, the preceding Oval Office clash, and the earlier pause in military aid.",
     "host": "cbsnews.com",
-    "date": "2026-09-15",
+    "date": "2026-10-24",
     "kind": "fact",
-    "archive": false
+    "archive": true
    },
    "1": {
     "state": "unopened",
@@ -18638,6 +18726,22 @@
     "why": "The LIGA.net article (citing Politico) confirms Ratcliffe's October 2025 Brussels trip, his meetings with EU officials and briefing of NATO's North Atlantic Council, and explicitly ties the visit to distrust stemming from the March intelligence-sharing termination and concerns about politicizing intelligence.",
     "host": "news.liga.net",
     "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "supports",
+    "why": "The October 18, 2026 Reuters report via Daily Maverick quotes Zelensky's 'de-blocked' account on Meet the Press and notes Trump had said earlier that week Washington was still sharing intelligence.",
+    "host": "dailymaverick.co.za",
+    "date": "2026-10-24",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "supports",
+    "why": "The October 19, 2026 Reuters report via Internazionale says Rubio denied any pause, quoting 'There's been no pause,' contradicting Zelenskiy's Meet the Press account from Sunday.",
+    "host": "internazionale.it",
+    "date": "2026-10-24",
     "kind": "fact",
     "archive": false
    }
