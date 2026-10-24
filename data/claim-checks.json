@@ -730,10 +730,42 @@
   },
   "blanche-crypto-conflict-of-interest-2025": {
    "0": {
+    "state": "supports",
+    "why": "The memo text states DOJ will no longer target exchanges, mixers and offline wallets for end-user acts, lists the focus crimes, and says NCET is disbanded effective immediately.",
+    "host": "justice.gov",
+    "date": "2026-10-24",
+    "kind": "fact",
+    "archive": false
+   },
+   "1": {
     "state": "partly",
-    "why": "The TPM/ProPublica article confirms Blanche's crypto holdings and ethics-agreement divestment deadline, the memo halting crypto enforcement issued about a month into the job, the gift-based divestment to children/grandchild, and Canter's and Thurber's on-record reactions, but it does not name the memo, the National Cryptocurrency Enforcement Team, the Binance settlement, or quote Kedric Payne in the text provided.",
+    "why": "The ProPublica/TPM text supports the memo, NCET elimination, gifts to grandchild and adult children in late May/early June, and the three named experts, but the provided text states records give only broad ranges (not exact holdings) and shows no divestment deadline or Binance-precedent detail beyond the Zhao settlement mention.",
     "host": "talkingpointsmemo.com",
-    "date": "2026-09-15",
+    "date": "2026-10-24",
+    "kind": "fact",
+    "archive": false
+   },
+   "2": {
+    "state": "supports",
+    "why": "The article is dated January 23, 2026, reports the Campaign Legal Center asked the DOJ's acting inspector general to investigate, and carries the DOJ spokesperson's quoted statement with both phrases the claim cites.",
+    "host": "propublica.org",
+    "date": "2026-10-24",
+    "kind": "fact",
+    "archive": false
+   },
+   "3": {
+    "state": "supports",
+    "why": "The January 29, 2026 article reports the six Democratic senators' letter with the quoted 'glaring conflict of interest' language and the DOJ spokesperson's statement, noting she did not elaborate or respond about who cleared his actions.",
+    "host": "propublica.org",
+    "date": "2026-10-24",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "partly",
+    "why": "The OGE form shows the 09/02/2026 de la Vega annotation and Part 7 lines 1-6 as sales of Bitcoin, Solana, ethereum classic, polygon, polkadot and Quant; line 15 and a separate Ethereum sale are not visible in the provided (elided) text.",
+    "host": "static.washingtonsun.com",
+    "date": "2026-10-24",
     "kind": "fact",
     "archive": false
    }
@@ -3588,8 +3620,8 @@
     "archive": false
    },
    "2": {
-    "state": "partly",
-    "why": "Time reports Trump told Hannity on Fox News on Thursday night (Jan 8, 2026, per the Jan 9 dateline) that the U.S. would 'start now hitting land' with regard to cartels and links it to Mexico, but the provided text is Time only; CNBC's reporting is not in the source.",
+    "state": "supports",
+    "why": "Time reports Trump telling Sean Hannity on Fox News that 'we are going to start now hitting land with regard to the cartels' and that 'The cartels are running Mexico', on the Thursday night before the Jan. 9, 2026 article (Jan. 8).",
     "host": "time.com",
     "date": "2026-10-24",
     "kind": "fact",
@@ -7722,10 +7754,18 @@
     "archive": false
    },
    "4": {
-    "state": "partly",
-    "why": "Warner's September 18, 2025 press release confirms the Senate floor address titled 'The Politicization of Intelligence: A Threat to Our National Security' and its general theme of firings/retaliation undermining intelligence independence, but the provided (truncated) text cuts off mid-sentence ('but punishing intellige...') before reaching any explicit mention of the NGA episode, NSA/Cyber Command firings, or the quoted line 'If we let politics dictate what intelligence is acceptable, we are effectively flying blind' -- none of that specific content appears in the text available.",
+    "state": "supports",
+    "why": "The press release is dated September 18, 2025 and describes Warner's floor address with the exact title and the warning about firings, revoked clearances and retaliatory reassignments.",
     "host": "warner.senate.gov",
-    "date": "2026-09-15",
+    "date": "2026-10-24",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "partly",
+    "why": "The Record text carries the Loomer 'behest', 'blocked—again—and apparently, as she claimed, by Laura Loomer' (garbled across columns) and 'flying blind' passages, but the NSC reference, NGA wording and page numbers S6714-S6716 are not visible in the extracted text.",
+    "host": "govinfo.gov",
+    "date": "2026-10-24",
     "kind": "fact",
     "archive": false
    }
@@ -8088,8 +8128,8 @@
     "archive": false
    },
    "2": {
-    "state": "partly",
-    "why": "CBS confirms Bacon said at the hearing there was a one-day pause in February and that Vindman called the DoD denial a lie, but the text never mentions Laurie Buckhout or her response.",
+    "state": "supports",
+    "why": "The CBS article reports Bacon calling it 'a one-day pause' at a hearing on Friday (capture dated 17 May 2025) and Vindman calling the DOD Rapid Response statement 'an outright lie.'",
     "host": "cbsnews.com",
     "date": "2026-10-24",
     "kind": "fact",
@@ -8505,9 +8545,49 @@
    },
    "3": {
     "state": "supports",
+    "why": "The complaint, filed 10/06/25 as 25-cv-3559 in D.D.C., seeks under FOIA the recording of Homan's acceptance of a $50,000 cash payment from undercover FBI agents in September 2024, and paragraph 14 describes the September 22, 2025 request for any recording.",
+    "host": "democracyforward.org",
+    "date": "2026-10-24",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "supports",
     "why": "Snopes confirms it could not rate the claim due to reliance on anonymous sourcing, and that the New York Times' own anonymous sources disagreed on whether the evidence supported a bribery charge.",
     "host": "snopes.com",
     "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "supports",
+    "why": "Complaint paragraph 25 states the January 5, 2026 full denial categorically withheld all documents under Exemptions 6 and 7(C); the caption shows the 02/17/26 filing, D.D.C. and case 1:26-cv-00496.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-10-24",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
+    "state": "supports",
+    "why": "The motion (filed 04/06/26) describes the FBI's December 2, 2025 Glomar response, quotes the 'neither confirm nor deny' language, and relies on Exemptions 6 and 7(C) for Homan's privacy and 7(E) for surveillance techniques.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-10-24",
+    "kind": "fact",
+    "archive": false
+   },
+   "7": {
+    "state": "partly",
+    "why": "The docket shows the Democracy Forward cross-motion (Apr 24), the June 30 reply, and a July 21 Notice of Supplemental Authority as the newest entry, but 'no ruling as of July 26' is only inferred from the absence of an order in the (elided) list and attachment timestamps.",
+    "host": "courtlistener.com",
+    "date": "2026-10-24",
+    "kind": "fact",
+    "archive": false
+   },
+   "8": {
+    "state": "supports",
+    "why": "The docket's minute entry records a pre-motion conference held 9/8/2026 before Judge Ana C. Reyes at which the defendant was directed to file a Vaughn Index, and it is the newest entry shown with no ruling listed.",
+    "host": "courtlistener.com",
+    "date": "2026-10-24",
     "kind": "fact",
     "archive": false
    }
@@ -12604,6 +12684,14 @@
     "date": "2026-10-24",
     "kind": "fact",
     "archive": false
+   },
+   "5": {
+    "state": "supports",
+    "why": "The docket shows Doc 177 notice of appeal filed Jan 22, 2026 from Doc 176, USCA No. 26-3008, June 8 hearing taken under advisement, hearing rescheduled to Oct 9, 2026, and the Oct 7 government motion to continue.",
+    "host": "courtlistener.com",
+    "date": "2026-10-24",
+    "kind": "fact",
+    "archive": false
    }
   },
   "private-sector-hackback-authorization-2026": {
@@ -14312,10 +14400,10 @@
     "archive": false
    },
    "3": {
-    "state": "unopened",
-    "why": "",
-    "host": "usnews.com",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "The Reuters wire text carries Berisha's Facebook statement and the State Department spokesperson's quoted waiver rationale, and notes the spokesperson did not name those granted waivers.",
+    "host": "whbl.com",
+    "date": "2026-10-24",
     "kind": "fact",
     "archive": false
    },
@@ -14508,6 +14596,14 @@
     "date": "2026-10-19",
     "kind": "fact",
     "archive": true
+   },
+   "6": {
+    "state": "supports",
+    "why": "NPR's Feb. 12, 2026 article states that the 137 Venezuelans were deported to CECOT under the Alien Enemies Act and were later sent to their home countries in a prisoner exchange.",
+    "host": "npr.org",
+    "date": "2026-10-24",
+    "kind": "fact",
+    "archive": false
    }
   },
   "rubio-signal-autodelete-court-contradiction-2026": {
@@ -18169,13 +18265,21 @@
    },
    "3": {
     "state": "supports",
+    "why": "Courthouse News (July 28, 2025) reports the Freedom of the Press Foundation's FOIA suit for Bondi's memo calling the $400 million jet 'legally permissible' and DOJ's Jan. 25, 2027 earliest release date.",
+    "host": "courthousenews.com",
+    "date": "2026-10-24",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "supports",
     "why": "Newsweek reports Meink's under-$400 million estimate, other estimates near or above $1 billion for installing top-secret systems, and that the Air Force tapped Sentinel program funds to help pay for the overhaul.",
     "host": "newsweek.com",
     "date": "2026-10-24",
     "kind": "fact",
     "archive": false
    },
-   "4": {
+   "5": {
     "state": "supports",
     "why": "NPR (published July 2, 2026, describing events \"yesterday\") confirms Trump's first flight on the retrofitted jet to North Dakota on July 1, 2026.",
     "host": "npr.org",
@@ -18183,7 +18287,7 @@
     "kind": "fact",
     "archive": false
    },
-   "5": {
+   "6": {
     "state": "supports",
     "why": "ABC's August 6, 2026 report contains the White House official's quote, Trump's library pledge, sources saying ownership would pass to the Trump Presidential Library Foundation shortly before he leaves office, and open questions including personal use.",
     "host": "abcnews.com",
