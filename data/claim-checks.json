@@ -2085,7 +2085,7 @@
    },
    "15": {
     "state": "partly",
-    "why": "The source supports Kao's account of deals with Graham, Clyburn and Wilson each asking $100,000, the Dec. 9, 2024 Ball memo, non-designation of the lawmakers, the case going dark, Graham's death and the FBI's 'half baked' quote; but the provided text does not show Clyburn's or Wilson's offices denying wrongdoing or citing FEC rules, and the memo's detailing of the lawmakers' conduct is cut off in the extract.",
+    "why": "The source supports the Kao allegations, the $100,000 asks, the Dec. 9, 2024 Ball memo, the non-designation of the lawmakers, the agents' firing/ouster, the prosecutor quitting, and the FBI and DOJ statements; but the provided text contains no statements from Graham's, Clyburn's or Wilson's offices, nothing about Graham having died, and the 'case is dead' line is truncated (the text says only that 'there is no one left to look into' the allegations).",
     "host": "propublica.org",
     "date": "2026-10-25",
     "kind": "fact",
@@ -8164,6 +8164,14 @@
     "why": "The Fox News Digital piece (Oct 2, 2026, on WFMD) names the four senators and three secretaries, contains the quoted contention sentence verbatim, reports State delivered copies of the 'USG Strategic Partnership Agreement with NABEP' on Oct 1, says a Republican majority staffer asked to move the briefing to November, and quotes Johnson's 'pure grandstanding.'",
     "host": "wfmd.com",
     "date": "2026-10-16",
+    "kind": "fact",
+    "archive": false
+   },
+   "12": {
+    "state": "supports",
+    "why": "Every quoted term (35% stake via a Barbados parent, $0.01 per warrant share expiring on the 75th anniversary, seven-member board for 15 years, Northern District of Texas forum, no royalty guarantee, closing conditions), the Kingsley Wilson statement and the four senators' letter 'last month' (September, given the Oct. 20 dateline) appear in the source text.",
+    "host": "propublica.org",
+    "date": "2026-10-25",
     "kind": "fact",
     "archive": false
    }
@@ -15878,16 +15886,16 @@
     "archive": false
    },
    "3": {
-    "state": "partly",
-    "why": "All quoted passages (zero evidence, the pretext heading, 'appears to be pretextual... arbitrary and capricious', Eighth Amendment 'for another day', and the '12 months of study' argument) appear in Document 216, but the extracted text does not show the opinion's disposition, so the claim that it blocked Program Statement 5260.01 is not confirmed here, and the court frames its APA conclusion as 'likely'.",
+    "state": "supports",
+    "why": "The memorandum opinion (Document 216, filed 06/17/26) contains the grant with modification, the injunction and section 705 stay of Program Statement 5260.01, the APA likely-success holding, the 'zero evidence' passage, the pretext heading and holding, the deferral of Eighth Amendment claims, and the government's '12 months of study' argument.",
     "host": "storage.courtlistener.com",
     "date": "2026-10-25",
     "kind": "fact",
     "archive": false
    },
    "4": {
-    "state": "not_found",
-    "why": "The extracted CourtListener docket text covers only page 1 of 4 (entries through September 2025); it contains no August 26, 2026 order, no August 28 appeal or D.C. Cir. No. 26-5310, and no October 2026 entries.",
+    "state": "partly",
+    "why": "The docket confirms ECF 242 (Aug. 26 grant and Sept. 15-Dec. 14, 2026 injunction), the Aug. 28 notice of interlocutory appeal by defendants including Trump (ECF 245) and USCA No. 26-5310, and the Oct. 22 order on directing notice to class members; but the only visible Oct. 23 entry is a joint motion for order (ECF 269), not an order, and its text is truncated.",
     "host": "courtlistener.com",
     "date": "2026-10-25",
     "kind": "fact",
@@ -16596,8 +16604,8 @@
     "archive": false
    },
    "2": {
-    "state": "partly",
-    "why": "The guidance page (updated October 20, 2026) contains the three-year term, $10,000 to $30,000 reward, sole-discretion, multiple-tipster, and non-appealable language verbatim, but the quoted FAQ line about not 'merely repeat[ing] information from public sources' does not appear in the provided text (only a similar ineligibility rule for information contained entirely in court allegations or news media).",
+    "state": "supports",
+    "why": "The DOJ guidance page (marked 'Updated October 20, 2026') contains each quoted passage: the three-year term, the $10,000-$30,000 reward, sole discretion, multiple tipsters, non-appealable determination, and the news-media originality exclusion.",
     "host": "justice.gov",
     "date": "2026-10-25",
     "kind": "fact",
@@ -17330,9 +17338,17 @@
     "archive": false
    },
    "17": {
-    "state": "partly",
-    "why": "The Daily Beast text supports Concord's October 2025 formation by Isabela, Habba's contract within days at $10 million a year for four years plus bonuses (over $50 million), her Jan. 1 start while a DOJ senior adviser, the Jan. 15 pardon, the $3.5 million super PAC donation and the denials; but it does not report that people familiar with the contract believed Habba was hired to help with the pardon, does not say 'late' October, and no Raw Story text is provided.",
+    "state": "supports",
+    "why": "The Daily Beast article, citing the Times, states each element: Isabela created Concord in October 2025, Habba signed within days while acting U.S. attorney, $10 million a year over four years plus bonuses (over $50 million), joined Jan. 1 while a Bondi adviser, the Jan. 15 pardon and amended order five days later, the $3.5 million super PAC donation, and the Habba, DOJ and White House denials.",
     "host": "thedailybeast.com",
+    "date": "2026-10-25",
+    "kind": "fact",
+    "archive": false
+   },
+   "18": {
+    "state": "supports",
+    "why": "Raw Story, citing the Times, directly reports the late-October 2025 Concord registration, Habba's general-counsel role within days at $10 million a year plus bonuses under a $50-million-plus deal, the 'no public profile' quote, Kise and the $3.5 million donation failing by fall, sources' belief she was hired for the pardon effort, and the Habba, DOJ and White House denials.",
+    "host": "rawstory.com",
     "date": "2026-10-25",
     "kind": "fact",
     "archive": false
