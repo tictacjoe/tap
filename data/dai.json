@@ -4414,8 +4414,8 @@
     "status": "Ongoing. A Massachusetts federal judge let the colleges' challenge proceed in March 2026 and allowed limited discovery in September 2026; summary-judgment motions are due February 2027. ICE reactivated the terminated records by early May 2025; State has not reinstated revoked visas.",
     "date_of_action": "2025-03 (Student Criminal Alien Initiative begins) through 2026-03-20 (judge largely denies motion to dismiss)",
     "date_added": "2026-09-10",
-    "last_substantive_update": "2026-10-19",
-    "cause": "[TAP Analysis, not sourced] Part of a broader pattern this database documents of the administration using existing data systems and databases in new, aggressive ways against noncitizens -- pairing pre-existing law-enforcement records with immigration-status decisions at a scale and speed that outpaces individualized due process, echoed in other entries involving ICE data practices and student-visa vetting.",
+    "last_substantive_update": "2026-10-25",
+    "cause": "[TAP Analysis, not sourced] Part of a broader pattern this database documents of the administration using existing data systems and databases in new, aggressive ways against noncitizens -- pairing pre-existing law-enforcement records with immigration-status decisions at a scale and speed that outpaces individualized due process, echoed in other entries involving ICE data practices and student-visa vetting. The State Department's mass visa revocations, which it says passed 300,000 by October 2026, are tracked separately.",
     "glance": {
       "who": "ICE and DHS leadership (unnamed)",
       "what": "Ran 1.3M students through a crime database and cut thousands of SEVIS records, often without notice",
@@ -4424,12 +4424,12 @@
         "certainty": "documented",
         "who": "International students (4,700+)"
       },
-      "reviewed": "2026-10-19"
+      "reviewed": "2026-10-25"
     },
     "narrative_override": {
       "headline": "ICE cut thousands of students' SEVIS records after a mass crime-database check, often with no notice."
     },
-    "last_verified": "2026-10-19",
+    "last_verified": "2026-10-25",
     "what_changed": "In mid-March 2025, DHS and the State Department began an effort referred to internally as the \"Student Criminal Alien Initiative.\" Over multiple weeks, ICE employees ran the names of the 1.3 million international students then in the United States through the National Crime Information Center (NCIC) database, which records arrests, charges and citations as well as convictions. About 6,400 names returned hits, among them students with no criminal history, only speeding tickets, or arrests that never led to charges. ICE sent that list to State, which revoked many if not all of the valid visas on it, and ICE then terminated the SEVIS (Student and Exchange Visitor Information System) records of thousands of the students -- **more than 4,736 by April 10, by the student-visa program's own count to Congress, without any individualized assessment and, in many cases, without notifying the students or their schools**, according to the colleges' lawsuit. A senior DHS official, Andre Watson, told a federal judge in Washington on April 29, 2025 that the initiative was done \"at the instruction of leadership.\" Hundreds of students sued, and judges had granted temporary restraining orders in more than 35 of the suits by April 24, 2025, per Inside Higher Ed. That day the Presidents' Alliance on Higher Education and Immigration and several students sued in federal court in Massachusetts to challenge the policy itself; the Association of Independent Colleges and Universities in Massachusetts (AICUM) is a plaintiff on the amended complaint, and the individual students later dropped their claims. On April 25, 2025, a DOJ lawyer told a court that ICE would return the records to \"active\" while it developed a new termination framework. ICE issued a new SEVIS termination policy on April 26 that lists a State visa revocation as a ground, and by early May 2025 it had reactivated all the records terminated in the initiative, retroactively; State has not reinstated the revoked visas. On March 20, 2026, Judge Patti Saris largely denied the government's motion to dismiss, ruling the claims were not moot because the government had not shown the challenged conduct could not reasonably recur.\n\nUpdate 2026-10-19: In a separate case in Washington, Judge Sparkle Sooknanan on March 18, 2026 granted summary judgment to Mansi Reddy Bushireddy, a student whose SEVIS record ICE terminated on April 4, 2025 over a 2023 shoplifting charge dismissed after she completed an awareness course and community service. The judge ruled the termination arbitrary and capricious and wrote that the government had acted \"with a now all-too-familiar disregard for the law in hastily and callously terminating the F-1 status of international students across the country.\" A government witness in that case estimated DHS initiated about 5,500 SEVIS terminations from January to early May 2025, against about six in all of 2024. In the Massachusetts case, the government served the administrative record in June 2026, and on September 18, 2026 Judge Saris allowed the colleges limited discovery, including one deposition each of State and DHS; summary-judgment motions are due February 16, 2027.",
     "legal_status": "Sued. Presidents' Alliance on Higher Education and Immigration and AICUM v. Noem (D. Mass., No. 25-cv-11109) challenges State's visa revocations and DHS/ICE's SEVIS terminations under the Administrative Procedure Act. On March 20, 2026, Judge Patti Saris dismissed one claim (State's letters to students) and denied the rest of the motion to dismiss, holding the claims not moot; limited discovery was allowed September 18, 2026, and summary-judgment motions are due February 16, 2027. Separately, in Bushireddy v. Lyons (D.D.C.), Judge Sparkle Sooknanan ruled on March 18, 2026 that ICE's termination of one student's SEVIS record was arbitrary and capricious. Judges granted temporary restraining orders in more than 35 of the early individual student suits (Inside Higher Ed, April 2025).",
     "human_toll": {
@@ -4514,6 +4514,13 @@
       {
         "name": "Tampa Free Press via AOL -- 'Federal Court Slams ICE Over \"Callous\" Purge Of International Student Visas'",
         "url": "https://www.aol.com/news/federal-court-slams-ice-over-200829161.html"
+      }
+    ],
+    "cause_references": [
+      {
+        "match": "The State Department's mass visa revocations",
+        "tracker": "prosecution",
+        "id": "rubio-state-dept-mass-visa-revocations-2025-2026"
       }
     ],
     "timeline": {
@@ -6550,6 +6557,104 @@
       {
         "name": "Reason (via Yahoo News) -- Judge blocks warrantless ICE construction site raids after agents in Alabama arrested a U.S. citizen 3 times",
         "url": "https://www.yahoo.com/news/us/articles/judge-blocks-warrantless-ice-construction-192447813.html"
+      }
+    ]
+  },
+  {
+    "id": "hegseth-dhs-active-denial-heat-ray-border-2026",
+    "title": "Hegseth loaned DHS the military's Active Denial \"heat ray\" to test for use at the southern border",
+    "agencies": [
+      "DHS",
+      "CBP"
+    ],
+    "category": "policy_leadership",
+    "location": {
+      "place": "U.S.-Mexico border (test site not disclosed)"
+    },
+    "people": {
+      "officials": [
+        {
+          "name": "Pete Hegseth",
+          "role": "Secretary of Defense; signed the September 2026 memo authorizing a seven-month loan of one Active Denial System to DHS",
+          "sources": [
+            "https://www.cnn.com/2026/10/21/politics/heat-ray-weapon-dhs-pentagon",
+            "https://www.axios.com/2026/10/21/heat-ray-border-immigration-hegseth",
+            "https://www.theguardian.com/us-news/2026/oct/22/heat-ray-mexico-border-dhs"
+          ]
+        },
+        {
+          "name": "Markwayne Mullin",
+          "role": "Secretary of Homeland Security; said on Oct. 21, 2026 that DHS is \"always evaluating technology on the border\" and called the weapon \"less lethal or nonlethal\"",
+          "sources": [
+            "https://thehill.com/homenews/administration/6166168-dhs-receives-pentagon-heat-ray/"
+          ]
+        }
+      ],
+      "agents": [],
+      "affected": []
+    },
+    "status": "DHS has one Active Denial System on a seven-month loan from the Pentagon, starting September 2026, to test and develop border tactics; it has not said where or how. No use on people has been reported, and no lawsuit or congressional action has been found.",
+    "date_of_action": "2026-09 (Hegseth signs memo authorizing the seven-month loan, starting in September) through 2026-10-21 (memo reported; Mullin says DHS is \"always evaluating technology on the border\")",
+    "date_added": "2026-10-25",
+    "last_substantive_update": "2026-10-25",
+    "last_verified": "2026-10-25",
+    "what_changed": "Backstory: The Active Denial System is a nonlethal military weapon that fires an invisible beam of millimeter-wave energy, reaching a little more than half a mile, which penetrates about 1/64 of an inch into the skin and causes an intense burning sensation (CNN; Axios; the Guardian). Pentagon officials have compared it to the blast of heat from opening a hot oven; the military says it produces \"an instinctive and irresistible urge to run from the effect,\" and that a residual tingling can last 10 to 15 minutes (CNN; Axios). The Pentagon developed it as a demonstration project from 2002 to 2007 (Axios). It was sent to Afghanistan in 2010 but never used (The Hill) and was quickly returned home, the Washington Post reported (via the Guardian). Border officials had weighed it before: the El Centro sector evaluated it several years ago, when current CBP Commissioner Rodney Scott led that sector, to discourage river crossings, a CBP official told CNN, and in 2018 then-Homeland Security Secretary Kirstjen Nielsen rejected a proposal to use it against migrants (CNN), telling an aide it must never be brought up again, The New York Times reported (via The Hill). In 2020 the administration also sought it to control protests in Washington, D.C., after the killing of George Floyd, the Washington Post reported (via the Guardian). It has never been deployed at the border (CNN).\n\n**In September 2026, Defense Secretary Pete Hegseth signed a memo authorizing the \"temporary loan\" of one Active Denial System to the Department of Homeland Security for seven months, starting in September, so DHS can test it and develop tactics for potential use in operations at the southern border** (CNN, which obtained the memo; Axios; the Guardian). The memo says the system \"shall not be operated by DoW (Department of War) personnel\" and makes DHS solely responsible for \"system employment, use and development of tactics, techniques and procedures\" (CNN). After the loan, DHS can ask to keep using it, a defense official told CNN. DHS's request did not say where or how the weapon would be tested or how it might eventually be used (CNN). The Pentagon referred questions to DHS, which answered with a CBP statement that the agency is \"continually evaluating new technology, especially technology that can save lives while simultaneously enhancing national security effectiveness\" (the Guardian; Axios).\n\nHegseth's deputy chief of staff, Patrick Weaver, wrote on X that \"The border is now a military installation and a battle lab for testing new systems, to include directed energy weapons\" (Axios). On October 21, Homeland Security Secretary Markwayne Mullin told Fox News's Laura Ingraham, \"we're always evaluating technology on the border,\" adding, \"Deterrent is the best option we have\"; he declined to say how the technology works but called it \"less lethal or nonlethal\" (The Hill). Current and former CBP officials told CNN there have been internal discussions over the years about using it for crowd dispersal along the border; CNN reported that those efforts ran into hurdles over legality, use of force, effectiveness and sovereignty, especially if it were turned on people in Mexico who had not crossed, and above all over whether people could be hurt. \"Even if they're chasing people back to the river, you don't want them to go in and drown,\" a former CBP official said (CNN). Some Border Patrol agents have questioned whether the tool is needed at all given low crossings and more personnel, another former CBP official told CNN.",
+    "legal_status": "",
+    "human_toll": {
+      "summary": "No one is reported to have been targeted yet. The weapon is built to inflict burning pain on people so they flee; at the border that could mean migrants and, officials have said, people still on the Mexican side or in the river. The system has caused second-degree burns in at least two documented incidents, and a former CBP official warned that people driven back toward the river could drown.",
+      "figures": [
+        {
+          "metric": "Documented incidents in which the Active Denial System caused second-degree burns (a 1999 laboratory accident and a 2007 training exercise)",
+          "value": "at least two",
+          "source": "Axios, Oct. 21, 2026"
+        },
+        {
+          "metric": "Length of the loan of one system to DHS, starting September 2026",
+          "value": "seven months",
+          "source": "Hegseth memo, as reported by CNN, Oct. 21, 2026"
+        }
+      ],
+      "caveat": "The harm is forward-looking: the memo allows testing and tactics development, not deployment, and Axios notes it is unclear whether DHS will ever use the weapon. The Defense Department designed the system to be nonlethal and says killing someone would take exposure \"sustained and prolonged many times over\" what is needed to repel, and that controls and training reduce injury risk (Axios); in 2012 the Marine Corps said it complied with U.S. international legal obligations (the Guardian). DHS's stated rationale is deterrence: Mullin said DHS will use \"whatever tool we have at our disposal\" to stop illegal entry and that the goal is not to use lethal force unless necessary (The Hill). Critics, including a defense technology analyst quoted by Axios, say a weapon designed to inflict pain raises ethical and legal questions."
+    },
+    "cause": "[TAP Analysis, not sourced] A military weapon designed to cause pain, which a previous Homeland Security secretary refused to use on migrants, is now in DHS's hands, with the Pentagon disclaiming any role in how it is used; it fits a senior Hegseth aide's description of the border as \"a military installation and a battle lab.\"",
+    "cause_references": [],
+    "pull_quote": "\"The border is now a military installation and a battle lab for testing new systems, to include directed energy weapons.\" -- Patrick Weaver, Hegseth's deputy chief of staff, on X, as quoted by Axios",
+    "confidence_note": "HIGH confidence that Hegseth signed the memo and on its terms (a seven-month loan of one system starting in September, no Defense Department operators, DHS solely responsible): CNN obtained the memo and quotes it, and Axios and the Guardian follow CNN's report; the memo itself has not been published, and neither the Pentagon nor DHS has disputed it. HIGH on Mullin's and Weaver's statements (The Hill; Axios). MODERATE on the history: past border evaluations, the 2018 rejection and the 2020 protest request rest on unnamed current and former officials quoted by CNN and on New York Times and Washington Post reporting relayed by The Hill and the Guardian, which were not read directly. Sources differ on the Afghanistan date: The Hill says 2010; CNN and the Guardian say nearly two decades ago. No use on people has been reported, so there is no public figure for people affected; the burn figure is Axios's account. Searches through Oct. 25, 2026 found no test site, lawsuit or congressional response. No rank-and-file agent or affected person is named.",
+    "glance": {
+      "who": "Defense Secretary Hegseth; DHS Secretary Mullin",
+      "what": "Loaned DHS the military's pain-inducing Active Denial \"heat ray\" to test for use at the southern border",
+      "harm": {
+        "kind": "physical",
+        "certainty": "projected",
+        "who": "People crossing the southern border"
+      },
+      "reviewed": "2026-10-25"
+    },
+    "section_summaries": {
+      "what_changed": "Hegseth lent DHS a beam weapon that causes burning pain for seven months of border testing, after a former DHS secretary rejected using it on migrants.",
+      "human_toll": "No one is reported hit yet; the weapon is meant to cause burning pain, has burned people in past incidents, and could drive people into the river.",
+      "confidence_note": "The memo's terms come from CNN, which obtained it; the system's history rests partly on unnamed officials and secondhand reporting."
+    },
+    "sources": [
+      {
+        "name": "CNN -- Pentagon grants DHS permission to test heat ray weapon for potential use at border (Oct. 21, 2026)",
+        "url": "https://www.cnn.com/2026/10/21/politics/heat-ray-weapon-dhs-pentagon"
+      },
+      {
+        "name": "Axios -- Hegseth approves testing of \"heat ray\" at the border. Here's how it works (Oct. 21, 2026)",
+        "url": "https://www.axios.com/2026/10/21/heat-ray-border-immigration-hegseth"
+      },
+      {
+        "name": "The Guardian -- Pete Hegseth reportedly authorizes DHS to test 'heat ray' at US-Mexico border (Oct. 22, 2026)",
+        "url": "https://www.theguardian.com/us-news/2026/oct/22/heat-ray-mexico-border-dhs"
+      },
+      {
+        "name": "The Hill -- Mullin on heat ray weapon: 'We're always evaluating technology on the border' (Oct. 22, 2026)",
+        "url": "https://thehill.com/homenews/administration/6166168-dhs-receives-pentagon-heat-ray/"
+      },
+      {
+        "name": "The National News Desk (via WJLA) -- Pentagon clears DHS to test 'heat ray' for possible use at southern border (Oct. 21, 2026)",
+        "url": "https://wjla.com/news/nation-world/pentagon-clears-dhs-homeland-security-to-test-heat-ray-active-denial-system-for-possible-use-at-southern-border-defense-secretary-pete-hegseth-memo-border-patrol"
       }
     ]
   },

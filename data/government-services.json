@@ -18727,7 +18727,7 @@
       "estimated_impact": "In the deadly July 2025 Texas floods, call-center funding lapsed and Noem took five days to renew it as the answer rate fell to 20%; FEMA later approved only 22% of Kerr County aid applications.",
       "confidence_note": "Strongly sourced via internal memos and GAO data; whether the cuts caused specific deaths or slower rescues stays contested, framed as a plausible link, not a proven cause."
     },
-    "last_verified": "2026-09-23",
+    "last_verified": "2026-10-25",
     "date_added": "2026-07-07",
     "sources": [
       {
@@ -18956,7 +18956,7 @@
       }
     ],
     "last_updated": "2026-09-23",
-    "last_substantive_update": "2026-09-23",
+    "last_substantive_update": "2026-10-25",
     "glance": {
       "who": "Kristi Noem (DHS Secretary)",
       "what": "A $100,000 spending sign-off rule delayed FEMA call-center funding during the deadly 2025 Texas floods",
@@ -18965,9 +18965,9 @@
         "certainty": "documented",
         "who": "Texas flood survivors calling FEMA"
       },
-      "reviewed": "2026-09-23"
+      "reviewed": "2026-10-25"
     },
-    "cause": "[TAP Analysis, not sourced] Hamilton's pledge to be 'fair and reasonable' in assessing disaster-aid requests is notable given the separate, related pattern of partisan gaps in disaster-aid approvals. See also: the partisan gaps in disaster-aid approvals entry; the Katrina Declaration whistleblower retaliation entry.",
+    "cause": "[TAP Analysis, not sourced] Hamilton's pledge to be 'fair and reasonable' in assessing disaster-aid requests is notable given the separate, related pattern of partisan gaps in disaster-aid approvals. See also: the partisan gaps in disaster-aid approvals entry; the Katrina Declaration whistleblower retaliation entry; the entry on FEMA's push for states to handle most disasters.",
     "cause_references": [
       {
         "match": "the partisan gaps in disaster-aid approvals entry",
@@ -18978,6 +18978,11 @@
         "match": "the Katrina Declaration whistleblower retaliation entry",
         "tracker": "prosecution",
         "id": "noem-fema-katrina-declaration-whistleblower-retaliation-2025-2026"
+      },
+      {
+        "match": "the entry on FEMA's push for states to handle most disasters",
+        "tracker": "government-services",
+        "id": "fema-states-disaster-response-shift-2026"
       }
     ],
     "timeline": {
@@ -19545,6 +19550,120 @@
         "who": "Cities and groups sheltering migrants"
       },
       "reviewed": "2026-10-07"
+    }
+  },
+  {
+    "id": "fema-states-disaster-response-shift-2026",
+    "title": "FEMA's Chief Told States to Prepare to Handle Most Disasters Without Federal Help, With Changes Possible Within Six Months, as FEMA's Own Study Found Local Emergency Agencies Understaffed and Underfunded",
+    "institution": "Federal Emergency Management Agency (FEMA) disaster declarations, Public Assistance and recovery aid to states, tribes and territories",
+    "domain": "funding_redirection",
+    "status": "Announced, not yet in effect. FEMA chief Cameron Hamilton told state officials on Oct. 20, 2026 that changes could begin within six months; no change has been publicly announced and FEMA still approves disaster aid. The Review Council's biggest proposals would need Congress.",
+    "date_of_action": "2026-05-07 (FEMA Review Council final report) through 2026-10-20 (Hamilton's remarks to state emergency managers)",
+    "what_changed": "On May 7, 2026, the President's FEMA Review Council, set up by Executive Order 14180 in January 2025, released its final report with ten recommendations for a system in which states and localities take the lead in disasters. The National Association of Counties (NACo) reported that the report would replace FEMA's Public Assistance and Individual Assistance programs, transfer emergency sheltering to states and territories, and raise federal disaster declaration thresholds with new minimum state spending requirements, which NACo said could mean roughly 16 fewer major disaster declarations a year, so that 'more moderate disasters would be absorbed entirely by states and counties without federal assistance.' NACo noted that the most consequential changes would require acts of Congress. On Sept. 3, 2026, the Congressional Research Service reported that state emergency management budgets ranged from $390,000 in New Mexico to $700 million in Illinois for fiscal 2026, that federal funding made up anywhere from zero to 99.4% of state emergency management budgets in fiscal 2024, according to the National Emergency Management Association (NEMA), and that in fiscal 2025, 16 states reported layoffs or hiring freezes and 1,191 of 8,612 full-time state emergency management positions were vacant. CRS concluded that some states 'may struggle to adjust to the proposed changes' and would likely need 'months to years' to adapt. FEMA Administrator Cameron Hamilton sent an internal memo on Oct. 15, 2026 that, as reported by Politico, said FEMA will 'strengthen state and local capacity'; The Hill reported that a Hamilton memo sent that week called for FEMA to 'reduce unnecessary centralization in Washington, D.C.' and to 'reduce federal government dependency.' On Oct. 16, FEMA released a study it funded, conducted by Argonne National Laboratory, which surveyed officials in 1,689 local jurisdictions, 37 states, 59 tribal nations and four territories. **FEMA's own release said the study found local emergency management agencies are 'typically understaffed and underfunded'**; Smart Cities Dive reported that the study found more than half of local agencies have one or fewer full-time employees and that 19% said they are only slightly or not at all meeting their communities' needs. FEMA presented the finding as reinforcing the administration's push for state and local self-reliance, saying that 'many states have relied excessively on federal grants.' On Oct. 20, Hamilton told state emergency management leaders at NEMA's annual conference in Little Rock, Arkansas, that **states must increase their financial reserves and emergency capabilities to handle most disasters on their own, without federal help**, according to a recording of the private conference obtained by Politico. 'Every state must have the appropriate financial reserves' so that recovery is not 'held up simply because of the federal [disaster] declaration process,' Hamilton said, adding that he hoped for a future that 'wouldn't require as many disasters,' meaning presidential authorizations of federal aid, 'because the capability of states is so high and so substantial.' He said changes could begin 'in the next six months,' that the administration plans a 'national mutual aid' system in which states help one another, and that FEMA will seek to waive federal environmental and historic preservation reviews of rebuilding projects. 'Federal dollars should be building greater capability, not creating greater dependency,' he said. A FEMA spokesperson told Politico that 'FEMA is not a first responder' but 'a force multiplier.' Critics questioned whether states can absorb the shift: Eric Holdeman, a former King County, Washington, emergency management director, wrote on LinkedIn in response to Hamilton's memo that many states have 'slim rainy-day funds and no capacity to make up for a lack of federal disaster recovery funds,' and California Gov. Gavin Newsom accused the administration of 'telling Americans in states across the country to fend for themselves.' Smart Cities Dive cited a 2025 Urban Institute report finding that only five of the 31 states that received federal disaster resources in 2019 had enough set aside in their budgets to cover disaster costs. Politico reported that the administration has not publicly announced any changes and has continued to approve disaster aid for weather-related events.",
+    "primary_proponent": {
+      "name": "Cameron Hamilton",
+      "role": "Administrator, Federal Emergency Management Agency (Senate-confirmed August 2026)",
+      "note": "Told state emergency managers on Oct. 20, 2026 that 'Every state must have the appropriate financial reserves' to handle most disasters without federal help and that changes could begin 'in the next six months'; a memo he sent that month called for FEMA to 'reduce federal government dependency,' The Hill reported. The shift follows the President's FEMA Review Council recommendations of May 2026."
+    },
+    "estimated_impact": {
+      "summary": "If carried out, more disasters would be handled by states and localities without federal aid. That would leave survivors and communities dependent on local emergency agencies that FEMA's own study found are typically understaffed and underfunded, more than half with one or fewer full-time staff, and on state agencies, some of which get as much as 99.4% of their budgets from federal money. NACo estimates the Review Council's higher declaration thresholds could mean about 16 fewer major disaster declarations a year.",
+      "figures": [
+        {
+          "metric": "Timeline Hamilton gave for changes to begin",
+          "value": "within the next six months (from Oct. 20, 2026)",
+          "source": "Hamilton's remarks to NEMA, recording obtained by Politico, Oct. 20, 2026"
+        },
+        {
+          "metric": "Fewer major disaster declarations per year under the Review Council's higher thresholds",
+          "value": "roughly 16",
+          "source": "FEMA Review Council final report, as summarized by NACo, May 11, 2026"
+        },
+        {
+          "metric": "Share of state emergency management budgets from federal funding, FY2024",
+          "value": "0% to 99.4%, depending on the state",
+          "source": "NEMA data, cited in CRS report R49336, Sept. 3, 2026"
+        },
+        {
+          "metric": "Vacant full-time state emergency management positions, FY2025 (16 states reported layoffs or hiring freezes)",
+          "value": "1,191 of 8,612",
+          "source": "CRS report R49336, Sept. 3, 2026"
+        },
+        {
+          "metric": "Local emergency management agencies with one or fewer full-time employees",
+          "value": "more than half",
+          "source": "FEMA-funded Argonne National Laboratory study, Oct. 16, 2026, as reported by Smart Cities Dive"
+        },
+        {
+          "metric": "States with enough budgeted to cover disaster costs, of 31 receiving federal disaster resources in 2019",
+          "value": "5",
+          "source": "Urban Institute, 2025, as cited by Smart Cities Dive"
+        }
+      ],
+      "caveat": "The shift has been described in a private speech and an internal memo, not a published policy; Politico reported no change has been announced and disaster aid is still being approved, and NACo notes the Review Council's largest changes need Congress. The 16-declaration figure is NACo's summary of the report's projection. The FEMA study's 'understaffed and underfunded' finding is about local agencies; the state-level staffing and budget figures come from CRS and NEMA. No estimate of the human or dollar cost to survivors was found."
+    },
+    "confidence_note": "MODERATE-HIGH confidence. Hamilton's Oct. 20 remarks rest on a recording Politico obtained and quoted at length. The study finding comes from FEMA's own Oct. 16 press release; state budget and staffing figures come from a Sept. 3, 2026 CRS report; the Review Council recommendations are as summarized by NACo. The October memos are known only through Politico's and The Hill's reporting. Frame it as an announced direction with a stated timeline, not an enacted cut.",
+    "cause": "[TAP Analysis, not sourced] The planned shift extends the push to move disaster costs onto states traced in the entry on FEMA's capacity collapse, including the Review Council fight and the earlier block-grant proposal, and it would raise the stakes of the declaration decisions documented in the entry on FEMA disaster aid approvals. See also: the entry on FEMA's cancelled disaster-resilience grants.",
+    "cause_references": [
+      {
+        "match": "the entry on FEMA's capacity collapse",
+        "tracker": "government-services",
+        "id": "fema-capacity-collapse-texas-floods-trump2"
+      },
+      {
+        "match": "the entry on FEMA disaster aid approvals",
+        "tracker": "government-services",
+        "id": "fema-disaster-aid-partisan-approval-gap-trump2"
+      },
+      {
+        "match": "the entry on FEMA's cancelled disaster-resilience grants",
+        "tracker": "government-services",
+        "id": "fema-bric-program-elimination-reinstatement-2025"
+      }
+    ],
+    "pull_quote": "'Every state must have the appropriate financial reserves.' -- FEMA Administrator Cameron Hamilton, telling states to prepare to handle most disasters without federal help, days after FEMA's own study found local emergency agencies typically understaffed and underfunded.",
+    "last_verified": "2026-10-25",
+    "date_added": "2026-10-25",
+    "last_substantive_update": "2026-10-25",
+    "sources": [
+      {
+        "name": "Politico -- 'FEMA tells states to handle disasters on their own' (Oct. 20, 2026)",
+        "url": "https://www.politico.com/news/2026/10/20/fema-states-disasters-exclusive-energy-environment-01128120"
+      },
+      {
+        "name": "FEMA -- 'First-of-its-Kind Study Provides Insights into Challenges Facing Emergency Management Agencies Across the Nation' (Oct. 16, 2026)",
+        "url": "https://www.fema.gov/press-release/20261016/first-its-kind-study-provides-insights-challenges-facing-emergency"
+      },
+      {
+        "name": "Smart Cities Dive via Yahoo News -- 'Few states, cities have capacity to handle disasters without FEMA, reports find' (Oct. 2026)",
+        "url": "https://www.yahoo.com/news/us/articles/few-states-cities-capacity-handle-144904192.html"
+      },
+      {
+        "name": "Congressional Research Service -- 'Understanding State Capacity for Emergency Management,' R49336 (Sept. 3, 2026)",
+        "url": "https://www.everycrsreport.com/files/2026-09-03_R49336_cb22912c0c02b9e94629f661c356eaf37d7a2a0c.pdf"
+      },
+      {
+        "name": "National Association of Counties -- 'FEMA review council releases final report recommending sweeping changes' (May 11, 2026)",
+        "url": "https://www.naco.org/news/fema-review-council-releases-final-report-recommending-sweeping-changes"
+      },
+      {
+        "name": "The National News Desk via WJLA -- 'FEMA officials to decentralize agency, realign certain offices: report' (Oct. 19, 2026, citing The Hill)",
+        "url": "https://wjla.com/news/nation-world/fema-officials-to-decentralize-agency-realign-certain-offices-report-cameron-hamilton-washington-trump-administration-disasters-gao"
+      }
+    ],
+    "section_summaries": {
+      "what_changed": "FEMA's chief told states to build reserves to handle most disasters alone, with changes possible in six months, after FEMA's study found local agencies understaffed.",
+      "estimated_impact": "More disasters would fall to states, where federal money is up to 99.4% of some agency budgets, and to local offices, more than half with one full-time worker or fewer.",
+      "confidence_note": "Hamilton's remarks come from a recording Politico obtained; study and budget figures come from FEMA and CRS. It is an announced direction, not an enacted cut."
+    },
+    "glance": {
+      "who": "Cameron Hamilton (FEMA Administrator)",
+      "what": "Told states to prepare to handle most disasters without federal aid, with changes possible within 6 months",
+      "harm": {
+        "kind": "livelihood",
+        "certainty": "projected",
+        "who": "Disaster-hit communities"
+      },
+      "reviewed": "2026-10-25"
     }
   },
   {

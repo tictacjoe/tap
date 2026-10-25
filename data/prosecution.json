@@ -4637,7 +4637,7 @@
     "status": "Litigation ongoing: Judge Loren AliKhan heard ABC's injunction motion and the FCC's motion to dismiss Oct. 6, 2026, and has not ruled; the FCC filed a supplemental brief Oct. 9 and ABC's is due Oct. 14. The FCC has not referred the licenses for a hearing and agreed to give 48 hours' notice first.",
     "rebuttal_anticipated": "The FCC's defense: the early renewals serve a year-long investigation into alleged unlawful discrimination at Disney, whose responses it calls deficient and nonresponsive; a longstanding rule allows early renewal to serve an investigation; the stations keep operating while renewal is pending; Carr says no decision has been made and the agency will \"follow the facts and the law\"; and only a federal appeals court, not the district court, can review FCC licensing actions.",
     "comeback": "The order came the day after the President demanded that Kimmel be fired, ABC's complaint says it was the first time the FCC had called a network's owned stations in together, and the agency had not used the tool in more than half a century before that week. Carr's own statements tie the review to content: in March he warned stations airing \"fake news\" to \"correct course before their license renewals come up,\" according to ABC's complaint, and in July he said he expected ABC's decision not to carry the President's speech live to be part of the review. The Supreme Court held in NRA v. Vullo (2024) that officials may not use state power to punish disfavored expression. The FCC's jurisdictional argument, if it prevails, would move the case to an appeals court, not answer the retaliation claim.",
-    "cause": "[TAP Analysis, not sourced] Part of the press-pressure pattern this tracker documents, alongside the Wiles/AP press-access case and Trump's September 2026 ban of CNN, MS NOW and Politico. Those cases used control of White House access; this one uses a regulator's licensing power over the stations that carry a network's programming, where the potential penalty is loss of a license rather than loss of a seat in the briefing room. The President's public demands (fire Kimmel; revoke licenses over a speech ABC did not air; report NBC's Kristen Welker to the FCC) are followed, in ABC's account, by FCC action or statements from Carr, a sequence ABC calls retaliation and the FCC attributes to a discrimination probe.",
+    "cause": "[TAP Analysis, not sourced] Part of the press-pressure pattern this tracker documents, alongside the Wiles/AP press-access case and Trump's September 2026 ban of CNN, MS NOW and Politico. Those cases used control of White House access; this one uses a regulator's licensing power over the stations that carry a network's programming, where the potential penalty is loss of a license rather than loss of a seat in the briefing room. The President's public demands (fire Kimmel; revoke licenses over a speech ABC did not air; report NBC's Kristen Welker to the FCC) are followed, in ABC's account, by FCC action or statements from Carr, a sequence ABC calls retaliation and the FCC attributes to a discrimination probe. Carr's later warning to broadcasters about airing \"fake polls\" is tracked separately.",
     "cause_references": [
       {
         "match": "the Wiles/AP press-access case",
@@ -4648,6 +4648,11 @@
         "match": "Trump's September 2026 ban of CNN, MS NOW and Politico",
         "tracker": "prosecution",
         "id": "trump-cnn-msnow-politico-white-house-ban-2026"
+      },
+      {
+        "match": "Carr's later warning to broadcasters about airing \"fake polls\"",
+        "tracker": "prosecution",
+        "id": "carr-fcc-fake-polls-broadcaster-warning-2026"
       }
     ],
     "confidence_note": "HIGH confidence on the sequence of events: the April 27 post, the April 28 order, the license dates, the lawsuit and the parties' arguments are documented in the court record (ABC's complaint, the FCC's motion to dismiss and ABC's opposition) and in reporting by NPR, CNN, NBC News, Reuters and Deadline; the October 6 hearing and briefing schedule are on the court docket and were reported by the Associated Press and JURIST. The retaliation claim is an allegation: the FCC attributes the order to a discrimination investigation, the judge heard argument on October 6 but has not ruled, and the FCC's argument that only an appeals court can hear the case could end it in district court without a ruling on motive. Some details (the extension denial, the 150,000-comment count, the President's July 16 words) come from ABC's complaint.",
@@ -4657,8 +4662,8 @@
       "confidence_note": "The order, timing and lawsuit are documented in court filings; retaliation is alleged, the FCC cites a discrimination probe, and the court has not yet ruled."
     },
     "date_of_action": "2026-04-28 (FCC early-renewal order, a day after Trump's call to fire Kimmel) through 2026-08-18 (ABC and Disney sue)",
-    "last_verified": "2026-10-11",
-    "last_substantive_update": "2026-10-11",
+    "last_verified": "2026-10-25",
+    "last_substantive_update": "2026-10-25",
     "date_added": "2026-09-29",
     "glance": {
       "who": "Brendan Carr (FCC Chairman)",
@@ -4668,9 +4673,105 @@
         "certainty": "alleged",
         "who": "ABC's eight owned TV stations"
       },
-      "reviewed": "2026-10-11"
+      "reviewed": "2026-10-25"
     },
     "narrative_combined": true
+  },
+  {
+    "id": "carr-fcc-fake-polls-broadcaster-warning-2026",
+    "official": "Brendan Carr, Chairman of the Federal Communications Commission (posted the October 21, 2026 warning to broadcasters on X)",
+    "offense_category": "Accountability concern, not alleged as a legal violation: the FCC Chairman using the agency's licensing power to warn broadcasters away from airing election polls he called \"fake,\" without identifying any. TAP notes that the Communications Act bars the FCC from censoring broadcasts or interfering with free speech (47 U.S.C. 326) and that the Supreme Court has held the government may not \"use the power of the State to punish or suppress disfavored expression\" (NRA v. Vullo, 2024); critics call the warning an unconstitutional threat. No guidance, investigation or enforcement action has followed; public warning only",
+    "contested": true,
+    "narrative_combined": true,
+    "incident_summary": "The FCC's news distortion policy, which the agency describes as covering broadcasters who \"have deliberately distorted a factual news report,\" was rarely invoked for decades until FCC Chairman Brendan Carr cited it in disputes with networks the agency regulates. In November 2025, a bipartisan group of former FCC chairs and commissioners petitioned the agency to repeal it. On August 30, 2026, after NBC's Kristen Welker said President Trump had had \"mixed results\" with his primary endorsements, Trump wrote on Truth Social that she would be reported to the FCC for \"rebuke or punishment\" and that he hoped Carr and his commission \"will take this Threat to our Country very seriously.\" Asked about Welker on Fox News on Sunday, September 6, Carr said \"President Trump is over the target, and we're looking at a lot of actions,\" adding that \"the FCC may put guidance out soon to remind broadcasters about their obligations with respect to not airing fake polls, particularly if they're done to suppress people heading into the fall.\" On Tuesday, October 20, a self-described polling firm, Wedgewood Polls, admitted it had fabricated its survey data after the poll tracker FiftyPlusOne asked it to comment on an investigation; The New York Times, among others, had included its numbers in election coverage. The next day, Wednesday, October 21, as the latest Reuters/Ipsos and Washington Post-ABC News-Ipsos polls put Trump's approval at 31% and 33%, record lows by CNN's and Reuters' accounts, **Carr posted on X that there had been \"a significant surge in entirely Fake Polls and Suppression Polls designed to do nothing more than interfere with the regular functioning of the electoral process and alter the normal patterns of voter turnout and enthusiasm,\"** and that \"many journalists and broadcasters\" had been airing them. He wrote that \"broadcasters are prohibited by the terms of their federal licenses from engaging in News Distortion or promoting Broadcast Hoaxes\" and advised them \"to avoid engaging in News Distortions or running Broadcast Hoaxes by airing Polls that would violate their regulatory obligations.\" He named no poll or broadcaster and offered no evidence, according to Reuters and TheDesk, and did not respond to CNN's request for comment. Commissioner Anna Gomez, the commission's lone Democrat, replied that \"FCC rules on news distortion or hoaxes do not apply to a station that reports this data in good faith.\" A bipartisan group of former FCC officials, including former chairs Mark Fowler and Tom Wheeler and former commissioner Gloria Tristani, said Carr was \"seizing on reports about fabricated political polling as an excuse to once again try to scare broadcasters into self-censorship\" and that \"the FCC has zero authority to dictate editorial decisions.\" The midterm elections are on November 3.",
+    "elements_required": [
+      "Carr, who as FCC Chairman oversees the licensing of local TV and radio stations, publicly warned broadcasters on October 21, 2026 that airing \"Fake Polls\" could breach their license obligations under the FCC's news distortion and broadcast hoax policies, without naming any poll or broadcaster or offering evidence of the \"surge\" he described",
+      "The warning follows President Trump's attacks on unfavorable polls and his demand that NBC's Kristen Welker face FCC \"rebuke or punishment\"; Carr answered that demand in September by saying \"President Trump is over the target\" and that the FCC might issue guidance on fake polls, and his October warning came as major polls showed Trump's approval at record lows less than two weeks before the midterms",
+      "The FCC's own description of its news distortion policy covers deliberate distortion, not good-faith errors, and the agency's lone Democratic commissioner and a bipartisan group of former FCC chairs and commissioners say good-faith reporting of public polls does not violate it, so the warning's practical effect is to make stations wary of airing polls",
+      "No guidance, investigation or enforcement action has followed; a real fabricated-poll scandal broke the day before the warning, and whether any broadcast of a poll violated FCC policy is untested"
+    ],
+    "evidence": [
+      {
+        "type": "news_report",
+        "description": "NBC News, November 13, 2025: \"A bipartisan group of former Federal Communications Commission leaders has petitioned the agency to repeal the policy the Trump administration invoked in discussions surrounding Jimmy Kimmel at ABC and in the investigation of \"60 Minutes\" at CBS.\" The policy, per the FCC's website, allows sanctions if broadcasters \"have deliberately distorted a factual news report\"; it \"was rarely invoked for decades until this year, when President Donald Trump's pick to lead the FCC, Brendan Carr, cited it in several high-profile disputes with networks his agency regulates.\"",
+        "source_url": "https://www.nbcnews.com/tech/tech-news/fcc-chair-trump-kimmel-60-minutes-policy-abc-disney-distortion-cbs-rcna243495",
+        "maps_to_element": "The FCC's own description of its news distortion policy covers deliberate distortion, not good-faith errors, and the agency's lone Democratic commissioner and a bipartisan group of former FCC chairs and commissioners say good-faith reporting of public polls does not violate it, so the warning's practical effect is to make stations wary of airing polls"
+      },
+      {
+        "type": "news_report",
+        "description": "Washington Examiner, on Carr's Fox News \"Sunday Briefing\" appearance: \"I think President Trump is over the target, and we're looking at a lot of actions,\" Carr said. \"For instance, there's a lot of interest right now in fake polls that are out there, and so the FCC may put guidance out soon to remind broadcasters about their obligations with respect to not airing fake polls, particularly if they're done to suppress people heading into the fall.\" The comments followed Trump's post that Welker would be reported to the FCC for \"rebuke or punishment,\" in which Trump wrote: \"Thank you for your attention to this very important matter of Fake Polls and Commentary!\"",
+        "source_url": "https://www.washingtonexaminer.com/news/entertainment/4715834/fcc-action-networks-fake-polls-brendan-carr/",
+        "maps_to_element": "The warning follows President Trump's attacks on unfavorable polls and his demand that NBC's Kristen Welker face FCC \"rebuke or punishment\"; Carr answered that demand in September by saying \"President Trump is over the target\" and that the FCC might issue guidance on fake polls, and his October warning came as major polls showed Trump's approval at record lows less than two weeks before the midterms"
+      },
+      {
+        "type": "news_report",
+        "description": "TV Tech (George Winslow): \"During an interview on Sunday Sept. 6 with Fox News,\" Carr made the comments \"in response to social media posts in late August by President Trump who lashed out at 'FAKE POLLS USED BY OUR CROOKED MEDIA'\" and Trump's August 30 comments that Welker \"should face 'rebuke or punishment' from the FCC.\" Gomez replied on X: \"The FCC faces a very high bar to prove news distortion, and it requires clear evidence of an intentional effort to mislead the public. Without it, this is all political theater.\"",
+        "source_url": "https://www.tvtechnology.com/regulatory-legal/fcc-may-ramp-up-regulation-of-how-broadcasters-cover-polls",
+        "maps_to_element": "The warning follows President Trump's attacks on unfavorable polls and his demand that NBC's Kristen Welker face FCC \"rebuke or punishment\"; Carr answered that demand in September by saying \"President Trump is over the target\" and that the FCC might issue guidance on fake polls, and his October warning came as major polls showed Trump's approval at record lows less than two weeks before the midterms"
+      },
+      {
+        "type": "news_report",
+        "description": "FiftyPlusOne (Mary Radcliffe, G. Elliott Morris, Cooper Burton): \"On Tuesday, Oct. 20, FiftyPlusOne reached out to Wedgewood Polls, a self-professed polling firm, with a request for comment on an investigation we had conducted into their alleged survey research. They did not respond to our request, but instead posted a public statement on social media admitting that they had been fabricating data.\"",
+        "source_url": "https://blog.fiftyplusone.news/p/fiftyplusone-just-caught-a-pollster",
+        "maps_to_element": "No guidance, investigation or enforcement action has followed; a real fabricated-poll scandal broke the day before the warning, and whether any broadcast of a poll violated FCC policy is untested"
+      },
+      {
+        "type": "news_report",
+        "description": "Reuters (David Shepardson, via KFGO), October 21, 2026: Carr \"said on X that ahead of the November midterm congressional elections there had been a significant surge in such polls 'designed to do nothing more than interfere with the regular functioning of the electoral process and alter the normal patterns of voter turnout and enthusiasm.' Carr did not provide evidence or detail which polls he was referring to.\" Reuters adds that the FCC's website says news distortion \"must involve a significant event,\" and that \"expressions of opinion or errors stemming from mistakes are not actionable.\" A Reuters/Ipsos poll that closed Monday put Trump's approval at 31%, \"the lowest level in either of his presidential terms.\"",
+        "source_url": "https://kfgo.com/2026/10/21/fcc-chair-says-broadcast-networks-could-violate-regulatory-obligations-by-airing-fake-polls/",
+        "maps_to_element": "Carr, who as FCC Chairman oversees the licensing of local TV and radio stations, publicly warned broadcasters on October 21, 2026 that airing \"Fake Polls\" could breach their license obligations under the FCC's news distortion and broadcast hoax policies, without naming any poll or broadcaster or offering evidence of the \"surge\" he described"
+      },
+      {
+        "type": "news_report",
+        "description": "TV Tech (Tom Butts), quoting Carr's post: \"Many journalists and broadcasters have been amplifying or airing these Polls without regard to basic journalistic ethics and without informing the public that those Polls lack a scientific, accurate, or even real basis\"; \"broadcasters are prohibited by the terms of their federal licenses from engaging in News Distortion or promoting Broadcast Hoaxes\"; and \"Broadcasters are advised to avoid engaging in News Distortions or running Broadcast Hoaxes by airing Polls that would violate their regulatory obligations.\" The article, updated October 22, carries a statement from a bipartisan group of former FCC officials including Mark Fowler, Tom Wheeler and Gloria Tristani: \"Good-faith reporting on public polls — even ones that turn out to be made up — is not a violation of the FCC's news distortion or hoax rules. And the FCC has zero authority to dictate editorial decisions.\"",
+        "source_url": "https://www.tvtechnology.com/regulatory-legal/fcc/carr-warns-broadcasters-against-reporting-fake-polls",
+        "maps_to_element": "The FCC's own description of its news distortion policy covers deliberate distortion, not good-faith errors, and the agency's lone Democratic commissioner and a bipartisan group of former FCC chairs and commissioners say good-faith reporting of public polls does not violate it, so the warning's practical effect is to make stations wary of airing polls"
+      },
+      {
+        "type": "news_report",
+        "description": "CNN (Brian Stelter, analysis), October 21, 2026: Carr \"warned FCC-licensed stations on Wednesday, the same day two new, highly respected national polls showed Trump registering another record-low approval rating,\" and \"one day after a self-professed polling firm admitted to being a 'fictional entity' that fabricated data and fooled news outlets.\" \"His X post didn't say\" which polls he meant, \"and he didn't respond to CNN's request for comment.\" CNN notes the news distortion and hoax policies \"are narrowly tailored and rarely enforced.\" Gomez wrote: \"broadcasters who report publicly available polling data should never be punished when a poll is wrong.\"",
+        "source_url": "https://www.cnn.com/2026/10/21/media/trump-polls-fcc-brendan-carr-wedgewood",
+        "maps_to_element": "Carr, who as FCC Chairman oversees the licensing of local TV and radio stations, publicly warned broadcasters on October 21, 2026 that airing \"Fake Polls\" could breach their license obligations under the FCC's news distortion and broadcast hoax policies, without naming any poll or broadcaster or offering evidence of the \"surge\" he described"
+      },
+      {
+        "type": "news_report",
+        "description": "TheDesk.net (Matthew Keys): \"Carr provided no specific examples of problematic polls, and did not call out any broadcasters by name.\" The news distortion threshold \"is remarkably high and typically only covers instances where a news outlet knows a report is false or fabricated before it is aired.\" The New York Times \"was one of the outlets that included Wedgewood Polling data in its midterm election coverage\" and \"has since affixed an editor's note to all stories that contained material from the firm.\"",
+        "source_url": "https://thedesk.net/2026/10/fccs-carr-engages-in-election-interference-with-baseless-threat-about-polls/",
+        "maps_to_element": "No guidance, investigation or enforcement action has followed; a real fabricated-poll scandal broke the day before the warning, and whether any broadcast of a poll violated FCC policy is untested"
+      }
+    ],
+    "status": "Public warning only: Carr's October 21, 2026 post named no poll or broadcaster, and no FCC guidance on polls, investigation or enforcement action has been reported. The midterm elections are on November 3.",
+    "rebuttal_anticipated": "Fabricated polls are a real problem: a self-described polling firm admitted fabricating its surveys the day before Carr's post, after outlets including The New York Times had used its numbers. Carr's post restates existing license obligations, asks only that stations add context, and threatens no specific broadcaster. Broadcasters use public airwaves and carry public interest duties that cable and print outlets do not.",
+    "comeback": "Carr did not point to the admitted fake or any other poll, and **his warning came the same day respected national polls showed Trump's approval at record lows**, after Trump had demanded FCC punishment of an NBC anchor over \"Fake Polls and Commentary\" and Carr replied that Trump was \"over the target.\" The FCC's own standard requires deliberate distortion, so a station that airs a poll in good faith has nothing to fix. A vague warning from the official who controls station licenses, issued days before an election, invites stations to drop poll coverage altogether, which is the chilling effect the former FCC chairs and commissioners warn about.",
+    "cause": "[TAP Analysis, not sourced] Part of the pattern this tracker documents of Carr using the FCC's licensing power over the stations that carry network news after the President attacks their coverage, most directly the FCC's early call-in of ABC's station licenses after Trump demanded Jimmy Kimmel's firing. Here the target is not one network but election coverage across all broadcasters, and the tool is a public warning rather than a formal order.",
+    "cause_references": [
+      {
+        "match": "the FCC's early call-in of ABC's station licenses after Trump demanded Jimmy Kimmel's firing",
+        "tracker": "prosecution",
+        "id": "carr-fcc-abc-early-license-renewal-2026"
+      }
+    ],
+    "confidence_note": "HIGH confidence on the facts: Carr's post is quoted consistently by Reuters, CNN and TV Tech, and his September comments by the Washington Examiner and TV Tech; the post itself on X was not fetched. That the warning is aimed at unfavorable polls rather than fabricated ones is an inference drawn by critics and TAP from its timing and Carr's silence on which polls he meant; Carr has not said so. No enforcement has followed, so the concern is a chilling effect, not a sanction.",
+    "pull_quote": "\"Good-faith reporting on public polls — even ones that turn out to be made up — is not a violation of the FCC's news distortion or hoax rules.\" -- bipartisan statement of former FCC officials, via TV Tech",
+    "last_verified": "2026-10-25",
+    "date_added": "2026-10-25",
+    "last_substantive_update": "2026-10-25",
+    "date_of_action": "2026-10-21",
+    "section_summaries": {
+      "incident_summary": "Days before the midterms, FCC Chair Carr warned stations that airing unnamed \"fake polls\" could violate license rules, after Trump attacked polls.",
+      "confidence_note": "Carr's own words are well documented across outlets; reading it as aimed at unfavorable polls is critics' and TAP's inference.",
+      "status": "Warning only: no poll or broadcaster named, and no FCC guidance, probe or enforcement reported before the November 3 midterms."
+    },
+    "glance": {
+      "who": "Brendan Carr (FCC Chairman)",
+      "what": "Warned broadcasters that airing unnamed \"fake polls\" could breach license rules, days before midterms",
+      "harm": {
+        "kind": "rights",
+        "certainty": "alleged",
+        "who": "Broadcasters' election poll coverage"
+      },
+      "reviewed": "2026-10-25"
+    }
   },
   {
     "id": "carr-fcc-paramount-gala-gifts-ethics-complaints-2026",
@@ -22471,6 +22572,137 @@
     ]
   },
   {
+    "id": "rubio-state-dept-mass-visa-revocations-2025-2026",
+    "official": "Marco Rubio, Secretary of State (heads the department that announces and carries out the revocations and has said \"Every time I find one of these lunatics, I take away their visas,\" while Deputy Secretary Christopher Landau directed the Charlie Kirk-related revocations)",
+    "offense_category": "First Amendment viewpoint discrimination (found by two federal district courts) and Administrative Procedure Act violations (found by one) in the subset of visa revocations based on protected political speech; revoking visas for crimes, overstays or fraud is a lawful discretionary power under the Immigration and Nationality Act and is not itself alleged to be unlawful. Both speech rulings are on appeal",
+    "contested": true,
+    "narrative_combined": true,
+    "incident_summary": "Since President Trump returned to office in January 2025, the State Department under Secretary of State Marco Rubio has revoked visas at a rate it says no earlier administration has matched. Its own running totals: about 80,000 nonimmigrant visas by November 2025; more than 100,000 by January 12, 2026, which the department called a record and a 150% increase over 2024; more than 175,000 by August 10, 2026; more than 250,000 by September 30; and more than 300,000 on October 20, 2026, an increase of roughly 125,000 in just over ten weeks. Announcing the latest figure, spokesman Tommy Pigott said the administration \"has revoked more visas at a faster pace than any administration in history.\" The department says most revocations follow crimes or other violations: an official told Al Jazeera the majority were for criminal activity or public safety concerns, including 25 percent for assault and related crimes and 22 percent for driving under the influence, and that more than 4,000 were tied to birth tourism. In 2025 it said it was reviewing the status of more than 55 million current visa holders, and it has set up a Continuous Vetting Center.\n\nA smaller share, which the department has never counted publicly, is at the center of the free-speech challenges. In March 2025, asked about Tufts doctoral student Rumeysa Ozturk, whose visa State had revoked and who was detained a year after co-writing a student-paper op-ed criticizing her university's response to Israel's war in Gaza, Rubio said: **\"It might be more than 300 at this point. We do it every day. Every time I find one of these lunatics, I take away their visas.\"** He said visas would be pulled from students who joined actions such as \"vandalizing universities, harassing students, taking over buildings,\" but did not say what Ozturk had done. In August 2025 a State official said about 200 to 300 of more than 6,000 revoked student visas were pulled for \"support for terrorism,\" without saying which groups. In October 2025 the department revoked six visas over social media posts about the killing of conservative activist Charlie Kirk, after Deputy Secretary of State Christopher Landau directed consular officials to act and asked social media users to send him such posts.\n\nTwo federal courts have ruled against the speech-based campaign. On September 30, 2025, after a trial, U.S. District Judge William Young in Boston found that Rubio and then-Homeland Security Secretary Kristi Noem had \"intentionally and in concert implemented\" two executive orders \"in a viewpoint-discriminatory way to chill protected speech.\" His January 22, 2026 judgment declared the enforcement policy void and vacated it, and let noncitizens who were members of the plaintiff groups from March 25 through September 30, 2025 bring their own court actions in which any change to their immigration status since January 20, 2025 is presumed to be retaliation unless the government proves otherwise. The government appealed to the First Circuit. On August 28, 2026, U.S. District Judge Noël Wise of the Northern District of California ruled that the statutes Rubio used to revoke visas and deport legal immigrants over their speech were unconstitutional as applied to protected speech, while declining to bar future revocations; the government had appealed to the Ninth Circuit by October 14.",
+    "elements_required": [
+      "The State Department under Rubio has revoked visas at a pace it calls faster than any administration in history, passing 300,000 revocations by October 20, 2026, up from more than 175,000 on August 10, 2026",
+      "Part of the campaign targets speech: Rubio said amid the 2025 campus-protest revocations that \"Every time I find one of these lunatics, I take away their visas,\" State officials have cited \"support for terrorism\" and social media posts about Charlie Kirk's killing as grounds, and the department has published no count of speech-based revocations",
+      "Two federal courts have found the speech-based policy unconstitutional: a Boston judge found after trial that Rubio and the Homeland Security Secretary intentionally implemented it in a viewpoint-discriminatory way to chill protected speech, and a California federal judge held the statutes Rubio used unconstitutional as applied to protected speech",
+      "Most revocations, by the department's own account, rest on crimes, overstays and other conduct that lawfully supports revocation; both speech rulings are on appeal, and neither court has ruled on the broader revocation totals"
+    ],
+    "evidence": [
+      {
+        "type": "news_report",
+        "description": "Reuters (via Hawaii Tribune-Herald), March 27, 2025, Georgetown, Guyana: asked about Tufts student Rumeysa Ozturk, Rubio said: \"It might be more than 300 at this point. We do it every day. Every time I find one of these lunatics, I take away their visas.\" He \"confirmed the State Department revoked Ozturk's visa but did not address details when asked what specific actions Ozturk had taken,\" and said Washington would take away visas from students who joined actions such as \"vandalizing universities, harassing students, taking over buildings, creating a ruckus.\" Her arrest \"came a year after Ozturk co-authored an opinion piece in the school's student paper.\"",
+        "source_url": "https://www.hawaiitribune-herald.com/2025/03/28/nation-world-news/rubio-says-us-may-have-revoked-more-than-300-visas/",
+        "maps_to_element": "Part of the campaign targets speech: Rubio said amid the 2025 campus-protest revocations that \"Every time I find one of these lunatics, I take away their visas,\" State officials have cited \"support for terrorism\" and social media posts about Charlie Kirk's killing as grounds, and the department has published no count of speech-based revocations"
+      },
+      {
+        "type": "news_report",
+        "description": "Reuters (via Yahoo News), August 2025 (Humeyra Pamuk): the administration \"has revoked more than 6,000 student visas for overstays and breaking the law, including a small minority for 'support for terrorism,' a State Department official said.\" Around 4,000 were canceled because the visitors broke the law; \"About 200 to 300 visas were revoked for terrorism,\" and \"The official did not say which groups the students whose visas have been revoked were in support of.\" Rubio \"has said he has revoked the visas of hundreds, perhaps thousands of people, including students, because they got involved in activities which he said went against U.S. foreign policy priorities.\"",
+        "source_url": "https://www.yahoo.com/news/articles/trump-administration-revoked-more-6-185524888.html",
+        "maps_to_element": "Part of the campaign targets speech: Rubio said amid the 2025 campus-protest revocations that \"Every time I find one of these lunatics, I take away their visas,\" State officials have cited \"support for terrorism\" and social media posts about Charlie Kirk's killing as grounds, and the department has published no count of speech-based revocations"
+      },
+      {
+        "type": "news_report",
+        "description": "AAUP v. Rubio (D. Mass., No. 1:25-cv-10685), September 30, 2025, as reported by USA Today (via Yahoo News): Judge William G. Young found the administration sought to \"target noncitizen pro-Palestinians for deportation primarily on account of their First Amendment protected political speech,\" and that \"the effect of these targeted deportation proceedings continues unconstitutionally to chill freedom of speech to this day.\" The Justice Department \"argued during the trial that no such policy of deportation for ideological reasons existed and that the administration was lawfully executing its wide discretion to enforce immigration laws.\"",
+        "source_url": "https://www.yahoo.com/news/articles/judge-rules-trumps-deportation-moves-192131471.html",
+        "maps_to_element": "Two federal courts have found the speech-based policy unconstitutional: a Boston judge found after trial that Rubio and the Homeland Security Secretary intentionally implemented it in a viewpoint-discriminatory way to chill protected speech, and a California federal judge held the statutes Rubio used unconstitutional as applied to protected speech"
+      },
+      {
+        "type": "news_report",
+        "description": "Associated Press (via ABC13), October 14, 2025: the administration \"has revoked the visas of six foreigners deemed by U.S. officials to have made derisive comments or made light of the assassination of conservative activist Charlie Kirk,\" after reviewing their social media posts. Deputy Secretary of State Christopher Landau had asked social media users to copy him on such posts and said he had \"directed our consular officials to undertake appropriate action.\" The department said it \"is reviewing the status of the more than 55 million current U.S. visa holders for potential violations of its standards.\"",
+        "source_url": "https://abc13.com/post/us-revokes-visas-6-foreigners-charlie-kirk-related-speech/18007351/",
+        "maps_to_element": "Part of the campaign targets speech: Rubio said amid the 2025 campus-protest revocations that \"Every time I find one of these lunatics, I take away their visas,\" State officials have cited \"support for terrorism\" and social media posts about Charlie Kirk's killing as grounds, and the department has published no count of speech-based revocations"
+      },
+      {
+        "type": "news_report",
+        "description": "Reuters (via Al-Monitor), January 12, 2026: the State Department \"said on Monday it has revoked more than 100,000 visas since President Donald Trump took office last year, setting what it said was a new record.\" Deputy spokesperson Tommy Pigott said the four leading causes were \"overstays, driving under the influence, assault and theft\" and that revocations marked \"a 150% increase from 2024.\" In November the department had said it revoked \"around 80,000 non-immigrant visas\" since the inauguration. It has launched a Continuous Vetting Center.",
+        "source_url": "https://www.al-monitor.com/originals/2026/01/trump-administration-has-revoked-over-100000-visas-state-department-says",
+        "maps_to_element": "The State Department under Rubio has revoked visas at a pace it calls faster than any administration in history, passing 300,000 revocations by October 20, 2026, up from more than 175,000 on August 10, 2026"
+      },
+      {
+        "type": "court_ruling",
+        "description": "AAUP v. Rubio, Annotated Judgment (D. Mass., Doc. 313, filed January 22, 2026): the plaintiffs \"have shown by clear and convincing evidence that Secretaries Noem and Rubio have intentionally and in concert implemented Executive Orders in 14161 and 14188 a viewpoint-discriminatory way to chill protected speech\"; the officials' \"threats to continue detaining, deporting, and revoking visas based on political speech\" are circumstantial evidence the enforcement exists. The court declared the enforcement policy \"OF NO EFFECT, VOID, ILLEGAL, SET ASIDE, AND VACATED,\" and held that for qualifying AAUP or MESA members \"it shall be presumed that the alteration in immigration status is in retribution\" for their speech.",
+        "source_url": "https://storage.courtlistener.com/recap/gov.uscourts.mad.282460/gov.uscourts.mad.282460.313.0.pdf",
+        "maps_to_element": "Two federal courts have found the speech-based policy unconstitutional: a Boston judge found after trial that Rubio and the Homeland Security Secretary intentionally implemented it in a viewpoint-discriminatory way to chill protected speech, and a California federal judge held the statutes Rubio used unconstitutional as applied to protected speech"
+      },
+      {
+        "type": "court_record",
+        "description": "Civil Rights Litigation Clearinghouse case summary, AAUP v. Rubio: \"On February 9, 2026, the defendants appealed the district court's judgment to the United States Court of Appeals for the First Circuit\"; the plaintiffs cross-appealed February 24; on March 11, 2026 the district court denied a stay pending appeal except for \"the monetary portion of the sanction relief.\" The page lists the First Circuit appeal as No. 26-01141, with the cross-appeal as No. 26-01195.",
+        "source_url": "https://clearinghouse.net/case/46288/",
+        "maps_to_element": "Most revocations, by the department's own account, rest on crimes, overstays and other conduct that lawfully supports revocation; both speech rulings are on appeal, and neither court has ruled on the broader revocation totals"
+      },
+      {
+        "type": "news_report",
+        "description": "FOX 9, August 10, 2026, from a State Department statement: \"175,000 visas have been pulled since President Donald Trump returned to office,\" and \"most of those who lost their visas had been accused of crimes.\" The department said: \"A U.S. visa is a privilege, not a right.\" Others \"had their visas revoked for posting messages that federal officials say celebrated the death of conservative activist Charlie Kirk.\"",
+        "source_url": "https://www.fox9.com/news/trumps-state-department-revoked-175000-visas-since-january-2025",
+        "maps_to_element": "The State Department under Rubio has revoked visas at a pace it calls faster than any administration in history, passing 300,000 revocations by October 20, 2026, up from more than 175,000 on August 10, 2026"
+      },
+      {
+        "type": "news_report",
+        "description": "The Stanford Daily, August 29, 2026: U.S. District Judge Noël Wise \"ruled that statutes which Secretary of State Marco Rubio and the federal government used to deport legal immigrants on the basis of their speech were unconstitutional,\" describing their use as \"a viewpoint- and content-based restriction as applied to protected speech\"; Rubio's revocations targeted noncitizens whose speech he \"personally determined\" to be unacceptable. Wise denied the claims for injunctive relief as \"not appropriate at this stage.\"",
+        "source_url": "https://stanforddaily.com/2026/08/29/stanford-daily-wins-free-speech-suit/",
+        "maps_to_element": "Two federal courts have found the speech-based policy unconstitutional: a Boston judge found after trial that Rubio and the Homeland Security Secretary intentionally implemented it in a viewpoint-discriminatory way to chill protected speech, and a California federal judge held the statutes Rubio used unconstitutional as applied to protected speech"
+      },
+      {
+        "type": "news_report",
+        "description": "The National News Desk (via WJLA), October 1, 2026: the State Department said it has revoked more than 250,000 visas during Trump's second term, citing foreign nationals who \"called for violence against the U.S. or Americans, defrauded U.S. citizens, abused the immigration system, endangered national security, violated the terms of their visas, and committed crimes\"; \"The majority of the revoked visas resulted from law enforcement encounters.\" Pigott: \"Every visa decision is a national security decision.\"",
+        "source_url": "https://wjla.com/news/nation-world/state-department-says-more-than-250000-visas-revoked-president-trump-tommy-pigott-asylum-crimes",
+        "maps_to_element": "Most revocations, by the department's own account, rest on crimes, overstays and other conduct that lawfully supports revocation; both speech rulings are on appeal, and neither court has ruled on the broader revocation totals"
+      },
+      {
+        "type": "news_report",
+        "description": "The Stanford Daily, October 14, 2026: \"The Trump administration has appealed a district court's ruling on The Stanford Daily's free speech lawsuit,\" sending the case to the U.S. Court of Appeals for the Ninth Circuit.",
+        "source_url": "https://stanforddaily.com/2026/10/14/trump-appeals-daily-lawsuit/",
+        "maps_to_element": "Most revocations, by the department's own account, rest on crimes, overstays and other conduct that lawfully supports revocation; both speech rulings are on appeal, and neither court has ruled on the broader revocation totals"
+      },
+      {
+        "type": "news_report",
+        "description": "Reuters (via Deccan Chronicle), October 20-21, 2026: the administration \"has revoked over 300,000 US visas during his second term, the State Department said on Tuesday\"; the figure \"showed an acceleration in the pace of visa revocations in recent weeks,\" up from over 175,000 in an August 10 update. Pigott said the administration \"has revoked more visas at a faster pace than any administration in history.\" Among revocations \"particularly condemned by rights advocates are those of pro-Palestinian foreign protesters\" and \"of foreigners over their social media comments about conservative commentator Charlie Kirk's assassination.\"",
+        "source_url": "https://www.deccanchronicle.com/world/americas/trump-administration-says-it-has-revoked-over-300000-visas-1997566",
+        "maps_to_element": "The State Department under Rubio has revoked visas at a pace it calls faster than any administration in history, passing 300,000 revocations by October 20, 2026, up from more than 175,000 on August 10, 2026"
+      },
+      {
+        "type": "news_report",
+        "description": "Al Jazeera, October 20, 2026: a State Department official said \"The vast majority of these revocations were due to criminal activity, public safety concerns, immigration violations, fraud or misrepresentation,\" that \"More than 4,000 of the revocations were for aliens who engaged in or facilitated birth tourism,\" and that the majority were for criminal activity or public safety concerns, \"including 25 percent for assault and related crimes and 22 percent for driving under the influence.\"",
+        "source_url": "https://www.aljazeera.com/news/2026/10/20/trump-official-claims-record-breaking-300000-visas-were-revoked",
+        "maps_to_element": "Most revocations, by the department's own account, rest on crimes, overstays and other conduct that lawfully supports revocation; both speech rulings are on appeal, and neither court has ruled on the broader revocation totals"
+      }
+    ],
+    "status": "Ongoing. State says it has revoked more than 300,000 visas since January 2025, most of them, it says, for crimes. Rulings in Boston and San Francisco that its speech-based revocations violate the First Amendment are on appeal in the First and Ninth Circuits.",
+    "rebuttal_anticipated": "A visa is a privilege, not a right, and the Secretary of State has broad statutory power to revoke one at any time. By the department's own breakdown, the great majority of the 300,000 revocations were for assault, drunk driving, theft, drugs, fraud, overstays and birth tourism, the ordinary work of vetting visitors more closely than past administrations did. The speech cases involve a small number of people the department says supported terrorism or celebrated violence, the Justice Department denied at trial that any policy of ideological deportation exists, and both rulings are under appeal.",
+    "comeback": "The size of the total does not cure the speech-based revocations inside it. **A federal judge found by clear and convincing evidence, after a trial, that Rubio and the Homeland Security Secretary intentionally used their powers \"in a viewpoint-discriminatory way to chill protected speech,\"** and a second judge found the statutes Rubio relied on unconstitutional as applied to protected speech. Rubio called the people whose visas he takes away every day \"these lunatics\" but would not say what Ozturk, whose known act was a co-written student op-ed, had done, and the Kirk-post revocations rested on social media posts, not crimes. The department publishes detailed crime percentages but has never said how many visas it revoked over speech.",
+    "cause": "[TAP Analysis, not sourced] Part of a pattern this tracker documents of the administration using immigration status to sort out disfavored people, alongside DHS's mass termination of international students' SEVIS records over database hits and the social-media vetting pause on student visas. A rising raw total is presented as proof of public safety while the speech-based cases inside it go uncounted.",
+    "cause_references": [
+      {
+        "match": "DHS's mass termination of international students' SEVIS records over database hits",
+        "tracker": "dai",
+        "id": "dhs-student-criminal-alien-initiative-sevis-2025"
+      },
+      {
+        "match": "the social-media vetting pause on student visas",
+        "tracker": "government-services",
+        "id": "student-visa-vetting-pause-enrollment-decline-2025"
+      }
+    ],
+    "confidence_note": "HIGH confidence on the totals and the court rulings: the figures are the State Department's own announcements, reported by Reuters and others, and the Boston judgment is read from the court's order. The department's crime breakdown is its own unaudited account. How many revocations rest on speech is unknown: the department has not published that number, and the cited cases (Rubio's 300-plus remark, 200 to 300 student visas, six Kirk-post revocations) are partial snapshots. Both speech rulings are on appeal.",
+    "pull_quote": "\"It might be more than 300 at this point. We do it every day. Every time I find one of these lunatics, I take away their visas.\" -- Secretary of State Marco Rubio, March 27, 2025",
+    "last_verified": "2026-10-25",
+    "date_added": "2026-10-25",
+    "last_substantive_update": "2026-10-25",
+    "date_of_action": "2025-03-27 (Rubio says more than 300 visas revoked over protests) through 2026-10-20 (State says more than 300,000 visas revoked since January 2025)",
+    "section_summaries": {
+      "incident_summary": "State under Rubio has revoked over 300,000 visas since January 2025, mostly for crimes; two judges found its speech-based revocations unconstitutional.",
+      "confidence_note": "Totals and rulings are well documented; the crime breakdown is State's own, and the speech-based share has never been disclosed.",
+      "status": "Revocations continue past 300,000; both court rulings against the speech-based revocations are on appeal in two circuits."
+    },
+    "glance": {
+      "who": "Marco Rubio (Secretary of State)",
+      "what": "Revoked over 300,000 visas since Jan. 2025; courts found speech-based revocations unconstitutional",
+      "harm": {
+        "kind": "rights",
+        "certainty": "documented",
+        "who": "Visa holders, noncitizen students"
+      },
+      "reviewed": "2026-10-25"
+    }
+  },
+  {
     "id": "rubio-vacancies-act-concentration-2025-2026",
     "official": "Marco Rubio, Secretary of State and, since September 2026, National Security Advisor (acting from May 2025); also served as Acting Archivist of the United States and Acting USAID Administrator in 2025",
     "offense_category": "Potential Federal Vacancies Reform Act (FVRA, 5 U.S.C. §3345 et seq.) compliance issues — concentration of multiple statutorily limited acting roles in one individual; NOT charged, no formal violation finding identified, but Rubio's exit from the Archivist role, which NARA says came at the Act's 300-day limit, indicates an internal recognition the statutory clock applied",
@@ -23563,6 +23795,125 @@
     }
   },
   {
+    "id": "trump-bop-transgender-inmate-care-eo-2025",
+    "official": "Donald Trump, President (signed Executive Order 14168, whose Sec. 4(c) ordered the change); William K. Marshall III, Director, Federal Bureau of Prisons (approved the February 2026 replacement policy)",
+    "offense_category": "Accountability concern, not alleged as a legal violation by Trump personally: a presidential order directing the Bureau of Prisons to stop spending federal funds on hormone therapy and other gender-affirming care for transgender federal inmates. A federal judge found the Bureau's implementing policy likely arbitrary and capricious under the Administrative Procedure Act and pretextual; the inmates' Eighth Amendment (cruel and unusual punishment) claims are undecided. Preliminary findings only; litigation ongoing",
+    "contested": true,
+    "narrative_combined": true,
+    "incident_summary": "On January 20, 2025, his first day back in office, President Trump signed Executive Order 14168, which recognizes only two sexes. Its Section 4(c) directs the Attorney General to ensure that the Bureau of Prisons revises its medical-care policies and \"that no Federal funds are expended for any medical procedure, treatment, or drug for the purpose of conforming an inmate's appearance to that of the opposite sex.\" The Bureau issued two memoranda in February 2025 to carry it out, the second stating that \"no Bureau of Prisons funds are to be expended\" on such care. A federal judge later found that the named plaintiffs' \"access to hormone medications and social accommodations was subsequently cut off or reduced\"; **one, Alishea Kingdom, went forty days without her hormone medication**, and she described anxiety, panic attacks and suicidal ideation. On March 7, 2025, Kingdom and two other transgender inmates, Jas Kapule and Solo Nichols, represented by the ACLU and the Transgender Law Center, sued in federal court in Washington, D.C. On June 3, 2025, Senior U.S. District Judge Royce Lamberth certified a class of Bureau inmates diagnosed with gender dysphoria and blocked the order and the memoranda as applied to their care, finding the memoranda likely arbitrary and capricious for lack of a reasoned explanation. By then the named plaintiffs' hormone access had been restored, though not their social accommodations. On February 19, 2026, Bureau Director William K. Marshall III approved a replacement policy, Program Statement 5260.01, \"Management of Inmates with Gender Dysphoria.\" It says psychotherapy \"should be prioritized,\" ends sex trait modification surgeries, bars starting anyone on hormones, puts every inmate now receiving hormones on a \"tapering plan,\" and ends social accommodations such as clothing, makeup and wigs, which the Bureau will \"remove or confiscate\" when practicable. The Bureau said it adopted the policy \"independently of\" the order and supported it with a 43-page memo citing \"the latest scientific information\" and security concerns. On June 17, 2026, Lamberth blocked the new policy as well, writing that \"despite providing gender-affirming care to inmates in its custody for years, the government cites in the Program Statement zero evidence from its own medical or mental health professionals to support its conclusions,\" and finding that the policy appears pretextual and \"reverse engineered\" to implement the order. Because such prison injunctions expire after 90 days, he renewed it on August 26, 2026, barring enforcement from September 15 to December 14, 2026. On September 18, a divided D.C. Circuit panel refused to pause that order, finding the government unlikely to defeat the claim that the Bureau failed to adequately consider \"its own experience providing gender-affirming care under its prior policy\"; Judge Walker dissented. Solicitor General D. John Sauer asked the Supreme Court to step in on September 28. On October 21, 2026, the Court denied the application in a one-sentence order that gave no reasons; Justices Clarence Thomas and Samuel Alito would have granted it. The Bureau said in court records that about 600 inmates were receiving hormone therapy in 2025; the ACLU says the class covers about 1,000 people diagnosed with gender dysphoria. The case continues in the district court and on appeal.",
+    "elements_required": [
+      "Trump's Executive Order 14168, Sec. 4(c), directed that no federal funds be spent on medical care to conform an inmate's appearance to the opposite sex, and the Bureau of Prisons carried it out in February 2025, cutting off or reducing hormone therapy for two of the three named plaintiffs",
+      "The Bureau's February 2026 replacement policy, Program Statement 5260.01, would bar new hormone therapy, taper current patients off hormones, and end surgeries and social accommodations for inmates with gender dysphoria",
+      "A federal judge found the policy likely arbitrary and capricious and pretextual, reverse engineered to implement the order, and the D.C. Circuit and the Supreme Court refused to pause his injunction",
+      "The rulings are preliminary: there is no final judgment, the Supreme Court gave no reasons, the Eighth Amendment claims are undecided, and the administration defends the policy as a reasoned medical and security judgment"
+    ],
+    "evidence": [
+      {
+        "type": "public_record",
+        "description": "Executive Order 14168, \"Defending Women From Gender Ideology Extremism and Restoring Biological Truth to the Federal Government,\" signed January 20, 2025 (Federal Register). Sec. 4(c): \"The Attorney General shall ensure that the Bureau of Prisons revises its policies concerning medical care to be consistent with this order, and shall ensure that no Federal funds are expended for any medical procedure, treatment, or drug for the purpose of conforming an inmate's appearance to that of the opposite sex.\"",
+        "source_url": "https://www.federalregister.gov/documents/2025/01/30/2025-02090/defending-women-from-gender-ideology-extremism-and-restoring-biological-truth-to-the-federal-government",
+        "maps_to_element": "Trump's Executive Order 14168, Sec. 4(c), directed that no federal funds be spent on medical care to conform an inmate's appearance to the opposite sex, and the Bureau of Prisons carried it out in February 2025, cutting off or reducing hormone therapy for two of the three named plaintiffs"
+      },
+      {
+        "type": "court_filing",
+        "description": "Judge Lamberth's memorandum opinion, Kingdom v. Trump, No. 1:25-cv-00691 (D.D.C.), June 3, 2025 (ECF No. 67): after the order and two implementing memoranda, \"The plaintiffs' access to hormone medications and social accommodations was subsequently cut off or reduced. Access to hormone medications has since been restored, but the plaintiffs remain unable to procure social accommodations.\" Kingdom and Nichols \"were told explicitly that the discontinuation of their hormone therapy was attributable to the Executive Order,\" and \"in the case of Ms. Kingdom, her hormone medication had already been discontinued for forty days, during which time she missed three scheduled treatment sessions.\"",
+        "source_url": "https://storage.courtlistener.com/recap/gov.uscourts.dcd.278186/gov.uscourts.dcd.278186.67.0_3.pdf",
+        "maps_to_element": "Trump's Executive Order 14168, Sec. 4(c), directed that no federal funds be spent on medical care to conform an inmate's appearance to the opposite sex, and the Bureau of Prisons carried it out in February 2025, cutting off or reducing hormone therapy for two of the three named plaintiffs"
+      },
+      {
+        "type": "public_record",
+        "description": "Bureau of Prisons Program Statement 5260.01, \"Management of Inmates with Gender Dysphoria,\" dated February 19, 2026, \"Approved by William K. Marshall III, Director, Federal Bureau of Prisons.\" It states that \"Psychotherapy should be prioritized,\" that an inmate not already on hormones \"will not receive hormones to address GD,\" and that for inmates currently receiving hormones a medical review team shall \"review and approve or disapprove the tapering plan submitted by the Primary Care Provider for all such inmates.\" A cover memo from the Bureau's general counsel the same day says the Bureau remains bound by the June 3, 2025 injunction.",
+        "source_url": "https://www.bop.gov/policy/progstat/5260_001.pdf",
+        "maps_to_element": "The Bureau's February 2026 replacement policy, Program Statement 5260.01, would bar new hormone therapy, taper current patients off hormones, and end surgeries and social accommodations for inmates with gender dysphoria"
+      },
+      {
+        "type": "court_filing",
+        "description": "Judge Lamberth's memorandum opinion, June 17, 2026 (ECF No. 216), blocking Program Statement 5260.01: \"Despite providing gender-affirming care to inmates in its custody for years, the government cites in the Program Statement zero evidence from its own medical or mental health professionals to support its conclusions.\" Under the heading \"The Program Statement is Pretextual and Reverse Engineered to Implement EO 14168,\" he wrote that \"Because the Program Statement appears to be pretextual, it is arbitrary and capricious under the APA,\" and left the Eighth Amendment claims \"for another day.\" The government argued the policy was \"the result of approximately 12 months of study.\"",
+        "source_url": "https://storage.courtlistener.com/recap/gov.uscourts.dcd.278186/gov.uscourts.dcd.278186.216.0_1.pdf",
+        "maps_to_element": "A federal judge found the policy likely arbitrary and capricious and pretextual, reverse engineered to implement the order, and the D.C. Circuit and the Supreme Court refused to pause his injunction"
+      },
+      {
+        "type": "court_filing",
+        "description": "Kingdom v. Trump docket (CourtListener), order of August 26, 2026: the renewed preliminary injunction motion \"is GRANTED\" and \"Program Statement 5260.01 is stayed and that Defendants are ENJOINED from enforcing Program Statement 5260.01 from September 15, 2026 to December 14, 2026.\" The government appealed on August 28 (D.C. Cir. No. 26-5310). Later entries through October 23, 2026 concern notice to class members.",
+        "source_url": "https://www.courtlistener.com/docket/69717615/kingdom-v-trump/",
+        "maps_to_element": "A federal judge found the policy likely arbitrary and capricious and pretextual, reverse engineered to implement the order, and the D.C. Circuit and the Supreme Court refused to pause his injunction"
+      },
+      {
+        "type": "court_filing",
+        "description": "D.C. Circuit order, Nos. 26-5236 and 26-5310, September 18, 2026 (Judges Wilkins, Walker and Garcia): the stay motion in No. 26-5310 is \"denied.\" \"Appellants have not shown a strong likelihood of success on the question of whether Program Statement 5260.01 is arbitrary and capricious because the Bureau of Prisons (BOP) did not adequately consider its own experience providing gender-affirming care under its prior policy... For example, BOP makes claims about the security impact of providing gender-affirming care without addressing whether such issues have occurred.\" Judge Walker dissented and would have granted the stay.",
+        "source_url": "https://storage.courtlistener.com/pdf/2026/09/18/alishea_kingdom_v._donald_trump.pdf",
+        "maps_to_element": "A federal judge found the policy likely arbitrary and capricious and pretextual, reverse engineered to implement the order, and the D.C. Circuit and the Supreme Court refused to pause his injunction"
+      },
+      {
+        "type": "court_filing",
+        "description": "Supreme Court docket No. 26A416, Trump v. Kingdom: application for a stay filed September 28, 2026 by Solicitor General D. John Sauer. October 21, 2026: \"Application (26A416) for stay presented to The Chief Justice and by him referred to the Court is denied. Justice Thomas and Justice Alito would grant the application for stay.\"",
+        "source_url": "https://www.supremecourt.gov/docket/docketfiles/html/public/26A416.html",
+        "maps_to_element": "A federal judge found the policy likely arbitrary and capricious and pretextual, reverse engineered to implement the order, and the D.C. Circuit and the Supreme Court refused to pause his injunction"
+      },
+      {
+        "type": "news_report",
+        "description": "SCOTUSblog (Amy Howe), October 8, 2026: when it adopted the February 2026 policy, \"which the BOP said that it did 'independently of'\" Trump's order, the Bureau included \"a 43-page memorandum in which it attributed the change from its prior policy to, among other things, 'the latest scientific information,'\" called the WPATH standards \"unreliable,\" and said access to procedures could subject transgender prisoners to \"attacks,\" \"raise fairness concerns,\" and \"breed resentment among other inmates.\" Solicitor General D. John Sauer told the Court the district court had \"substitut[ed] its own policy judgment for that of the\" Bureau.",
+        "source_url": "https://www.scotusblog.com/2026/10/justices-urged-to-leave-order-in-place-barring-enforcement-of-trump-administrations-new-policy-f/",
+        "maps_to_element": "The rulings are preliminary: there is no final judgment, the Supreme Court gave no reasons, the Eighth Amendment claims are undecided, and the administration defends the policy as a reasoned medical and security judgment"
+      },
+      {
+        "type": "news_report",
+        "description": "NBC News (Lawrence Hurley), October 21, 2026: the order \"included no explanation.\" \"'This order is a loss for common sense,' White House spokeswoman Allison Schuster said in a statement.\" ACLU lawyer Li Nowlin-Sohl: \"The denial of medically necessary health care, including gender-affirming health care, to people in prison is a violation of their fundamental constitutional rights.\" NBC reports Lamberth \"also found that the proposal appeared to be engineered precisely to comply with the president's executive order, concluding that the reasons given were pretextual.\" NBC adds that \"ACLU lawyers said in court papers that the Bureau of Prisons has provided hormone therapy to inmates since 1992.\"",
+        "source_url": "https://www.nbcnews.com/politics/supreme-court/supreme-court-rejects-trump-transgender-prison-policy-rcna601889",
+        "maps_to_element": "The rulings are preliminary: there is no final judgment, the Supreme Court gave no reasons, the Eighth Amendment claims are undecided, and the administration defends the policy as a reasoned medical and security judgment"
+      },
+      {
+        "type": "news_report",
+        "description": "Associated Press (Lindsay Whitehurst, via ABC News), October 21, 2026: the new policy \"would halt surgeries, taper off hormones and end social accommodations like makeup and wigs.\" \"About 600 inmates were receiving hormone therapy in 2025, the agency said in court records.\" AP, summarizing the inmates' lawyers: \"The government has not detailed evidence of security problems linked to hormone therapy for transgender inmates over the 30 years it has been provided, they wrote.\"",
+        "source_url": "https://abcnews.com/US/wireStory/supreme-court-rebuffs-trump-administration-restrictions-medical-care-137448790",
+        "maps_to_element": "The Bureau's February 2026 replacement policy, Program Statement 5260.01, would bar new hormone therapy, taper current patients off hormones, and end surgeries and social accommodations for inmates with gender dysphoria"
+      },
+      {
+        "type": "news_report",
+        "description": "NPR (Jaclyn Diaz, via OPB), October 21, 2026: \"Kingdom v. Trump represents 1,000 inmates who have a gender dysphoria diagnosis, Nowlin-Sohl explained. Of those, the ACLU believes there are about 800 who have been prescribed hormone therapy.\" NPR notes the Bureau \"stopped publishing data reflecting transgender inmates after Trump took office in 2025.\"",
+        "source_url": "https://www.opb.org/article/2026/10/21/scotus-allows-gender-affirming-care-as-litigation-continues/",
+        "maps_to_element": "The Bureau's February 2026 replacement policy, Program Statement 5260.01, would bar new hormone therapy, taper current patients off hormones, and end surgeries and social accommodations for inmates with gender dysphoria"
+      }
+    ],
+    "status": "Blocked: Judge Lamberth's renewed injunction bars the Bureau of Prisons from enforcing its February 2026 policy through December 14, 2026, and must be renewed every 90 days. The D.C. Circuit and, on October 21, 2026, the Supreme Court refused to pause it; appeals and the district case are ongoing.",
+    "rebuttal_anticipated": "The administration argues that prison officials are owed substantial deference on medical and security decisions, and that the Bureau's 2026 policy rests on its own review, not just the order: about 12 months of study, a 43-page memo citing the latest scientific evidence, a finding that the WPATH standards it once relied on are unreliable, and concerns that this care makes recipients targets for attacks and breeds resentment among other inmates. Inmates still receive mental health care, and hormone tapering is individualized. The Solicitor General says the courts substituted their own policy judgment for the agency's; the Supreme Court's order is not a ruling on the merits, and Judge Walker would have let the policy take effect.",
+    "comeback": "The ACLU says the Bureau has provided hormone therapy since 1992, yet **Lamberth found its policy cites zero evidence from its own medical or mental health professionals**, and the D.C. Circuit noted it claims security harms without addressing whether any have occurred. The inmates point to language the policy shares with the order, and the judge found it reverse engineered to reach the result the order demanded. Three courts, including a Supreme Court with a 6-3 conservative majority that has sided with the administration on other transgender policies, declined to let it take effect, and the 2025 version had already cut off or reduced hormone therapy for two of the three named plaintiffs.",
+    "cause": "[TAP Analysis, not sourced] Part of the administration's use of Executive Order 14168's two-sex definition to drive agency policy against transgender people, alongside Trump's separate order cutting federal support for gender-affirming care for minors and the VA's rescission of its transgender veterans' health directive.",
+    "cause_references": [
+      {
+        "match": "Trump's separate order cutting federal support for gender-affirming care for minors",
+        "tracker": "prosecution",
+        "id": "trump-gender-affirming-care-eo-2025"
+      },
+      {
+        "match": "the VA's rescission of its transgender veterans' health directive",
+        "tracker": "government-services",
+        "id": "va-transgender-veterans-directive-1341-rescission-2025"
+      }
+    ],
+    "confidence_note": "HIGH confidence on the record: the order's text, the Bureau's policy and every ruling come from the Federal Register, the Bureau's own published policy, the court opinions and the court dockets. The findings that the policy is likely arbitrary and pretextual are preliminary, made at the injunction stage, and the Supreme Court's one-sentence denial is not a merits ruling. The cutoff of the named plaintiffs' care in early 2025 is a court finding. Inmate counts differ by scope: about 600 on hormones in 2025 per Bureau court records (via AP), about 1,000 class members per the ACLU.",
+    "pull_quote": "\"In the case of Ms. Kingdom, her hormone medication had already been discontinued for forty days, during which time she missed three scheduled treatment sessions.\" -- Judge Royce Lamberth, June 3, 2025",
+    "last_verified": "2026-10-25",
+    "date_added": "2026-10-25",
+    "last_substantive_update": "2026-10-25",
+    "date_of_action": "2025-01-20 (Trump signs Executive Order 14168 directing the prison medical-care change) through 2026-10-21 (Supreme Court refuses to lift the injunction)",
+    "section_summaries": {
+      "incident_summary": "Trump's order to end gender-affirming care for federal inmates cut off some care in 2025; a judge found the follow-up policy pretextual and blocked it.",
+      "confidence_note": "Order, policy and rulings come from primary records; the court findings are preliminary and the Supreme Court gave no reasons.",
+      "status": "An injunction blocks the policy through December 14, 2026; the D.C. Circuit and the Supreme Court refused to pause it, and appeals continue."
+    },
+    "glance": {
+      "who": "Donald Trump (President)",
+      "what": "Ordered end to federal inmates' gender-affirming care; courts blocked it and the Supreme Court kept the block",
+      "harm": {
+        "kind": "physical",
+        "certainty": "documented",
+        "who": "Transgender federal inmates"
+      },
+      "reviewed": "2026-10-25"
+    }
+  },
+  {
     "id": "trump-brazil-tariffs-bolsonaro-protection-2025",
     "official": "Donald Trump, President",
     "offense_category": "Using Official U.S. Trade and Sanctions Authority to Attempt to Shield a Foreign Political Ally From a Legitimate Foreign Prosecution -- not itself a domestic criminal charge, addressed here as a foreign-policy/abuse-of-power accountability concern",
@@ -24350,6 +24701,113 @@
         "id": "pirro-dc-grand-jury-refusals-crackdown-pattern-2025"
       }
     ]
+  },
+  {
+    "id": "trump-doj-fraud-tip-rewards-2026",
+    "official": "Donald Trump, President (said he would personally be \"the arbitrator\" of who receives rewards under the Justice Department's fraud tip program); JD Vance, Vice President of the United States (chairs the administration's fraud task force; co-announced the program and presented its first payment to Nick Shirley)",
+    "offense_category": "Accountability concern, not alleged as a legal violation: the President claiming personal, \"binding\" control over who receives cash rewards from a Justice Department program whose published rules leave every award to the department's \"sole discretion\" under 28 U.S.C. 530C(b)(1)(L), and promising payouts (a 1 percent commission, no limit, no criminal charges needed) that its published terms do not include. TAP notes that the reward statute names the President only for approving rewards of $250,000 or more and caps rewards at $3,000,000 unless another statute allows more. The concern is political control of a law-enforcement payment program, with its first payment going to an allied influencer. No lawsuit, ethics complaint or investigation has been reported",
+    "contested": true,
+    "narrative_combined": true,
+    "incident_summary": "In December 2025, Nick Shirley, a 24-year-old right-wing YouTuber, posted a video alleging that Somali-run childcare centers in Minnesota were collecting public money without caring for children. The video drew national attention and the administration's interest; the Associated Press reported that inspectors said the centers were operating as expected, and a CBS News review of state records found that all but two had active licenses and \"no recorded evidence of fraud\" as of December 30, 2025. Shortly after the video was posted, federal officials announced about 2,000 more agents for the immigration enforcement surge in Minnesota. One woman featured in the video, the former head of a childcare center, pleaded guilty in July 2026 to wire fraud and conspiracy to defraud the United States. On October 20, 2026, Trump and Vice President JD Vance, who chairs the administration's fraud task force, announced in the Oval Office the Fraud Whistleblower Incentive Program, or WHIP, run by the Justice Department's National Fraud Enforcement Division. The department's announcement and published rules say tips that lead to criminal charges in health care fraud and fraud on federal benefit programs (eight agencies' programs in the announcement, seven in the rules) can earn a reward of $10,000 to $30,000, awarded \"in its sole discretion\" under its reward authority, 28 U.S.C. 530C(b)(1)(L), and that its decisions are \"neither appealable nor subject to judicial review.\" The Treasury committed $25 million to the three-year pilot. **At the announcement Trump said: \"I will be the arbitrator of all of these decisions. In other words, I'll determine whether or not the person is deserving, and I will be very generous, believe me.\"** He called it \"binding arbitration,\" said tipsters would get a 1 percent commission on the fraud they uncover, and, asked about the gap with the department's terms, said there was no limit and criminal charges were not necessary. The White House referred reporters' questions back to his remarks. Vance said he and Trump created the program to encourage more people to report fraud like Shirley, and the White House said Trump would present Shirley a $10,000 check, which MPR News called the program's first payment; CBS Minnesota reported that Trump handed it to him in the Oval Office, while the Associated Press reported that no check was given in front of journalists. The department's rules require tips to contain original information that does not merely repeat news media or other public sources. By October 24, Assistant Attorney General Colin McDonald, who leads the fraud division, said thousands of tips had come in; NewsNation reported that he described tipsters as also standing to receive \"a potential 1% commission,\" a term the department's published rules do not contain.",
+    "elements_required": [
+      "Trump said publicly on October 20, 2026 that he would personally be \"the arbitrator\" of who receives cash rewards under the Justice Department's new fraud tip program, deciding \"whether or not the person is deserving\" in what he called \"binding arbitration\"",
+      "The Justice Department's published rules give the department alone \"sole discretion\" over awards under 28 U.S.C. 530C(b)(1)(L), make its decisions unappealable, and set awards of $10,000 to $30,000 after criminal charges are filed; Trump's promises of a 1 percent commission with no limit and no charges needed contradict them",
+      "The program's first announced payment, $10,000, went to Nick Shirley, a right-wing influencer whose Minnesota childcare-fraud video the administration credits, though state records and inspectors did not support many of its claims; Vance said the program was created to encourage more reporting like his",
+      "No reward is known to have been decided by Trump, no legal challenge or ethics complaint has been reported, and the Justice Department has not publicly reconciled the President's statements with its rules"
+    ],
+    "evidence": [
+      {
+        "type": "statute",
+        "description": "28 U.S.C. 530C(b)(1)(L) (Cornell LII) lets the Justice Department pay \"rewards (i.e., payments pursuant to public advertisements for assistance to the Department of Justice), in accordance with procedures and regulations established or issued by the Attorney General.\" It caps any reward at $3,000,000 unless another statute allows more or it combats terrorism, and says \"no such reward of $250,000 or more may be made or offered without the personal approval of either the Attorney General or the President.\"",
+        "source_url": "https://www.law.cornell.edu/uscode/text/28/530C",
+        "maps_to_element": "The Justice Department's published rules give the department alone \"sole discretion\" over awards under 28 U.S.C. 530C(b)(1)(L), make its decisions unappealable, and set awards of $10,000 to $30,000 after criminal charges are filed; Trump's promises of a 1 percent commission with no limit and no charges needed contradict them"
+      },
+      {
+        "type": "official_statement",
+        "description": "Justice Department press release 26-1231, October 20, 2026: WHIP \"will pay whistleblowers an award of $10,000 to $30,000 for information leading to criminal charges relating to certain subject areas.\" \"Awards will be made in the Justice Department's sole discretion following the filing of criminal charges.\" \"The Department of the Treasury is committing $25 million.\" Attorney General Todd Blanche: the program lets people \"be rewarded quickly for their efforts.\" The release says the department's fraud work supports the task force \"chaired by Vice President J.D. Vance.\" It does not mention any role for the President in deciding awards.",
+        "source_url": "https://www.justice.gov/opa/pr/justice-department-announces-innovative-whistleblower-rewards-program-combat-fraud",
+        "maps_to_element": "The Justice Department's published rules give the department alone \"sole discretion\" over awards under 28 U.S.C. 530C(b)(1)(L), make its decisions unappealable, and set awards of $10,000 to $30,000 after criminal charges are filed; Trump's promises of a 1 percent commission with no limit and no charges needed contradict them"
+      },
+      {
+        "type": "official_statement",
+        "description": "Justice Department, Criminal Tip Rewards Pilot Program external guidance (updated October 20, 2026): the program \"is subject to an initial three-year term\" and provides \"a defined, $10,000 to $30,000 financial reward.\" \"The determination of whether an individual is eligible for a reward and the amount of a reward is in the sole discretion of the Department.\" \"Rewards may be given to more than one tipster in connection with the same matter provided each tipster has individually met the criteria.\" \"The Department's Reward Determination is entirely discretionary, 28 U.S.C. § 530C(b)(1)(L), and neither appealable nor subject to judicial review.\" The program's FAQ adds that original information cannot \"merely repeat information from public sources such as allegations made in court or from news media.\"",
+        "source_url": "https://www.justice.gov/fraud/national-fraud-enforcement-division-criminal-tip-rewards-pilot-program",
+        "maps_to_element": "The Justice Department's published rules give the department alone \"sole discretion\" over awards under 28 U.S.C. 530C(b)(1)(L), make its decisions unappealable, and set awards of $10,000 to $30,000 after criminal charges are filed; Trump's promises of a 1 percent commission with no limit and no charges needed contradict them"
+      },
+      {
+        "type": "news_report",
+        "description": "Associated Press (Darlene Superville, via The Philadelphia Inquirer), October 20, 2026: \"'I will be the arbitrator of all of these decisions,' Trump said in the Oval Office.\" \"'It'll be a binding arbitration.'\" The White House said Trump would present a $10,000 check to Shirley, \"a right-wing influencer who posted a video last year that said members of Minnesota's Somali community were running fake childcare centers,\" \"But a check was not given to Shirley in the presence of journalists.\" The video caught the administration's attention, \"though inspectors said the centers were operating as expected.\"",
+        "source_url": "https://www.inquirer.com/politics/trump-vance-whistleblower-reward-program-fraud-government-20261020.html",
+        "maps_to_element": "Trump said publicly on October 20, 2026 that he would personally be \"the arbitrator\" of who receives cash rewards under the Justice Department's new fraud tip program, deciding \"whether or not the person is deserving\" in what he called \"binding arbitration\""
+      },
+      {
+        "type": "news_report",
+        "description": "CBS Minnesota (Eric Henderson), October 20, 2026: \"President Trump handed Nick Shirley, the conservative YouTuber behind viral fraud videos filmed in Minnesota, a $10,000 check from the Oval Office.\" A CBS News review of state records \"found that all but two of the centers had active licenses\" and \"no recorded evidence of fraud, as of Dec. 30, 2025.\" A woman who appeared in one of Shirley's videos has pleaded guilty to wire fraud and conspiracy to defraud the United States.",
+        "source_url": "https://www.cbsnews.com/minnesota/news/nick-shirley-10000-check-minnesota-day-care-fraud-videos/",
+        "maps_to_element": "The program's first announced payment, $10,000, went to Nick Shirley, a right-wing influencer whose Minnesota childcare-fraud video the administration credits, though state records and inspectors did not support many of its claims; Vance said the program was created to encourage more reporting like his"
+      },
+      {
+        "type": "news_report",
+        "description": "MPR News, October 20, 2026: \"Trump also said he will personally decide who gets to collect reward money when more than one person claims to have provided the tip.\" Vance gave Shirley \"a $10,000 check, the first payment from the program,\" and \"Several allegations made in the video were unsubstantiated.\" After the video was posted on Dec. 26, \"federal officials announced around 2,000 more agents would swarm the state\" in Operation Metro Surge.",
+        "source_url": "https://www.mprnews.org/story/2026/10/20/anti-fraud-whistleblower-reward-program-announced-by-president-donald-trump",
+        "maps_to_element": "The program's first announced payment, $10,000, went to Nick Shirley, a right-wing influencer whose Minnesota childcare-fraud video the administration credits, though state records and inspectors did not support many of its claims; Vance said the program was created to encourage more reporting like his"
+      },
+      {
+        "type": "news_report",
+        "description": "Newsweek (Hannah Parry), on the October 20 announcement: \"The president's one percent reward pledge clashed with the Justice Department's announcement.\" Asked to clarify, \"Trump said there was no limit on whistleblower compensation and that criminal charges were not necessary.\" The department's announcement \"does not identify Trump as the official responsible for determining individual awards,\" and the White House \"redirected Newsweek to the president's comments.\"",
+        "source_url": "https://newsweek.com/trump-vance-offer-cash-for-fraud-tips-ahead-of-midterms-12596023",
+        "maps_to_element": "The Justice Department's published rules give the department alone \"sole discretion\" over awards under 28 U.S.C. 530C(b)(1)(L), make its decisions unappealable, and set awards of $10,000 to $30,000 after criminal charges are filed; Trump's promises of a 1 percent commission with no limit and no charges needed contradict them"
+      },
+      {
+        "type": "news_report",
+        "description": "The Guardian (Ariana Baio), October 21, 2026: Trump said, \"I will be the arbitrator of all of these decisions. In other words, I'll determine whether or not the person is deserving, and I will be very generous, believe me,\" and \"You'll get your money immediately, but I'll make the determination.\" \"It is unclear whether Trump was being genuine about his new role.\" \"Vance said he and Trump decided to create the program to incentivize more people to report fraud like Nick Shirley.\"",
+        "source_url": "https://www.theguardian.com/us-news/2026/oct/20/trump-doj-anti-fraud-tip",
+        "maps_to_element": "Trump said publicly on October 20, 2026 that he would personally be \"the arbitrator\" of who receives cash rewards under the Justice Department's new fraud tip program, deciding \"whether or not the person is deserving\" in what he called \"binding arbitration\""
+      },
+      {
+        "type": "news_report",
+        "description": "NewsNation (Hena Doba), October 24, 2026: \"Federal authorities have received thousands of tips\" since the announcement, a Justice Department official says. Colin M. McDonald of the National Fraud Enforcement Division said, \"No one else has been willing to put their skin in the game like President Trump.\"",
+        "source_url": "https://www.newsnationnow.com/politics/thousands-fraud-tips-trump-whistleblower-rewards/",
+        "maps_to_element": "No reward is known to have been decided by Trump, no legal challenge or ethics complaint has been reported, and the Justice Department has not publicly reconciled the President's statements with its rules"
+      }
+    ],
+    "status": "Ongoing: the program is taking tips (thousands by October 24, per the Justice Department). Its rules still leave awards to the department's sole discretion; no award decided by Trump, legal challenge or ethics complaint has been reported.",
+    "rebuttal_anticipated": "The program is a lawful use of a long-standing reward statute, its written rules keep award decisions inside the Justice Department, and the President's remarks were an offhand, partly joking pledge (they drew laughter) to resolve disputes fairly and quickly, not a change to the rules. Paying tipsters early may surface real fraud in federal benefit programs, and Shirley's video did bring attention to a center whose former head later pleaded guilty.",
+    "comeback": "The White House, asked whether Trump meant it, pointed back to his remarks rather than correcting them, and he repeated that \"I'll make the determination\" and that it would be \"binding.\" **A President promising to personally decide who is \"deserving\" of law-enforcement payouts, weeks before an election, invites rewards for political allies**, and the first one went to an influencer whose video state records largely did not support. Trump's 1 percent, no-limit, no-charges promise also tells the public the program offers money its own published terms do not include.",
+    "cause": "[TAP Analysis, not sourced] Part of a pattern of the administration's anti-fraud drive being run through political leadership, as with the Vance task force's mass suspension of Los Angeles hospices that swept in legitimate providers, and of Trump positioning himself to steer government payouts, as with the $1.776 billion Justice Department fund created from his own IRS settlement.",
+    "cause_references": [
+      {
+        "match": "the Vance task force's mass suspension of Los Angeles hospices",
+        "tracker": "government-services",
+        "id": "vance-fraud-task-force-hospice-suspensions-2026"
+      },
+      {
+        "match": "the $1.776 billion Justice Department fund created from his own IRS settlement",
+        "tracker": "prosecution",
+        "id": "trump-jan6-anti-weaponization-fund-2026"
+      }
+    ],
+    "confidence_note": "HIGH confidence on the core facts: Trump's \"arbitrator\" remarks are quoted on the record by the Associated Press, The Guardian and Newsweek, and the program's terms come from the Justice Department's own release and guidance. Whether Trump will actually decide any award is unknown; the department's rules do not give him that role, and the concern is TAP's framing. Accounts differ on whether Shirley was physically handed a check at the event. Claims about the Minnesota centers rest on CBS and AP reviews, not a court finding.",
+    "pull_quote": "\"I will be the arbitrator of all of these decisions. In other words, I'll determine whether or not the person is deserving.\" -- President Trump, October 20, 2026",
+    "last_verified": "2026-10-25",
+    "date_added": "2026-10-25",
+    "last_substantive_update": "2026-10-25",
+    "date_of_action": "2026-10-20",
+    "section_summaries": {
+      "incident_summary": "Trump said he will personally decide who is \"deserving\" of DOJ fraud-tip rewards, though DOJ's rules leave awards to the department alone.",
+      "confidence_note": "Trump's remarks and DOJ's rules are on the record; whether he will actually decide any award is unknown, and the concern is TAP's framing.",
+      "status": "The program is taking thousands of tips; DOJ rules still give it sole discretion, and no Trump-decided award or legal challenge has been reported."
+    },
+    "glance": {
+      "who": "Donald Trump (President)",
+      "what": "Said he will personally decide who is \"deserving\" of DOJ fraud-tip rewards that DOJ rules leave to DOJ",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "documented",
+        "who": "Independence of DOJ reward decisions"
+      },
+      "reviewed": "2026-10-25"
+    }
   },
   {
     "id": "trump-drug-trafficker-pardons-boat-strike-inconsistency-2025",
@@ -25359,8 +25817,8 @@
     "status": "The order's funding cutoff remains blocked by the March 2025 PFLAG v. Trump injunction, now on appeal. A court vacated HHS's Kennedy Declaration in April 2026. A CMS rule citing the order bars federal Medicaid/CHIP funds for this care from Oct. 13, 2026; 21 states and D.C. have sued.",
     "rebuttal_anticipated": "The administration frames the order as protecting minors from medical interventions it characterizes as unproven or harmful, citing the HHS report as its scientific basis, and argues the executive branch has broad authority to set conditions on discretionary federal grant funding; supporters would note the order itself was never found unconstitutional outright, only preliminarily enjoined pending further litigation. CMS likewise maintains that its August 2026 Medicaid/CHIP rule rests on independent statutory authority and does not rely on the enjoined sections of the order.",
     "comeback": "This entry does not resolve the underlying medical or policy dispute -- it documents that a presidential directive conditioning federal healthcare funding on providers withholding a specific category of care was found by a federal court, within five weeks, to warrant a nationwide injunction, and that the HHS declaration the administration issued to enforce the same restrictions was, over a year later, vacated outright by a different federal court. The `contested: true` flag reflects that the underlying medical-evidence dispute is genuinely contested in ways the litigation itself has not resolved, distinct from the more procedural question of whether the order's enjoined funding cutoff is currently enforceable (it is not; a separate CMS Medicaid/CHIP rule citing the order is now under its own legal challenge).",
-    "cause": "[TAP Analysis, not sourced] Illustrates a policy-level accountability question about using conditional federal funding to restrict a specific category of medical care, rather than any specific legal violation established against Trump personally.",
-    "last_verified": "2026-10-19",
+    "cause": "[TAP Analysis, not sourced] Illustrates a policy-level accountability question about using conditional federal funding to restrict a specific category of medical care, rather than any specific legal violation established against Trump personally. Trump's Day One order ending gender-affirming care for federal inmates is tracked separately.",
+    "last_verified": "2026-10-25",
     "date_added": "2026-08-08",
     "confidence_note": "HIGH confidence on the order's content, both litigation tracks, and their outcomes -- corroborated by Wikipedia's sourced summary, ACLU, KFF's litigation tracker, Ropes & Gray's original March 2026 analysis, and multiple independent outlets (Metro Weekly, Maryland Matters, STAT, U.S. News) reporting the April 18, 2026 Kasubhai ruling and Lambda Legal's case timeline for the Fourth Circuit's April/May 2026 stay denials, with no facts in dispute among these sources. Correction 2026-08-19: this entry's original status described the Kennedy Declaration challenge as merely 'headed toward at least partial invalidation' based on a March 19, 2026 hearing; the actual ruling five weeks later was a full vacatur and permanent injunction, not a partial one, and both this ruling and the Fourth Circuit's April/May 2026 stay denials predate this entry's own Aug. 8, 2026 write date by 3-4 months and were not incorporated when the entry was drafted. The underlying medical-evidence debate remains genuinely contested and outside this entry's scope. Re-verified 2026-08-26: no material change identified -- no confirmed Ninth Circuit notice-of-appeal filing for the Kasubhai ruling, and no new PFLAG v. Trump developments, found in sourcing reviewed since the prior update. Re-verified 2026-09-02: no material change on either track. Update 2026-10-19: In PFLAG v. Trump the injunction remains in force and Fourth Circuit merits briefing resumed in June 2026 after the appeal had been held for a related case. In the Oregon case, Judge Kasubhai denied HHS's May 18, 2026 motion to narrow the judgment on Sept. 17, 2026; no notice of appeal was found, and the appeal window remained open as of Sept. 30. Separately, CMS finalized a rule, effective Oct. 13, 2026, ending federal Medicaid funding for these treatments for patients under 18 and CHIP funding for those under 19, citing Section 5(a) of the order but not its enjoined sections; 21 states (Pennsylvania through its governor) and D.C. sued on Sept. 2, 2026, and no court order blocking the rule was found in reporting reviewed. The finding that the order has not taken practical effect therefore now applies to its enjoined funding cutoff, not to this rule.",
     "pull_quote": "A federal judge's April 18, 2026 ruling went further than earlier expected: Judge Kasubhai fully vacated the HHS ‘Kennedy Declaration’ and permanently enjoined HHS from enforcing it or any materially similar policy against providers in the plaintiff states, finding it exceeded HHS's statutory authority and bypassed federal rulemaking requirements.",
@@ -25369,7 +25827,7 @@
       "confidence_note": "HIGH confidence on the order, both court tracks and the 2026 CMS Medicaid/CHIP rule and its legal challenge, corroborated by court records, the rule text, law firms and news outlets."
     },
     "date_of_action": "2025-01-28 (Trump signs EO restricting gender-affirming care) through 2026-08-13 (CMS publishes Medicaid/CHIP rule citing the order)",
-    "last_substantive_update": "2026-10-19",
+    "last_substantive_update": "2026-10-25",
     "glance": {
       "who": "Donald Trump (President)",
       "what": "Ordered youth gender-care funds cut; enjoined, but a Medicaid rule citing it cut federal funds from Oct. 2026",
@@ -25378,8 +25836,15 @@
         "certainty": "documented",
         "who": "Transgender minors and their families"
       },
-      "reviewed": "2026-10-19"
+      "reviewed": "2026-10-25"
     },
+    "cause_references": [
+      {
+        "match": "Day One order ending gender-affirming care for federal inmates",
+        "tracker": "prosecution",
+        "id": "trump-bop-transgender-inmate-care-eo-2025"
+      }
+    ],
     "timeline": {
       "confidence_note": {
         "base": "HIGH confidence on the order's content, both litigation tracks, and their outcomes -- corroborated by Wikipedia's sourced summary, ACLU, KFF's litigation tracker, Ropes & Gray's original March 2026 analysis, and multiple independent outlets (Metro Weekly, Maryland Matters, STAT, U.S. News) reporting the April 18, 2026 Kasubhai ruling and Lambda Legal's case timeline for the Fourth Circuit's April/May 2026 stay denials, with no facts in dispute among these sources. Correction 2026-08-19: this entry's original status described the Kennedy Declaration challenge as merely 'headed toward at least partial invalidation' based on a March 19, 2026 hearing; the actual ruling five weeks later was a full vacatur and permanent injunction, not a partial one, and both this ruling and the Fourth Circuit's April/May 2026 stay denials predate this entry's own Aug. 8, 2026 write date by 3-4 months and were not incorporated when the entry was drafted. The underlying medical-evidence debate remains genuinely contested and outside this entry's scope. Re-verified 2026-08-26: no material change identified -- no confirmed Ninth Circuit notice-of-appeal filing for the Kasubhai ruling, and no new PFLAG v. Trump developments, found in sourcing reviewed since the prior update. Re-verified 2026-09-02: no material change on either track.",
@@ -26031,10 +26496,10 @@
     "status": "The fund was rescinded on August 2, 2026, and a court injunction bars reviving it under any name; the judge, weighing DOJ's bid to dismiss as moot, has asked whether a substitute is in the works. Rioters' lawyers report 600+ FTCA claims; the Sullivan class action is stayed.",
     "rebuttal_anticipated": "The administration could argue the settlement fund was a legitimate resolution of Trump's personal legal claims against the government, structurally separate from any individual January 6 defendant's FTCA claims, and that DOJ's abandonment of the broader fund demonstrates responsiveness to legitimate process concerns rather than an intent to reward political allies.",
     "comeback": "The concern isn't whether the fund's formal structure was legally permissible -- it's that a settlement of the President's own lawsuit against his own executive branch became the vehicle reporters, GOP allies, and rioters themselves all understood as a mechanism for compensating people convicted of attacking the Capitol on his behalf, and that Trump's own refusal to rule out compensating them, even after the formal fund's collapse, keeps that outcome alive through an alternate legal channel.",
-    "cause": "[TAP Analysis, not sourced] Fits a recurring pattern in this tracker of the administration steering benefits toward people connected to Trump's political movement or his own legal history. Two features set this case apart. First, the vehicle was a settlement of the president's own lawsuit against the IRS, agreed to by a Justice Department he directs; the audit protections reportedly tied to that same settlement are covered in the IRS settlement audit-immunity entry. Second, among those openly preparing to claim from the fund were January 6 defendants who had already received Trump's clemency, covered in the January 6 blanket pardon entry, so the fund would have added money on top of that earlier, separate act. The fund was dropped under congressional and court pressure, and DOJ has since argued in court that at least one group of January 6 participants' tort claims are time-barred, so whether the existing Judgment Fund becomes a substitute route, one Trump's own statements leave open, remains unresolved; the judge who enjoined the fund has asked the same question in court.",
+    "cause": "[TAP Analysis, not sourced] Fits a recurring pattern in this tracker of the administration steering benefits toward people connected to Trump's political movement or his own legal history. Two features set this case apart. First, the vehicle was a settlement of the president's own lawsuit against the IRS, agreed to by a Justice Department he directs; the audit protections reportedly tied to that same settlement are covered in the IRS settlement audit-immunity entry. Second, among those openly preparing to claim from the fund were January 6 defendants who had already received Trump's clemency, covered in the January 6 blanket pardon entry, so the fund would have added money on top of that earlier, separate act. The fund was dropped under congressional and court pressure, and DOJ has since argued in court that at least one group of January 6 participants' tort claims are time-barred, so whether the existing Judgment Fund becomes a substitute route, one Trump's own statements leave open, remains unresolved; the judge who enjoined the fund has asked the same question in court. A Justice Department fraud-tip reward program whose payouts Trump said he would decide himself is tracked separately.",
     "confidence_note": "HIGH confidence on the fund's creation, its settlement origin, its temporary court block, and Blanche's June 2, 2026 statement that it would not move forward, corroborated across CBS News, NBC News, The Independent (via Yahoo News), ABC News, and DOJ's own June 5, 2026 court filing in Floyd v. Department of Justice. HIGH confidence on Trump's on-record statements declining to rule out compensation, per ABC News's account of his NBC interview. HIGH confidence on the August 2, 2026 rescission order and August 3 motion to dismiss (CBS News), and on the class action's later amended complaint and August 26 order (court docket). HIGH confidence on the June 12, 2026 preliminary injunction, including its bar on reconstituting the fund under a different name, and on the September 18, 2026 hearing's outcome (the court's own order and docket); Brinkema's courtroom remarks come from Associated Press and ABC News accounts, not a transcript. The figure of at least 600 individual FTCA claims comes from rioters' lawyers, as reported by The Independent, and has not been independently confirmed. MODERATE confidence on the outcome of those individual claims, an ongoing case-by-case process, and on whether DOJ's timeliness argument will be applied beyond the class action. Re-verified 2026-10-06 against the Floyd court docket: no material change; the motion to dismiss remains under advisement with no opinion issued, and the court has not yet ruled on the plaintiffs' September 21 motions concerning discovery. Re-verified 2026-10-20 against the Floyd and Sullivan court dockets: no material change; Brinkema has still issued no opinion on the motion to dismiss or ruling on the plaintiffs' discovery motions, and no renewed motion to dismiss appears on the Sullivan docket, which remains stayed.",
     "pull_quote": "When asked directly, Trump said he supports compensating January 6 defendants and refused to rule out taxpayer-funded payments to people convicted or charged in connection with the Capitol attack.",
-    "last_verified": "2026-10-20",
+    "last_verified": "2026-10-25",
     "date_added": "2026-08-02",
     "section_summaries": {
       "incident_summary": "DOJ created, then dropped, a $1.776B fund from Trump's own IRS settlement that Jan. 6 defendants planned to claim from; a judge barring its revival is probing other payment routes.",
@@ -26042,7 +26507,7 @@
       "status": "Fund rescinded; an injunction bars reviving it under any name, and the judge is probing substitute payment routes. Rioters' lawyers report 600+ tort claims; the Sullivan class action is stayed."
     },
     "date_of_action": "2026-05-18 (settlement and fund announced)",
-    "last_substantive_update": "2026-10-03",
+    "last_substantive_update": "2026-10-25",
     "glance": {
       "who": "Trump (President) and Blanche (AG)",
       "what": "Created a $1.776B DOJ fund from Trump's own settlement, reportedly for Jan. 6 defendants; abandoned it",
@@ -26051,7 +26516,7 @@
         "certainty": "averted",
         "who": "Taxpayers ($1.776B fund)"
       },
-      "reviewed": "2026-10-03"
+      "reviewed": "2026-10-25"
     },
     "narrative_combined": true,
     "cause_references": [
@@ -26064,6 +26529,11 @@
         "match": "the January 6 blanket pardon entry",
         "tracker": "prosecution",
         "id": "trump-jan6-blanket-pardon-2025"
+      },
+      {
+        "match": "Justice Department fraud-tip reward program",
+        "tracker": "prosecution",
+        "id": "trump-doj-fraud-tip-rewards-2026"
       }
     ]
   },
@@ -28289,7 +28759,7 @@
     "official": "Donald Trump, President; John Ratcliffe, Director of the Central Intelligence Agency (executed the intelligence-sharing pause and directed allied services to limit information to Kyiv)",
     "offense_category": "Suspending Military Aid and Intelligence Sharing to a Wartime Ally in the Immediate Aftermath of a Public Diplomatic Clash, Directly Weakening That Ally's Battlefield Position During an Active Russian Invasion",
     "contested": true,
-    "incident_summary": "On February 28, 2025, a scheduled White House visit by Ukrainian President Volodymyr Zelenskyy, meant to culminate in a minerals-rights agreement granting the U.S. potential benefits from Ukrainian mineral extraction, collapsed into a televised Oval Office confrontation. President Trump and Vice President JD Vance publicly berated Zelenskyy, and the planned signing was abruptly scrapped. Trump then declared Zelenskyy 'not ready for peace.'\n\nOn March 3, 2025, Trump announced a suspension of all U.S. military aid to Ukraine. Two days later, on March 5, 2025, **CIA Director John Ratcliffe confirmed the United States was also pausing all intelligence sharing with Ukraine, and separately directed allied intelligence services, including the United Kingdom's, to limit the information they shared with Kyiv -- extending the pause's effect beyond direct U.S.-Ukraine channels alone.** Ratcliffe said he believed the pause would 'go away' given Zelenskyy's expressed openness to a negotiated settlement. For approximately one week, the dual suspension left Ukraine's military without full access to U.S.-supplied targeting and early-warning intelligence during an active Russian invasion. American University's School of International Service described it as introducing significant new uncertainty into Ukraine's military planning during that period.\n\nOn March 11, 2025, following talks between U.S. and Ukrainian officials in Jeddah, Saudi Arabia, Ukraine agreed to an 'immediate, interim 30-day ceasefire' proposal contingent on Russia's separate acceptance, and the United States immediately resumed both security assistance and intelligence sharing. U.S.-Ukraine intelligence cooperation continued from there.\n\nThe damage to European allies' trust in U.S. intelligence reliability lasted. In October 2025, seven months after the pause, it was still a live diplomatic concern: Ratcliffe made a previously undisclosed trip to Brussels, briefing NATO's North Atlantic Council and meeting privately with EU foreign-policy chief Kaja Kallas and senior officials from the EU's Intelligence and Situation Centre, in what Politico characterized as a 'not-so-subtle message' aimed at reassuring European partners the U.S. remained a reliable intelligence partner despite the March pause and separate concerns about the CIA's own internal politicization under this administration.\n\nIn October 2026, Zelenskyy said U.S. intelligence sharing had been briefly paused again. Ukraine relies on that intelligence to spot the ballistic missiles Russia fires at its cities, and Trump had said earlier that week that Washington was still sharing intelligence, despite Ukrainian officials saying some Russian strikes had occurred without warning. In comments Reuters reported on October 18, 2026, Zelenskyy told NBC's Meet the Press that the sharing had been interrupted but later 'de-blocked,' adding: 'Now it works.' The next day, Secretary of State Marco Rubio denied that any pause had happened, telling reporters: 'There's been no pause.'",
+    "incident_summary": "On February 28, 2025, a scheduled White House visit by Ukrainian President Volodymyr Zelenskyy, meant to culminate in a minerals-rights agreement granting the U.S. potential benefits from Ukrainian mineral extraction, collapsed into a televised Oval Office confrontation. President Trump and Vice President JD Vance publicly berated Zelenskyy, and the planned signing was abruptly scrapped. Trump then declared Zelenskyy 'not ready for peace.'\n\nOn March 3, 2025, Trump announced a suspension of all U.S. military aid to Ukraine. Two days later, on March 5, 2025, **CIA Director John Ratcliffe confirmed the United States was also pausing all intelligence sharing with Ukraine, and separately directed allied intelligence services, including the United Kingdom's, to limit the information they shared with Kyiv -- extending the pause's effect beyond direct U.S.-Ukraine channels alone.** Ratcliffe said he believed the pause would 'go away' given Zelenskyy's expressed openness to a negotiated settlement. For approximately one week, the dual suspension left Ukraine's military without full access to U.S.-supplied targeting and early-warning intelligence during an active Russian invasion. American University's School of International Service described it as introducing significant new uncertainty into Ukraine's military planning during that period.\n\nOn March 11, 2025, following talks between U.S. and Ukrainian officials in Jeddah, Saudi Arabia, Ukraine agreed to an 'immediate, interim 30-day ceasefire' proposal contingent on Russia's separate acceptance, and the United States immediately resumed both security assistance and intelligence sharing.\n\nThe damage to European allies' trust in U.S. intelligence reliability lasted. In October 2025, seven months after the pause, it was still a live diplomatic concern: Ratcliffe made a previously undisclosed trip to Brussels, briefing NATO's North Atlantic Council and meeting privately with EU foreign-policy chief Kaja Kallas and senior officials from the EU's Intelligence and Situation Centre, in what Politico characterized as a 'not-so-subtle message' aimed at reassuring European partners the U.S. remained a reliable intelligence partner despite the March pause and separate concerns about the CIA's own internal politicization under this administration.\n\nIn October 2026, Zelenskyy said U.S. intelligence sharing had been briefly paused again. Ukraine relies on that intelligence to spot the ballistic missiles Russia fires at its cities, and Trump had said earlier that week that Washington was still sharing intelligence, despite Ukrainian officials saying some Russian strikes had occurred without warning. In comments Reuters reported on October 18, 2026, Zelenskyy told NBC's Meet the Press that the sharing had been interrupted but later 'de-blocked,' adding: 'Now it works.' The next day, Secretary of State Marco Rubio denied that any pause had happened, telling reporters: 'There's been no pause.'\n\nAround the same time, Ukrainian officials told the Kyiv Independent on October 19, 2026 that Defense Secretary Pete Hegseth had not approved the transfer of a 'significant' batch of Patriot interceptor missiles that Ukraine's allies had already paid for. 'Hegseth has the contracts for Patriot missiles on his desk. He is not signing off on them,' one official said; Ukrainian officials suspected deliberate political pressure. A U.S. government official called those claims 'not true,' and a NATO official said deliveries through NATO's PURL program, including air defense, were continuing. The Washington Post, citing a U.S. official and three people familiar with the situation, reported the same day that Hegseth had not completed the steps needed to approve transfers of Patriot interceptors that other countries were ready to give Kyiv, some of which need his personal approval, though he had not formally refused them. On October 20, Hegseth told reporters: 'We haven't changed our posture in any way toward the Ukrainians, but certainly with things like interceptors, we want to make sure our guys have the most possible as well.'",
     "elements_required": [
       "A U.S. president suspended military aid to an active wartime ally in direct response to a public diplomatic disagreement rather than any change in the ally's own conduct of the war",
       "The CIA Director separately confirmed a parallel pause in intelligence sharing, and directed at least one allied intelligence service to also limit information sharing with the same ally",
@@ -28332,23 +28802,41 @@
         "description": "Reuters' October 19, 2026 report (via Internazionale) that Secretary of State Marco Rubio denied the United States had paused intelligence sharing with Ukraine, saying \"There's been no pause,\" contradicting Zelenskyy's account the day before",
         "source_url": "https://www.internazionale.it/ultime-notizie-reuters/2026/10/19/rubio-denies-us-paused-intelligence-sharing-with-ukraine",
         "maps_to_element": "The aftermath of the lifted pause: a later, disputed report of a brief interruption of U.S. intelligence sharing with the same ally"
+      },
+      {
+        "type": "news_report",
+        "description": "The Kyiv Independent's October 19, 2026 report that one senior Ukrainian official and two Ukrainian military officials said Defense Secretary Pete Hegseth had not approved the transfer of a \"significant\" batch of Patriot interceptors already paid for by Ukraine's allies, which they suspected was political pressure; a U.S. government official called the claims \"not true,\" and a NATO official said PURL deliveries, including air defense, were continuing",
+        "source_url": "https://kyivindependent.com/its-significant-ukraine-fears-us-is-withholding-allied-funded-air-defense-supplies-to-pressure-kyiv/",
+        "maps_to_element": "The aftermath of the lifted pause: a later, disputed holdup of allied-funded Patriot interceptors for the same ally"
+      },
+      {
+        "type": "news_report",
+        "description": "The Washington Post's October 19, 2026 report (via LIGA.net's pickup), citing a U.S. official and three people familiar with the situation, that Hegseth had not completed the procedures needed to approve transfers of Patriot interceptors that other countries were ready to give Ukraine, some of which require his personal approval, though he had not formally refused them",
+        "source_url": "https://news.liga.net/en/war/news/wp-the-pentagon-is-delaying-the-transfer-of-patriot-missiles-to-ukraine-from-its-partners",
+        "maps_to_element": "The aftermath of the lifted pause: a later, disputed holdup of allied-funded Patriot interceptors for the same ally"
+      },
+      {
+        "type": "news_report",
+        "description": "Anadolu Agency's report (via A News) that on Tuesday, October 20, 2026, asked in Eau Claire, Wisconsin about reports that the Pentagon was delaying Patriot transfers from allies to Ukraine, Hegseth said \"We haven't changed our posture in any way toward the Ukrainians, but certainly with things like interceptors, we want to make sure our guys have the most possible as well\"",
+        "source_url": "https://www.anews.com.tr/americas/2026/10/21/us-defense-secretary-denies-changes-to-us-policy-on-ukraine/amp",
+        "maps_to_element": "The aftermath of the lifted pause: a later, disputed holdup of allied-funded Patriot interceptors for the same ally"
       }
     ],
-    "status": "Concluded: the 2025 aid and intelligence pause was lifted March 11, 2025, after about a week. Allied trust was still a live concern in October 2025. In October 2026, Zelenskyy said sharing had briefly paused again; Rubio denied any pause.",
+    "status": "The 2025 aid and intelligence pause ended March 11, 2025, after about a week. In October 2026, Zelenskyy said sharing had briefly paused again (Rubio denied it), and Hegseth reportedly had not approved allied Patriot interceptor transfers to Ukraine; he said U.S. posture was unchanged.",
     "narrative_combined": true,
     "rebuttal_anticipated": "The administration could argue that pausing aid and intelligence to press a reluctant party toward peace negotiations is a legitimate use of American leverage in service of ending the war faster, that the pause was brief (roughly one week) and quickly reversed once Ukraine signaled openness to a ceasefire, and that the strategy arguably worked, since Ukraine did agree to the 30-day ceasefire proposal shortly after.",
     "comeback": "Even on the administration's own framing, the documented facts stand: a wartime ally facing an active invasion had its access to U.S. battlefield intelligence and military aid cut off not because of any change in its own conduct of the war, but because its president had a public argument with the U.S. president and vice president -- and the CIA director's own decision to also direct an allied intelligence service (the UK) to limit its sharing with Kyiv extended the pressure beyond bilateral U.S. channels alone. The pause's damage to European partners' trust in U.S. intelligence reliability lasting seven months, confirmed by the CIA director's own dedicated reassurance trip, is independent evidence the episode's costs were not confined to the one week the pause itself lasted.",
     "cause": "[TAP Analysis, not sourced] Consistent with a broader pattern this tracker documents of this administration using material leverage -- funding, security cooperation, intelligence access -- as a tool of interpersonal and diplomatic pressure rather than confining such levers to policy disputes (see the Trump entry for a related instance of intelligence being withheld or restricted around a politically sensitive question) -- this entry documents the case with the most direct, acknowledged connection between a public personal clash and a formal national-security policy action.",
-    "confidence_note": "HIGH confidence on the 2025 timeline (the Oval Office clash, the aid and intelligence pause, its March 11 resumption, and the October Brussels trip), corroborated across CBS News, NPR, Kyiv Independent, American University's SIS analysis, and Politico (via LIGA.net's pickup). The October 2026 interruption rests on Zelenskyy's own account as reported by Reuters and is disputed: Trump said that week that Washington was still sharing intelligence, and Rubio denied any pause the next day.",
+    "confidence_note": "HIGH confidence on the 2025 timeline (the Oval Office clash, the aid and intelligence pause, its March 11 resumption, and the October Brussels trip), corroborated across CBS News, NPR, Kyiv Independent, American University's SIS analysis, and Politico (via LIGA.net's pickup). The October 2026 interruption rests on Zelenskyy's own account as reported by Reuters and is disputed: Trump said that week that Washington was still sharing intelligence, and Rubio denied any pause the next day. The October 2026 Patriot holdup rests on anonymous Ukrainian officials (Kyiv Independent) and on a U.S. official and three people familiar with the situation (The Washington Post, via LIGA.net); a U.S. government official called Ukraine's claims 'not true,' and Hegseth said U.S. posture toward Ukraine had not changed.",
     "pull_quote": "Trump declared Zelenskyy “not ready for peace” days before suspending military aid and, through Ratcliffe, intelligence sharing.",
-    "last_verified": "2026-10-24",
+    "last_verified": "2026-10-25",
     "date_added": "2026-09-12",
     "section_summaries": {
-      "incident_summary": "After the Feb. 2025 Oval Office clash, Trump cut Ukraine's aid and Ratcliffe paused intel sharing for a week, until Kyiv backed a truce plan. Allied trust stayed shaken; a 2026 pause is disputed.",
-      "confidence_note": "The 2025 episode is well-corroborated across CBS, NPR, Kyiv Independent, and Politico; the October 2026 pause is Zelenskyy's account via Reuters, which Rubio denied."
+      "incident_summary": "After the Feb. 2025 Oval Office clash, Trump cut Ukraine's aid and Ratcliffe paused intel for a week. In Oct. 2026 a new intel pause and a reported Hegseth hold on allied Patriots were disputed.",
+      "confidence_note": "The 2025 episode is well-corroborated. The October 2026 intel pause (Zelenskyy's account, denied by Rubio) and Patriot holdup (anonymously sourced, disputed by U.S. officials) are contested."
     },
     "date_of_action": "2025-02-28 (Trump-Zelenskyy Oval Office clash) through 2025-03-11 (US resumes aid/intel sharing after Jeddah talks)",
-    "last_substantive_update": "2026-10-24",
+    "last_substantive_update": "2026-10-25",
     "glance": {
       "who": "Trump (President) and Ratcliffe (CIA Director)",
       "what": "Suspended military aid to Ukraine after the Oval Office clash and paused intel sharing; lifted in a week",
@@ -28357,7 +28845,7 @@
         "certainty": "documented",
         "who": "Ukraine's aid and intelligence supply"
       },
-      "reviewed": "2026-10-24"
+      "reviewed": "2026-10-25"
     },
     "cause_references": [
       {
