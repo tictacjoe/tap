@@ -12824,8 +12824,8 @@
     "archive": false
    },
    "6": {
-    "state": "not_found",
-    "why": "The fetched text is only page 1 of 4 of the docket (entries from July-Aug 2023); it contains no Doc 163, no Nov. 6, 2025 notice of appeal, and no D.C. Circuit No. 25-3110, so the claim cannot be settled from the provided text.",
+    "state": "supports",
+    "why": "The docket lists entry 163, a Notice of Appeal filed Nov 6, 2025, and a Nov 7, 2025 entry assigning USCA Case Number 25-3110 to that notice, matching the claim.",
     "host": "courtlistener.com",
     "date": "2026-10-24",
     "kind": "fact",
@@ -13261,7 +13261,7 @@
    },
    "1": {
     "state": "partly",
-    "why": "The provided NYT text confirms Siri's vetting role, his firm's lawsuits (fluoride, vaccine exemption) and the FDA Tylenol petition, ICAN as his client, and legal-ethics experts' concerns, but no ICAN funding figures appear in the provided (truncated) text.",
+    "why": "The source text confirms Siri's vetting role, fluoride lawsuits, the FDA petition, ICAN work, and legal-ethics experts' concerns, but the extracted (truncated) text contains no ICAN funding figures.",
     "host": "nytimes.com",
     "date": "2026-10-24",
     "kind": "fact",
