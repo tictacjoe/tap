@@ -23415,12 +23415,12 @@
     "official": "John Thune, Senate Majority Leader",
     "offense_category": "Inserting an Undisclosed Self-Benefiting Provision Into Must-Pass Government Funding Legislation, Creating a Personal Financial Remedy for Himself and Colleagues Whose Records Were Lawfully Subpoenaed in a Federal Investigation",
     "contested": true,
-    "incident_summary": "In November 2025, as Congress finalized the legislative package ending the 43-day government shutdown, **Senate Majority Leader John Thune personally directed staff to insert language into one of the package's full-year spending bills allowing senators (and at least one House member) to sue the federal government for up to $500,000 in statutory damages per violation if their phone or electronic records were subpoenaed or obtained without their knowledge.** The provision followed an October 2025 disclosure, via documents released by Senate Judiciary Chairman Chuck Grassley, that then-Special Counsel Jack Smith's 2023 investigation into efforts to overturn the 2020 election had obtained phone records for eight Republican senators -- Lindsey Graham, Bill Hagerty, Josh Hawley, Dan Sullivan, Tommy Tuberville, Ron Johnson, Cynthia Lummis, and Marsha Blackburn -- around the time of the January 6, 2021 Capitol attack, plus at least one House member, all via lawful grand jury subpoena. The provision was inserted without a standalone vote or public debate and signed into law along with the rest of the funding package. It drew immediate bipartisan criticism once discovered: House Speaker Mike Johnson said he was 'surprised and very frustrated,' calling it 'way out of line' and saying he was 'very angry about it'; Senate Finance Committee Democrat Ron Wyden called it a 'tax dollar giveaway to Republican senators.' Johnson announced the House would hold a standalone vote to strip the provision. The House did so, voting 426-0 to repeal the provision -- a second unanimous House repeal vote followed weeks later after the first stalled -- but Thune has refused to bring the repeal to a Senate floor vote, and Sen. Graham personally blocked a Democratic attempt to force one, arguing senators whose records were 'wrongly' obtained deserved a 'remedy.' As of this entry, the provision remains law, unrepealed, despite two unanimous House votes against it.",
+    "incident_summary": "In November 2025, as Congress finalized the legislative package ending the 43-day government shutdown, **Senate Majority Leader John Thune personally directed staff to insert language into one of the package's full-year spending bills allowing senators (and at least one House member) to sue the federal government for up to $500,000 in statutory damages per violation if their phone or electronic records were subpoenaed or obtained without their knowledge.** The provision followed an October 2025 disclosure, via documents released by Senate Judiciary Chairman Chuck Grassley, that then-Special Counsel Jack Smith's 2023 investigation into efforts to overturn the 2020 election had obtained phone records for eight Republican senators -- Lindsey Graham, Bill Hagerty, Josh Hawley, Dan Sullivan, Tommy Tuberville, Ron Johnson, Cynthia Lummis, and Marsha Blackburn -- around the time of the January 6, 2021 Capitol attack, plus at least one House member, all via lawful grand jury subpoena. The provision was inserted without a standalone vote or public debate and signed into law along with the rest of the funding package. It drew immediate bipartisan criticism once discovered: House Speaker Mike Johnson said he was 'surprised and very frustrated,' calling it 'way out of line' and saying he was 'very angry about it'; Senate Finance Committee Democrat Ron Wyden called it a 'tax dollar giveaway to Republican senators.' Johnson announced the House would hold a standalone vote to strip the provision. The House did so, voting 426-0 to repeal the provision -- a second unanimous House repeal vote followed weeks later after the first stalled -- but Thune refused to bring the repeal to a Senate floor vote, and Sen. Graham personally blocked a Democratic attempt to force one, arguing senators whose records were 'wrongly' obtained deserved a 'remedy.'\n\nUpdate 2026-10-26: On January 22, 2026, the House unanimously attached a repeal of the provision to a must-pass funding package. Graham, who had said he planned to sue under the law, held up the package; on January 30 he lifted his hold in exchange for future votes, which he said Thune supported, on ending sanctuary city policies and on letting groups and private citizens, \"not members of Congress,\" harmed by the Jack Smith investigation have their day in court. The repeal, which also removed the requirement that phone companies notify senators, was signed into law on February 3, 2026, according to Sen. Martin Heinrich, whose repeal bill it carried. Graham died in July 2026.",
     "elements_required": [
       "A Senate leader personally directed the insertion of a substantive, self-benefiting legal provision into unrelated must-pass funding legislation, without a standalone vote or public hearing",
       "The provision created a specific financial remedy (up to $500,000 per violation) for a defined class of people that includes the inserting official's own colleagues, following a lawful federal investigative action (grand jury subpoenas) that the underlying prosecutors were legally entitled to pursue without notifying the targets in advance",
       "Once discovered, the provision drew bipartisan public criticism, including from the inserting official's own party's House leadership",
-      "The House voted unanimously, twice, to repeal the provision, but the Senate leader who inserted it has refused to allow a floor vote on repeal, and a directly financially-interested senator (Graham) personally blocked an attempt to force one"
+      "The House voted unanimously, twice, to repeal the provision, but the Senate leader who inserted it refused to allow a floor vote on repeal, and a directly financially-interested senator (Graham) personally blocked an attempt to force one"
     ],
     "evidence": [
       {
@@ -23455,28 +23455,64 @@
       },
       {
         "type": "news_report",
-        "description": "Axios reported that despite the House's repeated unanimous repeal votes, Thune has refused to schedule a Senate floor vote on repeal, and that Sen. Graham personally blocked a Democratic attempt to force one, defending the provision as a deserved 'remedy' for the senators' 'wrongs'",
+        "description": "Axios reported that the House voted unanimously a second time to repeal the provision, tucking the repeal into a must-pass funding package, and that the repeal had stalled in the Senate, where Thune had refused to bring it up for a vote",
         "source_url": "https://www.axios.com/2026/01/22/house-overturns-senate-seized-phone-records-arctic-frost",
-        "maps_to_element": "Thune's and Graham's ongoing personal roles in blocking repeal despite unanimous House opposition"
+        "maps_to_element": "Thune's personal role in blocking repeal despite unanimous House opposition"
+      },
+      {
+        "type": "news_report",
+        "description": "CBS News, January 22, 2026: \"The House approved an amendment to a must-pass funding package Thursday that would repeal a controversial provision that allows senators to sue for $500,000 if federal investigators search their phone records without their knowledge,\" in a unanimous vote; when a Democratic senator sought unanimous consent in November to approve the House-passed repeal, \"Sen. Lindsey Graham, a South Carolina Republican, objected.\"",
+        "source_url": "https://www.cbsnews.com/news/house-amendment-senate-lawsuits-500k-funding-package/",
+        "maps_to_element": "Near-total bipartisan repudiation of the provision via unanimous House vote"
+      },
+      {
+        "type": "news_report",
+        "description": "The Hill (Emily Brooks), January 30, 2026: the repeal \"is at the center of a hold by Sen. Lindsey Graham (R-S.C.) that is delaying a vote on a funding package\"; Graham, \"who plans to use the law to seek monetary damages,\" wants to keep it intact, and \"Graham said he did plan to sue.\"",
+        "source_url": "https://thehill.com/homenews/senate/5714880-lindsey-graham-arctic-frost-dhs/",
+        "maps_to_element": "Thune's and Graham's personal roles in blocking repeal despite unanimous House opposition"
+      },
+      {
+        "type": "news_report",
+        "description": "Washington Times (Lindsey McPherson), January 30, 2026: Graham \"lifted his 'hold' on the package Friday in exchange for future votes on ending sanctuary city policies and providing a legal remedy for conservatives\"; he said Thune \"supports, at a time to be determined, a vote on creating the ability for groups and private citizens, not members of Congress, that may have been harmed by Jack Smith and the Biden DOJ to have their day in court.\" The House-added repeal \"not only wipes away senators' ability to sue, but also a requirement that phone companies notify senators.\"",
+        "source_url": "https://www.washingtontimes.com/news/2026/jan/30/senate-vote-funding-deal-lindsey-graham-secures-votes-sanctuary/",
+        "maps_to_element": "Thune's and Graham's personal roles in blocking repeal despite unanimous House opposition"
+      },
+      {
+        "type": "official_statement",
+        "description": "Sen. Martin Heinrich press release, February 3, 2026: his \"legislation to repeal the 'Arctic Frost' provision was signed into law today\"; \"Included in the legislation signed into law today was my bill to repeal the 'Arctic Frost' provision, which would have let a few Republican senators collect hundreds of thousands of dollars of taxpayer money for legally obtained phone records.\"",
+        "source_url": "https://www.heinrich.senate.gov/newsroom/press-releases/heinrichs-repeal-of-the-arctic-frost-provision-signed-into-law",
+        "maps_to_element": "Near-total bipartisan repudiation of the provision via unanimous House vote"
+      },
+      {
+        "type": "public_record",
+        "description": "Congress.gov actions record for H.R. 7148, the Consolidated Appropriations Act, 2026, lists \"Signed by President.\" and \"Became Public Law No: 119-75.\" under 02/03/2026, the date Sen. Heinrich's office gives for the enactment of the repeal.",
+        "source_url": "https://www.congress.gov/bill/119th-congress/house-bill/7148/all-actions",
+        "maps_to_element": "Near-total bipartisan repudiation of the provision via unanimous House vote"
+      },
+      {
+        "type": "news_report",
+        "description": "NPR, via Michigan Public, July 12, 2026: \"Sen. Lindsey Graham, R-S.C., died late Saturday following a 'brief and sudden illness,' according to a statement released by his office. He was 71.\"",
+        "source_url": "https://www.michiganpublic.org/2026-07-12/sen-lindsey-graham-of-south-carolina-trump-ally-and-foreign-policy-hawk-dies-at-71",
+        "maps_to_element": "Thune's and Graham's personal roles in blocking repeal despite unanimous House opposition"
       }
     ],
-    "status": "Unrepealed as of this entry. The House has voted unanimously (426-0) at least twice to strip the provision; Senate Majority Leader Thune has declined to schedule a floor vote on repeal, and Sen. Graham blocked a Democratic attempt to force one in January 2026. The underlying $500,000-per-violation lawsuit right remains active law.",
-    "rebuttal_anticipated": "Sen. Graham's stated defense is that senators whose phone records were subpoenaed without their knowledge in a politically sensitive investigation suffered a genuine privacy violation deserving a legal remedy, regardless of the subpoenas' underlying lawfulness, and that the provision simply gives them a path to seek redress like any other person whose records were improperly handled.",
-    "comeback": "The subpoenas were lawful grand jury process in an active federal criminal investigation -- the same kind of process regularly used against ordinary Americans without any comparable $500,000 statutory-damages remedy -- and the provision was inserted into unrelated, must-pass shutdown-ending legislation without a standalone vote specifically because it could not have survived open, individual scrutiny, a conclusion borne out by the House's subsequent unanimous, bipartisan votes to repeal it. That the provision's chief defender (Graham) and inserter (Thune) are themselves among its direct financial beneficiaries is the core self-dealing concern, independent of whether the underlying privacy objection has some merit in the abstract.",
-    "cause": "[TAP Analysis, not sourced] A direct instance of legislative self-dealing: a Senate leader used his procedural control over must-pass legislation to create a personal and colleague-benefiting legal remedy tied to an investigation of Trump-aligned figures, in a manner transparent enough to draw immediate, near-unanimous bipartisan repudiation once discovered, yet durable enough that the same leader's control over the Senate floor has kept it from being undone.",
-    "confidence_note": "HIGH confidence on all core facts -- the provision's terms, Thune's personal role in inserting it, the eight named senators, the bipartisan criticism, and the House's unanimous repeal votes -- independently corroborated across NBC News, CBS News, ABC News, Axios, and PBS NewsHour. HIGH confidence that the repeal remains stalled in the Senate as of the most recent reporting reviewed (January 2026); should be rechecked periodically for any change in the provision's legal status.",
-    "pull_quote": "The House voted 426-0, twice, to repeal the provision, but Thune has refused to bring the repeal to a Senate floor vote, and Sen. Graham personally blocked a Democratic attempt to force one.",
-    "last_verified": "2026-09-12",
+    "status": "Repealed: after the House attached a repeal to a must-pass funding package in January 2026 and Sen. Graham lifted his hold on it January 30 in exchange for promised future votes, the repeal was signed into law February 3, 2026, also ending the notice-to-senators requirement.",
+    "rebuttal_anticipated": "Sen. Graham's stated defense was that senators whose phone records were subpoenaed without their knowledge in a politically sensitive investigation suffered a genuine privacy violation deserving a legal remedy, regardless of the subpoenas' underlying lawfulness, and that the provision simply gives them a path to seek redress like any other person whose records were improperly handled.",
+    "comeback": "The subpoenas were lawful grand jury process in an active federal criminal investigation -- the same kind of process regularly used against ordinary Americans without any comparable $500,000 statutory-damages remedy -- and the provision was inserted into unrelated, must-pass shutdown-ending legislation without a standalone vote specifically because it could not have survived open, individual scrutiny, a conclusion borne out by the House's subsequent unanimous, bipartisan votes to repeal it. That the provision's chief defender (Graham) was himself among its direct financial beneficiaries, and that its inserter (Thune) wrote it to benefit only his own chamber's members, is the core self-dealing concern, independent of whether the underlying privacy objection has some merit in the abstract.",
+    "cause": "[TAP Analysis, not sourced] A direct instance of legislative self-dealing: a Senate leader used his procedural control over must-pass legislation to create a colleague-benefiting legal remedy tied to an investigation of Trump-aligned figures, in a manner transparent enough to draw immediate, near-unanimous bipartisan repudiation once discovered, yet durable enough that the same leader's control over the Senate floor kept a standalone repeal from a vote until the House attached repeal to must-pass funding.",
+    "confidence_note": "HIGH confidence on all core facts -- the provision's terms, Thune's personal role in inserting it, the eight named senators, the bipartisan criticism, and the House's unanimous repeal votes -- independently corroborated across NBC News, CBS News, ABC News, Axios, and PBS NewsHour. HIGH confidence that the provision was repealed: Sen. Heinrich's office says the repeal was signed into law on February 3, 2026, the day Congress.gov records H.R. 7148, the Consolidated Appropriations Act, 2026, becoming Public Law 119-75, and the Washington Times reported Graham lifting his hold on the package carrying it on January 30.",
+    "pull_quote": "The House voted unanimously, twice, to repeal the provision, but Thune refused to bring the repeal to a Senate floor vote, and Sen. Graham personally blocked a Democratic attempt to force one.",
+    "last_verified": "2026-10-26",
     "date_added": "2026-09-12",
     "section_summaries": {
-      "incident_summary": "Thune inserted a provision into shutdown-ending funding legislation letting senators sue for $500,000 over lawful Jan. 6-probe phone-records subpoenas benefiting himself and eight named GOP colleagues; the House voted 426-0 to repeal it twice, but Thune has blocked a Senate vote and Graham personally blocked a forced vote.",
-      "confidence_note": "HIGH confidence across many independent outlets on all core facts, including the ongoing Senate blockage as of the most recent reporting reviewed."
+      "incident_summary": "Thune put a clause in shutdown-ending funding letting senators sue for $500,000 over lawful Jan. 6-probe phone subpoenas; after Graham blocked repeal, it was repealed in February 2026.",
+      "confidence_note": "HIGH confidence across many independent outlets on the core facts, and that the provision was repealed on February 3, 2026."
     },
     "narrative_override": {
       "headline": "Thune inserted a provision letting senators sue over lawful Jan. 6 phone-records subpoenas."
     },
     "date_of_action": "2025-10 (Grassley discloses Jack Smith obtained senators' phone records) through 2025-11 (Thune inserts lawsuit provision into spending bill)",
-    "last_substantive_update": "2026-09-12",
+    "last_substantive_update": "2026-10-26",
     "glance": {
       "who": "John Thune (Senate Majority Leader)",
       "what": "Directed a clause into the funding bill letting senators sue for $500,000 over Jan. 6 phone-record subpoenas",
@@ -23485,7 +23521,20 @@
         "certainty": "documented",
         "who": "Checks on congressional self-dealing"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-10-26"
+    },
+    "timeline": {
+      "incident_summary": {
+        "base": "In November 2025, as Congress finalized the legislative package ending the 43-day government shutdown, **Senate Majority Leader John Thune personally directed staff to insert language into one of the package's full-year spending bills allowing senators (and at least one House member) to sue the federal government for up to $500,000 in statutory damages per violation if their phone or electronic records were subpoenaed or obtained without their knowledge.** The provision followed an October 2025 disclosure, via documents released by Senate Judiciary Chairman Chuck Grassley, that then-Special Counsel Jack Smith's 2023 investigation into efforts to overturn the 2020 election had obtained phone records for eight Republican senators -- Lindsey Graham, Bill Hagerty, Josh Hawley, Dan Sullivan, Tommy Tuberville, Ron Johnson, Cynthia Lummis, and Marsha Blackburn -- around the time of the January 6, 2021 Capitol attack, plus at least one House member, all via lawful grand jury subpoena. The provision was inserted without a standalone vote or public debate and signed into law along with the rest of the funding package. It drew immediate bipartisan criticism once discovered: House Speaker Mike Johnson said he was 'surprised and very frustrated,' calling it 'way out of line' and saying he was 'very angry about it'; Senate Finance Committee Democrat Ron Wyden called it a 'tax dollar giveaway to Republican senators.' Johnson announced the House would hold a standalone vote to strip the provision. The House did so, voting 426-0 to repeal the provision -- a second unanimous House repeal vote followed weeks later after the first stalled -- but Thune refused to bring the repeal to a Senate floor vote, and Sen. Graham personally blocked a Democratic attempt to force one, arguing senators whose records were 'wrongly' obtained deserved a 'remedy.'",
+        "updates": [
+          {
+            "date": "2026-10-26",
+            "label": "Update",
+            "text": "Update 2026-10-26: On January 22, 2026, the House unanimously attached a repeal of the provision to a must-pass funding package. Graham, who had said he planned to sue under the law, held up the package; on January 30 he lifted his hold in exchange for future votes, which he said Thune supported, on ending sanctuary city policies and on letting groups and private citizens, \"not members of Congress,\" harmed by the Jack Smith investigation have their day in court. The repeal, which also removed the requirement that phone companies notify senators, was signed into law on February 3, 2026, according to Sen. Martin Heinrich, whose repeal bill it carried. Graham died in July 2026.",
+            "effective_date": "2026-10-26"
+          }
+        ]
+      }
     }
   },
   {
