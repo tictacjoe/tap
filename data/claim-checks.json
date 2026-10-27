@@ -1,6 +1,6 @@
 {
  "version": 1,
- "as_of": "2026-10-26",
+ "as_of": "2026-10-27",
  "checks": {
   "abrego-garcia-vindictive-prosecution-2025-2026": {
    "0": {
@@ -2218,6 +2218,30 @@
     "why": "The CNN article reports the September 10 Rosen communication, the Evans sworn statement on blocked evidence, the missing Pretti officer statement, the post-press-conference halt, and the D.C. federal court fight, matching every element of the claim.",
     "host": "cnn.com",
     "date": "2026-10-16",
+    "kind": "fact",
+    "archive": false
+   },
+   "14": {
+    "state": "supports",
+    "why": "The reply brief's introduction states the non-disclosure decision is committed to agency discretion by law, exempting the action from the APA; the body quotes the 'no proceedings or litigation had commenced' and 'declined to share information' language, and the title and transfer section confirm the dismiss-or-transfer request to Minnesota.",
+    "host": "courtlistener.com",
+    "date": "2026-10-27",
+    "kind": "fact",
+    "archive": false
+   },
+   "15": {
+    "state": "supports",
+    "why": "The AP text states the DOJ reply argued it is within their discretion to decline to share information, cited Touhy regulations that apply only when formal proceedings are underway, and that Evans said federal authorities still hold Good's clothing, the officer's phone and interview recordings.",
+    "host": "apnews.com",
+    "date": "2026-10-27",
+    "kind": "fact",
+    "archive": false
+   },
+   "16": {
+    "state": "supports",
+    "why": "The KARE 11 text reproduces the Evans declaration language quoted in the claim verbatim (the article calls him BCA \"Supervisor\" rather than Superintendent, a minor title discrepancy).",
+    "host": "valleynewslive.com",
+    "date": "2026-10-27",
     "kind": "fact",
     "archive": false
    }
@@ -4990,6 +5014,30 @@
     "why": "The Reformer reports Schiltz spoke at a St. Thomas law school symposium two days after the complaint and quotes the 'right' and 'duty' remark; it also notes the Times wrote that Schiltz didn't comment on specific cases.",
     "host": "minnesotareformer.com",
     "date": "2026-10-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "8": {
+    "state": "supports",
+    "why": "CBS reports Woodward filed the motions Tuesday against Schiltz and Tunheim, quotes both motions, notes he was the only government lawyer to sign, the Nov. 23 hearing, expert expectation of failure, and Gillers calling them performative.",
+    "host": "cbsnews.com",
+    "date": "2026-10-27",
+    "kind": "fact",
+    "archive": false
+   },
+   "9": {
+    "state": "supports",
+    "why": "MPR names Ahmed (Schiltz) and Weihmann (Tunheim), Woodward's \"partisan critique\" characterization, DOJ's use of the St. Thomas remarks, and Gerdts's \"contrived and baseless\" comment.",
+    "host": "mprnews.org",
+    "date": "2026-10-27",
+    "kind": "fact",
+    "archive": false
+   },
+   "10": {
+    "state": "supports",
+    "why": "FOX 9 names both cases, says Schiltz scheduled a hearing next month in the Ahmed case, Tunheim has yet to act, and repeats the court statement that judges acted \"well within the ethical rules\".",
+    "host": "fox9.com",
+    "date": "2026-10-27",
     "kind": "fact",
     "archive": false
    }
@@ -15220,6 +15268,72 @@
     "why": "The August 12, 2026 DFF motion quotes the July 22, 2025 declaration (footnoted to the Rogoff Declaration) and says the June 22, 2026 court-ordered production showed Rubio in multiple autodelete chats, but the extracted text does not include the Weetman/Kootz repetition passage or the 'SS/APNSA,SD,CJCS' chat with '8 hours' and '1 week' settings.",
     "host": "storage.courtlistener.com",
     "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   }
+  },
+  "rubio-state-dept-diplomat-voting-history-questions-2026": {
+   "0": {
+    "state": "supports",
+    "why": "The statute defines personnel action to include appointment, promotion, assignment and performance evaluation, requires merit principles, and requires regulations ensuring freedom from political-affiliation discrimination per 5 U.S.C. 2302(b)(1).",
+    "host": "law.cornell.edu",
+    "date": "2026-10-27",
+    "kind": "fact",
+    "archive": false
+   },
+   "1": {
+    "state": "supports",
+    "why": "Section 2302(b)(1)(E) bars officials with personnel authority from discriminating on the basis of marital status or political affiliation as prohibited under any law, rule, or regulation.",
+    "host": "law.cornell.edu",
+    "date": "2026-10-27",
+    "kind": "fact",
+    "archive": false
+   },
+   "2": {
+    "state": "supports",
+    "why": "The criteria document lists Fidelity first and contains the quoted phrases (zealously executing USG policy; senior-level aligning oneself and team to current USG goals; executive power under Article II). Release date and Fox News publication are not shown in the text but are peripheral.",
+    "host": "static.foxnews.com",
+    "date": "2026-10-27",
+    "kind": "fact",
+    "archive": false
+   },
+   "3": {
+    "state": "supports",
+    "why": "Federal News Network states the new core precepts will assess employees \"in part, on their fidelity\" to the Trump administration's policy goals and that the fidelity portion links to a White House page listing executive orders.",
+    "host": "federalnewsnetwork.com",
+    "date": "2026-10-27",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "supports",
+    "why": "The Sun report states the voting questions for 2016, 2020 and 2024, the Trump-voters-only eligibility, the disqualifying Democratic donations, six sources (three speaking directly with those questioned), and the department's later \"absurd premise\" rejection seven hours after publication.",
+    "host": "washingtonsun.com",
+    "date": "2026-10-27",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "supports",
+    "why": "The Sun report states officials made clear only Trump voters would be eligible, donation history would be examined, and Shaheen said the committee is working with the House and others \"to thoroughly investigate all such claims\".",
+    "host": "washingtonsun.com",
+    "date": "2026-10-27",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
+    "state": "supports",
+    "why": "The Hill relays the Sun report, quotes the spokesperson rejecting \"this absurd premise\" and defining fidelity as upholding the Constitution and law, and says AFSA heard anecdotes of questions \"political in nature\" and is exploring legal options.",
+    "host": "thehill.com",
+    "date": "2026-10-27",
+    "kind": "fact",
+    "archive": false
+   },
+   "7": {
+    "state": "supports",
+    "why": "The Daily Beast relays the Sun report and quotes spokesperson Tommy Pigott with the \"bureaucrats who are complaining to the press\" statement (in the paragraph following his attributed quote).",
+    "host": "thedailybeast.com",
+    "date": "2026-10-27",
     "kind": "fact",
     "archive": false
    }
