@@ -15314,7 +15314,7 @@
     "domain": "data_collection_halted",
     "status": "Both discontinuations are final as of this entry -- EJScreen taken offline, the NOAA disaster database retired with no updates beyond 2024",
     "date_of_action": "2025-02 (EPA's EJScreen taken offline) through 2026-05 (NOAA announces retirement of its billion-dollar disaster database)",
-    "what_changed": "**EPA's EJScreen -- a mapping and screening tool combining environmental and demographic indicators to identify communities facing higher combined environmental and socioeconomic burdens -- was taken offline by the Trump administration between February 3 and February 5, 2025; a nonprofit, the Public Environmental Data Project, has since built a replica to keep the underlying data accessible.** Separately, NOAA announced it will retire its 'Billion-Dollar Weather and Climate Disasters' database, which had tracked the frequency and cost of major U.S. weather and climate disasters for decades -- the agency will keep historical data through calendar year 2024 available but will not add further updates, as part of a Trump 2026 fiscal year budget proposal cutting NOAA's overall budget by $1.52 billion, concentrated in climate-related research, data, and grant programs. Separately, CDC removed multiple web pages addressing health disparities among LGBTQ+ youth, and USDA (which oversees the Forest Service) removed pages referencing climate change, as part of the same broader wave of federal data and web-content removal reported across agencies in 2025-2026. (Note: the parallel removal of USDA's 30-year Household Food Security Survey is documented separately in this tracker's usda-food-security-survey-cancellation-2025.json entry and is not duplicated here.) Added 2026-09-11 (round-4 backlog fold, cluster c0686): the Federation of American Scientists and other data scientists published a 'Dearly Departed Datasets' list around late October 2025 cataloguing federal datasets killed off, stripped of variables, or made harder to access under the second Trump administration, sorting them into categories (fully terminated, variables deleted, access tools removed, or preserved by outside groups after federal discontinuation). Specific examples beyond the EPA/NOAA/CDC/USDA items above included: figures on transgender inmates removed from Bureau of Justice Statistics inmate data, three gender-identity questions removed from the National Crime Victimization Survey, a race-and-ethnicity column removed from a federal workforce dataset, and a Census Bureau dataset on the relationship between income inequality and disaster vulnerability. The report found the number of fully-terminated datasets 'in the dozens, out of the hundreds of thousands' the federal government produces, and warned that continued loss of federal staff and expertise (following the year's broader workforce reductions) put additional datasets at ongoing risk. No specific administration official was named or quoted defending the removals catalogued in this report.",
+    "what_changed": "**EPA's EJScreen -- a mapping and screening tool combining environmental and demographic indicators to identify communities facing higher combined environmental and socioeconomic burdens -- was taken offline by the Trump administration between February 3 and February 5, 2025; a nonprofit, the Public Environmental Data Project, has since built a replica to keep the underlying data accessible.** Separately, NOAA announced it will retire its 'Billion-Dollar Weather and Climate Disasters' database, which had tracked the frequency and cost of major U.S. weather and climate disasters for decades -- the agency will keep historical data through calendar year 2024 available but will not add further updates, as part of a Trump 2026 fiscal year budget proposal cutting NOAA's overall budget by $1.52 billion, concentrated in climate-related research, data, and grant programs. Separately, CDC removed multiple web pages addressing health disparities among LGBTQ+ youth, and USDA (which oversees the Forest Service) removed pages referencing climate change, as part of the same broader wave of federal data and web-content removal reported across agencies in 2025-2026. (Note: the parallel removal of USDA's 30-year Household Food Security Survey is documented separately in this tracker's usda-food-security-survey-cancellation-2025.json entry and is not duplicated here.) Added 2026-09-11: the Federation of American Scientists and other data scientists published a 'Dearly Departed Datasets' list around late October 2025 cataloguing federal datasets killed off, stripped of variables, or made harder to access under the second Trump administration, sorting them into categories (fully terminated, variables deleted, access tools removed, or preserved by outside groups after federal discontinuation). Specific examples beyond the EPA/NOAA/CDC/USDA items above included: figures on transgender inmates removed from Bureau of Justice Statistics inmate data, three gender-identity questions removed from the National Crime Victimization Survey, a race-and-ethnicity column removed from a federal workforce dataset, and a Census Bureau dataset on the relationship between income inequality and disaster vulnerability. The report found the number of fully-terminated datasets 'in the dozens, out of the hundreds of thousands' the federal government produces, and warned that continued loss of federal staff and expertise (following the year's broader workforce reductions) put additional datasets at ongoing risk. No specific administration official was named or quoted defending the removals catalogued in this report.",
     "primary_proponent": {
       "name": "Multiple agency heads -- no single named official directs all three actions",
       "role": "EPA, NOAA (Commerce Department), and HHS/CDC leadership each independently discontinued or removed tools/data within their own agencies",
@@ -15346,9 +15346,17 @@
       ],
       "caveat": "These are three separate agency actions grouped here because they share the same domain (halting or removing a public federal dataset/tool) and were reported together as part of a broader pattern in contemporaneous coverage -- each has independent sourcing and should be evaluated on its own facts rather than treated as a single coordinated directive."
     },
-    "confidence_note": "HIGH confidence on the EJScreen removal and NOAA disaster-database retirement, each independently corroborated across multiple outlets (ESG Dive, Utility Dive, Scripps News, HSToday, Time, E&E News/POLITICO for NOAA; NBC News, Context/Thomson Reuters Foundation for EJScreen). MODERATE confidence on grouping the CDC LGBTQ+ youth page removals and USDA climate-change page removals into this same entry, since those are documented via fewer, less-detailed sources in the reporting reviewed -- treat the EJScreen and NOAA facts as the strongest-sourced parts of this entry. Added 2026-09-11 (round-4 backlog fold, cluster c0686): the 'Dearly Departed Datasets' additions are HIGH confidence for the report's existence and its named specific examples (corroborated across AP, Yahoo, AOL) and attributed to a credible named organization (Federation of American Scientists), but no government official is quoted responding to or defending any specific removal catalogued in that report.",
+    "confidence_note": "HIGH confidence on the EJScreen removal and NOAA disaster-database retirement, each independently corroborated across multiple outlets (ESG Dive, Utility Dive, Scripps News, HSToday, Time, E&E News/POLITICO for NOAA; NBC News, Context/Thomson Reuters Foundation for EJScreen). MODERATE confidence on grouping the CDC LGBTQ+ youth page removals and USDA climate-change page removals into this same entry, since those are documented via fewer, less-detailed sources in the reporting reviewed -- treat the EJScreen and NOAA facts as the strongest-sourced parts of this entry. Added 2026-09-11: the 'Dearly Departed Datasets' additions are HIGH confidence for the report's existence and its named specific examples (corroborated across AP, Yahoo, AOL) and attributed to a credible named organization (Federation of American Scientists), but no government official is quoted responding to or defending any specific removal catalogued in that report.",
+    "cause": "[TAP Analysis, not sourced] See also: the entry on EPA's plan to shut down its public web archive, a plan that would take more past EPA material out of public view.",
+    "cause_references": [
+      {
+        "match": "the entry on EPA's plan to shut down its public web archive",
+        "tracker": "government-services",
+        "id": "epa-public-web-archive-shutdown-2026"
+      }
+    ],
     "pull_quote": "A Federation of American Scientists catalogue found dozens of federal datasets fully terminated -- including transgender-inmate figures removed from Bureau of Justice Statistics data and gender-identity questions dropped from the National Crime Victimization Survey -- warning that continued staff losses put more datasets at ongoing risk.",
-    "last_verified": "2026-09-11",
+    "last_verified": "2026-10-28",
     "date_added": "2026-07-28",
     "sources": [
       {
@@ -15373,7 +15381,7 @@
       "estimated_impact": "Both discontinued tools were standard references for researchers, journalists, and policymakers; outside groups have had to independently preserve the data since the federal versions went away.",
       "confidence_note": "EJScreen and the NOAA database removals are each strongly multi-sourced; the CDC/USDA page removals grouped in here rest on thinner sourcing."
     },
-    "last_substantive_update": "2026-09-11",
+    "last_substantive_update": "2026-10-28",
     "glance": {
       "who": "EPA, NOAA and CDC leadership",
       "what": "Took EPA's EJScreen offline and retired NOAA's billion-dollar disaster database; others preserved copies",
@@ -15382,7 +15390,7 @@
         "certainty": "documented",
         "who": "Public environmental and disaster data"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-10-28"
     },
     "timeline": {
       "what_changed": {
@@ -15391,7 +15399,7 @@
           {
             "date": "2026-09-11",
             "label": "Added",
-            "text": "Added 2026-09-11 (round-4 backlog fold, cluster c0686): the Federation of American Scientists and other data scientists published a 'Dearly Departed Datasets' list around late October 2025 cataloguing federal datasets killed off, stripped of variables, or made harder to access under the second Trump administration, sorting them into categories (fully terminated, variables deleted, access tools removed, or preserved by outside groups after federal discontinuation). Specific examples beyond the EPA/NOAA/CDC/USDA items above included: figures on transgender inmates removed from Bureau of Justice Statistics inmate data, three gender-identity questions removed from the National Crime Victimization Survey, a race-and-ethnicity column removed from a federal workforce dataset, and a Census Bureau dataset on the relationship between income inequality and disaster vulnerability. The report found the number of fully-terminated datasets 'in the dozens, out of the hundreds of thousands' the federal government produces, and warned that continued loss of federal staff and expertise (following the year's broader workforce reductions) put additional datasets at ongoing risk. No specific administration official was named or quoted defending the removals catalogued in this report.",
+            "text": "Added 2026-09-11: the Federation of American Scientists and other data scientists published a 'Dearly Departed Datasets' list around late October 2025 cataloguing federal datasets killed off, stripped of variables, or made harder to access under the second Trump administration, sorting them into categories (fully terminated, variables deleted, access tools removed, or preserved by outside groups after federal discontinuation). Specific examples beyond the EPA/NOAA/CDC/USDA items above included: figures on transgender inmates removed from Bureau of Justice Statistics inmate data, three gender-identity questions removed from the National Crime Victimization Survey, a race-and-ethnicity column removed from a federal workforce dataset, and a Census Bureau dataset on the relationship between income inequality and disaster vulnerability. The report found the number of fully-terminated datasets 'in the dozens, out of the hundreds of thousands' the federal government produces, and warned that continued loss of federal staff and expertise (following the year's broader workforce reductions) put additional datasets at ongoing risk. No specific administration official was named or quoted defending the removals catalogued in this report.",
             "effective_date": "2026-09-11"
           }
         ]
@@ -15402,7 +15410,7 @@
           {
             "date": "2026-09-11",
             "label": "Added",
-            "text": "Added 2026-09-11 (round-4 backlog fold, cluster c0686): the 'Dearly Departed Datasets' additions are HIGH confidence for the report's existence and its named specific examples (corroborated across AP, Yahoo, AOL) and attributed to a credible named organization (Federation of American Scientists), but no government official is quoted responding to or defending any specific removal catalogued in that report.",
+            "text": "Added 2026-09-11: the 'Dearly Departed Datasets' additions are HIGH confidence for the report's existence and its named specific examples (corroborated across AP, Yahoo, AOL) and attributed to a credible named organization (Federation of American Scientists), but no government official is quoted responding to or defending any specific removal catalogued in that report.",
             "effective_date": "2026-09-11"
           }
         ]
@@ -15662,6 +15670,118 @@
         "who": "PFAS-on-farms research"
       },
       "reviewed": "2026-10-11"
+    }
+  },
+  {
+    "id": "epa-public-web-archive-shutdown-2026",
+    "title": "EPA Plans to Shut Down Its Public Web Archive of Decades of Environmental Records on Dec. 31, 2026, Pointing Users to Three Website Snapshots Instead",
+    "institution": "U.S. Environmental Protection Agency -- EPA Web Archive (archive.epa.gov)",
+    "domain": "data_collection_halted",
+    "status": "Planned, not yet carried out. EPA's archive homepage says the archive will retire Dec. 31, 2026; it was still online Oct. 28. EPA has given no public reason this time and did not answer Mother Jones. No reversal, lawsuit or congressional action was found.",
+    "date_of_action": "2026 (retirement date posted on the archive's homepage a few weeks before Oct. 23, 2026, per Mother Jones); planned retirement 2026-12-31",
+    "what_changed": "The EPA Web Archive at archive.epa.gov holds older agency web content that is no longer updated but stays public; EPA's own notice says its materials 'may be useful as background documents to supplement current information or to provide a historical perspective on a topic.' Mother Jones reported that it holds **tens of thousands of EPA documents dating back to the 1990s** that are not available elsewhere, including fact sheets, environmental reports, policy changes and regulatory actions, records of initiatives such as the 2003 Clear Skies Initiative and the 2015 Clean Power Plan, the climate change pages deleted from EPA's main site during Trump's first term, and documents from EPA's decades-long investigation of contamination at Marine Corps Base Camp Lejeune, which Mother Jones said helped nearby residents and service members evaluate chemical exposures. The archive's homepage now says 'The EPA Archive will retire on December 31, 2026' and tells readers to 'search the EPA snapshot collections for historical information or the main EPA website for the most up-to-date information.' Mother Jones, reporting the change on Oct. 23, 2026, said EPA had updated the archive's expiration date to Dec. 31, 2026 'a few weeks ago,' in a 'discreet banner notice.' EPA's web-standards page for its content owners, last updated Oct. 19, 2026, carries an 'Archive Sunset' alert: 'We are not moving any additional content to the EPA Archive,' and says the archive web standard 'has been retired.' The snapshot collections EPA points to are captures of www.epa.gov taken every four years, on Jan. 19 of 2017, 2021 and 2025; EPA's own description says they cover only www.epa.gov, link to current rather than past versions of its databases, and leave out some very large collections, and its snapshot procedure says snapshots 'are not official records.' EPA did not respond to Mother Jones's request for comment, and no stated reason for the 2026 date was found. This is not the first attempt to close the archive: in January 2022 the Biden administration's EPA announced plans to discontinue it, citing the cost of upkeep (about $2 million a year, according to records EDGI co-founder Gretchen Gehrke obtained under the Freedom of Information Act, as reported by Mother Jones), and in a 2022 statement to Government Executive the agency said the archive 'exists on an old and outdated technology that is no longer cost effective to maintain or update.' After about five months of objections from environmental, historian and librarian groups, EPA delayed the retirement to July 2023, and in March 2023 changed the notice to say only that the archive was 'retiring,' with no end date, until the new Dec. 31, 2026 date appeared. Gehrke told Mother Jones the archive is a tool for 'democratic oversight' and that 'EPA should expand and systematize the archive, not throw it away and expect that three discrete snapshots will suffice.' Lauren Harper, the Daniel Ellsberg chair on government secrecy at the Freedom of the Press Foundation, wrote to Mother Jones that 'Killing easy access to records forces researchers and lawmakers to flood an already underwater FOIA office just to see once-public records.'",
+    "primary_proponent": {
+      "name": "U.S. Environmental Protection Agency",
+      "role": "Agency that runs the archive; headed by Administrator Lee Zeldin",
+      "note": "The retirement notice appears on EPA's own archive homepage and its web-standards page for content owners. No source reviewed names the official who set the Dec. 31, 2026 date or ties Administrator Lee Zeldin personally to it, and EPA did not respond to Mother Jones's request for comment."
+    },
+    "estimated_impact": {
+      "summary": "If the shutdown goes ahead, tens of thousands of past EPA documents, some found nowhere else, would leave public view, including records that residents and service members used to check contamination at Camp Lejeune, and records researchers use to trace how EPA policy changed across administrations. EPA points users to its four-yearly website snapshots instead, which cover only www.epa.gov and are not official records; open-government advocates warn that people will instead have to file FOIA requests for once-public records.",
+      "figures": [
+        {
+          "metric": "Documents in the archive",
+          "value": "tens of thousands, dating back to the 1990s",
+          "source": "Mother Jones, Oct. 23, 2026"
+        },
+        {
+          "metric": "Planned retirement date",
+          "value": "December 31, 2026",
+          "source": "EPA Web Archive homepage (archive.epa.gov)"
+        },
+        {
+          "metric": "Snapshot collections EPA points to instead",
+          "value": "3 (www.epa.gov as of Jan. 19 of 2017, 2021 and 2025)",
+          "source": "EPA, www.epa.gov Snapshots page"
+        },
+        {
+          "metric": "Annual cost of maintaining the archive (2022)",
+          "value": "about $2 million",
+          "source": "EPA records obtained by EDGI's Gretchen Gehrke under FOIA, as reported by Mother Jones"
+        }
+      ],
+      "caveat": "The shutdown has not happened yet and could be delayed or reversed, as the 2022 plan was. How much of the archive's content EPA will move to its main site, keep as records reachable by FOIA, or delete is not stated in any 2026 source reviewed; Mother Jones said it is hard to know whether all, or even a fraction, of the contents will live on. The $2 million cost is a 2022 figure. No source quantifies a health effect, and the harm warnings are those of researchers and open-government advocates."
+    },
+    "confidence_note": "HIGH confidence on the plan itself: EPA's own archive homepage states the Dec. 31, 2026 retirement date, and its web-standards page (updated Oct. 19, 2026) says no more content is being added. The history of the 2022 attempt rests on Mother Jones and on 2022 Government Executive reporting. Independent 2026 coverage is thin: Mother Jones is the only outlet found doing its own reporting, and The Cool Down (via Yahoo News) and beSpacific relay it or a NowThis post. EPA gave no reason for the 2026 date, and no source names the deciding official. Frame the loss of records as a risk if the plan goes ahead, not as an outcome.",
+    "cause": "[TAP Analysis, not sourced] Like the State Department's removal of pre-2025 posts from its X accounts, the plan would take an agency's own past public material out of easy public reach, which open-government advocates warn would leave records requests as the route to it. See also: the entry on EPA's EJScreen tool and NOAA's billion-dollar disaster database, and the entry on stripping 'climate' from federal research funding and websites.",
+    "cause_references": [
+      {
+        "match": "the State Department's removal of pre-2025 posts from its X accounts",
+        "tracker": "government-services",
+        "id": "state-department-pre-trump-x-post-deletion-2026"
+      },
+      {
+        "match": "the entry on EPA's EJScreen tool and NOAA's billion-dollar disaster database",
+        "tracker": "government-services",
+        "id": "epa-noaa-cdc-data-tools-erasure-2026"
+      },
+      {
+        "match": "the entry on stripping 'climate' from federal research funding and websites",
+        "tracker": "government-services",
+        "id": "climate-word-research-purge-2025"
+      }
+    ],
+    "pull_quote": "\"This information is irreplaceable, and if the archive is decommissioned, that information will be lost forever.\" -- Gretchen Gehrke, co-founder of the Environmental Data and Governance Initiative, to Mother Jones",
+    "last_verified": "2026-10-28",
+    "last_substantive_update": "2026-10-28",
+    "date_added": "2026-10-28",
+    "sources": [
+      {
+        "name": "U.S. EPA -- EPA Web Archives homepage, 'EPA Archive Retiring' notice",
+        "url": "https://archive.epa.gov/"
+      },
+      {
+        "name": "U.S. EPA -- Web Standard: Archive ('Archive Sunset' alert; last updated Oct. 19, 2026)",
+        "url": "https://www.epa.gov/web-policies-and-procedures/web-standard-archive"
+      },
+      {
+        "name": "U.S. EPA -- www.epa.gov Snapshots",
+        "url": "https://www.epa.gov/home/wwwepagov-snapshots"
+      },
+      {
+        "name": "U.S. EPA -- Procedure: EPA Public Web Snapshots",
+        "url": "https://www.epa.gov/web-policies-and-procedures/procedure-epa-public-web-snapshots"
+      },
+      {
+        "name": "Mother Jones -- The EPA Is Quietly Killing its Web Archive (Oct. 23, 2026)",
+        "url": "https://www.motherjones.com/environment/2026/10/epa-online-archive-deletion-zeldin-camp-lejeune-trump-clean-power/"
+      },
+      {
+        "name": "The Cool Down via Yahoo News -- US EPA quietly sets December 31, 2026, retirement date for critical data",
+        "url": "https://www.yahoo.com/news/us/articles/us-epa-quietly-sets-december-070000859.html"
+      },
+      {
+        "name": "beSpacific -- EPA Is Quietly Killing its Web Archive",
+        "url": "https://www.bespacific.com/quietly-killing-its-web-archive/"
+      },
+      {
+        "name": "Government Executive -- The EPA is Getting Rid of Its Online Archive and Groups Are Unhappy (June 2022)",
+        "url": "https://www.govexec.com/management/2022/06/epa-getting-rid-its-online-archive-and-groups-are-unhappy/368211/"
+      }
+    ],
+    "section_summaries": {
+      "what_changed": "EPA set Dec. 31, 2026 to retire its public web archive of decades of records, pointing users to three site snapshots; it gave no reason, and a 2022 attempt was dropped.",
+      "estimated_impact": "Tens of thousands of past EPA documents, some found nowhere else, would leave public view; the snapshots cover only www.epa.gov and are not official records.",
+      "confidence_note": "EPA's own pages confirm the date; Mother Jones is the only outlet reporting independently, and no deciding official or 2026 reason is named."
+    },
+    "glance": {
+      "who": "EPA (deciding official not named)",
+      "what": "Set Dec. 31, 2026 to retire its web archive of 20-plus years of records, pointing users to 3 site snapshots",
+      "harm": {
+        "kind": "institutional",
+        "certainty": "projected",
+        "who": "Public access to past EPA records"
+      },
+      "reviewed": "2026-10-28"
     }
   },
   {
