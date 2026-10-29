@@ -4439,9 +4439,9 @@
    },
    "1": {
     "state": "partly",
-    "why": "The docket confirms the filing date, judge, nature of suit, intervention/expedite motions, joinder, and the Oct 26 expedite order, but the extracted text shows no Oct 27 order or the United States' Oct 27 opposition entry, and the State's motion to dismiss is not visible as its own entry.",
+    "why": "The visible docket text confirms the Oct. 22 filing, Judge Gleason, the voting nature of suit, and the Oct. 23 and Oct. 25 intervention and motion-to-dismiss-leave filings. The source text cuts off at entry 9, so the later orders, joinder, State motion and Oct. 28 rulings cannot be checked.",
     "host": "courtlistener.com",
-    "date": "2026-10-28",
+    "date": "2026-10-29",
     "kind": "fact",
     "archive": false
    },
@@ -4514,6 +4514,22 @@
     "why": "CNN reports Blanche touted the NYT story as proof DOJ was right, said DOJ has a civil investigation, could not say whether anything illegal occurred, quotes Trump's Truth Social post, and reports the Peltola campaign and DSCC denials.",
     "host": "cnn.com",
     "date": "2026-10-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "11": {
+    "state": "supports",
+    "why": "The notice states the change in circumstances tied to the New York Times reporting, the withdrawal of opposition for the Campaign, the intent to seek expedited discovery, and continued opposition to the League of Women Voters, Common Cause, Grzeda and Roy.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-10-29",
+    "kind": "fact",
+    "archive": false
+   },
+   "12": {
+    "state": "partly",
+    "why": "The order confirms intervention as of right for the Campaign given the United States' and State's non-opposition. The source text is truncated before the permissive intervention ruling, the motions to dismiss and the briefing schedule, so those parts cannot be checked.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-10-29",
     "kind": "fact",
     "archive": false
    }
@@ -6228,6 +6244,46 @@
     "why": "ABC reports Carter said he intends to appoint a special master, did not rule at the hearing, would issue a ruling by the next day, and closed by saying threats to election employees should 'cease immediately'.",
     "host": "abcnews.com",
     "date": "2026-10-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "50": {
+    "state": "partly",
+    "why": "The order text contains the quoted 'Never before in American history' passage and the denial of the TRO. The text is truncated at page 4 of 26, so the 'likely does not have standing', 'solely due to its own neglect', 'raises significant concerns' and 'these threats must stop' quotes are not in the provided text.",
+    "host": "electionlawblog.org",
+    "date": "2026-10-29",
+    "kind": "fact",
+    "archive": false
+   },
+   "51": {
+    "state": "supports",
+    "why": "NPR reports the 26-page ruling, the 20,000 'likely' noncitizens, DOJ's quick notice of appeal, and Essayli's X statement and plan to seek an emergency Ninth Circuit order, matching the claim.",
+    "host": "npr.org",
+    "date": "2026-10-29",
+    "kind": "fact",
+    "archive": false
+   },
+   "52": {
+    "state": "supports",
+    "why": "The article describes Hobbs' Oct. 28 letter to Floyd and Serrano calling the list unreliable, the 405 people, and the noon Oct. 28 deadline warning of 'no choice but to seek emergency relief'.",
+    "host": "lynnwoodtimes.com",
+    "date": "2026-10-29",
+    "kind": "fact",
+    "archive": false
+   },
+   "53": {
+    "state": "supports",
+    "why": "Democracy Docket reports DOJ's 'have no independent legal effect' argument, the Hobbs letter, Boasberg's Thursday hearing, and notes Marc Elias, founder of Democracy Docket, chairs the Elias Law Group representing the Democrats.",
+    "host": "democracydocket.com",
+    "date": "2026-10-29",
+    "kind": "fact",
+    "archive": false
+   },
+   "54": {
+    "state": "not_found",
+    "why": "The provided docket text is only page 1 (through about entry 11, last updated Oct. 28 at 1:58 p.m.) and does not show the intervention orders, ECF 149, 152, 153 or the Oct. 29 ECF 159 special-master order.",
+    "host": "courtlistener.com",
+    "date": "2026-10-29",
     "kind": "fact",
     "archive": false
    }
