@@ -1,6 +1,6 @@
 {
  "version": 1,
- "as_of": "2026-10-29",
+ "as_of": "2026-10-30",
  "checks": {
   "abrego-garcia-vindictive-prosecution-2025-2026": {
    "0": {
@@ -4439,9 +4439,9 @@
    },
    "1": {
     "state": "partly",
-    "why": "The visible docket text confirms the Oct. 22 filing, Judge Gleason, the voting nature of suit, and the Oct. 23 and Oct. 25 intervention and motion-to-dismiss-leave filings. The source text cuts off at entry 9, so the later orders, joinder, State motion and Oct. 28 rulings cannot be checked.",
+    "why": "The docket confirms the filing date, Judge Gleason, the 'Civil Rights: Voting' nature of suit, the October 26 and 28 orders, the October 29 amended complaint (Doc. 43), Doc. 46, the motions to dismiss (Docs. 55, 57, 60) and joinders (Docs. 59, 61) in the State's Doc. 53 motion to expedite, but the elided passages do not show the October 23-25 intervention motions, the State's original motion to dismiss, an October 27 order, the United States' opposition or partial-withdrawal notice, or that Doc. 46 asks the motions be denied as moot.",
     "host": "courtlistener.com",
-    "date": "2026-10-29",
+    "date": "2026-10-30",
     "kind": "fact",
     "archive": false
    },
@@ -4530,6 +4530,62 @@
     "why": "The order confirms intervention as of right for the Campaign given the United States' and State's non-opposition. The source text is truncated before the permissive intervention ruling, the motions to dismiss and the briefing schedule, so those parts cannot be checked.",
     "host": "storage.courtlistener.com",
     "date": "2026-10-29",
+    "kind": "fact",
+    "archive": false
+   },
+   "13": {
+    "state": "supports",
+    "why": "CNN reports the 'dramatically accelerated' probe, the more-than-40 subpoenas and preservation notices, Trump's 'I think they should be prosecuted' remark, the 'long-shot lawsuit' label, and the 'preservation lawsuit' quote, matching every element of the claim.",
+    "host": "cnn.com",
+    "date": "2026-10-30",
+    "kind": "fact",
+    "archive": false
+   },
+   "14": {
+    "state": "supports",
+    "why": "The article directly reports each element: the 'at least three dozen' subpoenas confirmed by a U.S. official, Dunleavy's quoted order, Trump's 'You're going to have to see what happens' answer, Comer's interview requests to Rios and Kurtz, and Peltola's quoted denial.",
+    "host": "nbcnews.com",
+    "date": "2026-10-30",
+    "kind": "fact",
+    "archive": false
+   },
+   "15": {
+    "state": "supports",
+    "why": "ABC reports the DOJ 'has begun issuing a new wave of subpoenas stemming from an ongoing criminal probe' per multiple sources, and that Gov. Dunleavy ordered an investigation, as the claim states.",
+    "host": "abcnews.com",
+    "date": "2026-10-30",
+    "kind": "fact",
+    "archive": false
+   },
+   "16": {
+    "state": "supports",
+    "why": "Document 43 lists Stanley E. Woodward, Jr. as counsel, contains the quoted New York Times sentence, includes Count Two '(Supremacy Clause – Obstacle Preemption)', and asks the court to enjoin Defendants 'from certifying any result that may be impacted by voter confusion' pending an investigation into votes cast for Daniel J. Sullivan.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-10-30",
+    "kind": "fact",
+    "archive": false
+   },
+   "17": {
+    "state": "supports",
+    "why": "Doc. 46 cites the Times report and Dunleavy's directive to the Department of Public Safety, states the amended complaint added a Supremacy Clause claim 'In light of these serious developments,' and asks that ECF Nos. 6-1, 8-1, 18 be denied as moot.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-10-30",
+    "kind": "fact",
+    "archive": false
+   },
+   "18": {
+    "state": "supports",
+    "why": "Doc. 53 says the United States filed an amended complaint 'adding a second—but equally meritless—count' and argued mootness, calls it 'gamesmanship,' and requests a decision by Monday, November 2.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-10-30",
+    "kind": "fact",
+    "archive": false
+   },
+   "19": {
+    "state": "supports",
+    "why": "Doc. 57 states 'As for DOJ's \"new\" Count II, it is just Count I in a costume' and that Count II relies on the same snippet from the NVRA's statement of purpose, as claimed.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-10-30",
     "kind": "fact",
     "archive": false
    }
@@ -6248,10 +6304,10 @@
     "archive": false
    },
    "50": {
-    "state": "partly",
-    "why": "The order text contains the quoted 'Never before in American history' passage and the denial of the TRO. The text is truncated at page 4 of 26, so the 'likely does not have standing', 'solely due to its own neglect', 'raises significant concerns' and 'these threats must stop' quotes are not in the provided text.",
+    "state": "supports",
+    "why": "The October 28, 2026 order (Doc. 149) signed by Judge Carter contains every quoted phrase, including the 'Never before in American history' passage, the standing finding, 'solely due to its own neglect', 'raises significant concerns', and 'these threats must stop', and denies the TRO application.",
     "host": "electionlawblog.org",
-    "date": "2026-10-29",
+    "date": "2026-10-30",
     "kind": "fact",
     "archive": false
    },
@@ -6300,6 +6356,22 @@
     "why": "Democracy Docket reports the judge did not reach the TRO request, ordered identification of states sent demands since July 1, set a noon Friday deadline, appeared skeptical of standing, and will rule by Monday; its disclosure states ELG represents the Democrats and its chair founded Democracy Docket.",
     "host": "democracydocket.com",
     "date": "2026-10-29",
+    "kind": "fact",
+    "archive": false
+   },
+   "57": {
+    "state": "supports",
+    "why": "AP (Riddle and Tucker, Oct. 29) describes the three subpoenas sent Oct. 21 and Oct. 24 for a Nov. 4 appearance, their document requests, the HSI criminal-investigation letter language, the anonymous source on all four U.S. attorneys, and Logan's quote, matching the claim.",
+    "host": "apnews.com",
+    "date": "2026-10-30",
+    "kind": "fact",
+    "archive": false
+   },
+   "58": {
+    "state": "partly",
+    "why": "The Chronicle article supports the byline, the three grand jury subpoenas from Essayli and HSI, the November 4 Santa Ana appearance, and Logan's 'Threats and intimidation have no place in elections' statement, but the NPR October 30 report cited in the claim is not part of this source text.",
+    "host": "sfchronicle.com",
+    "date": "2026-10-30",
     "kind": "fact",
     "archive": false
    }
@@ -8146,6 +8218,30 @@
     "why": "The provided source text is simply the original July 13, 2026 announcement article reused; it contains no information about the task force's status as of an August 2026 update or whether any prosecutions/referrals resulted, so it cannot support or refute this re-verification claim.",
     "host": "militarytimes.com",
     "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "supports",
+    "why": "CNN quotes Parnell's 'extensive Air Force OSI investigation' and referral statements, the defense official on Sylvia's dismissal for alleged 'misconduct' and leaking investigation, the OSI spokesperson's confirmation, and the DOJ spokesperson's statement, matching each element.",
+    "host": "cnn.com",
+    "date": "2026-10-30",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "supports",
+    "why": "The Washington Post article (via Spokesman-Review) contains all three quoted passages: no evidence publicly disclosed, the colleague's account of Sylvia's denials, and 'appears to mark the first time' the secretary referred a senior uniformed officer for prosecution.",
+    "host": "spokesman.com",
+    "date": "2026-10-30",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
+    "state": "supports",
+    "why": "Axios reports per the shared internal report that Sylvia admitted leaking Iran and Ukraine information to two reporters over a year, acknowledged on video after failing four polygraphs per a U.S. official, and mentions the July joint task force only as background.",
+    "host": "axios.com",
+    "date": "2026-10-30",
     "kind": "fact",
     "archive": false
    }
