@@ -4657,6 +4657,246 @@ function glanceDetailTitleHtml(entry, cfg, hl) {
   return title ? '<p class="glance-orig-title">' + hl(title) + '</p>' : "";
 }
 /* glance-head:end */
+/* listen-script:start */
+/* Listen button, spoken text (2026-10-31, Joe's call; spec:
+   tap-data/docs/superpowers/specs/2026-10-31-tap-entry-listen-button-design.md).
+   Turns one curated entry into the ordered list of sections the player
+   speaks: a quick listen (the glance line plus TAP's short section
+   summaries), the cue "Here's the full entry.", the full sections in the
+   tracker's own reading order, and the confidence note's one-line summary
+   as a close. Built from entry data at click time -- never by scraping the
+   DOM -- so search highlighting never leaks into speech, and an edited
+   entry is always read as currently published (no audio files to keep in
+   step: MP3s were rejected for size and churn, see the spec).
+
+   Each section is { label, text }: `label` is what the player bar shows,
+   `text` is the complete string spoken for it, label included ("Status.
+   ..."). Paragraphs inside `text` are separated by a blank line, which
+   splitForSpeech() treats as a hard break. Empty sections are left out
+   entirely, label and all.
+
+   Dates (Joe, 2026-10-31): listeners hear when things happened, never when
+   TAP did something to the entry. Story dates inside the prose and the
+   entry's date_of_action are spoken; update-marker dates, date_added,
+   last_verified, last_substantive_update and "Re-verified YYYY-MM-DD:"
+   leads never are. Pure functions (no DOM) so Node tests can run them. */
+const LISTEN_MONTHS = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"];
+
+// "2026-03-04" -> "March 4, 2026", "2025-03" -> "March 2025". Anything that
+// isn't a real month (or day) comes back unchanged rather than guessed at.
+function spokenDate(iso) {
+  const m = /^(\d{4})-(\d{2})(?:-(\d{2}))?$/.exec(String(iso || ""));
+  if (!m) return iso;
+  const month = parseInt(m[2], 10);
+  if (month < 1 || month > 12) return iso;
+  if (m[3] === undefined) return LISTEN_MONTHS[month - 1] + " " + m[1];
+  const day = parseInt(m[3], 10);
+  if (day < 1 || day > 31) return iso;
+  return LISTEN_MONTHS[month - 1] + " " + day + ", " + m[1];
+}
+
+// "Re-verified 2026-07-26: no material change ..." -- TAP's own recheck
+// date, bookkeeping. Kept on screen on purpose (see stripProcessLabels'
+// comment), but dropped from speech; the story after the colon stays,
+// capitalized the same way stripUpdateMarker() does it.
+const LISTEN_REVERIFIED_LEAD_RE = /(^|[.!?;:]\s+|\s)Re-verified \d{4}-\d{2}-\d{2}[^.:]{0,130}?:\s*(\S)/g;
+
+// One field value -> plain text a speech engine reads well. Order matters:
+// process labels first (same cleanup the page shows), then the re-verified
+// lead, then markup, then dates and the TAP -> "Tap" word swap (Joe: TAP is
+// said as the word, never spelled out).
+function speakableText(text) {
+  if (text === undefined || text === null) return "";
+  const s = stripProcessLabels(String(text))
+    .replace(LISTEN_REVERIFIED_LEAD_RE, (m, before, first) => before + first.toUpperCase())
+    .replace(/\*\*/g, "")
+    .replace(/[\[\]]/g, "")
+    .replace(/\s+--\s+/g, ", ")
+    .replace(/\b\d{4}-\d{2}(?:-\d{2})?\b/g, d => spokenDate(d))
+    .replace(/\bTAP('s|’s)?\b/g, "Tap$1");
+  return s.split(/\n\s*\n/).map(p => p.replace(/\s+/g, " ").trim()).filter(Boolean).join("\n\n");
+}
+
+// Text -> utterance-sized chunks. Chrome cuts off utterances that run past
+// roughly 15 seconds, so nothing goes to the engine longer than maxLen:
+// paragraphs are hard breaks, sentences are merged while they fit, and a
+// single over-long sentence is cut at its last "; " or ", " (else last
+// space) before the limit. Every word survives, in order.
+function splitForSpeech(text, maxLen = 220) {
+  const cutLong = (s) => {
+    const pieces = [];
+    while (s.length > maxLen) {
+      const window = s.slice(0, maxLen);
+      const punct = Math.max(window.lastIndexOf("; "), window.lastIndexOf(", "));
+      const space = window.lastIndexOf(" ");
+      const at = punct > 0 ? punct + 1 : space > 0 ? space : maxLen;
+      pieces.push(s.slice(0, at).trim());
+      s = s.slice(at).trim();
+    }
+    if (s) pieces.push(s);
+    return pieces;
+  };
+  const chunks = [];
+  String(text || "").split(/\n\s*\n/).map(p => p.trim()).filter(Boolean).forEach(para => {
+    let current = "";
+    para.split(/(?<=[.!?])\s+(?=[A-Z0-9"“(‘'])/).forEach(sentence => {
+      cutLong(sentence.trim()).forEach(piece => {
+        if (current && (current + " " + piece).length <= maxLen) current += " " + piece;
+        else { if (current) chunks.push(current); current = piece; }
+      });
+    });
+    if (current) chunks.push(current);
+  });
+  return chunks;
+}
+
+// Ends a spoken fragment with a full stop unless it already ends a sentence,
+// so "Harm to: miners" and the next fragment don't run together.
+function listenSentence(s) {
+  const t = String(s || "").trim();
+  if (!t) return "";
+  return /[.!?]["”)]?$/.test(t) ? t : t + ".";
+}
+
+// One timeline field, spoken exactly as buildFieldTimelineHtml() shows it:
+// base narrative, the "Update"/"Updates, newest first" label, then each
+// update newest first with its marker (and so its recording date) removed.
+// The update `date`/`effective_date` are used only for that sort.
+function timelineSpeech(entry, field) {
+  const part = entry.timeline && entry.timeline[field];
+  const raw = (!part || !Array.isArray(part.updates) || part.updates.length === 0)
+    ? (entry[field] ? String(entry[field]).split(/\n\s*\n/) : [])
+    : [part.base || ""].concat(updatesLabel(part.updates.length) + ".",
+        sortUpdatesNewestFirst(part.updates).map(u => stripUpdateMarker(u.text)));
+  return raw.map(speakableText).filter(Boolean);
+}
+
+function buildListenScript(entry, cfg) {
+  const ss = entry.section_summaries || {};
+  const L = cfg.fieldLabels || {};
+  const say = speakableText;
+  // A section from already-speakable parts; null (dropped) when all empty.
+  const section = (label, parts) => {
+    const kept = (Array.isArray(parts) ? parts : [parts]).filter(Boolean);
+    return kept.length ? { label, text: label + ". " + kept.join("\n\n") } : null;
+  };
+  const proponent = (p) => p && p.name
+    ? listenSentence(say(p.name) + (p.role ? ", " + say(p.role) : "")) + (p.note ? " " + listenSentence(say(p.note)) : "")
+    : "";
+  const impact = (block) => {
+    const summary = listenSentence(say(block && block.summary));
+    const caveat = block && block.caveat ? "Caveat. " + listenSentence(say(block.caveat)) : "";
+    return [summary, caveat].filter(Boolean).join(" ");
+  };
+  const isCla = cfg.kind === "prosecution";
+  const glance = glanceActive(entry, cfg);
+  const v = isCla ? violationConcernValue(entry) : null;
+  const vText = v && v.text ? say(v.text) + (v.isConcern ? ", not alleged as a legal violation" : "") : "";
+
+  // Quick listen, part 1: tracker, when it happened, then who did what.
+  let intro = listenSentence(cfg.label);
+  if (entry.date_of_action) intro += " Date of action: " + listenSentence(say(entry.date_of_action));
+  if (glance) {
+    const g = entry.glance;
+    intro += " " + listenSentence(say(g.who) + ": " + say(g.what)) +
+      " Harm to: " + listenSentence(say(g.harm.who)) + " Harm status: " + listenSentence(say(g.harm.certainty));
+    // Cabinet-Level's glance line also carries Violation/Concern Type and
+    // Status Stage (they appear nowhere else once the glance shows), and
+    // they are TAP's allegation-vs-finding words, so they must be heard.
+    if (isCla) {
+      if (vText) intro += " Violation or concern type: " + listenSentence(vText);
+      if (entry.status_category) intro += " Status stage: " + listenSentence(say(entry.status_category));
+    }
+  } else if (entry[cfg.titleField]) {
+    intro += " " + listenSentence(say(entry[cfg.titleField]));
+  }
+  const sections = [{ label: "At a glance", text: intro }];
+
+  // Quick listen, part 2: TAP's short summaries, in full-entry order. The
+  // govservices trackers keep their impact summary under their own key
+  // (DHS and ICE: human_toll, Trump Family: financial_stake).
+  const impactLabel = isCla ? "" : cfg.kind === "deregulation" ? "Estimated impact" : (L.impact || "Estimated impact");
+  const quick = isCla
+    ? [["What happened", ss.incident_summary], ["Status", ss.status]]
+    : [["What happened", ss.what_changed], [impactLabel, ss.estimated_impact || ss.human_toll || ss.financial_stake]];
+  quick.forEach(([label, text]) => sections.push(section(label, say(text))));
+  sections.push({ label: "Full entry", text: "Here's the full entry." });
+
+  // Full entry: each section's detail only -- the summaries just heard are
+  // not repeated.
+  if (isCla) {
+    sections.push(section("What happened", timelineSpeech(entry, "incident_summary")
+      .concat(entry.narrative_combined ? timelineSpeech(entry, "status") : [])));
+    if (!glance) {
+      sections.push(section("Violation or concern type", listenSentence(vText)));
+      sections.push(section("Status stage", listenSentence(say(entry.status_category))));
+    }
+    if (!entry.narrative_combined) sections.push(section("Status", timelineSpeech(entry, "status")));
+    sections.push(section("Broader Pattern", say(entry.cause)));
+    sections.push(section("Violation Type, in full", say(entry.offense_category_raw || entry.offense_category)));
+    sections.push(section("Anticipated Defense", say(entry.rebuttal_anticipated)));
+    sections.push(section("Tap's Rebuttal", say(entry.comeback)));
+  } else {
+    sections.push(section("What happened", timelineSpeech(entry, "what_changed")));
+    sections.push(section("Status", timelineSpeech(entry, "status")));
+    sections.push(section(impactLabel, impact(cfg.kind === "deregulation" ? entry.estimated_health_impact : entry.estimated_impact)));
+    sections.push(section("Broader Pattern", say(entry.cause)));
+    if (cfg.kind === "deregulation") {
+      sections.push(section("Primary proponent", proponent(entry.primary_proponent)));
+    } else {
+      if (cfg.trackerKey === "trumpfamily") sections.push(section("Family ties", trumpFamilySpeech(entry)));
+      if (cfg.trackerKey === "dai") {
+        sections.push(section("People", daiPeopleSpeech(entry)));
+        sections.push(section("Legal status, not a finding", say(entry.legal_status)));
+      }
+      sections.push(section(L.institution || "Institution", listenSentence(say(entry.institution))));
+      sections.push(section(L.proponent || "Primary proponent", proponent(entry.primary_proponent)));
+    }
+  }
+  if (ss.confidence_note) sections.push({ label: "How solid is this?", text: "How solid is this? " + say(ss.confidence_note) });
+  return sections.filter(Boolean);
+}
+
+// Trump Family's aside card, spoken (buildTrumpFamilyCardHtml order). The
+// "not a finding" wording on legal context is always spoken.
+function trumpFamilySpeech(entry) {
+  const say = speakableText;
+  const stake = entry.business_entity && entry.business_entity.family_stake;
+  const nexus = entry.government_nexus || {};
+  const also = (nexus.also_officials || []).filter(o => o && o.name)
+    .map(o => say(o.name) + (o.role ? " (" + say(o.role) + ")" : "")).join(", ");
+  return [
+    (entry.family_members || []).length ? "Family members: " + listenSentence(entry.family_members.map(say).join(", ")) : "",
+    stake ? "Family stake: " + listenSentence(say(stake)) : "",
+    nexus.action ? "Government action: " + listenSentence(say(nexus.action)) : "",
+    also ? "Also involved: " + listenSentence(also) : "",
+    entry.legal_context ? "Legal context, not a finding: " + listenSentence(say(entry.legal_context)) : "",
+  ].filter(Boolean).join(" ");
+}
+
+// DHS and ICE people groups, spoken (buildDaiPeopleHtml order), names only
+// -- the links are dropped. legal_status is its own section, not here.
+function daiPeopleSpeech(entry) {
+  const say = speakableText;
+  const people = entry.people || {};
+  const group = (label, list, detail) => {
+    const rows = (list || []).filter(p => p && p.name).map(p => {
+      const extra = detail(p);
+      return say(p.name) + (extra ? ", " + say(extra) : "");
+    });
+    return rows.length ? label + ": " + listenSentence(rows.join("; ")) : "";
+  };
+  const affected = group("Affected", people.affected, p => p.description);
+  const unnamed = people.unnamed_affected
+    ? (affected ? "" : "Affected: ") + listenSentence(say(people.unnamed_affected)) : "";
+  return [
+    group("Officials", people.officials, p => p.role),
+    group("Agents", people.agents, p => [p.role, p.incident_role].filter(Boolean).join(", ")),
+    affected, unnamed,
+  ].filter(Boolean).join(" ");
+}
+/* listen-script:end */
 
 /* Third line of a glance card: previously [domain tag] - date of action -
    verified date; collapsed to a single "Last update: <date>" (2026-09-21,
