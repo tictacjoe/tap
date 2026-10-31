@@ -5549,7 +5549,8 @@ function compareByCardTitle(cfg) {
    rebuilds). "Default" always means whatever renderEntries() falls
    back to below when sortValue is "" -- impact score for most
    trackers, date-of-action recency for Government Service
-   Redirection -- so it's never mislabeled here.
+   Redirection, newest added first for Claim-checks -- so it's never
+   mislabeled here.
    "Most recent entries added" only makes sense for the curated
    trackers, which carry a hand-stamped date_added field -- Reporting
    is a mechanical Substack scrape ingested in batches, not a target
@@ -5791,6 +5792,14 @@ function renderEntries() {
     // more useful default here. Impact score is still available as an
     // explicit choice above.
     filtered.sort((a, b) => extractFirstDate(b.date_of_action) - extractFirstDate(a.date_of_action));
+  } else if (cfg.kind === "communitytopics") {
+    // Default ordering: Claim-checks lists newest first (2026-10-31, Joe's
+    // call) -- new submissions landed mid-list under the impact-score
+    // default and were easy to miss. Same plain YYYY-MM-DD comparison as
+    // the "added" sort above, with date_submitted breaking same-day ties.
+    filtered.sort((a, b) =>
+      (b[cfg.dateAddedField] || "").localeCompare(a[cfg.dateAddedField] || "") ||
+      (b[cfg.dateField] || "").localeCompare(a[cfg.dateField] || ""));
   } else {
     // Default ordering for every other tracker: the same impact
     // heuristic used elsewhere, whether or not a search/filter is
