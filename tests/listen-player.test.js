@@ -109,15 +109,34 @@ test("start on a new entry replaces the old one", () => {
   assert.equal(synth.spoken.length, count);
 });
 
-test("toggle pauses and resumes", () => {
+// Review fix 2026-10-31: Android Chrome's pause() is unreliable (ignored, or
+// acts like cancel and fires onend), so Pause cancels and Resume re-speaks
+// the current chunk -- the engine's own pause() is never used.
+test("toggle pauses by cancelling and resumes by respeaking the chunk", () => {
   const { synth, player } = setup();
   player.start("cla/a", "Entry A", twoSections);
+  const cancels = synth.cancels;
   player.toggle();
-  assert.equal(synth.pauses, 1);
+  assert.equal(synth.pauses, 0);
+  assert.ok(synth.cancels > cancels);
   assert.equal(player.state().status, "paused");
+  const count = synth.spoken.length;
   player.toggle();
-  assert.equal(synth.resumes, 1);
+  assert.equal(synth.spoken.length, count + 1);
+  assert.equal(synth.last().text, "One. First.");
   assert.equal(player.state().status, "playing");
+});
+
+test("an onend fired while paused does not advance", () => {
+  const { synth, player } = setup();
+  player.start("cla/a", "Entry A", twoSections);
+  const u = synth.last();
+  player.toggle();
+  const count = synth.spoken.length;
+  u.onend();
+  assert.equal(synth.spoken.length, count);
+  assert.equal(player.state().status, "paused");
+  assert.equal(player.state().sectionIndex, 0);
 });
 
 test("resume after interruption respeaks current chunk", () => {
@@ -134,6 +153,38 @@ test("resume after interruption respeaks current chunk", () => {
   assert.equal(player.state().status, "playing");
 });
 
+// Review fix: iOS may pause (not cancel) speech when the page is hidden.
+test("markInterrupted catches an engine left paused", () => {
+  const { synth, player } = setup();
+  player.start("cla/a", "Entry A", twoSections);
+  synth.paused = true;                       // still "speaking", but paused
+  player.markInterrupted();
+  assert.equal(player.state().status, "paused");
+  player.toggle();
+  assert.equal(synth.last().text, "One. First.");
+  assert.equal(synth.paused, false);
+});
+
+// Review fix: the engine keeps only a weak hold on an utterance in Chrome,
+// which can garbage-collect it so onend never fires -- the player must hold it.
+test("the player keeps a reference to the utterance being spoken", () => {
+  const { synth, player } = setup();
+  player.start("cla/a", "Entry A", twoSections);
+  assert.equal(player.current(), synth.last());
+});
+
+// Review fix: voices can load late (Chrome desktop); picking per chunk made
+// the voice change partway through. One voice per reading.
+test("the voice is picked once per reading", () => {
+  const { synth, player } = setup();
+  player.start("cla/a", "Entry A", twoSections);
+  synth.getVoices = () => [{ name: "Microsoft Aria Online (Natural)", lang: "en-US" }];
+  synth.last().onend();
+  assert.equal(synth.last().voice.name, "Fred");
+  player.start("cla/b", "Entry B", twoSections);
+  assert.equal(synth.last().voice.name, "Microsoft Aria Online (Natural)");
+});
+
 test("markInterrupted leaves a live reading alone", () => {
   const { player } = setup();
   player.start("cla/a", "Entry A", twoSections);   // fake is still speaking
@@ -148,8 +199,21 @@ test("interrupted/canceled errors do not advance", () => {
   synth.last().onerror({ error: "interrupted" });
   synth.last().onerror({ error: "canceled" });
   assert.equal(synth.spoken.length, count);
-  synth.last().onerror({ error: "synthesis-failed" });
-  assert.equal(synth.last().text, "Two. Second.");
+});
+
+// Review fix 2026-10-31: a backgrounded phone can fail every queued chunk
+// with synthesis-failed / audio-busy; skipping on each would run through the
+// reading and close the bar. Any real error pauses in place instead.
+test("any other error pauses in place", () => {
+  for (const error of ["synthesis-failed", "audio-busy", "synthesis-unavailable", "network"]) {
+    const { synth, player } = setup();
+    player.start("cla/a", "Entry A", twoSections);
+    const count = synth.spoken.length;
+    synth.last().onerror({ error });
+    assert.equal(synth.spoken.length, count, error);
+    assert.equal(player.state().status, "paused", error);
+    assert.equal(player.state().sectionIndex, 0, error);
+  }
 });
 
 // Found in a real Chrome 2026-10-31: speech not started by a real tap fails
@@ -177,7 +241,7 @@ test("long sections are spoken in chunks", () => {
   let guard = 0;
   while (player.state().status === "playing" && guard++ < 50) synth.last().onend();
   assert.ok(synth.spoken.length > 1);
-  assert.ok(synth.spoken.every(u => u.text.length <= 220));
+  assert.ok(synth.spoken.every(u => u.text.length <= 160));
   assert.equal(synth.spoken.map(u => u.text).join(" "), long);
 });
 

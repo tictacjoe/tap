@@ -4758,6 +4758,9 @@ function speakableText(text) {
   const s = stripProcessLabels(String(text))
     .replace(LISTEN_REVERIFIED_LEAD_RE, (m, before, first) => before + first.toUpperCase())
     .replace(/\*\*/g, "")
+    // The honesty marker gets its own sentence, or it runs straight into the
+    // pattern text once its brackets are gone (review 2026-10-31).
+    .replace(/\[TAP Analysis, not sourced\]\.?\s*/gi, "Tap analysis, not sourced. ")
     .replace(/[\[\]]/g, "")
     .replace(/\s+--\s+/g, ", ")
     .replace(/\b\d{4}-\d{2}(?:-\d{2})?\b/g, d => spokenDate(d))
@@ -4766,11 +4769,13 @@ function speakableText(text) {
 }
 
 // Text -> utterance-sized chunks. Chrome cuts off utterances that run past
-// roughly 15 seconds, so nothing goes to the engine longer than maxLen:
+// roughly 15 seconds (160 characters is ~10 s at rate 1, leaving margin; 220
+// was too close, per review 2026-10-31), so nothing goes to the engine
+// longer than maxLen:
 // paragraphs are hard breaks, sentences are merged while they fit, and a
 // single over-long sentence is cut at its last "; " or ", " (else last
 // space) before the limit. Every word survives, in order.
-function splitForSpeech(text, maxLen = 220) {
+function splitForSpeech(text, maxLen = 160) {
   const cutLong = (s) => {
     const pieces = [];
     while (s.length > maxLen) {
@@ -4960,7 +4965,16 @@ function daiPeopleSpeech(entry) {
    Phones stop speech when the page is hidden or the screen locks (the
    accepted trade-off for not shipping MP3s -- see the spec).
    markInterrupted() turns that silent stop into a visible pause, and the
-   next toggle() re-speaks the chunk that was cut off. */
+   next toggle() re-speaks the chunk that was cut off.
+
+   Hardened after review (2026-10-31), because mobile engines don't behave:
+   Pause cancels and Resume re-speaks the current chunk (the engine's own
+   pause() is ignored or acts like cancel on Android Chrome); every real
+   error pauses in place rather than skipping ahead (a hidden phone can fail
+   each queued chunk, which would run through the reading and close the
+   bar); the voice is picked once per reading so it can't change midway; and
+   the utterance being spoken is held here, since Chrome can garbage-collect
+   an unreferenced one and never fire its onend. */
 
 // First English voice whose name suggests a natural/neural voice, else the
 // device's default English voice, else any English voice; null lets the
@@ -4980,6 +4994,8 @@ function createListenPlayer(synth, UtteranceCtor, onChange) {
   let chunks = [];    // chunks[i] = sections[i]'s text, split for speech
   let si = 0;         // current section
   let ci = 0;         // current chunk within it
+  let voice = null;   // picked once per reading, in start()
+  let currentUtterance = null;
 
   const state = () => ({ status, key, title, label: sections[si] ? sections[si].label : "", sectionIndex: si });
   const emit = () => { if (onChange) onChange(state()); };
@@ -4987,26 +5003,26 @@ function createListenPlayer(synth, UtteranceCtor, onChange) {
   function speakCurrent() {
     const mine = ++gen;
     const u = new UtteranceCtor(chunks[si][ci]);
-    const voice = pickListenVoice(synth.getVoices ? synth.getVoices() : []);
     u.rate = 1;
     if (voice) u.voice = voice;
     u.lang = voice ? voice.lang : "en-US";
-    u.onend = () => { if (mine === gen) advance(); };
+    // status check too: an engine whose pause() acts like cancel fires
+    // onend while the bar says Resume, and that must not move on.
+    u.onend = () => { if (mine === gen && status === "playing") advance(); };
     u.onerror = (e) => {
       if (mine !== gen) return;
-      // Our own cancel()/pause plumbing, not a real failure.
+      // Our own cancel() plumbing, not a real failure.
       if (e && (e.error === "interrupted" || e.error === "canceled")) return;
-      // The browser refused to speak (no real tap behind the start, or an
-      // autoplay block). Advancing would race through every chunk in
-      // silence and close the bar (seen in Chrome 2026-10-31), so pause in
-      // place instead: the listener's Resume tap retries this chunk.
-      if (e && e.error === "not-allowed") {
-        status = "paused";
-        emit();
-        return;
-      }
-      advance();
+      // Any real failure -- "not-allowed" (no real tap behind the start;
+      // seen in Chrome 2026-10-31), "synthesis-failed"/"audio-busy" from a
+      // backgrounded phone -- pauses in place. Advancing would race through
+      // every chunk in silence and close the bar; the listener's Resume tap
+      // retries this chunk instead.
+      gen++;
+      status = "paused";
+      emit();
     };
+    currentUtterance = u;
     synth.speak(u);
   }
 
@@ -5041,6 +5057,7 @@ function createListenPlayer(synth, UtteranceCtor, onChange) {
     title = newTitle || "";
     sections = (newSections || []).filter(s => splitForSpeech(s.text).length);
     chunks = sections.map(s => splitForSpeech(s.text));
+    voice = pickListenVoice(synth.getVoices ? synth.getVoices() : []);
     playFrom(0);
   }
 
@@ -5050,27 +5067,27 @@ function createListenPlayer(synth, UtteranceCtor, onChange) {
     playFrom(si + 1);
   }
 
+  // Pause = cancel, keeping our place; Resume = re-speak the current chunk
+  // from its start (at most ~10 s repeated). Never relies on synth.pause().
   function toggle() {
     if (status === "playing") {
-      synth.pause();
+      hush();
       status = "paused";
       emit();
     } else if (status === "paused") {
-      // A real pause resumes in place; speech the browser dropped while the
-      // page was hidden is re-spoken from the start of the cut-off chunk.
-      if (synth.paused && (synth.speaking || synth.pending)) {
-        synth.resume();
-      } else {
-        hush();
-        speakCurrent();
-      }
+      hush();
       status = "playing";
       emit();
+      speakCurrent();
     }
   }
 
+  // Also called by a watchdog in the page while playing: catches speech the
+  // browser dropped (hidden page, a stalled utterance that never ends) and
+  // an engine left paused (iOS on background), showing Resume instead of a
+  // dead "Pause".
   function markInterrupted() {
-    if (status === "playing" && !synth.speaking && !synth.pending) {
+    if (status === "playing" && (synth.paused || (!synth.speaking && !synth.pending))) {
       status = "paused";
       emit();
     }
@@ -5086,10 +5103,11 @@ function createListenPlayer(synth, UtteranceCtor, onChange) {
     chunks = [];
     si = 0;
     ci = 0;
+    currentUtterance = null;
     emit();
   }
 
-  return { start, toggle, next, stop, markInterrupted, state };
+  return { start, toggle, next, stop, markInterrupted, state, current: () => currentUtterance };
 }
 /* listen-player:end */
 
@@ -5254,6 +5272,12 @@ function wireShareLinkButtons(container) {
 // touch the player or #listen-bar.
 const LISTEN_KINDS = ["prosecution", "deregulation", "govservices"];
 let listenPlayer = null;
+// Chrome loads its voice list lazily: ask for it at page load so a natural
+// voice is already known when the first Listen tap picks one.
+if (window.speechSynthesis && window.speechSynthesis.getVoices) {
+  window.speechSynthesis.getVoices();
+  if (window.speechSynthesis.addEventListener) window.speechSynthesis.addEventListener("voiceschanged", () => window.speechSynthesis.getVoices());
+}
 
 function listenAvailable() {
   return !!(window.speechSynthesis && window.SpeechSynthesisUtterance);
@@ -5283,6 +5307,10 @@ function getListenPlayer() {
   document.addEventListener("visibilitychange", () => {
     if (document.visibilityState === "visible") listenPlayer.markInterrupted();
   });
+  // Watchdog: a reading that went silent without an event (stalled or
+  // garbage-collected utterance, iOS pausing in the background) flips to
+  // Resume within a few seconds instead of showing Pause over silence.
+  setInterval(() => { if (listenPlayer.state().status === "playing") listenPlayer.markInterrupted(); }, 3000);
   return listenPlayer;
 }
 

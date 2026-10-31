@@ -70,8 +70,23 @@ test("converts compound date_of_action", () => {
 });
 
 test("TAP becomes Tap, bold and brackets removed", () => {
-  assert.equal(speakableText("**[TAP Analysis, not sourced]** TAP's view"), "Tap Analysis, not sourced Tap's view");
+  assert.equal(speakableText("**[TAP Analysis, not sourced]** TAP's view"), "Tap analysis, not sourced. Tap's view");
   assert.equal(speakableText("STAPLES"), "STAPLES");
+});
+
+// Review fix 2026-10-31: the bracketed honesty marker ran straight into the
+// next sentence once its brackets were stripped; it now ends with a full stop.
+test("TAP Analysis marker is spoken as its own sentence", () => {
+  assert.equal(speakableText("[TAP Analysis, not sourced] Consistent with a pattern."),
+    "Tap analysis, not sourced. Consistent with a pattern.");
+});
+
+// Review fix: 220 characters is ~15 s at rate 1, right at Chrome's cut-off
+// for network voices; the default chunk is now 160.
+test("splitForSpeech defaults to 160-character chunks", () => {
+  const text = Array.from({ length: 30 }, (_, i) => "Short sentence " + i + ".").join(" ");
+  assert.ok(splitForSpeech(text).every(c => c.length <= 160));
+  assert.ok(splitForSpeech(text).some(c => c.length > 140));
 });
 
 test("splitForSpeech keeps chunks under maxLen and loses no words", () => {
