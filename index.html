@@ -4897,6 +4897,145 @@ function daiPeopleSpeech(entry) {
   ].filter(Boolean).join(" ");
 }
 /* listen-script:end */
+/* listen-player:start */
+/* Listen button, playback (2026-10-31; spec as listen-script above). Drives
+   the browser's built-in speech engine through an injected synth object
+   (window.speechSynthesis in the page, a fake in tests/listen-player.test.js)
+   so the sequencing can be tested without a browser.
+
+   One reading at a time: start() on another entry replaces the current one.
+   Text goes to the engine one chunk at a time (splitForSpeech), advancing on
+   each utterance's onend. Every utterance carries a generation number, and
+   events from an older generation are ignored -- cancel() fires a late
+   onend/onerror on the utterance it kills in some browsers, which would
+   otherwise skip a section or revive a reading that was just replaced.
+
+   Phones stop speech when the page is hidden or the screen locks (the
+   accepted trade-off for not shipping MP3s -- see the spec).
+   markInterrupted() turns that silent stop into a visible pause, and the
+   next toggle() re-speaks the chunk that was cut off. */
+
+// First English voice whose name suggests a natural/neural voice, else the
+// device's default English voice, else any English voice; null lets the
+// engine use its own default.
+function pickListenVoice(voices) {
+  const en = (voices || []).filter(v => v && /^en([-_]|$)/i.test(v.lang || ""));
+  return en.find(v => /natural|enhanced|premium|neural/i.test(v.name || "")) ||
+    en.find(v => v.default) || en[0] || null;
+}
+
+function createListenPlayer(synth, UtteranceCtor, onChange) {
+  let gen = 0;
+  let status = "idle";
+  let key = null;
+  let title = "";
+  let sections = [];
+  let chunks = [];    // chunks[i] = sections[i]'s text, split for speech
+  let si = 0;         // current section
+  let ci = 0;         // current chunk within it
+
+  const state = () => ({ status, key, title, label: sections[si] ? sections[si].label : "", sectionIndex: si });
+  const emit = () => { if (onChange) onChange(state()); };
+
+  function speakCurrent() {
+    const mine = ++gen;
+    const u = new UtteranceCtor(chunks[si][ci]);
+    const voice = pickListenVoice(synth.getVoices ? synth.getVoices() : []);
+    u.rate = 1;
+    if (voice) u.voice = voice;
+    u.lang = voice ? voice.lang : "en-US";
+    u.onend = () => { if (mine === gen) advance(); };
+    u.onerror = (e) => {
+      if (mine !== gen) return;
+      // Our own cancel()/pause plumbing, not a real failure.
+      if (e && (e.error === "interrupted" || e.error === "canceled")) return;
+      advance();
+    };
+    synth.speak(u);
+  }
+
+  // Cancel whatever is queued and clear a stuck pause: a paused engine
+  // won't start a newly queued utterance until resumed.
+  function hush() {
+    gen++;
+    synth.cancel();
+    if (synth.paused) synth.resume();
+  }
+
+  function playFrom(section) {
+    si = section;
+    ci = 0;
+    if (si >= chunks.length) { stop(); return; }
+    status = "playing";
+    emit();
+    speakCurrent();
+  }
+
+  function advance() {
+    ci++;
+    while (si < chunks.length && ci >= chunks[si].length) { si++; ci = 0; }
+    if (si >= chunks.length) { stop(); return; }
+    emit();
+    speakCurrent();
+  }
+
+  function start(newKey, newTitle, newSections) {
+    hush();
+    key = newKey;
+    title = newTitle || "";
+    sections = (newSections || []).filter(s => splitForSpeech(s.text).length);
+    chunks = sections.map(s => splitForSpeech(s.text));
+    playFrom(0);
+  }
+
+  function next() {
+    if (status === "idle") return;
+    hush();
+    playFrom(si + 1);
+  }
+
+  function toggle() {
+    if (status === "playing") {
+      synth.pause();
+      status = "paused";
+      emit();
+    } else if (status === "paused") {
+      // A real pause resumes in place; speech the browser dropped while the
+      // page was hidden is re-spoken from the start of the cut-off chunk.
+      if (synth.paused && (synth.speaking || synth.pending)) {
+        synth.resume();
+      } else {
+        hush();
+        speakCurrent();
+      }
+      status = "playing";
+      emit();
+    }
+  }
+
+  function markInterrupted() {
+    if (status === "playing" && !synth.speaking && !synth.pending) {
+      status = "paused";
+      emit();
+    }
+  }
+
+  function stop() {
+    gen++;
+    synth.cancel();
+    status = "idle";
+    key = null;
+    title = "";
+    sections = [];
+    chunks = [];
+    si = 0;
+    ci = 0;
+    emit();
+  }
+
+  return { start, toggle, next, stop, markInterrupted, state };
+}
+/* listen-player:end */
 
 /* Third line of a glance card: previously [domain tag] - date of action -
    verified date; collapsed to a single "Last update: <date>" (2026-09-21,
