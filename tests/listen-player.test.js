@@ -152,6 +152,24 @@ test("interrupted/canceled errors do not advance", () => {
   assert.equal(synth.last().text, "Two. Second.");
 });
 
+// Found in a real Chrome 2026-10-31: speech not started by a real tap fails
+// every utterance with "not-allowed", and advancing on it flashed through the
+// whole entry in silence and closed the bar. It must pause in place instead,
+// so the listener's Resume tap (a real gesture) retries the same chunk.
+test("not-allowed pauses in place instead of skipping", () => {
+  const { synth, player } = setup();
+  player.start("cla/a", "Entry A", twoSections);
+  const count = synth.spoken.length;
+  synth.speaking = false;
+  synth.last().onerror({ error: "not-allowed" });
+  assert.equal(synth.spoken.length, count);
+  assert.equal(player.state().status, "paused");
+  assert.equal(player.state().sectionIndex, 0);
+  player.toggle();
+  assert.equal(synth.last().text, "One. First.");
+  assert.equal(player.state().status, "playing");
+});
+
 test("long sections are spoken in chunks", () => {
   const { synth, player } = setup();
   const long = Array.from({ length: 12 }, (_, i) => "Sentence number " + i + " is here to make this long.").join(" ");

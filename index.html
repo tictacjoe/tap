@@ -604,7 +604,7 @@
     font-size: 1.05rem;
     font-weight: bold;
   }
-  .share-link-btn {
+  .share-link-btn, .listen-btn {
     font-family: ui-monospace, monospace;
     font-size: 0.65rem;
     color: var(--ink-faint);
@@ -617,7 +617,54 @@
     vertical-align: middle;
     white-space: nowrap;
   }
-  .share-link-btn:hover { color: var(--brass); border-color: var(--brass); }
+  .share-link-btn:hover, .listen-btn:hover { color: var(--brass); border-color: var(--brass); }
+  /* Listen player bar (2026-10-31; spec tap-data/docs/superpowers/specs/
+     2026-10-31-tap-entry-listen-button-design.md): pinned to the bottom so
+     it stays reachable from any tab while a reading plays. body.listen-active
+     adds matching room at the bottom so the bar never covers the last card. */
+  #listen-bar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 900;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35rem 0.75rem;
+    padding: 0.5rem 16px calc(0.5rem + env(safe-area-inset-bottom));
+    background: var(--paper-card);
+    border-top: 1px solid var(--rule-strong);
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.12);
+    font-family: ui-monospace, monospace;
+    font-size: 0.75rem;
+    color: var(--ink);
+  }
+  #listen-bar[hidden] { display: none; }
+  .listen-bar-text { flex: 1 1 12rem; min-width: 0; }
+  .listen-bar-title {
+    display: block;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .listen-bar-section { color: var(--brass); }
+  .listen-bar-controls { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+  .listen-bar-controls button {
+    font: inherit;
+    color: var(--ink);
+    background: transparent;
+    border: 1px solid var(--rule-strong);
+    border-radius: 3px;
+    padding: 0.3rem 0.6rem;
+    min-height: 2rem;
+    cursor: pointer;
+  }
+  .listen-bar-controls button:hover { color: var(--brass); border-color: var(--brass); }
+  .listen-bar-note { flex-basis: 100%; color: var(--ink-faint); font-size: 0.65rem; }
+  body.listen-active { padding-bottom: 7rem; }
   .entry-meta {
     font-family: ui-monospace, monospace;
     font-size: 0.7rem;
@@ -4949,6 +4996,15 @@ function createListenPlayer(synth, UtteranceCtor, onChange) {
       if (mine !== gen) return;
       // Our own cancel()/pause plumbing, not a real failure.
       if (e && (e.error === "interrupted" || e.error === "canceled")) return;
+      // The browser refused to speak (no real tap behind the start, or an
+      // autoplay block). Advancing would race through every chunk in
+      // silence and close the bar (seen in Chrome 2026-10-31), so pause in
+      // place instead: the listener's Resume tap retries this chunk.
+      if (e && e.error === "not-allowed") {
+        status = "paused";
+        emit();
+        return;
+      }
       advance();
     };
     synth.speak(u);
@@ -5123,19 +5179,27 @@ function buildEntryCard(entry, cfg, docketLabel, sourceLabel, term, useRegex, ca
     ? ' <button type="button" class="share-link-btn" data-share-tracker="' + escapeHtml(cfg.trackerKey || cfg.kind) + '" data-share-id="' + escapeHtml(entry[cfg.idField] || "") + '" title="Copy a link to this entry">🔗 Copy link</button>'
     : "";
 
+  // Listen button (2026-10-31): curated trackers only -- Reporting and
+  // Community Topics aren't read aloud in v1 -- and only where the browser
+  // can speak at all. Sits beside Copy link, so it's reachable from the
+  // card head without opening the entry.
+  const listenBtnHtml = cfg.idField && LISTEN_KINDS.includes(cfg.kind) && listenAvailable()
+    ? ' <button type="button" class="listen-btn" data-listen-key="' + escapeHtml((cfg.trackerKey || cfg.kind) + "/" + (entry[cfg.idField] || "")) + '" title="Listen to this entry">🔊 Listen</button>'
+    : "";
+
   // Glance card (see the glance-head script block): null when the tracker's
   // flag is off or the entry has no valid `glance`, in which case the
   // old head below is drawn unchanged.
   const glanceHead = buildGlanceHeadHtml(entry, cfg, {
     hl,
-    shareBtnHtml,
+    shareBtnHtml: shareBtnHtml + listenBtnHtml,
     hideWho: !!(cardOpts && cardOpts.hideWho),
     metaHtml: glanceMetaHtml(entry, cfg, sourceLabel, hl),
   });
   const oldHead =
     '<div class="entry-head">' +
       '<div class="entry-title-block">' +
-        '<p class="entry-title"' + titleTooltipHtml + '>' + hl(title) + shareBtnHtml + '</p>' +
+        '<p class="entry-title"' + titleTooltipHtml + '>' + hl(title) + shareBtnHtml + listenBtnHtml + '</p>' +
         '<div class="entry-meta">' + metaHtml + '</div>' +
       '</div>' +
     '</div>';
@@ -5153,6 +5217,7 @@ function buildEntryCard(entry, cfg, docketLabel, sourceLabel, term, useRegex, ca
   wireUpdateRequestButtons(div);
   wireTriageButtons(div);
   wireShareLinkButtons(div);
+  wireListenButtons(div, entry, cfg);
   wireEvidenceDrawers(div, entry, cfg, term, useRegex);
   return div;
 }
@@ -5178,6 +5243,64 @@ function wireShareLinkButtons(container) {
       } else {
         window.prompt("Copy this link:", url);
       }
+    });
+  });
+}
+
+// Listen button wiring (2026-10-31; text from buildListenScript, playback
+// from createListenPlayer -- see the listen-script/listen-player regions).
+// One player for the whole page, made on the first click, so a reading
+// keeps going through tab switches, searches and re-renders: none of those
+// touch the player or #listen-bar.
+const LISTEN_KINDS = ["prosecution", "deregulation", "govservices"];
+let listenPlayer = null;
+
+function listenAvailable() {
+  return !!(window.speechSynthesis && window.SpeechSynthesisUtterance);
+}
+
+function renderListenBar(state) {
+  const bar = document.getElementById("listen-bar");
+  if (!bar) return;
+  const active = state.status !== "idle";
+  bar.hidden = !active;
+  document.body.classList.toggle("listen-active", active);
+  if (!active) return;
+  bar.querySelector(".listen-bar-title").textContent = state.title;
+  bar.querySelector(".listen-bar-section").textContent = state.label;
+  bar.querySelector(".listen-toggle").textContent = state.status === "paused" ? "Resume" : "Pause";
+}
+
+function getListenPlayer() {
+  if (listenPlayer) return listenPlayer;
+  listenPlayer = createListenPlayer(window.speechSynthesis, window.SpeechSynthesisUtterance, renderListenBar);
+  const bar = document.getElementById("listen-bar");
+  bar.querySelector(".listen-toggle").addEventListener("click", () => listenPlayer.toggle());
+  bar.querySelector(".listen-next").addEventListener("click", () => listenPlayer.next());
+  bar.querySelector(".listen-stop").addEventListener("click", () => listenPlayer.stop());
+  // Phones drop speech while the page is hidden; on return, show that as a
+  // pause (Resume re-speaks the cut-off chunk) instead of a dead "Pause".
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "visible") listenPlayer.markInterrupted();
+  });
+  return listenPlayer;
+}
+
+// stopPropagation() for the same reason as wireShareLinkButtons(): the card
+// head's own click toggles the card. start() runs synchronously inside the
+// click because mobile browsers only allow speech to begin from a user tap.
+function wireListenButtons(container, entry, cfg) {
+  container.querySelectorAll(".listen-btn").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const player = getListenPlayer();
+      const current = player.state();
+      if (current.status !== "idle" && current.key === btn.dataset.listenKey) {
+        player.toggle();
+        return;
+      }
+      const title = glanceActive(entry, cfg) ? entry.glance.what : entry[cfg.titleField];
+      player.start(btn.dataset.listenKey, stripProcessLabels(title || ""), buildListenScript(entry, cfg));
     });
   });
 }
@@ -6984,6 +7107,18 @@ if (document.readyState === "loading") {
 }
 </script>
 <script data-goatcounter="https://tap-site.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<div id="listen-bar" hidden role="region" aria-label="Listen player">
+  <div class="listen-bar-text">
+    <span class="listen-bar-title"></span>
+    <span class="listen-bar-section" aria-live="polite"></span>
+  </div>
+  <div class="listen-bar-controls">
+    <button type="button" class="listen-toggle">Pause</button>
+    <button type="button" class="listen-next">Next section</button>
+    <button type="button" class="listen-stop">Stop</button>
+  </div>
+  <div class="listen-bar-note">Keep your screen on while listening.</div>
+</div>
 <div id="demo-spotlight" class="demo-spotlight" style="display: none;"></div>
 <div id="demo-card" class="demo-card" style="display: none;" role="region" aria-label="Guided Tour">
   <div class="demo-card-header">
