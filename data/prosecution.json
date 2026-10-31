@@ -5188,7 +5188,7 @@
     "id": "coast-guard-swastika-policy-reversal-2026",
     "official": "Adm. Kevin Lunday, Coast Guard Commandant / Kristi Noem, then-Secretary of Homeland Security",
     "offense_category": "Repeated Policy Flip-Flopping on Classifying Swastikas and Nooses as Hate Symbols, Followed by an Actual Swastika Incident at a Recruit Training Center -- documents an institutional policy failure rather than any single official's criminal conduct",
-    "incident_summary": "In November 2025, The Washington Post reported the Coast Guard would no longer classify swastikas and nooses as hate symbols under a new workplace-harassment policy, instead labeling them merely \"potentially divisive.\" Within a day, the Coast Guard reversed course and said both would again be classified as hate symbols. Despite that public reversal, Commandant Adm. Kevin Lunday's order to maintain the hate-symbol classification was never actually incorporated into the policy for reasons that remain unclear, and the more lenient \"potentially divisive\" language was allowed to take effect in mid-December 2025 despite objections from members of Congress. Facing renewed uproar, the Coast Guard deleted the downgraded language again on December 18, 2025, restoring the hate-symbol classification for a second time.\n\nRoughly two months later, on February 19-20, 2026, an instructor found a swastika hand-drawn on a bathroom wall at the Coast Guard's primary recruit training center in Cape May, New Jersey; Lunday personally flew to the base to address roughly 900 recruits and staff, condemning the symbol's use, and the Coast Guard referred the incident to its Investigative Service. The Coast Guard Investigative Service has not publicly released findings, identified a suspect, or announced any disciplinary/legal action from the Cape May incident; no further policy reversals have been identified since the December 2025 restoration of the hate-symbol classification.",
+    "incident_summary": "In November 2025, The Washington Post reported the Coast Guard would no longer classify swastikas and nooses as hate symbols under a new workplace-harassment policy, instead labeling them merely \"potentially divisive.\" Within a day, the Coast Guard reversed course and said both would again be classified as hate symbols. Despite that public reversal, then-acting Commandant Adm. Kevin Lunday's order to maintain the hate-symbol classification was never actually incorporated into the policy for reasons that remain unclear, and the more lenient \"potentially divisive\" language was allowed to take effect in mid-December 2025 despite objections from members of Congress. Facing renewed uproar, the Coast Guard removed the downgraded language on December 18, 2025, restoring the hate-symbol classification for a second time.\n\nRoughly two months later, on February 19-20, 2026, an instructor found a swastika hand-drawn on a bathroom wall at the Coast Guard's primary recruit training center in Cape May, New Jersey; Lunday personally flew to the base to address roughly 900 recruits and staff, condemning the symbol's use, and the Coast Guard referred the incident to its Investigative Service. The Coast Guard Investigative Service has not publicly released findings, identified a suspect, or announced any disciplinary/legal action from the Cape May incident; no further policy reversals have been identified since the December 2025 restoration of the hate-symbol classification.",
     "contested": true,
     "elements_required": [
       "The Coast Guard's official written policy classified swastikas and nooses as merely 'potentially divisive' rather than hate symbols for a period in December 2025, despite the Commandant's own stated intent to maintain the stricter classification",
@@ -5199,27 +5199,33 @@
     "evidence": [
       {
         "type": "public_record",
-        "description": "The Washington Post's original and follow-up reporting documents the November 2025 policy downgrade, the Commandant's order to reverse it that was never incorporated, the policy actually taking effect in mid-December despite congressional objections, and the Coast Guard deleting the downgraded language again on December 18, 2025",
-        "source_url": "https://www.washingtonpost.com/national-security/2025/12/18/coast-guard-swastikas-nooses-kristi-noem/",
-        "maps_to_element": "The repeated policy flip-flopping and the implementation failure of Lunday's reversal order"
-      },
-      {
-        "type": "public_record",
         "description": "NPR's reporting confirms the Coast Guard's initial reclassification of swastikas and nooses as hate symbols following the first public reversal in November 2025",
         "source_url": "https://www.npr.org/2025/11/21/nx-s1-5616396/coast-guard-changes-course-reclassifies-swastikas-and-nooses-as-hate-symbols",
         "maps_to_element": "Timeline confirmation of the first reversal"
       },
       {
         "type": "public_record",
-        "description": "The Washington Post's February 2026 reporting confirms the swastika found at the Cape May recruit training center, Lunday's personal response addressing roughly 900 recruits and staff, and the referral to the Coast Guard Investigative Service",
-        "source_url": "https://www.washingtonpost.com/national-security/2026/02/23/coast-guard-swastika-cape-may/",
-        "maps_to_element": "The concrete hate-symbol incident following the policy saga"
-      },
-      {
-        "type": "public_record",
         "description": "Rep. Joe Courtney's statement confirms congressional objection to the Coast Guard allowing the downgraded policy manual language to take effect",
         "source_url": "https://courtney.house.gov/media-center/press-releases/courtney-statement-after-coast-guard-allows-its-official-policy-manual",
         "maps_to_element": "Congressional objection during the period the downgraded policy was in effect"
+      },
+      {
+        "type": "public_record",
+        "description": "The Washington Post's December 18, 2025 report documents the Coast Guard's plan to label swastikas and nooses \"potentially divisive\" in its new workplace harassment manual, Lunday's November order prohibiting them that \"for reasons that remain unclear\" was never incorporated in the manual that took effect that week despite objections from Congress, and Homeland Security Secretary Kristi Noem's December 18 announcement that the Coast Guard will remove the downgraded language",
+        "source_url": "https://www.washingtonpost.com/national-security/2025/12/18/coast-guard-swastikas-nooses-kristi-noem/",
+        "maps_to_element": "The repeated policy flip-flopping and the implementation failure of Lunday's reversal order"
+      },
+      {
+        "type": "news_report",
+        "description": "The Associated Press reports that references in Coast Guard policy calling hate symbols \"potentially divisive\" were removed on Thursday, December 18, 2025, and that Sen. Jacky Rosen lifted her hold on Lunday's nomination, saying \"the policy now directly refers to stronger language against swastikas and nooses\"",
+        "source_url": "https://www.news4jax.com/news/politics/2025/12/19/coast-guard-drops-references-to-swastikas-and-nooses-being-potentially-divisive/",
+        "maps_to_element": "The second reversal: the downgraded language actually removed from the policy on December 18, 2025"
+      },
+      {
+        "type": "public_record",
+        "description": "The Washington Post's February 2026 reporting confirms the swastika found at the Cape May recruit training center, Lunday's personal response addressing roughly 900 recruits and staff, and the referral to the Coast Guard Investigative Service",
+        "source_url": "https://www.washingtonpost.com/national-security/2026/02/23/coast-guard-swastika-cape-may/",
+        "maps_to_element": "The concrete hate-symbol incident following the policy saga"
       },
       {
         "type": "news_report",
@@ -5232,16 +5238,16 @@
     "rebuttal_anticipated": "Likely defense: the final, current policy classifies swastikas and nooses as hate symbols, the December lapse was reportedly an implementation/coordination failure rather than an intentional policy choice, and a single vandalism incident at a large training facility does not by itself establish an institutional culture problem.",
     "comeback": "The specific concern is not the current written policy, which is now corrected, but that the Commandant's own reversal order went unincorporated for weeks despite public commitments and congressional objection -- suggesting either a governance breakdown in implementing leadership's own stated decisions or that the downgraded classification reflected the administration's actual preference until public pressure forced a second reversal; the subsequent swastika incident, while not proof of a causal link to the policy episode, occurred at the same institution within a short window and prompted the Commandant's own direct, urgent response.",
     "cause": "[TAP Analysis, not sourced] An institution-specific governance and culture concern; this entry does not allege a direct causal link between the policy-manual episode and the February incident, only that both concern the same institution's handling of hate-symbol classification within a short timeframe.",
-    "last_verified": "2026-09-08",
+    "last_verified": "2026-10-31",
     "date_added": "2026-08-05",
-    "confidence_note": "HIGH confidence on the full sequence of events (both policy reversals, the congressional objection, and the February incident) -- independently corroborated across The Washington Post's sustained coverage, NPR, and Rep. Courtney's own statement, with no facts disputed by the Coast Guard. Light-touch recheck 2026-08-18: no material development found; investigation status unchanged. Re-verified 2026-08-26: no material development; investigation status unchanged. Re-verified 2026-09-08 (batch 65): no material development; investigation status unchanged.",
+    "confidence_note": "HIGH confidence on the full sequence of events (both policy reversals, the congressional objection, and the February incident) -- independently corroborated across The Washington Post's sustained coverage, NPR, the Associated Press, and Rep. Courtney's own statement, with no facts disputed by the Coast Guard. Light-touch recheck 2026-08-18: no material development found; investigation status unchanged. Re-verified 2026-08-26: no material development; investigation status unchanged. Re-verified 2026-09-08 (batch 65): no material development; investigation status unchanged.",
     "section_summaries": {
-      "incident_summary": "The Coast Guard downgraded swastikas/nooses from hate symbols to merely 'potentially divisive' in its harassment policy, reversed course twice amid public and congressional pressure, and then found an actual swastika at its Cape May recruit training center about two months after the policy was finally corrected.",
+      "incident_summary": "The Coast Guard downgraded swastikas and nooses to 'potentially divisive,' reversed course twice under public and congressional pressure, then found a swastika at its Cape May recruit center.",
       "confidence_note": "The full policy-reversal sequence and the February incident are both well-corroborated across sustained Washington Post coverage, NPR, and a member of Congress's own statement.",
       "status": "The Investigative Service's probe into the Cape May incident remains open, with no findings, suspect, or discipline released."
     },
     "date_of_action": "2025-11 (Coast Guard reclassifies hate symbols as 'potentially divisive') through 2026-02-19 (swastika found at Cape May training center)",
-    "last_substantive_update": "2026-09-08",
+    "last_substantive_update": "2026-10-31",
     "glance": {
       "who": "Kevin Lunday (Coast Guard) and Kristi Noem (DHS)",
       "what": "Downgraded swastikas and nooses to 'potentially divisive,' reversed twice; a swastika later found at Cape May",
@@ -5250,7 +5256,7 @@
         "certainty": "documented",
         "who": "Coast Guard's anti-harassment policy"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-10-31"
     },
     "narrative_combined": true
   },
@@ -5906,9 +5912,9 @@
     "official": "Derek S. Maltz, DEA Acting Administrator (Jan-May 2025, proposal); Donald Trump, President (later publicly threatening the same action)",
     "offense_category": "Proposing, and Later Publicly Threatening, Extrajudicial Killings and Military Strikes on Sovereign Mexican Territory Without Congressional Authorization",
     "contested": false,
-    "incident_summary": "In the opening weeks of Trump's second term in early 2025, after the administration designated numerous Latin American cartels as foreign terrorist organizations, DEA Acting Administrator Derek S. Maltz advocated internally for targeted killings of cartel leadership and drone strikes on drug production infrastructure inside Mexico. He told colleagues he supported 'hitting the production labs and command control leaders in Mexico.' The proposals, coordinated in part through White House Deputy Chief of Staff Stephen Miller's interagency discussions, alarmed officials at the Pentagon and elsewhere in the White House. They warned that Congress had not authorized military force against drug cartels and that a terrorist-organization designation alone doesn't create authority to 'fire anything.' Officials also raised the risk of American or civilian casualties and noted that the Coast Guard already had sufficient legal authority for drug interdiction under Title 14. NBC News reported in April 2025 that drone strikes were under consideration. The Washington Post separately reported the internal dispute on September 19, 2025, describing the plans as 'fairly conceptual' and lacking 'a robust legal framework.' No strike in Mexico was carried out following Maltz's proposal.\n\nThe idea resurfaced at the presidential level months later. On January 8, 2026, after claiming the separate Caribbean/Pacific maritime strike campaign had 'knocked out 97% of the drugs coming in by water,' Trump told Fox News's Sean Hannity, 'we are going to start now hitting land, with regard to the cartels,' calling cartels a force 'running Mexico.' Mexican President Claudia Sheinbaum had already downplayed the possibility days earlier, saying she didn't believe the U.S. was 'taking seriously' an invasion and that organized crime required Mexican, not foreign, solutions. She has reasserted Mexico's sovereignty and rejects any unilateral U.S. military action on Mexican territory. No U.S. land strike inside Mexico has been reported despite Trump's threat. Instead, the two governments' cooperation has taken the form of intelligence-sharing through the Joint Interagency Task Force-Counter Cartel, which reportedly assisted the Mexican military's own raid killing cartel boss 'El Mencho' on February 22, 2026. Alongside it have come continued U.S. maritime strikes against alleged drug-trafficking vessels and drone-defense operations at the border. (A separate entry in this tracker covers the September 2025 follow-up maritime strike that killed two boat-attack survivors.)",
+    "incident_summary": "In the opening weeks of Trump's second term in early 2025, after the administration designated numerous Latin American cartels as foreign terrorist organizations, DEA officials, then led by Acting Administrator Derek S. Maltz, advocated internally for targeted killings of cartel leadership and attacks on infrastructure inside Mexico. Maltz later told The Washington Post he was 'totally in favor' of 'hitting the production labs and command control leaders in Mexico' and supported drone strikes on drug labs. The proposals alarmed officials at the Pentagon and in the White House, which coordinated interagency discussions about cartels, including meetings overseen by Deputy Chief of Staff Stephen Miller. They warned that Congress had not authorized military force against drug cartels and that a terrorist-organization designation alone doesn't create authority to 'fire anything.' Officials also raised the risk that U.S. citizens might be killed and noted that the Coast Guard already had sufficient legal authority for drug interdiction under Title 14. NBC News reported in April 2025 that drone strikes were under consideration. The Washington Post separately reported the internal dispute on September 19, 2025, describing the plans as 'fairly conceptual' and lacking 'a robust legal framework.' No strike in Mexico was carried out following DEA's proposal.\n\nThe idea resurfaced at the presidential level months later. On January 8, 2026, after claiming the separate Caribbean/Pacific maritime strike campaign had 'knocked out 97% of the drugs coming in by water,' Trump told Fox News's Sean Hannity, 'we are going to start now hitting land, with regard to the cartels,' calling cartels a force 'running Mexico.' Mexican President Claudia Sheinbaum had already downplayed the possibility days earlier, saying she didn't believe the U.S. was 'taking seriously' an invasion and that organized crime required Mexican, not foreign, solutions. She has reasserted Mexico's sovereignty and rejects any unilateral U.S. military action on Mexican territory. No U.S. land strike inside Mexico has been reported despite Trump's threat. Instead, the two governments' cooperation has taken the form of intelligence-sharing through the Joint Interagency Task Force-Counter Cartel, which reportedly assisted the Mexican military's own raid killing cartel boss 'El Mencho' on February 22, 2026. Alongside it have come continued U.S. maritime strikes against alleged drug-trafficking vessels and drone-defense operations at the border. (A separate entry in this tracker covers the September 2025 follow-up maritime strike that killed two boat-attack survivors.)",
     "elements_required": [
-      "A named senior federal law-enforcement official personally advocated for extrajudicial killings and military strikes on foreign sovereign territory",
+      "A named senior federal law-enforcement official led an agency that advocated for extrajudicial killings and military strikes on foreign sovereign territory, and himself publicly backed such strikes",
       "Other administration officials (Pentagon, White House) internally objected on the specific ground that Congress had not authorized such force",
       "The same underlying idea was later publicly threatened by the President himself, at head-of-state level, not merely discussed internally",
       "The foreign government named as the prospective target publicly and explicitly rejected the action as a violation of its sovereignty",
@@ -5917,7 +5923,7 @@
     "evidence": [
       {
         "type": "news_report",
-        "description": "The Washington Post reported DEA Acting Administrator Derek Maltz's internal advocacy for targeted killings and infrastructure strikes in Mexico, the Pentagon/White House pushback citing lack of congressional authorization, and named officials involved (Maltz, Stephen Miller, Terrance Cole, Earl Matthews)",
+        "description": "The Washington Post reported that DEA officials advocated in early 2025 for targeted killings of cartel leadership and attacks on infrastructure in Mexico, while Derek Maltz was acting administrator; Maltz told the Post he was 'totally in favor' of 'hitting the production labs and command control leaders in Mexico' and supported drone strikes on drug labs. It also reported Pentagon and White House pushback noting there was no congressional authorization for force against cartels, and that interagency cartel discussions were coordinated by the White House, including meetings overseen by Stephen Miller",
         "source_url": "https://www.washingtonpost.com/national-security/2025/09/19/trump-cartel-strikes-mexico-dea/",
         "maps_to_element": "Other administration officials (Pentagon, White House) internally objected on the specific ground that Congress had not authorized such force"
       },
@@ -5925,7 +5931,7 @@
         "type": "news_report",
         "description": "NBC News reported in April 2025 that the Trump administration was weighing drone strikes on Mexican cartels, corroborating the proposal's timeline independent of the Washington Post's later account",
         "source_url": "https://www.nbcnews.com/politics/national-security/trump-administration-weighs-drone-strikes-mexican-cartels-rcna198930",
-        "maps_to_element": "A named senior federal law-enforcement official personally advocated for extrajudicial killings and military strikes on foreign sovereign territory"
+        "maps_to_element": "A named senior federal law-enforcement official led an agency that advocated for extrajudicial killings and military strikes on foreign sovereign territory, and himself publicly backed such strikes"
       },
       {
         "type": "news_report",
@@ -5948,29 +5954,29 @@
     ],
     "status": "Ongoing: no U.S. land strike inside Mexico has been reported despite Trump's January 2026 threat; cooperation has instead meant intelligence-sharing, U.S. maritime strikes and border drone defense. Sheinbaum rejects any unilateral U.S. military action on Mexican territory.",
     "rebuttal_anticipated": "The administration could argue that the foreign-terrorist-organization designations create a legitimate legal basis for using force against cartels. It could add that no strike was ever actually carried out in Mexico, despite the proposal and the later presidential statement, and that Trump's January 2026 remarks were rhetorical pressure on Mexico to act rather than a literal operational plan.",
-    "comeback": "The administration's own Pentagon and White House officials rejected that legal theory when it was proposed, explicitly stating that a terrorist designation alone doesn't authorize military force and that Congress had not authorized any such action. That is itself the accountability-relevant fact: a senior DEA official pushed for extrajudicial killings on foreign soil despite his own colleagues warning it was unauthorized, and the President later escalated the same idea to a public threat against a neighboring sovereign country, regardless of whether it has since been operationalized.",
+    "comeback": "The administration's own Pentagon and White House officials rejected that legal theory when it was proposed, explicitly stating that a terrorist designation alone doesn't authorize military force and that Congress had not authorized any such action. That is itself the accountability-relevant fact: DEA, led by an acting administrator who says he is 'totally in favor' of such strikes, pushed for extrajudicial killings on foreign soil despite administration colleagues warning it was unauthorized, and the President later escalated the same idea to a public threat against a neighboring sovereign country, regardless of whether it has since been operationalized.",
     "cause": "[TAP Analysis, not sourced] The same foreign-terrorist-organization designation that enabled this internal DEA push is the legal theory underlying the separate, actually-executed Caribbean/Pacific maritime strike campaign (the Hegseth entry) -- illustrating that the administration's cartel-related use-of-force theory has been pushed toward its most expansive form (land strikes on a neighboring sovereign nation) by multiple agencies and, eventually, the President himself, not contained to the one theater where it was actually acted upon.",
-    "confidence_note": "HIGH confidence on Maltz's internal advocacy and the Pentagon/White House legal-authority objections, corroborated by The Washington Post (the original, detailed report naming officials) and NBC News's earlier, independent April 2025 report. HIGH confidence on Trump's January 8, 2026 public statement and Sheinbaum's public rejection, documented by Time and Global News. MODERATE confidence that no land strike has occurred: a review of reporting through September 2026 found no report of one, which is not an official confirmation that none is planned. This status should be re-verified in future rechecks given how quickly the related maritime campaign escalated after its own initial disclosure.",
-    "last_verified": "2026-10-24",
+    "confidence_note": "HIGH confidence that DEA officials pushed internally for strikes in Mexico while Maltz led the agency, and on the Pentagon/White House legal-authority objections, per The Washington Post's detailed report; Maltz himself told the Post he is 'totally in favor' of such strikes. NBC News's earlier, independent April 2025 report confirms strikes were under consideration and reports Maltz saying the U.S. would ideally secure Mexico's agreement before any strikes on cartel infrastructure. HIGH confidence on Trump's January 8, 2026 public statement and Sheinbaum's public rejection, documented by Time and Global News. MODERATE confidence that no land strike has occurred: a review of reporting through September 2026 found no report of one, which is not an official confirmation that none is planned. This status should be re-verified in future rechecks given how quickly the related maritime campaign escalated after its own initial disclosure.",
+    "last_verified": "2026-10-31",
     "date_added": "2026-09-12",
     "section_summaries": {
-      "incident_summary": "DEA's acting head pushed in early 2025 for killings and drone strikes in Mexico over Pentagon/White House objections; Trump threatened land strikes in January 2026. None has been reported.",
+      "incident_summary": "DEA, under acting head Derek Maltz, pushed in early 2025 for killings and strikes in Mexico over Pentagon/White House objections; Trump threatened land strikes in January 2026. None reported.",
       "confidence_note": "Washington Post and NBC News corroborate the proposal; Time and Global News cover Trump's threat and Sheinbaum's rejection. No land strike reported through September 2026; none is ruled out."
     },
     "narrative_override": {
-      "headline": "DEA's acting administrator pushed for extrajudicial killings and drone strikes in Mexico."
+      "headline": "DEA, under an acting administrator who backed it, pushed for extrajudicial killings and strikes in Mexico."
     },
-    "date_of_action": "2025-01 (Maltz proposes strikes early in second term) through 2026-01-08 (Trump publicly floats hitting cartels on land)",
-    "last_substantive_update": "2026-10-24",
+    "date_of_action": "2025-01 (DEA, under acting head Maltz, proposes strikes early in second term) through 2026-01-08 (Trump publicly floats hitting cartels on land)",
+    "last_substantive_update": "2026-10-31",
     "glance": {
       "who": "Derek Maltz (DEA) and Donald Trump (President)",
-      "what": "Reportedly, Maltz urged killings, drone strikes in Mexico; Trump then threatened land strikes; none reported",
+      "what": "Reportedly, Maltz's DEA urged killings, strikes in Mexico; Trump then threatened land strikes; none reported",
       "harm": {
         "kind": "institutional",
         "certainty": "alleged",
         "who": "Congress's war-powers authority"
       },
-      "reviewed": "2026-10-24"
+      "reviewed": "2026-10-31"
     },
     "cause_references": [
       {
@@ -9682,7 +9688,7 @@
       },
       {
         "type": "reporting",
-        "description": "Democracy Docket (October 30, 2026), citing a DOJ court filing it obtained, on DOJ's response to Chief Judge Boasberg's order naming California and Washington, DHS's separate listing of letters to California, Nevada, Pennsylvania and New Jersey, and DOJ's disclosure that it sent records-preservation letters 'to all states' on October 29; copies from Colorado, Michigan, Minnesota and Wisconsin signed by Acting Deputy Attorney General R. Trent McCotter state, 'It is a crime to willfully fail to comply with Section 20701'; Democracy Docket's founder chairs the law firm representing the Democrats",
+        "description": "Democracy Docket (October 30, 2026), citing a DOJ court filing it obtained, on DOJ's response to Chief Judge Boasberg's order naming California and Washington, DHS's separate listing of letters to California, Nevada, Pennsylvania and New Jersey, and DOJ's disclosure that it sent records-preservation letters 'to all states' on October 29; copies from Colorado, Michigan, Minnesota and Wisconsin signed by Acting Deputy Attorney General R. Trent McCotter state, 'It is a crime to willfully fail to comply with Section 20701'",
         "source_url": "https://www.democracydocket.com/news-alerts/doj-warns-election-officials-in-all-50-states-of-criminal-penalties-days-before-midterms/",
         "maps_to_element": "The pattern -- pursuing sensitive individual voter data at national scale via a legal theory courts have repeatedly rejected, then threatening the same officials with sanctions -- raises separation-of-powers and voter-privacy concerns beyond the merits of any single case"
       },
@@ -11968,12 +11974,12 @@
   {
     "id": "hatfill-hhs-aspr-appointment-firing-2025",
     "official": "Robert F. Kennedy Jr., Secretary of Health and Human Services",
-    "offense_category": "Installing a Controversial, Discredited Figure Into a Critical Biodefense Preparedness Role, Who Was Later Fired for Misrepresenting His Own Official Title -- contested; the appointment itself is a personnel/policy judgment call, not unlawful, but the misrepresentation that led to his firing is a documented, admitted-basis accountability fact",
+    "offense_category": "Installing a Controversial, Discredited Figure Into a Critical Biodefense Preparedness Role, Who Was Later Fired Over an Alleged Misrepresentation of His Official Title -- contested; the appointment itself is a personnel/policy judgment call, not unlawful, but HHS's stated basis for his firing, a title misrepresentation Hatfill disputes, is a documented accountability fact",
     "contested": true,
-    "incident_summary": "In May 2025, HHS Secretary Robert F. Kennedy Jr.'s department appointed Steven Hatfill -- a virologist who had promoted hydroxychloroquine as a COVID-19 treatment and criticized mRNA vaccines, and who had previously been investigated by DOJ as a person of interest in the 2001 anthrax attacks before being exonerated and awarded a $5.8 million settlement in 2008 -- as a senior adviser in the Office of the Director at the Administration for Strategic Preparedness and Response (ASPR), the HHS agency responsible for coordinating the nation's disaster and pandemic response. Hatfill had worked with then-trade adviser Peter Navarro during Trump's first term promoting hydroxychloroquine. On October 28, 2025, HHS fired Hatfill; a senior department official said the firing followed Hatfill misrepresenting himself as ASPR's 'chief medical officer,' a title he did not actually hold.",
+    "incident_summary": "In May 2025, HHS Secretary Robert F. Kennedy Jr.'s department appointed Steven Hatfill -- a virologist who had promoted hydroxychloroquine as a COVID-19 treatment and criticized mRNA vaccines, and who had previously been investigated by DOJ as a person of interest in the 2001 anthrax attacks before being exonerated and paid a $4.6 million settlement in 2008 -- as a senior adviser in the Office of the Director at the Administration for Strategic Preparedness and Response (ASPR), the HHS agency responsible for coordinating the nation's disaster and pandemic response. Hatfill had worked with then-trade adviser Peter Navarro during Trump's first term promoting hydroxychloroquine. In late October 2025, HHS fired Hatfill; a senior department official told The New York Times he had misrepresented himself as ASPR's 'chief medical officer' and was not coordinating policy-making with leadership. Hatfill denied it, saying the department had printed business cards giving him that title.",
     "elements_required": [
       "HHS appointed a figure with a documented record of promoting a scientifically discredited COVID-19 treatment to a senior advisory role in the nation's pandemic-preparedness agency",
-      "HHS itself, on the record, identified Hatfill's misrepresentation of his own title as the specific basis for his October 2025 firing",
+      "A senior HHS official identified Hatfill's alleged misrepresentation of his own title as a basis for his October 2025 firing",
       "The appointment and firing both occurred within the same administration and HHS leadership, reflecting on the vetting process that placed him in the role"
     ],
     "evidence": [
@@ -11985,27 +11991,33 @@
       },
       {
         "type": "news_report",
-        "description": "The Washington Post reported October 28, 2025 that HHS fired Hatfill, with a senior department official stating the firing was for misrepresenting himself as ASPR's 'chief medical officer,' a title he did not hold.",
+        "description": "The Washington Post reported October 28, 2025 that Hatfill said he had been asked to resign from his senior role at ASPR and had refused; an administration official, speaking anonymously, said he was terminated 'for cause.' Hatfill, who joined HHS in May, said he had been given the title of ASPR chief medical officer and that he had not yet been formally terminated.",
         "source_url": "https://www.washingtonpost.com/health/2025/10/28/hatfill-hhs-fired-mrna-covid-hydroxychloroquine/",
-        "maps_to_element": "HHS itself, on the record, identified Hatfill's misrepresentation of his own title as the specific basis for his October 2025 firing"
+        "maps_to_element": "The appointment and firing both occurred within the same administration and HHS leadership, reflecting on the vetting process that placed him in the role"
+      },
+      {
+        "type": "news_report",
+        "description": "The New York Times reported October 28, 2025 (copy published by the Boston Globe) that Hatfill was fired over the weekend from his senior adviser job, and that a senior department official, speaking anonymously, said he was let go because he had misrepresented himself as the 'chief medical officer' for ASPR and was 'not coordinating policy-making with leadership.' Hatfill said that was not true, said the department had printed business cards identifying him as a senior adviser and chief medical officer, and called his ouster part of 'a coup to overthrow Mr. Kennedy.'",
+        "source_url": "https://www.bostonglobe.com/2025/10/28/nation/steven-hatfill-hhs-ousted",
+        "maps_to_element": "A senior HHS official identified Hatfill's alleged misrepresentation of his own title as a basis for his October 2025 firing"
       }
     ],
-    "status": "Resolved -- Hatfill was fired October 28, 2025, roughly six months after his appointment, for misrepresenting his official title.",
-    "rebuttal_anticipated": "HHS could argue that acting quickly to fire Hatfill once the title misrepresentation was discovered shows the accountability system worked as intended, and that the initial appointment reflected a policy preference for pandemic-treatment skeptics rather than a vetting failure.",
-    "comeback": "The firing resolves the title-misrepresentation issue but does not address the underlying judgment question: a figure with a well-documented public record of promoting a treatment health authorities found ineffective for COVID-19 was placed in a senior advisory role over the nation's actual pandemic-preparedness apparatus for roughly six months, and was only removed once a separate integrity issue (title misrepresentation) surfaced -- not because of the qualifications concern reporters raised at the time of his appointment.",
+    "status": "Resolved -- Hatfill was fired in late October 2025, about six months after his appointment. A senior HHS official said he misrepresented himself as ASPR's chief medical officer and was not coordinating with leadership; Hatfill denies it and says HHS gave him that title.",
+    "rebuttal_anticipated": "HHS could argue that acting quickly to fire Hatfill once it concluded he had misrepresented his title shows the accountability system worked as intended, and that the initial appointment reflected a policy preference for pandemic-treatment skeptics rather than a vetting failure.",
+    "comeback": "The firing resolves the title dispute but does not address the underlying judgment question: a figure with a well-documented public record of promoting a treatment health authorities found ineffective for COVID-19 was placed in a senior advisory role over the nation's actual pandemic-preparedness apparatus for roughly six months, and was only removed once HHS cited a separate integrity issue (an alleged title misrepresentation, which Hatfill disputes) -- not because of the qualifications concern reporters raised at the time of his appointment.",
     "cause": "[TAP Analysis, not sourced] Consistent with a broader pattern this database documents (RFK Jr.'s other ACIP/vaccine-panel and public-health-leadership entries) of installing pandemic-treatment or vaccine skeptics into senior HHS public-health roles, sometimes followed by a separate, unrelated accountability failure rather than a reversal of the underlying appointment judgment itself.",
-    "confidence_note": "HIGH confidence -- both the May 2025 appointment and the October 2025 firing (and its stated basis) are corroborated by the Washington Post's own direct reporting on both events, plus wire syndication (UPI, The Hill, Yahoo/AOL) on the firing.",
-    "last_verified": "2026-09-10",
+    "confidence_note": "HIGH confidence -- both the May 2025 appointment and the October 2025 firing are corroborated by the Washington Post's own direct reporting on both events. HHS's stated basis for the firing (a senior official, speaking anonymously, said Hatfill misrepresented himself as ASPR's chief medical officer) comes from The New York Times, relayed by UPI; the Post reported only that he was terminated 'for cause.' Hatfill disputes the stated basis, saying the department printed business cards with that title, so it is HHS's stated reason, not an established fact.",
+    "last_verified": "2026-10-31",
     "date_added": "2026-09-10",
     "section_summaries": {
-      "incident_summary": "HHS installed hydroxychloroquine promoter Steven Hatfill in a senior pandemic-preparedness role in May 2025, then fired him in October 2025 for misrepresenting his title.",
-      "confidence_note": "Both the appointment and firing are well corroborated by the Washington Post's direct reporting on each."
+      "incident_summary": "HHS installed hydroxychloroquine promoter Steven Hatfill in a senior pandemic-preparedness role in May 2025, then fired him in October 2025, citing a misrepresented title he disputes.",
+      "confidence_note": "The appointment and firing are well corroborated; HHS's stated reason, reported by The New York Times, is disputed by Hatfill."
     },
     "narrative_override": {
       "headline": "HHS installed a hydroxychloroquine promoter in a pandemic-preparedness role, then fired him."
     },
-    "date_of_action": "2025-05 (Hatfill appointed ASPR senior adviser) through 2025-10-28 (Hatfill fired)",
-    "last_substantive_update": "2026-09-10",
+    "date_of_action": "2025-05 (Hatfill appointed ASPR senior adviser) through 2025-10 (Hatfill fired over the weekend of Oct 25-26; reported 2025-10-28)",
+    "last_substantive_update": "2026-10-31",
     "glance": {
       "who": "Robert F. Kennedy Jr. (HHS Secretary)",
       "what": "Installed hydroxychloroquine promoter Steven Hatfill in a pandemic-preparedness role, then fired the adviser",
@@ -12014,7 +12026,7 @@
         "certainty": "alleged",
         "who": "Pandemic-preparedness leadership"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-10-31"
     }
   },
   {
@@ -15372,8 +15384,14 @@
     ],
     "evidence": [
       {
+        "type": "news_report",
+        "description": "The State's report (carried by Stars and Stripes), published October 26, 2022, that Irizarry pleaded guilty that Wednesday, in a court hearing in Washington, to entering and remaining in a restricted area or grounds",
+        "source_url": "https://www.stripes.com/theaters/us/2022-10-26/citadel-cadet-pleads-guilty-riot-7820580.html",
+        "maps_to_element": "Establishes the date and charge of the guilty plea underlying the conviction"
+      },
+      {
         "type": "public_record",
-        "description": "The Washington Post's original reporting establishing Irizarry's hire, his 2022 guilty plea and sentence, his subsequent pardon, and the sensitive nature of the Special Operations and Low-Intensity Conflict role",
+        "description": "The Washington Post's original reporting establishing Irizarry's hire, his guilty plea and 14-day sentence, his subsequent pardon, and the sensitive nature of the Special Operations and Low-Intensity Conflict role",
         "source_url": "https://www.washingtonpost.com/national-security/2026/06/02/pentagon-hires-convicted-jan-6-rioter-sensitive-counterterrorism-job/",
         "maps_to_element": "Establishes the conviction, the role's sensitivity, and the hire as documented facts"
       },
@@ -15408,14 +15426,14 @@
     "cause": "[TAP Analysis, not sourced] Consistent with the broader documented pattern in this tracker of pardoned January 6 participants and other politically-connected individuals receiving government positions or benefits from the administration.",
     "confidence_note": "HIGH confidence on Irizarry's conviction, pardon, hire, and the role's sensitivity, corroborated across many independent outlets (Washington Post, Newsweek, The Hill, Democracy Now, MS NOW). MODERATE confidence on the specific claim of internal Pentagon dissent, since reporting characterizes 'concerns reportedly raised by Pentagon officials' without naming the officials or detailing the concerns' substance. Re-verified 2026-08-18: no material change identified -- no reversal, removal, congressional hearing, or further Pentagon statement on the hire found since this entry's original reporting; the appointment appears to remain in effect. Re-verified 2026-08-26: no material change identified -- no reversal, removal, congressional hearing, or further Pentagon statement on the hire found in coverage through this update; the appointment appears to remain in effect. Re-verified 2026-09-05: no material change identified. Re-verified 2026-10-21: no material change identified -- no reversal, removal, congressional hearing, or further Pentagon statement on the hire found in coverage through this update.",
     "pull_quote": "The Department of Defense defended the hire, calling Irizarry “a qualified, patriotic young professional,” despite reported concerns raised internally by Pentagon officials about the appointment.",
-    "last_verified": "2026-10-21",
+    "last_verified": "2026-10-31",
     "date_added": "2026-08-02",
     "section_summaries": {
       "incident_summary": "The Pentagon hired a pardoned January 6 Capitol rioter with no counterterrorism background into a sensitive special-operations policy role, defending the hire despite reported internal objections.",
       "confidence_note": "Well-corroborated across multiple independent outlets; the specific substance of internal Pentagon objections isn't detailed in reporting reviewed."
     },
     "date_of_action": "2026-06-02 (source publish date, event date not stated in reporting)",
-    "last_substantive_update": "2026-10-21",
+    "last_substantive_update": "2026-10-31",
     "glance": {
       "who": "DoD under Pete Hegseth (Secretary of Defense)",
       "what": "Hired a pardoned Jan. 6 participant with no counterterrorism background in a special-operations policy role",
@@ -15424,7 +15442,7 @@
         "certainty": "alleged",
         "who": "Pentagon special-ops policy office"
       },
-      "reviewed": "2026-10-21"
+      "reviewed": "2026-10-31"
     }
   },
   {
