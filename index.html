@@ -3167,6 +3167,17 @@ function classifyOffenseCategory(raw) {
     [/home rule act/, "D.C. Home Rule Act Dispute"],
     [/circumvent(ing)? the senate confirmation|senate advice-and-consent review|circumventing senate/, "Senate Confirmation Bypass"],
     [/federal procurement authority violation|exercising contracting authority .{0,20}did not legally hold/, "Federal Procurement Authority Violation"],
+    // Added 2026-10-31 for entries neither classifier matched (see
+    // tests/cla-concern-classification.test.js). Appended last, so they only see
+    // text every rule above missed. Each entry's own text alleges a violation --
+    // a court finding, formal bar charges, a named statute it "would conflict
+    // with" -- so a concern type (shown as "not alleged as a legal violation")
+    // would contradict it. "held to violate" restores the Kennedy Center
+    // entry's old label after its text was reworded.
+    [/held to violate a federal court injunction/, "Federal Court Order Defiance"],
+    [/unlawful service in a senate-confirmed office/, "Senate Confirmation Bypass"],
+    [/attorney-discipline charges/, "Attorney Discipline Charges (Not Adjudicated)"],
+    [/foreign service act/, "Foreign Service Act Violation"],
   ];
 
   for (const [pattern, label] of rules) {
@@ -3265,6 +3276,16 @@ function classifyConcernType(raw) {
     [/conflict-of-interest rules \(18 u\.s\.c\. 208/, "Conflict of Interest / Undisclosed Ties (Non-Adjudicated)"],
     [/chill protected voter-registration/, "Federal Reach Into Election Administration"],
     [/law enforcement against a political opponent/, "Retaliation Against Critics or Political Opponents"],
+    // Added 2026-10-31 for the concern-framed entries (of 290) neither classifier
+    // matched, same appended-last approach; every one's own text disclaims a
+    // legal violation. "were suspended" restores the Pirro entry's old label
+    // after its text was reworded from "Suspending Two Career Prosecutors".
+    [/career prosecutors were suspended/, "Retaliation Against Critics or Political Opponents"],
+    [/warn broadcasters/, "Press Freedom / Newsgathering Interference"],
+    [/not an allegation that doj broke the law/, "Executive Action With No Established Legal Violation (Policy Dispute)"],
+    [/interference in a state-run federal election|referral of state election partners/, "Federal Reach Into Election Administration"],
+    [/no-bid contract/, "Contracting Integrity Concern (Non-Adjudicated)"],
+    [/cash rewards from a justice department program/, "Misuse of Official Resources or Authority"],
   ];
 
   for (const [pattern, label] of rules) {

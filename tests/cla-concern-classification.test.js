@@ -77,6 +77,7 @@ test("the new rules do not change classification for any entry the site actually
   // compared over all 288 entries, no entry that already had a label changed. A new entry nothing matches
   // lands here again: give it a rule, or raise this number deliberately.
   // 0 -> 12 by 2026-10-18 (data drift + new entries); 12 -> 0 the same day with appended rules (see EXPECTED_2026_10_18).
+  // 0 -> 11 by 2026-10-31 (9 new entries + 2 reworded); 11 -> 0 the same day with appended rules (see EXPECTED_2026_10_31_*).
   const data = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "data", "prosecution.json"), "utf8"));
   let residual = 0;
   for (const e of data) {
@@ -183,6 +184,51 @@ test("each of the 12 previously unmatched published entries gets its 2026-10-18 
     assert.equal(classifyOffenseCategory(e.offense_category), "Other/Unclassified", `${id} now has a Violation Type`);
     const got = classifyConcernType(e.offense_category);
     if (got !== label) wrong.push(`${id}: got ${got}`);
+  }
+  assert.deepEqual(wrong, []);
+});
+
+// 2026-10-31: the 11 entries (of 290) neither classifier matched. Nine are new since
+// 2026-10-18; two are data drift that had silently dropped a label they used to get
+// (Kennedy Center reworded to "Held to Violate"; Pirro reworded to "were suspended") --
+// restored to the same labels they had. Entries whose own text alleges a violation
+// (a court finding, formal bar charges, a named statute it "would conflict with") get a
+// Violation Type, so the site never tags them "(not alleged as a legal violation)";
+// entries whose text disclaims one get a concern type.
+const EXPECTED_2026_10_31_VIOLATIONS = {
+  "trump-kennedy-center-injunction-violation-2026": "Federal Court Order Defiance",
+  "blanche-essayli-cdcal-de-facto-us-attorney-2025-2026": "Senate Confirmation Bypass",
+  "ed-martin-dc-bar-georgetown-dei-charges-2026": "Attorney Discipline Charges (Not Adjudicated)",
+  "rubio-state-dept-diplomat-voting-history-questions-2026": "Foreign Service Act Violation",
+};
+const EXPECTED_2026_10_31_CONCERNS = {
+  "pirro-taranto-jan6-mob-rioters-memo-suppression-2025": "Retaliation Against Critics or Political Opponents",
+  "carr-fcc-fake-polls-broadcaster-warning-2026": "Press Freedom / Newsgathering Interference",
+  "dhillon-doj-school-desegregation-cases-dropped-2025-2026": "Executive Action With No Established Legal Violation (Policy Dispute)",
+  "doj-alaska-senate-certification-suit-2026": "Federal Reach Into Election Administration",
+  "mullin-doj-voting-machine-eric-probe-request-2026": "Federal Reach Into Election Administration",
+  "patel-fbi-ufc-sole-source-training-contract-2026": "Contracting Integrity Concern (Non-Adjudicated)",
+  "trump-doj-fraud-tip-rewards-2026": "Misuse of Official Resources or Authority",
+};
+
+test("each of the 11 previously unmatched published entries gets its 2026-10-31 label", () => {
+  const data = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "data", "prosecution.json"), "utf8"));
+  const byId = Object.fromEntries(data.map(e => [e.id, e]));
+  const wrong = [];
+  for (const [id, label] of Object.entries(EXPECTED_2026_10_31_VIOLATIONS)) {
+    if (MOVED_OUT_OF_CLA.has(id)) continue;
+    assert.ok(byId[id], `${id} is not in the published data`);
+    const got = classifyOffenseCategory(byId[id].offense_category);
+    if (got !== label) wrong.push(`${id}: violation got ${got}`);
+  }
+  for (const [id, label] of Object.entries(EXPECTED_2026_10_31_CONCERNS)) {
+    if (MOVED_OUT_OF_CLA.has(id)) continue;
+    assert.ok(byId[id], `${id} is not in the published data`);
+    const e = byId[id];
+    const off = classifyOffenseCategory(e.offense_category);
+    if (off !== "Other/Unclassified") { wrong.push(`${id}: now has Violation Type ${off}`); continue; }
+    const got = classifyConcernType(e.offense_category);
+    if (got !== label) wrong.push(`${id}: concern got ${got}`);
   }
   assert.deepEqual(wrong, []);
 });
