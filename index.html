@@ -144,39 +144,42 @@
   }
   .browse-instead:hover { background: var(--brass); color: var(--paper-card); border-color: var(--brass); }
 
-  /* ================= NAV ACTIONS (floating) ================= */
-  .nav-actions {
-    position: fixed;
-    right: 1.25rem;
-    top: 50%;
-    transform: translateY(-50%);
+  /* ================= TOP BAR ================= */
+  /* Slim bar above the masthead: updated date on the left, text links on
+     the right. Replaced the old fixed floating side buttons. */
+  .top-bar {
     display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    z-index: 100;
-  }
-  .nav-action-btn {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.25rem 1rem;
+    padding: 0.4rem 1.25rem;
+    background: var(--paper-card);
+    border-bottom: 1px solid var(--rule-strong);
     font-family: ui-monospace, monospace;
     font-size: 0.72rem;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    background: var(--paper-card);
-    color: var(--ink-soft);
-    border: 1px solid var(--rule-strong);
-    padding: 0.5rem 0.9rem;
-    border-radius: 4px;
-    cursor: pointer;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    letter-spacing: 0.02em;
+  }
+  .top-bar-updated { color: var(--ink-soft); }
+  .top-bar-links {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 0.4rem;
+    gap: 0.25rem 1rem;
+  }
+  .nav-action-btn {
+    font: inherit;
+    letter-spacing: inherit;
+    background: none;
+    border: none;
+    padding: 0.2rem 0;
+    color: var(--brass);
+    cursor: pointer;
     white-space: nowrap;
     text-decoration: none;
   }
-  .nav-action-btn[hidden] {
-    display: none;
-  }
-  .nav-action-btn:hover { background: var(--brass); color: var(--paper-card); border-color: var(--brass); }
+  .nav-action-btn[hidden] { display: none; }
+  .nav-action-btn:hover { text-decoration: underline; }
 
   /* ================= SUGGEST-A-TOPIC MODAL ================= */
   .suggest-backdrop {
@@ -298,35 +301,8 @@
   .browse-option-btn:hover { background: var(--brass-light); border-color: var(--brass); }
   .browse-option-count { color: var(--ink-faint); font-size: 0.8rem; }
 
-  /* Below this width, the reserved-nav-actions-column layout main and
-     #headlines-wrap share breaks down two ways: their shared 880px
-     floor pins them wider than the viewport (forcing horizontal scroll
-     on an actual phone), and even before that floor is hit, the fixed
-     nav-actions column can overlap the right edge of a not-yet-full-
-     width main/headlines-wrap. Below 900px, nav-actions comes out of
-     fixed-floating mode into a normal in-flow row right after the
-     header, so it can never overlap content again regardless of how
-     narrow the viewport gets. (The other half of the fix, main and
-     #headlines-wrap going fluid, lives after their base rules below --
-     it has to, see the comment there.) */
-  @media (max-width: 900px) {
-    .nav-actions {
-      position: static;
-      top: auto;
-      right: auto;
-      transform: none;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      max-width: 700px;
-      margin: 1.25rem auto 0;
-      padding: 0 1rem;
-    }
-  }
-
-  @media (max-width: 600px) {
-    .nav-action-btn { padding: 0.45rem 0.7rem; font-size: 0.68rem; }
-  }
+  /* (The other half of the narrow-viewport fix, main and #headlines-wrap
+     going fluid, lives after their base rules below.) */
 
   .regex-toggle {
     font-family: ui-monospace, monospace;
@@ -499,8 +475,8 @@
 
   /* ================= MAIN ================= */
   /* Matches #headlines-wrap's width/position below -- both grow to fill
-     nearly the full viewport width up to the fixed .nav-actions button
-     column's clearance (13rem) on the right, instead of being capped at a
+     nearly the full viewport width up to the clearance the old
+     nav-actions button column needed (13rem) on the right, instead of being capped at a
      narrow centered reading column (Joe: "a lot of empty room on the
      left... can we expand the inner box", originally asked for Records,
      applied here too for the per-database tracker pages). Never shrinks
@@ -1506,6 +1482,17 @@
 </head>
 <body>
 
+<div class="top-bar" id="top-bar">
+  <span class="top-bar-updated" id="top-bar-updated"></span>
+  <nav class="top-bar-links" aria-label="Site">
+    <a class="nav-action-btn" id="top-bar-about" href="about.html">About</a>
+    <button id="suggest-claim-link" class="nav-action-btn" type="button" title="Suggest a topic or submit a claim for TAP to check">Suggest a topic</button>
+    <button id="start-over-btn" class="nav-action-btn" type="button" title="Clear search/filters and return to the default view">↻ Start Over</button>
+    <button id="back-to-top-btn" class="nav-action-btn" type="button" title="Scroll to the top of the page">↑ Back to Top</button>
+    <button id="demo-tour-btn" class="nav-action-btn" type="button" title="Start automated or interactive video walkthrough tour" hidden>▶ Demo Tour</button>
+  </nav>
+</div>
+
 <header class="masthead">
   <h1>TAP</h1>
   <p class="tagline-name">The Accountability Project</p>
@@ -1522,12 +1509,6 @@
   <button type="button" class="browse-instead" id="browse-instead">— browse by database —</button>
 </header>
 
-<div class="nav-actions">
-  <button id="start-over-btn" class="nav-action-btn" type="button" title="Clear search/filters and return to the default view">↻ Start Over</button>
-  <button id="back-to-top-btn" class="nav-action-btn" type="button" title="Scroll to the top of the page">↑ Back to Top</button>
-  <button id="demo-tour-btn" class="nav-action-btn" type="button" title="Start automated or interactive video walkthrough tour" hidden>▶ Demo Tour</button>
-  <button id="suggest-claim-link" class="nav-action-btn" type="button" title="Submit a claim for TAP to check">✎ Claim-Check</button>
-</div>
 
 <!-- Suggest-a-Topic modal: posts to the same Google Form the site used to
      link out to (docs/tap-submission-triage.md), styled to match the site
@@ -6510,6 +6491,30 @@ document.getElementById("global-search-clear-btn").addEventListener("click", () 
    every piece of search/filter state to the fresh-load default
    (activeTracker back to "headlines"/Records, the actual initial value
    above) so the page looks exactly like a first visit. */
+/* site-updated:start */
+function formatSiteUpdated(iso) {
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(String(iso == null ? "" : iso).trim());
+  if (!m) return "";
+  const y = +m[1], mo = +m[2], d = +m[3];
+  // Parse as local Y-M-D (not new Date("YYYY-MM-DD"), which is UTC and
+  // can shift a day) and reject overflow dates like 2026-13-45.
+  const dt = new Date(y, mo - 1, d);
+  if (dt.getFullYear() !== y || dt.getMonth() !== mo - 1 || dt.getDate() !== d) return "";
+  const names = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  return "Updated " + names[mo - 1] + " " + d + ", " + y;
+}
+/* site-updated:end */
+
+// Top bar "Updated" date. Non-blocking; any failure (404 before the first
+// publish writes site_meta.json, bad JSON, offline) leaves the slot empty.
+fetch("data/site_meta.json")
+  .then(r => (r.ok ? r.json() : null))
+  .then(meta => {
+    const el = document.getElementById("top-bar-updated");
+    if (el) el.textContent = formatSiteUpdated(meta && meta.updated);
+  })
+  .catch(() => {});
+
 document.getElementById("back-to-top-btn").addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
@@ -6970,7 +6975,7 @@ const TapDemoTour = (() => {
     {
       title: "Community Sourcing & Open Methodology",
       desc: "Submit new topics directly into our automated triage pipeline. Full verification standards and technical process guides are published openly under Docs.",
-      target: () => document.querySelector(".nav-actions"),
+      target: () => document.getElementById("top-bar"),
       action: async () => {
         const suggestBtn = document.getElementById("suggest-claim-link");
         if (suggestBtn) {
@@ -6979,7 +6984,7 @@ const TapDemoTour = (() => {
           const closeBtn = document.getElementById("suggest-close-btn");
           if (closeBtn) closeBtn.click();
         }
-        const navActions = document.querySelector(".nav-actions");
+        const navActions = document.getElementById("top-bar");
         if (navActions) navActions.scrollIntoView({ behavior: "smooth", block: "center" });
       }
     }
