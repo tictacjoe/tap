@@ -474,16 +474,17 @@
   }
 
   /* ================= MAIN ================= */
-  /* Matches #headlines-wrap's width/position below -- both grow to fill
-     nearly the full viewport width up to the clearance the old
-     nav-actions button column needed (13rem) on the right, instead of being capped at a
+  /* Matches #headlines-wrap's width/position below -- both fill the full
+     viewport width (1.5rem side margins) instead of being capped at a
      narrow centered reading column (Joe: "a lot of empty room on the
-     left... can we expand the inner box", originally asked for Records,
-     applied here too for the per-database tracker pages). Never shrinks
+     left... can we expand the inner box"). The old right-hand clearance
+     for the floating nav column is gone with that column. Never shrinks
      below 880px, so narrow viewports are unaffected. */
   main {
     margin-left: 1.5rem;
-    width: max(880px, calc(100vw - 1.5rem - 13rem));
+    margin-right: 1.5rem;
+    width: auto;
+    min-width: 880px;
     background: var(--paper-card);
     padding: 1.75rem 1.5rem 3rem;
     min-height: 400px;
@@ -492,7 +493,9 @@
 
   #headlines-wrap {
     margin-left: 1.5rem;
-    width: max(880px, calc(100vw - 1.5rem - 13rem));
+    margin-right: 1.5rem;
+    width: auto;
+    min-width: 880px;
     background: var(--paper-card);
     padding: 1.75rem 1.5rem 3rem;
     min-height: 400px;
@@ -509,7 +512,9 @@
   @media (max-width: 900px) {
     main, #headlines-wrap {
       width: auto;
+      min-width: 0;
       margin-left: 0;
+      margin-right: 0;
     }
   }
 
