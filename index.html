@@ -8,6 +8,13 @@
 <style>
   :root {
     --paper: #EDEFE7;
+    /* Tracker identity colors, defined once (chips + card left borders). */
+    --trk-prosecution: #7a3f8f;
+    --trk-govservices: #00846a;
+    --trk-deregulation: #b0561a;
+    --trk-dai: #3462b0;
+    --trk-trumpfamily: #a3303f;
+    --trk-oea: #8a7a0a;
     --paper-card: #F7F8F2;
     --ink: #1D2220;
     --ink-soft: #52564F;
@@ -610,6 +617,8 @@
     background: var(--paper);
     overflow: hidden;
   }
+  /* Curated cards get a tracker-colored left border (--trk set inline). */
+  .entry.curated-card { border-left: 6px solid var(--trk); }
   .entry-head {
     display: flex;
     align-items: flex-start;
@@ -1127,6 +1136,17 @@
      narrow-screen fallback stays the 3-letter code rather than this
      label. */
   .headline-row-tracker .tracker-name-abbr { display: none; }
+  /* Tracker chip: filled with the tracker's color, always carries its name
+     as text. Sits inside the existing jump button, so the button's width
+     rules (and the <600px abbr swap) still apply. */
+  .tracker-chip {
+    display: inline-block;
+    background: var(--chip);
+    color: #fff;
+    border-radius: 3px;
+    padding: 0.1rem 0.4rem;
+    line-height: 1.3;
+  }
   .headline-row-text {
     flex: 1 1 auto;
     min-width: 0;
@@ -2552,6 +2572,7 @@ function buildTrailHtml(trail) {
    option there rather than assuming the shorter medium label is
    automatically narrow enough too. Both spans render into the DOM
    always; the CSS media query below picks which one is visible. */
+/* tracker-colors:start */
 const HEADLINE_TRACKER_MEDIUM = {
   deregulation: "Deregulation",
   prosecution: "Accountability",
@@ -2572,6 +2593,28 @@ const HEADLINE_TRACKER_ABBR = {
   tracker: "RPT",
   communitytopics: "CC",
 };
+
+// Same hex values as the --trk-<key> custom properties in :root.
+const TRACKER_COLORS = {
+  prosecution: "#7a3f8f",
+  govservices: "#00846a",
+  deregulation: "#b0561a",
+  dai: "#3462b0",
+  trumpfamily: "#a3303f",
+  oea: "#8a7a0a",
+};
+
+// Chip markup for a curated tracker key; "" for Reporting, Claim-checks and
+// unknown keys. Holds both the medium label and the 3-letter code so the
+// existing <600px CSS swap still picks one. Labels are static, no escaping.
+function trackerChipHtml(key) {
+  if (!Object.prototype.hasOwnProperty.call(TRACKER_COLORS, key)) return "";
+  return '<span class="tracker-chip" style="--chip:var(--trk-' + key + ')">' +
+    '<span class="tracker-name-medium">' + HEADLINE_TRACKER_MEDIUM[key] + '</span>' +
+    '<span class="tracker-name-abbr">' + HEADLINE_TRACKER_ABBR[key] + '</span>' +
+    '</span>';
+}
+/* tracker-colors:end */
 
 function buildHeadlineRow(item, displayDate) {
   const row = document.createElement("div");
@@ -2646,9 +2689,9 @@ function buildHeadlineRow(item, displayDate) {
   dbBtn.type = "button";
   dbBtn.className = "share-link-btn headline-row-tracker";
   dbBtn.title = item.id ? "Jump to this entry in " + trackerLabel : "Jump to " + trackerLabel;
-  dbBtn.innerHTML =
+  dbBtn.innerHTML = trackerChipHtml(item.tracker) || (
     '<span class="tracker-name-medium">' + escapeHtml(trackerMedium) + '</span>' +
-    '<span class="tracker-name-abbr">' + escapeHtml(trackerAbbr) + '</span>';
+    '<span class="tracker-name-abbr">' + escapeHtml(trackerAbbr) + '</span>');
   dbBtn.addEventListener("click", () => {
     // Stamp the CURRENT history entry (still Records, not yet navigated)
     // with a snapshot via replaceState, then push a new entry for the
@@ -5270,6 +5313,12 @@ function glanceMetaHtml(entry, cfg, sourceLabel, hl) {
 function buildEntryCard(entry, cfg, docketLabel, sourceLabel, term, useRegex, cardOpts) {
   const div = document.createElement("div");
   div.className = "entry";
+  // Curated trackers get a tracker-colored left border (see .curated-card).
+  const cardTrackerKey = cfg.trackerKey || cfg.kind;
+  if (trackerChipHtml(cardTrackerKey)) {
+    div.classList.add("curated-card");
+    div.style.setProperty("--trk", "var(--trk-" + cardTrackerKey + ")");
+  }
   // Stamped so jumpToRelatedEntry() can locate this exact card by id
   // afterward, without relying on text search -- necessary because
   // several tracker kinds' titleField is not reliably unique per entry
