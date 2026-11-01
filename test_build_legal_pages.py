@@ -27,3 +27,13 @@ def test_footer_links_point_at_html():
     assert 'href="terms.html"' in index
     assert 'href="license.html"' in index
     assert 'href="TERMS.md"' not in index
+
+
+def test_render_page_lists_after_text():
+    html = blp.render_page("Intro:\n- a\n- b", "T")
+    assert "<li>a</li>" in html and "<li>b</li>" in html
+    assert "- a" not in html
+
+
+def test_render_page_numbered_list_after_text():
+    assert "<ol>" in blp.render_page("Rules:\n1. x\n2. y", "T")
