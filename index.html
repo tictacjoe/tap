@@ -326,6 +326,7 @@
     white-space: nowrap;
     cursor: pointer;
   }
+  .search-advanced-btn:focus-visible { outline: 2px solid var(--brass); outline-offset: 2px; }
   .search-advanced-panel {
     max-width: 700px;
     margin: 0.5rem auto 0;
@@ -1539,20 +1540,6 @@
   <h1>TAP</h1>
   <p class="tagline-name">The Accountability Project</p>
   <p class="tagline">Executive branch actions from Jan. 2025, assembled into topic dossiers through primary records and verified reporting. Every entry is built to hold up when challenged.</p>
-  <div class="global-search-box" id="search-mode-box">
-    <span class="search-icon">🔍</span>
-    <input type="text" id="global-search" placeholder="Search everything — try &quot;EPA&quot;, &quot;Supreme Court&quot;, or a name...">
-    <button id="global-search-clear-btn" class="clear-search-btn" type="button" title="Clear search text">✕</button>
-    <button type="button" class="search-advanced-btn" id="search-advanced-btn" aria-expanded="false" aria-controls="search-advanced-panel">Advanced &#9662;</button>
-  </div>
-  <div class="search-advanced-panel" id="search-advanced-panel" hidden>
-    <label class="regex-toggle"><input type="checkbox" id="global-oneliner"> 1-liners</label>
-    <label class="regex-toggle"><input type="checkbox" id="global-regex"> regex</label>
-  </div>
-
-  <div class="regex-error" id="regex-error"></div>
-  <button type="button" class="browse-instead" id="browse-instead">— browse by database —</button>
-
   <section class="intro-strip" id="intro-strip">
     <div class="intro-item">
       <h2>What it tracks</h2>
@@ -1567,6 +1554,21 @@
       <p>Search for a name or topic, or browse one tracker.</p>
     </div>
   </section>
+
+  <div class="global-search-box" id="search-mode-box">
+    <span class="search-icon">🔍</span>
+    <input type="text" id="global-search" placeholder="Search everything — try &quot;EPA&quot;, &quot;Supreme Court&quot;, or a name...">
+    <button id="global-search-clear-btn" class="clear-search-btn" type="button" title="Clear search text">✕</button>
+    <button type="button" class="search-advanced-btn" id="search-advanced-btn" aria-expanded="false" aria-controls="search-advanced-panel">Advanced &#9662;</button>
+  </div>
+  <div class="search-advanced-panel" id="search-advanced-panel" hidden>
+    <label class="regex-toggle"><input type="checkbox" id="global-oneliner"> 1-liners</label>
+    <label class="regex-toggle"><input type="checkbox" id="global-regex"> regex</label>
+  </div>
+
+  <div class="regex-error" id="regex-error"></div>
+  <button type="button" class="browse-instead" id="browse-instead">— browse by database —</button>
+
 </header>
 
 

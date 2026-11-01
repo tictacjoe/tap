@@ -88,3 +88,10 @@ def test_advanced_shows_active_count(browser, site_url):
     page.check("#global-oneliner")
     page.click("#search-advanced-btn")
     assert page.locator("#search-advanced-btn").inner_text().strip() == "Advanced (2) \u25be"
+
+
+def test_intro_strip_above_search_box(browser, site_url):
+    page = _open(browser, site_url)
+    strip = page.locator("#intro-strip").bounding_box()["y"]
+    search = page.locator("#global-search").bounding_box()["y"]
+    assert strip < search
