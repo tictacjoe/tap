@@ -1970,6 +1970,7 @@ function govservicesDomainLabel(domain) {
    at all (e.g. "Structural decline since 2013" with no YYYY-MM),
    which sorts such entries as oldest -- a reasonable default for
    entries describing a chronic condition rather than a datable event. */
+/* extract-first-date:start */
 function extractFirstDate(str) {
   if (!str) return 0;
   const isoMatch = String(str).match(/(\d{4})-(\d{2})(?:-(\d{2}))?/);
@@ -1988,6 +1989,21 @@ function extractFirstDate(str) {
   if (yearMatch) return parseInt(yearMatch[0], 10) * 10000 + 101;
   return 0;
 }
+/* extract-first-date:end */
+
+/* The date a Records row sorts and displays by in "Newest/Oldest first"
+   (2026-11-01). Normally the event date, but when that date is still in
+   the future -- a planned shutdown or effective date, e.g. the EPA web
+   archive's "planned retirement 2026-12-31" -- the row falls back to the
+   date TAP added it, so a scheduled event can't sit above today's news
+   at the top of "Newest first" until it happens. todayNum is
+   extractFirstDate()'s YYYYMMDD number form. */
+/* headline-sort-date:start */
+function headlineSortDate(item, todayNum) {
+  const added = item.trail && item.trail.dateAdded;
+  return added && extractFirstDate(item.date) > todayNum ? added : item.date;
+}
+/* headline-sort-date:end */
 
 function formatHeadlineDate(dateStr) {
   if (!dateStr) return "undated";
@@ -2689,8 +2705,11 @@ function renderHeadlinesView(appendOnly) {
     }
   }
 
+  const now = new Date();
+  const todayNum = now.getFullYear() * 10000 + (now.getMonth() + 1) * 100 + now.getDate();
+  items.forEach(i => { i.sortDate = headlineSortDate(i, todayNum); });
   items.sort((a, b) => {
-    if (headlinesSortValue === "date-asc") return extractFirstDate(a.date) - extractFirstDate(b.date);
+    if (headlinesSortValue === "date-asc") return extractFirstDate(a.sortDate) - extractFirstDate(b.sortDate);
     if (headlinesSortValue === "alpha") return a.headline.localeCompare(b.headline);
     // "Recently updated" sorts by last_substantive_update, not the event
     // date and not last_verified -- a substantively-updated entry (e.g. a
@@ -2705,7 +2724,7 @@ function renderHeadlinesView(appendOnly) {
     // (extractFirstDate(null) -> 0), so they naturally sort last here
     // rather than needing a separate exclusion.
     if (headlinesSortValue === "updated-desc") return extractFirstDate(b.trail.lastSubstantiveUpdate) - extractFirstDate(a.trail.lastSubstantiveUpdate);
-    return extractFirstDate(b.date) - extractFirstDate(a.date);
+    return extractFirstDate(b.sortDate) - extractFirstDate(a.sortDate);
   });
 
   const toRender = items.slice(0, headlinesRenderLimit);
@@ -2731,10 +2750,12 @@ function renderHeadlinesView(appendOnly) {
   // last_substantive_update (what the sort order is actually keyed on)
   // instead of the event date -- otherwise a row sorted to the top for a
   // just-finalized update would confusingly display its original, much
-  // older date_of_action.
+  // older date_of_action. Likewise the date sorts show sortDate, which
+  // differs from item.date only for a future-dated event (see
+  // headlineSortDate()).
   const rowDisplayDate = item => headlinesSortValue === "updated-desc"
     ? (item.trail.lastSubstantiveUpdate || item.date)
-    : item.date;
+    : (item.sortDate || item.date);
   newlyRendered.forEach(item => {
     const row = buildHeadlineRow(item, rowDisplayDate(item));
     newTextSpans.push(row.querySelector(".headline-row-text"));
@@ -5758,7 +5779,12 @@ function renderEntries() {
   const countEl = document.getElementById("count");
 
   const filtered = cfg.data.filter(e => {
-    const matchesSearch = matchesTerm(visibleSearchText(e, cfg), searchTerm, false);
+    // No search: skip building the haystack. matchesTerm() would return
+    // true anyway, but visibleSearchText() runs stripProcessLabels()'s
+    // regexes over every entry -- 14,000+ for Reporting -- and that froze
+    // the tab for seconds on a slow machine every time Records opened an
+    // entry (2026-11-01).
+    const matchesSearch = !searchTerm || matchesTerm(visibleSearchText(e, cfg), searchTerm, false);
     const matchesFilter = !filterValue || filterBaseValue(e[cfg.filterField]) === filterValue;
     return matchesSearch && matchesFilter;
   });
@@ -6481,6 +6507,11 @@ document.getElementById("back-to-top-btn").addEventListener("click", () => {
 // every browser.
 const browseBackdrop = document.getElementById("browse-backdrop");
 const browseOptionsEl = document.getElementById("browse-options");
+// Set by loadAllData() once every data file has settled. Until then each
+// tracker's data is still its empty placeholder array, so the counts below
+// would read 0 (seen live 2026-11-01): show "…" instead, and loadAllData()
+// redraws an open dialog with the real counts when loading finishes.
+let allDataLoaded = false;
 
 function openBrowseModal() {
   browseOptionsEl.innerHTML = "";
@@ -6490,7 +6521,7 @@ function openBrowseModal() {
     btn.className = "browse-option-btn";
     btn.innerHTML =
       '<span>' + escapeHtml(TRACKERS[key].label) + '</span>' +
-      '<span class="browse-option-count">' + TRACKERS[key].data.length + '</span>';
+      '<span class="browse-option-count">' + (allDataLoaded ? TRACKERS[key].data.length : "…") + '</span>';
     btn.addEventListener("click", () => {
       closeBrowseModal();
       selectDatabaseTab(key);
@@ -6715,6 +6746,8 @@ async function loadAllData() {
     history.replaceState(null, "", location.pathname + location.search);
   }
 
+  allDataLoaded = true;
+  if (!browseBackdrop.hidden) openBrowseModal();
   renderDispatch();
   openEntryFromHash();
 
