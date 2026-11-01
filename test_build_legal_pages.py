@@ -27,6 +27,9 @@ def test_footer_links_point_at_html():
     assert 'href="terms.html"' in index
     assert 'href="license.html"' in index
     assert 'href="TERMS.md"' not in index
+    about = (ROOT / "about.html").read_text(encoding="utf-8")
+    assert 'href="terms.html"' in about and 'href="license.html"' in about
+    assert 'href="TERMS.md"' not in about and 'href="LICENSE.md"' not in about
 
 
 def test_render_page_lists_after_text():

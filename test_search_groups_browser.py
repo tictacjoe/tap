@@ -118,7 +118,7 @@ def test_reporting_group_capped_with_show_all(browser, site_url):
     assert page.eval_on_selector_all(
         'section[data-group="reporting"] .headline-entry', "els => els.every(e => e.dataset.tracker === 'tracker')")
     button = page.locator('section[data-group="reporting"] button.search-group-show-all')
-    assert button.inner_text() == f"Show all {counts['reporting']} in the Reporting feed"
+    assert button.inner_text() == f"Show all {counts['reporting']} in the Reporting database"
     button.click()
     page.wait_for_timeout(500)
     assert page.locator("#global-search").input_value() == ""
@@ -134,6 +134,8 @@ def test_empty_group_hidden(browser, site_url):
     assert _groups(page) == ["reporting"]
     assert page.locator('#entries [data-group="curated"]').count() == 0
     assert "(0)" not in page.locator("#entries").inner_text()
+    count = page.locator("#count").inner_text()
+    assert "0 result" not in count
 
 
 def test_tabs_hidden_during_search(browser, site_url):
@@ -148,3 +150,33 @@ def test_tabs_hidden_during_search(browser, site_url):
     assert page.locator(".records-feed-tabs").is_visible()
     assert page.locator("#feed-tab-reporting").get_attribute("aria-selected") == "true"
     assert page.locator("#feed-tab-curated").get_attribute("aria-selected") == "false"
+
+
+def test_curated_oneliner_row_has_tracker_chip(browser, site_url):
+    page = _open(browser, site_url)
+    term = page.evaluate(PICK_JS, ["deregulation", "c => c.curated > 0"])
+    page.click("#search-advanced-btn")
+    page.check("#global-oneliner")
+    _search(page, term)
+    assert page.locator('section[data-group="curated"] .oneliner-row .tracker-chip').count() > 0
+
+
+def test_back_from_reporting_jump_restores_search(browser, site_url):
+    page = _open(browser, site_url)
+    term = page.evaluate(PICK_JS, ["tracker", "c => c.reporting > 0"])
+    _search(page, term)
+    page.locator('section[data-group="reporting"] .headline-row-tracker').first.click()
+    page.wait_for_timeout(500)
+    page.go_back()
+    page.wait_for_timeout(600)
+    assert page.locator("#global-search").input_value() == term
+    assert page.locator('#entries section[data-group="reporting"]').is_visible()
+
+
+def test_start_over_closes_advanced_panel(browser, site_url):
+    page = _open(browser, site_url)
+    page.click("#search-advanced-btn")
+    assert page.locator("#search-advanced-panel").is_visible()
+    page.click("#start-over-btn")
+    assert page.locator("#search-advanced-panel").is_hidden()
+    assert page.get_attribute("#search-advanced-btn", "aria-expanded") == "false"

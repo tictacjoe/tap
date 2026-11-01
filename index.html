@@ -180,13 +180,13 @@
     background: none;
     border: none;
     padding: 0.2rem 0;
-    color: var(--brass);
+    color: var(--ink-soft);
     cursor: pointer;
     white-space: nowrap;
     text-decoration: none;
   }
   .nav-action-btn[hidden] { display: none; }
-  .nav-action-btn:hover { text-decoration: underline; }
+  .nav-action-btn:hover, .nav-action-btn:focus-visible { color: var(--brass); text-decoration: underline; }
 
   /* ================= SUGGEST-A-TOPIC MODAL ================= */
   .suggest-backdrop {
@@ -356,7 +356,7 @@
     color: var(--brass);
     margin: 0 0 0.25rem;
   }
-  .intro-item p { font-size: 0.85rem; line-height: 1.45; margin: 0; color: var(--ink-faint); }
+  .intro-item p { font-size: 0.85rem; line-height: 1.45; margin: 0; color: var(--ink-soft); }
   @media (max-width: 600px) {
     .intro-strip { grid-template-columns: 1fr; }
   }
@@ -2817,7 +2817,15 @@ function buildHeadlineRow(item, displayDate) {
     // page we're about to show -- so a later Back lands on the replaced
     // entry and the popstate handler below restores Records from its
     // stamped snapshot, rather than leaving the site.
-    history.replaceState(captureHeadlinesSnapshot(), "", location.href);
+    // On global search results the visitor's place is the search, not Records.
+    const gTerm = document.getElementById("global-search").value;
+    history.replaceState(gTerm.trim() ? {
+      type: "search",
+      term: gTerm,
+      regex: document.getElementById("global-regex").checked,
+      oneliner: document.getElementById("global-oneliner").checked,
+      scrollY: window.scrollY,
+    } : captureHeadlinesSnapshot(), "", location.href);
     history.pushState({ type: "entry", tracker: item.tracker, id: item.id || null }, "", location.href);
     if (item.id) {
       goToTrackerHome(item.tracker);
@@ -6633,7 +6641,7 @@ function renderSearchMatches(section, matches, term, useRegex, useOneLiners) {
     row.className = "oneliner-row";
     row.innerHTML =
       '<span class="oneliner-caret">▸</span>' +
-      '<span class="oneliner-text"><span class="source-tag">' + m.sourceLabel + '</span>' +
+      '<span class="oneliner-text">' + (trackerChipHtml(m.cfg.trackerKey || m.cfg.kind) || '<span class="source-tag">' + m.sourceLabel + '</span>') +
       entryStatusPillHtml(m.cfg.trackerKey || m.cfg.kind, m.entry.status_stage, false) +
       highlightMatches(oneLiner.line, term, useRegex) +
       (oneLiner.figure ? ' <span class="oneliner-figure' + (oneLiner.figureKind ? ' oneliner-figure-' + oneLiner.figureKind : '') + '">' + highlightMatches(oneLiner.figure, term, useRegex) + '</span>' : '') +
@@ -6703,7 +6711,11 @@ function renderGlobalResults(term, useRegex, useOneLiners, useImpactSort) {
   }
 
   const tapTotal = curatedMatches.length + claimMatches.length;
-  countEl.textContent = tapTotal + " result(s) across " + globalSearchDatabaseCount(TRACKERS) + " databases for \"" + term + "\"" +
+  const repN = reportingMatches.length;
+  countEl.textContent = (tapTotal === 0 && repN > 0
+    ? repN + " in Reporting (unverified) for \"" + term + "\""
+    : tapTotal + " result(s) across " + globalSearchDatabaseCount(TRACKERS) + " databases" +
+      (repN ? ", plus " + repN + " in Reporting (unverified)" : "") + " for \"" + term + "\"") +
     (useRegex ? " (regex)" : "") + (useOneLiners ? " — 1-liner view" : "");
 
   container.innerHTML = "";
@@ -6754,7 +6766,7 @@ function renderGlobalResults(term, useRegex, useOneLiners, useImpactSort) {
       const btn = document.createElement("button");
       btn.type = "button";
       btn.className = "search-group-show-all";
-      btn.textContent = "Show all " + reportingMatches.length + " in the Reporting feed";
+      btn.textContent = "Show all " + reportingMatches.length + " in the Reporting database";
       btn.addEventListener("click", () => jumpToReportingSearch(term));
       more.appendChild(btn);
       section.appendChild(more);
@@ -6990,6 +7002,13 @@ window.addEventListener("popstate", (e) => {
   if (!e.state) return;
   if (e.state.type === "headlines") {
     restoreHeadlinesSnapshot(e.state);
+  } else if (e.state.type === "search") {
+    document.getElementById("global-search").value = e.state.term;
+    document.getElementById("global-regex").checked = !!e.state.regex;
+    document.getElementById("global-oneliner").checked = !!e.state.oneliner;
+    updateAdvancedBtn();
+    renderDispatch();
+    requestAnimationFrame(() => window.scrollTo(0, e.state.scrollY));
   } else if (e.state.type === "entry") {
     goToTrackerHome(e.state.tracker);
     if (e.state.id) openCardById(e.state.id);
@@ -7030,6 +7049,8 @@ document.getElementById("start-over-btn").addEventListener("click", () => {
   document.getElementById("global-regex").checked = false;
   document.getElementById("global-oneliner").checked = false;
   updateAdvancedBtn();
+  document.getElementById("search-advanced-panel").hidden = true;
+  document.getElementById("search-advanced-btn").setAttribute("aria-expanded", "false");
   document.getElementById("search").value = "";
   document.getElementById("filter").value = "";
   document.getElementById("sort-order").value = "";
