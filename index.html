@@ -404,6 +404,16 @@
     cursor: pointer;
   }
   .reporting-link a:hover { opacity: 0.8; }
+  .reporting-link .search-group-show-all {
+    font: inherit; color: var(--brass); font-weight: bold;
+    background: none; border: none; text-decoration: underline; cursor: pointer;
+    max-width: 100%; white-space: normal;
+  }
+  .search-group { margin-bottom: 1.5rem; }
+  .search-group-heading {
+    font-family: Georgia, serif; font-size: 1.15rem; margin: 0 0 0.6rem;
+    padding-bottom: 0.3rem; border-bottom: 1px solid var(--rule);
+  }
 
   /* ================= ONE-LINER ROWS ================= */
   .oneliner-row {
@@ -5983,27 +5993,6 @@ function renderEntries() {
    see flattenTrackerPosts()), applies plain or regex matching, and
    renders either full docket cards or a condensed one-liner list
    depending on the "1-liners" toggle. */
-/* Builds the "N more matches in Reporting" callout shown above global
-   search results. Reporting is excluded from the merged results below
-   because at 500+ entries -- an order of magnitude more than the three
-   curated trackers combined -- it would otherwise flood the list; this
-   link is the way back to it, landing on Reporting's own tab with its
-   own independent search box pre-filled with the same term. */
-function buildReportingLink(term, count) {
-  if (!count) return null;
-  const p = document.createElement("p");
-  p.className = "reporting-link";
-  const a = document.createElement("a");
-  a.href = "#";
-  a.textContent = count + " more match" + (count === 1 ? "" : "es") + " in Reporting →";
-  a.addEventListener("click", (e) => {
-    e.preventDefault();
-    jumpToReportingSearch(term);
-  });
-  p.appendChild(a);
-  return p;
-}
-
 /* Leaves global-search mode entirely and lands on the Reporting tab
    with its own per-tracker search box carrying over the same term --
    reuses the existing tab/search-box machinery rather than building a
@@ -6333,85 +6322,35 @@ function wireTriageButtons(container) {
   });
 }
 
-function renderGlobalResults(term, useRegex, useOneLiners, useImpactSort) {
-  const container = document.getElementById("entries");
-  const countEl = document.getElementById("count");
-  const errorEl = document.getElementById("regex-error");
-  errorEl.textContent = "";
+/* Global search shows up to three groups, in this order: TAP entries
+   (curated trackers), Claim-checks, and Reporting (third-party, not
+   verified by TAP). A group with no matches is not rendered at all. */
+const SEARCH_REPORTING_CAP = 50;
+const SEARCH_GROUP_CAP = 300;
 
-  let allMatches = [];
-  let hadRegexError = false;
+function buildSearchGroup(groupKey, headingText) {
+  const section = document.createElement("section");
+  section.className = "search-group";
+  section.dataset.group = groupKey;
+  const h = document.createElement("h2");
+  h.className = "search-group-heading";
+  h.textContent = headingText;
+  section.appendChild(h);
+  return section;
+}
 
-  // Reporting is deliberately excluded here -- see buildReportingLink()
-  // above for why -- and searched separately below just for its count.
-  visibleTrackerKeys(TRACKERS).forEach(key => {
-    if (key === "tracker") return;
-    const cfg = TRACKERS[key];
-    cfg.data.forEach(entry => {
-      const haystack = visibleSearchText(entry, cfg);
-      const result = matchesTerm(haystack, term, useRegex);
-      if (result === null) { hadRegexError = true; return; }
-      if (result) allMatches.push({ entry, cfg, sourceLabel: cfg.label });
-    });
-  });
-
-  if (hadRegexError) {
-    errorEl.textContent = "Invalid regular expression — showing no results until the pattern is fixed.";
-    container.innerHTML = "";
-    countEl.textContent = "";
-    return;
-  }
-
-  // Always plain-text matching here, regardless of the regex toggle --
-  // Reporting's own tab search box doesn't support regex, so this count
-  // needs to match what actually shows up after following the link.
-  const reportingMatchCount = TRACKERS.tracker.data.filter(entry =>
-    matchesTerm(visibleSearchText(entry, TRACKERS.tracker), term, false)
-  ).length;
-  const reportingLink = buildReportingLink(term, reportingMatchCount);
-
-  if (useImpactSort) {
-    allMatches.sort((a, b) => impactScore(b.entry, b.cfg) - impactScore(a.entry, a.cfg));
-  }
-
-  countEl.textContent = allMatches.length + " result(s) across " + globalSearchDatabaseCount(TRACKERS) + " databases for \"" + term + "\"" +
-    (useRegex ? " (regex)" : "") + (useOneLiners ? " — 1-liner view" : "");
-
-  container.innerHTML = "";
-
-  if (allMatches.length === 0) {
-    const empty = document.createElement("div");
-    empty.className = "empty-state";
-    empty.textContent = globalSearchNoMatchesText(TRACKERS);
-    container.appendChild(empty);
-    if (reportingLink) container.appendChild(reportingLink);
-    return;
-  }
-
-  // Safety valve: a broad term could still match hundreds of entries
-  // across the three curated trackers -- cap what's actually rendered
-  // so the page doesn't choke, and be explicit that there are more.
-  const RENDER_CAP = 300;
-  const overCap = allMatches.length > RENDER_CAP;
-  const toRender = allMatches.slice(0, RENDER_CAP);
-  if (overCap) {
-    countEl.textContent = toRender.length + " shown of " + allMatches.length + " results — refine your search to narrow further";
-  }
-
-  if (reportingLink) container.appendChild(reportingLink);
-
+/* Renders one group's curated-style matches (full cards or one-liners)
+   into `section`. */
+function renderSearchMatches(section, matches, term, useRegex, useOneLiners) {
   if (!useOneLiners) {
-    toRender.forEach((m, i) => {
-      const card = buildEntryCard(m.entry, m.cfg, "NO. " + String(i + 1).padStart(2, "0"), m.sourceLabel, term, useRegex);
-      container.appendChild(card);
+    matches.forEach((m, i) => {
+      section.appendChild(buildEntryCard(m.entry, m.cfg, "NO. " + String(i + 1).padStart(2, "0"), m.sourceLabel, term, useRegex));
     });
     return;
   }
-
-  // --- one-liner list mode ---
   const list = document.createElement("div");
   list.className = "oneliner-list";
-  toRender.forEach((m, i) => {
+  matches.forEach((m) => {
     const oneLiner = oneLinerFor(m.entry, m.cfg);
     const row = document.createElement("div");
     row.className = "oneliner-row";
@@ -6440,7 +6379,109 @@ function renderGlobalResults(term, useRegex, useOneLiners, useImpactSort) {
     list.appendChild(row);
     list.appendChild(detail);
   });
-  container.appendChild(list);
+  section.appendChild(list);
+}
+
+function renderGlobalResults(term, useRegex, useOneLiners, useImpactSort) {
+  const container = document.getElementById("entries");
+  const countEl = document.getElementById("count");
+  const errorEl = document.getElementById("regex-error");
+  errorEl.textContent = "";
+
+  let curatedMatches = [];
+  let claimMatches = [];
+  let hadRegexError = false;
+
+  // Reporting is searched separately below (plain text, own group).
+  visibleTrackerKeys(TRACKERS).forEach(key => {
+    if (key === "tracker") return;
+    const cfg = TRACKERS[key];
+    cfg.data.forEach(entry => {
+      const haystack = visibleSearchText(entry, cfg);
+      const result = matchesTerm(haystack, term, useRegex);
+      if (result === null) { hadRegexError = true; return; }
+      if (result) (key === "communitytopics" ? claimMatches : curatedMatches).push({ entry, cfg, sourceLabel: cfg.label });
+    });
+  });
+
+  if (hadRegexError) {
+    errorEl.textContent = "Invalid regular expression — showing no results until the pattern is fixed.";
+    container.innerHTML = "";
+    countEl.textContent = "";
+    return;
+  }
+
+  // Always plain-text matching here, regardless of the regex toggle --
+  // Reporting's own tab search box doesn't support regex, so this count
+  // needs to match what actually shows up after following the link.
+  const reportingMatches = TRACKERS.tracker.data.filter(entry =>
+    matchesTerm(visibleSearchText(entry, TRACKERS.tracker), term, false)
+  );
+
+  if (useImpactSort) {
+    const byImpact = (a, b) => impactScore(b.entry, b.cfg) - impactScore(a.entry, a.cfg);
+    curatedMatches.sort(byImpact);
+    claimMatches.sort(byImpact);
+  }
+
+  const tapTotal = curatedMatches.length + claimMatches.length;
+  countEl.textContent = tapTotal + " result(s) across " + globalSearchDatabaseCount(TRACKERS) + " databases for \"" + term + "\"" +
+    (useRegex ? " (regex)" : "") + (useOneLiners ? " — 1-liner view" : "");
+
+  container.innerHTML = "";
+
+  if (tapTotal === 0 && reportingMatches.length === 0) {
+    const empty = document.createElement("div");
+    empty.className = "empty-state";
+    empty.textContent = globalSearchNoMatchesText(TRACKERS);
+    container.appendChild(empty);
+    return;
+  }
+
+  // Safety valve: a broad term could still match hundreds of entries --
+  // cap what's rendered per group so the page doesn't choke, and say so.
+  if (curatedMatches.length > SEARCH_GROUP_CAP || claimMatches.length > SEARCH_GROUP_CAP) {
+    countEl.textContent = (Math.min(curatedMatches.length, SEARCH_GROUP_CAP) + Math.min(claimMatches.length, SEARCH_GROUP_CAP)) +
+      " shown of " + tapTotal + " results — refine your search to narrow further";
+  }
+
+  if (curatedMatches.length) {
+    const section = buildSearchGroup("curated", "TAP entries (" + curatedMatches.length + ")");
+    renderSearchMatches(section, curatedMatches.slice(0, SEARCH_GROUP_CAP), term, useRegex, useOneLiners);
+    container.appendChild(section);
+  }
+  if (claimMatches.length) {
+    const section = buildSearchGroup("claimchecks", "Claim-checks (" + claimMatches.length + ")");
+    renderSearchMatches(section, claimMatches.slice(0, SEARCH_GROUP_CAP), term, useRegex, useOneLiners);
+    container.appendChild(section);
+  }
+  if (reportingMatches.length) {
+    const section = buildSearchGroup("reporting", "Reporting, not verified by TAP (" + reportingMatches.length + ")");
+    container.appendChild(section);
+    // Newest first, rendered as headline-style rows like the Records feed.
+    const todayNum = todayDateNum();
+    const items = reportingMatches.map(adaptReportingEntry);
+    items.forEach(i => { i.sortDate = headlineSortDate(i, todayNum); });
+    items.sort((a, b) => extractFirstDate(b.sortDate) - extractFirstDate(a.sortDate));
+    const spans = [];
+    items.slice(0, SEARCH_REPORTING_CAP).forEach(item => {
+      const row = buildHeadlineRow(item, item.sortDate || item.date);
+      spans.push(row.querySelector(".headline-row-text"));
+      section.appendChild(row);
+    });
+    spans.forEach(fitHeadlineRowText);
+    if (reportingMatches.length > SEARCH_REPORTING_CAP) {
+      const more = document.createElement("p");
+      more.className = "reporting-link";
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "search-group-show-all";
+      btn.textContent = "Show all " + reportingMatches.length + " in the Reporting feed";
+      btn.addEventListener("click", () => jumpToReportingSearch(term));
+      more.appendChild(btn);
+      section.appendChild(more);
+    }
+  }
 }
 
 /* Top-level dispatcher: global search (if non-empty) takes over the
