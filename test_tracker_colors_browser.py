@@ -107,3 +107,27 @@ def test_search_result_cards_have_chip(browser, site_url):
     assert cards.count() > 0
     assert cards.first.locator(".tracker-chip").count() == 1
     assert page.locator(".search-group .entry:not(.curated-card) .tracker-chip").count() == 0
+
+
+@pytest.mark.parametrize("key", ["deregulation", "govservices"])
+def test_domain_tags_neutral(browser, site_url, key):
+    page = _open(browser, site_url)
+    # Glance cards carry no domain tag, so draw the old-style card (the one
+    # that still shows it) from a real entry with glanceEnabled switched off.
+    html = page.evaluate("""key => {
+        const cfg = Object.assign({}, TRACKERS[key], { glanceEnabled: false });
+        const entry = cfg.data.find(e => e.domain);
+        if (!entry) return null;
+        const card = buildEntryCard(entry, cfg, "", "", "", false, {});
+        document.body.appendChild(card);
+        return card.querySelector('.domain-tag') ? 'ok' : 'no-tag';
+    }""", key)
+    assert html == "ok"
+    tag = page.locator(".entry .domain-tag").last
+    style = lambda prop: tag.evaluate(f"e => getComputedStyle(e).{prop}")
+    assert style("backgroundColor") == "rgba(0, 0, 0, 0)"
+    assert style("color") == "rgb(29, 34, 32)"
+    assert style("borderTopWidth") == "1px"
+    assert style("borderTopColor") == "rgb(169, 172, 154)"
+    # Category is not a color: no domain tag carries inline background/color.
+    assert page.locator(".domain-tag[style*='background']").count() == 0

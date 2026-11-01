@@ -740,7 +740,14 @@
     border-radius: 2px;
     font-size: 0.68rem;
     letter-spacing: 0.02em;
+    /* Category tags are neutral: color on curated content means tracker only. */
+    background: transparent;
+    border: 1px solid var(--rule-strong);
+    color: var(--ink);
   }
+  /* Community Topics' verdict tag still sets its own inline colors; keep its
+     box the same size as the neutral ones without a grey outline. */
+  .domain-tag[style] { border-color: transparent; }
   /* Trump Family member chips: neutral (no category colour), outlined. */
   .family-chip {
     display: inline-block;
@@ -2007,24 +2014,6 @@ function filterBaseValue(value) {
   if (!value) return value;
   const m = value.match(/^([^/(]+?)\s*[/(]/);
   return m ? m[1].trim() : value;
-}
-
-function domainColor(domain) {
-  const map = {
-    environmental: "#4B6B4F", labor: "#3E5C76", financial: "#8B6F3E",
-    consumer_safety: "#7A4B3E", "cross-cutting": "#5C5A52",
-    research_suppression: "#6B4B7A", funding_redirection: "#8B6F3E",
-    staff_office_cuts: "#3E5C76", data_collection_halted: "#7A4B3E",
-    protection_rollback: "#7A3E4B",
-    // Trump Family categories (reuse the palette above, one hue each).
-    crypto: "#6B4B7A", foreign_deals: "#3E5C76", federal_contracts_investments: "#8B6F3E",
-    real_estate_licensing: "#4B6B4F", pardons_policy_favors: "#7A3E4B", official_roles: "#5C5A52",
-    // DHS and ICE categories (same palette, one hue each).
-    raids_arrests: "#3E5C76", use_of_force: "#7A3E4B", detention_deaths_conditions: "#7A4B3E",
-    removals: "#6B4B7A", detention_contracts_money: "#8B6F3E", courts_defiance: "#4B6B4F",
-    policy_leadership: "#5C5A52"
-  };
-  return map[domain] || "#5C5A52";
 }
 
 /* govservices domain values are snake_case in the data
@@ -5311,7 +5300,7 @@ function createListenPlayer(synth, UtteranceCtor, onChange) {
    re-verification with no real change should not look like a fresh
    update here either. Lives outside the glance-head block (unchanged
    from before this simplification) so it stays next to its sibling,
-   the old non-glance card's metaHtml, which still uses domainColor()/
+   the old non-glance card's metaHtml, which still uses
    govservicesDomainLabel() for its own domain tag. */
 function glanceMetaHtml(entry, cfg, sourceLabel, hl) {
   let html = sourceLabel ? '<span class="source-tag">' + sourceLabel + '</span>' : "";
@@ -5359,14 +5348,14 @@ function buildEntryCard(entry, cfg, docketLabel, sourceLabel, term, useRegex, ca
 
   let metaHtml = sourceLabel ? '<span class="source-tag">' + sourceLabel + '</span>' : "";
   if (cfg.kind === "deregulation") {
-    metaHtml += '<span class="domain-tag" style="background:' + domainColor(entry.domain) + '22; color:' + domainColor(entry.domain) + '">' + escapeHtml(entry.domain) + '</span>' +
+    metaHtml += '<span class="domain-tag">' + escapeHtml(entry.domain) + '</span>' +
                '<span>' + hl(entry.agency) + '</span><span>' + hl(entry.date_of_action) + '</span>' +
                (entry.last_verified ? '<span>verified ' + hl(entry.last_verified) + '</span>' : '') +
                '<span>' + hl(entry.short_summary || truncate(entry.what_changed || "", 100)) + '</span>';
   } else if (cfg.kind === "tracker") {
     metaHtml += '<span>' + (entry.date || "") + '</span>';
   } else if (cfg.kind === "govservices") {
-    metaHtml += '<span class="domain-tag" style="background:' + domainColor(entry.domain) + '22; color:' + domainColor(entry.domain) + '">' + escapeHtml(govservicesDomainLabel(entry.domain)) + '</span>' +
+    metaHtml += '<span class="domain-tag">' + escapeHtml(govservicesDomainLabel(entry.domain)) + '</span>' +
                '<span>' + hl(entry.institution) + '</span><span>' + hl(entry.date_of_action) + '</span>';
   } else if (cfg.kind === "communitytopics") {
     // Coverage indicator -- surfaces on the card itself (not just the
