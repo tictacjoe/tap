@@ -240,6 +240,7 @@ def test_the_drawer_works_in_the_global_search_one_liner_list(browser, site_url)
     searching (not from a per-tracker tab). A Cabinet-Level row expanded there must get a
     working drawer too."""
     page, _, errors = _open_page(browser, site_url)
+    page.click("#search-advanced-btn")
     page.check("#global-oneliner")
     page.fill("#global-search", "Tirrell")
     page.wait_for_timeout(900)

@@ -315,6 +315,43 @@
     cursor: pointer;
   }
   .regex-toggle input { cursor: pointer; }
+  .search-advanced-btn {
+    font-family: ui-monospace, monospace;
+    font-size: 0.72rem;
+    color: var(--brass);
+    background: none;
+    border: 1px solid var(--brass);
+    border-radius: 4px;
+    padding: 0.25rem 0.5rem;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  .search-advanced-panel {
+    max-width: 700px;
+    margin: 0.5rem auto 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.1rem;
+  }
+  .search-advanced-panel[hidden] { display: none; }
+  .intro-strip {
+    max-width: 900px;
+    margin: 1.75rem auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    text-align: left;
+  }
+  .intro-item h2 {
+    font-family: Georgia, serif;
+    font-size: 0.95rem;
+    color: var(--brass);
+    margin: 0 0 0.25rem;
+  }
+  .intro-item p { font-size: 0.85rem; line-height: 1.45; margin: 0; color: var(--ink-faint); }
+  @media (max-width: 600px) {
+    .intro-strip { grid-template-columns: 1fr; }
+  }
   .clear-search-btn {
     font-family: ui-monospace, monospace;
     font-size: 0.95rem;
@@ -1506,12 +1543,30 @@
     <span class="search-icon">🔍</span>
     <input type="text" id="global-search" placeholder="Search everything — try &quot;EPA&quot;, &quot;Supreme Court&quot;, or a name...">
     <button id="global-search-clear-btn" class="clear-search-btn" type="button" title="Clear search text">✕</button>
+    <button type="button" class="search-advanced-btn" id="search-advanced-btn" aria-expanded="false" aria-controls="search-advanced-panel">Advanced &#9662;</button>
+  </div>
+  <div class="search-advanced-panel" id="search-advanced-panel" hidden>
     <label class="regex-toggle"><input type="checkbox" id="global-oneliner"> 1-liners</label>
     <label class="regex-toggle"><input type="checkbox" id="global-regex"> regex</label>
   </div>
 
   <div class="regex-error" id="regex-error"></div>
   <button type="button" class="browse-instead" id="browse-instead">— browse by database —</button>
+
+  <section class="intro-strip" id="intro-strip">
+    <div class="intro-item">
+      <h2>What it tracks</h2>
+      <p id="intro-tracks-text">Executive branch actions since Jan. 2025, in several topic trackers.</p>
+    </div>
+    <div class="intro-item">
+      <h2>Curated vs. Reporting</h2>
+      <p>TAP researches and sources curated entries. Reporting is a daily news feed that TAP collects but doesn't verify.</p>
+    </div>
+    <div class="intro-item">
+      <h2>How to use it</h2>
+      <p>Search for a name or topic, or browse one tracker.</p>
+    </div>
+  </section>
 </header>
 
 
@@ -6589,10 +6644,40 @@ window.addEventListener("popstate", (e) => {
   }
 });
 
+/* intro-and-advanced:start */
+/* Intro strip count word: curated trackers a visitor can see (TRACKERS
+   minus Reporting, Claim-checks and any hidden:true entry). */
+(function fillIntroTrackerCount() {
+  const words = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"];
+  const n = visibleTrackerKeys(TRACKERS).filter(k => k !== "tracker" && k !== "communitytopics").length;
+  const word = words[n] !== undefined ? words[n] : String(n);
+  document.getElementById("intro-tracks-text").textContent =
+    "Executive branch actions since Jan. 2025, in " + word + " topic trackers.";
+})();
+
+/* Advanced search toggle: holds the 1-liners and regex checkboxes; the
+   button label shows how many are on so a collapsed panel never hides
+   an active mode. */
+function updateAdvancedBtn() {
+  const btn = document.getElementById("search-advanced-btn");
+  const n = ["global-oneliner", "global-regex"].filter(id => document.getElementById(id).checked).length;
+  btn.textContent = "Advanced" + (n ? " (" + n + ")" : "") + " \u25be";
+}
+document.getElementById("search-advanced-btn").addEventListener("click", () => {
+  const btn = document.getElementById("search-advanced-btn");
+  const panel = document.getElementById("search-advanced-panel");
+  panel.hidden = !panel.hidden;
+  btn.setAttribute("aria-expanded", String(!panel.hidden));
+});
+["global-oneliner", "global-regex"].forEach(id =>
+  document.getElementById(id).addEventListener("change", updateAdvancedBtn));
+/* intro-and-advanced:end */
+
 document.getElementById("start-over-btn").addEventListener("click", () => {
   document.getElementById("global-search").value = "";
   document.getElementById("global-regex").checked = false;
   document.getElementById("global-oneliner").checked = false;
+  updateAdvancedBtn();
   document.getElementById("search").value = "";
   document.getElementById("filter").value = "";
   document.getElementById("sort-order").value = "";
@@ -6838,8 +6923,10 @@ const TapDemoTour = (() => {
     {
       title: "Rapid Briefing Scanner",
       desc: "Toggle 1-Liners mode to condense extensive dossiers into instant summary rows — ideal for rapid scanning during hearing preparation.",
-      target: () => document.querySelector("label:has(#global-oneliner)") || document.getElementById("global-oneliner"),
+      target: () => document.getElementById("search-advanced-btn"),
       action: async () => {
+        const advPanel = document.getElementById("search-advanced-panel");
+        if (advPanel && advPanel.hidden) document.getElementById("search-advanced-btn").click();
         const oneLiner = document.getElementById("global-oneliner");
         if (oneLiner && !oneLiner.checked) {
           oneLiner.checked = true;
