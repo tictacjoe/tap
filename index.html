@@ -1128,10 +1128,18 @@
   .headline-more-btn, .headline-trail-btn { flex-shrink: 0; }
   .headline-tier-text { display: none; margin: 0 0.8rem 0.6rem; }
   .headline-trail-panel { margin: 0.5rem 0.8rem 0.6rem; }
-  /* Toggle button (not a real checkbox) -- .active mirrors the same
-     pressed-state language the database-tab/Records buttons use
-     elsewhere on the page, so "on" reads consistently sitewide. */
-  .headlines-exclude-btn.active {
+  /* Records feed tabs: "TAP entries" vs the unverified Reporting feed. */
+  .records-feed-tabs { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.8rem; }
+  .records-feed-tabs button {
+    font-family: inherit;
+    font-size: 0.85rem;
+    padding: 0.45rem 0.9rem;
+    border: 1px solid var(--rule);
+    background: var(--paper-card);
+    color: var(--ink);
+    cursor: pointer;
+  }
+  .records-feed-tabs button[aria-selected="true"] {
     background: var(--brass);
     color: var(--paper-card);
     border-color: var(--brass);
@@ -1653,11 +1661,14 @@
   <div id="entries"></div>
 </main>
 <div id="headlines-wrap" style="display:none">
+  <div class="records-feed-tabs" role="tablist" aria-label="Records feed">
+    <button type="button" role="tab" id="feed-tab-curated" aria-selected="true">TAP entries</button>
+    <button type="button" role="tab" id="feed-tab-reporting" aria-selected="false">Reporting feed, unverified</button>
+  </div>
   <div class="controls" id="headlines-controls">
     <select id="headlines-sort"></select>
     <select id="headlines-tracker-filter"></select>
     <select id="headlines-subfilter"></select>
-    <button type="button" id="headlines-exclude-reporting-btn" class="share-link-btn headlines-exclude-btn">Exclude raw reporting</button>
   </div>
   <div class="result-count" id="headlines-count"></div>
   <div id="headlines-view"></div>
@@ -2555,6 +2566,7 @@ const HEADLINE_TRACKER_ABBR = {
 function buildHeadlineRow(item, displayDate) {
   const row = document.createElement("div");
   row.className = "headline-entry";
+  row.dataset.tracker = item.tracker;
 
   const trackerLabel = TRACKERS[item.tracker].label;
   const trackerMedium = HEADLINE_TRACKER_MEDIUM[item.tracker] || trackerLabel;
@@ -2703,16 +2715,35 @@ function fitHeadlineRowText(el) {
 let headlinesSortValue = "date-desc";
 let headlinesTrackerFilter = "";
 let headlinesSubFilter = "";
-let headlinesExcludeReporting = false;
+// Which Records feed is showing: "curated" (TAP's own trackers) or
+// "reporting" (the unverified third-party Reporting archive).
+let headlinesFeed = "curated";
 // How many of the current (sorted/filtered) result set are actually
 // rendered to the DOM -- grows via the "Load more" button rather than
 // rendering all ~14k headlines at once, which previously froze the tab
 // (see RENDER_STEP below). Reset to RENDER_STEP any time the
-// underlying result set changes (sort, filter, or the exclude-reporting
-// toggle) so pagination restarts from the top of the new set rather
+// underlying result set changes (sort, filter, or the feed tab) so pagination restarts from the top of the new set rather
 // than carrying over a stale, now-meaningless position.
 const RENDER_STEP = 300;
 let headlinesRenderLimit = RENDER_STEP;
+
+/* Visible curated tracker keys: every visible tracker except Reporting
+   and Claim-checks. */
+function headlinesCuratedKeys() {
+  return visibleTrackerKeys(TRACKERS).filter(k => k !== "tracker" && k !== "communitytopics");
+}
+
+/* The one function that switches the Records feed tab ("curated" or
+   "reporting"). Resets the tracker filter, sort and paging, then redraws. */
+function setHeadlinesFeed(feed) {
+  headlinesFeed = feed === "reporting" ? "reporting" : "curated";
+  headlinesTrackerFilter = "";
+  headlinesSubFilter = "";
+  headlinesSortValue = "date-desc";
+  headlinesRenderLimit = RENDER_STEP;
+  renderHeadlinesControls();
+  renderHeadlinesView();
+}
 
 /* appendOnly (set only by the "Load more" button) renders and
    fits-to-width just the newly-revealed slice and appends it, instead
@@ -2721,7 +2752,7 @@ let headlinesRenderLimit = RENDER_STEP;
    the *total* rendered so far (measured ~15s across 4 clicks / 1800
    rows), which is exactly the kind of unbounded-cost-as-you-page-back
    problem RENDER_STEP exists to avoid in the first place. A sort,
-   filter, or the exclude-reporting toggle still does a full rebuild,
+   filter, or the feed tab still does a full rebuild,
    since the actual set of rows (not just how many) has changed. */
 function renderHeadlinesView(appendOnly) {
   const container = document.getElementById("headlines-view");
@@ -2736,22 +2767,24 @@ function renderHeadlinesView(appendOnly) {
   // built around.
   items = items.filter(i => extractFirstDate(i.date) >= 20250101);
 
-  // Claim-checks is opt-in only -- present in buildHeadlineItems() so it
-  // can be found once selected, but never part of the "All databases"
-  // aggregate or any other tracker's filtered view, unlike Reporting's
-  // exclude-toggle-when-included-by-default behavior.
-  if (headlinesTrackerFilter !== "communitytopics") {
-    items = items.filter(i => i.tracker !== "communitytopics");
-  }
+  // Tab counts are taken before the tab/tracker filters, from the same
+  // since-2025 base set, so each label matches what its tab lists.
+  const curatedKeys = headlinesCuratedKeys();
+  document.getElementById("feed-tab-curated").textContent =
+    "TAP entries (" + items.filter(i => curatedKeys.includes(i.tracker)).length + ")";
+  document.getElementById("feed-tab-reporting").textContent =
+    "Reporting feed, unverified (" + items.filter(i => i.tracker === "tracker").length + ")";
 
-  if (headlinesExcludeReporting) {
-    items = items.filter(i => i.tracker !== "tracker");
-  }
-
-  if (headlinesTrackerFilter) {
-    items = items.filter(i => i.tracker === headlinesTrackerFilter);
-    if (headlinesSubFilter) {
-      items = items.filter(i => (i.category || "Uncategorized") === headlinesSubFilter);
+  // Claim-checks never appear in either feed.
+  if (headlinesFeed === "reporting") {
+    items = items.filter(i => i.tracker === "tracker");
+  } else {
+    items = items.filter(i => curatedKeys.includes(i.tracker));
+    if (headlinesTrackerFilter) {
+      items = items.filter(i => i.tracker === headlinesTrackerFilter);
+      if (headlinesSubFilter) {
+        items = items.filter(i => (i.category || "Uncategorized") === headlinesSubFilter);
+      }
     }
   }
 
@@ -2822,8 +2855,6 @@ function renderHeadlinesView(appendOnly) {
     loadMoreRow.style.display = "none";
   }
 
-  const excludeBtn = document.getElementById("headlines-exclude-reporting-btn");
-  excludeBtn.classList.toggle("active", headlinesExcludeReporting);
 }
 
 /* Records/Headlines has no URL or history footprint of its own -- every
@@ -2840,7 +2871,7 @@ function captureHeadlinesSnapshot() {
   return {
     type: "headlines",
     sortValue: headlinesSortValue,
-    excludeReporting: headlinesExcludeReporting,
+    feed: headlinesFeed,
     trackerFilter: headlinesTrackerFilter,
     subFilter: headlinesSubFilter,
     renderLimit: headlinesRenderLimit,
@@ -2850,7 +2881,7 @@ function captureHeadlinesSnapshot() {
 
 function restoreHeadlinesSnapshot(snap) {
   headlinesSortValue = snap.sortValue;
-  headlinesExcludeReporting = snap.excludeReporting;
+  headlinesFeed = snap.feed === "reporting" ? "reporting" : "curated";
   headlinesTrackerFilter = snap.trackerFilter;
   headlinesSubFilter = snap.subFilter;
   headlinesRenderLimit = snap.renderLimit;
@@ -2872,13 +2903,16 @@ function renderHeadlinesControls() {
     '<option value="alpha">Alphabetical</option>';
   sortSel.value = headlinesSortValue;
 
-  // Claim-checks is a selectable option here (2026-09-18) even though
-  // it's excluded from "All databases" (see renderHeadlinesView()) --
-  // this dropdown lists every tracker that's *findable*, not every
-  // tracker that's in the default aggregate.
+  // Tab state: the selected tab, and the tracker filter (curated tab only,
+  // listing visible curated trackers).
+  const isReporting = headlinesFeed === "reporting";
+  document.getElementById("feed-tab-curated").setAttribute("aria-selected", String(!isReporting));
+  document.getElementById("feed-tab-reporting").setAttribute("aria-selected", String(isReporting));
   const trackerSel = document.getElementById("headlines-tracker-filter");
+  trackerSel.style.display = isReporting ? "none" : "";
+  if (!headlinesCuratedKeys().includes(headlinesTrackerFilter)) headlinesTrackerFilter = "";
   trackerSel.innerHTML = '<option value="">All databases</option>' +
-    visibleTrackerKeys(TRACKERS).map(key => '<option value="' + key + '">' + TRACKERS[key].label + '</option>').join("");
+    headlinesCuratedKeys().map(key => '<option value="' + key + '">' + TRACKERS[key].label + '</option>').join("");
   trackerSel.value = headlinesTrackerFilter;
 
   // The Records category subfilter (Corruption, Disinformation, etc., for
@@ -6497,21 +6531,9 @@ document.getElementById("headlines-subfilter").addEventListener("change", (e) =>
   headlinesRenderLimit = RENDER_STEP;
   renderHeadlinesView();
 });
-document.getElementById("headlines-exclude-reporting-btn").addEventListener("click", () => {
-  headlinesExcludeReporting = !headlinesExcludeReporting;
-  // Raw Reporting entries have no last_substantive_update at all, so
-  // "Recently updated first" is meaningless with them included (they'd just sort
-  // last, en masse, under "Newest first"'s own behavior anyway) -- but
-  // once they're excluded, the remaining curated entries are exactly the
-  // ones "Recently updated" was built for (SCHEMA.md's documented
-  // date_of_action tradeoff: a substantively-updated entry can carry an
-  // old leading event date and get buried under "Newest first"). Default
-  // to it on exclude, back to "Newest first" when reporting is re-included.
-  headlinesSortValue = headlinesExcludeReporting ? "updated-desc" : "date-desc";
-  document.getElementById("headlines-sort").value = headlinesSortValue;
-  headlinesRenderLimit = RENDER_STEP;
-  renderHeadlinesView();
-});
+// Enter and Space already fire click on a <button>, so these cover keyboard use.
+document.getElementById("feed-tab-curated").addEventListener("click", () => setHeadlinesFeed("curated"));
+document.getElementById("feed-tab-reporting").addEventListener("click", () => setHeadlinesFeed("reporting"));
 document.getElementById("headlines-load-more-btn").addEventListener("click", () => {
   headlinesRenderLimit += RENDER_STEP;
   renderHeadlinesView(/* appendOnly */ true);
