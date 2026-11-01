@@ -13,8 +13,8 @@ function extractFunction(source, name) {
 }
 
 const source = fs.readFileSync(path.join(__dirname, "..", "index.html"), "utf8");
-const headlineSortDate = (0, eval)(
-  `${extractFunction(source, "extract-first-date")}\n${extractFunction(source, "headline-sort-date")}\nheadlineSortDate;`
+const { headlineSortDate, futureSafeDate, todayDateNum } = (0, eval)(
+  `${extractFunction(source, "extract-first-date")}\n${extractFunction(source, "headline-sort-date")}\n({ headlineSortDate, futureSafeDate, todayDateNum });`
 );
 
 const TODAY = 20261101;
@@ -42,4 +42,18 @@ test("headlineSortDate keeps today's date (today is not the future)", () => {
 test("headlineSortDate keeps a future date when there is no date added to fall back on", () => {
   assert.equal(headlineSortDate({ date: "2026-12-31", trail: {} }, TODAY), "2026-12-31");
   assert.equal(headlineSortDate({ date: "2026-12-31" }, TODAY), "2026-12-31");
+});
+
+// Tracker tabs (Service Cuts' default order, every curated tab's "Most recent
+// activity") sort raw entries, so they use the same rule on the entry's own
+// date_of_action / date_added fields.
+test("futureSafeDate swaps a future event date for the date added", () => {
+  assert.equal(futureSafeDate("planned retirement 2026-12-31", "2026-10-28", TODAY), "2026-10-28");
+  assert.equal(futureSafeDate("2026-10-20", "2026-10-28", TODAY), "2026-10-20");
+  assert.equal(futureSafeDate("2026-12-31", null, TODAY), "2026-12-31");
+});
+
+test("todayDateNum is the local date in extractFirstDate's YYYYMMDD form", () => {
+  assert.equal(todayDateNum(new Date(2026, 10, 1, 23, 59)), 20261101);
+  assert.equal(todayDateNum(new Date(2027, 0, 9)), 20270109);
 });

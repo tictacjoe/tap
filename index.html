@@ -1997,11 +1997,18 @@ function extractFirstDate(str) {
    archive's "planned retirement 2026-12-31" -- the row falls back to the
    date TAP added it, so a scheduled event can't sit above today's news
    at the top of "Newest first" until it happens. todayNum is
-   extractFirstDate()'s YYYYMMDD number form. */
+   extractFirstDate()'s YYYYMMDD number form (todayDateNum()).
+   futureSafeDate() is the same rule on raw entry fields, used by the
+   tracker tabs' date sorts in renderEntries(). */
 /* headline-sort-date:start */
+function futureSafeDate(dateStr, addedStr, todayNum) {
+  return addedStr && extractFirstDate(dateStr) > todayNum ? addedStr : dateStr;
+}
 function headlineSortDate(item, todayNum) {
-  const added = item.trail && item.trail.dateAdded;
-  return added && extractFirstDate(item.date) > todayNum ? added : item.date;
+  return futureSafeDate(item.date, item.trail && item.trail.dateAdded, todayNum);
+}
+function todayDateNum(now = new Date()) {
+  return now.getFullYear() * 10000 + (now.getMonth() + 1) * 100 + now.getDate();
 }
 /* headline-sort-date:end */
 
@@ -2705,8 +2712,7 @@ function renderHeadlinesView(appendOnly) {
     }
   }
 
-  const now = new Date();
-  const todayNum = now.getFullYear() * 10000 + (now.getMonth() + 1) * 100 + now.getDate();
+  const todayNum = todayDateNum();
   items.forEach(i => { i.sortDate = headlineSortDate(i, todayNum); });
   items.sort((a, b) => {
     if (headlinesSortValue === "date-asc") return extractFirstDate(a.sortDate) - extractFirstDate(b.sortDate);
@@ -5798,11 +5804,22 @@ function renderEntries() {
   // dateField (date_of_action, last_verified, date, or date_submitted)
   // through extractFirstDate(), which handles both plain dates and
   // compound strings like "2025-03 (initial cuts) through 2026-04
-  // (ongoing)" that native Date.parse can't parse at all.
+  // (ongoing)" that native Date.parse can't parse at all. A dateField
+  // still in the future falls back to date_added (futureSafeDate()), the
+  // same rule Records uses. Keys are computed once per render, not per
+  // comparison.
+  const todayNum = todayDateNum();
+  const activityKeys = new Map();
+  const activityDate = e => {
+    if (!activityKeys.has(e)) {
+      activityKeys.set(e, extractFirstDate(futureSafeDate(e[cfg.dateField], cfg.dateAddedField && e[cfg.dateAddedField], todayNum)));
+    }
+    return activityKeys.get(e);
+  };
   if (sortValue === "added" && cfg.dateAddedField) {
     filtered.sort((a, b) => (b[cfg.dateAddedField] || "").localeCompare(a[cfg.dateAddedField] || ""));
   } else if (sortValue === "activity") {
-    filtered.sort((a, b) => extractFirstDate(b[cfg.dateField]) - extractFirstDate(a[cfg.dateField]));
+    filtered.sort((a, b) => activityDate(b) - activityDate(a));
   } else if (sortValue === "verified" && cfg.kind !== "tracker") {
     filtered.sort(compareByLastVerified);
   } else if (sortValue === "impact") {
@@ -5816,8 +5833,9 @@ function renderEntries() {
     // reverse-chronologically by date of action instead of impact
     // score, since this tracker updates frequently and recency is the
     // more useful default here. Impact score is still available as an
-    // explicit choice above.
-    filtered.sort((a, b) => extractFirstDate(b.date_of_action) - extractFirstDate(a.date_of_action));
+    // explicit choice above. A still-future date_of_action sorts by
+    // date_added instead (activityDate(), 2026-11-01).
+    filtered.sort((a, b) => activityDate(b) - activityDate(a));
   } else if (cfg.kind === "communitytopics") {
     // Default ordering: Claim-checks lists newest first (2026-10-31, Joe's
     // call) -- new submissions landed mid-list under the impact-score
