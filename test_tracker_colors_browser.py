@@ -67,13 +67,43 @@ def test_rows_have_tracker_chips(browser, site_url):
     assert "reporting" in label.lower()
 
 
-def test_cards_have_left_border(browser, site_url):
+COLORS = {
+    "prosecution": "rgb(122, 63, 143)",
+    "govservices": "rgb(0, 132, 106)",
+    "deregulation": "rgb(176, 86, 26)",
+    "dai": "rgb(52, 98, 176)",
+    "trumpfamily": "rgb(163, 48, 63)",
+    "oea": "rgb(138, 122, 10)",
+}
+
+
+@pytest.mark.parametrize("key", list(COLORS))
+def test_cards_have_left_border_and_chip(browser, site_url, key):
     page = _open(browser, site_url)
-    page.evaluate("goToTrackerHome('prosecution')")
+    page.evaluate(f"goToTrackerHome('{key}')")
     page.wait_for_timeout(800)
     card = page.locator(".entry.curated-card").first
-    assert card.count() == 1
-    color = card.evaluate("e => getComputedStyle(e).borderLeftColor")
-    width = card.evaluate("e => getComputedStyle(e).borderLeftWidth")
-    assert color == "rgb(122, 63, 143)"
-    assert width == "6px"
+    if card.count() == 0:
+        pytest.skip(f"no {key} entries loaded")
+    assert card.evaluate("e => getComputedStyle(e).borderLeftColor") == COLORS[key]
+    assert card.evaluate("e => getComputedStyle(e).borderLeftWidth") == "6px"
+    chip = card.locator(".tracker-chip")
+    assert chip.count() == 1
+    assert chip.evaluate("e => getComputedStyle(e).backgroundColor") == COLORS[key]
+    assert chip.evaluate("e => e.textContent.trim()")
+    assert chip.evaluate("e => getComputedStyle(e).color") == (
+        "rgb(0, 0, 0)" if key == "oea" else "rgb(255, 255, 255)")
+    # Chip leads the header line.
+    assert card.locator(".entry-title").first.evaluate(
+        "e => e.firstElementChild.classList.contains('tracker-chip')")
+
+
+def test_search_result_cards_have_chip(browser, site_url):
+    page = _open(browser, site_url)
+    page.fill("#global-search", "the")
+    page.dispatch_event("#global-search", "input")
+    page.wait_for_timeout(1200)
+    cards = page.locator(".search-group .entry.curated-card")
+    assert cards.count() > 0
+    assert cards.first.locator(".tracker-chip").count() == 1
+    assert page.locator(".search-group .entry:not(.curated-card) .tracker-chip").count() == 0

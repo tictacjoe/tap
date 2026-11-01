@@ -1147,6 +1147,19 @@
     padding: 0.1rem 0.4rem;
     line-height: 1.3;
   }
+  /* White on --trk-oea (#8a7a0a) is 4.31:1, under 4.5:1 at this size; black is ~4.87:1. */
+  .tracker-chip[style*="--trk-oea"] { color: #000; }
+  /* Outside a Records row the chip shows the medium label only. */
+  .tracker-chip .tracker-name-abbr { display: none; }
+  .entry-title > .tracker-chip {
+    font-family: ui-monospace, monospace;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    font-weight: normal;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+  }
   .headline-row-text {
     flex: 1 1 auto;
     min-width: 0;
@@ -4821,7 +4834,7 @@ function glanceActive(entry, cfg) {
   return !!(cfg && cfg.glanceEnabled && entry && isValidGlance(entry.glance));
 }
 
-/* opts: { hl, metaHtml, shareBtnHtml, hideWho }. hideWho is set inside
+/* opts: { hl, metaHtml, shareBtnHtml, hideWho, chipHtml }. hideWho is set inside
    "List by individual" groups, whose header already names the person. */
 function buildGlanceHeadHtml(entry, cfg, opts) {
   if (!glanceActive(entry, cfg)) return null;
@@ -4843,7 +4856,7 @@ function buildGlanceHeadHtml(entry, cfg, opts) {
   })();
   return '<div class="entry-head">' +
     '<div class="entry-title-block">' +
-      '<p class="entry-title glance-line">' + who + hl(g.what) + (opts.shareBtnHtml || "") + '</p>' +
+      '<p class="entry-title glance-line">' + (opts.chipHtml || "") + who + hl(g.what) + (opts.shareBtnHtml || "") + '</p>' +
       // "Harm status" (not "Certainty"): documented/projected/alleged are genuine
       // confidence levels, but averted means the harm never happened (blocked before
       // it took effect) -- an outcome, not a confidence level. "Harm status" reads
@@ -5315,7 +5328,8 @@ function buildEntryCard(entry, cfg, docketLabel, sourceLabel, term, useRegex, ca
   div.className = "entry";
   // Curated trackers get a tracker-colored left border (see .curated-card).
   const cardTrackerKey = cfg.trackerKey || cfg.kind;
-  if (trackerChipHtml(cardTrackerKey)) {
+  const cardChipHtml = trackerChipHtml(cardTrackerKey);
+  if (cardChipHtml) {
     div.classList.add("curated-card");
     div.style.setProperty("--trk", "var(--trk-" + cardTrackerKey + ")");
   }
@@ -5396,12 +5410,13 @@ function buildEntryCard(entry, cfg, docketLabel, sourceLabel, term, useRegex, ca
     hl,
     shareBtnHtml: shareBtnHtml + listenBtnHtml,
     hideWho: !!(cardOpts && cardOpts.hideWho),
+    chipHtml: cardChipHtml,
     metaHtml: glanceMetaHtml(entry, cfg, sourceLabel, hl),
   });
   const oldHead =
     '<div class="entry-head">' +
       '<div class="entry-title-block">' +
-        '<p class="entry-title"' + titleTooltipHtml + '>' + hl(title) + shareBtnHtml + listenBtnHtml + '</p>' +
+        '<p class="entry-title"' + titleTooltipHtml + '>' + cardChipHtml + hl(title) + shareBtnHtml + listenBtnHtml + '</p>' +
         '<div class="entry-meta">' + metaHtml + '</div>' +
       '</div>' +
     '</div>';
