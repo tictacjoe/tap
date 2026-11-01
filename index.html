@@ -1167,6 +1167,38 @@
     margin-right: 0.5rem;
     vertical-align: middle;
   }
+  /* Status pill (spec 5.6): outlined, colored text and border on the
+     card background, symbol plus words. Colors start from the spec's
+     mockup table, checked for WCAG text contrast against --paper-card
+     (#F7F8F2) and --paper (#EDEFE7): rev 5.67/5.22, ruled 7.81/7.19,
+     court 5.13/4.72, find 6.99/6.43, inv 6.46/5.94, none 5.42/4.99.
+     Unchallenged is darkened from the mockup's #7d776a (4.17:1, under
+     4.5:1 for this ~11px text) to #6b6558. */
+  .status-pill {
+    display: inline-block;
+    font-family: ui-monospace, monospace;
+    font-size: 0.7rem;
+    font-weight: normal;
+    letter-spacing: 0.02em;
+    line-height: 1.3;
+    padding: 0.05rem 0.45rem;
+    border: 1px solid currentColor;
+    border-radius: 999px;
+    background: transparent;
+    white-space: nowrap;
+    vertical-align: middle;
+    flex-shrink: 0;
+  }
+  .status-pill.s-rev { color: #4f6b2a; }
+  .status-pill.s-ruled { color: #8f2a1f; }
+  .status-pill.s-court { color: #9a5a00; }
+  .status-pill.s-find { color: #7a4a10; }
+  .status-pill.s-inv { color: #5a5a5a; }
+  .status-pill.s-none { color: #6b6558; border-style: dashed; }
+  /* Symbol-only pill on phone-width Records rows. */
+  .status-pill.compact { padding: 0.05rem 0.35rem; }
+  .entry-title > .status-pill { margin-right: 0.5rem; }
+  .oneliner-text > .status-pill { margin-right: 0.4rem; }
   .headline-row-text {
     flex: 1 1 auto;
     min-width: 0;
@@ -1703,6 +1735,7 @@
     <input type="text" id="search" placeholder="Search entries...">
     <button id="search-clear-btn" class="clear-search-btn" type="button" title="Clear search text">✕</button>
     <select id="filter"></select>
+    <select id="status-filter" aria-label="Filter by status" style="display:none"></select>
     <select id="sort-order"></select>
     <select id="group-mode"></select>
     <label class="regex-toggle" id="status-group-label" style="display:none"><input type="checkbox" id="status-group-toggle"> Group by status</label>
@@ -1719,6 +1752,7 @@
     <select id="headlines-sort"></select>
     <select id="headlines-tracker-filter"></select>
     <select id="headlines-subfilter"></select>
+    <select id="headlines-status-filter" aria-label="Filter by status" style="display:none"></select>
   </div>
   <div class="result-count" id="headlines-count"></div>
   <div id="headlines-view"></div>
@@ -1951,6 +1985,8 @@ function flattenTrackerPosts(posts) {
 let activeTracker = "headlines";
 let searchTerm = "";
 let filterValue = "";
+// Status dropdown (#status-filter, spec 5.6): a status_stage value or "".
+let statusStageFilter = "";
 let sortValue = "";
 
 /* default-group-mode:start */
@@ -2198,6 +2234,7 @@ function adaptDeregulationEntry(entry) {
     },
     date: entry.date_of_action || entry.date_added || entry.last_verified || null,
     tracker: "deregulation",
+    statusStage: entry.status_stage || null,
     category: entry.domain || null,
     id: entry.id || null,
   });
@@ -2229,6 +2266,7 @@ function adaptGovServicesEntry(entry) {
     },
     date: entry.date_of_action || entry.last_verified || entry.date_added || null,
     tracker: "govservices",
+    statusStage: entry.status_stage || null,
     category: entry.domain || null,
     id: entry.id || null,
   });
@@ -2449,6 +2487,7 @@ function adaptProsecutionEntry(entry) {
     },
     date: entry.date_of_action || entry.date_added || entry.last_verified || null,
     tracker: "prosecution",
+    statusStage: entry.status_stage || null,
     category: entry.offense_category || null,
     id: entry.id || null,
   });
@@ -2618,6 +2657,84 @@ function trackerChipHtml(key) {
 }
 /* tracker-colors:end */
 
+/* status-stage:start */
+/* Status pills (UX refresh spec 5.6). `status_stage` is a curated entry's
+   procedural stage, one of these six exact strings, in this order (the
+   first that fits wins, tap-data spec section 6). Each pill carries a
+   symbol plus words, so color is never the only cue; the colors live in
+   CSS (.status-pill.s-*). */
+const STATUS_STAGES = [
+  { name: "Reversed or withdrawn", symbol: "↺", cls: "s-rev" },
+  { name: "Court ruled", symbol: "⚖", cls: "s-ruled" },
+  { name: "In court", symbol: "⧗", cls: "s-court" },
+  { name: "Finding issued", symbol: "✎", cls: "s-find" },
+  { name: "Under investigation", symbol: "◔", cls: "s-inv" },
+  { name: "Unchallenged", symbol: "○", cls: "s-none" },
+];
+
+function statusStageInfo(stage) {
+  return STATUS_STAGES.find(s => s.name === stage) || null;
+}
+
+/* Pill markup for one stage; "" for a missing or unknown stage, so an
+   entry without the field never shows a pill and nothing ever falls back
+   to "Other/Unclassified". compact (phone-width rows) shows the symbol
+   only and keeps the stage name as aria-label and title. Stage names are
+   static strings from STATUS_STAGES, so no escaping is needed. */
+function statusPillHtml(stage, compact) {
+  const s = statusStageInfo(stage);
+  if (!s) return "";
+  if (compact) {
+    return '<span class="status-pill ' + s.cls + ' compact" role="img" aria-label="' + s.name +
+      '" title="' + s.name + '">' + s.symbol + '</span>';
+  }
+  return '<span class="status-pill ' + s.cls + '">' + s.symbol + ' ' + s.name + '</span>';
+}
+
+/* The staged-release gate: true only when every published entry of the
+   tracker has a valid status_stage (and the tracker is visible and has
+   entries). Until then the tracker shows no pills and no status filter,
+   and Cabinet-Level keeps its computed status_category text, filter and
+   "Group by status". `trackers` defaults to TRACKERS; tests pass their own. */
+function trackerHasStatusStage(key, trackers) {
+  const t = (trackers || TRACKERS)[key];
+  if (!t || t.hidden || !Array.isArray(t.data) || !t.data.length) return false;
+  return t.data.every(e => !!statusStageInfo(e && e.status_stage));
+}
+/* status-stage:end */
+
+/* trackerHasStatusStage() is evaluated once per tracker after the data
+   loads (loadAllData() calls this) and kept as TRACKERS[key].statusStageLive,
+   so the card, row and filter code reads one flag instead of rescanning a
+   tracker's entries per card. A tracker without the flag (including any
+   cfg a unit test builds) behaves exactly as before the pills existed. */
+function refreshStatusStageFlags() {
+  Object.keys(TRACKERS).forEach(k => { TRACKERS[k].statusStageLive = trackerHasStatusStage(k); });
+}
+
+/* Pill for a curated entry on a card or row: shown only once its whole
+   tracker has the field, so a half-backfilled tracker looks exactly as it
+   did before. */
+function entryStatusPillHtml(trackerKey, stage, compact) {
+  const t = TRACKERS[trackerKey];
+  return t && t.statusStageLive ? statusPillHtml(stage, compact) : "";
+}
+
+/* Cabinet-Level's main filter is status_category (computed by
+   classifyStatus()) until its entries all carry status_stage; then it
+   filters on status_stage instead. Every other tracker keeps its own
+   filterField and gets a separate status dropdown (#status-filter). */
+function effectiveFilterField(cfg) {
+  if (cfg.kind === "prosecution" && cfg.statusStageLive) return "status_stage";
+  return cfg.filterField;
+}
+
+/* Records rows at phone width use the symbol-only pill. Read when a row
+   is built, the same moment fitHeadlineRowText() measures it. */
+function useCompactPills() {
+  return !!(window.matchMedia && window.matchMedia("(max-width: 480px)").matches);
+}
+
 function buildHeadlineRow(item, displayDate) {
   const row = document.createElement("div");
   row.className = "headline-entry";
@@ -2711,6 +2828,12 @@ function buildHeadlineRow(item, displayDate) {
   });
   line.insertBefore(dbBtn, textSpan);
 
+  // Status pill right after the chip, once this tracker's entries all
+  // carry status_stage; symbol-only at phone width. fitHeadlineRowText()
+  // leaves room for it.
+  const pillHtml = entryStatusPillHtml(item.tracker, item.statusStage, useCompactPills());
+  if (pillHtml) textSpan.insertAdjacentHTML("beforebegin", pillHtml);
+
   const trailBtn = document.createElement("button");
   trailBtn.type = "button";
   trailBtn.className = "share-link-btn headline-trail-btn";
@@ -2738,14 +2861,35 @@ function buildHeadlineRow(item, displayDate) {
    on a spacious monitor), and each row's date/tracker tag eats a
    different amount of the row before the headline span even starts, so
    the true per-character cost has to be measured, not guessed. */
-function estimateFitChars(el, text) {
+function estimateFitChars(el, text, width) {
   const canvas = estimateFitChars._canvas || (estimateFitChars._canvas = document.createElement("canvas"));
   const ctx = canvas.getContext("2d");
   const style = getComputedStyle(el);
   ctx.font = [style.fontStyle, style.fontWeight, style.fontSize, style.fontFamily].join(" ");
   const sample = text.slice(0, 120) || text;
   const avgCharWidth = ctx.measureText(sample).width / sample.length || 8;
-  return Math.max(15, Math.floor(el.clientWidth / avgCharWidth));
+  return Math.max(15, Math.floor((width ?? el.clientWidth) / avgCharWidth));
+}
+
+/* Width left for the headline text: the row's content width minus every
+   other rendered item in it (date, tracker chip, status pill, buttons)
+   and the flex gaps between them. The text span is a min-width:0 flex
+   item, so its own clientWidth normally equals this already; taking the
+   smaller of the two keeps the budget right even if the span is ever laid
+   out wider than the room actually left after the chip and pill. */
+function headlineTextAvailWidth(el) {
+  const row = el.parentElement;
+  if (!row) return el.clientWidth;
+  const cs = getComputedStyle(row);
+  const gap = parseFloat(cs.columnGap) || 0;
+  let avail = row.clientWidth - (parseFloat(cs.paddingLeft) || 0) - (parseFloat(cs.paddingRight) || 0);
+  for (const child of row.children) {
+    if (child === el || !child.getClientRects().length) continue;
+    avail -= child.getBoundingClientRect().width + gap;
+  }
+  // Sub-pixel item widths: within 1px of the span's own width counts as equal.
+  const rounded = Math.ceil(avail);
+  return rounded >= el.clientWidth - 1 ? el.clientWidth : Math.max(0, rounded);
 }
 
 /* Shows the full headline whenever it already fits; only shortens it via
@@ -2759,17 +2903,21 @@ function estimateFitChars(el, text) {
 function fitHeadlineRowText(el) {
   if (el.scrollWidth <= el.clientWidth) return;
   const full = el.dataset.fullHeadline || el.textContent;
-  const estimate = estimateFitChars(el, full);
+  // Subtract the chip and pill (and the row's other items) first.
+  const avail = headlineTextAvailWidth(el);
+  const estimate = estimateFitChars(el, full, avail);
   const budgets = [estimate, Math.floor(estimate * 0.8), Math.floor(estimate * 0.6), Math.floor(estimate * 0.4)];
   for (const budget of budgets) {
     el.textContent = packHeadline(full, budget);
-    if (el.scrollWidth <= el.clientWidth) return;
+    if (el.scrollWidth <= avail) return;
   }
 }
 
 let headlinesSortValue = "date-desc";
 let headlinesTrackerFilter = "";
 let headlinesSubFilter = "";
+// TAP entries tab status dropdown (#headlines-status-filter, spec 5.6).
+let headlinesStatusFilter = "";
 // Which Records feed is showing: "curated" (TAP's own trackers) or
 // "reporting" (the unverified third-party Reporting archive).
 let headlinesFeed = "curated";
@@ -2788,12 +2936,20 @@ function headlinesCuratedKeys() {
   return visibleTrackerKeys(TRACKERS).filter(k => k !== "tracker" && k !== "communitytopics");
 }
 
+/* The TAP entries tab's status dropdown shows once every visible curated
+   tracker carries status_stage (spec 5.6); until then it stays hidden. */
+function headlinesStatusFilterOn() {
+  const keys = headlinesCuratedKeys();
+  return keys.length > 0 && keys.every(k => TRACKERS[k].statusStageLive);
+}
+
 /* The one function that switches the Records feed tab ("curated" or
    "reporting"). Resets the tracker filter, sort and paging, then redraws. */
 function setHeadlinesFeed(feed) {
   headlinesFeed = feed === "reporting" ? "reporting" : "curated";
   headlinesTrackerFilter = "";
   headlinesSubFilter = "";
+  headlinesStatusFilter = "";
   headlinesSortValue = "date-desc";
   headlinesRenderLimit = RENDER_STEP;
   renderHeadlinesControls();
@@ -2840,6 +2996,9 @@ function renderHeadlinesView(appendOnly) {
       if (headlinesSubFilter) {
         items = items.filter(i => (i.category || "Uncategorized") === headlinesSubFilter);
       }
+    }
+    if (headlinesStatusFilter && headlinesStatusFilterOn()) {
+      items = items.filter(i => i.statusStage === headlinesStatusFilter);
     }
   }
 
@@ -2929,6 +3088,7 @@ function captureHeadlinesSnapshot() {
     feed: headlinesFeed,
     trackerFilter: headlinesTrackerFilter,
     subFilter: headlinesSubFilter,
+    statusFilter: headlinesStatusFilter,
     renderLimit: headlinesRenderLimit,
     scrollY: window.scrollY,
   };
@@ -2939,6 +3099,7 @@ function restoreHeadlinesSnapshot(snap) {
   headlinesFeed = snap.feed === "reporting" ? "reporting" : "curated";
   headlinesTrackerFilter = snap.trackerFilter;
   headlinesSubFilter = snap.subFilter;
+  headlinesStatusFilter = snap.statusFilter || "";
   headlinesRenderLimit = snap.renderLimit;
   activeTracker = "headlines";
   document.getElementById("global-search").value = "";
@@ -2982,6 +3143,19 @@ function renderHeadlinesControls() {
   subSel.style.display = "none";
   subSel.innerHTML = "";
   headlinesSubFilter = "";
+
+  // Status dropdown: the curated tab's third control, once every visible
+  // curated tracker carries status_stage.
+  const statusSel = document.getElementById("headlines-status-filter");
+  const showStatus = !isReporting && headlinesStatusFilterOn();
+  statusSel.style.display = showStatus ? "" : "none";
+  if (showStatus) {
+    statusSel.innerHTML = statusStageOptionsHtml("All statuses");
+    statusSel.value = headlinesStatusFilter;
+  } else {
+    statusSel.innerHTML = "";
+    headlinesStatusFilter = "";
+  }
 }
 
 /* Extracts the largest numeric value found in a string like
@@ -4613,7 +4787,8 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
   const glanceShowing = glanceActive(entry, cfg);
   const asideHtml =
     (glanceShowing ? '' : buildViolationConcernCardHtml(entry, hl)) +
-    (glanceShowing ? '' : '<div class="field-group entry-aside-card"><div class="field-label">Status Stage</div><div class="field-value">' + hl(entry.status_category) + '</div></div>') +
+    // Computed "Status Stage" card until the pill replaces it (spec 5.6).
+    (glanceShowing || cfg.statusStageLive ? '' : '<div class="field-group entry-aside-card"><div class="field-label">Status Stage</div><div class="field-value">' + hl(entry.status_category) + '</div></div>') +
     buildProsecutionSourcesCardHtml(entry);
   // collapsible=true here only (Joe's call, 2026-09-22): Deregulation and
   // Government Service Redirection's own calls below don't pass it, so
@@ -4841,7 +5016,8 @@ function buildGlanceHeadHtml(entry, cfg, opts) {
     const v = violationConcernValue(entry);
     const caveat = v.isConcern ? ' <em>(not alleged as a legal violation)</em>' : '';
     return '<span class="glance-harm-item"><span class="glance-harm-label">Violation/Concern Type:</span> ' + hl(v.text) + caveat + '</span>' +
-      '<span class="glance-harm-item"><span class="glance-harm-label">Status Stage:</span> ' + hl(entry.status_category) + '</span>';
+      // Computed "Status Stage" text until the pill replaces it (spec 5.6).
+      (cfg.statusStageLive ? '' : '<span class="glance-harm-item"><span class="glance-harm-label">Status Stage:</span> ' + hl(entry.status_category) + '</span>');
   })();
   return '<div class="entry-head">' +
     '<div class="entry-title-block">' +
@@ -5318,6 +5494,9 @@ function buildEntryCard(entry, cfg, docketLabel, sourceLabel, term, useRegex, ca
   // Curated trackers get a tracker-colored left border (see .curated-card).
   const cardTrackerKey = cfg.trackerKey || cfg.kind;
   const cardChipHtml = trackerChipHtml(cardTrackerKey);
+  // Status pill right after the chip (spec 5.6), once the whole tracker
+  // carries status_stage; "" until then and for non-curated cards.
+  const cardPillHtml = cardChipHtml ? entryStatusPillHtml(cardTrackerKey, entry.status_stage, false) : "";
   if (cardChipHtml) {
     div.classList.add("curated-card");
     div.style.setProperty("--trk", "var(--trk-" + cardTrackerKey + ")");
@@ -5375,7 +5554,8 @@ function buildEntryCard(entry, cfg, docketLabel, sourceLabel, term, useRegex, ca
                '<span>' + hl(truncate(entry.summary || "", 100)) + '</span>';
   } else {
     metaHtml += '<span class="meta-field"><span class="meta-field-label">Violation/Concern Type</span><span class="meta-field-value">' + hl(violationConcernValue(entry).text) + '</span></span>' +
-               '<span class="meta-field"><span class="meta-field-label">Status Stage</span><span class="meta-field-value">' + hl(entry.status_category) + '</span></span>' +
+               // Computed "Status Stage" text until the pill replaces it (spec 5.6).
+               (cfg.statusStageLive ? '' : '<span class="meta-field"><span class="meta-field-label">Status Stage</span><span class="meta-field-value">' + hl(entry.status_category) + '</span></span>') +
                (entry.date_of_action ? '<span>' + hl(entry.date_of_action) + '</span>' : '') +
                '<span>verified ' + (entry.last_verified || "") + '</span>';
   }
@@ -5399,13 +5579,13 @@ function buildEntryCard(entry, cfg, docketLabel, sourceLabel, term, useRegex, ca
     hl,
     shareBtnHtml: shareBtnHtml + listenBtnHtml,
     hideWho: !!(cardOpts && cardOpts.hideWho),
-    chipHtml: cardChipHtml,
+    chipHtml: cardChipHtml + cardPillHtml,
     metaHtml: glanceMetaHtml(entry, cfg, sourceLabel, hl),
   });
   const oldHead =
     '<div class="entry-head">' +
       '<div class="entry-title-block">' +
-        '<p class="entry-title"' + titleTooltipHtml + '>' + cardChipHtml + hl(title) + shareBtnHtml + listenBtnHtml + '</p>' +
+        '<p class="entry-title"' + titleTooltipHtml + '>' + cardChipHtml + cardPillHtml + hl(title) + shareBtnHtml + listenBtnHtml + '</p>' +
         '<div class="entry-meta">' + metaHtml + '</div>' +
       '</div>' +
     '</div>';
@@ -5598,6 +5778,7 @@ function wireEvidenceDrawers(container, entry, cfg, term, useRegex) {
 function switchToTracker(key) {
   activeTracker = key;
   filterValue = "";
+  statusStageFilter = "";
   sortValue = "";
   groupMode = defaultGroupModeFor(key);
   statusGroupOn = false;
@@ -5657,10 +5838,36 @@ function pluralize(word) {
   return word + "s";
 }
 
+/* Options for a status_stage dropdown: the six stages in STATUS_STAGES
+   order, all always listed (not only the ones present). */
+function statusStageOptionsHtml(allLabel) {
+  return '<option value="">' + allLabel + '</option>' +
+    STATUS_STAGES.map(s => '<option value="' + s.name + '">' + s.name + '</option>').join("");
+}
+
+/* #status-filter: shown on a curated tracker once all its entries carry
+   status_stage, unless the tracker's main filter already is status_stage
+   (Cabinet-Level, see effectiveFilterField()). */
+function renderStatusFilter(cfg) {
+  const sel = document.getElementById("status-filter");
+  const show = !!cfg.statusStageLive && effectiveFilterField(cfg) !== "status_stage";
+  sel.style.display = show ? "" : "none";
+  if (!show) { sel.innerHTML = ""; statusStageFilter = ""; return; }
+  sel.innerHTML = statusStageOptionsHtml("All statuses");
+  sel.value = statusStageFilter;
+}
+
 function renderFilterOptions(cfg) {
+  renderStatusFilter(cfg);
   const sel = document.getElementById("filter");
-  if (!cfg.filterField) { sel.style.display = "none"; return; }
+  const field = effectiveFilterField(cfg);
+  if (!field) { sel.style.display = "none"; return; }
   sel.style.display = "";
+  if (field === "status_stage") {
+    sel.innerHTML = statusStageOptionsHtml("all " + pluralize(cfg.filterLabel));
+    sel.value = filterValue;
+    return;
+  }
   let values;
   if (cfg.kind === "tracker") {
     // Curated, fixed order -- not derived from raw data, since raw
@@ -5839,6 +6046,19 @@ function statusGroupKey(entry) {
   return entry.status_category || "Uncategorized";
 }
 
+/* Once every Cabinet-Level entry carries status_stage (spec 5.6), "Group
+   by status" groups on it instead, in STATUS_STAGES order. */
+function statusStageGroupKey(entry) {
+  return entry.status_stage;
+}
+function sortGroupsByStatusStage(groupEntries) {
+  const rank = name => {
+    const i = STATUS_STAGES.findIndex(s => s.name === name);
+    return i === -1 ? STATUS_STAGES.length : i;
+  };
+  return groupEntries.sort((a, b) => rank(a[0]) - rank(b[0]));
+}
+
 /* Group order for "List by individual": entry count descending, ties
    broken alphabetically, per Joe's call. */
 function sortGroupsByCount(groupEntries) {
@@ -5931,8 +6151,9 @@ function renderEntries() {
     // the tab for seconds on a slow machine every time Records opened an
     // entry (2026-11-01).
     const matchesSearch = !searchTerm || matchesTerm(visibleSearchText(e, cfg), searchTerm, false);
-    const matchesFilter = !filterValue || filterBaseValue(e[cfg.filterField]) === filterValue;
-    return matchesSearch && matchesFilter;
+    const matchesFilter = !filterValue || filterBaseValue(e[effectiveFilterField(cfg)]) === filterValue;
+    const matchesStatus = !statusStageFilter || e.status_stage === statusStageFilter;
+    return matchesSearch && matchesFilter && matchesStatus;
   });
 
   // An explicit sort choice overrides each tracker's default ordering
@@ -6015,7 +6236,8 @@ function renderEntries() {
   }
 
   if (cfg.kind === "prosecution" && statusGroupOn) {
-    renderGroupedEntries(toRender, cfg, container, statusGroupKey, sortGroupsByStatusRank);
+    if (cfg.statusStageLive) renderGroupedEntries(toRender, cfg, container, statusStageGroupKey, sortGroupsByStatusStage);
+    else renderGroupedEntries(toRender, cfg, container, statusGroupKey, sortGroupsByStatusRank);
     return;
   }
 
@@ -6054,6 +6276,7 @@ function jumpToReportingSearch(term) {
   document.getElementById("global-search").value = "";
   activeTracker = "tracker";
   filterValue = "";
+  statusStageFilter = "";
   sortValue = "";
   groupMode = "";
   statusGroupOn = false;
@@ -6123,6 +6346,7 @@ function goToTrackerHome(key) {
   document.getElementById("global-search").value = "";
   activeTracker = key;
   filterValue = "";
+  statusStageFilter = "";
   sortValue = "";
   groupMode = defaultGroupModeFor(key);
   statusGroupOn = false;
@@ -6410,6 +6634,7 @@ function renderSearchMatches(section, matches, term, useRegex, useOneLiners) {
     row.innerHTML =
       '<span class="oneliner-caret">▸</span>' +
       '<span class="oneliner-text"><span class="source-tag">' + m.sourceLabel + '</span>' +
+      entryStatusPillHtml(m.cfg.trackerKey || m.cfg.kind, m.entry.status_stage, false) +
       highlightMatches(oneLiner.line, term, useRegex) +
       (oneLiner.figure ? ' <span class="oneliner-figure' + (oneLiner.figureKind ? ' oneliner-figure-' + oneLiner.figureKind : '') + '">' + highlightMatches(oneLiner.figure, term, useRegex) + '</span>' : '') +
       '</span>';
@@ -6600,6 +6825,10 @@ document.getElementById("filter").addEventListener("change", (e) => {
   filterValue = e.target.value;
   renderEntries();
 });
+document.getElementById("status-filter").addEventListener("change", (e) => {
+  statusStageFilter = e.target.value;
+  renderEntries();
+});
 document.getElementById("sort-order").addEventListener("change", (e) => {
   sortValue = e.target.value;
   renderEntries();
@@ -6618,6 +6847,11 @@ document.getElementById("headlines-tracker-filter").addEventListener("change", (
   headlinesSubFilter = "";
   headlinesRenderLimit = RENDER_STEP;
   renderHeadlinesControls();
+  renderHeadlinesView();
+});
+document.getElementById("headlines-status-filter").addEventListener("change", (e) => {
+  headlinesStatusFilter = e.target.value;
+  headlinesRenderLimit = RENDER_STEP;
   renderHeadlinesView();
 });
 document.getElementById("headlines-subfilter").addEventListener("change", (e) => {
@@ -6803,10 +7037,12 @@ document.getElementById("start-over-btn").addEventListener("click", () => {
   activeTracker = "headlines";
   headlinesFeed = "curated";
   headlinesTrackerFilter = "";
+  headlinesStatusFilter = "";
   headlinesSortValue = "date-desc";
   headlinesRenderLimit = RENDER_STEP;
   searchTerm = "";
   filterValue = "";
+  statusStageFilter = "";
   sortValue = "";
   groupMode = "";
   statusGroupOn = false;
@@ -6980,6 +7216,9 @@ async function loadAllData() {
     } catch (e) {}
     history.replaceState(null, "", location.pathname + location.search);
   }
+
+  // Status pills and status filters switch on per tracker (spec 5.6).
+  refreshStatusStageFlags();
 
   allDataLoaded = true;
   if (!browseBackdrop.hidden) openBrowseModal();

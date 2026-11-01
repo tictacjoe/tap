@@ -28,6 +28,7 @@ its Chromium build is not installed.
 
 import functools
 import http.server
+import json
 import pathlib
 import threading
 
@@ -57,21 +58,29 @@ def site_url():
 
 
 @pytest.fixture(scope="module")
-def phone_page(site_url):
+def phone_browser():
+    """One Chromium for the module (Playwright's sync API allows only one
+    running instance per thread)."""
     with sync_api.sync_playwright() as playwright:
         try:
             browser = playwright.chromium.launch()
         except Exception as exc:  # Chromium build not installed
             pytest.skip(f"Chromium not available for Playwright: {exc}")
-        context = browser.new_context(
-            viewport={"width": PHONE_WIDTH, "height": PHONE_HEIGHT},
-            device_scale_factor=3, is_mobile=True, has_touch=True,
-        )
-        page = context.new_page()
-        page.goto(site_url, wait_until="networkidle")
-        page.wait_for_timeout(1500)  # let the tab select and first render settle
-        yield page
+        yield browser
         browser.close()
+
+
+@pytest.fixture(scope="module")
+def phone_page(site_url, phone_browser):
+    context = phone_browser.new_context(
+        viewport={"width": PHONE_WIDTH, "height": PHONE_HEIGHT},
+        device_scale_factor=3, is_mobile=True, has_touch=True,
+    )
+    page = context.new_page()
+    page.goto(site_url, wait_until="networkidle")
+    page.wait_for_timeout(1500)  # let the tab select and first render settle
+    yield page
+    context.close()
 
 
 _MEASURE = "() => ({innerWidth: window.innerWidth, scrollWidth: document.documentElement.scrollWidth})"
@@ -99,3 +108,69 @@ def test_no_view_is_wider_than_the_phone(phone_page):
             too_wide[label] = measured
 
     assert not too_wide, f"views wider than {PHONE_WIDTH}px: {too_wide}"
+
+
+# Status pills (UX refresh spec 5.6, Review Focus 4): with `status_stage`
+# routed into every curated data file, Records rows carry a pill after the
+# tracker chip. At phone width the pill shrinks to its symbol (the stage name
+# stays as aria-label and title), and no row or view may overflow.
+_CURATED_FILES = [
+    "prosecution.json", "deregulation.json", "government-services.json",
+    "oea.json", "trumpfamily.json", "dai.json",
+]
+PILL_PHONE_WIDTH = 400
+
+
+def _fulfill_with(body):
+    # A one-argument handler: Playwright passes (route, request) to a handler
+    # that takes two parameters, so a default-argument lambda would get the
+    # request as its body.
+    return lambda route: route.fulfill(body=body, content_type="application/json")
+
+
+def _inject_status_stage(page, stage="Court ruled"):
+    data_dir = pathlib.Path(__file__).parent / "data"
+    for name in _CURATED_FILES:
+        entries = json.loads((data_dir / name).read_text(encoding="utf-8"))
+        for entry in entries:
+            entry["status_stage"] = stage
+        page.route("**/data/" + name, _fulfill_with(json.dumps(entries)))
+
+
+def test_curated_feed_with_compact_pills_fits_the_phone(site_url, phone_browser):
+    context = phone_browser.new_context(
+        viewport={"width": PILL_PHONE_WIDTH, "height": PHONE_HEIGHT},
+        device_scale_factor=3, is_mobile=True, has_touch=True,
+    )
+    try:
+        page = context.new_page()
+        _inject_status_stage(page)
+        page.goto(site_url, wait_until="networkidle")
+        page.wait_for_timeout(1500)
+
+        pills = page.eval_on_selector_all(
+            "#headlines-view .headline-entry .status-pill",
+            "els => els.map(e => [e.textContent.trim(), e.getAttribute('aria-label')])")
+        assert pills, "expected compact pills on the curated feed rows"
+        assert all(p == ["⚖", "Court ruled"] for p in pills), pills[:3]
+
+        measured = page.evaluate(_MEASURE)
+        assert measured == {"innerWidth": PILL_PHONE_WIDTH, "scrollWidth": PILL_PHONE_WIDTH}, measured
+        overflowing = page.eval_on_selector_all(
+            "#headlines-view .headline-row",
+            "els => els.filter(r => r.scrollWidth > r.clientWidth"
+            " || r.getBoundingClientRect().right > window.innerWidth + 0.5).length")
+        assert overflowing == 0
+
+        # Every view, with pills on the cards too.
+        views = page.evaluate("() => [...document.querySelectorAll('#tabs option')].map(o => o.value)")
+        too_wide = {}
+        for value in views:
+            page.evaluate(_SELECT_VIEW, value)
+            page.wait_for_timeout(900)
+            m = page.evaluate(_MEASURE)
+            if m["innerWidth"] != PILL_PHONE_WIDTH or m["scrollWidth"] != PILL_PHONE_WIDTH:
+                too_wide[value] = m
+        assert not too_wide, f"views wider than {PILL_PHONE_WIDTH}px: {too_wide}"
+    finally:
+        context.close()
