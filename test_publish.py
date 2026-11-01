@@ -1,6 +1,7 @@
 import json
+from datetime import date
 
-from publish import publish_json_entries
+from publish import publish_json_entries, write_site_meta
 
 
 def test_publish_json_entries_preserves_section_summaries(tmp_path):
@@ -401,3 +402,16 @@ def test_publish_main_has_a_dai_block():
     text = (Path(__file__).parent / "publish.py").read_text(encoding="utf-8")
     assert 'working / "dai" / "entries"' in text and 'site / "data" / "dai.json"' in text
     assert 'TIMELINE_FIELDS["dai"]' in text
+
+
+def test_write_site_meta_writes_iso_date(tmp_path):
+    dest = tmp_path / "site_meta.json"
+    result = write_site_meta(dest, date(2026, 11, 1))
+    assert result == {"updated": "2026-11-01"}
+    assert json.loads(dest.read_text()) == {"updated": "2026-11-01"}
+
+
+def test_write_site_meta_dry_run_writes_nothing(tmp_path):
+    dest = tmp_path / "site_meta.json"
+    write_site_meta(dest, date(2026, 11, 1), dry_run=True)
+    assert not dest.exists()

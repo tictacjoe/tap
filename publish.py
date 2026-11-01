@@ -44,6 +44,7 @@ Usage:
 import json
 import sys
 import argparse
+from datetime import date
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -216,6 +217,15 @@ def moved_targets_hidden(working, site):
         return set()
     targets = {info["to"] for info in json.loads(path.read_text(encoding="utf-8")).values()}
     return targets & hidden_trackers.site_hidden_trackers(Path(site) / "index.html")
+
+
+def write_site_meta(dest_file: Path, today: date, dry_run: bool = False) -> dict:
+    """Write {"updated": "YYYY-MM-DD"} so the page can show a site update date."""
+    meta = {"updated": today.isoformat()}
+    if not dry_run:
+        dest_file.parent.mkdir(parents=True, exist_ok=True)
+        dest_file.write_text(json.dumps(meta))
+    return meta
 
 
 def main():
@@ -399,6 +409,13 @@ def main():
     tracker_src = working / "tracker" / "output" / "posts.json"
     count = publish_tracker(tracker_src, site / "data" / "tracker.json", dry_run=args.dry_run)
     print(f"  {count} posts published (no per-entry exclude list applied)")
+    print()
+
+    # --- site meta ---
+    print("=== site meta ===")
+    meta = write_site_meta(site / "data" / "site_meta.json", date.today(),
+                           dry_run=args.dry_run)
+    print(f"  updated {meta['updated']}")
     print()
 
     print("---")
