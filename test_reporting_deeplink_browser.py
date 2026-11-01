@@ -152,6 +152,8 @@ def test_a_headlines_jump_to_an_old_reporting_row_opens_it_and_back_forward_repl
     page, errors = _goto(browser, site_url, "")  # the plain page; Headlines is reached from there
     page.evaluate("selectDatabaseTab('headlines')")
     page.wait_for_timeout(800)
+    page.locator("#feed-tab-reporting").click()  # Reporting rows live on their own Records tab now
+    page.wait_for_timeout(500)
     for _ in range(15):
         more = page.locator("#headlines-load-more-btn")
         if not more.is_visible():
