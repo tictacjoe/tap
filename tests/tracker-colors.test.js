@@ -44,5 +44,5 @@ test("trackerChipHtml carries the color var and the tracker name as text", () =>
   const html = trackerChipHtml("dai");
   assert.ok(html.includes("var(--trk-dai)"));
   assert.ok(html.includes("tracker-chip"));
-  assert.ok(html.includes("Enforcement"));
+  assert.ok(html.includes("DHS and ICE"));
 });
