@@ -115,3 +115,18 @@ test("CLA one-liner shows status_stage once live", () => {
   const off = api.oneLinerFor(entry, { kind: "prosecution" }).line;
   assert.equal(off, "Jane Example \u2014 Alleged: Abuse");
 });
+
+test("visibleSearchText: status_stage is searchable once live, haystack unchanged otherwise", () => {
+  const cla = { official: "Jane Example", status_category: "Alleged", status_stage: "In court" };
+  const claLive = api.visibleSearchText(cla, { kind: "prosecution", titleField: "official", statusStageLive: true });
+  assert.ok(claLive.includes("In court"));
+  assert.ok(!claLive.includes("Alleged"));
+  const claOff = api.visibleSearchText(cla, { kind: "prosecution", titleField: "official" });
+  assert.ok(claOff.includes("Alleged"));
+  assert.ok(!claOff.includes("In court"));
+
+  const gsr = { title: "A title", status_stage: "Court ruled" };
+  const gsrCfg = { kind: "govservices", titleField: "title" };
+  assert.ok(api.visibleSearchText(gsr, Object.assign({}, gsrCfg, { statusStageLive: true })).includes("Court ruled"));
+  assert.ok(!api.visibleSearchText(gsr, gsrCfg).includes("Court ruled"));
+});

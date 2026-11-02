@@ -4020,6 +4020,10 @@ function visibleSearchText(entry, cfg) {
   if (glanceActive(entry, cfg)) {
     parts.push(entry.glance.who, entry.glance.what, entry.glance.harm.who, GLANCE_HARM_LABELS[entry.glance.harm.kind]);
   }
+  // Once a non-CLA tracker is live its status pill is visible, so the stage
+  // is searchable; not live, the haystack is unchanged. (Cabinet-Level
+  // swaps status_category for the stage via stageOrCategory below.)
+  if (cfg.kind !== "prosecution" && cfg.statusStageLive) parts.push(entry.status_stage);
   if (cfg.kind === "deregulation") {
     parts.push(
       entry.agency, entry.domain, entry.status, entry.date_of_action, entry.last_verified,
@@ -4035,7 +4039,7 @@ function visibleSearchText(entry, cfg) {
     (entry.sources || []).forEach(s => parts.push(s.name));
   } else if (cfg.kind === "prosecution") {
     parts.push(
-      entry.offense_category, entry.offense_category_raw, entry.status_category, entry.status,
+      entry.offense_category, entry.offense_category_raw, stageOrCategory(entry, cfg), entry.status,
       entry.concern_type,
       entry.date_of_action, entry.last_verified,
       entry.section_summaries?.incident_summary, entry.section_summaries?.confidence_note,
