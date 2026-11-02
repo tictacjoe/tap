@@ -2701,6 +2701,14 @@ function trackerHasStatusStage(key, trackers) {
   if (!t || t.hidden || !Array.isArray(t.data) || !t.data.length) return false;
   return t.data.every(e => !!statusStageInfo(e && e.status_stage));
 }
+
+/* Which status text to show for a curated entry. Once the entry's tracker
+   is live (cfg.statusStageLive, see trackerHasStatusStage) that is the
+   curated `status_stage`; before then it is the computed `status_category`
+   exactly as the site always showed it. */
+function stageOrCategory(entry, cfg) {
+  return cfg && cfg.statusStageLive ? entry.status_stage : entry.status_category;
+}
 /* status-stage:end */
 
 /* trackerHasStatusStage() is evaluated once per tracker after the data
@@ -2732,7 +2740,7 @@ function effectiveFilterField(cfg) {
 /* Records rows at phone width use the symbol-only pill. Read when a row
    is built, the same moment fitHeadlineRowText() measures it. */
 function useCompactPills() {
-  return !!(window.matchMedia && window.matchMedia("(max-width: 480px)").matches);
+  return !!(window.matchMedia && window.matchMedia("(max-width: 600px)").matches);
 }
 
 function buildHeadlineRow(item, displayDate) {
@@ -3944,7 +3952,7 @@ function oneLinerBase(entry, cfg) {
   }
   if (cfg.kind === "prosecution") {
     const tag = entry.contested ? " [CONTESTED]" : "";
-    return { line: entry.official + " \u2014 " + entry.status_category + ": " + entry.offense_category + tag, figure: null };
+    return { line: entry.official + " \u2014 " + stageOrCategory(entry, cfg) + ": " + entry.offense_category + tag, figure: null };
   }
   if (cfg.kind === "tracker") {
     return { line: (entry.date || "") + " " + truncate(entry.what_happened, 150), figure: null };
@@ -5222,10 +5230,15 @@ function buildListenScript(entry, cfg) {
     // they are TAP's allegation-vs-finding words, so they must be heard.
     if (isCla) {
       if (vText) intro += " Violation or concern type: " + listenSentence(vText);
-      if (entry.status_category) intro += " Status stage: " + listenSentence(say(entry.status_category));
+      if (stageOrCategory(entry, cfg)) intro += " Status stage: " + listenSentence(say(stageOrCategory(entry, cfg)));
     }
   } else if (entry[cfg.titleField]) {
     intro += " " + listenSentence(say(entry[cfg.titleField]));
+  }
+  // Every other tracker shows the stage as a pill once it is live, so say
+  // it too; before go-live nothing is spoken (as before).
+  if (!isCla && cfg.statusStageLive && entry.status_stage) {
+    intro += " Status stage: " + listenSentence(say(entry.status_stage));
   }
   const sections = [{ label: "At a glance", text: intro }];
 
@@ -5246,7 +5259,7 @@ function buildListenScript(entry, cfg) {
       .concat(entry.narrative_combined ? timelineSpeech(entry, "status") : [])));
     if (!glance) {
       sections.push(section("Violation or concern type", listenSentence(vText)));
-      sections.push(section("Status stage", listenSentence(say(entry.status_category))));
+      sections.push(section("Status stage", listenSentence(say(stageOrCategory(entry, cfg)))));
     }
     if (!entry.narrative_combined) sections.push(section("Status", timelineSpeech(entry, "status")));
     sections.push(section("Broader Pattern", say(entry.cause)));
@@ -6054,6 +6067,7 @@ function statusGroupKey(entry) {
   return entry.status_category || "Uncategorized";
 }
 
+/* status-stage-group:start */
 /* Once every Cabinet-Level entry carries status_stage (spec 5.6), "Group
    by status" groups on it instead, in STATUS_STAGES order. */
 function statusStageGroupKey(entry) {
@@ -6066,6 +6080,7 @@ function sortGroupsByStatusStage(groupEntries) {
   };
   return groupEntries.sort((a, b) => rank(a[0]) - rank(b[0]));
 }
+/* status-stage-group:end */
 
 /* Group order for "List by individual": entry count descending, ties
    broken alphabetically, per Joe's call. */

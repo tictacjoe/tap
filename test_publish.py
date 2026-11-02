@@ -415,3 +415,18 @@ def test_write_site_meta_dry_run_writes_nothing(tmp_path):
     dest = tmp_path / "site_meta.json"
     write_site_meta(dest, date(2026, 11, 1), dry_run=True)
     assert not dest.exists()
+
+
+def test_status_stage_passes_through(tmp_path):
+    # publish keeps every non-underscore key, so the curated status_stage
+    # field must reach the published JSON untouched.
+    source_dir = tmp_path / "entries"
+    source_dir.mkdir()
+    entry = {"id": "staged-entry", "status_stage": "In court"}
+    (source_dir / "staged-entry.json").write_text(json.dumps(entry))
+
+    dest_file = tmp_path / "output" / "deregulation.json"
+    included, _ = publish_json_entries(source_dir, dest_file, excluded_ids=set())
+
+    assert included[0]["status_stage"] == "In court"
+    assert json.loads(dest_file.read_text())[0]["status_stage"] == "In court"

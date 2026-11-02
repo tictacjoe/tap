@@ -19,6 +19,7 @@ const source = fs.readFileSync(path.join(__dirname, "..", "index.html"), "utf8")
 // figure-suffix test does not drag in the whole figure classifier.
 const stub = "function figureKindOf() { return 'harm'; }";
 const combined =
+  extractFunction(source, "status-stage") + "\n" +
   extractFunction(source, "escape-html") + "\n" +
   extractFunction(source, "highlight-matches") + "\n" +
   extractFunction(source, "glance-head") + "\n" +
@@ -104,3 +105,13 @@ for (const kind of ["govservices", "deregulation"]) {
     assert.ok(api.visibleSearchText(entry, { kind, titleField: "title" }).includes("zebra pattern"));
   });
 }
+
+test("CLA one-liner shows status_stage once live", () => {
+  const entry = { official: "Jane Example", status_category: "Alleged", status_stage: "In court", offense_category: "Abuse" };
+  const live = api.oneLinerFor(entry, { kind: "prosecution", statusStageLive: true }).line;
+  assert.ok(live.includes("In court"), live);
+  assert.ok(!live.includes("undefined"), live);
+  // Not live: byte-identical to today (computed status_category).
+  const off = api.oneLinerFor(entry, { kind: "prosecution" }).line;
+  assert.equal(off, "Jane Example \u2014 Alleged: Abuse");
+});

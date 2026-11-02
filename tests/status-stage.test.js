@@ -19,8 +19,11 @@ function extractRegion(source, name) {
 
 const source = fs.readFileSync(path.join(__dirname, "..", "index.html"), "utf8");
 const region = extractRegion(source, "status-stage");
-const { STATUS_STAGES, statusPillHtml, trackerHasStatusStage } = (0, eval)(
-  `${region}\n({ STATUS_STAGES, statusPillHtml, trackerHasStatusStage });`
+// The group-by sort lives in its own marker region; it needs STATUS_STAGES.
+const groupRegion = extractRegion(source, "status-stage-group");
+const { STATUS_STAGES, statusPillHtml, trackerHasStatusStage, stageOrCategory,
+        statusStageGroupKey, sortGroupsByStatusStage } = (0, eval)(
+  `${region}\n${groupRegion}\n({ STATUS_STAGES, statusPillHtml, trackerHasStatusStage, stageOrCategory, statusStageGroupKey, sortGroupsByStatusStage });`
 );
 
 // Text a reader sees: tags (and their attributes) removed.
@@ -92,4 +95,32 @@ test("trackerHasStatusStage: true only when every entry has a valid stage", () =
   assert.equal(trackerHasStatusStage("empty", trackers), false);
   assert.equal(trackerHasStatusStage("hidden", trackers), false);
   assert.equal(trackerHasStatusStage("missing", trackers), false);
+});
+
+test("stageOrCategory: stage when live, category otherwise", () => {
+  const e = { status_stage: "In court", status_category: "Alleged" };
+  assert.equal(stageOrCategory(e, { statusStageLive: true }), "In court");
+  assert.equal(stageOrCategory(e, { statusStageLive: false }), "Alleged");
+  assert.equal(stageOrCategory(e, {}), "Alleged");
+});
+
+test("group-by uses STATUS_STAGES order across all six stages", () => {
+  // Entries deliberately in reverse order; group exactly as the shipped
+  // renderer does (key function, then the shipped group sort).
+  const entries = STATUS_STAGES.map(s => ({ status_stage: s.name })).reverse();
+  const groups = new Map();
+  entries.forEach(e => {
+    const k = statusStageGroupKey(e);
+    if (!groups.has(k)) groups.set(k, []);
+    groups.get(k).push(e);
+  });
+  const sorted = sortGroupsByStatusStage([...groups.entries()]);
+  assert.deepEqual(sorted.map(g => g[0]), STATUS_STAGES.map(s => s.name));
+});
+
+test("compact pills at 600px", () => {
+  const m = source.match(/function useCompactPills\(\) \{[\s\S]*?\n\}/);
+  assert.ok(m, "useCompactPills not found");
+  assert.ok(m[0].includes("(max-width: 600px)"));
+  assert.ok(!m[0].includes("480px"));
 });

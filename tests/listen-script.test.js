@@ -24,7 +24,7 @@ const siteDir = path.join(__dirname, "..");
 const source = fs.readFileSync(path.join(siteDir, "index.html"), "utf8");
 // The builder reuses the page's own cleanup and timeline helpers so what is
 // spoken always matches what is shown -- pull every region it depends on.
-const combined = ["strip-process-labels", "update-timeline", "violation-concern-value", "glance-head", "listen-script"]
+const combined = ["status-stage", "strip-process-labels", "update-timeline", "violation-concern-value", "glance-head", "listen-script"]
   .map(n => extractFunction(source, n)).join("\n");
 const { spokenDate, speakableText, splitForSpeech, buildListenScript } =
   (0, eval)(`${combined}\n({ spokenDate, speakableText, splitForSpeech, buildListenScript });`);
@@ -218,4 +218,26 @@ test("corpus: every published curated entry speaks cleanly", () => {
     }
   }
   assert.ok(checked > 900);
+});
+
+test("live tracker speaks Status stage from status_stage", () => {
+  const texts = (script) => script.filter(Boolean).map(x => x.text).join("\n");
+  // CLA, glance active: stage rides in the At a glance intro.
+  const cla = claEntry({ status_stage: "In court" });
+  const claLive = texts(buildListenScript(cla, Object.assign({}, claCfg, { statusStageLive: true })));
+  assert.ok(claLive.includes("Status stage: In court."), claLive);
+  assert.ok(!claLive.includes("Status stage: Alleged"), claLive);
+  // CLA not live keeps the computed status_category speech.
+  const claOff = texts(buildListenScript(cla, claCfg));
+  assert.ok(claOff.includes("Status stage: Alleged."), claOff);
+  // CLA, glance off: the separate Status stage section.
+  const claNoGlance = texts(buildListenScript(cla, Object.assign({}, claCfg, { glanceEnabled: false, statusStageLive: true })));
+  assert.ok(claNoGlance.includes("Status stage. In court."), claNoGlance);
+  // GSR (DAI config here): spoken only when live.
+  const gsr = { title: "A title", status_stage: "Court ruled",
+    glance: { who: "Someone", what: "did a thing", harm: { kind: "rights", who: "people", certainty: "documented" } } };
+  const gsrLive = texts(buildListenScript(gsr, Object.assign({}, daiCfg, { statusStageLive: true })));
+  assert.ok(gsrLive.includes("Status stage: Court ruled."), gsrLive);
+  const gsrOff = texts(buildListenScript(gsr, daiCfg));
+  assert.ok(!gsrOff.includes("Status stage"), gsrOff);
 });
