@@ -22108,9 +22108,9 @@
     "title": "DOGE Shut Down GSA's 18F Tech Unit; IRS Then Killed the Free Direct File Tax Program It Built",
     "institution": "General Services Administration (GSA) / Internal Revenue Service",
     "domain": "staff_office_cuts",
-    "status": "Implemented -- 18F shuttered March 2025; IRS Direct File permanently discontinued, not available for Filing Season 2026",
+    "status": "Implemented -- 18F shuttered March 2025; IRS Direct File discontinued, not available for Filing Season 2026, with no relaunch date. About 80 fired 18F staff filed a class appeal with the Merit Systems Protection Board in May 2025 seeking reinstatement; no ruling has been reported.",
     "date_of_action": "2025-03 (18F shutdown) through 2025 (Direct File discontinued for the 2026 filing season)",
-    "what_changed": "In February 2025, Elon Musk announced on social media that he had 'deleted' the team behind IRS Direct File, the free government tax-filing tool. In March 2025, DOGE shut down 18F entirely -- the roughly 90-person General Services Administration digital-services unit that had built or supported Direct File and other federal websites and digital tools for two decades. IRS staff assigned to Direct File were told in mid-March 2025 to stop developing it for the 2026 filing season, even though officials initially indicated the tool would stay operational through the 2025 season. AP reported on April 17, 2025 -- citing two people familiar with the decision -- that the administration planned to end Direct File outright; Republican lawmakers and commercial tax-preparation companies had pushed for the program's elimination, calling it a waste of taxpayer money despite existing free-filing alternatives being difficult to use. Amanda Renteria, CEO of Code for America (which had worked with the IRS on Direct File's state-integration systems), called the move 'a betrayal of public trust at precisely the time government should be demonstrating its ability to deliver basic services effectively.' **Direct File accepted 296,531 tax returns in the 2025 filing season, with 94% of surveyed users rating their experience 'excellent' or 'above average,' and had been offered in 25 states.** On November 3, 2025, IRS product manager Cindy Noe emailed those 25 partner states that 'IRS Direct File will not be available in Filing Season 2026. No launch date has been set for the future.' Treasury cited 'low participation and relatively high costs and burdens on the federal government,' estimating the program cost $41 million to operate for tax year 2024 -- at least $138 per tax return filed.",
+    "what_changed": "In February 2025, Elon Musk announced on social media that he had 'deleted' the team behind IRS Direct File, the free government tax-filing tool. In March 2025, DOGE shut down 18F entirely -- the roughly 90-person General Services Administration digital-services unit that had built or supported Direct File and other federal websites and digital tools for two decades. IRS staff assigned to Direct File were told in mid-March 2025 to stop developing it for the 2026 filing season, even though officials initially indicated the tool would stay operational through the 2025 season. AP reported on April 17, 2025 -- citing two people familiar with the decision -- that the administration planned to end Direct File outright; Republican lawmakers and commercial tax-preparation companies had pushed for the program's elimination, calling it a waste of taxpayer money despite existing free-filing alternatives being difficult to use. Amanda Renteria, CEO of Code for America (which had worked with the IRS on Direct File's state-integration systems), called the move 'a betrayal of public trust at precisely the time government should be demonstrating its ability to deliver basic services effectively.' **Direct File accepted 296,531 tax returns in the 2025 filing season, with 94% of surveyed users rating their experience 'excellent' or 'above average,' and had been offered in 25 states.** On November 3, 2025, IRS product manager Cindy Noe emailed those 25 partner states that 'IRS Direct File will not be available in Filing Season 2026. No launch date has been set for the future.' Treasury cited 'low participation and relatively high costs and burdens on the federal government,' estimating the program cost $41 million to operate for tax year 2024 -- at least $138 per tax return filed.\n\nUpdate 2026-11-02: On May 28, 2025, about 80 former 18F employees, represented by the law firm Mehri & Skalet, filed a class-action appeal with the Merit Systems Protection Board asking for a hearing and to have their removal reversed. The appeal argues that GSA, OPM, DOGE and OMB lacked a valid reason for the reduction in force that targeted 18F and that the team was targeted in retaliation for its members' perceived political beliefs, support for diversity work, and whistleblowing on DOGE's handling of sensitive data and systems. No ruling on the appeal has been reported.",
     "primary_proponent": {
       "name": "Elon Musk / Department of Government Efficiency (DOGE)",
       "role": "Musk publicly announced 18F's elimination and directed DOGE's cuts across GSA; IRS leadership implemented the subsequent Direct File shutdown",
@@ -22142,9 +22142,9 @@
       ],
       "caveat": "The administration's stated rationale (cost, efficiency, deference to the private tax-prep industry via Free File) is a genuine policy dispute over how tax filing should be delivered, not addressed here as settled; this entry documents the staffing action and the program's discontinuation, both independently confirmed."
     },
-    "confidence_note": "HIGH confidence. The 18F shutdown is corroborated by Nextgov/FCW and CNN reporting, including Musk's own public statement; the April 2025 plan-to-end reporting is corroborated by AP (via Federal News Network/Yahoo/NBC syndication) with an on-record quote from Code for America's CEO; the Direct File discontinuation is corroborated by Accounting Today, Federal News Network's coverage of the IRS's formal November 3, 2025 email to states (with Treasury's stated cost rationale), Yahoo/AP, and a formal letter from Sen. John Hickenlooper's office citing the IRS's own notice to states.",
+    "confidence_note": "HIGH confidence. The 18F shutdown is corroborated by Nextgov/FCW and CNN reporting, including Musk's own public statement; the April 2025 plan-to-end reporting is corroborated by AP (via Federal News Network/Yahoo/NBC syndication) with an on-record quote from Code for America's CEO; the Direct File discontinuation is corroborated by Accounting Today, Federal News Network's coverage of the IRS's formal November 3, 2025 email to states (with Treasury's stated cost rationale), Yahoo/AP, and a formal letter from Sen. John Hickenlooper's office citing the IRS's own notice to states. Re-verified 2026-11-02: FedScoop and Federal News Network report the former 18F staff's May 28, 2025 class appeal to the Merit Systems Protection Board; no ruling on it, and no relaunch of Direct File, was found.",
     "pull_quote": "Ending the free filing tool was “a betrayal of public trust at precisely the time government should be demonstrating its ability to deliver basic services effectively,” said Code for America CEO Amanda Renteria.",
-    "last_verified": "2026-09-10",
+    "last_verified": "2026-11-02",
     "date_added": "2026-08-09",
     "sources": [
       {
@@ -22170,14 +22170,22 @@
       {
         "name": "Federal News Network -- IRS tells states Direct File 'will not be available' in 2026",
         "url": "https://federalnewsnetwork.com/it-modernization/2025/11/irs-direct-file-will-not-be-available-in-2026-agency-tells-states/"
+      },
+      {
+        "name": "FedScoop -- Former 18F employees file appeal of DOGE firings (May 2025)",
+        "url": "https://fedscoop.com/former-18f-employees-file-appeal-of-doge-firings/"
+      },
+      {
+        "name": "Federal News Network -- GSA shutting down 18F was 'retaliation' by DOGE, former staff claim in appeal for their jobs back",
+        "url": "https://federalnewsnetwork.com/workforce/2025/05/gsa-shutting-down-18f-was-retaliation-by-doge-former-staff-claim-in-appeal-for-their-jobs-back/"
       }
     ],
     "section_summaries": {
-      "what_changed": "DOGE shut down GSA's entire 18F digital-services unit in March 2025; after GOP lawmakers and tax-prep companies pushed for Direct File's elimination, the IRS discontinued the free tax-filing tool 18F had helped build, formally telling states on November 3, 2025 it would not return for the 2026 filing season, with no relaunch planned.",
-      "estimated_impact": "Roughly 300,000 taxpayers who used the free, government-run filing option in 2025 -- 94% of whom rated it highly -- now have no equivalent free IRS-run alternative; Treasury cited cost ($41 million, ~$138 per return) and low participation as its rationale.",
-      "confidence_note": "Well-corroborated across multiple outlets, including Musk's own public statement, AP's April 2025 sourced reporting with an on-record critic quote, and the IRS's formal November 2025 notice to participating states."
+      "what_changed": "DOGE shut down GSA's 18F unit in March 2025, and about 80 fired staff appealed to the MSPB; the IRS then told states free Direct File, which 18F helped build, won't run in 2026.",
+      "estimated_impact": "About 300,000 taxpayers who used free, IRS-run Direct File in 2025 (94% rated it highly) lost it; Treasury cited low use and cost ($41 million, ~$138 per return).",
+      "confidence_note": "Well corroborated: Musk's own statement, AP's sourced April 2025 report, the IRS's November 2025 notice to states, and FedScoop and FNN on the 18F staff appeal."
     },
-    "last_substantive_update": "2026-09-10",
+    "last_substantive_update": "2026-11-02",
     "glance": {
       "who": "DOGE under Elon Musk; IRS",
       "what": "Shut down GSA's 18F unit; the IRS then ended free Direct File, used by ~300,000 taxpayers in 2025",
@@ -22186,9 +22194,22 @@
         "certainty": "documented",
         "who": "~300,000 Direct File taxpayers"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-11-02"
     },
-    "status_stage": "Unchallenged"
+    "status_stage": "In court",
+    "timeline": {
+      "what_changed": {
+        "base": "In February 2025, Elon Musk announced on social media that he had 'deleted' the team behind IRS Direct File, the free government tax-filing tool. In March 2025, DOGE shut down 18F entirely -- the roughly 90-person General Services Administration digital-services unit that had built or supported Direct File and other federal websites and digital tools for two decades. IRS staff assigned to Direct File were told in mid-March 2025 to stop developing it for the 2026 filing season, even though officials initially indicated the tool would stay operational through the 2025 season. AP reported on April 17, 2025 -- citing two people familiar with the decision -- that the administration planned to end Direct File outright; Republican lawmakers and commercial tax-preparation companies had pushed for the program's elimination, calling it a waste of taxpayer money despite existing free-filing alternatives being difficult to use. Amanda Renteria, CEO of Code for America (which had worked with the IRS on Direct File's state-integration systems), called the move 'a betrayal of public trust at precisely the time government should be demonstrating its ability to deliver basic services effectively.' **Direct File accepted 296,531 tax returns in the 2025 filing season, with 94% of surveyed users rating their experience 'excellent' or 'above average,' and had been offered in 25 states.** On November 3, 2025, IRS product manager Cindy Noe emailed those 25 partner states that 'IRS Direct File will not be available in Filing Season 2026. No launch date has been set for the future.' Treasury cited 'low participation and relatively high costs and burdens on the federal government,' estimating the program cost $41 million to operate for tax year 2024 -- at least $138 per tax return filed.",
+        "updates": [
+          {
+            "date": "2026-11-02",
+            "label": "Update",
+            "text": "Update 2026-11-02: On May 28, 2025, about 80 former 18F employees, represented by the law firm Mehri & Skalet, filed a class-action appeal with the Merit Systems Protection Board asking for a hearing and to have their removal reversed. The appeal argues that GSA, OPM, DOGE and OMB lacked a valid reason for the reduction in force that targeted 18F and that the team was targeted in retaliation for its members' perceived political beliefs, support for diversity work, and whistleblowing on DOGE's handling of sensitive data and systems. No ruling on the appeal has been reported.",
+            "effective_date": "2026-11-02"
+          }
+        ]
+      }
+    }
   },
   {
     "id": "gsa-fine-arts-program-staff-cuts-collection-risk-2025-2026",

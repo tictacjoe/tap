@@ -2674,14 +2674,30 @@
   },
   "bondi-slater-antitrust-firing-2026": {
    "0": {
-    "state": "supports",
-    "why": "The CBS/wayback article confirms Bondi's chief of staff Chad Mizelle overruled Slater to accept a weaker HPE/Juniper settlement, and that Slater told companies not to use Trump-aligned lobbyists, establishing friction months before her ouster.",
+    "state": "partly",
+    "why": "The article supports the reported friction, the Mizelle overrule, and the lobbyist complaints, but says nothing about Slater's February 2026 ouster, so the claim's closing 'establishing ... months before' framing is not settled by the source.",
     "host": "cbsnews.com",
-    "date": "2026-09-15",
+    "date": "2026-11-02",
     "kind": "fact",
     "archive": true
    },
    "1": {
+    "state": "supports",
+    "why": "CNN reports the Monday firings of Alford and Rinner, their prior administrative leave, the HPE/Juniper dispute, the DOJ official citing insubordination, and CBS being first.",
+    "host": "cnn.com",
+    "date": "2026-11-02",
+    "kind": "fact",
+    "archive": false
+   },
+   "2": {
+    "state": "supports",
+    "why": "Hogan Lovells (Oct 23, 2025) reports the Oct 14 motion by twelve states and DC led by Colorado (Minnesota included), the 'undue influence' allegation, the Alford quote, and the firing claim.",
+    "host": "hoganlovells.com",
+    "date": "2026-11-02",
+    "kind": "fact",
+    "archive": false
+   },
+   "3": {
     "state": "partly",
     "why": "The source confirms the Paris travel dispute that led DOJ to cut off Slater's government credit card access, but it never mentions Tim Leiweke or any December 2025 pardon connected to Slater's division.",
     "host": "cbsnews.com",
@@ -2689,7 +2705,7 @@
     "kind": "fact",
     "archive": false
    },
-   "2": {
+   "4": {
     "state": "supports",
     "why": "CNN confirms Slater was forced out after months of friction with Bondi and the White House, despite her own social-media post suggesting a voluntary departure.",
     "host": "cnn.com",
@@ -2697,7 +2713,7 @@
     "kind": "fact",
     "archive": false
    },
-   "3": {
+   "5": {
     "state": "supports",
     "why": "The source (which itself attributes the Assefi detail to \"sources told CBS News\") confirms both Bondi's thank-you statement to Slater and Assefi's appointment as acting antitrust chief.",
     "host": "washingtontimes.com",
@@ -2705,7 +2721,7 @@
     "kind": "fact",
     "archive": false
    },
-   "4": {
+   "6": {
     "state": "unopened",
     "why": "",
     "host": "democrats-judiciary.house.gov",
@@ -2713,15 +2729,7 @@
     "kind": "fact",
     "archive": false
    },
-   "5": {
-    "state": "partly",
-    "why": "CNN confirms the firings of Alford and Rinner for alleged insubordination after administrative leave over the HPE/Juniper handling; the text does not mention Mizelle overruling them, Trump-connected lobbyists, Ellison's intervention, or Bloomberg (it credits CBS as first to report).",
-    "host": "cnn.com",
-    "date": "2026-11-02",
-    "kind": "fact",
-    "archive": false
-   },
-   "6": {
+   "7": {
     "state": "supports",
     "why": "Roll Call confirms Alford's May 2026 testimony criticizing the $280 million Live Nation/Ticketmaster settlement (falling short of the sought breakup) as inviting political allies to lobby for results, and the article confirms the April 15 jury verdict finding illegal monopolization.",
     "host": "rollcall.com",
@@ -2729,33 +2737,33 @@
     "kind": "fact",
     "archive": false
    },
-   "7": {
-    "state": "partly",
-    "why": "The article (dated July 7, 2026, before the July 29 hearing) confirms the Rule 50(b) and Rule 59 post-trial motions, their May 21/July 2 filing dates, and that Judge Subramanian had not yet ruled as of that writing, but it does not describe any 'sustained questioning' by the judge on a distinct large-amphitheater market at a subsequent hearing, since that hearing had not yet occurred when this article was published.",
+   "8": {
+    "state": "supports",
+    "why": "MBW reports the May 21 motions under Rules 50(b) and 59, the July 2 replies, the April 15 verdict, no ruling yet, and the July 29 hearing.",
     "host": "musicbusinessworldwide.com",
-    "date": "2026-09-15",
+    "date": "2026-11-02",
     "kind": "fact",
     "archive": false
    },
-   "8": {
-    "state": "partly",
-    "why": "The article (dated July 17, 2026) confirms the states sought Tunney Act discovery citing possible outside influence and that DOJ and Live Nation oppose it, but it does not contain the Aug. 4 denial, the 'narrow and targeted' direction, or the Sept. 4 comment period.",
+   "9": {
+    "state": "supports",
+    "why": "MBW reports the July 16 letter from 21 states led by Colorado, the discovery goals including White House communications, the quoted language, and opposition from both DOJ and Live Nation.",
     "host": "musicbusinessworldwide.com",
     "date": "2026-11-02",
-    "kind": "interpretation",
-    "archive": false
-   },
-   "9": {
-    "state": "not_found",
-    "why": "This Crowell & Moring client alert is dated May 6, 2026 and only notes that Rule 50/59 motions and Tunney Act review are pending as of that date; it predates and cannot confirm the specific July 31, 2026 hearing or the claim's September 2, 2026 re-verification status.",
-    "host": "crowell.com",
-    "date": "2026-09-15",
     "kind": "fact",
     "archive": false
    },
    "10": {
     "state": "supports",
-    "why": "The article quotes the amended filing's statement about Trump briefly appearing, the revised account of Trump's February call to Rapino, Live Nation's opposition to the states' requests as too broad, and that the judge has yet to rule.",
+    "why": "TicketNews says the most sustained questions at the July 31 hearing concerned the amphitheater market and that the judge did not immediately rule.",
+    "host": "ticketnews.com",
+    "date": "2026-11-02",
+    "kind": "fact",
+    "archive": false
+   },
+   "11": {
+    "state": "supports",
+    "why": "MBW (Oct 26, 2026) reports the Oct 21 amended filing quote, the revised Trump-Rapino February call, the Aug 4 denial with leave for narrow requests, states' renewed requests opposed in early October, and no ruling yet.",
     "host": "musicbusinessworldwide.com",
     "date": "2026-11-02",
     "kind": "fact",
@@ -10011,29 +10019,21 @@
    },
    "2": {
     "state": "supports",
-    "why": "CBS reports the chairs' letter to Wallace-Jones, that a House GOP aide said a contempt vote is on the table, that documents were requested within two weeks, and Trump's April directive to DOJ.",
-    "host": "cbsnews.com",
+    "why": "The May 7, 2025 release describes the chairmen's letter to Bondi citing the April 24 memorandum and seeking to 'work collaboratively with DOJ', and its background timeline lists Steil's October 31, 2023 letter and October 30, 2024 subpoena.",
+    "host": "cha.house.gov",
     "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "3": {
     "state": "supports",
-    "why": "The June 22, 2026 Judiciary press release, headlined 'Reject Baseless Privilege Claims', announces the contempt-threat letter and states ActBlue claimed privilege over Ting's letter, Ahmad's message and 420 other documents.",
-    "host": "judiciary.house.gov",
+    "why": "CBS reports the chairs' letter to Wallace-Jones, that a House GOP aide said a contempt vote is on the table, that documents were requested within two weeks, and Trump's April directive to DOJ.",
+    "host": "cbsnews.com",
     "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "4": {
-    "state": "supports",
-    "why": "The Daily Caller states Wallace-Jones invoked the Fifth in response to virtually every question at the June 10 hearing, including on verification procedures and false information to Congress, and that the June 18 letter demanded documents by June 26.",
-    "host": "dailycaller.com",
-    "date": "2026-09-27",
-    "kind": "fact",
-    "archive": false
-   },
-   "5": {
     "state": "supports",
     "why": "The Texas Tribune reports Paxton sued in state court on April 20, ActBlue sued in early May alleging political motivation, Judge Stearns ruled Paxton must drop the suit writing it was filed in retaliation, and Paxton appealed to the 1st Circuit.",
     "host": "texastribune.org",
@@ -10041,23 +10041,15 @@
     "kind": "fact",
     "archive": false
    },
+   "5": {
+    "state": "supports",
+    "why": "The Daily Caller states Wallace-Jones invoked the Fifth in response to virtually every question at the June 10 hearing, including on verification procedures and false information to Congress, and that the June 18 letter demanded documents by June 26.",
+    "host": "dailycaller.com",
+    "date": "2026-09-27",
+    "kind": "fact",
+    "archive": false
+   },
    "6": {
-    "state": "supports",
-    "why": "The June 18, 2026 letter finds it implausible that all 422 logged documents are entirely privileged, rejects privilege over Ting's resignation letter, Ahmad's message and documents circulated among non-lawyers, demands them by June 26, 2026, and says the Committees remain prepared to enforce their subpoenas through all available mechanisms.",
-    "host": "judiciary.house.gov",
-    "date": "2026-09-27",
-    "kind": "fact",
-    "archive": false
-   },
-   "7": {
-    "state": "supports",
-    "why": "The May 7, 2025 release describes the chairmen's letter to Bondi citing the April 24 memorandum and seeking to 'work collaboratively with DOJ', and its background timeline lists Steil's October 31, 2023 letter and October 30, 2024 subpoena.",
-    "host": "cha.house.gov",
-    "date": "2026-09-27",
-    "kind": "fact",
-    "archive": false
-   },
-   "8": {
     "state": "supports",
     "why": "WLT Report cites the Washington Post for 21 Fifth Amendment invocations, describes her declining on the advice of counsel, and (via the New York Post) her statement that invoking the Fifth is not an admission or insinuation of guilt.",
     "host": "wltreport.com",
@@ -10065,10 +10057,26 @@
     "kind": "fact",
     "archive": false
    },
-   "9": {
+   "7": {
     "state": "supports",
     "why": "The Texas AG release states Paxton filed an opening brief asking the First Circuit to reverse the June 11, 2026 preliminary injunction blocking his Texas DTPA case against ActBlue.",
     "host": "texasattorneygeneral.gov",
+    "date": "2026-09-27",
+    "kind": "fact",
+    "archive": false
+   },
+   "8": {
+    "state": "supports",
+    "why": "The June 18, 2026 letter finds it implausible that all 422 logged documents are entirely privileged, rejects privilege over Ting's resignation letter, Ahmad's message and documents circulated among non-lawyers, demands them by June 26, 2026, and says the Committees remain prepared to enforce their subpoenas through all available mechanisms.",
+    "host": "judiciary.house.gov",
+    "date": "2026-09-27",
+    "kind": "fact",
+    "archive": false
+   },
+   "9": {
+    "state": "supports",
+    "why": "The June 22, 2026 Judiciary press release, headlined 'Reject Baseless Privilege Claims', announces the contempt-threat letter and states ActBlue claimed privilege over Ting's letter, Ahmad's message and 420 other documents.",
+    "host": "judiciary.house.gov",
     "date": "2026-09-27",
     "kind": "fact",
     "archive": false
@@ -11033,53 +11041,13 @@
    },
    "1": {
     "state": "supports",
-    "why": "The Hill reports Republican senators, including Tillis and Kennedy on the record, expressing worry and criticism over Lutnick's Epstein ties.",
-    "host": "thehill.com",
-    "date": "2026-09-21",
-    "kind": "fact",
-    "archive": false
-   },
-   "2": {
-    "state": "supports",
     "why": "The Fox News article directly reports both the top House Oversight Democrat (Garcia) and Rep. Thomas Massie publicly calling for Lutnick's resignation and characterizing his prior 2005-cutoff statements as lying.",
     "host": "foxnews.com",
     "date": "2026-09-15",
     "kind": "fact",
     "archive": false
    },
-   "3": {
-    "state": "partly",
-    "why": "The text documents the 2011 calls and drinks meeting, 2012 island lunch emails, 2013 shared investment, 2015 Clinton fundraiser invitation and the $50,000 UJA donation, but the May 2018 Frick Collection email and the Feb. 15, 2026 date do not appear in the provided text.",
-    "host": "cnn.com",
-    "date": "2026-09-27",
-    "kind": "fact",
-    "archive": false
-   },
-   "4": {
-    "state": "supports",
-    "why": "Mother Jones, citing documents surfaced by a former BGC Financial managing director, reports Cantor's $2 million loan at end-2013, Cantor's 2016 majority control with Lutnick joining the board while Epstein retained shares, and HWL's May 2018 'Producing revenue finally. This is their year.' email.",
-    "host": "motherjones.com",
-    "date": "2026-09-27",
-    "kind": "fact",
-    "archive": false
-   },
-   "5": {
-    "state": "supports",
-    "why": "NPR directly reports that Lutnick was questioned by the House Oversight Committee over his Epstein ties on May 6, 2026.",
-    "host": "npr.org",
-    "date": "2026-09-15",
-    "kind": "fact",
-    "archive": false
-   },
-   "6": {
-    "state": "supports",
-    "why": "The Washington Examiner confirms Comer's quoted statement ahead of Lutnick's testimony, including no wrongdoing seen in the emails and the brief family visit to the island noted elsewhere in the article.",
-    "host": "washingtonexaminer.com",
-    "date": "2026-09-15",
-    "kind": "fact",
-    "archive": false
-   },
-   "7": {
+   "2": {
     "state": "supports",
     "why": "CNBC reports Lutnick's Feb. 10, 2026 testimony to the Senate Appropriations subcommittee admitting an hour-long 2012 family lunch on the island, recalling only two other meetings, and saying he 'barely had anything to do with that person.'",
     "host": "cnbc.com",
@@ -11087,18 +11055,58 @@
     "kind": "fact",
     "archive": false
    },
+   "3": {
+    "state": "partly",
+    "why": "CNN's text supports the 2011 calls and drinks meeting, the 2012 island lunch, 2013 shared investment, 2015 fundraiser invite and 2017 $50,000 donation, but the provided text contains no May 2018 Lutnick email about the Frick Collection.",
+    "host": "cnn.com",
+    "date": "2026-11-02",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "supports",
+    "why": "The Hill reports Republican senators, including Tillis and Kennedy on the record, expressing worry and criticism over Lutnick's Epstein ties.",
+    "host": "thehill.com",
+    "date": "2026-09-21",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "supports",
+    "why": "Mother Jones reports the $2 million Cantor loan at the end of 2013, Cantor majority control and Lutnick joining the board in 2016 with Epstein keeping shares, the whistleblower source, and the May 2018 HWL quote.",
+    "host": "motherjones.com",
+    "date": "2026-11-02",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
+    "state": "supports",
+    "why": "NPR directly reports that Lutnick was questioned by the House Oversight Committee over his Epstein ties on May 6, 2026.",
+    "host": "npr.org",
+    "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "7": {
+    "state": "supports",
+    "why": "The Washington Examiner confirms Comer's quoted statement ahead of Lutnick's testimony, including no wrongdoing seen in the emails and the brief family visit to the island noted elsewhere in the article.",
+    "host": "washingtonexaminer.com",
+    "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   },
    "8": {
     "state": "supports",
-    "why": "CNN reports the released Oversight transcript in which Lutnick said the 2005, 2011 and 2012 island encounters were, to the best of his recollection, the only three, confirmed writing the 2018 Adfin-prospects email, and said he didn't know Epstein was a co-investor until the files came out.",
-    "host": "cnn.com",
+    "why": "NOTUS reports Comer, who earlier that Wednesday (May 6, 2026) said Lutnick had not been '100% truthful', said during a break that Lutnick had 'been very forthcoming with those interactions.'",
+    "host": "notus.org",
     "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "9": {
     "state": "supports",
-    "why": "NOTUS reports Comer, who earlier that Wednesday (May 6, 2026) said Lutnick had not been '100% truthful', said during a break that Lutnick had 'been very forthcoming with those interactions.'",
-    "host": "notus.org",
+    "why": "CNN reports the released Oversight transcript in which Lutnick said the 2005, 2011 and 2012 island encounters were, to the best of his recollection, the only three, confirmed writing the 2018 Adfin-prospects email, and said he didn't know Epstein was a co-investor until the files came out.",
+    "host": "cnn.com",
     "date": "2026-09-27",
     "kind": "fact",
     "archive": false
@@ -11914,6 +11922,14 @@
     "archive": false
    },
    "15": {
+    "state": "supports",
+    "why": "The docket shows the random reassignment from Judge Sooknanan to Judge Chutkan, the court's rejection of Defendants' related-case claim as to Trujillo and DSCC v. Trump ('The Court disagrees'), and the 10/31/2026 hearing on the EPIC/LULAC TRO motion with the entry 'The Court hears Oral Argument. Order forthcoming.'",
+    "host": "courtlistener.com",
+    "date": "2026-11-02",
+    "kind": "fact",
+    "archive": false
+   },
+   "16": {
     "state": "partly",
     "why": "The docket shows the October 16, 2026 notice of appeal (ECF 55), transmission to the appeals court (56), and stay motion (57), but the text does not show that the order vacated the \"Voter List Maintenance Policy\" (it only records summary judgment granted).",
     "host": "courtlistener.com",
@@ -11921,7 +11937,7 @@
     "kind": "fact",
     "archive": false
    },
-   "16": {
+   "17": {
     "state": "supports",
     "why": "The CNN article contains each reported element: the 300,000 \"potential\" noncitizens, 1,620 investigations, around 160 arrests, the DOJ and DHS statements on California, and the SAVE and Accurint points.",
     "host": "cnn.com",
@@ -11929,9 +11945,9 @@
     "kind": "fact",
     "archive": false
    },
-   "17": {
-    "state": "partly",
-    "why": "The page lists the latest updates and the suit's aims as stated, but the case number 1:26-cv-3602 does not appear in the provided text.",
+   "18": {
+    "state": "supports",
+    "why": "The case page lists the Oct 30 status report, Oct 29 TRO motion, Oct 28 amended complaint and Oct 15 complaint, and describes the relief sought as blocking use of the data and requiring deletion.",
     "host": "democracydocket.com",
     "date": "2026-11-02",
     "kind": "fact",
@@ -15216,22 +15232,14 @@
     "archive": false
    },
    "1": {
-    "state": "unopened",
-    "why": "",
-    "host": "lujan.senate.gov",
-    "date": "2026-09-15",
+    "state": "partly",
+    "why": "The Snopes text supports the May 14, 2025 testimony that Geier was not hired to lead autism research but to review VSD data; the Washington Post March 25, 2025 first report, the exact quoted sentence, and the independent-contractor detail are not in the available text.",
+    "host": "yahoo.com",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "2": {
-    "state": "supports",
-    "why": "The press release announces the three ranking members' letter to Kennedy demanding answers about the Geier hiring and calls him a conspiracy theorist (title: 'Anti-Science Conspiracy Theorist').",
-    "host": "democrats-energycommerce.house.gov",
-    "date": "2026-11-02",
-    "kind": "fact",
-    "archive": false
-   },
-   "3": {
     "state": "supports",
     "why": "The NYT text states Geier has joined the department to work on a study examining the long-debunked vaccine-autism theory, according to people familiar with the matter.",
     "host": "nytimes.com",
@@ -15239,15 +15247,15 @@
     "kind": "fact",
     "archive": false
    },
-   "4": {
+   "3": {
     "state": "supports",
-    "why": "The text reports Trump on Monday posted a decades-old video featuring David Geier, whom Kennedy tapped this spring to investigate vaccine-autism links, alongside his father Mark Geier; the Sept. 8 date follows from the Thursday Sept. 4 caption, though Politico is not named in the extracted text.",
-    "host": "yahoo.com",
-    "date": "2026-09-27",
+    "why": "The press release announces the three ranking members' letter to Kennedy demanding answers about the Geier hiring and calls him a conspiracy theorist (title: 'Anti-Science Conspiracy Theorist').",
+    "host": "democrats-energycommerce.house.gov",
+    "date": "2026-11-02",
     "kind": "fact",
     "archive": false
    },
-   "5": {
+   "4": {
     "state": "supports",
     "why": "Luján's April 1, 2026 letter quotes the September 4, 2025 exchange and states the protocols were not produced nor identified in any public domain after a diligent search.",
     "host": "lujan.senate.gov",
@@ -15255,7 +15263,23 @@
     "kind": "fact",
     "archive": false
    },
+   "5": {
+    "state": "supports",
+    "why": "The text reports Trump on Monday posted a decades-old video featuring David Geier, whom Kennedy tapped this spring to investigate vaccine-autism links, alongside his father Mark Geier; the Sept. 8 date follows from the Thursday Sept. 4 caption, though Politico is not named in the extracted text.",
+    "host": "yahoo.com",
+    "date": "2026-09-27",
+    "kind": "fact",
+    "archive": false
+   },
    "6": {
+    "state": "unopened",
+    "why": "",
+    "host": "lujan.senate.gov",
+    "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "7": {
     "state": "supports",
     "why": "The Reuters report states Kennedy saw no issue sharing the contract by week's end, that Geier is a contractor reporting to CDC, and the Luján protocols exchange.",
     "host": "usnews.com",
@@ -15263,18 +15287,10 @@
     "kind": "fact",
     "archive": false
    },
-   "7": {
+   "8": {
     "state": "not_found",
     "why": "The provided NBC live-blog text covers other April 22, 2026 items and does not include the Geier contract or protocols exchange.",
     "host": "nbcnews.com",
-    "date": "2026-09-27",
-    "kind": "fact",
-    "archive": false
-   },
-   "8": {
-    "state": "partly",
-    "why": "The Snopes text supports the May 14, 2025 testimony that Geier was not hired to lead autism research but to review VSD data; the Washington Post March 25, 2025 first report, the exact quoted sentence, and the independent-contractor detail are not in the available text.",
-    "host": "yahoo.com",
     "date": "2026-09-27",
     "kind": "fact",
     "archive": false
