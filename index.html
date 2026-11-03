@@ -1053,6 +1053,70 @@
   .field-toggle[open] > summary.field-label-row > .field-label::before {
     transform: rotate(90deg);
   }
+  /* Key-events dotted rail + collapsed full story (key_events feature).
+     Tokens only, so any theme that redefines them is followed. The dot's
+     accent is the card's tracker color (--trk, set on curated cards),
+     falling back to brass where no card scopes it (one-liner detail). */
+  .key-events {
+    list-style: none;
+    margin: 0 0 12px 5px;
+    padding: 0 0 0 18px;
+    border-left: 2px solid var(--rule);
+  }
+  .key-event { position: relative; margin: 0; padding: 0; }
+  .key-event::before {
+    content: "";
+    position: absolute;
+    left: -25px;
+    top: 0.45em;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--paper-card);
+    border: 2px solid var(--trk, var(--brass));
+  }
+  .key-event-turning::before { background: var(--trk, var(--brass)); }
+  .key-event-link {
+    display: block;
+    padding: 4px 0;
+    color: inherit;
+    text-decoration: none;
+  }
+  .key-event-link:focus-visible {
+    outline: 2px solid var(--trk, var(--brass));
+    outline-offset: 2px;
+  }
+  .key-event-date {
+    display: block;
+    font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+  }
+  .key-event-text { display: block; }
+  @media (max-width: 600px) {
+    .key-event-link { min-height: 44px; }
+  }
+  .full-story > summary {
+    list-style: none;
+    cursor: pointer;
+    font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ink-soft);
+  }
+  .full-story > summary::-webkit-details-marker { display: none; }
+  .full-story > summary::before {
+    content: "\25B8";
+    display: inline-block;
+    margin-right: 0.35em;
+    font-size: 0.7em;
+    color: var(--brass);
+    transition: transform 0.15s ease;
+  }
+  .full-story[open] > summary::before { transform: rotate(90deg); }
+  .exhibit-list li { transition: background-color 0.4s ease; }
+  .source-flash { background: var(--highlight); }
   .entry-col .field-value,
   .entry-col .confidence-box,
   .entry-col .exhibit-list {
@@ -5682,6 +5746,7 @@ function buildEntryCard(entry, cfg, docketLabel, sourceLabel, term, useRegex, ca
     if (div.classList.contains("open")) distributeEntryCards(div);
   });
   wireRelatedEntryLinks(div);
+  wireKeyEventLinks(div);
   wireUpdateRequestButtons(div);
   wireTriageButtons(div);
   wireShareLinkButtons(div);
@@ -6605,6 +6670,39 @@ function wireRelatedEntryLinks(container) {
   });
 }
 
+/* Browser-only: clicking a key-event dot opens the entry's Sources card and
+   flashes the source rows that event cites (data-sources = JSON URL array).
+   Bad JSON counts as no sources; with no matching row the card is just
+   opened and scrolled to. stopPropagation for the same reason as
+   wireRelatedEntryLinks (.entry-head toggles the card). Not covered by the
+   Node harness; see test_key_events_browser.py. */
+function wireKeyEventLinks(container) {
+  container.querySelectorAll(".key-event-link").forEach(a => {
+    a.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      let urls = [];
+      try {
+        const parsed = JSON.parse(a.dataset.sources || "[]");
+        if (Array.isArray(parsed)) urls = parsed;
+      } catch (err) { urls = []; }
+      const scope = a.closest(".entry-detail, .oneliner-detail") || container;
+      const card = Array.from(scope.querySelectorAll(".entry-aside-card"))
+        .find(c => c.querySelector("details .exhibit-list"));
+      if (!card) return;
+      const toggle = card.querySelector("details");
+      toggle.open = true;
+      const hits = Array.from(card.querySelectorAll("li[data-url]"))
+        .filter(li => urls.includes(li.getAttribute("data-url")));
+      hits.forEach(li => {
+        li.classList.add("source-flash");
+        setTimeout(() => li.classList.remove("source-flash"), 2000);
+      });
+      (hits[0] || card).scrollIntoView({ behavior: "smooth", block: "center" });
+    });
+  });
+}
+
 /* Browser-only counterpart to buildUpdateRequestHtml() -- reads the
    data-* attributes that pure function rendered, same split
    wireRelatedEntryLinks() uses one level up. Not covered by the Node
@@ -6729,6 +6827,7 @@ function renderSearchMatches(section, matches, term, useRegex, useOneLiners) {
       glanceDetailTitleHtml(m.entry, m.cfg, (t) => highlightMatches(t || "", term, useRegex)) +
       buildDetailHtml(m.entry, m.cfg, term, useRegex);
     wireRelatedEntryLinks(detail);
+    wireKeyEventLinks(detail);
     wireEvidenceDrawers(detail, m.entry, m.cfg, term, useRegex);
     wireTriageButtons(detail);
 
