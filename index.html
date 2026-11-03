@@ -4157,6 +4157,24 @@ function isOwnerDevice() {
    (tabbed/global card view) and by the one-liner expand-on-click,
    so there's exactly one place that knows how to render each
    tracker kind's fields, not two drifting copies. */
+/* format-key-event-date:start */
+/* Display form of a key-event date. Splits the string (never new Date(),
+   so time zones can't shift the day). Full dates show the year on the
+   first event and whenever the year changes from the previous event;
+   YYYY-MM always reads "Oct 2026"; YYYY reads "2026". */
+function formatKeyEventDate(date, prevDate) {
+  var MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  var parts = String(date).split("-");
+  var year = parts[0];
+  if (parts.length === 1) return year;
+  var mon = MONTHS[parseInt(parts[1], 10) - 1];
+  if (parts.length === 2) return mon + " " + year;
+  var day = parseInt(parts[2], 10);
+  var prevYear = prevDate ? String(prevDate).split("-")[0] : null;
+  return prevYear === year ? mon + " " + day : mon + " " + day + ", " + year;
+}
+/* format-key-event-date:end */
+
 /* update-timeline:start */
 /* Renders an entry's update history from the published `timeline` object
    (2026-09-21). The marker parsing lives ONLY in tracker/update_markers.py
