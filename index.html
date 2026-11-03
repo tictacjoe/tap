@@ -4175,6 +4175,28 @@ function formatKeyEventDate(date, prevDate) {
 }
 /* format-key-event-date:end */
 
+/* key-events-rail:start */
+/* Dotted-rail timeline of an entry's authored `key_events` (oldest first).
+   `hl` is the caller's escape+highlight function, so text is passed
+   through it unchanged; the sources list rides in an escaped data
+   attribute for the click handler. Returns "" when there are no events. */
+function buildKeyEventsRailHtml(entry, hl) {
+  var events = entry && entry.key_events;
+  if (!events || !events.length) return "";
+  var prev = null;
+  var items = events.map(function (e) {
+    var cls = "key-event" + (e.turning_point ? " key-event-turning" : "");
+    var li = '<li class="' + cls + '">' +
+      '<a href="#" class="key-event-link" data-sources="' + escapeHtml(JSON.stringify(e.sources || [])) + '">' +
+      '<span class="key-event-date">' + escapeHtml(formatKeyEventDate(e.date, prev)) + "</span>" +
+      '<span class="key-event-text">' + hl(e.text) + "</span></a></li>";
+    prev = e.date;
+    return li;
+  });
+  return '<ol class="key-events" aria-label="Key events">' + items.join("") + "</ol>";
+}
+/* key-events-rail:end */
+
 /* update-timeline:start */
 /* Renders an entry's update history from the published `timeline` object
    (2026-09-21). The marker parsing lives ONLY in tracker/update_markers.py
