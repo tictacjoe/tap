@@ -4669,9 +4669,17 @@
    },
    "8": {
     "state": "supports",
-    "why": "The complaint (filed 10/15/26, Case 1:26-cv-03602, by LWV, EPIC and LULAC against DHS, Mullin, ICE, HSI and others) states verbatim that DHS 'has obtained some version of the SVRLs of at least 47 states', quotes the June 1, 2026 HSI report's 50.6 million-record DOJ Dataset Intake and 48.4 million-record DHS Dataset Intake attributed to Heather Honey, and prays for a declaration that the policy is without statutory authority and violates the Privacy Act, PRA and APA. The claim correctly frames these as allegations.",
+    "why": "The complaint text contains the quoted 47-state, 50.6 million, 48.4 million and prayer-for-relief language, with the parties, case number and filing date as claimed; it is pleaded as allegations.",
     "host": "democracyforward.org",
-    "date": "2026-10-16",
+    "date": "2026-11-03",
+    "kind": "fact",
+    "archive": false
+   },
+   "9": {
+    "state": "partly",
+    "why": "The order grants ECF 15 and enjoins and stays defendants as quoted, with the SAVE and prosecution carve-outs, and says nothing about HSI nonprofit reviews. The order does not identify LULAC and EPIC as movants and does not name DOJ as a defendant (\"Defendants and their agents\").",
+    "host": "storage.courtlistener.com",
+    "date": "2026-11-03",
     "kind": "fact",
     "archive": false
    }
@@ -5260,6 +5268,14 @@
     "why": "The DOJ press release itself frames the Biden-era FACE Act enforcement as weaponization and cites the pardons as corrective action, matching the claim precisely.",
     "host": "justice.gov",
     "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "supports",
+    "why": "The article states Vaughn will receive a seven-figure settlement \"his lawyers said\", that it was reached in April but first disclosed Tuesday, and that Blanche called him a victim of Biden-administration weaponization; conviction in 2024 and the pardon are also stated.",
+    "host": "bostonglobe.com",
+    "date": "2026-11-03",
     "kind": "fact",
     "archive": false
    }
@@ -7116,6 +7132,22 @@
     "archive": false
    },
    "76": {
+    "state": "partly",
+    "why": "The order grants ECF 15 and enjoins and stays defendants in the quoted terms with the SAVE and prosecution exceptions. The order itself does not say the motion was brought by LULAC and EPIC (the opinion does, elsewhere).",
+    "host": "storage.courtlistener.com",
+    "date": "2026-11-03",
+    "kind": "fact",
+    "archive": false
+   },
+   "77": {
+    "state": "partly",
+    "why": "The opinion grants the motion for a preliminary injunction and stay and describes the Oct 13 thumb-drive illustration, but the provided text does not show an express likelihood-of-success finding on excess-of-authority and Privacy Act claims, only the plaintiffs' assertions.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-11-03",
+    "kind": "fact",
+    "archive": false
+   },
+   "78": {
     "state": "supports",
     "why": "The docket shows ECF 171 (Logan), 170 (SIREN and Mi Familia en Accion), 169 (State) and 168 (NAACP/LULAC joinder) filed November 2, with motions set for hearing November 13, and no entry after ECF 153 disposing of DOJ's injunction-pending-appeal application.",
     "host": "courtlistener.com",
@@ -7123,7 +7155,7 @@
     "kind": "fact",
     "archive": false
    },
-   "77": {
+   "79": {
     "state": "partly",
     "why": "The tracker supports the Trujillo/CHIRLA preliminary injunction with the quoted language and the Ninth Circuit's divided stay of Thompson's TRO followed by en banc grant and vacatur, but the provided text is truncated before any DSCC v. Trump entry, so that part cannot be checked.",
     "host": "justsecurity.org",
@@ -7131,10 +7163,18 @@
     "kind": "fact",
     "archive": false
    },
-   "78": {
+   "80": {
     "state": "supports",
     "why": "Democracy Docket reports the 2-1 panel of Bea and Callahan pausing Thompson's order with Murguia dissenting, and that hours later a majority of all Ninth Circuit judges voted to vacate the panel ruling and consider DOJ's stay bid.",
     "host": "democracydocket.com",
+    "date": "2026-11-03",
+    "kind": "fact",
+    "archive": false
+   },
+   "81": {
+    "state": "supports",
+    "why": "The docket lists ECF 13 as an amended complaint naming DOJ and Todd W. Blanche, and ECF 30 granting the TRO/stay/PI motion on Nov 2 with ECF 31 as the memorandum opinion.",
+    "host": "courtlistener.com",
     "date": "2026-11-03",
     "kind": "fact",
     "archive": false
@@ -20539,13 +20579,21 @@
    },
    "16": {
     "state": "partly",
+    "why": "Fox quotes Brinkema calling the Judgment Fund \"a less transparent structure\", says she affirmed she meant Paul Vaughn, and gives \"seven figures\" without attributing it. The text does not show the Sept 18 date or that Vaughn told Fox News Digital in July (only a video caption on his seven-figure settlement).",
+    "host": "foxnews.com",
+    "date": "2026-11-03",
+    "kind": "fact",
+    "archive": false
+   },
+   "17": {
+    "state": "partly",
     "why": "The October 23, 2026 renewed motion asks for dismissal of the amended class complaint with prejudice, and a footnote dates Patrick Sullivan's claim July 29, 2025; but the truncated text does not contain the 'forever barred' argument, the January 6, 2023 deadline, the equitable-tolling quote or the alternative transfer request.",
     "host": "storage.courtlistener.com",
     "date": "2026-11-03",
     "kind": "fact",
     "archive": false
    },
-   "17": {
+   "18": {
     "state": "unopened",
     "why": "",
     "host": "courtlistener.com",
