@@ -4153,10 +4153,6 @@ function isOwnerDevice() {
   try { return localStorage.getItem("tap-owner") === "1"; } catch (e) { return false; }
 }
 
-/* Shared detail-html builder -- used both by the full docket card
-   (tabbed/global card view) and by the one-liner expand-on-click,
-   so there's exactly one place that knows how to render each
-   tracker kind's fields, not two drifting copies. */
 /* format-key-event-date:start */
 /* Display form of a key-event date. Splits the string (never new Date(),
    so time zones can't shift the day). Full dates show the year on the
@@ -4196,6 +4192,23 @@ function buildKeyEventsRailHtml(entry, hl) {
   return '<ol class="key-events" aria-label="Key events">' + items.join("") + "</ol>";
 }
 /* key-events-rail:end */
+
+/* full-story-disclosure:start */
+/* Collapses an entry's full narrative ("the story") behind a disclosure once
+   the entry has an authored key-events rail to skim instead. Entries with no
+   key_events render exactly as before (story html returned unchanged). The
+   summary shows the update count from the published `timeline`; a search hit
+   (<mark>) inside the story opens the disclosure so the match is visible. */
+function wrapFullStoryHtml(entry, field, storyHtml) {
+  if (!storyHtml) return "";
+  if (!entry || !entry.key_events || !entry.key_events.length) return storyHtml;
+  var n = entry.timeline && entry.timeline[field] && entry.timeline[field].updates
+    ? entry.timeline[field].updates.length : 0;
+  var count = n ? " (" + n + " update" + (n === 1 ? "" : "s") + ")" : "";
+  var open = storyHtml.indexOf("<mark") !== -1 ? " open" : "";
+  return '<details class="full-story"' + open + '><summary>Read the full story' + count + '</summary>' + storyHtml + '</details>';
+}
+/* full-story-disclosure:end */
 
 /* update-timeline:start */
 /* Renders an entry's update history from the published `timeline` object
@@ -4412,7 +4425,7 @@ function buildSourcesCardHtml(entry, hl) {
   const sources = entry.sources || [];
   if (!sources.length) return "";
   return '<div class="field-group entry-aside-card"><details class="field-toggle"><summary class="field-label">Sources</summary><ul class="exhibit-list">' +
-    sources.map(s => '<li><a href="' + escapeHtml(safeHref(s.url)) + '" target="_blank" rel="noopener">' + hl(s.name) + '</a></li>').join("") +
+    sources.map(s => '<li data-url="' + escapeHtml(s.url) + '"><a href="' + escapeHtml(safeHref(s.url)) + '" target="_blank" rel="noopener">' + hl(s.name) + '</a></li>').join("") +
     '</ul></details></div>';
 }
 /* build-sources-card-html:end */
@@ -4622,6 +4635,10 @@ function buildEvidenceDrawerHtml(entry, cfg, hl, opts) {
    plus a second "Accountability Concern Type" card that only appeared for concern matches --
    that pairing showed "Violation Type: Other/Unclassified" right next to the concern label,
    which read as two answers to the same question (2026-09-21, Joe's call to unify the label). */
+/* Shared detail-html builder -- used both by the full docket card
+   (tabbed/global card view) and by the one-liner expand-on-click,
+   so there's exactly one place that knows how to render each
+   tracker kind's fields, not two drifting copies. */
 /* build-detail-html:start */
 function buildDetailHtml(entry, cfg, term, useRegex) {
   // Same highlighting the card's title/meta line already gets --
@@ -4654,7 +4671,7 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
     // in distributeEntryCards(), and as the second card it always seeds the middle
     // column -- same technique as CLA's shared Anticipated Defense / TAP's Rebuttal card.
     const mainHtml =
-      '<div class="field-group entry-main-card"><div class="field-label">What happened</div><div class="field-value">' + summary(entry.section_summaries?.what_changed) + buildFieldTimelineHtml(entry, "what_changed", hl) + '</div></div>' +
+      '<div class="field-group entry-main-card"><div class="field-label">What happened</div><div class="field-value">' + summary(entry.section_summaries?.what_changed) + buildKeyEventsRailHtml(entry, hl) + wrapFullStoryHtml(entry, "what_changed", buildFieldTimelineHtml(entry, "what_changed", hl)) + '</div></div>' +
       '<div class="field-group entry-main-card"><div class="field-label">Status</div><div class="field-value">' + buildFieldTimelineHtml(entry, "status", hl) + '</div>' +
       '<div class="field-label">Estimated impact</div><div class="field-value">' + summary(entry.section_summaries?.estimated_impact) + hl(entry.estimated_health_impact?.summary) + '</div>' +
       (entry.estimated_health_impact?.caveat ? '<div class="field-label">Caveat</div><div class="field-value" style="font-style:italic;">' + hl(entry.estimated_health_impact.caveat) + '</div>' : '') +
@@ -4696,7 +4713,7 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
     // in distributeEntryCards(), and as the second card it always seeds the middle
     // column -- same technique as CLA's shared Anticipated Defense / TAP's Rebuttal card.
     const mainHtml =
-      '<div class="field-group entry-main-card"><div class="field-label">What happened</div><div class="field-value">' + summary(entry.section_summaries?.what_changed) + buildFieldTimelineHtml(entry, "what_changed", hl) + '</div></div>' +
+      '<div class="field-group entry-main-card"><div class="field-label">What happened</div><div class="field-value">' + summary(entry.section_summaries?.what_changed) + buildKeyEventsRailHtml(entry, hl) + wrapFullStoryHtml(entry, "what_changed", buildFieldTimelineHtml(entry, "what_changed", hl)) + '</div></div>' +
       '<div class="field-group entry-main-card"><div class="field-label">Status</div><div class="field-value">' + buildFieldTimelineHtml(entry, "status", hl) + '</div>' +
       '<div class="field-label">' + escapeHtml(L.impact || "Estimated impact") + '</div><div class="field-value">' + summary(entry.section_summaries?.estimated_impact) + hl(entry.estimated_impact?.summary) + '</div>' +
       (entry.estimated_impact?.caveat ? '<div class="field-label">Caveat</div><div class="field-value" style="font-style:italic;">' + hl(entry.estimated_impact.caveat) + '</div>' : '') +
@@ -4832,11 +4849,11 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
     ? '<div class="field-group entry-main-card"><div class="field-label">Status</div><div class="field-value">' + summary(entry.section_summaries.status) + '</div></div>'
     : '';
   const mainHtml = entry.narrative_combined
-    ? '<div class="field-group entry-main-card"><div class="field-label">What happened</div><div class="field-value">' + summary(entry.section_summaries?.incident_summary) + buildFieldTimelineHtml(entry, "incident_summary", hl) + buildFieldTimelineHtml(entry, "status", hl) + '</div></div>' +
+    ? '<div class="field-group entry-main-card"><div class="field-label">What happened</div><div class="field-value">' + summary(entry.section_summaries?.incident_summary) + buildKeyEventsRailHtml(entry, hl) + wrapFullStoryHtml(entry, "incident_summary", buildFieldTimelineHtml(entry, "incident_summary", hl) + buildFieldTimelineHtml(entry, "status", hl)) + '</div></div>' +
       (hasStatusSkim
         ? statusSkimCardHtml + broaderPatternCardHtml + violationTypeCardHtml + tailCardsHtml
         : violationTypeCardHtml + broaderPatternCardHtml + tailCardsHtml)
-    : '<div class="field-group entry-main-card"><div class="field-label">What happened</div><div class="field-value">' + summary(entry.section_summaries?.incident_summary) + buildFieldTimelineHtml(entry, "incident_summary", hl) + '</div></div>' +
+    : '<div class="field-group entry-main-card"><div class="field-label">What happened</div><div class="field-value">' + summary(entry.section_summaries?.incident_summary) + buildKeyEventsRailHtml(entry, hl) + wrapFullStoryHtml(entry, "incident_summary", buildFieldTimelineHtml(entry, "incident_summary", hl)) + '</div></div>' +
       '<div class="field-group entry-main-card"><div class="field-label">Status</div><div class="field-value">' + buildFieldTimelineHtml(entry, "status", hl) + '</div></div>' +
       broaderPatternCardHtml + violationTypeCardHtml + tailCardsHtml;
   // Violation/Concern Type and Status Stage move into the glance card's harm line
@@ -4897,7 +4914,7 @@ function buildProsecutionSourcesCardHtml(entry) {
   const urls = [...new Set(evidenceForSourceTrail(entry.evidence).map(ev => ev.source_url).filter(Boolean))];
   if (!urls.length) return "";
   return '<div class="field-group entry-aside-card"><details class="field-toggle"><summary class="field-label">Sources</summary><ul class="exhibit-list">' +
-    urls.map(url => '<li><a href="' + escapeHtml(safeHref(url)) + '" target="_blank" rel="noopener">' + escapeHtml(url) + '</a></li>').join("") +
+    urls.map(url => '<li data-url="' + escapeHtml(url) + '"><a href="' + escapeHtml(safeHref(url)) + '" target="_blank" rel="noopener">' + escapeHtml(url) + '</a></li>').join("") +
     '</ul></details></div>';
 }
 
