@@ -27,6 +27,11 @@ const buildUpdateRequestHtmlFunctionSource = extractFunction(source, "build-upda
 const triageFormConfigSource = extractFunction(source, "triage-form-config");
 const buildTriageButtonHtmlSource = extractFunction(source, "build-triage-button-html");
 const updateTimelineFunctionSource = extractFunction(source, "update-timeline");
+// Added 2026-11-03: the "What happened" cards now hold the key-events rail and
+// collapse the full story behind a disclosure.
+const formatKeyEventDateSource = extractFunction(source, "format-key-event-date");
+const keyEventsRailSource = extractFunction(source, "key-events-rail");
+const fullStoryDisclosureSource = extractFunction(source, "full-story-disclosure");
 const buildConfidenceNoteHtmlFunctionSource = extractFunction(source, "build-confidence-note-html");
 const buildDetailHtmlFunctionSource = extractFunction(source, "build-detail-html");
 // Added 2026-09-19: buildDetailHtml gained two more direct dependencies
@@ -77,6 +82,7 @@ const buildFiguresHtmlStubSource = "function buildFiguresHtml(figs) { return fig
 const combined = escapeHtmlFunctionSource + "\n" + summaryLineFunctionSource + "\n" +
   highlightMatchesFunctionSource + "\n" + buildUpdateRequestHtmlFunctionSource + "\n" +
   triageFormConfigSource + "\n" + buildTriageButtonHtmlSource + "\n" + "function isOwnerDevice() { return false; }" + "\n" +
+  formatKeyEventDateSource + "\n" + keyEventsRailSource + "\n" + fullStoryDisclosureSource + "\n" +
   updateTimelineFunctionSource + "\n" + buildConfidenceNoteHtmlFunctionSource + "\n" +
   safeHrefFunctionSource + "\n" + buildPullQuoteHtmlFunctionSource + "\n" + buildEntryColsHtmlFunctionSource + "\n" +
   buildFiguresHtmlStubSource + "\n" + evidenceDrawerFunctionSource + "\n" + glanceHeadFunctionSource + "\n" +
@@ -1731,4 +1737,77 @@ test("User Topics callouts omit hidden-tracker targets", () => {
   assert(mixed.includes('data-id="bondi-james-thing"') && !mixed.includes('data-id="wlf-uae"'), mixed);
   const visible = buildDetailHtml({ ...base, promoted_to: "prosecution/bondi-james-thing" }, { kind: "communitytopics" });
   assert(visible.includes("promoted-callout") && visible.includes("Cabinet-Level Accountability"));
+});
+
+// ---- Key events rail + collapsed full story in "What happened" (2026-11-03) ----
+const KE = [
+  { date: "2026-01-05", text: "First event.", sources: ["https://a.test/1"] },
+  { date: "2026-02-10", text: "Second event.", sources: [] },
+];
+const CASES = [
+  { name: "CDR", cfg: { kind: "deregulation" }, field: "what_changed",
+    base: { what_changed: "Story para." } },
+  { name: "GSR", cfg: { kind: "govservices" }, field: "what_changed",
+    base: { what_changed: "Story para." } },
+  { name: "DAI", cfg: { kind: "govservices", labels: {} }, field: "what_changed",
+    base: { what_changed: "Story para." } },
+  { name: "CLA plain", cfg: { kind: "prosecution" }, field: "incident_summary",
+    base: { offense_category: "Fraud", status_category: "Investigation", incident_summary: "Story para.", status: "Status para." } },
+  { name: "CLA narrative_combined", cfg: { kind: "prosecution" }, field: "incident_summary",
+    base: { offense_category: "Fraud", status_category: "Investigation", incident_summary: "Story para.", status: "Status para.", narrative_combined: true } },
+];
+
+for (const c of CASES) {
+  test(`${c.name}: entry without key_events has no rail or disclosure, story intact`, () => {
+    const r = buildDetailHtml({ ...c.base }, c.cfg);
+    assert(!r.includes("key-events"), "no rail");
+    assert(!r.includes("full-story"), "no disclosure");
+    assert(r.includes("<p>Story para.</p>"));
+  });
+  test(`${c.name}: rail precedes the disclosure inside What happened, summary line stays first`, () => {
+    const e = { ...c.base, key_events: KE, section_summaries: { [c.field]: "Skim line." },
+      timeline: { [c.field]: tl("Story para.", upd("u1", "2026-03-01"), upd("u2", "2026-04-01")) } };
+    const r = buildDetailHtml(e, c.cfg);
+    const sum = r.indexOf("Skim line.");
+    const rail = r.indexOf('<ol class="key-events"');
+    const det = r.indexOf('<details class="full-story"');
+    assert(sum !== -1 && sum < rail, "summary first");
+    assert(rail < det, "rail before disclosure");
+    assert(r.includes("Read the full story (2 updates)</summary>"));
+    assert(!r.includes('<details class="full-story" open'), "closed by default");
+  });
+}
+
+test("narrative_combined: disclosure holds both incident_summary and status; count is incident_summary only", () => {
+  const e = { ...CASES[4].base, key_events: KE,
+    timeline: { incident_summary: tl("Story para.", upd("u1", "2026-03-01")), status: tl("Status para.", upd("s1", "2026-03-02"), upd("s2", "2026-03-03")) } };
+  const r = buildDetailHtml(e, CASES[4].cfg);
+  const det = r.indexOf('<details class="full-story"');
+  const end = r.indexOf("</details>", det);
+  assert(r.slice(det, end).includes("Status para."));
+  assert(r.includes("Read the full story (1 update)</summary>"));
+});
+
+test("summary has no parenthetical with zero updates", () => {
+  const r = buildDetailHtml({ ...CASES[0].base, key_events: KE, timeline: { what_changed: tl("Story para.") } }, CASES[0].cfg);
+  assert(r.includes("<summary>Read the full story</summary>"));
+});
+
+test("search hit inside the story opens the disclosure", () => {
+  const r = buildDetailHtml({ ...CASES[0].base, key_events: KE }, CASES[0].cfg, "Story", false);
+  assert(r.includes('<details class="full-story" open>'));
+});
+
+test("no disclosure when the story is empty", () => {
+  const r = buildDetailHtml({ what_changed: "", key_events: KE }, CASES[0].cfg);
+  assert(!r.includes("full-story"));
+  assert(r.includes('<ol class="key-events"'));
+});
+
+test("sources cards carry data-url on each item", () => {
+  const gsr = buildDetailHtml({ what_changed: "x", sources: [{ name: "Src", url: "https://s.test/a?b=1&c=2" }] }, { kind: "deregulation" });
+  assert(gsr.includes('<li data-url="https://s.test/a?b=1&amp;c=2">'));
+  const cla = buildDetailHtml({ offense_category: "Fraud", status_category: "Investigation", incident_summary: "x",
+    evidence: [{ source_url: "https://s.test/e1", quote: "q" }] }, { kind: "prosecution" });
+  assert(cla.includes('<li data-url="https://s.test/e1">'));
 });

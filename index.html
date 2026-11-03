@@ -1053,6 +1053,70 @@
   .field-toggle[open] > summary.field-label-row > .field-label::before {
     transform: rotate(90deg);
   }
+  /* Key-events dotted rail + collapsed full story (key_events feature).
+     Tokens only, so any theme that redefines them is followed. The dot's
+     accent is the card's tracker color (--trk, set on curated cards),
+     falling back to brass where no card scopes it (one-liner detail). */
+  .key-events {
+    list-style: none;
+    margin: 0 0 12px 5px;
+    padding: 0 0 0 18px;
+    border-left: 2px solid var(--rule);
+  }
+  .key-event { position: relative; margin: 0; padding: 0; }
+  .key-event::before {
+    content: "";
+    position: absolute;
+    left: -25px;
+    top: 0.45em;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--paper-card);
+    border: 2px solid var(--trk, var(--brass));
+  }
+  .key-event-turning::before { background: var(--trk, var(--brass)); }
+  .key-event-link {
+    display: block;
+    padding: 4px 0;
+    color: inherit;
+    text-decoration: none;
+  }
+  .key-event-link:focus-visible {
+    outline: 2px solid var(--trk, var(--brass));
+    outline-offset: 2px;
+  }
+  .key-event-date {
+    display: block;
+    font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+  }
+  .key-event-text { display: block; }
+  @media (max-width: 600px) {
+    .key-event-link { min-height: 44px; }
+  }
+  .full-story > summary {
+    list-style: none;
+    cursor: pointer;
+    font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ink-soft);
+  }
+  .full-story > summary::-webkit-details-marker { display: none; }
+  .full-story > summary::before {
+    content: "\25B8";
+    display: inline-block;
+    margin-right: 0.35em;
+    font-size: 0.7em;
+    color: var(--brass);
+    transition: transform 0.15s ease;
+  }
+  .full-story[open] > summary::before { transform: rotate(90deg); }
+  .exhibit-list li { transition: background-color 0.4s ease; }
+  .source-flash { background: var(--highlight); }
   .entry-col .field-value,
   .entry-col .confidence-box,
   .entry-col .exhibit-list {
@@ -4079,6 +4143,8 @@ function visibleSearchText(entry, cfg) {
     (entry.sources || []).forEach(s => parts.push(s.name));
     (entry.related_entries || []).forEach(r => parts.push(r.note));
   }
+  // The key-events rail is visible on curated entries, so its text is searchable.
+  if (Array.isArray(entry.key_events)) entry.key_events.forEach(e => parts.push(e?.text));
   return stripProcessLabels(parts.filter(Boolean).join(" \n "));
 }
 /* visible-search-text:end */
@@ -4153,10 +4219,63 @@ function isOwnerDevice() {
   try { return localStorage.getItem("tap-owner") === "1"; } catch (e) { return false; }
 }
 
-/* Shared detail-html builder -- used both by the full docket card
-   (tabbed/global card view) and by the one-liner expand-on-click,
-   so there's exactly one place that knows how to render each
-   tracker kind's fields, not two drifting copies. */
+/* format-key-event-date:start */
+/* Display form of a key-event date. Splits the string (never new Date(),
+   so time zones can't shift the day). Full dates show the year on the
+   first event and whenever the year changes from the previous event;
+   YYYY-MM always reads "Oct 2026"; YYYY reads "2026". */
+function formatKeyEventDate(date, prevDate) {
+  var MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  var parts = String(date).split("-");
+  var year = parts[0];
+  if (parts.length === 1) return year;
+  var mon = MONTHS[parseInt(parts[1], 10) - 1];
+  if (parts.length === 2) return mon + " " + year;
+  var day = parseInt(parts[2], 10);
+  var prevYear = prevDate ? String(prevDate).split("-")[0] : null;
+  return prevYear === year ? mon + " " + day : mon + " " + day + ", " + year;
+}
+/* format-key-event-date:end */
+
+/* key-events-rail:start */
+/* Dotted-rail timeline of an entry's authored `key_events` (oldest first).
+   `hl` is the caller's escape+highlight function, so text is passed
+   through it unchanged; the sources list rides in an escaped data
+   attribute for the click handler. Returns "" when there are no events. */
+function buildKeyEventsRailHtml(entry, hl) {
+  var events = entry && entry.key_events;
+  if (!events || !events.length) return "";
+  var prev = null;
+  var items = events.map(function (e) {
+    var cls = "key-event" + (e.turning_point ? " key-event-turning" : "");
+    var li = '<li class="' + cls + '">' +
+      '<a href="#" class="key-event-link" data-sources="' + escapeHtml(JSON.stringify(e.sources || [])) + '">' +
+      '<span class="key-event-date">' + escapeHtml(formatKeyEventDate(e.date, prev)) + "</span>" +
+      '<span class="key-event-text">' + hl(e.text) + "</span></a></li>";
+    prev = e.date;
+    return li;
+  });
+  return '<ol class="key-events" aria-label="Key events">' + items.join("") + "</ol>";
+}
+/* key-events-rail:end */
+
+/* full-story-disclosure:start */
+/* Collapses an entry's full narrative ("the story") behind a disclosure once
+   the entry has an authored key-events rail to skim instead. Entries with no
+   key_events render exactly as before (story html returned unchanged). The
+   summary shows the update count from the published `timeline`; a search hit
+   (<mark>) inside the story opens the disclosure so the match is visible. */
+function wrapFullStoryHtml(entry, field, storyHtml) {
+  if (!storyHtml) return "";
+  if (!entry || !entry.key_events || !entry.key_events.length) return storyHtml;
+  var n = entry.timeline && entry.timeline[field] && entry.timeline[field].updates
+    ? entry.timeline[field].updates.length : 0;
+  var count = n ? " (" + n + " update" + (n === 1 ? "" : "s") + ")" : "";
+  var open = storyHtml.indexOf("<mark") !== -1 ? " open" : "";
+  return '<details class="full-story"' + open + '><summary>Read the full story' + count + '</summary>' + storyHtml + '</details>';
+}
+/* full-story-disclosure:end */
+
 /* update-timeline:start */
 /* Renders an entry's update history from the published `timeline` object
    (2026-09-21). The marker parsing lives ONLY in tracker/update_markers.py
@@ -4372,7 +4491,7 @@ function buildSourcesCardHtml(entry, hl) {
   const sources = entry.sources || [];
   if (!sources.length) return "";
   return '<div class="field-group entry-aside-card"><details class="field-toggle"><summary class="field-label">Sources</summary><ul class="exhibit-list">' +
-    sources.map(s => '<li><a href="' + escapeHtml(safeHref(s.url)) + '" target="_blank" rel="noopener">' + hl(s.name) + '</a></li>').join("") +
+    sources.map(s => '<li data-url="' + escapeHtml(s.url) + '"><a href="' + escapeHtml(safeHref(s.url)) + '" target="_blank" rel="noopener">' + hl(s.name) + '</a></li>').join("") +
     '</ul></details></div>';
 }
 /* build-sources-card-html:end */
@@ -4582,6 +4701,10 @@ function buildEvidenceDrawerHtml(entry, cfg, hl, opts) {
    plus a second "Accountability Concern Type" card that only appeared for concern matches --
    that pairing showed "Violation Type: Other/Unclassified" right next to the concern label,
    which read as two answers to the same question (2026-09-21, Joe's call to unify the label). */
+/* Shared detail-html builder -- used both by the full docket card
+   (tabbed/global card view) and by the one-liner expand-on-click,
+   so there's exactly one place that knows how to render each
+   tracker kind's fields, not two drifting copies. */
 /* build-detail-html:start */
 function buildDetailHtml(entry, cfg, term, useRegex) {
   // Same highlighting the card's title/meta line already gets --
@@ -4614,7 +4737,7 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
     // in distributeEntryCards(), and as the second card it always seeds the middle
     // column -- same technique as CLA's shared Anticipated Defense / TAP's Rebuttal card.
     const mainHtml =
-      '<div class="field-group entry-main-card"><div class="field-label">What happened</div><div class="field-value">' + summary(entry.section_summaries?.what_changed) + buildFieldTimelineHtml(entry, "what_changed", hl) + '</div></div>' +
+      '<div class="field-group entry-main-card"><div class="field-label">What happened</div><div class="field-value">' + summary(entry.section_summaries?.what_changed) + buildKeyEventsRailHtml(entry, hl) + wrapFullStoryHtml(entry, "what_changed", buildFieldTimelineHtml(entry, "what_changed", hl)) + '</div></div>' +
       '<div class="field-group entry-main-card"><div class="field-label">Status</div><div class="field-value">' + buildFieldTimelineHtml(entry, "status", hl) + '</div>' +
       '<div class="field-label">Estimated impact</div><div class="field-value">' + summary(entry.section_summaries?.estimated_impact) + hl(entry.estimated_health_impact?.summary) + '</div>' +
       (entry.estimated_health_impact?.caveat ? '<div class="field-label">Caveat</div><div class="field-value" style="font-style:italic;">' + hl(entry.estimated_health_impact.caveat) + '</div>' : '') +
@@ -4656,7 +4779,7 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
     // in distributeEntryCards(), and as the second card it always seeds the middle
     // column -- same technique as CLA's shared Anticipated Defense / TAP's Rebuttal card.
     const mainHtml =
-      '<div class="field-group entry-main-card"><div class="field-label">What happened</div><div class="field-value">' + summary(entry.section_summaries?.what_changed) + buildFieldTimelineHtml(entry, "what_changed", hl) + '</div></div>' +
+      '<div class="field-group entry-main-card"><div class="field-label">What happened</div><div class="field-value">' + summary(entry.section_summaries?.what_changed) + buildKeyEventsRailHtml(entry, hl) + wrapFullStoryHtml(entry, "what_changed", buildFieldTimelineHtml(entry, "what_changed", hl)) + '</div></div>' +
       '<div class="field-group entry-main-card"><div class="field-label">Status</div><div class="field-value">' + buildFieldTimelineHtml(entry, "status", hl) + '</div>' +
       '<div class="field-label">' + escapeHtml(L.impact || "Estimated impact") + '</div><div class="field-value">' + summary(entry.section_summaries?.estimated_impact) + hl(entry.estimated_impact?.summary) + '</div>' +
       (entry.estimated_impact?.caveat ? '<div class="field-label">Caveat</div><div class="field-value" style="font-style:italic;">' + hl(entry.estimated_impact.caveat) + '</div>' : '') +
@@ -4792,11 +4915,11 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
     ? '<div class="field-group entry-main-card"><div class="field-label">Status</div><div class="field-value">' + summary(entry.section_summaries.status) + '</div></div>'
     : '';
   const mainHtml = entry.narrative_combined
-    ? '<div class="field-group entry-main-card"><div class="field-label">What happened</div><div class="field-value">' + summary(entry.section_summaries?.incident_summary) + buildFieldTimelineHtml(entry, "incident_summary", hl) + buildFieldTimelineHtml(entry, "status", hl) + '</div></div>' +
+    ? '<div class="field-group entry-main-card"><div class="field-label">What happened</div><div class="field-value">' + summary(entry.section_summaries?.incident_summary) + buildKeyEventsRailHtml(entry, hl) + wrapFullStoryHtml(entry, "incident_summary", buildFieldTimelineHtml(entry, "incident_summary", hl) + buildFieldTimelineHtml(entry, "status", hl)) + '</div></div>' +
       (hasStatusSkim
         ? statusSkimCardHtml + broaderPatternCardHtml + violationTypeCardHtml + tailCardsHtml
         : violationTypeCardHtml + broaderPatternCardHtml + tailCardsHtml)
-    : '<div class="field-group entry-main-card"><div class="field-label">What happened</div><div class="field-value">' + summary(entry.section_summaries?.incident_summary) + buildFieldTimelineHtml(entry, "incident_summary", hl) + '</div></div>' +
+    : '<div class="field-group entry-main-card"><div class="field-label">What happened</div><div class="field-value">' + summary(entry.section_summaries?.incident_summary) + buildKeyEventsRailHtml(entry, hl) + wrapFullStoryHtml(entry, "incident_summary", buildFieldTimelineHtml(entry, "incident_summary", hl)) + '</div></div>' +
       '<div class="field-group entry-main-card"><div class="field-label">Status</div><div class="field-value">' + buildFieldTimelineHtml(entry, "status", hl) + '</div></div>' +
       broaderPatternCardHtml + violationTypeCardHtml + tailCardsHtml;
   // Violation/Concern Type and Status Stage move into the glance card's harm line
@@ -4857,7 +4980,7 @@ function buildProsecutionSourcesCardHtml(entry) {
   const urls = [...new Set(evidenceForSourceTrail(entry.evidence).map(ev => ev.source_url).filter(Boolean))];
   if (!urls.length) return "";
   return '<div class="field-group entry-aside-card"><details class="field-toggle"><summary class="field-label">Sources</summary><ul class="exhibit-list">' +
-    urls.map(url => '<li><a href="' + escapeHtml(safeHref(url)) + '" target="_blank" rel="noopener">' + escapeHtml(url) + '</a></li>').join("") +
+    urls.map(url => '<li data-url="' + escapeHtml(url) + '"><a href="' + escapeHtml(safeHref(url)) + '" target="_blank" rel="noopener">' + escapeHtml(url) + '</a></li>').join("") +
     '</ul></details></div>';
 }
 
@@ -5625,6 +5748,7 @@ function buildEntryCard(entry, cfg, docketLabel, sourceLabel, term, useRegex, ca
     if (div.classList.contains("open")) distributeEntryCards(div);
   });
   wireRelatedEntryLinks(div);
+  wireKeyEventLinks(div);
   wireUpdateRequestButtons(div);
   wireTriageButtons(div);
   wireShareLinkButtons(div);
@@ -6548,6 +6672,39 @@ function wireRelatedEntryLinks(container) {
   });
 }
 
+/* Browser-only: clicking a key-event dot opens the entry's Sources card and
+   flashes the source rows that event cites (data-sources = JSON URL array).
+   Bad JSON counts as no sources; with no matching row the card is just
+   opened and scrolled to. stopPropagation for the same reason as
+   wireRelatedEntryLinks (.entry-head toggles the card). Not covered by the
+   Node harness; see test_key_events_browser.py. */
+function wireKeyEventLinks(container) {
+  container.querySelectorAll(".key-event-link").forEach(a => {
+    a.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      let urls = [];
+      try {
+        const parsed = JSON.parse(a.dataset.sources || "[]");
+        if (Array.isArray(parsed)) urls = parsed;
+      } catch (err) { urls = []; }
+      const scope = a.closest(".entry-detail, .oneliner-detail") || container;
+      const card = Array.from(scope.querySelectorAll(".entry-aside-card"))
+        .find(c => c.querySelector("details .exhibit-list"));
+      if (!card) return;
+      const toggle = card.querySelector("details");
+      toggle.open = true;
+      const hits = Array.from(card.querySelectorAll("li[data-url]"))
+        .filter(li => urls.includes(li.getAttribute("data-url")));
+      hits.forEach(li => {
+        li.classList.add("source-flash");
+        setTimeout(() => li.classList.remove("source-flash"), 2000);
+      });
+      (hits[0] || card).scrollIntoView({ behavior: "smooth", block: "center" });
+    });
+  });
+}
+
 /* Browser-only counterpart to buildUpdateRequestHtml() -- reads the
    data-* attributes that pure function rendered, same split
    wireRelatedEntryLinks() uses one level up. Not covered by the Node
@@ -6672,6 +6829,7 @@ function renderSearchMatches(section, matches, term, useRegex, useOneLiners) {
       glanceDetailTitleHtml(m.entry, m.cfg, (t) => highlightMatches(t || "", term, useRegex)) +
       buildDetailHtml(m.entry, m.cfg, term, useRegex);
     wireRelatedEntryLinks(detail);
+    wireKeyEventLinks(detail);
     wireEvidenceDrawers(detail, m.entry, m.cfg, term, useRegex);
     wireTriageButtons(detail);
 
