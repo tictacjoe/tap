@@ -130,3 +130,16 @@ test("visibleSearchText: status_stage is searchable once live, haystack unchange
   assert.ok(api.visibleSearchText(gsr, Object.assign({}, gsrCfg, { statusStageLive: true })).includes("Court ruled"));
   assert.ok(!api.visibleSearchText(gsr, gsrCfg).includes("Court ruled"));
 });
+
+test("visibleSearchText includes key_events[].text so rail-only terms match", () => {
+  const entry = {
+    official: "Jane Example",
+    key_events: [
+      { date: "2026-01-02", text: "Quokka memo leaked to press", sources: ["https://example.com/a"] },
+      { date: "2026-02-03", text: "Second event", sources: ["https://example.com/a"] },
+    ],
+  };
+  const cfg = { kind: "prosecution", titleField: "official", glanceEnabled: false };
+  assert.match(api.visibleSearchText(entry, cfg), /Quokka memo leaked/);
+  assert.doesNotMatch(api.visibleSearchText({ official: "Jane" }, cfg), /Quokka/);
+});

@@ -4143,6 +4143,8 @@ function visibleSearchText(entry, cfg) {
     (entry.sources || []).forEach(s => parts.push(s.name));
     (entry.related_entries || []).forEach(r => parts.push(r.note));
   }
+  // The key-events rail is visible on curated entries, so its text is searchable.
+  if (Array.isArray(entry.key_events)) entry.key_events.forEach(e => parts.push(e?.text));
   return stripProcessLabels(parts.filter(Boolean).join(" \n "));
 }
 /* visible-search-text:end */
