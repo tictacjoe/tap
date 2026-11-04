@@ -4305,6 +4305,94 @@
       }
     ],
     "status_stage": "In court",
+    "key_events": [
+      {
+        "date": "2025-06",
+        "text": "Kennedy's reconstituted vaccine panel says it will review the whole childhood and adolescent vaccine schedule",
+        "sources": [
+          "https://www.politico.com/news/2025/06/25/kennedys-vaccine-panel-to-review-childhood-immunization-schedule-00423759"
+        ]
+      },
+      {
+        "date": "2025-09-19",
+        "text": "The panel votes 11 to 1 to table a proposal to delay the hepatitis B shot given at birth",
+        "sources": [
+          "https://www.npr.org/sections/shots-health-news/2025/09/19/nx-s1-5546769/cdc-vaccine-acip-hepatitis-b-covid"
+        ]
+      },
+      {
+        "date": "2025-12-05",
+        "text": "The panel votes 8 to 3 to end the universal hepatitis B birth-dose recommendation",
+        "sources": [
+          "https://www.npr.org/sections/shots-health-news/2025/12/05/nx-s1-5634004/cdc-hepatitis-b-vaccine-acip-meeting"
+        ]
+      },
+      {
+        "date": "2025-12-16",
+        "text": "CDC formalizes the change, letting the birth dose be delayed when the mother tests negative",
+        "sources": [
+          "https://www.cdc.gov/media/releases/2025/2025-hepatitis-b-immunization.html",
+          "https://thehill.com/policy/healthcare/5652563-cdc-hepatits-b-vaccine-change/"
+        ]
+      },
+      {
+        "date": "2026-01-05",
+        "text": "Acting CDC Director Jim O'Neill signs a memo removing seven childhood vaccines from universal recommendation",
+        "turning_point": true,
+        "sources": [
+          "https://storage.courtlistener.com/recap/gov.uscourts.mad.286605/gov.uscourts.mad.286605.291.0_5.pdf",
+          "https://www.ag.state.mn.us/Office/Communications/2026/docs/01609_HHS_Complaint.pdf"
+        ]
+      },
+      {
+        "date": "2026-02-03",
+        "text": "The American Academy of Pediatrics breaks with CDC and keeps recommending vaccines against all 18 diseases",
+        "sources": [
+          "https://www.wsj.com/health/healthcare/defying-cdc-pediatricians-recommend-all-kids-get-vaccinations-against-18-diseases-b50f2549"
+        ]
+      },
+      {
+        "date": "2026-02-24",
+        "text": "Fifteen states sue in federal court in California, saying the memo puts children's lives at risk",
+        "turning_point": true,
+        "sources": [
+          "https://www.cnn.com/2026/02/24/health/states-sue-trump-childhood-vaccine-recommendations",
+          "https://www.gov.ca.gov/2026/02/24/california-co-leads-multi-state-lawsuit-against-cdcs-unscientific-vaccine-recommendations-putting-public-health-at-risk/",
+          "https://www.ag.state.mn.us/Office/Communications/2026/docs/01609_HHS_Complaint.pdf"
+        ]
+      },
+      {
+        "date": "2026-03-16",
+        "text": "A federal judge in Boston stays the schedule changes, 13 panel appointments and the panel's votes",
+        "turning_point": true,
+        "sources": [
+          "https://storage.courtlistener.com/recap/gov.uscourts.mad.286605/gov.uscourts.mad.286605.291.0_5.pdf",
+          "https://www.npr.org/2026/03/16/nx-s1-5749530/judge-blocks-rfk-jr-vaccine-changes",
+          "https://www.cnbc.com/2026/03/16/judge-blocks-rfk-jrs-efforts-to-reshape-childhood-vaccine-policy.html"
+        ]
+      },
+      {
+        "date": "2026-04-29",
+        "text": "The government appeals the Boston ruling to the First Circuit",
+        "sources": [
+          "https://www.statnews.com/2026/04/29/hhs-appealing-acip-vaccine-policy-lawsuit-ruling/"
+        ]
+      },
+      {
+        "date": "2026-09-08",
+        "text": "The California court partly denies the government's motion to dismiss, so the states' suit goes on",
+        "sources": [
+          "https://www.doj.state.or.us/oregon-department-of-justice/federal-oversight/federal-litigation-tracker/unlawful-overhaul-of-the-childhood-immunization-schedule-arizona-v-kennedy-n-d-cal/"
+        ]
+      },
+      {
+        "date": "2026-09-11",
+        "text": "The Boston judge pauses the pediatricians' case until the First Circuit rules on the appeal",
+        "sources": [
+          "https://www.medicaldaily.com/aap-kennedy-vaccine-lawsuit-paused-october-6-appeal-478666"
+        ]
+      }
+    ],
     "timeline": {
       "confidence_note": {
         "base": "HIGH confidence -- the Decision Memo's date, signatory, and specific vaccine list, plus the 15-state lawsuit's filing and participant states, are independently corroborated across CNN, the California Governor's office's own press release, and multiple state Attorneys General's coordinated announcements. Re-verified 2026-08-06: a Stanford-backed model published by ProPublica projects ~290,000 measles deaths over subsequent decades under a vaccine-disappearance scenario -- a modeled projection, not an observed outcome, cited here to quantify stakes rather than as a measured result.",
@@ -4413,7 +4501,28 @@
       },
       "reviewed": "2026-10-06"
     },
-    "status_stage": "Unchallenged"
+    "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2026-03-19",
+        "text": "Acting CDC Director Jay Bhattacharya blocks a cleared COVID vaccine study set to run in CDC's weekly journal",
+        "turning_point": true,
+        "sources": [
+          "https://democrats-energycommerce.house.gov/media/press-releases/democrats-demand-answers-trump-administrations-suppression-covid-19-vaccine",
+          "https://www.nbcnews.com/health/health-news/study-covid-vaccines-acting-cdc-director-blocked-published-rcna351174"
+        ]
+      },
+      {
+        "date": "2026-06-23",
+        "text": "The study's authors publish it in JAMA Network Open, outside CDC",
+        "turning_point": true,
+        "sources": [
+          "https://www.nbcnews.com/health/health-news/study-covid-vaccines-acting-cdc-director-blocked-published-rcna351174",
+          "https://apnews.com/article/cdc-covid-vaccine-effective-study-256e61b5ff4fcf3bfecd48826077e389",
+          "https://pubmed.ncbi.nlm.nih.gov/42334917/"
+        ]
+      }
+    ]
   },
   {
     "id": "cdc-diagnostic-testing-suspended-2026",
@@ -4609,7 +4718,45 @@
       },
       "reviewed": "2026-10-21"
     },
-    "status_stage": "Unchallenged"
+    "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2025-04",
+        "text": "The administration sends layoff notices to thousands of CDC and other federal health agency employees",
+        "turning_point": true,
+        "sources": [
+          "https://www.wabe.org/the-cdc-has-zombie-programs-congress-funds-them-but-few-people-are-left-to-do-the-work/"
+        ]
+      },
+      {
+        "date": "2026-01",
+        "text": "A spending law requires HHS to keep staff for required program work but sets no staffing level per program",
+        "sources": [
+          "https://www.wabe.org/the-cdc-has-zombie-programs-congress-funds-them-but-few-people-are-left-to-do-the-work/"
+        ]
+      },
+      {
+        "date": "2026-04",
+        "text": "Health Secretary Kennedy tells a congressional hearing he plans to hire 12,000 people",
+        "sources": [
+          "https://www.wabe.org/the-cdc-has-zombie-programs-congress-funds-them-but-few-people-are-left-to-do-the-work/"
+        ]
+      },
+      {
+        "date": "2026-08-18",
+        "text": "AP reports CDC 'zombie programs' that Congress funds but that have almost no one left to run them",
+        "sources": [
+          "https://www.wabe.org/the-cdc-has-zombie-programs-congress-funds-them-but-few-people-are-left-to-do-the-work/"
+        ]
+      },
+      {
+        "date": "2026-10-16",
+        "text": "The CDC union counts about 50 funded programs with little staff and says 2026 hires replaced 16.5% of losses",
+        "sources": [
+          "https://abcnews.com/Politics/cdc-lags-hiring-health-agencies-after-doge-cuts/story?id=137261657"
+        ]
+      }
+    ]
   },
   {
     "id": "cdc-global-health-center-elimination-2025",
@@ -4736,7 +4883,49 @@
       },
       "reviewed": "2026-09-20"
     },
-    "status_stage": "Unchallenged"
+    "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2025-01",
+        "text": "An executive order starts the U.S. withdrawal from the World Health Organization",
+        "sources": [
+          "https://time.com/7320256/vaccines-trump-rfk-jr-global-health-covid/"
+        ]
+      },
+      {
+        "date": "2025-05",
+        "text": "The 2026 budget request ends CDC's Global Health Center as its own budget line and zeroes out Gavi funding",
+        "turning_point": true,
+        "sources": [
+          "https://www.kff.org/global-health-policy/administration-releases-additional-details-of-fiscal-year-2026-budget-request/",
+          "https://www.cbsnews.com/news/hhs-budget-proposal-cdc-chronic-disease-global-health-maha-agency"
+        ]
+      },
+      {
+        "date": "2025-06",
+        "text": "Kennedy tells Gavi's pledging summit the U.S. is withdrawing its roughly $1.2 billion pledge",
+        "turning_point": true,
+        "sources": [
+          "https://www.bloomberg.com/news/articles/2025-06-26/rfk-jr-pulls-us-funding-for-vaccines-for-the-world-s-poorest"
+        ]
+      },
+      {
+        "date": "2025-09",
+        "text": "Time reports CDC's Global Health Center has effectively been shut down and global health funding cut 67%",
+        "sources": [
+          "https://time.com/7320256/vaccines-trump-rfk-jr-global-health-covid/"
+        ]
+      },
+      {
+        "date": "2025-12-04",
+        "text": "A Gates Foundation report projects child deaths under 5 will rise in 2025 for the first time this century",
+        "sources": [
+          "https://www.gatesfoundation.org/ideas/media-center/press-releases/2025/12/goalkeepers-child-deaths-rising-high-impact-solutions",
+          "https://www.cnn.com/2025/12/04/world/child-deaths-projected-rise-gates-foundation-intl",
+          "https://www.bloomberg.com/news/articles/2025-12-04/gates-warns-child-deaths-to-rebound-after-trump-era-funding-cuts"
+        ]
+      }
+    ]
   },
   {
     "id": "cdc-harm-reduction-defunding-threat-trump2",
@@ -4850,7 +5039,80 @@
       },
       "reviewed": "2026-09-28"
     },
-    "status_stage": "Unchallenged"
+    "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2025-04",
+        "text": "A budget document proposes ending a $56 million-a-year grant that gives naloxone to first responders",
+        "sources": [
+          "https://www.cnn.com/2025/04/30/health/naloxone-grant-budget-cut-overdose-prevention",
+          "https://www.yahoo.com/news/trump-looks-end-56-million-184000560.html"
+        ]
+      },
+      {
+        "date": "2025-07-24",
+        "text": "A Trump executive order says SAMHSA grants must not fund harm reduction or safe consumption efforts",
+        "turning_point": true,
+        "sources": [
+          "https://www.naco.org/news/samhsa-implements-new-harm-reduction-restrictions-updated-guidance"
+        ]
+      },
+      {
+        "date": "2025-07-29",
+        "text": "SAMHSA tells grantees it is moving away from harm reduction but still allows naloxone and test strips",
+        "sources": [
+          "https://www.naco.org/news/samhsa-implements-new-harm-reduction-restrictions-updated-guidance"
+        ]
+      },
+      {
+        "date": "2025-09-17",
+        "text": "CDC's published priorities say its grants will deprioritize harm reduction and housing-first policies",
+        "sources": [
+          "https://www.cdc.gov/about/cdc/index.html"
+        ]
+      },
+      {
+        "date": "2026-01",
+        "text": "CDC officials tell overdose-prevention grantees anything seen as encouraging drug use is now prohibited",
+        "sources": [
+          "https://www.theguardian.com/us-news/2026/jan/23/trump-cdc-overdose-prevention-messaging"
+        ]
+      },
+      {
+        "date": "2026-02-02",
+        "text": "Kennedy announces a $100 million addiction plan that faults harm reduction and housing first",
+        "sources": [
+          "https://www.hhs.gov/press-room/secretary-kennedy-announces-100-million-investment-great-american-recovery.html",
+          "https://www.statnews.com/2026/02/02/trump-kennedy-addiction-initiative-spiritual-malaise/"
+        ]
+      },
+      {
+        "date": "2026-02-03",
+        "text": "The 2026 health spending law Trump signs funds first-responder overdose-reversal training at about $59 million",
+        "sources": [
+          "https://www.addictionpolicy.org/post/congress-appropriates-funding-for-key-substance-use-and-justice-agencies-and-programs-for-fy2026",
+          "https://www.bhfs.com/insight/labor-hhs-fiscal-year-fy-2026-appropriations-bill-and-health-care-extenders-overview/"
+        ]
+      },
+      {
+        "date": "2026-04-24",
+        "text": "SAMHSA bars HHS funds for drug test strips, syringes and safer-smoking supplies; naloxone stays fundable",
+        "turning_point": true,
+        "sources": [
+          "https://www.samhsa.gov/sites/default/files/dear-colleague-letter-upated-hr-funding-guidance.pdf",
+          "https://www.naco.org/news/samhsa-implements-new-harm-reduction-restrictions-updated-guidance"
+        ]
+      },
+      {
+        "date": "2026-06-24",
+        "text": "CDC tells funded health programs to accept its priorities, which deprioritize harm reduction, by July 1",
+        "turning_point": true,
+        "sources": [
+          "https://www.theguardian.com/us-news/2026/jun/26/trump-administration-overdose-prevention-health-program",
+          "https://www.aol.com/articles/white-house-mandates-move-away-202521000.html"
+        ]
+      }
+    ]
   },
   {
     "id": "cdc-hicpac-infection-control-committee-disbanded-2025",
@@ -4918,7 +5180,27 @@
       },
       "reviewed": "2026-10-21"
     },
-    "status_stage": "Unchallenged"
+    "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2025-03-31",
+        "text": "CDC's committee that set national infection-control guidance for hospitals is terminated",
+        "turning_point": true,
+        "sources": [
+          "https://www.nbcnews.com/health/health-news/trump-administration-shut-cdcs-infection-control-committee-rcna205209",
+          "https://leadingage.org/cdcs-hicpac-disbanded-by-trump-administration/"
+        ]
+      },
+      {
+        "date": "2025-05-02",
+        "text": "CDC first discloses the termination, more than a month later, and tells committee members at a virtual meeting",
+        "sources": [
+          "https://www.nbcnews.com/health/health-news/trump-administration-shut-cdcs-infection-control-committee-rcna205209",
+          "https://leadingage.org/cdcs-hicpac-disbanded-by-trump-administration/",
+          "https://www.healio.com/news/infectious-disease/20250507/cdc-terminates-infection-control-advisory-committee"
+        ]
+      }
+    ]
   },
   {
     "id": "cdc-hiv-prevention-cbo-grants-not-renewed-2026",
@@ -5074,7 +5356,79 @@
       },
       "reviewed": "2026-10-26"
     },
-    "status_stage": "Unchallenged"
+    "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2026-02-03",
+        "text": "The 2026 spending law keeps CDC's HIV prevention program funded, rejecting a House plan to eliminate it",
+        "sources": [
+          "https://www.hivma.org/news/news_and_publications/hivma_news_releases/2026/in-a-major-victory-congress-maintains-federal-funding-for-hiv-programs/",
+          "https://www.everycrsreport.com/reports/R48970.html"
+        ]
+      },
+      {
+        "date": "2026-06-30",
+        "text": "The direct grants' funding period ends, and the 96 community groups get a three-month extension through September",
+        "sources": [
+          "https://19thnews.org/2026/08/hiv-funding-cuts-cdc/",
+          "https://www.govexec.com/management/2026/07/cdc-shifts-hiv-prevention-funds-away-groups-tackling-work/414924/"
+        ]
+      },
+      {
+        "date": "2026-07-17",
+        "text": "AIDS United says CDC's direct HIV-prevention grant program for community groups will not be recompeted",
+        "turning_point": true,
+        "sources": [
+          "https://www.aidsunited.org/posts/aids-united-condemns-trump-administrations-decision-to-end-direct-hiv-prevention-funding-for-community-organizations"
+        ]
+      },
+      {
+        "date": "2026-07-20",
+        "text": "Roll Call reports the White House budget office told CDC not to renew $46 million for the 96 groups",
+        "sources": [
+          "https://rollcall.com/2026/07/20/trump-administration-puts-kibosh-on-hiv-prevention-funding/",
+          "https://savehivfunding.org/statement-cdc-not-renewing-hiv-prevention-funding-for-nearly-100-community-based-organizations/"
+        ]
+      },
+      {
+        "date": "2026-07-22",
+        "text": "A coalition and 71 organizations ask Kennedy and acting CDC chief Bhattacharya to reconsider",
+        "sources": [
+          "https://www.hivma.org/globalassets/hivma/federal-policy-watch/hpac-hhs-letter-ps21-2102.pdf"
+        ]
+      },
+      {
+        "date": "2026-07-29",
+        "text": "113 House members ask budget director Vought whether his office ordered the cut, and on what legal authority",
+        "sources": [
+          "https://pocan.house.gov/sites/evo-subsites/pocan-evo.house.gov/files/evo-media-document/omb-cdc-letter-july-29-2026-compressed.pdf",
+          "https://pocan.house.gov/media-center/press-releases/pocan-frankel-randall-takano-lead-113-house-members-letter-omb-calling"
+        ]
+      },
+      {
+        "date": "2026-08",
+        "text": "PowerHouse Charlotte, which offered free HIV screening for 16 years, announces it will close",
+        "sources": [
+          "https://stateline.org/2026/10/01/community-groups-lose-hiv-prevention-money-as-feds-redirect-dollars-to-states/"
+        ]
+      },
+      {
+        "date": "2026-09-03",
+        "text": "CDC sends health departments $91 million in one-time supplements, 24% below plan; five departments get none",
+        "sources": [
+          "https://www.kff.org/other-health/the-future-of-cdc-hiv-prevention-funding-for-community-organizations/"
+        ]
+      },
+      {
+        "date": "2026-09-30",
+        "text": "CDC's direct HIV-prevention grants to the 96 community groups end",
+        "turning_point": true,
+        "sources": [
+          "https://stateline.org/2026/10/01/community-groups-lose-hiv-prevention-money-as-feds-redirect-dollars-to-states/",
+          "https://www.wlrn.org/health/2026-10-22/white-house-diverts-hiv-prevention-money-to-states-cutting-off-local-outreach-groups"
+        ]
+      }
+    ]
   },
   {
     "id": "cdc-injury-center-drowning-team-elimination-2025",
@@ -5176,7 +5530,53 @@
       },
       "reviewed": "2026-10-13"
     },
-    "status_stage": "Unchallenged"
+    "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2025-04",
+        "text": "HHS layoffs cut whole CDC Injury Center teams, from crash and brain-injury work to drowning prevention",
+        "turning_point": true,
+        "sources": [
+          "https://www.npr.org/sections/shots-health-news/2025/04/21/nx-s1-5371519/cdc-hhs-injury-prevention-federal-layoffs",
+          "https://www.opb.org/article/2025/04/21/cdc-injury-prevention-team-faced-major-cuts-putting-critical-work-at-risk/"
+        ]
+      },
+      {
+        "date": "2025-04-11",
+        "text": "A safety agency email says CDC cuts are ending part of the national ER injury-tracking system",
+        "sources": [
+          "https://www.newsweek.com/consumer-safety-agency-injury-data-trump-cdc-cuts-2060742"
+        ]
+      },
+      {
+        "date": "2025-08-27",
+        "text": "NPR reports CDC's three-scientist drowning unit has halted, and the 2026 budget plan would end the program",
+        "sources": [
+          "https://www.npr.org/sections/shots-health-news/2025/08/27/nx-s1-5509976/drowning-prevention-program-halt-cdc"
+        ]
+      },
+      {
+        "date": "2025-10-29",
+        "text": "A former CDC injury scientist writes that only the overdose, suicide and violent-death programs remain",
+        "sources": [
+          "https://theconversation.com/cdcs-ability-to-prevent-injuries-like-drowning-traumatic-brain-injury-and-falls-is-severely-compromised-by-trump-cuts-267531"
+        ]
+      },
+      {
+        "date": "2026-01",
+        "text": "Congress keeps the Injury Center level-funded for 2026 despite a proposal to eliminate it",
+        "sources": [
+          "https://gazettenet.com/2026/05/19/mcgovern-addresses-drowning-deaths-cdc-cuts/"
+        ]
+      },
+      {
+        "date": "2026-05",
+        "text": "Rep. McGovern says the drowning-prevention staff have all been fired and the 2027 budget ends the program",
+        "sources": [
+          "https://gazettenet.com/2026/05/19/mcgovern-addresses-drowning-deaths-cdc-cuts/"
+        ]
+      }
+    ]
   },
   {
     "id": "cdc-injury-center-funding-freeze-2025",
@@ -5521,7 +5921,65 @@
       },
       "reviewed": "2026-10-22"
     },
-    "status_stage": "Reversed or withdrawn"
+    "status_stage": "Reversed or withdrawn",
+    "key_events": [
+      {
+        "date": "2025-01",
+        "text": "A Milwaukee Public Schools student is diagnosed with high blood lead, traced to flaking paint at school",
+        "sources": [
+          "https://abc17news.com/cnn-health/2025/12/26/milwaukee-clears-its-public-schools-of-lead-paint-hazards-after-10-months-of-work/"
+        ]
+      },
+      {
+        "date": "2025-03-26",
+        "text": "Milwaukee asks CDC to send its expert field team to help with lead hazards in the city's schools",
+        "sources": [
+          "https://www.cnn.com/2025/04/11/health/cdc-milwaukee-schools-lead/index.html"
+        ]
+      },
+      {
+        "date": "2025-04-01",
+        "text": "A CDC epidemiologist tells Milwaukee her entire division was eliminated that day in the HHS layoffs",
+        "turning_point": true,
+        "sources": [
+          "https://www.cnn.com/2025/04/11/health/cdc-milwaukee-schools-lead/index.html",
+          "https://wisconsinexaminer.com/2025/04/14/milwaukee-jolted-by-cdc-lead-prevention-team-cuts-as-mps-schools-remain-closed/"
+        ]
+      },
+      {
+        "date": "2025-04-03",
+        "text": "CDC turns Milwaukee down, citing the complete loss of its lead program; Kennedy suggests the cut was a mistake",
+        "turning_point": true,
+        "sources": [
+          "https://www.cnn.com/2025/04/11/health/cdc-milwaukee-schools-lead/index.html",
+          "https://www.cbsnews.com/news/rfk-jr-hhs-layoffs-cdc-lead-poisoning/"
+        ]
+      },
+      {
+        "date": "2025-04-07",
+        "text": "Kennedy seems to walk back his remark about the lead program cut",
+        "sources": [
+          "https://www.cbsnews.com/news/rfk-jr-hhs-layoffs-cdc-lead-poisoning/"
+        ]
+      },
+      {
+        "date": "2025-06-11",
+        "text": "HHS rehires more than 450 fired CDC staff, including the whole lead team and its parent division",
+        "turning_point": true,
+        "sources": [
+          "https://abc17news.com/cnn-health/2025/06/11/hhs-reinstates-more-than-450-cdc-employees-fired-in-april-reorganization/",
+          "https://www.yahoo.com/news/cdc-rehires-450-employees-cut-225753113.html",
+          "https://www.fiercehealthcare.com/regulatory/hhs-reinstates-more-450-cdc-employees-fired-during-massive-reorganization-april"
+        ]
+      },
+      {
+        "date": "2025-12",
+        "text": "Milwaukee finishes clearing lead hazards from its schools, about ten months after the crisis began",
+        "sources": [
+          "https://abc17news.com/cnn-health/2025/12/26/milwaukee-clears-its-public-schools-of-lead-paint-hazards-after-10-months-of-work/"
+        ]
+      }
+    ]
   },
   {
     "id": "cdc-leadership-vacancy-crisis-2026",
@@ -5642,7 +6100,82 @@
       },
       "reviewed": "2026-09-28"
     },
-    "status_stage": "Unchallenged"
+    "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2025-03-25",
+        "text": "Five CDC center and office heads depart at once, a day after Susan Monarez is named as the director pick",
+        "sources": [
+          "https://www.cnn.com/2025/03/25/health/senior-cdc-leaders-depart",
+          "https://www.statnews.com/2025/03/25/cdc-high-level-officials-depart/",
+          "https://www.yahoo.com/news/5-high-level-cdc-officials-162320293.html"
+        ]
+      },
+      {
+        "date": "2025-08",
+        "text": "CDC Director Susan Monarez is fired 29 days into the job after clashing with Kennedy over vaccine policy",
+        "turning_point": true,
+        "sources": [
+          "https://www.statnews.com/2026/08/05/senate-confirms-dr-erica-schwartz-new-cdc-director/"
+        ]
+      },
+      {
+        "date": "2025-11-26",
+        "text": "Ralph Abraham, who as Louisiana's surgeon general stopped mass vaccine promotion, is named CDC's No. 2",
+        "sources": [
+          "https://www.cbsnews.com/atlanta/news/ralph-abraham-cdc-principal-deputy-director-vaccine-critic/"
+        ]
+      },
+      {
+        "date": "2026-02-18",
+        "text": "After acting director Jim O'Neill leaves, NIH chief Jay Bhattacharya is named to run CDC as well",
+        "sources": [
+          "https://www.cbsnews.com/news/nih-jay-bhattacharya-acting-cdc-director/"
+        ]
+      },
+      {
+        "date": "2026-02-23",
+        "text": "Deputy director Abraham resigns about seven weeks after starting, the second top CDC official out that month",
+        "sources": [
+          "https://www.theguardian.com/us-news/2026/feb/23/cdc-deputy-director-steps-down"
+        ]
+      },
+      {
+        "date": "2026-03",
+        "text": "The Wall Street Journal reports about 80% of CDC's center directors have left or been forced out since January 2025",
+        "sources": [
+          "https://www.wsj.com/health/healthcare/turmoil-takes-hold-at-cdc-as-top-officials-keep-leaving-0152432e?mod=hp_lead_pos6",
+          "https://gettysburgconnection.org/the-turmoil-is-getting-deep-at-cdc/"
+        ]
+      },
+      {
+        "date": "2026-03",
+        "text": "The White House misses the 210-day Vacancies Act deadline without nominating a permanent CDC director",
+        "turning_point": true,
+        "sources": [
+          "https://www.cnn.com/2026/03/25/health/cdc-director-nomination-deadline",
+          "https://www.npr.org/2026/03/25/nx-s1-5760832/cdc-turmoil-director"
+        ]
+      },
+      {
+        "date": "2026-04",
+        "text": "The White House nominates Dr. Erica Schwartz, a former deputy surgeon general, as CDC director",
+        "sources": [
+          "https://www.npr.org/2026/08/05/nx-s1-5920379/cdc-director-confirmed-erica-schwartz",
+          "https://www.cnn.com/2026/08/05/health/erica-schwartz-senate-vote"
+        ]
+      },
+      {
+        "date": "2026-08-05",
+        "text": "The Senate confirms Schwartz 51-44, ending a nearly yearlong vacancy in CDC's top job",
+        "turning_point": true,
+        "sources": [
+          "https://www.statnews.com/2026/08/05/senate-confirms-dr-erica-schwartz-new-cdc-director/",
+          "https://www.npr.org/2026/08/05/nx-s1-5920379/cdc-director-confirmed-erica-schwartz",
+          "https://www.cnn.com/2026/08/05/health/erica-schwartz-senate-vote"
+        ]
+      }
+    ]
   },
   {
     "id": "cdc-prams-maternal-health-data-eliminated-2025",
@@ -5915,7 +6448,32 @@
       },
       "reviewed": "2026-09-20"
     },
-    "status_stage": "Unchallenged"
+    "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2025-03",
+        "text": "CDC databases that had been updated monthly begin to stall; nearly 90% of the paused ones track vaccination",
+        "turning_point": true,
+        "sources": [
+          "https://www.nbcnews.com/health/health-news/cdc-databases-not-updated-vaccines-study-rcna255467"
+        ]
+      },
+      {
+        "date": "2025-04",
+        "text": "Some databases, including COVID-19 vaccination data, stop getting updates after late April",
+        "sources": [
+          "https://www.nbcnews.com/health/health-news/cdc-databases-not-updated-vaccines-study-rcna255467"
+        ]
+      },
+      {
+        "date": "2026-01-26",
+        "text": "A study in Annals of Internal Medicine finds 38 of 82 monthly CDC databases had stalled by late October 2025",
+        "turning_point": true,
+        "sources": [
+          "https://www.nbcnews.com/health/health-news/cdc-databases-not-updated-vaccines-study-rcna255467"
+        ]
+      }
+    ]
   },
   {
     "id": "cdc-vessel-sanitation-program-layoffs-2025",
@@ -6187,7 +6745,47 @@
       },
       "reviewed": "2026-10-05"
     },
-    "status_stage": "Unchallenged"
+    "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2026-08-27",
+        "text": "FDA approves the updated 2026-27 COVID vaccines",
+        "sources": [
+          "https://www.cidrap.umn.edu/covid-19/cdc-greenlights-covid-vaccines-vulnerable-children-after-nearly-1-month-delay"
+        ]
+      },
+      {
+        "date": "2026-09-16",
+        "text": "The Wall Street Journal reports CDC has not opened orders for the shots in the free Vaccines for Children program",
+        "sources": [
+          "https://www.staradvertiser.com/2026/09/16/breaking-news/cdc-delay-holds-up-childrens-covid-vaccine-orders/"
+        ]
+      },
+      {
+        "date": "2026-09-23",
+        "text": "The Guardian reports the holdup blocks COVID shots for all children in at least 11 states and American Samoa",
+        "sources": [
+          "https://www.newsbeep.com/us/858061/"
+        ]
+      },
+      {
+        "date": "2026-09-23",
+        "text": "CDC opens Vaccines for Children ordering for the shots, nearly four weeks after FDA approval",
+        "turning_point": true,
+        "sources": [
+          "https://www.cidrap.umn.edu/covid-19/cdc-greenlights-covid-vaccines-vulnerable-children-after-nearly-1-month-delay",
+          "https://www.drugtopics.com/view/cdc-opens-orders-for-covid-19-vaccines-in-vaccines-for-children"
+        ]
+      },
+      {
+        "date": "2026-09-29",
+        "text": "Sens. Markey, Schumer and Sanders ask CDC and HHS to explain the delay in writing by October 9",
+        "sources": [
+          "https://www.markey.senate.gov/imo/media/doc/letter_to_cdc_on_covid_vaccines.pdf",
+          "https://www.markey.senate.gov/news/press-releases/sens-markey-schumer-sanders-demand-transparency-on-cdcs-delay-of-covid-19-vaccines-for-children-highlighting-concerning-pattern-of-trump-administration-undermining-americans-faith-in-vaccines"
+        ]
+      }
+    ]
   },
   {
     "id": "census-2026-test-citizenship-question-2030",
@@ -6254,6 +6852,26 @@
       "reviewed": "2026-09-20"
     },
     "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2025-08",
+        "text": "Trump directs Commerce to have the Census Bureau work on a count that leaves out immigrants without legal status",
+        "sources": [
+          "https://www.congress.gov/crs-product/IN12676",
+          "https://www.usnews.com/news/best-states/florida/articles/2026-02-05/census-bureau-plans-to-use-survey-with-a-citizenship-question-in-its-test-for-2030-alarming-experts"
+        ]
+      },
+      {
+        "date": "2026",
+        "text": "The Census Bureau's 2026 test asks about citizenship, in two places instead of the six first planned",
+        "turning_point": true,
+        "sources": [
+          "https://www.usnews.com/news/best-states/florida/articles/2026-02-05/census-bureau-plans-to-use-survey-with-a-citizenship-question-in-its-test-for-2030-alarming-experts",
+          "https://www.congress.gov/crs-product/IN12676",
+          "https://www.census.gov/programs-surveys/2026-census-test/faq.html"
+        ]
+      }
+    ],
     "timeline": {
       "confidence_note": {
         "base": "HIGH confidence -- the test's use of ACS citizenship-question wording, the reduction from six to two test locations, and the connection to Trump's August 2025 directive are corroborated across AP-sourced reporting (U.S. News, Washington Times, AOL) and official congressional/Census Bureau documentation (Congress.gov CRS report, Census.gov's own test FAQ).",
@@ -6340,7 +6958,26 @@
       },
       "reviewed": "2026-09-20"
     },
-    "status_stage": "Unchallenged"
+    "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2025-12-05",
+        "text": "OMB's chief statistician says the administration has reopened review of the 2024 race and ethnicity standards",
+        "sources": [
+          "https://www.npr.org/2025/12/05/nx-s1-5634897/trump-census-race-categories-ethnicity-middle-east-north-africa"
+        ]
+      },
+      {
+        "date": "2026-09-10",
+        "text": "A Federal Register notice proposes dropping the census race and ethnicity question and barring a sexual-orientation one",
+        "turning_point": true,
+        "sources": [
+          "https://www.npr.org/2026/09/09/nx-s1-5845147/trump-us-census-citizenship-question-race-categories",
+          "https://www.nprillinois.org/2026-09-09/trump-officials-propose-sweeping-changes-to-the-census-that-would-reshape-voting-maps",
+          "https://politicalwire.com/2026/09/10/trump-proposes-eliminating-race-questions-from-census/"
+        ]
+      }
+    ]
   },
   {
     "id": "census-bureau-differential-privacy-ban",
@@ -6495,7 +7132,78 @@
       },
       "reviewed": "2026-10-06"
     },
-    "status_stage": "Unchallenged"
+    "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2025-09-15",
+        "text": "Two Florida Republican groups sue over the 2020 census's use of imputation and differential privacy",
+        "sources": [
+          "https://storage.courtlistener.com/recap/gov.uscourts.flmd.447432/gov.uscourts.flmd.447432.1.0.pdf"
+        ]
+      },
+      {
+        "date": "2026-02-03",
+        "text": "A three-judge court dismisses the suit as filed too late, with leave to amend",
+        "sources": [
+          "https://storage.courtlistener.com/recap/gov.uscourts.flmd.447432/gov.uscourts.flmd.447432.84.0.pdf"
+        ]
+      },
+      {
+        "date": "2026-02-17",
+        "text": "The plaintiffs' new complaint drops the differential-privacy challenge and targets only imputation",
+        "sources": [
+          "https://www.courtlistener.com/docket/71353803/university-of-south-florida-college-republicans-v-lutnick/"
+        ]
+      },
+      {
+        "date": "2026-06-04",
+        "text": "Commerce order DAO 216-26 bans noise infusion, leaving coarsening or suppression to protect census data",
+        "turning_point": true,
+        "sources": [
+          "https://www.commerce.gov/opog/disclosure-avoidance-statistical-products",
+          "https://datafoundation.org/news/data-policy/886/886-DAO-216-26-Fact-Sheet",
+          "https://www.npr.org/2026/06/12/nx-s1-5855734/census-bureau-data-differential-privacy"
+        ]
+      },
+      {
+        "date": "2026-07-07",
+        "text": "The court dismisses the suit for good, finding no standing and untimely claims",
+        "sources": [
+          "https://storage.courtlistener.com/recap/gov.uscourts.flmd.447432/gov.uscourts.flmd.447432.111.0.pdf"
+        ]
+      },
+      {
+        "date": "2026-07-08",
+        "text": "The plaintiffs appeal the dismissal directly to the Supreme Court",
+        "sources": [
+          "https://storage.courtlistener.com/recap/gov.uscourts.flmd.447432/gov.uscourts.flmd.447432.115.0.pdf",
+          "https://www.supremecourt.gov/docket/docketfiles/html/public/26-205.html"
+        ]
+      },
+      {
+        "date": "2026-08-04",
+        "text": "The Census Bureau holds the 2025 American Community Survey 1-year estimates, with no release date, citing the order",
+        "turning_point": true,
+        "sources": [
+          "https://www.census.gov/newsroom/press-releases/2026/iphi-acs-media-advisory.html"
+        ]
+      },
+      {
+        "date": "2026-08-17",
+        "text": "The bureau says it will rely only on coarsening and suppression, with the survey fully switched by 2029",
+        "sources": [
+          "https://www.census.gov/newsroom/blogs/director/2026/08/understanding-the-new-disclosure-avoidance-policy.html"
+        ]
+      },
+      {
+        "date": "2026-09-04",
+        "text": "More than 100 groups urge Lutnick to postpone the order and release the delayed survey estimates",
+        "sources": [
+          "https://thecensusproject.org/2026/09/04/over-100-incredibly-diverse-organizations-write-to-lutnick-critical-of-delay-in-acs-release/",
+          "https://www.ihep.org/press/ihep-100-organizations-urge-commerce-department-to-end-indefinite-delay-of-acs-data-release/"
+        ]
+      }
+    ]
   },
   {
     "id": "cfpb-dismantlement-trump2",
@@ -6764,6 +7472,126 @@
       }
     ],
     "status_stage": "Reversed or withdrawn",
+    "key_events": [
+      {
+        "date": "2025-02-10",
+        "text": "Acting Director Russell Vought orders all CFPB staff and contractors to stop work and stay out of the offices",
+        "turning_point": true,
+        "sources": [
+          "https://www.arnoldporter.com/en/perspectives/advisories/2025/02/trump-administration-seeks-to-dismantle-cfpb",
+          "https://www.epi.org/policywatch/trump-administration-closes-the-cfpb/"
+        ]
+      },
+      {
+        "date": "2025-02-14",
+        "text": "A federal judge temporarily blocks further firings, data destruction and funding cuts at the CFPB",
+        "sources": [
+          "https://www.arnoldporter.com/en/perspectives/advisories/2025/02/trump-administration-seeks-to-dismantle-cfpb"
+        ]
+      },
+      {
+        "date": "2025-04",
+        "text": "Under a partial appeals-court stay, about 1,400 remaining employees get layoff notices",
+        "sources": [
+          "https://bankingjournal.aba.com/2026/01/d-c-circuit-court-grants-en-banc-rehearing-of-cfpb-layoff-lawsuit-district-court-clarifies-preliminary-injunction/"
+        ]
+      },
+      {
+        "date": "2025-04-28",
+        "text": "The D.C. Circuit restores the full injunction, blocking further layoffs while the appeal goes on",
+        "sources": [
+          "https://www.consumerfinancialserviceslawmonitor.com/2025/04/appeals-court-blocks-cfpb-layoffs-pending-further-review/",
+          "https://bankingjournal.aba.com/2026/01/d-c-circuit-court-grants-en-banc-rehearing-of-cfpb-layoff-lawsuit-district-court-clarifies-preliminary-injunction/"
+        ]
+      },
+      {
+        "date": "2025-07-04",
+        "text": "Trump signs a law cutting the cap on CFPB's yearly Federal Reserve funding roughly in half",
+        "sources": [
+          "https://www.hklaw.com/en/insights/publications/2025/07/cfpb-budget-slashed-by-almost-50-percent-as-trump-signs",
+          "https://news.bgov.com/banking-law/voughts-latest-cfpb-plan-sent-to-judge-who-halted-mass-firings"
+        ]
+      },
+      {
+        "date": "2025-08-15",
+        "text": "A D.C. Circuit panel lifts the injunction, letting the layoffs move toward a staff of about 200",
+        "sources": [
+          "https://www.opb.org/article/2025/08/15/cfpb-staff-layoffs-can-proceed-appeals-court-rules/",
+          "https://bankingjournal.aba.com/2026/01/d-c-circuit-court-grants-en-banc-rehearing-of-cfpb-layoff-lawsuit-district-court-clarifies-preliminary-injunction/"
+        ]
+      },
+      {
+        "date": "2025-12",
+        "text": "The panel's ruling is vacated, leaving the layoffs blocked",
+        "sources": [
+          "https://bankingjournal.aba.com/2026/01/d-c-circuit-court-grants-en-banc-rehearing-of-cfpb-layoff-lawsuit-district-court-clarifies-preliminary-injunction/",
+          "https://www.npr.org/2026/01/21/nx-s1-5683060/cfpb-consumer-watchdog-agency-trump-second-term"
+        ]
+      },
+      {
+        "date": "2025-12-22",
+        "text": "21 states and D.C. sue to make Vought keep requesting Federal Reserve funding for the CFPB",
+        "sources": [
+          "https://www.consumerfinancemonitor.com/2025/12/31/state-ags-file-suit-to-force-cfpb-to-request-funding-from-the-federal-reserve/"
+        ]
+      },
+      {
+        "date": "2025-12-30",
+        "text": "Judge Amy Berman Jackson orders Vought to request funding, writing that the agency is hanging by a thread",
+        "turning_point": true,
+        "sources": [
+          "https://www.npr.org/2025/12/30/nx-s1-5661581/cfpb-funding-order",
+          "https://www.npr.org/2026/01/21/nx-s1-5683060/cfpb-consumer-watchdog-agency-trump-second-term"
+        ]
+      },
+      {
+        "date": "2026-03-13",
+        "text": "A California federal judge rules CFPB must keep requesting the funds it needs; the bureau later appeals",
+        "sources": [
+          "https://www.consumerfinancemonitor.com/2026/05/12/cfpb-surprisingly-appeals-judge-davilas-funding-decision-to-the-ninth-circuit/"
+        ]
+      },
+      {
+        "date": "2026-05",
+        "text": "CFPB removes roughly 1,700 web pages of consumer advisories, press releases and testimony from before February 2025",
+        "sources": [
+          "https://www.notus.org/trump-white-house/cfpb-deletes-consumer-advisories-from-its-website",
+          "https://www.theguardian.com/us-news/ng-interactive/2026/jun/04/trump-administration-consumer-financial-protection-bureau"
+        ]
+      },
+      {
+        "date": "2026-06-19",
+        "text": "The full D.C. Circuit sends a new plan to cut about half the remaining staff back to Judge Jackson for review",
+        "sources": [
+          "https://news.bgov.com/banking-law/voughts-latest-cfpb-plan-sent-to-judge-who-halted-mass-firings"
+        ]
+      },
+      {
+        "date": "2026-09-17",
+        "text": "The Senate Banking Committee votes 13-11 to advance Brian Johnson's nomination as CFPB director",
+        "sources": [
+          "https://www.consumerfinancemonitor.com/2026/09/18/senate-banking-committee-advances-brian-johnsons-nomination-to-lead-cfpb/",
+          "https://www.americanbanker.com/news/cfpb-director-designate-brian-johnson-clears-senate-banking"
+        ]
+      },
+      {
+        "date": "2026-09-25",
+        "text": "An Oregon federal judge rules Vought's refusal to request funding was unlawful and vacates those decisions",
+        "turning_point": true,
+        "sources": [
+          "https://bankingjournal.aba.com/2026/09/oregon-federal-court-rules-cfpb-funding-refusal-violated-apa/",
+          "https://www.goodwinlaw.com/en/insights/blogs/2026/10/court-vacates-cfpb-directors-bid-to-zero-out-funds",
+          "https://www.oag.ca.gov/news/press-releases/attorney-general-bonta-celebrates-final-win-cfpb-funding-lawsuit-consumer"
+        ]
+      },
+      {
+        "date": "2026-10-07",
+        "text": "Reuters reports more than half of 2026 CFPB exams got an expedited review, making penalties unlikely",
+        "sources": [
+          "https://kfgo.com/2026/10/07/exclusive-us-consumer-watchdog-examiners-adopt-lighter-touch-amid-pressure-and-threats-sources-say/"
+        ]
+      }
+    ],
     "timeline": {
       "confidence_note": {
         "base": "Very strong sourcing: court filings and judicial rulings are primary legal documents, not characterizations, and are corroborated across NPR, NOTUS, the Economic Policy Institute, and legal-advisory analysis from Arnold & Porter (a law firm tracking the litigation for its own clients, a useful neutral-technical source). Vought's own public statements (the Charlie Kirk Show interview, his Project 2025 authorship) are on the record in his own words. Re-verified 2026-07-20: funding litigation continues in CFPB's favor (a federal judge again rejected the administration's funding-withholding theory); the more significant near-term development is procedural -- Vought's FVRA-based authority to run the agency expires August 1, 2026, and his eventual successor (Johnson if confirmed, otherwise Paoletta) is not yet on record with a stated position on the underlying dismantlement effort. Re-verified 2026-07-26: Johnson's hearing and its substance are corroborated by Consumer Finance Monitor, American Banker, HousingWire, and MBA Newslink; the RIF-litigation stay is corroborated by Consumer Financial Services Law Monitor's reporting on the D.C. Circuit's NTEU v. Vought remand. Re-verified 2026-08-02: the forced nationwide relocation, regional-office lease terminations, and headquarters capacity shortfall are well-corroborated across many independent outlets (National Mortgage News, American Banker, U.S. News, Consumer Finance Monitor, Yahoo News), with the capacity mismatch itself reported as a likely attrition driver beyond the relocation requirement's direct effect. Re-verified 2026-08-02: The Guardian's independent, methodologically-documented count (Wayback Machine + mirror-site comparison) of >=2,200 deleted pages is a stronger, more precise figure than the earlier NOTUS ~1,700 estimate cited above; both describe the same underlying campaign, not separate deletions. Senate Banking Committee Democrats' June 22, 2026 letter to Vought is corroborated by the Committee's own published letter (banking.senate.gov) and Consumer Finance Monitor's reporting. Reordered 2026-08-06 (chronology cleanup, no new facts): this entry's `what_changed` had accumulated several append-only 'Update' additions whose event dates (the May 2026 relocation order, the June 2026 page-removal/letter events, the February 2026 Warren report) had fallen out of chronological sequence relative to later-appended July 2026 content; no facts were added, removed, or altered, only reordered to match actual event dates. Re-verified 2026-08-17: Paoletta's August 1, 2026 transition to Acting Director is corroborated across National Mortgage News, American Banker, and Consumer Finance Monitor; the report of Vought remaining as a senior adviser is sourced to Consumer Finance Monitor's July 28, 2026 reporting. No committee-vote date for Johnson was identified in sourcing reviewed. Re-verified 2026-08-29: Paoletta's continued role and the absence of a scheduled Johnson committee vote are corroborated by National Mortgage News, American Banker, and Consumer Finance Monitor reporting through late August 2026; no material change to report. Re-verified 2026-09-09: no material change -- no Senate Banking Committee vote on Brian Johnson's nomination has been scheduled in sourcing reviewed following his July 23, 2026 confirmation hearing; Mark Paoletta continues serving as Acting Director. Expanded 2026-09-09: added the Feb-June 2025 enforcement-leadership resignations (Halperin, Petersen), the April-August 2025 D.C. Circuit back-and-forth on the RIF injunction (which the entry had previously compressed into a vague 'despite the court order'), the OBBBA's July 4, 2025 Federal Reserve funding-cap cut, and two medical-debt/registry rule rollbacks (July 11 and Oct. 29, 2025) -- corroborated by Bloomberg Law and PYMNTS (Petersen resignation), Consumer Financial Services Law Monitor and OPB (the two D.C. Circuit rulings), Holland & Knight (OBBBA funding cut), and Consumer Finance Monitor/CNBC (medical debt rule vacatur, registry rescission, and the state-law-preemption interpretive rule).",
@@ -6929,7 +7757,69 @@
       },
       "reviewed": "2026-10-08"
     },
-    "status_stage": "Unchallenged"
+    "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2025-07-16",
+        "text": "Days after a Supreme Court order clears agency layoffs, the CFTC begins cutting staff across key divisions",
+        "turning_point": true,
+        "sources": [
+          "https://www.investing.com/news/economy-news/us-cftc-begins-layoffs-after-supreme-court-ruling--reuters-4138637",
+          "https://www.aol.com/news/us-cftc-begins-staff-firings-000943597.html"
+        ]
+      },
+      {
+        "date": "2025-12-03",
+        "text": "The CFTC's inspector general reports staff fell 21.5% in fiscal 2025, from about 708 to about 556",
+        "sources": [
+          "https://www.oversight.gov/sites/default/files/documents/reports/2026-01/oigmgmtcha120325.pdf"
+        ]
+      },
+      {
+        "date": "2026-02-09",
+        "text": "The last enforcement lawyer in the Chicago office resigns, leaving the once 20-attorney hub empty",
+        "turning_point": true,
+        "sources": [
+          "https://finance.yahoo.com/news/cftcs-top-cop-legal-team-161236038.html"
+        ]
+      },
+      {
+        "date": "2026-02-26",
+        "text": "Sen. Durbin and four other Democrats write the CFTC chair about the Chicago losses and falling enforcement",
+        "sources": [
+          "https://www.durbin.senate.gov/newsroom/press-releases/durbin-leads-senators-in-raising-alarm-about-gutting-of-cftcs-chicago-division-of-enforcement"
+        ]
+      },
+      {
+        "date": "2026-04",
+        "text": "Chairman Selig tells House lawmakers the smaller agency runs more efficiently, leaning on AI and automation",
+        "sources": [
+          "https://www.coindesk.com/policy/2026/04/16/u-s-cftc-s-selig-says-ai-has-helped-make-up-for-staffing-cuts-at-key-crypto-watchdog"
+        ]
+      },
+      {
+        "date": "2026-04-24",
+        "text": "Sen. Reed says enforcement staff fell 25% since 2024 and the agency filed one new case in 2025",
+        "sources": [
+          "https://www.reed.senate.gov/news/releases/reed-presses-cftc-chair-on-lack-of-enforcement-action"
+        ]
+      },
+      {
+        "date": "2026-06-01",
+        "text": "Politico reports the CFTC is offering staff buyouts and early retirement packages",
+        "sources": [
+          "https://subscriber.politicopro.com/article/2026/06/wall-street-regulator-offers-staff-buyouts-00945487"
+        ]
+      },
+      {
+        "date": "2026-07-21",
+        "text": "Sen. Warren asks the GAO to review whether the CFTC's 25% workforce cut followed federal law",
+        "sources": [
+          "https://www.banking.senate.gov/imo/media/doc/20260721_letter_to_gao_re_cftc_staffing_enforcementpdf.pdf",
+          "https://www.bankingdive.com/news/warren-sounds-alarm-on-cftc-staffing/826023/"
+        ]
+      }
+    ]
   },
   {
     "id": "cia-workforce-buyout-hiring-freeze-2025",
@@ -7058,7 +7948,57 @@
       },
       "reviewed": "2026-09-28"
     },
-    "status_stage": "Unchallenged"
+    "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2025-02-04",
+        "text": "The CIA offers its whole workforce buyouts of eight months' pay and freezes hiring",
+        "turning_point": true,
+        "sources": [
+          "https://www.nbcnews.com/news/us-news/cia-offers-buyouts-workforce-trump-administration-continues-efforts-sc-rcna190742",
+          "https://www.cbsnews.com/news/cia-offers-buyouts-to-all-staffers/"
+        ]
+      },
+      {
+        "date": "2025-03",
+        "text": "The CIA begins firing some probationary employees, on top of the voluntary buyouts",
+        "sources": [
+          "https://www.defenseone.com/policy/2025/03/cia-terminating-some-probationary-employees/403531/?oref=d1-homepage-top-story",
+          "https://www.washingtonpost.com/national-security/2025/03/06/cia-nsa-doge-layoffs-firing/"
+        ]
+      },
+      {
+        "date": "2025-05-02",
+        "text": "Officials are reported to have told Congress of a multi-year plan to cut about 1,200 CIA positions",
+        "turning_point": true,
+        "sources": [
+          "https://www.washingtontimes.com/news/2025/may/3/nsa-cia-spy-agencies-set-shrink-workforce-trump-administration-plan/"
+        ]
+      },
+      {
+        "date": "2025-10",
+        "text": "OPM's backlog of pending retirement claims reaches 34,587, the most since 2022, as OPM itself shrinks",
+        "sources": [
+          "https://www.govexec.com/pay-benefits/2025/11/opms-retirement-backlog-skyrockets-deferred-resignees-begin-offboarding/409448/"
+        ]
+      },
+      {
+        "date": "2026-08-20",
+        "text": "A wave of CIA departures is reported swamping the retirement system; new retirees face 9+ month pension waits",
+        "turning_point": true,
+        "sources": [
+          "https://www.washingtonpost.com/national-security/2026/08/20/wave-cia-retirements-resignations-is-swamping-spy-agency/",
+          "https://www.msn.com/en-us/news/us/cia-departures-swamp-retirement-system-as-1200-job-cut-looms/ar-AA2aFBSr"
+        ]
+      },
+      {
+        "date": "2026-08-31",
+        "text": "OPM's retirement backlog falls sharply to 15,427 pending claims by the end of August",
+        "sources": [
+          "https://www.fedsmith.com/2026/09/10/opm-retirement-backlog-record-drop-august-2026/"
+        ]
+      }
+    ]
   },
   {
     "id": "cia-world-factbook-shuttered-2026",
@@ -7123,7 +8063,35 @@
       },
       "reviewed": "2026-10-06"
     },
-    "status_stage": "Unchallenged"
+    "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "1962",
+        "text": "The CIA begins the Factbook as a classified reference on the world's countries",
+        "sources": [
+          "https://www.cia.gov/stories/story/spotlighting-the-world-factbook-as-we-bid-a-fond-farewell/",
+          "https://www.nbcnews.com/politics/politics-news/cia-discontinues-publication-world-factbook-reference-tool-rcna257515"
+        ]
+      },
+      {
+        "date": "1997",
+        "text": "The World Factbook goes online as a free public reference used by students, teachers and journalists",
+        "sources": [
+          "https://www.cia.gov/stories/story/spotlighting-the-world-factbook-as-we-bid-a-fond-farewell/",
+          "https://www.nbcnews.com/politics/politics-news/cia-discontinues-publication-world-factbook-reference-tool-rcna257515"
+        ]
+      },
+      {
+        "date": "2026-02-04",
+        "text": "The CIA abruptly ends the Factbook with no notice or stated reason, replacing it with a farewell page",
+        "turning_point": true,
+        "sources": [
+          "https://www.cia.gov/stories/story/spotlighting-the-world-factbook-as-we-bid-a-fond-farewell/",
+          "https://www.nbcnews.com/politics/politics-news/cia-discontinues-publication-world-factbook-reference-tool-rcna257515",
+          "https://www.cnn.com/2026/02/05/us/cia-world-factbook-countries-cec"
+        ]
+      }
+    ]
   },
   {
     "id": "cisa-cyber-workforce-cuts-trump2",
@@ -7417,6 +8385,122 @@
       "reviewed": "2026-10-21"
     },
     "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2025-02",
+        "text": "CISA cuts more than 100 workers, including probationary hires and staff tracking China's Salt and Volt Typhoon hackers",
+        "turning_point": true,
+        "sources": [
+          "https://www.notus.org/technology/cisa-layoffs-salt-typhoon",
+          "https://www.cbsnews.com/news/cybersecurity-agencys-top-recruits-doge-cuts/"
+        ]
+      },
+      {
+        "date": "2025-03",
+        "text": "The administration revokes $10 million for MS-ISAC, a threat-sharing center serving state and local governments",
+        "sources": [
+          "https://statescoop.com/sen-mark-warner-introduces-bill-to-restore-ms-isac-funding-boosting-federal-cyber-support-to-50m-annually/"
+        ]
+      },
+      {
+        "date": "2025-05-30",
+        "text": "Budget documents propose cutting CISA's funding by about $495 million and ending its election security program",
+        "sources": [
+          "https://www.nextgov.com/cybersecurity/2025/06/cisa-projected-lose-third-its-workforce-under-trumps-2026-budget/405726/"
+        ]
+      },
+      {
+        "date": "2025-09-30",
+        "text": "CISA's funding agreement for MS-ISAC with the Center for Internet Security expires",
+        "sources": [
+          "https://www.cybersecuritydive.com/news/ms-isac-loses-federal-funding-cyber-impacts/761367/",
+          "https://www.naco.org/news/multi-state-information-sharing-and-analysis-center-ms-isac-loses-federal-funding"
+        ]
+      },
+      {
+        "date": "2025-10",
+        "text": "A government shutdown leaves about 35% of CISA staff working, and a key cyber-sharing law lapses",
+        "sources": [
+          "https://www.washingtonpost.com/technology/2025/10/02/cisa-shutdown-cybersecurity/",
+          "https://www.politico.com/news/2025/10/03/cyber-law-cisa-2015-shutdown-00592501"
+        ]
+      },
+      {
+        "date": "2025-10-09",
+        "text": "Hundreds of DHS staff, CISA's among them, are reported ordered to ICE, CBP or federal police jobs or risk removal",
+        "sources": [
+          "https://www.nextgov.com/people/2025/10/hundreds-dhs-staff-face-reassignments-border-security-immigration/408707/"
+        ]
+      },
+      {
+        "date": "2025-11-12",
+        "text": "The law ending the shutdown voids shutdown layoffs, and CISA's 54 layoff notices are rescinded",
+        "turning_point": true,
+        "sources": [
+          "https://www.govinfo.gov/content/pkg/PLAW-119publ37/html/PLAW-119publ37.htm",
+          "https://federalnewsnetwork.com/federal-report/2025/11/more-than-3600-feds-get-notice-their-shutdown-rifs-are-rescinded/"
+        ]
+      },
+      {
+        "date": "2025-12",
+        "text": "The administration ends a retention pay program covering nearly half of CISA's employees",
+        "sources": [
+          "https://www.bloomberg.com/news/articles/2025-12-03/us-cyber-agency-cuts-incentive-pay-program-for-diminished-staff?srnd=phx-us-politics",
+          "https://www.cybersecuritydive.com/news/cisa-eliminate-cyber-pay-incentives-ctms/806981/"
+        ]
+      },
+      {
+        "date": "2026-01-21",
+        "text": "CISA's acting director defends the cuts as an internal report counts at least 998 staff gone",
+        "sources": [
+          "https://www.cybersecuritydive.com/news/cisa-acting-director-house-hearing/810175/"
+        ]
+      },
+      {
+        "date": "2026-02-14",
+        "text": "A DHS funding lapse begins, and CISA furloughs more than half of its remaining workforce",
+        "turning_point": true,
+        "sources": [
+          "https://www.nytimes.com/2026/02/22/us/politics/cyber-agency-dhs-security-setbacks.html"
+        ]
+      },
+      {
+        "date": "2026-02-26",
+        "text": "DHS moves the acting director out and names Nick Andersen acting head of CISA",
+        "sources": [
+          "https://www.nextgov.com/people/2026/02/cisa-acting-director-moved-new-dhs-role/411737/"
+        ]
+      },
+      {
+        "date": "2026-04",
+        "text": "Sean Plankey, the nominee to lead CISA, withdraws after 13 months without Senate confirmation",
+        "sources": [
+          "https://federalnewsnetwork.com/cybersecurity/2026/04/plankey-withdraws-as-cisa-nominee/"
+        ]
+      },
+      {
+        "date": "2026-04-30",
+        "text": "Trump signs a DHS funding bill, ending the longest agency shutdown on record",
+        "sources": [
+          "https://federalnewsnetwork.com/government-shutdown/2026/04/house-approves-bill-to-fund-the-department-of-homeland-security-and-end-the-record-shutdown/"
+        ]
+      },
+      {
+        "date": "2026-09-09",
+        "text": "CISA says about 250 prospective hires hold tentative offers; the DHS secretary has said about 600 are needed",
+        "sources": [
+          "https://www.nextgov.com/people/2026/09/cisa-has-roughly-250-prospective-hires-awaiting-clearance-agency-chief-says/415887/",
+          "https://therecord.media/cisa-director-nominee-workforce-hires-mullin-house-hearing"
+        ]
+      },
+      {
+        "date": "2026-09-24",
+        "text": "CISA publishes a 13-page 2026 election security plan that a state election chief calls too little, too late",
+        "sources": [
+          "https://www.propublica.org/article/cisa-election-security-donald-trump"
+        ]
+      }
+    ],
     "timeline": {
       "confidence_note": {
         "base": "Strong, multi-source documentation: Axios, Cybersecurity Dive, Nextgov/FCW, Federal News Network and The Record, plus primary records -- Sen. Mark Warner's June 16, 2026 letter, the FY2026 budget supplement as reported by Nextgov/FCW, and an internal CISA workforce report entered into a House hearing record (at least 998 departures). The 3,292-to-2,324 workforce figures are the FY2026 budget request's projection, not a June 2026 count of filled positions, and the $495 million (FY2026) and $700 million-plus (FY2027) cuts are budget requests, not enacted appropriations. The MS-ISAC defunding is the most cleanly attributable individual action (a specific dollar figure, a named department head, a specific date). Whether the cuts have made the country less safe is disputed between CISA's own leadership, which cites 2025 output figures, and outside oversight (Warner, House Democrats) -- present both sides rather than picking one as settled fact. The director post remains vacant after Sean Plankey's April 2026 withdrawal; a likely nominee has been reported but none has been formally announced.",
@@ -7680,7 +8764,32 @@
       },
       "reviewed": "2026-09-20"
     },
-    "status_stage": "Unchallenged"
+    "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2025-05-31",
+        "text": "NOAA fires the roughly 10-person team that produces Climate.gov, halting new content",
+        "turning_point": true,
+        "sources": [
+          "https://www.theguardian.com/us-news/2025/jun/11/climate-website-shut-down-noaa"
+        ]
+      },
+      {
+        "date": "2025-06-24",
+        "text": "Climate.gov visitors are redirected to NOAA.gov/climate, ending it as a standalone public resource",
+        "turning_point": true,
+        "sources": [
+          "https://www.ecowatch.com/trump-noaa-climate-website.html"
+        ]
+      },
+      {
+        "date": "2026-06",
+        "text": "Former NOAA employees launch an independent site recreating Climate.gov's data tools and lessons",
+        "sources": [
+          "https://www.npr.org/2026/06/26/nx-s1-5869615/climate-noaa-data-trump-doge"
+        ]
+      }
+    ]
   },
   {
     "id": "climate-word-research-purge-2025",
@@ -7775,7 +8884,57 @@
       },
       "reviewed": "2026-09-28"
     },
-    "status_stage": "Unchallenged"
+    "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2025-02-21",
+        "text": "The administration is reported withdrawing grants and support for research that mentions 'climate'",
+        "turning_point": true,
+        "sources": [
+          "https://www.theguardian.com/environment/2025/feb/21/trump-scientific-research-climate"
+        ]
+      },
+      {
+        "date": "2025-03-20",
+        "text": "A USDA research official sends staff a list of 110 banned terms, including 'climate change' and 'clean water'",
+        "turning_point": true,
+        "sources": [
+          "https://investigatemidwest.org/2025/04/07/clean-water-equity-microplastics-and-other-words-banned-in-leaked-usda-memo/",
+          "https://climate.law.columbia.edu/content/usda-staff-given-list-110-banned-terms"
+        ]
+      },
+      {
+        "date": "2025-04-11",
+        "text": "Sen. Wyden and dozens of lawmakers warn USDA the banned-words list will harm rural communities",
+        "sources": [
+          "https://pingree.house.gov/news/documentsingle.aspx?DocumentID=5528"
+        ]
+      },
+      {
+        "date": "2025-07-10",
+        "text": "Former NOAA staff say they were told to avoid the word 'climate' and say 'environmental change'",
+        "sources": [
+          "https://www.usatoday.com/story/news/nation/2025/07/10/weather-scientists-challenges-budget-cuts/84416470007/"
+        ]
+      },
+      {
+        "date": "2026-03-27",
+        "text": "An analysis finds NSF grants mentioning 'climate change' fell 77% from 2023 to 2025",
+        "turning_point": true,
+        "sources": [
+          "https://grist.org/language/climate-federal-research-grants-national-science-foundation/",
+          "https://www.govexec.com/management/2026/03/national-science-foundation-climate-change-disappearing-proposals/412495/"
+        ]
+      },
+      {
+        "date": "2026-05-29",
+        "text": "A proposed White House budget office rule would give political appointees power over federal grant decisions",
+        "sources": [
+          "https://cen.acs.org/policy/research-funding/omb-federal-research-grants-peer-review-political-appointee/104/web/2026/06",
+          "https://www.wbur.org/news/2026/07/13/trump-white-house-omb-regulation-federal-financial-assistance-research-grants-proposed-rule"
+        ]
+      }
+    ]
   },
   {
     "id": "cms-hrsn-medicaid-guidance-rescission-2025",
@@ -7849,7 +9008,34 @@
       },
       "reviewed": "2026-09-20"
     },
-    "status_stage": "Unchallenged"
+    "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2023-11",
+        "text": "CMS issues guidance encouraging states to use Medicaid waivers for housing, food and other social needs",
+        "sources": [
+          "https://www.medicaid.gov/federal-policy-guidance/2025-03-03/177006"
+        ]
+      },
+      {
+        "date": "2024-12",
+        "text": "CMS issues a second bulletin on covering health-related social needs through Medicaid waivers",
+        "sources": [
+          "https://www.medicaid.gov/federal-policy-guidance/2025-03-03/177006"
+        ]
+      },
+      {
+        "date": "2025-03-04",
+        "text": "CMS rescinds both bulletins and the framework; 18 states keep approved waivers for now but face renewal doubts",
+        "turning_point": true,
+        "sources": [
+          "https://www.medicaid.gov/federal-policy-guidance/2025-03-03/177006",
+          "https://www.cbsnews.com/news/trump-medicaid-social-services-housing-nutrition/",
+          "https://www.aamc.org/advocacy-policy/washington-highlights/cms-rescinds-guidance-addressing-health-related-social-needs-medicaid",
+          "https://www.fiercehealthcare.com/payers/cms-rescinds-medicaid-health-related-social-needs-guidance"
+        ]
+      }
+    ]
   },
   {
     "id": "coast-guard-payroll-breach-2025",
@@ -7905,7 +9091,24 @@
       },
       "reviewed": "2026-09-20"
     },
-    "status_stage": "Under investigation"
+    "status_stage": "Under investigation",
+    "key_events": [
+      {
+        "date": "2025-02-18",
+        "text": "Coast Guard says a payroll breach, first flagged by a junior petty officer, delayed pay for 1,135 members",
+        "turning_point": true,
+        "sources": [
+          "https://www.militarytimes.com/news/your-military/2025/02/18/coast-guard-data-breach-impacts-pay-of-1135-service-members/"
+        ]
+      },
+      {
+        "date": "2025-02-19",
+        "text": "The Coast Guard restores its payroll system after a temporary shutdown; the investigation continues",
+        "sources": [
+          "https://content.govdelivery.com/accounts/USDHSCG/bulletins/3d57ea5"
+        ]
+      }
+    ]
   },
   {
     "id": "columbia-400m-funding-cut-antisemitism-2025",
@@ -8129,7 +9332,48 @@
       },
       "reviewed": "2026-11-02"
     },
-    "status_stage": "Unchallenged"
+    "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2023-12",
+        "text": "The Biden administration signs a salmon deal with four tribes and two states, pausing decades of dam litigation",
+        "sources": [
+          "https://earthjustice.org/press/2025/plaintiffs-represented-by-earthjustice-condemn-trump-administrations-unilateral-withdrawal-from-historic-columbia-basin-agreement"
+        ]
+      },
+      {
+        "date": "2025-06-12",
+        "text": "Trump memo withdraws the government from the Columbia Basin salmon agreement; tribes call it a broken promise",
+        "turning_point": true,
+        "sources": [
+          "https://www.opb.org/article/2025/06/12/trump-upends-columbia-river-basin-agreement/",
+          "https://earthjustice.org/press/2025/plaintiffs-represented-by-earthjustice-condemn-trump-administrations-unilateral-withdrawal-from-historic-columbia-basin-agreement",
+          "https://www.hcn.org/articles/trump-quits-deal-with-northwest-tribes-to-restore-salmon/"
+        ]
+      },
+      {
+        "date": "2025-09",
+        "text": "With the agreement gone, a federal judge lifts the stay on the long-running dam-operations case",
+        "sources": [
+          "https://www.courthousenews.com/judge-denies-feds-attempt-to-dismiss-revived-lawsuit-over-columbia-basin-salmon-protections/"
+        ]
+      },
+      {
+        "date": "2026-02-25",
+        "text": "The judge issues a preliminary injunction requiring more water spill at the dams to protect salmon",
+        "turning_point": true,
+        "sources": [
+          "https://www.opb.org/article/2026/02/25/judge-orders-protective-measures-for-columbia-river-salmon-after-canceled-historic-deal/"
+        ]
+      },
+      {
+        "date": "2026-10-20",
+        "text": "The Ninth Circuit hears the government's appeal of the injunction",
+        "sources": [
+          "https://www.courthousenews.com/trump-admin-reignites-battle-over-salmon-dams-in-columbia-river/"
+        ]
+      }
+    ]
   },
   {
     "id": "commerce-china-export-official-forced-out-2025",
@@ -8388,7 +9632,32 @@
       },
       "reviewed": "2026-10-21"
     },
-    "status_stage": "Unchallenged"
+    "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2026-01-23",
+        "text": "Trump officials push out Elizabeth Cannon, head of Commerce's tech-threat office, after a deputy is put on leave",
+        "turning_point": true,
+        "sources": [
+          "https://www.wsj.com/politics/national-security/trump-administration-pushes-out-key-officials-focused-on-china-tech-threat-cd2dde3f",
+          "https://www.yahoo.com/news/articles/trump-administration-pushes-official-whose-144634799.html"
+        ]
+      },
+      {
+        "date": "2026-02-06",
+        "text": "Rep. Debbie Dingell writes to Commerce asking about the removals",
+        "sources": [
+          "https://debbiedingell.house.gov/UploadedFiles/2.6.2026_Rep._Dingell_Letter_to_Commerce_on_BIS_Firings.pdf"
+        ]
+      },
+      {
+        "date": "2026-02-12",
+        "text": "Sens. Warner and Warren ask Lutnick who ordered the dismissals and who now leads the office, seeking a reply by March 4",
+        "sources": [
+          "https://www.warner.senate.gov/public/index.cfm/2026/2/warner-warren-press-commerce-secretary-lutnick-on-reportedly-pushing-out-key-officials-working-to-counter-cyber-threats-posed-by-china"
+        ]
+      }
+    ]
   },
   {
     "id": "commerce-natcast-chips-grant-clawback-2025",
@@ -8729,7 +9998,85 @@
       },
       "reviewed": "2026-09-28"
     },
-    "status_stage": "Unchallenged"
+    "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2025-01",
+        "text": "A federal grant freeze leaves health centers in at least 10 states temporarily unable to draw approved grant money",
+        "turning_point": true,
+        "sources": [
+          "https://www.pbs.org/newshour/nation/community-health-centers-face-funding-delays-after-trump-administration-freeze",
+          "https://www.motherjones.com/politics/2025/03/medicaid-health-center-funding-freeze-gop/"
+        ]
+      },
+      {
+        "date": "2025-02-14",
+        "text": "About 7% of staff at HRSA, the agency that runs health-center grants, are fired",
+        "sources": [
+          "https://kffhealthnews.org/health-industry/hrsa-federal-staff-cuts-affect-health-programs-grants/"
+        ]
+      },
+      {
+        "date": "2025-03",
+        "text": "Congress extends the Community Health Center Fund, about 70% of centers' federal money, only to Sept. 30, 2025",
+        "sources": [
+          "https://kffhealthnews.org/news/article/community-health-centers-government-shutdown-state-cuts-funding-risks/"
+        ]
+      },
+      {
+        "date": "2025-03-27",
+        "text": "HHS announces a reduction in force that deepens HRSA's staff losses",
+        "sources": [
+          "https://kffhealthnews.org/health-industry/hrsa-federal-staff-cuts-affect-health-programs-grants/"
+        ]
+      },
+      {
+        "date": "2025-05",
+        "text": "The national health-center association warns one in four centers may close or cut services within two years",
+        "sources": [
+          "https://www.nachc.org/risk-of-medicaid-cuts-millions-of-community-health-center-patients-stand-to-lose-coverage/"
+        ]
+      },
+      {
+        "date": "2025-10",
+        "text": "The Community Health Center Fund lapses as Congress fails to renew it before the government shutdown",
+        "sources": [
+          "https://kffhealthnews.org/news/article/community-health-centers-government-shutdown-state-cuts-funding-risks/",
+          "https://www.cbsnews.com/news/health-centers-government-funding-lapses/"
+        ]
+      },
+      {
+        "date": "2025-10",
+        "text": "A New Hampshire health center closes its Franconia site, leaving about 1,400 patients to drive 10 miles or more",
+        "turning_point": true,
+        "sources": [
+          "https://fortune.com/2025/11/19/trump-medicaid-cuts-rural-new-hampshire-hospital-closes-first-domino"
+        ]
+      },
+      {
+        "date": "2025-11",
+        "text": "The bill ending the 43-day shutdown extends the fund only to Jan. 30, 2026",
+        "sources": [
+          "https://www.govinfo.gov/content/pkg/BILLS-119hr5371enr/html/BILLS-119hr5371enr.htm"
+        ]
+      },
+      {
+        "date": "2026-02-03",
+        "text": "A full-year spending law extends the fund through Dec. 31, 2026, a stopgap with no multi-year renewal",
+        "turning_point": true,
+        "sources": [
+          "https://www.govinfo.gov/content/pkg/BILLS-119hr7148enr/html/BILLS-119hr7148enr.htm"
+        ]
+      },
+      {
+        "date": "2026-09-02",
+        "text": "A stopgap carries centers' separate discretionary funding only to Dec. 11, 2026",
+        "sources": [
+          "https://www.govinfo.gov/content/pkg/BILLS-119hr6500enr/html/BILLS-119hr6500enr.htm",
+          "https://www.medicaldaily.com/federal-health-funding-december-deadline-health-center-fund-478623"
+        ]
+      }
+    ]
   },
   {
     "id": "copyright-office-perlmutter-hayden-firing-2025",
@@ -8826,7 +10173,59 @@
       },
       "reviewed": "2026-09-20"
     },
-    "status_stage": "In court"
+    "status_stage": "In court",
+    "key_events": [
+      {
+        "date": "2025-05-08",
+        "text": "The White House fires Librarian of Congress Carla Hayden in a two-sentence email",
+        "turning_point": true,
+        "sources": [
+          "https://www.cbsnews.com/news/trump-fires-longtime-librarian-of-congress-carla-hayden/",
+          "https://www.libraryjournal.com/story/librarian-of-congress-carla-hayden-fired",
+          "https://www.npr.org/2025/05/09/nx-s1-5393737/carla-hayden-fired-library-of-congress-trump"
+        ]
+      },
+      {
+        "date": "2025-05-10",
+        "text": "Acting Librarian Todd Blanche removes Register of Copyrights Shira Perlmutter and names a replacement",
+        "turning_point": true,
+        "sources": [
+          "https://www.publishersweekly.com/pw/by-topic/industry-news/libraries/article/97754-u-s-executive-and-legislative-branches-battle-at-the-loc.html"
+        ]
+      },
+      {
+        "date": "2025-05-12",
+        "text": "Library staff refuse the new acting officials entry to the Copyright Office, and Capitol Police are called",
+        "sources": [
+          "https://www.thedailybeast.com/library-of-congress-staff-mount-standoff-against-new-bosses/",
+          "https://www.publishersweekly.com/pw/by-topic/industry-news/libraries/article/97754-u-s-executive-and-legislative-branches-battle-at-the-loc.html"
+        ]
+      },
+      {
+        "date": "2025-05-22",
+        "text": "Perlmutter sues, arguing neither the President nor Blanche had the power to remove her",
+        "sources": [
+          "https://www.authorsalliance.org/2025/05/23/perlmutter-v-blanche-register-of-copyrights-sues-trump-over-his-attempt-to-remove-her/",
+          "https://www.npr.org/2025/05/23/nx-s1-5408982/register-of-copyrights-lawsuit-trump"
+        ]
+      },
+      {
+        "date": "2025-09-10",
+        "text": "After a lower court declined to block her removal, an appeals court reinstates Perlmutter while the case goes on",
+        "turning_point": true,
+        "sources": [
+          "https://www.niso.org/niso-io/2025/09/appeals-court-ruling-reinstates-shira-perlmutter-register-us-copyrights",
+          "https://patentlyo.com/patent/2025/09/perlmutter-temporarily-copyright.html"
+        ]
+      },
+      {
+        "date": "2025-11",
+        "text": "The Supreme Court holds off on the administration's bid to undo her reinstatement, pairing it with FTC and Fed cases",
+        "sources": [
+          "https://www.scotusblog.com/2025/11/supreme-court-defers-decision-on-whether-trump-can-fire-head-of-u-s-copyright-office/"
+        ]
+      }
+    ]
   },
   {
     "id": "cpb-defunding-dissolution-trump2",
@@ -9288,7 +10687,71 @@
       },
       "reviewed": "2026-10-05"
     },
-    "status_stage": "Court ruled"
+    "status_stage": "Court ruled",
+    "key_events": [
+      {
+        "date": "2025-05-08",
+        "text": "Trump fires three Democratic commissioners hours after they vote to keep DOGE staff out of the agency",
+        "turning_point": true,
+        "sources": [
+          "https://www.stinson.com/newsroom-publications-challenges-in-the-cpsc-what-has-happened-and-what-comes-next",
+          "https://www.bicycleretailer.com/industry-news/2026/09/23/appeals-court-upholds-firings-cpsc-members"
+        ]
+      },
+      {
+        "date": "2025-07-23",
+        "text": "The Supreme Court pauses a lower-court order reinstating the commissioners, letting the firings stand for now",
+        "turning_point": true,
+        "sources": [
+          "https://www.scotusblog.com/2025/07/supreme-court-sides-with-trump-administration-in-battle-over-cpsc-commissioners/",
+          "https://www.citizen.org/litigation/boyle-v-trump/",
+          "https://www.stinson.com/newsroom-publications-challenges-in-the-cpsc-what-has-happened-and-what-comes-next"
+        ]
+      },
+      {
+        "date": "2025-08",
+        "text": "Commissioner Douglas Dziak resigns, leaving Acting Chairman Peter Feldman as the only commissioner",
+        "sources": [
+          "https://www.khlaw.com/insights/and-then-there-was-onecpsc-continues-operations-one-commissioner"
+        ]
+      },
+      {
+        "date": "2026-06-24",
+        "text": "A lithium-ion battery safety rule, pulled from public comment after the firings, is published as a proposed rule",
+        "sources": [
+          "https://www.federalregister.gov/documents/2026/06/24/2026-12749/safety-standard-for-lithium-ion-batteries-used-in-micromobility-products-and-electrical-systems-of",
+          "https://www.cov.com/en/news-and-insights/insights/2026/06/the-cpsc-under-presidential-control-implications-of-trump-v-slaughter"
+        ]
+      },
+      {
+        "date": "2026-06-29",
+        "text": "Supreme Court voids FTC firing protections in Trump v. Slaughter; Feldman says the fired members' claims should now fail",
+        "sources": [
+          "https://www.cov.com/en/news-and-insights/insights/2026/06/the-cpsc-under-presidential-control-implications-of-trump-v-slaughter",
+          "https://www.citizen.org/litigation/boyle-v-trump/",
+          "https://www.cpsc.gov/Newsroom/News-Releases/2026/Statement-of-Acting-Chairman-Peter-A-Feldman-Regarding-Slaughter-Decision"
+        ]
+      },
+      {
+        "date": "2026-08-07",
+        "text": "The Senate confirms Trump nominees Karen Sessions and Brien Lorenze, restoring a three-member quorum",
+        "sources": [
+          "https://www.toyassociation.org/PressRoom2/News/2026-News/senate-confirms-2-cpsc-commissioners-restoring-agency-quorum.aspx",
+          "https://www.productlawperspective.com/2026/08/new-era-cpsc-regains-quorum-as-senate-confirms-two-new-commissioners/",
+          "https://www.cpsc.gov/s3fs-public/Feldman_Statement-On-Confirmation-of-Sessions-and-Lorenze.pdf"
+        ]
+      },
+      {
+        "date": "2026-09-22",
+        "text": "At both sides' request, the Fourth Circuit reverses the commissioners' reinstatement in light of Slaughter",
+        "turning_point": true,
+        "sources": [
+          "https://www.courtlistener.com/docket/70578118/mary-boyle-v-donald-trump/",
+          "https://www.theusconstitution.org/litigation/boyle-v-trump/",
+          "https://www.bicycleretailer.com/industry-news/2026/09/23/appeals-court-upholds-firings-cpsc-members"
+        ]
+      }
+    ]
   },
   {
     "id": "cve-program-funding-crisis-2025",
@@ -9374,7 +10837,36 @@
       },
       "reviewed": "2026-10-24"
     },
-    "status_stage": "Reversed or withdrawn"
+    "status_stage": "Reversed or withdrawn",
+    "key_events": [
+      {
+        "date": "2025-04-15",
+        "text": "MITRE warns that the government will not renew its contract to run the CVE program, which ends the next day",
+        "turning_point": true,
+        "sources": [
+          "https://krebsonsecurity.com/2025/04/funding-expires-for-key-cyber-vulnerability-database/",
+          "https://www.infosecurity-magazine.com/news/cisa-cve-program-mitre-contract/",
+          "https://www.csoonline.com/article/3963190/cve-program-faces-swift-end-after-dhs-fails-to-renew-contract-leaving-security-flaw-tracking-in-limbo.html"
+        ]
+      },
+      {
+        "date": "2025-04-16",
+        "text": "Hours before the lapse, CISA says it has extended the MITRE contract by 11 months, to March 16, 2026",
+        "turning_point": true,
+        "sources": [
+          "https://therecord.media/cisa-extends-cve-program-contract-with-mitre",
+          "https://www.infosecurity-magazine.com/news/cisa-cve-program-mitre-contract/",
+          "https://www.theregister.com/2025/04/16/cve_program_funding_save/"
+        ]
+      },
+      {
+        "date": "2026-01-21",
+        "text": "The CVE board is told there will be no funding cliff when the extension ends in March",
+        "sources": [
+          "https://www.csoonline.com/article/4142600/cve-program-funding-secured-easing-fears-of-repeat-crisis.html"
+        ]
+      }
+    ]
   },
   {
     "id": "dam-infrastructure-staff-cuts-2025",
@@ -9574,7 +11066,26 @@
       },
       "reviewed": "2026-09-20"
     },
-    "status_stage": "Unchallenged"
+    "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2025-04",
+        "text": "A Defense Health Agency review of whether to close or downgrade military hospitals is first reported",
+        "turning_point": true,
+        "sources": [
+          "https://www.militarytimes.com/news/your-military/2025/04/03/defense-officials-considering-cuts-to-military-treatment-facilities/"
+        ]
+      },
+      {
+        "date": "2026-06",
+        "text": "A House Armed Services panel proposes reversing cuts and closures at 41 military hospitals and clinics",
+        "turning_point": true,
+        "sources": [
+          "https://www.militarytimes.com/news/pentagon-congress/2026/06/03/draft-defense-bill-would-halt-cuts-closures-of-military-health-facilities/",
+          "https://www.moaa.org/content/publications-and-media/news-articles/2026-news-articles/advocacy/ndaa-draft-would-reverse-planned-cuts,-closures-at-41-military-hospitals-and-clinics/"
+        ]
+      }
+    ]
   },
   {
     "id": "dhs-counterterrorism-grants-immigration-condition-2025",
@@ -10038,7 +11549,34 @@
       },
       "reviewed": "2026-09-20"
     },
-    "status_stage": "Unchallenged"
+    "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2025-04",
+        "text": "A leaked HHS budget draft plans to end federal funding for the state disability-rights Protection and Advocacy network",
+        "sources": [
+          "https://www.motherjones.com/politics/2025/04/hhs-budget-proposal-cut-protection-advocacy/"
+        ]
+      },
+      {
+        "date": "2025-04",
+        "text": "Funding delays force agencies in New Jersey, Mississippi and Arkansas to pause or limit services, including new intake",
+        "turning_point": true,
+        "sources": [
+          "https://www.motherjones.com/politics/2025/04/disability-protection-groups-in-two-states-pause-services-after-missing-federal-funds/",
+          "https://arktimes.com/arkansas-blog/2025/04/29/trump-funding-freeze-hits-arkansas-disability-advocacy-group"
+        ]
+      },
+      {
+        "date": "2025-07",
+        "text": "The formal FY2026 budget request proposes ending three of the network's four grant streams and cutting the fourth",
+        "turning_point": true,
+        "sources": [
+          "https://apnews.com/article/disability-rights-budget-cuts-congress-ada-c05bcbcc973ee7573c5c6cbde8f97dbe",
+          "https://www.mprnews.org/story/2025/07/26/as-ada-turns-35-disability-rights-groups-face-federal-funding-cuts"
+        ]
+      }
+    ]
   },
   {
     "id": "disease-surveillance-cuts-emerging-threats-2026",
@@ -10194,7 +11732,64 @@
       },
       "reviewed": "2026-09-28"
     },
-    "status_stage": "Unchallenged"
+    "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2025-07-01",
+        "text": "CDC's FoodNet stops requiring reports on six of the eight foodborne germs it tracks, including Cyclospora",
+        "turning_point": true,
+        "sources": [
+          "https://www.cidrap.umn.edu/foodborne-disease/cdc-cuts-back-foodborne-illness-surveillance-program",
+          "https://www.food-safety.com/articles/10646-cdc-slashes-foodnet-surveillance-from-eight-foodborne-pathogens-to-two"
+        ]
+      },
+      {
+        "date": "2025-08-26",
+        "text": "The unannounced FoodNet cutback is first reported; CDC says funding has not kept pace",
+        "sources": [
+          "https://www.cidrap.umn.edu/foodborne-disease/cdc-cuts-back-foodborne-illness-surveillance-program"
+        ]
+      },
+      {
+        "date": "2026-06-03",
+        "text": "USDA confirms the first new U.S. case of New World screwworm, in Zavala County, Texas",
+        "sources": [
+          "https://www.houstonpublicmedia.org/articles/news/energy-environment/animals/2026/09/21/556427/texas-new-world-screwworm-tracker/"
+        ]
+      },
+      {
+        "date": "2026-06-25",
+        "text": "Michigan, not a FoodNet state, spots an unusual rise in Cyclospora cases and alerts CDC",
+        "turning_point": true,
+        "sources": [
+          "https://www.cidrap.umn.edu/public-health-alerts/public-health-alerts-cyclosporiasis-outbreak-michigan-may-july-2026-interim",
+          "https://www.cdc.gov/cyclosporiasis/outbreaks/07-26/investigation.html"
+        ]
+      },
+      {
+        "date": "2026-07-17",
+        "text": "Iceberg lettuce from Taylor Farms de Mexico, traced as the outbreak's source, is recalled",
+        "sources": [
+          "https://www.fda.gov/food/outbreaks-foodborne-illness/investigation-multistate-outbreak-cyclospora-illnesses-iceberg-lettuce-july-2026",
+          "https://www.cdc.gov/cyclosporiasis/outbreaks/07-26/investigation.html"
+        ]
+      },
+      {
+        "date": "2026-09-11",
+        "text": "CDC declares the outbreak over: 12,883 confirmed illnesses in 21 states, at least 570 hospitalized, two deaths",
+        "turning_point": true,
+        "sources": [
+          "https://www.cdc.gov/cyclosporiasis/outbreaks/07-26/investigation.html"
+        ]
+      },
+      {
+        "date": "2026-09-21",
+        "text": "Confirmed U.S. screwworm cases reach 50, 48 in Texas and 2 in New Mexico",
+        "sources": [
+          "https://www.houstonpublicmedia.org/articles/news/energy-environment/animals/2026/09/21/556427/texas-new-world-screwworm-tracker/"
+        ]
+      }
+    ]
   },
   {
     "id": "doctors-relocating-canada-trump-2025",
@@ -10260,7 +11855,38 @@
       },
       "reviewed": "2026-09-20"
     },
-    "status_stage": "Unchallenged"
+    "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2025-02",
+        "text": "British Columbia ends a fiscal year with 28 U.S.-trained doctors licensed, triple the year before",
+        "sources": [
+          "https://www.npr.org/sections/shots-health-news/2025/05/29/nx-s1-5414345/american-doctors-look-to-relocate-to-canada-to-avoid-the-trump-administration"
+        ]
+      },
+      {
+        "date": "2025-03",
+        "text": "Ontario registers 116 U.S.-trained doctors in the first quarter, up at least 50%, with about 260 applying",
+        "sources": [
+          "https://www.npr.org/sections/shots-health-news/2025/05/29/nx-s1-5414345/american-doctors-look-to-relocate-to-canada-to-avoid-the-trump-administration"
+        ]
+      },
+      {
+        "date": "2025-04",
+        "text": "A recruiting firm reports a 65% rise since January in American doctors seeking Canadian jobs",
+        "sources": [
+          "https://www.npr.org/sections/shots-health-news/2025/05/29/nx-s1-5414345/american-doctors-look-to-relocate-to-canada-to-avoid-the-trump-administration"
+        ]
+      },
+      {
+        "date": "2025-05-29",
+        "text": "NPR reports more U.S.-trained doctors are seeking to move to Canada, citing the Trump administration's policies",
+        "turning_point": true,
+        "sources": [
+          "https://www.npr.org/sections/shots-health-news/2025/05/29/nx-s1-5414345/american-doctors-look-to-relocate-to-canada-to-avoid-the-trump-administration"
+        ]
+      }
+    ]
   },
   {
     "id": "dod-pfas-cleanup-schedule-delays-2025-2026",
@@ -10408,7 +12034,87 @@
       },
       "reviewed": "2026-10-24"
     },
-    "status_stage": "Unchallenged"
+    "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2025-03",
+        "text": "Pentagon issues new timetables pushing back PFAS cleanup studies at some 150 military sites, some by nearly a decade",
+        "turning_point": true,
+        "sources": [
+          "https://www.stripes.com/theaters/us/2025-11-19/senate-democrats-pentagon-pfas-cleanups-19818665.html"
+        ]
+      },
+      {
+        "date": "2025-09",
+        "text": "The New York Times reveals the delays; Sens. Markey and Warren urge the Pentagon to restore the old timetable",
+        "sources": [
+          "https://www.eenews.net/articles/democrats-probe-pentagon-over-delays-in-pfas-cleanup/"
+        ]
+      },
+      {
+        "date": "2025-11",
+        "text": "Sen. Murray and nearly 30 Senate Democrats press the Pentagon over the delays, calling them unacceptable",
+        "sources": [
+          "https://capitolreleases.com/releases/3a6bca1b-2ea9-4594-9e14-69ad1148231b",
+          "https://www.stripes.com/theaters/us/2025-11-19/senate-democrats-pentagon-pfas-cleanups-19818665.html"
+        ]
+      },
+      {
+        "date": "2025-12",
+        "text": "A defense official tells New Hampshire lawmakers new EPA standards and other factors require more investigation",
+        "sources": [
+          "https://www.notus.org/climate-environment/pentagon-quietly-delayed-pfas-cleanup-nearly-200-military-sites"
+        ]
+      },
+      {
+        "date": "2025-12-18",
+        "text": "Defense bill signed into law requires a PFAS cleanup-acceleration strategy by June 16, 2026",
+        "sources": [
+          "https://www.govinfo.gov/content/pkg/PLAW-119publ60/html/PLAW-119publ60.htm",
+          "https://mcdonaldrivet.house.gov/sites/evo-subsites/mcdonaldrivet.house.gov/files/evo-media-document/requesting-the-expedited-completion-of-the-dod-pfas-acceleration-strategy.pdf"
+        ]
+      },
+      {
+        "date": "2026-05",
+        "text": "Pentagon quietly posts new timelines pushing back cleanup at 178 sites by one to 20 years",
+        "turning_point": true,
+        "sources": [
+          "https://www.notus.org/climate-environment/pentagon-quietly-delayed-pfas-cleanup-nearly-200-military-sites",
+          "https://tucson.com/news/nation-world/article_276cef6d-0790-45a6-be0f-82ea02506946.html"
+        ]
+      },
+      {
+        "date": "2026-06-25",
+        "text": "24 Senate Democrats ask Defense Secretary Hegseth to reverse the delays and answer by July 31",
+        "sources": [
+          "https://www.notus.org/congress/forever-chemicals-pfas-senate-democrats-hegseth"
+        ]
+      },
+      {
+        "date": "2026-07-17",
+        "text": "Four House members call the required cleanup-acceleration strategy overdue and ask Hegseth to finish it",
+        "sources": [
+          "https://mcdonaldrivet.house.gov/sites/evo-subsites/mcdonaldrivet.house.gov/files/evo-media-document/requesting-the-expedited-completion-of-the-dod-pfas-acceleration-strategy.pdf"
+        ]
+      },
+      {
+        "date": "2026-07-28",
+        "text": "Sen. Baldwin asks the Air Force to explain delays pushing two Wisconsin site investigations out to 2045 and 2046",
+        "sources": [
+          "https://www.wpr.org/wp-content/uploads/2026/07/2026.07.28-PFAS-Letter-to-Air-Force.pdf",
+          "https://capitolreleases.com/releases/d0e7a961-c6b5-47e9-b15c-1294cca675d7",
+          "https://www.wpr.org/news/pfas-cleanup-military-sites-delays-nationwide-wisconsin"
+        ]
+      },
+      {
+        "date": "2026-09-02",
+        "text": "A defense official says a third round of delays in a year will change cleanup schedules at 243 installations",
+        "turning_point": true,
+        "sources": [
+          "https://www.notus.org/climate-environment/pentagon-delays-pfas-cleanup-200-military-sites-third-time"
+        ]
+      }
+    ]
   },
   {
     "id": "doe-budget-cuts-efficiency-standards-rollback-2025",
@@ -10680,7 +12386,34 @@
       },
       "reviewed": "2026-09-20"
     },
-    "status_stage": "Unchallenged"
+    "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2024-11",
+        "text": "Biden administration issues a $4.9 billion conditional loan guarantee for the Grain Belt Express power line",
+        "sources": [
+          "https://apnews.com/article/green-energy-transmission-line-grain-belt-express-6d674ba10fc2d5700133989695e838ec"
+        ]
+      },
+      {
+        "date": "2025-07",
+        "text": "Sen. Josh Hawley says he asked President Trump to halt the project and Trump promised to have DOE act",
+        "sources": [
+          "https://apnews.com/article/green-energy-transmission-line-grain-belt-express-6d674ba10fc2d5700133989695e838ec"
+        ]
+      },
+      {
+        "date": "2025-07-23",
+        "text": "Energy Department cancels the loan guarantee, saying its conditions were unlikely to be met",
+        "turning_point": true,
+        "sources": [
+          "https://apnews.com/article/green-energy-transmission-line-grain-belt-express-6d674ba10fc2d5700133989695e838ec",
+          "https://www.canarymedia.com/articles/transmission/grain-belt-express-trump-loan-canceled",
+          "https://www.utilitydive.com/news/doe-cancels-conditional-loan-commitment-grain-belt-express/753828/",
+          "https://thehill.com/policy/energy-environment/5418063-trump-administration-solar-wind-power-line-grain-belt/"
+        ]
+      }
+    ]
   },
   {
     "id": "doe-nuclear-waste-cleanup-staffing-collapse-2026",
@@ -11589,6 +13322,49 @@
       "reviewed": "2026-10-10"
     },
     "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2025-02-21",
+        "text": "GSA confirms a $1 limit on all its cardholder accounts and asks 15 other agencies to cut card limits",
+        "turning_point": true,
+        "sources": [
+          "https://www.gsa.gov/about-gsa/newsroom/news-releases/statement-regarding-recent-reporting-about-the-gsa-smartpayr-program-02212025",
+          "https://www.wired.com/story/doge-government-credit-cards/"
+        ]
+      },
+      {
+        "date": "2025-02-26",
+        "text": "Trump executive order directs a governmentwide 30-day pause on agency credit cards",
+        "turning_point": true,
+        "sources": [
+          "https://www.defenseone.com/policy/2025/03/pentagon-freezes-government-credit-cards-doge-cost-savings-push/403537/",
+          "https://www.militarytimes.com/news/your-military/2025/03/10/dod-civilian-employees-given-1-spending-limit-for-travel-cards/"
+        ]
+      },
+      {
+        "date": "2025-03",
+        "text": "Pentagon memo temporarily cuts the spending limit on all government purchase cards to $1",
+        "sources": [
+          "https://www.defenseone.com/policy/2025/03/pentagon-freezes-government-credit-cards-doge-cost-savings-push/403537/"
+        ]
+      },
+      {
+        "date": "2025-03",
+        "text": "DOGE says 146,000 cards across 16 agencies have been frozen",
+        "sources": [
+          "https://www.adn.com/nation-world/2025/03/09/doges-1-spending-card-limit-touches-everything-from-military-research-to-trash-pickup/"
+        ]
+      },
+      {
+        "date": "2025-03-05",
+        "text": "Pentagon memo cuts civilian travel-card limits to $1 and cancels non-exempt official travel",
+        "turning_point": true,
+        "sources": [
+          "https://www.militarytimes.com/news/your-military/2025/03/10/dod-civilian-employees-given-1-spending-limit-for-travel-cards/",
+          "https://www.defenseone.com/policy/2025/03/pentagon-freezes-government-credit-cards-doge-cost-savings-push/403537/"
+        ]
+      }
+    ],
     "timeline": {
       "confidence_note": {
         "base": "HIGH confidence -- corroborated across Wired's original GSA reporting and multiple independent outlets on the Pentagon implementation specifically (Military Times, Defense One, Federal News Network), including the underlying Feb 26, 2025 executive order and the named March 5 DoD memo signatory (Selnick).",
@@ -11688,7 +13464,49 @@
       },
       "reviewed": "2026-10-06"
     },
-    "status_stage": "Finding issued"
+    "status_stage": "Finding issued",
+    "key_events": [
+      {
+        "date": "2025-04-14",
+        "text": "NLRB IT staffer files a whistleblower complaint with Congress alleging DOGE accessed agency data",
+        "sources": [
+          "https://www.gao.gov/products/gao-26-108774",
+          "https://fedscoop.com/national-labor-relations-board-watchdog-investigating-doge-potential-data-breach/"
+        ]
+      },
+      {
+        "date": "2025-04-16",
+        "text": "Two DOGE staffers begin a detail at the NLRB and request access to seven internal HR systems",
+        "sources": [
+          "https://www.gao.gov/products/gao-26-108774"
+        ]
+      },
+      {
+        "date": "2025-05",
+        "text": "The NLRB's inspector general is investigating DOGE's work at the agency",
+        "sources": [
+          "https://fedscoop.com/national-labor-relations-board-watchdog-investigating-doge-potential-data-breach/"
+        ]
+      },
+      {
+        "date": "2025-08",
+        "text": "After the detail ends, NLRB deletes the DOGE staffers' system-access accounts before GAO can examine them",
+        "turning_point": true,
+        "sources": [
+          "https://www.wired.com/story/federal-investigators-say-certain-doge-records-were-deleted/",
+          "https://www.themindfulfederalemployee.com/blog/gao-report-doge-nlrb-deleted-access-records"
+        ]
+      },
+      {
+        "date": "2026-04-28",
+        "text": "GAO finds no sign of system access during the detail but cannot verify access levels after the deletion",
+        "turning_point": true,
+        "sources": [
+          "https://www.gao.gov/products/gao-26-108774",
+          "https://www.wired.com/story/federal-investigators-say-certain-doge-records-were-deleted/"
+        ]
+      }
+    ]
   },
   {
     "id": "doge-ssa-fraud-review-data-access-2025-2026",
@@ -11869,6 +13687,110 @@
       "reviewed": "2026-09-26"
     },
     "status_stage": "In court",
+    "key_events": [
+      {
+        "date": "2025-02",
+        "text": "Elon Musk claims millions of dead people are still marked alive in Social Security records, a claim experts reject",
+        "sources": [
+          "https://abcnews.com/Politics/musk-misreads-social-security-data-millions-dead-people/story?id=118960821"
+        ]
+      },
+      {
+        "date": "2025-03",
+        "text": "DOGE is reported searching $8.6 trillion in Social Security payment records for fraud",
+        "sources": [
+          "https://abcnews.go.com/Politics/doge-searching-social-security-payments-fraud/story?id=119564143"
+        ]
+      },
+      {
+        "date": "2025-03",
+        "text": "A federal judge temporarily bars DOGE affiliates from SSA's sensitive personal data",
+        "sources": [
+          "https://www.cnbc.com/2025/03/21/social-securitys-lee-dudek-raises-concerns-following-judges-restraining-order.html"
+        ]
+      },
+      {
+        "date": "2025-05",
+        "text": "An internal SSA document finds the new phone identity checks slowed retirement claim processing by 25%",
+        "sources": [
+          "https://democrats.org/news/internal-docs-doge-delayed-americans-social-security-benefits-and-still-cant-find-fraud-at-ssa/"
+        ]
+      },
+      {
+        "date": "2025-05-15",
+        "text": "Internal SSA records show only 2 likely fraud cases among more than 110,000 phone claims checked",
+        "turning_point": true,
+        "sources": [
+          "https://www.nextgov.com/digital-government/2025/05/doge-went-looking-phone-fraud-ssa-and-found-almost-none/405346/",
+          "https://www.warren.senate.gov/newsroom/press-releases/new-social-security-data-reveals-musk-doge-lied-in-claims-of-social-security-fraud"
+        ]
+      },
+      {
+        "date": "2025-08-26",
+        "text": "SSA's chief data officer files a whistleblower disclosure saying DOGE copied Americans' data to a cloud system",
+        "turning_point": true,
+        "sources": [
+          "https://whistleblower.org/wp-content/uploads/2025/08/08-26-2025-Borges-Disclosure-Sanitized.pdf",
+          "https://www.cnn.com/2025/08/26/politics/doge-social-security-records-whistleblower",
+          "https://www.cbsnews.com/news/social-security-admin-chief-data-officer-resigns-after-filing-whistleblower-complaint/"
+        ]
+      },
+      {
+        "date": "2025-08-29",
+        "text": "The chief data officer resigns, citing retaliation",
+        "sources": [
+          "https://www.cnn.com/2025/08/29/politics/social-security-whistleblower-resigns-involuntarily",
+          "https://www.cbsnews.com/news/social-security-admin-chief-data-officer-resigns-after-filing-whistleblower-complaint/"
+        ]
+      },
+      {
+        "date": "2026-01-16",
+        "text": "Justice Department filing admits DOGE staff shared SSA data through an unapproved third-party server",
+        "turning_point": true,
+        "sources": [
+          "https://storage.courtlistener.com/recap/gov.uscourts.mdd.577321/gov.uscourts.mdd.577321.197.0.pdf",
+          "https://www.npr.org/2026/01/23/nx-s1-5684185/doge-data-social-security-privacy"
+        ]
+      },
+      {
+        "date": "2026-03-10",
+        "text": "Plaintiffs tell the court a departing DOGE associate allegedly took restricted SSA databases to a private job",
+        "sources": [
+          "https://www2.mdd.uscourts.gov/Opinions/Opinions/25-596%20AFSCME%20v.%20SSA%20Motion%20to%20Rescind%20Opinion_Final.pdf",
+          "https://www.npr.org/2026/03/11/nx-s1-5745153/doge-social-security-data-whistleblower-investigation"
+        ]
+      },
+      {
+        "date": "2026-04-10",
+        "text": "Full Fourth Circuit vacates the injunction limiting DOGE's access to SSA data",
+        "sources": [
+          "https://www.ca4.uscourts.gov/opinions/251411.P.pdf",
+          "https://www.govexec.com/management/2026/04/appeals-court-clears-way-doge-access-social-security-data-despite-new-red-flags/412788/"
+        ]
+      },
+      {
+        "date": "2026-04-14",
+        "text": "On remand, the district court lifts its stay and grants plaintiffs' request for discovery",
+        "sources": [
+          "https://www2.mdd.uscourts.gov/Opinions/Opinions/25-596%20AFSCME%20v.%20SSA%20Motion%20to%20Rescind%20Opinion_Final.pdf"
+        ]
+      },
+      {
+        "date": "2026-06-05",
+        "text": "Former SSA official's sworn declaration says a DOGE official planned to mark 2.7 million living people dead",
+        "sources": [
+          "https://www.washingtonpost.com/politics/2026/06/05/doge-planned-falsely-mark-27-million-people-dead-whistleblower-says/",
+          "https://whistlebloweraid.org/trump-administration-weaponized-social-security-records-attempting-to-falsely-declare-2-7-million-people-as-dead/"
+        ]
+      },
+      {
+        "date": "2026-06-26",
+        "text": "Judge refuses to rescind discovery, finding SSA and DOGE made serious misrepresentations to the court",
+        "sources": [
+          "https://www2.mdd.uscourts.gov/Opinions/Opinions/25-596%20AFSCME%20v.%20SSA%20Motion%20to%20Rescind%20Opinion_Final.pdf"
+        ]
+      }
+    ],
     "timeline": {
       "confidence_note": {
         "base": "HIGH confidence. The fraud-review claims and results are corroborated by ABC News' original reporting, Nextgov/FCW's internal-document reporting, and Sen. Warren's official Senate release citing SSA's own data. The improper data-access findings come from DOJ's own court filing (a party admission, not an outside allegation) and are corroborated by NPR, Axios, CNN, and Government Executive reporting on the same filing and the subsequent Fourth Circuit ruling. Re-verified 2026-08-17: the Fourth Circuit's April 10, 2026 ruling vacated the preliminary injunction and remanded the case to the district court for further proceedings (Democracy Forward, Nextgov/FCW, Bloomberg Law) rather than finally resolving it -- consistent with this entry's existing 'ongoing litigation' status; no reporting found of a district-court ruling on remand as of this recheck. Re-verified 2026-08-29: AFSCME's own reporting and FedScoop corroborate the April 14, 2026 order lifting the stay and granting discovery on remand; no subsequent ruling or discovery outcome was identified as of this update. Re-verified 2026-08-31 (real correction): the June 26, 2026 opinion denying the Motion to Rescind is a primary-source district court memorandum opinion (ELH-25-0596), fetched directly from the District of Maryland's own website after CourtListener's docket page 403'd, consistent with this sweep's established blocked-domain pattern -- HIGH confidence, a party admission and judicial finding, not outside characterization. The Schofield whistleblower declaration and its 2.7-million-person death-designation allegation are independently corroborated across the Washington Post, Boston Globe, Newsweek, and the whistleblower's own representing law firm (Whistleblower Aid, Katz Banks Kumin) -- HIGH confidence that the allegation was made under oath and made public; MODERATE on whether the plan was ever actually executed, since SSA disputes that specific point and no independent confirmation the Death Master File was altered was identified in sourcing reviewed.",
@@ -12204,7 +14126,41 @@
       },
       "reviewed": "2026-10-11"
     },
-    "status_stage": "Unchallenged"
+    "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2025-03-03",
+        "text": "The Hilo USGS lease housing Hawaii's volcano observatory appears on a DOGE lease-cancellation list",
+        "sources": [
+          "https://www.hawaiitribune-herald.com/2025/03/03/hawaii-news/downtown-hilo-post-office-hvo-site-among-possible-federal-cuts/"
+        ]
+      },
+      {
+        "date": "2025-03-06",
+        "text": "Reports reveal GSA notices to end the leases for the Alaska and Hawaii volcano observatory buildings",
+        "turning_point": true,
+        "sources": [
+          "https://www.notus.org/health-science/doge-alaska-volcano-observatory"
+        ]
+      },
+      {
+        "date": "2025-03-18",
+        "text": "The Alaska observatory lease is reinstated after Rep. Begich intervenes; GSA confirms the notice is rescinded",
+        "turning_point": true,
+        "sources": [
+          "https://mustreadalaska.com/breaking-alaska-volcano-observatorys-lease-will-not-be-cancelled-begich-says/",
+          "https://www.newsweek.com/doge-alaska-volcano-observatory-lease-termination-reversed-2051304"
+        ]
+      },
+      {
+        "date": "2026-06",
+        "text": "Hawaii observatory staff still work from the rented Hilo building, with a new headquarters due in April 2027",
+        "sources": [
+          "https://www.westhawaiitoday.com/2026/06/16/hawaii-news/completion-of-hvo-facility-projected-for-2027/",
+          "https://www.staradvertiser.com/2026/06/24/hawaii-news/new-hawaiian-volcano-observatory-headquarters-set-to-open-in-april/"
+        ]
+      }
+    ]
   },
   {
     "id": "doj-civil-rights-division-exodus-trump2",
@@ -12398,6 +14354,108 @@
       }
     ],
     "status_stage": "Under investigation",
+    "key_events": [
+      {
+        "date": "2025-04",
+        "text": "Harmeet Dhillon takes over the Civil Rights Division and sends new mission statements to its 11 sections",
+        "sources": [
+          "https://abcnews.go.com/US/exodus-doj-civil-rights-division-official-100-attorneys/story?id=121257205",
+          "https://www.npr.org/2025/05/19/g-s1-66906/trump-civil-rights-justice-exodus"
+        ]
+      },
+      {
+        "date": "2025-04-11",
+        "text": "The division ends a first-of-its-kind civil rights deal on raw-sewage exposure in Lowndes County, Alabama",
+        "sources": [
+          "https://www.justice.gov/opa/pr/department-justice-terminates-environmental-justice-settlement-agreement-advancing-president",
+          "https://insideclimatenews.org/news/11042025/trump-terminates-civil-rights-agreement-in-alabama/"
+        ]
+      },
+      {
+        "date": "2025-04-28",
+        "text": "More than 100 division attorneys have left as priorities shift away from voting rights and policing",
+        "sources": [
+          "https://abcnews.go.com/US/exodus-doj-civil-rights-division-official-100-attorneys/story?id=121257205"
+        ]
+      },
+      {
+        "date": "2025-05",
+        "text": "About 70% of the division's attorneys are gone, and the Voting Section is down from about 30 lawyers to 3",
+        "turning_point": true,
+        "sources": [
+          "https://www.npr.org/2025/05/19/g-s1-66906/trump-civil-rights-justice-exodus",
+          "https://www.democracydocket.com/news-alerts/doj-voting-section-has-just-three-lawyers-left-watchdog-estimates/"
+        ]
+      },
+      {
+        "date": "2025-07-16",
+        "text": "DOJ recommends a one-day sentence for Brett Hankison, the ex-officer convicted in the Breonna Taylor raid",
+        "sources": [
+          "https://storage.courtlistener.com/recap/gov.uscourts.kywd.126793/gov.uscourts.kywd.126793.285.0.pdf",
+          "https://www.wdrb.com/in-depth/department-of-justice-recommends-no-prison-time-for-brett-hankison-in-breonna-taylor-case/article_4d466a0a-74a5-4019-94c2-4789204875eb.html"
+        ]
+      },
+      {
+        "date": "2025-07-21",
+        "text": "A federal judge rejects DOJ's recommendation and sentences Hankison to 33 months in prison",
+        "sources": [
+          "https://www.cnn.com/2025/07/21/us/brett-hankison-sentencing-breonna-taylor"
+        ]
+      },
+      {
+        "date": "2025-08",
+        "text": "DOJ seeks internal transfers to refill its most depleted civil rights sections",
+        "sources": [
+          "https://www.govexec.com/management/2025/08/after-shedding-most-employees-doj-looks-shift-around-civil-rights-staff-fill-deep-need/407175/"
+        ]
+      },
+      {
+        "date": "2025-10",
+        "text": "Nearly 400 people have left the division, about 75% of its attorneys, by one estimate",
+        "sources": [
+          "https://www.thejusticeconnection.org/press-dismantling-doj-civil-rights-division/"
+        ]
+      },
+      {
+        "date": "2025-11",
+        "text": "DOJ asks a federal appeals court to release Hankison from prison while he appeals",
+        "sources": [
+          "https://www.wdrb.com/news/doj-asks-federal-appeals-court-to-release-former-louisville-officer-brett-hankison-from-prison/article_3a99f660-d7fd-4b63-859c-6d2418cafe4b.html"
+        ]
+      },
+      {
+        "date": "2026-02",
+        "text": "The unit prosecuting police misconduct has lost about two-thirds of its attorneys, from about 40 to 13",
+        "sources": [
+          "https://www.investing.com/news/economy-news/exclusivejustice-department-unit-on-police-misconduct-sees-staffing-plunge-and-probes-scaled-back-sources-say-4487051"
+        ]
+      },
+      {
+        "date": "2026-08-18",
+        "text": "A former division lawyer's whistleblower complaint says antisemitism probes of three universities were predetermined",
+        "turning_point": true,
+        "sources": [
+          "https://www.cbsnews.com/news/justice-department-harvard-brown-columbia-haley-van-erem-whistleblower/",
+          "https://whistleblower.org/press/former-doj-attorneys-blow-the-whistle-on-university-title-vi-investigations/",
+          "https://abovethelaw.com/2026/08/doj-civil-rights-attorneys-leaving-to-save-their-law-licenses-whistleblower-tells-congress/"
+        ]
+      },
+      {
+        "date": "2026-10-06",
+        "text": "Reports find 130 new hires, some with partisan or conspiratorial records, after 300-plus career staff left",
+        "sources": [
+          "https://www.nytimes.com/2026/10/06/us/politics/justice-department-civil-rights-division.html"
+        ]
+      },
+      {
+        "date": "2026-10-11",
+        "text": "New hires now outnumber holdovers; officials say appointees took over hiring, which DOJ denies",
+        "turning_point": true,
+        "sources": [
+          "https://www.npr.org/2026/10/11/g-s1-145063/justice-department-civil-rights-transformed"
+        ]
+      }
+    ],
     "timeline": {
       "confidence_note": {
         "base": "Strong, consistent sourcing across NPR, Government Executive, Democracy Docket, and multiple advocacy organizations, all citing the same core figures traceable to Justice Connection's direct contacts within the division -- a meaningful source since it draws on current employees, not just outside inference. Dhillon's own quotes and mission-statement language are on the record from her own public remarks and DOJ's own internal communications, not disputed characterizations. Re-verified 2026-07-20: Riordan's appointment and the reported election-observer defunding consideration both extend this entry's existing pattern (priorities redirected toward voter-fraud pursuit, away from voting-rights protection) with new, specific, named developments rather than changing the basic trajectory already documented. Re-verified 2026-07-26: the DOJ denial is corroborated by CBS News's own follow-up reporting and Election Law Blog's contemporaneous coverage. Re-verified 2026-08-17: the July 2026 swearing-in of 100+ new attorneys and the division's reoriented case priorities are corroborated across Bloomberg Law and Federal News Network reporting; the demographic-composition criticism is a characterization from Atlanta Black Star's coverage of DOJ's own published photo, presented here as commentary rather than an independently adjudicated fact. Re-verified 2026-08-30 (real correction): Van Erem's whistleblower disclosure and its core claims (25-28 page disclosure, House Judiciary Committee referral, the Harvard/Brown/Columbia investigations, the predetermined-outcome allegation) are well-corroborated across CBS News, ABC News, the Jewish Telegraphic Agency, jweekly, Higher Ed Dive, and the Government Accountability Project's own press release -- HIGH confidence. The specific 'poison pill' settlement-language and single-article-triggered-investigation details are sourced to Above the Law's fuller writeup of the disclosure and were not independently cross-checked against the disclosure document itself -- MODERATE confidence on those two specific procedural details.",
@@ -12525,6 +14583,45 @@
       "reviewed": "2026-09-20"
     },
     "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2025-07-23",
+        "text": "DOJ orders its top anti-drug task force to move its 5,000-plus cases to a new Homeland Security Task Force",
+        "turning_point": true,
+        "sources": [
+          "https://justiceconnection.substack.com/p/say-goodbye-to-the-nations-largest"
+        ]
+      },
+      {
+        "date": "2025-09-29",
+        "text": "Federal drug prosecutions fall to their slowest pace in decades as prosecutors shift to immigration cases",
+        "sources": [
+          "https://www.usnews.com/news/world/articles/2025-09-29/exclusive-federal-drug-prosecutions-fall-to-lowest-level-in-decades-as-trump-shifts-focus-to-deportations"
+        ]
+      },
+      {
+        "date": "2025-11",
+        "text": "Sen. Warner says 25% to 45% of FBI agents on terrorism, spy and child cases were moved to immigration",
+        "turning_point": true,
+        "sources": [
+          "https://www.axios.com/2025/11/20/trump-homeland-security-task-force-ice-fbi"
+        ]
+      },
+      {
+        "date": "2025-11-16",
+        "text": "Reports find DHS agents pulled from trafficking, child-exploitation and terror-finance cases for deportations",
+        "sources": [
+          "https://www.nytimes.com/2025/11/16/us/politics/dhs-agents-reassigned.html"
+        ]
+      },
+      {
+        "date": "2025-11-25",
+        "text": "Federal data show drug arrests and gun seizures dropping sharply as agents staff deportation operations",
+        "sources": [
+          "https://www.nytimes.com/2025/11/25/us/politics/drug-arrests-gun-seizures-homeland-security-immigration.html"
+        ]
+      }
+    ],
     "timeline": {
       "confidence_note": {
         "base": "HIGH confidence on the core pattern and the Reuters-derived prosecution-decline figures, which are based on a direct review of nearly 2 million federal court records rather than an advocacy estimate; independently corroborated by the Wall Street Journal's and New York Times's separate reporting on HSI and FBI/ATF reassignments. MODERATE confidence on the specific reassignment-percentage figures (25-45% FBI, 80% ATF), which trace to a senator's public statement and single-outlet reporting rather than DOJ/DHS's own disclosed personnel data.",
@@ -12717,6 +14814,83 @@
       }
     ],
     "status_stage": "In court",
+    "key_events": [
+      {
+        "date": "2025-03",
+        "text": "DHS fires about 20% of its terrorism-prevention office, its director resigns, and about $20M in grants is cut",
+        "turning_point": true,
+        "sources": [
+          "https://www.propublica.org/article/trump-doge-budget-cuts-terrorism-prevention"
+        ]
+      },
+      {
+        "date": "2025-04-22",
+        "text": "DOJ abruptly cancels hundreds of public-safety grants worth more than $800 million, including violence prevention",
+        "turning_point": true,
+        "sources": [
+          "https://www.cnn.com/2025/04/24/politics/justice-department-crime-victims-opioid-abuse/index.html",
+          "https://apnews.com/article/justice-grants-funding-cuts-law-enforcement-victims-18d5cdec6bdbb8472cd1e080e5e4e5ef",
+          "https://counciloncj.org/doj-funding-cuts-more-than-550-organizations-impacted-new-analysis-finds/"
+        ]
+      },
+      {
+        "date": "2025-05",
+        "text": "The Vera Institute and four other groups sue to reverse the DOJ grant cancellations",
+        "sources": [
+          "https://clearinghouse.net/case/46625/"
+        ]
+      },
+      {
+        "date": "2025-06-04",
+        "text": "DHS has put a 22-year-old with no counterterrorism background in charge of the office's remaining work",
+        "sources": [
+          "https://www.propublica.org/article/trump-dhs-thomas-fugate-cp3-terrorism-prevention"
+        ]
+      },
+      {
+        "date": "2025-07",
+        "text": "A judge dismisses the grantees' suit; they appeal, and an agreed order bars DOJ from reusing the money",
+        "turning_point": true,
+        "sources": [
+          "https://clearinghouse.net/case/46625/"
+        ]
+      },
+      {
+        "date": "2025-07-22",
+        "text": "DHS now says the 22-year-old was only a special assistant who never led the office",
+        "sources": [
+          "https://www.thedailybeast.com/trumps-anti-terror-gardener-thomas-fugate-22-humiliated-by-his-own-boss-in-dhs-reversal/"
+        ]
+      },
+      {
+        "date": "2025-10-14",
+        "text": "A federal appeals court hears the grantees' appeal",
+        "sources": [
+          "https://clearinghouse.net/case/46625/"
+        ]
+      },
+      {
+        "date": "2025-11-10",
+        "text": "Most affected groups still have not been repaid for money already spent, forcing layoffs and service cuts",
+        "sources": [
+          "https://www.npr.org/2025/11/10/nx-s1-5552704/doj-crime-prevention-public-safety-grant-cuts"
+        ]
+      },
+      {
+        "date": "2026-05-01",
+        "text": "A year on, the damage is unreversed and at least one 20-year-old violence-prevention nonprofit has closed",
+        "sources": [
+          "https://www.vera.org/news/the-federal-government-pulled-back-500-million-from-public-safety-organizations-one-year-later-communities-are-still-reeling"
+        ]
+      },
+      {
+        "date": "2026-07-08",
+        "text": "The order barring DOJ from reusing the canceled grant money is extended through Sept. 1, 2026",
+        "sources": [
+          "https://clearinghouse.net/case/46625/"
+        ]
+      }
+    ],
     "timeline": {
       "confidence_note": {
         "base": "Strong, cross-corroborated sourcing on both threads: the DOJ cancellations are documented by AP News, CNN, NPR (both the initial and six-month-later follow-up reporting), a Council on Criminal Justice policy analysis, and a federal court's written ruling (Judge Mehta, July 2025) rather than advocacy claims alone. The DHS/CP3 thread is documented by ProPublica's original investigative reporting (including the Thomas Fugate leadership story) and corroborated, for the official administration framing, by DHS's own July 2025 press release -- which is deliberately included to show the cuts were smaller and less final than some contemporaneous 'shutdown' framing suggested, consistent with this tracker's practice of weighing contested causal/scope claims against the most precise available sourcing rather than the most dramatic. Re-verified 2026-08-17: the Vera Institute v. DOJ case (D.C. Cir. No. 25-5248) remains on appeal with no ruling issued as of the docket's June 22, 2026 update -- this entry's prior framing of the July 2025 district-court dismissal read as a final resolution; it is not. No additional information was found on current reimbursement status for affected grantees beyond the November 2025 NPR reporting already cited. Re-verified 2026-08-29: the May 1, 2026 Vera Institute one-year retrospective (including the Equal Justice USA closure) is a first-party account from one of the case's own plaintiff organizations rather than independent reporting -- credible for describing Vera's own knowledge of field conditions and named closures, but treated as an interested party, not neutral corroboration; no independent outlet confirming the Equal Justice USA closure specifically was identified in this recheck. No ruling on the D.C. Circuit appeal (No. 25-5248) was identified as of this update. Re-verified 2026-08-31 (real correction): confirmed via CNN, NPR, CBS News, and Time that Bondi was removed as Attorney General April 2, 2026 and, per NPR and Axios, that Todd Blanche was confirmed as her permanent successor by the Senate August 8, 2026 (50-49); confirmed via CBS News, NBC News, NPR, and DHS's own press release (Noem timeline corrected 2026-09-26) that President Trump announced on March 5, 2026 that Noem would leave as DHS Secretary (naming Mullin as successor effective March 31, 2026), and that Markwayne Mullin was confirmed by the Senate 54-45 on March 23, 2026 and sworn in March 24, 2026. Also corrected, via the Civil Rights Litigation Clearinghouse's case-docket summary (drawing on the parties' own joint status reports), this entry's prior implication that the stipulated grant-preservation injunction had lapsed after its May 5, 2026 extension deadline: the injunction has instead been extended multiple further times and remains in effect through September 1, 2026, with an August 28, 2026 status report due to determine the next extension; that report's outcome was not identified in this recheck's sourcing. Round-4 backlog fold 2026-09-09 (cluster c0203, 2 of 7 records): one record (the July 2025 Judge Mehta dismissal) was a confirmed duplicate of content already fully documented here, not re-added. The other added the CVI-specific breakdown of the April 22 cancellation wave ($158M/69 grants, named cities), corroborated across Yahoo/Reuters wire coverage, the Brennan Center, and the Friends Committee on National Legislation.",
@@ -12869,6 +15043,68 @@
       "reviewed": "2026-09-26"
     },
     "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2025-01-24",
+        "text": "At least four environment division section chiefs are told they are being moved to a sanctuary-cities group",
+        "turning_point": true,
+        "sources": [
+          "https://www.eenews.net/articles/doj-environment-section-chiefs-reassigned-to-work-on-immigration/"
+        ]
+      },
+      {
+        "date": "2025-10-09",
+        "text": "The budget request seeks a 22.5% cut for the division; its enforcement section fell from about 120 lawyers to 65-70",
+        "sources": [
+          "https://news.bloomberglaw.com/environment-and-energy/doj-legal-delays-slow-environmental-cases-and-frustrate-lawyers"
+        ]
+      },
+      {
+        "date": "2026-01-22",
+        "text": "DOJ orders prosecutors to drop all criminal cases over vehicle emissions defeat devices",
+        "sources": [
+          "https://www.cbsnews.com/news/justice-department-auto-emissions-cheating-cases/"
+        ]
+      },
+      {
+        "date": "2026-02-03",
+        "text": "At least 140 lawyers, at least a third of its attorneys, have left the environment division in a year",
+        "turning_point": true,
+        "sources": [
+          "https://www.eenews.net/articles/staff-exodus-case-gridlock-doj-environment-division-under-trump-2-0/"
+        ]
+      },
+      {
+        "date": "2026-02-05",
+        "text": "DOJ filed only 16 civil complaints in EPA-referred cases in a year, down 76% from Biden's first year",
+        "sources": [
+          "https://environmentalintegrity.org/wp-content/uploads/2026/02/EPA-Enforcement-Report-EMBARGOED-for-2.5.26.pdf"
+        ]
+      },
+      {
+        "date": "2026-06",
+        "text": "DOJ renames the division the Energy and Natural Resources Division, with a mission of U.S. energy dominance",
+        "turning_point": true,
+        "sources": [
+          "https://www.justice.gov/opa/pr/justice-department-rename-division-energy-and-natural-resources-division"
+        ]
+      },
+      {
+        "date": "2026-07-03",
+        "text": "Trump pardons nine people convicted of Clean Air Act violations for installing emissions defeat devices",
+        "sources": [
+          "https://www.cnn.com/2026/07/03/politics/trump-pardons-emissions-pollution",
+          "https://www.foxnews.com/politics/trump-pardons-9-people-convicted-tampering-emission-controls-diesel-engines"
+        ]
+      },
+      {
+        "date": "2026-07-28",
+        "text": "The enforcement section is under half its former size, and the crimes section is down to half its peak",
+        "sources": [
+          "https://insideclimatenews.org/news/28072026/justice-department-environmental-enforcement-has-collapsed/"
+        ]
+      }
+    ],
     "timeline": {
       "confidence_note": {
         "base": "HIGH confidence on the initial reassignments (corroborated by the New York Times' contemporaneous January 2025 reporting) and on the division-wide departure figures (E&E News' February 2026 count from interviews and its own analysis, repeated by Inside Climate News). MODERATE confidence on the precise administrative-leave and Honors-Program-rescission details, which rest on the single original NYT report and were not independently re-confirmed in later reporting reviewed for this entry. Re-verified 2026-08-17: no new developments found since the FY2026 budget-request and section-headcount figures added this update (Bloomberg Law, 2025-10-09, which predates this entry's original 2026-08-08 write date but was not yet incorporated); no indication of reversal or further escalation in the roughly six weeks since. Updated 2026-08-30: HIGH confidence on the June 2026 rename to Energy and Natural Resources Division -- verified directly against DOJ's own justice.gov press release and current ENRD landing page, not just a search summary. HIGH confidence on the July 3, 2026 Clean Air Act pardons -- corroborated across CNN, Fox News, E&E News, and Cronkite News. MODERATE confidence on the Environmental Crimes Section figure -- former chief Deborah Harris's account to Inside Climate News (42 attorneys at its peak, now half that size), consistent with E&E News' February 2026 count (35% lost). LOW confidence on the reported deputy departure -- Law360's full report is paywalled, so only the headline claim (a top deputy left, per an August court filing) could be verified; the deputy's name and stated reason were not independently confirmed and are deliberately omitted here.",
@@ -12967,7 +15203,46 @@
       },
       "reviewed": "2026-09-20"
     },
-    "status_stage": "Unchallenged"
+    "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2025",
+        "text": "Robert Wells, head of the FBI's National Security Branch, is forced out shortly after Trump takes office",
+        "sources": [
+          "https://www.nbcnews.com/politics/national-security/trump-brain-drain-weakens-fbi-doj-us-braces-iran-attack-defenses-rcna214182"
+        ]
+      },
+      {
+        "date": "2025-05",
+        "text": "David Scott, the FBI's counterterrorism chief, leaves the bureau",
+        "sources": [
+          "https://www.nbcnews.com/politics/national-security/trump-brain-drain-weakens-fbi-doj-us-braces-iran-attack-defenses-rcna214182"
+        ]
+      },
+      {
+        "date": "2025-06-16",
+        "text": "DHS's budget plan dissolves its weapons-of-mass-destruction defense office and all 286 of its positions",
+        "turning_point": true,
+        "sources": [
+          "https://globalbiodefense.com/2025/06/16/dhs-fy-2026-budget-dissolves-cwmd-office-amid-structural-overhaul/"
+        ]
+      },
+      {
+        "date": "2025-06-22",
+        "text": "U.S. and Israeli forces strike Iran's nuclear sites; a former DOJ official warns of Iranian retaliation at home",
+        "sources": [
+          "https://www.nbcnews.com/politics/national-security/trump-brain-drain-weakens-fbi-doj-us-braces-iran-attack-defenses-rcna214182"
+        ]
+      },
+      {
+        "date": "2025-06-24",
+        "text": "Reports show DOJ national-security sections have lost up to two-thirds of staff as Iran threats rise",
+        "turning_point": true,
+        "sources": [
+          "https://www.nbcnews.com/politics/national-security/trump-brain-drain-weakens-fbi-doj-us-braces-iran-attack-defenses-rcna214182"
+        ]
+      }
+    ]
   },
   {
     "id": "doj-federal-programs-branch-exodus-2025",
