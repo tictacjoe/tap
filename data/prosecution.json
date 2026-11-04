@@ -18210,6 +18210,47 @@
       "reviewed": "2026-09-21"
     },
     "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2025-08-11",
+        "text": "Attorney General Pam Bondi appoints Eric Grant U.S. Attorney for the Eastern District of California",
+        "sources": [
+          "https://www.justice.gov/usao-edca/staff-profile/us-attorney-eric-grant"
+        ]
+      },
+      {
+        "date": "2026-06-15",
+        "text": "CNN reports Grant's office is leading a criminal tax probe of people close to Newsom, including his wife",
+        "turning_point": true,
+        "sources": [
+          "https://www.cnn.com/2026/06/15/politics/gavin-newsom-trump-justice-department-investigation"
+        ]
+      },
+      {
+        "date": "2026-06-15",
+        "text": "Newsom calls the probe politically motivated and says it targets him and his wife",
+        "sources": [
+          "https://www.gov.ca.gov/2026/06/15/governor-newsom-demands-records-from-trumps-doj-about-politically-motivated-investigation/",
+          "https://www.cnn.com/2026/06/15/politics/gavin-newsom-trump-justice-department-investigation"
+        ]
+      },
+      {
+        "date": "2026-06-16",
+        "text": "Newsom's team tells congressional Democrats Trump ordered the probe; a source says whistleblowers started it",
+        "sources": [
+          "https://www.axios.com/2026/06/16/gavin-newsom-doj-trump-investigation-congress"
+        ]
+      },
+      {
+        "date": "2026-09",
+        "text": "Subpoenas seek six years of records from the nonprofit that funds Newsom's travel and messages with his aides",
+        "turning_point": true,
+        "sources": [
+          "https://sfstandard.com/2026/09/12/newsom-travel-subpoenas-federal-criminal-probe/",
+          "https://www.motherjones.com/politics/2026/09/gavin-newsom-justice-department-investigation-funding-travel-subpoenas/"
+        ]
+      }
+    ],
     "timeline": {
       "confidence_note": {
         "base": "HIGH confidence on the investigation's existence and the September 2026 subpoena scope, corroborated across CNN, Axios, San Francisco Standard, and Mother Jones; the U.S. Attorney's identity and appointment rest on the San Francisco Standard and the Justice Department's own staff profile. MODERATE confidence on motivation/origin specifically -- this is a genuinely disputed question between Newsom's on-record political-retribution claim and DOJ's/a source's on-record counter-account that the probe originated from California whistleblowers, and no independent adjudication of that dispute was identified in sourcing reviewed for this entry.",
@@ -18349,7 +18390,78 @@
         "id": "vought-impoundment-control-act-2025-2026"
       }
     ],
-    "status_stage": "Court ruled"
+    "status_stage": "Court ruled",
+    "key_events": [
+      {
+        "date": "2026-02-20",
+        "text": "The Supreme Court rules IEEPA cannot support the global tariffs, striking about 70% of them",
+        "turning_point": true,
+        "sources": [
+          "https://cryptobriefing.com/jamieson-greer-influence-supreme-court-tariff-ruling/"
+        ]
+      },
+      {
+        "date": "2026-02-20",
+        "text": "Greer's office announces a temporary 10% global surcharge under Section 122 and new Section 301 investigations",
+        "sources": [
+          "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/february/ambassador-greer-issues-statement-supreme-court-ieepa-decision"
+        ]
+      },
+      {
+        "date": "2026-02-22",
+        "text": "Greer says on ABC that the legal tool might change but the tariff policy hasn't",
+        "sources": [
+          "https://cryptobriefing.com/jamieson-greer-influence-supreme-court-tariff-ruling/"
+        ]
+      },
+      {
+        "date": "2026-05-07",
+        "text": "The Court of International Trade rules 2-1 that the Section 122 tariffs also exceed the law",
+        "turning_point": true,
+        "sources": [
+          "https://www.gibsondunn.com/section-122-global-tariffs-invalidated-by-the-court-of-international-trade-ruling-and-next-steps/"
+        ]
+      },
+      {
+        "date": "2026-05-12",
+        "text": "The Federal Circuit pauses the ruling while the government appeals",
+        "sources": [
+          "https://www.gibsondunn.com/section-122-global-tariffs-invalidated-by-the-court-of-international-trade-ruling-and-next-steps/"
+        ]
+      },
+      {
+        "date": "2026-07-23",
+        "text": "USTR imposes Section 301 tariffs on 60 economies from July 24, as the Section 122 tariffs expire",
+        "turning_point": true,
+        "sources": [
+          "https://www.cnbc.com/2026/08/03/trump-tariffs-25-states-lawsuit-supreme-court.html",
+          "https://www.tariffstool.com/guides/section-301-replacing-section-122"
+        ]
+      },
+      {
+        "date": "2026-07-24",
+        "text": "Importers including Burlap & Barrel and Learning Resources sue in the trade court over the Section 301 tariffs",
+        "sources": [
+          "https://www.supplychaindive.com/news/25-states-sue-trump-over-section-301-forced-labor-tariffs/826908/",
+          "https://tradelawdaily.com/article/2026/08/06/us-moves-for-burlap-and-barrel-to-be-master-case-in-litigation-against-section-301-tariffs-2608050035"
+        ]
+      },
+      {
+        "date": "2026-08-03",
+        "text": "Attorneys general from 25 states sue to block the Section 301 tariffs",
+        "sources": [
+          "https://www.cnbc.com/2026/08/03/trump-tariffs-25-states-lawsuit-supreme-court.html",
+          "https://www.supplychaindive.com/news/25-states-sue-trump-over-section-301-forced-labor-tariffs/826908/"
+        ]
+      },
+      {
+        "date": "2026-08-19",
+        "text": "The trade court picks the Learning Resources suit as the sample case and pauses the others",
+        "sources": [
+          "https://taxprofblog.aals.org/2026/08/26/tariff-litigation-update/"
+        ]
+      }
+    ]
   },
   {
     "id": "grenell-rubio-venezuela-swap-collapse-2025",
@@ -18417,7 +18529,50 @@
       },
       "reviewed": "2026-10-24"
     },
-    "status_stage": "Unchallenged"
+    "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2025-05",
+        "text": "Rubio's State Department nears a late-May swap of about 250 CECOT migrants for 11 detained Americans",
+        "sources": [
+          "https://www.nytimes.com/2025/07/08/world/americas/trump-venezuelan-migrants-us-prisoner-swap.html",
+          "https://www.sanjuandailystar.com/post/dueling-us-efforts-botched-a-deal-to-swap-venezuelans-held-in-el-salvador-for-americans"
+        ]
+      },
+      {
+        "date": "2025-05",
+        "text": "Grenell, without coordinating with Rubio's team, offers Venezuela continued Chevron oil operations for U.S. detainees",
+        "turning_point": true,
+        "sources": [
+          "https://www.nytimes.com/2025/07/08/world/americas/trump-venezuelan-migrants-us-prisoner-swap.html",
+          "https://www.sanjuandailystar.com/post/dueling-us-efforts-botched-a-deal-to-swap-venezuelans-held-in-el-salvador-for-americans"
+        ]
+      },
+      {
+        "date": "2025-05",
+        "text": "Grenell wins the release of Air Force veteran Joseph St. Clair",
+        "sources": [
+          "https://www.nytimes.com/2025/07/08/world/americas/trump-venezuelan-migrants-us-prisoner-swap.html"
+        ]
+      },
+      {
+        "date": "2025-07-08",
+        "text": "The New York Times reports the swap was never sealed, with Grenell's rival track part of the reason",
+        "sources": [
+          "https://www.nytimes.com/2025/07/08/world/americas/trump-venezuelan-migrants-us-prisoner-swap.html",
+          "https://www.sanjuandailystar.com/post/dueling-us-efforts-botched-a-deal-to-swap-venezuelans-held-in-el-salvador-for-americans",
+          "https://www.advocate.com/news/ric-grenell-undercuts-marco-rubio"
+        ]
+      },
+      {
+        "date": "2025-07-18",
+        "text": "A separate exchange returns 252 CECOT migrants to Venezuela for 10 Americans, including two from the failed deal",
+        "turning_point": true,
+        "sources": [
+          "https://www.cnn.com/2025/07/18/politics/venezuela-us-prisoner-swap-trump"
+        ]
+      }
+    ]
   },
   {
     "id": "halligan-comey-vindictive-prosecution-2025-2026",
@@ -18660,6 +18815,108 @@
     ],
     "narrative_combined": true,
     "status_stage": "Court ruled",
+    "key_events": [
+      {
+        "date": "2025-09",
+        "text": "Trump forces out U.S. Attorney Erik Siebert, who found too little evidence to charge Comey, and installs Halligan",
+        "turning_point": true,
+        "sources": [
+          "https://www.washingtonpost.com/national-security/2026/05/09/doj-sees-fallout-after-push-prosecute-former-fbi-director-james-comey/",
+          "https://www.nytimes.com/2025/09/27/us/politics/trump-comey-justice-department.html"
+        ]
+      },
+      {
+        "date": "2025-09-25",
+        "text": "Halligan personally secures a grand jury indictment of former FBI Director James Comey",
+        "turning_point": true,
+        "sources": [
+          "https://www.cnn.com/2025/09/25/politics/troy-edwards-jr-resigns-comey-indictment",
+          "https://www.politico.com/news/2025/09/26/cheering-comey-indictment-trump-predicts-there-will-be-others-00582321",
+          "https://www.nytimes.com/2025/09/27/us/politics/trump-comey-justice-department.html"
+        ]
+      },
+      {
+        "date": "2025-10",
+        "text": "Halligan secures a mortgage and bank fraud indictment of New York Attorney General Letitia James",
+        "sources": [
+          "https://www.washingtonpost.com/national-security/2025/10/09/letitia-james-grand-jury-trump/",
+          "https://www.reuters.com/world/ny-attorney-general-james-seek-dismissal-indictment-by-challenging-us-attorney-2025-10-23/"
+        ]
+      },
+      {
+        "date": "2025-10-08",
+        "text": "Comey pleads not guilty, calling the case a politically motivated vendetta",
+        "sources": [
+          "https://apnews.com/article/trump-comey-justice-department-russia-court-appearance-141a5ada1f3c1018b7a417f2a156673f"
+        ]
+      },
+      {
+        "date": "2025-11-05",
+        "text": "A magistrate judge faults an \"indict first, investigate later\" approach and orders grand jury materials turned over",
+        "sources": [
+          "https://www.nbcnews.com/politics/justice-department/judge-accuses-prosecutors-comey-case-taking-indict-first-investigate-l-rcna242222"
+        ]
+      },
+      {
+        "date": "2025-11-17",
+        "text": "The judge finds profound investigative missteps, including Halligan remarks to grand jurors that seem to misstate law",
+        "sources": [
+          "https://www.cbsnews.com/news/comey-seeks-dismissal-grand-jury-indictment-errors/"
+        ]
+      },
+      {
+        "date": "2025-11-19",
+        "text": "Prosecutors admit the final Comey indictment was never shown to the full grand jury",
+        "sources": [
+          "https://www.cbsnews.com/news/comey-seeks-dismissal-grand-jury-indictment-errors/"
+        ]
+      },
+      {
+        "date": "2025-11-24",
+        "text": "Judge Cameron Currie dismisses both indictments, ruling Halligan was unlawfully appointed",
+        "turning_point": true,
+        "sources": [
+          "https://www.cbsnews.com/news/james-comey-case-dismissed-judge-lindsey-halligan/",
+          "https://www.cnn.com/2025/11/24/politics/james-comey-letitia-james-indictments-dismissed"
+        ]
+      },
+      {
+        "date": "2025-12-04",
+        "text": "A grand jury declines to re-indict James",
+        "sources": [
+          "https://www.cnn.com/2025/12/04/politics/grand-jury-declines-to-indict-letitia-james-again"
+        ]
+      },
+      {
+        "date": "2025-12-11",
+        "text": "A second grand jury rejects a revised James indictment that added a third felony count",
+        "sources": [
+          "https://thehill.com/regulation/court-battles/5656649-doj-letitia-james-felony-charge-doj/"
+        ]
+      },
+      {
+        "date": "2026-01",
+        "text": "Prosecutors open a new inquiry into James's financial transactions",
+        "sources": [
+          "https://www.nytimes.com/2026/01/08/us/politics/letitia-james-trump-justice-department.html"
+        ]
+      },
+      {
+        "date": "2026-02-20",
+        "text": "Todd Blanche fires James Hundley, the U.S. Attorney the district's judges chose to replace Halligan",
+        "sources": [
+          "https://www.washingtonpost.com/national-security/2026/07/16/justice-dept-taps-veteran-lawyer-lead-virginia-federal-prosecutors-office/",
+          "https://www.washingtonpost.com/national-security/2026/05/09/doj-sees-fallout-after-push-prosecute-former-fbi-director-james-comey/"
+        ]
+      },
+      {
+        "date": "2026-09-15",
+        "text": "A Fourth Circuit panel hears DOJ's appeal and voices skepticism about reviving the Comey and James cases",
+        "sources": [
+          "https://www.washingtonpost.com/national-security/2026/09/15/doj-seeks-revive-cases-against-comey-james-year-after-dismissals/"
+        ]
+      }
+    ],
     "timeline": {
       "confidence_note": {
         "base": "HIGH confidence on the documented facts -- Siebert's firing, Halligan's installation, the indictment, its dismissal, the appeal, and the EDVA office fallout are all corroborated by the Washington Post, CBS News, CNN, and NBC News across a multi-month record, including an actual federal court ruling voiding the appointment, not merely an allegation. This entry rests on stronger evidentiary footing than most 'vindictive prosecution' entries in this tracker, since a court has already ruled on the appointment's legality, even though the appeal was still pending as of this entry. Re-verified 2026-08-18: two new developments -- a September 15, 2026 Fourth Circuit oral argument date on the appointment question, and Theo Stamos's installation as Acting U.S. Attorney via the First Assistant/Vacancies Reform Act route -- extend but do not resolve the entry's central findings. Re-verified 2026-08-26: the September 15, 2026 Fourth Circuit oral argument date stands, briefing remains complete (government's opening brief filed February 9, 2026), and no ruling has issued; no material change since the prior recheck. Correction (2026-09-01): HIGH confidence on the March 2026 amicus-brief filings (confirmed directly via the Society for the Rule of Law's own case page and States United's case tracker, corroborating a Pacific Legal Foundation writeup on the Wille v. NOAA connection) -- an omission dating to this entry's original write date, not a new development, but one that meaningfully broadens the documented breadth of legal opinion against Halligan's appointment beyond what the entry previously reflected.",
@@ -18737,7 +18994,33 @@
       },
       "reviewed": "2026-10-31"
     },
-    "status_stage": "Reversed or withdrawn"
+    "status_stage": "Reversed or withdrawn",
+    "key_events": [
+      {
+        "date": "2025-05",
+        "text": "HHS appoints Steven Hatfill, a hydroxychloroquine promoter and mRNA vaccine critic, as a senior adviser at ASPR",
+        "turning_point": true,
+        "sources": [
+          "https://www.washingtonpost.com/politics/2025/05/04/hatfill-covid-hydroxychloroquine-anthrax/"
+        ]
+      },
+      {
+        "date": "2025-10",
+        "text": "HHS fires Hatfill; an official says he misrepresented himself as ASPR's chief medical officer",
+        "turning_point": true,
+        "sources": [
+          "https://www.bostonglobe.com/2025/10/28/nation/steven-hatfill-hhs-ousted",
+          "https://www.washingtonpost.com/health/2025/10/28/hatfill-hhs-fired-mrna-covid-hydroxychloroquine/"
+        ]
+      },
+      {
+        "date": "2025-10-28",
+        "text": "Hatfill denies it, saying HHS printed business cards giving him that title",
+        "sources": [
+          "https://www.bostonglobe.com/2025/10/28/nation/steven-hatfill-hhs-ousted"
+        ]
+      }
+    ]
   },
   {
     "id": "hegseth-army-chief-staff-purge-2026",
@@ -18826,7 +19109,55 @@
       }
     ],
     "narrative_combined": true,
-    "status_stage": "Unchallenged"
+    "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2026-04-02",
+        "text": "Hegseth forces Army Chief of Staff Gen. Randy George into immediate retirement and fires two other generals",
+        "turning_point": true,
+        "sources": [
+          "https://www.nbcnews.com/politics/national-security/pete-hegseth-forces-army-chief-staff-randy-george-rcna266491",
+          "https://defensescoop.com/2026/04/02/hegseth-fired-gen-george-army-chief-of-staff/"
+        ]
+      },
+      {
+        "date": "2026-04-02",
+        "text": "Gen. Christopher LaNeve, Hegseth's former senior military assistant, becomes acting Army chief of staff",
+        "sources": [
+          "https://defensescoop.com/2026/04/02/hegseth-fired-gen-george-army-chief-of-staff/",
+          "https://www.forbes.com/sites/saradorn/2026/08/26/top-army-general-fired-after-disagreement-over-kid-rock-helicopter-probe-report-says-as-vacancies-mount-under-hegseth/"
+        ]
+      },
+      {
+        "date": "2026-04-03",
+        "text": "The New York Times ties the removal to clashes over Hegseth blocking four officers' promotions, two Black and two women",
+        "sources": [
+          "https://www.aljazeera.com/news/2026/4/3/hegseth-fires-us-army-chief-of-staff-in-reported-string-of-dismissals"
+        ]
+      },
+      {
+        "date": "2026-08-21",
+        "text": "The Wall Street Journal reports Army Secretary Dan Driscoll plans to leave by year's end amid friction with Hegseth",
+        "sources": [
+          "https://www.stripes.com/theaters/us/2026-08-26/army-secretary-driscoll-expected-departure-22664598.html"
+        ]
+      },
+      {
+        "date": "2026-08-26",
+        "text": "Reports say George was fired soon after being told Hegseth wanted to back off a probe of a helicopter flyby",
+        "sources": [
+          "https://www.forbes.com/sites/saradorn/2026/08/26/top-army-general-fired-after-disagreement-over-kid-rock-helicopter-probe-report-says-as-vacancies-mount-under-hegseth/"
+        ]
+      },
+      {
+        "date": "2026-09-02",
+        "text": "Driscoll serves his last full day as Army Secretary amid reported tensions with Hegseth",
+        "turning_point": true,
+        "sources": [
+          "https://www.pbs.org/newshour/politics/driscoll-offers-no-reason-for-his-exit-as-army-secretary-but-says-wednesday-is-his-last-full-day"
+        ]
+      }
+    ]
   },
   {
     "id": "hegseth-army-cid-security-detail-diversion-2025",
@@ -18900,7 +19231,34 @@
       },
       "reviewed": "2026-10-24"
     },
-    "status_stage": "Unchallenged"
+    "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2025-01",
+        "text": "Hegseth takes office as defense secretary; Army CID agents on protective duty later grow from about 150 to 400-500",
+        "sources": [
+          "https://www.washingtonpost.com/national-security/2025/08/20/hegseth-security-detail/"
+        ]
+      },
+      {
+        "date": "2025-08-20",
+        "text": "The Washington Post reports Hegseth's security detail is pulling Army CID agents off criminal cases",
+        "turning_point": true,
+        "sources": [
+          "https://www.washingtonpost.com/national-security/2025/08/20/hegseth-security-detail/",
+          "https://www.mediaite.com/media/news/pete-hegseths-security-detail-is-so-big-its-pushing-an-entire-army-agency-to-the-brink-wapo/"
+        ]
+      },
+      {
+        "date": "2025-08-20",
+        "text": "The Pentagon accuses the Post of doxxing and says CID itself recommended the security arrangements",
+        "sources": [
+          "https://thehill.com/policy/defense/5461776-washington-post-pentagon-hegseth-security/",
+          "https://www.mediaite.com/media/news/pete-hegseths-security-detail-is-so-big-its-pushing-an-entire-army-agency-to-the-brink-wapo/",
+          "https://www.foxnews.com/media/pentagon-officials-blast-washington-post-putting-lives-risk-report-pete-hegseths-security"
+        ]
+      }
+    ]
   },
   {
     "id": "hegseth-boat-strike-kill-order-2025-09",
@@ -19110,6 +19468,121 @@
       }
     ],
     "status_stage": "Finding issued",
+    "key_events": [
+      {
+        "date": "2019-02-13",
+        "text": "On Fox & Friends, Hegseth defends a soldier charged with killing a captive Afghan: 'Put us all in jail'",
+        "sources": [
+          "https://www.mediamatters.org/pete-hegseth/flashback-when-pete-hegseth-endorsed-soldiers-executing-captured-alleged-combatants"
+        ]
+      },
+      {
+        "date": "2025-09-02",
+        "text": "A U.S. strike hits an alleged drug boat in the Caribbean, and a follow-up strike kills the two survivors",
+        "turning_point": true,
+        "sources": [
+          "https://www.cnn.com/2026/01/13/politics/classified-aircraft-boat-strike-civilian-paint",
+          "https://www.hrw.org/news/2026/01/13/new-questions-on-september-us-boat-strike",
+          "https://www.washingtonpost.com/national-security/2025/11/28/hegseth-kill-them-all-survivors-boat-strike/"
+        ]
+      },
+      {
+        "date": "2025-09-30",
+        "text": "At Quantico, Hegseth tells hundreds of generals the military won't fight with 'stupid rules of engagement'",
+        "sources": [
+          "https://www.mediamatters.org/pete-hegseth/flashback-when-pete-hegseth-endorsed-soldiers-executing-captured-alleged-combatants"
+        ]
+      },
+      {
+        "date": "2025-11-28",
+        "text": "The Washington Post reports Hegseth gave a verbal order to 'leave no survivors' before the first strike",
+        "sources": [
+          "https://www.washingtonpost.com/national-security/2025/11/28/hegseth-kill-them-all-survivors-boat-strike/",
+          "https://www.washingtonpost.com/national-security/2025/11/29/hegseth-caribbean-strikes-kill-order-reaction/"
+        ]
+      },
+      {
+        "date": "2025-11-29",
+        "text": "Former military lawyers say orders to kill survivors at sea are patently illegal and can be prosecuted",
+        "sources": [
+          "https://www.militarytimes.com/news/your-military/2025/12/01/former-jags-say-hegseth-others-may-have-committed-war-crimes/"
+        ]
+      },
+      {
+        "date": "2025-12-04",
+        "text": "Adm. Bradley tells lawmakers the boat was bound for Suriname; lawmakers dispute what the survivors' waving meant",
+        "sources": [
+          "https://time.com/7339154/admiral-bradley-boat-strike-hegseth/",
+          "https://www.cbc.ca/news/world/us-hegseth-boat-attack-congress-9.7002756"
+        ]
+      },
+      {
+        "date": "2025-12-09",
+        "text": "The ACLU and allies sue for the Justice Department legal opinion cited to justify the strikes",
+        "sources": [
+          "https://www.aclu.org/press-releases/rights-groups-sue-trump-administration-for-legal-justification-of-deadly-boat-strikes"
+        ]
+      },
+      {
+        "date": "2025-12-18",
+        "text": "Senate Armed Services chair Wicker follows House chair Rogers in closing his committee's probe; Democrats object",
+        "sources": [
+          "https://www.notus.org/defense/senate-armed-services-chair-says-no-evidence-of-war-crimes-in-double-tap-strike"
+        ]
+      },
+      {
+        "date": "2026-01-13",
+        "text": "Reports say the strike plane was painted to look civilian, raising a possible perfidy violation",
+        "sources": [
+          "https://www.cnn.com/2026/01/13/politics/classified-aircraft-boat-strike-civilian-paint",
+          "https://www.hrw.org/news/2026/01/13/new-questions-on-september-us-boat-strike"
+        ]
+      },
+      {
+        "date": "2026-05-11",
+        "text": "The Pentagon inspector general opens a review of how Southern Command picks boats to strike",
+        "sources": [
+          "https://www.nbcnews.com/politics/national-security/pentagons-internal-watchdog-probe-us-strikes-alleged-drug-boats-rcna345811"
+        ]
+      },
+      {
+        "date": "2026-07-14",
+        "text": "The Senate blocks its defense bill, which would hold back 75% of Hegseth's travel budget over the strike videos",
+        "sources": [
+          "https://www.techtimes.com/articles/320549/20260715/senate-blocks-fy2027-ndaa-over-iran-war-115t-weapons-programs-limbo.htm",
+          "https://www.stripes.com/theaters/us/2026-06-18/senate-panel-travel-limits-hegseth-22008540.html"
+        ]
+      },
+      {
+        "date": "2026-08-11",
+        "text": "The Pentagon's civilian-harm report finds no civilian deaths in the 2025 strikes; officials call it a whitewash",
+        "sources": [
+          "https://theintercept.com/2026/08/11/war-department-civilian-casualties-boat-strikes-yemen/"
+        ]
+      },
+      {
+        "date": "2026-09",
+        "text": "A U.N. expert finds reasonable grounds to believe the strikes were crimes against humanity of murder",
+        "sources": [
+          "https://www.ohchr.org/sites/default/files/documents/issues/terrorism/sr-ct-briefing-note-targeting-narco-terrori.pdf"
+        ]
+      },
+      {
+        "date": "2026-09-30",
+        "text": "A federal judge rejects two of three secrecy claims and orders the legal memo produced for his private review",
+        "turning_point": true,
+        "sources": [
+          "https://www.courthousenews.com/wp-content/uploads/2026/09/order-boat-strikes-dod-foia-aclu.pdf"
+        ]
+      },
+      {
+        "date": "2026-10-04",
+        "text": "A strike kills four more people, bringing the campaign's toll to at least 235 dead in 70 strikes",
+        "sources": [
+          "https://www.stripes.com/theaters/americas/2026-10-05/us-strike-caribbean-kills-4-23061506.html"
+        ]
+      }
+    ],
     "timeline": {
       "confidence_note": {
         "base": "MODERATE-LOW confidence on the central disputed fact (did Hegseth order killing survivors) -- this is a direct conflict between anonymous-sourced reporting and on-record congressional testimony from the officer who'd have executed such an order. HIGH confidence on the underlying outcome (two survivors were killed in a follow-up strike), on the existence of sustained, escalating bipartisan congressional concern, and on the campaign's dramatically expanded scale (60+ strikes, 200+ deaths as of mid-2026, versus the single incident originally documented). This is a documented controversy under active, escalating bipartisan investigation with disputed facts about a specific order, situated within a much larger and still-growing strike campaign, NOT a settled claim that Hegseth gave a kill order -- the order allegation remains this entry's central disputed fact, though the campaign's scale is no longer in dispute. Re-verified 2026-07-18: the FY2027 travel-fund escalation is now less certain than previously reported -- it exists only in the Senate's stalled bill, not enacted law, and the House version omits it entirely -- so it is proposed, not yet enacted, rather than a confirmed escalation. Re-verified 2026-07-26: no material change -- the FY2027 NDAA (with the 75% travel-fund provision) remains stalled pending conference negotiation between the House and Senate versions; no new resolution identified. Re-verified 2026-08-02: a formal Inspector General evaluation, corroborated across many independent outlets (NBC News, CNN, Washington Examiner, Marine Corps Times, Euronews), adds a second, independent accountability track to the existing congressional investigations -- this is now supported by the strongest source type this tracker prioritizes, not just press/testimony characterization. Re-verified 2026-08-18: the Pentagon's own August 2026 civilian-harm report to Congress denying any boat-strike civilian deaths is a significant new accountability data point, corroborated across multiple outlets and criticized as not credible by officials inside the administration itself -- it does not resolve the disputed kill-order question, but it is hard evidence the administration's own casualty accounting for this specific campaign carries no credibility even internally. Re-verified 2026-08-26 (real correction): this entry's prior claim that the House NDAA text omitted the travel-fund provision entirely is now stale and was itself wrong as a snapshot of the bill's final form -- the House passed its own FY2027 NDAA July 22, 2026 (216-212) with a 25% travel-fund provision tied to boat-strike video specifically, distinct in both percentage and scope from the Senate's 75%/boat-strikes-plus-Minab version; the two chambers were in informal conference negotiations as of early August 2026, with no reconciled text or enactment identified as of this update.",
@@ -19276,7 +19749,44 @@
         "id": "hegseth-army-chief-staff-purge-2026"
       }
     ],
-    "status_stage": "Unchallenged"
+    "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2026-02-12",
+        "text": "Hegseth orders Army Secretary Dan Driscoll to remove Col. Dave Butler, his public affairs chief and adviser",
+        "turning_point": true,
+        "sources": [
+          "https://www.foxnews.com/politics/scoop-hegseth-orders-removal-army-public-affairs-chief-amid-broader-pentagon-purge",
+          "https://thehill.com/policy/defense/5741827-hegseth-ousts-top-army-advisor/"
+        ]
+      },
+      {
+        "date": "2026-02-17",
+        "text": "Fox News reports the ouster while Driscoll is in Geneva; Butler leaves his post to retire after 28 years",
+        "sources": [
+          "https://x.com/JenGriffinFNC/status/2023760364718944390?lang=en",
+          "https://www.foxnews.com/politics/scoop-hegseth-orders-removal-army-public-affairs-chief-amid-broader-pentagon-purge",
+          "https://thehill.com/policy/defense/5741827-hegseth-ousts-top-army-advisor/"
+        ]
+      },
+      {
+        "date": "2026-04",
+        "text": "Hegseth ousts Gen. Randy George, Driscoll's close friend, as Army chief of staff",
+        "sources": [
+          "https://www.pbs.org/newshour/politics/army-secretary-dan-driscoll-is-stepping-down-after-18-months-on-the-job-white-house-says",
+          "https://www.cbsnews.com/news/army-secretary-dan-driscoll-resigns/"
+        ]
+      },
+      {
+        "date": "2026-08-31",
+        "text": "The White House confirms Driscoll is stepping down as Army secretary after months of friction with Hegseth",
+        "turning_point": true,
+        "sources": [
+          "https://www.pbs.org/newshour/politics/army-secretary-dan-driscoll-is-stepping-down-after-18-months-on-the-job-white-house-says",
+          "https://www.cbsnews.com/news/army-secretary-dan-driscoll-resigns/"
+        ]
+      }
+    ]
   },
   {
     "id": "hegseth-congress-communication-gag-2025",
@@ -19536,6 +20046,34 @@
       "reviewed": "2026-11-02"
     },
     "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2026-07-10",
+        "text": "The Justice Department subpoenas New York Times reporters over the paper's Air Force One security reporting",
+        "sources": [
+          "https://thehill.com/policy/defense/5965945-hegeseth-crackdown-media-leaks/"
+        ]
+      },
+      {
+        "date": "2026-07-13",
+        "text": "Hegseth announces a joint Pentagon-DOJ task force to find and prosecute leaks to the news media",
+        "turning_point": true,
+        "sources": [
+          "https://www.militarytimes.com/news/pentagon-congress/2026/07/13/us-creates-task-force-to-prosecute-leaks-to-news-media-hegseth-says/",
+          "https://www.foxnews.com/politics/hegseth-announces-joint-task-force-doj-prosecute-leaks-journalists-full-force-law",
+          "https://thehill.com/policy/defense/5965945-hegeseth-crackdown-media-leaks/"
+        ]
+      },
+      {
+        "date": "2026-10-29",
+        "text": "The Pentagon refers a leak case to DOJ after Hegseth fires Lt. Gen. Brett Sylvia; reports don't tie it to the task force",
+        "sources": [
+          "https://www.cnn.com/2026/10/29/politics/pentagon-top-planner-sylvia-ousted-hegseth-hnk-ml",
+          "https://www.spokesman.com/stories/2026/oct/29/general-ousted-by-hegseth-referred-for-criminal-pr/",
+          "https://www.axios.com/2026/10/29/fired-general-leaks-iran-ukraine"
+        ]
+      }
+    ],
     "timeline": {
       "confidence_note": {
         "base": "HIGH confidence -- the task force's creation, its structure (OGC tasking authority, 2-day response requirement), and Hegseth's own quoted rationale are corroborated across numerous independent outlets (Military Times, The Hill, Fox News, Democracy Now, IBTimes UK) and Hegseth's own public statement, not contested.",
@@ -19606,7 +20144,40 @@
       },
       "reviewed": "2026-09-20"
     },
-    "status_stage": "Unchallenged"
+    "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2025-07",
+        "text": "Musk's Grok chatbot draws criticism for antisemitic posts praising Hitler",
+        "sources": [
+          "https://www.cbsnews.com/news/elon-musk-grok-ai-pentagon-growing-backlash/"
+        ]
+      },
+      {
+        "date": "2026-01",
+        "text": "Grok draws global outcry over sexual deepfakes; Malaysia and Indonesia block it and a UK watchdog opens a probe",
+        "sources": [
+          "https://www.cbsnews.com/news/elon-musk-grok-ai-pentagon-growing-backlash/"
+        ]
+      },
+      {
+        "date": "2026-01-12",
+        "text": "At SpaceX in Texas, Hegseth says Grok will run on Pentagon networks, including classified systems",
+        "turning_point": true,
+        "sources": [
+          "https://www.cbsnews.com/news/elon-musk-grok-ai-pentagon-growing-backlash/",
+          "https://www.defenseone.com/policy/2026/01/grok-ethics-are-out-pentagons-new-ai-acceleration-strategy/410649/"
+        ]
+      },
+      {
+        "date": "2026-01-12",
+        "text": "The Pentagon's new AI strategy drops its responsible-AI framework and orders a looser standard for autonomous weapons",
+        "turning_point": true,
+        "sources": [
+          "https://www.defenseone.com/policy/2026/01/grok-ethics-are-out-pentagons-new-ai-acceleration-strategy/410649/"
+        ]
+      }
+    ]
   },
   {
     "id": "hegseth-harvard-military-education-cutoff-2026",
@@ -19816,7 +20387,67 @@
       "reviewed": "2026-11-03"
     },
     "narrative_combined": true,
-    "status_stage": "Under investigation"
+    "status_stage": "Under investigation",
+    "key_events": [
+      {
+        "date": "2026-05-18",
+        "text": "After an official Fort Campbell visit, Hegseth speaks at a Kentucky rally for Rep. Thomas Massie's challenger",
+        "turning_point": true,
+        "sources": [
+          "https://www.militarytimes.com/news/your-military/2026/05/19/hegseth-campaigns-for-congressional-race-breaking-with-pentagon-neutrality/",
+          "https://www.newsweek.com/pete-hegseth-thomas-massie-ed-gallreinand-hatch-act-violation-11961018"
+        ]
+      },
+      {
+        "date": "2026-07-07",
+        "text": "The Steady State files a Hatch Act complaint over the Kentucky rally with the Office of Special Counsel",
+        "sources": [
+          "https://steadystate1.substack.com/p/complaint-and-request-for-investigation",
+          "https://steadystate1.substack.com/p/osc-produced-no-records-supporting"
+        ]
+      },
+      {
+        "date": "2026-07-08",
+        "text": "The Office of Special Counsel closes the complaint a day after getting it, saying he spoke in a personal capacity",
+        "turning_point": true,
+        "sources": [
+          "https://steadystate1.substack.com/p/osc-produced-no-records-supporting",
+          "https://globegazette.com/news/state-regional/government-politics/elections/article_edc7afa3-5005-5387-9423-d721eae2289a.html"
+        ]
+      },
+      {
+        "date": "2026-08-17",
+        "text": "Hegseth headlines an Iowa State Fair fundraiser for Rep. Zach Nunn after flying in on a military aircraft",
+        "turning_point": true,
+        "sources": [
+          "https://www.thegazette.com/news/elections/did-pete-hegseth-s-iowa-campaign-appearance-violate-pentagon-rules/article_5bd706ea-c72b-4a48-b670-c67be95d0e5d.html",
+          "https://www.bostonglobe.com/2026/08/18/nation/pete-hegseth-iowa-republicans-congress/",
+          "https://steadystate1.substack.com/p/according-to-the-lawyers"
+        ]
+      },
+      {
+        "date": "2026-09-02",
+        "text": "The group appeals after its records request returns mostly its own complaint and no analysis behind the closure",
+        "sources": [
+          "https://steadystate1.substack.com/p/osc-produced-no-records-supporting"
+        ]
+      },
+      {
+        "date": "2026-09-11",
+        "text": "The Steady State asks the Office of Special Counsel to investigate the Iowa fundraiser appearance",
+        "sources": [
+          "https://iowacapitaldispatch.com/2026/09/16/ethics-complaint-filed-over-defense-secretary-hegseths-iowa-state-fair-fundraiser-with-rep-nunn/",
+          "https://globegazette.com/news/state-regional/government-politics/elections/article_edc7afa3-5005-5387-9423-d721eae2289a.html"
+        ]
+      },
+      {
+        "date": "2026-10-28",
+        "text": "The New York Times reports the group is challenging the Kentucky closure; the Pentagon says lawyers cleared both",
+        "sources": [
+          "https://www.inquirer.com/politics/nation/cabinet-officials-political-campaigns-ethics-20261029.html"
+        ]
+      }
+    ]
   },
   {
     "id": "hegseth-iran-school-strike-minab-2026",
@@ -19932,6 +20563,69 @@
       }
     ],
     "status_stage": "Finding issued",
+    "key_events": [
+      {
+        "date": "2026-02-28",
+        "text": "A U.S. missile hits a girls' school in Minab, Iran; Iranian state media say 168 people, mostly children, are killed",
+        "turning_point": true,
+        "sources": [
+          "https://www.militarytimes.com/news/pentagon-congress/2026/07/13/lawmakers-demand-pentagon-release-findings-from-probe-of-iran-school-strike/",
+          "https://www.npr.org/2026/09/17/nx-s1-5972934/us-iran-war-un-report-alleged-war-crimes"
+        ]
+      },
+      {
+        "date": "2026-03-05",
+        "text": "First reports say an initial internal military probe found U.S. forces likely responsible, blaming outdated intelligence",
+        "sources": [
+          "https://www.militarytimes.com/news/pentagon-congress/2026/07/13/lawmakers-demand-pentagon-release-findings-from-probe-of-iran-school-strike/"
+        ]
+      },
+      {
+        "date": "2026-06",
+        "text": "A Senate committee votes to cut Hegseth's office travel funds until the Pentagon hands over the full investigation",
+        "sources": [
+          "https://www.militarytimes.com/news/pentagon-congress/2026/06/18/senate-eyes-hegseth-travel-cuts-without-probes-into-iran-school-bombing-boat-strikes/"
+        ]
+      },
+      {
+        "date": "2026-06",
+        "text": "The Pentagon's investigation is reportedly finalized but is not released to Congress or the public",
+        "sources": [
+          "https://new.finalcall.com/2026/08/04/five-months-after-u-s-bombing-of-iranian-elementary-school-pentagon-still-hasnt-released-its-findings/"
+        ]
+      },
+      {
+        "date": "2026-07-07",
+        "text": "CNN reports commanders approved strikes, including this one, despite warnings that targeting data was out of date",
+        "sources": [
+          "https://www.cnn.com/2026/07/07/politics/us-commanders-intelligence-iran-school"
+        ]
+      },
+      {
+        "date": "2026-07-13",
+        "text": "More than two dozen Senate Democrats demand the findings within a week; the Pentagon has no updates to announce",
+        "turning_point": true,
+        "sources": [
+          "https://www.militarytimes.com/news/pentagon-congress/2026/07/13/lawmakers-demand-pentagon-release-findings-from-probe-of-iran-school-strike/",
+          "https://www.reed.senate.gov/news/releases/reed-colleagues-demand-pentagon-release-investigation-of-deadly-iran-school-strike-without-further-delay"
+        ]
+      },
+      {
+        "date": "2026-07-16",
+        "text": "CNN reports CENTCOM has not ordered the standard intelligence review and has locked down post-strike interviews",
+        "sources": [
+          "https://www.cnn.com/2026/07/16/politics/us-military-intelligence-review-iran-school-strike"
+        ]
+      },
+      {
+        "date": "2026-09-17",
+        "text": "U.N.-backed investigators find reasonable grounds of U.S. war crimes and say the school was the intended point of impact",
+        "turning_point": true,
+        "sources": [
+          "https://www.npr.org/2026/09/17/nx-s1-5972934/us-iran-war-un-report-alleged-war-crimes"
+        ]
+      }
+    ],
     "timeline": {
       "confidence_note": {
         "base": "HIGH confidence on the strike's occurrence, death toll, and the investigation's existence and delay -- corroborated across CNN (two separate exclusive reports), Military Times, Sen. Reed's official press release, and additional wire/regional coverage (JPost, NBC News, Al Jazeera). MODERATE-HIGH confidence on the more serious allegations (commanders knowingly bypassing stale-intelligence warnings, deliberate information restriction driven by White House pressure), since these rest on CNN's sourced-but-anonymous reporting rather than documentary evidence or on-record confirmation from Hegseth, Cooper, or the Pentagon, none of which have been obtained as of this entry. Real-correction note, 2026-08-18 recheck: the entry's own date_added/last_verified (2026-07-27/08-05) postdated both the May 13, 2026 IG report and the June 18, 2026 Senate Armed Services Committee vote by weeks to months, and neither had been incorporated despite being directly on-topic -- the same omission-at-build-time pattern documented elsewhere in this sweep. HIGH confidence on the IG report's existence and findings and the July 6 senators' letter (direct press release and PDF letter). HIGH confidence on the NDAA committee-level vote itself (corroborated across Military Times, Defense News, Federal Times, and multiple wire-service pickups), but the travel-fund provision's ultimate enactment status was not confirmed in sourcing reviewed as of this update -- described here only as having cleared committee, not as law. Re-verified 2026-08-26: HIGH confidence the investigation is complete but withheld -- corroborated across NBC News (finalization) and Final Call News (five-month non-release as of Aug 4, 2026); MODERATE confidence on the classification concern, which is characterized in sourcing as a fear/expectation rather than a confirmed decision. HIGH confidence on Trump's on-record denial statement. MODERATE confidence that the House-passed NDAA's travel-fund provision excludes the Minab-disclosure requirement specifically -- based on the provision's boat-strike-specific description in sourcing reviewed, not a direct comparison of full bill text. Re-verified 2026-09-02: no material change -- no findings release and no NDAA conference resolution identified.",
@@ -20059,7 +20753,47 @@
       }
     ],
     "narrative_combined": true,
-    "status_stage": "Unchallenged"
+    "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2025-02-21",
+        "text": "Trump fires Joint Chiefs Chairman CQ Brown and two other top officers; Hegseth ousts the Army and Air Force JAGs",
+        "turning_point": true,
+        "sources": [
+          "https://www.npr.org/2025/02/21/nx-s1-5305288/trump-fires-chairman-joint-chiefs-of-staff-charles-brown-pentagon",
+          "https://www.military.com/daily-news/2025/02/21/fired-joint-chiefs-chairman-top-navy-leader-air-force-vice-chief-service-judge-advocates-general.html"
+        ]
+      },
+      {
+        "date": "2025-07",
+        "text": "The Pentagon moves Vice Adm. Yvette Davids, the first woman to lead the Naval Academy, out of the post",
+        "turning_point": true,
+        "sources": [
+          "https://thehill.com/policy/defense/5421346-pentagon-reassigns-women-leadership/"
+        ]
+      },
+      {
+        "date": "2025-10-23",
+        "text": "The acting Air Force JAG who took over after the purge steps down, with no permanent nominee named yet",
+        "sources": [
+          "https://www.defenseone.com/threats/2025/10/hegseth-fired-air-forces-top-lawyer-jag-who-took-job-stepping-away/409013/"
+        ]
+      },
+      {
+        "date": "2026-01-30",
+        "text": "The Senate confirms Brig. Gen. Christopher Eason as Air Force JAG, filling the last of the three posts",
+        "sources": [
+          "https://www.govinfo.gov/content/pkg/CREC-2026-01-30/html/CREC-2026-01-30-pt1-PgS424-2.htm"
+        ]
+      },
+      {
+        "date": "2026-07-03",
+        "text": "Brown warns in a Foreign Affairs essay that using troops for politically contentious missions at home is fraught",
+        "sources": [
+          "https://www.cnn.com/2026/07/03/politics/cq-brown-military-politics-after-firing"
+        ]
+      }
+    ]
   },
   {
     "id": "hegseth-kuwait-drone-strike-accountability-2026",
@@ -20198,7 +20932,94 @@
         "id": "hegseth-iran-school-strike-minab-2026"
       }
     ],
-    "status_stage": "Finding issued"
+    "status_stage": "Finding issued",
+    "key_events": [
+      {
+        "date": "2026-03-01",
+        "text": "An Iranian drone hits a U.S. Army operations center at Port Shuaiba, Kuwait, killing six soldiers and wounding dozens",
+        "turning_point": true,
+        "sources": [
+          "https://www.msn.com/en-us/news/world/us-troops-had-little-protection-from-drone-strike-that-killed-six-imagery-shows/ar-AA1Xug33",
+          "https://www.cbsnews.com/news/iran-war-kuwait-drone-attack-survivors-us-army/",
+          "https://www.washingtonpost.com/national-security/2026/07/12/survivors-iranian-attack-that-killed-6-us-troops-say-generals-ignored-warnings/"
+        ]
+      },
+      {
+        "date": "2026-04-29",
+        "text": "Asked at a House hearing if survivors who dispute him are lying, Hegseth accuses Rep. Pat Ryan of falsehoods",
+        "sources": [
+          "https://truthout.org/articles/hegseth-dismisses-testimony-of-us-soldiers-who-said-they-were-put-in-danger/"
+        ]
+      },
+      {
+        "date": "2026-07-09",
+        "text": "Army officials privately brief the families on a completed investigation that reportedly assigns no fault",
+        "turning_point": true,
+        "sources": [
+          "https://www.cbsnews.com/news/tammy-baldwin-pentagon-iranian-attack-kuwait-six-u-s-troops/",
+          "https://www.washingtonpost.com/national-security/2026/07/12/survivors-iranian-attack-that-killed-6-us-troops-say-generals-ignored-warnings/"
+        ]
+      },
+      {
+        "date": "2026-07-12",
+        "text": "Survivors tell The Washington Post commanders sent them to Port Shuaiba despite warnings it was an Iranian target",
+        "turning_point": true,
+        "sources": [
+          "https://www.washingtonpost.com/national-security/2026/07/12/survivors-iranian-attack-that-killed-6-us-troops-say-generals-ignored-warnings/",
+          "https://www.baldwin.senate.gov/news/press-releases/baldwin-demands-military-release-its-investigation-into-iranian-attack-that-killed-6-servicemembers"
+        ]
+      },
+      {
+        "date": "2026-07-20",
+        "text": "An Army inspector general letter, citing limited evidence, finds no misconduct by Brig. Gen. Clint Barnes",
+        "sources": [
+          "https://www.wcax.com/2026/10/05/soldiers-seriously-wounded-iranian-drone-strike-tell-ap-militarys-medical-system-failed-them/"
+        ]
+      },
+      {
+        "date": "2026-07-21",
+        "text": "Hegseth tells a Senate hearing that not a single drone or defense request was denied at any level",
+        "sources": [
+          "https://www.baldwin.senate.gov/news/press-releases/baldwin-demands-military-release-its-investigation-into-iranian-attack-that-killed-6-servicemembers"
+        ]
+      },
+      {
+        "date": "2026-07-29",
+        "text": "Thirteen lawmakers send Hegseth 23 questions on the strike, medical care and the investigation, due Aug. 12",
+        "sources": [
+          "https://www.warren.senate.gov/wp-content/uploads/2026/07/Final-Letter-to-DoD-re-Access-to-Care-after-Port-Shuaiba-Strike.pdf"
+        ]
+      },
+      {
+        "date": "2026-08-05",
+        "text": "Sen. Tammy Baldwin asks CENTCOM to release the findings publicly and give Congress the full report by Aug. 18",
+        "sources": [
+          "https://www.baldwin.senate.gov/news/press-releases/baldwin-demands-military-release-its-investigation-into-iranian-attack-that-killed-6-servicemembers"
+        ]
+      },
+      {
+        "date": "2026-09-24",
+        "text": "CBS reports Barnes rejected at least two Saudi relocation options; more than 20 Democrats ask for public hearings",
+        "sources": [
+          "https://www.cbsnews.com/news/iran-drone-strike-kuwait-commander-rejected-plans-rebase/"
+        ]
+      },
+      {
+        "date": "2026-10-05",
+        "text": "Nine wounded soldiers tell the AP the military medical system left them fighting for treatment on their own",
+        "sources": [
+          "https://www.adn.com/nation-world/2026/10/05/soldiers-badly-wounded-in-iranian-drone-strike-say-militarys-medical-system-failed-them/",
+          "https://www.wcax.com/2026/10/05/soldiers-seriously-wounded-iranian-drone-strike-tell-ap-militarys-medical-system-failed-them/"
+        ]
+      },
+      {
+        "date": "2026-10-05",
+        "text": "The AP reports officers warned the generals the port lacked drone protection, and Army Central's chief approved the move",
+        "sources": [
+          "https://www.wcax.com/2026/10/05/soldiers-seriously-wounded-iranian-drone-strike-tell-ap-militarys-medical-system-failed-them/"
+        ]
+      }
+    ]
   },
   {
     "id": "hegseth-la-guard-federalization-posse-comitatus-2025",
@@ -20310,7 +21131,77 @@
       },
       "reviewed": "2026-10-19"
     },
-    "status_stage": "Court ruled"
+    "status_stage": "Court ruled",
+    "key_events": [
+      {
+        "date": "2025-06-07",
+        "text": "Trump calls the California Guard into federal service, and Hegseth federalizes 2,000 troops over Newsom's objection",
+        "turning_point": true,
+        "sources": [
+          "https://storage.courtlistener.com/recap/gov.uscourts.cand.450934/gov.uscourts.cand.450934.176.0.pdf"
+        ]
+      },
+      {
+        "date": "2025-06-09",
+        "text": "Hegseth federalizes 2,000 more Guard members and sends about 700 Marines; California sues",
+        "sources": [
+          "https://storage.courtlistener.com/recap/gov.uscourts.cand.450934/gov.uscourts.cand.450934.176.0.pdf"
+        ]
+      },
+      {
+        "date": "2025-07-07",
+        "text": "Hegseth approves sending troops to MacArthur Park in Los Angeles as a show of presence",
+        "sources": [
+          "https://storage.courtlistener.com/recap/gov.uscourts.cand.450934/gov.uscourts.cand.450934.176.0.pdf"
+        ]
+      },
+      {
+        "date": "2025-07-10",
+        "text": "About 80 troops help form a perimeter at a Camarillo farm raid where at least 361 people are detained",
+        "sources": [
+          "https://storage.courtlistener.com/recap/gov.uscourts.cand.450934/gov.uscourts.cand.450934.176.0.pdf",
+          "https://www.ms.now/news/national-guard-california-immigration-raid"
+        ]
+      },
+      {
+        "date": "2025-09-02",
+        "text": "Judge Breyer rules the troops executed the laws in violation of the Posse Comitatus Act and bars such use",
+        "turning_point": true,
+        "sources": [
+          "https://storage.courtlistener.com/recap/gov.uscourts.cand.450934/gov.uscourts.cand.450934.176.0.pdf",
+          "https://storage.courtlistener.com/recap/gov.uscourts.cand.450934/gov.uscourts.cand.450934.186.0.pdf",
+          "https://tennesseelookout.com/2025/09/02/repub/judge-warns-of-national-police-force-in-ruling-trump-broke-the-law-sending-guard-to-la/"
+        ]
+      },
+      {
+        "date": "2025-09-04",
+        "text": "The Ninth Circuit pauses the injunction, saying the stay is not a ruling on the merits",
+        "sources": [
+          "https://storage.courtlistener.com/recap/gov.uscourts.cand.450934/gov.uscourts.cand.450934.194.0_3.pdf"
+        ]
+      },
+      {
+        "date": "2025-12-10",
+        "text": "Breyer separately bars the continued federalization of the California National Guard",
+        "sources": [
+          "https://storage.courtlistener.com/recap/gov.uscourts.cand.450934/gov.uscourts.cand.450934.225.0_9.pdf"
+        ]
+      },
+      {
+        "date": "2026-01-12",
+        "text": "The Ninth Circuit puts the government's Posse Comitatus appeal on hold pending related appeals",
+        "sources": [
+          "https://storage.courtlistener.com/recap/gov.uscourts.ca9.33862d2f-fcee-484b-82e0-2aefd5de7aaa/gov.uscourts.ca9.33862d2f-fcee-484b-82e0-2aefd5de7aaa.47.0.pdf"
+        ]
+      },
+      {
+        "date": "2026-10-07",
+        "text": "MS NOW reports an Army review suggesting Guard troops moved Camarillo detainees; the military denies it",
+        "sources": [
+          "https://www.ms.now/news/national-guard-california-immigration-raid"
+        ]
+      }
+    ]
   },
   {
     "id": "hegseth-national-defense-strategy-china-pivot-caine-dissent-2025",
@@ -20395,7 +21286,33 @@
       }
     ],
     "narrative_combined": true,
-    "status_stage": "Unchallenged"
+    "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2025-09-25",
+        "text": "CSIS publicly asks why Hegseth is calling hundreds of generals and admirals to Washington",
+        "sources": [
+          "https://www.csis.org/analysis/update-why-secretary-hegseth-calling-his-generals-and-admirals-washington"
+        ]
+      },
+      {
+        "date": "2025-09-29",
+        "text": "The Washington Post reports Hegseth's new strategy shifts focus from China toward the homeland and Caine pushed back",
+        "turning_point": true,
+        "sources": [
+          "https://www.washingtonpost.com/national-security/2025/09/29/hegseth-national-defense-strategy-trump-dissent/",
+          "https://newrepublic.com/post/201130/military-leaders-alarmed-hegsth-defense-strategy"
+        ]
+      },
+      {
+        "date": "2026-01-23",
+        "text": "The Pentagon releases the strategy, ranking homeland defense first and deterring China second",
+        "turning_point": true,
+        "sources": [
+          "https://www.csis.org/analysis/what-does-trump-administrations-new-national-defense-strategy-say-about-china"
+        ]
+      }
+    ]
   },
   {
     "id": "hegseth-navy-promotion-list-2026",
@@ -20504,7 +21421,69 @@
         "id": "hegseth-promotions-blocked-2026"
       }
     ],
-    "status_stage": "Unchallenged"
+    "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2026-03-27",
+        "text": "The New York Times reports Hegseth removed two Black and two female Army colonels from a one-star promotion list",
+        "sources": [
+          "https://www.commondreams.org/news/pete-hegseth-racist",
+          "https://giwps.georgetown.edu/2026/03/31/giwps-analysis-hegseth-removes-black-and-female-officers-from-promotion-list/"
+        ]
+      },
+      {
+        "date": "2026-04-02",
+        "text": "NBC News reports Hegseth blocked or delayed promotions for more than a dozen Black and female senior officers",
+        "sources": [
+          "https://www.nbcnews.com/politics/national-security/hegseth-intervened-military-promotions-dozen-senior-officers-rcna266062"
+        ]
+      },
+      {
+        "date": "2026-05-22",
+        "text": "The Pentagon releases a 22-name Navy one-star promotion list with no women, after Hegseth struck officers from it",
+        "turning_point": true,
+        "sources": [
+          "https://web.archive.org/web/20260614233147/https://www.spokesman.com/stories/2026/jun/01/hegseth-strikes-female-and-black-navy-officers-fro/"
+        ]
+      },
+      {
+        "date": "2026-06-01",
+        "text": "The New York Times reports Hegseth blocked at least seven of the Navy officers the admirals' board selected",
+        "sources": [
+          "https://web.archive.org/web/20260614233147/https://www.spokesman.com/stories/2026/jun/01/hegseth-strikes-female-and-black-navy-officers-fro/",
+          "https://newrepublic.com/post/211207/hegseth-black-women-promotions",
+          "https://abcnews.com/Politics/hegseth-blocks-promotion-navy-officers-1-star-rank/story?id=133498412"
+        ]
+      },
+      {
+        "date": "2026-06-02",
+        "text": "Sen. Jack Reed says only the President may legally remove an officer from a promotion list",
+        "sources": [
+          "https://www.reed.senate.gov/news/releases/reed-condemns-hegseth-blockade-of-military-promotions-across-navy-and-air-force"
+        ]
+      },
+      {
+        "date": "2026-07-06",
+        "text": "Seven Democratic senators demand Hegseth explain the removals, asking for a written reply by August 30",
+        "sources": [
+          "https://www.slotkin.senate.gov/wp-content/uploads/2026/07/26.07.06_SECDEF-Letter_Officer-Promotions.pdf"
+        ]
+      },
+      {
+        "date": "2026-07-08",
+        "text": "Pentagon spokesman Sean Parnell rejects the senators' letter as partisan, saying promotions are based on merit",
+        "sources": [
+          "https://redstate.com/rc-maxwell/2026/07/08/senate-democrats-continue-unprecedented-push-to-politicize-military-promotions-n2204113"
+        ]
+      },
+      {
+        "date": "2026-08-28",
+        "text": "The New York Times reports Hegseth has pulled at least 45 officers from promotion lists this year",
+        "sources": [
+          "https://politicalwire.com/2026/08/28/hegseth-blocks-promotions-of-four-army-officers/"
+        ]
+      }
+    ]
   },
   {
     "id": "hegseth-nga-warner-oversight-visit-canceled-2025",
@@ -20595,7 +21574,42 @@
       }
     ],
     "narrative_combined": true,
-    "status_stage": "Unchallenged"
+    "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2025-08-31",
+        "text": "Laura Loomer attacks Sen. Warner and the NGA director online over Warner's planned classified visit",
+        "sources": [
+          "https://www.axios.com/2025/09/04/intelligence-meeting-canceled-hegseth-loomer-warner"
+        ]
+      },
+      {
+        "date": "2025-09-02",
+        "text": "Warner says political appointees canceled his Sept. 5 NGA visit after Loomer's attacks; the Pentagon says it was moved",
+        "turning_point": true,
+        "sources": [
+          "https://www.warner.senate.gov/newsroom/press-releases/senate-intelligence-committee-vice-chair-on-trump-administration-blocking-congressional-intelligence-oversight/",
+          "https://www.nbcnews.com/politics/politics-news/intelligence-meeting-canceled-attacks-far-right-activist-laura-loomer-rcna228710",
+          "https://www.thedailybeast.com/senator-rips-laura-loomer-after-intelligence-meeting-axed-following-her-attacks/"
+        ]
+      },
+      {
+        "date": "2025-09-18",
+        "text": "Warner takes the blocked visit to the Senate floor as part of a pattern of politicizing intelligence",
+        "turning_point": true,
+        "sources": [
+          "https://www.warner.senate.gov/public/index.cfm/2025/9/on-senate-floor-warner-warns-of-intelligence-politicization",
+          "https://www.govinfo.gov/content/pkg/CREC-2025-09-18/pdf/CREC-2025-09-18-senate.pdf"
+        ]
+      },
+      {
+        "date": "2025-11",
+        "text": "NGA Director Trey Whitworth leaves the post; no reporting ties his exit to Loomer's campaign",
+        "sources": [
+          "https://satellogic.com/news/press-releases/frank-d-trey-whitworth-former-director-of-the-nga-appointed-as-president-of-satellogic/"
+        ]
+      }
+    ]
   },
   {
     "id": "hegseth-osc-betancourt-nabep-stake-2026",
@@ -20727,6 +21741,68 @@
       "reviewed": "2026-10-26"
     },
     "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2026-08-28",
+        "text": "Trump announces a Venezuela oil deal Hegseth and Rubio reached with businessman Alejandro Betancourt's company",
+        "turning_point": true,
+        "sources": [
+          "https://www.thestar.com.my/news/focus/2026/09/22/an-unlikely-oil-partner",
+          "https://www.inquirer.com/news/nation-world/pentagon-partnership-private-oil-venezuela-20260901.html"
+        ]
+      },
+      {
+        "date": "2026-08-29",
+        "text": "The Wall Street Journal reports a Pentagon office will take a 35% stake; a spokesman says it takes no equity stakes",
+        "sources": [
+          "https://www.brecorder.com/news/amp/40437089"
+        ]
+      },
+      {
+        "date": "2026-08-31",
+        "text": "The White House says Rubio and Hegseth signed the deal, giving a Pentagon office a 35% stake in the company's parent",
+        "turning_point": true,
+        "sources": [
+          "https://www.whitehouse.gov/fact-sheets/2026/08/fact-sheet-president-donald-j-trump-announces-historic-oil-agreement-to-secure-american-energy-dominance-and-drive-venezuelas-economic-recovery/"
+        ]
+      },
+      {
+        "date": "2026-09",
+        "text": "Four Senate Democrats write that the office's law does not allow stakes in foreign companies",
+        "sources": [
+          "https://www.propublica.org/article/trump-venezuela-oil-agreement-terms",
+          "https://www.wfmd.com/2026/10/02/dems-demanding-venezuela-brief-face-state-department-fury-as-senators-leave-town-without-answers/"
+        ]
+      },
+      {
+        "date": "2026-09-02",
+        "text": "A U.S. official tells Semafor the U.S. stepped into a money-laundering probe of Betancourt to finalize the deal",
+        "sources": [
+          "https://www.semafor.com/article/09/02/2026/trumps-venezuela-deal-draws-scrutiny-of-obscure-pentagon-office"
+        ]
+      },
+      {
+        "date": "2026-09-03",
+        "text": "Semafor reports Congress had declined Pentagon requests to let the office take equity stakes",
+        "sources": [
+          "https://www.semafor.com/article/09/02/2026/congress-rejected-pentagon-offices-equity-power"
+        ]
+      },
+      {
+        "date": "2026-10-01",
+        "text": "The State Department gives senators copies of the agreement, and a planned briefing is put off to November",
+        "sources": [
+          "https://www.wfmd.com/2026/10/02/dems-demanding-venezuela-brief-face-state-department-fury-as-senators-leave-town-without-answers/"
+        ]
+      },
+      {
+        "date": "2026-10-20",
+        "text": "ProPublica reports the U.S. pays nothing upfront, then $0.01 a warrant share; an undisclosed Betancourt associate signed",
+        "sources": [
+          "https://www.propublica.org/article/trump-venezuela-oil-agreement-terms"
+        ]
+      }
+    ],
     "timeline": {
       "confidence_note": {
         "base": "MODERATE confidence. The stake, the signers and the no-cost terms are on the White House record, and the Pentagon spokesman's denial is quoted by Reuters and the Times. Stake terms vary by outlet (a 35% equity stake per the White House; warrants for up to 35% per the Times); a U.S. official said, per Reuters on September 4, the position is penny warrants that still entitle the U.S. to dividends. Whether the office lacks authority is an argument by lawmakers and scholars, not a ruling; Congress's refusal and the U.S. intervention in a probe each rest on Semafor's anonymous sources. Which Pentagon office will hold the position rests on one former official quoted by the Guardian. Feinberg's personal role in this deal is not reported.",
@@ -20819,6 +21895,62 @@
       }
     ],
     "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2025-05",
+        "text": "Hegseth begins hosting monthly Christian worship services at the Pentagon",
+        "sources": [
+          "https://www.military.com/daily-news/2026/03/26/pentagon-christian-service-hegseth-prays-violence-against-those-who-deserve-no-mercy.html"
+        ]
+      },
+      {
+        "date": "2025-08-07",
+        "text": "Hegseth reposts a CNN segment on Christian nationalist pastor Doug Wilson captioned 'All of Christ for All of Life'",
+        "sources": [
+          "https://www.theguardian.com/us-news/2025/aug/14/pete-hegseth-pentagon-christian-nationalism"
+        ]
+      },
+      {
+        "date": "2025-08-14",
+        "text": "The Guardian reports Pentagon recruitment ads built around biblical imagery",
+        "sources": [
+          "https://www.theguardian.com/us-news/2025/aug/14/pete-hegseth-pentagon-christian-nationalism"
+        ]
+      },
+      {
+        "date": "2025-12",
+        "text": "Americans United asks the Pentagon for records on the worship services",
+        "sources": [
+          "https://thehill.com/policy/defense/5802042-defense-secretary-pentagon-prayer/"
+        ]
+      },
+      {
+        "date": "2026-02-17",
+        "text": "Wilson, invited by Hegseth, preaches at a Pentagon worship service broadcast on the department's internal TV",
+        "turning_point": true,
+        "sources": [
+          "https://www.cnn.com/2026/02/19/politics/douglas-wilson-pastor-pentagon-service-christian-nationalism",
+          "https://www.militarytimes.com/news/pentagon-congress/2026/03/26/hegseth-prays-for-overwhelming-violence-during-pentagon-christian-service/"
+        ]
+      },
+      {
+        "date": "2026-03-23",
+        "text": "Americans United sues the Defense and Labor departments to force release of records on the services",
+        "sources": [
+          "https://www.military.com/daily-news/2026/03/26/pentagon-christian-service-hegseth-prays-violence-against-those-who-deserve-no-mercy.html",
+          "https://thehill.com/policy/defense/5802042-defense-secretary-pentagon-prayer/"
+        ]
+      },
+      {
+        "date": "2026-03-25",
+        "text": "At a livestreamed Pentagon service, Hegseth prays for overwhelming violence against those who deserve no mercy",
+        "turning_point": true,
+        "sources": [
+          "https://www.military.com/daily-news/2026/03/26/pentagon-christian-service-hegseth-prays-violence-against-those-who-deserve-no-mercy.html",
+          "https://www.militarytimes.com/news/pentagon-congress/2026/03/26/hegseth-prays-for-overwhelming-violence-during-pentagon-christian-service/"
+        ]
+      }
+    ],
     "timeline": {
       "confidence_note": {
         "base": "HIGH confidence on the March 25, 2026 service's occurrence and the specific quoted prayer content -- corroborated across Military.com (republishing the Associated Press report), Military Times, The Hill, PBS NewsHour, and KTTC, with the prayer language directly quoted from the livestreamed service. MODERATE confidence on the ultimate legal merits of an Establishment Clause claim, since none had actually been filed as of sourcing reviewed -- marked `contested: true` accordingly. Re-verified 2026-08-19, with a correction: AP's reporting (republished by Military.com) and Americans United's own case-page description both independently confirm the March 23, 2026 lawsuit is a FOIA/records-disclosure suit, not an Establishment Clause constitutional claim. This entry's original evidence and elements had conflated AU's public Establishment-Clause advocacy with the filed suit's actual legal theory. Re-verified 2026-09-08 (batch 66): no material development; investigation status unchanged.",
@@ -20939,6 +22071,90 @@
       }
     ],
     "status_stage": "Court ruled",
+    "key_events": [
+      {
+        "date": "2025-09",
+        "text": "The Pentagon issues a press policy warning reporters that seeking unapproved information could cost their credentials",
+        "turning_point": true,
+        "sources": [
+          "https://pressfreedomtracker.us/all-incidents/pete-hegseth-restricts-journalists-access-inside-pentagon/"
+        ]
+      },
+      {
+        "date": "2025-10-15",
+        "text": "About 40 to 50 journalists turn in their Pentagon badges and leave rather than sign the new rules",
+        "sources": [
+          "https://www.cnn.com/2025/10/15/media/pentagon-press-hegseth-restrictions-journalists-fox"
+        ]
+      },
+      {
+        "date": "2025-10-15",
+        "text": "The Washington Post reports Hegseth's personal lawyer Tim Parlatore guided the drafting of the policy",
+        "sources": [
+          "https://www.washingtonpost.com/national-security/2025/10/15/hegseth-media-restrictions-tim-parlatore/"
+        ]
+      },
+      {
+        "date": "2025-12",
+        "text": "The New York Times sues the Defense Department, Hegseth and spokesman Sean Parnell over the policy",
+        "sources": [
+          "https://pressfreedomtracker.us/all-incidents/pete-hegseth-restricts-journalists-access-inside-pentagon/"
+        ]
+      },
+      {
+        "date": "2026-03-20",
+        "text": "Judge Paul Friedman rules the credential-revocation rules unconstitutional and orders Times reporters' passes restored",
+        "turning_point": true,
+        "sources": [
+          "https://storage.courtlistener.com/pdf/2026/03/20/new_york_times_company_v._department_of_defense.pdf",
+          "https://pressfreedomtracker.us/all-incidents/pete-hegseth-restricts-journalists-access-inside-pentagon/"
+        ]
+      },
+      {
+        "date": "2026-03-23",
+        "text": "The Pentagon closes the press workspace and lets credentialed reporters in only with an escort at all times",
+        "turning_point": true,
+        "sources": [
+          "https://media.cadc.uscourts.gov/orders/docs/2026/04/26-5113.FINAL.pdf"
+        ]
+      },
+      {
+        "date": "2026-04-09",
+        "text": "Friedman finds the new rules violate his order and orders the Times reporters' access restored",
+        "sources": [
+          "https://media.cadc.uscourts.gov/orders/docs/2026/04/26-5113.FINAL.pdf",
+          "https://pressfreedomtracker.us/all-incidents/pete-hegseth-restricts-journalists-access-inside-pentagon/"
+        ]
+      },
+      {
+        "date": "2026-04-27",
+        "text": "A divided appeals panel lets the Pentagon keep requiring escorts while it appeals",
+        "sources": [
+          "https://media.cadc.uscourts.gov/orders/docs/2026/04/26-5113.FINAL.pdf"
+        ]
+      },
+      {
+        "date": "2026-05-18",
+        "text": "The Times files a second lawsuit, naming Parlatore among the defendants",
+        "sources": [
+          "https://storage.courtlistener.com/pdf/2026/06/30/new_york_times_company_v._department_of_defense_1.pdf"
+        ]
+      },
+      {
+        "date": "2026-06-30",
+        "text": "Friedman blocks the escort requirement as likely retaliation against the press",
+        "sources": [
+          "https://storage.courtlistener.com/pdf/2026/06/30/new_york_times_company_v._department_of_defense_1.pdf"
+        ]
+      },
+      {
+        "date": "2026-07-16",
+        "text": "Another divided appeals panel pauses that order, so the escort rule stays in effect",
+        "sources": [
+          "https://storage.courtlistener.com/recap/gov.uscourts.cadc.43373/gov.uscourts.cadc.43373.01208870018.0_1.pdf"
+        ]
+      }
+    ],
     "timeline": {
       "confidence_note": {
         "base": "HIGH confidence on the policy's terms, Parlatore's role, the October 15, 2025 mass badge-turn-in and its scale (30+ organizations, ~40-50 journalists), corroborated across The Washington Post's original reporting, CNN, OPB, and independent pickup (Boston Globe, Detroit News, Bloomberg Law). HIGH confidence on the subsequent New York Times lawsuit and the federal court's First/Fifth Amendment finding, per the U.S. Press Freedom Tracker's documentation.",
@@ -21029,7 +22245,39 @@
         "id": "hegseth-civilian-harm-office-cuts-2026"
       }
     ],
-    "status_stage": "Unchallenged"
+    "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2026-02-28",
+        "text": "The U.S. starts bombing Iran with no warning to U.S.-flagged ships in the Persian Gulf carrying merchant marine cadets",
+        "turning_point": true,
+        "sources": [
+          "https://www.notus.org/defense/us-cadets-vessels-stuck-persian-gulf-trump-bombing-iran-war"
+        ]
+      },
+      {
+        "date": "2026-03-02",
+        "text": "An Iranian attack hits the U.S.-flagged tanker Stena Imperative in Bahrain, killing a dockworker",
+        "turning_point": true,
+        "sources": [
+          "https://www.notus.org/defense/us-cadets-vessels-stuck-persian-gulf-trump-bombing-iran-war"
+        ]
+      },
+      {
+        "date": "2026-03-20",
+        "text": "Sen. Richard Blumenthal asks the head of Central Command what was done to warn or move the ships",
+        "sources": [
+          "https://www.blumenthal.senate.gov/newsroom/press/release/blumenthal-calls-on-us-central-command-to-aid-us-merchant-mariners-stranded-in-persian-gulf"
+        ]
+      },
+      {
+        "date": "2026-04-09",
+        "text": "NOTUS reports the cadets were kept aboard for weeks; Blumenthal calls the stranding absolutely foreseeable",
+        "sources": [
+          "https://www.notus.org/defense/us-cadets-vessels-stuck-persian-gulf-trump-bombing-iran-war"
+        ]
+      }
+    ]
   },
   {
     "id": "hegseth-project-meridian-musk-luckey-conflict-2026",
@@ -21112,7 +22360,32 @@
       },
       "reviewed": "2026-10-12"
     },
-    "status_stage": "Unchallenged"
+    "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2026-09-30",
+        "text": "Hegseth launches Project Meridian, a 120-day study of future war co-led by Elon Musk, Palmer Luckey and Newt Gingrich",
+        "turning_point": true,
+        "sources": [
+          "https://techcrunch.com/2026/09/30/the-pentagon-taps-elon-musk-and-palmer-luckey-to-help-decide-what-the-military-should-do-next/",
+          "https://media.defense.gov/2026/Sep/30/2004009287/-1/-1/1/COMMISSIONING-OF-PROJECT-MERIDIAN.PDF"
+        ]
+      },
+      {
+        "date": "2026-10-06",
+        "text": "NPR reports Hegseth had the study commissioned through MITRE, which the Pentagon says will apply conflict safeguards",
+        "sources": [
+          "https://www.npr.org/2026/10/06/nx-s1-5991899/elon-musk-palmer-luckey-pentagon-drones-ai"
+        ]
+      },
+      {
+        "date": "2026-10-06",
+        "text": "The Pentagon won't say whether Musk and Luckey are federal employees bound by conflict-of-interest law or contractors",
+        "sources": [
+          "https://www.npr.org/2026/10/06/nx-s1-5991899/elon-musk-palmer-luckey-pentagon-drones-ai"
+        ]
+      }
+    ]
   },
   {
     "id": "hegseth-promotions-blocked-2026",
@@ -21207,7 +22480,48 @@
       }
     ],
     "narrative_combined": true,
-    "status_stage": "Unchallenged"
+    "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2025-07",
+        "text": "After first holding back over unproven leak suspicions, Hegseth again blocks Lt. Gen. Douglas Sims's promotion",
+        "turning_point": true,
+        "sources": [
+          "https://www.nytimes.com/2025/07/26/us/politics/hegseth-pentagon-leadership.html"
+        ]
+      },
+      {
+        "date": "2025-07-26",
+        "text": "The New York Times reports the Sims reversal, citing his closeness to Milley, and rare pushback from Gen. Dan Caine",
+        "sources": [
+          "https://www.nytimes.com/2025/07/26/us/politics/hegseth-pentagon-leadership.html"
+        ]
+      },
+      {
+        "date": "2026-03-27",
+        "text": "The New York Times reports Hegseth struck two Black and two female officers from an Army one-star promotion list",
+        "sources": [
+          "https://thehill.com/policy/defense/5804541-pete-hegseth-pentagon-promotion-list/",
+          "https://www.rollingstone.com/politics/politics-news/army-secretary-trump-black-female-officer-1235538305/",
+          "https://www.npr.org/2026/03/27/nx-s1-5763863/hegseth-soldiers-promotions"
+        ]
+      },
+      {
+        "date": "2026-04-02",
+        "text": "NBC News reports Hegseth blocked or delayed promotions for more than a dozen Black and female senior officers",
+        "turning_point": true,
+        "sources": [
+          "https://www.nbcnews.com/politics/national-security/hegseth-intervened-military-promotions-dozen-senior-officers-rcna266062"
+        ]
+      },
+      {
+        "date": "2026-09-14",
+        "text": "The New York Times reports Hegseth has fired or blocked as many as 80 generals and admirals",
+        "sources": [
+          "https://gvwire.com/2026/09/14/in-hegseths-pentagon-top-leaders-battle-turmoil/"
+        ]
+      }
+    ]
   },
   {
     "id": "hegseth-russia-cyber-pause-denial-2025",
@@ -21282,7 +22596,48 @@
       },
       "reviewed": "2026-10-24"
     },
-    "status_stage": "Unchallenged"
+    "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2025-02",
+        "text": "U.S. cyber operations against Russia pause for one day during Trump's push to negotiate an end to the Ukraine war",
+        "sources": [
+          "https://www.cbsnews.com/news/gop-congressman-don-bacon-hegseth-ordered-pause-cyber-operations-against-russia/"
+        ]
+      },
+      {
+        "date": "2025-03-01",
+        "text": "The Washington Post reports Hegseth ordered Cyber Command to halt offensive operations against Russia",
+        "sources": [
+          "https://www.stripes.com/theaters/us/2025-03-02/us-cyber-operations-moscow-17002880.html"
+        ]
+      },
+      {
+        "date": "2025-03-04",
+        "text": "The Pentagon's Rapid Response account denies any pause, saying there was no stand-down order whatsoever",
+        "turning_point": true,
+        "sources": [
+          "https://www.stripes.com/theaters/us/2025-03-04/cyber-hegseth-pentagon-russia-17031715.html"
+        ]
+      },
+      {
+        "date": "2025-05-16",
+        "text": "At a House hearing, Rep. Don Bacon confirms a one-day pause; Rep. Eugene Vindman calls the denial an outright lie",
+        "turning_point": true,
+        "sources": [
+          "https://www.cbsnews.com/news/gop-congressman-don-bacon-hegseth-ordered-pause-cyber-operations-against-russia/",
+          "https://vindman.house.gov/2025/05/16/vindman-uncovers-dod-lies-to-the-american-people-about-russia-cyber-operations-slams-hegseth-in-armed-services-subcommittee-hearing/"
+        ]
+      },
+      {
+        "date": "2025-06-12",
+        "text": "Hegseth tells the House Armed Services Committee that Cyber Command did not stop operations: \"We did not!\"",
+        "turning_point": true,
+        "sources": [
+          "https://www.kyivpost.com/post/54443"
+        ]
+      }
+    ]
   },
   {
     "id": "hegseth-signal-yemen-strike-2025-03",
@@ -21449,7 +22804,34 @@
         "id": "rubio-signal-autodelete-court-contradiction-2026"
       }
     ],
-    "status_stage": "Finding issued"
+    "status_stage": "Finding issued",
+    "key_events": [
+      {
+        "date": "2025-03-15",
+        "text": "Hegseth shares Yemen strike timing and aircraft details on Signal in a chat that mistakenly includes a journalist",
+        "turning_point": true,
+        "sources": [
+          "https://www.nytimes.com/2025/03/27/us/politics/pilots-signal-leak.html",
+          "https://media.defense.gov/2025/Dec/12/2003841995/-1/-1/1/DODIG_2026_021_SIGNAL_REPORT_FINAL_REDACTED%20SECURE.PDF"
+        ]
+      },
+      {
+        "date": "2025-03-15",
+        "text": "Hegseth also reportedly shares similar details in a separate Signal chat with his wife, brother and personal lawyer",
+        "sources": [
+          "https://web.archive.org/web/20260515055458/https://www.spokesman.com/stories/2025/apr/20/hegseth-said-to-have-shared-attack-details-in-seco/"
+        ]
+      },
+      {
+        "date": "2025-12-04",
+        "text": "The Pentagon inspector general finds Hegseth broke DoD rules sending strike details over Signal and failed to keep them",
+        "turning_point": true,
+        "sources": [
+          "https://media.defense.gov/2025/Dec/12/2003841995/-1/-1/1/DODIG_2026_021_SIGNAL_REPORT_FINAL_REDACTED%20SECURE.PDF",
+          "https://www.foxnews.com/politics/ig-hegseth-broke-pentagon-rules-using-signal-share-strike-details-though-no-classified-info-released"
+        ]
+      }
+    ]
   },
   {
     "id": "hegseth-trump-quantico-generals-summit-2025",
@@ -21583,7 +22965,77 @@
       }
     ],
     "narrative_combined": true,
-    "status_stage": "Unchallenged"
+    "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2025-09-02",
+        "text": "A federal judge rules troops the administration deployed to Los Angeles broke the Posse Comitatus Act",
+        "sources": [
+          "https://storage.courtlistener.com/recap/gov.uscourts.cand.450934/gov.uscourts.cand.450934.176.0.pdf"
+        ]
+      },
+      {
+        "date": "2025-09-30",
+        "text": "Hegseth summons nearly 800 generals and admirals to Quantico and declares an end to the \"war on warriors\"",
+        "turning_point": true,
+        "sources": [
+          "https://www.stripes.com/theaters/us/2025-09-30/generals-meeting-trump-hegseth-quantico-19272259.html",
+          "https://abc7news.com/17909098"
+        ]
+      },
+      {
+        "date": "2025-09-30",
+        "text": "Trump tells the commanders to use American cities such as Chicago as military training grounds",
+        "turning_point": true,
+        "sources": [
+          "https://www.axios.com/2025/09/30/trump-military-training-grounds-chicago-portland",
+          "https://time.com/7321940/hegseth-trump-generals-meeting/"
+        ]
+      },
+      {
+        "date": "2025-09-30",
+        "text": "Sen. Jack Reed calls it a dangerous dereliction of leadership and the training-grounds idea an assault on democracy",
+        "sources": [
+          "https://www.reed.senate.gov/news/releases/reed-condemns-trump-hegseth-quantico-military-gathering"
+        ]
+      },
+      {
+        "date": "2025-10",
+        "text": "A Pentagon memo orders all troops to watch the speech and review the new policy memos by the end of October",
+        "sources": [
+          "https://www.npr.org/2025/10/15/nx-s1-5575528/hegseth-order-troops-quantico-speech"
+        ]
+      },
+      {
+        "date": "2025-10",
+        "text": "National Guard Bureau memos order every state's Guard to form civil-disturbance quick reaction forces, 23,000+ troops",
+        "turning_point": true,
+        "sources": [
+          "https://www.news4jax.com/news/politics/2025/10/30/national-guard-in-each-state-is-ordered-to-create-quick-reaction-forces-trained-in-civil-unrest/"
+        ]
+      },
+      {
+        "date": "2025-10-16",
+        "text": "A Marine colonel who left the day of the summit writes that Trump's remarks there show the climate that drove him out",
+        "sources": [
+          "https://www.washingtonpost.com/opinions/2025/10/16/marine-resign-trump-oath-constitution/"
+        ]
+      },
+      {
+        "date": "2025-12",
+        "text": "The Supreme Court rejects Trump's request to deploy the National Guard to Chicago",
+        "sources": [
+          "https://keyt.com/politics/cnn-us-politics/2025/12/31/trump-says-hes-withdrawing-national-guard-from-chicago-los-angeles-and-portland/"
+        ]
+      },
+      {
+        "date": "2025-12-31",
+        "text": "Trump says he is withdrawing the Guard from Chicago, Los Angeles and Portland: \"We will come back\"",
+        "sources": [
+          "https://keyt.com/politics/cnn-us-politics/2025/12/31/trump-says-hes-withdrawing-national-guard-from-chicago-los-angeles-and-portland/"
+        ]
+      }
+    ]
   },
   {
     "id": "hegseth-undisclosed-jordan-strikes-2026",
@@ -21721,7 +23173,86 @@
         "id": "hegseth-kuwait-drone-strike-accountability-2026"
       }
     ],
-    "status_stage": "Unchallenged"
+    "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2026-07",
+        "text": "Iran strikes U.S. forces in Jordan three times in a week, injuring dozens; the Pentagon does not disclose the attacks",
+        "turning_point": true,
+        "sources": [
+          "https://www.inquirer.com/news/nation-world/iran-us-war-militaey-injuries-unreported-cenrtal-comman-hegseth-trump-20260720.html"
+        ]
+      },
+      {
+        "date": "2026-07-17",
+        "text": "An Iranian attack on Muwaffaq Salti Air Base in Jordan kills two U.S. soldiers and leaves a third missing",
+        "sources": [
+          "https://www.cnn.com/2026/07/20/politics/us-military-soldiers-killed-iran-war-jordan",
+          "https://www.kaine.senate.gov/press-releases/kaine-hirono-colleagues-press-hegseth-on-inaccurate-casualty-reporting-lack-of-transparency-about-human-cost-of-war-in-iran"
+        ]
+      },
+      {
+        "date": "2026-07-20",
+        "text": "The New York Times reports the three earlier strikes; the Pentagon calls the report fabrications",
+        "sources": [
+          "https://www.inquirer.com/news/nation-world/iran-us-war-militaey-injuries-unreported-cenrtal-comman-hegseth-trump-20260720.html"
+        ]
+      },
+      {
+        "date": "2026-07-23",
+        "text": "All 12 Senate Armed Services Democrats ask Hegseth for full casualty figures and who decided not to disclose the strikes",
+        "sources": [
+          "https://www.kaine.senate.gov/press-releases/kaine-hirono-colleagues-press-hegseth-on-inaccurate-casualty-reporting-lack-of-transparency-about-human-cost-of-war-in-iran"
+        ]
+      },
+      {
+        "date": "2026-08-04",
+        "text": "House Oversight Democrats probe four deaths dropped from the war's casualty count and moved to a new category",
+        "sources": [
+          "https://oversightdemocrats.house.gov/imo/media/doc/2026-08-04garciasubramanyamtohegsethrecoverupofwoundedservicemembers.pdf",
+          "https://www.militarytimes.com/news/pentagon-congress/2026/08/04/house-oversight-democrats-seek-records-behind-pentagon-changes-to-iran-war-casualty-database/"
+        ]
+      },
+      {
+        "date": "2026-08-06",
+        "text": "Sen. Tammy Duckworth introduces a bill requiring one accurate count of Iran war casualties",
+        "sources": [
+          "https://abcnews.com/Politics/duckworth-bill-targets-pentagons-confusing-accounting-iran-war/story?id=135402574"
+        ]
+      },
+      {
+        "date": "2026-09-18",
+        "text": "The Washington Post reports at least 22 U.S. troops have died since the war began, four more than the Pentagon lists",
+        "turning_point": true,
+        "sources": [
+          "https://www.timesofisrael.com/liveblog_entry/a-complete-lie-hegseth-denies-wapo-report-that-pentagon-is-publicly-undercounting-iran-war-deaths/",
+          "https://www.spokesman.com/stories/2026/sep/22/another-us-service-member-dies-amid-iran-war-penta/"
+        ]
+      },
+      {
+        "date": "2026-09-18",
+        "text": "Hegseth calls the Post's report \"DISGUSTING and FAKE. A complete LIE\"",
+        "sources": [
+          "https://www.timesofisrael.com/liveblog_entry/a-complete-lie-hegseth-denies-wapo-report-that-pentagon-is-publicly-undercounting-iran-war-deaths/"
+        ]
+      },
+      {
+        "date": "2026-09-25",
+        "text": "The Washington Post reports the Pentagon quietly added 37 wounded troops without saying when or how they were hurt",
+        "sources": [
+          "https://www.spokesman.com/stories/2026/sep/25/pentagon-quietly-adds-dozens-to-tally-of-troops-wo/"
+        ]
+      },
+      {
+        "date": "2026-10-09",
+        "text": "The Pentagon raises its public toll to 21 killed and 865 wounded without explaining the change",
+        "turning_point": true,
+        "sources": [
+          "https://www.nytimes.com/2026/10/10/us/politics/pentagon-casualties-iran-war.html",
+          "https://www.adn.com/nation-world/2026/10/10/pentagon-raises-official-toll-of-troops-who-died-during-war-with-iran-to-21/"
+        ]
+      }
+    ]
   },
   {
     "id": "homan-fbi-bribery-sting-doj-shutdown-2024-2025",
@@ -21820,7 +23351,74 @@
       "reviewed": "2026-10-24"
     },
     "narrative_combined": true,
-    "status_stage": "Unchallenged"
+    "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2024-09-20",
+        "text": "Undercover FBI agents meet Homan in Texas; hidden cameras reportedly record him accepting $50,000 in cash",
+        "turning_point": true,
+        "sources": [
+          "https://www.msnbc.com/msnbc/news/tom-homan-cash-contracts-trump-doj-investigation-rcna232568"
+        ]
+      },
+      {
+        "date": "2025",
+        "text": "After Trump's inauguration, Acting Deputy Attorney General Emil Bove opposes continuing the investigation",
+        "sources": [
+          "https://www.msnbc.com/msnbc/news/tom-homan-cash-contracts-trump-doj-investigation-rcna232568"
+        ]
+      },
+      {
+        "date": "2025-09-20",
+        "text": "MSNBC reveals the sting and the case's closure; Patel and Blanche say a review found no credible evidence of a crime",
+        "turning_point": true,
+        "sources": [
+          "https://www.msnbc.com/msnbc/news/tom-homan-cash-contracts-trump-doj-investigation-rcna232568"
+        ]
+      },
+      {
+        "date": "2025-09-23",
+        "text": "House Judiciary Democrats led by Jamie Raskin demand that DOJ and the FBI release the recordings",
+        "sources": [
+          "https://democrats-judiciary.house.gov/media-center/press-releases/judiciary-democrats-demand-doj-fbi-release-recordings-of-tom-homan-receiving-50000-cash-bribe"
+        ]
+      },
+      {
+        "date": "2025-10-06",
+        "text": "Democracy Forward sues DOJ and the FBI for any recording of the September 2024 meeting",
+        "sources": [
+          "https://democracyforward.org/wp-content/uploads/2025/10/Compl-Homan-recording.pdf"
+        ]
+      },
+      {
+        "date": "2025-12-02",
+        "text": "The FBI refuses to confirm or deny that any recording exists, citing Homan's privacy",
+        "sources": [
+          "https://storage.courtlistener.com/recap/gov.uscourts.dcd.285623/gov.uscourts.dcd.285623.15.0.pdf"
+        ]
+      },
+      {
+        "date": "2026-02-17",
+        "text": "Democracy Defenders Fund sues the FBI after the bureau withholds all of its records on Homan",
+        "sources": [
+          "https://storage.courtlistener.com/recap/gov.uscourts.dcd.289436/gov.uscourts.dcd.289436.1.0.pdf"
+        ]
+      },
+      {
+        "date": "2026-04-06",
+        "text": "DOJ asks the court to rule for it in the Democracy Forward suit, defending the FBI's refusal",
+        "sources": [
+          "https://storage.courtlistener.com/recap/gov.uscourts.dcd.285623/gov.uscourts.dcd.285623.15.0.pdf"
+        ]
+      },
+      {
+        "date": "2026-09-08",
+        "text": "Judge Ana Reyes orders the FBI to list and justify what it is withholding from Democracy Defenders Fund",
+        "sources": [
+          "https://www.courtlistener.com/api/rest/v4/search/?type=rd&q=docket_id%3A72284498&order_by=entry_date_filed%20desc"
+        ]
+      }
+    ]
   },
   {
     "id": "house-gop-actblue-contempt-threat-2026",
@@ -22138,7 +23736,72 @@
         "id": "hegseth-kuwait-drone-strike-accountability-2026"
       }
     ],
-    "status_stage": "Unchallenged"
+    "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2026-05-15",
+        "text": "Trump tells Fox News he is holding the $14 billion Taiwan arms package in abeyance as a negotiating chip with China",
+        "turning_point": true,
+        "sources": [
+          "https://www.foxnews.com/politics/trumps-taiwan-negotiating-chip-remark-sparks-alarm-over-how-far-hed-shift-us-china-policy",
+          "https://dailycaller.com/2026/05/30/pete-hegseth-disagrees-hung-cao-taiwan-arms-shipment-iran-war/"
+        ]
+      },
+      {
+        "date": "2026-05-21",
+        "text": "Acting Navy Secretary Hung Cao tells senators the Taiwan sale is paused to save munitions for the Iran war",
+        "turning_point": true,
+        "sources": [
+          "https://www.aljazeera.com/news/2026/5/22/us-pausing-14bn-arms-sale-to-taiwan-due-to-iran-war-navy-chief-says",
+          "https://dailycaller.com/2026/05/22/taiwan-never-notified-frozen-arms-shipment-amid-iran-war/",
+          "https://thehill.com/policy/defense/5892374-navy-secretary-taiwan-arms-sale-pause-iran/"
+        ]
+      },
+      {
+        "date": "2026-05-22",
+        "text": "Taiwan says it has no word of any change; the Pentagon calls the details predecisional and policy unchanged",
+        "sources": [
+          "https://dailycaller.com/2026/05/22/taiwan-never-notified-frozen-arms-shipment-amid-iran-war/"
+        ]
+      },
+      {
+        "date": "2026-05-25",
+        "text": "Taiwan's foreign minister says Cao is not the final policymaker on arms sales",
+        "sources": [
+          "https://maritime-executive.com/article/taiwan-attempts-to-row-back-us-navy-secretary-s-comments-on-arms-sales"
+        ]
+      },
+      {
+        "date": "2026-05-30",
+        "text": "Hegseth says there is no change on Taiwan and he would not couple the sale with the Iran war",
+        "sources": [
+          "https://www.manilatimes.net/2026/05/31/world/asia-oceania/policy-on-taiwan-arms-sales-unchanged/2355030",
+          "https://dailycaller.com/2026/05/30/pete-hegseth-disagrees-hung-cao-taiwan-arms-shipment-iran-war/"
+        ]
+      },
+      {
+        "date": "2026-06",
+        "text": "The State Department reiterates that arms sales to Taiwan do not depend on Beijing's consent",
+        "sources": [
+          "https://www.defensenews.com/global/asia-pacific/2026/07/27/us-congress-approves-money-for-taiwan-defense-does-it-mean-trump-is-done-hesitating/"
+        ]
+      },
+      {
+        "date": "2026-07-15",
+        "text": "The House passes a bill with $500 million in military financing for Taiwan, separate from the paused package",
+        "sources": [
+          "https://www.govtrack.us/congress/bills/119/hr8595",
+          "https://www.defensenews.com/global/asia-pacific/2026/07/27/us-congress-approves-money-for-taiwan-defense-does-it-mean-trump-is-done-hesitating/"
+        ]
+      },
+      {
+        "date": "2026-09-25",
+        "text": "Trump and Xi end a Washington summit; Trump says nothing in public about the package, still awaiting his decision",
+        "sources": [
+          "https://www.cnbc.com/2026/09/26/arming-taiwan-is-an-important-us-interest-taipei-official-says.html"
+        ]
+      }
+    ]
   },
   {
     "id": "interior-east-potomac-golf-tree-removal-2026",
@@ -22420,6 +24083,134 @@
       "reviewed": "2026-11-02"
     },
     "status_stage": "In court",
+    "key_events": [
+      {
+        "date": "2026-02",
+        "text": "The DC Preservation League and two golfers sue Interior over plans to overhaul East Potomac Golf Links",
+        "sources": [
+          "https://storage.courtlistener.com/recap/gov.uscourts.dcd.289401/gov.uscourts.dcd.289401.79.0.pdf",
+          "https://storage.courtlistener.com/recap/gov.uscourts.dcd.289401/gov.uscourts.dcd.289401.103.0.pdf"
+        ]
+      },
+      {
+        "date": "2026-05-08",
+        "text": "Interior Secretary Burgum announces the Park Service will renovate the course into a championship course",
+        "sources": [
+          "https://storage.courtlistener.com/recap/gov.uscourts.dcd.289401/gov.uscourts.dcd.289401.49.0.pdf"
+        ]
+      },
+      {
+        "date": "2026-10-09",
+        "text": "Late on a Friday, the government notifies the court it will start removing up to 529 trees the next morning",
+        "sources": [
+          "https://storage.courtlistener.com/recap/gov.uscourts.dcd.289401/gov.uscourts.dcd.289401.74.0.pdf",
+          "https://storage.courtlistener.com/recap/gov.uscourts.dcd.289401/gov.uscourts.dcd.289401.74.1.pdf",
+          "https://www.npr.org/2026/10/13/nx-s1-6000055/east-potomac-golf-course-tree-clearing-judge"
+        ]
+      },
+      {
+        "date": "2026-10-10",
+        "text": "Crews start felling trees at 8 a.m.; about 430 are down by the end of the day",
+        "turning_point": true,
+        "sources": [
+          "https://storage.courtlistener.com/recap/gov.uscourts.dcd.289401/gov.uscourts.dcd.289401.76.1.pdf",
+          "https://storage.courtlistener.com/recap/gov.uscourts.dcd.289401/gov.uscourts.dcd.289401.79.0.pdf",
+          "https://www.npr.org/2026/10/13/nx-s1-6000055/east-potomac-golf-course-tree-clearing-judge"
+        ]
+      },
+      {
+        "date": "2026-10-12",
+        "text": "At an emergency hearing, Judge Ana Reyes says the government has lost all credibility with her",
+        "sources": [
+          "https://www.cnn.com/2026/10/12/politics/judge-furious-trees-cut-down-washington-dc-golf-course-trump",
+          "https://abcnews.com/Politics/judge-explodes-trump-admin-lawyers-after-hundreds-trees/story?id=137204023",
+          "https://www.courtlistener.com/docket/72278895/dc-preservation-league-v-department-of-interior/?order_by=desc"
+        ]
+      },
+      {
+        "date": "2026-10-13",
+        "text": "Reyes issues a restraining order barring any more tree felling at the course through October 26",
+        "sources": [
+          "https://www.courtlistener.com/docket/72278895/dc-preservation-league-v-department-of-interior/?order_by=desc",
+          "https://storage.courtlistener.com/recap/gov.uscourts.dcd.289401/gov.uscourts.dcd.289401.79.0.pdf"
+        ]
+      },
+      {
+        "date": "2026-10-18",
+        "text": "Reyes rejects the government's motion to disqualify her for bias",
+        "sources": [
+          "https://storage.courtlistener.com/recap/gov.uscourts.dcd.289401/gov.uscourts.dcd.289401.95.0.pdf"
+        ]
+      },
+      {
+        "date": "2026-10-18",
+        "text": "Trump posts that a Fazio-designed course is planned and the old course will close November 15",
+        "sources": [
+          "https://www.courtlistener.com/docket/72278895/dc-preservation-league-v-department-of-interior/?order_by=desc",
+          "https://storage.courtlistener.com/recap/gov.uscourts.dcd.289401/gov.uscourts.dcd.289401.94.0.pdf"
+        ]
+      },
+      {
+        "date": "2026-10-19",
+        "text": "Interior officials testify under oath; Reyes says there appears to be a strong showing of bad faith",
+        "sources": [
+          "https://wtop.com/dc/2026/10/judge-hears-testimony-in-legal-fight-over-trumps-golf-course-renovation-plans-at-east-potomac-park/",
+          "https://abc7news.com/story/trump-golf-course-doj-official-clashes-judge-dc-case-attacks/19956278/",
+          "https://www.courtlistener.com/docket/72278895/dc-preservation-league-v-department-of-interior/?order_by=desc"
+        ]
+      },
+      {
+        "date": "2026-10-26",
+        "text": "Reyes grants a preliminary injunction barring tree cutting, calling the government's stated reason pretextual",
+        "turning_point": true,
+        "sources": [
+          "https://storage.courtlistener.com/recap/gov.uscourts.dcd.289401/gov.uscourts.dcd.289401.101.0.pdf",
+          "https://storage.courtlistener.com/recap/gov.uscourts.dcd.289401/gov.uscourts.dcd.289401.103.0.pdf",
+          "https://www.npr.org/2026/10/27/nx-s1-6019192/east-potomac-golf-course-renovations-blocked-appeal"
+        ]
+      },
+      {
+        "date": "2026-10-26",
+        "text": "Late that night, Trump posts that the course will close as scheduled on November 15",
+        "sources": [
+          "https://www.courtlistener.com/docket/72278895/dc-preservation-league-v-department-of-interior/?order_by=desc",
+          "https://www.npr.org/2026/10/27/nx-s1-6019192/east-potomac-golf-course-renovations-blocked-appeal"
+        ]
+      },
+      {
+        "date": "2026-10-27",
+        "text": "The government appeals the injunction to the D.C. Circuit",
+        "sources": [
+          "https://storage.courtlistener.com/recap/gov.uscourts.dcd.289401/gov.uscourts.dcd.289401.105.0.pdf"
+        ]
+      },
+      {
+        "date": "2026-10-28",
+        "text": "The government says the Park Service will close the park south of Buckeye Drive, course included, on November 15",
+        "sources": [
+          "https://storage.courtlistener.com/recap/gov.uscourts.dcd.289401/gov.uscourts.dcd.289401.111.0.pdf",
+          "https://storage.courtlistener.com/recap/gov.uscourts.dcd.289401/gov.uscourts.dcd.289401.111.2.pdf",
+          "https://storage.courtlistener.com/recap/gov.uscourts.dcd.289401/gov.uscourts.dcd.289401.107.0.pdf"
+        ]
+      },
+      {
+        "date": "2026-10-29",
+        "text": "The government asks Reyes to pause her injunction while it appeals",
+        "sources": [
+          "https://storage.courtlistener.com/recap/gov.uscourts.dcd.289401/gov.uscourts.dcd.289401.112.0.pdf"
+        ]
+      },
+      {
+        "date": "2026-10-30",
+        "text": "Reyes opens a formal inquiry into whether officials and DOJ lawyers misled the court",
+        "turning_point": true,
+        "sources": [
+          "https://www.npr.org/2026/10/30/nx-s1-6023328/east-potomac-reyes-misconduct-inquiry-doj",
+          "https://www.cnn.com/2026/10/30/politics/dc-golf-course-trump-justice-woodward-reyes",
+          "https://abcnews.com/Politics/judge-court-investigate-government-officials-dc-golf-case/story?id=137723824"
+        ]
+      }
+    ],
     "timeline": {
       "confidence_note": {
         "base": "HIGH confidence on the notice timing, the tree-removal plan, the TRO and the testimony orders, all from the court docket and filings, with CNN, NPR and ABC News on the hearing testimony and the judge's words. The tree count differs by source: ABC reports that a Justice Department lawyer told the court on Oct. 12 that 430 were cleared, and CNN and NPR report at least 430, while the plaintiffs' Oct. 11 motion said defendants had told them 529 were cut on Saturday; this entry uses 430. Burgum's personal role in the tree-removal order is not shown: testimony traces it to his deputy chief of staff. Whether the court was misled was first a question the judge raised; her Oct. 26 opinion found Bowron's October declaration misleading (while finding her testimony credible and placing the omission on government counsel) and Wischer not credible, preliminary findings in an injunction ruling, not a final judgment or a contempt finding. WTOP reported that Lands called the tree project his idea and said no one had instructed him; this entry follows the court's Oct. 13 opinion, which cites the hearing transcript for Wischer's Oct. 5 instruction to carry out the 2019 report \"as soon as practical,\" as do CNN and Bloomberg Government. Re-verified 2026-10-14: the live docket and the Oct. 13 memorandum opinion (ECF 79) confirm the TRO, the Oct. 19 testimony order and the Oct. 14 preliminary-injunction deadline. The Oct. 19 testimony is reported by AP and ABC News, and the docket's Oct. 19 minute entry lists Wischer, Bowron and Griess as witnesses; no hearing transcript is public yet. Trump's Oct. 19 post is quoted in full in a plaintiffs' court filing. Re-verified 2026-10-26: the live docket shows the Oct. 22 minute order denying a TRO extension and ordering preservation of Wischer's personal phone, and no preliminary-injunction ruling as of that date. The Oct. 26 preliminary injunction, the Oct. 27 notice of appeal and the government's Oct. 28 response are from the court filings (ECF 101, 103, 105, 107), with NPR on Trump's post announcing the appeal. Re-verified 2026-10-29: the government's Oct. 28 closure notice and Bowron declaration, its Oct. 29 stay motion and the plaintiffs' Oct. 29 notice quoting Trump's post are from the court filings (ECF 111, 112, 114), and the Oct. 30 hearing order is from the docket; the hearing had not yet been held. Re-verified 2026-10-30: the live docket, checked the morning of the Oct. 30 hearing, shows an Oct. 29 minute order also requiring Bowron to appear in person; no ruling from the hearing had been docketed or reported.",
@@ -22514,7 +24305,44 @@
       },
       "reviewed": "2026-10-31"
     },
-    "status_stage": "Unchallenged"
+    "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2021-01-06",
+        "text": "Elias Irizarry, then 19, enters the U.S. Capitol during the January 6 attack",
+        "sources": [
+          "https://www.stripes.com/theaters/us/2022-10-26/citadel-cadet-pleads-guilty-riot-7820580.html",
+          "https://www.washingtonpost.com/national-security/2026/06/02/pentagon-hires-convicted-jan-6-rioter-sensitive-counterterrorism-job/"
+        ]
+      },
+      {
+        "date": "2022-10-26",
+        "text": "Irizarry pleads guilty to a federal misdemeanor; he is later sentenced to 14 days in jail",
+        "sources": [
+          "https://www.stripes.com/theaters/us/2022-10-26/citadel-cadet-pleads-guilty-riot-7820580.html",
+          "https://www.washingtonpost.com/national-security/2026/06/02/pentagon-hires-convicted-jan-6-rioter-sensitive-counterterrorism-job/"
+        ]
+      },
+      {
+        "date": "2025-01-20",
+        "text": "On his first day back in office, Trump pardons Irizarry along with more than 1,500 other January 6 participants",
+        "turning_point": true,
+        "sources": [
+          "https://www.washingtonpost.com/national-security/2026/06/02/pentagon-hires-convicted-jan-6-rioter-sensitive-counterterrorism-job/",
+          "https://www.cbsnews.com/news/pentagon-hires-man-jan-6-riot-sensitive-job-special-operations-irizarry/"
+        ]
+      },
+      {
+        "date": "2026-06-02",
+        "text": "The Washington Post reveals his Pentagon counterterrorism job; the Pentagon calls him a qualified, patriotic hire",
+        "turning_point": true,
+        "sources": [
+          "https://www.washingtonpost.com/national-security/2026/06/02/pentagon-hires-convicted-jan-6-rioter-sensitive-counterterrorism-job/",
+          "https://www.newsweek.com/pentagon-hired-convicted-capitol-rioter-qualified-elias-irizarry-12023596",
+          "https://thehill.com/policy/defense/5906798-pentagon-appointment-jan-6-special-operations/"
+        ]
+      }
+    ]
   },
   {
     "id": "johnson-grijalva-swearing-in-delay-epstein-2025",
@@ -22723,7 +24551,34 @@
       },
       "reviewed": "2026-09-20"
     },
-    "status_stage": "Unchallenged"
+    "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2025-04",
+        "text": "Jordan, Grassley and others ask all eight Ivy League schools for records on alleged tuition and aid collusion",
+        "sources": [
+          "https://www.cnbc.com/2025/07/01/jim-jordan-subpoena-brown-penn-harvard.html",
+          "https://www.thecrimson.com/article/2025/6/27/harvard-antitrust-subpoena/"
+        ]
+      },
+      {
+        "date": "2025-06-26",
+        "text": "Jordan and Fitzgerald subpoena Harvard's tuition and aid communications; Harvard calls it unwarranted",
+        "turning_point": true,
+        "sources": [
+          "https://judiciary.house.gov/media/press-releases/chairmen-jordan-and-fitzgerald-subpoena-harvard-university",
+          "https://www.thecrimson.com/article/2025/6/27/harvard-antitrust-subpoena/"
+        ]
+      },
+      {
+        "date": "2025-07-01",
+        "text": "The committee issues matching subpoenas to Brown and the University of Pennsylvania",
+        "turning_point": true,
+        "sources": [
+          "https://www.cnbc.com/2025/07/01/jim-jordan-subpoena-brown-penn-harvard.html"
+        ]
+      }
+    ]
   },
   {
     "id": "jordan-jack-smith-perjury-referral-2025-2026",
@@ -22946,6 +24801,31 @@
     ],
     "narrative_combined": true,
     "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2025-12-05",
+        "text": "Vice Adm. Fred Kacher becomes Director of the Joint Staff",
+        "sources": [
+          "https://breakingdefense.com/2026/02/joint-staff-director-returning-to-navy-after-only-months-on-job/"
+        ]
+      },
+      {
+        "date": "2026-02-25",
+        "text": "The Pentagon announces Caine has removed Kacher after under three months, giving no public reason",
+        "turning_point": true,
+        "sources": [
+          "https://breakingdefense.com/2026/02/joint-staff-director-returning-to-navy-after-only-months-on-job/",
+          "https://www.washingtonexaminer.com/news/4472724/pentagon-removes-joint-staff-director-after-less-than-90-days-on-the-job/"
+        ]
+      },
+      {
+        "date": "2026-04-02",
+        "text": "Hegseth fires Army Chief of Staff Gen. Randy George amid a widening string of senior-officer removals",
+        "sources": [
+          "https://www.aljazeera.com/news/2026/4/3/hegseth-fires-us-army-chief-of-staff-in-reported-string-of-dismissals"
+        ]
+      }
+    ],
     "timeline": {
       "confidence_note": {
         "base": "HIGH confidence on the removal's occurrence, timeline, and the absence of a stated public rationale -- corroborated across Breaking Defense, The Hill, and Washington Examiner. LOW confidence on the underlying motive, since no source provided a substantive reason beyond an unattributed 'not the right fit' characterization -- this entry documents the unexplained removal itself, not a confirmed improper motive.",
@@ -23043,7 +24923,49 @@
       },
       "reviewed": "2026-10-15"
     },
-    "status_stage": "In court"
+    "status_stage": "In court",
+    "key_events": [
+      {
+        "date": "2025-03",
+        "text": "NIAID director Jeanne Marrazzo is placed on indefinite leave",
+        "sources": [
+          "https://www.cbsnews.com/news/rfk-jr-fires-nih-vaccine-whistleblower-dr-jeanne-marrazzo/"
+        ]
+      },
+      {
+        "date": "2025-09-04",
+        "text": "Marrazzo and former Fogarty director Kathleen Neuzil file a retaliation complaint with the Office of Special Counsel",
+        "turning_point": true,
+        "sources": [
+          "https://katzbanks.com/wp-content/uploads/OSC-Form-14-Report-of-Wrongdoing-Disclosure-Submitted-for-Marrazzo-and-Neuzil_Redacted.pdf",
+          "https://www.statnews.com/2025/09/04/nih-whistleblower-complaints-research-grants-flu-vaccine-jeanne-marrazzo/"
+        ]
+      },
+      {
+        "date": "2025-09-26",
+        "text": "Kennedy fires Marrazzo 22 days after the complaint",
+        "turning_point": true,
+        "sources": [
+          "https://www.cbsnews.com/news/rfk-jr-fires-nih-vaccine-whistleblower-dr-jeanne-marrazzo/",
+          "https://katzbanks.com/news/marrazzo-lawsuit/"
+        ]
+      },
+      {
+        "date": "2025-12-16",
+        "text": "Marrazzo sues Kennedy, NIH Director Bhattacharya and others in federal court in Maryland over her firing",
+        "sources": [
+          "https://news.bloomberglaw.com/health-law-and-business/rfk-jr-sued-by-fauci-successor-alleging-illegal-removal-at-nih",
+          "https://katzbanks.com/news/marrazzo-lawsuit/"
+        ]
+      },
+      {
+        "date": "2026-04-20",
+        "text": "The government moves to dismiss Marrazzo's suit for lack of jurisdiction",
+        "sources": [
+          "https://www.courtlistener.com/docket/72048676/marrazzo-v-kennedy/"
+        ]
+      }
+    ]
   },
   {
     "id": "kollitides-alvarez-marsal-pentagon-contracts-2026",
@@ -23132,7 +25054,68 @@
       },
       "reviewed": "2026-10-16"
     },
-    "status_stage": "Unchallenged"
+    "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2025",
+        "text": "Former A&M Capital partner George Kollitides joins the Pentagon as a special government employee under Feinberg",
+        "sources": [
+          "https://news.bgov.com/bloomberg-government-news/pentagon-investment-arm-director-joined-firm-with-defense-ties",
+          "https://www.propublica.org/article/george-kollitides-pentagon-contracts-alvarez-marsal"
+        ]
+      },
+      {
+        "date": "2025-12",
+        "text": "The Pentagon gives Alvarez & Marsal Federal a $67.6 million deal",
+        "turning_point": true,
+        "sources": [
+          "https://www.propublica.org/article/george-kollitides-pentagon-contracts-alvarez-marsal"
+        ]
+      },
+      {
+        "date": "2026-02-10",
+        "text": "Days after Feinberg names him to lead a new Pentagon office, Kollitides joins the board of an offshore shell company",
+        "sources": [
+          "https://news.bgov.com/bloomberg-government-news/pentagon-investment-arm-director-joined-firm-with-defense-ties"
+        ]
+      },
+      {
+        "date": "2026-04",
+        "text": "A securities filing still describes Kollitides as a senior adviser to A&M Capital",
+        "sources": [
+          "https://www.propublica.org/article/george-kollitides-pentagon-contracts-alvarez-marsal"
+        ]
+      },
+      {
+        "date": "2026-06",
+        "text": "The Pentagon finalizes a $281 million no-bid contract with Alvarez & Marsal Federal to advise Kollitides' BOND office",
+        "turning_point": true,
+        "sources": [
+          "https://www.propublica.org/article/george-kollitides-pentagon-contracts-alvarez-marsal"
+        ]
+      },
+      {
+        "date": "2026-09",
+        "text": "Kollitides leaves the shell company's board at the end of September",
+        "sources": [
+          "https://www.propublica.org/article/george-kollitides-pentagon-contracts-alvarez-marsal"
+        ]
+      },
+      {
+        "date": "2026-10-08",
+        "text": "The Wall Street Journal reports the Pentagon has paid Alvarez & Marsal $300 million",
+        "sources": [
+          "https://www.rawstory.com/steve-feinberg-pentagon/"
+        ]
+      },
+      {
+        "date": "2026-10-09",
+        "text": "ProPublica reports the two deals; A&M Capital says he left the firm days earlier and the Pentagon says he is recused",
+        "sources": [
+          "https://www.propublica.org/article/george-kollitides-pentagon-contracts-alvarez-marsal"
+        ]
+      }
+    ]
   },
   {
     "id": "kupor-opm-loyalty-essay-question-2025-2026",
@@ -23210,7 +25193,35 @@
       },
       "reviewed": "2026-10-27"
     },
-    "status_stage": "In court"
+    "status_stage": "In court",
+    "key_events": [
+      {
+        "date": "2025-05",
+        "text": "OPM's Merit Hiring Plan adds an essay question asking applicants which executive orders they would help carry out",
+        "turning_point": true,
+        "sources": [
+          "https://www.govexec.com/workforce/2025/11/unions-sue-over-loyalty-question-federal-jobseekers/409385/",
+          "https://democracyforward.org/wp-content/uploads/2026/09/86-2026-09-11-Judge-George-A.-OToole-Jr-ORDER-entered.-OPINION-AND.pdf"
+        ]
+      },
+      {
+        "date": "2025-11-06",
+        "text": "Three federal employee unions sue OPM and Kupor, calling the question a political loyalty test",
+        "sources": [
+          "https://democracyforward.org/wp-content/uploads/2025/11/Merit-Hiring-Complaint-110625.pdf",
+          "https://www.govexec.com/workforce/2025/11/unions-sue-over-loyalty-question-federal-jobseekers/409385/"
+        ]
+      },
+      {
+        "date": "2026-09-11",
+        "text": "Judge George O'Toole blocks the question and orders OPM to tell agencies to pull it from job postings",
+        "turning_point": true,
+        "sources": [
+          "https://democracyforward.org/wp-content/uploads/2026/09/86-2026-09-11-Judge-George-A.-OToole-Jr-ORDER-entered.-OPINION-AND.pdf",
+          "https://www.usnews.com/news/politics/articles/2026-09-11/us-judge-blocks-trump-administrations-loyalty-question-for-job-applicants"
+        ]
+      }
+    ]
   },
   {
     "id": "lewandowski-dhs-contracts-2026",
@@ -23359,7 +25370,84 @@
         "id": "salus-dhs-self-deportation-contract-2026"
       }
     ],
-    "status_stage": "Under investigation"
+    "status_stage": "Under investigation",
+    "key_events": [
+      {
+        "date": "2026-03-06",
+        "text": "Sens. Welch and Blumenthal ask the firms behind a $220 million no-bid DHS ad campaign if Lewandowski benefited",
+        "turning_point": true,
+        "sources": [
+          "https://www.nbcnews.com/politics/trump-administration/noem-lewandowski-democrats-probing-companies-220-million-ad-contract-rcna262156"
+        ]
+      },
+      {
+        "date": "2026-03-10",
+        "text": "NBC News reports Trump asked aides whether Lewandowski profited from the ad campaign",
+        "sources": [
+          "https://www.nbcnews.com/politics/white-house/trump-questioned-aides-corey-lewandowskis-role-dhs-ad-campaign-sources-rcna262631"
+        ]
+      },
+      {
+        "date": "2026-03-19",
+        "text": "NBC News reports a contractor said hiring a Lewandowski-tied consultant was a condition of a subcontract; he denies it",
+        "sources": [
+          "https://www.nbcnews.com/news/us-news/dhs-contractors-told-white-house-officials-asked-pay-corey-lewandowski-rcna263744"
+        ]
+      },
+      {
+        "date": "2026-03-23",
+        "text": "Rep. Robert Garcia widens the Oversight Democrats' probe after a report that Lewandowski sought kickbacks from GEO Group",
+        "turning_point": true,
+        "sources": [
+          "https://oversightdemocrats.house.gov/news/press-releases/ranking-member-robert-garcia-expands-corey-lewandowski-investigation-into-alleged-pay-to-play-scheme-with-dhs-contracts"
+        ]
+      },
+      {
+        "date": "2026-03-25",
+        "text": "House Judiciary Democrats ask Chairman Jim Jordan to subpoena Lewandowski over the ad spending",
+        "sources": [
+          "https://neguse.house.gov/media/press-releases/neguse-raskin-judiciary-democrats-demand-chairman-jordan-subpoena-corey"
+        ]
+      },
+      {
+        "date": "2026-03-26",
+        "text": "CNN reports the DHS inspector general has opened a wide probe of DHS contracts, including Lewandowski's role",
+        "sources": [
+          "https://www.cnn.com/2026/03/26/politics/kristi-noem-corey-lewandowski-investigation-inspector-general"
+        ]
+      },
+      {
+        "date": "2026-06-17",
+        "text": "A DHS nominee tells Sen. Maggie Hassan that Secretary Mullin is reviewing contracts Lewandowski may have approved",
+        "sources": [
+          "https://www.hassan.senate.gov/news/press-releases/senator-hassan-presses-dhs-on-investigation-into-corey-lewandowskis-alleged-corruption-and-abuse-of-taxpayer-dollars"
+        ]
+      },
+      {
+        "date": "2026-07-10",
+        "text": "The Wall Street Journal reports evidence he may have helped improperly award contracts; a criminal referral is weighed",
+        "sources": [
+          "https://www.msn.com/en-us/news/politics/investigators-find-corey-lewandowski-may-have-been-involved-in-improper-dhs-contracts/ar-AA27F7ex",
+          "https://www.yahoo.com/news/politics/articles/dhs-investigators-weigh-criminal-referral-005243068.html",
+          "https://www.rawstory.com/corey-lewandowski-investigation/"
+        ]
+      },
+      {
+        "date": "2026-09",
+        "text": "The Journal reports Lewandowski acted as a shadow secretary, holding up a Palantir deal; he calls it politically driven",
+        "sources": [
+          "https://www.huffpost.com/entry/corey-lewandowski-dhs-wall-street-journal_n_6aa01e58e4b030763604aae1",
+          "https://www.yahoo.com/news/politics/articles/lewandowski-pitched-himself-qatari-uae-151705764.html"
+        ]
+      },
+      {
+        "date": "2026-09",
+        "text": "The same report says he pitched Qatar and the UAE on hiring him for help with DHS matters; both turned him down",
+        "sources": [
+          "https://www.yahoo.com/news/politics/articles/lewandowski-pitched-himself-qatari-uae-151705764.html"
+        ]
+      }
+    ]
   },
   {
     "id": "loeffler-sba-hatch-act-2025-09",
@@ -23563,7 +25651,39 @@
       "reviewed": "2026-10-24"
     },
     "narrative_combined": true,
-    "status_stage": "Unchallenged"
+    "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2021",
+        "text": "Lohmeier is relieved of Space Force command after saying the military embraces Marxism and critical race theory",
+        "sources": [
+          "https://www.newsweek.com/trump-air-force-matthew-lohmeier-fired-marxism-2017334"
+        ]
+      },
+      {
+        "date": "2024-10-19",
+        "text": "Lohmeier posts that military leaders who politicized the services face serious consequences if Trump wins",
+        "sources": [
+          "https://www.defenseone.com/policy/2025/05/trumps-pick-air-force-no-2-civilian-defends-past-political-comments/405013/"
+        ]
+      },
+      {
+        "date": "2025-05-01",
+        "text": "At his confirmation hearing Lohmeier declines to disavow the post or rule out reprisals against named officers",
+        "turning_point": true,
+        "sources": [
+          "https://www.defenseone.com/policy/2025/05/trumps-pick-air-force-no-2-civilian-defends-past-political-comments/405013/"
+        ]
+      },
+      {
+        "date": "2025-07-24",
+        "text": "The Senate confirms Lohmeier as Under Secretary of the Air Force, 52-46 along party lines",
+        "turning_point": true,
+        "sources": [
+          "https://www.airforcetimes.com/air/2025/07/24/anti-woke-former-officer-confirmed-as-air-force-undersecretary/"
+        ]
+      }
+    ]
   },
   {
     "id": "lutnick-commerce-health-insurance-stripped-2025",
@@ -23619,7 +25739,26 @@
       },
       "reviewed": "2026-09-20"
     },
-    "status_stage": "Unchallenged"
+    "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2025-04-10",
+        "text": "Commerce re-fires reinstated probationary workers retroactive to their original dates, cutting off their health coverage",
+        "turning_point": true,
+        "sources": [
+          "https://www.npr.org/2025/06/04/nx-s1-5422998/commerce-lutnick-democrats-oversight-noaa-health-care"
+        ]
+      },
+      {
+        "date": "2025-06-04",
+        "text": "Rep. Stephen Lynch demands Lutnick explain the coverage cutoffs and repay employees' medical costs and premiums",
+        "turning_point": true,
+        "sources": [
+          "https://www.opb.org/article/2025/06/04/health-care-mess-at-commerce-prompts-questions-from-house-democrat/",
+          "https://www.npr.org/2025/06/04/nx-s1-5422998/commerce-lutnick-democrats-oversight-noaa-health-care"
+        ]
+      }
+    ]
   },
   {
     "id": "lutnick-epstein-business-ties-2026",
@@ -23734,7 +25873,69 @@
         "id": "ben-black-dfc-epstein-ties-2026"
       }
     ],
-    "status_stage": "Unchallenged"
+    "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2012-12-28",
+        "text": "Lutnick and Epstein sign for companies agreeing to jointly buy stakes in ad-tech firm Adfin",
+        "sources": [
+          "https://www.cbsnews.com/news/howard-lutnick-jeffrey-epstein-in-business-together/"
+        ]
+      },
+      {
+        "date": "2026-02",
+        "text": "Epstein files released by DOJ show Lutnick in business with Epstein into 2014, despite his claimed 2005 break",
+        "turning_point": true,
+        "sources": [
+          "https://www.cbsnews.com/news/howard-lutnick-jeffrey-epstein-in-business-together/"
+        ]
+      },
+      {
+        "date": "2026-02",
+        "text": "Rep. Thomas Massie and top Oversight Democrat Robert Garcia call on Lutnick to resign, saying he lied about the ties",
+        "sources": [
+          "https://www.foxnews.com/politics/massie-top-oversight-democrat-call-secretary-lutnick-resign-lying-about-alleged-epstein-ties.amp"
+        ]
+      },
+      {
+        "date": "2026-02-10",
+        "text": "At a Senate hearing, Lutnick admits a 2012 family lunch on Epstein's island but says he barely knew him",
+        "sources": [
+          "https://www.cnbc.com/2026/02/10/lutnick-epstein-island-vacation-congress.html"
+        ]
+      },
+      {
+        "date": "2026-02-15",
+        "text": "CNN's review of the files finds more contact, including a $50,000 Epstein donation to a 2017 dinner honoring Lutnick",
+        "sources": [
+          "https://www.cnn.com/2026/02/15/politics/howard-lutnick-epstein-ties-trump"
+        ]
+      },
+      {
+        "date": "2026-02-23",
+        "text": "Mother Jones reports Cantor lent Adfin $2 million in 2013 and took majority control in 2016, with Lutnick on its board",
+        "sources": [
+          "https://www.motherjones.com/politics/2026/02/jeffrey-epstein-files-howard-lutnick-email-cantor-fitzgerald/"
+        ]
+      },
+      {
+        "date": "2026-05-06",
+        "text": "Lutnick sits for a closed-door House Oversight interview; Chairman Comer says he wasn't 100% truthful",
+        "turning_point": true,
+        "sources": [
+          "https://www.npr.org/2026/05/06/nx-s1-5814081/howard-lutnick-epstein-files-house-oversight-committee",
+          "https://www.washingtonexaminer.com/news/4557857/comer-lutnick-epstein-oversight-testimony/",
+          "https://www.notus.org/congress/howard-lutnick-downplays-epstein-connections-in-capitol-grilling-oversight-hearing"
+        ]
+      },
+      {
+        "date": "2026-05-13",
+        "text": "The committee releases the transcript: Lutnick says he met Epstein three times and confirms a 2018 Adfin email",
+        "sources": [
+          "https://www.cnn.com/2026/05/13/politics/howard-lutnick-interview-transcript-epstein"
+        ]
+      }
+    ]
   },
   {
     "id": "lutnick-usar-conflict-of-interest-2026-01",
@@ -23878,7 +26079,68 @@
       "reviewed": "2026-10-04"
     },
     "narrative_combined": true,
-    "status_stage": "Unchallenged"
+    "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2025-11",
+        "text": "Lutnick reportedly meets with the CEO of USA Rare Earth, a critical-minerals startup",
+        "sources": [
+          "https://www.vanhollen.senate.gov/news/press-releases/van-hollen-warren-wyden-sound-alarm-on-lutnick-familys-conflicts-of-interest-involving-new-commerce-rare-earth-deal"
+        ]
+      },
+      {
+        "date": "2026-01-26",
+        "text": "Commerce announces a tentative $1.6 billion USA Rare Earth deal; Cantor Fitzgerald leads its $1.5 billion raise that day",
+        "turning_point": true,
+        "sources": [
+          "https://www.vanhollen.senate.gov/news/press-releases/van-hollen-warren-wyden-sound-alarm-on-lutnick-familys-conflicts-of-interest-involving-new-commerce-rare-earth-deal"
+        ]
+      },
+      {
+        "date": "2026-02-26",
+        "text": "Sens. Van Hollen, Warren and Wyden ask Lutnick about his role, ethics guidance and when he learned of Cantor's part",
+        "sources": [
+          "https://www.vanhollen.senate.gov/news/press-releases/van-hollen-warren-wyden-sound-alarm-on-lutnick-familys-conflicts-of-interest-involving-new-commerce-rare-earth-deal"
+        ]
+      },
+      {
+        "date": "2026-06-03",
+        "text": "Commerce signs the final award of up to $277 million and a loan of up to $1.3 billion with USA Rare Earth",
+        "turning_point": true,
+        "sources": [
+          "https://www.nist.gov/news-events/news/2026/06/department-commerces-chips-program-finalizes-definitive-agreement-usa-rare"
+        ]
+      },
+      {
+        "date": "2026-07-06",
+        "text": "Lawmakers say Lutnick refused to answer and widen their inquiry to Cantor Fitzgerald and USA Rare Earth",
+        "sources": [
+          "https://www.warren.senate.gov/newsroom/press-releases/warren-wyden-van-hollen-lofgren-lead-new-probe-into-cantor-fitzgerald-usar-after-1-6-billion-trump-administration-deal/",
+          "https://www.warren.senate.gov/wp-content/uploads/2026/07/Letter-from-Senators-Warren-Wyden-Van-Hollen-Rep-Lofgren-to-Cantor-re-Conflicts-of-Interest-07_06.pdf"
+        ]
+      },
+      {
+        "date": "2026-07-07",
+        "text": "Cantor Fitzgerald denies any role in the government talks and says Lutnick is fully divested",
+        "sources": [
+          "https://www.thedailybeast.com/trump-goon-howard-lutnick-hit-with-bombshell-probe-over-billion-dollar-deal/"
+        ]
+      },
+      {
+        "date": "2026-09-02",
+        "text": "Asked on CNBC whether the deal is a conflict of interest, Lutnick says \"It's just not\"",
+        "sources": [
+          "https://www.alternet.org/howard-lutnick-2677808911/"
+        ]
+      },
+      {
+        "date": "2026-09-23",
+        "text": "Bloomberg reports the private raise carried $50 million in fees; Commerce says no one discussed rare earths with Cantor",
+        "sources": [
+          "https://finance.yahoo.com/economy/policy/articles/tiny-magnet-maker-attracted-1-093009773.html"
+        ]
+      }
+    ]
   },
   {
     "id": "mccotter-adani-charges-dropped-2026",
@@ -24000,7 +26262,115 @@
       },
       "reviewed": "2026-10-16"
     },
-    "status_stage": "Court ruled"
+    "status_stage": "Court ruled",
+    "key_events": [
+      {
+        "date": "2024-10-24",
+        "text": "A Brooklyn grand jury indicts Gautam Adani and seven others over an alleged $265 million bribery scheme",
+        "sources": [
+          "https://storage.courtlistener.com/recap/gov.uscourts.nyed.522756/gov.uscourts.nyed.522756.49.0.pdf"
+        ]
+      },
+      {
+        "date": "2025-08",
+        "text": "Adani hires Sullivan & Cromwell; his lawyer Robert Giuffra is also a personal attorney for Trump",
+        "sources": [
+          "https://storage.courtlistener.com/recap/gov.uscourts.nyed.522756/gov.uscourts.nyed.522756.49.0.pdf"
+        ]
+      },
+      {
+        "date": "2026-04-17",
+        "text": "A defense slide deck proposes a $10 billion U.S. investment plan as part of a joint defense offer",
+        "sources": [
+          "https://storage.courtlistener.com/recap/gov.uscourts.nyed.522756/gov.uscourts.nyed.522756.49.0.pdf"
+        ]
+      },
+      {
+        "date": "2026-05-11",
+        "text": "U.S. Attorney Joseph Nocella writes that his office categorically rejects the investment part of the offer",
+        "sources": [
+          "https://storage.courtlistener.com/recap/gov.uscourts.nyed.522756/gov.uscourts.nyed.522756.49.0.pdf"
+        ]
+      },
+      {
+        "date": "2026-05-18",
+        "text": "McCotter files a one-paragraph motion to dismiss the indictment with prejudice",
+        "turning_point": true,
+        "sources": [
+          "https://storage.courtlistener.com/recap/gov.uscourts.nyed.522756/gov.uscourts.nyed.522756.49.0.pdf"
+        ]
+      },
+      {
+        "date": "2026-06-11",
+        "text": "Sens. Warren and Blumenthal write that the move makes it appear Adani bought his way to criminal immunity",
+        "sources": [
+          "https://www.warren.senate.gov/newsroom/press-releases/warren-blumenthal-open-investigation-into-dojs-move-to-drop-charges-against-billionaire/",
+          "https://m.thewire.in/article/law/adani-us-investment-offer-influence-doj-bid-to-abandon-criminal-prosecution-democratic-senators-ask"
+        ]
+      },
+      {
+        "date": "2026-06-26",
+        "text": "Judge Nicholas Garaufis refuses to grant the motion and orders DOJ to explain its reasons",
+        "sources": [
+          "https://m.thewire.in/article/law/adani-us-investment-offer-influence-doj-bid-to-abandon-criminal-prosecution-democratic-senators-ask",
+          "https://storage.courtlistener.com/recap/gov.uscourts.nyed.522756/gov.uscourts.nyed.522756.49.0.pdf"
+        ]
+      },
+      {
+        "date": "2026-07-04",
+        "text": "McCotter's letter calls the case mainly foreign and hard to prove, and calls reports the pledge played a part false",
+        "sources": [
+          "https://www.outlookbusiness.com/news/us-doj-says-decision-to-drop-adani-charges-not-tied-to-planned-us-investments",
+          "https://storage.courtlistener.com/recap/gov.uscourts.nyed.522756/gov.uscourts.nyed.522756.49.0.pdf"
+        ]
+      },
+      {
+        "date": "2026-07-15",
+        "text": "Adani swears he knows of no promise; Giuffra says he twice told DOJ the group would be amenable to the pledge",
+        "sources": [
+          "https://storage.courtlistener.com/recap/gov.uscourts.nyed.522756/gov.uscourts.nyed.522756.49.0.pdf"
+        ]
+      },
+      {
+        "date": "2026-08-10",
+        "text": "Garaufis dismisses the three Adani executives' charges but calls the irregularities in the decision concerning",
+        "turning_point": true,
+        "sources": [
+          "https://storage.courtlistener.com/recap/gov.uscourts.nyed.522756/gov.uscourts.nyed.522756.49.0.pdf",
+          "https://www.bnnbloomberg.ca/business/2026/08/11/us-judge-dismisses-criminal-case-against-indian-billionaire-adani/"
+        ]
+      },
+      {
+        "date": "2026-09-03",
+        "text": "The judge refuses to drop the counts against the five other defendants for lack of factual support",
+        "turning_point": true,
+        "sources": [
+          "https://www.mlex.com/mlex/amp/articles/2521577"
+        ]
+      },
+      {
+        "date": "2026-09-23",
+        "text": "Warren and Blumenthal write to Blanche again, citing the role of two of Trump's personal lawyers",
+        "sources": [
+          "https://www.nationalheraldindia.com/national/us-senators-renew-queries-over-dropped-adani-bribery-case-cite-trump-links",
+          "https://madhyamamonline.com/world/doj-dropping-adani-case-us-senators-renew-demand-for-answers-1558076"
+        ]
+      },
+      {
+        "date": "2026-09-28",
+        "text": "McCotter, now Acting Deputy Attorney General, asks the Second Circuit to order the remaining counts dismissed",
+        "sources": [
+          "https://storage.courtlistener.com/recap/gov.uscourts.nyed.522756/gov.uscourts.nyed.522756.59.1.pdf"
+        ]
+      },
+      {
+        "date": "2026-10-01",
+        "text": "The Second Circuit denies DOJ's bid to expedite its petition",
+        "sources": [
+          "https://www.mlex.com/mlex/articles/2532728"
+        ]
+      }
+    ]
   },
   {
     "id": "mcmahon-education-dept-activist-capture-2025-2026",
@@ -24069,7 +26439,48 @@
       },
       "reviewed": "2026-09-20"
     },
-    "status_stage": "Unchallenged"
+    "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2025",
+        "text": "The department's civil rights office loses about half its staff and much of its regional office network",
+        "turning_point": true,
+        "sources": [
+          "https://jewishinsider.com/2026/04/linda-mcmahon-education-department-civil-rights-budget-cuts-staffing/",
+          "https://www.k12dive.com/news/education-department-paid-laid-off-ocr-staff-38m-while-dismissing-most-com/811166/"
+        ]
+      },
+      {
+        "date": "2025",
+        "text": "ProPublica finds McMahon has brought in at least 20 appointees from groups skeptical of public schools",
+        "sources": [
+          "https://www.propublica.org/article/education-department-public-schools-activists-linda-mcmahon-trump"
+        ]
+      },
+      {
+        "date": "2025-09",
+        "text": "The department moves to protect prayer in public schools",
+        "sources": [
+          "https://www.cnn.com/2025/09/27/politics/linda-mcmahon-department-of-education-patriotic-civics"
+        ]
+      },
+      {
+        "date": "2025-09-17",
+        "text": "The department releases a Patriotic Education priority tying funding preference to patriotic curricula",
+        "turning_point": true,
+        "sources": [
+          "https://www.ed.gov/about/news/press-release/us-department-of-education-releases-secretary-mcmahons-patriotic-education-supplemental-priority",
+          "https://www.cnn.com/2025/09/27/politics/linda-mcmahon-department-of-education-patriotic-civics"
+        ]
+      },
+      {
+        "date": "2026-04",
+        "text": "The administration's budget seeks a further 35% cut to the civil rights office after a 30% drop in resolved complaints",
+        "sources": [
+          "https://jewishinsider.com/2026/04/linda-mcmahon-education-department-civil-rights-budget-cuts-staffing/"
+        ]
+      }
+    ]
   },
   {
     "id": "mcmahon-education-dept-transfers-2025-2026",
@@ -24213,7 +26624,100 @@
         "id": "sonderling-imls-unlawful-actions-2025"
       }
     ],
-    "status_stage": "In court"
+    "status_stage": "In court",
+    "key_events": [
+      {
+        "date": "2025-05-21",
+        "text": "McMahon approves the first transfer agreement, moving Perkins Act career-education programs to Labor",
+        "turning_point": true,
+        "sources": [
+          "https://www.govinfo.gov/bulkdata/BILLS/119/2/hres/BILLS-119hres1391ih.xml"
+        ]
+      },
+      {
+        "date": "2025-09-30",
+        "text": "New agreements move K-12 and higher-education programs to Labor and Indian Education programs to Interior",
+        "sources": [
+          "https://www.govinfo.gov/bulkdata/BILLS/119/2/hres/BILLS-119hres1391ih.xml",
+          "https://www.ed.gov/media/document/ed-and-doi-interagency-agreement-indian-education-partnership-september-30-2025-and-january-9-2026-addendum-113021.pdf"
+        ]
+      },
+      {
+        "date": "2025-11",
+        "text": "The move of Indian Education program administration to the Bureau of Indian Education is announced",
+        "sources": [
+          "https://kbft.org/were-here-too-late-indian-country-slams-changes-to-education-programs/"
+        ]
+      },
+      {
+        "date": "2025-11-25",
+        "text": "States and school districts suing in Massachusetts amend their complaint to challenge the transfer agreements",
+        "sources": [
+          "https://clearinghouse.net/case/46217/"
+        ]
+      },
+      {
+        "date": "2026-02",
+        "text": "Congress's 2026 spending law does not bar the agreements, though its statement says the department lacks that power",
+        "sources": [
+          "https://www.k12dive.com/news/congress-education-department-interagency-agreements/812492/"
+        ]
+      },
+      {
+        "date": "2026-02-10",
+        "text": "At the only scheduled tribal consultation, tribal leaders say the agreements are already at the execution stage",
+        "sources": [
+          "https://kbft.org/were-here-too-late-indian-country-slams-changes-to-education-programs/"
+        ]
+      },
+      {
+        "date": "2026-02-20",
+        "text": "New agreements move more K-12 programs to HHS and higher-education programs to the State Department",
+        "sources": [
+          "https://www.govinfo.gov/bulkdata/BILLS/119/2/hres/BILLS-119hres1391ih.xml"
+        ]
+      },
+      {
+        "date": "2026-05",
+        "text": "GAO tells Sen. Warren it is widening its review, including the move of student-loan default collections to Treasury",
+        "sources": [
+          "https://www.warren.senate.gov/newsroom/press-releases/following-warren-request-independent-government-watchdog-expands-investigation-into-trump-admin-efforts-to-dismantle-education-department",
+          "https://news.bgov.com/bloomberg-government-news/gao-to-probe-federal-student-loan-portfolio-transfer-to-treasury"
+        ]
+      },
+      {
+        "date": "2026-06",
+        "text": "The department's inspector general reports 1,277 firings and over $500 million in ended grants in early 2025",
+        "sources": [
+          "https://www.warren.senate.gov/news/press-releases/icymi-new-watchdog-report-reveals-trump-shut-down-130-teams-across-the-education-department-ended-500-million-in-grants-fired-over-1200-staff/"
+        ]
+      },
+      {
+        "date": "2026-06-15",
+        "text": "McMahon approves moving special education and vocational rehabilitation to HHS and civil rights enforcement to DOJ",
+        "turning_point": true,
+        "sources": [
+          "https://www.govinfo.gov/bulkdata/BILLS/119/2/hres/BILLS-119hres1391ih.xml"
+        ]
+      },
+      {
+        "date": "2026-06-25",
+        "text": "Rep. Suzanne Bonamici and 16 House Democrats introduce impeachment articles, which go to the Judiciary Committee",
+        "turning_point": true,
+        "sources": [
+          "https://www.govinfo.gov/bulkdata/BILLS/119/2/hres/BILLS-119hres1391ih.xml",
+          "https://bonamici.house.gov/media/press-releases/bonamici-introduces-resolution-impeach-education-secretary-linda-mcmahon",
+          "https://contracosta.news/2026/06/25/democrats-move-to-impeach-secretary-of-education-linda-mcmahon/amp/"
+        ]
+      },
+      {
+        "date": "2026-09",
+        "text": "Over a hundred special education staff begin reporting to an HHS building; dozens of civil rights staff move to DOJ",
+        "sources": [
+          "https://www.npr.org/2026/09/24/nx-s1-5968605/education-department-dismantling-how-its-going"
+        ]
+      }
+    ]
   },
   {
     "id": "miccosukee-tribe-everglades-veto-alligator-alcatraz-2025",
@@ -24293,7 +26797,33 @@
       },
       "reviewed": "2026-10-21"
     },
-    "status_stage": "Unchallenged"
+    "status_stage": "Unchallenged",
+    "key_events": [
+      {
+        "date": "2025-12",
+        "text": "Trump vetoes the Miccosukee flood-protection bill, saying the tribe has sought to obstruct his immigration policies",
+        "turning_point": true,
+        "sources": [
+          "https://www.whitehouse.gov/briefings-statements/2025/12/congressional-bill-h-r-504-vetoed",
+          "https://grist.org/indigenous/the-miccosukee-tribe-blocked-alligator-alcatraz-then-trump-blocked-a-bill-to-return-their-land/"
+        ]
+      },
+      {
+        "date": "2026-01-07",
+        "text": "Florida Gov. Ron DeSantis says Trump's description of the tribe in the veto message was accurate",
+        "sources": [
+          "https://www.wlrn.org/environment/2026-01-07/desantis-trump-miccosukees-veto"
+        ]
+      },
+      {
+        "date": "2026-01-08",
+        "text": "A House override vote fails 236-188, short of the two-thirds needed, so the veto stands",
+        "turning_point": true,
+        "sources": [
+          "https://floridapolitics.com/archives/772513-house-fails-to-override-donald-trumps-veto-of-protections-for-miccosukee-tribes-osceola-camp/"
+        ]
+      }
+    ]
   },
   {
     "id": "miller-fbi-counterterrorism-conference-proia-2026",
