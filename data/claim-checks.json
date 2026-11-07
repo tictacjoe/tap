@@ -2564,10 +2564,10 @@
   },
   "bondi-habba-nj-us-attorney-appointments-clause-2026": {
    "0": {
-    "state": "partly",
-    "why": "The NBC News article (June 2025) confirms Habba's indictment of Rep. McIver over the Delaney Hall confrontation, but as a June 2025 article it contains no reporting on New Jersey Globe's August 2026 appeals-court ruling on the three charges.",
+    "state": "supports",
+    "why": "The NBC article dated June 10, 2025 reports Habba said on X that a grand jury indicted McIver on three counts of forcibly impeding and interfering with federal officers, and ties the case to her interjection during Baraka's arrest at the ICE facility (photo caption dated May 9, 2025).",
     "host": "nbcnews.com",
-    "date": "2026-09-15",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    },
@@ -2589,13 +2589,21 @@
    },
    "3": {
     "state": "partly",
-    "why": "NBC News confirms the judge ruled Habba's appointment 'unlawful,' but this article does not use or cite the specific legal grounds named in the claim (the Federal Vacancies Reform Act or the Appointments Clause) -- it describes the ruling only in terms of sidestepping the Senate's role.",
+    "why": "NBC reports Judge Brann's Aug. 21, 2025 ruling that Habba's appointment was unlawful and sidestepped the Senate's role, but the provided text never names the Federal Vacancies Reform Act or the Appointments Clause as the bases of the ruling.",
     "host": "nbcnews.com",
-    "date": "2026-09-15",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    },
    "4": {
+    "state": "supports",
+    "why": "The New Jersey Globe piece reports McIver said 'absolutely' when asked whether Brann was correct, and that her motions to dismiss on political-motivation and legislative-duty grounds made no mention of Habba's legitimacy.",
+    "host": "newjerseyglobe.com",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
     "state": "partly",
     "why": "NBC News confirms the appeals court upheld the disqualification ruling and explicitly cites the FVRA violation, but this article does not state that Habba resigned as a result -- it only notes a prior August ruling and does not mention any resignation.",
     "host": "nbcnews.com",
@@ -2603,23 +2611,23 @@
     "kind": "fact",
     "archive": false
    },
-   "5": {
-    "state": "supports",
-    "why": "The source confirms, by name, that Judge Brann ruled the three-person replacement structure (Lamparello, Fox, Fontecchio) was also unconstitutionally appointed, the second such ruling.",
-    "host": "cbsnews.com",
-    "date": "2026-09-15",
-    "kind": "fact",
-    "archive": false
-   },
    "6": {
     "state": "supports",
-    "why": "AP News confirms Judge Quraishi threw a government attorney out of a hearing and ordered the three officials in charge to testify under oath, following a ruling that the replacement triumvirate structure violated the Appointments Clause.",
-    "host": "apnews.com",
-    "date": "2026-09-15",
+    "why": "CBS, dated March 9, 2026, reports Brann ruled Monday, the second time in under a year, that the Lamparello/Fox/Fontecchio replacement team was unconstitutionally appointed.",
+    "host": "cbsnews.com",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    },
    "7": {
+    "state": "partly",
+    "why": "The AP text supports the hearing events, the Appointments Clause context, the order to testify under oath, and the quote, but gives the hearing date only as 'Monday' and never states March 16, 2026.",
+    "host": "apnews.com",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": false
+   },
+   "8": {
     "state": "supports",
     "why": "New Jersey Monitor confirms the district judges appointed career prosecutor Robert Frazer as acting U.S. Attorney, ending the leadership standoff.",
     "host": "newjerseymonitor.com",
@@ -2627,11 +2635,27 @@
     "kind": "fact",
     "archive": false
    },
-   "8": {
+   "9": {
     "state": "supports",
     "why": "The article confirms Judge Brann ruled Frazer's appointment lawful on April 16, 2026, rejecting Naviwala's challenge seeking to unwind his Medicare-fraud case.",
     "host": "yahoo.com",
     "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "10": {
+    "state": "supports",
+    "why": "The News From The States republication of the New Jersey Monitor story, dated Aug 27, 2026, says a 3rd Circuit panel on Wednesday largely agreed with rejecting McIver's immunity arguments, clearing a trial on two of three counts and sending the third back for review.",
+    "host": "newsfromthestates.com",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": true
+   },
+   "11": {
+    "state": "supports",
+    "why": "JURIST names Judges Chung and Bibas as the majority, describes the vacate-and-remand of Count Three and the jurisdictional dismissal of the selective and vindictive prosecution claims, and notes Judge Ambro's partial dissent.",
+    "host": "jurist.org",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    }
@@ -6439,57 +6463,65 @@
    },
    "4": {
     "state": "partly",
-    "why": "The Boston Globe article confirms McElroy's finding that the administration's public 'abuse' framing and celebration of curtailed care tied the subpoena to a political goal, but no exact quote reading 'proven unworthy' of prosecutorial trust appears in the text.",
+    "why": "The Globe reports McElroy quashed the July 2025 subpoena and quotes her on the administration's 'abuse' framing and celebration of curtailed programs as grounds for bad faith. However, the order date is given only as 'Wednesday', and 'tied the subpoena to a political goal' is the claim's own characterization of her 'improper purpose in bad faith' finding.",
     "host": "bostonglobe.com",
-    "date": "2026-09-15",
-    "kind": "fact",
+    "date": "2026-11-07",
+    "kind": "interpretation",
     "archive": false
    },
    "5": {
     "state": "supports",
-    "why": "The Hill (AP) text states the subpoena demanded birth dates, Social Security numbers and addresses of every patient who received transgender care over five years, plus documents on adverse side effects and assessments underlying puberty-blocker or hormone prescriptions, matching the listed scope.",
+    "why": "The AP story published on The Hill lists the subpoenaed birth dates, Social Security numbers, addresses, adverse side-effect records and prescribing assessments, and quotes McElroy's 'unworthy of this trust' line verbatim.",
     "host": "thehill.com",
-    "date": "2026-09-21",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    },
    "6": {
-    "state": "supports",
-    "why": "The KFGO/Reuters article confirms the divided 9th Circuit panel (Bea and Bress majority, Paez dissent) reversed the QueerDoc bad-faith finding, quotes the 'aligns with his broader policy goals' language, and describes the remand -- matching the claim's description of this as a distinct case/circuit from the Rhode Island matter.",
-    "host": "kfgo.com",
-    "date": "2026-09-15",
+    "state": "partly",
+    "why": "The First Circuit order entered May 19, 2026 in No. 26-1568 denies the Child Advocate's motion for an injunction pending appeal for lack of irreparable harm, given in camera holding. The text says only that DOJ 'timely appealed' and does not state the May 14 appeal date or explicitly that the quash order remains in force.",
+    "host": "ca1.uscourts.gov",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    },
    "7": {
-    "state": "unopened",
-    "why": "",
-    "host": "ca1.uscourts.gov",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "Rhode Island Current reports DOJ filed notice Thursday morning appealing McElroy's Wednesday-night order, quotes her 'misrepresented and withheld information' language, and says she amended the order Thursday to add the 'seeking, receiving, using, retaining, or disseminating' bar.",
+    "host": "rhodeislandcurrent.com",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    },
    "8": {
-    "state": "not_found",
-    "why": "The claim asserts no First Circuit ruling had been identified as of 2026-08-30, but the cited source is a Rhode Island Current article dated May 14, 2026 describing only the appeal's filing -- it cannot speak to the state of the case more than three months later.",
-    "host": "rhodeislandcurrent.com",
-    "date": "2026-09-15",
+    "state": "partly",
+    "why": "The Globe supports the Friday referral over representations, review by the district's active judges, and DOJ's 'without merit' response. It does not name Lisa Hsiao, does not contain the 'clearly misleading, if not utterly false' quote, does not mention anonymization agreements with other hospitals, and gives the order date only as 'Friday'.",
+    "host": "bostonglobe.com",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    },
    "9": {
     "state": "partly",
-    "why": "The Boston Globe article confirms McElroy's June disciplinary referral of DOJ attorneys centered on Hsiao's misleading May 12 declaration and DOJ's 'without merit' pushback, but no source text supports the specific quote 'clearly misleading, if not utterly false' or the claim that DOJ concealed anonymization agreements with other hospitals.",
-    "host": "bostonglobe.com",
-    "date": "2026-09-15",
+    "why": "The Clearinghouse summary records DOJ's May 14, 2026 appeal (No. 26-1568), but the provided text is truncated and contains neither the June 5, 2026 Local Rule 210(b) text order nor the May 22, 2026 motion to expedite.",
+    "host": "clearinghouse.net",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    },
    "10": {
-    "state": "not_found",
-    "why": "The clearinghouse.net case page describes the case history through the May 2026 appeal filing and is undated in a way that would confirm the case's status specifically as of the 2026-09-02 re-verification; it is too thin/ambiguous to settle whether a ruling issued since the prior update.",
-    "host": "clearinghouse.net",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "Reuters (via KFGO), dated Aug 14, 2026, reports a divided 9th Circuit panel (Bea and Bress, with Paez dissenting) held that the Seattle judge wrongly found bad faith in QueerDoc's case. It says this was the first appeals court to uphold such a subpoena, quotes the 'President may direct DOJ' line, and reports a remand on overbreadth and burden.",
+    "host": "kfgo.com",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": false
+   },
+   "11": {
+    "state": "supports",
+    "why": "Uprise RI, dated October 11, 2026, reports the First Circuit heard the No. 26-1568 appeal on Wednesday, October 7, with the Child Advocate's lawyers urging affirmance, and that as of Friday no ruling or decision date existed.",
+    "host": "upriseri.com",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    }
@@ -15617,29 +15649,37 @@
   "private-sector-hackback-authorization-2026": {
    "0": {
     "state": "supports",
-    "why": "The New York Times (via Wayback) confirms drafts of the coming National Cybersecurity Strategy discussed expanding private companies' offensive cyber role, including hack-back authorities and a Letters-of-Marque-like mechanism, and quotes a former deputy commander of Cyber Command raising early concerns.",
+    "why": "The archived NYT article (URL dated 2026/01/14) cites four former senior officials on drafts of the National Cybersecurity Strategy that would enlist private companies in offensive cyberattacks. It notes lawmakers' 'hack back' and Letters of Marque proposals and quotes retired Lt. Gen. Moore warning of 'potential chaos'.",
     "host": "nytimes.com",
-    "date": "2026-09-15",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": true
    },
    "1": {
     "state": "supports",
-    "why": "Lawfare confirms the March 6, 2026 strategy release, both quoted phrases, and its own conclusion that the strategy stops short of explicitly authorizing private cyberattacks.",
+    "why": "Lawfare reports the March 6 strategy release and its two key positions, using the quoted incentives language, and states that the strategy stops short of explicitly authorizing private cyber operations.",
     "host": "lawfaremedia.org",
-    "date": "2026-09-15",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    },
    "2": {
-    "state": "partly",
-    "why": "TechCrunch confirms the $1 million escrow, two-month guidance deadline, DOJ/DHS sign-off requirement, and that the policy stops short of allowing \"hack back,\" but this source never mentions a \"Homeland Security Task Force National Coordination Center\" as the vetting body, so that specific structural detail is not supported here.",
-    "host": "techcrunch.com",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "The Paul, Weiss memo states the August 12, 2026 NSPM directs the National Coordination Center to create the Program, overseen by DOJ and DHS co-Executive Directors, who must set Operating Procedures by October 11, 2026.",
+    "host": "paulweiss.com",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    },
    "3": {
+    "state": "supports",
+    "why": "TechCrunch, dated August 13, 2026, reports that the memorandum permits surveillance including spyware and destructive attacks, calls it a 'seismic shift', and says it stops short of 'hack back'. It also reports the $1 million escrow, two-month guidance, and DOJ and Homeland Security sign-offs under exclusive federal supervision.",
+    "host": "techcrunch.com",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
     "state": "supports",
     "why": "TechCrunch confirms the exact quotes attributed to Jake Williams, calling the policy 'half-baked' and warning that American participants 'could easily be classified as non-uniformed combatants while traveling overseas.'",
     "host": "techcrunch.com",
