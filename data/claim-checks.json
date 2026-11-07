@@ -5508,22 +5508,46 @@
   },
   "doj-fani-willis-travel-subpoena-2025": {
    "0": {
-    "state": "partly",
-    "why": "The NYT article confirms the subpoena for Willis's travel records and that the inquiry is led by U.S. Attorney Theodore Hertzberg, but it does not state that Hertzberg is a Trump appointee.",
-    "host": "nytimes.com",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "The article, dated Feb. 2, 2024, reports Jordan subpoenaed Willis for documents on her office's receipt and use of federal funds, following allegations of misuse of Justice Department grant funding.",
+    "host": "nbcnews.com",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    },
    "1": {
-    "state": "partly",
-    "why": "The Hill reports a grand jury subpoena for Willis's travel records around the 2024 election and that the scope was unclear and it was uncertain whether she was the target. But this is a single relay of a New York Times report, not independent corroboration by Atlanta News First or Fox 5 Atlanta, which the source does not mention.",
-    "host": "thehill.com",
-    "date": "2026-09-21",
+    "state": "supports",
+    "why": "The letter is dated May 15, 2024, addressed to Willis, and states it requests information connected to an OJJDP grant and other federal grants to Fulton County; the letter text itself does not show signatories, but the claim's substance is directly supported.",
+    "host": "freebeacon.com",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    },
    "2": {
+    "state": "supports",
+    "why": "The Times text states the subpoena is a federal grand jury subpoena for Willis's travel records, seeks travel in the fall of 2024, is led by Hertzberg's office, and that scope and target status are unclear.",
+    "host": "nytimes.com",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": false
+   },
+   "3": {
+    "state": "supports",
+    "why": "The Hill article, dated 09/26/25, relays the Times' report of a federal grand jury subpoena for Willis travel records around the 2024 election and notes the scope was unclear and target status uncertain.",
+    "host": "thehill.com",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": true
+   },
+   "4": {
+    "state": "supports",
+    "why": "The Oct. 21, 2025 article, citing the New York Times, reports DOJ scrutiny of Willis's Bahamas trip after her 2024 re-election and says the inquiry is overseen by Hertzberg, a 2025 Trump appointee.",
+    "host": "blackenterprise.com",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
     "state": "supports",
     "why": "The Georgia Recorder piece situates the subpoena within the broader toll on Willis, explicitly linking congressional Republicans and DOJ scrutiny.",
     "host": "georgiarecorder.com",
@@ -5648,14 +5672,6 @@
   },
   "doj-fbi-epstein-files-delay-presentation-2026": {
    "0": {
-    "state": "partly",
-    "why": "The Hill article (via Wayback) confirms Massie's warning that the new DOJ probes could be used to withhold files under 'ongoing investigations,' but it contains no reporting from Time and no mention of Barbara McQuade or an executive-privilege mechanism.",
-    "host": "thehill.com",
-    "date": "2026-09-15",
-    "kind": "fact",
-    "archive": true
-   },
-   "1": {
     "state": "supports",
     "why": "Goldman's May 12, 2025 release states Bondi demanded the complete files within 24 hours and a comprehensive report from Patel within 14 days after the Feb. 27 release, and that 74 days later the report had not been released.",
     "host": "goldman.house.gov",
@@ -5663,71 +5679,7 @@
     "kind": "fact",
     "archive": false
    },
-   "2": {
-    "state": "supports",
-    "why": "The January 30, 2026 letter filed as ECF 50-3 and signed by Bondi and Blanche contains the quoted no-withholding statement verbatim; elsewhere it quotes the Act's 'all unclassified records...' language in footnote 1 and states more than 6 million pages were identified as potentially responsive.",
-    "host": "storage.courtlistener.com",
-    "date": "2026-11-02",
-    "kind": "fact",
-    "archive": false
-   },
-   "3": {
-    "state": "supports",
-    "why": "CNN's article matches the claim precisely, describing the 21-slide presentation and the list of 13 men including Trump, Clinton, Mountbatten-Windsor, Black, and Weinstein.",
-    "host": "cnn.com",
-    "date": "2026-09-15",
-    "kind": "fact",
-    "archive": false
-   },
-   "4": {
-    "state": "partly",
-    "why": "The headline states \"3 million documents and photos,\" broadly supporting the claim, but the captured live-blog body text elsewhere describes only \"tens of thousands of pages of material released so far,\" an internally inconsistent, smaller figure, and the claim's specific unit (\"pages\") isn't the unit used in the headline (\"documents and photos\").",
-    "host": "cbsnews.com",
-    "date": "2026-09-15",
-    "kind": "fact",
-    "archive": false
-   },
-   "5": {
-    "state": "supports",
-    "why": "The Daily Beast article published Feb 27, 2026 states DOJ offered a 'questionable explanation' for removing a Lutnick photo from its public Epstein files library; the claim's linkage to other entries is curator framing, not a factual assertion requiring source support.",
-    "host": "thedailybeast.com",
-    "date": "2026-11-02",
-    "kind": "fact",
-    "archive": false
-   },
-   "6": {
-    "state": "supports",
-    "why": "The Guardian article confirms the subpoena for Bondi's testimony and bipartisan concerns about improper redactions, noncompliance with the Transparency Act, and survivor exposure.",
-    "host": "theguardian.com",
-    "date": "2026-09-15",
-    "kind": "fact",
-    "archive": false
-   },
-   "7": {
-    "state": "supports",
-    "why": "NPR confirms Bondi's April 2, 2026 removal after a 14-month tenure, cites frustration over her handling of the Epstein files, and explicitly notes she was fired for 'not going far enough' against political opponents; Blanche is named acting AG.",
-    "host": "npr.org",
-    "date": "2026-09-15",
-    "kind": "fact",
-    "archive": false
-   },
-   "8": {
-    "state": "supports",
-    "why": "ABC News directly quotes AAG Patrick Davis's letter and the Garcia/Mace responses exactly as described in the claim.",
-    "host": "abcnews.com",
-    "date": "2026-09-15",
-    "kind": "fact",
-    "archive": false
-   },
-   "9": {
-    "state": "partly",
-    "why": "The Hill confirms the House Oversight Committee released the 111-page Bondi transcript on June 4, 2026 and that it shows her declining to answer questions and pointing at Blanche. It does not contain the May 29 date, Dhillon's executive-privilege interventions, the specific unanswered questions, or the count of more than 30 Blanche references, since the transcript itself is only linked.",
-    "host": "thehill.com",
-    "date": "2026-09-21",
-    "kind": "fact",
-    "archive": false
-   },
-   "11": {
+   "1": {
     "state": "partly",
     "why": "Fox News confirms the Bongino-Bondi clash and Bongino's Friday absence/possible resignation, but it does not report that Bondi separately accused him of leaking blame-shifting stories.",
     "host": "foxnews.com",
@@ -5735,7 +5687,23 @@
     "kind": "fact",
     "archive": false
    },
-   "12": {
+   "2": {
+    "state": "supports",
+    "why": "The CNN article, published Jul 11, 2025, reports per sources that Bongino told people he was considering resigning amid the Epstein fallout, and contains the quoted sentence verbatim.",
+    "host": "cnn.com",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": false
+   },
+   "3": {
+    "state": "supports",
+    "why": "The July 11, 2025 ABC News report says Bongino's future is uncertain after a memo stating the FBI and DOJ planned no future public disclosures, and contains the quoted criticism sentence verbatim.",
+    "host": "abc7news.com",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
     "state": "supports",
     "why": "CNN (July 14, 2025) reports Trump spent the weekend fuming over Bongino and Patel, Vance mediating with calls from Patel, Bongino and Bondi, Bongino skipping the office Friday, and his telling others he was considering resigning.",
     "host": "cnn.com",
@@ -5743,7 +5711,7 @@
     "kind": "fact",
     "archive": false
    },
-   "13": {
+   "5": {
     "state": "partly",
     "why": "NBC News confirms Durbin's letters and the whistleblower disclosure about roughly 1,000 personnel reviewing ~100,000 records to flag Trump mentions, but it does not mention journalist Allison Gill's spreadsheet corroboration or Leavitt's July 21 denial.",
     "host": "nbcnews.com",
@@ -5751,7 +5719,79 @@
     "kind": "fact",
     "archive": false
    },
+   "6": {
+    "state": "partly",
+    "why": "The Hill article (via Wayback) confirms Massie's warning that the new DOJ probes could be used to withhold files under 'ongoing investigations,' but it contains no reporting from Time and no mention of Barbara McQuade or an executive-privilege mechanism.",
+    "host": "thehill.com",
+    "date": "2026-09-15",
+    "kind": "fact",
+    "archive": true
+   },
+   "7": {
+    "state": "supports",
+    "why": "The January 30, 2026 letter filed as ECF 50-3 and signed by Bondi and Blanche contains the quoted no-withholding statement verbatim; elsewhere it quotes the Act's 'all unclassified records...' language in footnote 1 and states more than 6 million pages were identified as potentially responsive.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-11-02",
+    "kind": "fact",
+    "archive": false
+   },
+   "8": {
+    "state": "partly",
+    "why": "The headline states \"3 million documents and photos,\" broadly supporting the claim, but the captured live-blog body text elsewhere describes only \"tens of thousands of pages of material released so far,\" an internally inconsistent, smaller figure, and the claim's specific unit (\"pages\") isn't the unit used in the headline (\"documents and photos\").",
+    "host": "cbsnews.com",
+    "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "9": {
+    "state": "supports",
+    "why": "CNN's article matches the claim precisely, describing the 21-slide presentation and the list of 13 men including Trump, Clinton, Mountbatten-Windsor, Black, and Weinstein.",
+    "host": "cnn.com",
+    "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "10": {
+    "state": "supports",
+    "why": "The Daily Beast article published Feb 27, 2026 states DOJ offered a 'questionable explanation' for removing a Lutnick photo from its public Epstein files library; the claim's linkage to other entries is curator framing, not a factual assertion requiring source support.",
+    "host": "thedailybeast.com",
+    "date": "2026-11-02",
+    "kind": "fact",
+    "archive": false
+   },
+   "11": {
+    "state": "supports",
+    "why": "The Guardian article confirms the subpoena for Bondi's testimony and bipartisan concerns about improper redactions, noncompliance with the Transparency Act, and survivor exposure.",
+    "host": "theguardian.com",
+    "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "12": {
+    "state": "supports",
+    "why": "NPR confirms Bondi's April 2, 2026 removal after a 14-month tenure, cites frustration over her handling of the Epstein files, and explicitly notes she was fired for 'not going far enough' against political opponents; Blanche is named acting AG.",
+    "host": "npr.org",
+    "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "13": {
+    "state": "supports",
+    "why": "ABC News directly quotes AAG Patrick Davis's letter and the Garcia/Mace responses exactly as described in the claim.",
+    "host": "abcnews.com",
+    "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   },
    "14": {
+    "state": "partly",
+    "why": "The Hill confirms the June 4, 2026 release of the 111-page transcript, Bondi declining to answer questions, and her pointing at Todd Blanche, but says nothing about the May 29 interview date, Harmeet Dhillon's privilege invocations, the specific unanswered questions, or the 30-plus Blanche references.",
+    "host": "thehill.com",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": false
+   },
+   "16": {
     "state": "partly",
     "why": "Poland, Norway and Latvia statements match the claim closely, but for Britain the source only relays Times and Telegraph reports and notes the Crown Prosecution Service declined to comment, so British law enforcement is not shown 'saying' DOJ has not responded; the DOJ quote was given to the Telegraph last month rather than to reporters generally.",
     "host": "spokesman.com",
@@ -5759,7 +5799,7 @@
     "kind": "fact",
     "archive": false
    },
-   "15": {
+   "17": {
     "state": "supports",
     "why": "The Post article (Oct 22, 2026, via Inquirer) also reports the request for records on denied state/local requests, DOJ's confirmation of receipt and review, and Congress's requirement to release 'all unclassified files and records'.",
     "host": "inquirer.com",
@@ -5767,7 +5807,7 @@
     "kind": "fact",
     "archive": false
    },
-   "16": {
+   "18": {
     "state": "supports",
     "why": "CBS reports each element: the classified items, the NSCOU email on three documents 'identified that remain classified', Blanche's earlier statement, the page-gap calculation, the 6 million/3 million figures, DOJ's non-response, and the Lutnick photo removal and restoration.",
     "host": "cbsnews.com",
