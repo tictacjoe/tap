@@ -1719,10 +1719,10 @@
     "administration": "Trump I (2017-2021)",
     "agency": "EPA",
     "domain": "environmental",
-    "status": "Fully Repealed and replaced",
+    "status": "Clean Power Plan stays repealed: the D.C. Circuit vacated the repeal and the ACE Rule in 2021, but the Supreme Court reversed in West Virginia v. EPA (2022) and ACE came back into effect. EPA repealed ACE in 2024, and most of the 2024 standards that replaced it were repealed in 2026.",
     "date_of_action": "2019-06",
-    "original_rule_summary": "2015 Obama-era EPA rule setting the first-ever national carbon dioxide emission limits for existing power plants, aimed at cutting power-sector greenhouse gas emissions roughly 32% below 2005 levels by 2030.",
-    "what_changed": "EPA repealed the Clean Power Plan outright and replaced it with the much weaker Affordable Clean Energy Rule, which set no binding numeric emissions targets and instead directed states to require only modest efficiency upgrades ('heat rate improvements') at individual coal plants, explicitly rejecting the prior rule's system-wide approach of shifting generation toward cleaner sources. Update: EPA also rescinded the 2009 Greenhouse Gas Endangerment Finding in February 2026, targeting motor-vehicle GHG standards specifically rather than this entry's power-plant rule -- see the separately-tracked \"endangerment-finding-rescission-trump2\" entry for full detail (litigation status, EPA's cost claims, National Academies' rebuttal). Noted here only as broader legal-context for the regulatory environment this rule now sits in, not as a second rollback of the ACE Rule itself.",
+    "original_rule_summary": "2015 Obama-era EPA rule setting the first-ever national carbon dioxide emission limits for existing power plants, aimed at cutting power-sector greenhouse gas emissions roughly 32% below 2005 levels by 2030. EPA published it on October 23, 2015, and states and industry groups challenged it at once; on February 9, 2016, the Supreme Court stayed it, so it never took effect.",
+    "what_changed": "On March 28, 2017, President Trump signed an executive order directing EPA to review the Clean Power Plan; EPA proposed repealing it on October 10, 2017, and proposed the Affordable Clean Energy (ACE) Rule as its replacement on August 21, 2018. On June 19, 2019, EPA finalized both: it repealed the Clean Power Plan outright and replaced it with the much weaker ACE Rule, which set no binding numeric emissions targets and instead directed states to require only modest efficiency upgrades ('heat rate improvements') at individual coal plants, explicitly rejecting the prior rule's system-wide approach of shifting generation toward cleaner sources. Update: EPA also rescinded the 2009 Greenhouse Gas Endangerment Finding in February 2026, targeting motor-vehicle GHG standards specifically rather than this entry's power-plant rule -- see the separately-tracked \"endangerment-finding-rescission-trump2\" entry for full detail (litigation status, EPA's cost claims, National Academies' rebuttal). Noted here only as broader legal-context for the regulatory environment this rule now sits in, not as a second rollback of the ACE Rule itself. Update 2026-11-07: **On January 19, 2021, a divided D.C. Circuit panel vacated both the ACE Rule and its repeal of the Clean Power Plan**, then stayed its mandate on February 22, 2021 so the Clean Power Plan was not revived. On June 30, 2022, the Supreme Court ruled 6-3 in West Virginia v. EPA that the Clean Power Plan's generation-shifting approach exceeded EPA's authority under the Clean Air Act, reversing the D.C. Circuit's decision to vacate the repeal; on October 27, 2022, the D.C. Circuit kept the Clean Power Plan repealed and withdrew its vacatur of the ACE Rule, putting ACE back into effect. On May 9, 2024, EPA repealed the ACE Rule itself as part of the Biden administration's new carbon pollution standards for power plants. In a final rule published September 17, 2026, EPA repealed most of those 2024 standards, including all limits for existing coal-fired plants; that later rollback is tracked in the separate power plant greenhouse gas standards repeal entry.",
     "primary_proponent": {
       "name": "Andrew Wheeler",
       "role": "EPA Administrator (finalized the rule; the repeal process began under predecessor Scott Pruitt)",
@@ -1733,24 +1733,29 @@
       "Coal mining companies"
     ],
     "estimated_health_impact": {
-      "summary": "**EPA's own impact analysis found the ACE Rule replacement would result in more air pollution and premature deaths than either the Clean Power Plan or a full do-nothing baseline in some scenarios**, by allowing individual coal plants to run longer and more often even after efficiency upgrades ('the rebound effect').",
+      "summary": "**EPA's own analysis of the proposed ACE Rule projected more air pollution and up to 1,400 more premature deaths a year by 2030 than under the Clean Power Plan it replaced**, because more coal-fired plants would stay online and emit more fine particulate matter. Observers also warned that ACE's efficiency upgrades could encourage operators to run coal plants more often and for longer than under business as usual.",
       "figures": [
         {
-          "metric": "EPA's own estimate of additional premature deaths per year by 2030 under ACE vs. stronger alternatives",
+          "metric": "EPA's own estimate of additional premature deaths per year by 2030 under the proposed ACE Rule vs. the Clean Power Plan",
           "value": "up to 1,400",
-          "source": "EPA Regulatory Impact Analysis for the ACE Rule (2019)"
+          "source": "EPA regulatory impact analysis for the proposed ACE Rule (August 2018), as reported by CNN and E&E News"
+        },
+        {
+          "metric": "Amount by which ACE's costs exceed its benefits over 15 years when ozone and particulate co-benefits are not counted",
+          "value": "up to $980 million",
+          "source": "EPA regulatory impact analysis for the final ACE Rule (June 2019), as reported by E&E News"
         }
       ],
-      "caveat": "This is EPA's own regulatory impact analysis comparing ACE to alternative approaches, not an outside advocacy estimate -- a notably strong data point since the agency implementing the rollback produced the mortality estimate itself."
+      "caveat": "Both figures are EPA's own regulatory impact analyses, not outside advocacy estimates. The death estimate compares the August 2018 proposal with the Clean Power Plan; EPA's June 2019 final analysis switched to a business-as-usual baseline, which removed that comparison and which observers said hid the gap between the two rules."
     },
-    "confidence_note": "Especially strong evidence: the mortality estimate came from EPA's own regulatory impact analysis, not an opposing advocacy group. This is close to an admission-against-interest. Update: the Feb. 2026 Endangerment Finding rescission targets vehicle/mobile-source standards, not this entry's power-plant rule -- see the dedicated \"endangerment-finding-rescission-trump2\" entry, do not duplicate its detail here.",
-    "pull_quote": "EPA's own regulatory impact analysis estimated the ACE Rule replacement could cause up to 1,400 additional premature deaths per year by 2030, compared to stronger alternatives.",
+    "confidence_note": "Especially strong evidence: the mortality estimate came from EPA's own regulatory impact analysis, not an opposing advocacy group. This is close to an admission-against-interest. Update: the Feb. 2026 Endangerment Finding rescission targets vehicle/mobile-source standards, not this entry's power-plant rule -- see the dedicated \"endangerment-finding-rescission-trump2\" entry, do not duplicate its detail here. Update 2026-11-07: the 1,400 figure comes from EPA's analysis of the August 2018 proposal, measured against the Clean Power Plan; EPA's June 2019 final analysis used a business-as-usual baseline instead, so cite it as the proposal-stage estimate. The ACE Rule itself no longer stands: the D.C. Circuit vacated it in 2021 and restored it in 2022 after West Virginia v. EPA, and EPA repealed it in 2024.",
+    "pull_quote": "EPA's own analysis of the proposed ACE Rule estimated it could cause up to 1,400 more premature deaths a year by 2030 than the Clean Power Plan it replaced.",
     "section_summaries": {
-      "what_changed": "EPA scrapped binding plant-by-plant emissions targets for coal power and replaced them with a much weaker per-plant efficiency-upgrade requirement. (EPA separately rescinded the Endangerment Finding underpinning federal GHG authority in Feb. 2026 -- see the dedicated entry for that action.)",
-      "estimated_impact": "EPA's own analysis found the replacement could cause more pollution and premature deaths than the original rule, via a coal-plant 'rebound effect.'",
-      "confidence_note": "Very strong for debate -- the premature-death estimate comes from EPA's own impact analysis, close to an admission against interest."
+      "what_changed": "EPA repealed the Clean Power Plan in 2019 for a weaker coal-plant efficiency rule; the Supreme Court kept the repeal in 2022, and EPA scrapped that replacement in 2024.",
+      "estimated_impact": "EPA's own analysis of the proposed replacement projected up to 1,400 more premature deaths a year by 2030 than under the Clean Power Plan.",
+      "confidence_note": "Very strong for debate: the premature-death estimate is EPA's own analysis of the proposal, close to an admission against interest."
     },
-    "last_verified": "2026-09-06",
+    "last_verified": "2026-11-07",
     "date_added": "2026-07-03",
     "sources": [
       {
@@ -1764,10 +1769,30 @@
       {
         "name": "Federal Register — Rescission of the Greenhouse Gas Endangerment Finding and Motor Vehicle Greenhouse Gas Emission Standards Under the Clean Air Act",
         "url": "https://www.federalregister.gov/documents/2026/02/18/2026-03157/rescission-of-the-greenhouse-gas-endangerment-finding-and-motor-vehicle-greenhouse-gas-emission"
+      },
+      {
+        "name": "Environmental and Energy Law Program, Harvard -- Regulating Greenhouse Gases for New and Existing Fossil Fuel-Fired Power Plants",
+        "url": "https://eelp.law.harvard.edu/tracker/regulating-greenhouse-gases-for-new-and-existing-fossil-fuel-fired-power-plants/"
+      },
+      {
+        "name": "Federal Register -- Partial Repeal of the Carbon Pollution Standards for Fossil Fuel-Fired Electric Generating Units (Sept. 17, 2026)",
+        "url": "https://www.federalregister.gov/documents/2026/09/17/2026-19071/partial-repeal-of-the-carbon-pollution-standards-for-fossil-fuel-fired-electric-generating-units"
+      },
+      {
+        "name": "CNN -- Trump's coal emissions rollbacks will be bad for country's health, experts say (Aug. 2018)",
+        "url": "https://amp.cnn.com/cnn/2018/08/20/health/trump-coal-plant-plans-hurt-health"
+      },
+      {
+        "name": "Scientific American (reprinted from E&E News Climatewire) -- How the Numbers on the EPA's New Climate Rule Stack Up",
+        "url": "https://www.scientificamerican.com/article/how-the-numbers-on-the-epas-new-climate-rule-stack-up/"
+      },
+      {
+        "name": "Federal Register -- New Source Performance Standards for Greenhouse Gas Emissions from New, Modified, and Reconstructed Fossil Fuel-Fired EGUs; Emission Guidelines for Existing EGUs; and Repeal of the ACE Rule (May 9, 2024)",
+        "url": "https://www.federalregister.gov/documents/2024/05/09/2024-09233/new-source-performance-standards-for-greenhouse-gas-emissions-from-new-modified-and-reconstructed-fossil"
       }
     ],
     "short_summary": "Replaced binding power-plant carbon caps with a weaker efficiency-only standard.",
-    "last_substantive_update": "2026-09-06",
+    "last_substantive_update": "2026-11-07",
     "glance": {
       "who": "Andrew Wheeler (EPA)",
       "what": "Replaced binding power-plant carbon caps with a weaker efficiency-only rule",
@@ -1776,18 +1801,113 @@
         "certainty": "projected",
         "who": "People near coal power plants"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-11-07"
     },
-    "status_stage": "Unchallenged",
+    "status_stage": "Court ruled",
+    "key_events": [
+      {
+        "date": "2015-10-23",
+        "text": "EPA publishes the Clean Power Plan, the first national carbon limits for existing power plants",
+        "sources": [
+          "https://eelp.law.harvard.edu/tracker/regulating-greenhouse-gases-for-new-and-existing-fossil-fuel-fired-power-plants/"
+        ]
+      },
+      {
+        "date": "2016-02-09",
+        "text": "The Supreme Court stays the Clean Power Plan before it takes effect",
+        "sources": [
+          "https://eelp.law.harvard.edu/tracker/regulating-greenhouse-gases-for-new-and-existing-fossil-fuel-fired-power-plants/"
+        ]
+      },
+      {
+        "date": "2017-03-28",
+        "text": "Trump signs an executive order directing EPA to review the Clean Power Plan",
+        "sources": [
+          "https://en.wikipedia.org/wiki/Environmental_policy_of_the_first_Donald_Trump_administration",
+          "https://www.brookings.edu/articles/the-trump-administrations-major-environmental-deregulations/"
+        ]
+      },
+      {
+        "date": "2017-10-10",
+        "text": "EPA proposes repealing the Clean Power Plan",
+        "sources": [
+          "https://eelp.law.harvard.edu/tracker/regulating-greenhouse-gases-for-new-and-existing-fossil-fuel-fired-power-plants/"
+        ]
+      },
+      {
+        "date": "2018-08-21",
+        "text": "EPA proposes the ACE Rule; its own analysis projects up to 1,400 more deaths a year by 2030",
+        "sources": [
+          "https://eelp.law.harvard.edu/tracker/regulating-greenhouse-gases-for-new-and-existing-fossil-fuel-fired-power-plants/",
+          "https://amp.cnn.com/cnn/2018/08/20/health/trump-coal-plant-plans-hurt-health"
+        ]
+      },
+      {
+        "date": "2019-06-19",
+        "text": "EPA finalizes the Clean Power Plan repeal and the weaker ACE Rule replacing it",
+        "turning_point": true,
+        "sources": [
+          "https://eelp.law.harvard.edu/tracker/regulating-greenhouse-gases-for-new-and-existing-fossil-fuel-fired-power-plants/",
+          "https://www.scientificamerican.com/article/how-the-numbers-on-the-epas-new-climate-rule-stack-up/"
+        ]
+      },
+      {
+        "date": "2021-01-19",
+        "text": "D.C. Circuit vacates the ACE Rule and its repeal of the Clean Power Plan",
+        "turning_point": true,
+        "sources": [
+          "https://eelp.law.harvard.edu/tracker/regulating-greenhouse-gases-for-new-and-existing-fossil-fuel-fired-power-plants/",
+          "https://www.federalregister.gov/documents/2026/09/17/2026-19071/partial-repeal-of-the-carbon-pollution-standards-for-fossil-fuel-fired-electric-generating-units"
+        ]
+      },
+      {
+        "date": "2022-06-30",
+        "text": "Supreme Court rules the Clean Power Plan exceeded EPA's authority, keeping it repealed",
+        "turning_point": true,
+        "sources": [
+          "https://eelp.law.harvard.edu/tracker/regulating-greenhouse-gases-for-new-and-existing-fossil-fuel-fired-power-plants/",
+          "https://www.federalregister.gov/documents/2026/09/17/2026-19071/partial-repeal-of-the-carbon-pollution-standards-for-fossil-fuel-fired-electric-generating-units"
+        ]
+      },
+      {
+        "date": "2022-10-27",
+        "text": "D.C. Circuit keeps the Clean Power Plan repealed and puts the ACE Rule back into effect",
+        "sources": [
+          "https://www.federalregister.gov/documents/2024/05/09/2024-09233/new-source-performance-standards-for-greenhouse-gas-emissions-from-new-modified-and-reconstructed-fossil"
+        ]
+      },
+      {
+        "date": "2024-05-09",
+        "text": "EPA repeals the ACE Rule and issues new carbon standards for power plants",
+        "sources": [
+          "https://www.federalregister.gov/documents/2026/09/17/2026-19071/partial-repeal-of-the-carbon-pollution-standards-for-fossil-fuel-fired-electric-generating-units",
+          "https://eelp.law.harvard.edu/tracker/regulating-greenhouse-gases-for-new-and-existing-fossil-fuel-fired-power-plants/",
+          "https://www.federalregister.gov/documents/2024/05/09/2024-09233/new-source-performance-standards-for-greenhouse-gas-emissions-from-new-modified-and-reconstructed-fossil"
+        ]
+      },
+      {
+        "date": "2026-09-17",
+        "text": "EPA publishes its repeal of most of the 2024 standards, including all limits for existing coal plants",
+        "sources": [
+          "https://www.federalregister.gov/documents/2026/09/17/2026-19071/partial-repeal-of-the-carbon-pollution-standards-for-fossil-fuel-fired-electric-generating-units"
+        ]
+      }
+    ],
     "timeline": {
       "what_changed": {
-        "base": "EPA repealed the Clean Power Plan outright and replaced it with the much weaker Affordable Clean Energy Rule, which set no binding numeric emissions targets and instead directed states to require only modest efficiency upgrades ('heat rate improvements') at individual coal plants, explicitly rejecting the prior rule's system-wide approach of shifting generation toward cleaner sources.",
+        "base": "On March 28, 2017, President Trump signed an executive order directing EPA to review the Clean Power Plan; EPA proposed repealing it on October 10, 2017, and proposed the Affordable Clean Energy (ACE) Rule as its replacement on August 21, 2018. On June 19, 2019, EPA finalized both: it repealed the Clean Power Plan outright and replaced it with the much weaker ACE Rule, which set no binding numeric emissions targets and instead directed states to require only modest efficiency upgrades ('heat rate improvements') at individual coal plants, explicitly rejecting the prior rule's system-wide approach of shifting generation toward cleaner sources.",
         "updates": [
           {
             "date": null,
             "label": "Update",
             "text": "Update: EPA also rescinded the 2009 Greenhouse Gas Endangerment Finding in February 2026, targeting motor-vehicle GHG standards specifically rather than this entry's power-plant rule -- see the separately-tracked \"endangerment-finding-rescission-trump2\" entry for full detail (litigation status, EPA's cost claims, National Academies' rebuttal). Noted here only as broader legal-context for the regulatory environment this rule now sits in, not as a second rollback of the ACE Rule itself.",
             "effective_date": null
+          },
+          {
+            "date": "2026-11-07",
+            "label": "Update",
+            "text": "Update 2026-11-07: **On January 19, 2021, a divided D.C. Circuit panel vacated both the ACE Rule and its repeal of the Clean Power Plan**, then stayed its mandate on February 22, 2021 so the Clean Power Plan was not revived. On June 30, 2022, the Supreme Court ruled 6-3 in West Virginia v. EPA that the Clean Power Plan's generation-shifting approach exceeded EPA's authority under the Clean Air Act, reversing the D.C. Circuit's decision to vacate the repeal; on October 27, 2022, the D.C. Circuit kept the Clean Power Plan repealed and withdrew its vacatur of the ACE Rule, putting ACE back into effect. On May 9, 2024, EPA repealed the ACE Rule itself as part of the Biden administration's new carbon pollution standards for power plants. In a final rule published September 17, 2026, EPA repealed most of those 2024 standards, including all limits for existing coal-fired plants; that later rollback is tracked in the separate power plant greenhouse gas standards repeal entry.",
+            "effective_date": "2026-11-07"
           }
         ]
       },
@@ -1799,6 +1919,12 @@
             "label": "Update",
             "text": "Update: the Feb. 2026 Endangerment Finding rescission targets vehicle/mobile-source standards, not this entry's power-plant rule -- see the dedicated \"endangerment-finding-rescission-trump2\" entry, do not duplicate its detail here.",
             "effective_date": null
+          },
+          {
+            "date": "2026-11-07",
+            "label": "Update",
+            "text": "Update 2026-11-07: the 1,400 figure comes from EPA's analysis of the August 2018 proposal, measured against the Clean Power Plan; EPA's June 2019 final analysis used a business-as-usual baseline instead, so cite it as the proposal-stage estimate. The ACE Rule itself no longer stands: the D.C. Circuit vacated it in 2021 and restored it in 2022 after West Virginia v. EPA, and EPA repealed it in 2024.",
+            "effective_date": "2026-11-07"
           }
         ]
       }

@@ -1,6 +1,6 @@
 {
  "version": 1,
- "as_of": "2026-11-03",
+ "as_of": "2026-11-07",
  "checks": {
   "abrego-garcia-vindictive-prosecution-2025-2026": {
    "0": {
@@ -9201,11 +9201,11 @@
   "hegseth-harvard-military-education-cutoff-2026": {
    "0": {
     "state": "supports",
-    "why": "The source quotes Hegseth's statement verbatim, including both the \"no longer meets the needs of the War Department or the military services\" characterization and the \"heads full of globalist and radical ideologies\" description.",
+    "why": "The CBS article reports the Friday announcement and quotes Hegseth saying Harvard \"no longer meets the needs of the War Department or the military services\" and that officers came back with \"heads full of globalist and radical ideologies.\"",
     "host": "cbsnews.com",
-    "date": "2026-09-15",
+    "date": "2026-11-07",
     "kind": "fact",
-    "archive": false
+    "archive": true
    },
    "1": {
     "state": "supports",
@@ -9216,26 +9216,42 @@
     "archive": false
    },
    "2": {
-    "state": "supports",
-    "why": "Military.com confirms the Pentagon order ends funded attendance at Princeton, Columbia, MIT, Brown and Yale starting 2026-2027, and frames it within the administration's broader Harvard/funding-pressure campaign against universities.",
+    "state": "partly",
+    "why": "Military.com confirms the Feb. 27 video naming Princeton, Columbia, MIT, Brown and Yale and that it followed a Feb. 6, 2026 Pentagon release severing Harvard ties, but the article does not situate the move within a broader funding-pressure campaign against universities.",
     "host": "military.com",
-    "date": "2026-09-15",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    },
    "3": {
-    "state": "unopened",
-    "why": "",
+    "state": "supports",
+    "why": "The excerpt states the department will discontinue fellowships, certificate programs and graduate-level PME at Harvard from the 2026-27 year while letting current students finish, and the article frames this within the administration's campaign against Harvard, including the $2.2 billion research freeze a federal judge struck down in September (following the April freeze 'since last spring', i.e. 2025, per the Feb. 2026 article).",
     "host": "highereddive.com",
-    "date": "2026-09-15",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    },
    "4": {
-    "state": "not_found",
-    "why": "The source is a Feb 6, 2026 article announcing the original policy; it cannot speak to whether a legal challenge existed as of the claimed 2026-08-26 re-verification date, and it never mentions litigation over the education cutoff at all.",
+    "state": "supports",
+    "why": "CBS states personnel currently at Harvard can finish their courses and that Hegseth said other Ivy League programs would be evaluated, alleging a \"pervasive institutional bias.\"",
     "host": "cbsnews.com",
-    "date": "2026-09-15",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": true
+   },
+   "5": {
+    "state": "supports",
+    "why": "The July 23, 2026 article at the cited NOTUS URL reports UNC-Chapel Hill and Virginia Tech as the first universities selected for the reworked 10-month Senior Service College Fellowship after Hegseth cut ties with Ivy League schools, and that more universities are expected to join.",
+    "host": "notus.org",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
+    "state": "supports",
+    "why": "The Crimson reports the administration asked a skeptical three-judge First Circuit panel on Monday to toss Judge Burroughs's September 2025 ruling requiring restoration of nearly $2.7 billion in grants, showing the funding case is on appeal.",
+    "host": "thecrimson.com",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    }
@@ -20809,41 +20825,49 @@
   "trump-jfk-files-ssn-exposure-2025": {
    "0": {
     "state": "supports",
-    "why": "ABC News confirms the two named living individuals' exposed SSNs, the January 23 executive order (\"Trump signed an executive order on Jan. 23 directing the release of all remaining records\"), and the more-than-60,000-pages figure stated later in the same article.",
-    "host": "abcnews.go.com",
-    "date": "2026-09-15",
+    "why": "The Globe-carried Post report states private information of more than 200 former staffers was made public Tuesday, including more than 100 Church Committee staff, and quotes Callahan and Zaid exactly as claimed.",
+    "host": "bostonglobe.com",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    },
    "1": {
-    "state": "not_found",
-    "why": "The Washington Post source discusses the Privacy Act implications of the release generally (quoting Zaid, Morley, diGenova and Gitenstein) but never mentions Mary Ellen Callahan or an \"absolutely\" quote from her, so this specific attribution is not addressed by the text.",
-    "host": "washingtonpost.com",
-    "date": "2026-09-15",
-    "kind": "fact",
-    "archive": true
-   },
-   "2": {
     "state": "supports",
-    "why": "The source directly quotes Trump making exactly this statement to reporters.",
-    "host": "newrepublic.com",
-    "date": "2026-09-15",
+    "why": "ABC reports diGenova, 80, and Pyle, 86, had names, birth dates, birthplaces and SSNs exposed, that more than 80 of the 200-plus had 1930-1952 birth dates, and gives the Leavitt and NARA statements, the Jan. 23 executive order, Tuesday posting, and 60,000-plus pages.",
+    "host": "abcnews.go.com",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    },
+   "2": {
+    "state": "supports",
+    "why": "The Post reports the White House acknowledged the breach Thursday, NARA will scrub files and SSA will issue new numbers with credit monitoring meanwhile, over 3,500 instances and more than 400 people, the NARA statement, Trump's \"Just don't\" remark, the DOJ scramble, Zaid's quote, and diGenova hiring a law firm.",
+    "host": "washingtonpost.com",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": true
+   },
    "3": {
-    "state": "not_found",
-    "why": "The source confirms hundreds of SSNs were exposed and quotes diGenova calling the release 'absolutely outrageous... sloppy' and 'unprofessional,' but it does not mention 80+ additional individuals in their 70s-90s, an intent to sue NARA, or a 'They violated the Privacy Act' quote.",
-    "host": "forbes.com",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "TNR quotes Trump answering a reporter's question about who killed Kennedy with \"We even released Social Security numbers, I didn't want anything deleted,\" and quotes diGenova telling USA Today he intends to sue and that the Privacy Act was violated.",
+    "host": "newrepublic.com",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    },
    "4": {
-    "state": "partly",
-    "why": "This GMA/ABC source confirms the SSA/NARA screening, new-number issuance, and credit-monitoring response, but it does not state the \"roughly 3,500 instances\" figure (attributed to a different, WaPo, article) and, being from March 2025, cannot address the 2026-08-19 re-verification finding about a lawsuit or IG investigation.",
+    "state": "supports",
+    "why": "Forbes, citing the Post, reports hundreds of staffers' SSNs were revealed in records previously released with redactions, cites ABC on the NSD's overnight hasty review, and quotes diGenova's \"absolutely outrageous . . . sloppy\" and \"unprofessional.\"",
+    "host": "forbes.com",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": true
+   },
+   "5": {
+    "state": "supports",
+    "why": "The GMA copy states those whose SSNs were released will be given new ones, a process that could take time as NARA finds all victims, with SSA offering credit monitoring meanwhile.",
     "host": "goodmorningamerica.com",
-    "date": "2026-09-15",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    }
