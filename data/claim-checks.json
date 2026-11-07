@@ -594,6 +594,22 @@
     "date": "2026-11-02",
     "kind": "fact",
     "archive": false
+   },
+   "38": {
+    "state": "supports",
+    "why": "The AP text states Quinones' resignation followed Washington officials' frustrations with his management of the office leading the 'grand conspiracy' probe, that grand jury testimony of several witnesses was put off, and that diGenova resigned in September without bringing charges, matching every element of the claim.",
+    "host": "bostonglobe.com",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": false
+   },
+   "39": {
+    "state": "supports",
+    "why": "The ABC article says Blanche announced the resignation, that Reding Quinones is the latest of several Trump-allied attorneys to step away from the probe, that it has led to no criminal indictments, and that his departure was seen as a foregone conclusion after leadership admonished him for lack of progress.",
+    "host": "abcnews.com",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": false
    }
   },
   "blanche-campaign-events-hatch-act-2026": {
@@ -937,13 +953,21 @@
    },
    "4": {
     "state": "supports",
+    "why": "The Fox article reports DOJ charges against 16 people and quotes DHS Secretary Mullin's 300,000 / 1,620 / 151 figures verbatim, identifying them as coming from DHS in a separate interview, distinct from DOJ's charge announcement.",
+    "host": "foxnews.com",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "supports",
     "why": "The Spectrum News article of September 30, 2026 reports Blanche saying DOJ has charged over 90 people with voter-related fraud offenses in Trump's second term and that hundreds of investigations are ongoing.",
     "host": "spectrumlocalnews.com",
     "date": "2026-10-11",
     "kind": "fact",
     "archive": false
    },
-   "5": {
+   "6": {
     "state": "partly",
     "why": "The excerpt confirms the 64 foreign nationals / 17 states / roughly five weeks figures provided to Fox News Digital, and the article separately states DOJ has charged 104 people since Trump returned to office. However, the provided text carries no publication date (October 11, 2026 is unverified) and is truncated, so the claim that the article gives no figure for ongoing investigations cannot be fully checked.",
     "host": "foxnews.com",
@@ -951,7 +975,15 @@
     "kind": "fact",
     "archive": false
    },
-   "6": {
+   "7": {
+    "state": "supports",
+    "why": "Newsweek quotes Dhillon telling 60 Minutes 'There are literally thousands of them out there that we are looking at,' and reports DOJ declined to comment on ongoing investigations while giving the 112-in-seven-weeks and 155-since-inauguration charge figures; the 10/19 update note matches the claimed dating.",
+    "host": "newsweek.com",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": false
+   },
+   "8": {
     "state": "supports",
     "why": "The DOJ release states 11 were arrested among 28 charged LPRs in Operation Protect the Vote, a coordinated effort of all four California U.S. Attorney's Offices, with charges of false statements in naturalization applications and, for some, fraudulent voter registration.",
     "host": "justice.gov",
@@ -959,7 +991,7 @@
     "kind": "fact",
     "archive": false
    },
-   "7": {
+   "9": {
     "state": "supports",
     "why": "The AP report states DOJ said it charged 113 people in 20 states over the last several weeks and earlier said about 90 were charged this year; both figures are counts of people charged.",
     "host": "abc7news.com",
@@ -967,11 +999,19 @@
     "kind": "fact",
     "archive": false
    },
-   "8": {
+   "10": {
     "state": "supports",
-    "why": "The source states the administration issued more than 100 subpoenas on tens of thousands of voters in at least 13 states, that at least 49 were grand-jury subpoenas indicating ties to criminal investigations, that at least 17 went to California governments, and that DOJ declined to confirm or deny its use of subpoenas; every figure in the claim matches.",
+    "why": "The Reuters copy reports more than 100 subpoenas in at least 13 states, at least 49 under grand jury authority indicating criminal investigations, at least 17 to California governments, DOJ declining to confirm or deny, and at least 147 people accused under the 'voting by aliens' statute including 102 since September.",
     "host": "kfgo.com",
-    "date": "2026-10-30",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": false
+   },
+   "11": {
+    "state": "supports",
+    "why": "Newsweek reports the 63-person announcement the day before the midterms, the 195-noncitizens/25-states/nine-weeks and 239-since-inauguration figures, and quotes Blanche's 'largest surge' and 'will continue investigating and prosecuting voter fraud' lines; no investigation count is given.",
+    "host": "newsweek.com",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    }
@@ -3848,18 +3888,18 @@
   },
   "comer-epstein-probe-selective-subpoenas-2025-2026": {
    "0": {
-    "state": "partly",
-    "why": "The source confirms the subcommittee vote to subpoena DOJ and Comer's subpoena of Maxwell, but it dates these events to Wednesday, July 23, 2025 (the article's own publication/update date), not July 25, 2025 as the claim states.",
+    "state": "supports",
+    "why": "The archived Washington Post text says an Oversight subcommittee voted Wednesday (July 23, 2025) to subpoena DOJ for the Epstein files and that Comer earlier that day issued a subpoena for Maxwell's testimony.",
     "host": "washingtonpost.com",
-    "date": "2026-09-15",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": true
    },
    "1": {
     "state": "supports",
-    "why": "The source lists exactly the ten named individuals plus the DOJ subpoena for Epstein-related files/depositions, matching the claim precisely.",
+    "why": "CNN (Aug. 5, 2025) reports the subpoena to DOJ for Epstein files and lists exactly the ten former officials named in the claim for depositions.",
     "host": "cnn.com",
-    "date": "2026-09-15",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    },
@@ -3880,6 +3920,14 @@
     "archive": false
    },
    "4": {
+    "state": "supports",
+    "why": "The Hill quotes Comer on Newsmax calling Clinton 'a prime suspect to be deposed' citing reports of frequent island visits, notes repercussions would come from AG Pam Bondi, and quotes Comer's 'with a Republican attorney general' contempt warning.",
+    "host": "thehill.com",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": true
+   },
+   "5": {
     "state": "unopened",
     "why": "",
     "host": "bloomberg.com",
@@ -3887,7 +3935,7 @@
     "kind": "fact",
     "archive": false
    },
-   "5": {
+   "6": {
     "state": "supports",
     "why": "The Hill reports Comer agreed to delay Maxwell's deposition until after the Supreme Court acts on her petition, while declining her requests for immunity and advance questions. His letter says the committee is willing to delay the deposition 'until a date following the Court's certiorari determination', so the subpoena remains in place for a later date.",
     "host": "thehill.com",
@@ -3895,15 +3943,23 @@
     "kind": "fact",
     "archive": false
    },
-   "6": {
-    "state": "partly",
-    "why": "The Hill quotes Comer citing reports that Clinton was a frequent visitor to the island and calling him 'a prime suspect to be deposed', and quotes him on contempt of Congress with a Republican attorney general. The quote is about who should be deposed, not a suspect in wrongdoing, and the contempt remark is a general observation about noncompliance rather than a specific warning aimed at the Clintons.",
-    "host": "thehill.com",
-    "date": "2026-09-21",
+   "7": {
+    "state": "supports",
+    "why": "The source reports Acosta testified before the House Oversight Committee on Sept. 19, 2025 at a closed-door deposition, under oath and transcribed, and quotes Chairman Comer saying he \"cooperated.\"",
+    "host": "goodmorningamerica.com",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    },
-   "7": {
+   "8": {
+    "state": "supports",
+    "why": "The Washington Examiner text states verbatim that Acosta's appearance marked a rare voluntary interview because most witnesses had appeared under subpoena.",
+    "host": "washingtonexaminer.com",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": false
+   },
+   "9": {
     "state": "unopened",
     "why": "",
     "host": "pbs.org",
@@ -3911,11 +3967,51 @@
     "kind": "fact",
     "archive": false
    },
-   "8": {
+   "10": {
     "state": "supports",
     "why": "ABC reports the Clintons will sit for depositions on Feb. 26 and 27, 2026, after the Oversight Committee advanced contempt resolutions the prior month, and that both deny any knowledge of Epstein's crimes.",
     "host": "abcnews.com",
     "date": "2026-09-21",
+    "kind": "fact",
+    "archive": false
+   },
+   "11": {
+    "state": "supports",
+    "why": "Axios (Feb. 9, 2026) reports Maxwell declined to answer questions at a closed-door virtual deposition and Comer said she invoked her Fifth Amendment right.",
+    "host": "axios.com",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": true
+   },
+   "12": {
+    "state": "supports",
+    "why": "Deseret News reports Hillary Clinton's six-hour deposition Thursday Feb. 26 at the Chappaqua Performing Arts Center, quotes her saying she never met Epstein, and says Bill Clinton testified Friday Feb. 27.",
+    "host": "deseret.com",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": false
+   },
+   "13": {
+    "state": "supports",
+    "why": "The Guardian reports Comer's subpoena to AG Bondi for an April 14 deposition on DOJ's Epstein-files handling, following a March 4 vote in which five Republicans joined Democrats on Nancy Mace's motion.",
+    "host": "theguardian.com",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": false
+   },
+   "14": {
+    "state": "supports",
+    "why": "The Hill (06/04/26) states verbatim that Bondi, though subpoenaed, sat for a transcribed interview not video recorded after an arrangement with Comer, and that the committee released the transcript Thursday.",
+    "host": "thehill.com",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": false
+   },
+   "15": {
+    "state": "supports",
+    "why": "The AFP/SCMP text reports the House held Leon Black in contempt Wednesday by unanimous consent for defying Epstein-probe subpoenas, a day after the Oversight Committee unanimously recommended it.",
+    "host": "scmp.com",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    }
@@ -4913,9 +5009,9 @@
    },
    "3": {
     "state": "partly",
-    "why": "The docket header confirms the filing date, Judge Gleason, and 'Civil Rights: Voting', and visible entries confirm Docs. 19, 63, 64, 66, 67, 69, 74 and the Nov. 1 Doc. 79 order granting the motions at 55, 57 and 60, dismissing without prejudice and denying 58, 66, 70 and 78 as moot. However, the extracted docket text is truncated, so several listed items (e.g., the Oct. 27 opposition to intervention, the partial withdrawal notice, Doc. 70's filing, and the Oct. 31 replies at Docs. 75-77) are not visible, and Doc. 79 refers to the amended complaint as Docket [44] rather than 43.",
+    "why": "The extracted docket confirms the filing date, Judge Gleason, the 'Civil Rights: Voting' nature of suit, termination Nov. 1, Docs. 19, 63, 64, 67, 69, 79 (granting Docs. 55/57/60 and denying 58, 66, 70, 78 as moot), 87 and 88 with the 12/14/2026 and 1/11/2027 brief dates; but the text is truncated in many places, so several listed entries (Oct. 23-25 intervention filings, partial withdrawal of opposition, Docs. 72-77, 'without prejudice', and the Nov. 3-4 'moot as this case is closed' text orders) cannot be seen.",
     "host": "courtlistener.com",
-    "date": "2026-11-01",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    },
@@ -5124,6 +5220,30 @@
     "why": "NBC News (Nov 1, updated Nov 2) reports the dismissal, the appeal and the spokesperson statement containing the quoted 'procedural grounds ... Decoy Dan ... DOJ plans to file a notice of appeal' language.",
     "host": "nbcnews.com",
     "date": "2026-11-02",
+    "kind": "fact",
+    "archive": false
+   },
+   "30": {
+    "state": "supports",
+    "why": "The ABC/GMA article contains each quoted element: the 100+ subpoenas and 20+ target letters, recipients including Elias and his 'sham investigation' statement, the target-letter caveat, the Alaska grand jury probing conspiracy and donor fraud, and Blanche's Fox News remarks about Sullivan and preserving ballots.",
+    "host": "goodmorningamerica.com",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": false
+   },
+   "31": {
+    "state": "supports",
+    "why": "The Alaska Beacon text states the 626-vote margin out of 213,873, Dan J. Sullivan's 1.7% / 3,583 votes, DOJ escalating the criminal investigation with subpoenas on Election Day, and Trump telling the Times he would not challenge the results.",
+    "host": "alaskabeacon.com",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": false
+   },
+   "32": {
+    "state": "supports",
+    "why": "ADN reports Peltola's 637-vote lead with more than 215,000 ballots counted, tens of thousands still to count, Nov. 18 tabulation and Nov. 25 certification, and separately that the 9th Circuit is not expected to have briefings until Jan. 11.",
+    "host": "adn.com",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    }
@@ -5536,10 +5656,10 @@
     "archive": true
    },
    "1": {
-    "state": "partly",
-    "why": "The Goldman press release confirms the February 27, 2025 partial release, Bondi's 24-hour FBI demand and 14-day Patel deadline, and that 74 days had passed; but this May 2025 letter predates and makes no mention of the Epstein Files Transparency Act or its December 19, 2025 deadline, which the claim also attributes to 'reporting.'",
+    "state": "supports",
+    "why": "Goldman's May 12, 2025 release states Bondi demanded the complete files within 24 hours and a comprehensive report from Patel within 14 days after the Feb. 27 release, and that 74 days later the report had not been released.",
     "host": "goldman.house.gov",
-    "date": "2026-09-15",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    },
@@ -5616,6 +5736,14 @@
     "archive": false
    },
    "12": {
+    "state": "supports",
+    "why": "CNN (July 14, 2025) reports Trump spent the weekend fuming over Bongino and Patel, Vance mediating with calls from Patel, Bongino and Bondi, Bongino skipping the office Friday, and his telling others he was considering resigning.",
+    "host": "cnn.com",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": false
+   },
+   "13": {
     "state": "partly",
     "why": "NBC News confirms Durbin's letters and the whistleblower disclosure about roughly 1,000 personnel reviewing ~100,000 records to flag Trump mentions, but it does not mention journalist Allison Gill's spreadsheet corroboration or Leavitt's July 21 denial.",
     "host": "nbcnews.com",
@@ -5623,7 +5751,7 @@
     "kind": "fact",
     "archive": false
    },
-   "13": {
+   "14": {
     "state": "partly",
     "why": "Poland, Norway and Latvia statements match the claim closely, but for Britain the source only relays Times and Telegraph reports and notes the Crown Prosecution Service declined to comment, so British law enforcement is not shown 'saying' DOJ has not responded; the DOJ quote was given to the Telegraph last month rather than to reporters generally.",
     "host": "spokesman.com",
@@ -5631,7 +5759,7 @@
     "kind": "fact",
     "archive": false
    },
-   "14": {
+   "15": {
     "state": "supports",
     "why": "The Post article (Oct 22, 2026, via Inquirer) also reports the request for records on denied state/local requests, DOJ's confirmation of receipt and review, and Congress's requirement to release 'all unclassified files and records'.",
     "host": "inquirer.com",
@@ -5639,7 +5767,7 @@
     "kind": "fact",
     "archive": false
    },
-   "15": {
+   "16": {
     "state": "supports",
     "why": "CBS reports each element: the classified items, the NSCOU email on three documents 'identified that remain classified', Blanche's earlier statement, the page-gap calculation, the 6 million/3 million figures, DOJ's non-response, and the Lutnick photo removal and restoration.",
     "host": "cbsnews.com",
@@ -17305,9 +17433,25 @@
    },
    "24": {
     "state": "supports",
+    "why": "The Spokesman-Recorder reports Brenner's Oct. 20 testimony that Midwest Transfer funds Operation Keyhole operations but not Puppet Master or Whipple Shield, and that AUSA Sailer answered no when asked whether the government had evidence Deates committed a crime.",
+    "host": "spokesman-recorder.com",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": false
+   },
+   "25": {
+    "state": "supports",
     "why": "Docket entry 308, dated Oct 22, 2026, lists a superseding indictment charging all 15 defendants on count 1s, with Sant also on 4s and 5s, Wagner on 2s and 3s, Morgan on 6s and 7s, and Rakotz on 8s, exactly as the claim states.",
     "host": "courtlistener.com",
     "date": "2026-10-26",
+    "kind": "fact",
+    "archive": false
+   },
+   "26": {
+    "state": "supports",
+    "why": "The WIRED text, drawn from discovery records, states that 119 HSI agents worked the case, at least 11 Keyhole undercovers infiltrated trainings, marches, general strikes, community meetings and Signal chats, CBP Reaper drone footage exists, 314(a) queries targeted 29 subjects on March 31, 2026, and Keyhole funded six investigations including Project Whipple Shield as of its June 2026 renewal (the publication date itself is not in the extracted text).",
+    "host": "wired.com",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    }
@@ -22071,17 +22215,17 @@
   "trump-santos-commutation-2025": {
    "0": {
     "state": "partly",
-    "why": "CBS confirms the 87-month sentence and the $373,949.97 in fines/restitution, and that he pleaded guilty to wire fraud and identity theft, but this article does not state a specific count of 23 federal counts.",
+    "why": "The archived CBS text confirms the April 87-month sentence, the $373,949.97 in fines and restitution, and the guilty plea to wire fraud and identity theft, but contains nothing saying Santos will no longer have to pay restitution.",
     "host": "cbsnews.com",
-    "date": "2026-09-15",
+    "date": "2026-11-07",
     "kind": "fact",
-    "archive": false
+    "archive": true
    },
    "1": {
-    "state": "partly",
-    "why": "Malay Mail confirms Trump's exact quote praising Santos for having \"ALWAYS VOTE[D] REPUBLICAN,\" but this article contains no mention of Rep. Marjorie Taylor Greene, her August 2025 clemency letter, or any statement by her thanking Trump.",
+    "state": "supports",
+    "why": "The AFP/Malay Mail text quotes Trump's Friday Truth Social post about solitary confinement 'for long stretches of time,' being 'horribly mistreated,' and having the 'Courage, Conviction and Intelligence to ALWAYS VOTE REPUBLICAN.'",
     "host": "malaymail.com",
-    "date": "2026-09-15",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    },
@@ -22094,10 +22238,34 @@
     "archive": false
    },
    "3": {
+    "state": "supports",
+    "why": "The DOJ clemency list records an October 17, 2025 commutation for George Anthony Devolder Santos (Eastern New York) with the stated sentence, date and offenses exactly as claimed.",
+    "host": "justice.gov",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "supports",
+    "why": "CNN reports Murray said Greene 'fought like a lion,' that Greene, who wrote Trump in August asking for a commutation, thanked him saying Santos 'was unfairly treated and put in solitary confinement,' and Jeffries' 'serial fraudster' / 'Republican healthcare crisis' statement.",
+    "host": "cnn.com",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
     "state": "partly",
     "why": "CNN confirms Santos's own comparison of criticism of his commutation to hypothetical criticism of a pardon of \"Jesus Christ off the cross,\" but this source (largely a video-page listing) contains no content about Hakeem Jeffries's criticism contrasting the commutation's speed with other priorities.",
     "host": "cnn.com",
     "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
+    "state": "supports",
+    "why": "The Hill article (syndicated via AOL, Oct. 20, 2025) quotes the clemency order language verbatim and states Santos will not be required to pay further fines or restitution, having been ordered to pay more than $370,000.",
+    "host": "aol.com",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    }
@@ -22935,13 +23103,29 @@
   "vance-fight-back-employer-pressure-2025-09": {
    "0": {
     "state": "supports",
-    "why": "The article directly quotes Vance saying 'Call them out, and hell, call their employer' in the context of urging consequences for people who commented on Kirk's death.",
+    "why": "Atlanta Black Star states that five days after the assassination Vance guest-hosted Kirk's podcast, urged listeners to identify people celebrating the death, and said 'Call them out, and hell, call their employer.'",
     "host": "atlantablackstar.com",
-    "date": "2026-09-15",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    },
    "1": {
+    "state": "supports",
+    "why": "Forbes (May 26, 2026) reports more than $2.2 million in settlements and lists Bushart ($835,000, felony charge, over a month in jail), Brown ($485,000), Swierc ($225,000) and the re-hired Austin Peay professor ($500,000).",
+    "host": "forbes.com",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": false
+   },
+   "2": {
+    "state": "supports",
+    "why": "The June 2026 article says FIRE is aware of 14 federal First Amendment lawsuits, reports Austin Peay reinstating Darren Michael with $500,000, and says the News Guild and Democracy Defenders Fund are proceeding to arbitration over Attiah's firing.",
+    "host": "atlantablackstar.com",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": false
+   },
+   "3": {
     "state": "supports",
     "why": "The article states exactly the '50 education-sector employees' and 'roughly 600 workers across the private sector' figures attributed to a Reuters investigation.",
     "host": "atlantablackstar.com",
@@ -22949,43 +23133,43 @@
     "kind": "fact",
     "archive": false
    },
-   "2": {
-    "state": "supports",
-    "why": "Aaron Terr of FIRE is quoted making exactly this point, that the Kirk aftermath stood apart because government officials were often involved in the disciplinary actions.",
-    "host": "atlantablackstar.com",
-    "date": "2026-09-15",
-    "kind": "fact",
-    "archive": false
-   },
-   "3": {
-    "state": "supports",
-    "why": "The article documents the Karen Attiah/Washington Post arbitration proceeding via the Washington-Baltimore News Guild and Democracy Defenders Fund, plus multiple settlement figures, consistent with 'multiple lawsuits and at least one ongoing arbitration' and accumulating settlements.",
-    "host": "atlantablackstar.com",
-    "date": "2026-09-15",
-    "kind": "fact",
-    "archive": false
-   },
    "4": {
-    "state": "partly",
-    "why": "The source confirms the Bushart ($835,000), Austin Peay ($500,000 plus reinstatement), Florida FWC/Brown ($485,000), and Ball State/Swierc ($225,000) settlement figures, but it does not name the Austin Peay professor as Darren Michael or give a specific count of 14 FIRE-tracked federal lawsuits.",
-    "host": "forbes.com",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "The article identifies Terr as FIRE's director of public advocacy and states he argued the Kirk aftermath stood apart because government officials were often involved in disciplinary actions.",
+    "host": "atlantablackstar.com",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    },
    "5": {
-    "state": "partly",
-    "why": "The article confirms the core facts -- the $1.9 million University of Tennessee at Knoxville settlement with Tamar Shirinian in July 2026 over Kirk-related Facebook comments -- but does not itself compare this settlement's size to the Bushart settlement or otherwise state it is the largest documented settlement in the pattern.",
+    "state": "supports",
+    "why": "End Time Headlines (Jul 2, 2026), citing the NYT, reports UT Knoxville's $1.9 million settlement with former anthropology professor Tamar Shirinian, dismissed over a private Facebook post denigrating Kirk.",
     "host": "endtimeheadlines.org",
-    "date": "2026-09-15",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    },
    "6": {
-    "state": "not_found",
-    "why": "The source text is an ACLU of Florida release about a wholly different case (Brittney Brown, a Florida Fish and Wildlife Conservation Commission biologist, in Brown v. Young) and does not mention the claimed case involving 'Erika Santos,' a Florida college grant accountant, or the quoted court language about 'fair warning.'",
+    "state": "supports",
+    "why": "The ACLU of Florida release (Aug. 10, 2026) reports the judge rejected the EFSC supervisor's dismissal attempt in Santos's suit, describes the anonymous letter with Facebook screenshots, and quotes the 'fair warning' language verbatim.",
     "host": "aclufl.org",
-    "date": "2026-09-15",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": false
+   },
+   "7": {
+    "state": "supports",
+    "why": "The National News Desk (Aug. 24, 2026) reports arbitrator Sarah Miller Espinosa ordered the Post to rehire Attiah with back pay, finding it 'did not have good and sufficient cause' to fire her over posts after Kirk's assassination.",
+    "host": "wjla.com",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": false
+   },
+   "8": {
+    "state": "supports",
+    "why": "The ACLU of Florida release dated October 23, 2026 announces the Santos v. Howse settlement and states the defendants will pay Santos $250,000, inclusive of damages, costs, and attorney's fees.",
+    "host": "aclufl.org",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    }
