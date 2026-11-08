@@ -8110,10 +8110,10 @@
     "administration": "Trump I (2017-2021)",
     "agency": "FCC",
     "domain": "consumer_safety",
-    "status": "Fully Repealed",
+    "status": "Fully Repealed -- the D.C. Circuit largely upheld the repeal in Mozilla v. FCC (Oct. 1, 2019). The FCC restored net neutrality in April 2024, but the Sixth Circuit set that order aside on Jan. 2, 2025, and no Supreme Court review was sought, so the 2017 repeal stands.",
     "date_of_action": "2017-12-14",
     "original_rule_summary": "2015 FCC Open Internet Order reclassified broadband internet access as a Title II common-carrier telecommunications service, banning internet service providers from blocking, throttling, or paid-prioritizing web traffic based on source, destination, or content.",
-    "what_changed": "The FCC voted 3-2 along party lines to reclassify broadband back to a lightly-regulated Title I 'information service,' **eliminating the common-carrier blocking/throttling/prioritization bans**. ISPs remain subject only to a transparency (disclosure) requirement.",
+    "what_changed": "The FCC voted 3-2 along party lines to reclassify broadband back to a lightly-regulated Title I 'information service,' **eliminating the common-carrier blocking/throttling/prioritization bans**. ISPs remain subject only to a transparency (disclosure) requirement.\n\nUpdate 2026-11-07: On October 1, 2019, the D.C. Circuit **upheld the repeal order's reclassification of broadband** in Mozilla Corp. v. FCC, with two exceptions: it vacated the order's directive barring states from imposing their own net neutrality rules, and it sent three issues (public safety, pole attachments and the Lifeline program) back to the FCC. In April 2024 the FCC, under the Biden administration, again classified broadband as a Title II telecommunications service and reinstated the net neutrality rules. Industry groups sued, and the Sixth Circuit stayed the 2024 order on August 1, 2024. On January 2, 2025, in Ohio Telecom Ass'n v. FCC, the Sixth Circuit set the 2024 order aside, holding that broadband providers offer only an 'information service' and that the FCC lacks authority to impose net neutrality rules under Title II. It denied rehearing on March 11, 2025. On August 8, 2025, the public interest groups that had defended the 2024 order (the Benton Institute, Free Press, New America's Open Technology Institute and Public Knowledge) said they would not seek Supreme Court review, and the filing deadline passed that day. The 2017 repeal's light-touch classification remains in force.",
     "primary_proponent": {
       "name": "Ajit Pai",
       "role": "FCC Chairman",
@@ -8127,13 +8127,13 @@
       "figures": [],
       "caveat": "This is fundamentally a digital-access/market-structure issue, not a health rollback in the sense of the environmental or labor entries in this tracker -- use the telehealth-throttling angle cautiously as a theoretical risk, not a documented realized harm."
     },
-    "confidence_note": "Very well-documented, uncontroversial factually (clear vote, clear date, clear named proponent). Weakest entry in the tracker for a health-impact argument specifically -- best used for a consumer/market-access argument, not paired with the health-focused entries. Update: 2026-09-06 recheck sweep surfaced a January 2, 2025 Sixth Circuit ruling striking down the FCC's 2024 'Safeguarding Order' net-neutrality reinstatement attempt -- verified real, but predates this entry's prior verification and doesn't change current framing; not incorporated as a new development.",
+    "confidence_note": "Very well-documented, uncontroversial factually (clear vote, clear date, clear named proponent). Weakest entry in the tracker for a health-impact argument specifically -- best used for a consumer/market-access argument, not paired with the health-focused entries. The repeal has also held up in court: the D.C. Circuit largely upheld it in 2019, and the Sixth Circuit's January 2, 2025 ruling striking down the FCC's 2024 reinstatement order left it in place.",
     "section_summaries": {
-      "what_changed": "FCC voted 3-2 to reclassify broadband as lightly regulated, dropping bans on blocking, throttling, and paid prioritization by ISPs.",
+      "what_changed": "FCC voted 3-2 to drop ISP bans on blocking, throttling and paid priority; a court upheld it in 2019, and a 2024 attempt to restore the rules was struck down in 2025.",
       "estimated_impact": "Little direct physical health impact; the main health-adjacent worry is theoretical throttling of telehealth traffic, not a documented real harm.",
-      "confidence_note": "Well-documented and uncontroversial factually, but the weakest entry here for a health argument -- better used for a consumer/market-access angle."
+      "confidence_note": "Well-documented, uncontroversial and upheld in court, but the weakest entry here for a health argument -- better used for a consumer/market-access angle."
     },
-    "last_verified": "2026-09-06",
+    "last_verified": "2026-11-07",
     "date_added": "2026-07-03",
     "sources": [
       {
@@ -8143,10 +8143,30 @@
       {
         "name": "FCC — Remarks of Chairman Ajit Pai on Restoring Internet Freedom",
         "url": "https://docs.fcc.gov/public/attachments/DOC-347980A1.pdf"
+      },
+      {
+        "name": "D.C. Circuit — Mozilla Corp. v. FCC opinion (Oct. 1, 2019)",
+        "url": "https://media.cadc.uscourts.gov/opinions/docs/2019/10/18-1051-1808766.pdf"
+      },
+      {
+        "name": "Sixth Circuit — Ohio Telecom Ass'n v. FCC opinion (Jan. 2, 2025)",
+        "url": "https://www.opn.ca6.uscourts.gov/opinions.pdf/25a0002p-06.pdf"
+      },
+      {
+        "name": "Broadband Breakfast — Sixth Circuit Denies Rehearing in Net Neutrality Challenge",
+        "url": "https://broadbandbreakfast.com/sixth-circuit-denies-rehearing-in-net-neutrality-challenge/"
+      },
+      {
+        "name": "New America — Public Interest Groups Decline to Seek Supreme Court Review of FCC Open Internet Rules",
+        "url": "https://www.newamerica.org/insights/public-interest-groups-decline-to-seek-supreme-court-review-of-fcc-open-internet-rules/"
+      },
+      {
+        "name": "Broadband Breakfast — Public Interest Groups Won't Take Net Neutrality Case to Supreme Court Now",
+        "url": "https://broadbandbreakfast.com/public-interest-groups-wont-take-net-neutrality-case-to-supreme-court/"
       }
     ],
-    "short_summary": "Let ISPs block, throttle, or prioritize internet traffic without restriction.",
-    "last_substantive_update": "2026-09-06",
+    "short_summary": "Let ISPs block, throttle, or prioritize internet traffic with no federal ban.",
+    "last_substantive_update": "2026-11-07",
     "glance": {
       "who": "Ajit Pai (FCC Chairman)",
       "what": "Repealed net neutrality: ISPs may now block, throttle or charge for priority traffic",
@@ -8155,9 +8175,9 @@
         "certainty": "documented",
         "who": "Limits on ISP blocking and throttling"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-11-07"
     },
-    "status_stage": "Unchallenged",
+    "status_stage": "Court ruled",
     "key_events": [
       {
         "date": "2015",
@@ -8174,17 +8194,48 @@
           "https://www.npr.org/sections/thetwo-way/2017/12/14/570526390/fcc-repeals-net-neutrality-rules-for-internet-providers",
           "https://docs.fcc.gov/public/attachments/DOC-347980A1.pdf"
         ]
+      },
+      {
+        "date": "2019-10-01",
+        "text": "D.C. Circuit upholds the repeal in Mozilla v. FCC but strikes its bar on state net neutrality rules",
+        "sources": [
+          "https://media.cadc.uscourts.gov/opinions/docs/2019/10/18-1051-1808766.pdf"
+        ]
+      },
+      {
+        "date": "2024-04",
+        "text": "FCC reclassifies broadband under Title II again and reinstates the net neutrality rules",
+        "sources": [
+          "https://www.newamerica.org/insights/public-interest-groups-decline-to-seek-supreme-court-review-of-fcc-open-internet-rules/",
+          "https://www.opn.ca6.uscourts.gov/opinions.pdf/25a0002p-06.pdf"
+        ]
+      },
+      {
+        "date": "2025-01-02",
+        "text": "Sixth Circuit sets aside the 2024 order, ruling broadband is only an information service",
+        "turning_point": true,
+        "sources": [
+          "https://www.opn.ca6.uscourts.gov/opinions.pdf/25a0002p-06.pdf"
+        ]
+      },
+      {
+        "date": "2025-08-08",
+        "text": "Groups that defended the 2024 rules decline to seek Supreme Court review, leaving the repeal in force",
+        "sources": [
+          "https://www.newamerica.org/insights/public-interest-groups-decline-to-seek-supreme-court-review-of-fcc-open-internet-rules/",
+          "https://broadbandbreakfast.com/public-interest-groups-wont-take-net-neutrality-case-to-supreme-court/"
+        ]
       }
     ],
     "timeline": {
-      "confidence_note": {
-        "base": "Very well-documented, uncontroversial factually (clear vote, clear date, clear named proponent). Weakest entry in the tracker for a health-impact argument specifically -- best used for a consumer/market-access argument, not paired with the health-focused entries.",
+      "what_changed": {
+        "base": "The FCC voted 3-2 along party lines to reclassify broadband back to a lightly-regulated Title I 'information service,' **eliminating the common-carrier blocking/throttling/prioritization bans**. ISPs remain subject only to a transparency (disclosure) requirement.",
         "updates": [
           {
-            "date": null,
+            "date": "2026-11-07",
             "label": "Update",
-            "text": "Update: 2026-09-06 recheck sweep surfaced a January 2, 2025 Sixth Circuit ruling striking down the FCC's 2024 'Safeguarding Order' net-neutrality reinstatement attempt -- verified real, but predates this entry's prior verification and doesn't change current framing; not incorporated as a new development.",
-            "effective_date": null
+            "text": "Update 2026-11-07: On October 1, 2019, the D.C. Circuit **upheld the repeal order's reclassification of broadband** in Mozilla Corp. v. FCC, with two exceptions: it vacated the order's directive barring states from imposing their own net neutrality rules, and it sent three issues (public safety, pole attachments and the Lifeline program) back to the FCC. In April 2024 the FCC, under the Biden administration, again classified broadband as a Title II telecommunications service and reinstated the net neutrality rules. Industry groups sued, and the Sixth Circuit stayed the 2024 order on August 1, 2024. On January 2, 2025, in Ohio Telecom Ass'n v. FCC, the Sixth Circuit set the 2024 order aside, holding that broadband providers offer only an 'information service' and that the FCC lacks authority to impose net neutrality rules under Title II. It denied rehearing on March 11, 2025. On August 8, 2025, the public interest groups that had defended the 2024 order (the Benton Institute, Free Press, New America's Open Technology Institute and Public Knowledge) said they would not seek Supreme Court review, and the filing deadline passed that day. The 2017 repeal's light-touch classification remains in force.",
+            "effective_date": "2026-11-07"
           }
         ]
       }

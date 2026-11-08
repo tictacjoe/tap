@@ -2118,10 +2118,10 @@
   },
   "bondi-death-penalty-fast-track-rule-2026": {
    "0": {
-    "state": "supports",
-    "why": "The DOJ press release's headline and Bondi's quoted statement directly frame the rule as helping states achieve justice more quickly in capital cases.",
-    "host": "justice.gov",
-    "date": "2026-09-15",
+    "state": "partly",
+    "why": "The Federal Register page confirms the proposed rule's title, RIN 1105-AB80, the 03/16/2026 publication date and the May 15, 2026 comment deadline, but the provided text is metadata only and contains neither Bondi's signature nor the quoted 'would remove impediments' language.",
+    "host": "federalregister.gov",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    },
@@ -2135,24 +2135,48 @@
    },
    "2": {
     "state": "supports",
-    "why": "DPIC's analysis explicitly describes the certification process as an opt-in system based only on state officials' own assertions, with no independent verification and no public/opposing-view comment allowed.",
-    "host": "deathpenaltyinfo.org",
-    "date": "2026-09-15",
+    "why": "The March 17, 2026 OPA release says Bondi 'today announced' the proposed rule, and its headline frames it as helping 'More Quickly Achieve Justice in State Death Penalty Cases'.",
+    "host": "justice.gov",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    },
    "3": {
-    "state": "supports",
-    "why": "The source directly supports the claim: critics call the certification process an \"honor system\" and warn it could increase wrongful-execution risk by barring public/defender scrutiny of a state's competency claims.",
-    "host": "davisvanguard.org",
-    "date": "2026-09-15",
-    "kind": "interpretation",
+    "state": "partly",
+    "why": "The April 13, 2026 letter cites Docket No. OAG198, AG Order No. 6678-2026 and RIN 1105-AB80 and requests an extension of the comment period, but the provided (truncated) text never states the 'at least 45 days' length.",
+    "host": "downloads.regulations.gov",
+    "date": "2026-11-07",
+    "kind": "fact",
     "archive": false
    },
    "4": {
-    "state": "unopened",
-    "why": "",
-    "host": "downloads.regulations.gov",
+    "state": "supports",
+    "why": "The 04/29/2026 notice states Florida and Mississippi requested certification, and its Dates text says comments 'must be submitted on or before June 29, 2026'.",
+    "host": "federalregister.gov",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "supports",
+    "why": "The May 19, 2026 Davis Vanguard piece is headlined exactly this and reports critics warning the rule would rely on an 'honor system' of state assurances about post-conviction counsel.",
+    "host": "davisvanguard.org",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": true
+   },
+   "6": {
+    "state": "partly",
+    "why": "The page confirms a 07/10/2026 notice, AG Order No. 7011-2026, certifying Tennessee's mechanism with sections assessed against 'the 2013 Regulations', but the provided text does not show the July 6 date, Blanche's signature, or the 'remain in effect' language.",
+    "host": "federalregister.gov",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": false
+   },
+   "7": {
+    "state": "supports",
+    "why": "DPIC's analysis explicitly describes the certification process as an opt-in system based only on state officials' own assertions, with no independent verification and no public/opposing-view comment allowed.",
+    "host": "deathpenaltyinfo.org",
     "date": "2026-09-15",
     "kind": "fact",
     "archive": false
@@ -2161,9 +2185,9 @@
   "bondi-doj-23000-declinations-2026": {
    "0": {
     "state": "supports",
-    "why": "ProPublica's own article states DOJ closed more than 23,000 criminal cases in six months, that nearly 11,000 were declined in February 2025 alone (the most since 2004), and details the affected case categories (terrorism, white-collar, drug offenses, etc.).",
+    "why": "ProPublica's March 31, 2026 article reports its own two-decade data analysis, the 'more than 23,000 criminal cases' closed, 'nearly 11,000 cases were declined' in February 2025, and categories such as terrorism, white-collar crime and drugs.",
     "host": "propublica.org",
-    "date": "2026-09-15",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    },
@@ -2176,10 +2200,10 @@
     "archive": false
    },
    "2": {
-    "state": "supports",
-    "why": "The article quotes the DOJ spokesperson's data-cleanup/efficiency explanation verbatim, and separately reports ProPublica's own finding that the spike is not explained by inherited caseload and that former prosecutors could not recall a comparable review order, undercutting that explanation.",
+    "state": "partly",
+    "why": "The provided text supports that former prosecutors could not recall a similar February order, but it is truncated before any DOJ on-record response, the 'clean, remediate, and validate data' quote, or the 10-day review deadline.",
     "host": "propublica.org",
-    "date": "2026-09-15",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    }
@@ -6407,15 +6431,15 @@
     "state": "unopened",
     "why": "",
     "host": "judiciary.senate.gov",
-    "date": "2026-09-15",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    },
    "1": {
     "state": "supports",
-    "why": "CNN's article matches the claim exactly, quoting Reuveni's lawyers' letter that the OIG has not investigated any of the misconduct allegations over the past 15 months, including those raised by Congress.",
+    "why": "CNN reports the letter said OIG hasn't investigated 'any of the serious allegations of misconduct made over the past 15 months,' including complaints by members of Congress, the January referral to OPR, and the DOJ spokesman's 'no legitimate basis to investigate' response.",
     "host": "cnn.com",
-    "date": "2026-09-15",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    },
@@ -6425,6 +6449,30 @@
     "host": "whistleblower.org",
     "date": "2026-09-15",
     "kind": "interpretation",
+    "archive": false
+   },
+   "3": {
+    "state": "supports",
+    "why": "The NYT text states the 20-instance figure and that Horowitz left in June and 'The role has since remained vacant'.",
+    "host": "nytimes.com",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": true
+   },
+   "4": {
+    "state": "supports",
+    "why": "Bloomberg Law reports the unsigned reply one day after Reuveni's request about Bove and current leaders, the litigation rationale and OPR referral, OPR not having 'expressed any interest in conducting an investigation,' the DOJ 'legitimate basis' statement, and 'several acting leadership shifts since Horowitz left'.",
+    "host": "news.bloomberglaw.com",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "supports",
+    "why": "Government Executive's August 7, 2026 article reports the Senate confirmed Berthiaume, a career IG employee who served as acting DOJ IG from October 2025 through January 2026.",
+    "host": "govexec.com",
+    "date": "2026-11-07",
+    "kind": "fact",
     "archive": false
    }
   },
@@ -8318,34 +8366,66 @@
   },
   "gabbard-directors-initiatives-group-2026": {
    "0": {
-    "state": "unopened",
-    "why": "",
-    "host": "usnews.com",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "The Reuters copy reports Gabbard told Reuters she wound down the DIG, its declared goal and critics' view, two sources citing missteps including the pipe-bomb link, and the ODNI spokesperson's denial and 'only temporary' framing.",
+    "host": "thestar.com.my",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    },
    "1": {
-    "state": "partly",
-    "why": "Federal News Network confirms DIG's April 2025 formation and its dissolution after \"a little less than a year,\" but the article never states DIG issued reports specifically attacking the Russia-interference investigation or the prior administration's domestic-terrorism response -- it only notes that Gabbard herself (separately) revoked clearances and declassified Russia-related documents.",
-    "host": "federalnewsnetwork.com",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "The Hill, citing Reuters, reports Gabbard is ending the task force 'launched last year' (described as tasked in April), calling it temporary, plus the December bill and missed deadline.",
+    "host": "thehill.com",
+    "date": "2026-11-07",
     "kind": "fact",
-    "archive": false
+    "archive": true
    },
    "2": {
-    "state": "partly",
-    "why": "The Hill reports Gabbard ending the DIG, with congressional criticism preceding it (a December bill demanding a classified report on its leadership and staffing). It does not mention an internal memo, a December 2025 work pause, or a January 2026 dissolution, and its article dated Feb. 11, 2026 reports her announcing the end 'on Tuesday'.",
-    "host": "thehill.com",
-    "date": "2026-09-21",
+    "state": "supports",
+    "why": "The AP story reports the group was formed in April to root out politicization, the Democrats' and insiders' concerns, and that Gabbard ended it 'After a little less than a year,' calling it 'a temporary effort'.",
+    "host": "federalnewsnetwork.com",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    },
    "3": {
+    "state": "supports",
+    "why": "Raw Story quotes Erdman's written testimony verbatim, describes the memo carrying pardoned Jan. 6 defendant Baker's false claims against a CIA employee, and reports Gabbard's press secretary declined to comment on the record.",
+    "host": "rawstory.com",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
     "state": "unopened",
     "why": "",
     "host": "thedefensenews.com",
     "date": "2026-09-27",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "supports",
+    "why": "CBS reports the Tuesday announcement of Pulte as acting DNI replacing Gabbard at month's end; the archive's earliest capture date (02 Jun 2026) is consistent with Tuesday, June 2.",
+    "host": "cbsnews.com",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": true
+   },
+   "6": {
+    "state": "supports",
+    "why": "CNN's June 19, 2026 report states Gabbard and Trump settled on June 19, earlier than the end-of-month assurance, as Pulte began as acting DNI.",
+    "host": "cnn.com",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": false
+   },
+   "7": {
+    "state": "partly",
+    "why": "CNBC confirms the 51-47 confirmation and that it ended Pulte's interim tenure, but the provided text gives only 'Tuesday evening' (after a July 15 hearing), not the explicit July 28, 2026 date.",
+    "host": "cnbc.com",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    }
@@ -16754,10 +16834,10 @@
   },
   "rfk-jr-hatch-act-iowa-candidates-2026": {
    "0": {
-    "state": "unopened",
-    "why": "",
+    "state": "partly",
+    "why": "The archived AP page text contains only the headline and site navigation; it confirms Wyden accused Kennedy of a Hatch Act violation but none of the OSC filing date, candidates, districts, or call dates.",
     "host": "apnews.com",
-    "date": "2026-09-15",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": true
    },
@@ -16770,10 +16850,10 @@
     "archive": true
    },
    "2": {
-    "state": "unopened",
-    "why": "",
+    "state": "not_found",
+    "why": "The provided AP text is headline and navigation only and says nothing about Trump firing the OSC head or Craig Holman's views.",
     "host": "apnews.com",
-    "date": "2026-09-15",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": true
    }
@@ -22462,14 +22542,22 @@
   },
   "trump-santos-commutation-2025": {
    "0": {
-    "state": "partly",
-    "why": "The archived CBS text confirms the April 87-month sentence, the $373,949.97 in fines and restitution, and the guilty plea to wire fraud and identity theft, but contains nothing saying Santos will no longer have to pay restitution.",
+    "state": "supports",
+    "why": "NPR's August 20, 2024 report says Santos entered his plea 'yesterday,' had been charged with 23 criminal counts, and lists the additional admitted crimes as claimed.",
+    "host": "npr.org",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": false
+   },
+   "1": {
+    "state": "supports",
+    "why": "CBS New York states the April sentence of 87 months and $373,949.97 in fines and restitution after his guilty plea to wire fraud and identity theft.",
     "host": "cbsnews.com",
     "date": "2026-11-07",
     "kind": "fact",
     "archive": true
    },
-   "1": {
+   "2": {
     "state": "supports",
     "why": "The AFP/Malay Mail text quotes Trump's Friday Truth Social post about solitary confinement 'for long stretches of time,' being 'horribly mistreated,' and having the 'Courage, Conviction and Intelligence to ALWAYS VOTE REPUBLICAN.'",
     "host": "malaymail.com",
@@ -22477,15 +22565,15 @@
     "kind": "fact",
     "archive": false
    },
-   "2": {
-    "state": "partly",
-    "why": "NPR confirms Trump's October 17-18, 2025 commutation announcement ordering Santos's immediate release, but this specific article contains no \"horribly mistreated\" quote or mention of solitary confinement, and provides only NPR's own reporting (no CNN, PBS NewsHour, or JURIST content).",
+   "3": {
+    "state": "supports",
+    "why": "NPR's October 17, 2025 report quotes Trump's 'somewhat of a 'rogue'' and 'Courage, Conviction, and Intelligence to ALWAYS VOTE REPUBLICAN!' lines, the immediate-release commutation, and the 11 p.m. Fairton release.",
     "host": "npr.org",
-    "date": "2026-09-15",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    },
-   "3": {
+   "4": {
     "state": "supports",
     "why": "The DOJ clemency list records an October 17, 2025 commutation for George Anthony Devolder Santos (Eastern New York) with the stated sentence, date and offenses exactly as claimed.",
     "host": "justice.gov",
@@ -22493,7 +22581,7 @@
     "kind": "fact",
     "archive": false
    },
-   "4": {
+   "5": {
     "state": "supports",
     "why": "CNN reports Murray said Greene 'fought like a lion,' that Greene, who wrote Trump in August asking for a commutation, thanked him saying Santos 'was unfairly treated and put in solitary confinement,' and Jeffries' 'serial fraudster' / 'Republican healthcare crisis' statement.",
     "host": "cnn.com",
@@ -22501,15 +22589,23 @@
     "kind": "fact",
     "archive": false
    },
-   "5": {
-    "state": "partly",
-    "why": "CNN confirms Santos's own comparison of criticism of his commutation to hypothetical criticism of a pardon of \"Jesus Christ off the cross,\" but this source (largely a video-page listing) contains no content about Hakeem Jeffries's criticism contrasting the commutation's speed with other priorities.",
-    "host": "cnn.com",
-    "date": "2026-09-15",
+   "6": {
+    "state": "supports",
+    "why": "NBC's October 17, 2025 article states the May 2023 indictment, October 2023 23-count superseding indictment, and the later guilty plea to wire fraud and aggravated identity theft.",
+    "host": "nbcnews.com",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    },
-   "6": {
+   "7": {
+    "state": "supports",
+    "why": "The CNN page, by Dana Bash and published Sun October 19, 2025, carries this exact quote from Santos defending the commutation.",
+    "host": "cnn.com",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": false
+   },
+   "8": {
     "state": "supports",
     "why": "The Hill article (syndicated via AOL, Oct. 20, 2025) quotes the clemency order language verbatim and states Santos will not be required to pay further fines or restitution, having been ordered to pay more than $370,000.",
     "host": "aol.com",

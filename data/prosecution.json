@@ -4623,7 +4623,7 @@
   },
   {
     "id": "bondi-death-penalty-fast-track-rule-2026",
-    "official": "Pam Bondi, Attorney General",
+    "official": "Pam Bondi, then-Attorney General",
     "offense_category": "Concentrating Sole Certification Authority Over an Accelerated Capital-Appeals Process in the Attorney General, on an Honor-System Basis -- a proposed rule, not yet finalized; a due-process/executive-power-concentration accountability claim, not a criminal charge",
     "incident_summary": "DOJ proposed a rule making it easier for states to obtain certification for an accelerated federal review process for death penalty cases under a 1996 federal law (the Antiterrorism and Effective Death Penalty Act's Chapter 154 opt-in provisions). Attorney General Pam Bondi argued that regulations implemented during the Obama and Biden administrations had improperly prevented states from using the law's fast-track option, which -- once a state is certified -- **cuts a death-sentenced prisoner's window to file a federal habeas petition from one year to 180 days and requires federal courts to prioritize capital habeas petitions over all non-capital cases**. Under the proposal, the certification decision (whether a state's system for providing competent post-conviction defense counsel meets the law's requirements) rests solely with the Attorney General, based substantially on the certifying state's own representations about the quality of its post-conviction counsel system -- a process critics, including the Death Penalty Information Center, describe as effectively an honor system that does not independently verify defense-counsel quality or consider opposing views before certification. Bloomberg reported the change is part of the Trump administration's broader push to expand use of the federal death penalty. Critics quoted by Davis Vanguard and other outlets warned the accelerated timeline and reliance on state self-certification increase the risk of executing people without adequate review of wrongful-conviction claims.",
     "contested": true,
@@ -4636,9 +4636,9 @@
     "evidence": [
       {
         "type": "public_record",
-        "description": "DOJ's own Office of Public Affairs press release announcing the proposed rule, framing it as helping states 'more quickly achieve justice' in death penalty cases",
-        "source_url": "https://www.justice.gov/opa/pr/department-justice-proposes-rule-more-quickly-achieve-justice-state-death-penalty-cases",
-        "maps_to_element": "The proposed rule and its stated purpose, in DOJ's own words"
+        "description": "The proposed rule 'Certification Process for State Capital Counsel Systems' (RIN 1105-AB80), published in the Federal Register on March 16, 2026 and signed by Attorney General Pamela Bondi, which 'would remove impediments to certification that chapter 154 does not authorize', with comments due by May 15, 2026",
+        "source_url": "https://www.federalregister.gov/documents/2026/03/16/2026-05134/certification-process-for-state-capital-counsel-systems",
+        "maps_to_element": "The proposed rule itself, its publication date and its comment deadline"
       },
       {
         "type": "reporting",
@@ -4648,56 +4648,88 @@
       },
       {
         "type": "public_record",
-        "description": "The Death Penalty Information Center's analysis describing the proposed certification process as an 'opt-in' system that does not independently verify state representations about post-conviction counsel quality or consider opposing views before certifying a state",
-        "source_url": "https://deathpenaltyinfo.org/what-to-know-doj-seeks-to-fast-track-appeals-for-death-sentenced-prisoners-through-opt-in-certification-process-without-considering-opposing-views",
-        "maps_to_element": "Certification relies on state self-representation without independent verification or opposing-view consideration"
+        "description": "DOJ's Office of Public Affairs press release of March 17, 2026, in which Attorney General Bondi 'today announced' the proposed rule, framing it as helping states 'more quickly achieve justice' in death penalty cases",
+        "source_url": "https://www.justice.gov/opa/pr/department-justice-proposes-rule-more-quickly-achieve-justice-state-death-penalty-cases",
+        "maps_to_element": "The proposed rule and its stated purpose, in DOJ's own words"
+      },
+      {
+        "type": "public_record",
+        "description": "The Federal Public Defender for the Southern District of Ohio's April 13, 2026 letter asking DOJ to extend the comment period on the proposed rule (Docket No. OAG198, AG Order No. 6678-2026, RIN 1105-AB80) by at least 45 days",
+        "source_url": "https://downloads.regulations.gov/DOJ-OAG-2026-0034-0018/attachment_1.pdf",
+        "maps_to_element": "The rulemaking's docket identifiers and defense lawyers' participation in its comment process"
+      },
+      {
+        "type": "public_record",
+        "description": "DOJ's April 29, 2026 Federal Register notice that Florida and Mississippi have requested chapter 154 certification of their capital counsel mechanisms, with public comment due by June 29, 2026",
+        "source_url": "https://www.federalregister.gov/documents/2026/04/29/2026-08319/notice-of-requests-for-certification-of-capital-counsel-mechanisms-of-florida-and-mississippi",
+        "maps_to_element": "States seeking fast-track certification while the proposed rule is pending"
       },
       {
         "type": "reporting",
-        "description": "Davis Vanguard's coverage of advocates warning the proposal could allow fast-tracked executions without independent review of a state's post-conviction defense system",
+        "description": "Davis Vanguard's May 19, 2026 coverage of advocates warning the proposal could allow fast-tracked executions without independent review of a state's post-conviction defense system",
         "source_url": "https://davisvanguard.org/2026/05/critics-slam-doj-death-penalty-changes/",
         "maps_to_element": "Independent critics' assessment of wrongful-execution risk from reduced review"
       },
       {
         "type": "public_record",
-        "description": "Re-verification search through August 2026 found no final rule published in the Federal Register; the proposed rule (28 CFR Part 26, Docket No. OAG198, AG Order No. 6678-2026, RIN 1105-AB80, 'Certification Process for State Capital Counsel Systems') remains at the notice-of-proposed-rulemaking stage",
-        "source_url": "https://downloads.regulations.gov/DOJ-OAG-2026-0034-0018/attachment_1.pdf",
-        "maps_to_element": "Confirms the rule's status is unchanged (still proposed, not finalized) as of this re-verification, and adds the docket/RIN identifiers for future tracking"
+        "description": "DOJ's July 10, 2026 Federal Register notice (AG Order No. 7011-2026, dated July 6 and signed by Acting Attorney General Todd Blanche) certifying Tennessee's capital counsel mechanism under chapter 154, decided under the 2013 regulations, which the notice says 'remain in effect' notwithstanding the proposed rulemaking",
+        "source_url": "https://www.federalregister.gov/documents/2026/07/10/2026-13970/certification-of-tennessee-capital-counsel-mechanism",
+        "maps_to_element": "Confirms the proposed rule had not taken effect by July 2026; certifications continue under the existing 2013 rules"
+      },
+      {
+        "type": "public_record",
+        "description": "The Death Penalty Information Center's analysis describing the proposed certification process as an 'opt-in' system that does not independently verify state representations about post-conviction counsel quality or consider opposing views before certifying a state",
+        "source_url": "https://deathpenaltyinfo.org/what-to-know-doj-seeks-to-fast-track-appeals-for-death-sentenced-prisoners-through-opt-in-certification-process-without-considering-opposing-views",
+        "maps_to_element": "Certification relies on state self-representation without independent verification or opposing-view consideration"
       }
     ],
-    "status": "Proposed as of this entry's addition -- rulemaking process ongoing; no finalization identified in sourcing reviewed",
+    "status": "Proposed, not finalized: published March 16, 2026; the comment period closed May 15, 2026, and no final rule has appeared in the Federal Register. The 2013 certification rules remain in effect; under them DOJ certified Tennessee in July 2026, and Florida and Mississippi have requested certification.",
     "rebuttal_anticipated": "Likely defense: the 1996 law's opt-in fast-track provision has existed for three decades and was simply underused due to overly restrictive prior-administration regulations, states retain their own independent obligation to provide competent post-conviction counsel regardless of federal certification, and expediting review for the small subset of cases meeting the statute's own competent-counsel requirement serves victims' and the justice system's interest in finality.",
     "comeback": "The specific concern is not that Congress's 1996 opt-in mechanism is illegitimate, but that the proposed certification process, as DPIC's analysis documents, would rely substantially on states' own self-reported representations about their post-conviction counsel systems without independent verification or a mechanism to consider opposing views before a state is certified -- concentrating a due-process-critical gatekeeping judgment in the Attorney General's office on an honor-system basis, in a context DOJ's own leadership frames as part of a deliberate push to expand, not merely streamline, use of the federal death penalty.",
     "cause": "[TAP Analysis, not sourced] Consistent with a broader pattern this tracker documents of DOJ under Bondi concentrating discretionary authority in politically appointed leadership across multiple contexts (see also bondi-death-penalty entries and Bondi's broader tough-on-crime policy memos reported by The Appeal and The Hill).",
-    "last_verified": "2026-09-06",
+    "last_verified": "2026-11-07",
     "date_added": "2026-08-06",
-    "confidence_note": "HIGH confidence on the proposed rule's core mechanics -- the 180-day deadline, the certification process, and its self-certification character -- independently corroborated across DOJ's own press release, Bloomberg, and the Death Penalty Information Center's detailed legal analysis. MODERATE confidence on the wrongful-execution-risk characterization specifically, since that is advocates' and critics' assessment of a not-yet-finalized rule's likely effect, not an observed outcome -- present as a documented risk assessment from named critics, not a settled fact. Re-verified 2026-08-19: no final rule identified in the Federal Register as of this update; the March 16, 2026 proposed rule (comment period closed May 15, 2026) remains pending, not finalized. Separately, DOJ certified Tennessee's capital counsel mechanism effective July 10, 2026 (AG Order No. 7011-2026) -- but that certification traces to a request Tennessee filed in August 2025, predating and processed under the pre-existing 2013 certification framework, not the loosened self-certification process this entry's proposed rule would create; not treated as evidence the proposed rule is already in effect. Re-verified 2026-08-26: no final rule identified in the Federal Register as of this update; the March 2026 proposed rule remains pending at the notice-of-proposed-rulemaking stage. Re-verified 2026-09-06 (recheck sweep, batch 58): searched specifically for Federal Register finalization/certification updates -- no final rule identified, no material change.",
+    "confidence_note": "HIGH confidence on the proposed rule's core mechanics -- the 180-day deadline, the certification process, and its self-certification character -- independently corroborated across DOJ's own press release, Bloomberg, and the Death Penalty Information Center's detailed legal analysis. MODERATE confidence on the wrongful-execution-risk characterization specifically, since that is advocates' and critics' assessment of a not-yet-finalized rule's likely effect, not an observed outcome -- present as a documented risk assessment from named critics, not a settled fact. Re-verified 2026-08-19: no final rule identified in the Federal Register as of this update; the March 16, 2026 proposed rule (comment period closed May 15, 2026) remains pending, not finalized. Separately, DOJ certified Tennessee's capital counsel mechanism in a notice published July 10, 2026 (AG Order No. 7011-2026, signed July 6 by Acting Attorney General Todd Blanche) -- but that certification traces to a request Tennessee made by letter dated June 6, 2025 (DOJ published notice of it August 7, 2025), predating and processed under the pre-existing 2013 certification framework, not the loosened self-certification process this entry's proposed rule would create; not treated as evidence the proposed rule is already in effect. Re-verified 2026-08-26: no final rule identified in the Federal Register as of this update; the March 2026 proposed rule remains pending at the notice-of-proposed-rulemaking stage. Re-verified 2026-09-06: searched specifically for Federal Register finalization/certification updates -- no final rule identified, no material change. Re-verified 2026-11-07: Federal Register search found no final rule, only the March 16, 2026 proposed rule (DOJ's release announcing it is dated March 17); DOJ published Florida's and Mississippi's certification requests for comment on April 29, 2026.",
     "pull_quote": "Critics warn the accelerated timeline and reliance on state self-certification increase the risk of executing people without adequate review of wrongful-conviction claims.",
     "section_summaries": {
-      "incident_summary": "DOJ proposed a rule letting AG Bondi solely certify states for an accelerated capital-appeals process (cutting the federal habeas filing window from one year to 180 days) based substantially on states' own self-reported claims about their post-conviction defense counsel quality, without independent verification -- part of what Bondi's DOJ frames as a broader push to expand federal death penalty use.",
+      "incident_summary": "DOJ proposed letting the Attorney General alone certify states for fast-track capital appeals, cutting the habeas filing window to 180 days, mainly on states' own claims about defense-counsel quality.",
       "confidence_note": "The rule's mechanics are well-documented via DOJ's own release and DPIC's legal analysis; the wrongful-execution-risk claim is critics' assessment of a not-yet-finalized rule, not an observed outcome."
     },
-    "date_of_action": "2026-03-16 (DOJ proposes death-penalty fast-track certification rule)",
-    "last_substantive_update": "2026-09-06",
+    "date_of_action": "2026-03-16 (DOJ publishes its proposed death-penalty fast-track certification rule in the Federal Register; announced March 17)",
+    "last_substantive_update": "2026-11-07",
     "glance": {
-      "who": "Pam Bondi (Attorney General)",
+      "who": "Pam Bondi (then-Attorney General)",
       "what": "Proposed letting the AG alone certify states for fast-tracked death-penalty appeals on their own claims",
       "harm": {
         "kind": "rights",
         "certainty": "alleged",
         "who": "Death-row appellants"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-11-07"
     },
     "status_stage": "Unchallenged",
     "key_events": [
       {
-        "date": "2026-03",
-        "text": "DOJ proposes a rule letting the Attorney General certify states for fast-track federal review of death sentences",
+        "date": "2026-03-16",
+        "text": "DOJ publishes a proposed rule letting the Attorney General certify states for fast-track federal review of capital cases",
         "turning_point": true,
         "sources": [
-          "https://www.justice.gov/opa/pr/department-justice-proposes-rule-more-quickly-achieve-justice-state-death-penalty-cases",
-          "https://www.bloomberg.com/news/articles/2026-03-16/doj-plans-to-lower-bar-for-states-to-fast-track-executions"
+          "https://www.federalregister.gov/documents/2026/03/16/2026-05134/certification-process-for-state-capital-counsel-systems",
+          "https://www.justice.gov/opa/pr/department-justice-proposes-rule-more-quickly-achieve-justice-state-death-penalty-cases"
+        ]
+      },
+      {
+        "date": "2026-04-29",
+        "text": "DOJ publishes Florida's and Mississippi's requests for fast-track certification for public comment",
+        "sources": [
+          "https://www.federalregister.gov/documents/2026/04/29/2026-08319/notice-of-requests-for-certification-of-capital-counsel-mechanisms-of-florida-and-mississippi"
+        ]
+      },
+      {
+        "date": "2026-05-15",
+        "text": "The public comment period on the proposed rule closes",
+        "sources": [
+          "https://www.federalregister.gov/documents/2026/03/16/2026-05134/certification-process-for-state-capital-counsel-systems"
         ]
       },
       {
@@ -4706,6 +4738,13 @@
         "sources": [
           "https://davisvanguard.org/2026/05/critics-slam-doj-death-penalty-changes/"
         ]
+      },
+      {
+        "date": "2026-07-10",
+        "text": "DOJ publishes Acting AG Todd Blanche's certification of Tennessee for fast-track review under the existing 2013 rules",
+        "sources": [
+          "https://www.federalregister.gov/documents/2026/07/10/2026-13970/certification-of-tennessee-capital-counsel-mechanism"
+        ]
       }
     ]
   },
@@ -4713,7 +4752,7 @@
     "id": "bondi-doj-23000-declinations-2026",
     "official": "Pam Bondi, then-Attorney General",
     "offense_category": "Wholesale Deprioritization of Federal Criminal Enforcement Outside Immigration -- a prosecutorial-discretion and resource-allocation accountability claim, not an allegation that declining any specific case was individually improper",
-    "incident_summary": "A ProPublica investigation, examining two decades of DOJ case-declination data, found **DOJ under Attorney General Pam Bondi closed more than 23,000 criminal investigations without prosecution in the first six months of the administration -- including cases involving terrorism, fraud, corruption, labor racketeering, drug trafficking, and environmental crimes** -- while ramping up immigration prosecutions. The majority of the declined cases had been referred to DOJ by law enforcement agencies, including under prior administrations, whose investigators believed a federal crime may have been committed. February 2025 alone, covering the first weeks of Bondi's tenure, saw nearly 11,000 declinations -- the most in a single month since at least 2004, when comparable data begins, and far exceeding the prior monthly high of roughly 6,500 declinations set in September 2019 during Trump's first term. ProPublica's analysis found the increase was not attributable to a larger inherited caseload or increased referral volume from law enforcement, indicating a deliberate shift in prosecutorial priority rather than a passive resourcing effect.",
+    "incident_summary": "A ProPublica investigation published March 31, 2026, examining two decades of DOJ case-declination data, found **DOJ under Attorney General Pam Bondi closed more than 23,000 criminal investigations without prosecution in the first six months of the administration -- including cases involving terrorism, fraud, corruption, labor racketeering, drug trafficking, and environmental crimes** -- while ramping up immigration prosecutions. The majority of the declined cases had been referred to DOJ by law enforcement agencies, including under prior administrations, whose investigators believed a federal crime may have been committed. February 2025 alone, covering the first weeks of Bondi's tenure, saw nearly 11,000 declinations -- the most in a single month since at least 2004, and far exceeding the prior monthly high of just over 6,500 declinations set in September 2019 during Trump's first term. ProPublica's analysis found the increase was not attributable to a larger inherited caseload or increased referral volume from law enforcement, indicating a deliberate shift in prosecutorial priority rather than a passive resourcing effect. A DOJ spokesperson told ProPublica the department had reviewed all pending criminal matters opened before the 2023 fiscal year in “an effort to clean, remediate, and validate data” and that “the number of declinations is a direct result of our efforts to run the agency in a more efficient manner.”",
     "contested": true,
     "elements_required": [
       "DOJ declined to prosecute more than 23,000 referred criminal investigations in the administration's first six months, a specific, quantified figure from ProPublica's own data analysis",
@@ -4724,7 +4763,7 @@
     "evidence": [
       {
         "type": "reporting",
-        "description": "ProPublica's own investigation and data analysis, examining two decades of DOJ declination records, documenting the 23,000+ figure, the February 2025 ~11,000-case monthly high, and the specific case categories affected",
+        "description": "ProPublica's own investigation and data analysis (published March 31, 2026), examining two decades of DOJ declination records, documenting the 23,000+ figure, the February 2025 ~11,000-case monthly high, and the specific case categories affected",
         "source_url": "https://www.propublica.org/article/trump-doj-immigration-bondi-declinations-criminal-investigations",
         "maps_to_element": "Full fact pattern -- aggregate declination count, monthly high, and affected case categories"
       },
@@ -4736,25 +4775,25 @@
       },
       {
         "type": "public_record",
-        "description": "ProPublica's own article (already cited in this entry) quotes DOJ's on-record response: the department said it reviewed all pending criminal matters opened before FY2023 'in an effort to clean, remediate, and validate data' in the case-management system, calling the declinations 'a direct result of our efforts to run the agency in a more efficient manner' -- and ProPublica's own analysis found this explanation undercut by the declinations' concentration (nearly 11,000 in February 2025 alone, versus a historical monthly average of roughly 1,000-2,000) and by prosecutors' own accounts that they could not recall a comparable case-review order or a 10-day turnaround before",
+        "description": "ProPublica's March 31, 2026 article quotes DOJ's on-record response: the department said it reviewed all pending criminal matters opened before the 2023 fiscal year in 'an effort to clean, remediate, and validate data' in the U.S. Attorneys' case management system, calling the number of declinations 'a direct result of our efforts to run the agency in a more efficient manner' -- alongside ProPublica's reporting that a February 2025 memo ordered the review of every open case launched before October 2022 completed within 10 days, a review one attorney said would typically take months, and that former DOJ prosecutors could not recall a similar order",
         "source_url": "https://www.propublica.org/article/trump-doj-immigration-bondi-declinations-criminal-investigations",
-        "maps_to_element": "DOJ's actual on-record defense (data cleanup/efficiency) and ProPublica's own rebuttal to it, previously not reflected in this entry's rebuttal_anticipated/comeback fields despite being in the already-cited source"
+        "maps_to_element": "DOJ's on-record defense (data cleanup/efficiency) and ProPublica's reporting that undercuts it"
       }
     ],
-    "status": "Ongoing as of this entry's addition -- the declination pattern was documented for the administration's first six months; no policy reversal or DOJ on-record explanation beyond the immigration-priority shift itself was identified in sourcing reviewed",
-    "rebuttal_anticipated": "DOJ's own on-record response (in the ProPublica article this entry cites) is that the declinations resulted from a data-cleanup and case-management-system 'remediation' effort covering matters opened before FY2023, not a deliberate policy shift, and that DOJ 'remains committed to investigating and prosecuting all types of crime.' More generally, prosecutorial discretion over which referred cases to pursue is a core, constitutionally protected executive-branch function, and declining a case does not mean no crime occurred.",
-    "comeback": "ProPublica's own reporting directly tested and undercut DOJ's data-cleanup explanation: the February 2025 spike (~11,000 declinations) was many times the historical monthly average of roughly 1,000-2,000, and multiple current and former prosecutors told ProPublica they could not recall a comparable case-review order or a 10-day turnaround for completing one -- inconsistent with a routine, gradual data-remediation process. Combined with ProPublica's finding that the increase is not attributable to caseload inheritance or referral-volume changes, and the specific case categories affected (terrorism, fraud, corruption, labor racketeering), the scale and abruptness of the shift is the strongest evidence of a deliberate wholesale deprioritization of enforcement outside immigration, not case-by-case merit-based declinations.",
+    "status": "The declinations ProPublica documented cover the administration's first six months. DOJ's on-record explanation is a data-cleanup review of pending matters opened before fiscal 2023; no policy reversal, court challenge or watchdog review of the declinations has been identified.",
+    "rebuttal_anticipated": "DOJ's own on-record response (in the ProPublica article this entry cites) is that the declinations resulted from a data-cleanup effort to 'clean, remediate, and validate data' in the U.S. Attorneys' case management system, covering matters opened before FY2023, not a deliberate policy shift, and that DOJ 'remains committed to investigating and prosecuting all types of crime.' More generally, prosecutorial discretion over which referred cases to pursue is a core, constitutionally protected executive-branch function, and declining a case does not mean no crime occurred.",
+    "comeback": "ProPublica's own reporting directly tested and undercut DOJ's data-cleanup explanation: the February 2025 spike (nearly 11,000 declinations) far exceeded the previous monthly high of just over 6,500 in September 2019; a February memo gave prosecutors 10 days to review every open case launched before October 2022, a review one attorney said would typically take months; and former prosecutors told ProPublica none could recall a similar order -- inconsistent with a routine, gradual data-remediation process. Combined with ProPublica's finding that the increase is not attributable to caseload inheritance or referral-volume changes, and the specific case categories affected (terrorism, fraud, corruption, labor racketeering), the scale and abruptness of the shift is the strongest evidence of a deliberate wholesale deprioritization of enforcement outside immigration, not case-by-case merit-based declinations.",
     "cause": "[TAP Analysis, not sourced] Consistent with the broader pattern this tracker documents of DOJ resources under Bondi being redirected toward immigration enforcement and administration political priorities at the expense of traditional federal law enforcement functions (see also the DOJ staffing-cuts entry).",
-    "last_verified": "2026-09-07",
+    "last_verified": "2026-11-07",
     "date_added": "2026-08-06",
-    "confidence_note": "HIGH confidence -- the core figures (23,000+ declinations, the ~11,000 February 2025 monthly high, the affected case categories) come from ProPublica's own dedicated data analysis of two decades of DOJ records, independently corroborated by the ABA Journal's coverage of the same findings. MODERATE confidence on characterizing the shift as deliberately immigration-driven policy versus an aggregation of individually justified case-by-case declinations, since ProPublica's causal analysis (ruling out caseload/referral explanations) is the strongest available evidence but not an on-record DOJ admission of the specific motive. Updated 2026-08-19 (light touch -- no new external development, sharpened from the already-cited ProPublica source): rebuttal_anticipated and comeback previously described DOJ's likely defense speculatively; replaced with DOJ's actual on-record 'data cleanup' statement (quoted in the same ProPublica article already cited in this entry's evidence) and ProPublica's own specific rebuttal to it.",
-    "pull_quote": "DOJ called the wave a routine data-cleanup effort, but multiple current and former prosecutors told ProPublica they couldn't recall a comparable case-review order or a 10-day turnaround for completing one.",
+    "confidence_note": "HIGH confidence -- the core figures (23,000+ declinations, the ~11,000 February 2025 monthly high, the affected case categories) come from ProPublica's own dedicated data analysis of two decades of DOJ records, independently corroborated by the ABA Journal's coverage of the same findings. MODERATE confidence on characterizing the shift as deliberately immigration-driven policy versus an aggregation of individually justified case-by-case declinations, since ProPublica's causal analysis (ruling out caseload/referral explanations) is the strongest available evidence but not an on-record DOJ admission of the specific motive. Updated 2026-08-19 (light touch -- no new external development, sharpened from the already-cited ProPublica source): rebuttal_anticipated and comeback previously described DOJ's likely defense speculatively; replaced with DOJ's actual on-record 'data cleanup' statement (quoted in the same ProPublica article already cited in this entry's evidence) and ProPublica's own specific rebuttal to it. Update 2026-11-07: the ProPublica report is dated March 31, 2026; its comparison point is the prior monthly high of just over 6,500 declinations in September 2019, and its account of the 10-day review order rests on a memo described to reporters and former prosecutors' recollection; a search found no later policy reversal, court challenge or watchdog review.",
+    "pull_quote": "DOJ called the wave a data-cleanup effort, but former prosecutors told ProPublica none could recall a similar order to review every open case, which a memo said to finish within 10 days.",
     "section_summaries": {
-      "incident_summary": "ProPublica found DOJ under Bondi closed 23,000+ criminal investigations -- terrorism, fraud, corruption, labor racketeering, drugs, environmental crimes -- in six months while ramping up immigration prosecutions, including a record ~11,000 declinations in February 2025 alone, the highest monthly total in at least two decades and not explained by caseload or referral-volume changes.",
-      "confidence_note": "The declination figures and their scale are well-documented via ProPublica's own dedicated data analysis; whether the shift reflects deliberate immigration-focused policy versus aggregated individual case judgments is a disputed characterization, though ProPublica's analysis found no alternative explanation."
+      "incident_summary": "ProPublica reported March 31, 2026 that DOJ under Bondi closed 23,000+ criminal investigations in six months, nearly 11,000 in February 2025 alone; DOJ called it a data cleanup.",
+      "confidence_note": "Declination figures come from ProPublica's analysis of two decades of DOJ data; whether the shift was deliberate policy or case-by-case judgment is disputed, and DOJ cites a data cleanup."
     },
     "date_of_action": "2025-02 (single-month declination peak within ProPublica's 6-month analysis)",
-    "last_substantive_update": "2026-09-07",
+    "last_substantive_update": "2026-11-07",
     "glance": {
       "who": "Pam Bondi (then-Attorney General)",
       "what": "DOJ closed 23,000+ criminal investigations in six months while ramping up immigration prosecutions",
@@ -4763,7 +4802,7 @@
         "certainty": "alleged",
         "who": "Non-immigration federal enforcement"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-11-07"
     },
     "cause_references": [
       {
@@ -4783,14 +4822,27 @@
         ]
       },
       {
-        "date": "2026-03",
+        "date": "2026-03-31",
         "text": "ProPublica reports DOJ closed over 23,000 criminal investigations in six months as it shifted to immigration cases",
         "sources": [
           "https://www.propublica.org/article/trump-doj-immigration-bondi-declinations-criminal-investigations",
           "https://www.abajournal.com/news/article/doj-dropped-criminal-investigations-in-immigration-shift"
         ]
       }
-    ]
+    ],
+    "timeline": {
+      "confidence_note": {
+        "base": "HIGH confidence -- the core figures (23,000+ declinations, the ~11,000 February 2025 monthly high, the affected case categories) come from ProPublica's own dedicated data analysis of two decades of DOJ records, independently corroborated by the ABA Journal's coverage of the same findings. MODERATE confidence on characterizing the shift as deliberately immigration-driven policy versus an aggregation of individually justified case-by-case declinations, since ProPublica's causal analysis (ruling out caseload/referral explanations) is the strongest available evidence but not an on-record DOJ admission of the specific motive. Updated 2026-08-19 (light touch -- no new external development, sharpened from the already-cited ProPublica source): rebuttal_anticipated and comeback previously described DOJ's likely defense speculatively; replaced with DOJ's actual on-record 'data cleanup' statement (quoted in the same ProPublica article already cited in this entry's evidence) and ProPublica's own specific rebuttal to it.",
+        "updates": [
+          {
+            "date": "2026-11-07",
+            "label": "Update",
+            "text": "Update 2026-11-07: the ProPublica report is dated March 31, 2026; its comparison point is the prior monthly high of just over 6,500 declinations in September 2019, and its account of the 10-day review order rests on a memo described to reporters and former prosecutors' recollection; a search found no later policy reversal, court challenge or watchdog review.",
+            "effective_date": "2026-11-07"
+          }
+        ]
+      }
+    }
   },
   {
     "id": "bondi-doj-carl-charles-lambda-legal-indictment-2025",
@@ -14391,60 +14443,78 @@
   },
   {
     "id": "doj-reuveni-ig-oversight-failure-2026",
-    "official": "Todd Blanche, Attorney General (institutional attribution -- DOJ's Office of Inspector General, whose leadership posts have been left vacant, has not investigated the allegations; no specific individual named in sourcing as personally responsible for the inaction; underlying misconduct allegations concern senior DOJ and White House officials)",
-    "offense_category": "Internal Watchdog Failing to Investigate Documented Allegations of Court-Order Defiance and Retaliation -- based on a formal whistleblower's complaint to Congress; DOJ has not responded on the record to the specific inaction allegation as of this entry",
-    "incident_summary": "Erez Reuveni, a 15-year DOJ veteran immigration attorney fired in 2025 after refusing to comply with directives he believed violated court orders and his ethical obligations, filed an initial protected whistleblower disclosure in June 2025 alleging a pattern of senior DOJ and White House officials deliberately defying federal court rulings on immigration enforcement -- including knowingly violating court injunctions to carry out deportations under the Alien Enemies Act -- and retaliating against him for objecting.\n\nDOJ later gave Reuveni's own complaint an on-record response: a short, unsigned OIG letter declining to investigate was sent one day after Reuveni asked OIG to probe former DOJ official Emil Bove and current leadership over the court-order-defiance allegations, and in January 2026 OIG told Reuveni it would refer his claims to DOJ's own Office of Professional Responsibility (OPR) instead, separately citing pending litigation as a reason not to proceed. Reuveni's lawyers call both justifications pretextual: OPR itself \"showed no interest\" in taking up the claims, and the administration had already fired the attorney who ran OPR, which the lawyers describe as having \"decapitated\" that office. This response addressed Reuveni's own complaint specifically -- it does not extend to the broader set of 20+ allegations, including those raised independently by members of Congress, which remained without any confirmed OIG investigation.\n\nIn March 2026, Reuveni's lawyers told Congress that DOJ's own Office of the Inspector General had not investigated any of at least 20 serious misconduct allegations raised over the preceding 15 months, including complaints separately made by members of Congress, and that the OIG's inaction was occurring as the department's internal watchdog offices were being hollowed out, with leadership posts left vacant and internal oversight stalling department-wide.",
+    "official": "Todd Blanche, Attorney General (institutional attribution -- DOJ's Office of Inspector General, whose top post sat vacant from mid-2025 until a permanent inspector general was confirmed in August 2026, has not investigated the allegations; no specific individual named in sourcing as personally responsible for the inaction; underlying misconduct allegations concern senior DOJ and White House officials)",
+    "offense_category": "Internal Watchdog Failing to Investigate Documented Allegations of Court-Order Defiance and Retaliation -- based on a formal whistleblower's complaint to Congress; a DOJ spokesman said there was no legitimate basis to investigate",
+    "incident_summary": "Erez Reuveni, a 15-year DOJ veteran immigration attorney fired in 2025 after refusing to comply with directives he believed violated court orders and his ethical obligations, filed an initial protected whistleblower disclosure in June 2025 alleging a pattern of senior DOJ and White House officials deliberately defying federal court rulings on immigration enforcement -- including knowingly violating court injunctions to carry out deportations under the Alien Enemies Act -- and retaliating against him for objecting.\n\nOIG answered Reuveni's own complaint with a refusal: according to his lawyers, one day after he asked it to probe former DOJ official Emil Bove and current department leaders over the court-order-defiance allegations, the watchdog sent a short, unsigned reply declining to open an investigation, and in January 2026 OIG told Reuveni it would refer his allegations to DOJ's Office of Professional Responsibility (OPR) instead, separately citing pending litigation as a reason not to proceed. Reuveni's lawyers call both justifications faulty: OPR has fewer than three dozen employees and hasn't \"expressed any interest in conducting an investigation,\" and, Bloomberg Law notes, it lacks OIG's jurisdiction over the criminal wrongdoing Reuveni alleges; Todd Blanche, then Deputy Attorney General, had removed OPR's chief in 2025, and the lawyers' letter says \"The Trump administration has decapitated OPR.\" That refusal covered Reuveni's own complaint, not the broader set of allegations, including those raised independently by members of Congress.\n\nOn March 30, 2026, Reuveni's lawyers told the leaders of the House and Senate Judiciary Committees in a letter that OIG hadn't investigated \"any of the serious allegations of misconduct made over the past 15 months,\" including complaints made by members of Congress; The New York Times reported that the letter said the watchdog had seemingly ignored 20 instances of possible wrongdoing. The inaction came as the inspector general post sat vacant after Michael Horowitz left in mid-2025, with several acting leadership shifts and veteran officials leaving the office. A DOJ spokesman responded: \"Just because this former DOJ employee is desperate for relevancy doesn't mean there is any legitimate basis to investigate DOJ attorneys being instructed to do their jobs and vigorously litigate on behalf of the United States.\" OIG did not respond to requests for comment.\n\nOn Aug. 7, 2026, the Senate confirmed Don Berthiaume, a career inspector-general employee who had served as acting DOJ inspector general from October 2025 through January 2026, as DOJ's permanent inspector general.",
     "contested": true,
     "elements_required": [
       "Reuveni's original whistleblower disclosure, filed through protected channels in June 2025, alleged specific, documented instances of DOJ officials directing conduct that violated federal court injunctions",
-      "At least 20 distinct misconduct allegations, including some raised independently by members of Congress, were submitted to DOJ's Inspector General over a 15-month period",
-      "None of those 20+ allegations had been investigated by the OIG as of Reuveni's lawyers' March 2026 statement to Congress",
-      "The OIG's inaction coincided with a broader, documented hollowing-out of DOJ's internal watchdog offices, including vacant leadership posts, rather than being an isolated case-specific delay"
+      "About 20 instances of possible misconduct, including complaints raised independently by members of Congress, were before DOJ's Inspector General over a 15-month period",
+      "None of the serious misconduct allegations made over those 15 months had been investigated by the OIG as of Reuveni's lawyers' March 2026 letter to Congress",
+      "The OIG's inaction coincided with a broader, documented hollowing-out of DOJ's internal watchdog offices, including a vacant inspector general post, rather than being an isolated case-specific delay"
     ],
     "evidence": [
       {
         "type": "public_record",
-        "description": "The original protected whistleblower disclosure filed by Reuveni's attorneys, posted in full by the Senate Judiciary Committee, detailing allegations of DOJ and White House officials knowingly violating court injunctions on Alien Enemies Act deportations and retaliating against Reuveni",
+        "description": "The original June 24, 2025 protected whistleblower disclosure filed by Reuveni's attorneys, posted in full by the Senate Judiciary Committee, detailing allegations of DOJ and White House officials knowingly violating court injunctions on Alien Enemies Act deportations and retaliating against Reuveni",
         "source_url": "https://www.judiciary.senate.gov/imo/media/doc/06-24-2025_-_Protected_Whistleblower_Disclosure_of_Erez_Reuveni_Redacted.pdf",
         "maps_to_element": "Specific, documented allegations of court-order defiance by senior officials"
       },
       {
         "type": "public_record",
-        "description": "CNN's reporting that Reuveni's lawyers told Congress in March 2026 that DOJ's Inspector General had not investigated any of the serious misconduct allegations raised over the prior 15 months, including those separately raised by members of Congress",
+        "description": "CNN's March 30, 2026 report on a letter Reuveni's lawyers sent that day to House and Senate Judiciary Committee leaders saying DOJ's Inspector General hadn't investigated any of the serious misconduct allegations made over the prior 15 months, including those raised by members of Congress; that OIG told Reuveni in January 2026 it would refer his allegations to OPR; and a DOJ spokesman's response that there was no legitimate basis to investigate",
         "source_url": "https://www.cnn.com/2026/03/30/politics/doj-whistleblower-inspector-general-complaint",
-        "maps_to_element": "OIG's documented inaction on 20+ allegations over 15 months"
+        "maps_to_element": "OIG's documented inaction on misconduct allegations over 15 months"
       },
       {
         "type": "public_record",
         "description": "The Government Accountability Project's statement summarizing Reuveni's disclosures as exposing 'high-level defiance of court orders and retaliation,' corroborating the substance of the original allegations",
         "source_url": "https://whistleblower.org/press/doj-whistleblower-erez-reuveni-exposes-high-level-defiance-of-court-orders-and-retaliation/",
         "maps_to_element": "Independent characterization of the underlying misconduct allegations by a whistleblower-advocacy organization"
+      },
+      {
+        "type": "public_record",
+        "description": "The New York Times' March 30, 2026 report that the lawyers' letter said DOJ's watchdog had seemingly ignored 20 instances of possible wrongdoing by the Trump administration, and that the inspector general post had remained vacant since Michael Horowitz left in June 2025",
+        "source_url": "https://www.nytimes.com/2026/03/30/us/politics/trump-administration-doj-watchdog-reuveni.html",
+        "maps_to_element": "OIG's inaction on 20 instances of possible wrongdoing, alongside a vacant inspector general post"
+      },
+      {
+        "type": "public_record",
+        "description": "Bloomberg Law's report on the lawyers' letter: OIG sent a short, unsigned reply declining to investigate one day after Reuveni asked it to probe Emil Bove and current DOJ leaders, cited ongoing litigation and referred the complaint to OPR, which hasn't 'expressed any interest in conducting an investigation'; a DOJ spokesperson said there was no 'legitimate basis to investigate,' and the office has seen several acting leadership shifts since Horowitz left",
+        "source_url": "https://news.bloomberglaw.com/us-law-week/doj-watchdog-accused-of-abdicating-oversight-of-trump-leaders",
+        "maps_to_element": "OIG's refusal and OPR referral of Reuveni's own complaint; DOJ's on-record response"
+      },
+      {
+        "type": "public_record",
+        "description": "Government Executive's August 7, 2026 report that the Senate confirmed career inspector-general employee Don Berthiaume as DOJ inspector general; he had served as acting DOJ IG from October 2025 through January 2026",
+        "source_url": "https://www.govexec.com/oversight/2026/08/oversight-and-federal-workforce-nominees-confirmed/415295/",
+        "maps_to_element": "Inspector general vacancy later filled by a Senate-confirmed watchdog"
       }
     ],
-    "status": "Per Reuveni's lawyers' March 2026 statement to Congress, OIG had not opened investigations into any of the 20+ identified allegations, including complaints separately raised by members of Congress; no DOJ on-record response to that broader inaction claim has been identified.",
-    "rebuttal_anticipated": "Likely defense: inspectors general have broad prosecutorial-style discretion over which complaints to prioritize and investigate given limited resources, a whistleblower's own characterization of an investigation's scope and pace is inherently one-sided, and some underlying allegations remain contested legal questions (e.g., disputes over the proper interpretation of specific court orders) rather than clear-cut misconduct.",
-    "comeback": "The specific concern is not that every whistleblower complaint must be investigated on the complainant's preferred timeline, but that a documented 15-month pattern of zero investigative action across at least 20 distinct allegations -- some independently raised by sitting members of Congress, not just the whistleblower himself -- occurring alongside a broader, separately documented hollowing-out of DOJ's watchdog infrastructure, is difficult to characterize as ordinary prioritization discretion rather than a functional oversight failure.",
+    "status": "Reuveni's lawyers told Congress on March 30, 2026 that DOJ's inspector general had investigated none of the serious misconduct claims of the prior 15 months; DOJ said there was no \"legitimate basis to investigate.\" A permanent inspector general was confirmed Aug. 7, 2026; no OIG probe reported.",
+    "rebuttal_anticipated": "Likely defense: inspectors general have broad prosecutorial-style discretion over which complaints to prioritize and investigate given limited resources, a whistleblower's own characterization of an investigation's scope and pace is inherently one-sided, and some underlying allegations remain contested legal questions (e.g., disputes over the proper interpretation of specific court orders) rather than clear-cut misconduct. Senate Judiciary Chairman Chuck Grassley's office has said his investigation found the allegations did not substantiate misconduct against Bove.",
+    "comeback": "The specific concern is not that every whistleblower complaint must be investigated on the complainant's preferred timeline, but that a 15-month pattern of no publicly known investigative action across some 20 instances of possible misconduct -- some independently raised by sitting members of Congress, not just the whistleblower himself -- occurring alongside a broader, separately documented hollowing-out of DOJ's watchdog infrastructure, is difficult to characterize as ordinary prioritization discretion rather than a functional oversight failure.",
     "cause": "[TAP Analysis, not sourced] Consistent with the broader pattern this tracker documents of DOJ's internal accountability mechanisms being weakened under the current administration (see also the Bondi entry), extending here to the department's own inspector general function rather than a specific prosecutorial unit. Reuveni was fired after conceding in court that Abrego Garcia should not have been sent to El Salvador; see the entry on that removal.",
-    "last_verified": "2026-10-19",
+    "last_verified": "2026-11-07",
     "date_added": "2026-08-06",
-    "confidence_note": "HIGH confidence on Reuveni's original June 2025 whistleblower disclosure, which is a matter of public record via the Senate Judiciary Committee's own posting. HIGH confidence on the March 2026 claim that the OIG had not investigated the identified allegations, corroborated by CNN's direct reporting on Reuveni's lawyers' statement to Congress. MODERATE confidence on characterizing every one of the 20+ allegations as substantively meritorious, since this entry documents the OIG's inaction pattern and the original disclosure's contents, not an independent adjudication of each individual allegation's truth. Re-verified 2026-08-19, with a correction: OIG's one-day rejection letter regarding Reuveni's own request to probe Bove/leadership, its January 2026 referral to OPR, and OPR's lack of follow-through are corroborated by Bloomberg Law's direct reporting ('DOJ Watchdog Accused of Ignoring Trump Leaders' Misconduct') and CNN's March 30, 2026 coverage -- this Reuveni-specific response predates the entry's own write date by over six months and was not previously incorporated.",
-    "pull_quote": "Reuveni's lawyers told Congress in March 2026 that DOJ's own Inspector General had not investigated any of at least 20 serious misconduct allegations raised over the preceding 15 months.",
+    "confidence_note": "HIGH confidence on Reuveni's original June 2025 whistleblower disclosure, which is a matter of public record via the Senate Judiciary Committee's own posting. HIGH confidence on the March 2026 claim that the OIG had not investigated the identified allegations, corroborated by CNN's direct reporting on Reuveni's lawyers' statement to Congress. MODERATE confidence on characterizing every one of the roughly 20 instances as substantively meritorious, since this entry documents the OIG's inaction pattern and the original disclosure's contents, not an independent adjudication of each individual allegation's truth. Re-verified 2026-08-19, with a correction: OIG's one-day rejection letter regarding Reuveni's own request to probe Bove/leadership, its January 2026 referral to OPR, and OPR's lack of follow-through are corroborated by Bloomberg Law's direct reporting ('DOJ Watchdog Accused of Ignoring Trump Leaders' Misconduct') and CNN's March 30, 2026 coverage. Re-verified 2026-11-07, with corrections: the count of ignored allegations rests on The New York Times' report of \"20 instances\" in the lawyers' letter, not an \"at least 20\" figure; CNN and Bloomberg Law carry DOJ's on-record response; Government Executive confirms the Aug. 7, 2026 Senate confirmation of a permanent inspector general.",
+    "pull_quote": "Reuveni's lawyers told Congress in March 2026 that DOJ's own Inspector General hadn't investigated \"any of the serious allegations of misconduct made over the past 15 months.\"",
     "section_summaries": {
-      "incident_summary": "Fired DOJ whistleblower Erez Reuveni's lawyers told Congress in March 2026 that DOJ's Inspector General had investigated none of at least 20 misconduct allegations -- including court-order-defiance claims from his 2025 disclosure and complaints separately raised by members of Congress -- over the preceding 15 months, amid a broader hollowing-out of DOJ's watchdog offices.",
-      "confidence_note": "The original disclosure and the OIG-inaction claim are both well-documented via public congressional records and CNN's direct reporting; not every individual allegation has been independently adjudicated. OIG did give Reuveni's own complaint a quick, on-record (if pretextual, per his lawyers) rejection and OPR referral -- the broader 20+-allegation inaction claim otherwise stands.",
-      "status": "OIG still hadn't investigated any of the 20+ allegations as of March 2026, per Reuveni's lawyers; DOJ hasn't addressed the broader inaction claim."
+      "incident_summary": "Fired DOJ whistleblower Erez Reuveni's lawyers told Congress in March 2026 that DOJ's inspector general had seemingly ignored 20 misconduct cases in 15 months while its top post sat vacant.",
+      "confidence_note": "The disclosure and the OIG-inaction claim are well documented by congressional records, CNN, NYT and Bloomberg Law; the 20-case count is the lawyers' letter, per NYT, and none is adjudicated.",
+      "status": "Lawyers say OIG investigated none of the misconduct claims through March 2026; DOJ saw no basis to investigate. A permanent IG was confirmed in Aug. 2026; no probe reported."
     },
     "date_of_action": "2025-06 (Reuveni files whistleblower disclosure) through 2026-03 (lawyers tell Congress OIG failed to investigate)",
-    "last_substantive_update": "2026-10-19",
+    "last_substantive_update": "2026-11-07",
     "glance": {
       "who": "DOJ under Todd Blanche (Attorney General)",
-      "what": "Its Inspector General opened no probe of 20+ misconduct claims in 15 months, a whistleblower's lawyers say",
+      "what": "Its inspector general seemingly ignored 20 misconduct cases in 15 months, a whistleblower's lawyers say",
       "harm": {
         "kind": "institutional",
         "certainty": "alleged",
         "who": "DOJ's internal watchdog function"
       },
-      "reviewed": "2026-10-19"
+      "reviewed": "2026-11-07"
     },
     "cause_references": [
       {
@@ -14485,11 +14555,19 @@
         ]
       },
       {
-        "date": "2026-03",
+        "date": "2026-03-30",
         "text": "Reuveni's lawyers tell Congress the inspector general has not investigated any serious misconduct claim in 15 months",
         "turning_point": true,
         "sources": [
-          "https://www.cnn.com/2026/03/30/politics/doj-whistleblower-inspector-general-complaint"
+          "https://www.cnn.com/2026/03/30/politics/doj-whistleblower-inspector-general-complaint",
+          "https://www.nytimes.com/2026/03/30/us/politics/trump-administration-doj-watchdog-reuveni.html"
+        ]
+      },
+      {
+        "date": "2026-08-07",
+        "text": "The Senate confirms Don Berthiaume as DOJ's permanent inspector general",
+        "sources": [
+          "https://www.govexec.com/oversight/2026/08/oversight-and-federal-workforce-nominees-confirmed/415295/"
         ]
       }
     ]
@@ -17914,31 +17992,37 @@
     "id": "gabbard-directors-initiatives-group-2026",
     "official": "Tulsi Gabbard, then-Director of National Intelligence (February 2025-June 2026; resigned and was followed by acting DNI Bill Pulte, then by Jay Clayton)",
     "offense_category": "Creation and Use of an Intelligence Task Force for Partisan Political Attacks Under the Declared Guise of Depoliticizing Intelligence Agencies -- no criminal charge implicated; this tracks accountability for the gap between the task force's stated purpose and its documented use",
-    "incident_summary": "In April 2025, DNI Gabbard launched the Director's Initiatives Group (DIG), declaring its purpose was to root out politicization within U.S. intelligence agencies. In practice, the group issued reports attacking the intelligence community's own investigation into Russian interference in the 2016 election and the Biden administration's handling of domestic terrorism -- output critics, including Democrats and some intelligence-community insiders, characterized as a vehicle for Trump's political-retribution campaign rather than genuine depoliticization. A memo and the resulting internal controversy prompted a pause in DIG's work in December 2025, and Gabbard ultimately dissolved the group entirely in January 2026 following what Reuters described as 'alleged missteps.' Gabbard confirmed the wind-down to Reuters in a February 2026 exclusive.",
+    "incident_summary": "In April 2025, DNI Gabbard launched the Director's Initiatives Group (DIG), declaring its purpose was to root out politicization within U.S. intelligence agencies. In practice, the group issued reports attacking the intelligence community's own investigation into Russian interference in the 2016 election and the Biden administration's handling of domestic terrorism -- output critics, including Democrats and some intelligence-community insiders, characterized as a vehicle for Trump's political-retribution campaign rather than genuine depoliticization. Gabbard told Reuters on February 10, 2026 that she had wound down the group, which she said had always been meant as a temporary effort; two sources told Reuters the decision followed 'alleged missteps,' including the group mistakenly linking a federal security worker to the pipe bombs planted on the eve of the January 6, 2021 Capitol riot, which ODNI denied. A CIA officer formerly assigned to the group later said in written testimony to a Senate committee, as Raw Story reported, that a memo and 'the ensuing drama' helped spark a pause in its work in December 2025 and its dissolution in January 2026.",
     "contested": true,
     "elements_required": [
       "DIG was publicly launched with a stated depoliticization mission but produced work product attacking politically salient intelligence-community findings (the Russia investigation, domestic-terrorism handling under the prior administration)",
       "Critics from within the intelligence community itself, not solely partisan opponents, raised concerns the group was being used for political retribution rather than its stated purpose",
-      "An internal memo and controversy directly preceded both the group's December 2025 work pause and its January 2026 dissolution, indicating the shutdown followed specific internal problems rather than routine completion of its mission",
+      "A CIA officer formerly assigned to the group testified in writing that a memo and the resulting controversy helped spark DIG's December 2025 work pause and January 2026 dissolution, and two Reuters sources tied the wind-down to alleged missteps, indicating the shutdown followed specific internal problems rather than routine completion of its mission",
       "The group operated for less than a year before being wound down, a short lifespan for a task force whose stated mission (rooting out politicization) was not reported as accomplished"
     ],
     "evidence": [
       {
         "type": "public_record",
-        "description": "Reuters' exclusive reporting confirms Gabbard told Reuters directly that she wound down the Director's Initiatives Group, which she had launched with the declared goal of rooting out politicization from intelligence agencies but which critics accused of being a tool for partisan attacks",
-        "source_url": "https://www.usnews.com/news/world/articles/2026-02-10/exclusive-trumps-spy-chief-gabbard-winds-down-intelligence-task-force",
+        "description": "Reuters (Feb. 10, 2026, via The Star's syndicated copy) reports Gabbard told Reuters she had wound down the Director's Initiatives Group, launched with the declared goal of rooting out politicization but accused by critics of being a tool for partisan attacks; two sources said the decision followed alleged missteps, including mistakenly linking a federal security worker to the Jan. 6-eve pipe bombs, which an ODNI spokesperson denied, saying the group was only ever temporary",
+        "source_url": "https://www.thestar.com.my/news/world/2026/02/11/exclusive-trump039s-spy-chief-gabbard-winds-down-intelligence-task-force",
         "maps_to_element": "DIG's stated purpose versus its documented critical characterization, confirmed by Gabbard's own statement"
       },
       {
         "type": "reporting",
-        "description": "Federal News Network's reporting confirms DIG was formed in April 2025, issued reports attacking the Russia-interference investigation and the prior administration's domestic-terrorism response, and was dissolved after less than a year",
+        "description": "The Hill (Feb. 10, 2026), citing Reuters, reports Gabbard said she is ending the task force launched in April 2025, calling it temporary, and that Congress had passed a bill in December requiring a classified report on DIG's leadership, staffing and hiring practices, a deadline her office missed",
+        "source_url": "https://thehill.com/homenews/administration/5733533-tulsi-gabbard-ends-task-force/",
+        "maps_to_element": "Internal problems directly preceding the shutdown, rather than routine mission completion"
+      },
+      {
+        "type": "reporting",
+        "description": "Federal News Network (AP, Feb. 11, 2026) reports DIG was formed in April 2025 to root out what Gabbard called the politicization of intelligence gathering, that Democrats and some intelligence insiders questioned whether it would be used to weaken spy agencies and bring them under Trump's control, and that Gabbard ended its work after a little less than a year, calling it a temporary effort",
         "source_url": "https://federalnewsnetwork.com/intelligence-community/2026/02/gabbard-ends-intelligence-reform-task-force-after-less-than-a-year-of-work/",
         "maps_to_element": "DIG's specific work product and its short operational lifespan"
       },
       {
         "type": "reporting",
-        "description": "The Hill's reporting confirms an internal memo and resulting controversy preceded DIG's December 2025 work pause and its January 2026 full dissolution",
-        "source_url": "https://thehill.com/homenews/administration/5733533-tulsi-gabbard-ends-task-force/",
+        "description": "Raw Story (May 22, 2026) reports written testimony to the Senate Homeland Security Committee by James E. Erdman III, a CIA senior operations officer formerly assigned to DIG, stating 'The memo and the ensuing drama that unfolded as a result helped spark a pause in DIG's work in December 2025, and its ultimate dissolution in January 2026'; the memo carried a pardoned Jan. 6 defendant's false pipe-bomb claims against a CIA employee, and Gabbard's press secretary declined to comment on the record on that characterization",
+        "source_url": "https://www.rawstory.com/raw-investigates/weaponization-task-force/",
         "maps_to_element": "Internal problems directly preceding the shutdown, rather than routine mission completion"
       },
       {
@@ -17946,21 +18030,39 @@
         "description": "The Defense News (thedefensenews.com, May 23, 2026) coverage of Gabbard's planned June 30, 2026 departure from the DNI post reports her May 22 resignation announcement and says much of her declassification work was reportedly conducted through DIG, a task force she established",
         "source_url": "https://www.thedefensenews.com/Tulsi-Gabbard-to-Release-High-Profile-Intelligence-Reports-Before-Leaving-DNI-Post-on-June-30/",
         "maps_to_element": "DIG's specific work product and its short operational lifespan"
+      },
+      {
+        "type": "reporting",
+        "description": "CBS News reports President Trump announced on Tuesday, June 2, 2026 that housing official Bill Pulte would serve as acting director of national intelligence to replace Gabbard when she stepped aside at the end of the month",
+        "source_url": "https://www.cbsnews.com/news/bill-pulte-acting-director-national-intelligence-trump/",
+        "maps_to_element": "Current status: Gabbard's successor in the DNI post"
+      },
+      {
+        "type": "reporting",
+        "description": "CNN (June 19, 2026) reports Gabbard and Trump settled on June 19 as her departure date, ahead of the end of the month she had been promised, as Bill Pulte took over as acting director of national intelligence",
+        "source_url": "https://www.cnn.com/2026/06/19/politics/bill-pulte-intel-chief-takes-office",
+        "maps_to_element": "Current status: Gabbard's successor in the DNI post"
+      },
+      {
+        "type": "reporting",
+        "description": "CNBC reports the Senate confirmed Jay Clayton as director of national intelligence on July 28, 2026 by a 51-47 vote, ending interim DNI Bill Pulte's tenure",
+        "source_url": "https://www.cnbc.com/2026/07/28/jay-clayton-bill-pulte-senate-vote-trump-spy-chief.html",
+        "maps_to_element": "Current status: Gabbard's successor in the DNI post"
       }
     ],
-    "status": "Resolved -- DIG was fully dissolved in January 2026, confirmed by Gabbard herself in February 2026 reporting. Gabbard left the DNI role in June 2026; Bill Pulte served as acting DNI until Jay Clayton was confirmed July 28, 2026 (see the Government Service Redirection entry on Pulte's ODNI purge).",
+    "status": "Resolved -- Gabbard told Reuters on Feb. 10, 2026 that she had wound DIG down; a former member's Senate testimony dates its dissolution to January 2026. Gabbard left the DNI post on June 19, 2026, when Bill Pulte took over as acting DNI; the Senate confirmed Jay Clayton on July 28, 2026.",
     "rebuttal_anticipated": "Likely defense: reassessing intelligence agencies' past politically sensitive work is a legitimate function of a depoliticization effort, criticism of the Russia-interference investigation is not inherently partisan retaliation, and Gabbard's decision to wind down the group when internal problems surfaced reflects responsiveness rather than an admission the group was improperly used from the outset.",
-    "comeback": "The specific concern is not that DIG examined past intelligence work, but that its output specifically targeted findings politically inconvenient to the current administration (the Russia investigation, the prior administration's domestic-terrorism record) while operating under a neutral-sounding 'depoliticization' banner, and that its own internal memo and controversy -- not external criticism alone -- were what triggered the pause and dissolution, suggesting the concerns had substance recognized even inside the intelligence community.",
+    "comeback": "The specific concern is not that DIG examined past intelligence work, but that its output specifically targeted findings politically inconvenient to the current administration (the Russia investigation, the prior administration's domestic-terrorism record) while operating under a neutral-sounding 'depoliticization' banner, and that a CIA officer who served on the group testified that a memo it circulated and the resulting controversy helped spark the pause and dissolution, while two Reuters sources tied the wind-down to alleged missteps -- internal problems, not external criticism alone, suggesting the concerns had substance recognized even inside the intelligence community.",
     "cause": "[TAP Analysis, not sourced] Consistent with the broader pattern this tracker documents of ostensibly neutral oversight or reform bodies being used for partisan political ends under this administration (see also the Ed Martin Weaponization Working Group grand-jury-leak entry).",
-    "last_verified": "2026-10-21",
+    "last_verified": "2026-11-07",
     "date_added": "2026-08-05",
-    "confidence_note": "HIGH confidence -- Gabbard's own confirmation to Reuters that she wound down the group, its stated mission, and its documented output are all independently corroborated across Reuters, Federal News Network, and The Hill, with no facts disputed by Gabbard's own account. Re-verified 2026-08-18: no developments found since Gabbard's own June 2026 exit from the DNI role; DIG's dissolution stands as originally documented. Re-verified 2026-08-26: no developments found since the prior recheck; DIG's dissolution and Gabbard's own June 2026 exit from the DNI role stand as originally documented, no new confirming source identified. Re-verified 2026-09-05: no material change identified.",
+    "confidence_note": "HIGH confidence -- Gabbard's own confirmation to Reuters that she wound down the group, its stated mission, and its documented output are reported by Reuters and independently by AP (via Federal News Network), with The Hill relaying Reuters' account; why it ended is disputed, with ODNI denying the missteps Reuters' sources described. Re-verified 2026-08-18: no developments found since Gabbard's own June 2026 exit from the DNI role; DIG's dissolution stands as originally documented. Re-verified 2026-08-26: no developments found since the prior recheck; DIG's dissolution and Gabbard's own June 2026 exit from the DNI role stand as originally documented, no new confirming source identified. Re-verified 2026-09-05: no material change identified. Re-verified 2026-11-07: the December 2025 pause and January 2026 dissolution dates rest on a former DIG member's written Senate testimony reported by Raw Story, not on Reuters or The Hill, whose copies carry no memo, pause or January date; Pulte's acting tenure and Clayton's July 28, 2026 confirmation are confirmed by CBS News and CNBC.",
     "section_summaries": {
-      "incident_summary": "Gabbard launched an intelligence task force in 2025 under a depoliticization banner, but it produced reports attacking the Russia-interference investigation and the prior administration's domestic-terrorism record before an internal memo and controversy forced its dissolution within a year, which Gabbard confirmed to Reuters.",
-      "confidence_note": "Confirmed directly by Gabbard's own statement to Reuters and independently corroborated by Federal News Network and The Hill, with no facts disputed."
+      "incident_summary": "Gabbard's 2025 'depoliticization' task force produced reports attacking the Russia-interference probe; she wound it down by February 2026 amid reported missteps that ODNI denies.",
+      "confidence_note": "Gabbard confirmed the wind-down to Reuters, independently corroborated by AP; why it ended is disputed, with ODNI denying the missteps two sources described."
     },
-    "date_of_action": "2025-04 (Gabbard launches Director's Initiatives Group) through 2026-01 (group dissolved after 'alleged missteps')",
-    "last_substantive_update": "2026-10-21",
+    "date_of_action": "2025-04 (Gabbard launches Director's Initiatives Group) through 2026-02-10 (Gabbard confirms the group was wound down; a former member's testimony dates the dissolution to January 2026)",
+    "last_substantive_update": "2026-11-07",
     "glance": {
       "who": "Tulsi Gabbard (then-DNI)",
       "what": "Launched a 'depoliticizing' intelligence task force whose reports attacked the Russia probe; dissolved it",
@@ -17969,7 +18071,7 @@
         "certainty": "alleged",
         "who": "Nonpartisan intelligence analysis"
       },
-      "reviewed": "2026-10-21"
+      "reviewed": "2026-11-07"
     },
     "status_stage": "Reversed or withdrawn",
     "key_events": [
@@ -17984,27 +18086,25 @@
       },
       {
         "date": "2025-12",
-        "text": "The group's work is paused after an internal memo sets off controversy",
+        "text": "The group's work is paused amid fallout from a memo it circulated, a former member later testifies",
         "sources": [
-          "https://thehill.com/homenews/administration/5733533-tulsi-gabbard-ends-task-force/"
+          "https://www.rawstory.com/raw-investigates/weaponization-task-force/"
         ]
       },
       {
         "date": "2026-01",
-        "text": "Gabbard dissolves the group after what Reuters calls alleged missteps",
-        "turning_point": true,
+        "text": "The group is dissolved, according to the same former member's Senate testimony",
         "sources": [
-          "https://www.usnews.com/news/world/articles/2026-02-10/exclusive-trumps-spy-chief-gabbard-winds-down-intelligence-task-force",
-          "https://thehill.com/homenews/administration/5733533-tulsi-gabbard-ends-task-force/"
+          "https://www.rawstory.com/raw-investigates/weaponization-task-force/"
         ]
       },
       {
-        "date": "2026-02",
-        "text": "Gabbard confirms to Reuters that she has wound down the group, calling it a temporary effort",
+        "date": "2026-02-10",
+        "text": "Gabbard tells Reuters she has wound the group down, calling it temporary; sources cite alleged missteps",
+        "turning_point": true,
         "sources": [
-          "https://www.usnews.com/news/world/articles/2026-02-10/exclusive-trumps-spy-chief-gabbard-winds-down-intelligence-task-force",
-          "https://thehill.com/homenews/administration/5733533-tulsi-gabbard-ends-task-force/",
-          "https://federalnewsnetwork.com/intelligence-community/2026/02/gabbard-ends-intelligence-reform-task-force-after-less-than-a-year-of-work/"
+          "https://www.thestar.com.my/news/world/2026/02/11/exclusive-trump039s-spy-chief-gabbard-winds-down-intelligence-task-force",
+          "https://thehill.com/homenews/administration/5733533-tulsi-gabbard-ends-task-force/"
         ]
       }
     ]
@@ -36028,7 +36128,7 @@
     "id": "rfk-jr-hatch-act-iowa-candidates-2026",
     "official": "Robert F. Kennedy Jr., Secretary of Health and Human Services",
     "offense_category": "Hatch Act Violation -- using the authority of a federal office to influence the outcome of an election by pressuring third-party candidates to withdraw from congressional races",
-    "incident_summary": "Sen. Ron Wyden filed a complaint with the U.S. Office of Special Counsel (OSC) alleging that HHS Secretary Robert F. Kennedy Jr. violated the Hatch Act by placing phone calls urging two Libertarian congressional candidates in Iowa to withdraw from their races: a June 8, 2026 call to Marco Battaglia, running in Iowa's 3rd congressional district, and a June 11, 2026 call to Rick Stewart, running in Iowa's 2nd congressional district. **Donald Sherman, president of the nonpartisan watchdog group Citizens for Responsibility and Ethics in Washington (CREW), reviewed a recording of at least one call and said Kennedy invoked his official position and responsibilities as HHS Secretary multiple times during the conversation, calling it a 'clear violation' of the Hatch Act warranting OSC investigation.** The complaint seeks an OSC investigation into whether Kennedy improperly used his cabinet position to influence the composition of two competitive U.S. House races. Trump has separately taken steps during his second term to assert greater control over OSC, including firing the office's head earlier in the term, raising questions about whether the currently constituted office will investigate the complaint independently.",
+    "incident_summary": "On July 13, 2026, Sen. Ron Wyden filed a complaint with the U.S. Office of Special Counsel (OSC) alleging that HHS Secretary Robert F. Kennedy Jr. violated the Hatch Act by placing phone calls urging two Libertarian congressional candidates in Iowa to withdraw from their races: a June 8, 2026 call to Marco Battaglia, running in Iowa's 3rd congressional district, and a June 11, 2026 call to Rick Stewart, running in Iowa's 2nd congressional district. **Donald Sherman, president of the nonpartisan watchdog group Citizens for Responsibility and Ethics in Washington (CREW), reviewed a recording of at least one call and said Kennedy invoked his official position and responsibilities as HHS Secretary multiple times during the conversation, calling it a 'clear violation' of the Hatch Act warranting OSC investigation.** The complaint seeks an OSC investigation into whether Kennedy improperly used his cabinet position to influence the composition of two competitive U.S. House races. Trump has separately taken steps during his second term to assert greater control over OSC, including firing the office's head earlier in the term, raising questions about whether the currently constituted office will investigate the complaint independently.",
     "contested": true,
     "elements_required": [
       "A federal employee covered by the Hatch Act (a cabinet secretary) made direct contact with declared candidates in ongoing federal elections",
@@ -36039,7 +36139,7 @@
     "evidence": [
       {
         "type": "public_record",
-        "description": "Sen. Ron Wyden's Hatch Act complaint filed with OSC, alleging Kennedy called Libertarian candidates Marco Battaglia (Iowa's 3rd district, June 8, 2026) and Rick Stewart (Iowa's 2nd district, June 11, 2026) urging them to withdraw from their races",
+        "description": "Sen. Ron Wyden's Hatch Act complaint, filed with OSC on Monday, July 13, 2026, alleging Kennedy called Libertarian candidates Marco Battaglia (Iowa's 3rd district, June 8, 2026) and Rick Stewart (Iowa's 2nd district, June 11, 2026) urging them to withdraw from their races",
         "source_url": "https://apnews.com/article/rfk-jr-kennedy-hatch-act-iowa-wyden-cd81a5163a091b939121df539bf35330",
         "maps_to_element": "Direct contact with declared candidates in ongoing federal elections"
       },
@@ -36051,25 +36151,25 @@
       },
       {
         "type": "analysis",
-        "description": "Re-verification search (2026-08-18): no OSC finding, investigation outcome, or further developments beyond Wyden's original complaint and CREW's assessment were identified; the complaint's status remains pending as of this update.",
+        "description": "AP reports that Trump fired the head of OSC early in his second term, a posture that could influence whether the office acts on Wyden's complaint, and that Public Citizen's Craig Holman does not expect the office to act on what he considers a violation",
         "source_url": "https://apnews.com/article/rfk-jr-kennedy-hatch-act-iowa-wyden-cd81a5163a091b939121df539bf35330",
         "maps_to_element": "The Office of Special Counsel is institutionally positioned to investigate and act on the complaint independently of the administration"
       }
     ],
-    "status": "Complaint filed with OSC as of July 2026; no OSC finding or investigation outcome identified as of this entry",
+    "status": "Wyden filed the complaint with OSC on July 13, 2026. No OSC finding or investigation outcome has been reported; Public Citizen's Craig Holman told AP he does not expect the office to act.",
     "rebuttal_anticipated": "Likely defense: cabinet officials, like other public figures, retain some capacity for personal political activity and commentary on elections, and encouraging a candidate to withdraw is not per se unlawful unless it specifically leverages federal office/authority as the complaint alleges; the calls' full content and context have not been independently verified beyond the recording CREW reviewed and Wyden's complaint characterization.",
     "comeback": "The specific allegation is not that Kennedy expressed a personal political opinion, but that he invoked his HHS position and responsibilities during the calls themselves, which is the precise conduct the Hatch Act's use-of-official-authority provisions are designed to prevent -- and a nonpartisan ethics watchdog's independent review of the recording, not merely the complaining senator's characterization, supports that specific reading.",
     "cause": "[TAP Analysis, not sourced] Given Trump's documented efforts to assert control over OSC, including firing its prior head, there is a genuine open question -- flagged in reporting itself, not merely by critics -- about whether OSC in its current form will investigate a complaint against a sitting cabinet official independently; this doesn't bear on whether the underlying conduct occurred, but is relevant context for assessing whether accountability is likely to follow.",
-    "last_verified": "2026-09-06",
+    "last_verified": "2026-11-07",
     "date_added": "2026-07-27",
-    "confidence_note": "MODERATE-HIGH confidence -- the complaint's existence, its specific factual allegations (dates, candidates, districts), and CREW's independent on-record assessment based on a reviewed recording are corroborated across AP's widely syndicated reporting. MODERATE confidence on the ultimate legal characterization, since no OSC finding exists yet and this entry relies on a senator's complaint plus one watchdog's assessment rather than an adjudicated determination. Re-verified 2026-08-18: no material change -- no OSC ruling or investigation outcome has emerged since the complaint was filed. Re-verified 2026-09-06 (recheck sweep, batch 58): searched specifically for an OSC ruling or investigation outcome -- none identified, no material change.",
+    "confidence_note": "MODERATE-HIGH confidence -- the complaint's existence, its specific factual allegations (dates, candidates, districts), and CREW's independent on-record assessment based on a reviewed recording are corroborated across AP's widely syndicated reporting. MODERATE confidence on the ultimate legal characterization, since no OSC finding exists yet and this entry relies on a senator's complaint plus one watchdog's assessment rather than an adjudicated determination. Re-verified 2026-08-18: no material change -- no OSC ruling or investigation outcome has emerged since the complaint was filed. Re-verified 2026-09-06: searched specifically for an OSC ruling or investigation outcome -- none identified, no material change. Re-verified 2026-11-07: AP reports the complaint was filed on Monday, July 13, 2026; a search for an OSC ruling or investigation outcome found none.",
     "pull_quote": "Trump has separately taken steps during his second term to assert greater control over OSC, including firing the office's head earlier in the term, raising questions about whether the currently constituted office will investigate the complaint independently.",
     "section_summaries": {
-      "incident_summary": "Wyden filed an OSC Hatch Act complaint alleging RFK Jr. called two Libertarian Iowa House candidates urging them to drop out, with a CREW watchdog reviewing a recording and calling it a 'clear violation' based on Kennedy's invocation of his HHS role during the calls.",
-      "confidence_note": "The complaint's factual specifics and CREW's assessment are well-corroborated by widely syndicated AP reporting; no OSC ruling exists yet, and there's an open question about whether the current OSC will investigate independently."
+      "incident_summary": "Wyden's July 13, 2026 OSC complaint says RFK Jr. urged two Libertarian Iowa House candidates to drop out; CREW calls the recorded call a 'clear violation.'",
+      "confidence_note": "The complaint's details and CREW's assessment are well corroborated in AP reporting; OSC has issued no ruling, and whether it will investigate independently is open."
     },
     "date_of_action": "2026-06-08 (Kennedy calls Iowa candidate to withdraw) through 2026-06-11 (second call to withdraw)",
-    "last_substantive_update": "2026-09-06",
+    "last_substantive_update": "2026-11-07",
     "glance": {
       "who": "Robert F. Kennedy Jr. (HHS Secretary)",
       "what": "Allegedly called two Libertarian Iowa House candidates urging them to drop out, invoking the HHS role",
@@ -36078,7 +36178,7 @@
         "certainty": "alleged",
         "who": "Nonpartisan use of federal office"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-11-07"
     },
     "status_stage": "Under investigation",
     "key_events": [
@@ -36098,7 +36198,7 @@
         ]
       },
       {
-        "date": "2026-07",
+        "date": "2026-07-13",
         "text": "Sen. Ron Wyden files a Hatch Act complaint with the Office of Special Counsel over the calls",
         "turning_point": true,
         "sources": [
@@ -48164,8 +48264,14 @@
     ],
     "evidence": [
       {
+        "type": "news_report",
+        "description": "NPR's August 20, 2024 report that Santos pleaded guilty the previous day, August 19, 2024, to two charges, wire fraud and aggravated identity theft, after being charged with 23 criminal counts, and that prosecutors stressed the plea deal covers other crimes he admitted to, including filing fraudulent campaign finance reports, stealing money from donors, charging contributors' credit cards without authorization and fraudulently obtaining unemployment benefits",
+        "source_url": "https://www.npr.org/2024/08/20/nx-s1-5081330/former-rep-george-santos-pleads-guilty-to-wire-fraud-identity-theft",
+        "maps_to_element": "Establishes the guilty plea and the conduct it covered, including the deception of his own campaign donors"
+      },
+      {
         "type": "public_record",
-        "description": "Santos's April 2025 sentencing to 87 months in prison plus $373,949.97 in fines and restitution, after he pleaded guilty to wire fraud and identity theft charges; CBS also reported that Santos will no longer have to pay that restitution to his victims",
+        "description": "Santos's April 2025 sentencing to 87 months in prison plus $373,949.97 in fines and restitution, after he pleaded guilty to wire fraud and identity theft charges",
         "source_url": "https://www.cbsnews.com/newyork/news/trump-commutes-george-santos-sentence/",
         "maps_to_element": "Establishes the underlying conviction, sentence, and restitution obligation as a matter of public record"
       },
@@ -48176,8 +48282,8 @@
         "maps_to_element": "Documents the loyalty-based element of Trump's own stated rationale, alongside the prison-treatment rationale"
       },
       {
-        "type": "public_record",
-        "description": "Trump's October 17-18, 2025 announcement commuting Santos's sentence and ordering his immediate release, stating Santos had been 'horribly mistreated,' including a period in solitary confinement, reported by NPR, CNN, PBS NewsHour, and JURIST",
+        "type": "news_report",
+        "description": "NPR's October 17, 2025 report that Trump announced on Truth Social he had signed a commutation releasing Santos from prison immediately, writing that Santos 'was somewhat of a \"rogue\"' and praising his 'Courage, Conviction, and Intelligence to ALWAYS VOTE REPUBLICAN!'; Santos's lawyer told the AP he was released from the Federal Correctional Institution in Fairton, N.J., around 11 p.m. that night",
         "source_url": "https://www.npr.org/2025/10/17/nx-s1-5578304/trump-george-santos-prison-sentence-commuted",
         "maps_to_element": "Establishes the commutation itself and its stated official rationale"
       },
@@ -48195,9 +48301,15 @@
       },
       {
         "type": "news_report",
-        "description": "House Minority Leader Hakeem Jeffries's public criticism contrasting the speed of Santos's commutation with the administration's handling of other priorities, and Santos's own post-release comparison of criticism of his commutation to criticism of a hypothetical pardon of 'Jesus Christ off the cross'",
+        "description": "NBC News's October 17, 2025 report that Santos, indicted in May 2023 on federal charges including money laundering and wire fraud, was hit with a 23-count superseding indictment in October 2023 and later pleaded guilty to wire fraud and aggravated identity theft",
+        "source_url": "https://www.nbcnews.com/politics/donald-trump/trump-commutes-sentence-george-santos-rcna238293",
+        "maps_to_element": "Establishes the scope of the original indictment against the narrower offenses of the guilty plea"
+      },
+      {
+        "type": "news_report",
+        "description": "Santos's October 19, 2025 CNN interview with Dana Bash defending the commutation: 'If President Trump had pardoned Jesus Christ off the cross, he would have had critics'",
         "source_url": "https://www.cnn.com/2025/10/19/politics/video/george-santos-on-release-from-prison-trump-commutes-sentence",
-        "maps_to_element": "Documents contemporaneous political reaction and Santos's own public response"
+        "maps_to_element": "Documents Santos's own public response to the commutation"
       },
       {
         "type": "news_report",
@@ -48210,7 +48322,7 @@
     "rebuttal_anticipated": "The administration could argue clemency is a core, unreviewable constitutional power and that Trump was responding to a genuine humanitarian concern about Santos's treatment in prison (including solitary confinement), a concern independent of any political loyalty consideration, and that reducing an unusually long sentence for a first-time, non-violent financial-crimes offender is a legitimate use of that power regardless of the recipient's politics.",
     "comeback": "Clemency being a lawful constitutional power doesn't answer the pattern question this entry raises: Trump's own public statements cited Santos's voting loyalty specifically, not solely his prison conditions, and the commutation followed a direct, public lobbying campaign by a political ally (Greene) rather than a documented independent review of Santos's case on its facts. The clemency order also went beyond the prison term, cancelling any further restitution owed to Santos's victims. The underlying pattern -- clemency granted swiftly, after loyalist lobbying, to a convicted political ally whose crime was specifically defrauding his own supporters -- fits this tracker's broader documented pattern of clemency used to reward political alignment rather than to correct a specific, evidenced miscarriage of justice (see e.g. the entry on the Justice Department's firing of its Pardon Attorney for other pardon-wave examples, and the entry on the Justice Department's intervention in Tina Peters's state case for a comparable state-level pattern).",
     "cause": "[TAP Analysis, not sourced] Consistent with a broader pattern this tracker documents of clemency and pardon power being used to reward political loyalty and campaign/personal alliance rather than to address specific claims of wrongful conviction or disproportionate sentencing evaluated on an independent, case-specific basis.",
-    "confidence_note": "HIGH confidence on the sequence of events -- the conviction, sentence, restitution figure, commutation, and Greene's lobbying role are all corroborated across CBS News, NPR, CNN, PBS NewsHour, JURIST, and Fox News, with no factual dispute about what happened. The characterization of the commutation as primarily loyalty-driven rests on Trump's own public statements (praising Santos's voting record) alongside the humanitarian rationale he also offered -- both are presented rather than resolved to one motive, since Trump's own statements included both elements. Re-verified 2026-11-07 (correction): the clemency order, made public October 20, 2025, commutes the entire sentence 'with no further fines, restitution, probation, supervised release, or other conditions' (The Hill; CBS also reported Santos will no longer have to pay restitution), so the restitution order did not survive the commutation; Santos's guilty plea was to wire fraud and aggravated identity theft, the two offenses on the Justice Department's clemency list, after a 23-count superseding indictment; Greene's August 2025 letter is reported by CNN.",
+    "confidence_note": "HIGH confidence on the sequence of events -- the conviction, sentence, restitution figure, commutation, and Greene's lobbying role are all corroborated across CBS News, NPR, CNN, NBC News, The Hill and the Justice Department's clemency list, with no factual dispute about what happened. The characterization of the commutation as primarily loyalty-driven rests on Trump's own public statements (praising Santos's voting record) alongside the humanitarian rationale he also offered -- both are presented rather than resolved to one motive, since Trump's own statements included both elements. Re-verified 2026-11-07 (correction): the clemency order, made public October 20, 2025, commutes the entire sentence 'with no further fines, restitution, probation, supervised release, or other conditions' (The Hill), so the restitution order did not survive the commutation; Santos's guilty plea was to wire fraud and aggravated identity theft, the two offenses on the Justice Department's clemency list, after a 23-count superseding indictment (NBC News); Greene's August 2025 letter is reported by CNN.",
     "pull_quote": "Santos, defending the commutation in a post-release interview, compared criticism of it to hypothetical criticism of Trump pardoning “Jesus Christ off the cross.”",
     "last_verified": "2026-11-07",
     "date_added": "2026-09-10",
@@ -48240,6 +48352,13 @@
         "text": "The House expels Rep. George Santos",
         "sources": [
           "https://www.npr.org/2025/10/17/nx-s1-5578304/trump-george-santos-prison-sentence-commuted"
+        ]
+      },
+      {
+        "date": "2024-08-19",
+        "text": "Santos pleads guilty to wire fraud and aggravated identity theft",
+        "sources": [
+          "https://www.npr.org/2024/08/20/nx-s1-5081330/former-rep-george-santos-pleads-guilty-to-wire-fraud-identity-theft"
         ]
       },
       {
