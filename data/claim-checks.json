@@ -776,26 +776,26 @@
     "archive": false
    },
    "4": {
-    "state": "unopened",
-    "why": "",
-    "host": "usnews.com",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "RCFP's case page says The Times reported Cole was fighting the subpoena and lists the RCFP/Times application to unseal filed 2026-08-14 in E.D. Va. case 2:26-mc-00005.",
+    "host": "rcfp.org",
+    "date": "2026-10-03",
     "kind": "fact",
     "archive": false
    },
    "5": {
-    "state": "not_found",
-    "why": "The provided source text is the original August 5, 2026 Democracy Now brief, which predates the claimed August 25, 2026 recheck and cannot itself confirm that nothing changed by that later date.",
-    "host": "democracynow.org",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "The Zetik summary, attributed to The New York Times on Oct 6, states every element of the claim: the magistrate's recommendation, his tailored-need finding, its non-final status and the Newport News hearing.",
+    "host": "zetik.com",
+    "date": "2026-11-08",
     "kind": "fact",
     "archive": false
    },
    "6": {
     "state": "supports",
-    "why": "RCFP's case page says The Times reported Cole was fighting the subpoena and lists the RCFP/Times application to unseal filed 2026-08-14 in E.D. Va. case 2:26-mc-00005.",
-    "host": "rcfp.org",
-    "date": "2026-10-03",
+    "why": "The CourtListener listing shows the case number, assigned and referred judges, Document #28 (Cole's redacted objections, filed August 14 and entered 10/26/2026) and the June 5 motion to quash.",
+    "host": "courtlistener.com",
+    "date": "2026-11-08",
     "kind": "fact",
     "archive": false
    }
@@ -997,7 +997,7 @@
     "kind": "fact",
     "archive": false
    },
-   "7": {
+   "5": {
     "state": "supports",
     "why": "The DOJ press release dated September 14, 2026 states the $384,999,040 settlement for false claims between Jan. 1, 2018 and Dec. 31, 2022 tied to the Sturgis and Casa Grande facilities.",
     "host": "justice.gov",
@@ -1107,9 +1107,9 @@
   "blanche-doj-independence-collapse-admission-2026": {
    "0": {
     "state": "supports",
-    "why": "The NBC News article directly quotes Blanche's 'should make every American happy,' 'my boss,' and 'outsized focus' statements from the April 2026 interview.",
+    "why": "NBC News quotes Blanche saying the communication 'should make every American happy,' describes him calling Trump 'my boss,' and quotes his 'outsized focus' remark tied to the president's issues with those individuals.",
     "host": "nbcnews.com",
-    "date": "2026-09-15",
+    "date": "2026-11-08",
     "kind": "fact",
     "archive": false
    },
@@ -1196,14 +1196,38 @@
     "archive": false
    },
    "7": {
-    "state": "unopened",
-    "why": "",
+    "state": "partly",
+    "why": "The docket page text provided only reaches back to October 2026; it confirms the November 4 discovery hearing with an order 'forthcoming via Chambers,' but the July and August entries (ECF 68, 70, 72, 79, the July 31 conference and August 3 minute order) are not in the provided text.",
     "host": "courtlistener.com",
-    "date": "2026-09-27",
+    "date": "2026-11-08",
     "kind": "fact",
     "archive": false
    },
    "8": {
+    "state": "partly",
+    "why": "Both quoted sentences appear verbatim in the Examiner article, but the provided text does not show the article's August 11, 2026 publication date (only a photo caption dated Aug. 10).",
+    "host": "washingtonexaminer.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "9": {
+    "state": "supports",
+    "why": "ECF 79, filed 08/17/26 in response to the August 3 Minute Order, contains both quoted passages verbatim.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "10": {
+    "state": "partly",
+    "why": "The August 25 reply (Case 1:26-mc-00114, Document 20) contains the 'reject the ABA's wrongful attempt' language and cites the OLC opinion, but the provided text does not contain the 'relegates OLC's opinion to a single footnote' quote, and its caption reads 'In re Third Party Subpoenas' rather than naming Epshteyn.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "11": {
     "state": "supports",
     "why": "Judge Ali denied the disqualification motion, finding no identified necessary-witness lawyer and that Rule 3.7(a) restricts individual lawyers, not firms; the opinion also notes the government served third-party discovery on the firms.",
     "host": "storage.courtlistener.com",
@@ -1211,11 +1235,27 @@
     "kind": "fact",
     "archive": false
    },
-   "9": {
+   "12": {
     "state": "partly",
-    "why": "The motion seeks alternative service and a 90-day extension of the November 12, 2026 deadline through February 10, 2027, and contains both quoted statements, but the provided text does not show the government opposing the motion.",
+    "why": "ECF 87 (filed 10/22/26) confirms the alternative-service and limited-extension motion, the S.D.N.Y. July 20, 2026 transfer, and that Epshteyn 'resists all engagement while the motion to quash is pending,' but the truncated text does not show the 90-day/February 10, 2027 figures, the November 12 deadline, the July 2 filing date, the government's opposition, or the quoted sentences.",
     "host": "storage.courtlistener.com",
-    "date": "2026-11-02",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "13": {
+    "state": "supports",
+    "why": "ECF 89, dated November 2, 2026, contains both quoted passages verbatim, including the request to clarify that the third party need not respond while the motion to quash is pending.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "14": {
+    "state": "partly",
+    "why": "ECF 94 (filed 11/05/26) supports the 'Did Not Evade Service' point, the Rule 45 personal-service argument, the no-position stance on extension, and an abeyance request, but the specific quoted abeyance wording ('in abeyance until the Government's motion to quash those same subpoenas is fully and finally resolved') does not appear verbatim in the provided text.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-11-08",
     "kind": "fact",
     "archive": false
    }
@@ -5386,18 +5426,18 @@
   },
   "doge-chatgpt-grant-cuts-deposition-2026": {
    "0": {
-    "state": "supports",
-    "why": "The (truncated) Wayback capture directly confirms DOGE members' regular use of Signal, informal recruitment by people they knew, and other government employees' confusion about who was 'DOGE.'",
-    "host": "washingtonpost.com",
-    "date": "2026-09-15",
+    "state": "partly",
+    "why": "MLA's page confirms the Second Circuit appeal to restore three offices and twenty-two programs argued May 29, 2026, with no ruling reported, but it dates the summary-judgment motion March 7 (not March 6), and the provided text does not describe the DOGE depositions revealing a ChatGPT process.",
+    "host": "mla.org",
+    "date": "2026-11-08",
     "kind": "fact",
-    "archive": true
+    "archive": false
    },
    "1": {
     "state": "supports",
-    "why": "The source directly confirms Fox and Cavanaugh's deposition testimony describing the ChatGPT-based DEI screening (prompted for a sub-120-character Yes/No response), their role in the largest mass grant termination in NEH history, and Cavanaugh's stated lack of regret alongside his admission the deficit was not reduced.",
+    "why": "ABC's March 14, 2026 article reports Fox and Cavanaugh's depositions, the ChatGPT prompt limited to under 120 characters beginning 'Yes' or 'No,' their role in the largest NEH mass termination, Cavanaugh's 'No' on regret and 'No, we didn't' on reducing the deficit.",
     "host": "abcnews.com",
-    "date": "2026-09-15",
+    "date": "2026-11-08",
     "kind": "fact",
     "archive": false
    },
@@ -5411,21 +5451,29 @@
    },
    "3": {
     "state": "partly",
+    "why": "The Wayback snapshot of the Post article confirms Signal use and that other employees didn't know who was 'DOGE,' but the thin text does not describe a club-like atmosphere or confusion about DOGE's authority.",
+    "host": "washingtonpost.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": true
+   },
+   "4": {
+    "state": "partly",
     "why": "The source confirms Judge McMahon's May 7, 2026 ruling (a 143-page decision granting summary judgment on all counts) that the mass termination of more than 1,400 NEH grants was 'unlawful, unconstitutional, ultra vires, and without legal effect,' but it does not contain the 'textbook example of unconstitutional viewpoint discrimination' quote, the Jewish-women-Nazi-persecution grant example, or a dollar figure tied to this specific ruling.",
     "host": "acls.org",
     "date": "2026-09-15",
     "kind": "fact",
     "archive": false
    },
-   "4": {
-    "state": "partly",
-    "why": "The source confirms the June 2026 NEH reinstatement/implementation step following the ruling (agency asking grant recipients whether they still want reinstated awards), but it contains no mention of the government signaling an appeal of the ruling as 'egregiously wrong' or of Second Circuit oral arguments on May 29, 2026.",
+   "5": {
+    "state": "supports",
+    "why": "Inside Higher Ed states NEH, after losing in court over more than 1,400 grants totaling over $100 million, began offering this month (June 2026) to reinstate them, first asking via the Reinstatement Assurances Form whether recipients want reinstatement.",
     "host": "insidehighered.com",
-    "date": "2026-09-15",
+    "date": "2026-11-08",
     "kind": "fact",
     "archive": false
    },
-   "5": {
+   "6": {
     "state": "partly",
     "why": "The source confirms the July 6, 2026 appeal (26-1829) and the August 5 partial grant with fee entitlement deferred until appeals are exhausted, but nothing in the text states a 2.5% preservation figure; it only says plaintiffs sought 15%.",
     "host": "clearinghouse.net",
@@ -5433,23 +5481,7 @@
     "kind": "fact",
     "archive": false
    },
-   "6": {
-    "state": "supports",
-    "why": "The MLA page states the plaintiffs continue to pursue the Second Circuit appeal to restore three offices and twenty-two programs and that oral argument was held 29 May 2026; no ruling is mentioned.",
-    "host": "mla.org",
-    "date": "2026-10-06",
-    "kind": "fact",
-    "archive": false
-   },
    "7": {
-    "state": "unopened",
-    "why": "",
-    "host": "clearinghouse.net",
-    "date": "2026-09-15",
-    "kind": "fact",
-    "archive": false
-   },
-   "8": {
     "state": "supports",
     "why": "The summary states the lead case number, the September 9 opening brief, the November response date, and that the appeal and both orders remained in effect as of September 26, 2026.",
     "host": "clearinghouse.net",
@@ -6522,14 +6554,30 @@
     "archive": false
    },
    "4": {
+    "state": "supports",
+    "why": "The May 13, 2025 release names Raoul, Bonta, Platkin and Neronha 'as part of a coalition of 20 attorneys general,' describes the suit against FEMA, DHS and Noem, and lists the same sixteen joining states.",
+    "host": "illinoisattorneygeneral.gov",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "supports",
+    "why": "Paragraph 8 of the First Amended Complaint (filed 07/02/25, No. 1:25-cv-00206) lists the same 21 plaintiffs in the same order.",
+    "host": "clearinghouse-umich-production.s3.amazonaws.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
     "state": "partly",
-    "why": "HSToday reports Judge Smith's September 24, 2025 permanent injunction against DHS/FEMA enforcing immigration-related conditions on 40 federal grant programs, but the provided text does not say the order granted the states summary judgment.",
+    "why": "HSToday confirms Judge Smith's September 24, 2025 ruling permanently enjoined DHS and FEMA from enforcing the immigration conditions on 40 grant programs, but the provided text does not mention the APA arbitrary-and-capricious holding, the Spending Clause holding, or vacatur.",
     "host": "hstoday.us",
-    "date": "2026-10-06",
+    "date": "2026-11-08",
     "kind": "fact",
     "archive": true
    },
-   "5": {
+   "7": {
     "state": "supports",
     "why": "ILRC states the October 14, 2025 grant of the motion to enforce because DHS kept the same conditions after the injunction, and the November 21, 2025 notice of appeal to the First Circuit (No. 25-2131), exactly as claimed.",
     "host": "ilrc.org",
@@ -6537,7 +6585,7 @@
     "kind": "fact",
     "archive": false
    },
-   "6": {
+   "8": {
     "state": "supports",
     "why": "Paragraph 7 of the July 23, 2026 complaint in Case 1:26-cv-00485 (D.R.I.) alleges the FY2026 Standard Terms and Conditions include immigration conditions essentially identical to those vacated and enjoined last year, exactly as the claim states (correctly framed as an allegation).",
     "host": "ag.ny.gov",
@@ -6550,6 +6598,14 @@
     "why": "The docket shows the January 22, 2026 briefing schedule, the July 14 order extending the brief deadline to 09/02/2026 with the court 'disinclined to grant a request for further enlargement', the September 1, 2026 motion to dismiss, and the September 16, 2026 Rule 42(b) judgment and same-day mandate; the earlier extensions to May 4 and July 6 fall in an elided portion of the provided text and cannot be confirmed.",
     "host": "courtlistener.com",
     "date": "2026-10-06",
+    "kind": "fact",
+    "archive": false
+   },
+   "10": {
+    "state": "partly",
+    "why": "The Clearinghouse page confirms the case (1:26-cv-00485, D.R.I.) and Judge Mary Susan McElroy, but the docket entries in the provided text stop in July 2026 and do not show the October 2 amended complaint, October 13 summary-judgment motion, or October 21 scheduling order.",
+    "host": "clearinghouse.net",
+    "date": "2026-11-08",
     "kind": "fact",
     "archive": false
    }
@@ -8839,11 +8895,11 @@
   "fbi-milwaukee-election-director-home-visit-2026": {
    "0": {
     "state": "supports",
-    "why": "CBS News directly confirms FBI agents visited elections director Michelle Hawley's home leaving a card, and quotes Clerk Christenson's statement criticizing the visit as inappropriate given the Election Commission office was the normal contact point.",
+    "why": "The CBS report (Wayback) states an FBI agent visited the elections director's home and left a business card, and quotes Christenson criticizing the visit as an intrusion when the agency could have contacted the Election Commission's office directly; the Wisconsin Examiner piece is not in the provided text, but CBS alone supports the claim.",
     "host": "cbsnews.com",
-    "date": "2026-09-15",
+    "date": "2026-11-08",
     "kind": "fact",
-    "archive": false
+    "archive": true
    },
    "1": {
     "state": "partly",
@@ -8855,13 +8911,21 @@
    },
    "2": {
     "state": "supports",
-    "why": "Votebeat directly quotes named expert David Becker characterizing the investigation pattern as more plausibly aimed at the 2026/2028 elections than genuine 2020 fact-finding.",
-    "host": "votebeat.org",
-    "date": "2026-09-15",
-    "kind": "interpretation",
+    "why": "Urban Milwaukee (Jun 2nd, 2026) reports the unanimous council approval for Goyke to hire outside counsel for 'election-related needs' and that he will have two pro bono specialist firms should the issue escalate.",
+    "host": "urbanmilwaukee.com",
+    "date": "2026-11-08",
+    "kind": "fact",
     "archive": false
    },
    "3": {
+    "state": "partly",
+    "why": "Votebeat (June 8, 2026) reports that some named experts, such as David Becker, see the probes as being about 2026 and 2028, but frames this as what the probes 'may have more to do with' and what 'some experts believe,' softer than the claim's 'more plausibly a pretext' characterization.",
+    "host": "votebeat.org",
+    "date": "2026-11-08",
+    "kind": "interpretation",
+    "archive": false
+   },
+   "4": {
     "state": "supports",
     "why": "The Yahoo/Wisconsin Examiner article directly confirms Gov. Evers's public statement that he would resist federal efforts to seize Milwaukee's 2020 ballots.",
     "host": "yahoo.com",
@@ -8869,11 +8933,11 @@
     "kind": "fact",
     "archive": false
    },
-   "4": {
-    "state": "partly",
-    "why": "Urban Milwaukee confirms the county retained the Public Rights Project and The Washington Litigation Group in response to the FBI's approach, but this June 2, 2026 source predates and cannot confirm the claim's negative assertion that no ballots were seized or subpoenaed as of the 2026-08-18 recheck.",
-    "host": "urbanmilwaukee.com",
-    "date": "2026-09-15",
+   "5": {
+    "state": "supports",
+    "why": "WISN's July 7, 2026 report contains the quoted letter language, the interviews of a Commission official, police officers and reportedly a poll worker, the FBI's declining comment, the ballots preserved over an ongoing lawsuit, and Millis urging Kaul to intervene.",
+    "host": "wisn.com",
+    "date": "2026-11-08",
     "kind": "fact",
     "archive": false
    }

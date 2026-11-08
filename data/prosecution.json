@@ -1401,7 +1401,7 @@
   },
   {
     "id": "blanche-cole-north-korea-subpoena-2026",
-    "official": "Todd Blanche, Attorney General (confirmed August 8, 2026; was Acting Attorney General at the time of this entry's original sourcing)",
+    "official": "Todd Blanche, Attorney General (confirmed August 8, 2026; Deputy Attorney General when the subpoena was issued in February 2026; Acting Attorney General from April 2, 2026)",
     "offense_category": "Press Freedom / DOJ News Media Policy Violation (28 C.F.R. § 50.10) -- a separate leak investigation from this tracker's other DOJ-journalist-subpoena entries, notable because DOJ has refused to withdraw it after backing down from comparable subpoenas of other reporters",
     "incident_summary": "DOJ subpoenaed Matthew Cole, a freelance journalist who co-wrote a 2025 New York Times story on a botched 2019 Navy SEAL Team 6 mission in North Korea (in which SEALs killed several unarmed North Koreans while attempting to plant a listening device, based on reporting from roughly two dozen unnamed sources), **demanding his testimony and more than two years of his notes and communications to identify his sources**. The subpoena was issued in Virginia in February 2026, while Pam Bondi was Attorney General; FBI agents attempted to deliver it in person at Cole's New York City residence, then delivered it to his lawyer when he was not home. Its existence was not made public until August 1, 2026, when The Times disclosed it at Cole's request -- the paper said it supported his decision to make public a subpoena the government had tried to keep secret, and is paying for his legal representation. Unlike DOJ's subpoenas of Wall Street Journal reporters (Iran war reporting), a Washington Post reporter (Venezuela coverage) and New York Times reporters (Air Force One security story), all of which DOJ withdrew after legal challenges, DOJ had refused to withdraw the Cole subpoena as of early October 2026.",
     "contested": false,
@@ -1437,38 +1437,38 @@
         "maps_to_element": "Pattern characterization"
       },
       {
-        "type": "reporting",
-        "description": "Re-verified August 2026: no subsequent reporting identified of DOJ withdrawing the Cole subpoena, a court ruling on a motion to quash, or DOJ publicly explaining why this case is being treated differently from the WaPo/WSJ and NYT Air Force One subpoenas it withdrew under legal pressure -- status unchanged from this entry's original addition",
-        "source_url": "https://www.usnews.com/news/world/articles/2026-08-01/us-justice-department-subpoenas-new-york-times-freelancer-over-north-korea-story-paper-says",
-        "maps_to_element": "Re-verification of DOJ's continued refusal to withdraw, no new development"
-      },
-      {
-        "type": "news_report",
-        "description": "Re-verification search (2026-08-25): no subsequent reporting identified of DOJ withdrawing the Cole subpoena, a court ruling on a motion to quash, or a DOJ explanation for the disparate treatment versus the WaPo/WSJ/NYT Air Force One subpoenas it withdrew -- status unchanged from this entry's prior recheck.",
-        "source_url": "https://www.democracynow.org/2026/8/5/headlines/justice_department_subpoenaed_freelance_reporter_matthew_cole",
-        "maps_to_element": "Re-verification confirming no change to the subpoena's status as of this recheck"
-      },
-      {
         "type": "court_filing",
         "description": "The Reporters Committee for Freedom of the Press says The New York Times reported that Cole was challenging the grand jury subpoena, and that on August 14, 2026, the Times and the Reporters Committee applied in the U.S. District Court for the Eastern District of Virginia (No. 2:26-mc-00005) to unseal the judicial records ancillary to the subpoena.",
         "source_url": "https://www.rcfp.org/litigation/matthew-cole-unsealing-application/",
         "maps_to_element": "DOJ's continued refusal to withdraw the subpoena, contrasted with the withdrawn WaPo/WSJ and NYT subpoenas"
+      },
+      {
+        "type": "reporting",
+        "description": "A Zetik summary of New York Times reporting of October 6, 2026 says newly unsealed court records show Magistrate Judge Douglas E. Miller recommended letting the Justice Department enforce the subpoena, writing that prosecutors had shown a legitimate, tailored law-enforcement need for Cole's testimony; the recommendation is not final, and a district judge will hear the dispute in Newport News, Virginia",
+        "source_url": "https://www.zetik.com/news/article/story_id-p008-221649",
+        "maps_to_element": "DOJ maintained this subpoena despite withdrawing comparable ones elsewhere"
+      },
+      {
+        "type": "court_filing",
+        "description": "The federal court docket In re: Grand Jury Subpoena, Matthew Cole (E.D. Va. No. 4:26-dm-00001), assigned to District Judge Mark Steven Davis and referred to Magistrate Judge Douglas E. Miller, shows a redacted copy, entered October 26, 2026, of Cole's objections (filed August 14, 2026) to the magistrate judge's report and recommendation, and Cole's motion to quash the grand jury subpoena, filed June 5, 2026",
+        "source_url": "https://www.courtlistener.com/?q=%22Matthew%20Cole%22&type=r&court=vaed",
+        "maps_to_element": "The subpoena targeted a journalist specifically in connection with his newsgathering"
       }
     ],
-    "status": "Active and unresolved as of early October 2026 -- DOJ had not withdrawn the subpoena; Cole is challenging it in sealed proceedings in federal court in Virginia, where a New York Times/Reporters Committee bid to unseal those records was pending. No court ruling on his challenge identified.",
+    "status": "Active and unresolved: DOJ has not withdrawn the subpoena. Records unsealed in October 2026 show a magistrate judge recommended letting DOJ enforce it over Cole's June 2026 motion to quash; Cole has objected, and a district judge in Newport News, Va., will decide.",
     "rebuttal_anticipated": "Likely defense: the underlying 2019 SEAL Team 6 mission story involved the deaths of foreign nationals during a classified special-operations mission, a matter of unusually high national-security sensitivity distinguishable from the Air Force One, Iran and Venezuela stories, justifying DOJ's decision to pursue this subpoena to conclusion rather than withdraw it.",
     "comeback": "DOJ's own media-subpoena policy (28 C.F.R. 50.10) does not carve out a broader-scope exception for stories DOJ deems more sensitive -- the policy's personal-approval and less-intrusive-means requirements apply regardless of subject matter, and DOJ has not publicly identified what less-intrusive investigative steps it took before subpoenaing more than two years of a freelancer's notes, the same category of procedural question a federal judge raised in the Air Force One subpoenas before DOJ withdrew those.",
     "cause": "[TAP Analysis, not sourced] Part of the same broader pattern this tracker documents elsewhere (the WaPo/WSJ leak subpoenas over Iran and Venezuela coverage, begun under Bondi and withdrawn under Blanche; Patel's Air Force One leak probe) of DOJ leak investigations under this administration targeting journalists' sources directly; notable here for DOJ's willingness to hold firm on this one subpoena even after withdrawing comparable ones under court scrutiny, and after admitting errors in the Air Force One case.",
-    "last_verified": "2026-10-04",
+    "last_verified": "2026-11-08",
     "date_added": "2026-08-05",
-    "confidence_note": "HIGH confidence -- corroborated by The New York Times' own direct reporting on a subpoena targeting its own freelancer (an account with direct institutional knowledge and reason to be precise), plus independent corroboration from US News, Al Jazeera, and Democracy Now. No party has disputed the underlying facts as reported. Re-verified 2026-08-18: no material change identified. Re-verified 2026-08-25: no material change.",
+    "confidence_note": "HIGH confidence -- corroborated by The New York Times' own direct reporting on a subpoena targeting its own freelancer (an account with direct institutional knowledge and reason to be precise), plus independent corroboration from US News, Al Jazeera, and Democracy Now. No party has disputed the underlying facts as reported. Re-verified 2026-08-18: no material change identified. Re-verified 2026-08-25: no material change. Update 2026-11-08: the magistrate judge's recommendation is known from a summary of New York Times reporting on the unsealed records; the court docket confirms the report and recommendation and Cole's objections to it.",
     "pull_quote": "Unlike similar subpoenas of Washington Post, Wall Street Journal, and other New York Times reporters that DOJ withdrew after legal challenges, it has refused to withdraw the one targeting Cole.",
     "section_summaries": {
       "incident_summary": "DOJ subpoenaed NYT freelancer Matthew Cole for 2+ years of notes to find sources for his 2025 story on a botched SEAL Team 6 North Korea mission; unlike similar ones it withdrew, it has kept this one.",
       "confidence_note": "Corroborated by the New York Times' own direct reporting plus multiple independent outlets, with no facts disputed by any party."
     },
     "date_of_action": "2026-02 (subpoena issued) through 2026-08-01 (subpoena's existence disclosed publicly)",
-    "last_substantive_update": "2026-10-04",
+    "last_substantive_update": "2026-11-08",
     "glance": {
       "who": "Todd Blanche (Attorney General)",
       "what": "Refused to withdraw a subpoena for a NYT freelancer's notes on a SEAL Team 6 mission story",
@@ -1477,7 +1477,7 @@
         "certainty": "documented",
         "who": "Reporter Matthew Cole and his sources"
       },
-      "reviewed": "2026-10-04"
+      "reviewed": "2026-11-08"
     },
     "status_stage": "In court",
     "key_events": [
@@ -1498,6 +1498,13 @@
         ]
       },
       {
+        "date": "2026-06-05",
+        "text": "Cole moves in federal court in Virginia to quash the grand jury subpoena",
+        "sources": [
+          "https://www.courtlistener.com/?q=%22Matthew%20Cole%22&type=r&court=vaed"
+        ]
+      },
+      {
         "date": "2026-08-01",
         "text": "The Times makes the secret subpoena public at Cole's request; DOJ has not withdrawn it as it did other press subpoenas",
         "turning_point": true,
@@ -1509,12 +1516,35 @@
       },
       {
         "date": "2026-08-14",
-        "text": "The Times and the Reporters Committee ask a Virginia federal court to unseal records of Cole's challenge",
+        "text": "Cole objects to the magistrate judge's recommendation; the Times and Reporters Committee move to unseal the records",
         "sources": [
-          "https://www.rcfp.org/litigation/matthew-cole-unsealing-application/"
+          "https://www.rcfp.org/litigation/matthew-cole-unsealing-application/",
+          "https://www.courtlistener.com/?q=%22Matthew%20Cole%22&type=r&court=vaed"
+        ]
+      },
+      {
+        "date": "2026-10-06",
+        "text": "Unsealed records show a magistrate judge had recommended letting DOJ enforce the subpoena",
+        "turning_point": true,
+        "sources": [
+          "https://www.zetik.com/news/article/story_id-p008-221649",
+          "https://www.courtlistener.com/?q=%22Matthew%20Cole%22&type=r&court=vaed"
         ]
       }
-    ]
+    ],
+    "timeline": {
+      "confidence_note": {
+        "base": "HIGH confidence -- corroborated by The New York Times' own direct reporting on a subpoena targeting its own freelancer (an account with direct institutional knowledge and reason to be precise), plus independent corroboration from US News, Al Jazeera, and Democracy Now. No party has disputed the underlying facts as reported. Re-verified 2026-08-18: no material change identified. Re-verified 2026-08-25: no material change.",
+        "updates": [
+          {
+            "date": "2026-11-08",
+            "label": "Update",
+            "text": "Update 2026-11-08: the magistrate judge's recommendation is known from a summary of New York Times reporting on the unsealed records; the court docket confirms the report and recommendation and Cole's objections to it.",
+            "effective_date": "2026-11-08"
+          }
+        ]
+      }
+    }
   },
   {
     "id": "blanche-crypto-conflict-of-interest-2025",
@@ -1859,7 +1889,7 @@
   },
   {
     "id": "blanche-doj-drops-abbott-formula-case-2026",
-    "official": "Todd Blanche, Attorney General (confirmed August 8, 2026; was Acting Attorney General at the time of this entry's original sourcing)",
+    "official": "Todd Blanche, Attorney General (confirmed August 8, 2026; Deputy Attorney General when his office reportedly ordered the probe closed; Acting Attorney General from April 2, 2026)",
     "offense_category": "Prosecutorial Discretion Override / Corporate Accountability Failure -- DOJ senior leadership overruled its own Criminal Division's recommendation to pursue felony charges over infant hospitalizations and possible deaths, in favor of a civil settlement, against a company represented by a law firm with a pro-bono services deal benefiting pro-Trump causes",
     "incident_summary": "Federal prosecutors investigated Cronobacter bacterial contamination at Abbott Laboratories' Sturgis, Michigan infant-formula plant, where the FDA said **five infants were hospitalized with bacterial infections that 'may have contributed to death in two patients'**. Prosecutors reportedly recommended a felony charge that Abbott executives conspired to defraud the US, plus a separate Food, Drug and Cosmetic Act charge against the company. Tysen Duva, the DOJ Criminal Division's assistant attorney general, supported pursuing the felony charges, but was reportedly overruled by the Deputy Attorney General's office, then led by Todd Blanche, which ordered the criminal investigation closed. DOJ instead pursued a civil False Claims Act settlement, which a senior DOJ official called 'the best mechanism to achieve accountability, deterrence and protection of the public,' saying it included a 'significant' monetary penalty; on September 14, 2026, DOJ announced Abbott would pay $384,999,040, saying there had been no determination of liability. Sen. Adam Schiff opened an inquiry into the decision, writing to DOJ: 'Under your management, DOJ does not consider a case involving deadly risks to medically sensitive infants, after a recommendation of a felony charge, to be worthy of criminal prosecution,' and demanding an explanation for why prosecutors' advice was rejected. Abbott is represented by Kirkland & Ellis, one of the law firms that struck a deal with the White House providing pro-bono legal services to pro-Trump causes -- the same firm documented elsewhere in this tracker's entry on DOJ's subpoenas of law firms over Boris Epshteyn communications.",
     "contested": true,
@@ -1901,38 +1931,26 @@
         "maps_to_element": "Outside counsel's documented relationship with the administration, and its reported request that DOJ not prosecute"
       },
       {
-        "type": "analysis",
-        "description": "Re-verification search (2026-08-18): no formal DOJ or Blanche written response to Sen. Schiff's July 8, 2026 inquiry letter has been publicly reported; Schiff's inquiry remains open with no on-record DOJ reply identified beyond the original senior-official statement to CBS about the civil settlement being 'the best mechanism.'",
-        "source_url": "https://www.schiff.senate.gov/news/press-releases/news-who-killed-the-abbott-case-schiff-opens-inquiry-into-reports-that-department-of-justice-closed-criminal-case-against-abbott-laboratories-recommended-by-trumps-own-political-appointees/",
-        "maps_to_element": "DOJ has not provided a detailed public accounting of the decision"
-      },
-      {
-        "type": "news_report",
-        "description": "Re-verification search (2026-08-25): no formal DOJ or Blanche written response to Sen. Schiff's July 8, 2026 inquiry letter has surfaced; Schiff's inquiry remains open with no on-record DOJ reply beyond the original senior-official statement to CBS about the civil settlement -- status unchanged from the 2026-08-18 recheck.",
-        "source_url": "https://www.schiff.senate.gov/news/press-releases/news-who-killed-the-abbott-case-schiff-opens-inquiry-into-reports-that-department-of-justice-closed-criminal-case-against-abbott-laboratories-recommended-by-trumps-own-political-appointees/",
-        "maps_to_element": "Re-verification confirming no change to the status of Schiff's inquiry as of this recheck"
-      },
-      {
         "type": "public_record",
         "description": "DOJ announced on September 14, 2026 that Abbott Laboratories agreed to pay $384,999,040 to resolve allegations that it caused false claims to be submitted between Jan. 1, 2018, and Dec. 31, 2022, related to infant formula from its Sturgis, Michigan, and Casa Grande, Arizona, facilities.",
         "source_url": "https://www.justice.gov/opa/pr/abbott-agrees-pay-over-384m-settle-allegations-related-contaminated-infant-formula",
         "maps_to_element": "Case resolved civilly rather than criminally"
       }
     ],
-    "status": "Criminal probe closed; on September 14, 2026, DOJ announced Abbott would pay $384,999,040 to settle civil False Claims Act allegations, saying there had been no determination of liability. No detailed DOJ response to Schiff's inquiry into the override identified as of the latest reporting.",
+    "status": "Criminal probe closed; on September 14, 2026, DOJ announced Abbott would pay $384,999,040 to settle civil False Claims Act allegations, saying there had been no determination of liability. DOJ has not publicly answered Schiff's inquiry into the override.",
     "rebuttal_anticipated": "Likely defense: prosecutorial discretion routinely involves weighing internal recommendations against practical considerations (likelihood of conviction, resource allocation, adequacy of civil remedies), and DOJ's stated rationale -- that a civil settlement with a 'significant' penalty achieves accountability and deterrence -- is a legitimate, commonly used resolution mechanism in corporate food-safety cases generally, independent of any law-firm relationship. A senior DOJ official also told Bloomberg Law the Department 'did not give any weight' to Abbott's potential Ohio plant, a roughly $1 billion project that Kirkland & Ellis partner Mark Filip reportedly cited when urging DOJ not to prosecute.",
     "comeback": "DOJ's own Criminal Division recommended felony charges specifically because it judged the harm (infant hospitalizations and possible deaths) serious enough to warrant criminal rather than civil treatment -- senior leadership's override of that internal judgment, without a detailed public explanation, in a case involving a company represented by a firm with a documented pro-bono services arrangement benefiting pro-Trump causes, is the specific pattern Schiff's inquiry and this entry flag, not prosecutorial discretion in the abstract.",
     "cause": "[TAP Analysis, not sourced] Consistent with a broader pattern this tracker documents of DOJ decisions under Blanche appearing to favor entities with documented relationships to the administration (see also this tracker's entry on DOJ's law-firm subpoenas in the Epshteyn/ABA litigation, which involves several of the same firms, including Kirkland & Ellis, that made pro-bono deals with the White House).",
-    "last_verified": "2026-10-04",
+    "last_verified": "2026-11-08",
     "date_added": "2026-07-27",
-    "confidence_note": "HIGH confidence on the core facts -- DOJ's Criminal Division recommendation, Duva's support for felony charges, senior leadership's override, and Schiff's July 8, 2026 inquiry letter to Blanche are corroborated across CBS News, Schiff's own official Senate press release, Bloomberg Law, Food Safety Magazine, and AOL. The Kirkland & Ellis connection is a documented fact (the firm's pro-bono arrangement is independently established elsewhere in this tracker, and Bloomberg Law, citing people familiar with the matter, reports partner Mark Filip urged DOJ not to prosecute) but the link between that arrangement and this specific charging decision is flagged by this entry's analysis, not shown as a proven causal claim; a senior DOJ official told Bloomberg Law the Department gave no weight to the Ohio plant argument Filip reportedly raised. Re-verified 2026-08-18: no material change -- Schiff's inquiry remains open with no DOJ/Blanche formal response identified. Re-verified 2026-08-25: no material change. Re-verified 2026-09-08 (recheck sweep, batch 64): searched specifically for a formal DOJ/Blanche response to Schiff's inquiry or any charging-decision reversal -- none found, no material change. Re-verified 2026-10-04: the FDA figures cited by CBS News (five infants hospitalized; infections 'may have contributed to death in two patients') confirmed, and the summary now carries the FDA's hedge; no DOJ reply to Schiff's inquiry found.",
+    "confidence_note": "HIGH confidence on the core facts -- DOJ's Criminal Division recommendation, Duva's support for felony charges, senior leadership's override, and Schiff's July 8, 2026 inquiry letter to Blanche are corroborated across CBS News, Schiff's own official Senate press release, Bloomberg Law, Food Safety Magazine, and AOL. The Kirkland & Ellis connection is a documented fact (the firm's pro-bono arrangement is independently established elsewhere in this tracker, and Bloomberg Law, citing people familiar with the matter, reports partner Mark Filip urged DOJ not to prosecute) but the link between that arrangement and this specific charging decision is flagged by this entry's analysis, not shown as a proven causal claim; a senior DOJ official told Bloomberg Law the Department gave no weight to the Ohio plant argument Filip reportedly raised. Re-verified 2026-08-18: no material change -- Schiff's inquiry remains open with no DOJ/Blanche formal response identified. Re-verified 2026-08-25: no material change. Re-verified 2026-09-08: searched specifically for a formal DOJ/Blanche response to Schiff's inquiry or any charging-decision reversal -- none found, no material change. Re-verified 2026-10-04: the FDA figures cited by CBS News (five infants hospitalized; infections 'may have contributed to death in two patients') confirmed, and the summary now carries the FDA's hedge; no DOJ reply to Schiff's inquiry found.",
     "pull_quote": "“DOJ does not consider a case involving deadly risks to medically sensitive infants, after a recommendation of a felony charge, to be worthy of criminal prosecution,” Sen. Adam Schiff wrote to Acting Attorney General Blanche.",
     "section_summaries": {
       "incident_summary": "DOJ leadership under Blanche overrode its Criminal Division's felony recommendation against Abbott over infant illnesses tied to formula contamination; Abbott settled civilly for $385 million.",
       "confidence_note": "Well-corroborated across CBS News, Schiff's own Senate press release, and Bloomberg Law; the Kirkland & Ellis connection is flagged, not shown to be a causal link."
     },
     "date_of_action": "2026-06-28 (first reported by WSJ, per Schiff's letter; closure date not stated in reporting)",
-    "last_substantive_update": "2026-10-04",
+    "last_substantive_update": "2026-11-08",
     "glance": {
       "who": "Todd Blanche (then Deputy AG)",
       "what": "DOJ leadership overruled a felony-charge recommendation over infant formula illnesses; Abbott settled civilly",
@@ -1941,7 +1959,7 @@
         "certainty": "alleged",
         "who": "Accountability for infant-formula harms"
       },
-      "reviewed": "2026-10-04"
+      "reviewed": "2026-11-08"
     },
     "status_stage": "Unchallenged",
     "key_events": [
@@ -2187,7 +2205,7 @@
   },
   {
     "id": "blanche-doj-independence-collapse-admission-2026",
-    "official": "Todd Blanche, Attorney General (confirmed August 8, 2026; was Acting Attorney General at the time of this entry's original sourcing)",
+    "official": "Todd Blanche, Attorney General (confirmed August 8, 2026; Acting Attorney General during his April 14, 2026 NBC News interview)",
     "offense_category": "Public Admission That DOJ Prosecutorial Decisions Are Directed by Presidential Preference Rather Than Institutional Independence -- an institutional-accountability claim resting on the official's own on-record statements, not a criminal charge",
     "incident_summary": "In an April 2026 NBC News interview, Acting Attorney General Todd Blanche -- Trump's former personal defense attorney -- was asked about a communication in which Trump had publicly implored then-Attorney General Pam Bondi to indict several of his political enemies. Blanche said Americans should be 'happy' about it, calling it an example of the president being upfront with the public and making his 'high expectations' clear: 'That type of communication from President Trump should make every American happy,' Blanche said, adding it 'means that there's an executive, a chief executive, that is making sure every one of his Cabinet members are working as hard as they should.' Blanche described Trump as 'my boss' and characterized the investigations into Trump's political opponents as receiving 'outsized focus' only because 'they involve individuals that the president has had significant issues' with -- not because of their share of DOJ's actual caseload. Separately, Blanche suggested prosecutors could continue pursuing cases against a target even after a grand jury declines to indict, rather than treating a declined indictment as the matter's end -- 'You don't have to just take a \"no true bill\" from a grand jury and walk away,' he said. Legal commentary in Just Security later urged courts to adopt a 'no true bill' rule, devised by the chief judge of D.C.'s federal district court, requiring prosecutors to disclose a grand jury's prior refusal to indict before re-presenting a case elsewhere. The interview came as Blanche's own nomination for permanent Attorney General faced a contested Senate confirmation process.",
     "contested": true,
@@ -2200,7 +2218,7 @@
     "evidence": [
       {
         "type": "public_record",
-        "description": "NBC News's direct reporting and quotations of Blanche's April 2026 interview: his 'should make every American happy' statement about Trump's public indictment demands, his description of Trump as 'my boss,' and his characterization of the enemies-focused investigations as receiving 'outsized focus' only because of the president's personal issues with those individuals",
+        "description": "NBC News's direct reporting and quotations of Blanche's April 14, 2026 interview: his 'should make every American happy' statement about Trump's public indictment demands, his description of Trump as 'my boss,' and his characterization of the enemies-focused investigations as receiving 'outsized focus' only because of the president's personal issues with those individuals",
         "source_url": "https://www.nbcnews.com/politics/justice-department/todd-blanche-says-americans-happy-trump-deeply-involved-doj-rcna331691",
         "maps_to_element": "Blanche's on-record endorsement of presidential direction and his 'my boss' framing"
       },
@@ -2227,16 +2245,16 @@
     "rebuttal_anticipated": "Likely defense: the president has constitutional authority over the executive branch including DOJ, an Attorney General publicly acknowledging that authority is not the same as DOJ actually making prosecutorial decisions on political grounds, and Blanche's remarks about outsized media focus on a small number of cases is a factual observation about coverage patterns rather than a policy admission.",
     "comeback": "The concern here is not that Blanche acknowledged the president has formal authority over DOJ -- it's that he affirmatively characterized the president publicly directing prosecutors to indict named political opponents as something that 'should make every American happy,' rather than defending DOJ's independence from that kind of direction, and separately said prosecutors need not 'walk away' after a grand jury's rejection, a posture legal commentators have urged courts to check with a rule requiring disclosure of a prior refusal to indict before a case is re-presented.",
     "cause": "[TAP Analysis, not sourced] Consistent with a broader pattern this tracker documents of DOJ leadership under this administration publicly affirming rather than resisting direct presidential involvement in individual prosecutorial decisions (see also this tracker's pattern-level Patel prosecution-campaign entry and the individual Comey, Brennan, and James vindictive-prosecution entries).",
-    "last_verified": "2026-10-04",
+    "last_verified": "2026-11-08",
     "date_added": "2026-08-06",
-    "confidence_note": "HIGH confidence -- these are Blanche's own on-record statements in a national interview, directly quoted and corroborated by NBC News's own reporting and independently republished/discussed by The Hill, Truthout, and The Daily Beast. His grand-jury comments are directly quoted by NBC News; the point about a disclosure safeguard for re-presented cases rests on legal commentary (Just Security) and is framed as such. Re-verified and updated 2026-08-19: Blanche's Senate confirmation (Aug 8, 2026, 50-49) and his August 16, 2026 on-record refusal to pledge DOJ independence are genuinely new developments that postdate this entry's original sourcing (August 6, 2026). HIGH confidence -- the Aug 16 statement is directly quoted and independently corroborated across NPR, CNN, Washington Post, Axios, The Hill, Newsweek, and Forbes. Re-verified 2026-09-08: no material development; investigation status unchanged.",
+    "confidence_note": "HIGH confidence -- these are Blanche's own on-record statements in a national interview, directly quoted and corroborated by NBC News's own reporting and independently republished/discussed by The Hill, Truthout, and The Daily Beast. His grand-jury comments are directly quoted by NBC News; the point about a disclosure safeguard for re-presented cases rests on legal commentary (Just Security) and is framed as such. Re-verified and updated 2026-08-19: Blanche's Senate confirmation (Aug 8, 2026, 50-49) and his August 16, 2026 on-record refusal to pledge DOJ independence are later developments that postdate the April 14, 2026 interview. HIGH confidence -- the Aug 16 statement is directly quoted and independently corroborated across NPR, CNN, Washington Post, Axios, The Hill, Newsweek, and Forbes. Re-verified 2026-09-08: no material development; investigation status unchanged.",
     "pull_quote": "Blanche's April 2026 line about Trump publicly demanding indictments of his opponents: “That type of communication from President Trump should make every American happy.”",
     "section_summaries": {
       "incident_summary": "Acting AG Todd Blanche told NBC News Americans should be 'happy' Trump pushes DOJ to indict his opponents, called Trump 'my boss,' and suggested cases could go on after grand juries decline to indict.",
       "confidence_note": "Blanche's quotes, including on grand juries, are directly sourced and corroborated across outlets; the point about a disclosure safeguard for re-presented cases rests on legal commentary."
     },
-    "date_of_action": "2026-04 (Blanche's NBC News interview)",
-    "last_substantive_update": "2026-10-04",
+    "date_of_action": "2026-04-14 (Blanche's NBC News interview)",
+    "last_substantive_update": "2026-11-08",
     "glance": {
       "who": "Todd Blanche (Attorney General)",
       "what": "Called Trump 'my boss,' said Trump's views can factor into prosecutions, refused to pledge DOJ independence",
@@ -2245,12 +2263,12 @@
         "certainty": "documented",
         "who": "DOJ's independence from the White House"
       },
-      "reviewed": "2026-10-04"
+      "reviewed": "2026-11-08"
     },
     "status_stage": "Unchallenged",
     "key_events": [
       {
-        "date": "2026-04",
+        "date": "2026-04-14",
         "text": "Acting Attorney General Blanche tells NBC News Trump's public demands to indict his enemies should make Americans happy",
         "turning_point": true,
         "sources": [
@@ -2258,7 +2276,7 @@
         ]
       },
       {
-        "date": "2026-04",
+        "date": "2026-04-14",
         "text": "In the same interview, he says prosecutors need not walk away when a grand jury declines to indict",
         "sources": [
           "https://www.nbcnews.com/politics/justice-department/todd-blanche-says-americans-happy-trump-deeply-involved-doj-rcna331691"
@@ -2284,9 +2302,9 @@
   },
   {
     "id": "blanche-doj-law-firm-subpoenas-epshteyn-2026",
-    "official": "Todd Blanche, Attorney General (confirmed August 8, 2026; was Acting Attorney General at the time of this entry's original sourcing)",
+    "official": "Todd Blanche, Attorney General (confirmed August 8, 2026; Acting Attorney General when DOJ subpoenaed the 14 law firms on July 1, 2026)",
     "offense_category": "DOJ Weaponization Against the Legal Profession / Executive Privilege Misuse -- DOJ using civil-litigation subpoena power against private law firms to shield a presidential adviser's communications from a bar association's discovery request, while its own public justification concedes those communications are relevant",
-    "incident_summary": "Starting around February 2025, Trump used executive orders to strip lawyers at firms he viewed as hostile -- including firms that had represented his adversaries or investigated him -- of security clearances, government contracts, and building access. Rather than negotiating with government attorneys, targeted firms instead cut deals directly with Boris Epshteyn, Trump's personal lawyer, who by April 2025 had extracted commitments of close to $1 billion in free legal services for Trump-aligned causes plus changes to hiring practices, according to the Wall Street Journal; the nine firms that reached these deals, beginning with Paul, Weiss in March 2025, were Paul, Weiss, Skadden, Willkie Farr & Gallagher, Milbank, Kirkland & Ellis, Latham & Watkins, A&O Shearman, Simpson Thacher & Bartlett, and Cadwalader, Wickersham & Taft; Bloomberg Law put their combined pledges at $940 million. In early July 2026 (the University of Wisconsin Law School's Lawyers and Democratic Decline tracker says the subpoenas were issued July 1; DOJ's notice to the ABA is dated July 2), the Justice Department subpoenaed 14 major law firms and their leaders -- the nine firms that reached deals pledging free legal services to the administration, the four firms that successfully challenged Trump's executive orders targeting them in court (Perkins Coie, Jenner & Block, WilmerHale, and Susman Godfrey), and Covington & Burling, which was targeted by a February 25, 2025 presidential memorandum -- seeking the firms' communications with Trump adviser Boris Epshteyn about those executive orders, plus any communications the firms had with the American Bar Association regarding Epshteyn. The New York Times reported the subpoenas on July 14, and DOJ disclosed them in a July 17 court filing in the ABA's ongoing lawsuit alleging its members face harm from the administration's law-firm policy; DOJ's stated position was that the ABA should seek this information from its own members or the firms rather than from the White House directly, while simultaneously invoking executive privilege to withhold Epshteyn's communications from direct disclosure, framing them as confidential presidential advice. DOJ's subpoena notice was filed under the name of Civil Division Assistant Attorney General Brett A. Shumate and signed by trial attorney Adam S. Fox. On July 17, DOJ also moved to disqualify Susman Godfrey, one of the subpoenaed firms, as the ABA's counsel. The appeal of the underlying executive orders, already struck down for the four affected firms, remained pending before the U.S. Court of Appeals for the D.C. Circuit, which heard argument on May 14, 2026.\n\nIn a July 22, 2026 reply supporting its July 7 motion to compel, the ABA said the government's argument \"leads to an absurd outcome,\" called its law-firm subpoenas \"a huge waste of time (and resources) for everyone involved,\" and pressed for direct production by DOJ or a compliant privilege log. The subpoenas also called the 14 firms' leaders to depositions set for August 3, 2026; no account of those depositions has been publicly reported. Judge Amir H. Ali heard the motion to compel on July 31 and took it under advisement, and on August 3 ordered DOJ to identify the individuals and custodians at issue for several of the ABA's requests or assert privilege over them. On August 10, 2026, DOJ's Office of Legal Counsel issued a 21-page opinion to the Counsel to the President, signed by Assistant Attorney General T. Elliot Gaiser, concluding that executive privilege can extend to a president's communications with private advisers -- \"anyone the President consults outside the Executive Branch\" -- where the communications relate to official presidential decisionmaking, involve or reflect communications with the President or his direct advisers, and are confidential; the opinion does not mention the ABA case or Epshteyn. The Washington Examiner reported it on August 11. On August 17, DOJ formally asserted the presidential communications privilege over the non-public names of presidential advisers and custodians the court had ordered it to identify, saying the subpoenaed firms had \"only just begun to produce records.\" On August 25, DOJ invoked the OLC opinion in its reply supporting the motion it had filed on July 2, on behalf of the Executive Office of the President and the United States, to quash the ABA's own document and deposition subpoenas to Epshteyn, turning what had been a litigation-filing assertion into a position backed by OLC's formal opinion. On October 16, 2026, Judge Ali denied DOJ's motion to disqualify Susman Godfrey, finding the government \"does not identify any lawyer at Susman Godfrey who is likely to be a necessary witness at trial\" and that the professional-conduct rule it relied on \"restricts representation by individual lawyers, not by their law firms.\" On October 22, the ABA, over DOJ's opposition, asked the court to let it serve Epshteyn by alternative means and to extend the November 12, 2026 fact-discovery deadline to February 10, 2027 for his discovery alone, saying Epshteyn had used DOJ's still-pending motion to quash \"to avoid any engagement with the subpoenas\" and had evaded service of replacement subpoenas; the court set a discovery conference for November 4.",
+    "incident_summary": "Starting around February 2025, Trump used executive orders to strip lawyers at firms he viewed as hostile -- including firms that had represented his adversaries or investigated him -- of security clearances, government contracts, and building access. Rather than negotiating with government attorneys, targeted firms instead cut deals directly with Boris Epshteyn, Trump's personal lawyer, who by April 2025 had extracted commitments of close to $1 billion in free legal services for Trump-aligned causes plus changes to hiring practices, according to the Wall Street Journal; the nine firms that reached these deals, beginning with Paul, Weiss in March 2025, were Paul, Weiss, Skadden, Willkie Farr & Gallagher, Milbank, Kirkland & Ellis, Latham & Watkins, A&O Shearman, Simpson Thacher & Bartlett, and Cadwalader, Wickersham & Taft; Bloomberg Law put their combined pledges at $940 million. In early July 2026 (the University of Wisconsin Law School's Lawyers and Democratic Decline tracker says the subpoenas were issued July 1; DOJ's notice to the ABA is dated July 2), the Justice Department subpoenaed 14 major law firms and their leaders -- the nine firms that reached deals pledging free legal services to the administration, the four firms that successfully challenged Trump's executive orders targeting them in court (Perkins Coie, Jenner & Block, WilmerHale, and Susman Godfrey), and Covington & Burling, which was targeted by a February 25, 2025 presidential memorandum -- seeking the firms' communications with Trump adviser Boris Epshteyn about those executive orders, plus any communications the firms had with the American Bar Association regarding Epshteyn. The New York Times reported the subpoenas on July 14, and DOJ disclosed them in a July 17 court filing in the ABA's ongoing lawsuit alleging its members face harm from the administration's law-firm policy; DOJ's stated position was that the ABA should seek this information from its own members or the firms rather than from the White House directly, while simultaneously invoking executive privilege to withhold Epshteyn's communications from direct disclosure, framing them as confidential presidential advice. DOJ's subpoena notice was filed under the name of Civil Division Assistant Attorney General Brett A. Shumate and signed by trial attorney Adam S. Fox. On July 17, DOJ also moved to disqualify Susman Godfrey, one of the subpoenaed firms, as the ABA's counsel. The appeal of the underlying executive orders, already struck down for the four affected firms, remained pending before the U.S. Court of Appeals for the D.C. Circuit, which heard argument on May 14, 2026.\n\nIn a July 22, 2026 reply supporting its July 7 motion to compel, the ABA said the government's argument \"leads to an absurd outcome,\" called its law-firm subpoenas \"a huge waste of time (and resources) for everyone involved,\" and pressed for direct production by DOJ or a compliant privilege log. The subpoenas also called the 14 firms' leaders to depositions set for August 3, 2026; no account of those depositions has been publicly reported. Judge Amir H. Ali heard the motion to compel on July 31 and took it under advisement, and on August 3 ordered DOJ to identify the individuals and custodians at issue for several of the ABA's requests or assert privilege over them. On August 10, 2026, DOJ's Office of Legal Counsel issued a 21-page opinion to the Counsel to the President, signed by Assistant Attorney General T. Elliot Gaiser, concluding that executive privilege can extend to a president's communications with private advisers -- \"anyone the President consults outside the Executive Branch\" -- where the communications relate to official presidential decisionmaking, involve or reflect communications with the President or his direct advisers, and are confidential; the opinion does not mention the ABA case or Epshteyn. The Washington Examiner reported on August 11 that OLC posted the opinion \"without a press release or public announcement\" the same day Blanche was sworn in as Attorney General. On August 17, DOJ formally asserted the presidential communications privilege over the non-public names of presidential advisers and custodians the court had ordered it to identify, saying the subpoenaed firms had \"only just begun to produce records.\" On August 25, DOJ cited the OLC opinion in its reply supporting the motion it had filed on July 2 in New York, on behalf of the Executive Office of the President and the United States, to quash the ABA's own document and deposition subpoenas to Epshteyn (the motion was transferred to Judge Ali in July); the reply faulted the ABA for relegating the opinion \"to a single footnote\" and argued that the heightened protection for close presidential advisers is not confined to people holding an official government title. On October 16, 2026, Judge Ali denied DOJ's motion to disqualify Susman Godfrey, finding the government \"does not identify any lawyer at Susman Godfrey who is likely to be a necessary witness at trial\" and that the professional-conduct rule it relied on \"restricts representation by individual lawyers, not by their law firms.\" On October 22, the ABA, over DOJ's opposition, asked the court to let it serve Epshteyn by alternative means and to extend the November 12, 2026 fact-discovery deadline to February 10, 2027 for his discovery alone, saying Epshteyn had used DOJ's still-pending motion to quash \"to avoid any engagement with the subpoenas\" and had evaded service of replacement subpoenas; the court held a discovery hearing on November 4. DOJ opposed the request on November 2, saying \"no further discovery is appropriate in this matter\" and asking that Epshteyn not have to respond while its motion to quash is pending. On November 5, Epshteyn, through counsel, denied evading service, opposed alternative service and asked the court to hold the ABA's request in abeyance until the government's motion to quash is \"fully and finally resolved.\"",
     "contested": false,
     "elements_required": [
       "DOJ, as a defendant in the ABA's litigation, subpoenaed law firms with pre-existing relationships to the administration (firms that struck deals, firms that beat the executive orders in court, and Covington & Burling) seeking their communications with a specific presidential adviser",
@@ -2339,9 +2357,27 @@
       },
       {
         "type": "public_record",
-        "description": "The ABA v. Executive Office of the President docket (D.D.C. No. 1:25-cv-01888) shows DOJ moved to disqualify Susman Godfrey as the ABA's counsel on July 17, 2026 (ECF 68); the ABA responded July 27 (ECF 70) and DOJ replied July 31 (ECF 72); entries through September 15, 2026 (ECF 85) show no ruling on the motion.",
+        "description": "The ABA v. Executive Office of the President docket (D.D.C. No. 1:25-cv-01888) shows DOJ moved to disqualify Susman Godfrey as the ABA's counsel on July 17, 2026 (ECF 68), the ABA responded July 27 (ECF 70) and DOJ replied July 31 (ECF 72); at a July 31 discovery conference the court heard the ABA's motion to compel and took it under advisement; an August 3, 2026 minute order directed DOJ to identify the individuals and custodians at issue for several ABA requests and, for any name it withholds as privileged, to explain the basis for the privilege; DOJ filed its notice responding to that order on August 17 (ECF 79); and Judge Ali held a discovery hearing on November 4, 2026, with an order \"forthcoming via Chambers.\"",
         "source_url": "https://www.courtlistener.com/docket/70551899/american-bar-association-v-executive-office-of-the-president/?order_by=desc",
-        "maps_to_element": "Shows DOJ's motion to disqualify the ABA's counsel remained unresolved as of mid-September 2026"
+        "maps_to_element": "DOJ simultaneously invoked executive privilege over the same adviser's communications when sought more directly, while subpoenaing third parties for that same category of material"
+      },
+      {
+        "type": "news_report",
+        "description": "The Washington Examiner reported August 11, 2026 that \"The Office of Legal Counsel quietly posted the 21-page memorandum opinion on Monday, without a press release or public announcement,\" and that \"It was issued the same day Attorney General Todd Blanche was sworn in at the White House.\"",
+        "source_url": "https://www.washingtonexaminer.com/news/white-house/4682832/doj-memo-gives-trump-playbook-shield-outside-advisers-democrats-win-subpoena-power/",
+        "maps_to_element": "DOJ simultaneously invoked executive privilege over the same adviser's communications when sought more directly, while subpoenaing third parties for that same category of material"
+      },
+      {
+        "type": "public_record",
+        "description": "In an August 17, 2026 notice (ECF 79) responding to the court's August 3 order, DOJ said that \"To the extent that the ABA seeks the identities of presidential advisers or the identity of non-public custodians, Defendants formally assert the presidential communications privilege over this information,\" and argued the ABA could get information from third parties \"which have only just begun to produce records.\"",
+        "source_url": "https://storage.courtlistener.com/recap/gov.uscourts.dcd.281674/gov.uscourts.dcd.281674.79.0.pdf",
+        "maps_to_element": "DOJ simultaneously invoked executive privilege over the same adviser's communications when sought more directly, while subpoenaing third parties for that same category of material"
+      },
+      {
+        "type": "public_record",
+        "description": "In an August 25, 2026 reply (In re Subpoenas on Boris Epshteyn, D.D.C. No. 1:26-mc-00114, ECF 20) supporting the government's motion to quash the ABA's subpoenas to Epshteyn, DOJ cited OLC's opinion on \"Applicability of Executive Privilege to Presidential Communications with Private Advisers,\" said the ABA \"relegates OLC's opinion to a single footnote,\" and urged the court to \"reject the ABA's wrongful attempt to confine the heightened protection for depositions of close presidential advisers to individuals holding an official government title,\" which it said \"is at odds with Circuit precedent and the Office of Legal Counsel's recent opinion.\"",
+        "source_url": "https://storage.courtlistener.com/recap/gov.uscourts.dcd.294990/gov.uscourts.dcd.294990.20.0.pdf",
+        "maps_to_element": "DOJ simultaneously invoked executive privilege over the same adviser's communications when sought more directly, while subpoenaing third parties for that same category of material"
       },
       {
         "type": "public_record",
@@ -2351,26 +2387,38 @@
       },
       {
         "type": "public_record",
-        "description": "In an October 22, 2026 motion (ECF 87), opposed by the government, the ABA asked to serve Boris Epshteyn by alternative means and for a 90-day extension of the November 12, 2026 fact-discovery deadline, through February 10, 2027, limited to his discovery; it said the government's motion to quash its Epshteyn subpoenas \"remains pending before this Court\" and that Epshteyn \"has since used the pendency of the Motion to Quash to avoid any engagement with the subpoenas.\"",
+        "description": "In an October 22, 2026 motion (ECF 87), opposed by the government, the ABA asked to serve Boris Epshteyn by alternative means and for a 90-day extension of the November 12, 2026 fact-discovery deadline, through February 10, 2027, limited to his discovery; it said that on July 2, 2026 the government moved in the Southern District of New York to quash its Epshteyn subpoenas, that the New York court transferred the motion to Judge Ali's court on July 20, 2026, that the motion \"remains pending before this Court,\" and that Epshteyn \"has since used the pendency of the Motion to Quash to avoid any engagement with the subpoenas.\"",
         "source_url": "https://storage.courtlistener.com/recap/gov.uscourts.dcd.281674/gov.uscourts.dcd.281674.87.0.pdf",
+        "maps_to_element": "DOJ simultaneously invoked executive privilege over the same adviser's communications when sought more directly, while subpoenaing third parties for that same category of material"
+      },
+      {
+        "type": "public_record",
+        "description": "In a November 2, 2026 opposition (ECF 89) to the ABA's motion for alternative service on Epshteyn and a limited discovery extension, DOJ said \"Defendants believe that no further discovery is appropriate in this matter, and thus oppose any extension,\" and asked the court at least to clarify that nothing requires the third party to respond \"while Defendants' motion to quash the third-party subpoenas remains pending.\"",
+        "source_url": "https://storage.courtlistener.com/recap/gov.uscourts.dcd.281674/gov.uscourts.dcd.281674.89.0.pdf",
+        "maps_to_element": "DOJ simultaneously invoked executive privilege over the same adviser's communications when sought more directly, while subpoenaing third parties for that same category of material"
+      },
+      {
+        "type": "public_record",
+        "description": "In a November 5, 2026 response and cross-motion (ECF 94), non-party Boris Epshteyn, through counsel, said he \"Did Not Evade Service\" but had his counsel negotiate toward accepting service, argued that \"Rule 45 requires personal service of a subpoena,\" took no position on the ABA's extension request, and asked the court to hold the alternative-service request \"in abeyance until the Government's motion to quash those same subpoenas is fully and finally resolved.\"",
+        "source_url": "https://storage.courtlistener.com/recap/gov.uscourts.dcd.281674/gov.uscourts.dcd.281674.94.0.pdf",
         "maps_to_element": "DOJ simultaneously invoked executive privilege over the same adviser's communications when sought more directly, while subpoenaing third parties for that same category of material"
       }
     ],
-    "status": "As of Nov. 2, 2026, no firm or the ABA is known to have moved to quash DOJ's 14 law-firm subpoenas. The court denied DOJ's bid to disqualify Susman Godfrey on Oct. 16; the ABA's motion to compel, DOJ's motion to quash the ABA's Epshteyn subpoenas and the D.C. Circuit appeal remain pending.",
+    "status": "No firm or the ABA is known to have moved to quash DOJ's 14 law-firm subpoenas. The court refused on Oct. 16 to disqualify Susman Godfrey. DOJ's motion to quash the ABA's Epshteyn subpoenas, the ABA's motion to compel, its bid to serve Epshteyn another way and the D.C. Circuit appeal are pending.",
     "rebuttal_anticipated": "Likely defense: these are ordinary defensive-litigation subpoenas issued because DOJ is a defendant in the ABA's lawsuit, not a prosecutorial or investigative act against the firms themselves, and shielding a senior presidential adviser's confidential communications is a legitimate executive-privilege interest distinct from the merits of the underlying executive orders.",
     "comeback": "DOJ's own stated rationale undercuts itself: subpoenaing firms specifically for their communications with Epshteyn about the executive orders concedes that material is relevant to the ABA's claims, while DOJ simultaneously tries to withhold that same category of material as privileged when sought more directly -- using third-party law firms, including ones that beat the administration in court, as a discovery choke point rather than DOJ answering the discovery request it is itself a party to defending against.",
     "cause": "[TAP Analysis, not sourced] Consistent with this tracker's broader pattern of DOJ litigation and subpoena power being directed to advantage the administration's position in matters where DOJ itself is a party (here, the ABA suit) rather than exercised as neutral law enforcement -- a distinct mechanism from, but thematically adjacent to, this tracker's leak-investigation entries (Patel/NYT, Hegseth task force, Blanche/journalist subpoenas). The August 10, 2026 OLC opinion, which DOJ then invoked in its August 25 reply supporting its motion to quash the ABA's subpoenas to Epshteyn, gives the privilege half of this pattern a formal OLC footing: executive privilege can extend to a president's communications with private advisers outside the Executive Branch -- the theory DOJ relies on to withhold the communications of Epshteyn, Trump's personal lawyer, who negotiated the firms' deals directly rather than through government attorneys.",
-    "last_verified": "2026-11-02",
+    "last_verified": "2026-11-08",
     "date_added": "2026-07-27",
-    "confidence_note": "HIGH confidence on the core facts -- subpoenas issued in early July 2026 (notice dated July 2) seeking law-firm communications with Epshteyn, first reported by the New York Times on July 14 and disclosed in DOJ's July 17 filing in the ABA's pending litigation -- corroborated across Bloomberg Law, Reuters (as carried by the Maryland Daily Record and Missouri Lawyers Media), Above the Law, and the court record (DOJ's subpoena notice). HIGH confidence on the firm count of 14: DOJ's own subpoena notice lists 14 firms, and Bloomberg Law's breakdown of 9 deal firms + 4 EO firms (13) leaves out Covington & Burling. LOW confidence on personal attribution to Blanche specifically: the court filings name Civil Division officials (AAG Brett A. Shumate, trial attorney Adam S. Fox), and press accounts quote only an unnamed DOJ spokesperson; no source ties the decision to the Acting Attorney General himself. Re-verified 2026-08-18: ABA's July 22 reply filing and the scheduled August 3 depositions are corroborated across Law.com/American Lawyer and the UW Law ladd.law.wisc.edu tracker; the depositions' actual outcome is not yet reported in sources reviewed. Re-verified 2026-08-25 (moderate update): the OLC memo (dated August 10; reported August 11) is corroborated across Washington Examiner, Law.com, and other outlets reporting on the same document; no outcome of the August 3 depositions has been identified in sourcing reviewed. Re-verified 2026-09-02: no material change -- no depositions outcome and no disqualification ruling identified. Re-verified 2026-11-02 (moderate update): the court record shows the October 16 denial of DOJ's disqualification motion and the ABA's October 22 Epshteyn service motion; no motion by any subpoenaed firm or the ABA to quash DOJ's 14 law-firm subpoenas was found on CourtListener or in press coverage reviewed, and no D.C. Circuit ruling on the executive-order appeal was found.",
+    "confidence_note": "HIGH confidence on the core facts -- subpoenas issued in early July 2026 (notice dated July 2) seeking law-firm communications with Epshteyn, first reported by the New York Times on July 14 and disclosed in DOJ's July 17 filing in the ABA's pending litigation -- corroborated across Bloomberg Law, Reuters (as carried by the Maryland Daily Record and Missouri Lawyers Media), Above the Law, and the court record (DOJ's subpoena notice). HIGH confidence on the firm count of 14: DOJ's own subpoena notice lists 14 firms, and Bloomberg Law's breakdown of 9 deal firms + 4 EO firms (13) leaves out Covington & Burling. LOW confidence on personal attribution to Blanche specifically: the court filings name Civil Division officials (AAG Brett A. Shumate, trial attorney Adam S. Fox), and press accounts quote only an unnamed DOJ spokesperson; no source ties the decision to the Acting Attorney General himself. Re-verified 2026-08-18: ABA's July 22 reply filing and the scheduled August 3 depositions are corroborated across Law.com/American Lawyer and the UW Law ladd.law.wisc.edu tracker; the depositions' actual outcome is not yet reported in sources reviewed. Re-verified 2026-08-25 (moderate update): the OLC memo (dated August 10; reported August 11) is corroborated across Washington Examiner, Law.com, and other outlets reporting on the same document; no outcome of the August 3 depositions has been identified in sourcing reviewed. Re-verified 2026-09-02: no material change -- no depositions outcome and no disqualification ruling identified. Re-verified 2026-11-02 (moderate update): the court record shows the October 16 denial of DOJ's disqualification motion and the ABA's October 22 Epshteyn service motion; no motion by any subpoenaed firm or the ABA to quash DOJ's 14 law-firm subpoenas was found on CourtListener or in press coverage reviewed, and no D.C. Circuit ruling on the executive-order appeal was found. Re-verified 2026-11-08 (moderate update): DOJ's August 25 reply citing the OLC opinion is on the docket of the transferred motion-to-quash case (D.D.C. No. 1:26-mc-00114), and the Washington Examiner's August 11 report is sourced directly; the court record adds DOJ's November 2 opposition, the November 4 discovery hearing and Epshteyn's November 5 response; no ruling on the motion to quash or the motion to compel, and no D.C. Circuit ruling on the executive-order appeal, has been reported.",
     "pull_quote": "In a July 22, 2026 filing, the ABA said the government's argument 'leads to an absurd outcome': rather than produce communications 'in its possession,' the White House 'has subpoenaed over a dozen law firms' to get them, 'a huge waste of time (and resources) for everyone involved.'",
     "section_summaries": {
       "incident_summary": "DOJ subpoenaed 14 major law firms -- deal-makers, firms that beat Trump's orders in court, and Covington -- for their Epshteyn communications while claiming privilege over those communications.",
       "confidence_note": "Core facts rest on the court record, Reuters, Bloomberg Law and Above the Law; the firm count is 14; filings name Civil Division officials, but no source ties the decision to Blanche personally.",
-      "status": "No firm or the ABA is known to have moved to quash DOJ's 14 subpoenas; the court refused to disqualify Susman Godfrey, and the ABA discovery fights and the D.C. Circuit appeal remain pending."
+      "status": "No firm or the ABA is known to have moved to quash DOJ's 14 subpoenas; the court refused to disqualify Susman Godfrey, and the Epshteyn subpoena fight and the D.C. Circuit appeal remain pending."
     },
     "date_of_action": "2025-02 (Trump begins targeting law firms) / 2025-03 to 2025-04 (nine firms cut deals negotiated by Epshteyn) through 2026-07-01/02 (DOJ subpoenas 14 firms over Epshteyn communications; disclosed July 17)",
-    "last_substantive_update": "2026-11-02",
+    "last_substantive_update": "2026-11-08",
     "glance": {
       "who": "DOJ under Todd Blanche (Acting AG)",
       "what": "Subpoenaed 14 law firms for their Epshteyn communications while claiming privilege over them",
@@ -2379,7 +2427,7 @@
         "certainty": "alleged",
         "who": "ABA's discovery and the legal profession"
       },
-      "reviewed": "2026-11-02"
+      "reviewed": "2026-11-08"
     },
     "narrative_combined": true,
     "cause_references": [
@@ -2465,7 +2513,14 @@
         "date": "2026-08-17",
         "text": "DOJ claims presidential privilege over the names of advisers the court told it to identify",
         "sources": [
-          "https://www.courtlistener.com/docket/70551899/american-bar-association-v-executive-office-of-the-president/?order_by=desc"
+          "https://storage.courtlistener.com/recap/gov.uscourts.dcd.281674/gov.uscourts.dcd.281674.79.0.pdf"
+        ]
+      },
+      {
+        "date": "2026-08-25",
+        "text": "DOJ cites the new OLC opinion to shield Epshteyn from the ABA's subpoenas",
+        "sources": [
+          "https://storage.courtlistener.com/recap/gov.uscourts.dcd.294990/gov.uscourts.dcd.294990.20.0.pdf"
         ]
       },
       {
@@ -2481,6 +2536,13 @@
         "text": "The ABA says Epshteyn is dodging its subpoenas and asks to serve him another way",
         "sources": [
           "https://storage.courtlistener.com/recap/gov.uscourts.dcd.281674/gov.uscourts.dcd.281674.87.0.pdf"
+        ]
+      },
+      {
+        "date": "2026-11-05",
+        "text": "Epshteyn's lawyers ask the court to delay any response until DOJ's motion to quash is decided",
+        "sources": [
+          "https://storage.courtlistener.com/recap/gov.uscourts.dcd.281674/gov.uscourts.dcd.281674.94.0.pdf"
         ]
       }
     ]
@@ -11627,7 +11689,7 @@
     "id": "doge-chatgpt-grant-cuts-deposition-2026",
     "official": "Elon Musk, former DOGE leader; Justin Fox and Nate Cavanaugh, named DOGE staffers",
     "offense_category": "Unaccountable Federal Decision-Making by an Informally-Organized Group Using Automated Tools and Encrypted Messaging, With No Documented Legal Authority or Oversight -- an institutional-accountability claim about process and governance, not a criminal charge against any named individual",
-    "incident_summary": "Newly disclosed deposition videos and records, reported by the Washington Post, revealed how DOGE actually operated inside the federal government: a loosely organized network of technologists, several without clear statutory authority or agency-specific expertise, using the encrypted, auto-deleting messaging app Signal to coordinate widespread grant and contract cancellations across federal agencies. Deposition videos of former DOGE staffers Justin Fox and Nate Cavanaugh -- responsible for the largest mass termination of grants in the National Endowment for the Humanities' history -- showed the pair fed brief grant descriptions into ChatGPT and asked the chatbot whether each related 'at all to DEI,' instructing it to answer in under 120 characters beginning with 'Yes' or 'No.' DOGE used this ChatGPT-driven process to **identify more than $100 million in NEH grants for cancellation, including grants supporting Asian American history projects flagged for containing terms like 'LGBTQ+.'** In their depositions, Fox and Cavanaugh said they had no regrets about people losing income as a result of the cuts and could not confirm the cuts had reduced the federal deficit. Multiple DOGE members described a 'club-like atmosphere' in which cancellations proceeded with little internal oversight, and depositions and internal records showed confusion inside affected agencies about DOGE's actual membership and chain of authority. This entry documents DOGE's internal operating methods and governance structure specifically; individual agency-level consequences (e.g. NEH's mass grant terminations and staff cuts) are separately documented elsewhere in this tracker.",
+    "incident_summary": "Deposition videos and records released in March 2026 in the humanities groups' lawsuit over the NEH grant cuts, reported by ABC News on March 14, 2026 and the Washington Post on April 13, 2026, revealed how DOGE actually operated inside the federal government: a loosely organized network of technologists, several without clear statutory authority or agency-specific expertise, using the encrypted, auto-deleting messaging app Signal to coordinate widespread grant and contract cancellations across federal agencies. Deposition videos of former DOGE staffers Justin Fox and Nate Cavanaugh -- responsible for the largest mass termination of grants in the National Endowment for the Humanities' history -- showed the pair fed brief grant descriptions into ChatGPT and asked the chatbot whether each related 'at all to DEI,' instructing it to answer in under 120 characters beginning with 'Yes' or 'No.' DOGE used this ChatGPT-driven process to **identify more than $100 million in NEH grants for cancellation, including grants supporting Asian American history projects flagged for containing terms like 'LGBTQ+.'** In their depositions, Fox and Cavanaugh said they had no regrets about people losing income as a result of the cuts and could not confirm the cuts had reduced the federal deficit. Multiple DOGE members described a 'club-like atmosphere' in which cancellations proceeded with little internal oversight, and depositions and internal records showed confusion inside affected agencies about DOGE's actual membership and chain of authority. This entry documents DOGE's internal operating methods and governance structure specifically; individual agency-level consequences (e.g. NEH's mass grant terminations and staff cuts) are separately documented elsewhere in this tracker.",
     "contested": true,
     "elements_required": [
       "DOGE staffers used a general-purpose AI chatbot, not a vetted federal review process, to make binding determinations about which congressionally-appropriated grants to cancel",
@@ -11637,14 +11699,14 @@
     ],
     "evidence": [
       {
-        "type": "public_record",
-        "description": "The Washington Post's reporting on newly disclosed deposition videos and records revealing DOGE's use of Signal for internal coordination, the club-like internal atmosphere, and confusion inside agencies about DOGE's membership and authority",
-        "source_url": "https://www.washingtonpost.com/politics/2026/04/13/doge-musk-trump-deposition-videos-chatgpt/",
-        "maps_to_element": "DOGE's informal organizational structure, use of encrypted messaging, and the resulting confusion about its authority"
+        "type": "reporting",
+        "description": "MLA's case page (plaintiff) reports that on March 6, 2026 the plaintiffs filed a motion for summary judgment whose discovery materials, including depositions of two DOGE team members, revealed DOGE's ChatGPT process for identifying 'DEI programs' among NEH grants; it also reports that the plaintiffs' Second Circuit appeal to restore three NEH offices and twenty-two programs was argued on May 29, 2026, and reports no ruling.",
+        "source_url": "https://www.mla.org/Resources/Advocacy/Joint-Lawsuit-over-Dismantling-of-National-Endowment-for-the-Humanities",
+        "maps_to_element": "The March 6, 2026 court filing that disclosed the depositions, and the status of the plaintiffs' separate, still-pending Second Circuit appeal"
       },
       {
         "type": "testimony",
-        "description": "ABC News's reporting on Justin Fox and Nate Cavanaugh's deposition testimony, including their use of ChatGPT to screen NEH grant descriptions for DEI content in a sub-120-character yes/no format, their responsibility for the largest mass grant termination in NEH's history, and their stated lack of regret for resulting income losses and inability to confirm deficit reduction",
+        "description": "ABC News's March 14, 2026 reporting on Justin Fox and Nate Cavanaugh's deposition testimony, including their use of ChatGPT to screen NEH grant descriptions for DEI content in a sub-120-character yes/no format, their responsibility for the largest mass grant termination in NEH's history, and their stated lack of regret for resulting income losses and inability to confirm deficit reduction",
         "source_url": "https://abcnews.com/Politics/2-doge-staffers-regrets-people-losing-income-reduce/story?id=131050170",
         "maps_to_element": "The specific ChatGPT-driven grant-review process and named staffers' own deposition admissions"
       },
@@ -11655,6 +11717,12 @@
         "maps_to_element": "The scale and specific character of grants cancelled through this process, including apparent overbroad keyword-flagging"
       },
       {
+        "type": "public_record",
+        "description": "The Washington Post's April 13, 2026 reporting on the DOGE deposition videos and records, describing DOGE's use of Signal for internal coordination, the club-like internal atmosphere, and confusion inside agencies about DOGE's membership and authority",
+        "source_url": "https://www.washingtonpost.com/politics/2026/04/13/doge-musk-trump-deposition-videos-chatgpt/",
+        "maps_to_element": "DOGE's informal organizational structure, use of encrypted messaging, and the resulting confusion about its authority"
+      },
+      {
         "type": "court_filing",
         "description": "Reporting on U.S. District Judge Colleen McMahon's (S.D.N.Y.) May 7, 2026 143-page decision granting summary judgment to the plaintiffs (ACLS, AHA, MLA) and ruling that DOGE's mass termination of more than 1,400 NEH grants, over $100 million in congressionally appropriated funds, was 'unlawful, unconstitutional, ultra vires, and without legal effect' -- finding the AI-driven keyword-screening process this entry documents amounted to a 'textbook example of unconstitutional viewpoint discrimination,' and citing as an example a terminated grant supporting a project on Jewish women who survived Nazi persecution, flagged for centering 'Jewish cultures' and 'female' voices",
         "source_url": "https://www.acls.org/news/federal-judge-rules-to-restore-national-endowment-of-the-humanities-funding-in-historic-case/",
@@ -11662,27 +11730,15 @@
       },
       {
         "type": "public_record",
-        "description": "Reporting that the government signaled intent to appeal McMahon's ruling as 'egregiously wrong,' that the Second Circuit heard oral arguments on the plaintiffs' remaining claims (regarding NEH office closures and program eliminations) on May 29, 2026 with no ruling identified as of this update, and that by June 30, 2026 NEH had begun contacting grant recipients to ask whether they still wanted their reinstated awards -- an implementation step following the reinstatement order",
+        "description": "Inside Higher Ed reports that in June 2026, after losing in court over the termination of more than 1,400 grants totaling over $100 million, NEH began offering to reinstate those awards, first asking each recipient through a 'Reinstatement Assurances Form' whether it wants the award reinstated",
         "source_url": "https://www.insidehighered.com/news/government/science-research-policy/2026/06/30/neh-asks-grant-recipients-if-they-still-want",
-        "maps_to_element": "Current procedural status: the reinstatement order is being implemented while a narrower appeal remains pending"
+        "maps_to_element": "Implementation of the reinstatement order"
       },
       {
         "type": "court_filing",
         "description": "On July 6, 2026, the government formally appealed Judge McMahon's May 7, 2026 summary judgment to the Second Circuit (Docket No. 26-1829) -- the government's own appeal of the reinstatement order itself, distinct from the plaintiffs' separate May 29, 2026 oral argument on the office-closures/program-eliminations claims. Separately, on August 5, 2026, the district court granted plaintiffs' motion for a preliminary injunction in part, preserving 2.5% of disbursed grant funds pending a forthcoming attorneys'-fees motion, while declining to rule on fee entitlement or amount until the government's appeal is exhausted.",
         "source_url": "https://clearinghouse.net/case/46593/",
         "maps_to_element": "Current procedural status: the government formally appealed the reinstatement order, and a separate attorneys'-fees dispute remains unresolved"
-      },
-      {
-        "type": "reporting",
-        "description": "MLA's case page (plaintiff) reports that the plaintiffs' Second Circuit appeal to restore three NEH offices and twenty-two programs was argued on May 29, 2026, and reports no ruling.",
-        "source_url": "https://www.mla.org/Resources/Advocacy/Joint-Lawsuit-over-Dismantling-of-National-Endowment-for-the-Humanities",
-        "maps_to_element": "Status of the plaintiffs' separate, still-pending Second Circuit appeal"
-      },
-      {
-        "type": "reporting",
-        "description": "Re-verified 2026-09-02: no ruling identified on either Second Circuit matter -- the plaintiffs' office-closures/program-eliminations claims (argued May 29, 2026) or the government's own appeal of the reinstatement order (Docket 26-1829, filed July 6, 2026); no further movement on the attorneys'-fees dispute identified.",
-        "source_url": "https://clearinghouse.net/case/46593/",
-        "maps_to_element": "Confirms no material change on either pending Second Circuit matter"
       },
       {
         "type": "court_filing",
@@ -11695,16 +11751,16 @@
     "rebuttal_anticipated": "Likely defense: using AI tools to efficiently triage a large volume of grants for further review is a legitimate government-efficiency practice, Signal is a common, secure communication tool used across government and industry, and DOGE staffers' inability to personally confirm aggregate deficit-reduction figures does not mean the cuts were unjustified on other, individual grounds.",
     "comeback": "The specific concern is not that AI tools were used at all, but that a sub-120-character keyword-style yes/no ChatGPT query appears to have functioned as the actual cancellation determination itself rather than a triage step feeding into substantive human review, resulting in cancellations of grants (including Asian American history projects) apparently flagged for incidental terminology rather than genuine DEI-program status; combined with encrypted, auto-deleting communications and documented confusion inside agencies about DOGE's membership, this describes a process with structurally weak accountability regardless of whether any individual cancellation was independently defensible.",
     "cause": "[TAP Analysis, not sourced] Consistent with a broader pattern this tracker documents of DOGE operating with minimal transparency or oversight across multiple agencies (see also this tracker's Musk entry on Musk's own accountability evasion, and the separately-documented NEH, NSF, and other agency-specific DOGE grant-cancellation entries).",
-    "last_verified": "2026-10-06",
+    "last_verified": "2026-11-08",
     "date_added": "2026-08-06",
-    "confidence_note": "HIGH confidence -- these are deposition videos and records from active litigation, not anonymous sourcing, independently reported and corroborated across the Washington Post, ABC News, and multiple other outlets that reviewed the same underlying depositions. MODERATE confidence on the scope of the ChatGPT-driven process across DOGE's broader operation government-wide, since the specific detailed account documented here concerns the NEH grants specifically -- presented as a documented, illustrative example of DOGE's methods rather than a comprehensive government-wide accounting. Re-verified 2026-08-19: real correction -- McMahon's ruling predates this entry's own last_verified by roughly three months and directly contradicts its 'no court ruling... identified' status line. Corroborated across ACLS's, AHA's, and MLA's own case reporting (the plaintiffs), the Jewish Telegraphic Agency, Inside Higher Ed, and Publishers Weekly, all independently describing the same May 7-8, 2026 opinion and its specific viewpoint-discrimination finding. Re-verified 2026-08-26: no material change -- the Second Circuit has not yet ruled on the plaintiffs' remaining claims following the May 29, 2026 oral argument. Update 2026-09-02 (moderate/append, not a re-derivation of the entry's core finding): this entry's own prior 'government signaled it would appeal' language understated the actual procedural posture -- the government formally appealed to the Second Circuit on July 6, 2026 (Docket 26-1829), and the district court separately issued an August 5, 2026 partial preliminary injunction on attorneys' fees -- both predating the August 26, 2026 last_verified by three to seven weeks and omitted from that update. Corroborated via the Civil Rights Litigation Clearinghouse's own docket tracker (clearinghouse.net/case/46593) and independent WebSearch coverage. Re-verified 2026-09-02: no ruling on either pending Second Circuit matter identified. Update 2026-10-06: the government filed its opening brief in its Second Circuit appeal (No. 26-1829, lead case for the related appeals) on September 9, 2026, with plaintiffs' principal response due in November 2026; the permanent injunction and the August 5 fund-preservation order remain in effect (Civil Rights Litigation Clearinghouse). Re-verified 2026-10-06: no ruling identified on either Second Circuit matter, including the plaintiffs' appeal argued May 29, 2026, which MLA's case page still reports only as argued.",
+    "confidence_note": "HIGH confidence -- these are deposition videos and records from active litigation, not anonymous sourcing, independently reported and corroborated across ABC News, the Washington Post, and multiple other outlets that reviewed the same underlying depositions. MODERATE confidence on the scope of the ChatGPT-driven process across DOGE's broader operation government-wide, since the specific detailed account documented here concerns the NEH grants specifically -- presented as a documented, illustrative example of DOGE's methods rather than a comprehensive government-wide accounting. Re-verified 2026-08-19: Judge McMahon ruled on May 7, 2026 that the grant terminations were unconstitutional, corroborated across ACLS's, AHA's, and MLA's own case reporting (the plaintiffs), the Jewish Telegraphic Agency, Inside Higher Ed, and Publishers Weekly, all independently describing the same May 7-8, 2026 opinion and its specific viewpoint-discrimination finding. Re-verified 2026-08-26: no material change -- the Second Circuit has not yet ruled on the plaintiffs' remaining claims following the May 29, 2026 oral argument. Update 2026-09-02: the government formally appealed to the Second Circuit on July 6, 2026 (Docket 26-1829), and on August 5, 2026 the district court granted in part a preliminary injunction preserving a share of the funds for a possible attorneys'-fees award (Civil Rights Litigation Clearinghouse). Re-verified 2026-09-02: no ruling on either pending Second Circuit matter. Update 2026-10-06: the government filed its opening brief in its Second Circuit appeal (No. 26-1829, lead case for the related appeals) on September 9, 2026, with plaintiffs' principal response due in November 2026; the permanent injunction and the August 5 fund-preservation order remain in effect (Civil Rights Litigation Clearinghouse). Re-verified 2026-10-06: no ruling on either Second Circuit matter, including the plaintiffs' appeal argued May 29, 2026, which MLA's case page still reports only as argued. Re-verified 2026-11-08: the depositions and discovery records were disclosed in the plaintiffs' March 6, 2026 summary-judgment filing and widely reported that month, before the Washington Post's April 13 report; the Clearinghouse summary and MLA's case page show no Second Circuit ruling on either appeal.",
     "pull_quote": "Asked about the human cost, DOGE staffers Fox and Cavanaugh said they had no regrets about people losing income as a result of the cuts -- and couldn't confirm the cuts had reduced the federal deficit.",
     "section_summaries": {
       "incident_summary": "Depositions showed DOGE staffers used ChatGPT's short yes/no answers to flag NEH grants as DEI for cancellation, coordinated over Signal, and voiced no regret for lost income.",
       "confidence_note": "Grounded in sworn deposition videos and court records, corroborated across outlets; the ChatGPT-review account covers the NEH grants, not DOGE's methods government-wide."
     },
-    "date_of_action": "2026-04-13 (Washington Post reveals DOGE's ChatGPT-driven grant-cutting deposition videos)",
-    "last_substantive_update": "2026-10-06",
+    "date_of_action": "2026-03-06 (humanities groups' summary-judgment filing discloses depositions showing DOGE staffers used ChatGPT to flag NEH grants for cancellation)",
+    "last_substantive_update": "2026-11-08",
     "glance": {
       "who": "DOGE under Elon Musk (staffers Fox, Cavanaugh)",
       "what": "Used ChatGPT to flag NEH grants as DEI and cut them; a judge ruled it viewpoint discrimination",
@@ -11713,7 +11769,7 @@
         "certainty": "documented",
         "who": "Humanities grantees (1,400+ awards)"
       },
-      "reviewed": "2026-10-06"
+      "reviewed": "2026-11-08"
     },
     "cause_references": [
       {
@@ -11725,10 +11781,11 @@
     "status_stage": "Reversed or withdrawn",
     "key_events": [
       {
-        "date": "2026-03-14",
-        "text": "Deposition videos show two DOGE staffers used ChatGPT to flag NEH grants as DEI and voice no regrets",
+        "date": "2026-03-06",
+        "text": "Plaintiffs' court filing discloses depositions showing two DOGE staffers used ChatGPT to flag NEH grants as DEI",
         "turning_point": true,
         "sources": [
+          "https://www.mla.org/Resources/Advocacy/Joint-Lawsuit-over-Dismantling-of-National-Endowment-for-the-Humanities",
           "https://abcnews.com/Politics/2-doge-staffers-regrets-people-losing-income-reduce/story?id=131050170",
           "https://nextshark.com/doge-chatgpt-grant-cuts-deposition-videos"
         ]
@@ -11752,8 +11809,7 @@
         "date": "2026-05-29",
         "text": "An appeals court hears the plaintiffs' appeal over NEH office closures and program cuts",
         "sources": [
-          "https://www.mla.org/Resources/Advocacy/Joint-Lawsuit-over-Dismantling-of-National-Endowment-for-the-Humanities",
-          "https://www.insidehighered.com/news/government/science-research-policy/2026/06/30/neh-asks-grant-recipients-if-they-still-want"
+          "https://www.mla.org/Resources/Advocacy/Joint-Lawsuit-over-Dismantling-of-National-Endowment-for-the-Humanities"
         ]
       },
       {
@@ -11766,18 +11822,18 @@
     ],
     "timeline": {
       "confidence_note": {
-        "base": "HIGH confidence -- these are deposition videos and records from active litigation, not anonymous sourcing, independently reported and corroborated across the Washington Post, ABC News, and multiple other outlets that reviewed the same underlying depositions. MODERATE confidence on the scope of the ChatGPT-driven process across DOGE's broader operation government-wide, since the specific detailed account documented here concerns the NEH grants specifically -- presented as a documented, illustrative example of DOGE's methods rather than a comprehensive government-wide accounting. Re-verified 2026-08-19: real correction -- McMahon's ruling predates this entry's own last_verified by roughly three months and directly contradicts its 'no court ruling... identified' status line. Corroborated across ACLS's, AHA's, and MLA's own case reporting (the plaintiffs), the Jewish Telegraphic Agency, Inside Higher Ed, and Publishers Weekly, all independently describing the same May 7-8, 2026 opinion and its specific viewpoint-discrimination finding. Re-verified 2026-08-26: no material change -- the Second Circuit has not yet ruled on the plaintiffs' remaining claims following the May 29, 2026 oral argument.",
+        "base": "HIGH confidence -- these are deposition videos and records from active litigation, not anonymous sourcing, independently reported and corroborated across ABC News, the Washington Post, and multiple other outlets that reviewed the same underlying depositions. MODERATE confidence on the scope of the ChatGPT-driven process across DOGE's broader operation government-wide, since the specific detailed account documented here concerns the NEH grants specifically -- presented as a documented, illustrative example of DOGE's methods rather than a comprehensive government-wide accounting. Re-verified 2026-08-19: Judge McMahon ruled on May 7, 2026 that the grant terminations were unconstitutional, corroborated across ACLS's, AHA's, and MLA's own case reporting (the plaintiffs), the Jewish Telegraphic Agency, Inside Higher Ed, and Publishers Weekly, all independently describing the same May 7-8, 2026 opinion and its specific viewpoint-discrimination finding. Re-verified 2026-08-26: no material change -- the Second Circuit has not yet ruled on the plaintiffs' remaining claims following the May 29, 2026 oral argument.",
         "updates": [
           {
             "date": "2026-09-02",
             "label": "Update",
-            "text": "Update 2026-09-02 (moderate/append, not a re-derivation of the entry's core finding): this entry's own prior 'government signaled it would appeal' language understated the actual procedural posture -- the government formally appealed to the Second Circuit on July 6, 2026 (Docket 26-1829), and the district court separately issued an August 5, 2026 partial preliminary injunction on attorneys' fees -- both predating the August 26, 2026 last_verified by three to seven weeks and omitted from that update. Corroborated via the Civil Rights Litigation Clearinghouse's own docket tracker (clearinghouse.net/case/46593) and independent WebSearch coverage. Re-verified 2026-09-02: no ruling on either pending Second Circuit matter identified.",
+            "text": "Update 2026-09-02: the government formally appealed to the Second Circuit on July 6, 2026 (Docket 26-1829), and on August 5, 2026 the district court granted in part a preliminary injunction preserving a share of the funds for a possible attorneys'-fees award (Civil Rights Litigation Clearinghouse). Re-verified 2026-09-02: no ruling on either pending Second Circuit matter.",
             "effective_date": "2026-09-02"
           },
           {
             "date": "2026-10-06",
             "label": "Update",
-            "text": "Update 2026-10-06: the government filed its opening brief in its Second Circuit appeal (No. 26-1829, lead case for the related appeals) on September 9, 2026, with plaintiffs' principal response due in November 2026; the permanent injunction and the August 5 fund-preservation order remain in effect (Civil Rights Litigation Clearinghouse). Re-verified 2026-10-06: no ruling identified on either Second Circuit matter, including the plaintiffs' appeal argued May 29, 2026, which MLA's case page still reports only as argued.",
+            "text": "Update 2026-10-06: the government filed its opening brief in its Second Circuit appeal (No. 26-1829, lead case for the related appeals) on September 9, 2026, with plaintiffs' principal response due in November 2026; the permanent injunction and the August 5 fund-preservation order remain in effect (Civil Rights Litigation Clearinghouse). Re-verified 2026-10-06: no ruling on either Second Circuit matter, including the plaintiffs' appeal argued May 29, 2026, which MLA's case page still reports only as argued. Re-verified 2026-11-08: the depositions and discovery records were disclosed in the plaintiffs' March 6, 2026 summary-judgment filing and widely reported that month, before the Washington Post's April 13 report; the Clearinghouse summary and MLA's case page show no Second Circuit ruling on either appeal.",
             "effective_date": "2026-10-06"
           }
         ]
@@ -13843,7 +13899,7 @@
     "official": "Kristi Noem, Secretary of Homeland Security",
     "offense_category": "DOJ Criminal Subpoenas and FEMA Data and Affidavit Demands Targeting Migrant Shelters and Their Funders, Alongside DHS Immigration Conditions on State Grants That a Federal Court Struck Down as Unlawful Coercion",
     "contested": true,
-    "incident_summary": "In March 2025, federal prosecutors served criminal subpoenas on at least three New York City shelter buildings -- the Roosevelt Hotel and the Stewart Hotel, both used as migrant shelters, and the former Hotel Chandler, a homeless shelter that the AP reported does not primarily house migrants -- demanding the names, birth dates, and nationalities of residents, as well as the identities of the entities and individuals funding the shelter programs. In parallel, FEMA required recipients of its Shelter and Services Program grants nationwide to submit, within 30 days, lists of names and contact information for every migrant they had assisted, and **told each recipient organization's executive officers to personally sign sworn affidavits attesting they had no knowledge or suspicion that anyone in their organization had violated federal human-smuggling law -- with funding withheld during the review -- effectively conditioning continued shelter funding on self-incriminating attestations and mass data handover with no individualized suspicion**. In a separate case, a coalition of 20 states led by Illinois, later joined by the District of Columbia, sued DHS, FEMA, and Secretary Kristi Noem in the U.S. District Court for the District of Rhode Island (State of Illinois et al. v. FEMA), arguing the administration was withholding congressionally appropriated emergency-preparedness funds unless states diverted resources to federal civil immigration enforcement. On September 24, 2025, Senior U.S. District Judge William E. Smith granted the states summary judgment and permanently enjoined DHS and FEMA from enforcing the immigration-related conditions across 40 separate federal grant programs, finding the conditions unlawful. That ruling covered immigration-cooperation conditions DHS had added to its standard grant terms in March and April 2025; the states' case did not involve the New York subpoenas or FEMA's Shelter and Services Program letter, and no court ruling on the subpoenas was identified.",
+    "incident_summary": "In March 2025, federal prosecutors served criminal subpoenas on at least three New York City shelter buildings -- the Roosevelt Hotel and the Stewart Hotel, both used as migrant shelters, and the former Hotel Chandler, a homeless shelter that the AP reported does not primarily house migrants -- demanding the names, birth dates, and nationalities of residents, as well as the identities of the entities and individuals funding the shelter programs. In parallel, FEMA required recipients of its Shelter and Services Program grants nationwide to submit, within 30 days, lists of names and contact information for every migrant they had assisted, and **told each recipient organization's executive officers to personally sign sworn affidavits attesting they had no knowledge or suspicion that anyone in their organization had violated federal human-smuggling law -- with funding withheld during the review -- effectively conditioning continued shelter funding on self-incriminating attestations and mass data handover with no individualized suspicion**. In a separate case, a coalition of 20 states led by Illinois, later joined by the District of Columbia, sued DHS, FEMA, and Secretary Kristi Noem in the U.S. District Court for the District of Rhode Island (State of Illinois et al. v. FEMA), arguing the administration was withholding congressionally appropriated emergency-preparedness funds unless states diverted resources to federal civil immigration enforcement. On September 24, 2025, Senior U.S. District Judge William E. Smith granted the states summary judgment and permanently enjoined DHS and FEMA from enforcing the immigration-related conditions across 40 separate federal grant programs, finding the conditions unlawful. That ruling covered immigration-cooperation conditions DHS had added to its standard grant terms in March and April 2025; the states' case did not involve the New York subpoenas or FEMA's Shelter and Services Program letter, and no court ruling on the subpoenas has been reported.",
     "elements_required": [
       "Federal agencies (DOJ, FEMA/DHS) demanded personal identifying data on migrants and shelter funders without individualized suspicion of wrongdoing",
       "Shelter and Services Program grantees were told to sign sworn, potentially self-incriminating statements denying knowledge of smuggling-law violations, with their already-awarded funding withheld during a review",
@@ -13877,7 +13933,19 @@
       },
       {
         "type": "public_record",
-        "description": "HSToday reported Senior U.S. District Judge William E. Smith's September 24, 2025 order granting the states summary judgment and permanently enjoining DHS/FEMA from enforcing the immigration-related conditions across 40 federal grant programs",
+        "description": "Illinois Attorney General Kwame Raoul's May 13, 2025 announcement said he, California's Rob Bonta, New Jersey's Matthew Platkin and Rhode Island's Peter Neronha, 'as part of a coalition of 20 attorneys general,' sued FEMA, DHS and Secretary Kristi Noem, joined by the attorneys general of Colorado, Connecticut, Delaware, Hawaii, Maine, Maryland, Massachusetts, Michigan, Minnesota, Nevada, New Mexico, New York, Oregon, Washington, Wisconsin and Vermont",
+        "source_url": "https://illinoisattorneygeneral.gov/news/story/attorney-general-raoul-leads-coalition-suing-trump-administration-over-illegal-immigration-conditions-placed-on-billions-in-federal-funding-5-13-25",
+        "maps_to_element": "The multi-state legal challenge"
+      },
+      {
+        "type": "public_record",
+        "description": "The states' July 2, 2025 First Amended Complaint in State of Illinois et al. v. FEMA (D.R.I. No. 1:25-cv-00206) lists the plaintiffs as Illinois, California, New Jersey, Rhode Island, Colorado, Connecticut, Delaware, the District of Columbia, Hawai'i, Maine, Maryland, Massachusetts, Michigan, Minnesota, Nevada, New Mexico, New York, Oregon, Vermont, Washington and Wisconsin",
+        "source_url": "https://clearinghouse-umich-production.s3.amazonaws.com/media/doc/161906.pdf",
+        "maps_to_element": "The multi-state legal challenge"
+      },
+      {
+        "type": "public_record",
+        "description": "HSToday reported that Senior U.S. District Judge William E. Smith's September 24, 2025 ruling declared DHS's contested immigration conditions arbitrary and capricious under the APA and unconstitutional under the Spending Clause, vacated them, and permanently enjoined DHS and FEMA from enforcing them against the plaintiff states, on 40 federal grant programs",
         "source_url": "https://www.hstoday.us/perspective/eyes-on-preparedness-federal-courts-block-fema-dhs-immigration-grant-conditions-safeguarding-billions-in-emergency-preparedness-funds/",
         "maps_to_element": "The federal court's permanent injunction"
       },
@@ -13894,31 +13962,25 @@
         "maps_to_element": "Resolution/current status of the litigation beyond the initial injunction"
       },
       {
-        "type": "news_report",
-        "description": "Re-verified 2026-08-30: no First Circuit oral argument date or ruling identified in a fresh search on the pending appeal (No. 25-2131); no material change since the 2026-08-26 update.",
-        "source_url": "https://dockets.justia.com/docket/circuit-courts/ca1/25-2131",
-        "maps_to_element": "Re-verification confirming no material change as of this update"
-      },
-      {
-        "type": "news_report",
-        "description": "Re-verified 2026-09-02: no First Circuit oral argument date or ruling identified on the pending appeal (No. 25-2131); no material change since the 2026-08-30 update.",
-        "source_url": "https://dockets.justia.com/docket/circuit-courts/ca1/25-2131",
-        "maps_to_element": "Re-verification confirming no material change as of this update"
-      },
-      {
         "type": "public_record",
         "description": "CourtListener's First Circuit docket for No. 25-2131 shows the court's September 16, 2026 judgment dismissing the government's appeal under Fed. R. App. P. 42(b), with the mandate issued the same day, after the briefing schedule set January 22, 2026, three extensions of the government's opening-brief deadline (to May 4, July 6 and September 2, 2026, the last with the court 'disinclined to grant a request for further enlargement'), and the government's September 1, 2026 motion to dismiss its own appeal",
         "source_url": "https://www.courtlistener.com/docket/71982910/state-of-illinois-v-federal-emergency-management-agency/",
+        "maps_to_element": "Resolution/current status of the litigation beyond the initial injunction"
+      },
+      {
+        "type": "public_record",
+        "description": "The Civil Rights Litigation Clearinghouse docket for the 2026 suit, Illinois et al. v. FEMA (D.R.I. No. 1:26-cv-00485, Judge Mary S. McElroy), shows the states filed an amended complaint on October 2, 2026 and moved for summary judgment on October 13, 2026, and that an October 21, 2026 order set the government's cross-motion for October 22 and the states' reply for October 30, 2026",
+        "source_url": "https://clearinghouse.net/case/48373/",
         "maps_to_element": "Resolution/current status of the litigation beyond the initial injunction"
       }
     ],
     "status": "Final -- Judge Smith's September 24, 2025 ruling vacated DHS's immigration conditions on 40 state grant programs and enjoined their enforcement; the government dropped its appeal (No. 25-2131), dismissed September 16, 2026. A July 2026 suit alleges FY2026 terms repeat them.",
     "rebuttal_anticipated": "DOJ and DHS framed the subpoenas and grant conditions as legitimate law-enforcement and anti-smuggling measures, consistent with the administration's broader immigration-enforcement priorities, and FEMA's Shelter and Services Program itself funds a discretionary, non-mandatory federal grant program rather than a core disaster-relief entitlement.",
-    "comeback": "A federal judge -- applying ordinary administrative and constitutional law, not an ideological standard -- found DHS's immigration conditions on state grants unlawful and permanently enjoined them across 40 grant programs after a 20-state challenge, and the government abandoned its appeal. That case did not reach the shelter subpoenas or FEMA's affidavit demand, but requiring the executives of migrant-aid grantees to swear they know of no smuggling-law violations, with funding withheld in the meantime and no individualized suspicion, is a more coercive mechanism than an ordinary law-enforcement subpoena or an eligibility requirement tied to the grant's actual purpose.",
+    "comeback": "A federal judge -- applying ordinary administrative and constitutional law, not an ideological standard -- found DHS's immigration conditions on state grants unlawful and permanently enjoined them across 40 grant programs after a challenge by 20 states and the District of Columbia, and the government abandoned its appeal. That case did not reach the shelter subpoenas or FEMA's affidavit demand, but requiring the executives of migrant-aid grantees to swear they know of no smuggling-law violations, with funding withheld in the meantime and no individualized suspicion, is a more coercive mechanism than an ordinary law-enforcement subpoena or an eligibility requirement tied to the grant's actual purpose.",
     "cause": "[TAP Analysis, not sourced] An example of the administration using both criminal-investigative tools (DOJ subpoenas; FEMA's letter citing the federal smuggling law to shelter grantees) and appropriated-funding leverage (FEMA and DHS grant conditions) against organizations and governments serving migrants; for DHS's conditions on state grants, a federal court found this crossed into unlawful coercion when appropriations already approved by Congress were conditioned on states performing federal civil immigration enforcement.",
-    "last_verified": "2026-10-06",
+    "last_verified": "2026-11-08",
     "date_added": "2026-08-11",
-    "confidence_note": "HIGH confidence on the DOJ subpoenas and FEMA grant-condition demands, corroborated across Fox 5 NY, NBC New York, U.S. News, AP/Yahoo, and the Texas Tribune. HIGH confidence on the litigation outcome, corroborated across the Immigrant Legal Resource Center, the First Circuit docket on CourtListener, and HSToday's reporting on Judge Smith's September 24, 2025 order. `contested: true` because DOJ/DHS's law-enforcement rationale for the underlying subpoenas/conditions has not been independently adjudicated as pretextual -- only DHS's immigration conditions on state grants were found unlawful in the states' case, which did not involve the subpoenas or FEMA's Shelter and Services Program affidavit demand. Re-verified 2026-08-19: status updated to reflect an October 14, 2025 enforcement order (DHS/FEMA had continued imposing the same conditions post-injunction) and the government's November 21, 2025 notice of appeal to the First Circuit (No. 25-2131), both predating this entry's original write date by 9-10 months and omitted from the original 'no appeal outcome identified' framing; the appeal remains pending as of this recheck, per First Circuit docket review. Re-verified 2026-08-26: no material change -- the First Circuit appeal remains pending with no oral argument date or ruling identified. Re-verified 2026-08-30: no material change. Re-verified 2026-09-02: no material change. Update 2026-10-06: the First Circuit docket shows the government never filed its opening brief after three extensions, moved on September 1, 2026 to dismiss its own appeal (No. 25-2131), and the court dismissed it under Fed. R. App. P. 42(b) on September 16, 2026, issuing the mandate the same day, so the appeal is no longer pending and the district court's ruling stands. E&E News reported on May 14, 2026 that a FEMA bulletin said FEMA and DHS 'have decided not to pursue these appeals' of two court rulings on the immigration grant conditions; the government voluntarily dismissed the related Illinois v. Noem appeal in May 2026, per the Immigrant Legal Resource Center. Separately, on July 23, 2026 Illinois and other states filed a new suit in the District of Rhode Island (No. 1:26-cv-00485) alleging that DHS's Fiscal Year 2026 Standard Terms and Conditions include immigration conditions 'essentially identical to those already vacated and enjoined last year'; no ruling in that case was identified as of this update.",
+    "confidence_note": "HIGH confidence on the DOJ subpoenas and FEMA grant-condition demands, corroborated across Fox 5 NY, NBC New York, U.S. News, AP/Yahoo, and the Texas Tribune. HIGH confidence on the litigation outcome, corroborated across the Immigrant Legal Resource Center, the First Circuit docket on CourtListener, and HSToday's reporting on Judge Smith's September 24, 2025 order. `contested: true` because DOJ/DHS's law-enforcement rationale for the underlying subpoenas/conditions has not been independently adjudicated as pretextual -- only DHS's immigration conditions on state grants were found unlawful in the states' case, which did not involve the subpoenas or FEMA's Shelter and Services Program affidavit demand. Re-verified 2026-08-19: status updated to reflect an October 14, 2025 enforcement order (DHS/FEMA had continued imposing the same conditions post-injunction) and the government's November 21, 2025 notice of appeal to the First Circuit (No. 25-2131), both predating this entry's original write date by 9-10 months and omitted from the original 'no appeal outcome identified' framing; the appeal remains pending as of this recheck, per First Circuit docket review. Re-verified 2026-08-26: no material change -- the First Circuit appeal remains pending with no oral argument date or ruling identified. Re-verified 2026-08-30: no material change. Re-verified 2026-09-02: no material change. Update 2026-10-06: the First Circuit docket shows the government never filed its opening brief after three extensions, moved on September 1, 2026 to dismiss its own appeal (No. 25-2131), and the court dismissed it under Fed. R. App. P. 42(b) on September 16, 2026, issuing the mandate the same day, so the appeal is no longer pending and the district court's ruling stands. E&E News reported on May 14, 2026 that a FEMA bulletin said FEMA and DHS 'have decided not to pursue these appeals' of two court rulings on the immigration grant conditions; the government voluntarily dismissed the related Illinois v. Noem appeal in May 2026, per the Immigrant Legal Resource Center. Separately, on July 23, 2026 Illinois and other states filed a new suit in the District of Rhode Island (No. 1:26-cv-00485) alleging that DHS's Fiscal Year 2026 Standard Terms and Conditions include immigration conditions 'essentially identical to those already vacated and enjoined last year'. Update 2026-11-08: Illinois's May 13, 2025 announcement lists 20 states in the original suit, and the District of Columbia appears as a plaintiff in the July 2, 2025 first amended complaint; HSToday's timeline instead says 'Twenty states and the District of Columbia filed suit' on May 13 and elsewhere describes the case as brought by '11 states and the District of Columbia,' figures the complaints do not bear out. In the 2026 suit the states moved for summary judgment on October 13, 2026, with cross-motion briefing set to close October 30, 2026.",
     "pull_quote": "A federal judge permanently barred DHS and FEMA from enforcing immigration-related conditions on states' grants across 40 separate federal grant programs, finding them unlawful.",
     "section_summaries": {
       "incident_summary": "DOJ subpoenaed NYC shelters for residents' data and FEMA demanded migrant records and no-smuggling affidavits; separately, a 20-state suit won an injunction against DHS's state-grant conditions.",
@@ -13928,7 +13990,7 @@
       "headline": "DOJ subpoenaed NYC shelters for migrant data; a judge separately blocked DHS's immigration strings on state grants."
     },
     "date_of_action": "2025-03 (subpoenas served on NYC migrant shelters) through 2025-09-24 (judge permanently enjoins immigration-related grant conditions)",
-    "last_substantive_update": "2026-10-06",
+    "last_substantive_update": "2026-11-08",
     "glance": {
       "who": "Kristi Noem (Secretary of Homeland Security)",
       "what": "Tied states' DHS grants to immigration cooperation, which a judge permanently barred; FEMA sought shelter data",
@@ -13937,7 +13999,7 @@
         "certainty": "documented",
         "who": "Migrant shelter residents and grantees"
       },
-      "reviewed": "2026-10-06"
+      "reviewed": "2026-11-08"
     },
     "status_stage": "Reversed or withdrawn",
     "key_events": [
@@ -13963,7 +14025,7 @@
         "text": "Twenty states led by Illinois sue DHS and FEMA over immigration conditions on emergency grant funds",
         "sources": [
           "https://www.ilrc.org/immigration-enforcement/federal-tracking/federal-litigation/illinois-sued-fema-immigration",
-          "https://www.hstoday.us/perspective/eyes-on-preparedness-federal-courts-block-fema-dhs-immigration-grant-conditions-safeguarding-billions-in-emergency-preparedness-funds/"
+          "https://illinoisattorneygeneral.gov/news/story/attorney-general-raoul-leads-coalition-suing-trump-administration-over-illegal-immigration-conditions-placed-on-billions-in-federal-funding-5-13-25"
         ]
       },
       {
@@ -13997,8 +14059,14 @@
           {
             "date": "2026-10-06",
             "label": "Update",
-            "text": "Update 2026-10-06: the First Circuit docket shows the government never filed its opening brief after three extensions, moved on September 1, 2026 to dismiss its own appeal (No. 25-2131), and the court dismissed it under Fed. R. App. P. 42(b) on September 16, 2026, issuing the mandate the same day, so the appeal is no longer pending and the district court's ruling stands. E&E News reported on May 14, 2026 that a FEMA bulletin said FEMA and DHS 'have decided not to pursue these appeals' of two court rulings on the immigration grant conditions; the government voluntarily dismissed the related Illinois v. Noem appeal in May 2026, per the Immigrant Legal Resource Center. Separately, on July 23, 2026 Illinois and other states filed a new suit in the District of Rhode Island (No. 1:26-cv-00485) alleging that DHS's Fiscal Year 2026 Standard Terms and Conditions include immigration conditions 'essentially identical to those already vacated and enjoined last year'; no ruling in that case was identified as of this update.",
+            "text": "Update 2026-10-06: the First Circuit docket shows the government never filed its opening brief after three extensions, moved on September 1, 2026 to dismiss its own appeal (No. 25-2131), and the court dismissed it under Fed. R. App. P. 42(b) on September 16, 2026, issuing the mandate the same day, so the appeal is no longer pending and the district court's ruling stands. E&E News reported on May 14, 2026 that a FEMA bulletin said FEMA and DHS 'have decided not to pursue these appeals' of two court rulings on the immigration grant conditions; the government voluntarily dismissed the related Illinois v. Noem appeal in May 2026, per the Immigrant Legal Resource Center. Separately, on July 23, 2026 Illinois and other states filed a new suit in the District of Rhode Island (No. 1:26-cv-00485) alleging that DHS's Fiscal Year 2026 Standard Terms and Conditions include immigration conditions 'essentially identical to those already vacated and enjoined last year'.",
             "effective_date": "2026-10-06"
+          },
+          {
+            "date": "2026-11-08",
+            "label": "Update",
+            "text": "Update 2026-11-08: Illinois's May 13, 2025 announcement lists 20 states in the original suit, and the District of Columbia appears as a plaintiff in the July 2, 2025 first amended complaint; HSToday's timeline instead says 'Twenty states and the District of Columbia filed suit' on May 13 and elsewhere describes the case as brought by '11 states and the District of Columbia,' figures the complaints do not bear out. In the 2026 suit the states moved for summary judgment on October 13, 2026, with cross-motion briefing set to close October 30, 2026.",
+            "effective_date": "2026-11-08"
           }
         ]
       }
@@ -18337,7 +18405,7 @@
   },
   {
     "id": "fbi-milwaukee-election-director-home-visit-2026",
-    "official": "Kash Patel, FBI Director; Todd Blanche, Attorney General overseeing DOJ's 2020-election investigations (confirmed August 8, 2026; was Acting Attorney General at the time of this entry's original sourcing)",
+    "official": "Kash Patel, FBI Director; Todd Blanche, Attorney General overseeing DOJ's 2020-election investigations (confirmed August 8, 2026; Acting Attorney General when FBI agents visited the elections director's home in May 2026)",
     "offense_category": "Federal law-enforcement pattern targeting already-resolved 2020-election claims through intimidation-adjacent investigative tactics -- no criminal charge against any official; this is an abuse-of-investigative-power claim",
     "contested": false,
     "incident_summary": "**FBI agents visited the private home of Milwaukee County Elections Director Michelle Hawley in May 2026, leaving a business card after she was unavailable, as part of a widening federal probe into Wisconsin's handling of the 2020 election.** Milwaukee County Clerk George Christenson publicly criticized the visit, saying it was 'unfortunate that the FBI chose to visit the private residence of Milwaukee County's Elections Director rather than contact the Election Commission's office directly,' while reaffirming the county's position that the 2020 election was 'fair and transparent.' The visit is one part of a broader, multi-state DOJ/FBI effort demanding 2020 ballots and election records specifically from counties Trump has publicly and falsely blamed for his loss: agents have separately seized roughly 600 boxes of ballots from Fulton County, Georgia, subpoenaed records from Maricopa County, Arizona, and in Milwaukee are pursuing roughly 180,000 preserved absentee ballots as well as follow-up interviews with Milwaukee police officers who were on duty on election night 2020. Wisconsin Gov. Tony Evers said he would resist federal efforts to seize Milwaukee's ballots. A June 2026 Votebeat analysis, citing election-law experts, characterized the pattern of investigations as more plausibly aimed at building a pretext ahead of the 2026 midterms than at genuinely investigating events from six years earlier.",
@@ -18350,7 +18418,7 @@
     "evidence": [
       {
         "type": "news_report",
-        "description": "Wisconsin Examiner and CBS News reporting that FBI agents visited Hawley's home and left a card; County Clerk Christenson's public statement criticizing the home visit as inappropriate given the Elections Commission office was the normal point of contact",
+        "description": "Wisconsin Examiner and CBS News reporting (May 2026) that FBI agents visited Hawley's home and left a card; County Clerk Christenson's public statement criticizing the home visit as inappropriate given the Elections Commission office was the normal point of contact",
         "source_url": "https://www.cbsnews.com/news/fbi-milwaukee-county-wisconsin-election-official/",
         "maps_to_element": "Documented departure from normal investigative practice, called out by a named county official"
       },
@@ -18361,8 +18429,14 @@
         "maps_to_element": "Multi-state pattern targeting counties tied to Trump's 2020 loss narrative"
       },
       {
+        "type": "news_report",
+        "description": "Urban Milwaukee (June 2, 2026): the Milwaukee Common Council unanimously approved allowing City Attorney Evan Goyke to hire outside counsel for \"election-related needs,\" giving the city two pro bono specialist firms should the FBI's approach escalate",
+        "source_url": "https://urbanmilwaukee.com/2026/06/02/fbi-knocks-milwaukee-answers-with-two-new-law-firms-on-its-side/",
+        "maps_to_element": "Local institutional response to the FBI's approach, establishing the dispute as a matter of public record"
+      },
+      {
         "type": "analysis",
-        "description": "Votebeat analysis, citing named election-law experts, characterizing the investigation pattern as more plausibly a 2026-midterm pretext than genuine 2020 fact-finding",
+        "description": "Votebeat analysis (June 8, 2026), citing named election-law experts, characterizing the investigation pattern as more plausibly a 2026-midterm pretext than genuine 2020 fact-finding",
         "source_url": "https://www.votebeat.org/national/2026/06/08/fbi-investigation-2020-election-trump-milwaukee-fulton-maricopa/",
         "maps_to_element": "Expert characterization of investigative purpose"
       },
@@ -18374,25 +18448,25 @@
       },
       {
         "type": "news_report",
-        "description": "Re-verification search (2026-08-18): no material development since this entry's 2026-08-02 write date -- no ballots seized or subpoenaed in Milwaukee as of this recheck, consistent with the entry's existing status. Milwaukee County retained two outside law firms in response to the FBI's approach (reported June 2, 2026, predating this entry's own write date) -- a supporting detail on the county's institutional response, not a change to any claim already in this entry.",
-        "source_url": "https://urbanmilwaukee.com/2026/06/02/fbi-knocks-milwaukee-answers-with-two-new-law-firms-on-its-side/",
-        "maps_to_element": "Re-verification confirming no change to the investigation's status, plus supporting detail on the county's response"
+        "description": "WISN (July 7, 2026): Mayor Cavalier Johnson's letter to Vice President Vance said federal agents have been \"interviewing election officials\" and \"I know of no justification for this activity\"; agents had interviewed at least one Wisconsin Elections Commission official, several Milwaukee police officers and reportedly at least one poll worker; the FBI declined comment; Milwaukee's 2020 absentee ballots had not been destroyed, the county citing an ongoing lawsuit, while Commission Chair Don Millis urged Attorney General Josh Kaul to intervene to destroy them",
+        "source_url": "https://www.wisn.com/article/ahead-of-vice-presidents-visit-to-milwaukee-mayor-blasts-fbis-2020-probe/71853157",
+        "maps_to_element": "Continuing scope of the FBI's Milwaukee inquiry and local officials' public objection to it"
       }
     ],
-    "status": "Ongoing -- investigation remained in a preliminary phase as of June 2026 reporting, with the FBI moving next to interview Milwaukee police officers on duty election night 2020; no ballots have been seized in Wisconsin",
+    "status": "Ongoing -- the FBI's Wisconsin 2020-election probe has since reached several Milwaukee police officers, a state elections official and reportedly a poll worker; the FBI declines comment. As of July 2026 Milwaukee's 2020 absentee ballots were still preserved over a pending lawsuit.",
     "rebuttal_anticipated": "DOJ/FBI could argue any investigative avenue -- including a home visit when an official is otherwise unreachable -- is legitimate absent a specific finding of misconduct, and that investigating a past election isn't inherently improper regardless of prior audit results.",
     "comeback": "The home-visit tactic itself, the specific pattern of targeting only counties tied to Trump's 2020 loss narrative rather than a neutral nationwide sample, and the fact the underlying fraud claims were already resolved through the normal legal process in 2020-2021 together support a characterization of investigative pressure rather than genuine fact-finding -- a characterization multiple named election-law experts have made on the record, not merely the targeted county's own framing.",
     "cause": "[TAP Analysis, not sourced] Consistent with the broader documented DOJ 2020-election-grievance pattern already in this tracker (the Fulton County, GA ballot-seizure and subpoena entries).",
-    "confidence_note": "HIGH confidence on the home-visit fact and the county clerk's public criticism, corroborated across multiple independent local and national outlets (CBS News, WPR, Wisconsin Examiner, NBC News). MODERATE confidence on the '2026-midterm pretext' characterization, which is sourced to named election-law experts' analysis rather than an on-the-record DOJ admission of purpose. Re-verified 2026-08-18: no material change to the investigation's status; no Aug 2026-dated developments identified despite a search scoped specifically to that window. Re-verified 2026-08-26: no material change identified; searches scoped to July-August 2026 surfaced no developments past the June 2026 reporting already documented here, and no new confirming source beyond what's already cited in evidence[] was found. Re-verified 2026-09-08 (batch 65): no material change identified; no developments found past the June 2026 reporting already documented here.",
+    "confidence_note": "HIGH confidence on the home-visit fact and the county clerk's public criticism, corroborated across multiple independent local and national outlets (CBS News, WPR, Wisconsin Examiner, NBC News). MODERATE confidence on the '2026-midterm pretext' characterization, which is sourced to named election-law experts' analysis rather than an on-the-record DOJ admission of purpose. Re-verified 2026-08-18: no material change to the investigation's status; no Aug 2026-dated developments identified despite a search scoped specifically to that window. Re-verified 2026-08-26: no material change identified; searches scoped to July-August 2026 surfaced no developments past the June 2026 reporting already documented here, and no new confirming source beyond what's already cited in evidence[] was found. Re-verified 2026-09-08: no material change identified; no developments found past the June 2026 reporting already documented here. Re-verified 2026-11-08: the probe expanded to police, state-commission and poll-worker interviews by July 2026 (WISN); no ballot seizure or charges found in Wisconsin.",
     "pull_quote": "“Unfortunate that the FBI chose to visit the private residence of Milwaukee County’s Elections Director rather than contact the Election Commission’s office directly,” said County Clerk George Christenson.",
-    "last_verified": "2026-09-23",
+    "last_verified": "2026-11-08",
     "date_added": "2026-08-02",
     "section_summaries": {
-      "incident_summary": "FBI agents visited Milwaukee's elections director at her home rather than her office as part of a widening DOJ probe into 2020 election counties Trump has blamed for his loss; the county clerk publicly criticized the tactic.",
+      "incident_summary": "FBI agents visited Milwaukee's elections director at home, not her office, in a widening DOJ probe of 2020 counties Trump blames for his loss; the county clerk criticized the tactic.",
       "confidence_note": "Well-corroborated across multiple independent outlets; the 'pretext for 2026' framing is expert analysis, not an on-the-record DOJ admission."
     },
     "date_of_action": "2026-05 (FBI visits Milwaukee election director's home)",
-    "last_substantive_update": "2026-09-23",
+    "last_substantive_update": "2026-11-08",
     "glance": {
       "who": "Kash Patel (FBI) and Todd Blanche (AG)",
       "what": "FBI agents visited Milwaukee's elections director at home, not the office, in a 2020-election probe",
@@ -18401,7 +18475,7 @@
         "certainty": "alleged",
         "who": "Milwaukee election officials"
       },
-      "reviewed": "2026-09-23"
+      "reviewed": "2026-11-08"
     },
     "status_stage": "Unchallenged",
     "key_events": [
@@ -18419,6 +18493,13 @@
         "text": "Votebeat reports the FBI also seeks Milwaukee police interviews; experts call a midterm pretext the likelier aim",
         "sources": [
           "https://www.votebeat.org/national/2026/06/08/fbi-investigation-2020-election-trump-milwaukee-fulton-maricopa/"
+        ]
+      },
+      {
+        "date": "2026-07-07",
+        "text": "Milwaukee's mayor writes Vance objecting to FBI interviews as agents question police and a state elections official",
+        "sources": [
+          "https://www.wisn.com/article/ahead-of-vice-presidents-visit-to-milwaukee-mayor-blasts-fbis-2020-probe/71853157"
         ]
       }
     ]
