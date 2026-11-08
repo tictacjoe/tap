@@ -18859,15 +18859,33 @@
     "id": "gabbard-directors-initiatives-group-2026",
     "official": "Tulsi Gabbard, then-Director of National Intelligence (February 2025-June 2026; resigned and was followed by acting DNI Bill Pulte, then by Jay Clayton)",
     "offense_category": "Creation and Use of an Intelligence Task Force for Partisan Political Attacks Under the Declared Guise of Depoliticizing Intelligence Agencies -- no criminal charge implicated; this tracks accountability for the gap between the task force's stated purpose and its documented use",
-    "incident_summary": "In April 2025, DNI Gabbard launched the Director's Initiatives Group (DIG), declaring its purpose was to root out politicization within U.S. intelligence agencies. In practice, the group issued reports attacking the intelligence community's own investigation into Russian interference in the 2016 election and the Biden administration's handling of domestic terrorism -- output critics, including Democrats and some intelligence-community insiders, characterized as a vehicle for Trump's political-retribution campaign rather than genuine depoliticization. Gabbard told Reuters on February 10, 2026 that she had wound down the group, which she said had always been meant as a temporary effort; two sources told Reuters the decision followed 'alleged missteps,' including the group mistakenly linking a federal security worker to the pipe bombs planted on the eve of the January 6, 2021 Capitol riot, which ODNI denied. A CIA officer formerly assigned to the group later said in written testimony to a Senate committee, as Raw Story reported, that a memo and 'the ensuing drama' helped spark a pause in its work in December 2025 and its dissolution in January 2026.",
+    "incident_summary": "In April 2025, DNI Gabbard launched the Director's Initiatives Group (DIG), declaring its purpose was to root out politicization within U.S. intelligence agencies. In practice, the group issued reports attacking the intelligence community's own investigation into Russian interference in the 2016 election and released a declassified Biden-era plan for countering domestic terrorism, which conservative outlets presented as exposing a plan to potentially violate people's rights -- output critics, including Democrats and some intelligence-community insiders, characterized as a vehicle for Trump's political-retribution campaign rather than genuine depoliticization. Gabbard told Reuters on February 10, 2026 that she had wound down the group, which she said had always been meant as a temporary effort; two sources told Reuters the decision followed 'alleged missteps,' including the group mistakenly linking a federal security worker to the pipe bombs planted on the eve of the January 6, 2021 Capitol riot, which ODNI denied. A CIA officer formerly assigned to the group later said in written testimony to a Senate committee, as Raw Story reported, that a memo and 'the ensuing drama' helped spark a pause in its work in December 2025 and its dissolution in January 2026.",
     "contested": true,
     "elements_required": [
-      "DIG was publicly launched with a stated depoliticization mission but produced work product attacking politically salient intelligence-community findings (the Russia investigation, domestic-terrorism handling under the prior administration)",
+      "DIG was publicly launched with a stated depoliticization mission but produced work product attacking politically salient intelligence-community findings (the Russia investigation) and released a declassified prior-administration domestic-terrorism plan framed as exposing government overreach",
       "Critics from within the intelligence community itself, not solely partisan opponents, raised concerns the group was being used for political retribution rather than its stated purpose",
       "A CIA officer formerly assigned to the group testified in writing that a memo and the resulting controversy helped spark DIG's December 2025 work pause and January 2026 dissolution, and two Reuters sources tied the wind-down to alleged missteps, indicating the shutdown followed specific internal problems rather than routine completion of its mission",
       "The group operated for less than a year before being wound down, a short lifespan for a task force whose stated mission (rooting out politicization) was not reported as accomplished"
     ],
     "evidence": [
+      {
+        "type": "public_record",
+        "description": "ODNI's own page 'Declassified Strategic Implementation Plan for Countering Domestic Terrorism from the Biden Administration' (undated; first archived by the Wayback Machine Apr. 17, 2025; Feb. 4, 2026 capture) is filed under 'Director's Initiatives Group (DIG)' and links the declassified plan ('Download the report here.'); the page's DIG panel lists among the group's actions reviewing for declassification information on 'Crossfire Hurricane' and 'the Biden Administration's domestic surveillance and censorship actions against Americans'",
+        "source_url": "https://web.archive.org/web/20260204120310/https://www.dni.gov/index.php/newsroom/dig/4064-dig-strat-impl-plan-ct-biden",
+        "maps_to_element": "DIG's specific work product: the prior administration's domestic-terrorism record"
+      },
+      {
+        "type": "reporting",
+        "description": "Townhall (Apr. 17, 2025) reports Gabbard announced in an April 16, 2025 post on X that she had declassified the Biden administration's 'Strategic Implementation Plan for Countering Domestic Terrorism' ('As promised, I have declassified the Biden Administration's Strategic Implementation Plan for Countering Domestic Terrorism'); Townhall characterizes the release as exposing a Biden plan 'to potentially violate people's rights under the guise of preventing domestic terrorism'",
+        "source_url": "https://townhall.com/news/jeff-charles/2025/04/17/tulsi-gabbard-just-dropped-a-declassified-biden-era-report-that-will-blow-your-mind-n2655711",
+        "maps_to_element": "DIG's specific work product: the prior administration's domestic-terrorism record"
+      },
+      {
+        "type": "reporting",
+        "description": "The Blaze (May 7, 2025) reports the Biden-era 'Strategic Implementation Plan for Countering Domestic Terrorism' was one of the documents declassified under the Director's Initiatives Group, which Gabbard announced the previous month, and that Gabbard indicated DIG was reviewing documents on 'the Biden administration's domestic surveillance and censorship actions against Americans' for potential declassification",
+        "source_url": "https://www.theblaze.com/news/declassified-memo-reveals-how-biden-admin-set-stage-for-feds-to-hound-americans-over-non-criminal-behavior",
+        "maps_to_element": "DIG's specific work product: the prior administration's domestic-terrorism record"
+      },
       {
         "type": "public_record",
         "description": "Reuters (Feb. 10, 2026, via The Star's syndicated copy) reports Gabbard told Reuters she had wound down the Director's Initiatives Group, launched with the declared goal of rooting out politicization but accused by critics of being a tool for partisan attacks; two sources said the decision followed alleged missteps, including mistakenly linking a federal security worker to the Jan. 6-eve pipe bombs, which an ODNI spokesperson denied, saying the group was only ever temporary",
@@ -18912,24 +18930,36 @@
       },
       {
         "type": "reporting",
-        "description": "CNBC reports the Senate confirmed Jay Clayton as director of national intelligence on July 28, 2026 by a 51-47 vote, ending interim DNI Bill Pulte's tenure",
+        "description": "CNBC (July 28, 2026) reports the Senate on Tuesday evening confirmed Jay Clayton as director of national intelligence by a party-line 51-47 vote; Bill Pulte had been tapped by Trump to temporarily replace Gabbard after she resigned",
         "source_url": "https://www.cnbc.com/2026/07/28/jay-clayton-bill-pulte-senate-vote-trump-spy-chief.html",
+        "maps_to_element": "Current status: Gabbard's successor in the DNI post"
+      },
+      {
+        "type": "public_record",
+        "description": "ODNI News Release No. 12-26 (Aug. 3, 2026), as reproduced by GlobalSecurity.org, states 'Today, Jay Clayton was sworn in as the nation's ninth Director of National Intelligence, following confirmation by the United States Senate last week'",
+        "source_url": "https://www.globalsecurity.org/intell/library/news/2026/intell-260803-dni01.htm",
+        "maps_to_element": "Current status: Gabbard's successor in the DNI post"
+      },
+      {
+        "type": "reporting",
+        "description": "The New York Times (via the Boston Globe, Aug. 4, 2026) reports Jay Clayton, confirmed by the Senate the previous Tuesday, was sworn in as director of national intelligence 'on Monday' (Aug. 3, 2026); the White House had not immediately sworn him in, giving acting director Bill Pulte a few more days in office",
+        "source_url": "https://www.bostonglobe.com/2026/08/04/nation/jay-clayton-national-intelligence-director/",
         "maps_to_element": "Current status: Gabbard's successor in the DNI post"
       }
     ],
-    "status": "Resolved -- Gabbard told Reuters on Feb. 10, 2026 that she had wound DIG down; a former member's Senate testimony dates its dissolution to January 2026. Gabbard left the DNI post on June 19, 2026, when Bill Pulte took over as acting DNI; the Senate confirmed Jay Clayton on July 28, 2026.",
+    "status": "Resolved -- Gabbard told Reuters on Feb. 10, 2026 that she had wound DIG down; a former member's Senate testimony dates its dissolution to January 2026. Gabbard left the DNI post on June 19, 2026; acting DNI Bill Pulte served until Jay Clayton, confirmed July 28, was sworn in Aug. 3, 2026.",
     "rebuttal_anticipated": "Likely defense: reassessing intelligence agencies' past politically sensitive work is a legitimate function of a depoliticization effort, criticism of the Russia-interference investigation is not inherently partisan retaliation, and Gabbard's decision to wind down the group when internal problems surfaced reflects responsiveness rather than an admission the group was improperly used from the outset.",
-    "comeback": "The specific concern is not that DIG examined past intelligence work, but that its output specifically targeted findings politically inconvenient to the current administration (the Russia investigation, the prior administration's domestic-terrorism record) while operating under a neutral-sounding 'depoliticization' banner, and that a CIA officer who served on the group testified that a memo it circulated and the resulting controversy helped spark the pause and dissolution, while two Reuters sources tied the wind-down to alleged missteps -- internal problems, not external criticism alone, suggesting the concerns had substance recognized even inside the intelligence community.",
+    "comeback": "The specific concern is not that DIG examined past intelligence work, but that its output specifically targeted findings politically inconvenient to the current administration (the Russia investigation) and the prior administration's domestic-terrorism record while operating under a neutral-sounding 'depoliticization' banner, and that a CIA officer who served on the group testified that a memo it circulated and the resulting controversy helped spark the pause and dissolution, while two Reuters sources tied the wind-down to alleged missteps -- internal problems, not external criticism alone, suggesting the concerns had substance recognized even inside the intelligence community.",
     "cause": "[TAP Analysis, not sourced] Consistent with the broader pattern this tracker documents of ostensibly neutral oversight or reform bodies being used for partisan political ends under this administration (see also the Ed Martin Weaponization Working Group grand-jury-leak entry).",
-    "last_verified": "2026-11-07",
+    "last_verified": "2026-11-08",
     "date_added": "2026-08-05",
-    "confidence_note": "HIGH confidence -- Gabbard's own confirmation to Reuters that she wound down the group, its stated mission, and its documented output are reported by Reuters and independently by AP (via Federal News Network), with The Hill relaying Reuters' account; why it ended is disputed, with ODNI denying the missteps Reuters' sources described. Re-verified 2026-08-18: no developments found since Gabbard's own June 2026 exit from the DNI role; DIG's dissolution stands as originally documented. Re-verified 2026-08-26: no developments found since the prior recheck; DIG's dissolution and Gabbard's own June 2026 exit from the DNI role stand as originally documented, no new confirming source identified. Re-verified 2026-09-05: no material change identified. Re-verified 2026-11-07: the December 2025 pause and January 2026 dissolution dates rest on a former DIG member's written Senate testimony reported by Raw Story, not on Reuters or The Hill, whose copies carry no memo, pause or January date; Pulte's acting tenure and Clayton's July 28, 2026 confirmation are confirmed by CBS News and CNBC.",
+    "confidence_note": "HIGH confidence -- Gabbard's own confirmation to Reuters that she wound down the group, its stated mission, and its documented output are reported by Reuters and independently by AP (via Federal News Network), with The Hill relaying Reuters' account; why it ended is disputed, with ODNI denying the missteps Reuters' sources described. Re-verified 2026-08-18: no developments found since Gabbard's own June 2026 exit from the DNI role; DIG's dissolution stands as originally documented. Re-verified 2026-08-26: no developments found since the prior recheck; DIG's dissolution and Gabbard's own June 2026 exit from the DNI role stand as originally documented, no new confirming source identified. Re-verified 2026-09-05: no material change identified. Re-verified 2026-11-07: the December 2025 pause and January 2026 dissolution dates rest on a former DIG member's written Senate testimony reported by Raw Story, not on Reuters or The Hill, whose copies carry no memo, pause or January date; Pulte's acting tenure and Clayton's July 28, 2026 confirmation are confirmed by CBS News and CNBC. Re-verified 2026-11-08: Clayton was sworn in Aug. 3, 2026, with Pulte acting until then, per ODNI's own release and The New York Times via the Boston Globe; DIG's April 16, 2025 release of the declassified Biden administration domestic-terrorism implementation plan is confirmed by ODNI's own DIG page (Wayback capture) and by Townhall and The Blaze.",
     "section_summaries": {
       "incident_summary": "Gabbard's 2025 'depoliticization' task force produced reports attacking the Russia-interference probe; she wound it down by February 2026 amid reported missteps that ODNI denies.",
       "confidence_note": "Gabbard confirmed the wind-down to Reuters, independently corroborated by AP; why it ended is disputed, with ODNI denying the missteps two sources described."
     },
     "date_of_action": "2025-04 (Gabbard launches Director's Initiatives Group) through 2026-02-10 (Gabbard confirms the group was wound down; a former member's testimony dates the dissolution to January 2026)",
-    "last_substantive_update": "2026-11-07",
+    "last_substantive_update": "2026-11-08",
     "glance": {
       "who": "Tulsi Gabbard (then-DNI)",
       "what": "Launched a 'depoliticizing' intelligence task force whose reports attacked the Russia probe; dissolved it",
@@ -18938,7 +18968,7 @@
         "certainty": "alleged",
         "who": "Nonpartisan intelligence analysis"
       },
-      "reviewed": "2026-11-07"
+      "reviewed": "2026-11-08"
     },
     "status_stage": "Reversed or withdrawn",
     "key_events": [
@@ -18949,6 +18979,15 @@
         "sources": [
           "https://federalnewsnetwork.com/intelligence-community/2026/02/gabbard-ends-intelligence-reform-task-force-after-less-than-a-year-of-work/",
           "https://thehill.com/homenews/administration/5733533-tulsi-gabbard-ends-task-force/"
+        ]
+      },
+      {
+        "date": "2025-04-16",
+        "text": "Gabbard declassifies a Biden-era domestic-terrorism plan, one of the documents released under the group",
+        "sources": [
+          "https://web.archive.org/web/20260204120310/https://www.dni.gov/index.php/newsroom/dig/4064-dig-strat-impl-plan-ct-biden",
+          "https://townhall.com/news/jeff-charles/2025/04/17/tulsi-gabbard-just-dropped-a-declassified-biden-era-report-that-will-blow-your-mind-n2655711",
+          "https://www.theblaze.com/news/declassified-memo-reveals-how-biden-admin-set-stage-for-feds-to-hound-americans-over-non-criminal-behavior"
         ]
       },
       {
