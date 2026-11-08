@@ -9217,17 +9217,41 @@
    },
    "13": {
     "state": "supports",
+    "why": "The Reuters text reports a source saying Gabbard was forced out, Ingle's statement citing her husband's diagnosis, Trump's March 'softer' remark on Iran's nuclear ambitions, and her absence from deliberations on the Maduro operation, the Iran war and Cuba, matching every element of the claim.",
+    "host": "thestar.com.my",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "14": {
+    "state": "supports",
     "why": "CBS (captured June 2-3, 2026) states Trump on Tuesday announced housing official Bill Pulte as acting DNI to replace Gabbard, who is stepping aside at the end of the month.",
     "host": "cbsnews.com",
     "date": "2026-11-07",
     "kind": "fact",
     "archive": true
    },
-   "14": {
+   "15": {
+    "state": "supports",
+    "why": "CNN's June 19 report says Pulte called Gabbard to say he was taking over, that she had been assured she would stay through month's end, that she and Trump settled on June 19, that Trump said Pulte would start Friday, and that Gabbard 'played an unusually marginal role for a spy chief' in the four-month war.",
+    "host": "cnn.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "16": {
     "state": "supports",
     "why": "The CNBC article dated July 28, 2026 reports the Senate confirmed Clayton as DNI 51-47 on Tuesday evening and that the confirmation ends interim DNI Bill Pulte's tenure.",
     "host": "cnbc.com",
     "date": "2026-11-07",
+    "kind": "fact",
+    "archive": false
+   },
+   "17": {
+    "state": "supports",
+    "why": "The NYT text (via the Globe) says Clayton was sworn in 'on Monday' after Senate confirmation 'last Tuesday', and that the delay gave Pulte a few more days as acting director; the specific calendar dates in the claim are not printed in the excerpted text but are consistent with it.",
+    "host": "bostonglobe.com",
+    "date": "2026-11-08",
     "kind": "fact",
     "archive": false
    }
@@ -9507,13 +9531,29 @@
    },
    "2": {
     "state": "supports",
+    "why": "ABC's February 22, 2026 article quotes Greer to Raddatz on 'This Week' with exactly the quoted words, two days after Friday's Supreme Court ruling.",
+    "host": "abcnews.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "3": {
+    "state": "supports",
+    "why": "The Reuters report says collection began Tuesday at 10 percent under Trump's Friday order despite his Saturday pledge of 15 percent, that CBP notified shippers Monday, that no formal order for 15 percent had been signed, and that a White House official cited 'no change of heart.'",
+    "host": "bnnbloomberg.ca",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "supports",
     "why": "ABC reports the 60-partner proposal (12.5% for 54, 10% for 6) and quotes Wolff's view that Section 301 was meant to address one country at a time.",
     "host": "abcnews.com",
     "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
-   "3": {
+   "5": {
     "state": "supports",
     "why": "The article confirms this exactly, and the \"binary outcome\" framing appears later in the same piece describing the July 2026 Section 122 deadline.",
     "host": "cryptobriefing.com",
@@ -9521,15 +9561,15 @@
     "kind": "fact",
     "archive": false
    },
-   "4": {
+   "6": {
     "state": "partly",
-    "why": "Gibson Dunn confirms the May 7, 2026 2-1 ruling, the balance-of-payments-deficit rationale, the permanent injunction limited to the prevailing plaintiffs, the government's appeal, and the May 12, 2026 administrative stay -- but the lead case caption given is \"State of Oregon v. Trump,\" not \"State of Washington,\" and \"Basic Fun, Inc.\" is never named in this text, so the specific identities of the three plaintiffs cannot be confirmed from this source.",
+    "why": "Gibson Dunn confirms the May 7 2-1 ruling, the balance-of-payments-deficit definition rationale, the permanent injunction limited to three plaintiffs, the appeal, the May 12 Federal Circuit administrative stay, Proclamation 11012 at 10 percent and the unexecuted 15 percent threat; but it does not name the three plaintiffs (Burlap & Barrel, Basic Fun, Washington) and dates Section 122's passage to 1975 rather than 1974.",
     "host": "gibsondunn.com",
-    "date": "2026-09-15",
+    "date": "2026-11-08",
     "kind": "fact",
     "archive": false
    },
-   "5": {
+   "7": {
     "state": "supports",
     "why": "The July 20, 2026 proclamation finds under section 338 that Canada discriminates through its cheese TRQ allocation measures and imposes an additional 50 percent ad valorem duty on certain Canadian products effective 12:01 a.m. eastern time on August 19, 2026; clauses (6) and (8) have CBP act in consultation with the USTR and delegate the 1338(h) approval authority to the USTR.",
     "host": "whitehouse.gov",
@@ -9537,7 +9577,7 @@
     "kind": "fact",
     "archive": false
    },
-   "6": {
+   "8": {
     "state": "supports",
     "why": "The USTR release dated July 20, 2026 states Greer issued a statement after the Section 338 50 percent tariffs on Canada and contains both quoted phrases verbatim.",
     "host": "ustr.gov",
@@ -9545,7 +9585,7 @@
     "kind": "fact",
     "archive": false
    },
-   "7": {
+   "9": {
     "state": "partly",
     "why": "The guide supports the July 24 sunset, the March 11 investigations, the accelerated timeline with a July 20 deadline, and the 12.5% proposal, but attributes the accelerated timeline to USTR rather than a Greer signal, and its own update says the investigations missed July 20 and the final action differed from the proposal.",
     "host": "tariffstool.com",
@@ -9553,7 +9593,7 @@
     "kind": "fact",
     "archive": false
    },
-   "8": {
+   "10": {
     "state": "supports",
     "why": "The Aug. 6 update states the Section 122 lapse at 12:01 a.m. July 24, the broader two-tier final action covering about 60 economies (99.4% of imports), and that Section 301 has no rate cap or time limit.",
     "host": "tariffstool.com",
@@ -9561,7 +9601,7 @@
     "kind": "fact",
     "archive": false
    },
-   "9": {
+   "11": {
     "state": "supports",
     "why": "CNBC's July 21, 2026 (Tuesday) article confirms Greer's \"expect action soon\" comments without a timeline on Section 301 tariffs (tied to the 60-economy, up-to-12.5% forced-labor proposal) and that Section 122 tariffs expire Friday (July 24) at 12:01 a.m. ET absent congressional action.",
     "host": "cnbc.com",
@@ -9569,7 +9609,7 @@
     "kind": "fact",
     "archive": false
    },
-   "10": {
+   "12": {
     "state": "supports",
     "why": "CNBC reports the Monday 25-state CIT suit over 10%/12.5% tariffs on 60 partners seeking halt, unlawfulness declaration and refunds, the rushed/bypassed-consultation allegations, the July 23 announcement timing, and calls it at least the second challenge after a small-business suit.",
     "host": "cnbc.com",
@@ -9577,7 +9617,7 @@
     "kind": "fact",
     "archive": false
    },
-   "11": {
+   "13": {
     "state": "partly",
     "why": "Trade Law Daily confirms the Aug. 4 motion to make the Burlap and Barrel case the master case with coordinated briefing across the three suits without formal consolidation, but gives the caption as Burlap and Barrel v. United States, not v. Greer.",
     "host": "tradelawdaily.com",
@@ -9585,7 +9625,7 @@
     "kind": "fact",
     "archive": false
    },
-   "12": {
+   "14": {
     "state": "supports",
     "why": "Supply Chain Dive reports the July 24 Burlap and Barrel/Collective Horology suit seeking removal and refunds, and quotes the states' 'arbitrary, capricious' and 'pretext' language elsewhere in the article.",
     "host": "supplychaindive.com",
@@ -9593,7 +9633,7 @@
     "kind": "fact",
     "archive": false
    },
-   "13": {
+   "15": {
     "state": "supports",
     "why": "The Aug. 26 post states the In Re Section 301 Forced Labor Cases caption, Learning Resources as sample case with others stayed, the motion filed 'yesterday', and the Sept. 4 / Sept. 18 / Sept. 30 schedule before the named judges.",
     "host": "taxprofblog.aals.org",
@@ -9601,7 +9641,7 @@
     "kind": "fact",
     "archive": false
    },
-   "14": {
+   "16": {
     "state": "supports",
     "why": "The post describes the Federal Circuit stay preventing refunds, the July 21 opening brief (corrected July 29), appellees' responses due Monday, a reply three weeks later, and the case then awaiting oral argument.",
     "host": "taxprofblog.aals.org",
@@ -9609,7 +9649,15 @@
     "kind": "fact",
     "archive": false
    },
-   "15": {
+   "17": {
+    "state": "supports",
+    "why": "The hand2mind post states the August 19 sample-case order and that the Burlap & Barrel/Collective Horology v. Greer and State of Oregon v. Trump suits were stayed, exactly as claimed.",
+    "host": "peopleofplay.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "18": {
     "state": "supports",
     "why": "The EY alert states talks broke down late August 21, the 50% Section 338 duties on about $20 billion of goods from three July 20 proclamations took effect August 22 after Proclamation 11056 suspended the August 19 start, that this was the first use of Section 338 for tariffs, and that Canada's negotiators met repeatedly with Greer.",
     "host": "taxnews.ey.com",
@@ -9617,7 +9665,7 @@
     "kind": "fact",
     "archive": false
    },
-   "16": {
+   "19": {
     "state": "supports",
     "why": "The September 8, 2026 proclamation states the 3-day suspension in Proclamation 11056 lapsed and the duties became effective at 12:01 a.m. on August 22, 2026, says Canada maintained the discrimination, excludes certain Canadian products effective September 29, 2026, and in clause (7) again delegates the 1338(h) approval authority to the USTR.",
     "host": "whitehouse.gov",
@@ -9625,7 +9673,7 @@
     "kind": "fact",
     "archive": false
    },
-   "17": {
+   "20": {
     "state": "supports",
     "why": "The USTR September 8, 2026 release describes the import bans and scope modification, contains the quoted Greer language, and states the President directed USTR and GSA to remove $50 billion of Canadian-origin products from GSA's Multiple Award Schedules.",
     "host": "ustr.gov",
@@ -9633,7 +9681,7 @@
     "kind": "fact",
     "archive": false
    },
-   "18": {
+   "21": {
     "state": "supports",
     "why": "The article reports the panel pressing DOJ on whether Greer disregarded Congress's Section 301 framework and on the sufficiency of justifications, the judges' scrutiny of the pretext arguments, and that the court gave no ruling date; it separately quotes Choe-Groves on 'not a lot of depth' in the evidence.",
     "host": "ttnews.com",
@@ -9641,7 +9689,15 @@
     "kind": "fact",
     "archive": false
    },
-   "19": {
+   "22": {
+    "state": "supports",
+    "why": "Troutman Pepper Locke reports the October 8 Freestyle certification of a nationwide class of importers who paid IEEPA duties February 1, 2025 to February 19, 2026 and have not sued, CBP's CAPE refunds and individual actions, and that certification is not a refund order.",
+    "host": "troutman.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "23": {
     "state": "supports",
     "why": "The October 12, 2026 Troutman article states USTR imposed Section 301 forced-labor duties on 60 trading partners, the challenge is pending before the CIT with no decision, the panel heard argument September 30 and ordered supplemental briefing due October 16, and the duties remain in effect with no recovery mechanism unless the court sets the determinations aside.",
     "host": "troutman.com",
@@ -9649,15 +9705,15 @@
     "kind": "fact",
     "archive": false
    },
-   "20": {
-    "state": "partly",
-    "why": "The complaint confirms the October 20, 2026 CIT filing, case number, named defendants (including Greer in his official capacity and USTR), the implied-repeal/Section 301 argument, the nondelegation count, the narrow-reading argument, the 30-day objection to the September 8 additions, and a request to certify a class; however, the provided text does not show the class definition tied to entries since August 22 or the request for refunds with interest, which fall in truncated portions.",
+   "24": {
+    "state": "supports",
+    "why": "The complaint caption, class definition, Section 301 repeal argument, 30-day-wait allegation, nondelegation count, and refund request all appear in the source text as the claim describes.",
     "host": "libertyjusticecenter.org",
     "date": "2026-11-08",
     "kind": "fact",
     "archive": false
    },
-   "21": {
+   "25": {
     "state": "supports",
     "why": "The AP article of October 20, 2026 reports the suit against the 50% tariff on $20 billion of Canadian goods, that the authority had never been used in a trade dispute, that the White House would vigorously defend the tariffs, and that the president 'last month' escalated with a ban on nearly $1 billion of products.",
     "host": "news4jax.com",
@@ -9665,7 +9721,7 @@
     "kind": "fact",
     "archive": false
    },
-   "22": {
+   "26": {
     "state": "supports",
     "why": "Trade Law Daily reports Gellert's Oct. 23 motion for a preliminary injunction and summary judgment (CIT # 26-04636) and the same-day assignment to a panel of Judges Kelly, Laroski and Westercamp.",
     "host": "tradelawdaily.com",
@@ -9673,7 +9729,7 @@
     "kind": "fact",
     "archive": false
    },
-   "23": {
+   "27": {
     "state": "supports",
     "why": "The November 4, 2026 TaxProf post states each element: the stayed, pending Section 122 appeal with the reply brief delayed 30 days and due November 12; the Section 301 supplemental briefing ordered October 2 and filed October 16; and the Section 338 briefing schedule with December 11 and January 11 deadlines.",
     "host": "taxprofblog.aals.org",
@@ -10904,6 +10960,14 @@
     "archive": false
    },
    "10": {
+    "state": "supports",
+    "why": "Stars and Stripes (Sept. 22, 2026) reports the Warren/Ryan-led letter from more than 20 Democrats, Wicker and Rogers not responding, objectivity concerns about the Army probe, the Pentagon's 'directly to the authors' response, and six killed and more than 30 injured.",
+    "host": "stripes.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "11": {
     "state": "partly",
     "why": "CBS supports the rejected LSA Jenkins / Prince Sultan options, the January intelligence briefings to Barnes, and the Army spokesperson's confirmation that the probe finished in early July but is unreleased; the text cuts off at the 'Congressional Democrats urge committee hearings' subhead, so the 'more than 20' Democrats and their appeal to the committee chairmen are not shown.",
     "host": "cbsnews.com",
@@ -10911,7 +10975,7 @@
     "kind": "fact",
     "archive": false
    },
-   "11": {
+   "12": {
     "state": "supports",
     "why": "The AP text supports each element: nine wounded service members on the record, Lincón's artery injury and outpatient barracks placement, Bearman's account of the cargo plane roughly 10 days later and the coding error, Ramsbottom's four-month MRI wait, and the Pentagon's position that care was appropriate.",
     "host": "adn.com",
@@ -10919,7 +10983,7 @@
     "kind": "fact",
     "archive": false
    },
-   "12": {
+   "13": {
     "state": "supports",
     "why": "The AP text reports the Army's decline to comment pending family briefings, quotes the 'will be scheduled for briefs on the official findings of the completed investigation' statement, and states the June completion and redaction rationale.",
     "host": "wcax.com",
@@ -10927,7 +10991,7 @@
     "kind": "fact",
     "archive": false
    },
-   "13": {
+   "14": {
     "state": "partly",
     "why": "The source confirms the AP account rests on interviews with 13 soldiers, that Frank signed off when Hinson briefed him (per Halbur and another senior officer), Key's report of at least five quadcopter drones passed up the chain, and that neither Hinson nor Barnes could change drone defenses; the provided windows do not show five soldiers' account of warnings by protection officers or the unbriefed medical evacuation plan.",
     "host": "wcax.com",
@@ -10935,7 +10999,7 @@
     "kind": "fact",
     "archive": false
    },
-   "14": {
+   "15": {
     "state": "supports",
     "why": "The AP text directly reports the July 20 IG letter clearing Barnes based on limited evidence and noting the Hinson complaint was withdrawn, which the officer disputed.",
     "host": "wcax.com",
@@ -11512,22 +11576,30 @@
     "archive": false
    },
    "5": {
-    "state": "supports",
-    "why": "Blumenthal's April 27, 2026 release describes the four senators' investigation including the March 1 Kuwait strike, says the Pentagon failed to warn American ships left stranded for a month, quotes the letter, and sets a May 11, 2026 response date.",
-    "host": "capitolreleases.com",
+    "state": "unopened",
+    "why": "",
+    "host": "web.archive.org",
     "date": "2026-11-08",
     "kind": "fact",
     "archive": false
    },
    "6": {
-    "state": "partly",
-    "why": "The July 29, 2026 letter contains the quoted language, and its footnotes date the four senators' letter April 26, 2026 and cite a May 11, 2026 Dane Hughes reply to Warren; the provided text is truncated before the signature block, so the count of 13 lawmakers cannot be confirmed.",
-    "host": "warren.senate.gov",
+    "state": "supports",
+    "why": "The April 27, 2026 Blumenthal release announces the four senators' investigation including the March 1 Kuwait strike, says the Pentagon failed to warn American ships left stranded for a month, quotes the 'larger pattern' line, and sets a May 11, 2026 response date.",
+    "host": "web.archive.org",
     "date": "2026-11-08",
     "kind": "fact",
     "archive": false
    },
    "7": {
+    "state": "partly",
+    "why": "The letter is dated July 29, 2026, says several signers wrote in April 2026 and that Hegseth failed to answer the April letter's questions, and footnotes cite an April 26 letter from four senators and a May 11 Hughes reply; the extracted text is truncated before the signature block, so the 13-signer count and signing order cannot be confirmed.",
+    "host": "web.archive.org",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "8": {
     "state": "supports",
     "why": "Stars and Stripes (Sept. 22, 2026) reports Warren and Ryan led more than 20 Democrats in a Monday letter asking the GOP Armed Services chairmen for hearings, citing stonewalling, and that a Pentagon spokesperson declined to comment.",
     "host": "stripes.com",
@@ -16433,13 +16505,21 @@
    },
    "1": {
     "state": "supports",
+    "why": "Fox News reports Trump's quote on the Kilmeade show and that he said his message referred to the historical punishment for sedition; the text says 'Friday' rather than giving the November 21, 2025 date, which is consistent with the claim.",
+    "host": "foxnews.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "2": {
+    "state": "supports",
     "why": "The source confirms the grand jury's Tuesday (Feb. 10, 2026) refusal to indict, names all six lawmakers, and specifies the 18 U.S.C. § 2387 legal theory about interfering with military loyalty, morale, and discipline that Pirro's office (via DOJ) pursued.",
     "host": "cbsnews.com",
     "date": "2026-09-15",
     "kind": "fact",
     "archive": false
    },
-   "2": {
+   "3": {
     "state": "supports",
     "why": "NBC's Feb. 10, 2026 report says Pirro's office tried and failed Tuesday to indict the six lawmakers, failed to convince a single juror, and recalls Trump's 'SEDITIOUS BEHAVIOR, punishable by DEATH!' accusation.",
     "host": "nbcnews.com",
@@ -16447,7 +16527,7 @@
     "kind": "fact",
     "archive": false
    },
-   "3": {
+   "4": {
     "state": "supports",
     "why": "The syndicated article contains both quoted phrases: the 'latest extraordinary brushback by a grand jury of Washington, D.C., residents to a case brought by U.S. Attorney Jeanine Pirro' and grand juries turning down indictments 'at a historic clip.'",
     "host": "yahoo.com",
@@ -16455,7 +16535,7 @@
     "kind": "fact",
     "archive": false
    },
-   "4": {
+   "5": {
     "state": "supports",
     "why": "Bloomberg Law's preview text says Pirro tapped Steven Vandervelden, a dance photographer who worked for her decades ago and kept an active studio, as a presenting prosecutor, and that he is one of two Pirro hires with minimal federal prosecution experience rejected by the grand jury.",
     "host": "news.bloomberglaw.com",
@@ -16463,7 +16543,7 @@
     "kind": "fact",
     "archive": false
    },
-   "5": {
+   "6": {
     "state": "supports",
     "why": "The February 19, 2026 release states Garcia and Raskin initiated an inquiry into Pirro's failed prosecution, requested all related documents, and called for OPR to investigate Pirro and all DOJ personnel responsible.",
     "host": "oversightdemocrats.house.gov",
@@ -16471,7 +16551,7 @@
     "kind": "fact",
     "archive": false
    },
-   "6": {
+   "7": {
     "state": "supports",
     "why": "The letter names Steven Vandervelden and Carlton Davis as the two prosecutors, says they 'reportedly failed to convince a single member of the grand jury,' says it is writing 'to seek documents,' and refers the conduct of Pirro, Vandervelden, and Davis to OPR -- matching every element of the claim.",
     "host": "oversightdemocrats.house.gov",
@@ -16479,7 +16559,15 @@
     "kind": "fact",
     "archive": false
    },
-   "7": {
+   "8": {
+    "state": "supports",
+    "why": "NBC's February 23, 2026 report, citing three people familiar, says Pirro's office stopped pursuing the case and includes the quoted caveat about other districts.",
+    "host": "nbcnews.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "9": {
     "state": "supports",
     "why": "CBS's February 24, 2026 report, citing sources, says Pirro decided to table the effort after the grand jury refused to indict, and that grand jurors unanimously rejected the indictment.",
     "host": "cbsnews.com",
@@ -16487,7 +16575,15 @@
     "kind": "fact",
     "archive": false
    },
-   "8": {
+   "10": {
+    "state": "supports",
+    "why": "The AP report states the Legal Accountability Center filed bar complaints Tuesday against Pirro, Davis and Vandervelden alleging 'meritless' indictments, where each was filed, the request to 'pursue appropriate discipline,' and Lauer's 'frivolous complaint' statement.",
+    "host": "clickondetroit.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "11": {
     "state": "supports",
     "why": "The quoted passage appears verbatim in the August 26, 2026 letter signed by Ranking Member Raskin; its five record requests concern candor and court-order compliance across the office generally, and the letter text contains no reference to the lawmakers' case.",
     "host": "democrats-judiciary.house.gov",
@@ -18674,6 +18770,30 @@
     "date": "2026-09-27",
     "kind": "fact",
     "archive": false
+   },
+   "12": {
+    "state": "supports",
+    "why": "Docket entry 43 records the scheduling order signed by Judge Thompson on 10/1/2026 with the stated fact-discovery close, bench trial dates, and 10/27/2026 motion setting, and entry 44 records defendants' October 5 reply on the motion to dismiss.",
+    "host": "courtlistener.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "13": {
+    "state": "supports",
+    "why": "Judge Thompson's order dated October 20, 2026 states that the motion to stay discovery pending resolution of the motion to dismiss is DENIED and the motion to order production of the administrative record is GRANTED, matching the quoted language.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "14": {
+    "state": "partly",
+    "why": "The docket text contains the quoted submission language and the 1 hour, 13 minute time in court, and earlier entries set the motions for 10/27/2026 before Judge Thompson; however, the minute entry's own header (date, judge, motions heard) is elided in the extracted text.",
+    "host": "courtlistener.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
    }
   },
   "rosen-don-lemon-church-protest-prosecution-2026": {
@@ -19539,25 +19659,25 @@
   "sacks-ai-executive-order-conflict-2026": {
    "0": {
     "state": "supports",
-    "why": "Fortune confirms Sacks called Trump directly (on the Thursday before the signing ceremony, as executives were already traveling to Washington for it) to express concerns that the voluntary vetting could function as a de facto licensing regime and could slow AI companies' releases, tied to concerns about competing with China.",
-    "host": "fortune.com",
-    "date": "2026-09-15",
+    "why": "The text of EO 14177 (January 23, 2025) establishes PCAST and provides that the APST and the Special Advisor for AI & Crypto shall serve as Co-Chairs.",
+    "host": "federalregister.gov",
+    "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    },
    "1": {
     "state": "supports",
-    "why": "NPR's own December 2025 report, headlined 'Trump tech adviser David Sacks under fire over vast AI investments,' documents in detail the conflict-of-interest questions raised by Sacks's AI-industry holdings while he shaped White House AI policy.",
-    "host": "npr.org",
+    "why": "The Lever confirms the March 5, 2025 memo from White House Counsel David Warrington granting Sacks a blanket waiver for conflicts of interest regarding matters of general applicability concerning the digital asset industry.",
+    "host": "levernews.com",
     "date": "2026-09-15",
     "kind": "fact",
     "archive": false
    },
    "2": {
     "state": "supports",
-    "why": "The Lever confirms the March 5, 2025 memo from White House Counsel David Warrington granting Sacks a blanket waiver for conflicts of interest regarding matters of general applicability concerning the digital asset industry.",
-    "host": "levernews.com",
-    "date": "2026-09-15",
+    "why": "The transcribed memo (Warrington to Sacks, 'LIMITED WAIVER PURSUANT TO 18 U.S.C. § 208(b)(1) REGARDING A.I. ASSETS') states this Craft Funds figure verbatim, and also states in footnote 2 that Sacks initiated divestment of direct holdings in Meta, Amazon and TSMC, that he agreed to co-chair PCAST, and that he is expected to serve 130 days or less in a one-year period, so every element of the claim is supported.",
+    "host": "whitehouse.gov",
+    "date": "2026-10-31",
     "kind": "fact",
     "archive": false
    },
@@ -19571,29 +19691,37 @@
    },
    "4": {
     "state": "supports",
-    "why": "Fox Business reports Sacks was appointed PCAST co-chair and that the council will include up to 24 members including Huang, Zuckerberg and Ellison.",
-    "host": "foxbusiness.com",
-    "date": "2026-09-28",
-    "kind": "fact",
-    "archive": false
-   },
-   "5": {
-    "state": "supports",
-    "why": "The transcribed memo (Warrington to Sacks, 'LIMITED WAIVER PURSUANT TO 18 U.S.C. § 208(b)(1) REGARDING A.I. ASSETS') states this Craft Funds figure verbatim, and also states in footnote 2 that Sacks initiated divestment of direct holdings in Meta, Amazon and TSMC, that he agreed to co-chair PCAST, and that he is expected to serve 130 days or less in a one-year period, so every element of the claim is supported.",
-    "host": "whitehouse.gov",
-    "date": "2026-10-31",
-    "kind": "fact",
-    "archive": false
-   },
-   "6": {
-    "state": "supports",
     "why": "Nextgov/FCW (Sept. 17, 2025) reports Warren, Stansbury and six other lawmakers wrote Sacks about exceeding the 130-day SGE limit, quoting that the White House waived ethics restrictions so he could keep investments in industries he regulates.",
     "host": "nextgov.com",
     "date": "2026-09-28",
     "kind": "fact",
     "archive": false
    },
+   "5": {
+    "state": "supports",
+    "why": "NPR's own December 2025 report, headlined 'Trump tech adviser David Sacks under fire over vast AI investments,' documents in detail the conflict-of-interest questions raised by Sacks's AI-industry holdings while he shaped White House AI policy.",
+    "host": "npr.org",
+    "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
+    "state": "supports",
+    "why": "Fox Business reports Sacks was appointed PCAST co-chair and that the council will include up to 24 members including Huang, Zuckerberg and Ellison.",
+    "host": "foxbusiness.com",
+    "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
    "7": {
+    "state": "supports",
+    "why": "Fortune confirms Sacks called Trump directly (on the Thursday before the signing ceremony, as executives were already traveling to Washington for it) to express concerns that the voluntary vetting could function as a de facto licensing regime and could slow AI companies' releases, tied to concerns about competing with China.",
+    "host": "fortune.com",
+    "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "8": {
     "state": "supports",
     "why": "CNBC reports Trump's Tuesday order asking companies to voluntarily join benchmarking and give access to covered frontier models up to 30 days before release, and that Sacks, Musk and Zuckerberg reportedly called the administration last month to lobby against the prior order.",
     "host": "cnbc.com",
@@ -19601,11 +19729,19 @@
     "kind": "fact",
     "archive": false
    },
-   "8": {
+   "9": {
     "state": "supports",
-    "why": "The text of EO 14177 (January 23, 2025) establishes PCAST and provides that the APST and the Special Advisor for AI & Crypto shall serve as Co-Chairs.",
-    "host": "federalregister.gov",
-    "date": "2026-09-28",
+    "why": "The AFP report in Malay Mail describes the 30-day access provision as a compromise between 90 and 14 days and, citing Politico and other media, says Sacks called the president to warn the measure would slow innovation and hurt the U.S. in the AI race with China.",
+    "host": "malaymail.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "10": {
+    "state": "supports",
+    "why": "The August 10, 2026 Jewish Insider article states Trump announced Scharf would replace Warrington effective Sept. 1 and that Warrington will move to the private sector.",
+    "host": "jewishinsider.com",
+    "date": "2026-11-08",
     "kind": "fact",
     "archive": false
    }
@@ -21074,18 +21210,18 @@
   },
   "trump-dc-police-federal-takeover-2025": {
    "0": {
-    "state": "partly",
-    "why": "CNN confirms the Home Rule Act of 1973 authority, its unprecedented first-time invocation, the 48-hour/30-day emergency-control limits, and the National Guard deployment (800 troops), but the provided text never names the authority as \"Section 740\" as the claim specifies.",
-    "host": "cnn.com",
-    "date": "2026-09-15",
-    "kind": "fact",
-    "archive": false
-   },
-   "1": {
     "state": "supports",
     "why": "CNBC reports the Monday (Aug. 11, 2025) federalization of D.C. police, the roughly 800 Guard members ordered in, Trump's 'crime, bloodshed, bedlam and squalor' remark, and Section 740's 30-day maximum absent congressional extension.",
     "host": "cnbc.com",
     "date": "2026-09-27",
+    "kind": "fact",
+    "archive": false
+   },
+   "1": {
+    "state": "partly",
+    "why": "CNN confirms the Home Rule Act of 1973 authority, its unprecedented first-time invocation, the 48-hour/30-day emergency-control limits, and the National Guard deployment (800 troops), but the provided text never names the authority as \"Section 740\" as the claim specifies.",
+    "host": "cnn.com",
+    "date": "2026-09-15",
     "kind": "fact",
     "archive": false
    },
@@ -21107,21 +21243,13 @@
    },
    "4": {
     "state": "supports",
-    "why": "Bloomberg Law reports six Superior Court and two Court of Appeals nominees advancing amid backlogs, and cites the D.C. Sentencing Commission that felony filings rose 44% in 2025, coinciding with Trump's push for more control over D.C. police and federal prosecutions; the July 29 date is not stated in the text.",
-    "host": "news.bloomberglaw.com",
-    "date": "2026-09-27",
-    "kind": "fact",
-    "archive": false
-   },
-   "5": {
-    "state": "supports",
     "why": "CBS reports Rios Esquivel's Aug. 20 arrest, her late Aug. 25 court appearance (due Aug. 22), the government not seeking detention, a week of mistaken jailing, Judge Faruqui calling it 'false imprisonment' and not the first this year, and a DOJ prosecutor intervening to clear the warrant-database hit.",
     "host": "cbsnews.com",
     "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
-   "6": {
+   "5": {
     "state": "supports",
     "why": "The syndicated Reuters exclusive, based on nine current and former FBI employees, reports as many as 1,000 unmarked FBI vehicles used in highly public D.C. scenes, risking undercover and surveillance work against gangs, traffickers and foreign spies.",
     "host": "yahoo.com",
@@ -21129,11 +21257,99 @@
     "kind": "fact",
     "archive": false
    },
+   "6": {
+    "state": "supports",
+    "why": "The Post report (Sept. 4, 2025) states Schwalb's suit calling the deployment a 'military occupation' and seeking the Guard's withdrawal, nearly 2,300 Guard members as of Tuesday, and Bowser's executive order to coordinate with federal law enforcement beyond the 30-day emergency.",
+    "host": "adn.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
    "7": {
+    "state": "supports",
+    "why": "NPR's September 10, 2025 report says control was due to expire that night, the Home Rule Act allows only 30 days absent a congressional extension Congress had not signaled, other federal control continued, and Bowser issued a cooperation order the prior week; it names the Home Rule Act rather than Section 740 specifically.",
+    "host": "npr.org",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "8": {
+    "state": "supports",
+    "why": "The States Newsroom report names the Millett/Katsas/Rao panel staying Cobb's Nov. 20 decision, notes Cobb's stay until Dec. 11, and reports the Nov. 26 shooting and Beckstrom's death the following day.",
+    "host": "wisconsinexaminer.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "9": {
     "state": "supports",
     "why": "The Dec. 16 Reuters report, citing four sources, describes Hornok's demotion while remaining on staff, his promotion by Martin and retention under Pirro, his charge-everything-federally order that arguably backfired (grand jury declinations, the sandwich acquittal, a magistrate's civil-liberties criticism, prolonged jailing), the USIP lawyer's sworn statement, and the undetermined reason and no-comment.",
     "host": "yahoo.com",
     "date": "2026-09-27",
+    "kind": "fact",
+    "archive": false
+   },
+   "10": {
+    "state": "supports",
+    "why": "The AP report describes the unanimous panel staying Cobb's Nov. 20 opinion and order, the 'unique power' language, Cobb's 21-day hold, the Dec. 4 administrative stay, Beckstrom's Nov. 27 death after the ambush, and the call for 500 more Guard members.",
+    "host": "bostonglobe.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "11": {
+    "state": "supports",
+    "why": "The AP report via La Nacion (July 17, 2026) states the Pentagon's email confirmation of the extension to Jan. 20, 2029 and that the deployment had been set to expire at year's end.",
+    "host": "lanacion.com.ar",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "12": {
+    "state": "supports",
+    "why": "Bloomberg Law reports six Superior Court and two Court of Appeals nominees advancing amid backlogs, and cites the D.C. Sentencing Commission that felony filings rose 44% in 2025, coinciding with Trump's push for more control over D.C. police and federal prosecutions; the July 29 date is not stated in the text.",
+    "host": "news.bloomberglaw.com",
+    "date": "2026-09-27",
+    "kind": "fact",
+    "archive": false
+   },
+   "13": {
+    "state": "supports",
+    "why": "The AP/WTOP report gives the roughly $1.4 billion DoD estimate for fiscal 2027-2029 assuming an average of 2,500 Guard members, and 4,600 personnel from D.C. and 23 states and territories as of late July.",
+    "host": "wtop.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "14": {
+    "state": "supports",
+    "why": "Bloomberg Law reports the confirmation of six Superior Court and two Court of Appeals nominees bringing the appellate court to full capacity for the first time in more than a decade, and notes the courts' case backlogs.",
+    "host": "news.bloomberglaw.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "15": {
+    "state": "supports",
+    "why": "Newsweek gives preliminary MPD figures showing total crime down 20 percent, homicides down 31 percent and violent crime up 3 percent, and quotes criminologists (Weisburd, Piquero) saying causation cannot be established and crime was already falling in D.C. and elsewhere.",
+    "host": "newsweek.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "16": {
+    "state": "supports",
+    "why": "The AP/WPXI report names Judges Pillard, Rogers and Garcia, describes the 90-minute October 14 hearing after a different panel's stay, the January 2029 extension, the summer peak of about 5,000 and the drop to about 2,900 as of last week.",
+    "host": "wpxi.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "17": {
+    "state": "supports",
+    "why": "The AP/WTOP report states the two Oct. 29 memos, the vehicles and boats, rifles allowed except in Metro rail stations, the 3,500 cap, nearly 3,100 Guard members in Washington, and the Oct. 14 appeals argument.",
+    "host": "wtop.com",
+    "date": "2026-11-08",
     "kind": "fact",
     "archive": false
    }
@@ -22121,9 +22337,33 @@
    },
    "8": {
     "state": "supports",
-    "why": "The Federal Register text (Vol. 91, p. 60497) shows Proclamation 11069 of September 18, 2026 extending Proclamation 10973 for 12 months until 12:00 a.m. EDT September 21, 2027, and states the $100,000 payment has been made for over 700 petitions.",
+    "why": "Proclamation 11069 of September 18, 2026 (page 60497) extends the September 19, 2025 Proclamation 10973 for 12 months until 12:00 a.m. EDT September 21, 2027 and states the $100,000 payment 'has been made for over 700 petitions.'",
     "host": "govinfo.gov",
-    "date": "2026-09-27",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "9": {
+    "state": "partly",
+    "why": "The order text confirms the partial PI grant, the arbitrary-and-capricious finding, vacatur and remand, the injunction until notice-and-comment and RFA analyses, and denial of class certification and dismissal; the notice-and-comment likelihood finding and the denial of a stay pending appeal are not visible in the truncated text.",
+    "host": "courtlistener.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "10": {
+    "state": "supports",
+    "why": "The docket shows the October 9 notice of appeal assigned USCA Case No. 26-6667 and the October 9 motion to stay proceedings, and the October 28 minute entry denying the stay and ordering the administrative record by November 17, 2026.",
+    "host": "courtlistener.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "11": {
+    "state": "supports",
+    "why": "Bloomberg's report describes the Oct. 9 Ninth Circuit appeal from Gilliam's Sept. 30 order blocking USCIS and CBP memoranda and guidance unenforceable until notice-and-comment rulemaking, and the government's points about the First and D.C. Circuits and likely Supreme Court review.",
+    "host": "news.bgov.com",
+    "date": "2026-11-08",
     "kind": "fact",
     "archive": false
    }
@@ -22687,9 +22927,9 @@
   "trump-jan6-pardon-johnson-recidivism-2026": {
    "0": {
     "state": "supports",
-    "why": "NPR reports Johnson received a Trump pardon, was found guilty of five charges by a Hernando County jury, and per police tried to bribe a victim with anticipated Jan. 6 restitution money; the excerpt also calls the conviction the latest case of a pardoned rioter committing new crimes.",
+    "why": "NPR's February 11, 2026 report confirms Johnson's pardon, the Hernando County jury verdict on five charges, the police-reported bribery attempt using claimed Jan. 6 restitution, the 'latest case' framing, and Moynihan's misdemeanor harassment plea the previous week over threats to Jeffries.",
     "host": "npr.org",
-    "date": "2026-09-27",
+    "date": "2026-11-08",
     "kind": "fact",
     "archive": false
    },
@@ -22719,13 +22959,21 @@
    },
    "4": {
     "state": "supports",
+    "why": "The Times Union's Feb. 6, 2026 report states the plea reducing the felony terroristic-threat charge to misdemeanor aggravated harassment per DA Parisi, three years' probation, and an April 2 sentencing date with an agreed sentence.",
+    "host": "timesunion.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "supports",
     "why": "The March 5, 2026 NBC article says Johnson was convicted last month of five charges. The excerpt attributes his life sentence to the Fifth Judicial Circuit State Attorney's Office.",
     "host": "nbcnews.com",
     "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
-   "5": {
+   "6": {
     "state": "supports",
     "why": "Snopes rates the pardon-to-life-sentence claim True and lays out the timeline. The excerpt quotes the affidavit saying Johnson claimed he was being awarded $10,000,000 as a Jan. 6 defendant and would put the victim in his will.",
     "host": "snopes.com",
@@ -22733,7 +22981,7 @@
     "kind": "fact",
     "archive": false
    },
-   "6": {
+   "7": {
     "state": "supports",
     "why": "The NBC article reports the life sentence, quoted in the excerpt. The rest of the provided text covers the arrest, the conviction, the windfall claim and other Jan. 6 defendants, and never mentions an appeal or any later development in Johnson's case.",
     "host": "nbcnews.com",
