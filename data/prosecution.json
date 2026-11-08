@@ -11028,12 +11028,12 @@
     "official": "Markwayne Mullin, Secretary of Homeland Security",
     "offense_category": "Agency rulemaking a federal court found inadequately justified under the Administrative Procedure Act -- eliminating the decades-old 'duration of status' framework for foreign students and exchange visitors and capping certain foreign journalists' stays at 240 days; not charged, an APA/administrative-law concern, not a criminal one",
     "contested": true,
-    "incident_summary": "DHS finalized a rule replacing the long-standing 'duration of status' (D/S) framework -- under which F-1 students and J-1 exchange visitors could remain in the U.S. for as long as they maintained their status -- with a fixed period of authorized stay, capping most F-1/J-1 holders at four years before requiring an extension application, and separately imposing a 240-day limit on stay for certain foreign journalists in I status. The rule was scheduled to take effect September 15, 2026. On September 14, 2026 -- one day before it was to take effect -- U.S. District Judge F. Dennis Saylor issued a preliminary injunction blocking the rule nationwide, ruling that DHS failed to adequately justify the policy change: the agency did not meaningfully consider reasonable alternatives or demonstrate a sufficient connection between the rule and its stated objectives. The existing D/S framework remains in place for F-1 and J-1 holders while litigation continues; DHS had estimated the four-year cap alone could affect thousands of students, particularly in longer degree programs such as PhDs.",
+    "incident_summary": "DHS finalized a rule replacing the long-standing 'duration of status' (D/S) framework -- under which F-1 students and J-1 exchange visitors could remain in the U.S. for as long as they maintained their status -- with a fixed period of authorized stay, capping most F-1/J-1 holders at four years before requiring an extension application, and separately imposing a 240-day limit on stay for certain foreign journalists in I status. The rule was scheduled to take effect September 15, 2026. On September 14, 2026 -- one day before it was to take effect -- U.S. District Judge F. Dennis Saylor issued a preliminary injunction blocking the rule nationwide, ruling that DHS failed to adequately justify the policy change: the agency did not meaningfully consider reasonable alternatives or demonstrate a sufficient connection between the rule and its stated objectives. The existing D/S framework remains in place for F-1 and J-1 holders while litigation continues.",
     "elements_required": [
       "DHS finalized a rule eliminating duration-of-status protections for F-1/J-1 holders and imposing a 240-day cap for certain foreign journalists",
       "A federal court found DHS's rulemaking record inadequate under the APA -- insufficient consideration of alternatives and a weak fit between the rule and its stated goals",
       "The rule was blocked one day before taking effect, preserving the pre-existing framework pending further litigation",
-      "The rule's practical effect would have required thousands of students and exchange visitors, and certain foreign journalists, to seek periodic extensions rather than remaining in status for the length of their program"
+      "The rule's practical effect would have required students and exchange visitors in programs longer than four years, and certain foreign journalists, to seek periodic extensions rather than remaining in status for the length of their program"
     ],
     "evidence": [
       {
@@ -11053,20 +11053,26 @@
         "description": "Reuters reporting on the injunction, confirming it was issued the day before the rule's effective date and blocks DHS from capping foreign student and journalist visas as planned.",
         "source_url": "https://www.reuters.com/world/us-judge-blocks-trump-limits-duration-visas-foreign-students-journalists-2026-09-14/",
         "maps_to_element": "The rule was blocked one day before taking effect, preserving the pre-existing framework pending further litigation"
+      },
+      {
+        "type": "court_filing",
+        "description": "Case docket (Presidents' Alliance on Higher Education and Immigration v. DHS, D. Mass. No. 1:26-cv-13799): the September 14, 2026 order granted relief under 5 U.S.C. 705 postponing the Final Rule's effective date and denied vacatur and summary judgment without prejudice; DHS filed a notice of appeal to the First Circuit on September 30, 2026 (No. 26-2112); both sides filed motions for summary judgment on October 30, 2026, and the docket shows no ruling on them yet.",
+        "source_url": "https://clearinghouse.net/case/48393/",
+        "maps_to_element": "The rule was blocked one day before taking effect, preserving the pre-existing framework pending further litigation"
       }
     ],
-    "status": "Blocked pending litigation as of this entry's creation -- the preliminary injunction preserves the pre-existing duration-of-status framework for F-1/J-1 holders; no reversal, appeal outcome, or DHS on-record response identified in sourcing reviewed.",
-    "rebuttal_anticipated": "DHS would likely argue the fixed-term framework improves oversight and reduces the risk of prolonged unauthorized stays by better tracking students' and exchange visitors' compliance with program terms, and that the rule remains lawful even if this specific record needs supplementing on remand.",
-    "comeback": "The court's finding was not that a fixed-term framework is per se unlawful, but that DHS's own rulemaking record failed the APA's basic requirements -- it did not meaningfully engage with reasonable alternatives or show its chosen approach actually served the stated goal, a threshold DHS is expected to clear before disrupting a decades-old framework relied on by hundreds of thousands of students, exchange visitors, and journalists.",
+    "status": "Blocked: a September 14, 2026 court order postpones the rule and bars DHS from implementing it while the case continues. DHS criticized the ruling and appealed to the First Circuit on September 30; both sides filed cross-motions for summary judgment on October 30, with no merits ruling yet.",
+    "rebuttal_anticipated": "DHS cited national security and the need to prevent fraud in the visa program as the rule's rationale. After the ruling, DHS General Counsel James Percival said that under it ICE must \"permit this rampant abuse of our immigration system\": \"Come on a student visa, take one class per semester, and stay here for decades.\" DHS has appealed the order and moved for summary judgment, maintaining that the rule is lawful.",
+    "comeback": "The court's finding was not that a fixed-term framework is per se unlawful, but that DHS's own rulemaking record failed the APA's basic requirements -- it did not meaningfully engage with reasonable alternatives or show its chosen approach actually served the stated goal, a threshold DHS is expected to clear before disrupting a decades-old framework relied on by roughly 2.1 million people holding student (F) or exchange-visitor (J) visas, plus foreign journalists.",
     "cause": "[TAP Analysis, not sourced] Consistent with a broader pattern this tracker documents of DHS immigration rulemaking under this administration proceeding on truncated or thin justificatory records, resulting in court losses on procedural (APA) rather than substantive grounds -- see also this tracker's other DHS/USCIS immigration-rule entries.",
-    "confidence_note": "HIGH confidence on the injunction, its timing, and the rule's substance, independently corroborated across the Washington Post, Reuters, and immigration-law trade press (Erickson Immigration Group, Forbes/Stuart Anderson, U.S. News). No on-record DHS statement responding to the ruling identified in sourcing reviewed.",
-    "last_verified": "2026-09-19",
+    "confidence_note": "HIGH confidence on the injunction, its timing, and the rule's substance, independently corroborated across the Washington Post, Reuters, and immigration-law trade press (Erickson Immigration Group, Forbes/Stuart Anderson, U.S. News), with the appeal and summary-judgment filings confirmed on the court docket. DHS's side is on record: its General Counsel criticized the ruling (Reuters), and DHS has appealed and defends the rule on the merits.",
+    "last_verified": "2026-11-08",
     "date_added": "2026-09-19",
     "date_of_action": "2026-09-14 (federal court blocks DHS rule one day before its scheduled September 15, 2026 effective date)",
-    "last_substantive_update": "2026-09-19",
+    "last_substantive_update": "2026-11-08",
     "section_summaries": {
       "incident_summary": "A federal judge blocked DHS's rule eliminating duration-of-status for foreign students/exchange visitors (four-year cap) and capping some journalists at 240 days, one day before it was to take effect.",
-      "confidence_note": "Well corroborated across multiple independent outlets and legal trade press; no on-record DHS response to the ruling identified."
+      "confidence_note": "Well corroborated across major outlets, legal trade press and the court docket; DHS criticized the ruling and has appealed it."
     },
     "glance": {
       "who": "Markwayne Mullin (Secretary of Homeland Security)",
@@ -11076,15 +11082,16 @@
         "certainty": "averted",
         "who": "Foreign students and exchange visitors"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-11-08"
     },
     "status_stage": "In court",
     "key_events": [
       {
-        "date": "2026-07",
+        "date": "2026-07-17",
         "text": "DHS adopts a rule ending open-ended stays for F-1 and J-1 holders, capping most at four years",
         "sources": [
-          "https://www.reuters.com/world/us-judge-blocks-trump-limits-duration-visas-foreign-students-journalists-2026-09-14/"
+          "https://www.reuters.com/world/us-judge-blocks-trump-limits-duration-visas-foreign-students-journalists-2026-09-14/",
+          "https://clearinghouse.net/case/48393/"
         ]
       },
       {
@@ -11095,6 +11102,20 @@
           "https://www.washingtonpost.com/education/2026/09/14/judge-blocks-dhs-rule-limiting-foreign-students-four-year-stays/",
           "https://www.reuters.com/world/us-judge-blocks-trump-limits-duration-visas-foreign-students-journalists-2026-09-14/",
           "https://eiglaw.com/federal-court-preliminary-injunction-blocks-dhs-rule-limiting-duration-of-status-for-international-students-and-exchange-visitors/"
+        ]
+      },
+      {
+        "date": "2026-09-30",
+        "text": "DHS appeals the order blocking the rule to the First Circuit",
+        "sources": [
+          "https://clearinghouse.net/case/48393/"
+        ]
+      },
+      {
+        "date": "2026-10-30",
+        "text": "Both sides ask the judge to decide the case on the merits through cross-motions for summary judgment",
+        "sources": [
+          "https://clearinghouse.net/case/48393/"
         ]
       }
     ]
@@ -18848,11 +18869,11 @@
     "official": "Eric Grant, U.S. Attorney for the Eastern District of California (appointed by then-Attorney General Pam Bondi in August 2025)",
     "offense_category": "Potential Selective/Vindictive Prosecution (Due Process concern) -- underlying investigation ongoing, no charges filed against Newsom or his wife; the accountability question is whether a sitting political rival and prospective 2028 candidate, or people close to that rival, is a target of a criminal investigation driven by political motivation rather than independently-developed evidence",
     "contested": true,
-    "incident_summary": "In June 2026, CNN reported, citing a person familiar with the matter, that the U.S. Attorney's Office for the Eastern District of California was leading a criminal tax investigation into people connected to California Gov. Gavin Newsom, including his wife, Jennifer Siebel Newsom. That office is headed by Eric Grant (appointed by then-Attorney General Pam Bondi in August 2025, per the Justice Department's staff profile; the San Francisco Standard names him as its head), whom CNN's account does not name. CNN says The New York Times first disclosed the probe, while the San Francisco Standard says Newsom first disclosed it. Newsom publicly blasted the probe as politically motivated and said it was focused on him and his wife; CNN's source said the governor himself was not being investigated, though the San Francisco Standard's September reporting repeats a DOJ source's statement to Politico in June that Newsom and people close to him have been under investigation for more than a year. Newsom's team told congressional Democrats the investigation was ordered by Trump specifically to damage Newsom's prospective 2028 presidential campaign, framing it as investigating a critic rather than a crime; a source familiar with the investigation told reporters it instead originated from whistleblowers and local sources in California, not from Trump or DOJ leadership in Washington, and DOJ has denied its investigations are politically motivated. The investigation escalated in September 2026: **subpoenas signed by an Assistant U.S. Attorney sought six years of records from the California State Protocol Foundation, a nonprofit that has funded Newsom's international travel, along with communications involving current and former Newsom aides and associates** -- including Rebecca Prowda, Newsom's chief protocol officer and the wife of San Francisco Mayor Daniel Lurie. The subpoenas sought records on the foundation's donors and fundraisers, Newsom's participation in overseas events, and spending on the governor's residence and personal expenses; one subpoena stated the records were sought for a criminal investigation pending in the Eastern District of California. Newsom has directed more than $7.5 million in outside donations to the Protocol Foundation since 2019, roughly $5.1 million of it from leftover inaugural funds. Newsom has publicly characterized the expanded investigation as continued political retribution.",
+    "incident_summary": "In June 2026, CNN reported, citing a person familiar with the matter, that the U.S. Attorney's Office for the Eastern District of California was leading a criminal tax investigation into people connected to California Gov. Gavin Newsom, including his wife, Jennifer Siebel Newsom. That office is headed by Eric Grant (appointed by then-Attorney General Pam Bondi in August 2025, per the Justice Department's staff profile; the San Francisco Standard names him as its head), whom CNN's account does not name. CNN says The New York Times first disclosed the probe, while the San Francisco Standard says Newsom first disclosed it. Newsom publicly blasted the probe as politically motivated and said it was focused on him and his wife; CNN's source said the governor himself was not being investigated, though the San Francisco Standard's September reporting repeats a DOJ source's statement to Politico in June that Newsom and people close to him have been under investigation for more than a year. Newsom's team told congressional Democrats the investigation was ordered by Trump specifically to damage Newsom's prospective 2028 presidential campaign, framing it as investigating a critic rather than a crime; a source familiar with the investigation told reporters it instead originated from whistleblowers and local sources in California, not from Trump or DOJ leadership in Washington, and DOJ has denied its investigations are politically motivated. The investigation escalated in September 2026: **subpoenas signed by an Assistant U.S. Attorney sought six years of records from the California State Protocol Foundation, a nonprofit that has funded Newsom's international travel, along with communications involving current and former Newsom aides and associates** -- including Rebecca Prowda, Newsom's chief protocol officer and the wife of San Francisco Mayor Daniel Lurie. The subpoenas sought records on the foundation's donors and fundraisers, Newsom's participation in overseas events, and spending on the governor's residence and personal expenses; one subpoena stated the records were sought for a criminal investigation pending in the Eastern District of California. Newsom has directed more than $7.5 million in outside donations to the Protocol Foundation since 2019, about $5.1 million of it from two nonprofit foundations that covered his 2019 and 2023 inauguration costs. Newsom has publicly characterized the expanded investigation as continued political retribution.",
     "elements_required": [
       "A U.S. Attorney appointed by the Trump administration's first Attorney General is running a criminal investigation that includes the spouse of a sitting governor considered a potential 2028 Trump rival; whether the governor himself is a subject is disputed (a source told CNN he is not; Newsom says he is a target; a DOJ source told Politico, as the San Francisco Standard repeats, that he and people close to him have been under investigation for more than a year)",
       "The investigation's origin is disputed: Newsom's team says Trump personally ordered it to damage his political prospects; a source close to the investigation says it began from California whistleblowers/local sources, not from Trump or DOJ leadership",
-      "No indictment or formal charge has been filed against Newsom or his wife as of this entry",
+      "No indictment or formal charge against Newsom or his wife has been reported",
       "The investigation has escalated over several months (June to September 2026), expanding from an initial tax-focused probe to broad subpoenas covering years of travel-funding and personal-expense records and reaching third parties (a nonprofit and named aides)"
     ],
     "evidence": [
@@ -18882,30 +18903,36 @@
       },
       {
         "type": "news_report",
-        "description": "San Francisco Standard reporting on the September 2026 expansion: subpoenas seeking six years of California State Protocol Foundation records and communications with named aides including Rebecca Prowda, signed by an Assistant U.S. Attorney, stating the records were sought for a criminal investigation pending in the Eastern District of California; the Standard also identifies Eric Grant as head of that U.S. Attorney's office and repeats a DOJ source's statement to Politico (June) that Newsom and people close to him have been under investigation for more than a year",
+        "description": "San Francisco Standard reporting on the September 2026 expansion: subpoenas seeking six years of California State Protocol Foundation records and communications with named aides including Rebecca Prowda, signed by an Assistant U.S. Attorney, stating the records were sought for a criminal investigation pending in the Eastern District of California, and noting that the subpoenas don't cite any specific alleged crime; the Standard also identifies Eric Grant as head of that U.S. Attorney's office and repeats a DOJ source's statement to Politico (June) that Newsom and people close to him have been under investigation for more than a year",
         "source_url": "https://sfstandard.com/2026/09/12/newsom-travel-subpoenas-federal-criminal-probe/",
         "maps_to_element": "Escalation and specific scope of the September 2026 subpoenas"
       },
       {
         "type": "news_report",
-        "description": "Mother Jones reporting the same September 2026 subpoenas, describing prosecutors as not having publicly identified what crime is under investigation, and reiterating Newsom's denial of wrongdoing and characterization of the probe as politically motivated",
+        "description": "Mother Jones reporting the same September 2026 subpoenas, as reviewed by the San Francisco Standard, noting that federal probes into Newsom's circle reportedly began at least a year ago, and quoting Newsom's June description of the probe as a politically motivated “fishing expedition” and his office's September statement: “investigate first, hunt for a crime that doesn’t exist second”",
         "source_url": "https://www.motherjones.com/politics/2026/09/gavin-newsom-justice-department-investigation-funding-travel-subpoenas/",
-        "maps_to_element": "Confirmation that no specific crime has been publicly identified as of the September 2026 escalation, and Newsom's continued denial/characterization"
+        "maps_to_element": "Newsom's continued denial and political-retribution characterization at the September 2026 escalation"
+      },
+      {
+        "type": "news_report",
+        "description": "The Center Square (September 21, 2026) reporting the subpoenas seeking records related to Newsom's international travel, quoting the governor's communications director Tara Gallegos calling it “a baseless MAGA conspiracy theory” and saying there is no crime to investigate",
+        "source_url": "https://sjvsun.com/california/doj-issues-subpoenas-in-investigation-of-newsoms-international-travel/",
+        "maps_to_element": "Newsom's continued denial and political-retribution characterization at the September 2026 escalation"
       }
     ],
-    "status": "Ongoing criminal investigation; no indictment or formal charge against Newsom or his wife identified as of this entry's research (2026-09-18). The probe has expanded from an initial tax-focused inquiry disclosed in June 2026 to broad September 2026 subpoenas covering six years of travel-funding nonprofit records and communications with named aides. The investigation's origin and motivation remain genuinely disputed between Newsom's political-retribution account and DOJ's characterization of an independently-originated inquiry.",
-    "rebuttal_anticipated": "DOJ and a source familiar with the investigation say it originated from whistleblowers and local sources in California, not from Trump or DOJ leadership in Washington, and the Department has denied that its investigations are politically motivated; a criminal tax/spending investigation into a sitting official's use of nonprofit-funded travel and residence expenses is not inherently improper, and no charges have been filed against Newsom to date.",
+    "status": "Criminal investigation ongoing; no indictment or charge against Newsom or his wife has been reported. Probes of his circle reported in June 2026 widened in September to subpoenas for six years of travel-nonprofit records and aides' messages. Newsom calls it politically motivated; DOJ denies that.",
+    "rebuttal_anticipated": "A source familiar with the investigation says it originated from whistleblowers and local sources in California, not from Trump or DOJ leadership in Washington, and the Department has denied that its investigations are politically motivated; a criminal tax/spending investigation into a sitting official's use of nonprofit-funded travel and residence expenses is not inherently improper, and no charge against Newsom has been reported.",
     "comeback": "The investigation reaches the wife and circle of a prominent, sitting political rival of Trump's who is widely discussed as a potential 2028 opponent (Newsom says he is a target too, and a DOJ source told Politico he and people close to him have been under investigation for more than a year, though a source told CNN he is not), it is run by a U.S. Attorney appointed by Trump's own first Attorney General, and it has escalated for months without producing a publicly identified underlying crime even as its subpoena scope has expanded to a nonprofit, named aides, and years of personal spending records. That pattern -- broad, escalating subpoenas without a stated criminal theory, in the orbit of a high-profile political opponent -- is the same fact pattern this tracker documents in its other vindictive/selective-prosecution entries involving Trump-administration DOJ targeting of the administration's perceived adversaries.",
     "cause": "[TAP Analysis, not sourced] Illustrates the same broader pattern this tracker documents elsewhere of DOJ investigations expanding against named political adversaries without a publicly stated criminal theory, alongside DOJ's consistent denial that any such pattern reflects political motivation.",
-    "last_verified": "2026-09-21",
+    "last_verified": "2026-11-08",
     "date_added": "2026-09-18",
     "date_of_action": "2026-06 (June 15: DOJ tax investigation including Newsom's wife is reported; Newsom responds publicly) through 2026-09-12 (subpoenas expand to travel-funding nonprofit and named aides)",
-    "confidence_note": "HIGH confidence on the investigation's existence and the September 2026 subpoena scope, corroborated across CNN, Axios, San Francisco Standard, and Mother Jones; the U.S. Attorney's identity and appointment rest on the San Francisco Standard and the Justice Department's own staff profile. MODERATE confidence on motivation/origin specifically -- this is a genuinely disputed question between Newsom's on-record political-retribution claim and DOJ's/a source's on-record counter-account that the probe originated from California whistleblowers, and no independent adjudication of that dispute was identified in sourcing reviewed for this entry. Update 2026-09-21 (correction): the CNN evidence item (June 15, 2026) did not support this entry's earlier account that the investigation named Newsom and identified Eric Grant. CNN reports, citing a person familiar with the matter, that the Justice Department is investigating Newsom's wife and that the Eastern District of California office is leading probes into people connected to Newsom, that the governor himself is not being investigated, and that Newsom said he is a target; it does not name Grant. The account of who disclosed the probe, whom it names and the U.S. Attorney's role has been corrected to match. Grant's identity and appointment (by Attorney General Bondi beginning Aug. 11, 2025; court-appointed effective Dec. 9, 2025) are now sourced to the Justice Department's staff profile, and the San Francisco Standard's Sept. 12 report names him as head of the office. Whether the governor personally is a subject remains disputed in the reporting: the Standard, repeating a DOJ source's statement to Politico in June, reports that Newsom and people close to him have been under investigation for more than a year, while CNN's source said he is not.",
+    "confidence_note": "HIGH confidence on the investigation's existence, corroborated across CNN, Axios and the San Francisco Standard, and on the September 2026 subpoena scope, which rests on subpoenas reviewed by the San Francisco Standard (Mother Jones and The Center Square repeat its account); the U.S. Attorney's identity and appointment rest on the San Francisco Standard and the Justice Department's own staff profile. MODERATE confidence on motivation/origin specifically -- this is a genuinely disputed question between Newsom's on-record political-retribution claim and an unnamed source's counter-account that the probe originated from California whistleblowers (DOJ declined to comment on it but denies its investigations are politically motivated), and no independent adjudication of that dispute has been reported. Update 2026-09-21: CNN (June 15, 2026) reports, citing a person familiar with the matter, that the Justice Department is investigating Newsom's wife and that the Eastern District of California office is leading probes into people connected to Newsom, that the governor himself is not being investigated, and that Newsom said he is a target; it does not name Grant. Grant's identity and appointment (by Attorney General Bondi beginning Aug. 11, 2025; court-appointed effective Dec. 9, 2025) are sourced to the Justice Department's staff profile, and the San Francisco Standard's Sept. 12 report names him as head of the office. Whether the governor personally is a subject remains disputed in the reporting: the Standard, repeating a DOJ source's statement to Politico in June, reports that Newsom and people close to him have been under investigation for more than a year, while CNN's source said he is not. Re-verified 2026-11-08: the September subpoena reporting re-checked against the San Francisco Standard and Mother Jones; no indictment, charge or court fight over the subpoenas has been reported since, and The Center Square's Sept. 21 report quotes the governor's office saying there is no crime to investigate.",
     "section_summaries": {
-      "incident_summary": "DOJ's Eastern District of California U.S. Attorney's office has run a criminal tax/spending investigation reaching Gov. Newsom's wife and circle since June 2026 (whether the governor himself is a subject is disputed), escalating by September to subpoenas covering years of travel-funding nonprofit records.",
+      "incident_summary": "A federal criminal probe run from E.D. California has reached Gov. Newsom's wife and circle since June 2026 and in September subpoenaed years of travel-nonprofit records.",
       "confidence_note": "HIGH confidence on the investigation's existence and scope; MODERATE confidence on motivation, since origin/motive is genuinely disputed between Newsom's account and DOJ's."
     },
-    "last_substantive_update": "2026-09-21",
+    "last_substantive_update": "2026-11-08",
     "glance": {
       "who": "Eric Grant (U.S. Attorney, E.D. California)",
       "what": "Ran a tax probe reaching Gov. Newsom's wife and circle; subpoenas now span six years of records",
@@ -18914,7 +18941,7 @@
         "certainty": "alleged",
         "who": "Gov. Newsom's wife and circle"
       },
-      "reviewed": "2026-09-21"
+      "reviewed": "2026-11-08"
     },
     "status_stage": "Unchallenged",
     "key_events": [
@@ -18960,12 +18987,12 @@
     ],
     "timeline": {
       "confidence_note": {
-        "base": "HIGH confidence on the investigation's existence and the September 2026 subpoena scope, corroborated across CNN, Axios, San Francisco Standard, and Mother Jones; the U.S. Attorney's identity and appointment rest on the San Francisco Standard and the Justice Department's own staff profile. MODERATE confidence on motivation/origin specifically -- this is a genuinely disputed question between Newsom's on-record political-retribution claim and DOJ's/a source's on-record counter-account that the probe originated from California whistleblowers, and no independent adjudication of that dispute was identified in sourcing reviewed for this entry.",
+        "base": "HIGH confidence on the investigation's existence, corroborated across CNN, Axios and the San Francisco Standard, and on the September 2026 subpoena scope, which rests on subpoenas reviewed by the San Francisco Standard (Mother Jones and The Center Square repeat its account); the U.S. Attorney's identity and appointment rest on the San Francisco Standard and the Justice Department's own staff profile. MODERATE confidence on motivation/origin specifically -- this is a genuinely disputed question between Newsom's on-record political-retribution claim and an unnamed source's counter-account that the probe originated from California whistleblowers (DOJ declined to comment on it but denies its investigations are politically motivated), and no independent adjudication of that dispute has been reported.",
         "updates": [
           {
             "date": "2026-09-21",
             "label": "Update",
-            "text": "Update 2026-09-21 (correction): the CNN evidence item (June 15, 2026) did not support this entry's earlier account that the investigation named Newsom and identified Eric Grant. CNN reports, citing a person familiar with the matter, that the Justice Department is investigating Newsom's wife and that the Eastern District of California office is leading probes into people connected to Newsom, that the governor himself is not being investigated, and that Newsom said he is a target; it does not name Grant. The account of who disclosed the probe, whom it names and the U.S. Attorney's role has been corrected to match. Grant's identity and appointment (by Attorney General Bondi beginning Aug. 11, 2025; court-appointed effective Dec. 9, 2025) are now sourced to the Justice Department's staff profile, and the San Francisco Standard's Sept. 12 report names him as head of the office. Whether the governor personally is a subject remains disputed in the reporting: the Standard, repeating a DOJ source's statement to Politico in June, reports that Newsom and people close to him have been under investigation for more than a year, while CNN's source said he is not.",
+            "text": "Update 2026-09-21: CNN (June 15, 2026) reports, citing a person familiar with the matter, that the Justice Department is investigating Newsom's wife and that the Eastern District of California office is leading probes into people connected to Newsom, that the governor himself is not being investigated, and that Newsom said he is a target; it does not name Grant. Grant's identity and appointment (by Attorney General Bondi beginning Aug. 11, 2025; court-appointed effective Dec. 9, 2025) are sourced to the Justice Department's staff profile, and the San Francisco Standard's Sept. 12 report names him as head of the office. Whether the governor personally is a subject remains disputed in the reporting: the Standard, repeating a DOJ source's statement to Politico in June, reports that Newsom and people close to him have been under investigation for more than a year, while CNN's source said he is not. Re-verified 2026-11-08: the September subpoena reporting re-checked against the San Francisco Standard and Mother Jones; no indictment, charge or court fight over the subpoenas has been reported since, and The Center Square's Sept. 21 report quotes the governor's office saying there is no crime to investigate.",
             "effective_date": "2026-09-21"
           }
         ]
@@ -33041,14 +33068,14 @@
     "id": "peizer-sec-suit-dismissal-2026",
     "official": "Donald Trump, President of the United States",
     "offense_category": "Use of the pardon power to erase both criminal and civil consequences for a convicted ally -- clemency is a constitutional power, not itself unlawful, but its use here directly preceded a coordinate independent agency dropping its own separate civil enforcement action against the same person for the same underlying conduct",
-    "status": "Closed as to both the criminal conviction (pardoned) and the SEC's civil suit (dismissed with prejudice, August 7, 2026) -- no remaining legal consequence identified in sourcing reviewed for the conduct a federal jury found to be insider trading and securities fraud.",
+    "status": "Closed. Trump pardoned Peizer in January 2026, and on August 7, 2026 the SEC and Peizer filed a joint stipulation dismissing the SEC's civil suit with prejudice; the court docket shows the case terminated that day. No remaining legal consequence has been found for conduct a jury found to be fraud.",
     "contested": false,
-    "incident_summary": "Terren Peizer, founder and former CEO of healthcare company Ontrak, was convicted by a federal jury in 2024 of insider trading and securities fraud -- the first criminal case built on the theory that a pre-arranged stock-selling plan (normally used to shield executives from insider-trading liability) could itself be used to commit the fraud, since Peizer sold more than $20 million of Ontrak stock in mid-2021 while possessing material non-public negative information about the company's largest customer. He was sentenced to 3.5 years in prison. **President Trump pardoned Peizer in January 2026, erasing the criminal conviction and sentence. On August 7, 2026, the Securities and Exchange Commission moved to dismiss with prejudice its own separate, parallel civil enforcement action against Peizer and his company Acuitas -- the last remaining legal consequence for the conduct the jury had already found to be fraudulent.** No SEC reasoning independent of the pardon was identified in sourcing reviewed as justifying the civil dismissal.",
+    "incident_summary": "Terren Peizer, founder and former CEO of healthcare company Ontrak, was convicted by a federal jury in 2024 of insider trading and securities fraud -- the first criminal case built on the theory that a pre-arranged stock-selling plan (normally used to shield executives from insider-trading liability) could itself be used to commit the fraud, since Peizer sold more than $20 million of Ontrak stock in mid-2021 while possessing material non-public negative information about the company's largest customer. He was sentenced to 3.5 years in prison. **President Trump pardoned Peizer in January 2026, erasing the criminal conviction and sentence. On August 7, 2026, the Securities and Exchange Commission and Peizer filed a joint stipulation dismissing with prejudice the SEC's own separate, parallel civil enforcement action against Peizer and his company Acuitas -- the last remaining legal consequence for the conduct the jury had already found to be fraudulent.** The SEC's stipulation gives no reason beyond saying dismissal is appropriate \"in the exercise of discretion.\"",
     "elements_required": [
       "A federal jury convicted Peizer of insider trading and securities fraud in 2024, and he was sentenced to 3.5 years in prison -- an adjudicated finding of fact, not merely an allegation.",
       "President Trump pardoned Peizer in January 2026, using the pardon power to erase the criminal conviction and sentence.",
-      "Following the pardon, the SEC -- an agency independent of the pardon power and pursuing its own separate civil enforcement action -- moved on August 7, 2026 to dismiss that action with prejudice, ending the case permanently rather than merely pausing it.",
-      "No SEC statement or reasoning distinct from the pardon itself was identified in sourcing reviewed as the basis for dismissing the civil case, despite the civil action targeting the same underlying conduct a jury had already adjudicated."
+      "Following the pardon, the SEC -- an agency independent of the pardon power and pursuing its own separate civil enforcement action -- joined Peizer on August 7, 2026 in a stipulation dismissing that action with prejudice, ending the case permanently rather than merely pausing it.",
+      "No SEC statement or reasoning distinct from the pardon itself was given as the basis for dismissing the civil case, beyond the stipulation's statement that dismissal is appropriate \"in the exercise of discretion\", despite the civil action targeting the same underlying conduct a jury had already adjudicated."
     ],
     "evidence": [
       {
@@ -33067,22 +33094,34 @@
         "type": "reporting",
         "description": "Reuters: the SEC said on August 7, 2026 it was moving to dismiss its insider-trading civil suit against Terren Peizer, convicted by a federal jury in 2024 and pardoned by Trump.",
         "source_url": "https://www.reuters.com/legal/government/sec-drops-insider-trading-suit-against-ex-healthcare-executive-pardoned-by-trump-2026-08-08/",
-        "maps_to_element": "Following the pardon, the SEC ... moved on August 7, 2026 to dismiss that action with prejudice"
+        "maps_to_element": "Following the pardon, the SEC ... joined Peizer on August 7, 2026 in a stipulation dismissing that action with prejudice"
+      },
+      {
+        "type": "court_filing",
+        "description": "Joint stipulation filed August 7, 2026 in SEC v. Peizer (C.D. Cal. 2:23-cv-01511): the SEC and Peizer and Acuitas stipulate under Rule 41(a)(1)(A)(ii) that the case \"be dismissed with prejudice, and without costs or fees to either party\"; the only reason the SEC gives is that \"in the exercise of discretion\" it believes dismissal is appropriate.",
+        "source_url": "https://storage.courtlistener.com/recap/gov.uscourts.cacd.876938/gov.uscourts.cacd.876938.54.0.pdf",
+        "maps_to_element": "Following the pardon, the SEC ... joined Peizer on August 7, 2026 in a stipulation dismissing that action with prejudice"
+      },
+      {
+        "type": "court_document",
+        "description": "CourtListener docket for SEC v. Peizer (C.D. Cal. 2:23-cv-01511): the joint stipulation to dismiss under Rule 41(a)(1)(A)(ii) is the last entry, filed August 7, 2026, and the docket lists the case as terminated August 7, 2026.",
+        "source_url": "https://www.courtlistener.com/docket/66917874/securities-and-exchange-commission-v-teren-s-peizer/",
+        "maps_to_element": "Following the pardon, the SEC ... joined Peizer on August 7, 2026 in a stipulation dismissing that action with prejudice"
       }
     ],
     "rebuttal_anticipated": "The SEC could argue that pursuing a civil case after the underlying criminal conviction has been pardoned serves diminished punitive purpose, and that dropping civil actions for resource-allocation or case-strength reasons unrelated to any political favor is a routine, discretionary enforcement decision agencies make regularly.",
-    "comeback": "A civil securities case is not merely a shadow of the criminal one -- it independently allows disgorgement of the $20 million-plus in proceeds from the fraudulent trades and civil penalties, remedies untouched by a pardon of the criminal sentence. The SEC dismissed the case with prejudice, foreclosing it permanently, within months of the pardon and with no cited change in the case's evidentiary strength or legal theory -- the timing itself, not a resource-allocation memo, is what sourcing reviewed actually documents.",
+    "comeback": "A civil securities case is not merely a shadow of the criminal one -- it independently allows disgorgement of the $20 million-plus in proceeds from the fraudulent trades and civil penalties, remedies untouched by a pardon of the criminal sentence. The SEC agreed with Peizer to dismiss the case with prejudice, foreclosing it permanently, within months of the pardon. Its stipulation says only that dismissal is appropriate \"in the exercise of discretion\" and cites no change in the case's evidentiary strength or legal theory -- the timing itself, not a resource-allocation memo, is what the record documents.",
     "cause": "[TAP Analysis, not sourced] Fits an established pattern in this database (see the Trump entry) of pardons for financially-connected allies functioning as a signal that coordinate federal agencies should stand down on any remaining consequences for the same conduct, extending clemency's practical effect well beyond the criminal sentence itself.",
-    "confidence_note": "HIGH confidence -- the SEC's own dismissal action and its timing relative to the pardon are independently corroborated by Reuters and Bloomberg Law, both citing the SEC's public filing; the underlying conviction, sentence, and pardon date are corroborated by contemporaneous reporting.",
+    "confidence_note": "HIGH confidence -- the SEC's dismissal and its timing relative to the pardon are independently corroborated by Reuters and Bloomberg Law, and the joint stipulation dismissing the case with prejudice and the court docket show it filed, and the case terminated, on August 7, 2026; the underlying conviction, sentence, and pardon date are corroborated by contemporaneous reporting.",
     "pull_quote": "A civil securities case independently allows disgorgement of the $20 million-plus in proceeds from the fraudulent trades and civil penalties — remedies untouched by a pardon of the criminal sentence, yet the SEC dismissed the case with prejudice within months of the pardon with no cited change in the case's evidentiary strength.",
-    "last_verified": "2026-09-13",
+    "last_verified": "2026-11-08",
     "date_added": "2026-09-13",
     "section_summaries": {
       "incident_summary": "Trump pardoned Peizer's insider-trading conviction in Jan. 2026; the SEC then dropped its own parallel civil case against him in August.",
-      "confidence_note": "HIGH confidence -- SEC's dismissal and its timing after the pardon are independently corroborated by Reuters and Bloomberg Law."
+      "confidence_note": "HIGH confidence -- Reuters, Bloomberg Law and the court docket corroborate the SEC's with-prejudice dismissal and its timing after the pardon."
     },
     "date_of_action": "2026-01 (Trump pardons Peizer) through 2026-08-07 (SEC dismisses parallel civil suit)",
-    "last_substantive_update": "2026-09-13",
+    "last_substantive_update": "2026-11-08",
     "glance": {
       "who": "Donald Trump (President)",
       "what": "Pardoned insider-trading convict Terren Peizer; the SEC then dropped its own civil case with prejudice",
@@ -33091,7 +33130,7 @@
         "certainty": "documented",
         "who": "Securities-fraud enforcement"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-11-08"
     },
     "cause_references": [
       {
@@ -33136,11 +33175,11 @@
       },
       {
         "date": "2026-08-07",
-        "text": "The SEC moves to dismiss with prejudice its parallel civil suit against Peizer and his company Acuitas",
+        "text": "The SEC and Peizer stipulate to dismiss the SEC's parallel civil suit with prejudice, ending the case",
         "turning_point": true,
         "sources": [
-          "https://www.reuters.com/legal/government/sec-drops-insider-trading-suit-against-ex-healthcare-executive-pardoned-by-trump-2026-08-08/",
-          "https://www.bloomberg.com/news/articles/2026-08-07/sec-drops-insider-trading-suit-against-executive-trump-pardoned"
+          "https://storage.courtlistener.com/recap/gov.uscourts.cacd.876938/gov.uscourts.cacd.876938.54.0.pdf",
+          "https://www.reuters.com/legal/government/sec-drops-insider-trading-suit-against-ex-healthcare-executive-pardoned-by-trump-2026-08-08/"
         ]
       }
     ]
@@ -37729,29 +37768,47 @@
       "Risch has speculated, per Wired's reporting, about a possible connection between COVID-19 vaccines and so-called 'turbo cancer' in young people, a claim without established scientific support",
       "HHS's official December 16, 2025 confirmation of the appointment did not mention any of this record"
     ],
-    "incident_summary": "Dr. Harvey A. Risch, professor emeritus and senior research scientist in epidemiology at the Yale School of Public Health, announced on X on December 4, 2025 that President Trump had appointed him to chair the President's Cancer Panel -- the body that monitors the National Cancer Institute's National Cancer Program and reports directly to the president -- succeeding Elizabeth M. Jaffee, who had served since January 2023. HHS did not make the appointment official until December 16, 2025, eleven days after Risch's own announcement; HHS Secretary Robert F. Kennedy Jr. said in the official statement, 'Dr. Risch brings the expertise and resolve needed to identify the root causes of cancer in America.' That statement did not mention Risch's COVID-19-era public record: he was an early and vocal proponent of hydroxychloroquine and ivermectin as COVID-19 treatments, currently serves as chief epidemiologist for The Wellness Company (which commercially sells ivermectin), and has, per Wired's reporting, speculated about a possible connection between COVID-19 vaccines and so-called '**turbo cancer**' in young people -- a claim without established scientific support. Risch's own research background is in cancer etiology, prevention, and early diagnosis across ovarian, pancreatic, lung, bladder, esophageal, and stomach cancers, per HHS's official biography of him.",
+    "incident_summary": "Dr. Harvey A. Risch, professor emeritus and senior research scientist in epidemiology at the Yale School of Public Health, announced on X in early December 2025 that President Trump had appointed him to chair the President's Cancer Panel -- the body that monitors the National Cancer Institute's National Cancer Program and reports directly to the president -- succeeding Elizabeth M. Jaffee, whose service on the panel ran from January 2023 to March 2025. HHS did not make the appointment official until December 16, 2025, eleven days after Risch's own announcement, per Just the News; HHS Secretary Robert F. Kennedy Jr. said in the official statement, 'Dr. Risch brings the expertise and resolve needed to identify the root causes of cancer in America.' That statement did not mention Risch's COVID-19-era public record: he was an early and vocal proponent of hydroxychloroquine and ivermectin as COVID-19 treatments, currently serves as chief epidemiologist for The Wellness Company (which commercially sells ivermectin), and has, per Wired's reporting, speculated about a possible connection between COVID-19 vaccines and so-called '**turbo cancer**' in young people -- a claim without established scientific support. Risch's own research background is in cancer etiology, prevention, and early diagnosis across ovarian, pancreatic, lung, bladder, esophageal, and stomach cancers, per HHS's official biography of him.",
     "evidence": [
       {
         "type": "news_report",
-        "description": "Just the News's report documents the December 4/December 16, 2025 announcement timeline, HHS's official statement and Kennedy's quote, Risch's academic biography, and (citing Wired) his ivermectin/hydroxychloroquine advocacy, Wellness Company role, and 'turbo cancer' speculation",
+        "description": "Wired's report says Risch announced his appointment as chair of the President's Cancer Panel on X, that no formal announcement had yet been made, that he has \"speculated about whether there is a connection between Covid-19 vaccines and 'turbo cancer' in young people,\" that he promoted hydroxychloroquine in congressional testimony, and that he is chief epidemiologist for The Wellness Company, which sells hydroxychloroquine and ivermectin; it quotes the National Cancer Institute: \"There is no evidence that COVID-19 vaccines cause cancer\"",
+        "source_url": "https://www.wired.com/story/risch-trump-panel-vaccines-turbo-cancer-ivermectin-hcq/",
+        "maps_to_element": "Risch's ivermectin/hydroxychloroquine promotion, Wellness Company role, and 'turbo cancer' speculation"
+      },
+      {
+        "type": "news_report",
+        "description": "Just the News's December 16, 2025 report says HHS officially announced Risch as chair that day, 11 days after Risch himself said Trump had appointed him and less than two hours after Wired noted he was not listed on the panel's website; it quotes Kennedy's statement and HHS's account of Risch's cancer-research career, notes the announcement did not mention his COVID-treatment positions, and cites Wired on his 'turbo cancer' speculation and Wellness Company role",
         "source_url": "https://justthenews.com/government/federal-agencies/hhs-appoints-epidemiologist-harvey-risch-chairman-presidents-cancer",
         "maps_to_element": "The appointment itself, HHS's official framing, and Risch's undisclosed COVID-era record"
+      },
+      {
+        "type": "news_report",
+        "description": "In a Just the News interview published December 17, 2025, Risch said ivermectin and hydroxychloroquine are \"among maybe a dozen various medications that should have more formal studies\" as possible cancer treatments, adding \"I don't want to overpromise\" and \"So honestly, I don't know yet\"",
+        "source_url": "https://justthenews.com/politics-policy/health/trumps-cancer-panel-chair-wants-more-formal-studies-ivermectin-hcq-treatment",
+        "maps_to_element": "Risch's ivermectin/hydroxychloroquine promotion"
+      },
+      {
+        "type": "public_record",
+        "description": "The National Cancer Institute's President's Cancer Panel member page lists Risch as the panel's current Chair and lists Elizabeth M. Jaffee, his predecessor, among past members with her years of service",
+        "source_url": "https://www.cancer.gov/about-nci/advisory-boards/pcp/members",
+        "maps_to_element": "The appointment itself"
       }
     ],
-    "status": "Confirmed appointment as of HHS's December 16, 2025 announcement; no removal or reversal identified as of this entry's writing.",
+    "status": "Risch chairs the President's Cancer Panel: HHS made the appointment official on December 16, 2025, and the National Cancer Institute's panel page lists him as current Chair. No removal or reversal has been reported.",
     "rebuttal_anticipated": "The administration could argue Risch's decades of peer-reviewed cancer-epidemiology research (spanning ovarian, pancreatic, lung, bladder, esophageal, and stomach cancers) is the relevant qualification for a panel focused on cancer policy, and that his COVID-era public statements, whatever their merit, are unrelated to his capacity to oversee the National Cancer Program.",
-    "comeback": "The President's Cancer Panel exists specifically to give the president credible, science-grounded guidance on cancer policy; a chair who has publicly speculated -- without established scientific support -- that the vaccines most Americans received cause cancer, while holding a paid role promoting a commercial ivermectin seller, creates a direct conflict between his public advocacy record and the panel's core mission of communicating accurate cancer science, a conflict HHS's own announcement did not acknowledge or address.",
+    "comeback": "The President's Cancer Panel exists specifically to give the president credible, science-grounded guidance on cancer policy; a chair who has publicly speculated -- without established scientific support -- about whether the vaccines most Americans received cause cancer, while serving as chief epidemiologist for a company that sells ivermectin, creates a direct conflict between his public advocacy record and the panel's core mission of communicating accurate cancer science, a conflict HHS's own announcement did not acknowledge or address.",
     "cause": "[TAP Analysis, not sourced] Fits this tracker's broader documented pattern (see the Levi task-force entry) of the administration installing ideologically aligned figures with fringe or professionally contested views into federal health-science bodies, rather than credentialed specialists free of significant public controversy in the relevant subject matter.",
-    "confidence_note": "HIGH confidence on the appointment, its December 2025 timeline, HHS's official statement, and Risch's biography, directly sourced to Just the News's report. MODERATE confidence on the full 'turbo cancer' claim and its scientific reception, since this entry relies on Just the News's account of Wired's reporting rather than a direct fetch of wired.com, which could not be retrieved by the tooling used to verify this entry; washingtonpost.com's own dedicated report on the appointment also returned a 403 and is not relied upon here.",
+    "confidence_note": "HIGH confidence on the appointment, HHS's December 16, 2025 statement and Kennedy's quote, and Risch's biography, sourced to Just the News, with the National Cancer Institute's panel page confirming he is current Chair. HIGH confidence on Risch's 'turbo cancer' speculation, hydroxychloroquine and ivermectin promotion, and Wellness Company role, sourced directly to Wired. The exact day of Risch's X announcement is not given by these sources; Just the News places it 11 days before HHS's announcement. Contested: surgical oncologist David Gorski, quoted by Wired, calls Risch's place on the panel 'a disaster for cancer patients,' while Risch told Just the News he wants 'more formal studies' of ivermectin and hydroxychloroquine and does not 'want to overpromise.'",
     "pull_quote": "HHS Secretary Robert F. Kennedy Jr. said in the official statement, “Dr. Risch brings the expertise and resolve needed to identify the root causes of cancer in America.”",
-    "last_verified": "2026-09-13",
+    "last_verified": "2026-11-08",
     "date_added": "2026-09-13",
     "section_summaries": {
-      "incident_summary": "Trump appointed Harvey Risch -- a hydroxychloroquine/ivermectin promoter with a paid tie to an ivermectin-selling company who has speculated COVID vaccines cause 'turbo cancer' -- to chair the President's Cancer Panel; HHS's December 16, 2025 announcement did not mention this record.",
-      "confidence_note": "HIGH confidence on the appointment and Risch's record via Just the News; the 'turbo cancer' claim traces to Wired's reporting via Just the News's account rather than a direct fetch, and washingtonpost.com's own report could not be retrieved."
+      "incident_summary": "Trump named Harvey Risch, an ivermectin and hydroxychloroquine promoter who speculated about vaccine 'turbo cancer,' to chair the Cancer Panel; HHS's notice left that out.",
+      "confidence_note": "HIGH confidence: the appointment, HHS statement and Risch's record are directly sourced to Just the News, Wired and NCI's panel page; contested by critics and Risch."
     },
-    "date_of_action": "2025-12-04 (Risch announces Cancer Panel appointment) through 2025-12-16 (HHS makes appointment official)",
-    "last_substantive_update": "2026-09-13",
+    "date_of_action": "2025-12 (Risch announces Cancer Panel appointment, 11 days before HHS) through 2025-12-16 (HHS makes appointment official)",
+    "last_substantive_update": "2026-11-08",
     "glance": {
       "who": "Donald Trump (President)",
       "what": "Appointed ivermectin promoter Harvey Risch to chair the Cancer Panel; HHS's notice omitted that record",
@@ -37760,7 +37817,7 @@
         "certainty": "alleged",
         "who": "President's Cancer Panel credibility"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-11-08"
     },
     "cause_references": [
       {
@@ -37773,7 +37830,7 @@
     "key_events": [
       {
         "date": "2025-12",
-        "text": "Harvey Risch announces on X that Trump has appointed him to chair the President's Cancer Panel",
+        "text": "Harvey Risch announces on X that Trump appointed him Cancer Panel chair, 11 days before HHS's announcement",
         "turning_point": true,
         "sources": [
           "https://justthenews.com/government/federal-agencies/hhs-appoints-epidemiologist-harvey-risch-chairman-presidents-cancer"

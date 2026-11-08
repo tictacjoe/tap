@@ -6760,13 +6760,13 @@
     "title": "38 of 82 Regularly Updated CDC Public Health Databases Stopped Updating Within Months of RFK Jr.'s Confirmation, Nearly All Vaccine-Related",
     "institution": "Centers for Disease Control and Prevention (CDC)",
     "domain": "data_collection_halted",
-    "status": "Confirmed via peer-reviewed research published January 26, 2026; no restoration of the stalled databases identified in sourcing reviewed.",
+    "status": "A peer-reviewed study published January 26, 2026 found 38 of 82 monthly CDC databases stalled by October 28, 2025; a December 2, 2025 recheck found only one had resumed. HHS said the changes reflect routine data-quality decisions, not political direction.",
     "date_of_action": "2025-03 through 2025-04 (pauses begin) through 2025-10 (extent of stalled databases documented)",
-    "what_changed": "A study published January 26, 2026 in Annals of Internal Medicine examined 82 CDC databases that had been updated monthly as of early 2025 and found that by late October 2025, 38 of them had stalled, including 34 with no new entries at all in the prior six months. The paused databases tracked vaccination coverage (including COVID-19 vaccination rates among pregnant women and the general adult population), respiratory illness activity in emergency departments, and RSV preventive-drug usage; some, including COVID vaccination databases, had last been updated in late April 2025. Researchers found the unexplained pauses began predominantly in March and April 2025, shortly after President Trump took office and Robert F. Kennedy Jr. was confirmed as HHS Secretary. **Nearly 90% of the paused databases specifically concerned vaccination.** Study researcher Noel Brewer said, 'it's curious that all these changes are primarily, and almost exclusively, in the area of vaccination.'",
+    "what_changed": "A study published January 26, 2026 in Annals of Internal Medicine examined 82 CDC databases that had been updated monthly as of early 2025 and found that by late October 2025, 38 of them had stalled, including 34 with no new entries at all in the prior six months. The paused databases tracked vaccination coverage (including COVID-19 vaccination rates among pregnant women and the general adult population), respiratory illness activity in emergency departments, and RSV preventive-drug usage; some, including COVID vaccination databases, had last been updated in late April 2025. When the researchers rechecked the 38 paused databases on December 2, 2025, only one had resumed updates. Researchers found the unexplained pauses began predominantly in March and April 2025, shortly after President Trump took office and Robert F. Kennedy Jr. was confirmed as HHS Secretary. **Nearly 90% of the paused databases specifically concerned vaccination.** Study author Noel Brewer said, 'it's curious that all these changes are primarily, and almost exclusively, in the area of vaccination.'",
     "primary_proponent": {
       "name": "Robert F. Kennedy Jr.",
       "role": "Secretary of Health and Human Services",
-      "note": "The study found the database-update pauses began almost immediately after Kennedy's confirmation and were concentrated nearly exclusively in vaccination-related tracking systems, though sourcing does not identify a specific directive ordering the pauses."
+      "note": "The study found the database-update pauses began predominantly in March and April 2025, shortly after Kennedy's confirmation and were concentrated nearly exclusively in vaccination-related tracking systems, though it does not identify a specific directive ordering the pauses."
     },
     "estimated_impact": {
       "summary": "Removed public visibility into vaccination coverage and respiratory-illness surveillance data for roughly six months across nearly half of the CDC's regularly updated tracking systems, concentrated almost entirely in vaccine-related metrics, at the same time other entries in this database document a historic measles outbreak and declining vaccination rates nationally.",
@@ -6787,23 +6787,27 @@
           "source": "Same study"
         }
       ],
-      "caveat": "The study identifies a strong statistical and temporal association between the administration's arrival and the pause pattern, and its lead researcher directly noted the concentration in vaccine-related data as notable; sourcing reviewed does not include an HHS/CDC statement explaining the specific cause of the pauses."
+      "caveat": "The study documents a strong temporal association between the administration's arrival and the pause pattern, and its authors suggest workforce reductions, budget cuts or shifting attitudes about vaccines among federal health officials as possible causes without establishing which applies. HHS spokesperson Andrew Nixon said 'changes to individual dashboards or update schedules reflect routine data quality and system management decisions, not political direction.'"
     },
-    "confidence_note": "HIGH confidence, directly sourced to NBC News's report on the peer-reviewed Annals of Internal Medicine study.",
-    "last_verified": "2026-09-13",
+    "confidence_note": "HIGH confidence, directly sourced to NBC News's report and AJMC's summary of the peer-reviewed Annals of Internal Medicine study.",
+    "last_verified": "2026-11-08",
     "date_added": "2026-09-13",
     "sources": [
       {
         "name": "NBC News -- CDC databases not updated, vaccines study",
         "url": "https://www.nbcnews.com/health/health-news/cdc-databases-not-updated-vaccines-study-rcna255467"
+      },
+      {
+        "name": "AJMC -- Unexplained pauses hit nearly half of monthly updated CDC databases",
+        "url": "https://www.ajmc.com/view/unexplained-pauses-hit-nearly-half-of-monthly-updated-cdc-databases-raising-transparency-concerns"
       }
     ],
     "section_summaries": {
-      "what_changed": "A peer-reviewed study found 38 of 82 regularly updated CDC public health databases stalled by late October 2025, with the pauses beginning within weeks of RFK Jr.'s confirmation and nearly 90% concentrated in vaccine-related tracking.",
-      "estimated_impact": "Cut public visibility into vaccination coverage and respiratory-illness surveillance for months during a historic measles outbreak, though the study stops short of establishing an explicit administrative cause.",
-      "confidence_note": "HIGH confidence, directly sourced to NBC News's report on the peer-reviewed study."
+      "what_changed": "A peer-reviewed study found 38 of 82 monthly CDC databases stalled by late October 2025, nearly 90% vaccine-related; the pauses began in March-April 2025 and only one had resumed by December.",
+      "estimated_impact": "Cut public visibility into vaccination coverage and respiratory-illness data for months; the study does not establish a cause, and HHS called the changes routine data-quality decisions.",
+      "confidence_note": "HIGH confidence, directly sourced to NBC News and AJMC reports on the peer-reviewed study."
     },
-    "last_substantive_update": "2026-09-13",
+    "last_substantive_update": "2026-11-08",
     "glance": {
       "who": "CDC, under HHS Secretary Robert F. Kennedy Jr.",
       "what": "38 of 82 CDC databases stopped updating within months, nearly 90% vaccine-related, a study found",
@@ -6812,7 +6816,7 @@
         "certainty": "documented",
         "who": "Public vaccination and disease data"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-11-08"
     },
     "status_stage": "Unchallenged",
     "key_events": [
@@ -6829,6 +6833,13 @@
         "text": "Some databases, including COVID-19 vaccination data, stop getting updates after late April",
         "sources": [
           "https://www.nbcnews.com/health/health-news/cdc-databases-not-updated-vaccines-study-rcna255467"
+        ]
+      },
+      {
+        "date": "2025-12-02",
+        "text": "A recheck by the researchers finds only one of the 38 paused databases has resumed updates",
+        "sources": [
+          "https://www.ajmc.com/view/unexplained-pauses-hit-nearly-half-of-monthly-updated-cdc-databases-raising-transparency-concerns"
         ]
       },
       {
@@ -31138,16 +31149,16 @@
     "title": "FHFA Director Pulte Purged Hundreds of Staff and Fannie/Freddie Board Members, Replacing Them With Unqualified Loyalists, While Pushing 50-Year Mortgages and Crypto-Backed Loan Assets",
     "institution": "Federal Housing Finance Agency (FHFA), Fannie Mae, Freddie Mac",
     "domain": "staff_office_cuts",
-    "status": "Ongoing -- GAO investigation open, no findings issued as of sourcing reviewed; 50-year mortgage and crypto-asset policies remain proposed/directive, not shown to have caused documented market harm yet",
+    "status": "Ongoing: GAO's inquiry into Pulte's mortgage-fraud referrals is open with no findings; GAO said in October 2026 it may finish by early 2027. Pulte set the 50-year mortgage aside in January 2026; a crypto-backed mortgage built to Fannie Mae guidelines became generally available in August 2026.",
     "date_of_action": "2025-03 (board purge begins) through 2025-12-19 (Reuters investigation)",
-    "what_changed": "Within a week of taking office as FHFA Director in March 2025, Bill Pulte fired Freddie Mac's CEO and removed 14 of the two companies' nonpartisan board directors, installing himself as chairman of both boards along with business associates and partisan loyalists. Reuters' December 19, 2025 investigation reported Pulte has since driven out hundreds of employees across FHFA, Fannie Mae, and Freddie Mac -- from executive leadership to rank-and-file staff -- replacing many with people who, per staffers' concerns cited in the reporting, lack mortgage-industry experience. Named replacements include Omeed Malik, a venture-fund founder and Trump donor appointed to Fannie Mae's board in April 2025 -- Donald Trump Jr. is a partner in Malik's 1789 Capital fund, and Malik and Trump Jr. share a financial interest in firearms retailer GrabAGun, in which Pulte's own family office separately invested around the time Malik joined Fannie's board -- and Mark Zarkin, a Michigan restaurateur and Trump fundraiser with no housing-finance experience and a vacated felony sex-offense conviction, hired as a consultant (documented in fuller detail, including a separate pending pardon-bribery lawsuit, in pulte-zarkin-sex-offender-consultant-2025.json). Alongside the personnel changes, Pulte pushed two substantive policy changes critics characterized as risky: he announced 50-year mortgages on X as 'a complete game changer,' drawing criticism from economists and industry experts over increased long-term debt burdens and lender risk exposure (not implemented as of sourcing reviewed); and in June 2025 he ordered Fannie Mae and Freddie Mac to begin counting cryptocurrency holdings as an asset in mortgage-loan applications, stating he was 'keeping with President Trump's vision' -- a directive following reporting that the Trump family had earned roughly $800 million from crypto sales in early 2025. Internal watchdogs who scrutinized these moves were themselves removed: FHFA's inspector general was ousted, and Pulte fired internal watchdogs at Fannie Mae as well (the removal of Fannie's chief ethics officer, general counsel, and acting inspector general specifically in connection with their review of Pulte's mortgage-data conduct is documented in fuller detail in pulte-mortgage-data-misuse-2025-2026.json). On December 4, 2025, **the Government Accountability Office confirmed it had opened a formal investigation, requested by eight Senate Democrats led by Elizabeth Warren, into whether Pulte and FHFA employees misused federal authority and resources**; federal prosecutors in Maryland were separately reviewing Pulte's conduct in connection with his criminal referral against Sen. Adam Schiff. Government-ethics attorney Richard Painter told Reuters the appointment pattern reflects 'a buddy system' in which people are 'getting into positions because of their political or personal connections,' calling it 'unprecedented.'",
+    "what_changed": "After his March 2025 confirmation as FHFA Director, Bill Pulte installed himself as chairman of the boards of both Fannie Mae and Freddie Mac, a move Reuters called unprecedented, and went on to remove 14 directors at the two companies, replacing most of them, while making management changes that included both companies' chief executives. Reuters' December 19, 2025 investigation reported that Pulte has driven out hundreds of employees across FHFA, Fannie Mae and Freddie Mac, supplanting industry veterans with politically or personally connected advisors, and announced layoffs of 'not core' employees, including staffers responsible for diversity efforts and ethics enforcement. Named appointees include Omeed Malik, founder of venture fund 1789 Capital and a prominent Trump donor, whom Pulte named to Fannie Mae's board in April 2025: Donald Trump Jr. is a partner in 1789 Capital and a board member of GrabAGun, a firearms retailer Malik helped take public, and months earlier Pulte's family investment office had invested in GrabAGun (an FHFA spokesperson said Pulte hasn't owned GrabAGun shares 'since being in Government'). Reuters also reported that Pulte enlisted Mark Zarkin, a Michigan restaurateur who campaigned for Trump, with no significant mortgage-sector experience and a felony sex-offense conviction a judge later vacated, as a consultant to the two companies; an FHFA spokesperson told Reuters that Zarkin 'is currently not an employee or consultant to the agency, Fannie or Freddie' and didn't answer follow-up questions about any earlier role. In 2026 an FHFA spokesperson told HuffPost that a different Mark Zarkin had worked for the agency, without identifying him. Zarkin's hiring and a separate June 2025 whistleblower lawsuit in Michigan alleging that a local police chief schemed with Zarkin to bribe Trump for a pardon are covered in TAP's Cabinet-Level entry on Pulte's hiring of Zarkin. Alongside the personnel changes, Pulte pushed two policy changes critics called risky. In November 2025 he wrote on X: 'Thanks to President Trump, we are indeed working on The 50-year-mortgage - a complete game changer.' Staffers, economists and mortgage-industry experts criticized the idea, some saying it would burden homeowners with more debt and expose lenders to higher risk. It was never implemented, and in January 2026, asked whether 50-year mortgages were still on the table, Pulte said, 'I think we have other priorities.' In June 2025 he ordered Fannie Mae and Freddie Mac 'to prepare their businesses to count cryptocurrency as an asset for a mortgage,' writing that he acted 'in keeping with President Trump's vision to make the United States the crypto capital of the world.' Some staffers saw a conflict of interest because the president's family has significant crypto investments; Reuters reported in October 2025 that Trump's family reaped more than $800 million from crypto sales in the first half of 2025. In March 2026 Fannie Mae was reported to be preparing to accept crypto-backed mortgages for the first time, through a Better Home & Finance and Coinbase product that lets borrowers pledge crypto as collateral tied to their down payment. Coinbase later said a Michigan couple had closed the first Fannie Mae-backed mortgage using Bitcoin pledged for the down payment, and on August 26, 2026 Better and Coinbase announced general availability of the product, designed in accordance with Fannie Mae guidelines. Internal watchdogs were removed as well. According to Wall Street Journal reporting relayed by HousingWire, Fannie Mae officials who investigated whether Pulte improperly obtained Democratic officials' mortgage records were pushed out, with chief ethics officer Suzanne Libby removed and general counsel Danielle McCoy resigning under pressure, and FHFA's acting inspector general, Joe Allen, who forwarded their findings to prosecutors, was asked to step down. Allen was ousted in November 2025; Reuters reported the White House fired the inspector general for reasons it hasn't disclosed. On December 4, 2025, **the Government Accountability Office said it would act on a request from eight Senate Democrats led by Elizabeth Warren to investigate whether FHFA and its employees, including Pulte, misused federal authority and resources** in his mortgage-fraud referrals against Trump critics; federal prosecutors in Maryland separately began reviewing Pulte's conduct in the investigation of Sen. Adam Schiff. The referrals and the removals tied to them are covered in TAP's Cabinet-Level entry on Pulte's use of mortgage data against political opponents. Richard Painter, a Bush administration ethics attorney, told Reuters: 'This reliance on a buddy system - in which people are getting into positions because of their political or personal connections - is unprecedented at these organizations.'",
     "primary_proponent": {
       "name": "Bill Pulte, Director of the Federal Housing Finance Agency",
       "role": "Directed the board purges, personnel replacements, and the 50-year-mortgage and crypto-asset policy pushes",
       "note": "Also serves as chairman of both the Fannie Mae and Freddie Mac boards he purged"
     },
     "estimated_impact": {
-      "summary": "Institutional capacity and independence at the two federally regulated mortgage giants and their regulator have been reshaped around personal and political loyalty rather than housing-finance expertise, with an open federal watchdog investigation into whether this constituted misuse of federal authority; the mortgage-market policy changes (50-year terms, crypto-backed loan assets) carry warned-of but not yet documented financial-stability risk.",
+      "summary": "Institutional capacity and independence at the two federally regulated mortgage giants and their regulator have been reshaped around personal and political loyalty rather than housing-finance expertise, with an open GAO investigation into whether Pulte and FHFA misused federal authority and resources. Of the two mortgage-market policy pushes, the 50-year mortgage was set aside in January 2026, while the crypto-asset directive was followed by a crypto-backed mortgage built to Fannie Mae guidelines, generally available since August 2026, with risks critics warned of but no documented market harm.",
       "figures": [
         {
           "metric": "Fannie Mae/Freddie Mac board directors removed",
@@ -31155,30 +31166,70 @@
           "source": "Reuters' December 19, 2025 investigation"
         },
         {
-          "metric": "Trump family's reported crypto sales earnings, early 2025",
-          "value": "~$800,000,000",
-          "source": "Reporting cited in Reuters' December 19, 2025 investigation"
+          "metric": "Trump family's reported crypto sales earnings, first half of 2025",
+          "value": "More than $800,000,000",
+          "source": "Reuters reporting from October 2025, cited in Reuters' December 19, 2025 investigation"
         }
       ],
-      "caveat": "Reuters did not report a precise total headcount for the 'hundreds' of employees driven out across the three institutions; the 50-year-mortgage and crypto-asset policies are documented as directives/proposals with warned-of risk, not as having caused a confirmed market-harm outcome as of sourcing reviewed."
+      "caveat": "Reuters did not report a precise total headcount for the 'hundreds' of employees driven out across the three institutions; the 50-year mortgage was never implemented, and no confirmed market harm from the crypto-asset directive has been documented."
     },
-    "confidence_note": "HIGH confidence on the board purge, the specific named replacements (Malik, Zarkin) and their documented conflicts of interest, the 50-year-mortgage and crypto-asset policy announcements, and the open GAO investigation, all directly sourced to Reuters' December 19, 2025 investigation. Reuters.com itself could not be fetched directly by the tooling used to verify this entry; the article's full text was instead directly read via a radio-station wire-service mirror (WHTC) carrying the identical Reuters copy. MODERATE confidence on the precise scale of 'hundreds' of staff terminations, since Reuters did not provide an exact aggregate figure.",
-    "pull_quote": "“It's a buddy system,” government-ethics attorney Richard Painter said of the appointment pattern — people “getting into positions because of their political or personal connections,” which he called “unprecedented.”",
-    "last_verified": "2026-09-12",
+    "confidence_note": "HIGH confidence on the board overhaul, the named appointees (Malik, Zarkin) and their documented ties, the 50-year-mortgage and crypto-asset policy pushes, and the open GAO investigation, sourced to Reuters' December 19, 2025 investigation (read in full through syndicated copies), CNN's and HousingWire's reports of GAO's December 2025 announcement, the senators' request letter, and Scotsman Guide's November 2026 report that the GAO inquiry is ongoing. The removal of Fannie Mae's ethics officer and general counsel rests on Wall Street Journal reporting relayed by HousingWire. MODERATE confidence on the precise scale of the 'hundreds' of staff departures, since Reuters gave no exact figure, and on Zarkin's role, which FHFA now disputes.",
+    "pull_quote": "“This reliance on a buddy system – in which people are getting into positions because of their political or personal connections – is unprecedented at these organizations,” said Richard Painter, a Bush administration ethics attorney.",
+    "last_verified": "2026-11-08",
     "date_added": "2026-09-12",
     "sources": [
       {
         "name": "WHTC (Reuters wire copy) -- 'Pulte and other Trump loyalists at mortgage regulator clash with Fannie and Freddie staffers'",
         "url": "https://whtc.com/2025/12/19/pulte-and-other-trump-loyalists-at-mortgage-regulator-clash-with-fannie-and-freddie-staffers/"
+      },
+      {
+        "name": "Yahoo Finance (Reuters copy) -- 'Pulte and other Trump loyalists at mortgage regulator clash with Fannie and Freddie staffers' (Dec 19, 2025)",
+        "url": "https://finance.yahoo.com/news/pulte-other-trump-loyalists-mortgage-131744506.html"
+      },
+      {
+        "name": "Senate Democrats' letter to GAO requesting an investigation of FHFA (Nov 17, 2025)",
+        "url": "https://www.banking.senate.gov/imo/media/doc/2025.11.17%20Letter%20to%20GAO%20re%20FHFA%20Mortgage%20Fraud%20Investigations.pdf"
+      },
+      {
+        "name": "CNN -- GAO to investigate FHFA chief Bill Pulte over mortgage referrals (Dec 4, 2025)",
+        "url": "https://www.cnn.com/2025/12/04/business/government-accountability-office-investigation-bill-pulte-mortgage-referrals"
+      },
+      {
+        "name": "HousingWire -- 'GAO opens probe into Bill Pulte's mortgage fraud referrals'",
+        "url": "https://www.housingwire.com/articles/gao-fhfa-director-investigation/"
+      },
+      {
+        "name": "NASCUS (Politico excerpt) -- 'Pulte Backs Away From 50-Year Mortgage' (Jan 2026)",
+        "url": "https://www.nascus.org/2026/01/15/pulte-backs-away-from-50-year-mortgage/"
+      },
+      {
+        "name": "PYMNTS/CPI -- 'Fannie Mae to Accept Crypto-backed Mortgages for the First Time' (Mar 29, 2026)",
+        "url": "https://www.pymnts.com/cpi-posts/fannie-mae-to-accept-crypto-backed-mortgages-for-the-first-time/"
+      },
+      {
+        "name": "HuffPost -- Pulte's intelligence firings and his hiring of Mark Zarkin (2026)",
+        "url": "https://www.huffpost.com/entry/bill-pulte-firing-intel-officials-hired-mark-zarkin_n_6a4535d6e4b087bc4f0b3433"
+      },
+      {
+        "name": "Scotsman Guide -- 'FHFA watchdog accuses Pulte of unprecedented obstruction' (Nov 2, 2026)",
+        "url": "https://www.scotsmanguide.com/news/fhfa-watchdog-accuses-pulte-of-unprecedented-obstruction/"
+      },
+      {
+        "name": "Decrypt -- 'Fannie Mae-Backed Bitcoin Home Mortgages Are Finally Here, Coinbase Says' (2026)",
+        "url": "https://decrypt.co/370016/fannie-mae-backed-bitcoin-home-mortgages-finally-here-coinbase"
+      },
+      {
+        "name": "Better and Coinbase press release (Business Wire via Nasdaq) -- general availability of token-backed conforming mortgage (Aug 26, 2026)",
+        "url": "https://www.nasdaq.com/press-release/better-coinbase-announce-general-availability-first-token-backed-conforming-mortgage"
       }
     ],
     "section_summaries": {
-      "what_changed": "FHFA Director Pulte purged 14 Fannie Mae/Freddie Mac board members and hundreds of staff, replacing them with unqualified political loyalists (including a donor with an undisclosed conflict of interest and a consultant with a vacated felony conviction), while pushing 50-year mortgages and ordering crypto assets counted toward mortgage qualification -- prompting an open GAO investigation into misuse of federal authority.",
-      "estimated_impact": "Institutional independence at the mortgage regulator and the two companies it oversees has been reshaped around personal/political loyalty, with an open GAO investigation and warned-of but not yet documented financial-stability risk from the 50-year-mortgage and crypto-asset policy changes.",
-      "confidence_note": "HIGH confidence on the purge, named replacements, and policy pushes, directly sourced to Reuters' investigation (read via a wire-copy mirror after reuters.com itself could not be fetched); the exact total staff-termination count is not precisely quantified in sourcing reviewed."
+      "what_changed": "Pulte made himself chair of Fannie and Freddie, removed 14 directors and drove out hundreds of staff for connected loyalists, pushed 50-year mortgages and crypto assets, and ousted watchdogs.",
+      "estimated_impact": "Fannie, Freddie and FHFA were reshaped around loyalty over expertise; a GAO probe is open, the 50-year mortgage was dropped, and the crypto push carries warned-of but undocumented risk.",
+      "confidence_note": "High confidence on the board overhaul, appointees, policy pushes and GAO probe, from Reuters and later reporting; moderate on the total staff loss and on Zarkin's role, which FHFA disputes."
     },
-    "last_updated": "2026-09-12",
-    "last_substantive_update": "2026-09-12",
+    "last_updated": "2026-11-08",
+    "last_substantive_update": "2026-11-08",
     "glance": {
       "who": "Bill Pulte (FHFA Director)",
       "what": "Purged 14 Fannie Mae/Freddie Mac board members and hundreds of staff, installing loyalists; GAO probe open",
@@ -31187,13 +31238,13 @@
         "certainty": "documented",
         "who": "Fannie, Freddie and FHFA independence"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-11-08"
     },
     "status_stage": "Under investigation",
     "key_events": [
       {
         "date": "2025-03",
-        "text": "New FHFA Director Bill Pulte fires Freddie Mac's CEO, removes 14 board members and makes himself chairman",
+        "text": "After his confirmation, FHFA Director Bill Pulte makes himself chairman of the Fannie Mae and Freddie Mac boards",
         "turning_point": true,
         "sources": [
           "https://whtc.com/2025/12/19/pulte-and-other-trump-loyalists-at-mortgage-regulator-clash-with-fannie-and-freddie-staffers/"
@@ -31214,18 +31265,55 @@
         ]
       },
       {
-        "date": "2025-12-04",
-        "text": "GAO confirms it has opened an investigation into whether Pulte and FHFA staff misused federal authority",
-        "turning_point": true,
+        "date": "2025-11",
+        "text": "Pulte says on X that work is under way on a 50-year mortgage",
         "sources": [
           "https://whtc.com/2025/12/19/pulte-and-other-trump-loyalists-at-mortgage-regulator-clash-with-fannie-and-freddie-staffers/"
+        ]
+      },
+      {
+        "date": "2025-11",
+        "text": "FHFA's acting inspector general, Joe Allen, is ousted",
+        "sources": [
+          "https://www.scotsmanguide.com/news/fhfa-watchdog-accuses-pulte-of-unprecedented-obstruction/"
+        ]
+      },
+      {
+        "date": "2025-12-04",
+        "text": "GAO says it will investigate whether Pulte and FHFA misused federal authority in his mortgage-fraud referrals",
+        "turning_point": true,
+        "sources": [
+          "https://www.cnn.com/2025/12/04/business/government-accountability-office-investigation-bill-pulte-mortgage-referrals",
+          "https://www.housingwire.com/articles/gao-fhfa-director-investigation/"
         ]
       },
       {
         "date": "2025-12-19",
         "text": "Reuters reports Pulte has driven out hundreds of staff at FHFA, Fannie Mae and Freddie Mac",
         "sources": [
-          "https://whtc.com/2025/12/19/pulte-and-other-trump-loyalists-at-mortgage-regulator-clash-with-fannie-and-freddie-staffers/"
+          "https://whtc.com/2025/12/19/pulte-and-other-trump-loyalists-at-mortgage-regulator-clash-with-fannie-and-freddie-staffers/",
+          "https://finance.yahoo.com/news/pulte-other-trump-loyalists-mortgage-131744506.html"
+        ]
+      },
+      {
+        "date": "2026-01",
+        "text": "Asked about 50-year mortgages, Pulte says 'I think we have other priorities'",
+        "sources": [
+          "https://www.nascus.org/2026/01/15/pulte-backs-away-from-50-year-mortgage/"
+        ]
+      },
+      {
+        "date": "2026-03",
+        "text": "Fannie Mae is reported to be preparing to accept crypto-backed mortgages for the first time",
+        "sources": [
+          "https://www.pymnts.com/cpi-posts/fannie-mae-to-accept-crypto-backed-mortgages-for-the-first-time/"
+        ]
+      },
+      {
+        "date": "2026-08-26",
+        "text": "Better and Coinbase make their crypto-backed mortgage built to Fannie Mae guidelines generally available",
+        "sources": [
+          "https://www.nasdaq.com/press-release/better-coinbase-announce-general-availability-first-token-backed-conforming-mortgage"
         ]
       }
     ]
@@ -36306,9 +36394,9 @@
     "title": "HHS Abruptly Cut $12 Million in Pediatric Health Grants After the American Academy of Pediatrics Publicly Opposed RFK Jr.'s Vaccine and Gender-Care Positions",
     "institution": "Department of Health and Human Services (HHS)",
     "domain": "funding_redirection",
-    "status": "Ongoing litigation as of the lawsuit's December 24, 2025 filing in U.S. District Court for the District of Columbia; no ruling identified as of this entry's writing.",
-    "date_of_action": "2025-12 (grants abruptly terminated) through 2025-12-24 (AAP files suit)",
-    "what_changed": "In December 2025, HHS abruptly terminated nearly $12 million in federal grants to the American Academy of Pediatrics (AAP), the nation's leading pediatric medical association. The cuts hit dozens of public health programs the AAP operates, including **efforts to prevent sudden unexpected infant deaths, strengthen pediatric care access in rural communities, support teen substance-use and mental-health services, fund newborn hearing screenings, and run safe-sleep campaigns for infants**. On December 24, 2025, the AAP filed suit against HHS in U.S. District Court for the District of Columbia to block the cuts, alleging HHS terminated the funding in retaliation for the organization's public advocacy -- specifically the AAP's support for pediatric vaccination and its public opposition to HHS Secretary Robert F. Kennedy Jr.'s positions on gender-affirming care and vaccine policy. The AAP's complaint stated the organization 'does not have other sources of grant funding to replace the federal awards' and would 'immediately terminate its work on dozens of programs' absent an injunction; AAP CEO Mark Del Monte said the organization would 'be forced to begin laying off employees' within weeks without the funding.",
+    "status": "Judge Beryl Howell (D.D.C.) issued a preliminary injunction on January 11, 2026, finding AAP likely to win its First Amendment retaliation claim and barring HHS from giving effect to the seven grant terminations. The case has been stayed since March 2026; a joint status report is due April 30, 2027.",
+    "date_of_action": "2025-12-16 (grants terminated, per AAP) through 2025-12-24 (AAP files suit)",
+    "what_changed": "In December 2025, HHS abruptly terminated seven federal grants, worth nearly $12 million, to the American Academy of Pediatrics (AAP), the nation's leading pediatric medical association; AAP said the grants were canceled on December 16. The grants, administered through the CDC and the Health Resources and Services Administration (HRSA), funded public health programs the AAP runs, including **efforts to prevent sudden unexpected infant death, strengthen pediatric care in rural communities, and support teens facing substance use and mental health challenges**; AAP CEO Mark Del Monte said the programs fund services like hearing screenings for newborns and safe sleep campaigns. On December 24, 2025, the AAP sued HHS in U.S. District Court for the District of Columbia to block the cuts, alleging HHS terminated the funding in retaliation for the group speaking out against the administration's positions -- the AAP has backed pediatric vaccination and access to gender-affirming care and has publicly opposed HHS Secretary Robert F. Kennedy Jr.'s positions on both. The complaint stated the organization 'does not have other sources of grant funding to replace the federal awards' and 'must immediately terminate its work on its dozens of programs', adding that 'Within a few weeks, AAP will have to begin laying off employees dedicated to this critically important work.' HHS said in letters to the AAP that the grants no longer aligned with the department's priorities, and it denies the retaliation allegation.\n\nUpdate 2026-11-08: On January 11, 2026, U.S. District Judge Beryl Howell granted the AAP a preliminary injunction, finding the evidence showed HHS likely had a 'retaliatory motive' and that the AAP was likely to prevail on its First Amendment claim; she cited 'pejorative' statements by HHS officials as showing 'clear animus' toward the group. The order bars HHS from 'enforcing or otherwise giving effect to the terminations' and requires the CDC and HRSA to disburse funds on the grants 'in the customary manner and in customary timeframes', while leaving HHS free to end them 'for permissible and demonstrably nonretaliatory reasons.' On March 10, 2026, the court stayed the case through September 30, 2026. On August 28 the parties jointly asked to extend the stay through March 30, 2027, with HHS reserving the right to act on any grant non-compliance; the court ruled on that motion August 31, and the case is listed as stayed with a joint status report due April 30, 2027.",
     "primary_proponent": {
       "name": "Robert F. Kennedy Jr.",
       "role": "Secretary of Health and Human Services",
@@ -36323,42 +36411,58 @@
           "source": "NBC News, citing AAP's lawsuit"
         }
       ],
-      "caveat": "This entry documents the AAP's own allegations as stated in its complaint and public statements; the retaliation claim had not been adjudicated by a court as of this entry's writing, and HHS's own stated rationale for the terminations was not identified in sourcing reviewed."
+      "caveat": "The retaliation claim has not been decided on the merits: the January 2026 preliminary injunction found only that the AAP is likely to succeed. HHS says the grants were cut because they no longer aligned with its priorities and denies retaliation."
     },
-    "confidence_note": "HIGH confidence on the lawsuit's filing, the grant amount, the affected programs, and Del Monte's quote, directly sourced to NBC News's report.",
-    "pull_quote": "AAP CEO Mark Del Monte said the organization would be “forced to begin laying off employees” within weeks without the funding.",
-    "last_verified": "2026-09-13",
+    "confidence_note": "HIGH confidence on the lawsuit's filing, the grant amount, the affected programs, and the complaint's layoff warning, directly sourced to NBC News's report. Update 2026-11-08: HIGH confidence on the January 11, 2026 preliminary injunction (AP via NPR; Reuters) and the case's stay, sourced to the parties' August 28, 2026 joint motion and Georgetown's Health Care Litigation Tracker docket summary.",
+    "pull_quote": "“Within a few weeks, AAP will have to begin laying off employees dedicated to this critically important work,” the AAP's lawsuit warned.",
+    "last_verified": "2026-11-08",
     "date_added": "2026-09-13",
     "sources": [
       {
         "name": "NBC News -- Pediatrics group sues HHS over cutting funds for children's health programs",
         "url": "https://www.nbcnews.com/politics/politics-news/pediatrics-group-sues-hhs-cutting-funds-childrens-health-programs-rcna250900"
+      },
+      {
+        "name": "NPR (Associated Press) -- A judge orders HHS to restore children's health funding as a lawsuit continues",
+        "url": "https://www.npr.org/2026/01/12/g-s1-105740/a-judge-orders-hhs-to-restore-childrens-health-funding-as-a-lawsuit-continues"
+      },
+      {
+        "name": "Reuters (via Yahoo News) -- US judge blocks Trump administration from canceling pediatrics group's grants",
+        "url": "https://www.yahoo.com/news/articles/us-judge-blocks-trump-administration-145407654.html"
+      },
+      {
+        "name": "AAP v. HHS, No. 25-4505 (D.D.C.) -- Joint Motion to Extend the Stay, Aug. 28, 2026 (Georgetown Health Care Litigation Tracker)",
+        "url": "https://litigationtracker.law.georgetown.edu/wp-content/uploads/2025/12/AAP-v-HHS_2026.08.28_JOINT-MOTION-TO-EXTEND-STAY.pdf"
+      },
+      {
+        "name": "Georgetown Health Care Litigation Tracker -- American Academy of Pediatrics v. Department of Health and Human Services",
+        "url": "https://litigationtracker.law.georgetown.edu/litigation/american-academy-of-pediatrics-v-department-of-health-and-human-services/"
       }
     ],
     "section_summaries": {
-      "what_changed": "HHS abruptly cut nearly $12 million in AAP grants funding infant-death prevention, rural pediatric care, and teen mental health programs; the AAP sued December 24, 2025, alleging the cuts were retaliation for its public opposition to RFK Jr.'s vaccine and gender-affirming-care positions.",
+      "what_changed": "HHS cut seven AAP grants worth nearly $12M in December 2025; AAP sued, alleging retaliation for its advocacy. A judge ordered the funding kept in place in January 2026.",
       "estimated_impact": "AAP warned it would have to lay off employees and shut down dozens of programs within weeks without an injunction, since it has no alternate funding source to replace the federal grants.",
-      "confidence_note": "HIGH confidence, directly sourced to NBC News's report on the lawsuit."
+      "confidence_note": "HIGH confidence, sourced to NBC News on the lawsuit, AP and Reuters on the injunction, and the court's docket filings."
     },
-    "last_substantive_update": "2026-09-13",
+    "last_substantive_update": "2026-11-08",
     "glance": {
       "who": "Robert F. Kennedy Jr. (HHS Secretary)",
-      "what": "Cut ~$12M in AAP pediatric grants; AAP sued, alleging retaliation for opposing Kennedy's positions",
+      "what": "Cut ~$12M in AAP pediatric grants; a judge found likely retaliation and blocked the cuts",
       "harm": {
         "kind": "rights",
         "certainty": "alleged",
         "who": "AAP pediatric health programs"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-11-08"
     },
     "status_stage": "In court",
     "key_events": [
       {
-        "date": "2025-12",
-        "text": "HHS abruptly ends nearly $12 million in grants to the American Academy of Pediatrics",
+        "date": "2025-12-16",
+        "text": "HHS abruptly ends seven grants worth nearly $12 million to the American Academy of Pediatrics",
         "turning_point": true,
         "sources": [
-          "https://www.nbcnews.com/politics/politics-news/pediatrics-group-sues-hhs-cutting-funds-childrens-health-programs-rcna250900"
+          "https://www.yahoo.com/news/articles/us-judge-blocks-trump-administration-145407654.html"
         ]
       },
       {
@@ -36368,8 +36472,48 @@
         "sources": [
           "https://www.nbcnews.com/politics/politics-news/pediatrics-group-sues-hhs-cutting-funds-childrens-health-programs-rcna250900"
         ]
+      },
+      {
+        "date": "2026-01-11",
+        "text": "Judge Beryl Howell blocks the cuts, finding HHS likely acted with a retaliatory motive",
+        "turning_point": true,
+        "sources": [
+          "https://www.npr.org/2026/01/12/g-s1-105740/a-judge-orders-hhs-to-restore-childrens-health-funding-as-a-lawsuit-continues",
+          "https://www.yahoo.com/news/articles/us-judge-blocks-trump-administration-145407654.html"
+        ]
+      },
+      {
+        "date": "2026-03-10",
+        "text": "The court stays the case through September 30, 2026; the parties later seek to extend it to March 2027",
+        "sources": [
+          "https://litigationtracker.law.georgetown.edu/wp-content/uploads/2025/12/AAP-v-HHS_2026.08.28_JOINT-MOTION-TO-EXTEND-STAY.pdf"
+        ]
       }
-    ]
+    ],
+    "timeline": {
+      "what_changed": {
+        "base": "In December 2025, HHS abruptly terminated seven federal grants, worth nearly $12 million, to the American Academy of Pediatrics (AAP), the nation's leading pediatric medical association; AAP said the grants were canceled on December 16. The grants, administered through the CDC and the Health Resources and Services Administration (HRSA), funded public health programs the AAP runs, including **efforts to prevent sudden unexpected infant death, strengthen pediatric care in rural communities, and support teens facing substance use and mental health challenges**; AAP CEO Mark Del Monte said the programs fund services like hearing screenings for newborns and safe sleep campaigns. On December 24, 2025, the AAP sued HHS in U.S. District Court for the District of Columbia to block the cuts, alleging HHS terminated the funding in retaliation for the group speaking out against the administration's positions -- the AAP has backed pediatric vaccination and access to gender-affirming care and has publicly opposed HHS Secretary Robert F. Kennedy Jr.'s positions on both. The complaint stated the organization 'does not have other sources of grant funding to replace the federal awards' and 'must immediately terminate its work on its dozens of programs', adding that 'Within a few weeks, AAP will have to begin laying off employees dedicated to this critically important work.' HHS said in letters to the AAP that the grants no longer aligned with the department's priorities, and it denies the retaliation allegation.",
+        "updates": [
+          {
+            "date": "2026-11-08",
+            "label": "Update",
+            "text": "Update 2026-11-08: On January 11, 2026, U.S. District Judge Beryl Howell granted the AAP a preliminary injunction, finding the evidence showed HHS likely had a 'retaliatory motive' and that the AAP was likely to prevail on its First Amendment claim; she cited 'pejorative' statements by HHS officials as showing 'clear animus' toward the group. The order bars HHS from 'enforcing or otherwise giving effect to the terminations' and requires the CDC and HRSA to disburse funds on the grants 'in the customary manner and in customary timeframes', while leaving HHS free to end them 'for permissible and demonstrably nonretaliatory reasons.' On March 10, 2026, the court stayed the case through September 30, 2026. On August 28 the parties jointly asked to extend the stay through March 30, 2027, with HHS reserving the right to act on any grant non-compliance; the court ruled on that motion August 31, and the case is listed as stayed with a joint status report due April 30, 2027.",
+            "effective_date": "2026-11-08"
+          }
+        ]
+      },
+      "confidence_note": {
+        "base": "HIGH confidence on the lawsuit's filing, the grant amount, the affected programs, and the complaint's layoff warning, directly sourced to NBC News's report.",
+        "updates": [
+          {
+            "date": "2026-11-08",
+            "label": "Update",
+            "text": "Update 2026-11-08: HIGH confidence on the January 11, 2026 preliminary injunction (AP via NPR; Reuters) and the case's stay, sourced to the parties' August 28, 2026 joint motion and Georgetown's Health Care Litigation Tracker docket summary.",
+            "effective_date": "2026-11-08"
+          }
+        ]
+      }
+    }
   },
   {
     "id": "hhs-ahrq-grant-impoundment-rif-2025-2026",
@@ -41089,21 +41233,21 @@
     "title": "Indian Health Service Flagged 'Vaccines' and 'Immunizations' as Restricted Buzzwords, Cutting Vaccine Outreach on Navajo Nation During Active Measles Outbreaks",
     "institution": "Indian Health Service (IHS), Department of Health and Human Services",
     "domain": "protection_rollback",
-    "status": "Ongoing as of the reporting reviewed (through mid-October 2025) -- no reversal of the language-approval policy identified.",
+    "status": "No reversal, legal challenge or watchdog inquiry has been reported for the approval requirement on 'vaccines' and 'immunizations' since ProPublica's November 2025 investigation. HHS said the rewritten messaging encourages “shared decision-making.”",
     "date_of_action": "2025-03 (language restrictions implemented) through 2025-10 (reduced vaccine-clinic outreach documented)",
-    "what_changed": "In March 2025, the Indian Health Service reclassified the words 'vaccines' and 'immunizations' from 'low-risk' to 'medium-risk' terms requiring public-information-officer approval before use in social media posts, presentations, and printed materials. An internal email from Ryan Goldtooth, a public information officer at a Navajo Nation hospital, instructed staff to remove existing social media posts containing those terms. The practical effect was a steep reduction in vaccine-related messaging: through mid-October 2025, IHS published far fewer Facebook posts promoting vaccine clinics than in the same period the prior year, and the surviving posts shifted from actively promoting immunization benefits to framing vaccination as a personal choice, advising patients to consult providers about their 'options regarding vaccines' rather than encouraging specific shots. **During active measles outbreaks in the region, IHS issued only minimal advisories even as independent tribal health facilities not subject to the same restrictions continued actively promoting vaccination.** Dr. Harry Brown, a physician and epidemiologist who spent 26 years with IHS before leaving in 2016, said of the policy, 'it seems to me that they're trying to put up barriers,' adding he had never previously encountered efforts to restrict vaccine messaging during his tenure. An unnamed physician who left IHS in 2025 said, 'I can't keep people safe. I don't have any of the words anymore to say anything I need to say.'",
+    "what_changed": "In March 2025, the Indian Health Service reclassified the words 'vaccines' and 'immunizations' from 'low-risk' to 'medium-risk' terms requiring public-information-officer approval before use in social media posts, presentations, and printed materials. An internal email from Ryan Goldtooth, a public information officer at a Navajo Nation hospital, instructed staff to remove existing social media posts containing those terms. The practical effect was a steep reduction in vaccine-related messaging: through mid-October 2025, IHS published far fewer Facebook posts promoting vaccine clinics than in the same period the prior year, and the surviving posts shifted from actively promoting immunization benefits to framing vaccination as a personal choice, advising patients to consult providers about their 'options regarding vaccines' rather than encouraging specific shots. **During active measles outbreaks in the region, IHS issued only minimal advisories even as independent tribal health facilities not subject to the same restrictions continued actively promoting vaccination.** Dr. Harry Brown, a physician and epidemiologist who spent 26 years with IHS before leaving in 2016, said of the policy, 'it seems to me that they're trying to put up barriers,' adding he had never previously encountered efforts to restrict vaccine messaging during his tenure. An unnamed physician who left IHS in 2025 said, 'I can't keep people safe. I don't have any of the words anymore to say anything I need to say.' In a statement to ProPublica, an HHS spokesperson said the redrafting of IHS's public messaging was designed to encourage “shared decision-making” between patients and providers and that IHS “continues to provide accurate, evidence-based information on vaccines and infectious-disease prevention”; the statement did not address what prompted the change. IHS deputy chief medical officer Matthew Clark said the agency's approach to immunizations has remained consistent even though its messaging changed.",
     "primary_proponent": {
       "name": "Indian Health Service leadership, under Robert F. Kennedy Jr.'s HHS",
       "role": "Implemented the vaccine-terminology approval requirement across IHS facilities",
-      "note": "Reporting reviewed connects the restriction to RFK Jr.'s broader reshaping of federal immunization messaging policy, though no single named IHS official is identified as personally directing the specific word-classification decision."
+      "note": "ProPublica says the shift aligns with widely publicized changes within HHS under Kennedy's leadership; no single named IHS official is identified as personally directing the specific word-classification decision."
     },
     "estimated_impact": {
       "summary": "Reduced vaccine-clinic outreach and promotional messaging to Navajo Nation patients during active regional measles outbreaks, at a time when independent tribal health facilities not subject to the same restrictions continued actively promoting vaccination -- creating a documented gap in public health messaging specifically at federally operated facilities.",
       "figures": []
     },
-    "confidence_note": "HIGH confidence, directly sourced to ProPublica's dedicated investigation, including the internal email, the clinician quotes, and the comparative Facebook-posting-frequency finding.",
+    "confidence_note": "HIGH confidence, directly sourced to ProPublica's dedicated investigation, including the internal email, the clinician quotes, and the comparative Facebook-posting-frequency finding. Re-verified 2026-11-08: searches found no reversal of the policy, legal challenge or watchdog inquiry since the investigation was published on November 21, 2025.",
     "pull_quote": "“I can’t keep people safe. I don’t have any of the words anymore to say anything I need to say,” said a physician who left the Indian Health Service in 2025.",
-    "last_verified": "2026-09-13",
+    "last_verified": "2026-11-08",
     "date_added": "2026-09-13",
     "sources": [
       {
@@ -41112,11 +41256,11 @@
       }
     ],
     "section_summaries": {
-      "what_changed": "IHS reclassified 'vaccines' and 'immunizations' as restricted terms requiring approval in March 2025, sharply cutting vaccine-clinic social media outreach on Navajo Nation through October 2025, even during active regional measles outbreaks.",
-      "estimated_impact": "Reduced public vaccine messaging at federally operated Navajo Nation health facilities during active measles outbreaks, while independent tribal facilities not subject to the restriction kept promoting vaccination.",
+      "what_changed": "In March 2025 IHS made 'vaccines' and 'immunizations' approval-only terms, and its Navajo Nation vaccine-clinic posts fell sharply amid nearby measles outbreaks.",
+      "estimated_impact": "Less public vaccine messaging at federal Navajo Nation facilities during measles outbreaks, while independent tribal facilities kept promoting vaccination.",
       "confidence_note": "HIGH confidence, directly sourced to ProPublica's dedicated investigation."
     },
-    "last_substantive_update": "2026-09-13",
+    "last_substantive_update": "2026-11-08",
     "glance": {
       "who": "Indian Health Service, under HHS Secretary Kennedy",
       "what": "Reportedly made 'vaccines' an approval-only term, cutting vaccine-clinic outreach on Navajo Nation",
@@ -41125,7 +41269,7 @@
         "certainty": "alleged",
         "who": "Navajo Nation patients during measles"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-11-08"
     },
     "status_stage": "Unchallenged",
     "key_events": [
@@ -41138,8 +41282,8 @@
         ]
       },
       {
-        "date": "2025-10",
-        "text": "ProPublica finds IHS posted far fewer vaccine clinic messages through mid-October than a year earlier",
+        "date": "2025-11-21",
+        "text": "ProPublica reports IHS posted far fewer vaccine clinic notices through mid-October than a year earlier",
         "sources": [
           "https://www.propublica.org/article/indian-health-service-vaccine-censorship"
         ]
@@ -49583,13 +49727,13 @@
     "title": "NIH Suspended a Tuberculosis Researcher's Grant Under a 'Dangerous Gain-of-Function' Label She Says Misdescribes Standard Techniques That Make the Bacterium Weaker, Not More Dangerous",
     "institution": "National Institutes of Health (NIH)",
     "domain": "research_suppression",
-    "status": "Suspension in effect as of the researcher's account published October 6, 2025; no reversal identified as of this entry's writing.",
+    "status": "No reversal of Stanley's suspension found. NIH's July 28, 2026 notice on a new policy barring funding for 'dangerous gain-of-function' research said all work flagged in its 2025 review will \"remain paused until NIH specific implementation requirements are established.\"",
     "date_of_action": "2025-05 (executive order on gain-of-function research) through 2025-07-11 (NIH suspension letter to Sarah Stanley)",
-    "what_changed": "Following a May 2025 executive order targeting 'dangerous gain-of-function research,' NIH conducted an internal review of federally funded pathogen studies and suspended a number of them, including tuberculosis research. On July 11, 2025, Sarah Stanley, an associate professor at UC Berkeley studying Mycobacterium tuberculosis, received an NIH letter ordering her to halt her research, citing the executive order's 'dangerous gain-of-function' definition. Stanley disputed the characterization: her lab's techniques include creating mutations that disable specific bacterial genes -- which she said makes the bacterium 'less virulent, the opposite goal of gain-of-function research' -- and using kanamycin-resistance markers (kanamycin is not used in human medicine) purely as a molecular tool to identify modified strains, with the resulting bacteria 'fully treatable by all clinically used antibiotics' and unable to 'spread drug resistance.' Stanley noted that **tuberculosis 'kills more people than any other infectious disease' globally and pointed to a 2024-25 Kansas City-area outbreak that exceeded 100 cases as evidence the disease remains an active domestic threat that her research was intended to address**. Other outlets (Science/AAAS, Treatment Action Group) reported the suspension affected more than 40 studies government-wide and that NIH Principal Deputy Director Matthew Memoli personally directed the review's implementation, but these broader figures and Memoli's specific role could not be independently confirmed via direct fetch for this entry and are not asserted here as verified fact.",
+    "what_changed": "Following a May 2025 executive order targeting 'dangerous gain-of-function research,' NIH conducted an internal review of federally funded pathogen studies and suspended a number of them, including tuberculosis research. On July 11, 2025, Sarah Stanley, an associate professor at UC Berkeley studying Mycobacterium tuberculosis, received an NIH letter ordering her to halt her research, citing the executive order's 'dangerous gain-of-function' definition. Stanley disputed the characterization: her lab's techniques include creating mutations that disable specific bacterial genes -- which she said makes the bacterium 'less virulent, the opposite goal of gain-of-function research' -- and using kanamycin-resistance markers (kanamycin is not used in human medicine) purely as a molecular tool to identify modified strains, with the resulting bacteria 'fully treatable by all clinically used antibiotics' and unable to 'spread drug resistance.' Stanley noted that **tuberculosis 'kills more people than any other infectious disease' globally and pointed to a 2024-25 Kansas City-area outbreak that exceeded 100 cases as evidence the disease remains an active domestic threat that her research was intended to address**. The Washington Post, citing internal emails and two career staffers speaking anonymously, reported that NIH tuberculosis program officers had flagged five TB studies as fitting the order's definition and 11 more that used common techniques 'widely used by microbiologists for decades'; acting infectious-disease institute director Jeffery Taubenberger agreed on June 23 that the 11 should not be paused. On July 2 he relayed that Matthew Memoli, NIH's politically appointed No. 2, wanted all 16 classified as dangerous and paused, and on July 9 NIH sent letters halting funding to the 11 additional TB researchers. A July 3 draft memo from Memoli to White House officials said NIH was suspending funding for 40 experiments involving a range of pathogens. Treatment Action Group counted at least 22 suspended TB awards across 10 states.\n\nUpdate 2026-11-08: On July 28, 2026, NIH announced a new government-wide policy that explicitly prohibits federal support for 'dangerous gain-of-function' research. NIH said all research flagged as potential dangerous gain-of-function work under its 2025 notices would \"remain paused until NIH specific implementation requirements are established,\" and that the suspension will be lifted once agencies publish implementation guidance (due within 120 days) and set up an independent third-party review body (due within 90 days).",
     "primary_proponent": {
       "name": "National Institutes of Health, implementing a May 2025 executive order",
       "role": "Suspended Stanley's federally funded tuberculosis research grant",
-      "note": "Sourcing directly fetched for this entry does not name a specific individual official as personally responsible for Stanley's suspension; other outlets name NIH Principal Deputy Director Matthew Memoli in a broader role, but this entry does not assert that claim as independently verified."
+      "note": "Stanley's account does not name the official responsible for her suspension. The Washington Post, citing internal emails and anonymous staffers, reported that NIH Principal Deputy Director Matthew Memoli overrode career staff to have 11 additional tuberculosis studies, deemed safe by reviewers, added to the suspension list."
     },
     "estimated_impact": {
       "summary": "Halted active tuberculosis research using an executive-order definition of 'dangerous gain-of-function research' that at least one affected researcher argues does not accurately describe standard, safety-focused genetic techniques, potentially slowing work on a disease that kills more people worldwide than any other infectious disease and that had caused a real, ongoing U.S. outbreak.",
@@ -49598,26 +49742,48 @@
           "metric": "Kansas City-area tuberculosis outbreak cited as context",
           "value": ">100 cases (2024-25)",
           "source": "STAT News, citing Sarah Stanley"
+        },
+        {
+          "metric": "Experiments NIH said it was suspending (Memoli draft memo, July 3, 2025)",
+          "value": "40",
+          "source": "The Washington Post"
+        },
+        {
+          "metric": "Tuberculosis research awards suspended",
+          "value": "at least 22",
+          "source": "Treatment Action Group count"
         }
       ],
-      "caveat": "Other outlets identified via WebSearch (Science/AAAS, Treatment Action Group) report the suspension affected more than 40 studies government-wide, with a subset involving tuberculosis, but this broader scale could not be independently confirmed by direct fetch for this entry and is not included as a verified figure -- this entry documents only Stanley's individually confirmed case."
+      "caveat": "The 40-experiment figure comes from a draft memo described by the Washington Post; the count of at least 22 tuberculosis awards is Treatment Action Group's own tally, which it says exceeds earlier media counts. Stanley's case is the one documented in her own account."
     },
-    "confidence_note": "HIGH confidence on Sarah Stanley's individual case, her technical rebuttal, and the Kansas City outbreak context, directly sourced to STAT News's first-person account. The broader government-wide suspension scale (>40 studies) and Matthew Memoli's specific role, reported by other outlets, could not be independently confirmed by direct fetch -- science.org returned a 403 and washingtonpost.com's original report also could not be fetched -- and are deliberately excluded from this entry's factual claims rather than asserted on WebSearch synthesis alone.",
+    "confidence_note": "HIGH confidence on Sarah Stanley's individual case, her technical rebuttal and the Kansas City outbreak context, sourced to her first-person STAT News account. The broader suspension (40 experiments) and Matthew Memoli's role rest on the Washington Post's report from internal emails and anonymous staffers; the at-least-22 tuberculosis award count is Treatment Action Group's. The pause's continuation is sourced to NIH's own July 28, 2026 notice.",
     "pull_quote": "Stanley said her technique makes the bacterium “less virulent, the opposite goal of gain-of-function research,” and that the modified strains remain “fully treatable by all clinically used antibiotics.”",
-    "last_verified": "2026-09-13",
+    "last_verified": "2026-11-08",
     "date_added": "2026-09-13",
     "sources": [
       {
         "name": "STAT News -- The NIH ordered me to stop my 'dangerous' gain-of-function research. It isn't dangerous at all",
         "url": "https://www.statnews.com/2025/10/06/gain-of-function-research-tuberculosis-expert-nih/"
+      },
+      {
+        "name": "The Washington Post -- Trump officials halt 'dangerous' NIH research, overriding career scientists",
+        "url": "https://www.washingtonpost.com/science/2025/07/16/nih-research-viruses-trump-administration/"
+      },
+      {
+        "name": "Treatment Action Group -- Statement on Suspension of TB Funding Over White House Gain-of-Function Fictions",
+        "url": "https://www.treatmentactiongroup.org/statement/treatment-action-group-statement-on-suspension-of-tb-funding-over-white-house-gain-of-function-fictions/"
+      },
+      {
+        "name": "NIH -- NOT-OD-26-101: USG Policy for Stopping High-Risk Life Sciences Research",
+        "url": "https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-101.html"
       }
     ],
     "section_summaries": {
-      "what_changed": "NIH suspended UC Berkeley researcher Sarah Stanley's tuberculosis grant under a May 2025 executive order's 'dangerous gain-of-function' definition; Stanley argues her techniques actually weaken the bacterium and pose no safety risk, while highlighting an active Kansas City TB outbreak her work was meant to help address. Other reporting suggests the suspension was part of a broader, government-wide review, though this entry could not independently confirm that broader scale.",
-      "estimated_impact": "Halted active tuberculosis research based on a contested application of the gain-of-function definition, potentially slowing work on the world's deadliest infectious disease during a live domestic outbreak.",
-      "confidence_note": "HIGH confidence on Stanley's individual case, directly sourced to STAT News; broader scale claims from other outlets could not be directly fetched and are excluded rather than asserted."
+      "what_changed": "NIH halted TB researcher Sarah Stanley's grant as 'dangerous gain-of-function'; she says her methods weaken TB. Memoli added safe TB studies, the Post reports; a 2026 policy keeps them paused.",
+      "estimated_impact": "Halted tuberculosis research, including at least 22 TB awards by one count, under a contested definition, as the world's deadliest infectious disease caused a U.S. outbreak.",
+      "confidence_note": "HIGH on Stanley's case (her STAT account); broader scale and Memoli's role rest on Washington Post reporting and a TAG count; the 2026 pause on NIH's own notice."
     },
-    "last_substantive_update": "2026-09-13",
+    "last_substantive_update": "2026-11-08",
     "glance": {
       "who": "NIH, under a May 2025 executive order",
       "what": "Suspended a Berkeley researcher's tuberculosis grant under an executive order's 'gain-of-function' label",
@@ -49626,7 +49792,7 @@
         "certainty": "alleged",
         "who": "Tuberculosis research during an outbreak"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-11-08"
     },
     "status_stage": "Unchallenged",
     "key_events": [
@@ -49634,9 +49800,17 @@
         "date": "2025-05",
         "text": "An executive order targets 'dangerous gain-of-function research'; NIH then reviews funded pathogen studies",
         "sources": [
-          "https://www.statnews.com/2025/10/06/gain-of-function-research-tuberculosis-expert-nih/"
+          "https://www.statnews.com/2025/10/06/gain-of-function-research-tuberculosis-expert-nih/",
+          "https://www.washingtonpost.com/science/2025/07/16/nih-research-viruses-trump-administration/"
         ],
         "turning_point": true
+      },
+      {
+        "date": "2025-07-02",
+        "text": "NIH's No. 2, Matthew Memoli, wants all 16 flagged TB studies paused, overruling career staff, the Post reports",
+        "sources": [
+          "https://www.washingtonpost.com/science/2025/07/16/nih-research-viruses-trump-administration/"
+        ]
       },
       {
         "date": "2025-07-11",
@@ -49652,8 +49826,29 @@
         "sources": [
           "https://www.statnews.com/2025/10/06/gain-of-function-research-tuberculosis-expert-nih/"
         ]
+      },
+      {
+        "date": "2026-07-28",
+        "text": "New federal policy bans funding for 'dangerous gain-of-function' research; NIH keeps flagged work paused",
+        "turning_point": true,
+        "sources": [
+          "https://grants.nih.gov/grants/guide/notice-files/NOT-OD-26-101.html"
+        ]
       }
-    ]
+    ],
+    "timeline": {
+      "what_changed": {
+        "base": "Following a May 2025 executive order targeting 'dangerous gain-of-function research,' NIH conducted an internal review of federally funded pathogen studies and suspended a number of them, including tuberculosis research. On July 11, 2025, Sarah Stanley, an associate professor at UC Berkeley studying Mycobacterium tuberculosis, received an NIH letter ordering her to halt her research, citing the executive order's 'dangerous gain-of-function' definition. Stanley disputed the characterization: her lab's techniques include creating mutations that disable specific bacterial genes -- which she said makes the bacterium 'less virulent, the opposite goal of gain-of-function research' -- and using kanamycin-resistance markers (kanamycin is not used in human medicine) purely as a molecular tool to identify modified strains, with the resulting bacteria 'fully treatable by all clinically used antibiotics' and unable to 'spread drug resistance.' Stanley noted that **tuberculosis 'kills more people than any other infectious disease' globally and pointed to a 2024-25 Kansas City-area outbreak that exceeded 100 cases as evidence the disease remains an active domestic threat that her research was intended to address**. The Washington Post, citing internal emails and two career staffers speaking anonymously, reported that NIH tuberculosis program officers had flagged five TB studies as fitting the order's definition and 11 more that used common techniques 'widely used by microbiologists for decades'; acting infectious-disease institute director Jeffery Taubenberger agreed on June 23 that the 11 should not be paused. On July 2 he relayed that Matthew Memoli, NIH's politically appointed No. 2, wanted all 16 classified as dangerous and paused, and on July 9 NIH sent letters halting funding to the 11 additional TB researchers. A July 3 draft memo from Memoli to White House officials said NIH was suspending funding for 40 experiments involving a range of pathogens. Treatment Action Group counted at least 22 suspended TB awards across 10 states.",
+        "updates": [
+          {
+            "date": "2026-11-08",
+            "label": "Update",
+            "text": "Update 2026-11-08: On July 28, 2026, NIH announced a new government-wide policy that explicitly prohibits federal support for 'dangerous gain-of-function' research. NIH said all research flagged as potential dangerous gain-of-function work under its 2025 notices would \"remain paused until NIH specific implementation requirements are established,\" and that the suspension will be lifted once agencies publish implementation guidance (due within 120 days) and set up an independent third-party review body (due within 90 days).",
+            "effective_date": "2026-11-08"
+          }
+        ]
+      }
+    }
   },
   {
     "id": "nih-impoundment-gao-finding-trump2",
@@ -72172,16 +72367,16 @@
     "title": "USDA Mass Firings Gutted Food-Safety and Import-Inspection Staff, With a Reinstatement Order Not Immediately Followed",
     "institution": "U.S. Department of Agriculture (USDA) -- Food Safety and Inspection Service (FSIS) and Animal and Plant Health Inspection Service (APHIS)",
     "domain": "staff_office_cuts",
-    "status": "Complete (initial probationary firings reversed under court order, USDA confirmed compliance May 2025; second, larger resignation wave was not reversed)",
+    "status": "Complete. Fired probationary staff were briefly reinstated in March 2025, but the Supreme Court and Fourth Circuit stayed the court orders in April and an MSPB stay lapsed; in September 2025 a judge ruled the firings unlawful but did not order reinstatement. The larger buyout wave was not reversed.",
     "date_of_action": "2025-02 (probationary firings begin) through 2025-12 (USDA OIG report confirms 20,000+ final H1-2025 tally)",
-    "what_changed": "Beginning in February 2025, USDA terminated at least 5,692 probationary employees as part of the government-wide firing wave, including roughly 200 inspectors in APHIS's Plant Protection and Quarantine (PPQ) program -- the unit that screens agricultural imports at ports of entry and detects invasive pests and diseases before they can spread domestically. (A separate, narrower incident the same month -- USDA's accidental firing of bird-flu-response staff, later reversed -- is tracked in its own entry in this database.) On March 13, 2025, the U.S. District Court for the Northern District of California issued a preliminary injunction ordering the immediate reinstatement of the terminated probationary employees; the Ninth Circuit denied USDA's request for a stay and upheld the injunction on March 17. Reinstatement did not happen immediately: **on March 25, Rep. Jill Tokuda and 32 House colleagues sent USDA a letter urging urgent rehiring of the terminated agricultural inspectors, warning the delay heightened the risk that unscreened imports could introduce invasive pests and diseases into U.S. agriculture.** USDA did not confirm compliance with the reinstatement order until May 2025, when it sent formal written notices to the affected probationary employees. By then a second, much larger wave of departures was already underway: more than 15,000 USDA employees -- over 15% of the department's workforce -- accepted deferred-resignation buyouts across two rounds (roughly 3,900 in the first round, 11,300 more confirmed by May 5, 2025), including hundreds of food-safety inspectors and technical experts. A subsequent analysis of USDA's own workforce data found FSIS (which inspects meat, poultry, and egg products) lost about 8% of its staff and APHIS (import and pest inspection) lost about 20% of its staff between January and March 2025 alone, with departing staff averaging 16-21 years of experience and 63% of FSIS separations specifically inspectors. Facing internal warnings that the departing employees' work was 'essential to securing the safety of the American food and agriculture system,' USDA reversed course on the ongoing buyout campaign in an April 23, 2025 email urging employees who had already accepted resignation offers to 'reconsider,' calling the work 'vital, mission critical' -- but the reconsideration window applied only to the second round of departures still in progress, not to employees who had already left the agency. Added 2026-09-12: a USDA Office of Inspector General report, released December 2025, provided the first official confirmed final tally covering the full January-June 2025 window -- USDA lost more than 20,000 employees, nearly one-fifth of its entire workforce, roughly three-quarters of them (15,114) via the Deferred Resignation Program already documented above. The OIG's per-agency breakdown showed losses concentrated well beyond the food-safety/import-inspection units already detailed here: the U.S. Forest Service lost 5,860 employees (16% of its workforce), Rural Development -- which administers housing, utilities, and economic-development programs in small towns -- lost 36% of its staff, the Natural Resources Conservation Service lost 2,673 employees (22%), and APHIS's losses (already documented above at 20% for January-March alone) reached 25% by the report's full-period tally, with ARS (Agricultural Research Service) at 23%. Because the OIG report's window ends in June 2025, actual cumulative attrition is understood to be higher still.",
+    "what_changed": "Beginning in February 2025, USDA terminated at least 5,692 probationary employees as part of the government-wide firing wave, including roughly 200 inspectors in APHIS's Plant Protection and Quarantine (PPQ) program -- the unit that screens agricultural imports at ports of entry and detects invasive pests and diseases before they can spread domestically. (A separate, narrower incident the same month -- USDA's accidental firing of bird-flu-response staff, later reversed -- is tracked in its own entry in this database.) Orders to undo the firings followed: on March 5, 2025, the Merit Systems Protection Board granted a 45-day stay of USDA's probationary terminations, and USDA said it would put all terminated probationary employees back in pay status, with back pay, by March 12; on March 13, the U.S. District Court for the Northern District of California (Judge William Alsup) issued a preliminary injunction that found USDA's February 13-14 terminations unlawful and ordered reinstatement at USDA and five other departments, and a federal judge in Maryland ordered reinstatement in a separate suit brought by states. On March 17 a divided Ninth Circuit panel refused the administration's request for an immediate administrative stay of Alsup's order. Reinstatement did not happen immediately: USDA said on March 19 that the employees had been restored to their prior employment status but placed on paid administrative leave under a phased return-to-duty plan, and **on March 25, Rep. Jill Tokuda and 32 House colleagues sent USDA a letter urging urgent rehiring of the terminated agricultural inspectors, warning the delay heightened the risk that unscreened imports could introduce invasive pests and diseases into U.S. agriculture.** The reinstatement orders did not hold: on April 8 the Supreme Court stayed Alsup's injunction, finding the nonprofit plaintiffs' allegations insufficient to establish standing; on April 9 the Fourth Circuit stayed the Maryland order, a ruling FedScoop reported enabled the administration to again terminate reinstated workers; and the MSPB stay ran to April 18 after no extension was requested. In May 2025, in compliance with a Northern District of California order, USDA sent a written statement directly to the terminated probationary employees. In September 2025 Alsup ruled that the Office of Personnel Management's firing directive was unlawful and ordered USDA and the other departments to correct the fired employees' personnel files to show the terminations were not based on performance or conduct, but declined to order reinstatement, writing that 'too much water has now passed under the bridge' since the Supreme Court stayed his preliminary ruling. By then a second, much larger wave of departures was already underway: more than 15,000 USDA employees -- over 15% of the department's workforce -- accepted deferred-resignation buyouts across two rounds (roughly 3,900 in the first round, 11,300 more confirmed by May 5, 2025), including hundreds of food-safety inspectors and technical experts. A subsequent analysis of federal Office of Personnel Management (OPM) workforce data found FSIS (which inspects meat, poultry, and egg products) lost about 8% of its staff and APHIS (import and pest inspection) lost about 20% of its staff between January and March 2025 alone, with separated FSIS employees averaging 16 years of service and more than 63% of them from the agency's investigations group, which includes inspectors. Facing internal warnings that the departing employees' work was 'essential to securing the safety of the American food and agriculture system,' USDA reversed course on the ongoing buyout campaign in an April 23, 2025 email urging employees who had already accepted resignation offers to 'reconsider,' calling the work 'vital, mission critical' -- but the reconsideration window applied only to the second round of departures still in progress, not to employees who had already left the agency. Added 2026-09-12: a USDA Office of Inspector General report, released December 2025, provided the first official confirmed final tally covering the full January-June 2025 window -- USDA lost more than 20,000 employees, nearly one-fifth of its entire workforce, roughly three-quarters of them (15,114) via the Deferred Resignation Program already documented above. The OIG's per-agency breakdown showed losses concentrated well beyond the food-safety/import-inspection units already detailed here: the U.S. Forest Service lost 5,860 employees (16% of its workforce), Rural Development -- which administers housing, utilities, and economic-development programs in small towns -- lost 36% of its staff, the Natural Resources Conservation Service lost 2,673 employees (22%), and APHIS's losses (already documented above at 20% for January-March alone) reached 25% by the report's full-period tally, with ARS (Agricultural Research Service) at 23%. Because the OIG report's window ends in June 2025, actual cumulative attrition is understood to be higher still.",
     "primary_proponent": {
       "name": "Brooke Rollins",
       "role": "Secretary of Agriculture",
       "note": "Oversaw both the probationary firings and the deferred-resignation buyout programs, while publicly stating 'If you are FSA or frontline or with the farmers, you are not eligible to take early retirement' -- a claim in tension with the hundreds of frontline food-safety and import-inspection staff who did depart through the programs she ran, and with the department's own April 2025 email urging 'vital, mission critical' staff to reconsider resigning."
     },
     "estimated_impact": {
-      "summary": "The cuts hit the specific functions responsible for stopping unsafe food and invasive pests before they reach the public: import screening at ports of entry, meat/poultry/egg plant inspection, and pest/disease detection. USDA's own workforce data, reviewed by an agricultural-policy nonprofit, documented double-digit staffing losses at the agencies responsible for import and pest inspection within the cuts' first two months, and advocacy groups warned of growing inspection gaps at small and mid-sized processing plants.",
+      "summary": "The cuts hit the specific functions responsible for stopping unsafe food and invasive pests before they reach the public: import screening at ports of entry, meat/poultry/egg plant inspection, and pest/disease detection. Federal OPM workforce data, reviewed by an agricultural-policy nonprofit, documented double-digit staffing losses at the agencies responsible for import and pest inspection within the cuts' first two months, and advocacy groups warned of growing inspection gaps at small and mid-sized processing plants.",
       "figures": [
         {
           "metric": "USDA probationary employees terminated (Feb-March 2025)",
@@ -72196,12 +72391,12 @@
         {
           "metric": "APHIS staffing loss, January-March 2025 (deferred resignation + separations)",
           "value": "~20%",
-          "source": "National Sustainable Agriculture Coalition analysis of USDA workforce data"
+          "source": "National Sustainable Agriculture Coalition analysis of OPM workforce data"
         },
         {
-          "metric": "FSIS staffing loss, January-March 2025 (63% of departures were inspectors)",
+          "metric": "FSIS staffing loss, January-March 2025 (more than 63% of those who separated were in the investigations group, which includes inspectors)",
           "value": "~8%",
-          "source": "National Sustainable Agriculture Coalition analysis of USDA workforce data"
+          "source": "National Sustainable Agriculture Coalition analysis of OPM workforce data"
         },
         {
           "metric": "Total USDA workforce loss, January-June 2025 (final confirmed tally)",
@@ -72209,16 +72404,16 @@
           "source": "USDA Office of Inspector General report, December 2025"
         }
       ],
-      "caveat": "USDA has characterized the larger, second wave of departures as voluntary buyouts rather than forced firings -- a meaningful distinction from the initial probationary terminations, which a federal court found required by law to be reversed. The department maintains remaining staff and reassigned resources can absorb the lost capacity, but has not published a detailed accounting of which specific inspection functions were held at pre-cut staffing levels versus which experienced the gaps outside groups have documented."
+      "caveat": "USDA has characterized the larger, second wave of departures as voluntary buyouts rather than forced firings -- a meaningful distinction from the initial probationary terminations, which a federal court later ruled unlawful, though it declined to order the fired employees reinstated. The department maintains remaining staff and reassigned resources can absorb the lost capacity, but has not published a detailed accounting of which specific inspection functions were held at pre-cut staffing levels versus which experienced the gaps outside groups have documented."
     },
-    "confidence_note": "Strong, cross-corroborated sourcing: specialist trade press (Food Safety Magazine's ongoing 2025 timeline), an agricultural-policy nonprofit with direct access to USDA's own workforce data (National Sustainable Agriculture Coalition), investigative reporting (Investigate Midwest), and primary-source congressional correspondence (Rep. Tokuda's letter) and court filings (N.D. Cal. preliminary injunction, Ninth Circuit stay denial) for the reinstatement-order timeline. The FSIS/APHIS-specific staffing-loss percentages trace to USDA's own data as analyzed by NSAC, not third-party estimates. Added 2026-09-12: the 20,000+/nearly-one-fifth final tally and the Forest Service/Rural Development/NRCS per-agency figures are HIGH confidence, sourced to a USDA Office of Inspector General report (a formal government watchdog finding, the strongest available source type) as directly reported by Western Priorities; nytimes.com's own original report on the same OIG findings could not be fetched by the tooling used to verify this entry.",
+    "confidence_note": "Strong, cross-corroborated sourcing: specialist trade press (Food Safety Magazine's ongoing 2025 timeline), an agricultural-policy nonprofit analyzing federal OPM workforce data (National Sustainable Agriculture Coalition), investigative reporting (Investigate Midwest), and primary-source congressional correspondence (Rep. Tokuda's letter) and USDA's own litigation-status statement for the reinstatement timeline, with the Ninth Circuit, Supreme Court and Fourth Circuit rulings and the September 2025 final ruling taken from Courthouse News, Government Executive, FedScoop and Agri-Pulse court reporting. The FSIS/APHIS-specific staffing-loss percentages trace to OPM's federal workforce data as analyzed by NSAC, not third-party estimates. Added 2026-09-12: the 20,000+/nearly-one-fifth final tally and the Forest Service/Rural Development/NRCS per-agency figures are HIGH confidence, sourced to a USDA Office of Inspector General report (a formal government watchdog finding, the strongest available source type) as directly reported by Western Priorities; The New York Times' original report on the same OIG findings is not relied on here.",
     "pull_quote": "Secretary Rollins publicly stated ‘If you are FSA or frontline or with the farmers, you are not eligible to take early retirement’ — a claim in tension with the hundreds of frontline food-safety and import-inspection staff who did depart through the programs she ran.",
     "section_summaries": {
-      "what_changed": "USDA fired thousands of probationary staff including import/pest inspectors, was ordered by a federal court to reinstate them, took until May to confirm compliance, and by then a much larger voluntary-buyout wave had further hollowed out its inspection workforce; a December 2025 USDA Inspector General report later confirmed the department lost over 20,000 employees (nearly one-fifth of its workforce) by mid-2025, with Rural Development (36%) and the Forest Service (5,860 staff) among the hardest-hit units.",
-      "estimated_impact": "USDA's own workforce data shows APHIS (import/pest inspection) lost about a fifth of its staff and FSIS (meat/poultry/egg inspection) lost about a twelfth in just the cuts' first two months, with inspectors making up most FSIS departures.",
-      "confidence_note": "Cross-corroborated by trade press, an agricultural-policy nonprofit citing USDA's own data, investigative reporting, and primary-source court filings and congressional correspondence."
+      "what_changed": "USDA fired thousands of probationary staff; court reinstatement orders were stayed in April 2025, a buyout wave followed, and the IG found 20,000+ staff, nearly a fifth, left by mid-2025.",
+      "estimated_impact": "OPM data show APHIS (import/pest inspection) lost about a fifth of its staff and FSIS (meat/poultry/egg inspection) about a twelfth in early 2025, most FSIS losses in a group including inspectors.",
+      "confidence_note": "Cross-corroborated by trade press, a nonprofit citing federal workforce data, investigative and court reporting, USDA's own statement, congressional letters and a USDA IG report."
     },
-    "last_verified": "2026-09-12",
+    "last_verified": "2026-11-08",
     "date_added": "2026-08-11",
     "sources": [
       {
@@ -72244,43 +72439,69 @@
       {
         "name": "Western Priorities -- USDA lost over 20,000 workers in the first half of 2025",
         "url": "https://westernpriorities.org/2025/12/usda-lost-over-20000-workers-in-the-first-half-of-2025/"
+      },
+      {
+        "name": "USDA -- USDA Status on Workforce Litigation (statement of March 11, 2025, with later updates)",
+        "url": "https://www.usda.gov/about-usda/news/press-releases/2025/03/11/usda-status-update-probationary-employees"
+      },
+      {
+        "name": "Courthouse News Service -- Ninth Circuit rejects Trump bid to stay firing of federal workers (March 17, 2025)",
+        "url": "https://www.courthousenews.com/ninth-circuit-rejects-trump-bid-to-stay-firing-of-federal-workers/"
+      },
+      {
+        "name": "Government Executive -- SCOTUS: Trump can temporarily move forward with mass firing of some probationary employees (April 8, 2025)",
+        "url": "https://www.govexec.com/workforce/2025/04/supreme-court-says-trump-can-temporarily-move-forward-mass-firing-some-probationary-employees/404386/"
+      },
+      {
+        "name": "FedScoop -- Appeals court halts remaining district order that reinstated fired probationary workers (April 2025)",
+        "url": "https://fedscoop.com/appeals-court-halts-remaining-district-order-that-reinstated-fired-probationary-workers/"
+      },
+      {
+        "name": "Agri-Pulse -- Judge finds Trump administration illegally terminated probationary employees (September 15, 2025)",
+        "url": "https://www.agri-pulse.com/articles/23458-judge-finds-trump-administration-illegally-terminated-probationary-employees"
       }
     ],
-    "last_substantive_update": "2026-09-12",
+    "last_substantive_update": "2026-11-08",
     "glance": {
       "who": "Brooke Rollins (Secretary of Agriculture)",
-      "what": "Fired thousands of probationary staff until a court ordered reinstatement; the IG confirmed 20,000+ departures",
+      "what": "Fired thousands of probationary staff; court reinstatement orders were stayed; IG found 20,000+ departures",
       "harm": {
         "kind": "institutional",
         "certainty": "documented",
         "who": "Food-safety and import inspection"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-11-08"
     },
-    "status_stage": "Finding issued",
+    "status_stage": "Court ruled",
     "key_events": [
       {
         "date": "2025-02",
         "text": "USDA fires at least 5,692 probationary workers, including about 200 import and pest inspectors",
         "turning_point": true,
         "sources": [
-          "https://www.food-safety.com/articles/11004-a-2025-timeline-of-us-federal-food-safety-changes-under-the-trump-admin",
           "https://tokuda.house.gov/media/press-releases/rep-tokuda-leads-colleagues-in-urgent-request-to-reinstate-terminated-agricultural-inspectors"
         ]
       },
       {
-        "date": "2025-03-13",
-        "text": "A federal court in California orders the fired probationary workers reinstated",
-        "turning_point": true,
+        "date": "2025-03-05",
+        "text": "The Merit Systems Protection Board orders a 45-day stay of USDA's probationary firings",
         "sources": [
-          "https://www.food-safety.com/articles/11004-a-2025-timeline-of-us-federal-food-safety-changes-under-the-trump-admin"
+          "https://www.usda.gov/about-usda/news/press-releases/2025/03/11/usda-status-update-probationary-employees"
+        ]
+      },
+      {
+        "date": "2025-03-13",
+        "text": "A federal court in California rules the firings unlawful and orders the workers reinstated",
+        "sources": [
+          "https://www.usda.gov/about-usda/news/press-releases/2025/03/11/usda-status-update-probationary-employees",
+          "https://www.courthousenews.com/ninth-circuit-rejects-trump-bid-to-stay-firing-of-federal-workers/"
         ]
       },
       {
         "date": "2025-03-17",
-        "text": "The Ninth Circuit refuses to pause the reinstatement order",
+        "text": "A divided Ninth Circuit panel refuses an immediate administrative stay of the reinstatement order",
         "sources": [
-          "https://www.food-safety.com/articles/11004-a-2025-timeline-of-us-federal-food-safety-changes-under-the-trump-admin"
+          "https://www.courthousenews.com/ninth-circuit-rejects-trump-bid-to-stay-firing-of-federal-workers/"
         ]
       },
       {
@@ -72291,6 +72512,21 @@
         ]
       },
       {
+        "date": "2025-04-08",
+        "text": "The Supreme Court stays the California reinstatement order",
+        "turning_point": true,
+        "sources": [
+          "https://www.govexec.com/workforce/2025/04/supreme-court-says-trump-can-temporarily-move-forward-mass-firing-some-probationary-employees/404386/"
+        ]
+      },
+      {
+        "date": "2025-04-09",
+        "text": "The Fourth Circuit stays a Maryland judge's separate reinstatement order",
+        "sources": [
+          "https://fedscoop.com/appeals-court-halts-remaining-district-order-that-reinstated-fired-probationary-workers/"
+        ]
+      },
+      {
         "date": "2025-04-23",
         "text": "USDA emails staff urging those who took buyouts to reconsider, calling their work mission critical",
         "sources": [
@@ -72298,18 +72534,17 @@
         ]
       },
       {
-        "date": "2025-05",
-        "text": "USDA sends written notices confirming it has complied with the reinstatement order",
+        "date": "2025-05-05",
+        "text": "More than 15,000 USDA workers, over 15% of staff, have now taken buyouts across two rounds",
         "sources": [
           "https://www.food-safety.com/articles/11004-a-2025-timeline-of-us-federal-food-safety-changes-under-the-trump-admin"
         ]
       },
       {
-        "date": "2025-05-05",
-        "text": "More than 15,000 USDA workers, over 15% of staff, have now taken buyouts across two rounds",
+        "date": "2025-09",
+        "text": "Judge Alsup rules the firings unlawful but declines to order the workers reinstated",
         "sources": [
-          "https://sustainableagriculture.net/blog/usda-staffing-crisis-food-safety-agencies-struggle-as-federal-workforce-shrinks/",
-          "https://www.wired.com/story/usda-food-supply-chains/"
+          "https://www.agri-pulse.com/articles/23458-judge-finds-trump-administration-illegally-terminated-probationary-employees"
         ]
       },
       {
@@ -72323,7 +72558,7 @@
     ],
     "timeline": {
       "what_changed": {
-        "base": "Beginning in February 2025, USDA terminated at least 5,692 probationary employees as part of the government-wide firing wave, including roughly 200 inspectors in APHIS's Plant Protection and Quarantine (PPQ) program -- the unit that screens agricultural imports at ports of entry and detects invasive pests and diseases before they can spread domestically. (A separate, narrower incident the same month -- USDA's accidental firing of bird-flu-response staff, later reversed -- is tracked in its own entry in this database.) On March 13, 2025, the U.S. District Court for the Northern District of California issued a preliminary injunction ordering the immediate reinstatement of the terminated probationary employees; the Ninth Circuit denied USDA's request for a stay and upheld the injunction on March 17. Reinstatement did not happen immediately: **on March 25, Rep. Jill Tokuda and 32 House colleagues sent USDA a letter urging urgent rehiring of the terminated agricultural inspectors, warning the delay heightened the risk that unscreened imports could introduce invasive pests and diseases into U.S. agriculture.** USDA did not confirm compliance with the reinstatement order until May 2025, when it sent formal written notices to the affected probationary employees. By then a second, much larger wave of departures was already underway: more than 15,000 USDA employees -- over 15% of the department's workforce -- accepted deferred-resignation buyouts across two rounds (roughly 3,900 in the first round, 11,300 more confirmed by May 5, 2025), including hundreds of food-safety inspectors and technical experts. A subsequent analysis of USDA's own workforce data found FSIS (which inspects meat, poultry, and egg products) lost about 8% of its staff and APHIS (import and pest inspection) lost about 20% of its staff between January and March 2025 alone, with departing staff averaging 16-21 years of experience and 63% of FSIS separations specifically inspectors. Facing internal warnings that the departing employees' work was 'essential to securing the safety of the American food and agriculture system,' USDA reversed course on the ongoing buyout campaign in an April 23, 2025 email urging employees who had already accepted resignation offers to 'reconsider,' calling the work 'vital, mission critical' -- but the reconsideration window applied only to the second round of departures still in progress, not to employees who had already left the agency.",
+        "base": "Beginning in February 2025, USDA terminated at least 5,692 probationary employees as part of the government-wide firing wave, including roughly 200 inspectors in APHIS's Plant Protection and Quarantine (PPQ) program -- the unit that screens agricultural imports at ports of entry and detects invasive pests and diseases before they can spread domestically. (A separate, narrower incident the same month -- USDA's accidental firing of bird-flu-response staff, later reversed -- is tracked in its own entry in this database.) Orders to undo the firings followed: on March 5, 2025, the Merit Systems Protection Board granted a 45-day stay of USDA's probationary terminations, and USDA said it would put all terminated probationary employees back in pay status, with back pay, by March 12; on March 13, the U.S. District Court for the Northern District of California (Judge William Alsup) issued a preliminary injunction that found USDA's February 13-14 terminations unlawful and ordered reinstatement at USDA and five other departments, and a federal judge in Maryland ordered reinstatement in a separate suit brought by states. On March 17 a divided Ninth Circuit panel refused the administration's request for an immediate administrative stay of Alsup's order. Reinstatement did not happen immediately: USDA said on March 19 that the employees had been restored to their prior employment status but placed on paid administrative leave under a phased return-to-duty plan, and **on March 25, Rep. Jill Tokuda and 32 House colleagues sent USDA a letter urging urgent rehiring of the terminated agricultural inspectors, warning the delay heightened the risk that unscreened imports could introduce invasive pests and diseases into U.S. agriculture.** The reinstatement orders did not hold: on April 8 the Supreme Court stayed Alsup's injunction, finding the nonprofit plaintiffs' allegations insufficient to establish standing; on April 9 the Fourth Circuit stayed the Maryland order, a ruling FedScoop reported enabled the administration to again terminate reinstated workers; and the MSPB stay ran to April 18 after no extension was requested. In May 2025, in compliance with a Northern District of California order, USDA sent a written statement directly to the terminated probationary employees. In September 2025 Alsup ruled that the Office of Personnel Management's firing directive was unlawful and ordered USDA and the other departments to correct the fired employees' personnel files to show the terminations were not based on performance or conduct, but declined to order reinstatement, writing that 'too much water has now passed under the bridge' since the Supreme Court stayed his preliminary ruling. By then a second, much larger wave of departures was already underway: more than 15,000 USDA employees -- over 15% of the department's workforce -- accepted deferred-resignation buyouts across two rounds (roughly 3,900 in the first round, 11,300 more confirmed by May 5, 2025), including hundreds of food-safety inspectors and technical experts. A subsequent analysis of federal Office of Personnel Management (OPM) workforce data found FSIS (which inspects meat, poultry, and egg products) lost about 8% of its staff and APHIS (import and pest inspection) lost about 20% of its staff between January and March 2025 alone, with separated FSIS employees averaging 16 years of service and more than 63% of them from the agency's investigations group, which includes inspectors. Facing internal warnings that the departing employees' work was 'essential to securing the safety of the American food and agriculture system,' USDA reversed course on the ongoing buyout campaign in an April 23, 2025 email urging employees who had already accepted resignation offers to 'reconsider,' calling the work 'vital, mission critical' -- but the reconsideration window applied only to the second round of departures still in progress, not to employees who had already left the agency.",
         "updates": [
           {
             "date": "2026-09-12",
@@ -72334,12 +72569,12 @@
         ]
       },
       "confidence_note": {
-        "base": "Strong, cross-corroborated sourcing: specialist trade press (Food Safety Magazine's ongoing 2025 timeline), an agricultural-policy nonprofit with direct access to USDA's own workforce data (National Sustainable Agriculture Coalition), investigative reporting (Investigate Midwest), and primary-source congressional correspondence (Rep. Tokuda's letter) and court filings (N.D. Cal. preliminary injunction, Ninth Circuit stay denial) for the reinstatement-order timeline. The FSIS/APHIS-specific staffing-loss percentages trace to USDA's own data as analyzed by NSAC, not third-party estimates.",
+        "base": "Strong, cross-corroborated sourcing: specialist trade press (Food Safety Magazine's ongoing 2025 timeline), an agricultural-policy nonprofit analyzing federal OPM workforce data (National Sustainable Agriculture Coalition), investigative reporting (Investigate Midwest), and primary-source congressional correspondence (Rep. Tokuda's letter) and USDA's own litigation-status statement for the reinstatement timeline, with the Ninth Circuit, Supreme Court and Fourth Circuit rulings and the September 2025 final ruling taken from Courthouse News, Government Executive, FedScoop and Agri-Pulse court reporting. The FSIS/APHIS-specific staffing-loss percentages trace to OPM's federal workforce data as analyzed by NSAC, not third-party estimates.",
         "updates": [
           {
             "date": "2026-09-12",
             "label": "Added",
-            "text": "Added 2026-09-12: the 20,000+/nearly-one-fifth final tally and the Forest Service/Rural Development/NRCS per-agency figures are HIGH confidence, sourced to a USDA Office of Inspector General report (a formal government watchdog finding, the strongest available source type) as directly reported by Western Priorities; nytimes.com's own original report on the same OIG findings could not be fetched by the tooling used to verify this entry.",
+            "text": "Added 2026-09-12: the 20,000+/nearly-one-fifth final tally and the Forest Service/Rural Development/NRCS per-agency figures are HIGH confidence, sourced to a USDA Office of Inspector General report (a formal government watchdog finding, the strongest available source type) as directly reported by Western Priorities; The New York Times' original report on the same OIG findings is not relied on here.",
             "effective_date": "2026-09-12"
           }
         ]
@@ -73888,9 +74123,9 @@
     "title": "VA Reinstated a Near-Total Abortion Ban for Veterans -- Even in Cases of Rape, Incest, or Danger to Health -- Via a Quiet December 2025 DOJ Legal Opinion",
     "institution": "Department of Veterans Affairs (VA)",
     "domain": "protection_rollback",
-    "status": "Ongoing -- first legal challenge filed May 15, 2026, no ruling identified in sourcing reviewed; a Democratic-led Senate effort to restore the prior policy failed in March 2026",
+    "status": "Ongoing -- the ban remains in place under a final rule effective Jan. 30, 2026. A May 15, 2026 Federal Circuit petition by Minority Veterans of America is pending, with its opening brief filed and no ruling found. The Senate rejected a resolution to overturn the rule 48-50 on March 25, 2026.",
     "date_of_action": "2025-12-18 (DOJ OLC memo issued) through 2026-05-15 (first lawsuit filed)",
-    "what_changed": "In the final days of 2025, the VA quietly reinstated a near-total ban on abortion services and counseling at VA healthcare facilities nationwide, including in states where abortion remains legal. The change followed a December 18, 2025 memo from the Department of Justice's Office of Legal Counsel (OLC), authored by Deputy Assistant Attorney General Joshua Craddock, concluding the VA may not provide abortion services under any provision of federal law -- reversing a 2022 Biden-era OLC opinion issued after Roe v. Wade was overturned. That 2022 policy had allowed the VA to provide abortion access and counseling in cases of rape or incest, or when a pregnancy threatened the patient's life or health; VA clinicians could also discuss abortion options and provide referrals. **Under the new policy, only a narrow, vaguely defined exception for saving the life of a pregnant veteran or eligible family member remains -- the rape, incest, and broader health-threat exceptions were eliminated entirely, and clinicians' ability to counsel patients on abortion options was also restricted.** The policy applies to all VA facilities regardless of state law, and does not apply to active-duty service members or federal prisoners, who retain broader abortion access under separate policies. The change was implemented through an internal legal memo rather than a formal notice-and-comment rulemaking process, drawing criticism that it avoided public scrutiny. OMB Director Russell Vought and VA Secretary Doug Collins, both described in reporting as strongly anti-abortion, were identified as the officials who advanced the policy. In March 2026, Senate Democrats' effort to force a vote restoring the prior policy failed. On May 15, 2026, Minority Veterans of America, a nonprofit veterans' advocacy group, filed the first legal challenge to the ban -- a 28-page complaint in the U.S. Court of Appeals for the Federal Circuit, brought on behalf of its members including one pregnant veteran, arguing the VA violated the Administrative Procedure Act by acting 'arbitrarily and capriciously,' ignored the discretion a 1996 law gives the VA Secretary over medical-care decisions, and failed to account for the department's own 2022 findings that limited abortion access was necessary to protect veterans' health. The VA said it does not comment on pending litigation.",
+    "what_changed": "In the final days of 2025, the VA quietly reinstated a near-total ban on abortion services and counseling at VA healthcare facilities nationwide, including in states where abortion remains legal. The change followed a December 18, 2025 memo from the Department of Justice's Office of Legal Counsel (OLC), authored by Deputy Assistant Attorney General Joshua Craddock, concluding the VA may not provide abortion services under any provision of federal law -- reversing a 2022 Biden-era OLC opinion issued after Roe v. Wade was overturned. That 2022 policy had allowed the VA to provide abortion access and counseling in cases of rape or incest, or when a pregnancy threatened the patient's life or health; VA clinicians could also discuss abortion options and provide referrals. **Under the new policy, only a narrow, vaguely defined exception for saving the life of a pregnant veteran or eligible family member remains -- the rape, incest, and broader health-threat exceptions were eliminated entirely, and clinicians' ability to counsel patients on abortion options was also restricted.** The policy applies to all VA facilities regardless of state law, and does not apply to active-duty service members or federal prisoners, who retain broader abortion access under separate policies. The VA had proposed the change in August 2025, but rather than waiting for that rulemaking to finish it put the ban into effect immediately through an internal memo relying on the DOJ opinion, drawing criticism that it avoided public scrutiny. The VA then adopted the August proposal without changes as a final rule, published in the Federal Register on December 31, 2025 and effective January 30, 2026. OMB Director Russell Vought and VA Secretary Doug Collins, both described in reporting as strongly anti-abortion, were identified as the officials who advanced the policy. On March 25, 2026, the Senate voted 48-50 against taking up S.J. Res. 103, a Congressional Review Act resolution led by Sen. Richard Blumenthal to overturn the VA rule; Republican Sens. Susan Collins and Lisa Murkowski joined Democrats in voting yes. On May 15, 2026, Minority Veterans of America, a nonprofit veterans' advocacy group, filed the first legal challenge to the ban -- a 28-page complaint (a petition for review of the final rule) in the U.S. Court of Appeals for the Federal Circuit, brought on behalf of its members including one pregnant veteran, arguing the VA violated the Administrative Procedure Act with an 'arbitrary and capricious' rule, ignored the discretion a 1996 law gives the VA Secretary over medical-care decisions, and failed to account for the department's own 2022 findings that limited abortion access was necessary to protect veterans' health. A VA spokesperson said the agency does not typically comment on pending litigation.",
     "primary_proponent": {
       "name": "Russell Vought, OMB Director, and Doug Collins, VA Secretary",
       "role": "Identified in reporting as the officials who advanced the policy reversal",
@@ -73915,11 +74150,11 @@
           "source": "Center for Reproductive Rights"
         }
       ],
-      "caveat": "These figures describe the population potentially affected by the policy generally, not a documented count of veterans specifically denied care or harmed under the new policy; no such outcome-level count was identified in sourcing reviewed."
+      "caveat": "These figures describe the population potentially affected by the policy generally, not a documented count of veterans specifically denied care or harmed under the new policy; no such outcome-level count has been found."
     },
-    "confidence_note": "HIGH confidence on the DOJ OLC memo, its author and date, the prior Biden-era policy it reversed, the narrowed exception, and the officials involved, directly corroborated across Center for Reproductive Rights' dedicated advocacy reporting (which independently confirmed and added detail to The Hill's original reporting, which itself could not be fetched directly -- thehill.com returned a 403) and Ms./MS NOW's independent reporting on the subsequent lawsuit. HIGH confidence on the Minority Veterans of America lawsuit's filing date, claims, and forum, directly sourced to Ms./MS NOW's dedicated report. MODERATE confidence on the March 2026 Senate vote's precise procedural mechanism, since it is referenced in search results but was not independently verified via a directly-fetched dedicated report.",
-    "pull_quote": "Minority Veterans of America's lawsuit argues the VA violated the Administrative Procedure Act by acting ‘arbitrarily and capriciously,’ ignored the discretion a 1996 law gives the VA Secretary over medical-care decisions, and failed to account for the department's own 2022 findings that limited abortion access was necessary to protect veterans' health.",
-    "last_verified": "2026-09-12",
+    "confidence_note": "HIGH confidence on the DOJ OLC memo, its author and date, the prior Biden-era policy it reversed, the narrowed exception, and the officials involved, directly corroborated across Center for Reproductive Rights' dedicated advocacy reporting (which independently confirmed and added detail to The Hill's original reporting, which itself could not be fetched directly -- thehill.com returned a 403) and Ms./MS NOW's independent reporting on the subsequent lawsuit. HIGH confidence on the Minority Veterans of America lawsuit's filing date, claims, and forum, directly sourced to Ms./MS NOW's dedicated report. HIGH confidence on the March 25, 2026 Senate vote (48-50 against proceeding to S.J. Res. 103, with Republican Sens. Susan Collins and Lisa Murkowski voting yes), read in the Congressional Record, and on the final rule's December 31, 2025 publication and January 30, 2026 effective date, read in the Federal Register; the lawsuit's targeting of that final rule and the filing of the petitioner's opening brief come from the petition and the National Women's Law Center's case page.",
+    "pull_quote": "Minority Veterans of America's lawsuit argues the VA violated the Administrative Procedure Act with an ‘arbitrary and capricious’ rule, ignored the discretion a 1996 law gives the VA Secretary over medical-care decisions, and failed to account for the department's own 2022 findings that limited abortion access was necessary to protect veterans' health.",
+    "last_verified": "2026-11-08",
     "date_added": "2026-09-12",
     "sources": [
       {
@@ -73933,14 +74168,26 @@
       {
         "name": "The Hill -- 'Department of Veterans Affairs quietly bans abortion services, counseling'",
         "url": "https://thehill.com/policy/healthcare/5661427-abortion-ban-trump-administration-veterans-affairs/"
+      },
+      {
+        "name": "Federal Register -- VA final rule 'Reproductive Health Services' (Dec. 31, 2025)",
+        "url": "https://www.federalregister.gov/documents/2025/12/31/2025-24061/reproductive-health-services"
+      },
+      {
+        "name": "Congressional Record -- Senate, March 25, 2026, S1609 (S.J. Res. 103 motion to proceed, Rollcall Vote No. 72)",
+        "url": "https://www.govinfo.gov/content/pkg/CREC-2026-03-25/pdf/CREC-2026-03-25-pt1-PgS1609-4.pdf"
+      },
+      {
+        "name": "National Women's Law Center -- 'Minority Veterans of America v. Secretary of Veterans Affairs' case page",
+        "url": "https://nwlc.org/resource/minority-veterans-of-america-v-secretary-of-veterans-affairs/"
       }
     ],
     "section_summaries": {
-      "what_changed": "A December 18, 2025 DOJ legal opinion reversed Biden-era policy and led the VA to quietly reinstate a near-total abortion ban -- eliminating exceptions for rape, incest, and health threats and leaving only a narrow life-saving exception -- prompting a May 2026 APA lawsuit from a veterans' advocacy group.",
-      "estimated_impact": "Affects a population of over 2 million women veterans and 700,000+ covered family members nationwide, with the sharpest impact on the 400,000+ women veterans in states with existing abortion bans; no outcome-level harm count was identified.",
-      "confidence_note": "HIGH confidence on the policy reversal, its legal basis, and the subsequent lawsuit, corroborated across Center for Reproductive Rights and Ms./MS NOW reporting; thehill.com's original report could not be fetched directly (403)."
+      "what_changed": "A Dec. 2025 DOJ opinion led the VA to reinstate a near-total abortion ban, dropping rape, incest and health exceptions; a Senate bid to overturn it failed 48-50 and a veterans group sued in May 2026.",
+      "estimated_impact": "Affects over 2 million women veterans and 700,000+ covered family members, hitting hardest the 400,000+ women veterans in states with abortion bans; no count of harm has been found.",
+      "confidence_note": "HIGH confidence on the policy reversal, its legal basis, the final rule, the March 2026 Senate vote and the lawsuit, from advocacy, news, Federal Register and Congressional Record sources."
     },
-    "last_substantive_update": "2026-09-12",
+    "last_substantive_update": "2026-11-08",
     "glance": {
       "who": "VA Secretary Doug Collins, OMB's Russell Vought",
       "what": "Reinstated a near-total VA abortion ban, leaving only a life-saving exception, after a Dec. 2025 DOJ opinion",
@@ -73949,7 +74196,7 @@
         "certainty": "documented",
         "who": "Veterans and VA-covered family members"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-11-08"
     },
     "status_stage": "In court",
     "key_events": [
@@ -73960,6 +74207,22 @@
         "sources": [
           "https://reproductiverights.org/news/trump-administration-quietly-bans-abortions-for-veterans/",
           "https://thehill.com/policy/healthcare/5661427-abortion-ban-trump-administration-veterans-affairs/"
+        ]
+      },
+      {
+        "date": "2025-12-31",
+        "text": "VA publishes a final rule adopting the ban without changes, effective Jan. 30, 2026",
+        "turning_point": false,
+        "sources": [
+          "https://www.federalregister.gov/documents/2025/12/31/2025-24061/reproductive-health-services"
+        ]
+      },
+      {
+        "date": "2026-03-25",
+        "text": "Senate votes 48-50 against taking up a resolution to overturn the VA rule; Collins and Murkowski vote yes",
+        "turning_point": false,
+        "sources": [
+          "https://www.govinfo.gov/content/pkg/CREC-2026-03-25/pdf/CREC-2026-03-25-pt1-PgS1609-4.pdf"
         ]
       },
       {
@@ -77378,12 +77641,12 @@
     "title": "Whooping Cough Deaths Surged as Vaccination Rates Fell -- Louisiana's Surgeon General Ended Vaccine Promotion the Day RFK Jr. Was Confirmed, Then Delayed Public Warning for Months",
     "institution": "Louisiana Department of Health; state health departments nationally",
     "domain": "protection_rollback",
-    "status": "Ongoing as of the latest reporting reviewed -- Texas and Kentucky both issued health alerts on rising 2025 case counts in November 2025, with national case totals remaining elevated well above pre-pandemic levels for a second consecutive year.",
-    "date_of_action": "2025-02-13 (Louisiana Surgeon General ends vaccine promotion) through 2025-11-25 (Kentucky's third infant pertussis death of 2025 reported)",
-    "what_changed": "On February 13, 2025 -- the same day Robert F. Kennedy Jr. won Senate confirmation as HHS Secretary -- Louisiana State Surgeon General Ralph Abraham sent a memo to Louisiana Department of Health staff ending the department's general promotion of vaccines and community vaccine events, writing that public health had overstepped with vaccine recommendations driven by 'a one-size-fits-all, collectivist mentality'; Abraham has also called COVID-19 vaccines 'dangerous' and is a public supporter of Kennedy. Louisiana was in the midst of its worst whooping cough (pertussis) outbreak in 35 years -- 387 confirmed cases by September 20, 2025, far exceeding the state's previous high of 214 cases in 2013 -- and had already recorded two infant deaths, one in late 2024 and one in early 2025; physicians at one Louisiana hospital warned colleagues about the deaths in late January 2025. **Despite this, the health department did not confirm the infant deaths to media until February 17, 2025 (published February 20), made its first social-media mention of the outbreak in March, and did not issue a formal alert to physicians or the public until May 1, 2025 -- more than three months after the first physician warnings -- followed by a press release May 2 and a news conference May 14; by that point 42 people had been hospitalized, more than two-thirds of them under age one, and three-quarters not current on vaccinations.** The outbreak pattern was not confined to Louisiana. Texas reported more than 3,500 whooping cough cases in 2025 as of November, roughly quadrupling its 2024 case count for the same period, prompting a state health alert; nationally, kindergarten pertussis vaccination coverage fell to approximately 92.1% in the 2024-25 school year, down from about 95% before the pandemic. Kentucky, separately, reported its third infant pertussis death of 2025 on November 25 -- its first infant whooping-cough deaths since 2018 -- with 566 cases statewide as of November 19, officials calling it the state's most pertussis activity since 2012; none of the three deceased infants or their mothers had been vaccinated. Kentucky Health Secretary Steven Stack said, 'We continue to urge Kentuckians to get their whooping cough vaccine,' noting 'many illnesses can be prevented through vaccination.' Nationally, more than 25,000 pertussis cases had been reported in 2025 as of the CIDRAP report reviewed, following a 2024 surge of more than 33,000 cases by the same point in the year -- both far above the roughly 18,600 cases reported nationally in all of 2019, though 2025's pace was trending below 2024's. Abraham was subsequently reported in late November 2025 to be moving to a CDC deputy role, extending his vaccine-skeptic approach to the federal level.",
+    "status": "No legal or official challenge to Louisiana's February 2025 halt of vaccine promotion has been reported. Abraham became CDC principal deputy director in December 2025 and resigned in February 2026. National pertussis cases stayed elevated in 2025, though below 2024's peak.",
+    "date_of_action": "2025-02-13 (Louisiana Surgeon General ends vaccine promotion) through 2025-11-24 (Kentucky announces its third infant pertussis death in 12 months)",
+    "what_changed": "On February 13, 2025 -- the same day Robert F. Kennedy Jr. won Senate confirmation as HHS Secretary -- Louisiana State Surgeon General Ralph Abraham sent a memo to Louisiana Department of Health staff ending the department's general promotion of vaccines and community vaccine events, writing that public health had overstepped with vaccine recommendations driven by 'a one-size-fits-all, collectivist mentality'; Abraham has also called COVID-19 vaccines 'dangerous' and is a public supporter of Kennedy. Louisiana was in the midst of its worst whooping cough (pertussis) outbreak in 35 years -- 387 confirmed cases by September 20, 2025, far exceeding the state's previous high of 214 cases in 2013 -- and had already recorded two infant deaths, one in late 2024 and one in early 2025; physicians at one Louisiana hospital warned colleagues about the deaths in late January 2025. **Despite this, the health department did not confirm the infant deaths to media until February 17, 2025 (published February 20), made its first social-media mention of the outbreak in March, and did not issue a formal alert to physicians or the public until May 1, 2025 -- more than three months after the first physician warnings -- followed by a press release May 2 and a news conference May 14; by that point 42 people had been hospitalized, more than two-thirds of them under age one, and three-quarters not current on vaccinations.** The outbreak pattern was not confined to Louisiana. Texas reported more than 3,500 whooping cough cases in 2025 as of November, roughly quadrupling its 2024 case count for the same period, prompting a state health alert; nationally, kindergarten pertussis vaccination coverage fell to approximately 92.1% in the 2024-25 school year, down from about 95% before the pandemic. Kentucky, separately, announced on November 24, 2025 its third infant pertussis death within 12 months -- its first whooping-cough deaths reported since 2018 -- with 566 cases statewide as of November 19, officials calling it the largest spike in cases since 2012; health officials confirmed none of the three infants or their mothers had been vaccinated. Kentucky Health Secretary Steven Stack said, 'We continue to urge Kentuckians to get their whooping cough vaccine,' noting 'many illnesses can be prevented through vaccination.' Nationally, more than 25,000 pertussis cases had been reported in 2025 by late November, CIDRAP reported, citing ABC News, after more than 33,000 by November 2024 -- both far above the roughly 18,600 cases reported nationally in all of 2019, though 2025's pace was trending below 2024's. Abraham then left Louisiana for the CDC: an HHS spokesperson confirmed his appointment as CDC principal deputy director to NBC News, as reported November 25, 2025; Kennedy swore him in on December 15, 2025 and he began work on January 5, 2026, but the CDC announced on February 23, 2026 that he had resigned, effective immediately, to address unforeseen family obligations.",
     "primary_proponent": {
       "name": "Ralph Abraham",
-      "role": "Louisiana State Surgeon General (later reported moving to a CDC deputy role)",
+      "role": "Louisiana State Surgeon General (later CDC principal deputy director, December 2025 to February 2026)",
       "note": "Personally ended the state health department's vaccine-promotion activities the day RFK Jr. was confirmed as HHS Secretary, while the department he led delayed public disclosure of infant pertussis deaths for months during Louisiana's worst outbreak in 35 years."
     },
     "estimated_impact": {
@@ -77410,9 +77673,9 @@
           "source": "ABC News"
         },
         {
-          "metric": "Kentucky 2025 pertussis cases (as of Nov. 19) / infant deaths",
+          "metric": "Kentucky 2025 pertussis cases (as of Nov. 19) / infant deaths in 12 months",
           "value": "566 cases / 3 infant deaths (first since 2018)",
-          "source": "CIDRAP"
+          "source": "WKYT / CIDRAP"
         },
         {
           "metric": "National kindergarten pertussis vaccination rate, 2024-25 school year",
@@ -77422,14 +77685,14 @@
         {
           "metric": "National 2025 pertussis cases",
           "value": ">25,000 (2024 comparison: >33,000 by the same point; 2019 full-year: ~18,600)",
-          "source": "CIDRAP"
+          "source": "CIDRAP (citing ABC News)"
         }
       ],
-      "caveat": "Sourcing reviewed does not establish that Louisiana's specific vaccine-promotion halt or disclosure delay caused the two documented infant deaths, which occurred before and immediately after Abraham's February 13 memo; the entry documents the halt, the delay, and the outbreak's severity as a well-corroborated pattern, not a proven causal chain. National case trends were already elevated in 2024, before Abraham's memo or Kennedy's confirmation, indicating declining vaccination is a multi-year trend with causes beyond this entry's specific documented actions."
+      "caveat": "The sources do not establish that Louisiana's specific vaccine-promotion halt or disclosure delay caused the two documented infant deaths, which occurred before and immediately after Abraham's February 13 memo; the entry documents the halt, the delay, and the outbreak's severity as a well-corroborated pattern, not a proven causal chain. National case trends were already elevated in 2024, before Abraham's memo or Kennedy's confirmation, indicating declining vaccination is a multi-year trend with causes beyond this entry's specific documented actions."
     },
-    "confidence_note": "HIGH confidence on the Louisiana timeline, Abraham's February 13, 2025 memo and quote, the outbreak case counts, and the disclosure-delay timeline, directly sourced to KFF Health News's republication of the NPR/KFF Health News joint investigation (npr.org itself repeatedly timed out for the tooling used to verify this entry). HIGH confidence on the Texas case counts and national vaccination-rate figures, directly sourced to ABC News. HIGH confidence on the Kentucky case counts, infant deaths, and Secretary Stack's quote, directly sourced to CIDRAP (University of Minnesota); thehill.com's and kentuckylantern.com's own reports on the same story returned 403s and are not relied upon here.",
-    "pull_quote": "Kentucky reported its third infant pertussis death of 2025 -- its first infant whooping-cough deaths since 2018 -- with none of the three deceased infants or their mothers vaccinated; Kentucky Health Secretary Steven Stack said, ‘We continue to urge Kentuckians to get their whooping cough vaccine.’",
-    "last_verified": "2026-09-13",
+    "confidence_note": "HIGH confidence on the Louisiana timeline, Abraham's February 13, 2025 memo and quote, the outbreak case counts, and the disclosure-delay timeline, directly sourced to KFF Health News's republication of the NPR/KFF Health News joint investigation (npr.org itself repeatedly timed out for the tooling used to verify this entry). HIGH confidence on the Texas case counts and national vaccination-rate figures, directly sourced to ABC News. HIGH confidence on the Kentucky case counts, infant deaths, and Secretary Stack's quote, directly sourced to CIDRAP (University of Minnesota); thehill.com's and kentuckylantern.com's own reports on the same story returned 403s and are not relied upon here. Update 2026-11-08: HIGH confidence on Abraham's CDC appointment, reported by KALB on November 25, 2025, and on his December 15, 2025 swearing-in and February 23, 2026 resignation, reported by WAFB from the CDC's announcement. Kentucky's announcement date (Monday, November 24, 2025), its November 19 case count and the infants' and mothers' vaccination status are sourced to WKYT. The CDC's pertussis surveillance pages could not be fetched, so no 2026 national count is stated.",
+    "pull_quote": "Kentucky reported its third infant pertussis death in 12 months -- its first whooping-cough deaths since 2018 -- with none of the three infants or their mothers vaccinated; Kentucky Health Secretary Steven Stack said, ‘We continue to urge Kentuckians to get their whooping cough vaccine.’",
+    "last_verified": "2026-11-08",
     "date_added": "2026-09-13",
     "sources": [
       {
@@ -77447,14 +77710,26 @@
       {
         "name": "NPR -- Louisiana officials waited months to warn public of whooping cough outbreak",
         "url": "https://www.npr.org/sections/shots-health-news/2025/10/28/nx-s1-5576494/louisiana-whooping-cough-pertussis-infant-deaths"
+      },
+      {
+        "name": "WKYT -- Third infant dies from whooping cough in Kentucky within 12 months",
+        "url": "https://www.wkyt.com/2025/11/24/third-infant-dies-whooping-cough-kentucky-within-12-months/"
+      },
+      {
+        "name": "KALB (via KNOE) -- Louisiana's Dr. Ralph Abraham named CDC principal deputy director",
+        "url": "https://www.knoe.com/2025/11/25/louisianas-dr-ralph-abraham-named-cdc-principal-deputy-director/"
+      },
+      {
+        "name": "WAFB -- CDC principal deputy director resigns, citing family obligations",
+        "url": "https://www.wafb.com/2026/02/23/cdc-principal-deputy-director-resigns-citing-family-obligations/"
       }
     ],
     "section_summaries": {
-      "what_changed": "Louisiana's surgeon general ended vaccine promotion the day RFK Jr. was confirmed as HHS Secretary, and the state then waited over three months to publicly warn about a deadly, 35-year-worst whooping cough outbreak; nationally, pertussis vaccination rates fell and case counts stayed elevated, producing further infant deaths in Kentucky and a quadrupled case count in Texas the same year.",
-      "estimated_impact": "Louisiana's outbreak (387 cases, 2 infant deaths) and its months-long disclosure delay coincided with a broader national pattern of declining pertussis vaccination and elevated cases that also produced three infant deaths in Kentucky and 3,500+ cases in Texas, though no sourcing reviewed proves the Louisiana policy caused its own outbreak's specific deaths.",
-      "confidence_note": "HIGH confidence, corroborated across KFF Health News/NPR, ABC News, and CIDRAP; several other outlets covering the same stories could not be directly fetched and are not relied upon."
+      "what_changed": "Louisiana's surgeon general ended vaccine promotion the day RFK Jr. was confirmed, then the state waited 3+ months to warn of its worst whooping cough outbreak in 35 years as US cases stayed high.",
+      "estimated_impact": "Louisiana's outbreak (387 cases, 2 infant deaths) and delayed warning came amid elevated national cases, 3 infant deaths in Kentucky and 3,500+ in Texas; no source proves the policy caused the deaths.",
+      "confidence_note": "HIGH confidence, corroborated across KFF Health News/NPR, ABC News, CIDRAP and local TV reports; some other outlets on the same stories could not be fetched and are not relied upon."
     },
-    "last_substantive_update": "2026-09-13",
+    "last_substantive_update": "2026-11-08",
     "glance": {
       "who": "Ralph Abraham (Louisiana Surgeon General)",
       "what": "Ended vaccine promotion the day RFK Jr. was confirmed; Louisiana's pertussis warning then came 3+ months late",
@@ -77463,7 +77738,7 @@
         "certainty": "documented",
         "who": "Louisiana infants and families"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-11-08"
     },
     "status_stage": "Unchallenged",
     "key_events": [
@@ -77509,13 +77784,41 @@
         ]
       },
       {
-        "date": "2025-11-25",
-        "text": "Kentucky reports its third infant whooping cough death of 2025, its first such deaths since 2018",
+        "date": "2025-11-24",
+        "text": "Kentucky announces its third infant whooping cough death in 12 months, its first such deaths since 2018",
         "sources": [
+          "https://www.wkyt.com/2025/11/24/third-infant-dies-whooping-cough-kentucky-within-12-months/",
           "https://www.cidrap.umn.edu/pertussis/third-infant-kentucky-dies-whooping-cough-national-cases-stay-high-second-year-row"
         ]
+      },
+      {
+        "date": "2025-12-15",
+        "text": "Kennedy swears in Abraham as CDC principal deputy director",
+        "sources": [
+          "https://www.wafb.com/2026/02/23/cdc-principal-deputy-director-resigns-citing-family-obligations/"
+        ]
+      },
+      {
+        "date": "2026-02-23",
+        "text": "The CDC announces Abraham has resigned as principal deputy director, effective immediately",
+        "sources": [
+          "https://www.wafb.com/2026/02/23/cdc-principal-deputy-director-resigns-citing-family-obligations/"
+        ]
       }
-    ]
+    ],
+    "timeline": {
+      "confidence_note": {
+        "base": "HIGH confidence on the Louisiana timeline, Abraham's February 13, 2025 memo and quote, the outbreak case counts, and the disclosure-delay timeline, directly sourced to KFF Health News's republication of the NPR/KFF Health News joint investigation (npr.org itself repeatedly timed out for the tooling used to verify this entry). HIGH confidence on the Texas case counts and national vaccination-rate figures, directly sourced to ABC News. HIGH confidence on the Kentucky case counts, infant deaths, and Secretary Stack's quote, directly sourced to CIDRAP (University of Minnesota); thehill.com's and kentuckylantern.com's own reports on the same story returned 403s and are not relied upon here.",
+        "updates": [
+          {
+            "date": "2026-11-08",
+            "label": "Update",
+            "text": "Update 2026-11-08: HIGH confidence on Abraham's CDC appointment, reported by KALB on November 25, 2025, and on his December 15, 2025 swearing-in and February 23, 2026 resignation, reported by WAFB from the CDC's announcement. Kentucky's announcement date (Monday, November 24, 2025), its November 19 case count and the infants' and mothers' vaccination status are sourced to WKYT. The CDC's pertussis surveillance pages could not be fetched, so no 2026 national count is stated.",
+            "effective_date": "2026-11-08"
+          }
+        ]
+      }
+    }
   },
   {
     "id": "wic-shutdown-funding-crisis-2025",

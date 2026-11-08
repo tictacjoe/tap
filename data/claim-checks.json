@@ -4950,6 +4950,14 @@
     "date": "2026-09-21",
     "kind": "fact",
     "archive": false
+   },
+   "3": {
+    "state": "partly",
+    "why": "The docket text confirms the September 14 order postponed the Final Rule's effective date under 5 U.S.C. 705 and denied vacatur and summary judgment without prejudice, and separately shows a September 30 notice of appeal assigned USCA No. 26-2112. However, the provided (truncated) docket only shows an extension of time to October 30, 2026 to file summary judgment motions, not the actual filing of cross-motions on that date or the absence of any ruling on them.",
+    "host": "clearinghouse.net",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
    }
   },
   "doge-chatgpt-grant-cuts-deposition-2026": {
@@ -8841,17 +8849,25 @@
    },
    "4": {
     "state": "supports",
-    "why": "The excerpt confirms six years of California State Protocol Foundation records and communications with aides including Rebecca Prowda. The article also quotes the subpoena as being for a criminal investigation pending in the Eastern District of California, signed by an Assistant U.S. Attorney. It says the office is headed by Eric Grant and repeats the DOJ source's statement to Politico in June about a more-than-a-year investigation.",
+    "why": "The Standard reports subpoenas seeking six years of California State Protocol Foundation records and communications with aides including Rebecca Prowda, signed by an AUSA for a criminal investigation pending in E.D. Cal.; it also says the subpoenas don't cite any specific alleged crime, identifies Eric Grant as head of that office, and repeats the DOJ source's June statement to Politico.",
     "host": "sfstandard.com",
-    "date": "2026-09-21",
+    "date": "2026-11-08",
     "kind": "fact",
     "archive": false
    },
    "5": {
-    "state": "partly",
-    "why": "Mother Jones does report the September subpoenas and Newsom's politically motivated 'fishing expedition' characterization and 'not because they found a crime' denial, but nowhere states that prosecutors have not publicly identified the crime under investigation; it says only the probe relates to his travel and how it was paid for.",
+    "state": "supports",
+    "why": "Mother Jones cites the subpoenas reviewed by the San Francisco Standard, reports probes began at least a year ago, quotes the June 'fishing expedition' description, and quotes the office's 'investigate first, hunt for a crime that doesn’t exist second' statement.",
     "host": "motherjones.com",
-    "date": "2026-09-21",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
+    "state": "supports",
+    "why": "The Center Square piece dated September 21, 2026 reports subpoenas seeking records on Newsom's international travel and quotes communications director Tara Gallegos calling it 'a baseless MAGA conspiracy theory' and saying there is no crime to investigate.",
+    "host": "sjvsun.com",
+    "date": "2026-11-08",
     "kind": "fact",
     "archive": false
    }
@@ -15418,6 +15434,22 @@
     "date": "2026-09-15",
     "kind": "fact",
     "archive": false
+   },
+   "3": {
+    "state": "supports",
+    "why": "The stipulation, filed 08/07/26 in 2:23-cv-01511, states the Commission believes dismissal is appropriate 'in the exercise of discretion' and stipulates under Rule 41(a)(1)(A)(ii) to dismissal with prejudice and without costs or fees; no other reason is given.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "supports",
+    "why": "The docket lists entry 54, the Rule 41(a)(1)(A)(ii) joint stipulation filed Aug 7, 2026, as the latest entry, and shows 'Date Terminated: Aug. 7, 2026'.",
+    "host": "courtlistener.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
    }
   },
   "pirro-dc-grand-jury-refusals-crackdown-pattern-2025": {
@@ -17595,9 +17627,33 @@
   "risch-cancer-panel-fringe-views-2025": {
    "0": {
     "state": "supports",
-    "why": "The Just The News article confirms the December 4 (per Risch's own announcement)/December 16, 2025 (HHS's official announcement) timeline, includes HHS's and Kennedy's statements, Risch's Yale academic biography, and cites WIRED's reporting on his ivermectin/hydroxychloroquine advocacy, Wellness Company role, and 'turbo cancer' speculation -- matching the claim closely.",
+    "why": "Wired reports Risch announced his appointment on X, that no formal announcement was made, his 'turbo cancer' speculation, his promotion of hydroxychloroquine in congressional testimony, his Wellness Company role (which sells hydroxychloroquine and ivermectin), and quotes the NCI statement.",
+    "host": "wired.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "1": {
+    "state": "supports",
+    "why": "The December 16, 2025 article reports HHS's official announcement 11 days after Risch's own statement and under two hours after Wired's report, quotes Kennedy and HHS on Risch's cancer-research career, notes the omission of his COVID positions, and cites Wired on 'turbo cancer' and The Wellness Company.",
     "host": "justthenews.com",
-    "date": "2026-09-15",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "2": {
+    "state": "supports",
+    "why": "The December 17, 2025 article quotes Risch's 'among maybe a dozen various medications that should have more formal studies' line as well as 'So honestly, I don't know yet' and 'I don't want to overpromise.'",
+    "host": "justthenews.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "3": {
+    "state": "supports",
+    "why": "The NCI page lists 'Dr. Harvey Risch, Chair' under Current Panel Members and lists 'Elizabeth M. Jaffee, M.D. Service: Jan 2023 - Mar 2025' under Past Members; the page itself does not label her his predecessor, but that descriptor is incidental to what the page lists.",
+    "host": "cancer.gov",
+    "date": "2026-11-08",
     "kind": "fact",
     "archive": false
    }
