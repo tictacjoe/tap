@@ -11314,52 +11314,58 @@
     "official": "Elon Musk, former DOGE leader / Special Government Employee",
     "offense_category": "Public Exposure of Controlled National-Reconnaissance-Office Data Through DOGE's Own Website, Compounded by Independently Documented Vulnerabilities in That Website's Infrastructure -- an institutional-accountability claim about handling of sensitive national-security information, not a criminal charge",
     "contested": false,
-    "incident_summary": "In mid-February 2025, DOGE's public website, updated to display federal workforce information across agencies, published **headcount and budget details for the National Reconnaissance Office (NRO) -- the intelligence agency that designs and operates U.S. spy satellites**. Multiple intelligence-community sources told ABC News this likely constituted a significant security breach, since both figures are treated as controlled information specifically because foreign adversaries could use them to infer how heavily the U.S. prioritizes particular intelligence-collection activities. Separately, two independent web-development specialists found the DOGE.gov website itself was vulnerable due to its reliance on an unsecured external database, which they said allowed unauthorized access and editing of the site's published content -- meaning the site's own infrastructure, not just what an authorized DOGE staffer chose to post, was a documented security weakness. On February 27, 2025, Senators Elizabeth Warren, Gerry Connolly, and Melanie Stansbury led a group of Democratic lawmakers in opening a formal investigation into DOGE's handling of sensitive national-security information, sending Musk a formal letter of inquiry.",
+    "incident_summary": "In mid-February 2025, DOGE's public website, updated to display federal workforce information across agencies, published **headcount and budget details for the National Reconnaissance Office (NRO) -- the intelligence agency that designs and operates U.S. spy satellites**. Multiple intelligence-community sources told ABC News this likely constituted a significant security breach. Two Senate aides who work on intelligence matters told HuffPost, which first reported the posting, that NRO's headcount and budget are classified, because foreign adversaries could use them to extrapolate how much the U.S. is prioritizing certain intelligence activities. Separately, two web-development experts told 404 Media that the DOGE.gov website was not hosted on government servers and pulled from a database that could be, and had been, written to by third parties, with the changes showing on the live site -- meaning the site's own infrastructure, not just what an authorized DOGE staffer chose to post, was a documented security weakness. On February 27, 2025, Sen. Elizabeth Warren, Rep. Gerry Connolly (ranking member of the House Oversight Committee) and Rep. Melanie Stansbury led a group of Democratic lawmakers in opening an investigation into DOGE.gov's security failures, sending Musk a letter of inquiry.",
     "elements_required": [
       "DOGE's public website published NRO headcount and budget figures, both treated as controlled information under standard intelligence-community practice",
-      "Multiple named intelligence-community sources, speaking to an established news outlet, independently characterized this as a likely significant security breach",
+      "Multiple intelligence-community sources, speaking to an established news outlet, independently characterized this as a likely significant security breach",
       "Independent, separate technical analysis found the DOGE.gov website's own infrastructure -- an unsecured external database -- was vulnerable to unauthorized access and editing",
       "Members of Congress opened a formal investigation and sent a written inquiry to Musk specifically over this and related national-security data-handling concerns"
     ],
     "evidence": [
       {
         "type": "news_report",
-        "description": "ABC News reported DOGE's website published NRO headcount and budget details, with intelligence-community sources calling it a likely significant security breach",
+        "description": "On Feb. 14, 2025, 404 Media reported that two web-development experts found the DOGE.gov website was not hosted on government servers and pulled from a database that could be, and had been, written to by third parties; one showed two entries they had pushed that were live on the site (copy of the article filed as a court exhibit)",
+        "source_url": "https://www.eff.org/files/2025/09/03/037-36_exhibit_36._feb._14_404_media_article.pdf",
+        "maps_to_element": "A compounding, separate infrastructure vulnerability in the website that published the exposed data"
+      },
+      {
+        "type": "news_report",
+        "description": "HuffPost reported that DOGE's website database showed head counts and budgets for the NRO, apparently the only one of the 18 intelligence agencies with data on the site; two Senate aides who work on intelligence matters said NRO's headcount and budget are classified, and a White House spokesperson said \"DOGE did not share classified information\"",
+        "source_url": "https://www.huffpost.com/entry/elon-musk-doge-posts-classified-data_n_67ae646de4b0513a8d767112",
+        "maps_to_element": "DOGE's public website published NRO headcount and budget figures, both treated as controlled information under standard intelligence-community practice"
+      },
+      {
+        "type": "news_report",
+        "description": "On Feb. 16, 2025, ABC News reported DOGE's website published NRO headcount and budget details, with multiple intelligence-community sources calling it a likely significant breach and a Trump administration official saying the headcount had been publicly available on OPM's website",
         "source_url": "https://abcnews.go.com/US/agency-data-shared-doge-online-sparks-concern-intelligence/story?id=118858837",
         "maps_to_element": "The core data-exposure incident and its characterization by intelligence-community sources"
       },
       {
-        "type": "analysis",
-        "description": "Independent technical reporting found the DOGE.gov website relied on an unsecured external database, allowing unauthorized access and editing of published content",
-        "source_url": "https://nquiringminds.com/cybernews/security-breach-exposes-vulnerabilities-in-dogegov-website/",
-        "maps_to_element": "A compounding, separate infrastructure vulnerability in the website that published the exposed data"
-      },
-      {
         "type": "public_record",
-        "description": "Sen. Elizabeth Warren's office announced a formal congressional investigation, joined by Sens. Connolly and Stansbury, into DOGE's handling of sensitive national-security information, with a written letter of inquiry sent to Musk",
-        "source_url": "https://www.warren.senate.gov/newsroom/press-releases/warren-connolly-stansbury-doge-caucus-open-investigation-into-dogegov-after-alarming-failures-to-protect-sensitive-national-security-information",
+        "description": "On Feb. 27, 2025, Sen. Elizabeth Warren, Rep. Gerry Connolly, Rep. Melanie Stansbury and the other Democrats on the House Oversight subcommittee on DOGE wrote to Musk opening an investigation into DOGE.gov after two security failures, citing controlled NRO budget and headcount data in its database, and asked for answers by March 6, 2025",
+        "source_url": "https://capitolreleases.com/releases/0f2deccd-a424-4c3e-9691-6e35277ad6d3",
         "maps_to_element": "Formal congressional oversight response to the incident"
       },
       {
         "type": "news_report",
-        "description": "The Washington Post reported that a separate, broader GAO investigation into how DOGE staff accessed sensitive data across multiple agencies (Treasury, HHS, and others) has been stymied by agencies withholding records; no outcome specific to the Warren/Connolly/Stansbury congressional letter of inquiry into the DOGE.gov/NRO incident itself was identified in this recheck",
+        "description": "The Washington Post reported that a separate, broader GAO investigation into how DOGE members accessed sensitive government databases has been stymied by agencies withholding records, including HHS; the report does not address the lawmakers' letter about DOGE.gov and the NRO data",
         "source_url": "https://www.bespacific.com/agencies-wont-hand-over-records-for-investigation-into-how-doge-accessed-data/",
         "maps_to_element": "Re-verification of the formal congressional oversight response's outcome"
       }
     ],
-    "status": "The specific NRO data was reported removed from public view following the initial reporting, though no source reviewed for this entry confirmed the exact removal date. The underlying congressional investigation's outcome was not confirmed in sourcing reviewed for this entry.",
-    "rebuttal_anticipated": "The Trump administration publicly characterized the published data as already public information rather than classified or controlled material, arguing DOGE's transparency mission justified publishing federal workforce and budget data broadly, including at intelligence agencies.",
-    "comeback": "This entry does not rest on the administration's own characterization -- named intelligence-community sources, not partisan critics, independently told ABC News the specific NRO figures published were controlled information whose exposure could aid foreign adversaries, and a separate technical analysis found the publishing website itself was vulnerable to unauthorized editing, meaning the exposure risk was not limited to what DOGE staff deliberately chose to disclose.",
+    "status": "HuffPost reported the NRO figures were still on DOGE.gov hours after its story ran; no source reviewed gives a removal date. The lawmakers asked Musk to answer their Feb. 27, 2025 letter by March 6, 2025; no reply or finding on that inquiry has been reported in sources reviewed.",
+    "rebuttal_anticipated": "A White House spokesperson said \"DOGE did not share classified information, any assertion to the contrary is a lie,\" and a Trump administration official told ABC News that DOGE was sharing OPM data from the Biden administration and that the agency's headcount had been publicly available on OPM's website.",
+    "comeback": "The entry does not rest on partisan critics alone: multiple intelligence-community sources told ABC News the posting was likely a significant breach, two Senate aides who work on intelligence matters told HuffPost the NRO figures are classified, and DOGE.gov's own fine print said its workforce data excluded intelligence agencies. Two web developers also told 404 Media the publishing site's database could be edited by outsiders, so the exposure risk was not limited to what DOGE staff chose to post.",
     "cause": "[TAP Analysis, not sourced] Illustrates a policy-level accountability question about DOGE's data-handling practices around sensitive national-security information, rather than a specific legal violation by Musk personally.",
-    "last_verified": "2026-09-07",
+    "last_verified": "2026-11-07",
     "date_added": "2026-08-08",
-    "confidence_note": "HIGH confidence on the data exposure and the intelligence-community reaction, corroborated by ABC News's sourcing to multiple named intelligence-community officials. MODERATE confidence on the independent website-vulnerability finding, which rests on a single specialized technical-analysis outlet rather than mainstream corroboration -- treat as a compounding detail rather than the entry's central claim. Re-verified 2026-08-19: no outcome specific to the Feb 27, 2025 Warren/Connolly/Stansbury letter of inquiry into the DOGE.gov/NRO incident was identified. A separate, broader GAO investigation into DOGE's data access across Treasury, HHS, and other agencies remains open as of May 2026 but is a distinct thread -- not NRO-specific -- and has itself been stymied by agency non-cooperation; not folded into this entry's own claim.",
+    "confidence_note": "HIGH confidence on the data exposure and the intelligence-community reaction, reported by HuffPost and ABC News, which cites multiple intelligence-community sources and named former officials. MODERATE confidence on the website-vulnerability finding, which rests on two anonymous web developers who showed their work to 404 Media; the lawmakers' Feb. 27, 2025 release also cites two security researchers. Treat it as a compounding detail rather than the entry's central claim. Re-verified 2026-08-19: no outcome specific to the Feb 27, 2025 Warren/Connolly/Stansbury letter of inquiry into the DOGE.gov/NRO incident was identified. A separate, broader GAO investigation into DOGE's access to sensitive data at several agencies, including HHS, remains open as of May 2026 but is a distinct thread, not specific to the NRO, and has itself been stymied by agency non-cooperation. Re-verified 2026-11-07: Connolly and Stansbury were House members, not senators, per the Feb. 27, 2025 release; no reply from Musk or finding on that letter was found.",
     "section_summaries": {
       "incident_summary": "DOGE's public website exposed controlled National Reconnaissance Office headcount and budget data, on infrastructure independently found insecure.",
-      "confidence_note": "HIGH confidence on the exposure and reaction; MODERATE on the separate website-vulnerability finding, sourced to one technical outlet."
+      "confidence_note": "HIGH confidence on the exposure and reaction; MODERATE on the website-vulnerability finding, from two anonymous developers via 404 Media."
     },
-    "date_of_action": "2025-02 (DOGE website exposes NRO data) through 2025-02-27 (Senators open formal investigation)",
-    "last_substantive_update": "2026-09-07",
+    "date_of_action": "2025-02 (DOGE website exposes NRO data) through 2025-02-27 (Sen. Warren and House Democrats open investigation)",
+    "last_substantive_update": "2026-11-07",
     "glance": {
       "who": "DOGE under Elon Musk (former leader)",
       "what": "DOGE's website exposed controlled National Reconnaissance Office headcount and budget data",
@@ -11368,7 +11374,7 @@
         "certainty": "alleged",
         "who": "NRO's controlled data"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-11-07"
     },
     "status_stage": "Unchallenged",
     "key_events": [
@@ -11377,7 +11383,15 @@
         "text": "DOGE's website posts headcount and budget details for the NRO, the agency that runs U.S. spy satellites",
         "turning_point": true,
         "sources": [
+          "https://www.huffpost.com/entry/elon-musk-doge-posts-classified-data_n_67ae646de4b0513a8d767112",
           "https://abcnews.go.com/US/agency-data-shared-doge-online-sparks-concern-intelligence/story?id=118858837"
+        ]
+      },
+      {
+        "date": "2025-02-14",
+        "text": "Two web developers tell 404 Media the DOGE.gov database can be edited by outsiders",
+        "sources": [
+          "https://www.eff.org/files/2025/09/03/037-36_exhibit_36._feb._14_404_media_article.pdf"
         ]
       },
       {
@@ -11389,10 +11403,10 @@
       },
       {
         "date": "2025-02-27",
-        "text": "Sen. Elizabeth Warren and other Democrats open an inquiry into DOGE's handling of sensitive security data",
+        "text": "Sen. Elizabeth Warren and House Democrats write to Musk, opening an inquiry into DOGE.gov's security failures",
         "turning_point": true,
         "sources": [
-          "https://www.warren.senate.gov/newsroom/press-releases/warren-connolly-stansbury-doge-caucus-open-investigation-into-dogegov-after-alarming-failures-to-protect-sensitive-national-security-information"
+          "https://capitolreleases.com/releases/0f2deccd-a424-4c3e-9691-6e35277ad6d3"
         ]
       }
     ]
@@ -13412,18 +13426,18 @@
     "id": "doj-lausd-gender-identity-disclosure-investigation-2026",
     "official": "Harmeet Dhillon, Assistant Attorney General for Civil Rights",
     "offense_category": "DOJ Civil Rights Investigation Leveraging an Individual Tragedy Into a Broader Political Campaign Against Local School Policy -- an institutional-accountability claim about DOJ's use of investigative authority, not a criminal charge against any named official",
-    "incident_summary": "The Justice Department's Civil Rights Division, led by Assistant Attorney General Harmeet Dhillon, notified the Los Angeles Unified School District (LAUSD) in a March 2026 letter that it was opening an investigation into the district's 2019 policy directing staff not to disclose a student's gender identity to parents without the student's consent. The letter cited a lawsuit filed by parents Kathleen Mulligan and Andrew Parke, **who allege that LAUSD's non-disclosure of their child's social transition isolated them from their child and contributed to the child's suicide two years after graduating from Palisades Charter High School**. The investigation also referenced a separate complaint from a female student who alleged the district ignored her warnings about an unrelated perpetrator. Dhillon issued a public statement confirming and criticizing the policy. The LAUSD investigation is part of a broader DOJ pattern of civil rights inquiries into California and other school districts' gender-identity and parental-notification policies, including at least four Northern California districts and a separate Michigan gender-curriculum probe opened around the same period.",
+    "incident_summary": "The Justice Department's Civil Rights Division, led by Assistant Attorney General Harmeet Dhillon, notified the Los Angeles Unified School District (LAUSD) in a March 2026 letter that it was opening an investigation into the district's 2019 policy giving schools discretion over whether to disclose a student's gender identity to parents. The letter cited a lawsuit filed by parents Kathleen Mulligan and Andrew Parke, **who allege that LAUSD's non-disclosure of their child's social transition isolated them from their child and contributed to the child's suicide two years after graduating from Palisades Charter High School**. The investigation also referenced a separate complaint from a female student who alleged the district ignored her warnings about an unrelated perpetrator. Dhillon issued a public statement confirming and criticizing the policy. The LAUSD investigation is part of a broader DOJ pattern of civil rights inquiries into California and other school districts' gender-identity and parental-notification policies, including at least four Northern California districts and a separate Michigan gender-curriculum probe opened in the months around it.",
     "contested": true,
     "elements_required": [
-      "LAUSD's 2019 policy directs staff not to disclose a student's gender identity to parents without the student's consent",
+      "LAUSD's 2019 policy gives schools discretion over whether to disclose a student's gender identity to parents",
       "A specific, tragic case -- parents alleging the policy contributed to their child's suicide -- is the stated trigger for DOJ's investigation, per DOJ's own letter",
       "DOJ's Civil Rights Division, under a named Assistant Attorney General, opened a formal investigation and issued a public statement criticizing the underlying policy rather than confining itself to the specific case cited",
-      "The LAUSD investigation is one of multiple, similarly-framed DOJ investigations into school districts' gender-identity policies opened in the same period, consistent with a broader civil-rights-enforcement campaign rather than an isolated case-driven inquiry"
+      "The LAUSD investigation is one of multiple, similarly-framed DOJ investigations into school districts' gender-identity policies opened in the months around it, consistent with a broader civil-rights-enforcement campaign rather than an isolated case-driven inquiry"
     ],
     "evidence": [
       {
         "type": "public_record",
-        "description": "Fox News reporting confirms DOJ's Civil Rights Division sent LAUSD a March 2026 letter opening the investigation, citing the Mulligan/Parke lawsuit over their child's suicide and a separate student complaint about an unaddressed perpetrator warning",
+        "description": "Fox News reporting confirms DOJ's Civil Rights Division sent LAUSD a March 2026 letter opening the investigation, citing the Mulligan/Parke lawsuit over their child's suicide and a separate female student's sexual harassment claim",
         "source_url": "https://www.foxnews.com/politics/nations-second-largest-school-district-targeted-trump-over-secretive-trans-policy",
         "maps_to_element": "DOJ's investigation, its stated trigger, and its formal notification to LAUSD"
       },
@@ -13435,41 +13449,65 @@
       },
       {
         "type": "public_record",
-        "description": "Reporting confirms Assistant Attorney General Harmeet Dhillon publicly confirmed and issued a statement criticizing LAUSD's policy, and that DOJ opened similar investigations into at least four Northern California school districts and a Michigan gender-curriculum probe around the same period",
+        "description": "CBS San Francisco reports DOJ's Civil Rights Division opened a compliance review of four Northern California school districts (San Francisco Unified, Graves Elementary, Santa Rita Union and Soledad Unified) over instruction on sexual orientation and gender ideology and parental opt-out notice, with Assistant Attorney General Harmeet Dhillon saying DOJ \"will not tolerate local school authorities trampling on the rights of parents concerning the education of their children\"",
         "source_url": "https://www.cbsnews.com/sanfrancisco/news/doj-reviews-california-school-district-sexual-orientation-gender-policies-san-francisco-monterey/",
         "maps_to_element": "The broader, multi-district pattern and the named official's public statement"
+      },
+      {
+        "type": "reporting",
+        "description": "The New York Times reported on April 8, 2026 that DOJ informed LAUSD of the investigation in a March 25 letter, that the 11-page policy at issue, adopted by the district in 2019, gives schools discretion in deciding whether to disclose a student's gender identity to parents, that the probe was sparked by the parents' lawsuit, and that Dhillon, who signed off on the investigation, said the administration \"will not tolerate policies that deny parents' fundamental rights\"",
+        "source_url": "https://www.nytimes.com/2026/04/08/us/politics/trump-transgender-los-angeles-schools.html",
+        "maps_to_element": "LAUSD's 2019 policy, DOJ's investigation and its stated trigger, and the named official's public statement"
+      },
+      {
+        "type": "public_record",
+        "description": "DOJ press release: the Civil Rights Division opened investigations into three Michigan school districts (Detroit Public Schools Community District, Godfrey-Lee Public Schools and Lansing School District) over sexual orientation and gender ideology content in pre-K-12 classes and parental notice, citing Title IX and Mahmoud v. Taylor",
+        "source_url": "https://www.justice.gov/opa/pr/justice-department-opens-investigations-three-michigan-school-districts-required-instruction",
+        "maps_to_element": "The broader, multi-district pattern of similarly-framed DOJ investigations"
+      },
+      {
+        "type": "public_record",
+        "description": "DOJ press release of October 5, 2026: the Education and Justice Departments sent a joint letter to all state attorneys general on parents' rights under FERPA and PPRA and announced an enforcement action against LAUSD for policies directing staff to keep a student's gender identity \"private\" or \"confidential,\" including from parents",
+        "source_url": "https://www.justice.gov/opa/pr/us-department-education-and-us-department-justice-reaffirm-parents-are-not-terrorists-and",
+        "maps_to_element": "DOJ's escalation from the LAUSD investigation to a federal enforcement action against the district's policy"
+      },
+      {
+        "type": "reporting",
+        "description": "LAist (republishing EdSource) reports the Education Department's enforcement action against LAUSD alleges FERPA and PPRA violations, that LAUSD has denied any wrongdoing according to the Los Angeles Times, and that federal officials did not detail the nature of the action",
+        "source_url": "https://laist.com/news/education/us-department-of-education-action-against-lausd",
+        "maps_to_element": "DOJ's escalation from the LAUSD investigation to a federal enforcement action against the district's policy"
       }
     ],
-    "status": "Ongoing as of the reporting reviewed -- DOJ's investigation had not resulted in a public finding, settlement, or enforcement action against LAUSD as of this entry's addition; the underlying parent lawsuit and a separate California state-court challenge to a related non-disclosure policy were proceeding in parallel litigation tracks.",
-    "rebuttal_anticipated": "Likely defense: a parent's allegation that a school policy contributed to their child's death is a legitimate basis for federal civil-rights scrutiny regardless of the policy's origin or purpose, DOJ has statutory authority to investigate potential parental-rights violations in federally-funded school districts, and opening an investigation is not itself a finding of wrongdoing against LAUSD.",
-    "comeback": "The specific concern is not that DOJ investigated a tragic case, but that it used that single case to publicly criticize and target a broader district-wide (and now multi-district, multi-state) policy on parental notification of gender identity -- a politically contested issue predating this investigation -- rather than confining its inquiry to the individual allegations; the pattern of similarly-framed investigations opened against multiple California districts and at least one other state in the same period is more consistent with a coordinated policy campaign than case-by-case civil-rights enforcement.",
+    "status": "DOJ has announced no finding from its probe. On Oct. 5, 2026, the Education and Justice Departments announced a FERPA and PPRA enforcement action against LAUSD's gender-identity privacy policies, without details; LAUSD has denied wrongdoing. No ruling in the parents' lawsuit has been reported.",
+    "rebuttal_anticipated": "Likely defense: parents' allegation that a school policy contributed to their child's death is a legitimate basis for federal civil-rights scrutiny regardless of the policy's origin or purpose, DOJ has statutory authority to investigate potential parental-rights violations in federally-funded school districts, and opening an investigation is not itself a finding of wrongdoing against LAUSD.",
+    "comeback": "The specific concern is not that DOJ investigated a tragic case, but that it used that single case to publicly criticize and target a broader district-wide (and now multi-district, multi-state) policy on parental notification of gender identity -- a politically contested issue predating this investigation -- rather than confining its inquiry to the individual allegations; the pattern of similarly-framed investigations opened against multiple California districts and at least one other state in the months around it is more consistent with a coordinated policy campaign than case-by-case civil-rights enforcement.",
     "cause": "[TAP Analysis, not sourced] Consistent with a broader pattern this tracker documents of DOJ under this administration using investigative and subpoena authority to pursue politically-favored outcomes on gender-identity policy (see also the NYU Langone and Rhode Island Hospital transgender-care subpoena entries), applied here to K-12 school parental-notification policy rather than medical care.",
-    "last_verified": "2026-09-08",
+    "last_verified": "2026-11-07",
     "date_added": "2026-08-06",
-    "confidence_note": "HIGH confidence on the core facts -- DOJ's investigation, its March 2026 letter, the cited triggering lawsuit, and Dhillon's public statement are corroborated across Fox News, LGBTQ Nation, and CBS San Francisco reporting on the parallel Northern California investigations. MODERATE confidence on characterizing DOJ's motive as primarily political rather than case-driven, since DOJ has not itself confirmed a broader policy objective beyond the individual cases cited -- the multi-district pattern is circumstantial support for that characterization, not a DOJ admission. Re-verified 2026-08-19: no findings, settlement, or enforcement action against LAUSD identified in an August 2026 search sweep; the district continues to decline comment citing the pending investigation. Re-verified 2026-09-08 (batch 69): the DOJ investigation remains pending; no findings, settlement, or enforcement action against LAUSD identified in a September 2026 search sweep. No material change.",
+    "confidence_note": "HIGH confidence on the core facts -- DOJ's investigation, its March 2026 letter, the cited triggering lawsuit, and Dhillon's public statement are corroborated across Fox News, LGBTQ Nation, and CBS San Francisco reporting on the parallel Northern California investigations. MODERATE confidence on characterizing DOJ's motive as primarily political rather than case-driven, since DOJ has not itself confirmed a broader policy objective beyond the individual cases cited -- the multi-district pattern is circumstantial support for that characterization, not a DOJ admission. Re-verified 2026-08-19: no findings, settlement, or enforcement action against LAUSD identified in an August 2026 search sweep; the district continues to decline comment citing the pending investigation. Re-verified 2026-09-08: the DOJ investigation remains pending; no findings, settlement, or enforcement action against LAUSD identified in a September 2026 search sweep. No material change. Re-verified 2026-11-07: the New York Times confirms the policy's 2019 adoption and the March 25 letter; DOJ's own release confirms the Michigan probe; on October 5, 2026, the Education and Justice Departments announced a FERPA and PPRA enforcement action against LAUSD, details undisclosed, which LAUSD denies.",
     "section_summaries": {
-      "incident_summary": "DOJ's Civil Rights Division opened an investigation into LAUSD's gender-identity non-disclosure policy after parents alleged it contributed to their child's suicide, part of a broader wave of similar DOJ investigations into school districts' parental-notification policies nationwide.",
+      "incident_summary": "DOJ opened a civil-rights probe of LAUSD's gender-identity disclosure policy after parents alleged it contributed to their child's suicide, one of several similar DOJ school probes.",
       "confidence_note": "Core facts are well-corroborated across multiple outlets; whether DOJ's motive is primarily political or case-driven is circumstantially, not directly, supported by the multi-district pattern."
     },
     "date_of_action": "2026-03 (DOJ opens LAUSD gender-identity investigation)",
-    "last_substantive_update": "2026-09-08",
+    "last_substantive_update": "2026-11-07",
     "glance": {
       "who": "Harmeet Dhillon (Assistant AG, Civil Rights)",
-      "what": "Opened a civil-rights probe of LAUSD's gender-identity non-disclosure policy after a parent's lawsuit",
+      "what": "Opened a civil-rights probe of LAUSD's gender-identity disclosure policy after two parents sued the district",
       "harm": {
         "kind": "institutional",
         "certainty": "alleged",
         "who": "LAUSD's student-privacy policy"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-11-07"
     },
     "status_stage": "Unchallenged",
     "key_events": [
       {
         "date": "2019",
-        "text": "LAUSD adopts a policy telling staff not to share a student's gender identity with parents without consent",
+        "text": "LAUSD adopts a policy giving schools discretion over disclosing a student's gender identity to parents",
         "sources": [
-          "https://www.foxnews.com/politics/nations-second-largest-school-district-targeted-trump-over-secretive-trans-policy"
+          "https://www.nytimes.com/2026/04/08/us/politics/trump-transgender-los-angeles-schools.html"
         ]
       },
       {
@@ -13478,7 +13516,16 @@
         "turning_point": true,
         "sources": [
           "https://www.foxnews.com/politics/nations-second-largest-school-district-targeted-trump-over-secretive-trans-policy",
+          "https://www.nytimes.com/2026/04/08/us/politics/trump-transgender-los-angeles-schools.html",
           "https://www.lgbtqnation.com/2026/04/doj-investigates-la-public-schools-after-parents-claim-trans-rights-policy-led-to-childs/"
+        ]
+      },
+      {
+        "date": "2026-10-05",
+        "text": "Education and Justice Departments announce a FERPA and PPRA enforcement action against LAUSD's policies",
+        "turning_point": true,
+        "sources": [
+          "https://www.justice.gov/opa/pr/us-department-education-and-us-department-justice-reaffirm-parents-are-not-terrorists-and"
         ]
       }
     ]
@@ -18664,74 +18711,87 @@
   {
     "id": "gao-dhs-whistleblower-investigation-2026",
     "official": "Kristi Noem, then-Secretary of Homeland Security / Joseph Cuffari, DHS Inspector General",
-    "offense_category": "GAO Investigation Into DHS's Handling of Whistleblower Complaints, Opened Amid Separate Concerns About the DHS Inspector General's Independence -- documents an ongoing oversight inquiry, not a completed finding of wrongdoing",
-    "incident_summary": "The Government Accountability Office opened an investigation into DHS's handling of whistleblower complaints spanning from October 1, 2017 (Trump's first term) through September 30, 2025 (the first year of his second term), at the request of Rep. Bennie Thompson, top Democrat on the House Homeland Security Committee, and Sen. Gary Peters. GAO is seeking interviews with DHS whistleblowers who filed complaints during that roughly eight-year window, spanning both Trump administrations and the Biden administration, to gather firsthand accounts of how their complaints were handled. The investigation's launch coincided with DHS separately asking Inspector General Joseph Cuffari -- himself a first-Trump-term appointee -- to turn over a list of all his office's active investigations, a request the Project on Government Oversight's reporting flagged as relevant context for concerns about the DHS watchdog's independence.",
+    "offense_category": "GAO Investigation Into DHS's Handling of Whistleblower Complaints, Opened Amid Separate Concerns About the DHS Inspector General's Independence -- documents GAO's published findings of delays and missed statutory deadlines in DHS whistleblower retaliation cases, not a finding of retaliation by any named official",
+    "incident_summary": "The Government Accountability Office opened an investigation into DHS's handling of whistleblower complaints spanning from October 1, 2017 (Trump's first term) through September 30, 2025 (the first year of his second term), at the request of Rep. Bennie Thompson, top Democrat on the House Homeland Security Committee, and Sen. Gary Peters. GAO sought interviews with DHS whistleblowers who filed complaints during that roughly eight-year window, spanning both Trump administrations and the Biden administration, to gather firsthand accounts of how their complaints were handled. The review became public in February 2026, after DHS said it had asked Inspector General Joseph Cuffari -- himself a first-Trump-term appointee -- to turn over a list of all his office's active investigations, a request The Hill reported amid concerns about the DHS watchdog's independence.",
     "contested": false,
     "elements_required": [
       "GAO, an independent legislative-branch auditor, opened a formal investigation into DHS whistleblower handling at the explicit request of congressional oversight members",
       "The review's scope spans multiple administrations (both Trump terms and Biden), indicating a structural inquiry into DHS whistleblower-handling practices generally, not a partisan complaint about only the current administration",
       "GAO's request for direct whistleblower interviews indicates an intent to gather firsthand, systemic evidence rather than relying solely on DHS's own self-reporting",
-      "The investigation's launch coincided with DHS's own request that IG Cuffari disclose his office's active investigations -- a request raising independent oversight-independence concerns documented separately by POGO"
+      "The review became public after DHS's general counsel confirmed asking IG Cuffari to disclose his office's active investigations -- a request raising separate oversight-independence concerns, reported by The Hill"
     ],
     "evidence": [
       {
         "type": "public_record",
-        "description": "The Hill's reporting confirms GAO's investigation launch, its request for whistleblower interviews spanning October 2017 through September 2025, and that it was requested by Rep. Bennie Thompson and Sen. Gary Peters",
+        "description": "POGO Investigates (February 2026), citing a government email it obtained, reports that GAO launched a review of DHS's processes for handling whistleblower reprisal complaints and is requesting interviews with DHS whistleblowers who filed complaints in fiscal years 2018 through 2025; a GAO spokesperson confirmed the review and that Thompson and Peters requested it",
+        "source_url": "https://www.pogo.org/investigates/dhs-treatment-of-whistleblowers-under-investigation-by-gao",
+        "maps_to_element": "Independent documentary confirmation of the review's scope and requesters"
+      },
+      {
+        "type": "reporting",
+        "description": "When the review became public in February 2026, a GAO spokesperson told POGO Investigates it did not yet have an estimated date of completion",
+        "source_url": "https://www.pogo.org/investigates/dhs-treatment-of-whistleblowers-under-investigation-by-gao",
+        "maps_to_element": "Investigation status at launch"
+      },
+      {
+        "type": "public_record",
+        "description": "The Hill (Feb. 17, 2026) reports that GAO confirmed it is reviewing DHS's handling of whistleblower complaints from Trump's first term through the first year of his second, that it reached out asking for whistleblower interviews, that Rep. Bennie Thompson and Sen. Gary Peters requested the review, and that the probe came after DHS said it had asked Inspector General Joseph Cuffari to turn over a list of all his active investigations",
         "source_url": "https://thehill.com/homenews/administration/5742600-gao-investigates-dhs-whistleblowers/",
         "maps_to_element": "GAO investigation's existence, scope, and congressional requesters"
       },
       {
         "type": "public_record",
-        "description": "The Project on Government Oversight's reporting, based on an email it obtained, confirms the investigation's scope and details, and separately documents DHS's request that IG Cuffari turn over a list of his office's active investigations as relevant context",
-        "source_url": "https://www.pogo.org/investigates/dhs-treatment-of-whistleblowers-under-investigation-by-gao",
-        "maps_to_element": "Independent documentary confirmation and the DHS-IG-independence context"
-      },
-      {
-        "type": "reporting",
-        "description": "Re-verified 2026-08-18: no findings or conclusions from GAO's review have been published in sourcing reviewed; GAO has not confirmed an estimated completion date, and the investigation remains open.",
-        "source_url": "https://www.pogo.org/investigates/dhs-treatment-of-whistleblowers-under-investigation-by-gao",
-        "maps_to_element": "Investigation status as of this update"
+        "description": "GAO's report GAO-26-108106 (September 17, 2026), addressed to Peters and Thompson, finds the DHS OIG took over 3 years to investigate the majority (39 of 73) of retaliation cases it opened and closed in fiscal years 2018 through 2025, and that the Secretary did not decide on corrective action within the legally required 30 days for any of the 11 substantiated cases; DHS OIG and DHS agreed with its three recommendations",
+        "source_url": "https://files.gao.gov/reports/GAO-26-108106/index.html",
+        "maps_to_element": "GAO's published findings from the requested review"
       }
     ],
-    "status": "Ongoing as of this entry's addition (February 2026 launch) -- no findings or conclusions had been published in sourcing reviewed as of this entry's addition.",
+    "status": "GAO published its review on September 17, 2026: DHS's IG office took over 3 years on most retaliation cases it opened and closed in fiscal 2018-2025, and the Secretary missed the 30-day legal deadline in all 11 substantiated cases. DHS and the IG agreed with GAO's three recommendations.",
     "rebuttal_anticipated": "Likely defense: a GAO review spanning multiple administrations, including years before the current one, is a routine, bipartisan-appropriate oversight exercise rather than evidence of current administration-specific wrongdoing, and DHS requesting a list of its own IG's active investigations is a legitimate internal management inquiry rather than interference.",
-    "comeback": "This entry does not assert GAO has found wrongdoing -- it documents that Congress found DHS whistleblower handling serious enough to warrant a formal, multi-year GAO review with direct whistleblower interviews, occurring in the same period DHS separately sought visibility into its own Inspector General's active investigation list, a combination worth tracking for its eventual findings rather than asserting a conclusion prematurely.",
+    "comeback": "This entry does not assert GAO found retaliation or interference by any official. It documents that Congress found DHS whistleblower handling serious enough to warrant a formal GAO review with direct whistleblower interviews, that the review found the DHS OIG took over 3 years to investigate most retaliation cases it closed and that the Secretary missed the 30-day legal deadline in all 11 substantiated cases, and that this came in the same period DHS sought visibility into its own Inspector General's active investigation list.",
     "cause": "[TAP Analysis, not sourced] Consistent with the broader pattern this tracker documents of DHS oversight and accountability mechanisms facing structural strain under the current administration (see also the ICE biometric-surveillance IG audit and DHS critic-subpoena entries), though this entry concerns a multi-administration review rather than a claim specific to the current administration alone.",
-    "last_verified": "2026-09-07",
+    "last_verified": "2026-11-07",
     "date_added": "2026-08-05",
-    "confidence_note": "HIGH confidence on the investigation's existence, scope, and requesters -- independently corroborated by The Hill and POGO's own documentary reporting (an email POGO obtained directly). This entry documents an open inquiry, not a completed finding, so no confidence assessment of underlying wrongdoing is applicable yet. Re-verified 2026-08-18: no material change -- investigation remains open with no published findings. Re-verified 2026-08-26: investigation remains open with no published findings and no estimated completion date identified in sourcing reviewed; no material change since the prior recheck.",
+    "confidence_note": "HIGH confidence on the investigation's existence, scope, and requesters -- corroborated by The Hill and POGO's own documentary reporting (an email POGO obtained directly), with GAO confirming the review to both. The DHS request for the Inspector General's list of active investigations is reported by The Hill, not by POGO. HIGH confidence on GAO's findings, read in GAO's own report; those findings concern delays, not proven retaliation or interference by any named official. Re-verified 2026-08-18: no material change -- investigation remains open with no published findings. Re-verified 2026-08-26: investigation remains open with no published findings and no estimated completion date identified in sourcing reviewed; no material change since the prior recheck. Re-verified 2026-11-07: GAO published the review on September 17, 2026 (GAO-26-108106), addressed to Peters and Thompson; its letter says GAO conducted the audit from February 2025 to September 2026.",
     "section_summaries": {
-      "incident_summary": "GAO opened a formal, multi-administration investigation into DHS's handling of whistleblower complaints (2017-2025) at congressional Democrats' request, seeking direct whistleblower interviews, launched around the same time DHS asked its own Inspector General for a list of active investigations.",
-      "confidence_note": "Well-corroborated by The Hill and POGO's own documentary reporting; this documents an open inquiry, not yet a completed finding."
+      "incident_summary": "At the request of Rep. Thompson and Sen. Peters, GAO reviewed DHS's handling of whistleblower complaints from 2017-2025, interviewing whistleblowers, as DHS sought its IG's list of active probes.",
+      "confidence_note": "Well corroborated by The Hill, POGO and GAO's own report, whose findings concern delays rather than proven retaliation or interference."
     },
-    "last_substantive_update": "2026-08-23",
+    "last_substantive_update": "2026-11-07",
     "glance": {
       "who": "Kristi Noem (DHS) and Joseph Cuffari (DHS IG)",
-      "what": "DHS asked its Inspector General for a list of active probes as GAO opened a whistleblower-handling inquiry",
+      "what": "GAO found DHS slow on whistleblower retaliation cases; DHS had sought its IG's list of active probes",
       "harm": {
         "kind": "institutional",
         "certainty": "alleged",
         "who": "DHS Inspector General's independence"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-11-07"
     },
-    "status_stage": "Under investigation",
+    "status_stage": "Finding issued",
     "key_events": [
       {
         "date": "2026-02",
-        "text": "DHS asks its inspector general, Joseph Cuffari, to hand over a list of all his office's active investigations",
+        "text": "DHS says it asked its inspector general, Joseph Cuffari, for a list of all his office's active investigations",
+        "sources": [
+          "https://thehill.com/homenews/administration/5742600-gao-investigates-dhs-whistleblowers/"
+        ]
+      },
+      {
+        "date": "2026-02",
+        "text": "GAO confirms its review of DHS whistleblower complaint handling, requested by Thompson and Peters, and seeks interviews",
+        "turning_point": true,
         "sources": [
           "https://thehill.com/homenews/administration/5742600-gao-investigates-dhs-whistleblowers/",
           "https://www.pogo.org/investigates/dhs-treatment-of-whistleblowers-under-investigation-by-gao"
         ]
       },
       {
-        "date": "2026-02",
-        "text": "GAO opens a review of DHS whistleblower complaint handling from 2017 to 2025, at the request of Thompson and Peters",
+        "date": "2026-09-17",
+        "text": "GAO finds DHS's IG office took over 3 years on most retaliation cases and DHS missed all 11 corrective-action deadlines",
         "turning_point": true,
         "sources": [
-          "https://thehill.com/homenews/administration/5742600-gao-investigates-dhs-whistleblowers/",
-          "https://www.pogo.org/investigates/dhs-treatment-of-whistleblowers-under-investigation-by-gao"
+          "https://files.gao.gov/reports/GAO-26-108106/index.html"
         ]
       }
     ]
@@ -27057,58 +27117,76 @@
     "official": "Linda McMahon, Secretary of Education",
     "offense_category": "Staffing a Federal Agency With Activists From Groups Whose Stated Goal Is Dismantling That Agency's Own Mission, Including the Secretary's Own Prior Leadership Role at One Such Group -- no criminal charge; an accountability claim about institutional capture and an undisclosed personal history rather than a specific statutory violation",
     "contested": true,
-    "incident_summary": "Before becoming Education Secretary, McMahon chaired the America First Policy Institute (AFPI), a think tank co-founded by Stephen Miller that lists private-school vouchers and embedding 'biblical principles' in education among its priorities. ProPublica's investigation, published across a series of 2025-2026 reports, found McMahon has since brought at least 20 political appointees into the Education Department from ultraconservative advocacy groups and think tanks that share her department's own stated skepticism of public education's value, including at least nine from AFPI itself. Top adviser Lindsey Burke is a longtime Heritage Foundation policy director and the lead author of the education section of Project 2025, the conservative policy blueprint. Leaders from Moms for Liberty -- a group whose co-founder, Tiffany Justice (now with Heritage Foundation's political-advocacy arm), told ProPublica she hopes to drive public-school enrollment to 'zero' -- have joined McMahon for department roundtables and official events, and appointees with ties to Defending Education have also been placed in department posts. Under this leadership, the department has redirected hundreds of millions of dollars toward charter, private, and religious schools; released a formal 'Patriotic Education Supplemental Priority' tying federal funding preference to curricula emphasizing patriotic themes; and moved to protect school prayer. Separately, **the department's Office for Civil Rights (OCR) had its staff cut roughly in half early in Trump's second term and its nationwide regional office footprint reduced; OCR resolved 30% fewer discrimination complaints in 2025 than in 2024 and reached formal resolution agreements in fewer than 1% of its investigations**, while the administration's own subsequent budget proposal sought a further 35% cut to OCR's funding. In an apparent reversal reflecting the cuts' own dysfunction, the department later walked back hundreds of the OCR layoffs and paid approximately $38 million to the laid-off staff, even as OCR continued dismissing the large majority of complaints it received.",
+    "incident_summary": "Before becoming Education Secretary, McMahon chaired the America First Policy Institute (AFPI), a think tank co-founded by Stephen Miller that lists private-school vouchers and embedding 'biblical principles' in education among its priorities. ProPublica's investigation, published across a series of 2025-2026 reports, found McMahon has since brought at least 20 political appointees into the Education Department from ultraconservative advocacy groups and think tanks that share her department's own stated skepticism of public education's value, including at least nine from AFPI itself. Top adviser Lindsey Burke is a longtime Heritage Foundation policy director and the lead author of the education section of Project 2025, the conservative policy blueprint. Leaders from Moms for Liberty -- a group whose co-founder, Tiffany Justice (now with Heritage Foundation's political-advocacy arm), told ProPublica she hopes to drive public-school enrollment to 'zero' -- have joined McMahon for department roundtables and official events, and appointees with ties to Defending Education have also been placed in department posts. Under this leadership, the department has redirected hundreds of millions of dollars toward charter, private, and religious schools; released a formal 'Patriotic Education Supplemental Priority' tying federal funding preference to curricula emphasizing patriotic themes; and moved to protect school prayer. Separately, **in March 2025 the department moved to lay off about half of its Office for Civil Rights (OCR) staff and closed seven of OCR's 12 regional offices; OCR resolved roughly 30% fewer discrimination complaints in 2025 than in 2024 and reached resolution agreements in about 1% of pending cases**, while the administration's 2027 budget sought a further 35% cut to OCR's funding. The laid-off OCR staff sat on paid administrative leave as court challenges held up the layoffs; GAO estimated that paying them cost up to $38 million from March to December 2025; about 90% of the complaints OCR resolved from March to September 2025 were dismissals. The department recalled the staff in December 2025 and rescinded the OCR layoffs in early January 2026.",
     "elements_required": [
       "McMahon personally led an organization (AFPI) advocating the same anti-public-school, pro-voucher, religious-curriculum agenda her department has since pursued, a direct personal continuity between her prior advocacy role and her official capacity",
       "At least 20 political appointees, including at least nine from AFPI itself, were placed in the department from organizations whose stated goal is reducing or eliminating public school enrollment -- corroborated by named individuals' own statements to ProPublica, not merely inferred affiliation",
-      "The department's civil-rights enforcement function (OCR) was cut roughly in half in staffing and saw a documented, quantified decline in complaint resolutions during the same period the department pursued the appointees' shared ideological agenda"
+      "The department's civil-rights enforcement function (OCR) had about half its staff sidelined on paid leave for layoff and saw a documented, quantified decline in complaint resolutions during the same period the department pursued the appointees' shared ideological agenda"
     ],
     "evidence": [
       {
-        "type": "news_report",
-        "description": "ProPublica: 'These Activists Want to Dismantle Public Schools. Now They Run the Education Department' -- documents the 20+ appointees, Lindsey Burke's Heritage/Project 2025 role, the 9+ AFPI hires, and Tiffany Justice's 'zero' enrollment goal quote",
-        "source_url": "https://www.propublica.org/article/education-department-public-schools-activists-linda-mcmahon-trump",
-        "maps_to_element": "elements_required.1"
-      },
-      {
-        "type": "news_report",
-        "description": "CNN: 'Linda McMahon is dismantling the Education Department -- but first she'll help make school patriotic again' -- documents the Patriotic Education Supplemental Priority and the school-prayer initiative",
-        "source_url": "https://www.cnn.com/2025/09/27/politics/linda-mcmahon-department-of-education-patriotic-civics",
-        "maps_to_element": "Documents specific official department actions implementing the appointees' shared agenda"
-      },
-      {
         "type": "public_record",
-        "description": "U.S. Department of Education's own press release announcing the Patriotic Education Supplemental Priority",
+        "description": "U.S. Department of Education's own press release (Sept. 17, 2025) announcing the Patriotic Education Supplemental Priority",
         "source_url": "https://www.ed.gov/about/news/press-release/us-department-of-education-releases-secretary-mcmahons-patriotic-education-supplemental-priority",
         "maps_to_element": "Primary-source confirmation of a specific official policy tying federal funding preference to curriculum content"
       },
       {
         "type": "news_report",
-        "description": "K-12 Dive: Education Department paid roughly $38 million to laid-off Office for Civil Rights staff while dismissing most complaints it received, after walking back hundreds of the original OCR layoffs -- documents both the staffing cuts' scale and their acknowledged dysfunction",
+        "description": "CNN (Sept. 27, 2025): 'Linda McMahon is dismantling the Education Department -- but first she'll help make school patriotic again' -- documents the Patriotic Education Supplemental Priority and the school-prayer initiative",
+        "source_url": "https://www.cnn.com/2025/09/27/politics/linda-mcmahon-department-of-education-patriotic-civics",
+        "maps_to_element": "Documents specific official department actions implementing the appointees' shared agenda"
+      },
+      {
+        "type": "news_report",
+        "description": "ProPublica (Oct. 8, 2025): 'These Activists Want to Dismantle Public Schools. Now They Run the Education Department' -- documents the 20+ appointees, Lindsey Burke's Heritage/Project 2025 role, the 9+ AFPI hires, and Tiffany Justice's 'zero' enrollment goal quote",
+        "source_url": "https://www.propublica.org/article/education-department-public-schools-activists-linda-mcmahon-trump",
+        "maps_to_element": "elements_required.1"
+      },
+      {
+        "type": "public_record",
+        "description": "GAO report GAO-26-108320 (published Jan. 29, 2026, publicly released Feb. 2, 2026): in March 2025 about half of OCR's 575 staff were placed on paid administrative leave and seven of OCR's 12 regional offices were closed; paying OCR staff who weren't working from March to December 2025 may have cost up to $38 million; from March to September 2025 OCR resolved over 7,000 complaints, about 90 percent by dismissal; Education recalled the staff in December 2025 and rescinded the OCR layoffs in early January 2026",
+        "source_url": "https://www.gao.gov/products/gao-26-108320",
+        "maps_to_element": "elements_required.2"
+      },
+      {
+        "type": "news_report",
+        "description": "K-12 Dive: Education Department paid laid-off Office for Civil Rights staff $38 million while dismissing most complaints",
         "source_url": "https://www.k12dive.com/news/education-department-paid-laid-off-ocr-staff-38m-while-dismissing-most-com/811166/",
         "maps_to_element": "elements_required.2"
       },
       {
         "type": "news_report",
-        "description": "Jewish Insider/NPR: McMahon defended OCR staffing before Congress even as the administration's own budget proposal sought a further 35% OCR funding cut and department data showed a 30% year-over-year drop in resolved discrimination complaints",
+        "description": "Jewish Insider (April 28, 2026): at a Senate Appropriations subcommittee hearing, McMahon claimed she was trying to rebuild and expand OCR and had re-hired all fired OCR attorneys except those who took early retirement, while the administration's 2027 budget requested a $49 million cut to OCR, from $140 million to $91 million, which Sen. Chris Murphy called a 35% cut",
         "source_url": "https://jewishinsider.com/2026/04/linda-mcmahon-education-department-civil-rights-budget-cuts-staffing/",
+        "maps_to_element": "elements_required.2"
+      },
+      {
+        "type": "news_report",
+        "description": "New York Times (April 28, 2026): the Education Department resolved roughly 30 percent fewer discrimination complaints in 2025 than in 2024, the sharpest year-to-year decline in more than three decades, according to government data obtained by the Times",
+        "source_url": "https://www.nytimes.com/2026/04/28/us/politics/education-department-civil-rights-trump.html",
+        "maps_to_element": "elements_required.2"
+      },
+      {
+        "type": "news_report",
+        "description": "The Arc (April 29, 2026): a Senate HELP Committee staff report released April 28, 2026 found OCR reached 112 resolution agreements in 2025, down from 507 in 2024, about 1% of the 11,985 civil rights cases it says were pending",
+        "source_url": "https://thearc.org/blog/help-committee-report-finds-ocr-reached-a-12-year-low-in-enforceable-relief-for-students-facing-discrimination/",
         "maps_to_element": "elements_required.2"
       }
     ],
-    "status": "Ongoing -- the appointee network, funding redirection toward private/religious/charter schools, and the Patriotic Education policy remain in effect; OCR staffing partially restored (hundreds of layoffs walked back) but complaint-resolution performance and the proposed further 35% budget cut remained live issues as of the reporting reviewed.",
-    "rebuttal_anticipated": "McMahon's department would characterize the appointees as qualified education-policy experts entitled to pursue the administration's stated agenda of expanding parental choice and school options, argue that redirecting funds toward charter/private/religious schools reflects legitimate policy priorities within executive discretion, and note that some OCR staffing was in fact restored after the initial cuts proved counterproductive -- evidence of course-correction rather than fixed hostility to the office's mission.",
-    "comeback": "The appointees' own on-record statements -- including a former Moms for Liberty co-founder's explicit goal of driving public-school enrollment to zero -- go beyond ordinary policy disagreement about school choice to an avowed aim of eliminating the public system the department is statutorily charged with supporting; McMahon's own prior chairmanship of AFPI, one of the very organizations now supplying department staff, is a direct personal throughline rather than an arm's-length policy alignment. And OCR's partial staffing restoration came only after paying $38 million to previously-laid-off staff and continuing to dismiss the large majority of complaints -- evidence of costly institutional damage and continued underperformance, not evidence the underlying approach to civil-rights enforcement changed.",
+    "status": "Ongoing: the appointee network, funding shift toward private, religious and charter schools, and the Patriotic Education priority remain in effect. OCR's layoffs were rescinded in January 2026, but resolved complaints fell 30% in 2025 and the 2027 budget seeks a 35% cut to OCR.",
+    "rebuttal_anticipated": "McMahon's department would characterize the appointees as qualified education-policy experts entitled to pursue the administration's stated agenda of expanding parental choice and school options, argue that redirecting funds toward charter/private/religious schools reflects legitimate policy priorities within executive discretion, and note that the department recalled the OCR staff and rescinded their layoffs -- evidence of course-correction rather than fixed hostility to the office's mission.",
+    "comeback": "The appointees' own on-record statements -- including a former Moms for Liberty co-founder's explicit goal of driving public-school enrollment to zero -- go beyond ordinary policy disagreement about school choice to an avowed aim of eliminating the public system the department is statutorily charged with supporting; McMahon's own prior chairmanship of AFPI, one of the very organizations now supplying department staff, is a direct personal throughline rather than an arm's-length policy alignment. And OCR's staff came back only after months of paid leave, which GAO estimated cost up to $38 million, as court challenges held up the layoffs; about 90% of the complaints OCR resolved in that period were dismissals, and the administration's 2027 budget still seeks a 35% cut to the office -- evidence of costly institutional damage and continued underperformance, not evidence the underlying approach to civil-rights enforcement changed.",
     "cause": "[TAP Analysis, not sourced] Illustrates a broader pattern of installing officials whose professional history is opposition to an agency's core mission into leadership of that same agency, converting federal administration into an instrument for dismantling public institutions from within rather than administering them.",
-    "confidence_note": "HIGH confidence on the appointee network, the named individuals' backgrounds and quoted statements, and the Patriotic Education policy, all independently corroborated by ProPublica's investigative reporting (which the ed.gov press release and CNN's own reporting corroborate for the policy specifically) and wide syndication (CT Mirror, EdPost, Highland County Press, ForwardKY). HIGH confidence on the OCR staffing cuts, the 30% complaint-resolution decline, and the $38 million payment to laid-off staff, corroborated across K-12 Dive, Jewish Insider, NPR, and Federal News Network. MODERATE confidence on characterizing McMahon's own AFPI chairmanship as a personally-continuous conflict of interest rather than a coincidental ideological alignment -- this is this entry's own interpretive framing, though the underlying fact of her prior AFPI role is not disputed.",
+    "confidence_note": "HIGH confidence on the appointee network, the named individuals' backgrounds and quoted statements, and the Patriotic Education policy, all independently corroborated by ProPublica's investigative reporting (which the ed.gov press release and CNN's own reporting corroborate for the policy specifically) and wide syndication (CT Mirror, EdPost, Highland County Press, ForwardKY). HIGH confidence on the OCR layoffs and regional-office closures, GAO's estimate of up to $38 million in pay for idle OCR staff, the 90% dismissal rate, and the layoffs' rescission, all from GAO's own report; on the 30% decline in resolved complaints (New York Times, from department data), the drop to 112 resolution agreements (a Senate HELP Committee staff report), and the proposed 35% budget cut (Jewish Insider). MODERATE confidence on characterizing McMahon's own AFPI chairmanship as a personally-continuous conflict of interest rather than a coincidental ideological alignment -- this is this entry's own interpretive framing, though the underlying fact of her prior AFPI role is not disputed.",
     "pull_quote": "Moms for Liberty co-founder Tiffany Justice told ProPublica she hopes to drive public-school enrollment to “zero.”",
-    "last_verified": "2026-09-09",
+    "last_verified": "2026-11-07",
     "date_added": "2026-09-09",
     "section_summaries": {
-      "incident_summary": "McMahon, a former AFPI chair, staffed the Education Department with 20+ activists from groups seeking to reduce or eliminate public education, redirected funding to private/religious/charter schools, and tied federal priority to \"patriotic\" curricula, while OCR's staffing cuts nearly halved complaint resolutions.",
-      "confidence_note": "Well-corroborated across ProPublica's investigative reporting, the department's own press releases, and independent OCR-performance reporting; the conflict-of-interest framing is this entry's own interpretive analysis."
+      "incident_summary": "McMahon, a former AFPI chair, staffed the Education Dept with 20+ activists from groups seeking to shrink public schools, steered money to private and religious schools, and cut civil rights work.",
+      "confidence_note": "Well-corroborated by ProPublica, the department's own releases, GAO and news reporting on OCR; the conflict-of-interest framing is this entry's own interpretive analysis."
     },
     "date_of_action": "2025 through 2026 (ProPublica investigation into Education Department activist-appointment and OCR-cuts pattern)",
-    "last_substantive_update": "2026-09-09",
+    "last_substantive_update": "2026-11-07",
     "glance": {
       "who": "Linda McMahon (Secretary of Education)",
       "what": "Staffed the Education Dept with 20+ activists from groups seeking to shrink or end public education",
@@ -27117,24 +27195,16 @@
         "certainty": "alleged",
         "who": "Education Dept's public-schools mission"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-11-07"
     },
-    "status_stage": "Unchallenged",
+    "status_stage": "Finding issued",
     "key_events": [
       {
-        "date": "2025",
-        "text": "The department's civil rights office loses about half its staff and much of its regional office network",
+        "date": "2025-03",
+        "text": "The department moves to lay off about half its civil rights office staff and closes 7 of 12 regional offices",
         "turning_point": true,
         "sources": [
-          "https://jewishinsider.com/2026/04/linda-mcmahon-education-department-civil-rights-budget-cuts-staffing/",
-          "https://www.k12dive.com/news/education-department-paid-laid-off-ocr-staff-38m-while-dismissing-most-com/811166/"
-        ]
-      },
-      {
-        "date": "2025",
-        "text": "ProPublica finds McMahon has brought in at least 20 appointees from groups skeptical of public schools",
-        "sources": [
-          "https://www.propublica.org/article/education-department-public-schools-activists-linda-mcmahon-trump"
+          "https://www.gao.gov/products/gao-26-108320"
         ]
       },
       {
@@ -27154,10 +27224,40 @@
         ]
       },
       {
-        "date": "2026-04",
-        "text": "The administration's budget seeks a further 35% cut to the civil rights office after a 30% drop in resolved complaints",
+        "date": "2025-10-08",
+        "text": "ProPublica finds McMahon has brought in at least 20 appointees from groups skeptical of public schools",
         "sources": [
+          "https://www.propublica.org/article/education-department-public-schools-activists-linda-mcmahon-trump"
+        ]
+      },
+      {
+        "date": "2026-01",
+        "text": "After recalling the staff in December, the department rescinds the civil rights office layoffs",
+        "turning_point": true,
+        "sources": [
+          "https://www.gao.gov/products/gao-26-108320"
+        ]
+      },
+      {
+        "date": "2026-02-02",
+        "text": "GAO estimates paying idle civil rights staff cost up to $38 million; about 90% of resolved complaints were dismissed",
+        "sources": [
+          "https://www.gao.gov/products/gao-26-108320"
+        ]
+      },
+      {
+        "date": "2026-04-28",
+        "text": "Data show resolved complaints fell about 30% in 2025, as the 2027 budget seeks a further 35% cut to the office",
+        "sources": [
+          "https://www.nytimes.com/2026/04/28/us/politics/education-department-civil-rights-trump.html",
           "https://jewishinsider.com/2026/04/linda-mcmahon-education-department-civil-rights-budget-cuts-staffing/"
+        ]
+      },
+      {
+        "date": "2026-04-28",
+        "text": "A Senate HELP staff report finds the office reached resolution agreements in about 1% of pending cases in 2025",
+        "sources": [
+          "https://thearc.org/blog/help-committee-report-finds-ocr-reached-a-12-year-low-in-enforceable-relief-for-students-facing-discrimination/"
         ]
       }
     ]
@@ -32571,54 +32671,66 @@
     "id": "patel-toll-records-staff-firing-2026",
     "official": "Kash Patel, FBI Director",
     "offense_category": "Firing FBI Personnel Connected to a Biden-Era Investigation Into Patel's Own Phone Records -- raises a direct personal-conflict-of-interest concern, since the FBI Director used his removal authority against staff connected to an investigation of himself",
-    "incident_summary": "**The FBI fired at least 10 agents and staff members who had been connected to obtaining 'toll records' (call timing and recipient logs, not call content) for phone numbers belonging to Kash Patel and White House Chief of Staff Susie Wiles, sought in 2022-2023 as part of the Biden-era federal investigation into Trump's handling of classified documents at Mar-a-Lago.** Patel told Reuters the toll-record collection was 'outrageous and deeply alarming,' characterizing it as Biden-administration overreach. Legal observers noted that subpoenaing phone toll records -- which reveal only call metadata, not conversation content -- is a routine, unremarkable step in major federal investigations, including ones involving prominent officials' associates. It was not confirmed in sourcing reviewed whether the specific fired staff had personally sought, approved, or executed the toll-record request, or were terminated simply for having been assigned to the broader investigation.",
+    "incident_summary": "**The FBI fired at least 10 agents and staff members who had been connected to obtaining 'toll records' (call timing and recipient logs, not call content) for phone numbers belonging to Kash Patel and White House Chief of Staff Susie Wiles, sought in 2022-2023 as part of the Biden-era federal investigation into Trump's handling of classified documents at Mar-a-Lago.** Patel told Reuters, which first reported the subpoenas, that investigators obtained 'toll records.' In a statement on February 25, 2026, given to outlets including Axios and Fox News, he called it 'outrageous and deeply alarming that the previous FBI leadership secretly subpoenaed my own phone records,' using 'flimsy pretexts.' MS NOW reported that toll records 'are routinely and legally obtained in a criminal investigation,' and CNN that subpoenaing such information for those around Trump 'was part of the normal process of such an investigation.' It was not confirmed in sourcing reviewed whether the specific fired staff had personally sought, approved, or executed the toll-record request, or were terminated simply for having been assigned to the broader investigation.\n\nUpdate 2026-11-07: On October 15, 2026, nine of the fired employees, special agents, staff operations specialists and intelligence analysts assigned to the classified-documents probe, sued in federal court in Washington, seeking reinstatement and back pay. Their complaint says Patel 'summarily fired' them over two days in February 2026 with letters invoking 'Article II' and stating each had 'exercised poor judgment and a lack of impartiality in carrying out duties, leading to the political weaponization of the government,' and that the firings followed no internal investigation or disciplinary process.",
     "contested": true,
     "elements_required": [
       "Patel, now FBI Director, personally ordered the firing of FBI staff connected to an investigation that had obtained his own and a senior White House official's phone toll records",
       "This creates a direct conflict of interest -- the FBI Director exercising personnel authority over staff connected to scrutiny of himself, rather than the matter being handled through an independent process",
-      "Toll-record subpoenas are, per legal observers, a routine investigative step rather than an unusual or improper one, undercutting Patel's 'outrageous' characterization as the sole basis for termination",
+      "Toll-record subpoenas are, per CNN and MS NOW reporting, a routine investigative step rather than an unusual or improper one, undercutting Patel's 'outrageous' characterization as the sole basis for termination",
       "No source confirmed the specific fired individuals personally requested or approved the toll-record subpoena, as opposed to being connected to the broader investigation in some other capacity"
     ],
     "evidence": [
       {
         "type": "public_record",
-        "description": "CNN's reporting confirms at least 10 FBI staffers were fired over their connection to the toll-record collection on Patel and Wiles during the Trump classified-documents investigation",
+        "description": "CNN reported on February 25, 2026 that Patel ordered the ouster of at least 10 employees involved in the Trump classified-documents investigation, part of a wider internal investigation he ordered after discovering the FBI had subpoenaed his and Wiles's communication records",
         "source_url": "https://www.cnn.com/2026/02/25/politics/fbi-agents-fired-classified-documents-kash-patel-toll-records",
         "maps_to_element": "Scale and basis of the firings"
       },
       {
         "type": "public_record",
-        "description": "Reuters' direct reporting (via Patel's own quoted comments) confirms Patel characterized the toll-record collection as 'outrageous and deeply alarming,' and that the underlying subpoenas targeted his and Wiles's 2022-2023 phone records",
+        "description": "Fox News confirmed that the FBI subpoenaed Patel's and Wiles's phone records in 2022 and 2023, when both were private citizens, and was told at least 10 FBI employees were fired that Wednesday; in a statement to Fox News, Patel called the move 'outrageous and deeply alarming.' Reuters first disclosed the subpoenas.",
         "source_url": "https://www.foxnews.com/politics/fbi-subpoenaed-kash-patel-susie-wiles-phone-records-federal-trump-investigation.amp",
         "maps_to_element": "Patel's own stated rationale and the specific records at issue"
       },
       {
         "type": "reporting",
-        "description": "Axios's reporting notes toll-record requests are a routine, unremarkable step in major federal investigations that reveal only call metadata, not content, providing context that cuts against Patel's characterization of the collection itself as improper",
-        "source_url": "https://www.axios.com/2026/02/26/fbi-patel-wiles-phone-records-biden",
+        "description": "MS NOW reported on February 25, 2026 that the FBI fired at least 10 agents and support staff 'over allegations that they obtained phone records connected to' Patel and Wiles, and that toll records, which list numbers called and call times but not content, 'are routinely and legally obtained in a criminal investigation'",
+        "source_url": "https://www.ms.now/news/fbi-fires-agents-patel-trump-documents-case",
         "maps_to_element": "Routine nature of toll-record subpoenas as an investigative tool"
       },
       {
         "type": "reporting",
-        "description": "Re-verification (2026-08-19): a separate, contested claim has since circulated that the FBI also secretly recorded a 2023 phone call between Wiles and her attorney (not merely toll records). Deliberately not incorporated into this entry -- the claim traces to anonymous FBI officials, is denied on the record by Wiles's own 2023 attorney ('If I ever pulled a stunt like that I wouldn't -- and shouldn't -- have a license to practice law'), and Wiles herself is reported to believe her attorney over the FBI's account. Two denials (the attorney's and Wiles's own) against an anonymously-sourced claim does not clear this tracker's sourcing bar; no independent confirmation identified.",
+        "description": "Axios reported on February 26, 2026 that Patel, in a statement to Axios, called it 'outrageous and deeply alarming' that the previous FBI leadership secretly subpoenaed his and Wiles's phone records, and that Patel told Reuters, which broke the story, that investigators obtained 'toll records,' the timing and recipients of calls",
+        "source_url": "https://www.axios.com/2026/02/26/fbi-patel-wiles-phone-records-biden",
+        "maps_to_element": "Patel's own stated rationale and the specific records at issue"
+      },
+      {
+        "type": "reporting",
+        "description": "Fox News reported on February 27, 2026 that two FBI officials said agents recorded a 2023 phone call between Wiles and her attorney with the attorney's consent but not Wiles's. The unnamed attorney denied it ('If I ever pulled a stunt like that I wouldn’t – and shouldn’t – have a license to practice law'), and Wiles reportedly believes him. The recording claim rests on anonymous officials; no independent confirmation was found, so this entry does not treat it as established.",
         "source_url": "https://www.foxnews.com/politics/susie-wiles-lawyer-denies-approving-fbi-recording-says-hed-lose-license-over-stunt.print",
         "maps_to_element": "No source confirmed the specific fired individuals personally requested or approved the toll-record subpoena, as opposed to being connected to the broader investigation in some other capacity"
+      },
+      {
+        "type": "court_filing",
+        "description": "Courthouse News reported that on October 15, 2026 nine fired employees assigned to the classified-documents probe filed a 70-page lawsuit in the U.S. District Court for the District of Columbia, saying Patel 'summarily fired' them over two days in February 2026 by letters invoking 'Article II,' with no internal investigation or disciplinary process; they seek reinstatement and back pay",
+        "source_url": "https://www.courthousenews.com/fired-fbi-agents-on-trump-classified-documents-case-sue-doj/",
+        "maps_to_element": "Patel, now FBI Director, personally ordered the firing of FBI staff connected to an investigation that had obtained his own and a senior White House official's phone toll records"
       }
     ],
-    "status": "Resolved as a personnel action -- the firings occurred as reported; no independent review of whether the terminations were individually justified was identified in sourcing reviewed.",
-    "rebuttal_anticipated": "Likely defense: as FBI Director, Patel has legitimate authority over personnel decisions, and obtaining the phone records of a senior incoming administration official and a soon-to-be FBI Director -- even via a routine investigative tool -- reasonably raised his concerns about the investigation's scope and motivations.",
-    "comeback": "The specific conflict-of-interest concern is that Patel personally exercised termination authority over staff connected to scrutiny of his own communications, a decision an independent process (rather than the subject of the original inquiry) would ordinarily handle; combined with legal observers' assessment that toll-record subpoenas are routine rather than improper, the firings read as retaliation for investigative work that touched Patel himself rather than a neutral personnel-conduct review.",
+    "status": "The firings stand. On October 15, 2026, nine of the fired employees sued in federal court in Washington, calling their terminations unlawful and seeking reinstatement and back pay; no ruling has been reported.",
+    "rebuttal_anticipated": "Likely defense: as FBI Director, Patel has legitimate authority over personnel decisions, and obtaining the phone records of two people who later became White House chief of staff and FBI Director -- even via a routine investigative tool -- reasonably raised his concerns about the investigation's scope and motivations.",
+    "comeback": "The specific conflict-of-interest concern is that Patel personally exercised termination authority over staff connected to scrutiny of his own communications, a decision an independent process (rather than the subject of the original inquiry) would ordinarily handle; combined with CNN's and MS NOW's reporting that toll-record subpoenas are a routine, legal step, the firings read as retaliation for investigative work that touched Patel himself rather than a neutral personnel-conduct review.",
     "cause": "[TAP Analysis, not sourced] Consistent with the broader pattern this tracker documents of Patel using FBI personnel authority to remove staff connected to investigations or matters he personally objects to (see also the Patel field-office-purge entry and the Patel entry).",
-    "last_verified": "2026-09-07",
+    "last_verified": "2026-11-07",
     "date_added": "2026-08-05",
-    "confidence_note": "HIGH confidence on the firings' occurrence and scale, and on Patel's own quoted rationale -- independently corroborated across CNN, Fox News, Axios, and NBC News, drawing on Patel's own statements to Reuters. MODERATE confidence on whether the specific fired individuals were personally responsible for the toll-record request versus merely connected to the broader investigation, since this distinction was not resolved in sourcing reviewed. Re-verified 2026-08-19: no material change to the core toll-records fact pattern. A separate, disputed claim that a Wiles-attorney call was also recorded surfaced in reporting but is denied by both the attorney and Wiles herself, and rests on anonymous sourcing -- not incorporated per this tracker's sourcing standard.",
-    "pull_quote": "Legal observers noted that subpoenaing phone toll records — which reveal only call metadata, not conversation content — is a routine, unremarkable step in major federal investigations, cutting against Patel's own characterization of the collection as “outrageous and deeply alarming.”",
+    "confidence_note": "HIGH confidence on the firings' occurrence and scale, and on Patel's own quoted rationale -- corroborated across CNN, Fox News, Axios and MS NOW, which quote Patel's own statement; Reuters first reported the subpoenas. MODERATE confidence on whether the specific fired individuals were personally responsible for the toll-record request versus merely connected to the broader investigation, since this distinction was not resolved in sourcing reviewed. Re-verified 2026-08-19: no material change to the core toll-records fact pattern. A separate, disputed claim that a Wiles-attorney call was also recorded surfaced in reporting but is denied by both the attorney and Wiles herself, and rests on anonymous sourcing -- not incorporated per this tracker's sourcing standard. Update 2026-11-07: the fired employees' October 15, 2026 lawsuit is the plaintiffs' account; its claims about the termination letters and the absence of any disciplinary process have not been tested in court.",
+    "pull_quote": "MS NOW reported that toll records — which list the phone numbers called and the times and durations of those calls, but not their content — “are routinely and legally obtained in a criminal investigation,” cutting against Patel’s description of the collection as “outrageous and deeply alarming.”",
     "section_summaries": {
-      "incident_summary": "FBI Director Patel fired at least 10 staff connected to a Biden-era investigation that had obtained his and Susie Wiles's phone toll records, calling the records collection 'outrageous' despite legal observers noting toll-record subpoenas are a routine investigative tool.",
+      "incident_summary": "FBI Director Patel fired at least 10 staff tied to a probe that obtained his and Susie Wiles's toll records, a routine step he called 'outrageous'; nine sued in October 2026.",
       "confidence_note": "Well-corroborated across multiple outlets including Patel's own quoted statements; whether the specific fired staff personally handled the toll-record request is unresolved in sourcing reviewed."
     },
     "date_of_action": "2026-02-25 (FBI fires staff connected to Patel/Wiles toll-record collection)",
-    "last_substantive_update": "2026-09-07",
+    "last_substantive_update": "2026-11-07",
     "glance": {
       "who": "Kash Patel (FBI Director)",
       "what": "Fired at least 10 FBI staff tied to a Biden-era probe that obtained Patel's and Wiles's phone toll records",
@@ -32627,7 +32739,7 @@
         "certainty": "documented",
         "who": "10+ fired FBI staff"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-11-07"
     },
     "cause_references": [
       {
@@ -32641,7 +32753,7 @@
         "id": "patel-journalist-retaliation-2025-2026"
       }
     ],
-    "status_stage": "Unchallenged",
+    "status_stage": "In court",
     "key_events": [
       {
         "date": "2022",
@@ -32655,18 +32767,51 @@
         "text": "The FBI fires at least 10 agents and staff connected to obtaining the Patel and Wiles toll records",
         "turning_point": true,
         "sources": [
-          "https://www.cnn.com/2026/02/25/politics/fbi-agents-fired-classified-documents-kash-patel-toll-records"
+          "https://www.cnn.com/2026/02/25/politics/fbi-agents-fired-classified-documents-kash-patel-toll-records",
+          "https://www.ms.now/news/fbi-fires-agents-patel-trump-documents-case"
         ]
       },
       {
         "date": "2026-02-25",
         "text": "Patel calls the toll-record collection \"outrageous and deeply alarming\"",
         "sources": [
-          "https://www.foxnews.com/politics/fbi-subpoenaed-kash-patel-susie-wiles-phone-records-federal-trump-investigation.amp",
-          "https://www.cnn.com/2026/02/25/politics/fbi-agents-fired-classified-documents-kash-patel-toll-records"
+          "https://www.cnn.com/2026/02/25/politics/fbi-agents-fired-classified-documents-kash-patel-toll-records",
+          "https://www.ms.now/news/fbi-fires-agents-patel-trump-documents-case"
+        ]
+      },
+      {
+        "date": "2026-10-15",
+        "text": "Nine of the fired employees sue in federal court in Washington for reinstatement and back pay",
+        "turning_point": true,
+        "sources": [
+          "https://www.courthousenews.com/fired-fbi-agents-on-trump-classified-documents-case-sue-doj/"
         ]
       }
-    ]
+    ],
+    "timeline": {
+      "incident_summary": {
+        "base": "**The FBI fired at least 10 agents and staff members who had been connected to obtaining 'toll records' (call timing and recipient logs, not call content) for phone numbers belonging to Kash Patel and White House Chief of Staff Susie Wiles, sought in 2022-2023 as part of the Biden-era federal investigation into Trump's handling of classified documents at Mar-a-Lago.** Patel told Reuters, which first reported the subpoenas, that investigators obtained 'toll records.' In a statement on February 25, 2026, given to outlets including Axios and Fox News, he called it 'outrageous and deeply alarming that the previous FBI leadership secretly subpoenaed my own phone records,' using 'flimsy pretexts.' MS NOW reported that toll records 'are routinely and legally obtained in a criminal investigation,' and CNN that subpoenaing such information for those around Trump 'was part of the normal process of such an investigation.' It was not confirmed in sourcing reviewed whether the specific fired staff had personally sought, approved, or executed the toll-record request, or were terminated simply for having been assigned to the broader investigation.",
+        "updates": [
+          {
+            "date": "2026-11-07",
+            "label": "Update",
+            "text": "Update 2026-11-07: On October 15, 2026, nine of the fired employees, special agents, staff operations specialists and intelligence analysts assigned to the classified-documents probe, sued in federal court in Washington, seeking reinstatement and back pay. Their complaint says Patel 'summarily fired' them over two days in February 2026 with letters invoking 'Article II' and stating each had 'exercised poor judgment and a lack of impartiality in carrying out duties, leading to the political weaponization of the government,' and that the firings followed no internal investigation or disciplinary process.",
+            "effective_date": "2026-11-07"
+          }
+        ]
+      },
+      "confidence_note": {
+        "base": "HIGH confidence on the firings' occurrence and scale, and on Patel's own quoted rationale -- corroborated across CNN, Fox News, Axios and MS NOW, which quote Patel's own statement; Reuters first reported the subpoenas. MODERATE confidence on whether the specific fired individuals were personally responsible for the toll-record request versus merely connected to the broader investigation, since this distinction was not resolved in sourcing reviewed. Re-verified 2026-08-19: no material change to the core toll-records fact pattern. A separate, disputed claim that a Wiles-attorney call was also recorded surfaced in reporting but is denied by both the attorney and Wiles herself, and rests on anonymous sourcing -- not incorporated per this tracker's sourcing standard.",
+        "updates": [
+          {
+            "date": "2026-11-07",
+            "label": "Update",
+            "text": "Update 2026-11-07: the fired employees' October 15, 2026 lawsuit is the plaintiffs' account; its claims about the termination letters and the absence of any disciplinary process have not been tested in court.",
+            "effective_date": "2026-11-07"
+          }
+        ]
+      }
+    }
   },
   {
     "id": "peizer-sec-suit-dismissal-2026",
@@ -47618,34 +47763,46 @@
       },
       {
         "type": "reporting",
-        "description": "The Daily Beast's reporting characterizing the appointments as a 'MAGA takeover' of the boards overseeing the academies",
+        "description": "The Daily Beast's report that Trump appointed “loyalist MAGA celebrities and lawmakers” to oversee the military academies, naming Charlie Kirk, Michael Flynn and Maureen Bannon",
         "source_url": "https://www.thedailybeast.com/maga-takeover-of-military-academies-as-trump-names-charlie-kirk-to-board/",
         "maps_to_element": "Contemporaneous characterization of the pattern as institutional capture"
       },
       {
         "type": "reporting",
-        "description": "Re-verification (August 2026): no legal challenge to the West Point, Naval Academy, or Air Force Academy Board of Visitors appointments was identified, and no reporting found that any of the named appointees (Flynn, Nauta, Kirk, Tuberville, Bannon, Powell, Hunt) had resigned or been removed from their board seats since the March 2025 appointments.",
-        "source_url": "https://thehill.com/policy/defense/5199551-trump-appoints-charlie-kirk-walt-nauta-michael-flynn-to-military-boards/",
-        "maps_to_element": "Confirms the appointments remain in place and unreversed as of this update"
+        "description": "Colorado Politics reports (March 9, 2026) that Trump appointed Erika Kirk, Charlie Kirk's widow, to fill a seat on the Air Force Academy's Board of Visitors; that Charlie Kirk, a board member, attended a meeting before he was shot and killed Sept. 10, 2025, at a college event in Orem, Utah; and that Sen. Tommy Tuberville is still on the board.",
+        "source_url": "https://www.coloradopolitics.com/2026/03/09/trump-appoints-erika-kirk-to-air-force-academy-board",
+        "maps_to_element": "Change in the Air Force Academy board's membership after Charlie Kirk's death"
+      },
+      {
+        "type": "reporting",
+        "description": "West Point's Board of Visitors page lists Rep. Wesley Hunt, retired Lt. Gen. Michael Flynn and Maureen Bannon among the President's appointees on its 2026 membership roster.",
+        "source_url": "https://www.westpoint.edu/about/superintendent/board-of-visitors",
+        "maps_to_element": "Confirms the West Point appointments remain in place in 2026"
+      },
+      {
+        "type": "reporting",
+        "description": "The Naval Academy's Board of Visitors page, updated Aug. 24, 2026, lists Walt Nauta among the members appointed by the President.",
+        "source_url": "https://usna.edu/PAO/Superintendent/bov.php",
+        "maps_to_element": "Confirms the Nauta appointment remains in place in 2026"
       }
     ],
-    "status": "Appointments made and not reversed as of sourcing reviewed; no legal challenge to the appointments themselves was identified",
+    "status": "No legal challenge to the appointments was identified. Charlie Kirk was killed Sept. 10, 2025; by March 2026 Trump had named his widow, Erika Kirk, to the Air Force Academy board. West Point's 2026 board still lists Flynn, Maureen Bannon and Rep. Wesley Hunt; the Naval Academy's lists Walt Nauta.",
     "rebuttal_anticipated": "Likely defense: Boards of Visitors are advisory bodies without command authority, appointment to them is a routine exercise of presidential discretion extended to every administration, service on a board does not require military-oversight credentials, and Flynn's conviction was for a process offense unrelated to academy administration while Nauta's indictment (in a since-resolved case) does not itself disqualify him from an advisory role.",
-    "comeback": "The specific concern is not that political appointees serve on these boards -- prior administrations have done the same -- but that Trump specifically selected individuals with his own direct personal or legal ties (his former national security adviser convicted of lying to the FBI, his own indicted personal aide, a media activist with no military background) for bodies statutorily tasked with independent oversight of military-academy integrity, simultaneously across all three academies, raising the same loyalty-over-institutional-capacity concern this tracker documents elsewhere in Hegseth's senior military personnel decisions (see hegseth-joint-chiefs-jag-friday-night-massacre-2025.json).",
+    "comeback": "The specific concern is not that political appointees serve on these boards -- prior administrations have done the same -- but that Trump specifically selected individuals with his own direct personal or legal ties (his former national security adviser convicted of lying to the FBI, his own indicted personal aide, a media activist with no military background) for bodies statutorily tasked with independent oversight of military-academy integrity, simultaneously across all three academies, raising the same loyalty-over-institutional-capacity concern this tracker documents elsewhere in Hegseth's senior military personnel decisions (see the entry on Hegseth's firing of the Joint Chiefs chairman and service JAGs).",
     "cause": "[TAP Analysis, not sourced] Consistent with the broader pattern this tracker documents of the administration prioritizing personal loyalty over institutional-oversight independence in senior military-adjacent appointments.",
-    "last_verified": "2026-09-08",
+    "last_verified": "2026-11-07",
     "date_added": "2026-08-11",
-    "confidence_note": "HIGH confidence on the fact and full scope of the appointments, corroborated across The Hill, Washington Examiner, Denver Gazette, Colorado Politics, The Epoch Times, and The Daily Beast, each independently reporting the same slate of names. This entry does not allege a legal or criminal violation -- it documents a politicization/institutional-capture pattern, marked `contested: true` because the appointments themselves are a lawful exercise of presidential discretion and the accountability concern rests on the pattern and appointees' backgrounds, not an established legal breach. Re-verified 2026-08-19: no material change -- no legal challenge to the appointments and no reporting of any appointee's removal identified. Re-verified 2026-09-08 (CLA batch 67): no material change -- still no successful or newly filed legal challenges to the 2025 board dismissals identified.",
-    "pull_quote": "The Daily Beast characterized the simultaneous appointments across all three service academies as a “MAGA takeover” of their civilian oversight boards.",
+    "confidence_note": "HIGH confidence on the fact and full scope of the appointments, corroborated across The Hill, Washington Examiner, Denver Gazette, Colorado Politics, The Epoch Times, and The Daily Beast, each independently reporting the same slate of names. This entry does not allege a legal or criminal violation -- it documents a politicization/institutional-capture pattern, marked `contested: true` because the appointments themselves are a lawful exercise of presidential discretion and the accountability concern rests on the pattern and appointees' backgrounds, not an established legal breach. Re-verified 2026-08-19: no material change -- no legal challenge to the appointments and no reporting of any appointee's removal identified. Re-verified 2026-09-08: no material change -- still no successful or newly filed legal challenges to the 2025 board dismissals identified. Update 2026-11-07: Charlie Kirk was killed on Sept. 10, 2025, and by March 2026 Trump had named his widow, Erika Kirk, to the Air Force Academy board; the 2026 West Point and Naval Academy rosters still list Flynn, Bannon, Hunt and Nauta; no legal challenge to the appointments was identified.",
+    "pull_quote": "The Daily Beast reported that Trump “has appointed loyalist MAGA celebrities and lawmakers to oversee America’s military academies.”",
     "section_summaries": {
-      "incident_summary": "In March 2025, Trump appointed Michael Flynn (convicted of lying to the FBI) and Maureen Bannon to West Point's board, his own indicted aide Walt Nauta to the Naval Academy's board, and Charlie Kirk and Sen. Tommy Tuberville to the Air Force Academy's board -- installing personally loyal or legally-compromised figures across all three service academies' civilian oversight boards simultaneously.",
+      "incident_summary": "In March 2025, Trump named Michael Flynn, his indicted aide Walt Nauta, Charlie Kirk and Sen. Tommy Tuberville to the civilian oversight boards of all three service academies.",
       "confidence_note": "Well-corroborated across multiple independent outlets naming the same appointees; this is a documented politicization pattern, not an alleged legal violation, and is marked contested accordingly."
     },
     "narrative_override": {
       "headline": "Trump installed personally loyal or legally-compromised figures on all three academy boards."
     },
     "date_of_action": "2025-03 (Trump appoints political loyalists to service academy boards)",
-    "last_substantive_update": "2026-09-08",
+    "last_substantive_update": "2026-11-07",
     "glance": {
       "who": "Donald Trump (President)",
       "what": "Appointed Michael Flynn, Walt Nauta, Charlie Kirk and Sen. Tuberville to service academy boards in 2025",
@@ -47654,7 +47811,7 @@
         "certainty": "alleged",
         "who": "Military academy oversight boards"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-11-07"
     },
     "status_stage": "Unchallenged",
     "key_events": [
@@ -47690,8 +47847,35 @@
           "https://thehill.com/policy/defense/5199551-trump-appoints-charlie-kirk-walt-nauta-michael-flynn-to-military-boards/",
           "https://www.washingtonexaminer.com/news/3352179/trump-charlie-kirk-michael-flynn-military-academy-advisory-boards/"
         ]
+      },
+      {
+        "date": "2025-09-10",
+        "text": "Charlie Kirk, a Trump appointee to the Air Force Academy board, is shot and killed in Orem, Utah",
+        "sources": [
+          "https://www.coloradopolitics.com/2026/03/09/trump-appoints-erika-kirk-to-air-force-academy-board"
+        ]
+      },
+      {
+        "date": "2026-03",
+        "text": "Trump names Kirk's widow, Erika Kirk, to the Air Force Academy board",
+        "sources": [
+          "https://www.coloradopolitics.com/2026/03/09/trump-appoints-erika-kirk-to-air-force-academy-board"
+        ]
       }
-    ]
+    ],
+    "timeline": {
+      "confidence_note": {
+        "base": "HIGH confidence on the fact and full scope of the appointments, corroborated across The Hill, Washington Examiner, Denver Gazette, Colorado Politics, The Epoch Times, and The Daily Beast, each independently reporting the same slate of names. This entry does not allege a legal or criminal violation -- it documents a politicization/institutional-capture pattern, marked `contested: true` because the appointments themselves are a lawful exercise of presidential discretion and the accountability concern rests on the pattern and appointees' backgrounds, not an established legal breach. Re-verified 2026-08-19: no material change -- no legal challenge to the appointments and no reporting of any appointee's removal identified. Re-verified 2026-09-08: no material change -- still no successful or newly filed legal challenges to the 2025 board dismissals identified.",
+        "updates": [
+          {
+            "date": "2026-11-07",
+            "label": "Update",
+            "text": "Update 2026-11-07: Charlie Kirk was killed on Sept. 10, 2025, and by March 2026 Trump had named his widow, Erika Kirk, to the Air Force Academy board; the 2026 West Point and Naval Academy rosters still list Flynn, Bannon, Hunt and Nauta; no legal challenge to the appointments was identified.",
+            "effective_date": "2026-11-07"
+          }
+        ]
+      }
+    }
   },
   {
     "id": "trump-monaco-microsoft-firing-demand-2025",

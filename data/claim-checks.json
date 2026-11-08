@@ -5023,33 +5023,41 @@
   "doge-nro-data-exposure-2025": {
    "0": {
     "state": "supports",
-    "why": "The source directly confirms DOGE's website published NRO headcount and budget details and that multiple intelligence-community sources called it a likely significant breach.",
-    "host": "abcnews.go.com",
-    "date": "2026-09-15",
+    "why": "The Feb. 14, 2025 404 Media article (filed as Exhibit 36) says two anonymous web development experts found doge.gov not hosted on government servers and pulling from a database that 'can be and has been written to by third parties'; it also says one source showed the reporter two entries they pushed that were live.",
+    "host": "eff.org",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    },
    "1": {
-    "state": "unopened",
-    "why": "",
-    "host": "nquiringminds.com",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "HuffPost says NRO appears to be the only one of the 18 intelligence organizations with data on DOGE's site and that two Senate aides confirmed the headcount and budget are classified; the article also quotes a White House spokesperson saying 'DOGE did not share classified information.'",
+    "host": "huffpost.com",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    },
    "2": {
-    "state": "unopened",
-    "why": "",
-    "host": "warren.senate.gov",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "The Feb. 16, 2025 ABC News piece reports NRO headcount and budget details on the DOGE site, a Trump administration official saying the headcount was publicly available on OPM's website, and multiple intelligence-community sources calling it a likely significant breach.",
+    "host": "abcnews.go.com",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    },
    "3": {
-    "state": "partly",
-    "why": "The source confirms the broader GAO investigation into DOGE's data access has been stymied by agency non-cooperation, specifically naming HHS's withholding of information, but it does not mention Treasury, and it does not address any outcome of the Warren/Connolly/Stansbury letter of inquiry into the DOGE.gov/NRO incident itself.",
+    "state": "supports",
+    "why": "The Feb. 27, 2025 release says Warren, Connolly and every Democratic member of the DOGE subcommittee including Ranking Member Stansbury wrote to Musk opening an investigation after two security incidents, citing 'controlled information about the NRO's budget and head count,' and requested answers by March 6, 2025.",
+    "host": "capitolreleases.com",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "supports",
+    "why": "The beSpacific item quoting the Washington Post says GAO's probe into how DOGE members accessed sensitive databases has been stymied by agencies withholding information, with HHS as the example; the excerpt contains nothing about the DOGE.gov letter or NRO data, consistent with the claim's caveat.",
     "host": "bespacific.com",
-    "date": "2026-09-15",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    }
@@ -6006,10 +6014,10 @@
   },
   "doj-lausd-gender-identity-disclosure-investigation-2026": {
    "0": {
-    "state": "supports",
-    "why": "Fox News confirms DOJ Civil Rights Division's March 25 letter opening the investigation, citing the Parke family's suicide-related lawsuit and a separate student's sexual-harassment/unaddressed-warning claim.",
+    "state": "partly",
+    "why": "Fox News reports the March 25 letter, the parents' suicide-related lawsuit and the female student's harassment claim, but it attributes these details to the New York Times ('reportedly', 'according to the New York Times') rather than confirming them itself, and names only the Parke parents, not Mulligan.",
     "host": "foxnews.com",
-    "date": "2026-09-15",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    },
@@ -6022,10 +6030,42 @@
     "archive": false
    },
    "2": {
-    "state": "partly",
-    "why": "CBS San Francisco confirms Dhillon's public statement and the investigation of four Northern California districts, but it makes no mention of a Michigan gender-curriculum probe.",
+    "state": "supports",
+    "why": "CBS San Francisco names the same four districts undergoing a compliance review over SOGI instruction, carries the Dhillon quote verbatim, and separately notes the review examines parental opt-out notice.",
     "host": "cbsnews.com",
-    "date": "2026-09-15",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": true
+   },
+   "3": {
+    "state": "supports",
+    "why": "The NYT text states the 11-page 2019 policy gives schools discretion on disclosure, the March 25 letter, and Dhillon signing off with the quoted line; the preceding paragraph says the investigation was sparked by the lawsuit.",
+    "host": "nytimes.com",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": true
+   },
+   "4": {
+    "state": "supports",
+    "why": "The Feb. 18, 2026 DOJ release names the three Michigan districts, describes the SOGI-content and parental-notice inquiry, and cites Title IX and Mahmoud v. Taylor.",
+    "host": "justice.gov",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "supports",
+    "why": "The Oct. 5, 2026 release describes the joint letter to all state AGs on FERPA and PPRA and the LAUSD enforcement action; a later paragraph says the policies direct staff to keep gender identity 'private' or 'confidential,' including from parents.",
+    "host": "justice.gov",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
+    "state": "supports",
+    "why": "The EdSource piece republished by LAist cites alleged FERPA and PPRA violations, says LAUSD denied wrongdoing per the Los Angeles Times, and says federal officials did not detail the nature of the action.",
+    "host": "laist.com",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    }
@@ -8702,26 +8742,34 @@
   },
   "gao-dhs-whistleblower-investigation-2026": {
    "0": {
-    "state": "partly",
-    "why": "The Hill (via Wayback) confirms the investigation's launch and that Reps. Thompson and Peters requested it, but the article describes the review's scope only as covering \"President Trump's first term through the first year of his second one,\" not the specific \"October 2017 through September 2025\" range the claim states.",
-    "host": "thehill.com",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "POGO cites an obtained government email showing GAO's review and interview requests for complainants from Oct. 1, 2017 to Sept. 30, 2025 (fiscal years 2018-2025), and says a GAO spokesperson confirmed the review was requested by Thompson and Peters.",
+    "host": "pogo.org",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": true
    },
    "1": {
-    "state": "partly",
-    "why": "The source confirms the GAO review's scope (whistleblower complaints filed Oct. 1, 2017-Sept. 30, 2025) via an obtained email, but it never mentions DHS IG Cuffari or any DHS request for a list of active investigations.",
+    "state": "supports",
+    "why": "The POGO article, updated Feb. 18, 2026, states the GAO spokesperson said there was not yet an estimated completion date.",
     "host": "pogo.org",
-    "date": "2026-09-15",
+    "date": "2026-11-07",
     "kind": "fact",
-    "archive": false
+    "archive": true
    },
    "2": {
-    "state": "partly",
-    "why": "The source is consistent with \"no estimated completion date\" and no findings reported, but it is the same February 17, 2026-dated article (with a Feb. 18 update) and cannot itself establish the review's status as of the claimed August 18, 2026 re-verification date.",
-    "host": "pogo.org",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "The Hill (02/17/26) reports the review's time span, GAO's confirmation, the Cuffari active-investigations list context and the interview outreach; later it says Thompson requested the probe alongside Peters.",
+    "host": "thehill.com",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": true
+   },
+   "3": {
+    "state": "supports",
+    "why": "GAO-26-108106, dated Sept. 17, 2026 and addressed to Peters and Thompson, reports 39 of 73 cases took over 3 years, the Secretary missed the 30-day deadline for all 11 substantiated cases, and one plus two recommendations that DHS OIG and DHS agreed with.",
+    "host": "files.gao.gov",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    }
@@ -12628,42 +12676,66 @@
   },
   "mcmahon-education-dept-activist-capture-2025-2026": {
    "0": {
-    "state": "partly",
-    "why": "The ProPublica article confirms the 20+ political appointees and Lindsey Burke's Heritage Foundation/Project 2025 authorship role, and elsewhere states at least nine America First Policy Institute hires. However, the provided text is cut off before any mention of Tiffany Justice or a 'zero' enrollment goal quote, so that specific detail is not supported by the text given.",
-    "host": "propublica.org",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "The source is the Education Department's own Sept. 17, 2025 press release announcing the patriotic education supplemental priority.",
+    "host": "ed.gov",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    },
    "1": {
     "state": "supports",
-    "why": "The CNN article, matching the claim's title exactly, documents both the patriotic/civic education funding priority and the school-prayer guidance initiative under McMahon.",
+    "why": "The CNN piece, published Sept. 27, 2025 under the stated headline, covers both the school-prayer guidance and the patriotic-education grant priority.",
     "host": "cnn.com",
-    "date": "2026-09-15",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    },
    "2": {
-    "state": "supports",
-    "why": "The source is itself the Department of Education's press release announcing Secretary McMahon's Patriotic Education Supplemental Priority, so the claim is directly and trivially confirmed by the document.",
-    "host": "ed.gov",
-    "date": "2026-09-15",
+    "state": "partly",
+    "why": "The Oct. 8, 2025 ProPublica article (headline as stated) documents at least 20 appointees and Lindsey Burke's Heritage and Project 2025 role, but the provided text is truncated and does not contain the 9+ AFPI hires or Tiffany Justice's 'zero' enrollment quote.",
+    "host": "propublica.org",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    },
    "3": {
+    "state": "supports",
+    "why": "The GAO page (published Jan. 29, publicly released Feb. 2, 2026) states each element: half of 575 OCR staff on leave and 7 of 12 offices closed, up to $38 million, December 2025 recall, early-January 2026 RIF rescission, and over 7,000 complaints resolved, about 90 percent by dismissal.",
+    "host": "gao.gov",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": true
+   },
+   "4": {
     "state": "unopened",
     "why": "",
     "host": "k12dive.com",
-    "date": "2026-09-15",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    },
-   "4": {
+   "5": {
     "state": "partly",
-    "why": "The Jewish Insider article confirms McMahon claimed before Congress that she was rebuilding/expanding OCR even as the administration pushed for tens of millions in funding cuts. However, the provided (truncated) text gives the cut as '$49 million' rather than the claim's '35%' figure, and does not mention a 30% year-over-year drop in resolved discrimination complaints, so those specific figures are not confirmed by this text.",
+    "why": "The April 28, 2026 Jewish Insider text supports McMahon claiming to rebuild OCR and the $49 million proposed cut, but it is truncated before any mention of re-hiring fired attorneys, the $140M-to-$91M figures or Sen. Murphy's 35% characterization.",
     "host": "jewishinsider.com",
-    "date": "2026-09-15",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
+    "state": "supports",
+    "why": "The NYT text states the roughly 30 percent drop from 2024, the sharpest decline in more than three decades, based on government data the Times obtained.",
+    "host": "nytimes.com",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": true
+   },
+   "7": {
+    "state": "supports",
+    "why": "The Arc's April 29, 2026 post says the HELP staff report released 'yesterday' found 112 resolution agreements in 2025, down from 507 in 2024, about 1% of 11,985 pending cases.",
+    "host": "thearc.org",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    }
@@ -15123,33 +15195,49 @@
   "patel-toll-records-staff-firing-2026": {
    "0": {
     "state": "supports",
-    "why": "CNN reports Patel ordered the ouster of at least 10 employees connected to the Mar-a-Lago documents investigation, following the discovery that the FBI had subpoenaed Patel's and Wiles's phone records during that probe.",
+    "why": "CNN (published Feb. 25, 2026) reports Patel ordered at least 10 ousters as part of a wider internal investigation he ordered after finding the FBI had subpoenaed his and Wiles's communication records.",
     "host": "cnn.com",
-    "date": "2026-09-15",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    },
    "1": {
-    "state": "partly",
-    "why": "The Fox News article confirms Patel's 'outrageous and deeply alarming' quote and that the subpoenas targeted his and Wiles's 2022-2023 phone records, but it was Fox News, not Reuters, that obtained this direct quote from Patel -- the text credits Reuters only with first disclosing that the subpoenas existed, not with the quoted statement.",
+    "state": "supports",
+    "why": "Fox News says it confirmed the 2022-2023 subpoenas while both were private citizens and was told at least 10 employees were fired Wednesday; the article also says Reuters first disclosed the subpoenas and quotes Patel's 'outrageous and deeply alarming' statement to Fox.",
     "host": "foxnews.com",
-    "date": "2026-09-15",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    },
    "2": {
-    "state": "not_found",
-    "why": "The source describes what toll records are (call timing/recipients, not content) but never characterizes such requests as 'routine' or 'unremarkable,' nor does it offer any framing that cuts against Patel's characterization of the collection as improper.",
-    "host": "axios.com",
-    "date": "2026-09-15",
-    "kind": "interpretation",
+    "state": "supports",
+    "why": "MS NOW (Feb. 25, 2026) contains both quoted phrases verbatim, including the description of toll records as listing numbers and call times but not content.",
+    "host": "ms.now",
+    "date": "2026-11-07",
+    "kind": "fact",
     "archive": false
    },
    "3": {
     "state": "supports",
-    "why": "The Fox News article confirms the recording claim traces to two anonymous FBI officials, quotes the attorney's on-the-record denial verbatim ('If I ever pulled a stunt like that I wouldn't -- and shouldn't -- have a license to practice law'), and reports that Wiles believes her attorney over the FBI's account.",
+    "why": "Axios (Feb. 26, 2026) quotes Patel's statement to Axios and says Patel told Reuters, which broke the story, that investigators obtained 'toll records.'",
+    "host": "axios.com",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "supports",
+    "why": "The Feb. 27, 2026 Fox piece attributes the recording claim to two FBI officials ('the officials claimed'), reports the unnamed attorney's denial and license quote, and says Wiles reportedly believes him; the claim's closing caveat is the entry's own editorial framing, consistent with the source's anonymous sourcing.",
     "host": "foxnews.com",
-    "date": "2026-09-15",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "supports",
+    "why": "Courthouse News (Oct. 15, 2026) reports the nine agents' 70-page D.D.C. suit quoting that Patel 'summarily fired' them over two days in February 2026 without internal investigation or process; it also describes the 'Article II' termination letters and the reinstatement and backpay request.",
+    "host": "courthousenews.com",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    }
@@ -22236,18 +22324,34 @@
     "archive": false
    },
    "2": {
-    "state": "partly",
-    "why": "The Daily Beast source conveys a similar theme -- describing the appointments as stacking the boards with \"loyalist MAGA celebrities\" and \"Trump loyalists\" -- but this specific article's headline and text do not use the phrase \"MAGA takeover.\"",
+    "state": "supports",
+    "why": "The Daily Beast article uses the phrase 'loyalist MAGA celebrities and lawmakers' and names Charlie Kirk, Michael Flynn and Maureen Bannon.",
     "host": "thedailybeast.com",
-    "date": "2026-09-15",
-    "kind": "interpretation",
+    "date": "2026-11-07",
+    "kind": "fact",
     "archive": false
    },
    "3": {
-    "state": "not_found",
-    "why": "The source is a March 17, 2025 article on the appointments and cannot speak to whether legal challenges, resignations, or removals occurred by August 2026.",
-    "host": "thehill.com",
-    "date": "2026-09-21",
+    "state": "supports",
+    "why": "Colorado Politics reports Erika Kirk's appointment and that Charlie Kirk was a board member who attended a meeting before his death; it also says he was shot and killed Sept. 10 in Orem, Utah, and that the board includes Sen. Tuberville.",
+    "host": "coloradopolitics.com",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "supports",
+    "why": "West Point's 2026 membership roster lists Wesley Hunt, Michael Flynn and Maureen Bannon under 'Appointed by the President.'",
+    "host": "westpoint.edu",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "supports",
+    "why": "The USNA Board of Visitors page, 'Updated 08/24/2026', lists Mr. Walt Nauta under members appointed by the President.",
+    "host": "usna.edu",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    }
