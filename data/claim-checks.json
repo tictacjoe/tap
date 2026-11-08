@@ -11898,26 +11898,50 @@
   },
   "jordan-ivy-league-antitrust-subpoenas-2025": {
    "0": {
-    "state": "partly",
-    "why": "The Judiciary Committee press release confirms the June 26, 2025 subpoena to Harvard by Jordan and Fitzgerald over tuition/financial-aid communications, but this particular source text does not state the July 17, 2025 compliance deadline the claim also asserts.",
-    "host": "judiciary.house.gov",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "The release, published 04.10.2025, names Grassley, Jordan, Lee and Fitzgerald and states they 'sent letters to eight Ivy League universities requesting documents and communications regarding their apparent collusion to raise tuition prices,' matching the claim.",
+    "host": "judiciary.senate.gov",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    },
    "1": {
-    "state": "partly",
-    "why": "The Crimson confirms Harvard's \"good faith\"/\"unwarranted, unfair, and unnecessary\" quotes and that the committee called Harvard's response \"inadequate,\" but this source does not state an approximately-400-document total or a 79-day figure; it only gives a 138-document first-round count and three submission dates, so those specific numbers in the claim are not confirmed by this source.",
-    "host": "thecrimson.com",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "The June 26, 2025 release says Jordan and Fitzgerald subpoenaed Harvard and that Harvard produced 'fewer than 400 documents -- one of the lowest totals among Ivy League institutions' with an 'inadequate' response after 79 days following the April 8 requests, matching every element of the claim.",
+    "host": "judiciary.house.gov",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    },
    "2": {
     "state": "supports",
+    "why": "The Globe article reports the July 17 deadline and quotes the spokesperson calling the subpoena 'unwarranted, unfair and unnecessary,' saying there is 'no basis for an allegation of collusion' and that Harvard 'has produced thousands of pages of documents'; the article's date is not printed in the text but it describes the subpoena as sent 'on Thursday', consistent with June 26.",
+    "host": "bostonglobe.com",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": false
+   },
+   "3": {
+    "state": "supports",
+    "why": "The Crimson article reports the April 8 first contact, the July 17 deadline, the committee's 'Harvard's response has been inadequate' language, and spokesperson Newton's 'good faith' and 'unwarranted, unfair, and unnecessary' statement; the publication date itself is not in the extracted text.",
+    "host": "thecrimson.com",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "supports",
     "why": "CNBC confirms the July 1, 2025 mirroring subpoenas to Brown and Penn, expanding the same antitrust probe beyond Harvard, with a July 22 compliance deadline.",
     "host": "cnbc.com",
     "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "supports",
+    "why": "The quoted passage appears essentially verbatim in the Crimson article; the December 19, 2025 date is not printed in the extracted text but the quote itself is fully supported.",
+    "host": "thecrimson.com",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    }
@@ -13768,26 +13792,58 @@
   },
   "noem-dhs-text-message-preservation-violation-2025": {
    "0": {
-    "state": "supports",
-    "why": "The NYT article states verbatim that DHS's July 23 letter said text message data generated after April 9 was 'no longer maintained,' and separately reports DHS's contradictory later assurance that it did retain records.",
+    "state": "partly",
+    "why": "The NYT article (URL dated 2025/08/22) reports the July 23 letter saying text data 'generated after April 9' was 'no longer maintained' and a later senior-official assurance that DHS maintained text records, but nothing in the text establishes that the Times reported this 'first'.",
     "host": "nytimes.com",
-    "date": "2026-09-15",
+    "date": "2026-11-07",
     "kind": "fact",
-    "archive": false
+    "archive": true
    },
    "1": {
-    "state": "partly",
-    "why": "The American Oversight page fully documents DHS's admission that it no longer preserves text messages for Noem and other officials, but this August 2025 page predates and does not mention the October 20, 2025 lawsuit or its named defendants (DHS, Noem, NARA, Rubio).",
+    "state": "supports",
+    "why": "The August 22, 2025 release quotes DHS's July 23 response ('text message data generated after April 9, 2025, is no longer maintained') and its reply to the August 21 follow-up ('no longer has the capability to conduct a search of text messages'), exactly as claimed.",
     "host": "americanoversight.org",
-    "date": "2026-09-15",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    },
    "2": {
-    "state": "partly",
-    "why": "The source confirms the 'erroneous information'/'misunderstanding' admission tied to technology changes, but it ties the admission to 'weeks after' an October 20 FOIA suit filing rather than to April 2026, and no explicit April 2026 date appears in the text.",
+    "state": "supports",
+    "why": "The October 20, 2025 release says American Oversight sued DHS, Noem, NARA and Rubio over failure to preserve text messages and 'also filed a preliminary injunction'; a later paragraph states the complaint alleges FRA and FOIA violations.",
+    "host": "americanoversight.org",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": false
+   },
+   "3": {
+    "state": "supports",
+    "why": "Law & Crime (Nov 6, 2025) reports a joint status report filed 'on Wednesday' (Nov 5) with a declaration from Chief Data Officer Michael Weissman attributing 'misunderstanding' and 'erroneous information' to technology changes and stating 'a litigation hold has been issued that includes each of the named custodians.'",
     "host": "lawandcrime.com",
-    "date": "2026-09-15",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": true
+   },
+   "4": {
+    "state": "supports",
+    "why": "The November 21, 2025 release says DHS, as a result of the litigation, issued a notice demanding officials 'preserve documents and electronic records that relate to the subject matter of the complaint'; it also states DHS's declaration claims most devices were archived as of Nov. 14 but 'the officials themselves did not attest' they preserved all responsive records.",
+    "host": "americanoversight.org",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "supports",
+    "why": "The March 6, 2026 joint status report in No. 1:25-cv-03699 states that after DHS declarations that its response was erroneous the plaintiff withdrew its preliminary-relief motion, that Counts I, IV and V remain, and that DHS made an initial production on February 13, 2026.",
+    "host": "justsecurity.org",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
+    "state": "supports",
+    "why": "The case page shows status open, docket 25-3699, and lists the Oct. 20, 2025 initial complaint, Nov. 5, 2025 joint status report, and April 6, 2026 amended complaint.",
+    "host": "americanoversight.org",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    }

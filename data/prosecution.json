@@ -25287,23 +25287,35 @@
     "official": "Jim Jordan, Chairman, House Judiciary Committee (with Rep. Scott Fitzgerald)",
     "offense_category": "Congressional Investigative Power Used to Pressure Politically-Targeted Universities -- contested; House Judiciary frames this as a legitimate antitrust inquiry into tuition price coordination, not retaliation",
     "contested": true,
-    "incident_summary": "In April 2025, House Judiciary Committee Chairman Jim Jordan, joined by Senate Judiciary Chairman Charles Grassley and others, sent letters to all eight Ivy League schools seeking documents and communications related to alleged collusion in setting tuition and financial aid. On June 26, 2025, **Jordan and Rep. Scott Fitzgerald issued a formal subpoena to Harvard specifically, demanding internal communications about its tuition-setting and financial-aid process, with a July 17 compliance deadline**. Harvard called the subpoena 'unwarranted, unfair, and unnecessary,' stating it had already produced thousands of pages of documents and that there was no basis for a collusion allegation; the committee nonetheless deemed Harvard's roughly 400-document response, delivered after 79 days, inadequate. The investigation expanded on July 1, 2025 when the committee issued mirroring subpoenas to Brown University and the University of Pennsylvania, with a July 22 compliance deadline, as part of the same Ivy League tuition-pricing antitrust probe. The subpoenas arrived amid a broader, well-documented pattern of the administration and allied congressional committees targeting Harvard specifically over unrelated disputes (SEVP revocation, research funding freezes), raising the contested question of whether the antitrust rationale is the subpoena's genuine driver or a vehicle for continued pressure on an institution already targeted on other fronts.",
+    "incident_summary": "In April 2025, House Judiciary Committee Chairman Jim Jordan, joined by Senate Judiciary Chairman Charles Grassley and others, sent letters to all eight Ivy League schools seeking documents and communications related to alleged collusion in setting tuition and financial aid. On June 26, 2025, **Jordan and Rep. Scott Fitzgerald issued a formal subpoena to Harvard specifically, demanding internal communications about its tuition-setting and financial-aid process, with a July 17 compliance deadline**. Harvard called the subpoena 'unwarranted, unfair, and unnecessary,' stating it had already produced thousands of pages of documents and that there was no basis for a collusion allegation; the committee nonetheless deemed Harvard's response inadequate, saying it had produced fewer than 400 documents in the 79 days since the committee's April 8 requests. The investigation expanded on July 1, 2025 when the committee issued mirroring subpoenas to Brown University and the University of Pennsylvania, with a July 22 compliance deadline, as part of the same Ivy League tuition-pricing antitrust probe. The subpoenas arrived amid a broader, well-documented pattern of the administration and allied congressional committees targeting Harvard specifically over unrelated disputes (SEVP revocation, research funding freezes), raising the contested question of whether the antitrust rationale is the subpoena's genuine driver or a vehicle for continued pressure on an institution already targeted on other fronts.",
     "elements_required": [
       "The House Judiciary Committee issued a formal subpoena, not merely an information request, to Harvard specifically over tuition/financial-aid practices",
-      "Harvard's response, though substantial (thousands of pages, ~400 documents in the specific subpoena response), was deemed inadequate by the committee",
+      "Harvard's response, though substantial (thousands of pages by Harvard's account; fewer than 400 documents by the committee's count), was deemed inadequate by the committee",
       "The subpoena and probe arrived during a period of well-documented, separately-tracked administration pressure on Harvard over unrelated matters",
       "The investigation subsequently expanded to other Ivy League schools (Brown, Penn) using mirrored subpoena language, suggesting an institution-wide antitrust theory rather than Harvard-specific targeting alone"
     ],
     "evidence": [
       {
         "type": "public_record",
-        "description": "House Judiciary Committee Chairmen Jordan and Fitzgerald issued a subpoena to Harvard on June 26, 2025 demanding tuition and financial-aid-related communications, with a July 17, 2025 compliance deadline.",
+        "description": "A Senate Judiciary Committee release dated April 10, 2025 says Senate Judiciary Chairman Chuck Grassley and House Judiciary Chairman Jim Jordan, joined by Sen. Mike Lee and Rep. Scott Fitzgerald, sent letters to all eight Ivy League universities requesting documents and communications on their apparent collusion to raise tuition prices.",
+        "source_url": "https://www.judiciary.senate.gov/press/rep/releases/grassley-jordan-lee-and-fitzgerald-launch-bicameral-investigation-into-potential-ivy-league-tuition-pricing-collusion",
+        "maps_to_element": "The House Judiciary Committee issued a formal subpoena, not merely an information request, to Harvard specifically over tuition/financial-aid practices"
+      },
+      {
+        "type": "public_record",
+        "description": "House Judiciary Committee Chairmen Jordan and Fitzgerald sent Harvard a subpoena on June 26, 2025 seeking documents and communications on Ivy League tuition pricing and selective financial aid; the committee said Harvard had produced fewer than 400 documents, one of the lowest totals in the Ivy League, and that its response 79 days after the committee's April 8 requests was inadequate.",
         "source_url": "https://judiciary.house.gov/media/press-releases/chairmen-jordan-and-fitzgerald-subpoena-harvard-university",
         "maps_to_element": "The House Judiciary Committee issued a formal subpoena, not merely an information request, to Harvard specifically over tuition/financial-aid practices"
       },
       {
         "type": "news_report",
-        "description": "The Harvard Crimson and Boston Globe reported Harvard called the subpoena 'unwarranted, unfair and unnecessary,' saying it had been turning over documents in 'good faith'; the committee deemed Harvard's approximately 400-document response, delivered after 79 days, inadequate.",
+        "description": "The Boston Globe reported on June 26, 2025 that the committee gave Harvard until July 17 to produce the documents, and that a Harvard spokesperson called the subpoena 'unwarranted, unfair and unnecessary,' said there was 'no basis for an allegation of collusion,' and said Harvard had 'produced thousands of pages of documents.'",
+        "source_url": "https://www.bostonglobe.com/2025/06/26/metro/harvard-subpoena-tuition-pricing/",
+        "maps_to_element": "Harvard's response, though substantial, was deemed inadequate by the committee"
+      },
+      {
+        "type": "news_report",
+        "description": "The Harvard Crimson reported on June 27, 2025 that Republican lawmakers first contacted Harvard on April 8, that the subpoena compels Harvard to turn over the requested materials by July 17, that the committee called Harvard's response 'inadequate,' and that a Harvard spokesperson said the University had been turning over documents in 'good faith' and called the subpoena 'unwarranted, unfair, and unnecessary.'",
         "source_url": "https://www.thecrimson.com/article/2025/6/27/harvard-antitrust-subpoena/",
         "maps_to_element": "Harvard's response, though substantial, was deemed inadequate by the committee"
       },
@@ -25312,22 +25324,28 @@
         "description": "The committee issued mirroring subpoenas to Brown University and the University of Pennsylvania on July 1, 2025, with a July 22 compliance deadline, expanding the same Ivy League tuition-pricing antitrust investigation beyond Harvard.",
         "source_url": "https://www.cnbc.com/2025/07/01/jim-jordan-subpoena-brown-penn-harvard.html",
         "maps_to_element": "The investigation subsequently expanded to other Ivy League schools using mirrored subpoena language"
+      },
+      {
+        "type": "news_report",
+        "description": "The Harvard Crimson reported on December 19, 2025 that the House Judiciary Committee 'has subpoenaed Harvard's financial aid records as part of a broader antitrust investigation into alleged tuition-fixing among Ivy League schools.'",
+        "source_url": "https://www.thecrimson.com/article/2025/12/19/garber-extension-washington-pressure/",
+        "maps_to_element": "The House Judiciary Committee issued a formal subpoena, not merely an information request, to Harvard specifically over tuition/financial-aid practices"
       }
     ],
-    "status": "Investigation ongoing as of last verification -- compliance deadlines had passed for Harvard, Brown, and Penn, with no publicly reported final resolution or enforcement action identified in sourcing reviewed.",
+    "status": "Investigation open: the Harvard, Brown and Penn subpoena deadlines (July 17 and 22, 2025) have passed, and no committee report, contempt step or other enforcement has been publicly reported. A December 2025 Harvard Crimson report still cited the subpoena as part of a broader antitrust investigation.",
     "rebuttal_anticipated": "Jordan and the committee could argue the antitrust inquiry into Ivy League tuition-setting practices is a legitimate, previously-announced (April 2025 letters preceded the June subpoena) congressional oversight function applied evenhandedly across all eight Ivy League schools, not retaliation against Harvard specifically, as shown by the subsequent expansion to Brown and Penn.",
     "comeback": "The evenhanded-expansion argument is genuine evidence against a Harvard-specific retaliation theory, but it does not resolve the separate, well-documented pattern this database tracks of the administration targeting Harvard on multiple unrelated fronts (SEVP status, research funding) during the same period -- whether the antitrust probe's timing and intensity toward Harvard specifically reflects ordinary oversight prioritization or is amplified by that broader institutional targeting remains a genuinely contested characterization question, not a settled fact either direction.",
     "cause": "[TAP Analysis, not sourced] Consistent with a broader pattern this database documents of congressional committees controlled by Trump allies using subpoena power against institutions -- universities, but also other perceived administration adversaries -- in ways that combine plausible substantive rationales with a documented broader pattern of political pressure against the same targets.",
-    "confidence_note": "HIGH confidence on the subpoenas themselves, their dates, and Harvard's response, corroborated across the Harvard Crimson, Boston Globe, Harvard Magazine, and the committee's own press releases. LOW-MODERATE confidence on the retaliation characterization specifically, since the investigation's expansion to Brown and Penn is genuine evidence complicating a Harvard-targeting-only theory -- this entry should present the retaliation concern as contested, not established.",
+    "confidence_note": "HIGH confidence on the subpoenas themselves, their dates, and Harvard's response, corroborated across the Harvard Crimson, Boston Globe, Harvard Magazine, and the committee's own press releases. LOW-MODERATE confidence on the retaliation characterization specifically, since the investigation's expansion to Brown and Penn is genuine evidence complicating a Harvard-targeting-only theory -- this entry should present the retaliation concern as contested, not established. Re-verified 2026-11-07: the committee's own releases, the Senate Judiciary release on the April letters, and Crimson and Boston Globe coverage support the dates and Harvard's response; the committee's 'fewer than 400 documents' figure is its own count; Harvard says it produced thousands of pages. No committee report, contempt step or settlement of the subpoenas has been publicly reported; a December 2025 Crimson report still cited the subpoena as part of that investigation.",
     "pull_quote": "Harvard called the subpoena “unwarranted, unfair, and unnecessary,” saying it had already produced thousands of pages of documents.",
-    "last_verified": "2026-09-10",
+    "last_verified": "2026-11-07",
     "date_added": "2026-09-10",
     "section_summaries": {
-      "incident_summary": "House Judiciary subpoenaed Harvard (June 2025), then Brown and Penn (July 2025), over alleged Ivy League tuition price-fixing, amid a broader pattern of administration pressure on Harvard specifically.",
+      "incident_summary": "House Judiciary subpoenaed Harvard (June 2025), then Brown and Penn (July 2025), over alleged Ivy League tuition price-fixing, amid broader administration pressure on Harvard specifically.",
       "confidence_note": "The subpoenas and Harvard's response are well documented; whether this reflects genuine evenhanded oversight or targeted pressure is a contested characterization, not a settled fact."
     },
     "date_of_action": "2025-04 (Jordan/Grassley target Ivy League tuition-setting) through 2025-07-01 (subpoenas expanded to Brown, Penn)",
-    "last_substantive_update": "2026-09-10",
+    "last_substantive_update": "2026-11-07",
     "glance": {
       "who": "Jim Jordan (House Judiciary Chairman)",
       "what": "Subpoenaed Harvard, Brown and Penn over alleged tuition price-fixing amid administration pressure on Harvard",
@@ -25336,15 +25354,15 @@
         "certainty": "alleged",
         "who": "Harvard, Brown and Penn"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-11-07"
     },
     "status_stage": "Unchallenged",
     "key_events": [
       {
-        "date": "2025-04",
-        "text": "Jordan, Grassley and others ask all eight Ivy League schools for records on alleged tuition and aid collusion",
+        "date": "2025-04-08",
+        "text": "Jordan, Grassley, Lee and Fitzgerald send all eight Ivy League schools letters seeking records on tuition collusion",
         "sources": [
-          "https://www.cnbc.com/2025/07/01/jim-jordan-subpoena-brown-penn-harvard.html",
+          "https://www.judiciary.senate.gov/press/rep/releases/grassley-jordan-lee-and-fitzgerald-launch-bicameral-investigation-into-potential-ivy-league-tuition-pricing-collusion",
           "https://www.thecrimson.com/article/2025/6/27/harvard-antitrust-subpoena/"
         ]
       },
@@ -29247,50 +29265,74 @@
     "official": "Kristi Noem, Secretary of Homeland Security",
     "offense_category": "Federal Records Act Compliance Failure and Contradictory Public Statements Over DHS's Preservation of Text Messages",
     "contested": true,
-    "incident_summary": "In July 2025, watchdog group American Oversight submitted a FOIA request seeking text, Signal, and email communications of Secretary Kristi Noem and other top DHS officials related to the National Guard's deployment to Los Angeles and Florida's 'Alligator Alcatraz' migrant detention facility. On July 23, 2025, **DHS responded that 'text message data generated after April 9, 2025, is no longer maintained' -- meaning DHS had stopped preserving senior officials' text messages for roughly three and a half months by the time of the request**. The New York Times first reported this response on August 22, 2025; DHS subsequently gave contradictory public assurances that it did continue to preserve text-message records, without explaining the discrepancy with its own written FOIA response. American Oversight said a failure to preserve records as described would violate the Federal Records Act and urged Noem to immediately recover any missing records and notify the National Archives of any unlawful destruction, as the statute requires. On October 20, 2025, American Oversight sued DHS, Noem, the National Archives and Records Administration (NARA), and Acting Archivist Marco Rubio over the agency's failure to produce the requested records and the unresolved preservation question. A November 21-22, 2025 joint status report revealed DHS had issued a notice directing officials to preserve records relevant to the litigation, spurred by the lawsuit itself. In early April 2026, DHS admitted in a court filing that its original 'no longer maintained' assertion had been 'erroneous,' attributing it to a 'misunderstanding' tied to technology changes -- an explanation that, as of this entry's sourcing, had not been independently confirmed to demonstrate DHS actually complied with its Federal Records Act preservation obligations throughout the disputed period.",
+    "incident_summary": "In July 2025, watchdog group American Oversight submitted a FOIA request seeking text, Signal, and email communications of Secretary Kristi Noem and other top DHS officials related to the National Guard's deployment to Los Angeles and Florida's 'Alligator Alcatraz' migrant detention facility. On July 23, 2025, **DHS responded that 'text message data generated after April 9, 2025, is no longer maintained' -- on its face, a statement that DHS had stopped preserving senior officials' text messages for roughly three and a half months by the time of the request**. The New York Times first reported this response on August 22, 2025; DHS subsequently gave contradictory public assurances that it did continue to preserve text-message records, without explaining the discrepancy with its own written FOIA response. American Oversight said a failure to preserve records as described would violate the Federal Records Act and urged Noem to immediately recover any missing records and notify the National Archives of any unlawful destruction, as the statute requires. On October 20, 2025, American Oversight sued DHS, Noem, the National Archives and Records Administration (NARA), and Acting Archivist Marco Rubio over the agency's failure to produce the requested records and the unresolved preservation question. On November 5, 2025, a joint status report in the case included a declaration from DHS Chief Data Officer Michael Weissman stating that technology changes had led to 'the misunderstanding' about how DHS preserves electronic messages and 'the erroneous information provided to Plaintiffs' in response to their FOIA requests; he said DHS had moved away from the TeleMessage archiving software in April after 'cybersecurity failures,' that a litigation hold covering each named custodian had been issued, and that DHS had uncovered 'no evidence' that any federal records were destroyed. A November 21, 2025 court filing revealed that, as a result of the lawsuit, DHS had issued a notice directing these officials to preserve records relating to the case; DHS said most of the officials' devices had been archived as of November 14, but the officials themselves did not attest that they had preserved all responsive records. After DHS's declarations, American Oversight withdrew its motion for preliminary relief; DHS made an initial production of records on February 13, 2026, and American Oversight filed an amended complaint on April 6, 2026. American Oversight said DHS had not demonstrated that the requested messages were preserved, and DHS's 'misunderstanding' explanation remains its own account rather than an independently confirmed showing that it met its Federal Records Act preservation obligations throughout the disputed period.",
     "elements_required": [
       "DHS told a FOIA requester in writing that senior officials' text messages generated after a specific date were 'no longer maintained'",
       "DHS subsequently gave contradictory public assurances that records were preserved, without reconciling the two statements",
-      "A federal lawsuit naming Noem personally, DHS, NARA, and the Acting Archivist followed, alleging Federal Records Act noncompliance",
+      "A federal lawsuit naming Noem (in her official capacity), DHS, NARA, and the Acting Archivist followed, alleging Federal Records Act noncompliance",
       "DHS later admitted in the litigation that its original non-preservation statement was 'erroneous,' without independently confirming full compliance during the disputed period"
     ],
     "evidence": [
       {
         "type": "news_report",
-        "description": "The New York Times first reported DHS's July 23, 2025 FOIA response stating text messages generated after April 9, 2025 were 'no longer maintained,' and DHS's subsequent contradictory public assurances",
+        "description": "The New York Times first reported on August 22, 2025 DHS's July 23, 2025 FOIA response stating text messages generated after April 9, 2025 were 'no longer maintained,' and DHS's subsequent contradictory public assurances",
         "source_url": "https://www.nytimes.com/2025/08/22/us/politics/homeland-security-foia-text-messages.html",
         "maps_to_element": "The initial non-preservation admission and its public contradiction"
       },
       {
         "type": "official_statement",
-        "description": "American Oversight's own investigation pages document DHS's admission that text messages for Noem and other top officials were no longer preserved, and its subsequent lawsuit against DHS, Noem, NARA, and Acting Archivist Marco Rubio filed October 20, 2025",
+        "description": "American Oversight's August 22, 2025 release documents DHS's July 23 FOIA response that 'text message data generated after April 9, 2025, is no longer maintained' and its reply to an Aug. 21 follow-up request that it 'no longer has the capability to conduct a search of text messages'",
         "source_url": "https://americanoversight.org/american-oversight-obtains-startling-dhs-admission-it-no-longer-preserves-text-messages-for-noem-other-top-officials/",
-        "maps_to_element": "The formal lawsuit and its named defendants"
+        "maps_to_element": "The initial non-preservation admission and its public contradiction"
+      },
+      {
+        "type": "official_statement",
+        "description": "On October 20, 2025, American Oversight announced it had sued DHS, Secretary Kristi Noem, the National Archives and Records Administration and Acting Archivist Marco Rubio over the failure to preserve text messages, alleging violations of the Federal Records Act and FOIA, and had moved for a preliminary injunction",
+        "source_url": "https://americanoversight.org/american-oversight-seeks-emergency-court-relief-over-apparent-dhs-cover-up-of-text-messages-by-noem-other-top-officials/",
+        "maps_to_element": "A federal lawsuit naming Noem (in her official capacity), DHS, NARA, and the Acting Archivist followed, alleging Federal Records Act noncompliance"
       },
       {
         "type": "news_report",
-        "description": "Law & Crime reported DHS's April 2026 court admission that its original 'no longer maintained' statement was 'erroneous,' attributed to a technology-related 'misunderstanding'",
+        "description": "Law & Crime reported that a joint status report filed Nov. 5, 2025 in American Oversight's Oct. 20 suit against DHS, Noem and Acting Archivist Marco Rubio included a declaration from DHS Chief Data Officer Michael Weissman attributing 'erroneous information' and a 'misunderstanding' to technology changes, and stating that a litigation hold covering the named custodians had been issued",
         "source_url": "https://lawandcrime.com/high-profile/erroneous-information-provided-dhs-blames-misunderstanding-about-elusive-noem-texts-with-top-officials-on-technology-changes/",
         "maps_to_element": "DHS's later retraction and its stated explanation"
+      },
+      {
+        "type": "official_statement",
+        "description": "American Oversight reported on November 21, 2025 that a new court filing showed DHS, as a result of the litigation, had issued a notice directing top officials to 'preserve documents and electronic records that relate to the subject matter of the complaint'; DHS said most officials' devices were archived as of Nov. 14, but the officials did not attest they preserved all responsive records",
+        "source_url": "https://americanoversight.org/lawsuit-spurs-dhs-notice-to-noem-other-top-officials-demanding-proper-records-preservation/",
+        "maps_to_element": "DHS later admitted in the litigation that its original non-preservation statement was 'erroneous,' without independently confirming full compliance during the disputed period"
+      },
+      {
+        "type": "court_filing",
+        "description": "A March 6, 2026 joint status report in American Oversight v. DHS (No. 1:25-cv-03699) states that after DHS declarations that its FOIA response was erroneous, the plaintiff withdrew its motion for preliminary relief; DHS made an initial production on February 13, 2026, and Counts I, IV and V remain",
+        "source_url": "https://www.justsecurity.org/wp-content/uploads/2026/04/American-Oversight-v.-DHS-Mar.-6-2026-Filing.pdf",
+        "maps_to_element": "DHS later admitted in the litigation that its original non-preservation statement was 'erroneous,' without independently confirming full compliance during the disputed period"
+      },
+      {
+        "type": "official_statement",
+        "description": "American Oversight's case page for the suit (docket 25-3699, status open) lists an amended complaint filed April 6, 2026, after the Oct. 20, 2025 initial complaint and Nov. 5, 2025 joint status report",
+        "source_url": "https://americanoversight.org/litigation/american-oversight-v-dhs-kristi-noem-marco-rubio-and-nara-preservation-of-text-messages/",
+        "maps_to_element": "A federal lawsuit naming Noem (in her official capacity), DHS, NARA, and the Acting Archivist followed, alleging Federal Records Act noncompliance"
       }
     ],
-    "status": "Ongoing litigation -- DHS's April 2026 'erroneous information' admission had not, per sourcing reviewed, been independently verified as resolving whether records were actually preserved throughout the disputed period.",
-    "rebuttal_anticipated": "DHS could argue the entire episode was a good-faith administrative error caused by a technology transition, not a deliberate effort to evade FOIA or destroy records, and that its April 2026 correction and the preservation notice to officials show eventual compliance rather than concealment.",
-    "comeback": "DHS's own explanation does not account for why it took roughly nine months (from the July 2025 FOIA response to the April 2026 court admission) to correct a claim that senior officials' records were not being preserved, nor does a 'misunderstanding' explanation on its own establish that records generated during the disputed window were actually recovered and preserved -- the burden the Federal Records Act places on the agency itself, not on the requester to disprove the government's own written statement.",
-    "cause": "[TAP Analysis, not sourced] Illustrates a pattern of DHS providing contradictory, contested statements about its own records-preservation practices under FOIA pressure, resolved only after formal litigation naming the Secretary personally.",
-    "last_verified": "2026-09-10",
+    "status": "Ongoing in federal court in D.C. (No. 25-cv-3699). DHS called its 'no longer maintained' reply 'erroneous' in a Nov. 5, 2025 filing and began producing records in Feb. 2026; American Oversight, which said in Nov. 2025 DHS had not shown the texts were preserved, amended its complaint April 6, 2026.",
+    "rebuttal_anticipated": "DHS could argue the entire episode was a good-faith administrative error caused by a technology transition, not a deliberate effort to evade FOIA or destroy records, and that its November 2025 correction and the preservation notice to officials show eventual compliance rather than concealment.",
+    "comeback": "DHS's own explanation does not account for why it repeated its claim that senior officials' texts were not being preserved to American Oversight in August 2025 and corrected it only in a November 2025 court filing, weeks after being sued, nor does a 'misunderstanding' explanation on its own establish that records generated during the disputed window were actually recovered and preserved -- the burden the Federal Records Act places on the agency itself, not on the requester to disprove the government's own written statement.",
+    "cause": "[TAP Analysis, not sourced] Illustrates a pattern of DHS providing contradictory, contested statements about its own records-preservation practices under FOIA pressure, addressed only after formal litigation naming the Secretary as a defendant.",
+    "last_verified": "2026-11-07",
     "date_added": "2026-09-10",
-    "confidence_note": "HIGH confidence on the sequence of events -- the July 23, 2025 FOIA response, its August 2025 NYT reporting, the October 20, 2025 lawsuit and its named defendants, the November 2025 preservation notice, and the April 2026 'erroneous information' admission -- all independently corroborated across The New York Times, American Oversight's own case documentation, Law & Crime, and The Hill. MODERATE confidence on whether DHS's underlying Federal Records Act compliance was actually cured, since no sourcing reviewed independently confirmed that records from the disputed April-July 2025 window were recovered rather than permanently lost; this entry presents the 'erroneous information' explanation as DHS's own account, not as an independently verified resolution.",
-    "pull_quote": "In early April 2026, DHS admitted in a court filing that its original “no longer maintained” assertion had been “erroneous.”",
+    "confidence_note": "HIGH confidence on the sequence of events -- the July 23, 2025 FOIA response, its August 2025 NYT reporting, the October 20, 2025 lawsuit and its named defendants, DHS's November 5, 2025 'erroneous information' declaration, the November 2025 preservation notice, and the 2026 records production and amended complaint -- corroborated across The New York Times, American Oversight's own case documentation, Law & Crime, and a joint status report filed in the case. MODERATE confidence on whether DHS's underlying Federal Records Act compliance was actually cured, since no sourcing reviewed independently confirmed that records from the disputed April-July 2025 window were recovered rather than permanently lost; this entry presents the 'erroneous information' explanation as DHS's own account, not as an independently verified resolution.",
+    "pull_quote": "In a November 2025 court filing, DHS admitted that its original “no longer maintained” assertion had been “erroneous.”",
     "section_summaries": {
-      "incident_summary": "DHS told American Oversight in July 2025 that Noem's and other officials' text messages weren't preserved after April 2025, then gave contradictory public assurances; American Oversight sued DHS, Noem, and NARA in October 2025, and DHS admitted in April 2026 its original non-preservation statement was 'erroneous.'",
-      "confidence_note": "HIGH confidence on the documented sequence of statements and litigation; MODERATE confidence on whether the underlying records were actually preserved/recovered, since that remains DHS's own unverified account."
+      "incident_summary": "DHS told American Oversight in July 2025 that top officials' texts after April 9 weren't kept; after a lawsuit, it called that 'erroneous' in a Nov. 2025 filing. The case continues.",
+      "confidence_note": "HIGH confidence on the documented statements and litigation; MODERATE on whether the texts were actually preserved, which rests on DHS's own unverified account."
     },
     "narrative_override": {
-      "headline": "DHS said Noem's texts weren't preserved, then admitted a year later that claim was 'erroneous.'"
+      "headline": "DHS said Noem's texts weren't preserved, then admitted in court that claim was 'erroneous.'"
     },
-    "date_of_action": "2025-07 (American Oversight FOIA reveals DHS stopped preserving texts) through 2026-04 (DHS admits 'erroneous' claim in court filing)",
-    "last_substantive_update": "2026-09-10",
+    "date_of_action": "2025-07 (DHS tells American Oversight post-April 9 texts are 'no longer maintained') through 2025-11 (DHS calls that reply 'erroneous' in a court filing); litigation ongoing",
+    "last_substantive_update": "2026-11-07",
     "glance": {
       "who": "DHS under Kristi Noem (Secretary)",
       "what": "Told a FOIA requester Noem's texts weren't kept, then admitted in court that statement was 'erroneous'",
@@ -29299,7 +29341,7 @@
         "certainty": "documented",
         "who": "Public-records transparency at DHS"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-11-07"
     },
     "status_stage": "In court",
     "key_events": [
@@ -29332,8 +29374,38 @@
         "text": "American Oversight sues DHS, Noem, the National Archives and Acting Archivist Marco Rubio",
         "turning_point": true,
         "sources": [
-          "https://americanoversight.org/american-oversight-obtains-startling-dhs-admission-it-no-longer-preserves-text-messages-for-noem-other-top-officials/",
+          "https://americanoversight.org/american-oversight-seeks-emergency-court-relief-over-apparent-dhs-cover-up-of-text-messages-by-noem-other-top-officials/",
           "https://lawandcrime.com/high-profile/erroneous-information-provided-dhs-blames-misunderstanding-about-elusive-noem-texts-with-top-officials-on-technology-changes/"
+        ]
+      },
+      {
+        "date": "2025-11-05",
+        "text": "In a court filing, DHS calls its 'no longer maintained' reply erroneous and blames technology changes",
+        "turning_point": true,
+        "sources": [
+          "https://lawandcrime.com/high-profile/erroneous-information-provided-dhs-blames-misunderstanding-about-elusive-noem-texts-with-top-officials-on-technology-changes/",
+          "https://americanoversight.org/litigation/american-oversight-v-dhs-kristi-noem-marco-rubio-and-nara-preservation-of-text-messages/"
+        ]
+      },
+      {
+        "date": "2025-11-21",
+        "text": "A court filing shows DHS has told top officials to preserve records tied to the lawsuit",
+        "sources": [
+          "https://americanoversight.org/lawsuit-spurs-dhs-notice-to-noem-other-top-officials-demanding-proper-records-preservation/"
+        ]
+      },
+      {
+        "date": "2026-02-13",
+        "text": "DHS makes its first production of records to American Oversight",
+        "sources": [
+          "https://www.justsecurity.org/wp-content/uploads/2026/04/American-Oversight-v.-DHS-Mar.-6-2026-Filing.pdf"
+        ]
+      },
+      {
+        "date": "2026-04-06",
+        "text": "American Oversight files an amended complaint",
+        "sources": [
+          "https://americanoversight.org/litigation/american-oversight-v-dhs-kristi-noem-marco-rubio-and-nara-preservation-of-text-messages/"
         ]
       }
     ]

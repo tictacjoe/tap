@@ -11035,42 +11035,52 @@
   },
   {
     "id": "michigan-coal-plants-emergency-order-2025",
-    "rule_name": "DOE emergency orders forcing Michigan coal plants to remain operational past planned retirement",
+    "rule_name": "DOE emergency orders forcing Michigan's J.H. Campbell coal plant to remain operational past planned retirement",
     "administration": "Trump II (2025-present)",
     "agency": "DOE",
     "domain": "environmental",
-    "status": "Weakened (not fully repealed) -- repeated emergency orders overrode planned retirement; legal challenges ongoing",
-    "date_of_action": "2025-05-23 (first emergency order) through 2026-02 (fourth extension order)",
-    "original_rule_summary": "Consumers Energy had planned to retire the J.H. Campbell coal plant on May 31, 2025 and DTE Energy's Monroe plant faced similar planned closure, consistent with Michigan's own clean-energy transition plans and the utilities' own long-term resource planning, which had determined the aging coal plants -- among the dirtiest in the U.S. -- were no longer economically or environmentally justified to keep operating.",
-    "what_changed": "On May 23, 2025, the Trump administration's Department of Energy declared an electrical-supply 'national energy emergency' and issued an emergency order forcing Consumers Energy to keep the J.H. Campbell coal plant operating past its planned May 31, 2025 retirement date, overriding the utility's own retirement plan and Michigan's clean-energy planning. DTE Energy's Monroe plant faced a similar forced-extension order. DOE issued repeated additional emergency orders extending the forced operation: a second and third order continued the extensions through 2025, a fourth order in February 2026 extended operation an additional 90 days (to May 18, 2026), for a cumulative extension of 270+ days past the original planned retirement. Environmental and public-interest groups, state attorneys general, and even the utilities themselves challenged the orders in court as an illegal use of emergency authority to override routine utility retirement decisions absent an actual demonstrated grid emergency.",
+    "status": "Weakened (not fully repealed) -- the D.C. Circuit on Sept. 11, 2026 vacated DOE's first Campbell order as an unlawful use of emergency power, but DOE has sought rehearing and a sixth order keeps the plant running through Nov. 14, 2026 while challenges to the later orders continue.",
+    "date_of_action": "2025-05-23 (first emergency order) through 2026-08-14 (sixth order)",
+    "original_rule_summary": "Consumers Energy had planned to retire the J.H. Campbell coal plant in West Olive, Michigan, on May 31, 2025, after years of preparing replacement power, under a plan that Michigan regulators and the regional grid operator (MISO) had reviewed and approved and that was expected to save Michigan ratepayers nearly $600 million. Consumers Energy, the Michigan Public Service Commission and MISO all concluded there was adequate power generation without the plant, whose oldest unit went online in 1962.",
+    "what_changed": "On May 23, 2025, the Trump administration's Department of Energy declared an electrical-supply 'national energy emergency' and issued an emergency order forcing Consumers Energy to keep the J.H. Campbell coal plant operating past its planned May 31, 2025 retirement date, overriding the utility's own retirement plan and Michigan's clean-energy planning. DOE then reissued the order in 90-day increments: a second and third order continued the extensions through 2025, and a fourth order in February 2026 extended operation to May 18, 2026, which Environmental Defense Fund counted as almost a year (360 days) past the planned retirement. DTE Energy's Monroe coal plant is not among the plants DOE has ordered kept open. Environmental and public-interest groups and the states of Michigan, Minnesota and Illinois challenged the Campbell orders in the D.C. Circuit as an illegal use of emergency authority to override routine utility retirement decisions absent an actual demonstrated grid emergency.\n\nUpdate 2026-11-07: DOE issued a fifth order in May 2026, running to Aug. 16, 2026, and a sixth on Aug. 14, 2026, requiring the plant to run until Nov. 14, 2026, nearly a year and a half past its approved retirement date. On Sept. 11, 2026, a unanimous three-judge D.C. Circuit panel vacated DOE's first (May 23, 2025) order, ruling it an unlawful use of Section 202(c) of the Federal Power Act because DOE had not shown a genuine emergency. The ruling covered only that first order, and Consumers Energy said it would keep complying with the current one. By Oct. 30, 2026, DOE had asked the court to rehear the case, either before the same panel or before the full court.",
     "primary_proponent": {
       "name": "Chris Wright",
       "role": "Secretary of Energy",
-      "note": "DOE, under Secretary Wright, issued each of the successive emergency orders forcing the plants to remain operational."
+      "note": "DOE, under Secretary Wright, issued each of the successive emergency orders forcing the plant to remain operational."
     },
     "corporate_beneficiaries": [
-      "Coal-mining and coal-transport industry suppliers to the affected plants"
+      "Coal-mining and coal-transport industry suppliers to the Campbell plant"
     ],
     "estimated_health_impact": {
-      "summary": "**The J.H. Campbell and Monroe plants are among the highest-emitting coal facilities in the U.S., together producing nearly half of Michigan's power-sector greenhouse gas emissions and releasing pollutants including arsenic and heavy metals into local water**; forcing continued operation past their planned retirement extends these environmental and public-health exposures beyond what state and utility planning had already determined was no longer justified.",
+      "summary": "**The J.H. Campbell plant is one of Michigan's most polluting facilities: the Sierra Club estimates its smog and soot pollution kills 66 people a year, and Environmental Defense Fund estimates it causes more than 400 asthma attacks a year and sends 10,000 pounds of toxic metals into Lake Michigan**; forcing it to keep running past its planned retirement extends those exposures. Consumers Energy has reported $295 million in costs from May 2025 to June 30, 2026, which it is seeking to recover from electric customers across MISO's north and central regions.",
       "figures": [
         {
-          "metric": "Consumers Energy's net financial loss from keeping J.H. Campbell running past retirement (through Dec. 31, 2025)",
-          "value": "$135,000,000 (~$600,000/day)",
-          "source": "Environmental Defense Fund, citing Consumers Energy's own reporting"
+          "metric": "Annual deaths from the Campbell plant's smog and soot pollution (estimate)",
+          "value": "66 per year",
+          "source": "Sierra Club estimate, reported by Inside Climate News"
         },
         {
-          "metric": "Costs Consumers Energy sought to recover from ratepayers across 11 states",
+          "metric": "Annual asthma attacks caused by the Campbell plant (estimate)",
+          "value": "More than 400 per year",
+          "source": "Environmental Defense Fund estimate, reported by Inside Climate News"
+        },
+        {
+          "metric": "Costs Consumers Energy reported for the Campbell plant, May 2025 to June 30, 2026",
+          "value": "$295,000,000",
+          "source": "Michigan Attorney General, citing Consumers Energy's reporting"
+        },
+        {
+          "metric": "Costs from the first 90-day order Consumers Energy filed to recover from ratepayers in 11 states",
           "value": "~$42,000,000",
           "source": "Environmental Defense Fund"
         }
       ],
-      "caveat": "No independently quantified mortality or specific health-outcome figure tied to the extended emissions period was identified in sourcing reviewed -- the documented figures are financial losses and cost-recovery amounts, not a health-impact study specific to this extension period. The financial-loss figures are Consumers Energy's own reported figures, not an independent audit."
+      "caveat": "The health figures are advocacy-group estimates (Sierra Club, Environmental Defense Fund) of the plant's annual pollution effects, reported by Inside Climate News, not an independent health study of the extension period. The cost figures are Consumers Energy's own reported figures as relayed by the Michigan Attorney General and EDF, not an independent audit; Earthjustice, citing the company's SEC filings, put the cost at more than $248 million as of June 2026."
     },
-    "confidence_note": "HIGH confidence -- the emergency orders, their dates, and the financial-loss figures are well corroborated across Earthjustice, Environmental Defense Fund, Inside Climate News, NRDC, and DOE's own press materials defending the orders; the characterization of the orders as illegal is a contested legal claim under active litigation, not yet a final court ruling identified in sourcing reviewed.",
-    "pull_quote": "Consumers Energy sought to recover roughly $42 million of the plant's $135 million in losses — about $600,000 a day — from ratepayers across 11 states.",
-    "short_summary": "DOE forced two aging Michigan coal plants to keep running past planned retirement via repeated 'emergency' orders, costing ratepayers tens of millions.",
-    "last_verified": "2026-09-10",
+    "confidence_note": "HIGH confidence -- the emergency orders, their dates, and the cost figures are well corroborated across Earthjustice, Environmental Defense Fund, Inside Climate News, Bridge Michigan, the American Public Power Association and the Michigan Attorney General's office. On Sept. 11, 2026 the D.C. Circuit held DOE's first order unlawful, but DOE has sought rehearing and the court has not yet reviewed the later orders, so the legality of the continuing orders is not finally settled. Reported cost totals differ by source and cutoff date.",
+    "pull_quote": "Consumers Energy has reported $295 million in costs from keeping the Campbell coal plant running from May 2025 to June 30, 2026, costs it is seeking to recover from customers across the Midwest grid.",
+    "short_summary": "Kept Michigan's Campbell coal plant running past retirement via repeated 'emergency' orders, at ratepayer cost.",
+    "last_verified": "2026-11-07",
     "date_added": "2026-09-10",
     "sources": [
       {
@@ -11084,25 +11094,53 @@
       {
         "name": "The Guardian",
         "url": "https://www.theguardian.com/us-news/2025/jun/20/trump-michigan-coal-power-plants"
+      },
+      {
+        "name": "Michigan Attorney General (May 20, 2026)",
+        "url": "https://www.michigan.gov/ag/news/press-releases/2026/05/20/ag-nessel-to-challenge-latest-illegal-doe-order"
+      },
+      {
+        "name": "Michigan Attorney General (Aug. 17, 2026)",
+        "url": "https://www.michigan.gov/ag/news/press-releases/2026/08/17/ag-nessel-to-challenge-6th-unlawful-doe-order-forcing-operation-of-jh-campbell-plant"
+      },
+      {
+        "name": "Michigan Attorney General (Sept. 11, 2026)",
+        "url": "https://www.michigan.gov/ag/news/press-releases/2026/09/11/federal-appeals-court-vacates-first-doe-order-forcing-operation-of-jh-campbell-coal-plant"
+      },
+      {
+        "name": "Earthjustice (Sept. 11, 2026)",
+        "url": "https://earthjustice.org/press/2026/trump-administration-loses-first-court-case-challenging-doe-orders-for-coal-plants"
+      },
+      {
+        "name": "Inside Climate News",
+        "url": "https://insideclimatenews.org/news/11092026/court-rules-against-trump-order-to-keep-costly-michigan-coal-plant-running/"
+      },
+      {
+        "name": "Bridge Michigan",
+        "url": "https://bridgemi.com/michigan-environment-watch/court-strikes-trump-order-that-forced-michigan-coal-plant-to-stay-open/"
+      },
+      {
+        "name": "American Public Power Association",
+        "url": "https://www.publicpower.org/periodical/article/doe-seeks-rehearing-court-decision-coal-plants-operations"
       }
     ],
     "section_summaries": {
-      "what_changed": "DOE forced Michigan's J.H. Campbell and Monroe coal plants to keep running past planned retirement via repeated 'national energy emergency' orders starting May 2025.",
-      "estimated_impact": "Extended emissions from among the dirtiest U.S. coal plants; cost Consumers Energy $135M through 2025, partly billed to ratepayers across 11 states.",
-      "confidence_note": "Well corroborated across environmental-advocacy and utility-industry reporting; the orders' legality remains under active litigation."
+      "what_changed": "DOE's repeated 'emergency' orders since May 2025 have kept Michigan's J.H. Campbell coal plant running past retirement; a court voided the first order in Sept. 2026.",
+      "estimated_impact": "Sierra Club estimates the plant's pollution kills 66 people a year; Consumers Energy reported $295M in costs through June 2026, which it seeks to recover across the MISO grid.",
+      "confidence_note": "Well corroborated; the D.C. Circuit ruled DOE's first order unlawful in Sept. 2026, but DOE seeks rehearing and later orders remain unreviewed."
     },
-    "last_substantive_update": "2026-09-10",
+    "last_substantive_update": "2026-11-07",
     "glance": {
       "who": "Chris Wright (Energy Secretary)",
-      "what": "Forced two Michigan coal plants to keep running past retirement through repeated 'emergency' orders",
+      "what": "Forced Michigan's J.H. Campbell coal plant to keep running past retirement via repeated 'emergency' orders",
       "harm": {
         "kind": "environment",
         "certainty": "projected",
-        "who": "Air and water near two coal plants"
+        "who": "Air and water near a Michigan coal plant"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-11-07"
     },
-    "status_stage": "In court",
+    "status_stage": "Court ruled",
     "key_events": [
       {
         "date": "2025-05-23",
@@ -11120,8 +11158,45 @@
           "https://www.edf.org/media/trump-administration-extends-michigan-coal-plant-fourth-time-costs-balloon-staggering-135",
           "https://earthjustice.org/press/2025/trump-administration-issues-a-third-sham-emergency-order-to-force-the-j-h-campbell-power-plant-to-keep-burning-coal"
         ]
+      },
+      {
+        "date": "2026-08-14",
+        "text": "A sixth Energy Department order keeps the Campbell plant running until Nov. 14, 2026",
+        "sources": [
+          "https://www.michigan.gov/ag/news/press-releases/2026/08/17/ag-nessel-to-challenge-6th-unlawful-doe-order-forcing-operation-of-jh-campbell-plant"
+        ]
+      },
+      {
+        "date": "2026-09-11",
+        "text": "D.C. Circuit vacates the first Campbell order as an unlawful use of emergency power",
+        "turning_point": true,
+        "sources": [
+          "https://www.michigan.gov/ag/news/press-releases/2026/09/11/federal-appeals-court-vacates-first-doe-order-forcing-operation-of-jh-campbell-coal-plant",
+          "https://earthjustice.org/press/2026/trump-administration-loses-first-court-case-challenging-doe-orders-for-coal-plants",
+          "https://insideclimatenews.org/news/11092026/court-rules-against-trump-order-to-keep-costly-michigan-coal-plant-running/"
+        ]
+      },
+      {
+        "date": "2026-10",
+        "text": "Energy Department asks the D.C. Circuit to rehear the Campbell ruling",
+        "sources": [
+          "https://www.publicpower.org/periodical/article/doe-seeks-rehearing-court-decision-coal-plants-operations"
+        ]
       }
-    ]
+    ],
+    "timeline": {
+      "what_changed": {
+        "base": "On May 23, 2025, the Trump administration's Department of Energy declared an electrical-supply 'national energy emergency' and issued an emergency order forcing Consumers Energy to keep the J.H. Campbell coal plant operating past its planned May 31, 2025 retirement date, overriding the utility's own retirement plan and Michigan's clean-energy planning. DOE then reissued the order in 90-day increments: a second and third order continued the extensions through 2025, and a fourth order in February 2026 extended operation to May 18, 2026, which Environmental Defense Fund counted as almost a year (360 days) past the planned retirement. DTE Energy's Monroe coal plant is not among the plants DOE has ordered kept open. Environmental and public-interest groups and the states of Michigan, Minnesota and Illinois challenged the Campbell orders in the D.C. Circuit as an illegal use of emergency authority to override routine utility retirement decisions absent an actual demonstrated grid emergency.",
+        "updates": [
+          {
+            "date": "2026-11-07",
+            "label": "Update",
+            "text": "Update 2026-11-07: DOE issued a fifth order in May 2026, running to Aug. 16, 2026, and a sixth on Aug. 14, 2026, requiring the plant to run until Nov. 14, 2026, nearly a year and a half past its approved retirement date. On Sept. 11, 2026, a unanimous three-judge D.C. Circuit panel vacated DOE's first (May 23, 2025) order, ruling it an unlawful use of Section 202(c) of the Federal Power Act because DOE had not shown a genuine emergency. The ruling covered only that first order, and Consumers Energy said it would keep complying with the current one. By Oct. 30, 2026, DOE had asked the court to rehear the case, either before the same panel or before the full court.",
+            "effective_date": "2026-11-07"
+          }
+        ]
+      }
+    }
   },
   {
     "id": "msha-silica-niosh-rollback-trump2",
