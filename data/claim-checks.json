@@ -1369,9 +1369,9 @@
    },
    "8": {
     "state": "supports",
-    "why": "ABC quotes the DOJ spokesperson responding to the July 7 ruling with both quoted phrases.",
+    "why": "ABC's July 7, 2026 article quotes a Justice Department spokesperson responding to the ruling with both quoted phrases, calling it 'at odds with numerous holdings of the Supreme Court' and saying the Department 'is considering all options to challenge.'",
     "host": "abcnews.com",
-    "date": "2026-10-04",
+    "date": "2026-11-08",
     "kind": "fact",
     "archive": false
    },
@@ -1385,11 +1385,27 @@
    },
    "10": {
     "state": "supports",
-    "why": "The Eleventh Circuit docket for 26-12769 shows a Sept. 11, 2026 clerk-granted 30-day extension making the appellant's brief due 10/15/2026.",
+    "why": "The docket shows the Sep 11, 2026 clerk-granted 30-day extension making the appellant's brief due 10/15/2026, the appellant's brief filed Oct 5, 2026, and the Oct 14, 2026 extension setting the appellee's brief due 12/04/2026.",
     "host": "courtlistener.com",
-    "date": "2026-10-03",
+    "date": "2026-11-08",
     "kind": "fact",
     "archive": false
+   },
+   "11": {
+    "state": "supports",
+    "why": "The Democracy Docket page's 'Case Documents (11th circuit)' section lists exactly the item 'DOJ's opening brief (Oct. 5, 2026)'.",
+    "host": "democracydocket.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "12": {
+    "state": "supports",
+    "why": "The Oct. 6, 2026 Law&Crime article says DOJ 'on Monday' asked the 11th Circuit to reverse, quotes the 66-page opening brief with both quoted sentences, and reports the brief's argument that the court abused its discretion by focusing on whether the subpoena would yield a 'prosecutable' offense.",
+    "host": "lawandcrime.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": true
    }
   },
   "blanche-journalist-grand-jury-subpoenas-2026": {
@@ -1454,6 +1470,14 @@
     "why": "The Times text matches each element: the March records demand on WSJ reporters over Iran-war discussions, the Post subpoena over Venezuela coverage, the sealed challenges in Virginia, and the June withdrawal after the judge signaled she would likely quash.",
     "host": "nytimes.com",
     "date": "2026-10-04",
+    "kind": "fact",
+    "archive": false
+   },
+   "8": {
+    "state": "supports",
+    "why": "The RCFP analysis states the March records subpoenas to the WSJ over Iran-war reporting, that the grand jury subpoenas to Post and Journal reporters were withdrawn following the newspapers' legal challenges, and that it is unclear when the department authorized them.",
+    "host": "rcfp.org",
+    "date": "2026-11-08",
     "kind": "fact",
     "archive": false
    }
@@ -3477,25 +3501,17 @@
    },
    "1": {
     "state": "supports",
-    "why": "The Guardian confirms Broidy's 2020 FARA conspiracy guilty plea, his January 2021 pardon, his separate 2009 New York bribery guilty plea, and LEO's statement (via its attorneys) that Broidy played no role in the bidding process.",
+    "why": "The Guardian text says a Broidy-headed company won the $106m BOP contract 'last month' per federal contracting records (the URL dates the article May 27, 2026, placing the award in April), and covers the 2020 FARA conspiracy plea, the January 2021 pardon, the 2009 New York plea, and LEO's statement that Broidy played no role in the bidding.",
     "host": "theguardian.com",
-    "date": "2026-09-15",
+    "date": "2026-11-08",
     "kind": "fact",
     "archive": false
    },
    "2": {
     "state": "supports",
-    "why": "Correctional News's July 10, 2026 article confirms the separate four-year BOP inmate-tablet contract went to Securus Technologies, explicitly distinguishing it from the earlier five-year, $106 million LEO Technologies contract for translation/transcription services.",
+    "why": "The July 10, 2026 Correctional News article covers the Securus tablet contract announced July 8 and separately references the five-year, $106 million Leo Technologies AI translation/transcription contract as a separate move earlier in the year.",
     "host": "correctionalnews.com",
-    "date": "2026-09-15",
-    "kind": "fact",
-    "archive": false
-   },
-   "3": {
-    "state": "partly",
-    "why": "The GAO search page's list of recent decisions shows no LEO Technologies/Bureau of Prisons entry, consistent with \"no matching decision,\" but this GAO-only page says nothing about an inspector general review or ethics-office finding, so those parts of the claim are unaddressed by this source.",
-    "host": "gao.gov",
-    "date": "2026-09-15",
+    "date": "2026-11-08",
     "kind": "fact",
     "archive": false
    }
@@ -11857,13 +11873,21 @@
    },
    "3": {
     "state": "supports",
+    "why": "The CBS article (Wayback capture of April 4, 2025) reports the Thursday IG memo, quotes Acting IG Stebbins' objective and records-retention language verbatim, and says the Armed Services Committee chairman and ranking member requested the review (Sen. Reed is identified as ranking member of the Senate Armed Services Committee).",
+    "host": "cbsnews.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": true
+   },
+   "4": {
+    "state": "supports",
     "why": "The NYT article (via Spokesman-Review) states, citing four people, that Hegseth shared March 15 strike details including F/A-18 flight schedules in the 'Defense | Team Huddle' chat he created in January and accessed on his private phone, with his wife (not a DoD employee), brother Phil and lawyer Tim Parlatore (Pentagon jobs, no clear need to know), and about a dozen others.",
     "host": "web.archive.org",
     "date": "2026-09-30",
     "kind": "fact",
     "archive": false
    },
-   "4": {
+   "5": {
     "state": "supports",
     "why": "Schiff's April 21, 2025 letter to Rubio as acting Archivist requests preservation and investigation, cites both chats, raises Rubio's conflict with questions 5 and 6, and asks eight questions answered by May 5, 2025.",
     "host": "schiff.senate.gov",
@@ -11871,7 +11895,7 @@
     "kind": "fact",
     "archive": false
    },
-   "5": {
+   "6": {
     "state": "supports",
     "why": "The amended complaint filed 04/21/25 cites the March 27 TRO, alleges on information and belief no defendant preserved the chat in full, and adds the NYT-reported 'Defense | Team Huddle' chat with his wife, brother, lawyer, aides and advisors.",
     "host": "storage.courtlistener.com",
@@ -11879,7 +11903,7 @@
     "kind": "fact",
     "archive": false
    },
-   "6": {
+   "7": {
     "state": "supports",
     "why": "CBS reports the monitor for remote Signal/text access, two sources saying it bypasses protocols, Buria's oversight, the AP 'dirty line' report, and the spokesperson's denial and one-way-line description.",
     "host": "cbsnews.com",
@@ -11887,7 +11911,7 @@
     "kind": "fact",
     "archive": false
    },
-   "7": {
+   "8": {
     "state": "supports",
     "why": "The WSJ text states at least a dozen chats, the instruction to inform foreign governments, and (per two people) use for media, travel, schedule and other sensitive information.",
     "host": "wsj.com",
@@ -11895,7 +11919,7 @@
     "kind": "fact",
     "archive": false
    },
-   "8": {
+   "9": {
     "state": "supports",
     "why": "The AP report (June 6, 2025) says the IG is examining whether aides were asked to delete Signal messages about the March 15 strikes and asking staffers who posted the information and who had phone access.",
     "host": "militarytimes.com",
@@ -11903,7 +11927,7 @@
     "kind": "fact",
     "archive": false
    },
-   "9": {
+   "10": {
     "state": "supports",
     "why": "The CBS video description states Moulton pressed Hegseth about Signal texts that may have included sensitive and classified Yemen operation information at the HASC 2026 budget hearing.",
     "host": "cbsnews.com",
@@ -11911,7 +11935,7 @@
     "kind": "fact",
     "archive": false
    },
-   "10": {
+   "11": {
     "state": "supports",
     "why": "Boasberg's June 20, 2025 opinion grants in part, orders notification of the Archivist and referral to the AG, rejects the inadequacy and redress arguments, and quotes the DoD screenshot declaration.",
     "host": "storage.courtlistener.com",
@@ -11919,7 +11943,7 @@
     "kind": "fact",
     "archive": false
    },
-   "11": {
+   "12": {
     "state": "partly",
     "why": "Politico supports the Buria/Parlatore focus, the quote, the IG and OSI questions, and the comment responses; it says IG investigators asked about deleting messages but does not say OSI did so or asked about Buria or Parlatore by name.",
     "host": "politico.com",
@@ -11927,7 +11951,7 @@
     "kind": "fact",
     "archive": false
    },
-   "12": {
+   "13": {
     "state": "partly",
     "why": "The excerpted report supports the March 26 SASC request, the 2-to-4-hour strike info, the SECRET//NOFORN match, the 8170.01 violation, auto-deletion, and an official's mention of the 'Defense Team Huddle' chat; the truncated text does not show the report dates, the 44 U.S.C. 2911/DoDI 5015.02 retention finding, or the claim about the IG being unable to verify because Hegseth denied phone access.",
     "host": "media.defense.gov",
@@ -11935,7 +11959,7 @@
     "kind": "fact",
     "archive": false
    },
-   "13": {
+   "14": {
     "state": "supports",
     "why": "The PBS Dec. 3, 2025 transcript contains both quoted statements.",
     "host": "pbs.org",
@@ -11943,7 +11967,7 @@
     "kind": "fact",
     "archive": false
    },
-   "14": {
+   "15": {
     "state": "supports",
     "why": "Fox reports the IG affirms Hegseth's discretion as top classification authority while policy bars nonsecure, nonofficial channels.",
     "host": "foxnews.com",
@@ -11951,7 +11975,7 @@
     "kind": "fact",
     "archive": false
    },
-   "15": {
+   "16": {
     "state": "supports",
     "why": "Lawfare states exactly this, citing the report.",
     "host": "lawfaremedia.org",
@@ -11959,7 +11983,7 @@
     "kind": "fact",
     "archive": false
    },
-   "16": {
+   "17": {
     "state": "partly",
     "why": "The declaration (filed 04/30/26) supports the June 27, 2025 status report and the April 26, 2025 conversation in which Hegseth searched his phone, but the provided text cuts off before saying what he found and does not show the July 23, 2025 search or the March 26, 2026 date.",
     "host": "storage.courtlistener.com",
@@ -11967,7 +11991,7 @@
     "kind": "fact",
     "archive": false
    },
-   "17": {
+   "18": {
     "state": "supports",
     "why": "The April 30, 2026 joint stipulation dismisses with prejudice, each party bearing its own fees and costs.",
     "host": "storage.courtlistener.com",
@@ -11975,7 +11999,7 @@
     "kind": "fact",
     "archive": false
    },
-   "18": {
+   "19": {
     "state": "partly",
     "why": "The extracted portion of ECF 37-1 confirms the June 29, 2026 Atlantic article on the Hegseth/Rubio/Caine auto-deleting chat and the June 22, 2026 court-ordered production showing Rubio in autodelete chats, but the truncated text does not reach the 16 threads, the 'SS/APNSA,SD,CJCS' chat, the 8-hour setting, or the Mediaite report.",
     "host": "storage.courtlistener.com",
@@ -11983,7 +12007,7 @@
     "kind": "fact",
     "archive": false
    },
-   "19": {
+   "20": {
     "state": "supports",
     "why": "The opinion in No. 26-1690 recounts The Times's reporting that Hegseth shared Yemen strike details in a second private Signal chat including Parlatore, described as a Senior Advisor, and Hegseth's wife and brother.",
     "host": "storage.courtlistener.com",
@@ -20884,6 +20908,14 @@
     "archive": false
    },
    "9": {
+    "state": "partly",
+    "why": "The extracted Federal Register page confirms the Aug. 24, 2026 HHS notice, Docket No. HHS-OS-2026-0332, and the September 20, 2026 comment deadline, and its table of contents references the August 10, 2026 EO, the Task Force, and the 'Adequacy of the Current Categories'; but the truncated text does not include the quoted 'in support of the Task Force ... in furtherance of' language or the body describing the routine/risk-based/shared clinical decision-making categories.",
+    "host": "federalregister.gov",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "10": {
     "state": "supports",
     "why": "The Wayback snapshot of the Sept. 18, 2026 Post article contains the excerpt stating Trump would be 'demanding' companies split vaccines into five doses at six-month intervals and claimed it would reduce autism.",
     "host": "washingtonpost.com",
@@ -20891,7 +20923,7 @@
     "kind": "fact",
     "archive": true
    },
-   "10": {
+   "11": {
     "state": "supports",
     "why": "CNN (Sept. 18, 2026) quotes Trump verbatim on five doses 'given in six-month intervals' (excerpt) and a 'massive reduction in autism,' notes it was unclear which vaccines he meant and HHS did not respond, and quotes Offit saying the vaccines 'wouldn't be protective.'",
     "host": "cnn.com",
@@ -20899,7 +20931,7 @@
     "kind": "fact",
     "archive": false
    },
-   "11": {
+   "12": {
     "state": "supports",
     "why": "The excerpt from the Sept. 18, 2026 Reuters copy says Trump plans to demand vaccine makers split certain shots into five doses, did not provide scientific evidence linking vaccines and autism, and did not say which vaccines would be split.",
     "host": "wtvbam.com",
@@ -20907,7 +20939,7 @@
     "kind": "fact",
     "archive": false
    },
-   "12": {
+   "13": {
     "state": "supports",
     "why": "The CIDRAP column by Brandstetter Figueroa and Steier states verbatim that flu vaccines remain recommended for everyone 6 months and older because Trump's August order has been held up by a legal challenge, and separately that Overton 'helped develop his August executive order calling for the MMR to be split into three separate shots'. The October 1, 2026 publication date is not shown in the text but the content is fully supported.",
     "host": "cidrap.umn.edu",
@@ -21502,9 +21534,9 @@
   },
   "trump-drug-trafficker-pardons-boat-strike-inconsistency-2025": {
    "0": {
-    "state": "supports",
-    "why": "NPR's own description states directly that Trump \"has also pardoned more than 20 people serving time for serious drug crimes, some involving violence,\" even as he escalated drug-war rhetoric.",
-    "host": "npr.org",
+    "state": "partly",
+    "why": "The paywalled Baltimore Sun page confirms its subject is a Baltimore drug trafficker named Garnett Gilbert Smith who was granted clemency by Trump, but the visible text (cut off by the paywall) does not state the 2014 conviction date, the cocaine-conspiracy charge, the 25-year sentence, or the specific May 2025 pardon date.",
+    "host": "baltimoresun.com",
     "date": "2026-09-15",
     "kind": "fact",
     "archive": false
@@ -21518,26 +21550,58 @@
     "archive": false
    },
    "2": {
-    "state": "partly",
-    "why": "The paywalled Baltimore Sun page confirms its subject is a Baltimore drug trafficker named Garnett Gilbert Smith who was granted clemency by Trump, but the visible text (cut off by the paywall) does not state the 2014 conviction date, the cocaine-conspiracy charge, the 25-year sentence, or the specific May 2025 pardon date.",
-    "host": "baltimoresun.com",
+    "state": "supports",
+    "why": "NPR's own description states directly that Trump \"has also pardoned more than 20 people serving time for serious drug crimes, some involving violence,\" even as he escalated drug-war rhetoric.",
+    "host": "npr.org",
     "date": "2026-09-15",
     "kind": "fact",
     "archive": false
    },
    "3": {
-    "state": "unopened",
-    "why": "",
+    "state": "supports",
+    "why": "The CBS article reports the Navy helicopter transport of survivors to a Navy ship, repatriation to Ecuador and Colombia, Ecuador's release citing no evidence of a crime, and Vance's 'really care' remark when asked why survivors were not brought to the U.S. for prosecution.",
+    "host": "cbsnews.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": true
+   },
+   "4": {
+    "state": "supports",
+    "why": "The Washington Post text states analysts grew confident the 11 people aboard were ferrying drugs and that Hegseth gave a spoken directive, with one source saying 'The order was to kill everybody.'",
     "host": "washingtonpost.com",
-    "date": "2026-09-28",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": true
+   },
+   "5": {
+    "state": "supports",
+    "why": "The Dec. 1, 2025 Military Times article reports the Post's account of Hegseth's verbal no-survivors directive and Bradley's second strike on the two survivors, who were killed, and states that as of Nov. 17 the administration had disclosed 21 strikes killing at least 82 people.",
+    "host": "militarytimes.com",
+    "date": "2026-11-08",
     "kind": "fact",
     "archive": false
    },
-   "4": {
-    "state": "partly",
-    "why": "The ProPublica text confirms the article covers Hernández getting special treatment after Trump's pardon, but the provided windows never mention BOP post-release assistance, and the source cannot confirm what this database's own entry documents.",
+   "6": {
+    "state": "supports",
+    "why": "The Feb. 18, 2026 ProPublica article states the Dec. 1 pardon after less than four years of a 45-year sentence for bribes and 400+ tons of cocaine, BOP scrambling to remove the detainer, and the paid-overtime tactical team drive to the Waldorf Astoria per records and three people familiar.",
     "host": "propublica.org",
-    "date": "2026-09-28",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "7": {
+    "state": "supports",
+    "why": "Stars and Stripes (published October 5, 2026) reports the Oct. 4 Sunday Caribbean strike killed four per SOUTHCOM and raised the toll to at least 235 in 70 strikes since September 2025.",
+    "host": "stripes.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "8": {
+    "state": "supports",
+    "why": "Task & Purpose reports the Oct. 27 eastern Pacific strike killing five aboard a 'go-fast vessel', the toll of at least 240 since September 2025, SOUTHCOM not publicly providing evidence, and the Trinidad and Tobago families' wrongful-death/extrajudicial-killing suit over an October 2025 strike.",
+    "host": "taskandpurpose.com",
+    "date": "2026-11-08",
     "kind": "fact",
     "archive": false
    }
