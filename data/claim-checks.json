@@ -3337,13 +3337,37 @@
    },
    "3": {
     "state": "supports",
+    "why": "The archived Post article states each element: Martin personally submitted the seizure warrant application that a D.C. magistrate judge rejected (three people), Bove's office approached a southeastern U.S. attorney's office whose prosecutors refused (two people), FBI agents questioned EPA employees this week, and an FBI agent contacted Efron at the request of a Miami asset-forfeiture prosecutor.",
+    "host": "washingtonpost.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": true
+   },
+   "4": {
+    "state": "supports",
     "why": "MS NOW (March 13, 2025) reports Citibank's filing said it froze accounts at the FBI's recommendation, citing an 'ongoing criminal investigation' and possible conspiracy and wire fraud violations.",
     "host": "ms.now",
     "date": "2026-11-02",
     "kind": "fact",
     "archive": false
    },
-   "4": {
+   "5": {
+    "state": "supports",
+    "why": "The CNN article quotes Chutkan's April 2 hearing remark verbatim and reports she said the government shifted from citing wrongdoing to citing a change in administration policy.",
+    "host": "cnn.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
+    "state": "supports",
+    "why": "The September 4, 2025 letter text says additional facts about Bove's misconduct, including the Greenhouse Gas Reduction Fund, suggest he violated the New York Rules of Professional Conduct, and renews the request that the Committee review his conduct.",
+    "host": "capitolreleases.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "7": {
     "state": "supports",
     "why": "The article quotes Judge Millett telling Roth it seems \"too late in the day, after you charged criminality and then dropped that\" and Roth saying \"There are investigations ongoing\"; the article is dated one year after the March 11, 2025 termination.",
     "host": "insideclimatenews.org",
@@ -3351,7 +3375,7 @@
     "kind": "fact",
     "archive": false
    },
-   "5": {
+   "8": {
     "state": "supports",
     "why": "The Sabin Center post states the August 4, 2026 en banc one-page per curiam judgment upheld the injunction in its entirety, six of ten judges found EPA likely contravened the IRA's mandatory appropriation, and the government moved on August 6 to stay the mandate pending a cert petition.",
     "host": "blogs.law.columbia.edu",
@@ -3359,7 +3383,7 @@
     "kind": "fact",
     "archive": false
    },
-   "6": {
+   "9": {
     "state": "not_found",
     "why": "The provided docket text covers only entries through 2025 (e.g., the April 16, 2025 administrative stay) and shows no August 7, 2026 or October 9, 2026 orders.",
     "host": "courtlistener.com",
@@ -3367,7 +3391,7 @@
     "kind": "fact",
     "archive": false
    },
-   "7": {
+   "10": {
     "state": "supports",
     "why": "The database page lists the Oct. 9, 2026 order granting the Coalition for Green Capital's motion for clarification and describes the lawsuits challenging EPA's freezing and termination of the fund, including claims against Citibank.",
     "host": "climatecasechart.com",
@@ -6868,6 +6892,38 @@
     "date": "2026-09-27",
     "kind": "fact",
     "archive": false
+   },
+   "8": {
+    "state": "supports",
+    "why": "The September 4, 2026 DOJ release describes the Mount Sinai agreement terms (ceasing blockers, hormones and surgery for minors, a monetary penalty, $2 million for free care) and lists the prior agreements; it also states the claims are allegations only and Mount Sinai denied all allegations.",
+    "host": "justice.gov",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "9": {
+    "state": "supports",
+    "why": "The September 18, 2026 release states NYU will cease the listed interventions and pay $8.5 million, lists the prior agreements, and credits cooperation including ongoing cooperation in investigating other entities; it also describes FDCA/FCA/billing scope and says NYU and UPMC expressly denied all allegations.",
+    "host": "justice.gov",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "10": {
+    "state": "supports",
+    "why": "The joint statement from Lambda Legal, NYCLU, ACLU and Coe v. Blanche class counsel says no patient information was disclosed to DOJ in the NYU or Mount Sinai settlements and the order remains in full effect.",
+    "host": "lambdalegal.org",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "11": {
+    "state": "supports",
+    "why": "The AP explainer reports NYU agreed to pay $8.5 million and quotes NYU Langone's statement about removing the threat of providing confidential patient information, matching the claim.",
+    "host": "wcax.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
    }
   },
   "doj-paramount-warner-merger-review-politicization-2026": {
@@ -9232,6 +9288,46 @@
     "date": "2026-09-27",
     "kind": "fact",
     "archive": false
+   },
+   "7": {
+    "state": "partly",
+    "why": "The table of contents confirms Division F is the Intelligence Authorization Act for FY2026 and lists Sec. 6511 (counterintelligence briefings for Armed Forces members) and Sec. 6521 (FBI notice of counterintelligence assessments/investigations of federal candidates and officeholders), but the source text is heavily truncated, so the negative assertion that Division F contains no provision making ODNI the lead counterintelligence agency cannot be checked.",
+    "host": "govinfo.gov",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "8": {
+    "state": "supports",
+    "why": "CBS reports Gabbard said Friday she is resigning as DNI after her husband's rare bone cancer diagnosis, and that her letter to Trump set the resignation effective June 30.",
+    "host": "cbsnews.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": true
+   },
+   "9": {
+    "state": "supports",
+    "why": "CNN reports, via sources, that Gabbard had been assured she would stay through month's end, was told by Pulte he was taking over, and settled on June 19 with Trump; the article also says Trump said Pulte would start Friday.",
+    "host": "cnn.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "10": {
+    "state": "supports",
+    "why": "Federal News Network (July 27, 2026) reports Pulte's announcement of another layoff round, that ODNI has not confirmed the number cut, and the Post's report via congressional aides of 'little more than half' of 2,000 employees.",
+    "host": "federalnewsnetwork.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "11": {
+    "state": "supports",
+    "why": "CNBC reports the 51-47 party-line Senate confirmation of Clayton as DNI and that it ends interim DNI Pulte's tenure, which featured several rounds of layoffs of high-ranking intelligence officials.",
+    "host": "cnbc.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
    }
   },
   "gabbard-whistleblower-delay-2026": {
@@ -9494,6 +9590,30 @@
     "why": "The post describes the Federal Circuit stay preventing refunds, the July 21 opening brief (corrected July 29), appellees' responses due Monday, a reply three weeks later, and the case then awaiting oral argument.",
     "host": "taxprofblog.aals.org",
     "date": "2026-09-27",
+    "kind": "fact",
+    "archive": false
+   },
+   "13": {
+    "state": "supports",
+    "why": "The article reports the panel pressing DOJ on whether Greer disregarded Congress's Section 301 framework and on the sufficiency of justifications, the judges' scrutiny of the pretext arguments, and that the court gave no ruling date; it separately quotes Choe-Groves on 'not a lot of depth' in the evidence.",
+    "host": "ttnews.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "14": {
+    "state": "supports",
+    "why": "The October 12, 2026 Troutman article states USTR imposed Section 301 forced-labor duties on 60 trading partners, the challenge is pending before the CIT with no decision, the panel heard argument September 30 and ordered supplemental briefing due October 16, and the duties remain in effect with no recovery mechanism unless the court sets the determinations aside.",
+    "host": "troutman.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "15": {
+    "state": "supports",
+    "why": "The November 4, 2026 TaxProf post states the Section 122 appeal is pending with the CIT ruling stayed, challengers' response briefs filed, and the 30-day-delayed reply due November 12; and that the Section 301 panel ordered supplemental briefing October 2 on four questions including vacatur, with briefs filed October 16 and a decision awaited.",
+    "host": "taxprofblog.aals.org",
+    "date": "2026-11-08",
     "kind": "fact",
     "archive": false
    }
@@ -10527,29 +10647,13 @@
   "hegseth-joint-chiefs-jag-friday-night-massacre-2025": {
    "0": {
     "state": "supports",
-    "why": "NPR confirms Trump fired Gen. Charles Q. Brown Jr. as Joint Chiefs chairman and announced he would nominate Dan Caine to succeed him.",
+    "why": "NPR's February 21, 2025 report states Trump fired Gen. Charles Q. Brown Jr. as Joint Chiefs chairman and said he would nominate Lt. Gen. Dan Caine to succeed him.",
     "host": "npr.org",
-    "date": "2026-09-15",
+    "date": "2026-11-08",
     "kind": "fact",
     "archive": false
    },
    "1": {
-    "state": "supports",
-    "why": "Defense One (Oct. 23, 2025) states Vernon, acting JAG after Plummer's firing, stepped down eight months later with no permanent nominee.",
-    "host": "defenseone.com",
-    "date": "2026-09-27",
-    "kind": "fact",
-    "archive": false
-   },
-   "2": {
-    "state": "supports",
-    "why": "The Hill (July 26, 2025) says Davids, the first female superintendent, was moved after 18 months and is one of at least five senior women moved out since January.",
-    "host": "thehill.com",
-    "date": "2026-09-27",
-    "kind": "fact",
-    "archive": false
-   },
-   "3": {
     "state": "supports",
     "why": "Military.com identifies all six same-night removals: Brown, Franchetti, Slife, and the Army, Navy and Air Force JAGs.",
     "host": "military.com",
@@ -10557,7 +10661,15 @@
     "kind": "fact",
     "archive": false
    },
-   "4": {
+   "2": {
+    "state": "supports",
+    "why": "The February 24, 2025 Ocean State Media article (originally from Rhode Island Current) quotes Reed, identified as ranking member of Senate Armed Services, with the exact wording in the claim about the Friday-night firings.",
+    "host": "oceanstatemedia.org",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "3": {
     "state": "supports",
     "why": "The article directly quotes military lawyers and legal experts (an anonymous Air Force JAG officer, Charles Dunlap Jr., Frank Kendall's op-ed) describing the JAG firings as politicizing the role and setting an alarming precedent.",
     "host": "military.com",
@@ -10565,7 +10677,7 @@
     "kind": "fact",
     "archive": false
    },
-   "5": {
+   "4": {
     "state": "supports",
     "why": "The Verdict/Justia piece by Wexler and Ghiotto, titled exactly as described, lays out the statutory independent-advice protection for TJAGs and extensively discusses whether/how it applies to the removals.",
     "host": "verdict.justia.com",
@@ -10573,26 +10685,74 @@
     "kind": "fact",
     "archive": false
    },
+   "5": {
+    "state": "supports",
+    "why": "The AP report dated April 11, 2025 states the Senate confirmed Caine as Joint Chiefs chairman 60-25 in an overnight vote, almost two months after Trump fired Brown.",
+    "host": "wjla.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
    "6": {
-    "state": "unopened",
-    "why": "",
-    "host": "yahoo.com",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "The June 28, 2025 Record page lists, under 'Executive nominations confirmed by the Senate June 29, 2025', the appointment 'To be judge advocate general of the United States Army' of Maj. Gen. Bobby L. Christine.",
+    "host": "govinfo.gov",
+    "date": "2026-11-08",
     "kind": "fact",
     "archive": false
    },
    "7": {
     "state": "supports",
-    "why": "CNN (July 3, 2026) reports the Foreign Affairs op-ed co-authored with Feaver and Kragie criticizing domestic crime missions, and quotes Brown's Aspen remark that the firings are 'not about merit'.",
-    "host": "cnn.com",
+    "why": "The Hill (July 26, 2025) says Davids, the first female superintendent, was moved after 18 months and is one of at least five senior women moved out since January.",
+    "host": "thehill.com",
     "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "8": {
     "state": "supports",
+    "why": "The July 31, 2025 Record page, in its list of executive nominations confirmed by the Senate July 31, 2025, includes 'To be judge advocate general of the navy' Maj. Gen. David J. Bligh.",
+    "host": "govinfo.gov",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "9": {
+    "state": "supports",
+    "why": "Defense One (Oct. 23, 2025) states Vernon, acting JAG after Plummer's firing, stepped down eight months later with no permanent nominee.",
+    "host": "defenseone.com",
+    "date": "2026-09-27",
+    "kind": "fact",
+    "archive": false
+   },
+   "10": {
+    "state": "supports",
+    "why": "Defense One (December 16, 2025) reports the Oklahoma Air National Guard commander, identified as Brig. Gen. Christopher Eason, was nominated as top judge advocate general nearly 300 days after the predecessors, including Plummer, were fired.",
+    "host": "defenseone.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "11": {
+    "state": "partly",
+    "why": "Section 506 amends 10 U.S.C. 7037, 8088 and 9037 to add a subsection on removal of a Judge Advocate General before the end of the term, ending with notice and 'a statement of the reason for the removal'; however, the text is truncated where the deadline and recipients appear, so the five-day window and the Armed Services Committees as recipients cannot be confirmed.",
+    "host": "govinfo.gov",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "12": {
+    "state": "supports",
     "why": "The Jan. 30, 2026 Congressional Record lists Eason's Air Force JAG nomination among those confirmed en bloc on Thune's unanimous-consent request.",
     "host": "govinfo.gov",
+    "date": "2026-09-27",
+    "kind": "fact",
+    "archive": false
+   },
+   "13": {
+    "state": "supports",
+    "why": "CNN (July 3, 2026) reports the Foreign Affairs op-ed co-authored with Feaver and Kragie criticizing domestic crime missions, and quotes Brown's Aspen remark that the firings are 'not about merit'.",
+    "host": "cnn.com",
     "date": "2026-09-27",
     "kind": "fact",
     "archive": false
@@ -10831,45 +10991,21 @@
   "hegseth-navy-promotion-list-2026": {
    "0": {
     "state": "supports",
-    "why": "The GIWPS analysis calls the removal of two women and two Black officers 'unprecedented and concerning' and states that senior officials cannot recall a defense secretary selectively removing officers from a vetted slate, a break from longstanding norms.",
-    "host": "giwps.georgetown.edu",
-    "date": "2026-09-27",
-    "kind": "interpretation",
-    "archive": false
-   },
-   "1": {
-    "state": "supports",
-    "why": "The syndicated NYT piece states Hegseth blocked at least seven board-selected Navy officers (two women, two Black men, three white men), leaving a 22-nominee list released in late May with no women and apparently two nonwhite officers against 21% and 38% force shares, and four officials called it highly unusual.",
-    "host": "web.archive.org",
-    "date": "2026-09-27",
-    "kind": "fact",
-    "archive": false
-   },
-   "2": {
-    "state": "supports",
-    "why": "The New Republic relays the Times report that Hegseth personally blocked several Navy officers including at least two women and two Black men, per four officials, and that the nearly-two-dozen list had no women and only two nonwhite officers.",
-    "host": "newrepublic.com",
-    "date": "2026-09-27",
-    "kind": "fact",
-    "archive": false
-   },
-   "3": {
-    "state": "supports",
-    "why": "ABC (June 2, 2026), citing three sources, says the removed officers included African Americans, women and white males removed for reasons including DEI involvement.",
-    "host": "abcnews.com",
-    "date": "2026-09-27",
-    "kind": "fact",
-    "archive": false
-   },
-   "4": {
-    "state": "supports",
     "why": "Common Dreams (dated Mar 27/28, 2026) relays each element: the four blocked colonels over Driscoll's objections, the Buria-Driscoll exchange over Gant and Buria's 'completely false' denial, the 15-year-old paper, and the logistics officer held back over the Afghanistan withdrawal.",
     "host": "commondreams.org",
     "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
-   "5": {
+   "1": {
+    "state": "supports",
+    "why": "The GIWPS analysis calls the removal of two women and two Black officers 'unprecedented and concerning' and states that senior officials cannot recall a defense secretary selectively removing officers from a vetted slate, a break from longstanding norms.",
+    "host": "giwps.georgetown.edu",
+    "date": "2026-09-27",
+    "kind": "interpretation",
+    "archive": false
+   },
+   "2": {
     "state": "supports",
     "why": "NBC's April 2, 2026 (updated April 3) article cites nine U.S. officials that Hegseth blocked or delayed promotions for more than a dozen Black and female officers across all four branches and quotes the 'not a single service' line.",
     "host": "nbcnews.com",
@@ -10877,7 +11013,39 @@
     "kind": "fact",
     "archive": false
    },
+   "3": {
+    "state": "supports",
+    "why": "The Fulcrum piece states that on May 22 Hegseth announced 22 Navy captains selected for rear admiral, lower half, and that none was a woman.",
+    "host": "thefulcrum.us",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "supports",
+    "why": "The syndicated NYT piece states Hegseth blocked at least seven board-selected Navy officers (two women, two Black men, three white men), leaving a 22-nominee list released in late May with no women and apparently two nonwhite officers against 21% and 38% force shares, and four officials called it highly unusual.",
+    "host": "web.archive.org",
+    "date": "2026-09-27",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "supports",
+    "why": "The New Republic relays the Times report that Hegseth personally blocked several Navy officers including at least two women and two Black men, per four officials, and that the nearly-two-dozen list had no women and only two nonwhite officers.",
+    "host": "newrepublic.com",
+    "date": "2026-09-27",
+    "kind": "fact",
+    "archive": false
+   },
    "6": {
+    "state": "supports",
+    "why": "ABC (June 2, 2026), citing three sources, says the removed officers included African Americans, women and white males removed for reasons including DEI involvement.",
+    "host": "abcnews.com",
+    "date": "2026-09-27",
+    "kind": "fact",
+    "archive": false
+   },
+   "7": {
     "state": "supports",
     "why": "Reed's June 2, 2026 statement contains each quoted passage: the 'outrageous pattern that is both unlawful and corrosive' line, the 'only the President may remove' assertion, and the under-20% / nearly-60% disparity called a betrayal of meritocracy.",
     "host": "reed.senate.gov",
@@ -10885,7 +11053,7 @@
     "kind": "fact",
     "archive": false
    },
-   "7": {
+   "8": {
     "state": "supports",
     "why": "The July 6, 2026 letter, signed by Ossoff, Blumenthal, Slotkin, Gillibrand, Durbin, Booker and Merkley, requests Hegseth's decision-making process and rationale including legal and regulatory authorities, with a written response by August 30, 2026.",
     "host": "slotkin.senate.gov",
@@ -10893,7 +11061,7 @@
     "kind": "fact",
     "archive": false
    },
-   "8": {
+   "9": {
     "state": "supports",
     "why": "RedState's July 8, 2026 article quotes Parnell with each of the three phrases in the claim.",
     "host": "redstate.com",
@@ -10901,11 +11069,35 @@
     "kind": "fact",
     "archive": false
    },
-   "9": {
+   "10": {
+    "state": "supports",
+    "why": "Booker's July 17, 2026 release states he and Schatz demanded an independent IG investigation in a letter to IG Platte Moring and quotes both passages in the claim.",
+    "host": "capitolreleases.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "11": {
     "state": "supports",
     "why": "Political Wire quotes the Times verbatim on the four blocked Army officers, the apparent targeting of officers who worked for disfavored generals, and the at-least-45 removals with more than half female or Black.",
     "host": "politicalwire.com",
     "date": "2026-09-27",
+    "kind": "fact",
+    "archive": false
+   },
+   "12": {
+    "state": "supports",
+    "why": "NBC News (Sept. 1, 2026) reports, citing three U.S. officials, that Hegseth removed at least six Army officers from the two-star promotion list in recent weeks.",
+    "host": "nbcnews.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "13": {
+    "state": "supports",
+    "why": "The Hill article cites a person familiar with the six removals and reports NBC's logisticians detail, the Times' seven-officer report (two Black, two female), and the Booker-Schatz IG demand in a 3-page July 15 letter.",
+    "host": "wavy.com",
+    "date": "2026-11-08",
     "kind": "fact",
     "archive": false
    }
@@ -11077,13 +11269,45 @@
   "hegseth-pentagon-prayer-establishment-clause-2026": {
    "0": {
     "state": "supports",
+    "why": "The Guardian text reports Hegseth's religiosity in recruitment ads and DoD social media, the Pentagon X video with Psalms text over combat footage, and Hegseth's repost of the CNN Wilson segment with 'All of Christ for All of Life'; the Aug. 14, 2025 date is not present in the extracted text.",
+    "host": "theguardian.com",
+    "date": "2026-09-27",
+    "kind": "fact",
+    "archive": false
+   },
+   "1": {
+    "state": "supports",
+    "why": "CNN (published Feb. 19, 2026) reports that Wilson, a self-described Christian nationalist who supports repealing women's suffrage and believes homosexuality should be a crime, led a Pentagon worship service that week saying Hegseth invited him.",
+    "host": "cnn.com",
+    "date": "2026-09-27",
+    "kind": "fact",
+    "archive": false
+   },
+   "2": {
+    "state": "supports",
+    "why": "AU's case page states it filed a FOIA request in December 2025 for the listed record categories and sued when DoD failed to respond within the statutory deadline; the page is dated 2026.03.23.",
+    "host": "au.org",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "3": {
+    "state": "supports",
+    "why": "The Hill quotes the prayer Hegseth read at the Wednesday monthly Christian worship service and reports AU filed a lawsuit Monday, quoting the group's statement as in the claim.",
+    "host": "thehill.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": true
+   },
+   "4": {
+    "state": "supports",
     "why": "The AP report republished by Military.com quotes the prayer from the Wednesday service, reports Americans United's Monday lawsuit to enforce a public records request, and quotes Laser on 'pressure on federal employees to attend.'",
     "host": "military.com",
     "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
-   "1": {
+   "5": {
     "state": "supports",
     "why": "Military Times quotes the 'let justice be executed swiftly and without remorse' line, notes Americans United's backlash over monthly Pentagon worship, and says CREC co-founder Douglas Wilson was guest speaker at February's service.",
     "host": "militarytimes.com",
@@ -11091,27 +11315,19 @@
     "kind": "fact",
     "archive": false
    },
-   "2": {
-    "state": "partly",
-    "why": "The article says Americans United filed a lawsuit related to the services and quotes its statement about pressure on employees despite the services being voluntary. It does not say the suit is a FOIA action over a December 2025 records request or that it is not an Establishment Clause claim.",
-    "host": "thehill.com",
-    "date": "2026-09-21",
+   "6": {
+    "state": "supports",
+    "why": "Jones, identified as Dickinson College president and longtime federal judge, says FOIA records could support a separate establishment clause suit and 'it sure looks like they are in violation'; he later says abandoning Lemon leaves district judges 'completely unmoored.'",
+    "host": "theconversation.com",
+    "date": "2026-11-08",
     "kind": "fact",
     "archive": false
    },
-   "3": {
+   "7": {
     "state": "supports",
-    "why": "The Guardian text reports Hegseth's religiosity in recruitment ads and DoD social media, the Pentagon X video with Psalms text over combat footage, and Hegseth's repost of the CNN Wilson segment with 'All of Christ for All of Life'; the Aug. 14, 2025 date is not present in the extracted text.",
-    "host": "theguardian.com",
-    "date": "2026-09-27",
-    "kind": "fact",
-    "archive": false
-   },
-   "4": {
-    "state": "supports",
-    "why": "CNN (published Feb. 19, 2026) reports that Wilson, a self-described Christian nationalist who supports repealing women's suffrage and believes homosexuality should be a crime, led a Pentagon worship service that week saying Hegseth invited him.",
-    "host": "cnn.com",
-    "date": "2026-09-27",
+    "why": "The docket shows the answer filed May 27, 2026, a same-day minute order directing a JSR on the FOIA request's status, anticipated number of responsive documents and release dates, a June 29 order setting a JSR by August 28, an August 28 order requiring a JSR by October 27, 2026 and every sixty days thereafter, and a status report filed October 27, 2026, before Judge McFadden.",
+    "host": "courtlistener.com",
+    "date": "2026-11-08",
     "kind": "fact",
     "archive": false
    }
@@ -11217,9 +11433,41 @@
    },
    "3": {
     "state": "supports",
+    "why": "gCaptain (March 2, 2026) reports the Crowley-managed, U.S.-flagged Stena Imperative struck while berthed at Bahrain early Monday, mariners safe, and a shoreside fatality with two injured; it also notes Tanker Security Program enrollment.",
+    "host": "gcaptain.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "supports",
     "why": "The March 20, 2026 letter to Adm. Cooper contains the quoted 'no warning or direction to reposition' language, asks what steps were taken to notify or reposition vessels, and requests a response by March 26, 2026.",
     "host": "blumenthal.senate.gov",
     "date": "2026-09-27",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "supports",
+    "why": "Blumenthal's April 27, 2026 release describes the four senators' investigation including the March 1 Kuwait strike, says the Pentagon failed to warn American ships left stranded for a month, quotes the letter, and sets a May 11, 2026 response date.",
+    "host": "capitolreleases.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
+    "state": "partly",
+    "why": "The July 29, 2026 letter contains the quoted language, and its footnotes date the four senators' letter April 26, 2026 and cite a May 11, 2026 Dane Hughes reply to Warren; the provided text is truncated before the signature block, so the count of 13 lawmakers cannot be confirmed.",
+    "host": "warren.senate.gov",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "7": {
+    "state": "supports",
+    "why": "Stars and Stripes (Sept. 22, 2026) reports Warren and Ryan led more than 20 Democrats in a Monday letter asking the GOP Armed Services chairmen for hearings, citing stonewalling, and that a Pentagon spokesperson declined to comment.",
+    "host": "stripes.com",
+    "date": "2026-11-08",
     "kind": "fact",
     "archive": false
    }
@@ -11308,6 +11556,54 @@
     "archive": false
    },
    "5": {
+    "state": "supports",
+    "why": "The July 17, 2026 release reproduces the letter to IG Moring requesting review of removals from selection boards' lists and contains both quoted passages, including the 'nearly 40 officers' line.",
+    "host": "capitolreleases.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
+    "state": "supports",
+    "why": "The Hill reports the six two-star removals per a person familiar, days after blocking four one-star selectees, the Times' same-day seven-officer report, Driscoll's Monday resignation, and quotes the Booker-Schatz '3-page July 15 letter.'",
+    "host": "wavy.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "7": {
+    "state": "supports",
+    "why": "The NYT reprint reports more than 80 generals and admirals affected (about 10%), the seven two-star targets, and Driscoll's complaints to Trump about combat-tested leaders and morale; it also states more than half of affected officers are Black or female.",
+    "host": "staradvertiser.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "8": {
+    "state": "supports",
+    "why": "The Joe.My.God. transcript of Crow's interview with Margaret Brennan contains both quoted statements verbatim.",
+    "host": "joemygod.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "9": {
+    "state": "supports",
+    "why": "Punchbowl (September 10, 2026) reports Duckworth's Thursday letter seeking written notice and justification for promotion denials by strengthening Secs. 501 and 502 of the Senate NDAA as informal negotiations begin.",
+    "host": "punchbowl.news",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "10": {
+    "state": "supports",
+    "why": "The reprinted letter urges retaining Secs. 501 and 502 of the SASC FY2027 NDAA with a seven-day written notification and justification requirement, and contains both quoted statements.",
+    "host": "riverbender.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "11": {
     "state": "unopened",
     "why": "",
     "host": "gvwire.com",
@@ -12616,10 +12912,18 @@
     "archive": false
    },
    "6": {
-    "state": "partly",
-    "why": "The docket shows the defendants' April 20, 2026 motion to dismiss for lack of jurisdiction, Marrazzo's May 26 opposition, and assignment to Judge Gallagher; the June 12 reply is not visible in the provided windows (only a June 9 consent extension motion and a last-filing date of June 15), and the absence of a ruling cannot be fully confirmed from the truncated docket.",
+    "state": "supports",
+    "why": "The docket shows the defendants' motion to dismiss for lack of jurisdiction (ECF 34) on April 20, 2026, Marrazzo's opposition (ECF 39) on May 26, 2026, defendants' reply (ECF 42) on June 12, 2026, and a motion hearing before Judge Gallagher on October 22, 2026.",
     "host": "courtlistener.com",
-    "date": "2026-10-16",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "7": {
+    "state": "partly",
+    "why": "The opinion states the motion will be denied and contains the quoted finding that Plaintiff 'is not covered by the CSRA and jurisdiction is proper in this Court'; the APA section is truncated, so the stated reason for declining to dismiss the APA claim (that the NIH director-removal statute does not make the firing unreviewable) is not shown in the provided text.",
+    "host": "courtlistener.com",
+    "date": "2026-11-08",
     "kind": "fact",
     "archive": false
    }
@@ -15449,13 +15753,37 @@
   "patel-girlfriend-security-detail-jet-misuse-2026": {
    "0": {
     "state": "supports",
+    "why": "MS NOW (Nov. 17, 2025) reports, via two people with direct knowledge, the Nashville SWAT-agent detail, that the couple do not share a residence, and that people familiar with protocols knew of no precedent; it also quotes the FBI's 'hundreds of credible death threats' statement.",
+    "host": "ms.now",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "1": {
+    "state": "supports",
     "why": "The archived Nov. 23, 2025 NYT report describes an Atlanta field-office SWAT team sent to protect Wilkins when she sang the anthem at the spring NRA convention, officials calling SWAT use for her 'highly unusual,' and the FBI spokesman citing 'hundreds of credible death threats.'",
     "host": "nytimes.com",
     "date": "2026-09-27",
     "kind": "fact",
     "archive": true
    },
-   "1": {
+   "2": {
+    "state": "supports",
+    "why": "The December 1, 2025 release cites the October 25 Gulfstream trip and return flight to Nashville, the Texas hunting resort, Scotland golf trip, the Senate Judiciary Committee's May criticism, the shielding from flight-tracking, and directs production of records and communications.",
+    "host": "democrats-judiciary.house.gov",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "3": {
+    "state": "supports",
+    "why": "Durbin's February 24, 2026 release describes the follow-up letter to GAO and DOJ OIG adding new whistleblower information to GAO's ongoing review (first requested May 2025) and requesting an OIG investigation of misuse or mismanagement of resources.",
+    "host": "judiciary.senate.gov",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
     "state": "supports",
     "why": "The Feb. 28, 2026 NYT text reports, 'to an extent not previously reported,' that rotating SWAT teams escort Wilkins for singing appearances, personal engagements and errands, that Patel beefed up Nashville staffing where she lives, and that former agents called the arrangement unprecedented.",
     "host": "nytimes.com",
@@ -15463,7 +15791,7 @@
     "kind": "fact",
     "archive": false
    },
-   "2": {
+   "5": {
     "state": "supports",
     "why": "The NYT text covers the Pearl Harbor 'V.I.P. Snorkel,' the pattern of blending leisure with official travel on government jets, the Philadelphia concert viewed from a private suite, and the SWAT security detail for Wilkins.",
     "host": "nytimes.com",
@@ -15471,7 +15799,7 @@
     "kind": "fact",
     "archive": false
    },
-   "3": {
+   "6": {
     "state": "supports",
     "why": "IBTimes UK states the security-detail agents were previously assigned to an FBI SWAT team in the Nashville field office, and separately that providing full FBI protection to a romantic partner not residing with the official is unprecedented, matching both parts of the claim.",
     "host": "ibtimes.co.uk",
@@ -15479,7 +15807,7 @@
     "kind": "fact",
     "archive": false
    },
-   "4": {
+   "7": {
     "state": "supports",
     "why": "Mediaite quotes the Times directly: Patel, through an FBI spokesman, declined to say who financed the suite, and the spokesman said Wilkins was an 'invited guest' of performers whose representatives did not respond to confirm it.",
     "host": "mediaite.com",
@@ -15487,7 +15815,7 @@
     "kind": "fact",
     "archive": false
    },
-   "5": {
+   "8": {
     "state": "supports",
     "why": "The Daily Beast article confirms the Philadelphia concert trip and that flight crew and security detail remained on duty past 11 p.m. collecting overtime.",
     "host": "thedailybeast.com",
@@ -15495,7 +15823,7 @@
     "kind": "fact",
     "archive": false
    },
-   "6": {
+   "9": {
     "state": "supports",
     "why": "The July 9, 2026 House Judiciary Democrats release announces the Raskin-Durbin bicameral investigation following Grassley's private May 5, 2026 letter and cites VIP snorkeling in Hawaii, jet skiing, East Asia helicopter tours, and a $100,000 Milan Olympics trip; the letter's July 8 date is not stated in the text.",
     "host": "democrats-judiciary.house.gov",
@@ -15503,7 +15831,7 @@
     "kind": "fact",
     "archive": false
    },
-   "7": {
+   "10": {
     "state": "supports",
     "why": "CNN reports the NYT finding that agents combed FBI databases for Williamson and recommended a preliminary investigation after her Feb. 28 story, that DOJ found no legal basis to proceed, and that the FBI denied she was personally investigated while citing concern that reporting 'crossed lines of stalking.'",
     "host": "cnn.com",
