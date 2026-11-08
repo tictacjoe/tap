@@ -150,7 +150,7 @@
     "id": "afpi-census-bureau-noncitizen-voting-report-2026",
     "official": "George Cook, Acting Director, U.S. Census Bureau (no single official is named in sourcing as personally directing the AFPI placements; Cook is the agency's senior accountable office-holder, which has operated without a Senate-confirmed director since early 2025)",
     "offense_category": "Institutional Capture Through Politically Screened Placement -- partisan think-tank staff detailed into a nonpartisan statistical agency outside its normal vetted hiring process, producing a methodologically disputed report used to support voter-fraud claims; not itself a charged violation",
-    "incident_summary": "WIRED reported (September 16, 2026) that at least seven staffers from the America First Policy Institute (AFPI) -- a think tank aligned with President Trump -- have been detailed to the U.S. Census Bureau under the Intergovernmental Personnel Act (IPA), a mechanism historically used to bring in term-limited specialists from local governments, universities, and tribal organizations, not political-advocacy staff. The AFPI detailees were given access to sensitive Census population data.\n\nOn August 18, 2026, the Census Bureau published an anonymously authored report titled \"Noncitizen Voting in the 2020 Election: A Beginning Analysis,\" which compared voter records against citizenship records and claimed to identify roughly 24,000 instances of noncitizen voting in the 2020 election. WIRED identified two of the report's authors, Matthew Jensen and Jeff McCrea, as AFPI staffers, and named at least five additional AFPI members detailed to the Bureau, including researcher Max Kossek and Ryan Montgomery. Independent experts and former Census officials raised methodology concerns: David Becker, executive director of the Center for Election Innovation & Research, said \"census data cannot reliably be matched to voter data,\" and other reviewers flagged the report's undisclosed authorship and the absence of clear false-match testing or sample validation to confirm how many of the flagged 24,000 records were actually ineligible voters. A Census employee told WIRED the AFPI staffers' role was \"disrespectful to the institution,\" saying there had historically been \"nothing close\" to this level of outside-advocacy-group access.\n\nHouse Oversight Democrats -- Reps. Robert Garcia, Maxwell Frost, and Raja Krishnamoorthi -- sent a letter to the Census Bureau on September 4, 2026 raising concerns about the report and the AFPI detailees' role in producing it.",
+    "incident_summary": "WIRED reported (September 15, 2026) that at least seven staffers from the America First Policy Institute (AFPI) -- a think tank aligned with President Trump -- have been detailed to the U.S. Census Bureau under the Intergovernmental Personnel Act (IPA), which lets people with specialized skills from certain institutions, like nonprofits and universities, work for the government for up to two years; House Oversight Democrats note the IPA has historically been used for workers from local governments, universities, and tribal organizations on term-limited assignments. The AFPI detailees were given access to sensitive Census population data.\n\nOn August 18, 2026, the Census Bureau published an anonymously authored report titled \"Noncitizen Voting in the 2020 Election: A Beginning Analysis,\" which compared voter records against citizenship records and claimed to identify roughly 24,000 instances of noncitizen voting in the 2020 election. NPR reported on August 19, citing a Census Bureau employee, that the team behind the analysis included individuals affiliated with AFPI. A September 9, 2026 WIRED investigation identified two of the report's authors, Matthew Jensen and Jeff McCrea, as AFPI staffers working at the Bureau on loan under the IPA; WIRED's September 15 report named at least five additional AFPI members detailed to the Bureau, including researcher Max Kossek and Ryan Montgomery. Independent experts and former Census officials raised methodology concerns: David Becker, executive director of the Center for Election Innovation & Research, said \"census data cannot reliably be matched to voter data,\" and other reviewers flagged the report's undisclosed authorship and the absence of clear false-match testing or sample validation to confirm how many of the flagged 24,000 records were actually ineligible voters. A Census employee told WIRED the AFPI staffers' role was \"disrespectful to the institution,\" saying there had historically been \"nothing close\" to this level of outside-advocacy-group access.\n\nHouse Oversight Democrats -- Reps. Robert Garcia, Maxwell Frost, and Raja Krishnamoorthi -- sent a letter to the Census Bureau on September 4, 2026 raising concerns about the report and the AFPI detailees' role in producing it. The letter said the Bureau had brought \"at least six individuals affiliated with the America First Policy Institute\" into a larger Bureau data-quality project and demanded that the Bureau rescind the report.",
     "contested": true,
     "elements_required": [
       "Staff from a partisan political advocacy organization were detailed into a nonpartisan federal statistical agency's operations via a personnel mechanism (IPA) not designed for that purpose",
@@ -162,25 +162,25 @@
     "evidence": [
       {
         "type": "news_report",
-        "description": "WIRED reported at least seven America First Policy Institute (AFPI) staffers have been detailed to the U.S. Census Bureau under the Intergovernmental Personnel Act, with access to sensitive population data -- a mechanism historically used for term-limited specialists from local governments, universities, and tribal organizations, not political-advocacy staff.",
+        "description": "WIRED reported at least seven America First Policy Institute (AFPI) members have been or are staffed at the U.S. Census Bureau, detailed under the Intergovernmental Personnel Act, which allows people with specialized skills from certain institutions, like nonprofits and universities, to work for the government for up to two years, and that the AFPI team was given access to the Bureau's data.",
         "source_url": "https://www.wired.com/story/a-trump-aligned-think-tank-focused-on-voting-rights-has-taken-over-the-census-bureau/",
         "maps_to_element": "Establishes the detailing mechanism and the number/access level of AFPI staffers at the Bureau"
       },
       {
         "type": "public_record",
-        "description": "The Census Bureau published an anonymously authored report, \"Noncitizen Voting in the 2020 Election: A Beginning Analysis,\" on August 18, 2026, claiming to identify roughly 24,000 instances of noncitizen voting in the 2020 election.",
-        "source_url": "https://www.npr.org/2026/08/19/nx-s1-5938799/trump-census-bureau-noncitizen-voting",
+        "description": "The Census Bureau published an anonymously authored report, \"Noncitizen Voting in the 2020 Election: A Beginning Analysis,\" on August 18, 2026, claiming to identify over 24,000 voter records representing noncitizens in the 2020 election. The report page remains posted and shows it was last revised August 18, 2026.",
+        "source_url": "https://www.census.gov/library/publications/2026/dir/noncitizen-voting-in-the-2020-election.html",
         "maps_to_element": "The specific report at the center of this entry, and its headline claim"
       },
       {
         "type": "news_report",
-        "description": "WIRED identified two of the report's authors, Matthew Jensen and Jeff McCrea, as AFPI staffers, and named at least five additional AFPI members detailed to the Bureau, including researcher Max Kossek and Ryan Montgomery.",
+        "description": "WIRED reported that Matthew Jensen and Jeff McCrea, two AFPI members it had earlier identified as authors of the report, are part of a larger AFPI team at the Bureau, and named at least five additional AFPI members detailed there, including researcher Max Kossek and Ryan Montgomery.",
         "source_url": "https://www.wired.com/story/a-trump-aligned-think-tank-focused-on-voting-rights-has-taken-over-the-census-bureau/",
         "maps_to_element": "Establishes AFPI staffers directly authored the report without disclosed affiliation"
       },
       {
         "type": "news_report",
-        "description": "David Becker, executive director of the Center for Election Innovation & Research, said \"census data cannot reliably be matched to voter data\"; other reviewers and former Census employees flagged the report's undisclosed authorship and the absence of clear false-match testing or sample validation to confirm how many of the flagged 24,000 records were actually ineligible voters.",
+        "description": "David Becker, executive director of the Center for Election Innovation & Research, said \"census data cannot reliably be matched to voter data\"; other reviewers and former Census employees flagged the report's undisclosed authorship and the absence of clear false-match testing or sample validation to confirm how many of the flagged 24,000 records were actually ineligible voters. NPR also reported on August 19, 2026, citing a Census Bureau employee, that the team behind the analysis included individuals affiliated with AFPI and that career civil servants did not conduct the work.",
         "source_url": "https://www.npr.org/2026/08/19/nx-s1-5938799/trump-census-bureau-noncitizen-voting",
         "maps_to_element": "Independent expert identification of specific methodology concerns"
       },
@@ -192,24 +192,30 @@
       },
       {
         "type": "public_record",
-        "description": "House Oversight Democrats -- Reps. Robert Garcia, Maxwell Frost, and Raja Krishnamoorthi -- sent a letter to the Census Bureau on September 4, 2026 raising concerns about the \"Beginning Analysis\" report and the AFPI detailees' role in producing it.",
+        "description": "House Oversight Democrats -- Reps. Robert Garcia, Maxwell Frost, and Raja Krishnamoorthi -- sent a letter to the Census Bureau on September 4, 2026 raising concerns about the \"Beginning Analysis\" report and the AFPI detailees' role in producing it. The letter said the Bureau had brought \"at least six individuals affiliated with the America First Policy Institute\" into a larger data-quality project and demanded that the Bureau rescind the report.",
         "source_url": "https://oversightdemocrats.house.gov/imo/media/doc/2026-09-04garciafrostkrishnamoorthitocensusbureaurebeginninganalysis.pdf",
         "maps_to_element": "Formal congressional oversight response triggered by the report and staffing arrangement"
+      },
+      {
+        "type": "news_report",
+        "description": "WIRED reported on September 9, 2026 that records it reviewed identified Matthew Jensen and Jeff McCrea as \"the two America First staffers involved in authoring the report,\" and that sources confirmed both work at the Bureau on loan from AFPI under the Intergovernmental Personnel Act.",
+        "source_url": "https://www.wired.com/story/a-us-census-report-on-noncitizen-voting-used-bad-data-to-reach-faulty-conclusions/",
+        "maps_to_element": "Establishes AFPI staffers directly authored the report without disclosed affiliation"
       }
     ],
-    "status": "No response from the Census Bureau, Commerce Department, or AFPI has been identified as of this entry's addition. No indication the report has been withdrawn or corrected, and no response to the September 4, 2026 House Oversight Democrats' letter has been identified.",
+    "status": "The report remains posted on the Census Bureau's website, uncorrected. The Bureau and AFPI did not respond to NPR's or WIRED's requests for comment, and no reply has been reported to House Oversight Democrats' September 4, 2026 letter demanding that the Bureau rescind it.",
     "rebuttal_anticipated": "Likely defense: the Intergovernmental Personnel Act is a lawful, routinely used mechanism for bringing outside expertise into federal agencies, the detailees' subject-matter work on election-integrity questions is within the Bureau's legitimate research mandate, and disagreement with the report's methodology is a normal part of academic/statistical debate rather than evidence of impropriety.",
     "comeback": "The IPA mechanism's normal use is for local-government, university, and tribal specialists on term-limited technical assignments -- not for embedding staff from a single, Trump-aligned political advocacy organization en masse inside a nonpartisan statistical agency to author an anonymously published, politically salient report on voter fraud. The methodology concerns here aren't a generic academic dispute: a named expert said the underlying data-matching approach is unreliable by design, and the report withheld its authors' AFPI affiliations from the public. A career Census employee's on-record description of the situation as \"disrespectful to the institution\" and without precedent underscores that this isn't ordinary interagency personnel-sharing.",
     "cause": "[TAP Analysis, not sourced] Illustrates a pattern of placing ideologically aligned outside staff inside ostensibly nonpartisan federal agencies to produce data products that support a predetermined political narrative -- here, using the Census Bureau's institutional credibility to lend authority to a disputed noncitizen-voting claim ahead of the midterms.",
-    "confidence_note": "HIGH confidence on the underlying facts -- WIRED's investigation names specific individuals and the specific personnel mechanism, and the report's existence, publication date, and headline claim are independently confirmed by NPR and the Election Law Blog's coverage; the congressional letter is a public document. What remains genuinely contested: whether the report's methodology is actually invalid (a substantive empirical/statistical dispute, not yet independently adjudicated) versus AFPI's/the administration's position that it identifies real noncitizen voting. The report is disputed: authored by undisclosed political-advocacy staff, criticized on methodological grounds by independent experts, not a proven fabrication.",
+    "confidence_note": "HIGH confidence on the underlying facts -- WIRED's September 9 and September 15 investigations name specific individuals and the specific personnel mechanism, and the report's existence, publication date, and headline claim are independently confirmed by NPR and the Election Law Blog's coverage; the congressional letter is a public document. What remains genuinely contested: whether the report's methodology is actually invalid (a substantive empirical/statistical dispute, not yet independently adjudicated) versus AFPI's/the administration's position that it identifies real noncitizen voting. The report is disputed: authored by undisclosed political-advocacy staff, criticized on methodological grounds by independent experts, not a proven fabrication.",
     "pull_quote": "A Census employee told WIRED the AFPI staffers' role was \"disrespectful to the institution,\" saying there had historically been \"nothing close\" to this level of outside-advocacy-group access.",
     "section_summaries": {
-      "incident_summary": "At least seven staffers from a Trump-aligned think tank were embedded at the Census Bureau and authored a disputed noncitizen-voting report without disclosing their affiliation.",
+      "incident_summary": "At least seven staffers from a Trump-aligned think tank were detailed to the Census Bureau; two of them co-wrote its disputed, unsigned noncitizen-voting report.",
       "confidence_note": "The staffing arrangement and report are well-documented; whether the report's methodology is actually invalid remains a live, unresolved dispute."
     },
-    "date_of_action": "2026-08-18 (Census Bureau publishes the report) through 2026-09-16 (WIRED's investigation)",
-    "last_verified": "2026-09-22",
-    "last_substantive_update": "2026-09-22",
+    "date_of_action": "2026-08-18 (Census Bureau publishes the report) through 2026-09-15 (WIRED's investigation)",
+    "last_verified": "2026-11-08",
+    "last_substantive_update": "2026-11-08",
     "date_added": "2026-09-22",
     "glance": {
       "who": "George Cook (Acting Census Bureau Director)",
@@ -219,7 +225,7 @@
         "certainty": "documented",
         "who": "Census Bureau's nonpartisan credibility"
       },
-      "reviewed": "2026-09-22"
+      "reviewed": "2026-11-08"
     },
     "status_stage": "Unchallenged",
     "key_events": [
@@ -228,12 +234,13 @@
         "text": "The Census Bureau publishes an unsigned report claiming about 24,000 noncitizens voted in 2020",
         "turning_point": true,
         "sources": [
+          "https://www.census.gov/library/publications/2026/dir/noncitizen-voting-in-the-2020-election.html",
           "https://www.npr.org/2026/08/19/nx-s1-5938799/trump-census-bureau-noncitizen-voting"
         ]
       },
       {
         "date": "2026-08-19",
-        "text": "Experts warn census data cannot reliably be matched to voter records and question the report's methods",
+        "text": "NPR reports AFPI-affiliated people worked on the report; experts question whether census data can match voter records",
         "sources": [
           "https://www.npr.org/2026/08/19/nx-s1-5938799/trump-census-bureau-noncitizen-voting"
         ]
@@ -246,8 +253,16 @@
         ]
       },
       {
-        "date": "2026-09-16",
-        "text": "WIRED reports at least seven AFPI staffers detailed to the Census Bureau, two of them authors of the report",
+        "date": "2026-09-09",
+        "text": "WIRED identifies two report authors, Matthew Jensen and Jeff McCrea, as AFPI staffers on loan to the Bureau",
+        "turning_point": true,
+        "sources": [
+          "https://www.wired.com/story/a-us-census-report-on-noncitizen-voting-used-bad-data-to-reach-faulty-conclusions/"
+        ]
+      },
+      {
+        "date": "2026-09-15",
+        "text": "WIRED reports at least seven AFPI staffers detailed to the Census Bureau, including the report's two authors",
         "turning_point": true,
         "sources": [
           "https://www.wired.com/story/a-trump-aligned-think-tank-focused-on-voting-rights-has-taken-over-the-census-bureau/"
@@ -9542,7 +9557,7 @@
     "id": "dans-arctic-research-commission-russia-ties-2026",
     "official": "Thomas Dans, Chair, U.S. Arctic Research Commission",
     "offense_category": "Undisclosed Conflict of Interest / Potential Foreign Agents Registration Act Gap -- a Trump appointee promoting a foreign shipbuilder's business while it was under EU sanctions investigation for supplying Russia, without registering as a lobbyist or foreign agent; not itself a charged violation, and Arctic Research Commission members are not classified as federal employees required to file ethics disclosures",
-    "incident_summary": "President Trump appointed Thomas Dans -- a Texas venture capitalist and MAGA-aligned online influencer with no formal scientific background -- chair of the U.S. Arctic Research Commission in December 2025. Dans has long-standing personal and business ties to Russia dating to learning Russian as a child; he worked in finance in Moscow in the mid-1990s and previously held a $250,000-$500,000 investment stake in the company operating Papa John's restaurants in Russia. He has publicly advocated reestablishing closer U.S.-Russia relations and shared pro-Kremlin content online, and in 2023 attempted to buy Finland's Helsinki Shipyard -- where roughly half the world's icebreaker fleet has been built -- while it was chaired by Viktor Olerskiy, a former Russian deputy transport minister and former board member of Russia's state-owned shipping company, Sovcomflot.\n\nIn August 2024, before his Arctic Research Commission appointment, Dans announced he was \"working with Damen Shipyards Group,\" a Dutch shipbuilder, publicly promoting its icebreaker capabilities. As Arctic Research Commission chair -- a position that helps shape U.S. Arctic policy, including federal icebreaker procurement -- Dans continued championing Damen while his own consulting arrangement with the company remained undisclosed and unregistered. ProPublica reported (September 15, 2026) that during Dans's engagement with Damen, Dutch prosecutors were investigating the company for supplying Russia with equipment usable for military purposes in violation of EU sanctions, and that one Damen executive Dans had publicly posed with, Rutger Dolk, was later detained by Dutch authorities. Damen terminated its agreement with Dans -- which would have paid him if the company won a federal icebreaker contract -- while ProPublica's reporting was still underway. Legal experts told ProPublica the arrangement may have required Dans to register as a lobbyist or foreign agent under the Foreign Agents Registration Act; he apparently did neither. Unlike most senior presidential appointees, Arctic Research Commission members are not classified as federal employees and are not required to file ethics disclosures; the commission has a conflict-of-interest policy, but ProPublica reported violations carry no penalties.\n\nWhite House spokesperson Anna Kelly defended Dans, saying \"Tom Dans is doing a great job leading the Arctic Research Commission, and his shipbuilding expertise has helped him succeed in this role,\" and dismissed ethics concerns, saying \"These so-called 'experts' have no idea what they are talking about.\" Dans declined ProPublica's interview request and did not respond to its written questions.",
+    "incident_summary": "President Trump appointed Thomas Dans -- a Texas venture capitalist and MAGA-aligned online influencer with no formal scientific background -- chair of the U.S. Arctic Research Commission in December 2025. Dans has long-standing personal and business ties to Russia dating to learning Russian as a child; he worked in finance in Moscow in the mid-1990s and previously held a $250,000-$500,000 investment stake in the company operating Papa John's restaurants in Russia. He has publicly advocated reestablishing closer U.S.-Russia relations and shared pro-Kremlin content online, and in 2023 attempted to buy Finland's Helsinki Shipyard -- where roughly half the world's icebreaker fleet has been built -- while one of its Russian owners was a business partner of a former deputy minister in Vladimir Putin's government.\n\nIn August 2025, before his Arctic Research Commission appointment, Dans announced he was \"working with Damen Shipyards Group,\" a Dutch shipbuilder, publicly promoting its icebreaker capabilities. As Arctic Research Commission chair -- a position that helps shape U.S. Arctic policy, including federal icebreaker procurement -- Dans continued championing Damen while his own consulting arrangement with the company remained undisclosed and unregistered. ProPublica reported (September 15, 2026) that during Dans's engagement with Damen, Dutch prosecutors were investigating the company for supplying Russia with equipment usable for military purposes in violation of EU sanctions, and that one Damen executive Dans had publicly posed with, Rutger Dolk, was later detained by Dutch authorities. Damen terminated its agreement with Dans -- which would have paid him if the company won a federal icebreaker contract -- while ProPublica's reporting was still underway. Legal experts told ProPublica the arrangement may have required Dans to register as a lobbyist or foreign agent under the Foreign Agents Registration Act; he apparently did neither. Unlike most senior presidential appointees, Arctic Research Commission members are not classified as federal employees and are not required to file ethics disclosures; the commission has a conflict-of-interest policy, but ProPublica reported violations carry no penalties.\n\nWhite House spokesperson Anna Kelly defended Dans, saying \"Tom Dans is doing a great job leading the Arctic Research Commission, and his shipbuilding expertise has helped him succeed in this role,\" and dismissed ethics concerns, saying \"These so-called 'experts' have no idea what they are talking about.\" Dans declined ProPublica's interview request and did not respond to its written questions.",
     "contested": false,
     "elements_required": [
       "A presidential appointee held a paid business arrangement with a company (Damen Shipyards) whose interests directly overlapped with the appointee's own federal policy role (Arctic/icebreaker policy)",
@@ -9554,13 +9569,13 @@
     "evidence": [
       {
         "type": "news_report",
-        "description": "ProPublica documented Dans's long-standing Russia ties: he learned Russian as a child, worked in finance in Moscow in the mid-1990s, held a $250,000-$500,000 stake in the company operating Papa John's restaurants in Russia, has advocated closer U.S.-Russia relations and shared pro-Kremlin content, and in 2023 attempted to buy Finland's Helsinki Shipyard while it was chaired by a former Russian deputy transport minister and ex-Sovcomflot board member, Viktor Olerskiy.",
+        "description": "ProPublica documented Dans's long-standing Russia ties: he learned Russian as a child, worked in finance in Moscow in the mid-1990s, held a $250,000-$500,000 stake in the company operating Papa John's restaurants in Russia, has advocated closer U.S.-Russia relations and shared pro-Kremlin content, and in 2023 attempted to buy Finland's Helsinki Shipyard while one of its Russian owners was a business partner of a former Putin deputy minister.",
         "source_url": "https://www.propublica.org/article/thomas-dans-arctic-research-commission-trump-russia-propaganda",
         "maps_to_element": "Documents the appointee's pattern of pro-Russia advocacy and business ties predating the appointment"
       },
       {
         "type": "public_record",
-        "description": "In August 2024, Dans publicly announced he was \"working with Damen Shipyards Group,\" a Dutch shipbuilder, and continued promoting its icebreaker capabilities after becoming Arctic Research Commission chair.",
+        "description": "In August 2025, Dans publicly announced he was \"working with Damen Shipyards Group,\" a Dutch shipbuilder, and continued promoting its icebreaker capabilities after becoming Arctic Research Commission chair.",
         "source_url": "https://www.propublica.org/article/thomas-dans-arctic-research-commission-trump-russia-propaganda",
         "maps_to_element": "Establishes the paid business arrangement overlapping with the appointee's federal policy role"
       },
@@ -9587,21 +9602,27 @@
         "description": "White House spokesperson Anna Kelly defended Dans -- \"Tom Dans is doing a great job leading the Arctic Research Commission, and his shipbuilding expertise has helped him succeed in this role\" -- and dismissed ethics concerns as coming from people who \"have no idea what they are talking about.\" Dans declined ProPublica's interview request and did not respond to its written questions.",
         "source_url": "https://www.propublica.org/article/thomas-dans-arctic-research-commission-trump-russia-propaganda",
         "maps_to_element": "The administration's on-record response and the appointee's own non-response"
+      },
+      {
+        "type": "public_record",
+        "description": "The U.S. Arctic Research Commission's website lists Thomas Emanuel Dans as USARC Chairman, appointed December 2, 2025, with a term expiring February 26, 2028, representing industry.",
+        "source_url": "https://arctic.gov/thomas-emanuel-dans-chair/",
+        "maps_to_element": "Establishes the appointment and the appointee's current federal policy role"
       }
     ],
-    "status": "No ethics investigation, FARA enforcement action, or removal has been identified as of this entry's addition. Damen terminated its agreement with Dans during ProPublica's reporting; the White House has publicly defended him and rejected the ethics concerns raised.",
+    "status": "Dans remains chair of the U.S. Arctic Research Commission, per its website. No ethics investigation, FARA enforcement action, removal or congressional inquiry has been reported. Damen ended its deal with him during ProPublica's reporting; the White House defended him.",
     "rebuttal_anticipated": "Likely defense (echoing the White House's own on-record statement): Dans's shipbuilding-industry experience is exactly the relevant expertise for an Arctic Research Commission chair focused on icebreaker capacity, and informal advocacy for a shipbuilder he'd worked with isn't itself unlawful absent a specific disclosure statute Arctic Research Commission members are shown to be bound by.",
-    "comeback": "The defense doesn't address the specific gap ProPublica documented: legal experts said the paid Damen arrangement itself -- not just Dans's general industry background -- plausibly triggered a FARA or lobbying-registration obligation that wasn't met, and Damen was under active EU sanctions investigation for Russia-linked conduct at the time Dans was publicly promoting it in his federal policy role, a fact neither Dans nor the White House disputes. That the Arctic Research Commission's ethics rules happen to be unusually weak is a structural finding about the position, not a rebuttal to whether Dans's own conduct met even that low bar -- and the undisclosed payment arrangement was terminated only once a journalist began asking about it, not through any internal compliance process.",
+    "comeback": "The defense doesn't address the specific gap ProPublica documented: legal experts said the paid Damen arrangement itself -- not just Dans's general industry background -- plausibly triggered a FARA or lobbying-registration obligation that wasn't met, and Damen was under active EU sanctions investigation for Russia-linked conduct at the time Dans was publicly promoting it in his federal policy role, a fact neither Dans nor the White House disputes. That the Arctic Research Commission's ethics rules happen to be unusually weak is a structural finding about the position, not a rebuttal to whether Dans's own conduct met even that low bar -- and Damen ended the undisclosed arrangement, which would have paid Dans if it won an icebreaker contract, only while ProPublica was reporting the story.",
     "cause": "[TAP Analysis, not sourced] An appointee with documented pro-Russia advocacy and undisclosed foreign business ties placed in a federal policy role with outsized influence over lucrative shipbuilding contracts, in a position exempt from the ethics-disclosure rules that would normally surface exactly this kind of conflict -- illustrating how appointments to lower-profile advisory bodies can carry real policy and national-security stakes with less oversight than higher-visibility Cabinet posts.",
-    "confidence_note": "HIGH confidence on the underlying facts -- ProPublica's investigation is detailed, on-record (including the White House's own defense of Dans and confirmation that Damen ended the arrangement), and was independently republished/corroborated by Salon, Defense One, and Alaska Public Media's own follow-up reporting on the story. What remains genuinely unresolved: whether Dans's conduct actually violated FARA or any other specific statute -- ProPublica reports legal experts' view that registration was plausibly required, not a formal finding that it was legally mandated or that Dans broke the law. Dans's arrangement is a documented, undisclosed conflict of interest under a commission with unusually weak ethics rules, not a proven legal violation.",
+    "confidence_note": "HIGH confidence on the underlying facts -- ProPublica's investigation is detailed, on-record (including the White House's own defense of Dans and confirmation that Damen ended the arrangement), and was republished by Defense One and ArcticToday and discussed in an Alaska Public Media interview with its reporter -- republication, not independent corroboration. What remains genuinely unresolved: whether Dans's conduct actually violated FARA or any other specific statute -- ProPublica reports legal experts' view that registration was plausibly required, not a formal finding that it was legally mandated or that Dans broke the law. Dans's arrangement is a documented, undisclosed conflict of interest under a commission with unusually weak ethics rules, not a proven legal violation. Re-verified 2026-11-08: the commission's website still lists Dans as chair, and no ethics, FARA or congressional action against him has been reported since ProPublica's story.",
     "pull_quote": "Legal experts told ProPublica that Dans's paid arrangement with a foreign shipbuilder under EU sanctions investigation for supplying Russia may have required him to register as a lobbyist or foreign agent; he apparently did neither.",
     "section_summaries": {
       "incident_summary": "Trump's Arctic Research Commission chair promoted a Russia-linked Dutch shipbuilder under EU sanctions investigation while his own paid arrangement with it went undisclosed.",
       "confidence_note": "ProPublica's reporting is well-documented and on-record, including the White House's own defense; whether it amounts to a legal violation remains unresolved."
     },
-    "date_of_action": "2024-08 (Dans announces Damen partnership) through 2026-09-15 (ProPublica publishes investigation)",
-    "last_verified": "2026-09-22",
-    "last_substantive_update": "2026-09-22",
+    "date_of_action": "2025-08 (Dans announces Damen partnership) through 2026-09-15 (ProPublica publishes investigation)",
+    "last_verified": "2026-11-08",
+    "last_substantive_update": "2026-11-08",
     "date_added": "2026-09-22",
     "glance": {
       "who": "Thomas Dans (Arctic Research Commission Chair)",
@@ -9611,19 +9632,19 @@
         "certainty": "documented",
         "who": "Federal conflict-of-interest oversight"
       },
-      "reviewed": "2026-09-22"
+      "reviewed": "2026-11-08"
     },
     "status_stage": "Unchallenged",
     "key_events": [
       {
         "date": "2023",
-        "text": "Dans tries to buy Finland's Helsinki Shipyard while it is chaired by a former Russian deputy transport minister",
+        "text": "Dans tries to buy Finland's Helsinki Shipyard while a Russian owner is a business partner of an ex-Putin deputy minister",
         "sources": [
           "https://www.propublica.org/article/thomas-dans-arctic-research-commission-trump-russia-propaganda"
         ]
       },
       {
-        "date": "2024-08",
+        "date": "2025-08",
         "text": "Dans announces he is working with Dutch shipbuilder Damen and starts promoting its icebreakers",
         "turning_point": true,
         "sources": [

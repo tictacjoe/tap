@@ -46,34 +46,34 @@
   },
   "afpi-census-bureau-noncitizen-voting-report-2026": {
    "0": {
-    "state": "partly",
-    "why": "The source confirms at least seven AFPI members (Jensen, McCrea plus at least five others) detailed via the IPA with access to sensitive data, but it describes the IPA as covering institutions 'like nonprofits and universities' and does not mention local governments or tribal organizations or say it is historically not used for advocacy staff.",
+    "state": "supports",
+    "why": "WIRED names Jensen and McCrea plus 'at least five other AFPI members' (at least seven total), says all are detailed via the IPA with the described two-year mechanism, and elsewhere says the team was 'given access to its data.'",
     "host": "wired.com",
-    "date": "2026-09-23",
+    "date": "2026-11-08",
     "kind": "fact",
     "archive": false
    },
    "1": {
-    "state": "partly",
-    "why": "NPR confirms an unauthored report citing over 24,000 noncitizen votes in 2020, but the provided NPR text does not give the report's title or an August 18, 2026 publication date.",
-    "host": "npr.org",
-    "date": "2026-09-23",
+    "state": "supports",
+    "why": "The Census Bureau page shows the report dated August 18, 2026, states over 24,000 voter records represented noncitizens, and shows 'Page Last Revised - August 18, 2026'; no author is listed on the page.",
+    "host": "census.gov",
+    "date": "2026-11-08",
     "kind": "fact",
     "archive": false
    },
    "2": {
     "state": "supports",
-    "why": "WIRED names Jensen and McCrea as the two AFPI members it previously identified as report authors, and says at least five others are staffed at the Bureau, naming Kossek and Montgomery.",
+    "why": "WIRED states Jensen and McCrea were previously identified, that at least five other AFPI members are or were staffed at the Bureau, and names Max Kossek and Ryan Montgomery among them.",
     "host": "wired.com",
-    "date": "2026-09-23",
+    "date": "2026-11-08",
     "kind": "fact",
     "archive": false
    },
    "3": {
-    "state": "partly",
-    "why": "Becker's quote is verbatim and former employees flagged the missing author and mismatch risk, but the provided (truncated) text does not specifically state an absence of false-match testing or sample validation of the 24,000 records.",
+    "state": "supports",
+    "why": "NPR quotes Becker verbatim and separately reports, citing an unnamed Census Bureau employee, that career civil servants did not do the work and AFPI-affiliated individuals were on the team; Heggeness and O'Hara raise the missing author and the possible false-match problem.",
     "host": "npr.org",
-    "date": "2026-09-23",
+    "date": "2026-11-08",
     "kind": "fact",
     "archive": false
    },
@@ -86,10 +86,18 @@
     "archive": false
    },
    "5": {
-    "state": "partly",
-    "why": "The letter is dated September 4, 2026 and raises concerns about the Beginning Analysis and AFPI-affiliated IPA hires, but the provided (truncated) text does not show the signatories, so the named Representatives cannot be confirmed from it.",
+    "state": "supports",
+    "why": "The September 4, 2026 letter, signed by Garcia, Frost and Krishnamoorthi, demands that the Bureau rescind the Beginning Analysis and says at least six AFPI-affiliated individuals were brought into the Decennial Census Data Quality Evaluation project.",
     "host": "oversightdemocrats.house.gov",
-    "date": "2026-09-23",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
+    "state": "partly",
+    "why": "WIRED names Jensen and McCrea as the two America First staffers who, according to records it reviewed, helped author the report, and says sources confirmed they work on IPA loan from America First. The September 9, 2026 publication date does not appear in the provided text.",
+    "host": "wired.com",
+    "date": "2026-11-08",
     "kind": "fact",
     "archive": false
    }
@@ -4238,18 +4246,18 @@
   },
   "dans-arctic-research-commission-russia-ties-2026": {
    "0": {
-    "state": "partly",
-    "why": "The source confirms he learned Russian as a schoolboy, worked in Moscow finance in the mid-1990s, advocates closer U.S.-Russia ties and shares pro-Kremlin posts, but the provided (truncated) text does not mention the Papa John's stake or the Helsinki Shipyard bid.",
+    "state": "supports",
+    "why": "ProPublica supports each item: Russian lessons from seventh grade, finance work in Moscow in the mid-1990s, a $250,000-$500,000 stake in the parent of a Papa Johns Russia operator, pro-Russia advocacy and pro-Kremlin posts, and the 2023 Helsinki Shipyard bid. One small gap is that the stake was in the parent company, not the operator itself.",
     "host": "propublica.org",
-    "date": "2026-09-23",
+    "date": "2026-11-08",
     "kind": "fact",
     "archive": false
    },
    "1": {
-    "state": "partly",
-    "why": "The source confirms Dans championed Damen as commission chair while his consultancy was working to help Damen win a federal icebreaker contract, but the provided text does not contain the August 2024 'working with Damen Shipyards Group' announcement.",
+    "state": "supports",
+    "why": "ProPublica (Sept 2026) says that \"by August of last year\" Dans posted that he was working with Damen. It also says that as commission chair he championed Damen and praised its icebreakers in Anchorage in April.",
     "host": "propublica.org",
-    "date": "2026-09-23",
+    "date": "2026-11-08",
     "kind": "fact",
     "archive": false
    },
@@ -4282,6 +4290,14 @@
     "why": "Anna Kelly's quote and Dans's refusal to be interviewed or answer written questions are confirmed, but the 'have no idea what they are talking about' remark does not appear in the provided text.",
     "host": "propublica.org",
     "date": "2026-09-23",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
+    "state": "supports",
+    "why": "The USARC page lists Dans as USARC Chairman, appointed December 2, 2025, term expiring February 26, 2028, representing industry, exactly as claimed.",
+    "host": "arctic.gov",
+    "date": "2026-11-08",
     "kind": "fact",
     "archive": false
    }
