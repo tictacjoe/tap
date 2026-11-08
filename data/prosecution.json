@@ -32790,13 +32790,14 @@
     "id": "patel-toll-records-staff-firing-2026",
     "official": "Kash Patel, FBI Director",
     "offense_category": "Firing FBI Personnel Connected to a Biden-Era Investigation Into Patel's Own Phone Records -- raises a direct personal-conflict-of-interest concern, since the FBI Director used his removal authority against staff connected to an investigation of himself",
-    "incident_summary": "**The FBI fired at least 10 agents and staff members who had been connected to obtaining 'toll records' (call timing and recipient logs, not call content) for phone numbers belonging to Kash Patel and White House Chief of Staff Susie Wiles, sought in 2022-2023 as part of the Biden-era federal investigation into Trump's handling of classified documents at Mar-a-Lago.** Patel told Reuters, which first reported the subpoenas, that investigators obtained 'toll records.' In a statement on February 25, 2026, given to outlets including Axios and Fox News, he called it 'outrageous and deeply alarming that the previous FBI leadership secretly subpoenaed my own phone records,' using 'flimsy pretexts.' MS NOW reported that toll records 'are routinely and legally obtained in a criminal investigation,' and CNN that subpoenaing such information for those around Trump 'was part of the normal process of such an investigation.' It was not confirmed in sourcing reviewed whether the specific fired staff had personally sought, approved, or executed the toll-record request, or were terminated simply for having been assigned to the broader investigation.\n\nUpdate 2026-11-07: On October 15, 2026, nine of the fired employees, special agents, staff operations specialists and intelligence analysts assigned to the classified-documents probe, sued in federal court in Washington, seeking reinstatement and back pay. Their complaint says Patel 'summarily fired' them over two days in February 2026 with letters invoking 'Article II' and stating each had 'exercised poor judgment and a lack of impartiality in carrying out duties, leading to the political weaponization of the government,' and that the firings followed no internal investigation or disciplinary process.",
+    "incident_summary": "**The FBI fired at least 10 agents and staff members who had been connected to obtaining 'toll records' (call timing and recipient logs, not call content) for phone numbers belonging to Kash Patel and White House Chief of Staff Susie Wiles, sought in 2022-2023 as part of the Biden-era federal investigation into Trump's handling of classified documents at Mar-a-Lago.** Patel told Reuters, which first reported the subpoenas, that investigators obtained 'toll records.' In a statement on February 25, 2026, given to outlets including Axios and Fox News, he called it 'outrageous and deeply alarming that the previous FBI leadership secretly subpoenaed my own phone records,' using 'flimsy pretexts.' MS NOW reported that toll records 'are routinely and legally obtained in a criminal investigation,' and CNN that subpoenaing such information for those around Trump 'was part of the normal process of such an investigation.' It was not confirmed in sourcing reviewed whether the specific fired staff had personally sought, approved, or executed the toll-record request, or were terminated simply for having been assigned to the broader investigation.\n\nUpdate 2026-11-07: On October 15, 2026, nine of the fired employees, special agents, staff operations specialists and intelligence analysts assigned to the classified-documents probe, sued in federal court in Washington, seeking reinstatement and back pay. Their complaint says Patel 'summarily fired' them over two days in February 2026 with letters invoking 'Article II' and stating each had 'exercised poor judgment and a lack of impartiality in carrying out duties, leading to the political weaponization of the government,' and that the firings followed no internal investigation or disciplinary process.\n\nUpdate 2026-11-08: CBS News, citing multiple sources, reported that most of the fired agents worked counterintelligence cases, including cases involving Iran, and that many belonged to a squad known as CI-12; one source called the firings 'devastating to the FBI's Iran program,' saying the agents had confidential informants in the Iranian community in the U.S. CNN, citing two sources, reported that Patel fired a dozen agents and staff from the Washington-based CI-12 unit just days before the United States launched a major military operation in Iran, which began February 28, 2026, adding to concern inside the Justice Department and FBI that counterterrorism and intelligence investigations could be hampered. The FBI declined to comment on personnel matters but said it 'maintains a robust counterintelligence operation, with personnel all over the country.' On March 4, 2026, House Democrats, including Homeland Security Committee Ranking Member Bennie Thompson and appropriations subcommittee Ranking Member Grace Meng, wrote to Patel demanding answers. At a House Intelligence Committee hearing on March 19, 2026, Patel told Rep. Steve Cohen he did not believe those fired were Iran experts, said 'I don't work on timelines when these terminations occur,' and said the employees were fired for ethical violations.",
     "contested": true,
     "elements_required": [
       "Patel, now FBI Director, personally ordered the firing of FBI staff connected to an investigation that had obtained his own and a senior White House official's phone toll records",
       "This creates a direct conflict of interest -- the FBI Director exercising personnel authority over staff connected to scrutiny of himself, rather than the matter being handled through an independent process",
       "Toll-record subpoenas are, per CNN and MS NOW reporting, a routine investigative step rather than an unusual or improper one, undercutting Patel's 'outrageous' characterization as the sole basis for termination",
-      "No source confirmed the specific fired individuals personally requested or approved the toll-record subpoena, as opposed to being connected to the broader investigation in some other capacity"
+      "No source confirmed the specific fired individuals personally requested or approved the toll-record subpoena, as opposed to being connected to the broader investigation in some other capacity",
+      "The fired staff included counterintelligence specialists who worked on Iran, removed days before the February 28, 2026 U.S. strikes on Iran, so the firings also raise a national-security-capacity concern beyond the retaliation question"
     ],
     "evidence": [
       {
@@ -32830,26 +32831,56 @@
         "maps_to_element": "No source confirmed the specific fired individuals personally requested or approved the toll-record subpoena, as opposed to being connected to the broader investigation in some other capacity"
       },
       {
+        "type": "reporting",
+        "description": "CBS News reported on March 3, 2026, citing multiple sources, that most of the agents Patel fired had worked counterintelligence cases, including cases involving Iran, and that many were assigned to the CI-12 squad; one source called the firings 'devastating to the FBI's Iran program.' FBI spokesman Ben Williamson said the bureau 'maintains a robust counterintelligence operation.'",
+        "source_url": "https://www.cbsnews.com/amp/news/fbi-agents-patel-fired-counterintelligence-including-iran",
+        "maps_to_element": "The fired staff included counterintelligence specialists who worked on Iran, removed days before the February 28, 2026 U.S. strikes on Iran, so the firings also raise a national-security-capacity concern beyond the retaliation question"
+      },
+      {
+        "type": "reporting",
+        "description": "CNN reported on March 3, 2026, citing two sources, that Patel fired a dozen agents and staff from the Washington-based counterintelligence unit known as CI-12, tasked with monitoring threats from Iran, just days before the U.S. military operation in Iran, all of them involved in the Mar-a-Lago documents investigation; one person told CNN nothing indicated increased threats since the strikes.",
+        "source_url": "https://krdo.com/news/2026/03/03/kash-patel-gutted-fbi-counterintelligence-team-tasked-with-tracking-iranian-threats-days-before-us-strikes-sources-say/",
+        "maps_to_element": "The fired staff included counterintelligence specialists who worked on Iran, removed days before the February 28, 2026 U.S. strikes on Iran, so the firings also raise a national-security-capacity concern beyond the retaliation question"
+      },
+      {
+        "type": "public_record",
+        "description": "On March 4, 2026, Homeland Security Committee Ranking Member Bennie Thompson and Rep. Seth Magaziner wrote to Patel that firing these experts 'just days before President Trump ordered strikes on Iran' raised questions about the FBI's ability to counter Iranian operations on U.S. soil.",
+        "source_url": "https://democrats-homeland.house.gov/news/correspondence/thompson-magaziner-demand-answers-from-kash-patel-after-firing-staff-working-on-iran-threats",
+        "maps_to_element": "The fired staff included counterintelligence specialists who worked on Iran, removed days before the February 28, 2026 U.S. strikes on Iran, so the firings also raise a national-security-capacity concern beyond the retaliation question"
+      },
+      {
+        "type": "public_record",
+        "description": "On March 4, 2026, Rep. Grace Meng, ranking member of the House appropriations subcommittee that funds the FBI, wrote to Patel about the firing of 'at least 10 counterintelligence agents and support staff, including those who served in the unit known as CI-12,' and requested a briefing on the reasons; she dated the start of Operation Epic Fury to February 28.",
+        "source_url": "https://meng.house.gov/sites/evo-subsites/meng.house.gov/files/evo-media-document/3.4.26-meng-letter-to-fbi-director.pdf",
+        "maps_to_element": "The fired staff included counterintelligence specialists who worked on Iran, removed days before the February 28, 2026 U.S. strikes on Iran, so the firings also raise a national-security-capacity concern beyond the retaliation question"
+      },
+      {
+        "type": "reporting",
+        "description": "At a House Intelligence Committee hearing on March 19, 2026, Rep. Steve Cohen asked Patel whether the people he fired were experts on Iran; Patel answered 'I don't believe so,' said the employees were fired for ethical violations, and declined to comment on pending litigation, The New Republic reported.",
+        "source_url": "https://newrepublic.com/post/207986/kash-patel-plays-dumb-fired-iran-experts-before-war",
+        "maps_to_element": "Patel, now FBI Director, personally ordered the firing of FBI staff connected to an investigation that had obtained his own and a senior White House official's phone toll records"
+      },
+      {
         "type": "court_filing",
         "description": "Courthouse News reported that on October 15, 2026 nine fired employees assigned to the classified-documents probe filed a 70-page lawsuit in the U.S. District Court for the District of Columbia, saying Patel 'summarily fired' them over two days in February 2026 by letters invoking 'Article II,' with no internal investigation or disciplinary process; they seek reinstatement and back pay",
         "source_url": "https://www.courthousenews.com/fired-fbi-agents-on-trump-classified-documents-case-sue-doj/",
         "maps_to_element": "Patel, now FBI Director, personally ordered the firing of FBI staff connected to an investigation that had obtained his own and a senior White House official's phone toll records"
       }
     ],
-    "status": "The firings stand. On October 15, 2026, nine of the fired employees sued in federal court in Washington, calling their terminations unlawful and seeking reinstatement and back pay; no ruling has been reported.",
+    "status": "The firings stand. Nine fired employees sued on October 15, 2026, seeking reinstatement and back pay; no ruling has been reported. Patel told a House hearing in March 2026 the staff were fired for ethical violations.",
     "rebuttal_anticipated": "Likely defense: as FBI Director, Patel has legitimate authority over personnel decisions, and obtaining the phone records of two people who later became White House chief of staff and FBI Director -- even via a routine investigative tool -- reasonably raised his concerns about the investigation's scope and motivations.",
     "comeback": "The specific conflict-of-interest concern is that Patel personally exercised termination authority over staff connected to scrutiny of his own communications, a decision an independent process (rather than the subject of the original inquiry) would ordinarily handle; combined with CNN's and MS NOW's reporting that toll-record subpoenas are a routine, legal step, the firings read as retaliation for investigative work that touched Patel himself rather than a neutral personnel-conduct review.",
     "cause": "[TAP Analysis, not sourced] Consistent with the broader pattern this tracker documents of Patel using FBI personnel authority to remove staff connected to investigations or matters he personally objects to (see also the Patel field-office-purge entry and the Patel entry).",
-    "last_verified": "2026-11-07",
+    "last_verified": "2026-11-08",
     "date_added": "2026-08-05",
-    "confidence_note": "HIGH confidence on the firings' occurrence and scale, and on Patel's own quoted rationale -- corroborated across CNN, Fox News, Axios and MS NOW, which quote Patel's own statement; Reuters first reported the subpoenas. MODERATE confidence on whether the specific fired individuals were personally responsible for the toll-record request versus merely connected to the broader investigation, since this distinction was not resolved in sourcing reviewed. Re-verified 2026-08-19: no material change to the core toll-records fact pattern. A separate, disputed claim that a Wiles-attorney call was also recorded surfaced in reporting but is denied by both the attorney and Wiles herself, and rests on anonymous sourcing -- not incorporated per this tracker's sourcing standard. Update 2026-11-07: the fired employees' October 15, 2026 lawsuit is the plaintiffs' account; its claims about the termination letters and the absence of any disciplinary process have not been tested in court.",
+    "confidence_note": "HIGH confidence on the firings' occurrence and scale, and on Patel's own quoted rationale -- corroborated across CNN, Fox News, Axios and MS NOW, which quote Patel's own statement; Reuters first reported the subpoenas. MODERATE confidence on whether the specific fired individuals were personally responsible for the toll-record request versus merely connected to the broader investigation, since this distinction was not resolved in sourcing reviewed. Re-verified 2026-08-19: no material change to the core toll-records fact pattern. A separate, disputed claim that a Wiles-attorney call was also recorded surfaced in reporting but is denied by both the attorney and Wiles herself, and rests on anonymous sourcing -- not incorporated per this tracker's sourcing standard. Update 2026-11-07: the fired employees' October 15, 2026 lawsuit is the plaintiffs' account; its claims about the termination letters and the absence of any disciplinary process have not been tested in court. Update 2026-11-08: that many of those fired were Iran counterintelligence specialists rests on anonymous sources cited by CBS News and CNN; the FBI declined to comment on personnel, and Patel told a House hearing he did not believe those fired were Iran experts.",
     "pull_quote": "MS NOW reported that toll records — which list the phone numbers called and the times and durations of those calls, but not their content — “are routinely and legally obtained in a criminal investigation,” cutting against Patel’s description of the collection as “outrageous and deeply alarming.”",
     "section_summaries": {
-      "incident_summary": "FBI Director Patel fired at least 10 staff tied to a probe that obtained his and Susie Wiles's toll records, a routine step he called 'outrageous'; nine sued in October 2026.",
-      "confidence_note": "Well-corroborated across multiple outlets including Patel's own quoted statements; whether the specific fired staff personally handled the toll-record request is unresolved in sourcing reviewed."
+      "incident_summary": "Patel fired at least 10 FBI staff tied to a probe that got his and Wiles's toll records, many of them reportedly Iran counterintelligence specialists, days before the Iran strikes; nine sued.",
+      "confidence_note": "Firings and Patel's stated rationale are well corroborated; the Iran-expertise angle and the fired staff's exact role in the toll-record request rest on anonymous sources."
     },
     "date_of_action": "2026-02-25 (FBI fires staff connected to Patel/Wiles toll-record collection)",
-    "last_substantive_update": "2026-11-07",
+    "last_substantive_update": "2026-11-08",
     "glance": {
       "who": "Kash Patel (FBI Director)",
       "what": "Fired at least 10 FBI staff tied to a Biden-era probe that obtained Patel's and Wiles's phone toll records",
@@ -32858,7 +32889,7 @@
         "certainty": "documented",
         "who": "10+ fired FBI staff"
       },
-      "reviewed": "2026-11-07"
+      "reviewed": "2026-11-08"
     },
     "cause_references": [
       {
@@ -32899,6 +32930,29 @@
         ]
       },
       {
+        "date": "2026-03-03",
+        "text": "CBS News and CNN report many of those fired worked Iran counterintelligence, days before the Feb. 28 Iran strikes",
+        "sources": [
+          "https://www.cbsnews.com/amp/news/fbi-agents-patel-fired-counterintelligence-including-iran",
+          "https://krdo.com/news/2026/03/03/kash-patel-gutted-fbi-counterintelligence-team-tasked-with-tracking-iranian-threats-days-before-us-strikes-sources-say/"
+        ]
+      },
+      {
+        "date": "2026-03-04",
+        "text": "House Democrats write to Patel demanding answers on firing Iran counterintelligence staff before the war",
+        "sources": [
+          "https://democrats-homeland.house.gov/news/correspondence/thompson-magaziner-demand-answers-from-kash-patel-after-firing-staff-working-on-iran-threats",
+          "https://meng.house.gov/sites/evo-subsites/meng.house.gov/files/evo-media-document/3.4.26-meng-letter-to-fbi-director.pdf"
+        ]
+      },
+      {
+        "date": "2026-03-19",
+        "text": "Patel tells a House hearing he does not believe those fired were Iran experts",
+        "sources": [
+          "https://newrepublic.com/post/207986/kash-patel-plays-dumb-fired-iran-experts-before-war"
+        ]
+      },
+      {
         "date": "2026-10-15",
         "text": "Nine of the fired employees sue in federal court in Washington for reinstatement and back pay",
         "turning_point": true,
@@ -32916,6 +32970,12 @@
             "label": "Update",
             "text": "Update 2026-11-07: On October 15, 2026, nine of the fired employees, special agents, staff operations specialists and intelligence analysts assigned to the classified-documents probe, sued in federal court in Washington, seeking reinstatement and back pay. Their complaint says Patel 'summarily fired' them over two days in February 2026 with letters invoking 'Article II' and stating each had 'exercised poor judgment and a lack of impartiality in carrying out duties, leading to the political weaponization of the government,' and that the firings followed no internal investigation or disciplinary process.",
             "effective_date": "2026-11-07"
+          },
+          {
+            "date": "2026-11-08",
+            "label": "Update",
+            "text": "Update 2026-11-08: CBS News, citing multiple sources, reported that most of the fired agents worked counterintelligence cases, including cases involving Iran, and that many belonged to a squad known as CI-12; one source called the firings 'devastating to the FBI's Iran program,' saying the agents had confidential informants in the Iranian community in the U.S. CNN, citing two sources, reported that Patel fired a dozen agents and staff from the Washington-based CI-12 unit just days before the United States launched a major military operation in Iran, which began February 28, 2026, adding to concern inside the Justice Department and FBI that counterterrorism and intelligence investigations could be hampered. The FBI declined to comment on personnel matters but said it 'maintains a robust counterintelligence operation, with personnel all over the country.' On March 4, 2026, House Democrats, including Homeland Security Committee Ranking Member Bennie Thompson and appropriations subcommittee Ranking Member Grace Meng, wrote to Patel demanding answers. At a House Intelligence Committee hearing on March 19, 2026, Patel told Rep. Steve Cohen he did not believe those fired were Iran experts, said 'I don't work on timelines when these terminations occur,' and said the employees were fired for ethical violations.",
+            "effective_date": "2026-11-08"
           }
         ]
       },
@@ -32927,6 +32987,12 @@
             "label": "Update",
             "text": "Update 2026-11-07: the fired employees' October 15, 2026 lawsuit is the plaintiffs' account; its claims about the termination letters and the absence of any disciplinary process have not been tested in court.",
             "effective_date": "2026-11-07"
+          },
+          {
+            "date": "2026-11-08",
+            "label": "Update",
+            "text": "Update 2026-11-08: that many of those fired were Iran counterintelligence specialists rests on anonymous sources cited by CBS News and CNN; the FBI declined to comment on personnel, and Patel told a House hearing he did not believe those fired were Iran experts.",
+            "effective_date": "2026-11-08"
           }
         ]
       }
