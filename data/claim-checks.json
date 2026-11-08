@@ -97,17 +97,17 @@
   "ben-black-dfc-epstein-ties-2026": {
    "0": {
     "state": "supports",
-    "why": "The Guardian article directly states Ben Black had personal and business ties to Epstein per DOJ-released emails and business filings, including the shared ESWW investment and communications described in the claim.",
-    "host": "theguardian.com",
-    "date": "2026-09-15",
+    "why": "The DFC release dated December 12, 2025 states Black took part in a ceremonial swearing-in witnessed by Trump in the Oval Office and was confirmed by the Senate the prior October.",
+    "host": "dfc.gov",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    },
    "1": {
-    "state": "partly",
-    "why": "This source confirms the 2011 co-investment in the same company and the spokesperson's denial, but it does not state a '5,000 pages' review figure, and Black family lawyers quoted here actually dispute the ongoing personal relationship (birthday party, Google tour) the claim asserts.",
-    "host": "english.punjabkesari.com",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "The DFC release lists a $205 billion MCL investment cap among the FY2026 NDAA reauthorization highlights and describes it as an increase of over 300%.",
+    "host": "dfc.gov",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    },
@@ -121,33 +121,41 @@
    },
    "3": {
     "state": "supports",
-    "why": "DFC's own press release confirms Black's swearing-in as CEO at a White House ceremony.",
-    "host": "dfc.gov",
-    "date": "2026-09-15",
+    "why": "The CRS report (updated May 1, 2026) states the act raised DFC's MCL from $60 billion to $205 billion and that DFC exposure dropped from $48.9 billion to $43.4 billion over FY2025.",
+    "host": "everycrsreport.com",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    },
    "4": {
-    "state": "partly",
-    "why": "DFC's own release confirms the $205 billion MCL cap was created by the FY26 NDAA as a statutory ceiling (over 300% increase), consistent with the claim that this is a cap, not portfolio size, but it does not state the prior cap was specifically $60 billion.",
-    "host": "dfc.gov",
+    "state": "supports",
+    "why": "The Guardian article directly states Ben Black had personal and business ties to Epstein per DOJ-released emails and business filings, including the shared ESWW investment and communications described in the claim.",
+    "host": "theguardian.com",
     "date": "2026-09-15",
     "kind": "fact",
     "archive": false
    },
    "5": {
-    "state": "supports",
-    "why": "The source is the same Guardian investigation the claim describes; it contains the birthday, townhouse, and message-composing details, consistent with the claim that this is not new post-2026-08-02 reporting.",
-    "host": "theguardian.com",
-    "date": "2026-09-15",
+    "state": "partly",
+    "why": "The article, citing the Guardian, reports Black and family invested in ESWW in 2011 while Epstein held a stake, plus later meetings and the spokesperson's denial; it does not itself state the Guardian's finding that the two had a relationship for several years afterward, and it notes it is unclear whether Black knew Epstein was a co-shareholder.",
+    "host": "english.punjabkesari.com",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    },
    "6": {
     "state": "supports",
-    "why": "The source is again the same original Guardian investigation, consistent with the claim that no new reporting on Ben Black's own ties had surfaced by this recheck.",
+    "why": "The Guardian text states Epstein told a friend he attended Black's 30th birthday, weighed in on the $11.5m townhouse plan, and helped a woman compose messages to him, and separately notes Black has not been accused of wrongdoing.",
     "host": "theguardian.com",
-    "date": "2026-09-15",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": false
+   },
+   "7": {
+    "state": "supports",
+    "why": "DFC's leadership page states Black serves as CEO and gives his Senate confirmation date as October 7, 2025.",
+    "host": "dfc.gov",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    }
@@ -2260,26 +2268,50 @@
   },
   "bondi-doj-jan6-prosecutor-firings-govoni-2025": {
    "0": {
-    "state": "partly",
-    "why": "The source confirms Gordon recently took over the Govoni case, was fired amid the Jan. 6-linked purge, and that the firing complicated the case, but it never specifies a \"five weeks\" timeframe -- it only says he \"recently\" took over.",
-    "host": "cbsnews.com",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "Castor's July 8, 2025 letter to Bondi notes Gordon's removal was documented in Bondi's June 27 memo, urges his reinstatement, and says his removal places the Govoni case in jeopardy.",
+    "host": "castor.house.gov",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    },
    "1": {
     "state": "supports",
-    "why": "The Yahoo/WFLA article reports Govoni's alleged victims, including Sean Burke, fearing the case would be delayed after co-lead prosecutor Gordon's firing.",
-    "host": "yahoo.com",
-    "date": "2026-09-15",
+    "why": "The archived CBS article (captured July 15, 2025) states Gordon, who handled Jan. 6 prosecutions and had recently taken over Govoni prosecution duties, was among several prosecutors fired, and that his dismissal risks complicating the case timeline.",
+    "host": "cbsnews.com",
+    "date": "2026-11-07",
     "kind": "fact",
-    "archive": false
+    "archive": true
    },
    "2": {
     "state": "supports",
-    "why": "Castor's press release explicitly calls on Bondi to reinstate Gordon and frames his removal as jeopardizing the Govoni prosecution.",
-    "host": "castor.house.gov",
-    "date": "2026-09-15",
+    "why": "NBC (July 24, 2025) reports Gordon was handed a Bondi termination letter on the last Friday in June with 'No explanation. No advance warning.' and that he and two other fired DOJ employees sued over their dismissals.",
+    "host": "nbcnews.com",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": false
+   },
+   "3": {
+    "state": "supports",
+    "why": "WFLA reports victims fear delay after co-lead prosecutor Gordon's firing, that he was fired the day after successfully arguing for Govoni's detention, and that he was hand-picked five weeks before being fired.",
+    "host": "yahoo.com",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "partly",
+    "why": "The docket text confirms the case number, the July 24, 2025 filing by Gordon, Hartman and Tirrell, the defendants, and a last filing on Nov. 3, 2026, but the provided excerpt of entries ends in August 2025 and does not show the Nov. 25, 2025 motion to dismiss or the absence of a ruling.",
+    "host": "courtlistener.com",
+    "date": "2026-11-07",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "supports",
+    "why": "The Tampa Bay Times headline and subhead state victims must wait another year for trial and that Govoni's trial was continued until February.",
+    "host": "tampabay.com",
+    "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    }

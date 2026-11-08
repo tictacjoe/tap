@@ -260,9 +260,9 @@
     "official": "Ben Black, CEO of the U.S. International Development Finance Corporation (DFC)",
     "offense_category": "Undisclosed Personal Ties to Jeffrey Epstein by an Appointee Leading an Agency with $205 Billion in Statutory Investment Authority -- no criminal charge; a public-integrity/vetting-and-disclosure concern given a direct denial contradicted by documentary evidence",
     "contested": true,
-    "incident_summary": "Ben Black, the 40-year-old son of Apollo Global Management co-founder Leon Black, was appointed by Trump to lead the U.S. International Development Finance Corporation (DFC), a federal agency whose statutory investment authority (Maximum Contingent Liability cap) was raised to $205 billion by the FY2026 NDAA reauthorization -- a ceiling on the agency's total exposure, not its actual current portfolio, which is substantially smaller -- and was sworn in at a White House ceremony. Justice Department records and a Guardian review of more than 5,000 pages of Jeffrey Epstein's private correspondence found that Ben Black invested in the same company as Epstein in 2011 and maintained a personal and business relationship with him for several years afterward, including shared investments and direct communications. This is distinct from, though connected to, his father Leon Black's far larger and separately documented relationship with Epstein: a four-year Senate Finance Committee investigation led by Sen. Ron Wyden found Leon Black paid Epstein $170 million between 2012 and 2017 -- payments made after Epstein's 2008 sex-crimes conviction, which the committee's March 2026 findings said bore the hallmarks of 'hush money' and funded surveillance of women. A spokesperson for Ben Black stated: 'Ben Black had no personal or professional relationship with Jeffrey Epstein,' a denial that directly contradicts the documentary evidence in the DOJ records and Guardian's review of Epstein's own correspondence.",
+    "incident_summary": "Ben Black, the son of Apollo Global Management co-founder Leon Black, was appointed by Trump to lead the U.S. International Development Finance Corporation (DFC), a federal agency whose statutory investment authority (Maximum Contingent Liability cap) was raised to $205 billion by the FY2026 NDAA reauthorization -- a ceiling on the agency's total exposure, not its actual portfolio, which the Congressional Research Service put at $43.4 billion at the end of FY2025 -- was confirmed by the Senate on October 7, 2025, and took part in a ceremonial swearing-in in the Oval Office on December 12, 2025. Justice Department records and a Guardian review of more than 5,000 records from Jeffrey Epstein's private correspondence found that Ben Black invested in the same company as Epstein in 2011 and maintained a personal and business relationship with him for several years afterward, including shared investments and direct communications. This is distinct from, though connected to, his father Leon Black's far larger and separately documented relationship with Epstein: a four-year Senate Finance Committee investigation led by Sen. Ron Wyden found Leon Black paid Epstein $170 million between 2012 and 2017 -- payments made after Epstein's 2008 sex-crimes conviction, which the committee's March 2026 findings said bore the hallmarks of 'hush money' and funded surveillance of women. A spokesperson for Ben Black stated: 'Ben Black had no personal or professional relationship with Jeffrey Epstein,' a denial that directly contradicts the documentary evidence in the DOJ records and Guardian's review of Epstein's own correspondence.",
     "elements_required": [
-      "Ben Black holds a powerful, taxpayer-funded federal position (DFC CEO, leading an agency with $205 billion in statutory investment authority), a matter of public record established at his White House swearing-in",
+      "Ben Black holds a powerful, taxpayer-funded federal position (DFC CEO, leading an agency with $205 billion in statutory investment authority), a matter of public record established by his October 7, 2025 Senate confirmation",
       "Documentary evidence -- DOJ records and Epstein's own private correspondence, independently reviewed by the Guardian -- establishes a personal and business relationship between Ben Black and Jeffrey Epstein, including a shared 2011 investment, not merely an assertion by critics",
       "Ben Black's own spokesperson issued a direct public denial of any personal or professional relationship with Epstein, a denial the documentary record contradicts -- relevant to assessing candor about his own vetting rather than the underlying relationship alone",
       "The relationship is distinct from, but occurred within the same family and social circle as, his father Leon Black's much larger, separately investigated financial relationship with Epstein, which a Senate committee found bore the hallmarks of hush-money payments"
@@ -270,15 +270,15 @@
     "evidence": [
       {
         "type": "public_record",
-        "description": "Justice Department records disclosing Ben Black's personal and business interactions with Jeffrey Epstein over several years, including shared investments and communications",
-        "source_url": "https://www.theguardian.com/us-news/2026/jun/03/ben-black-investment-trump-epstein",
-        "maps_to_element": "Establishes the documented relationship as a matter of DOJ record, not merely characterization"
+        "description": "DFC's own official record of Ben Black's December 12, 2025 ceremonial swearing-in as CEO in the Oval Office, noting his Senate confirmation that October",
+        "source_url": "https://www.dfc.gov/media/press-releases/dfc-ceo-ben-black-sworn-white-house-ceremony",
+        "maps_to_element": "Establishes the position as a matter of the agency's own official record"
       },
       {
-        "type": "news_report",
-        "description": "Reporting on the Guardian's review of more than 5,000 pages of Epstein's private correspondence, finding Ben Black invested in the same company as Epstein in 2011 and maintained a relationship for several years afterward, alongside his spokesperson's denial",
-        "source_url": "https://english.punjabkesari.com/world/trump-dfc-epstein-links-26/",
-        "maps_to_element": "Documents both the underlying relationship and the spokesperson's contradicted denial"
+        "type": "public_record",
+        "description": "DFC's own official record of its $205 billion Maximum Contingent Liability (MCL) investment cap under the FY2026 NDAA reauthorization, which DFC describes as an increase of over 300%",
+        "source_url": "https://www.dfc.gov/media/press-releases/dfc-secures-expanded-authorities-fy26-ndaa-signed-law",
+        "maps_to_element": "Establishes the scope of authority the DFC CEO position carries as a matter of the agency's own official record"
       },
       {
         "type": "public_record",
@@ -288,43 +288,49 @@
       },
       {
         "type": "public_record",
-        "description": "DFC's own official record of Ben Black's appointment and swearing-in as CEO at a White House ceremony",
-        "source_url": "https://www.dfc.gov/media/press-releases/dfc-ceo-ben-black-sworn-white-house-ceremony",
-        "maps_to_element": "Establishes the position as a matter of the agency's own official record"
+        "description": "Congressional Research Service report on DFC (May 2026) stating the reauthorization raised DFC's maximum contingent liability from $60 billion to $205 billion, and that DFC's actual exposure fell from $48.9 billion to $43.4 billion over FY2025",
+        "source_url": "https://www.everycrsreport.com/files/2026-05-01_IF11436_b265ce29edc83dfbde6aec7007f0bd1013907d99.html",
+        "maps_to_element": "Establishes that the $205 billion figure is a statutory ceiling raised from $60 billion, far above the agency's actual portfolio exposure"
       },
       {
         "type": "public_record",
-        "description": "DFC's own official record of its $205 billion Maximum Contingent Liability (MCL) -- a statutory cap on the agency's total investment exposure, raised from $60 billion by the FY2026 NDAA reauthorization -- not the agency's actual current portfolio size, which was substantially smaller as of the most recent reporting reviewed",
-        "source_url": "https://www.dfc.gov/media/press-releases/dfc-secures-expanded-authorities-fy26-ndaa-signed-law",
-        "maps_to_element": "Establishes the scope of authority the DFC CEO position carries as a matter of the agency's own official record"
+        "description": "Justice Department records disclosing Ben Black's personal and business interactions with Jeffrey Epstein over several years, including shared investments and communications",
+        "source_url": "https://www.theguardian.com/us-news/2026/jun/03/ben-black-investment-trump-epstein",
+        "maps_to_element": "Establishes the documented relationship as a matter of DOJ record, not merely characterization"
       },
       {
         "type": "news_report",
-        "description": "Re-verification search (2026-08-18): no material development since this entry's 2026-08-02 write date -- Black remains DFC CEO, no removal/resignation/ethics review identified. Additional descriptive detail surfaced in continued Guardian-sourced coverage (Epstein telling a friend he attended Black's 30th birthday, advised on an $11.5M townhouse purchase, and helped a woman compose messages to Black) traces to the same original Guardian investigation already cited in this entry's evidence, not a new post-2026-08-02 disclosure.",
-        "source_url": "https://www.theguardian.com/us-news/2026/jun/03/ben-black-investment-trump-epstein",
-        "maps_to_element": "Re-verification confirming no change to Black's position or the underlying facts as of this recheck"
+        "description": "Reporting on the Guardian's review of Epstein's private correspondence, finding Ben Black invested in the same company as Epstein in 2011 and maintained a relationship for several years afterward, alongside his spokesperson's denial",
+        "source_url": "https://english.punjabkesari.com/world/trump-dfc-epstein-links-26/",
+        "maps_to_element": "Documents both the underlying relationship and the spokesperson's contradicted denial"
       },
       {
         "type": "news_report",
-        "description": "Re-verification search (2026-08-25): no material development since this entry's 2026-08-18 recheck -- Black remains DFC CEO, no removal/resignation/ethics review identified. Same Guardian investigation and Senate Finance Committee findings remain the current sourcing; no new reporting on Ben Black's own ties surfaced.",
+        "description": "The Guardian's investigation also reports that Epstein told a friend he attended Ben Black's 30th birthday, weighed in on Black's plan to buy an $11.5m townhouse, and helped one woman compose messages to him; the Guardian notes Black has not been accused of wrongdoing.",
         "source_url": "https://www.theguardian.com/us-news/2026/jun/03/ben-black-investment-trump-epstein",
-        "maps_to_element": "Re-verification confirming no change to Black's position or the underlying facts as of this recheck"
+        "maps_to_element": "Adds detail to the documented personal relationship the spokesperson's denial contradicts"
+      },
+      {
+        "type": "public_record",
+        "description": "DFC's own leadership page, which lists Ben Black as the agency's serving Chief Executive Officer and gives the date of his Senate confirmation",
+        "source_url": "https://www.dfc.gov/who-we-are/ben-black",
+        "maps_to_element": "Establishes the position and his Senate confirmation as a matter of the agency's own official record"
       }
     ],
-    "status": "Ben Black remains DFC CEO as of this entry's sourcing; no removal, resignation, or formal ethics review was identified in reporting reviewed",
+    "status": "Ben Black remains DFC CEO; DFC's own leadership page lists him as serving CEO, confirmed by the Senate on October 7, 2025. No removal, resignation or formal ethics review of Black has been reported.",
     "rebuttal_anticipated": "Black's team could argue a decade-old, disclosed-on-request business investment overlap is not evidence of a substantive personal relationship, that he was never implicated in any Epstein-related wrongdoing himself, and that scrutiny of his father's separate, far larger financial relationship with Epstein is being unfairly imputed to him.",
     "comeback": "The concern isn't the decade-old investment overlap alone -- it's that **Black's own spokesperson issued a categorical denial of any personal or professional relationship with Epstein that the documentary record (DOJ files and Epstein's own correspondence, independently reviewed by the Guardian) directly contradicts**, raising a candor question distinct from the underlying relationship's substance, for an official now leading an agency with $205 billion in statutory investment authority.",
     "cause": "[TAP Analysis, not sourced] Consistent with the broader documented pattern in this tracker of appointees with limited public vetting of personal associations receiving significant government positions or authority.",
-    "confidence_note": "HIGH confidence on the DFC appointment, the DOJ records, and the Guardian's correspondence review, corroborated across the Guardian's original reporting and wide syndication (Punjab Kesari, Forbes, Globelynews). HIGH confidence on the Leon Black-Epstein Senate Finance Committee findings, a formal congressional investigative record. MODERATE confidence on the precise substance/duration of Ben Black's own relationship with Epstein beyond the documented 2011 shared investment, since the Guardian's characterization of a 'relationship for several years afterward' is not itself broken down into specific dated interactions in the sourcing reviewed. Re-verified 2026-08-18: no material change; Black remains DFC CEO with no formal review identified. Re-verified 2026-08-25: no material change. Re-verified 2026-09-06 (recheck sweep, batch 58): searched specifically for resignations, firings, or formal ethics reviews -- none found, no material change. Corrected 2026-09-10: evidence item 3's source_url previously pointed to en.wikipedia.org/wiki/Benjamin_Black_(investor) (a different family member's page, containing none of the cited Senate Finance Committee/$170M content) -- replaced with the actual primary source, finance.senate.gov's 2026-03-23 press release, which contains the cited terms verbatim (verified live 2026-09-10). The underlying claim was accurate throughout; only the citation was wrong. Also corrected 2026-09-10 (caught by the new diff-scoped citation check, tracker/check_citation_diff.py): evidence item 4's $205 billion figure was cited to the DFC CEO swearing-in press release, which never states that figure -- split into its own evidence item and re-sourced to DFC's own FY2026 NDAA reauthorization press release, which does (verified live 2026-09-10). Note: $205 billion is DFC's statutory Maximum Contingent Liability cap (raised from $60 billion), not the agency's actual current portfolio size. Corrected again same day, 2026-09-10: the wording pass flagged above was itself the same enforcement-by-prose mistake this session spent all day identifying elsewhere -- a known 4-5x factual overstatement left live in offense_category, incident_summary, elements_required, and comeback, with a citation that now (correctly) says '$205 billion' reinforcing rather than correcting the wrong reading. All four fields rewritten to 'statutory investment authority'/'leading an agency with... authority' rather than 'overseeing $205 billion in investments.'",
+    "confidence_note": "HIGH confidence on the DFC appointment, the DOJ records, and the Guardian's correspondence review, corroborated across the Guardian's original reporting and wide syndication (Punjab Kesari, Forbes, Globelynews). HIGH confidence on the Leon Black-Epstein Senate Finance Committee findings, a formal congressional investigative record. MODERATE confidence on the precise substance/duration of Ben Black's own relationship with Epstein beyond the documented 2011 shared investment, since the Guardian's characterization of a 'relationship for several years afterward' is not itself broken down into specific dated interactions in the sourcing reviewed. Re-verified 2026-08-18: no material change; Black remains DFC CEO with no formal review identified. Re-verified 2026-08-25: no material change. Re-verified 2026-09-06: searched specifically for resignations, firings, or formal ethics reviews -- none found, no material change. Corrected 2026-09-10: the DFC swearing-in evidence item's source_url previously pointed to en.wikipedia.org/wiki/Benjamin_Black_(investor) (a different family member's page, containing none of the cited Senate Finance Committee/$170M content) -- replaced with the actual primary source, finance.senate.gov's 2026-03-23 press release, which contains the cited terms verbatim (verified live 2026-09-10). The underlying claim was accurate throughout; only the citation was wrong. Also corrected 2026-09-10: the NDAA evidence item's $205 billion figure was cited to the DFC CEO swearing-in press release, which never states that figure -- split into its own evidence item and re-sourced to DFC's own FY2026 NDAA reauthorization press release, which does (verified live 2026-09-10). Note: $205 billion is DFC's statutory Maximum Contingent Liability cap (raised from $60 billion), not the agency's actual current portfolio size. Corrected again same day, 2026-09-10: the wording pass above had left a known 4-5x factual overstatement live in offense_category, incident_summary, elements_required, and comeback, with a citation that now (correctly) says '$205 billion' reinforcing rather than correcting the wrong reading. All four fields rewritten to 'statutory investment authority'/'leading an agency with... authority' rather than 'overseeing $205 billion in investments.' Updated 2026-11-07: added the Senate confirmation date (October 7, 2025, per DFC's leadership page) and the ceremonial swearing-in date (December 12, 2025, per DFC's release); the Guardian's review figure now reads 'more than 5,000 records', the Guardian's own wording. DFC's page still lists Black as CEO, and a search found no removal, resignation or ethics review. The $60 billion prior cap and the actual-exposure figure ($43.4 billion at end of FY2025) are now cited to a May 2026 Congressional Research Service report; DFC's own NDAA release gives only the $205 billion cap and \"an increase of over 300%\".",
     "pull_quote": "Black's own spokesperson said, “Ben Black had no personal or professional relationship with Jeffrey Epstein” — a denial DOJ records and Epstein's own correspondence directly contradict.",
-    "last_verified": "2026-09-10",
+    "last_verified": "2026-11-07",
     "date_added": "2026-08-02",
     "section_summaries": {
-      "incident_summary": "DOJ records and a Guardian review of Epstein's correspondence show Trump's DFC CEO, Ben Black, had a personal investment relationship with Epstein starting in 2011, contradicting his own spokesperson's denial of any relationship.",
+      "incident_summary": "DOJ records and a Guardian review of Epstein's correspondence show DFC CEO Ben Black, confirmed October 2025, had ties to Epstein from 2011, despite his spokesperson's denial.",
       "confidence_note": "Well-corroborated via DOJ records and an independent documentary review; the exact scope of the relationship beyond the 2011 investment isn't fully detailed in sourcing reviewed."
     },
     "date_of_action": "2026-06-03 (source publish date, event date not stated in reporting)",
-    "last_substantive_update": "2026-09-10",
+    "last_substantive_update": "2026-11-07",
     "glance": {
       "who": "Ben Black (DFC CEO)",
       "what": "Black's office denied any Epstein relationship; DOJ records show a personal investment tie from 2011",
@@ -333,7 +339,7 @@
         "certainty": "documented",
         "who": "Public trust in DFC appointee vetting"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-11-07"
     },
     "status_stage": "Unchallenged",
     "key_events": [
@@ -346,9 +352,16 @@
         ]
       },
       {
-        "date": "2025-12-12",
-        "text": "Black is sworn in as head of the U.S. International Development Finance Corporation at a White House ceremony",
+        "date": "2025-10-07",
+        "text": "The Senate confirms Black as CEO of the U.S. International Development Finance Corporation",
         "turning_point": true,
+        "sources": [
+          "https://www.dfc.gov/who-we-are/ben-black"
+        ]
+      },
+      {
+        "date": "2025-12-12",
+        "text": "Black takes part in a ceremonial swearing-in as DFC head in the Oval Office, witnessed by Trump",
         "sources": [
           "https://www.dfc.gov/media/press-releases/dfc-ceo-ben-black-sworn-white-house-ceremony"
         ]
@@ -4989,7 +5002,7 @@
     "official": "Pam Bondi, Attorney General",
     "offense_category": "Retaliatory Firing of Career Prosecutors Connected to Jan. 6 Prosecutions, Disrupting an Unrelated $100 Million Fraud Case Against Vulnerable Victims",
     "contested": true,
-    "incident_summary": "In recent weeks before mid-July 2025 reporting, DOJ under Attorney General Pam Bondi fired several career prosecutors, investigators, and at least one administrator who had worked on U.S. Capitol riot (January 6) prosecutions, without prior notice or stated cause (CBS News, July 2025). One of those fired, Michael Gordon, had been hand-picked five weeks earlier to take over formal lead-prosecutor duties on an unrelated case: the criminal fraud prosecution of Leo Govoni, founder of the Center for Special Needs Trust Administration, who is accused of stealing roughly $100 million from a fund that managed more than $200 million across over 2,000 special-needs trusts for people with disabilities, spending the money on real estate, private jet travel, a brewery, personal bank deposits, and personal debts. Gordon told reporters he had been explicitly instructed to get the Govoni case charged, then was fired without warning five weeks into that assignment. **Victims' family members told CBS News they feared Gordon's removal would delay or derail the case, compounding the trauma of losing trust funds meant for their disabled children.** Rep. Kathy Castor (D-FL) publicly demanded Bondi reinstate Gordon specifically to avoid jeopardizing the prosecution (Florida Politics, Castor's House office, July 2025).",
+    "incident_summary": "In June and July 2025, DOJ under Attorney General Pam Bondi fired several career prosecutors, investigators, and at least one administrator who had worked on U.S. Capitol riot (January 6) prosecutions, without prior notice or stated cause (CBS News, July 2025). One of those fired, Assistant U.S. Attorney Michael Gordon, was dismissed on June 27, 2025, by a termination letter that cited only Article II of the Constitution; he had been hand-picked five weeks earlier to take over formal lead-prosecutor duties on an unrelated case: the criminal fraud prosecution of Leo Govoni, founder of the Center for Special Needs Trust Administration, who is accused of stealing roughly $100 million from a fund that managed more than $200 million across over 2,000 special-needs trusts for people with disabilities, spending the money on real estate, private jet travel, a brewery, personal bank deposits, and personal debts. Govoni and his accountant were indicted that June, and Gordon was fired the day after he successfully argued for Govoni's pretrial detention (WFLA). Gordon told reporters he had been explicitly instructed to get the Govoni case charged, then was fired without warning five weeks into that assignment. **Victims' family members told CBS News they feared Gordon's removal would delay or derail the case, compounding the trauma of losing trust funds meant for their disabled children.** Rep. Kathy Castor (D-FL) publicly demanded Bondi reinstate Gordon specifically to avoid jeopardizing the prosecution (Florida Politics, Castor's House office, July 2025).",
     "elements_required": [
       "DOJ fired multiple career prosecutors/investigators connected to Jan. 6 prosecutions without stated cause",
       "One of those fired, Michael Gordon, was serving as lead prosecutor on an unrelated, high-stakes fraud case (Govoni) at the time of his firing, having been assigned to it only five weeks earlier with explicit instructions to charge it",
@@ -4998,37 +5011,55 @@
     ],
     "evidence": [
       {
+        "type": "official_statement",
+        "description": "July 8, 2025: Rep. Kathy Castor (D-FL) wrote to Attorney General Bondi urging her to reinstate Assistant U.S. Attorney Michael Gordon, whose removal was documented in Bondi's June 27 memo, saying it placed the Govoni prosecution in jeopardy",
+        "source_url": "https://castor.house.gov/news/documentsingle.aspx?DocumentID=404984",
+        "maps_to_element": "Named congressional official characterizing the firing as jeopardizing the prosecution"
+      },
+      {
         "type": "news_report",
-        "description": "CBS News reported DOJ firings connected to Jan. 6 prosecutions disrupted the Govoni special-needs-trust fraud case after lead prosecutor Michael Gordon was fired five weeks into the assignment",
+        "description": "July 15, 2025: CBS News reported that Michael Gordon, who had handled Jan. 6 prosecutions and had recently taken over formal duties prosecuting the Govoni special-needs-trust fraud case, was among several prosecutors fired in recent weeks, and that his dismissal risked complicating the case's timeline",
         "source_url": "https://www.cbsnews.com/news/firings-at-trumps-doj-florida-man-special-needs/",
         "maps_to_element": "The firing and its disruption of the Govoni case"
       },
       {
         "type": "news_report",
-        "description": "Yahoo News reported Govoni's alleged victims -- families of children with disabilities -- fearing the case would be delayed after the co-lead prosecutor's firing",
+        "description": "July 24, 2025: NBC News reported Gordon was handed his termination letter on the last Friday in June with no explanation or advance warning, and that he and two other fired DOJ employees sued the Trump administration over their dismissals",
+        "source_url": "https://www.nbcnews.com/politics/justice-department/former-jan-6-prosecutor-doj-employees-sue-trump-administration-firing-rcna220386",
+        "maps_to_element": "The firing itself, its manner, and Gordon's legal challenge to it"
+      },
+      {
+        "type": "news_report",
+        "description": "WFLA (via Yahoo News) reported Govoni's alleged victims -- families of people with disabilities -- fearing the case would be delayed after co-lead prosecutor Gordon was fired the day after arguing for Govoni's detention, five weeks after being hand-picked for the case",
         "source_url": "https://www.yahoo.com/news/articles/leo-govoni-alleged-victims-fear-235527302.html",
         "maps_to_element": "Documented harm/fear attributed to the firing by named victims"
       },
       {
-        "type": "official_statement",
-        "description": "Rep. Kathy Castor (D-FL) publicly demanded Attorney General Bondi reinstate the prosecutor handling the Govoni case",
-        "source_url": "https://castor.house.gov/news/documentsingle.aspx?DocumentID=404984",
-        "maps_to_element": "Named congressional official characterizing the firing as jeopardizing the prosecution"
+        "type": "court_filing",
+        "description": "Nov. 25, 2025: in Gordon v. Executive Office of the President (D.D.C. No. 1:25-cv-02409, filed July 24, 2025 by Gordon, Patricia Hartman and Joseph Tirrell against Bondi, DOJ, the Executive Office of the President and the United States), the government moved to dismiss for lack of jurisdiction; the docket shows no ruling on that motion through Nov. 3, 2026",
+        "source_url": "https://www.courtlistener.com/docket/70909385/gordon-v-executive-office-of-the-president/",
+        "maps_to_element": "Status of the challenge to the firing"
+      },
+      {
+        "type": "news_report",
+        "description": "April 17, 2026: the Tampa Bay Times reported that Govoni's trial had been continued until February, so the trust fund theft victims must wait another year for trial",
+        "source_url": "https://tampabay.com/news/health/2026/04/17/st-petersburg-trust-fund-theft-victims-must-wait-another-year-trial/",
+        "maps_to_element": "Documented delay in the Govoni prosecution that victims had feared"
       }
     ],
-    "status": "Unresolved -- Gordon's firing had not been reversed as of the reporting reviewed for this entry; the Govoni prosecution's timeline impact was not yet independently confirmed.",
+    "status": "In court -- Gordon and two other fired DOJ employees sued Bondi, DOJ and the Executive Office of the President on July 24, 2025 (D.D.C.); a government motion to dismiss is pending. Govoni's trial has been continued into 2027; reports have not tied the delay to the firing.",
     "rebuttal_anticipated": "DOJ could characterize Gordon's firing as a routine personnel decision unrelated to his current caseload, note that other prosecutors remain assigned to the Govoni case, and argue that career-prosecutor turnover at the start of a new administration is normal rather than retaliatory.",
     "comeback": "The firing's timing -- five weeks after Gordon was specifically hand-picked and instructed to charge the case -- and its connection to a broader wave of firings targeting prosecutors with Jan. 6 caseload history, undercut a routine-turnover explanation; DOJ has not disputed that Gordon worked Jan. 6 cases or that he was removed from the Govoni case as a direct result of the firing, only whether the motive was retaliatory.",
     "cause": "[TAP Analysis, not sourced] Illustrates a pattern in which personnel actions motivated by Jan. 6-related retribution have documented collateral effects on unrelated prosecutions and their victims, rather than being contained to the Jan. 6 cases themselves.",
-    "last_verified": "2026-09-10",
+    "last_verified": "2026-11-07",
     "date_added": "2026-09-10",
-    "confidence_note": "HIGH confidence that Gordon was fired, that he had been lead prosecutor on the Govoni case, and that Rep. Castor publicly demanded his reinstatement -- corroborated across CBS News, Yahoo News, and Castor's own official House statement. MODERATE confidence on the retaliatory-motive characterization -- this entry presents it as the victims' and Rep. Castor's stated concern and CBS News's framing, not as an independently adjudicated finding; DOJ's own stated rationale for the firing was not identified in the sourcing reviewed. The $100 million theft/$200 million managed figures describe the underlying Govoni fraud allegation itself (not yet a conviction), sourced to federal investigators via CBS News.",
+    "confidence_note": "HIGH confidence that Gordon was fired, that he had been lead prosecutor on the Govoni case, and that Rep. Castor publicly demanded his reinstatement -- corroborated across CBS News, WFLA, NBC News, and Castor's own official House statement. MODERATE confidence on the retaliatory-motive characterization -- this entry presents it as the victims' and Rep. Castor's stated concern and CBS News's framing, not as an independently adjudicated finding; DOJ gave no stated cause: Gordon's termination letter cited only Article II of the Constitution (WFLA), and DOJ declined to comment to CBS News and WFLA. The $100 million theft/$200 million managed figures describe the underlying Govoni fraud allegation itself (not yet a conviction), sourced to federal investigators via CBS News.",
     "section_summaries": {
-      "incident_summary": "DOJ fired several career prosecutors connected to Jan. 6 cases, including Michael Gordon, who had just been assigned to lead the $100 million Govoni special-needs-trust fraud prosecution; victims' families and Rep. Kathy Castor said the firing jeopardized that case.",
-      "confidence_note": "HIGH confidence the firing occurred and disrupted the Govoni case's leadership; MODERATE confidence on the retaliatory-motive characterization, which remains a stated concern rather than an adjudicated finding."
+      "incident_summary": "DOJ fired Jan. 6 prosecutor Michael Gordon on June 27, 2025, weeks into co-leading the $100 million Govoni trust fraud case; victims' families and Rep. Castor said it jeopardized the case.",
+      "confidence_note": "HIGH confidence on the firing and its hit to the Govoni case's leadership; the retaliatory motive is a stated concern, not a finding, and DOJ gave no stated cause."
     },
-    "date_of_action": "2025-07 (CBS News reports Jan6 prosecutor firings)",
-    "last_substantive_update": "2026-09-10",
+    "date_of_action": "2025-06-27",
+    "last_substantive_update": "2026-11-07",
     "glance": {
       "who": "Pam Bondi (Attorney General)",
       "what": "DOJ fired Jan. 6 prosecutors, including the lead on a $100M special-needs-trust fraud case",
@@ -5037,17 +5068,17 @@
         "certainty": "alleged",
         "who": "Govoni special-needs-trust case"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-11-07"
     },
-    "status_stage": "Unchallenged",
+    "status_stage": "In court",
     "key_events": [
       {
-        "date": "2025-06",
-        "text": "DOJ fires Michael Gordon, a Jan. 6 prosecutor newly leading the Govoni fraud case, without notice or cause",
+        "date": "2025-06-27",
+        "text": "Bondi fires Michael Gordon, a Jan. 6 prosecutor co-leading the Govoni fraud case, without notice or stated cause",
         "turning_point": true,
         "sources": [
           "https://castor.house.gov/news/documentsingle.aspx?DocumentID=404984",
-          "https://www.yahoo.com/news/articles/leo-govoni-alleged-victims-fear-235527302.html"
+          "https://www.nbcnews.com/politics/justice-department/former-jan-6-prosecutor-doj-employees-sue-trump-administration-firing-rcna220386"
         ]
       },
       {
@@ -5058,10 +5089,26 @@
         ]
       },
       {
-        "date": "2025-07-18",
+        "date": "2025-07-15",
         "text": "CBS reports a wider purge of Jan. 6 prosecutors; Govoni victims' families fear the case will be delayed",
         "sources": [
           "https://www.cbsnews.com/news/firings-at-trumps-doj-florida-man-special-needs/"
+        ]
+      },
+      {
+        "date": "2025-07-24",
+        "text": "Gordon and two other fired DOJ employees sue Bondi, DOJ and the Executive Office of the President",
+        "turning_point": true,
+        "sources": [
+          "https://www.nbcnews.com/politics/justice-department/former-jan-6-prosecutor-doj-employees-sue-trump-administration-firing-rcna220386",
+          "https://www.courtlistener.com/docket/70909385/gordon-v-executive-office-of-the-president/"
+        ]
+      },
+      {
+        "date": "2026-04",
+        "text": "Govoni's trial is continued to February 2027, extending victims' wait",
+        "sources": [
+          "https://tampabay.com/news/health/2026/04/17/st-petersburg-trust-fund-theft-victims-must-wait-another-year-trial/"
         ]
       }
     ]
