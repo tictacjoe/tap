@@ -26494,7 +26494,7 @@
     "id": "lutnick-commerce-health-insurance-stripped-2025",
     "official": "Howard Lutnick, Secretary of Commerce",
     "offense_category": "Failure to honor a legally required 31-day health-insurance continuation period for terminated federal employees, and continued deduction of health-insurance premiums from paid-through employees without corresponding coverage or refund",
-    "incident_summary": "Hundreds of Commerce Department employees -- including at NOAA and the CHIPS for America program -- fired as part of the administration's probationary-employee terminations were stripped of federal health insurance without notice, despite having paid their premiums and being legally entitled to a 31-day continuation-of-coverage grace period after termination. When a court order briefly required their reinstatement, some employees were restored to payroll only to be retroactively re-fired once an appeals court allowed the firings to proceed, with Commerce basing insurance-coverage cutoffs on employees' ORIGINAL termination dates rather than treating the reinstatement period as continuous coverage -- leaving a gap in which employees believed, and in some cases were told, they were insured. **At least one NOAA employee, who had a long-planned hip arthroscopic surgery, now owes roughly $15,000 out of pocket after her coverage lapsed without her knowledge**. Half a dozen former Commerce/NOAA/CHIPS employees reported that even their final pay stubs (for the pay period ending April 19, 2025) showed continued deductions for health-insurance premiums, despite their coverage having already lapsed. Rep. Stephen Lynch (D-MA), ranking member-adjacent on House Oversight, sent Secretary Lutnick a formal letter demanding an explanation for why the department did not honor the 31-day continuation requirement, why premiums continued to be deducted after coverage lapsed, and calling for full reimbursement of employees' out-of-pocket medical costs and premium overpayments.",
+    "incident_summary": "Hundreds of Commerce Department employees -- including at NOAA and the CHIPS for America program -- fired as part of the administration's probationary-employee terminations were stripped of federal health insurance without notice, despite having paid their premiums and being legally entitled to a 31-day continuation-of-coverage grace period after termination. When a court order briefly required their reinstatement, some employees were restored to payroll only to be retroactively re-fired once an appeals court allowed the firings to proceed, with Commerce basing insurance-coverage cutoffs on employees' ORIGINAL termination dates rather than treating the reinstatement period as continuous coverage -- leaving a gap in which employees believed, and in some cases were told, they were insured. **At least one NOAA employee, who had a long-planned hip arthroscopic surgery, now owes roughly $15,000 out of pocket after her coverage lapsed without her knowledge**. Half a dozen former Commerce/NOAA/CHIPS employees reported that even their final pay stubs (for the pay period ending April 19, 2025) showed continued deductions for health-insurance premiums, despite their coverage having already lapsed. Rep. Stephen Lynch (D-MA), acting ranking member of the House Oversight Committee, sent Secretary Lutnick a formal letter demanding an explanation for why the department did not honor the 31-day continuation requirement, why premiums continued to be deducted after coverage lapsed, and calling for full reimbursement of employees' out-of-pocket medical costs and premium overpayments.",
     "contested": true,
     "elements_required": [
       "Federal employees are legally entitled to a 31-day health-insurance continuation period following termination -- a specific, checkable statutory/regulatory requirement, not a discretionary courtesy",
@@ -26506,7 +26506,7 @@
     "evidence": [
       {
         "type": "reporting",
-        "description": "NPR's June 4, 2025 report documents the core facts: hundreds of Commerce employees (NOAA and CHIPS for America) lost health coverage without notice despite paying premiums and being entitled to a 31-day continuation period; some were briefly reinstated by court order then retroactively re-fired once an appeals court allowed the firings, with Commerce basing coverage cutoffs on original termination dates; one NOAA employee now owes ~$15,000 for hip surgery after her coverage lapsed unknowingly; half a dozen former employees reported continued premium deductions on paystubs after their coverage had already lapsed.",
+        "description": "NPR's June 4, 2025 report documents the core facts: hundreds of Commerce employees (NOAA and CHIPS for America) lost health coverage without notice despite paying premiums and being entitled to a 31-day continuation period; some were briefly reinstated by court order then, on April 10, 2025, retroactively re-fired once an appeals court allowed the firings, with Commerce basing coverage cutoffs on original termination dates; one NOAA employee now owes ~$15,000 for hip surgery after her coverage lapsed unknowingly; half a dozen former employees reported continued premium deductions on paystubs after their coverage had already lapsed.",
         "source_url": "https://www.npr.org/2025/06/04/nx-s1-5422998/commerce-lutnick-democrats-oversight-noaa-health-care",
         "maps_to_element": "Establishes the coverage-gap mechanism, the named financial harm, and the continued-deduction-without-coverage detail"
       },
@@ -26515,34 +26515,40 @@
         "description": "Rep. Stephen Lynch's formal letter to Secretary Lutnick demanding an explanation for the department's failure to honor the 31-day continuation-of-coverage requirement and why premiums continued to be deducted after coverage lapsed, and calling for reimbursement of affected employees' out-of-pocket costs and premium overpayments",
         "source_url": "https://www.opb.org/article/2025/06/04/health-care-mess-at-commerce-prompts-questions-from-house-democrat/",
         "maps_to_element": "Formal congressional oversight demand directed at the named Cabinet secretary"
+      },
+      {
+        "type": "reporting",
+        "description": "NBC News's June 25, 2025 report: three former NOAA employees who were fired, rehired and fired again shared \"DEMAND NOTICE FOR PAYMENT\" letters dated June 16, 2025, claiming they owed debts (sometimes hundreds of dollars) for health-insurance premiums for the eighth and ninth pay periods of the year, when, the workers said, their coverage had already expired. After NBC News asked NOAA about it, probationary employees got an agency email saying \"we are working with NFC to resolve this. No action is needed from you right now.\" The Commerce Department did not respond to NBC News.",
+        "source_url": "https://www.nbcnews.com/science/science-news/fired-rehired-fired-noaa-employees-get-letters-demanding-money-rcna214755",
+        "maps_to_element": "Premiums billed by debt notice for coverage the workers said had already lapsed"
       }
     ],
-    "status": "Documented via reporting and a formal congressional oversight letter; no response from Lutnick/Commerce, reimbursement, or resolution identified in available sourcing as of this entry's most recent verification.",
+    "status": "Rep. Lynch's June 4, 2025 letter asked Lutnick for answers by June 18; no Commerce reply, refund or reimbursement has been found. Some re-fired NOAA workers instead got federal debt notices dated June 16, 2025, billing premiums for coverage that had lapsed; NOAA said it was working to resolve them.",
     "rebuttal_anticipated": "Commerce could characterize the coverage gaps as an administrative error arising from the genuinely unusual whiplash of court-ordered reinstatement followed by appellate-court-permitted re-termination -- a novel, fast-moving legal situation rather than a deliberate denial of a legal entitlement.",
     "comeback": "An administrative-error explanation does not account for the continued deduction of premiums from paychecks after coverage had already lapsed -- money taken for a benefit not provided -- nor does it explain why coverage was keyed to the ORIGINAL termination date rather than treating the court-ordered reinstatement period as continuous employment, which would have naturally preserved the 31-day continuation window from whichever termination date actually applied. Both are administrable choices Commerce made, not inherent features of the legal whiplash itself.",
     "cause": "[TAP Analysis, not sourced] Illustrates a downstream administrative-harm pattern distinct from headcount loss itself: the same probationary-firing/reinstatement/re-firing whiplash documented across multiple agencies in this database's other entries produced a specific benefits-administration failure at Commerce with direct financial harm to named individuals, not just projected capacity loss.",
-    "last_verified": "2026-09-12",
+    "last_verified": "2026-11-08",
     "date_added": "2026-09-12",
-    "confidence_note": "HIGH confidence on the core facts: NPR's reporting is corroborated by wide public-radio syndication of the same underlying story, and Rep. Lynch's letter is a public congressional record independently confirming the demand and its specific asks. MODERATE confidence on the total scope ('hundreds' of affected employees) since the specific named/documented harm (the $15,000 case) and the paystub-deduction detail (six employees) are more narrowly sourced than the broader 'hundreds' figure. No response from Commerce/Lutnick to the oversight letter was identified in sourcing reviewed, so this entry cannot yet report the administration's own explanation beyond what NPR's contemporaneous reporting characterized as Commerce's basis for using original termination dates.",
+    "confidence_note": "HIGH confidence on the core facts: NPR's reporting is corroborated by wide public-radio syndication of the same underlying story, and Rep. Lynch's letter is a public congressional record independently confirming the demand and its specific asks. MODERATE confidence on the total scope ('hundreds' of affected employees) since the specific named/documented harm (the $15,000 case) and the paystub-deduction detail (six employees) are more narrowly sourced than the broader 'hundreds' figure. No response from Commerce/Lutnick to the oversight letter was identified in sourcing reviewed, so the administration's own explanation is known only from what NPR's contemporaneous reporting characterized as Commerce's basis for using original termination dates. NBC News's June 25, 2025 report of debt notices billing premiums for lapsed coverage rests on three former NOAA employees' letters; NOAA's email to probationary employees acknowledged the notices and said it was working to resolve them, and no later resolution was found.",
     "pull_quote": "Half a dozen former Commerce/NOAA/CHIPS employees said their final pay stubs still showed deductions for health-insurance premiums -- for coverage that had already lapsed.",
     "section_summaries": {
-      "incident_summary": "Fired Commerce/NOAA workers lost health coverage without the legally required 31-day notice -- one now owes $15K for surgery -- while some paystubs kept deducting premiums for coverage that had already lapsed.",
+      "incident_summary": "Fired Commerce/NOAA workers lost health coverage without the 31-day grace period -- one owes ~$15K for surgery -- and paystubs kept deducting premiums for coverage that had already lapsed.",
       "confidence_note": "Well-corroborated by wide public-radio syndication and a public congressional letter; Commerce/Lutnick's own response to the oversight demand was not found in sourcing reviewed."
     },
     "narrative_override": {
-      "headline": "Fired Commerce/NOAA workers lost health coverage without the legally required 31-day notice."
+      "headline": "Fired Commerce/NOAA workers lost health coverage without the 31-day grace period."
     },
     "date_of_action": "2025-04 (Commerce/NOAA probationary firings strip health insurance without notice)",
-    "last_substantive_update": "2026-09-12",
+    "last_substantive_update": "2026-11-08",
     "glance": {
       "who": "Howard Lutnick (Secretary of Commerce)",
-      "what": "Reportedly cut off health coverage for fired Commerce and NOAA workers without the required 31-day notice",
+      "what": "Reportedly cut off fired Commerce and NOAA workers' health coverage without the 31-day grace period",
       "harm": {
         "kind": "livelihood",
         "certainty": "alleged",
         "who": "Fired Commerce and NOAA workers"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-11-08"
     },
     "status_stage": "Unchallenged",
     "key_events": [
@@ -26561,6 +26567,13 @@
         "sources": [
           "https://www.opb.org/article/2025/06/04/health-care-mess-at-commerce-prompts-questions-from-house-democrat/",
           "https://www.npr.org/2025/06/04/nx-s1-5422998/commerce-lutnick-democrats-oversight-noaa-health-care"
+        ]
+      },
+      {
+        "date": "2025-06-16",
+        "text": "Debt notices dated this day bill fired NOAA workers for premiums on coverage they say had already lapsed",
+        "sources": [
+          "https://www.nbcnews.com/science/science-news/fired-rehired-fired-noaa-employees-get-letters-demanding-money-rcna214755"
         ]
       }
     ]
@@ -30937,7 +30950,7 @@
     "official": "Kash Patel, FBI Director",
     "offense_category": "Waiving Standard Security-Clearance Polygraph Requirements for the FBI's Deputy Director and Two Personal Aides, Granting Top-Secret/SCI Access Despite Unresolved or Inconclusive Results",
     "contested": true,
-    "incident_summary": "ProPublica reported on November 24, 2025 that **FBI Director Kash Patel granted unprecedented polygraph waivers to three of his closest aides -- Deputy Director Dan Bongino, congressional-affairs liaison Marshall Yates, and Patel's personal assistant Nicole Rucker -- allowing all three to obtain Sensitive Compartmented Information (SCI) clearances, the level required for access to the nation's most sensitive intelligence, including presidential briefings, despite polygraph results that did not clear under normal standards.** Sources told ProPublica that Yates and Rucker did not clear their polygraph exams; Bongino's specific results were not established in reporting. Former FBI officials said they could not recall any senior official ever receiving such a waiver, with one recalling only a single such waiver in seven years, granted to an outside subject-matter expert -- not a sitting senior FBI leader. The FBI's own employment guidelines require all employees to pass a polygraph as part of obtaining Top Secret clearance. An FBI Security Division employee filed a formal internal complaint with the division's director, Robert Turner, alleging the waivers violated agency policy, and separately shared the complaint with the Justice Department's Office of the Inspector General. An FBI spokesperson denied that any of the three had 'failed' their polygraphs -- a characterization that leaves open whether the results were instead deemed inconclusive -- but declined to specify what, if anything, in ProPublica's reporting the FBI considered false.",
+    "incident_summary": "ProPublica reported on November 14, 2025 that **FBI Director Kash Patel granted unprecedented polygraph waivers to three of his closest aides -- Deputy Director Dan Bongino, congressional-affairs liaison Marshall Yates, and Patel's personal assistant Nicole Rucker -- allowing all three to obtain Sensitive Compartmented Information (SCI) clearances, the level required for access to the nation's most sensitive intelligence, including presidential briefings, despite polygraph results that did not clear under normal standards.** Sources told ProPublica that Yates and Rucker did not clear their polygraph exams; Bongino's specific results were not established in reporting. Former FBI officials said they could not recall any senior official ever receiving such a waiver, with one recalling only a single such waiver in seven years, granted to an outside subject-matter expert -- not a sitting senior FBI leader. The FBI's own employment guidelines require all employees to pass a polygraph as part of obtaining Top Secret clearance. An FBI Security Division employee filed a formal internal complaint with the division's director, Robert Turner, alleging the waivers violated agency policy, and separately shared the complaint with the Justice Department's Office of the Inspector General. An FBI spokesperson denied that any of the three had 'failed' their polygraphs -- a characterization that leaves open whether the results were instead deemed inconclusive -- but did not reply when asked to specify what, if anything, in ProPublica's reporting the FBI considered false.",
     "elements_required": [
       "The FBI Director personally waived a standard, employment-guideline-mandated security-clearance requirement for his own deputy and two personal aides",
       "At least two of the three did not clear their polygraph exams under normal standards, per multiple sources",
@@ -30950,25 +30963,37 @@
         "description": "ProPublica's original investigative report identifies all three waiver recipients (Bongino, Yates, Rucker), the SCI clearance level granted, the polygraph-clearance shortfall for Yates and Rucker, former officials' statements that such a waiver for senior leadership was unprecedented, the internal complaint to Security Division director Robert Turner and DOJ's Inspector General, and the FBI's on-record denial that anyone 'failed' their polygraphs",
         "source_url": "https://www.propublica.org/article/fbi-kash-patel-dan-bongino-waived-polygraph",
         "maps_to_element": "Full incident: waiver recipients, clearance level, unprecedented nature, internal complaint, and FBI's response"
+      },
+      {
+        "type": "news_report",
+        "description": "NTD reports that Deputy Director Dan Bongino officially stepped down from the FBI on January 3, posting that it was his last day on the job; he had announced in mid-December that he would leave in January",
+        "source_url": "https://www.ntd.com/deputy-director-dan-bongino-officially-resigns-from-fbi_1117300.html",
+        "maps_to_element": "Status: Bongino, one of the three waiver recipients, has left the FBI"
+      },
+      {
+        "type": "news_report",
+        "description": "CBS News reports, citing multiple sources, that Marshall Yates, head of the FBI's congressional affairs office, is departing the bureau, with his last day expected that Friday; a source said he was stepping down to spend more time with family",
+        "source_url": "https://www.cbsnews.com/news/fbis-head-of-congressional-affairs-stepping-down",
+        "maps_to_element": "Status: Yates, one of the three waiver recipients, has left the FBI"
       }
     ],
-    "status": "Unresolved as of this entry. An internal complaint has been referred to DOJ's Office of the Inspector General; no OIG findings, and no reversal of the waivers, were identified in reporting reviewed.",
+    "status": "A Security Division complaint about the waivers was shared with DOJ's Inspector General; no IG finding and no reversal of the waivers have been reported. Bongino left the FBI on January 3, 2026, and Yates was reported leaving in late February 2026; Rucker's status has not been reported.",
     "rebuttal_anticipated": "The FBI's on-record position is that none of the three 'failed' their polygraphs, implying inconclusive rather than disqualifying results, and that the Director has discretion to grant waivers for trusted senior personnel he has direct, ongoing working knowledge of.",
-    "comeback": "The FBI's own employment guidelines make polygraph clearance a requirement for Top Secret access, not a discretionary formality, and former officials -- not partisan critics -- said they could recall no precedent for waiving it at this level for sitting senior FBI leadership; a single-source report of one prior waiver, for an outside expert rather than an internal official, is a materially different situation than exempting the Bureau's own Deputy Director and the Director's personal staff. The FBI's denial that anyone 'failed' notably does not address whether the results were inconclusive -- itself normally grounds for further review, not an automatic waiver -- and the agency declined to specify what else in the reporting it considered inaccurate.",
+    "comeback": "The FBI's own employment guidelines make polygraph clearance a requirement for Top Secret access, not a discretionary formality, and former officials -- not partisan critics -- said they could recall no precedent for waiving it at this level for sitting senior FBI leadership; a single-source report of one prior waiver, for an outside expert rather than an internal official, is a materially different situation than exempting the Bureau's own Deputy Director and the Director's personal staff. The FBI's denial that anyone 'failed' notably does not address whether the results were inconclusive -- itself normally grounds for further review, not an automatic waiver -- and the agency did not reply when asked to specify what else in the reporting it considered inaccurate.",
     "cause": "[TAP Analysis, not sourced] Consistent with a broader pattern this tracker documents of Patel prioritizing personal loyalty and proximity over standard institutional vetting processes at the FBI, paralleling this tracker's separately-documented reduction of vetting standards for incoming special agents (see the Patel entry) -- here applied to the Bureau's own most senior leadership rather than new hires.",
-    "confidence_note": "HIGH confidence on the core facts -- the three named individuals, the SCI clearance level, the internal complaint to Robert Turner and DOJ's Inspector General, and the FBI's on-record denial -- all sourced directly to ProPublica's original investigative reporting, a single strong source with no independent corroboration identified in a fresh search as of this entry; should be rechecked for additional corroboration or an OIG outcome in future sessions.",
+    "confidence_note": "HIGH confidence on the core facts -- the three named individuals, the SCI clearance level, the internal complaint to Robert Turner and DOJ's Inspector General, and the FBI's on-record denial -- all sourced directly to ProPublica's original investigative reporting, a single strong source; no independent corroboration and no Inspector General outcome has been found. The later departures of Bongino and Yates are sourced to NTD and CBS News.",
     "pull_quote": "Former FBI officials said they could not recall any senior official ever receiving such a waiver, with one recalling only a single such waiver in seven years, granted to an outside subject-matter expert — not a sitting senior FBI leader.",
-    "last_verified": "2026-09-12",
+    "last_verified": "2026-11-08",
     "date_added": "2026-09-12",
     "section_summaries": {
-      "incident_summary": "Patel waived standard polygraph-clearance requirements for Deputy Director Bongino and two personal aides, granting SCI access despite unresolved polygraph results -- a move former FBI officials called unprecedented for senior leadership, prompting an internal complaint to DOJ's Inspector General.",
-      "confidence_note": "HIGH confidence on the core facts per ProPublica's original investigative report; single-source as of this entry, worth rechecking for corroboration or an OIG outcome."
+      "incident_summary": "Patel waived polygraph-clearance rules for Deputy Director Bongino and two aides, granting SCI access; ex-officials called it unprecedented, and a complaint went to DOJ's watchdog.",
+      "confidence_note": "HIGH confidence on the core facts per ProPublica's investigative report, a single source; no corroboration or Inspector General outcome found. Departures sourced separately."
     },
     "narrative_override": {
       "headline": "FBI Director Patel waived polygraph-clearance requirements for Deputy Director Bongino."
     },
-    "date_of_action": "2025-11-24 (ProPublica reveals Patel's polygraph waivers for aides)",
-    "last_substantive_update": "2026-09-12",
+    "date_of_action": "2025-11-14 (ProPublica reveals Patel's polygraph waivers for aides)",
+    "last_substantive_update": "2026-11-08",
     "glance": {
       "who": "Kash Patel (FBI Director)",
       "what": "Reportedly waived polygraph requirements for Deputy Director Bongino and two aides, granting SCI access",
@@ -30977,7 +31002,7 @@
         "certainty": "alleged",
         "who": "FBI security-clearance vetting"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-11-08"
     },
     "cause_references": [
       {
@@ -30996,7 +31021,7 @@
         ]
       },
       {
-        "date": "2025-11-24",
+        "date": "2025-11-14",
         "text": "ProPublica reports Patel waived polygraph clearance for Bongino, Yates and Rucker so they could get top clearances",
         "turning_point": true,
         "sources": [
@@ -31004,10 +31029,24 @@
         ]
       },
       {
-        "date": "2025-11-24",
+        "date": "2025-11-14",
         "text": "FBI denies any of the three 'failed' a polygraph but does not say what in the report it considers false",
         "sources": [
           "https://www.propublica.org/article/fbi-kash-patel-dan-bongino-waived-polygraph"
+        ]
+      },
+      {
+        "date": "2026-01-03",
+        "text": "Deputy Director Bongino leaves the FBI",
+        "sources": [
+          "https://www.ntd.com/deputy-director-dan-bongino-officially-resigns-from-fbi_1117300.html"
+        ]
+      },
+      {
+        "date": "2026-02",
+        "text": "Congressional-affairs chief Marshall Yates, another waiver recipient, is reported leaving the FBI",
+        "sources": [
+          "https://www.cbsnews.com/news/fbis-head-of-congressional-affairs-stepping-down"
         ]
       }
     ]
@@ -35186,7 +35225,7 @@
     "official": "William (Bill) Pulte, Director of the Federal Housing Finance Agency",
     "offense_category": "Installing an Unvetted Personal Loyalist With a Vacated Felony Sex-Offense Conviction and Pending Pardon-Bribery Allegations as a Consultant Inside Fannie Mae and Freddie Mac",
     "contested": true,
-    "incident_summary": "Mark Zarkin, a Michigan restaurateur (owner of Steven Lelli's On The Green in Farmington Hills) and prominent Detroit-area Trump fundraiser with no documented housing-finance experience, was appointed by FHFA Director Bill Pulte as a consultant to Fannie Mae and Freddie Mac after Pulte took office in March 2025. Six sources confirmed the role to Reuters, and Reuters found Zarkin still held an active Freddie Mac email account identifying him as a 'consultant' as recently as the weeks before publication. **In 1999, Zarkin pleaded no contest to attempted third-degree sexual conduct in Macomb County, Michigan, after investigators recovered his DNA during a pelvic examination of a woman who was underage and 'mentally incapacitated' by alcohol and Valium; he was sentenced to eight months in jail, three years' probation, and mandatory sex-offender registration.** In 2009, a judge granted his attorney's petition to vacate that conviction, reasoning Zarkin had not understood the registry requirement when he accepted the plea -- even though court records show registration was explicitly part of the original plea agreement, and the judge's order gave no further explanation; legal experts told Reuters the vacatur was 'unusual.' Separately, an ongoing 2025 Wayne County, Michigan lawsuit alleges Zarkin discussed with Jamiel Altaheri, the recently resigned Hamtramck police chief, a scheme to pay Trump as much as $5 million for a pardon of an unnamed New York associate accused of financial crimes; two plaintiffs, a former city manager and a former police officer, allege they lost their jobs partly for disclosing the plan. Zarkin denied everything by text message to Reuters, stating 'I have never been employed by Fannie Mae or Freddie Mac. I also have no criminal record. Anything you say to the contrary is defamatory.' Pulte called Reuters' questions 'filled with completely false and defamatory statements' without elaborating, and FHFA's media office issued an unsigned statement calling 'nearly all' of Reuters' statements 'false, misleading, or defamatory,' also without specifics; Fannie Mae and Freddie Mac did not respond to Reuters' requests for comment.",
+    "incident_summary": "Mark Zarkin, a Michigan restaurateur (owner of Steven Lelli's On The Green in Farmington Hills) and prominent Detroit-area Trump fundraiser with no documented housing-finance experience, was appointed by FHFA Director Bill Pulte as a consultant to Fannie Mae and Freddie Mac after Pulte took office in March 2025. Six sources confirmed the role to Reuters, and internal documentation reviewed by Reuters showed Zarkin still had a Freddie Mac email and was described internally as a 'consultant' in the weeks before publication. **In 1999, Zarkin pleaded no contest to attempted third-degree sexual conduct in Macomb County, Michigan, after investigators recovered his DNA during a pelvic examination of a woman who was underage and 'mentally incapacitated' by alcohol and Valium; he was sentenced to eight months in jail, three years' probation, and mandatory sex-offender registration.** In 2009, a judge granted his attorney's petition to vacate that conviction. The attorney had argued that Zarkin, when he accepted the plea, hadn't realized he would remain on the registry for so long, though court records show registration was an explicit part of the original plea agreement; the 2009 order gave no reason for the decision, and legal experts told Reuters it was unusual for a court to vacate such a conviction nearly a decade later. Separately, an ongoing 2025 Wayne County, Michigan lawsuit alleges Zarkin discussed with Jamiel Altaheri, the recently resigned Hamtramck police chief, a scheme to pay Trump as much as $5 million for a pardon of an unnamed New York associate accused of financial crimes; two plaintiffs, a former city manager and a former police officer, allege they lost their jobs partly for disclosing the plan. Zarkin denied everything by text message to Reuters, stating 'I have never been employed by Fannie Mae or Freddie Mac. I also have no criminal record. Anything you say to the contrary is defamatory.' Pulte called Reuters' questions 'filled with completely false and defamatory statements' without elaborating, and FHFA's media office issued an unsigned statement calling 'nearly all' of Reuters' statements 'false, misleading, or defamatory,' also without specifics; Fannie Mae and Freddie Mac did not respond to Reuters' requests for comment.",
     "elements_required": [
       "The FHFA director installed a personal ally with no documented housing-finance credentials as a consultant inside the two federally regulated mortgage giants",
       "That individual has a documented felony sex-offense conviction, later vacated under circumstances legal experts characterized as unusual, contradicting the individual's own denial of any criminal record",
@@ -35196,7 +35235,7 @@
     "evidence": [
       {
         "type": "news_report",
-        "description": "Reuters' exclusive investigation, based on six sources and Zarkin's own active Freddie Mac email, documents his appointment, his 1999 conviction and its 2009 vacatur (with the court's own records showing registration was originally part of the plea, contradicting the vacatur's stated rationale), the Wayne County pardon-bribery lawsuit's specific allegations, and on-the-record denials from Zarkin, Pulte, and FHFA's media office",
+        "description": "Reuters' exclusive investigation, based on six sources and internal documentation showing Zarkin still had a Freddie Mac email, documents his appointment as a consultant after Pulte took office in March 2025 (Reuters couldn't determine exactly when), his 1999 plea and its 2009 vacatur (an order that gave no reason, though court records show registration was an explicit part of the plea his lawyer later said Zarkin hadn't fully grasped), the Wayne County pardon-bribery lawsuit's specific allegations, and on-the-record denials from Zarkin, Pulte, and FHFA's media office",
         "source_url": "https://www.reuters.com/world/us/trump-official-accusing-presidents-rivals-crimes-tapped-former-registered-sex-2025-11-07/",
         "maps_to_element": "Full incident: appointment, criminal history, vacatur circumstances, pardon-bribery allegation, and all parties' denials"
       },
@@ -35208,25 +35247,31 @@
       },
       {
         "type": "news_report",
-        "description": "HuffPost's later reporting situates Zarkin's hiring within a broader pattern of unusual Pulte personnel choices, in a story otherwise focused on Pulte's subsequent mass firings of career intelligence staff after becoming Acting DNI",
+        "description": "Reuters' December 19, 2025 report on Pulte's FHFA tenure says three people familiar with Zarkin's presence said he often accompanied Pulte at Fannie Mae offices and in March escorted a film crew there; the FHFA spokesperson said Zarkin is currently not an employee or consultant to the agency, Fannie or Freddie, and didn't answer follow-up questions about any earlier role",
+        "source_url": "https://finance.yahoo.com/news/pulte-other-trump-loyalists-mortgage-131744506.html",
+        "maps_to_element": "Denials that leave Reuters' specific findings, and Zarkin's earlier role, unaddressed"
+      },
+      {
+        "type": "news_report",
+        "description": "HuffPost's 2026 reporting situates Zarkin's hiring within a broader pattern of unusual Pulte personnel choices, in a story otherwise focused on Pulte's mass firings of career intelligence staff as acting director of national intelligence; it notes, citing Reuters' December 19, 2025 report, that Zarkin was no longer an FHFA consultant, and reports FHFA's claim that a different Mark Zarkin worked for the agency, whom it did not identify",
         "source_url": "https://www.huffpost.com/entry/bill-pulte-firing-intel-officials-hired-mark-zarkin_n_6a4535d6e4b087bc4f0b3433",
         "maps_to_element": "Contextualizes the Zarkin hiring as part of a broader pattern in Pulte's personnel judgment"
       }
     ],
-    "status": "Unresolved. Zarkin denies both the Fannie Mae/Freddie Mac role and having a criminal record; Pulte and FHFA deny Reuters' reporting in blanket terms without disputing specific facts (the Freddie Mac email, court records). The Wayne County pardon-bribery lawsuit was ongoing as of Reuters' reporting, with no ruling or resolution identified as of this entry. No pardon of the unnamed New York associate has been reported as granted.",
-    "rebuttal_anticipated": "Pulte and FHFA's on-the-record position is that Reuters' reporting is 'false, misleading, or defamatory'; Zarkin denies ever being employed by Fannie Mae or Freddie Mac at all and denies any criminal record.",
-    "comeback": "Reuters' reporting is corroborated by six independent sources and by Zarkin's own still-active Freddie Mac email identifying him as a consultant -- a specific, checkable fact neither Pulte's nor FHFA's blanket denial actually disputed. Zarkin's claim to have 'no criminal record' is also in direct tension with Macomb County's own court records of his 1999 no-contest plea and subsequent registry requirement, which the 2009 vacatur order did not erase from the historical record even if it altered his current legal status -- and legal experts told Reuters that vacatur itself was 'unusual' given the plea's own terms.",
+    "status": "Unresolved. FHFA told Reuters in December 2025 Zarkin was not then a consultant to it, Fannie or Freddie, and later told HuffPost a different, unnamed Mark Zarkin had worked there. Zarkin denies any role. No ruling in the Wayne County suit, or pardon for the associate, has been reported.",
+    "rebuttal_anticipated": "Pulte and FHFA's on-the-record position is that Reuters' reporting is 'false, misleading, or defamatory'; Zarkin denies ever being employed by Fannie Mae or Freddie Mac at all and denies any criminal record. FHFA later told HuffPost that a different Mark Zarkin had worked for the agency and that 'This Mark Zarkin was never an employee or consultant of FHFA.'",
+    "comeback": "Reuters' reporting is corroborated by six independent sources and by internal documentation showing Zarkin still had a Freddie Mac email and was described internally as a consultant -- specific, checkable findings that neither Pulte's nor FHFA's blanket denial addressed with any specifics. Zarkin's claim to have 'no criminal record' is also in direct tension with Macomb County's own court records of his 1999 no-contest plea and subsequent registry requirement, which the 2009 vacatur order did not erase from the historical record even if it altered his current legal status -- and legal experts told Reuters it was unusual for a court to vacate such a conviction nearly a decade later. FHFA did not respond to HuffPost's multiple requests for details about the other Mark Zarkin it says worked there, and in December 2025 it told Reuters only that Zarkin was not currently a consultant, without answering follow-up questions about any earlier role.",
     "cause": "[TAP Analysis, not sourced] Consistent with a broader pattern this tracker documents of Pulte installing personal loyalists into sensitive federal financial-oversight roles with minimal vetting, a pattern connected to (though factually distinct from) this tracker's separately-documented the Pulte entry covering his use of the same agencies' mortgage data against political opponents, and documented at broader institutional scale (board purges, additional named loyalist Omeed Malik, and risky 50-year-mortgage/crypto-asset policy pushes) in the Pulte FHFA entry.",
-    "confidence_note": "HIGH confidence on Zarkin's appointment, his active Freddie Mac email, and the underlying 1999 conviction/2009 vacatur facts, independently corroborated by Reuters' six sourced contacts and court records Reuters reviewed directly; both Yahoo's republication and HuffPost's later reporting corroborate without adding independent sourcing of their own. MODERATE confidence on the pardon-bribery scheme allegation specifically, since it originates from a still-pending civil lawsuit's claims rather than a criminal charge or judicial finding -- presented as a serious, documented allegation, not an established fact. Zarkin's and Pulte's denials are on the record but do not dispute Reuters' most specific, verifiable claim (the Freddie Mac email).",
+    "confidence_note": "HIGH confidence on Zarkin's appointment, his active Freddie Mac email, and the underlying 1999 conviction/2009 vacatur facts, independently corroborated by Reuters' six sourced contacts and court records Reuters reviewed directly; both Yahoo's republication and HuffPost's later reporting corroborate without adding independent sourcing of their own. MODERATE confidence on the pardon-bribery scheme allegation specifically, since it originates from a still-pending civil lawsuit's claims rather than a criminal charge or judicial finding -- presented as a serious, documented allegation, not an established fact. Zarkin's and Pulte's denials are on the record but did not answer Reuters' detailed questions or address its most specific, verifiable finding (the Freddie Mac email).\n\nUpdate 2026-11-08: FHFA's December 2025 statement to Reuters covered only Zarkin's current status, and its later claim to HuffPost that a different Mark Zarkin worked there came with no name or details; Reuters' December report again placed Zarkin with Pulte at Fannie offices. When exactly Zarkin was recruited remains undetermined.",
     "pull_quote": "A pending Wayne County, Michigan lawsuit alleges Zarkin discussed a scheme to pay Trump as much as $5 million for a pardon of an unnamed New York associate accused of financial crimes; two plaintiffs allege they lost their jobs partly for disclosing the plan.",
-    "last_verified": "2026-09-12",
+    "last_verified": "2026-11-08",
     "date_added": "2026-09-12",
     "section_summaries": {
-      "incident_summary": "FHFA Director Pulte installed Trump fundraiser Mark Zarkin -- convicted (later unusually vacated) of a 1999 felony sex offense, and separately alleged in a pending lawsuit to have discussed a $5M pardon-bribery scheme -- as an unvetted consultant inside Fannie Mae and Freddie Mac.",
+      "incident_summary": "FHFA Director Pulte made Trump fundraiser Mark Zarkin, whose 1999 felony sex-offense plea was later vacated, a Fannie Mae and Freddie Mac consultant; a pending suit ties him to a $5M pardon plan.",
       "confidence_note": "HIGH confidence on the appointment and criminal-history facts (Reuters, six sources, court records); MODERATE confidence on the still-unproven pardon-bribery allegation from a pending civil suit."
     },
-    "date_of_action": "2025-03 (Zarkin appointed FHFA consultant)",
-    "last_substantive_update": "2026-09-12",
+    "date_of_action": "2025-03 (Pulte takes office at FHFA; Zarkin made a consultant afterward, exact date undetermined)",
+    "last_substantive_update": "2026-11-08",
     "glance": {
       "who": "Bill Pulte (FHFA Director)",
       "what": "Reportedly made a Trump fundraiser with a vacated 1999 sex-offense conviction a Fannie/Freddie consultant",
@@ -35235,7 +35280,7 @@
         "certainty": "alleged",
         "who": "Fannie Mae and Freddie Mac vetting"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-11-08"
     },
     "cause_references": [
       {
@@ -35292,8 +35337,28 @@
           "https://www.reuters.com/world/us/trump-official-accusing-presidents-rivals-crimes-tapped-former-registered-sex-2025-11-07/",
           "https://www.yahoo.com/news/articles/exclusive-trump-official-accusing-president-205855924.html"
         ]
+      },
+      {
+        "date": "2025-12-19",
+        "text": "FHFA tells Reuters that Zarkin is not currently a consultant to the agency, Fannie Mae or Freddie Mac",
+        "sources": [
+          "https://finance.yahoo.com/news/pulte-other-trump-loyalists-mortgage-131744506.html"
+        ]
       }
-    ]
+    ],
+    "timeline": {
+      "confidence_note": {
+        "base": "HIGH confidence on Zarkin's appointment, his active Freddie Mac email, and the underlying 1999 conviction/2009 vacatur facts, independently corroborated by Reuters' six sourced contacts and court records Reuters reviewed directly; both Yahoo's republication and HuffPost's later reporting corroborate without adding independent sourcing of their own. MODERATE confidence on the pardon-bribery scheme allegation specifically, since it originates from a still-pending civil lawsuit's claims rather than a criminal charge or judicial finding -- presented as a serious, documented allegation, not an established fact. Zarkin's and Pulte's denials are on the record but did not answer Reuters' detailed questions or address its most specific, verifiable finding (the Freddie Mac email).",
+        "updates": [
+          {
+            "date": "2026-11-08",
+            "label": "Update",
+            "text": "Update 2026-11-08: FHFA's December 2025 statement to Reuters covered only Zarkin's current status, and its later claim to HuffPost that a different Mark Zarkin worked there came with no name or details; Reuters' December report again placed Zarkin with Pulte at Fannie offices. When exactly Zarkin was recruited remains undetermined.",
+            "effective_date": "2026-11-08"
+          }
+        ]
+      }
+    }
   },
   {
     "id": "ratcliffe-cia-intelligence-politicization-2026-02",
@@ -43464,27 +43529,27 @@
     "id": "trump-extremity-care-skin-substitute-donation-2025",
     "official": "Donald Trump, President",
     "offense_category": "Apparent Quid Pro Quo -- a $5 million campaign donation followed within weeks by the President's personal intervention to delay a federal agency's regulatory action benefiting the donor, raising accountability concerns under anti-corruption norms even absent a criminal bribery charge, which requires proof of an explicit agreed exchange not established here",
-    "status": "Rule delay remained in effect as of this entry's last-verified date, with implementation pushed to at least January 1, 2026; Extremity Care's principal donor made a second, larger ($2.5 million, initially anonymous) donation to Trump's White House ballroom project in October 2025",
+    "status": "The coverage rule never took effect: CMS's contractors withdrew it on December 24, 2025, days before its January 1, 2026 start. CMS's 2026 fee schedule, final October 31, 2025, separately changed how Medicare pays for skin substitutes, expecting a nearly 90% spending cut.",
     "contested": true,
-    "incident_summary": "Extremity Care LLC, which sells 'skin substitute' wound-care products made from placental and other tissue, donated $5 million to the pro-Trump MAGA Inc. super PAC on February 24, 2025 -- a donation not publicly disclosed until July 31, 2025, buried on page 18 of the PAC's mid-year filing. The Biden administration had proposed a CMS rule limiting Medicare coverage of skin substitutes to products 'supported by evidence' of effectiveness, which CMS itself found would have excluded 92% of currently covered products (identifying only 17 with proven scientific validity) -- including Extremity Care's, which cost $7,812 to $11,051 per square inch, compared to $75 to $195 for proven alternatives. Days after the donation, Extremity Care co-owner Oliver Burckhardt attended a Mar-a-Lago donor dinner and spoke with Trump. The next morning, March 1, 2025, Trump posted on Truth Social attacking the rule and claiming, without evidentiary support, that it would cause '431,429 lost limbs annually and 187,286 additional deaths.' CMS, which had already pushed the rule's original effective date from February to April 13, 2025, announced on April 11, 2025 -- 40 days after Trump's post -- a further delay to at least January 1, 2026. **Between April and July 2025 alone, Medicare spent an additional $2.3 billion on skin substitutes while the rule remained blocked, on top of a broader spending surge in the category from a negligible amount in 2014 to more than $10 billion in 2024.** Extremity Care separately retained Trump fundraiser Brian Ballard as a lobbyist for $320,000 annually; Ballard's former employee, Susie Wiles, is Trump's White House Chief of Staff. In October 2025, Burckhardt attended a second Trump donor dinner, this one at the White House Rose Garden, and the New York Times later reported Extremity Care had been an anonymous $2.5 million donor to Trump's White House ballroom construction fund.",
+    "incident_summary": "Extremity Care LLC, which sells 'skin substitute' wound-care products made from placental and other tissue, donated $5 million to the pro-Trump MAGA Inc. super PAC on February 24, 2025 -- a donation not publicly disclosed until July 31, 2025, buried on page 18 of the PAC's mid-year filing. The Biden administration had proposed a CMS rule limiting Medicare coverage of skin substitutes to products 'supported by evidence' of effectiveness, which would have excluded 92% of currently covered products (CMS identified only 17 with proven scientific validity) -- including Extremity Care's, which cost $7,812 to $11,051 per square inch, compared to $75 to $195 for proven alternatives. A week after the donation, Extremity Care co-owner Oliver Burckhardt attended Trump's Mar-a-Lago donor dinner on March 1, 2025 and spoke briefly with Trump. The next morning, March 2, 2025, Trump posted on Truth Social attacking the rule and claiming, without evidentiary support, that it would cause '431,429 lost limbs annually and 187,286 additional deaths.' CMS, which had already pushed the rule's original effective date from February to April 13, 2025, announced on April 11, 2025 -- 40 days after Trump's post -- a further delay to at least January 1, 2026. **Between April and July 2025 alone, Medicare spent an additional $2.3 billion on skin substitutes while the rule remained blocked, on top of a broader spending surge in the category from a negligible amount in 2014 to more than $10 billion in 2024.** Extremity Care separately retained Trump fundraiser Brian Ballard as a lobbyist for $320,000 annually; Ballard's former employee, Susie Wiles, is Trump's White House Chief of Staff. In October 2025, Burckhardt attended a second Trump donor dinner, this one at the White House Rose Garden, and the New York Times later reported Extremity Care had been an anonymous $2.5 million donor to Trump's White House ballroom construction fund.",
     "elements_required": [
       "A specific, substantial donation ($5 million) from a company directly financially interested in a pending federal regulatory action, made shortly before that action was delayed in the donor's favor",
       "Direct, documented donor access to the President (the Mar-a-Lago dinner) preceding the President's own public intervention against the rule",
       "The President's own social-media statement opposing the rule, containing specific numerical claims (limb-loss and death figures) that lack cited evidentiary support",
       "A federal agency (CMS) action -- a further implementation delay -- following within 40 days of the President's public position, benefiting the donor commercially",
       "A quantified financial benefit to the donor and cost to the Medicare program ($2.3 billion in additional spending over roughly three months) resulting from the delay",
-      "A second, larger donation from the same donor to a Trump-connected fund (the White House ballroom) later in 2025, initially undisclosed, suggesting a continuing pattern rather than an isolated event"
+      "A second donation ($2.5 million) from the same donor to a Trump-connected fund (the White House ballroom) later in 2025, initially undisclosed, suggesting a continuing pattern rather than an isolated event"
     ],
     "evidence": [
       {
         "type": "news_report",
-        "description": "The New York Times' original August 7, 2025 investigation documenting the donation timeline, the Mar-a-Lago dinner, Trump's Truth Social post, and the CMS delay",
+        "description": "The New York Times' original August 7, 2025 investigation documenting the donation timeline, the March 1, 2025 Mar-a-Lago dinner, Trump's Truth Social post of the company's flier the next morning (March 2), and the CMS delay",
         "source_url": "https://www.nytimes.com/2025/08/07/us/politics/trump-medicare-bandages-donors.html",
         "maps_to_element": "Core timeline connecting the donation, donor access, presidential intervention, and regulatory delay"
       },
       {
         "type": "news_report",
-        "description": "Popular Information's reporting with additional detail: the $5 million donation's February 24, 2025 date and its concealment until a July 31, 2025 PAC filing, CMS's original rule timeline and the 92%-exclusion/17-product finding, the exact per-square-inch cost comparison, the $2.3 billion additional Medicare spending figure, and the Ballard/Wiles lobbying connection",
+        "description": "Popular Information's reporting with additional detail: the $5 million donation's February 24, 2025 date, Trump's Truth Social post six days later (March 2, 2025), the donation's concealment until a July 31, 2025 PAC filing, CMS's original rule timeline and its April 11, 2025 further delay to at least January 1, 2026, the 92%-exclusion/17-product finding, the exact per-square-inch cost comparison, the $2.3 billion additional Medicare spending figure, and the Ballard/Wiles lobbying connection",
         "source_url": "https://popular.info/p/days-after-5-million-donation-to",
         "maps_to_element": "Quantified financial benefit and cost; donor's lobbying access to the Chief of Staff's former employer"
       },
@@ -43499,24 +43564,36 @@
         "description": "Popular Information's follow-up reporting that Extremity Care was later revealed as an anonymous $2.5 million donor to Trump's White House ballroom project, following a second donor dinner at the White House Rose Garden in October 2025",
         "source_url": "https://popular.info/p/update-medicare-freeze-beneficiary",
         "maps_to_element": "Continuing pattern of donations from the same donor coinciding with continued access to the President"
+      },
+      {
+        "type": "public_record",
+        "description": "CMS's October 31, 2025 announcement of its 2026 Physician Fee Schedule final rule, which pays for skin substitutes as incident-to supplies, a change CMS expected to cut Medicare spending on the products by nearly 90%",
+        "source_url": "https://www.cms.gov/newsroom/press-releases/cms-modernizes-payment-accuracy-significantly-cuts-spending-waste",
+        "maps_to_element": "Later agency action on skin-substitute spending, bearing on the size of the donor's continuing financial benefit"
+      },
+      {
+        "type": "public_record",
+        "description": "CMS's December 24, 2025 notice that its Medicare contractors were withdrawing, effective immediately, the skin substitute coverage determinations scheduled to take effect January 1, 2026",
+        "source_url": "https://cms.gov/newsroom/fact-sheets/upcoming-update-final-local-coverage-determinations-lcds-certain-skin-substitutes",
+        "maps_to_element": "Federal agency action benefiting the donor commercially: the already-delayed coverage rule withdrawn before it took effect"
       }
     ],
     "rebuttal_anticipated": "Likely defense: CMS's own stated rationale for the delay -- allowing more time for industry and clinical input on a rule that would exclude the large majority of currently covered products -- is a legitimate regulatory concern independent of any donation, correlation between a donation and a subsequent agency action is not proof of causation or an explicit exchange, and the President is entitled to comment publicly on pending regulations regardless of who donates to allied political committees.",
-    "comeback": "The specific sequence -- an undisclosed $5 million donation, a private donor dinner with the President days later, the President's own social-media intervention citing unsupported casualty figures the next morning, and a further regulatory delay from the responsible agency within 40 days, quantifiably worth billions of dollars to the donor and its industry -- goes well beyond ordinary lobbying or public commentary on policy; the subsequent, larger, again-initially-undisclosed donation from the same company later in 2025 undercuts a one-time-coincidence explanation.",
+    "comeback": "The specific sequence -- an undisclosed $5 million donation, a private donor dinner with the President days later, the President's own social-media intervention citing unsupported casualty figures the next morning, and a further regulatory delay from the responsible agency within 40 days, quantifiably worth billions of dollars to the donor and its industry -- goes well beyond ordinary lobbying or public commentary on policy; the subsequent $2.5 million, again-initially-undisclosed donation from the same company later in 2025 undercuts a one-time-coincidence explanation.",
     "cause": "[TAP Analysis, not sourced] Consistent with a broader pattern this tracker documents of large, often initially undisclosed donations to Trump-aligned political and personal projects (campaign PACs, the White House ballroom fund) coinciding with favorable federal regulatory or enforcement outcomes for the donor.",
-    "confidence_note": "HIGH confidence on the core timeline (donation date and amount, the Mar-a-Lago dinner, Trump's Truth Social post, and CMS's delay announcement and new effective date), corroborated independently across the New York Times, Popular Information, and Public Citizen. The financial figures ($2.3 billion in additional Medicare spending, the per-square-inch cost comparison, the 92%-exclusion finding) are sourced to Popular Information's own analysis of CMS data, not independently re-derived here. No court finding, agency investigation, or admission establishes an explicit quid pro quo agreement; this entry documents a well-corroborated, closely-timed pattern rather than an adjudicated bribery finding, framed accordingly as an apparent-quid-pro-quo accountability concern rather than a proven criminal violation.",
+    "confidence_note": "HIGH confidence on the core timeline (donation date and amount, the Mar-a-Lago dinner, Trump's Truth Social post, and CMS's delay announcement and new effective date), corroborated independently across the New York Times, Popular Information, and Public Citizen. The $2.3 billion in additional Medicare spending is from an Early Read AI analysis done for the New York Times and repeated by Popular Information; the per-square-inch cost comparison and the 92%-exclusion finding are from Popular Information's reporting on CMS data. None is independently re-derived here. The dinner date (March 1, 2025) is from the New York Times; the post date (March 2) follows from its 'next morning' account and from Popular Information's 'six days later' after the February 24 donation. The coverage rule's December 2025 withdrawal and the 2026 payment change are sourced to CMS's own announcements. No court finding, agency investigation, or admission establishes an explicit quid pro quo agreement; this entry documents a well-corroborated, closely-timed pattern rather than an adjudicated bribery finding, framed accordingly as an apparent-quid-pro-quo accountability concern rather than a proven criminal violation.",
     "pull_quote": "The next morning, Trump posted on Truth Social attacking the rule and claiming, without evidentiary support, that it would cause ‘431,429 lost limbs annually and 187,286 additional deaths.’",
-    "last_verified": "2026-09-12",
+    "last_verified": "2026-11-08",
     "date_added": "2026-09-12",
     "section_summaries": {
-      "incident_summary": "Days after a company selling ultra-expensive Medicare-billed wound products donated $5M to a pro-Trump PAC, Trump personally attacked a CMS rule that would have excluded most such products, and CMS delayed the rule 40 days later, costing Medicare $2.3B in three months.",
-      "confidence_note": "The timeline and financial figures are well-corroborated across multiple independent investigations; no adjudicated finding establishes an explicit quid pro quo agreement, so this is framed as an apparent-pattern accountability concern, not a proven violation."
+      "incident_summary": "Days after a wound-product firm gave $5M to a pro-Trump PAC, Trump attacked a Medicare rule that would have cut its products; CMS delayed it, and Medicare spent $2.3B more.",
+      "confidence_note": "Timeline and figures are corroborated by several independent investigations and CMS's own notices; no finding shows an explicit quid pro quo, so it is framed as an apparent pattern."
     },
     "narrative_override": {
       "headline": "Trump attacked a Medicare rule days after a wound-product firm's $5M donation; CMS delayed it."
     },
     "date_of_action": "2025-02-24 (Extremity Care donates $5M to MAGA Inc) through 2025-10 (second donor dinner, ballroom fund donation revealed)",
-    "last_substantive_update": "2026-09-12",
+    "last_substantive_update": "2026-11-08",
     "glance": {
       "who": "Donald Trump (President)",
       "what": "Attacked a Medicare wound-product rule days after the maker's $5M donation; CMS then delayed the rule",
@@ -43525,7 +43602,7 @@
         "certainty": "alleged",
         "who": "Medicare (~$2.3B in three months)"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-11-08"
     },
     "status_stage": "Unchallenged",
     "key_events": [
@@ -43538,13 +43615,19 @@
         ]
       },
       {
-        "date": "2025-03",
-        "text": "After its co-owner dines with Trump at Mar-a-Lago, Trump attacks the Medicare skin-substitute rule on Truth Social",
+        "date": "2025-03-01",
+        "text": "Extremity Care co-owner Oliver Burckhardt attends Trump's donor dinner at Mar-a-Lago",
+        "sources": [
+          "https://www.nytimes.com/2025/08/07/us/politics/trump-medicare-bandages-donors.html"
+        ]
+      },
+      {
+        "date": "2025-03-02",
+        "text": "Trump posts the firm's flier on Truth Social, attacking the Medicare skin-substitute rule",
         "turning_point": true,
         "sources": [
           "https://www.nytimes.com/2025/08/07/us/politics/trump-medicare-bandages-donors.html",
-          "https://popular.info/p/days-after-5-million-donation-to",
-          "https://www.citizen.org/news/icymi-nyt-echoes-public-citizen-findings-that-trump-delayed-a-medicare-price-change-following-health-companys-5-million-donation/"
+          "https://popular.info/p/days-after-5-million-donation-to"
         ]
       },
       {
@@ -43568,6 +43651,20 @@
         "text": "The co-owner attends a Rose Garden donor dinner; the firm is later revealed as a $2.5 million ballroom donor",
         "sources": [
           "https://popular.info/p/update-medicare-freeze-beneficiary"
+        ]
+      },
+      {
+        "date": "2025-10-31",
+        "text": "CMS's 2026 fee schedule changes how Medicare pays for skin substitutes, expecting a nearly 90% spending cut",
+        "sources": [
+          "https://www.cms.gov/newsroom/press-releases/cms-modernizes-payment-accuracy-significantly-cuts-spending-waste"
+        ]
+      },
+      {
+        "date": "2025-12-24",
+        "text": "Medicare contractors withdraw the coverage rule days before its January 1, 2026 start",
+        "sources": [
+          "https://cms.gov/newsroom/fact-sheets/upcoming-update-final-local-coverage-determinations-lcds-certain-skin-substitutes"
         ]
       }
     ]
@@ -44433,7 +44530,7 @@
     "official": "Donald Trump, President-elect/President",
     "offense_category": "Nominating a Cabinet-Level Law-Enforcement Official (Attorney General) Who Faced Credible, Independently-Corroborated Allegations of Statutory Rape and Sex Trafficking of a Minor",
     "contested": true,
-    "incident_summary": "On November 13, 2024, President-elect Trump nominated former Rep. Matt Gaetz to be Attorney General, the nation's top law-enforcement post overseeing federal sex-trafficking and civil-rights enforcement. Gaetz had faced a federal sex-trafficking investigation beginning in 2021 -- DOJ ultimately declined to bring charges -- but the House Committee on Ethics had separately been conducting its own investigation, effectively derailed when Gaetz resigned from the House the day after his nomination. **The Ethics Committee nonetheless later released its findings, concluding there was 'substantial evidence' Gaetz violated Florida's statutory rape laws, among other findings.** Newly unsealed court records reported by the New York Times on November 13, 2025 (one year after the nomination) detailed the vulnerable circumstances of the minor victim at the center of the case: she was a homeless high school junior living in a shelter with a parent, working at McDonald's, who joined a 'sugar dating' website in an effort to save money for braces, falsely listing her age as 18. She testified she was 17 when she met Greenberg -- a Gaetz associate later convicted in a broader sex-trafficking scheme -- through the site in April 2017, and that she first had sex with Gaetz, who paid her, in July 2017 at a party hosted by lobbyist Chris Dorworth. Gaetz has consistently denied the allegations, telling the Times the account was 'fiction' and that he 'never had sex with this person,' who he said had instead threatened to sue him for $2.3 million. Gaetz withdrew his AG nomination on November 22, 2024, nine days after it was announced, citing a desire to avoid becoming 'a needlessly protracted Washington scuffle' and 'a distraction' to the transition; CNN and other outlets reported the more direct proximate cause was that Trump personally told Gaetz he lacked the Senate votes for confirmation, amid senators' concerns over the same allegations.",
+    "incident_summary": "On November 13, 2024, President-elect Trump nominated former Rep. Matt Gaetz to be Attorney General, the nation's top law-enforcement post overseeing federal sex-trafficking and civil-rights enforcement. Gaetz had faced a federal sex-trafficking investigation beginning in 2021 -- DOJ ultimately declined to bring charges -- but the House Committee on Ethics had separately been conducting its own investigation, effectively derailed when Gaetz resigned from the House the day he was named. **The Ethics Committee nonetheless later released its findings, concluding there was 'substantial evidence' Gaetz violated Florida's statutory rape laws, among other findings.** Newly unsealed court records reported by the New York Times on November 13, 2025 (one year after the nomination) detailed the vulnerable circumstances of the minor victim at the center of the case: she was a homeless high school junior living in a shelter with a parent, working at McDonald's, who joined a 'sugar dating' website in an effort to save money for braces, falsely listing her age as 18. She testified she was 17 when she met Greenberg -- a Gaetz associate later convicted in a broader sex-trafficking scheme -- through the site in April 2017, and that she first had sex with Gaetz, who paid her, in July 2017 at a party hosted by lobbyist Chris Dorworth. Gaetz has consistently denied the allegations, telling the Times the account was 'fiction' and that he 'never had sex with this person,' who he said had instead threatened to sue him for $2.3 million. Gaetz withdrew his AG nomination on November 21, 2024, eight days after it was announced, citing a desire to avoid becoming 'a needlessly protracted Washington scuffle' and 'a distraction' to the transition; CNN and other outlets reported the more direct proximate cause was that Trump personally told Gaetz he lacked the Senate votes for confirmation, amid senators' concerns over the same allegations.",
     "elements_required": [
       "Trump nominated a person for the nation's top federal law-enforcement post despite that person facing a federal sex-trafficking investigation involving a minor",
       "A bipartisan congressional ethics body, applying its own investigative process, found 'substantial evidence' of a specific state statutory-rape law violation, independent of DOJ's separate charging decision",
@@ -44449,7 +44546,7 @@
       },
       {
         "type": "news_report",
-        "description": "CNN reported that Trump personally told Gaetz he did not have the votes in the Senate to be confirmed, the more direct proximate cause of the November 22, 2024 withdrawal than Gaetz's own public 'distraction' framing",
+        "description": "CNN reported that on the morning of November 21, 2024, Trump called Gaetz and told him he did not have the votes in the Senate to win confirmation, according to a source with direct knowledge of the call; Gaetz announced his withdrawal early that afternoon, writing that his nomination 'was unfairly becoming a distraction'",
         "source_url": "https://www.cnn.com/2024/11/21/politics/matt-gaetz-withdrawing-attorney-general/index.html",
         "maps_to_element": "The nomination collapsed due to Senate Republicans' unwillingness to confirm, not a White House merits-based withdrawal"
       },
@@ -44466,32 +44563,32 @@
         "maps_to_element": "Gaetz's on-the-record denial and counter-characterization"
       }
     ],
-    "status": "Gaetz was never confirmed and never served as Attorney General; DOJ's 2021-2023 sex-trafficking investigation ended without charges, and no subsequent criminal charge has been reported. The House Ethics Committee's 'substantial evidence' finding on statutory rape stands as an official congressional finding, contested by Gaetz's continued denial. Trump has not publicly commented on the November 2025 unsealed-records reporting as of this entry.",
+    "status": "Gaetz was never confirmed and never served as Attorney General. DOJ's sex-trafficking investigation ended without charges, and no later charge has been reported. The House Ethics Committee's December 2024 'substantial evidence' finding stands; Gaetz continues to deny the allegations.",
     "rebuttal_anticipated": "Gaetz's own defense, on the record, is a categorical denial -- he says he never had sex with his accuser and that she instead attempted to extort him for $2.3 million -- and DOJ's own multi-year investigation, informed by the same underlying facts, did not result in criminal charges.",
-    "comeback": "DOJ's decision not to charge and a House Ethics Committee's independent 'substantial evidence' finding of a specific state-law violation are not in tension -- criminal charging decisions turn on proof beyond a reasonable doubt and a range of prosecutorial-discretion factors, while the Ethics Committee applied its own, different evidentiary standard and concluded the evidence supported the violation regardless. Trump's own team's stated reason for the nomination's collapse -- insufficient Senate votes -- was itself a direct consequence of sitting Republican senators finding the same underlying allegations disqualifying, undercutting any characterization of the episode as adequately vetted or resolved in Gaetz's favor before the nomination was made.",
+    "comeback": "DOJ's decision not to charge and a House Ethics Committee's independent 'substantial evidence' finding of a specific state-law violation are not in tension -- criminal charging decisions turn on proof beyond a reasonable doubt and a range of prosecutorial-discretion factors, while the Ethics Committee applied its own, different evidentiary standard and concluded the evidence supported the violation regardless. The reported reason for the nomination's collapse -- Trump telling Gaetz he lacked the Senate votes -- was itself a direct consequence of sitting Republican senators finding the same underlying allegations disqualifying, undercutting any characterization of the episode as adequately vetted or resolved in Gaetz's favor before the nomination was made.",
     "cause": "[TAP Analysis, not sourced] An early and prominent instance of a broader pattern this tracker documents of Trump prioritizing personal loyalty over standard vetting in cabinet-level and other senior appointments, in this case for the position with direct oversight of federal sex-trafficking and civil-rights enforcement.",
-    "confidence_note": "HIGH confidence on the nomination date, withdrawal date, and Trump's stated vote-count rationale for the withdrawal, corroborated across CNN, CBS News, NPR, PBS NewsHour, and OPB. HIGH confidence on the House Ethics Committee's own published 'substantial evidence' finding, sourced directly to the committee's report as published by CBS News. HIGH confidence on the minor's documented circumstances and Gaetz's on-the-record denial, both independently corroborated by the New Republic, WLOS, Newsweek, and the New York Times' November 2025 reporting -- though the underlying factual dispute over whether the sexual conduct itself occurred remains genuinely contested between the accuser's account and Gaetz's categorical denial, appropriately marked contested: true.",
+    "confidence_note": "HIGH confidence on the nomination date, withdrawal date, and CNN's sourced report that Trump told Gaetz he lacked the Senate votes, corroborated across CNN, CBS News, NPR, PBS NewsHour, and OPB. HIGH confidence on the House Ethics Committee's own published 'substantial evidence' finding, sourced directly to the committee's report as published by CBS News. HIGH confidence on the minor's documented circumstances and Gaetz's on-the-record denial, both independently corroborated by the New Republic, WLOS, Newsweek, and the New York Times' November 2025 reporting -- though the underlying factual dispute over whether the sexual conduct itself occurred remains genuinely contested between the accuser's account and Gaetz's categorical denial, appropriately marked contested: true.",
     "pull_quote": "Gaetz has consistently denied the allegations, telling the Times the account was ‘fiction’ and that he ‘never had sex with this person,’ who he said had instead threatened to sue him for $2.3 million.",
-    "last_verified": "2026-09-12",
+    "last_verified": "2026-11-08",
     "date_added": "2026-09-12",
     "section_summaries": {
-      "incident_summary": "Trump nominated Gaetz for Attorney General despite a federal sex-trafficking investigation and, later, a House Ethics finding of 'substantial evidence' of statutory rape; the nomination collapsed when Senate Republicans wouldn't provide confirmation votes, and 2025 reporting further detailed the minor accuser's vulnerable circumstances.",
+      "incident_summary": "Trump named Gaetz for Attorney General despite a sex-trafficking probe; House Ethics later found 'substantial evidence' of statutory rape, and Gaetz withdrew when the Senate votes weren't there.",
       "confidence_note": "HIGH confidence on the nomination timeline, withdrawal cause, and Ethics Committee finding; the core sexual-conduct allegation itself remains genuinely contested against Gaetz's categorical denial."
     },
     "narrative_override": {
       "headline": "Trump nominated Gaetz for AG despite a sex-trafficking probe; the nomination collapsed."
     },
-    "date_of_action": "2024-11-13 (Trump nominates Gaetz for AG) through 2024-11-22 (Gaetz withdraws nomination)",
-    "last_substantive_update": "2026-09-12",
+    "date_of_action": "2024-11-13 (Trump nominates Gaetz for AG) through 2024-11-21 (Gaetz withdraws nomination)",
+    "last_substantive_update": "2026-11-08",
     "glance": {
       "who": "Donald Trump (President-elect)",
-      "what": "Nominated Gaetz for Attorney General despite sex-trafficking allegations; withdrawn nine days later, no vote",
+      "what": "Nominated Gaetz for Attorney General despite sex-trafficking allegations; withdrawn eight days later, no vote",
       "harm": {
         "kind": "institutional",
         "certainty": "averted",
         "who": "Integrity of the Attorney General post"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-11-08"
     },
     "status_stage": "Reversed or withdrawn",
     "key_events": [
@@ -44499,7 +44596,8 @@
         "date": "2021",
         "text": "Gaetz comes under a federal sex-trafficking investigation; the Justice Department later declines to charge him",
         "sources": [
-          "https://cbsnews.com/news/read-matt-gaetz-ethics-report-house-investigation"
+          "https://cbsnews.com/news/read-matt-gaetz-ethics-report-house-investigation",
+          "https://www.newsweek.com/matt-gaetz-scandal-17-year-old-lawsuit-response-11044518"
         ]
       },
       {
@@ -44511,15 +44609,16 @@
         ]
       },
       {
-        "date": "2024-11-14",
-        "text": "Gaetz quits the House a day after his nomination, derailing its Ethics Committee investigation",
+        "date": "2024-11-13",
+        "text": "Gaetz quits the House the same day, ending the Ethics Committee's jurisdiction over him",
         "sources": [
+          "https://www.cnn.com/2024/11/21/politics/matt-gaetz-withdrawing-attorney-general/index.html",
           "https://cbsnews.com/news/read-matt-gaetz-ethics-report-house-investigation"
         ]
       },
       {
         "date": "2024-11-21",
-        "text": "Gaetz withdraws after Trump tells him he lacks the Senate votes to be confirmed",
+        "text": "Gaetz withdraws after Trump reportedly tells him he lacks the Senate votes to be confirmed",
         "turning_point": true,
         "sources": [
           "https://www.cnn.com/2024/11/21/politics/matt-gaetz-withdrawing-attorney-general/index.html"
@@ -44530,7 +44629,8 @@
         "text": "The House Ethics Committee releases a report finding \"substantial evidence\" Gaetz broke statutory rape law",
         "turning_point": true,
         "sources": [
-          "https://cbsnews.com/news/read-matt-gaetz-ethics-report-house-investigation"
+          "https://cbsnews.com/news/read-matt-gaetz-ethics-report-house-investigation",
+          "https://www.newsweek.com/matt-gaetz-scandal-17-year-old-lawsuit-response-11044518"
         ]
       },
       {

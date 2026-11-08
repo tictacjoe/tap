@@ -9065,10 +9065,10 @@
     "administration": "Trump II (2025-present)",
     "agency": "Food and Drug Administration",
     "domain": "consumer_safety",
-    "status": "Finalized (policy change announced)",
+    "status": "Weakened (not fully repealed): FDA announced a single-trial default in February 2026; a June 24, 2026 revised draft guidance treats one trial plus confirmatory evidence as a routine path to approval, but it is not yet final and law firms differ on whether it sets a default.",
     "date_of_action": "2026-02-18 (announcement, per AP reporting)",
     "original_rule_summary": "FDA has long applied a default expectation that new drug approvals be supported by two independent, adequate, and well-controlled clinical studies -- a standard intended to guard against a single trial's results being a statistical fluke, methodological artifact, or site-specific anomaly, and to provide independent replication of a drug's safety and efficacy findings before it reaches the market.",
-    "what_changed": "This policy had an internal antecedent conflict that predates its formal announcement. Dr. Richard Pazdur -- a 26-year FDA veteran Makary had personally recruited to lead the Center for Drug Evaluation and Research (CDER) on November 11, 2025, reportedly with promises of autonomy -- publicly and internally raised legal and safety objections within days of taking the role, telling colleagues the plan to reduce the standard evidentiary bar to a single clinical trial in many cases 'is not sufficiently transparent and could be illegal,' and separately raised similar concerns about Makary's National Priority Voucher program, which aimed to compress drug review timelines from 10-12 months to 1-2 months. The dispute came to a head when Pazdur was handed a prepared press release containing a quotation attributed to himself endorsing the reduced trial requirements and was told, in his own words, to 'just agree to it' -- which he characterized as breaching 'this wall between the commissioner's office and the review staff.' Pazdur filed his retirement on December 2, 2025, barely three weeks into the CDER director role, and left by the end of that month; HHS defended the underlying changes as necessary reform and characterized Pazdur himself as indecisive. FDA announced it will end its longstanding two-independent-study requirement for new drug approvals, moving to a default standard of a single trial, with the stated goal of accelerating drug approvals. The change was led by FDA Commissioner Marty Makary and vaccine/biologics official Dr. Vinay Prasad -- the same official whose office separately refused to even review Moderna's mRNA flu vaccine application over trial-design objections (see fda-moderna-mrna-flu-vaccine-refusal-2026.json), creating an apparent tension between accelerating approval standards for new drugs generally while applying an unusually strict, refusal-to-file standard in that specific vaccine case. Days later, Commissioner Makary announced a related acceleration measure: a pilot 'Reviewer Recognition and Excellence' program offering quarterly cash bonuses (starting around August 2026) to drug reviewers who complete evaluations ahead of schedule, tied to 'weighted time savings' and work-quality/complexity metrics. Makary told FDA staff the payments were meant to 'recognize and reward staff who find ways to be more efficient,' and that securing approval for the bonuses took 'some wrangling.'",
+    "what_changed": "This policy had an internal antecedent conflict that predates its formal announcement. Dr. Richard Pazdur -- a 26-year FDA veteran Makary had personally recruited to lead the Center for Drug Evaluation and Research (CDER) on November 11, 2025, reportedly with promises of autonomy -- publicly and internally raised legal and safety objections within days of taking the role, telling colleagues the plan to reduce the standard evidentiary bar to a single clinical trial in many cases 'is not sufficiently transparent and could be illegal,' and separately raised similar concerns about Makary's National Priority Voucher program, which aimed to compress drug review timelines from 10-12 months to 1-2 months. The dispute came to a head when Pazdur was handed a prepared press release containing a quotation attributed to himself endorsing the reduced trial requirements and was told, in his own words, to 'just agree to it' -- which he characterized as breaching 'this wall between the commissioner's office and the review staff.' Pazdur filed his retirement on December 2, 2025, barely three weeks into the CDER director role, and left by the end of that month; HHS defended the underlying changes as necessary reform and characterized Pazdur himself as indecisive. FDA announced it will end its longstanding two-independent-study requirement for new drug approvals, moving to a default standard of a single trial, with the stated goal of accelerating drug approvals. The change was announced by FDA Commissioner Marty Makary and vaccine/biologics official Dr. Vinay Prasad in a New England Journal of Medicine piece. Earlier that month, the FDA vaccine division Prasad heads had refused to accept Moderna's application for a new mRNA flu shot, saying its clinical trial was insufficient -- a contrast AP drew between the looser default for new drugs and the stricter evidence demands Prasad had applied to vaccines and gene therapies. On the day of the announcement, FDA reversed course and agreed to review the flu shot after Moderna agreed to conduct an additional study in older people. Days later, Commissioner Makary announced a related acceleration measure: a pilot 'Reviewer Recognition and Excellence' program offering quarterly cash bonuses (starting around August 2026) to drug reviewers who complete evaluations ahead of schedule, tied to 'weighted time savings' and work-quality/complexity metrics. Makary told FDA staff the payments were meant to 'recognize and reward staff who find ways to be more efficient,' and that securing approval for the bonuses took 'some wrangling.'\n\nUpdate 2026-11-08: On June 24, 2026, FDA published a revised draft guidance, 'Demonstrating Substantial Evidence of Effectiveness for Human Drug and Biological Products.' Latham & Watkins reads it as framing one adequate and well-controlled trial plus confirmatory evidence as the default requirement, no longer treating two trials as the default route; Hogan Lovells reads it as promoting the single-trial path as routine but not explicitly endorsing a single-trial default. Both firms refer to Makary and Prasad as the then-Commissioner and then-CBER Director, and Hogan Lovells notes the departure of the announcement's authors left open whether the default would be implemented. The guidance is still a draft; comments were due September 22, 2026, and the drug industry group PhRMA asked FDA to state explicitly that two pivotal trials is not the default requirement.",
     "primary_proponent": {
       "name": "Dr. Marty Makary / Dr. Vinay Prasad",
       "role": "FDA Commissioner / FDA vaccine and biologics official",
@@ -9079,12 +9079,12 @@
     ],
     "estimated_health_impact": {
       "summary": "Replication across independent studies has historically served as a safeguard against approving drugs based on results that don't hold up under a second trial -- **a single-trial default standard increases the risk that approved drugs' safety/efficacy profiles rest on findings that would not have replicated**, a tradeoff FDA is making explicitly in favor of faster approval timelines.",
-      "caveat": "FDA retains discretion to require additional studies for specific drugs under the new default policy; this entry documents the announced change in the default standard, not a claim that every future approval under it will prove unsafe or ineffective."
+      "caveat": "FDA retains discretion to require additional studies for specific drugs under the announced single-trial default; this entry documents the announced change in the default standard, not a claim that every future approval under it will prove unsafe or ineffective."
     },
-    "confidence_note": "HIGH confidence -- the policy announcement, its FDA leadership attribution (Makary and Prasad), and its stated acceleration rationale are confirmed by AP's direct reporting, with no dispute of the underlying facts identified in sourcing reviewed. Added 2026-09-12: Pazdur's appointment, his legal/safety objections, his own on-record 'just agree to it' and 'wall...breached' quotes, and his December 2, 2025 retirement filing are HIGH confidence, corroborated across the Washington Post's original reporting and BioSpace's detailed follow-up coverage, including HHS's on-record defense of the changes.",
+    "confidence_note": "HIGH confidence -- the policy announcement, its FDA leadership attribution (Makary and Prasad), and its stated acceleration rationale are confirmed by AP's direct reporting, with no dispute of the underlying facts identified in sourcing reviewed. Added 2026-09-12: Pazdur's appointment, his legal/safety objections, his own on-record 'just agree to it' and 'wall...breached' quotes, and his December 2, 2025 retirement filing are HIGH confidence, corroborated across the Washington Post's original reporting and BioSpace's detailed follow-up coverage, including HHS's on-record defense of the changes. Update 2026-11-08: the June 2026 revised draft guidance and the departure of Makary and Prasad from their posts are documented in Latham & Watkins and Hogan Lovells client alerts; the two firms differ on whether the draft sets a single-trial default, and the entry reports both readings.",
     "pull_quote": "Dr. Richard Pazdur, the FDA veteran Commissioner Makary had personally recruited to lead drug review, called the single-trial plan “not sufficiently transparent and could be illegal” -- and resigned within three weeks rather than go along.",
-    "short_summary": "FDA ended its default two-independent-study requirement for new drug approvals, moving to a single-trial standard to accelerate approvals.",
-    "last_verified": "2026-09-12",
+    "short_summary": "FDA announced it would end its default two-independent-study requirement for new drug approvals, moving to a single-trial standard to accelerate approvals.",
+    "last_verified": "2026-11-08",
     "date_added": "2026-08-05",
     "last_updated": "2026-08-05",
     "sources": [
@@ -9107,26 +9107,38 @@
       {
         "name": "BioSpace -- Pazdur To Retire Weeks After Taking On Coveted FDA Role",
         "url": "https://www.biospace.com/fda/pazdur-to-retire-weeks-after-taking-on-coveted-fda-role"
+      },
+      {
+        "name": "Latham & Watkins -- FDA Revises Draft Guidance on Demonstrating Substantial Evidence of Effectiveness",
+        "url": "https://www.lw.com/en/insights/fda-revises-draft-guidance-on-demonstrating-substantial-evidence-of-effectiveness"
+      },
+      {
+        "name": "Hogan Lovells -- FDA emphasizes totality-of-the-evidence approach in revised 'substantial evidence' draft guidance",
+        "url": "https://hlc.com/en/publications/fda-emphasizes-totalityoftheevidence-approach-in-revised-substantial-evidence-draft-guidance"
+      },
+      {
+        "name": "RAPS Regulatory Focus -- Single pivotal trials: Stakeholders seek definitions, clarification about evidentiary standard",
+        "url": "https://www.raps.org/resource/single-pivotal-trials-stakeholders-seek-definitions-clarification-about-evidentiary-standard.html"
       }
     ],
     "section_summaries": {
-      "what_changed": "FDA ended its default two-independent-study requirement for new drug approvals, moving to a single-trial standard under Makary and Prasad to accelerate approvals, over the newly-appointed CDER director Pazdur's internal legal/safety objections -- he retired after three weeks rather than cosign a prepared quote endorsing the change. Makary also introduced a bonus-pay pilot program rewarding reviewers who complete evaluations ahead of schedule.",
+      "what_changed": "FDA announced a single-trial default for new drugs in Feb. 2026, after drug chief Pazdur called the plan possibly illegal and retired; a June 2026 draft guidance treats one trial as routine.",
       "estimated_impact": "Increases the risk that approved drugs rest on unreplicated findings, a tradeoff made explicitly in favor of faster approval timelines.",
       "confidence_note": "Confirmed directly by AP's reporting with clear FDA leadership attribution; no facts disputed."
     },
     "narrative_override": {
-      "headline": "FDA dropped its two-study requirement for new drug approvals, moving to a single-trial standard."
+      "headline": "FDA announced it would drop its two-study requirement for new drug approvals in favor of a single-trial standard."
     },
-    "last_substantive_update": "2026-09-12",
+    "last_substantive_update": "2026-11-08",
     "glance": {
       "who": "Marty Makary, Vinay Prasad (FDA)",
-      "what": "Ended FDA's default two-study requirement for new drug approvals; one trial can now suffice",
+      "what": "Announced an end to FDA's default two-study requirement for new drugs; one trial plus support can suffice",
       "harm": {
         "kind": "physical",
         "certainty": "projected",
         "who": "Patients taking newly approved drugs"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-11-08"
     },
     "status_stage": "Unchallenged",
     "key_events": [
@@ -9162,9 +9174,29 @@
         "sources": [
           "https://www.usnews.com/news/us/articles/2026-02-26/fda-to-offer-bonus-payments-to-staffers-who-complete-speedy-drug-reviews"
         ]
+      },
+      {
+        "date": "2026-06-24",
+        "text": "FDA publishes a revised draft guidance treating one trial plus confirmatory evidence as a routine path to approval",
+        "turning_point": true,
+        "sources": [
+          "https://www.lw.com/en/insights/fda-revises-draft-guidance-on-demonstrating-substantial-evidence-of-effectiveness",
+          "https://hlc.com/en/publications/fda-emphasizes-totalityoftheevidence-approach-in-revised-substantial-evidence-draft-guidance"
+        ]
       }
     ],
     "timeline": {
+      "what_changed": {
+        "base": "This policy had an internal antecedent conflict that predates its formal announcement. Dr. Richard Pazdur -- a 26-year FDA veteran Makary had personally recruited to lead the Center for Drug Evaluation and Research (CDER) on November 11, 2025, reportedly with promises of autonomy -- publicly and internally raised legal and safety objections within days of taking the role, telling colleagues the plan to reduce the standard evidentiary bar to a single clinical trial in many cases 'is not sufficiently transparent and could be illegal,' and separately raised similar concerns about Makary's National Priority Voucher program, which aimed to compress drug review timelines from 10-12 months to 1-2 months. The dispute came to a head when Pazdur was handed a prepared press release containing a quotation attributed to himself endorsing the reduced trial requirements and was told, in his own words, to 'just agree to it' -- which he characterized as breaching 'this wall between the commissioner's office and the review staff.' Pazdur filed his retirement on December 2, 2025, barely three weeks into the CDER director role, and left by the end of that month; HHS defended the underlying changes as necessary reform and characterized Pazdur himself as indecisive. FDA announced it will end its longstanding two-independent-study requirement for new drug approvals, moving to a default standard of a single trial, with the stated goal of accelerating drug approvals. The change was announced by FDA Commissioner Marty Makary and vaccine/biologics official Dr. Vinay Prasad in a New England Journal of Medicine piece. Earlier that month, the FDA vaccine division Prasad heads had refused to accept Moderna's application for a new mRNA flu shot, saying its clinical trial was insufficient -- a contrast AP drew between the looser default for new drugs and the stricter evidence demands Prasad had applied to vaccines and gene therapies. On the day of the announcement, FDA reversed course and agreed to review the flu shot after Moderna agreed to conduct an additional study in older people. Days later, Commissioner Makary announced a related acceleration measure: a pilot 'Reviewer Recognition and Excellence' program offering quarterly cash bonuses (starting around August 2026) to drug reviewers who complete evaluations ahead of schedule, tied to 'weighted time savings' and work-quality/complexity metrics. Makary told FDA staff the payments were meant to 'recognize and reward staff who find ways to be more efficient,' and that securing approval for the bonuses took 'some wrangling.'",
+        "updates": [
+          {
+            "date": "2026-11-08",
+            "label": "Update",
+            "text": "Update 2026-11-08: On June 24, 2026, FDA published a revised draft guidance, 'Demonstrating Substantial Evidence of Effectiveness for Human Drug and Biological Products.' Latham & Watkins reads it as framing one adequate and well-controlled trial plus confirmatory evidence as the default requirement, no longer treating two trials as the default route; Hogan Lovells reads it as promoting the single-trial path as routine but not explicitly endorsing a single-trial default. Both firms refer to Makary and Prasad as the then-Commissioner and then-CBER Director, and Hogan Lovells notes the departure of the announcement's authors left open whether the default would be implemented. The guidance is still a draft; comments were due September 22, 2026, and the drug industry group PhRMA asked FDA to state explicitly that two pivotal trials is not the default requirement.",
+            "effective_date": "2026-11-08"
+          }
+        ]
+      },
       "confidence_note": {
         "base": "HIGH confidence -- the policy announcement, its FDA leadership attribution (Makary and Prasad), and its stated acceleration rationale are confirmed by AP's direct reporting, with no dispute of the underlying facts identified in sourcing reviewed.",
         "updates": [
@@ -9173,6 +9205,12 @@
             "label": "Added",
             "text": "Added 2026-09-12: Pazdur's appointment, his legal/safety objections, his own on-record 'just agree to it' and 'wall...breached' quotes, and his December 2, 2025 retirement filing are HIGH confidence, corroborated across the Washington Post's original reporting and BioSpace's detailed follow-up coverage, including HHS's on-record defense of the changes.",
             "effective_date": "2026-09-12"
+          },
+          {
+            "date": "2026-11-08",
+            "label": "Update",
+            "text": "Update 2026-11-08: the June 2026 revised draft guidance and the departure of Makary and Prasad from their posts are documented in Latham & Watkins and Hogan Lovells client alerts; the two firms differ on whether the draft sets a single-trial default, and the entry reports both readings.",
+            "effective_date": "2026-11-08"
           }
         ]
       }
