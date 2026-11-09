@@ -2101,9 +2101,9 @@
    },
    "4": {
     "state": "supports",
-    "why": "The excerpt reproduces the claim's quoted Washington Post attribution verbatim, and the article separately reports Judge Pedraz's August 10 filing saying the wait 'cannot extend beyond December of this year' and that he will close the case again absent a U.S. answer.",
+    "why": "Source states the Washington Post revelation about Bondi, Blanche and Landau pressuring Swiss prosecutors nearly verbatim, and separately reports Pedraz's August 10 filing allowing time that \"cannot extend beyond December of this year\" with a warning he will close the case again; both halves of the claim match.",
     "host": "english.elpais.com",
-    "date": "2026-10-16",
+    "date": "2026-11-09",
     "kind": "fact",
     "archive": false
    },
@@ -2125,9 +2125,9 @@
    },
    "7": {
     "state": "supports",
-    "why": "The source states the agreement safeguards Betancourt's CEO position and that the U.S. takes a 35% stake via a Barbados-registered parent whose owners it says little about; elsewhere it supports the supermajority-of-five clause, Alvarado's signature and Miami Herald co-conspirator report, the Washington Post report on Landau, Bondi and Blanche, and NABEP's denial.",
+    "why": "Source confirms the 18-page agreement signed by Rubio and Hegseth, the 35% stake via a Barbados-registered parent with little owner information, safeguarding of Betancourt as CEO with a supermajority of five to oust him, Alvarado's signature and Miami Herald co-conspirator report, the NABEP denial, and the linked Aug. 27, 2026 Post report that Landau, Bondi and then-Deputy AG Blanche sought closure of investigations.",
     "host": "propublica.org",
-    "date": "2026-10-25",
+    "date": "2026-11-09",
     "kind": "fact",
     "archive": false
    }
@@ -3317,21 +3317,37 @@
    },
    "2": {
     "state": "supports",
-    "why": "ABA Journal reports Gordon, Hartman and Tirrell sued in D.D.C., seek reinstatement and back pay, and that the suit says the MSPB has been stymied by Trump's decision to fire a board member.",
+    "why": "The ABA Journal report (July 25, 2025) states the suit was filed Thursday by Gordon, Hartman and Tirrell in D.D.C. seeking reinstatement and back pay, and the excerpt carries the MSPB point exactly as claimed.",
     "host": "abajournal.com",
-    "date": "2026-09-27",
+    "date": "2026-11-09",
     "kind": "fact",
     "archive": false
    },
    "3": {
     "state": "supports",
-    "why": "USA Herald reports the government's November motion to dismiss arguing the MSPB is the proper forum and the plaintiffs' December filing arguing the MSPB is not independent because Trump fired MSPB members, removed an MSPB administrative judge and directed how the board construes federal law.",
-    "host": "usaherald.com",
-    "date": "2026-09-27",
+    "why": "The MSPB FAQ, updated November 14, 2025, states Woodruff was sworn in as a Board member on October 28, 2025 and that the quorum is currently intact, matching the claim.",
+    "host": "mspb.gov",
+    "date": "2026-11-09",
     "kind": "fact",
     "archive": false
    },
    "4": {
+    "state": "supports",
+    "why": "The November 17, 2025 Daily Beast piece, citing Tirrell's account to the NYT, describes pushback over McGregor cigars and a FIFA soccer ball, Tirrell telling the AG's office to pay, return or discard the items, and a DOJ spokesperson confirming the ball was accepted and the cigars destroyed after ethics consultation.",
+    "host": "thedailybeast.com",
+    "date": "2026-09-27",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "supports",
+    "why": "The December 24, 2025 USA Herald article describes the November motion to dismiss and the plaintiffs' opposition arguing the MSPB is neither appropriate nor independent enough, citing the firing of members, removal of an AJ and direction of the board, as claimed.",
+    "host": "usaherald.com",
+    "date": "2026-11-09",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
     "state": "supports",
     "why": "The Above the Law text describes Tirrell, former DOJ ethics director, writing against DOJ's change to the long-standing policy treating political appointees as Hatch Act 'further restricted' employees, and notes he was dismissed by Bondi in July 2025; the exact March 9 publication date is not stated in the text.",
     "host": "abovethelaw.com",
@@ -3339,7 +3355,7 @@
     "kind": "fact",
     "archive": false
    },
-   "5": {
+   "7": {
     "state": "supports",
     "why": "The September 15, 2026 filing responds to the August 18, 2026 minute order, recounts the November 2025 motion to dismiss, calls Comans and Comey erroneous, and states each plaintiff's MSPB appeal remains pending.",
     "host": "storage.courtlistener.com",
@@ -3347,11 +3363,27 @@
     "kind": "fact",
     "archive": false
    },
-   "6": {
+   "8": {
     "state": "supports",
-    "why": "The November 17, 2025 Daily Beast piece, citing Tirrell's account to the NYT, describes pushback over McGregor cigars and a FIFA soccer ball, Tirrell telling the AG's office to pay, return or discard the items, and a DOJ spokesperson confirming the ball was accepted and the cigars destroyed after ethics consultation.",
-    "host": "thedailybeast.com",
-    "date": "2026-09-27",
+    "why": "The Sept. 29, 2026 plaintiffs' response to the Aug. 18, 2026 minute order in No. 1:25-cv-02409 argues exactly that the Comans and Comey courts correctly held the MSPB lacks jurisdiction over terminations via a naked assertion of Article II authority rather than for cause under the CSRA.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-11-09",
+    "kind": "fact",
+    "archive": false
+   },
+   "9": {
+    "state": "supports",
+    "why": "The October 26, 2026 notice submits an October 26, 2026 S.D.N.Y. decision in Comey v. U.S. Dep't of Justice (25-cv-7625) that 'addresses similar issues relating to the motions currently pending,' matching the claim.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-11-09",
+    "kind": "fact",
+    "archive": false
+   },
+   "10": {
+    "state": "supports",
+    "why": "The November 3, 2026 notice submits a November 2, 2026 District of Maryland decision in Marrazzo v. Kennedy (25-04144) that addresses similar issues relating to pending motions, matching the claim.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-11-09",
     "kind": "fact",
     "archive": false
    }
@@ -3958,6 +3990,22 @@
     "why": "The supplemental brief says early renewal 'is unique' because it combines public input and a possible hearing, contains the quoted Media Bureau sentence, and lists administrative subpoenas (enforced by DOJ suit) and monetary penalties as alternative tools.",
     "host": "storage.courtlistener.com",
     "date": "2026-10-11",
+    "kind": "fact",
+    "archive": false
+   },
+   "15": {
+    "state": "supports",
+    "why": "ABC's October 12, 2026 response contains both quoted passages verbatim (modulo line breaks), including the 'maximal coercive pressure ... while deliberately evading judicial review' language.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-11-09",
+    "kind": "fact",
+    "archive": false
+   },
+   "16": {
+    "state": "supports",
+    "why": "The November 3, 2026 Reuters report contains both quoted statements as claimed.",
+    "host": "wmbdradio.com",
+    "date": "2026-11-09",
     "kind": "fact",
     "archive": false
    }
@@ -8976,6 +9024,22 @@
     "why": "ABC News confirms Wise's pardon, his prior charges for encouraging rioters, his DOJ role under the Weaponization Working Group as counselor to Martin, and that the New York Times first reported the appointment.",
     "host": "abcnews.com",
     "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "10": {
+    "state": "supports",
+    "why": "The September 3, 2025 Durbin release reports Durbin, Whitehouse and Schiff wrote Bondi urging removal of Wise, hired as a senior adviser to Ed Martin and the Weaponization Working Group, objecting to his 'shameless hiring'; the excerpt carries the second quote.",
+    "host": "durbin.senate.gov",
+    "date": "2026-11-09",
+    "kind": "fact",
+    "archive": false
+   },
+   "11": {
+    "state": "partly",
+    "why": "The WTOP-hosted CBS report confirms Wise, a counselor to Ed Martin, announced on X he left DOJ with the quoted 'outside of government' line on the day Bondi was ousted, but the provided text gives no publication date, so the April 2026 timing is not shown.",
+    "host": "wtop.com",
+    "date": "2026-11-09",
     "kind": "fact",
     "archive": false
    }
@@ -19948,6 +20012,14 @@
     "date": "2026-10-25",
     "kind": "fact",
     "archive": false
+   },
+   "13": {
+    "state": "supports",
+    "why": "The Clearinghouse summary states the defendants appealed the judgment to the Ninth Circuit, filed a motion to expedite on October 21 that the Ninth Circuit granted the next day, and that the case is ongoing as of November 2026; the docket list also shows Ninth Circuit No. 26-6906.",
+    "host": "clearinghouse.net",
+    "date": "2026-11-09",
+    "kind": "fact",
+    "archive": false
    }
   },
   "rubio-vacancies-act-concentration-2025-2026": {
@@ -22670,6 +22742,14 @@
     "archive": false
    },
    "6": {
+    "state": "supports",
+    "why": "The summary reports the Fourth Circuit held proceedings in abeyance pending Anderson v. Crouch, and that on June 5, 2026 defendants asked to resume after Anderson, the court agreed, and briefing resumed June 7, matching the claim.",
+    "host": "clearinghouse.net",
+    "date": "2026-11-09",
+    "kind": "fact",
+    "archive": false
+   },
+   "7": {
     "state": "partly",
     "why": "The excerpt and metadata confirm the publication details (91 FR 52406, 08/13/2026, effective 2026-10-13) and the no-conflict-with-injunctions statement resting on independent authority and section 5(a). However, the 'consistent with the directive in E.O. 14187' wording appears only as what 'a few commenters' believed, not as CMS's own statement, and the provided text shows nothing on the under-18/under-19 age cutoffs or the six-month continued funding.",
     "host": "federalregister.gov",
@@ -22677,7 +22757,7 @@
     "kind": "fact",
     "archive": false
    },
-   "7": {
+   "8": {
     "state": "supports",
     "why": "The complaint, No. 1:26-cv-14051 in the District of Massachusetts filed 09/02/26, lists Illinois first among 21 states plus D.C. (Pennsylvania via Governor Shapiro), alleges CMS acted 'without precedent or Congressional authorization,' and asks the court to 'vacate and set aside the Rule.'",
     "host": "coag.gov",
@@ -22685,7 +22765,7 @@
     "kind": "fact",
     "archive": false
    },
-   "8": {
+   "9": {
     "state": "supports",
     "why": "The Clearinghouse summary states defendants moved on May 18, 2026 to amend the judgment to clarify its scope, the court denied the motion on September 17, 2026, and the case remained within its appeal window as of September 30, 2026.",
     "host": "clearinghouse.net",
@@ -25068,6 +25148,14 @@
     "archive": false
    },
    "2": {
+    "state": "supports",
+    "why": "The March 7, 2025 Euromaidan Press piece reports per The Guardian's sources that the UK will supply its own analysis but not US information obtained through intelligence-sharing arrangements, and cites the Daily Mail report in the excerpt.",
+    "host": "euromaidanpress.com",
+    "date": "2026-11-09",
+    "kind": "fact",
+    "archive": false
+   },
+   "3": {
     "state": "partly",
     "why": "The NPR article fully confirms the March 11, 2025 resumption of aid and intelligence sharing following the Jeddah talks and Ukraine's acceptance of the 30-day ceasefire proposal, but it is NPR's own reporting only -- there is no Kyiv Independent content in this source to corroborate that outlet's reporting as separately claimed.",
     "host": "npr.org",
@@ -25075,7 +25163,7 @@
     "kind": "fact",
     "archive": false
    },
-   "3": {
+   "4": {
     "state": "supports",
     "why": "The LIGA.net article (citing Politico) confirms Ratcliffe's October 2025 Brussels trip, his meetings with EU officials and briefing of NATO's North Atlantic Council, and explicitly ties the visit to distrust stemming from the March intelligence-sharing termination and concerns about politicizing intelligence.",
     "host": "news.liga.net",
@@ -25083,7 +25171,7 @@
     "kind": "fact",
     "archive": false
    },
-   "4": {
+   "5": {
     "state": "supports",
     "why": "The October 18, 2026 Reuters report via Daily Maverick quotes Zelensky's 'de-blocked' account on Meet the Press and notes Trump had said earlier that week Washington was still sharing intelligence.",
     "host": "dailymaverick.co.za",
@@ -25091,7 +25179,7 @@
     "kind": "fact",
     "archive": false
    },
-   "5": {
+   "6": {
     "state": "supports",
     "why": "The October 19, 2026 Reuters report via Internazionale says Rubio denied any pause, quoting 'There's been no pause,' contradicting Zelenskiy's Meet the Press account from Sunday.",
     "host": "internazionale.it",
@@ -25099,7 +25187,7 @@
     "kind": "fact",
     "archive": false
    },
-   "6": {
+   "7": {
     "state": "supports",
     "why": "The Kyiv Independent reports the three Ukrainian officials' account that Hegseth had not approved an allied-funded 'significant' Patriot batch, their political-pressure suspicion, the U.S. official's 'not true' denial, and the NATO official on continuing PURL air defense deliveries.",
     "host": "kyivindependent.com",
@@ -25107,7 +25195,7 @@
     "kind": "fact",
     "archive": false
    },
-   "7": {
+   "8": {
     "state": "supports",
     "why": "LIGA.net's summary of the Post cites a U.S. official and three sources, says Hegseth had not completed approval procedures, that some deliveries need his personal approval, and that he had not formally refused.",
     "host": "news.liga.net",
@@ -25115,11 +25203,19 @@
     "kind": "fact",
     "archive": false
    },
-   "8": {
+   "9": {
     "state": "supports",
     "why": "Anadolu reports Hegseth's Tuesday remarks in Eau Claire, Wisconsin, in response to the Patriot-delay reports, with the quote as stated.",
     "host": "anews.com.tr",
     "date": "2026-10-25",
+    "kind": "fact",
+    "archive": false
+   },
+   "10": {
+    "state": "supports",
+    "why": "The October 30, 2026 Militarnyi report states the 500 PAC-3 FMS sale funded by Canada, Germany and Norway via JUMPSTART and an EU credit program with no U.S. funds, and the excerpt carries the Hegseth-signature wait.",
+    "host": "militarnyi.com",
+    "date": "2026-11-09",
     "kind": "fact",
     "archive": false
    }
