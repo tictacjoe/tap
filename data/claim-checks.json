@@ -2464,6 +2464,30 @@
     "date": "2026-09-15",
     "kind": "interpretation",
     "archive": false
+   },
+   "3": {
+    "state": "supports",
+    "why": "Law Dork's Sep 09, 2025 report states the indictment (dated August 19) was unsealed Monday in the Middle District of Alabama, that Charles pleaded not guilty before Magistrate Judge Jerusha Adams, and that Chief Judge William Pryor reassigned the case to Chief Judge Cecilia Altonaga.",
+    "host": "lawdork.com",
+    "date": "2026-11-09",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "supports",
+    "why": "The June 10, 2026 JRL Charts article says a defense filing reported dismissal under a sealed order, court records show termination on February 11, and the Middle District of Alabama U.S. Attorney's Office declined comment citing the seal.",
+    "host": "jrlcharts.com",
+    "date": "2026-11-09",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "supports",
+    "why": "The June 23, 2026 order signed by Chief Judge Altonaga grants the motion and modifies the dismissal order (ECF No. 30) so it may be disclosed for employment, bar licensure, and the Eleventh Circuit sanctions appeal No. 25-10973.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-11-09",
+    "kind": "fact",
+    "archive": false
    }
   },
   "bondi-doj-jan6-prosecutor-firings-govoni-2025": {
@@ -13471,9 +13495,9 @@
    },
    "12": {
     "state": "supports",
-    "why": "HuffPost relays the WSJ's 'shadow secretary' characterization, the agreed $2.7 billion Palantir deal left unsigned while Lewandowski demanded a meeting with Karp and later cut to $1 billion, and Lewandowski's 'anonymous-source, politically driven reporting' response.",
+    "why": "HuffPost relays the WSJ's Tuesday report of Lewandowski as 'effectively the shadow secretary' and the unsigned $2.7 billion Palantir deal cut to $1 billion; Lewandowski's September 8, 2026 post calls it 'anonymous-source, politically driven reporting.'",
     "host": "huffpost.com",
-    "date": "2026-09-27",
+    "date": "2026-11-09",
     "kind": "fact",
     "archive": false
    },
@@ -13490,6 +13514,30 @@
     "why": "The MS NOW analysis dated Oct. 15, 2026 contains the quoted sentences verbatim.",
     "host": "ms.now",
     "date": "2026-10-16",
+    "kind": "fact",
+    "archive": false
+   },
+   "15": {
+    "state": "supports",
+    "why": "The CNN story (Oct 22, 2026) reports the DOJ probe including Lewandowski's role per multiple people, the IG criminal referral per one person, and Trigg's denial; it separately states it is not clear which U.S. attorney's office leads the probe.",
+    "host": "krdo.com",
+    "date": "2026-11-09",
+    "kind": "fact",
+    "archive": false
+   },
+   "16": {
+    "state": "supports",
+    "why": "ABC News, citing two sources, reports the investigation is in early stages and followed Cuffari's referral, and quotes Trump saying 'All I know is I want my people to be honest.'",
+    "host": "goodmorningamerica.com",
+    "date": "2026-11-09",
+    "kind": "fact",
+    "archive": false
+   },
+   "17": {
+    "state": "supports",
+    "why": "Reuters reports, per three U.S. officials and a fourth person, the criminal investigation over profiting from his role, the IG criminal referral, that DOJ had not yet issued subpoenas per one person, and a DHS official's statement that he signed contracts despite questionable authority.",
+    "host": "wmbdradio.com",
+    "date": "2026-11-09",
     "kind": "fact",
     "archive": false
    }
@@ -14120,14 +14168,22 @@
   },
   "miccosukee-tribe-everglades-veto-alligator-alcatraz-2025": {
    "0": {
-    "state": "partly",
-    "why": "The veto message quotes match exactly: it accuses the Tribe of having 'actively sought to obstruct reasonable immigration policies that the American people decisively voted for when I was elected,' raises 'special interests' taxpayer-funding concerns, and describes the Osceola Camp as constructed 'without authorization' in an area the Tribe 'has never been authorized to occupy.' However, the source page itself is dated December 30, 2025 and the message is signed December 29, 2025 -- there is no December 31, 2025 publication date supported by this text.",
-    "host": "whitehouse.gov",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "The bill-status record lists 'Presented to President' on 2025-12-18, 'Vetoed by President' on 2025-12-29, the failed 236-188 override vote (2/3 required) on 2026-01-08, and the motion to refer the bill and veto message to Natural Resources.",
+    "host": "govinfo.gov",
+    "date": "2026-11-09",
     "kind": "fact",
     "archive": false
    },
    "1": {
+    "state": "supports",
+    "why": "The White House posting dated December 30, 2025, signed December 29, 2025, contains the quoted immigration-obstruction language, the 'special interests' taxpayer-funding concern, and states the Osceola Camp was built 'without authorization.'",
+    "host": "whitehouse.gov",
+    "date": "2026-11-09",
+    "kind": "fact",
+    "archive": false
+   },
+   "2": {
     "state": "partly",
     "why": "Grist confirms the veto message ties directly to the tribe's July lawsuit challenging the 'Alligator Alcatraz' immigration detention facility. However, this Grist article does not describe the tribe saying the facility threatens ceremonial sites, villages, and wildlife near its reservation lands -- that specific characterization is not found in this text, and Florida Phoenix's reporting (also cited in the claim) is not part of this source.",
     "host": "grist.org",
@@ -14135,7 +14191,7 @@
     "kind": "fact",
     "archive": false
    },
-   "2": {
+   "3": {
     "state": "partly",
     "why": "Gimenez's press release confirms H.R. 504 passed the House unanimously with strong bipartisan support and, as excerpted here, was about incorporating Osceola Camp and improving water management and infrastructure. However, this press release does not explicitly describe a directive for the Interior Department to work with the tribe on water and wastewater infrastructure -- that specific framing appears in the White House veto message (a separate source), not in this bill-passage press release.",
     "host": "gimenez.house.gov",
@@ -14143,7 +14199,7 @@
     "kind": "fact",
     "archive": false
    },
-   "3": {
+   "4": {
     "state": "supports",
     "why": "Florida Phoenix quotes Chairman Talbert Cypress nearly verbatim as claimed, including the framing that the measure reflected years of bipartisan work and was not about special treatment but about public safety, environmental stewardship, and honoring long-recognized tribal interests.",
     "host": "floridaphoenix.com",
@@ -14151,7 +14207,7 @@
     "kind": "fact",
     "archive": false
    },
-   "4": {
+   "5": {
     "state": "supports",
     "why": "The WLRN/Florida Phoenix piece, dated January 7, 2026, is headlined with DeSantis calling Trump's description 'accurate,' and in the body DeSantis affirms the substance directly ('that is true') regarding the tribe obstructing immigration efforts -- a state official publicly endorsing the veto message's framing.",
     "host": "wlrn.org",
@@ -14159,11 +14215,11 @@
     "kind": "fact",
     "archive": false
    },
-   "5": {
+   "6": {
     "state": "unopened",
     "why": "",
     "host": "floridapolitics.com",
-    "date": "2026-09-15",
+    "date": "2026-11-09",
     "kind": "fact",
     "archive": false
    }
