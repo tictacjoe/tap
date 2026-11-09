@@ -1556,6 +1556,14 @@
     "archive": false
    },
    "3": {
+    "state": "supports",
+    "why": "The source quotes Trump's Friday answer as he left for Scotland, notes DOJ/Blanche met Maxwell Thursday and Friday, and quotes Markus's 'There's no promises yet' remark verbatim; the exact July 25 date is not printed but 'Friday' is consistent.",
+    "host": "fox5ny.com",
+    "date": "2026-11-09",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
     "state": "partly",
     "why": "The July 28, 2025 letter to Blanche follows up on 'Ranking Member Durbin's initial inquiry of July 18, 2025', states the meeting 'occurred on July 24, 2025, and continued the following day', and calls its 'purpose and timing' perplexing; however, the provided text is truncated before the signature block, so Sen. Whitehouse's co-authorship is not shown anywhere in the source text.",
     "host": "judiciary.senate.gov",
@@ -1563,7 +1571,7 @@
     "kind": "fact",
     "archive": false
    },
-   "4": {
+   "5": {
     "state": "partly",
     "why": "CNN confirms the transfer to FPC Bryan came a week after the Blanche interviews and describes the move as relatively uncommon for a sex offender, but the article does not state FPC Bryan is 'one of only three' minimum-security camps nationwide, and its only prison-consultant quote (Sam Mangel) says the move was good for her rather than 'highly unusual' -- that specific attribution to 'multiple former federal prison officials' is not supported by this text.",
     "host": "cnn.com",
@@ -1571,15 +1579,39 @@
     "kind": "fact",
     "archive": false
    },
-   "5": {
-    "state": "partly",
-    "why": "The text confirms Dkt. 809, filed 08/11/25, 31 pages, by Judge Engelmayer, denying DOJ's unsealing motion, but it is truncated in the background section and does not contain the 'demonstrably false' language, the no-advance-notice passage, or the description of the six victim/witness letters.",
-    "host": "nysd.uscourts.gov",
-    "date": "2026-09-27",
+   "6": {
+    "state": "supports",
+    "why": "The source reports two anonymous victims' Monday letters condemning DOJ's unsealing request, quotes both passages in the claim, and states the July 18 request and August 5 response deadline.",
+    "host": "cnn.com",
+    "date": "2026-11-09",
     "kind": "fact",
     "archive": false
    },
-   "6": {
+   "7": {
+    "state": "supports",
+    "why": "The source reports the Edwards/Cassell Tuesday letter calling the Blanche meeting and transfer 'jarring', quotes the re-traumatization line, the non-consultation point, and McCawley's objection on Farmer's behalf.",
+    "host": "cnn.com",
+    "date": "2026-11-09",
+    "kind": "fact",
+    "archive": false
+   },
+   "8": {
+    "state": "supports",
+    "why": "The bill-status record shows H.Res.635 submitted and referred to House Judiciary on 2025-08-05 by Rep. Krishnamoorthi [D-IL-8], with that title; it lists 14 cosponsors, all marked D, and no action beyond the referral.",
+    "host": "govinfo.gov",
+    "date": "2026-11-09",
+    "kind": "fact",
+    "archive": false
+   },
+   "9": {
+    "state": "supports",
+    "why": "Every element of the claim is supported by the order: Dkt. 809 (Page 1 of 31) dated August 11, 2025 denies the DAG's July 18, 2025 motion (with a similar motion filed in Epstein's case per n.7), calls the premise 'demonstrably false,' notes the lack of advance notice to victims, records six victim/witness letters docketed August 5-6 that 'generally support release ... provided that ... any records be rigorously redacted,' and lists the letters' concerns over the prison transfer, possible clemency, and the DAG meeting that 'legitimiz[ed] her.' The excerpt shows the 'demonstrably false' finding; the other quoted phrases appear verbatim elsewhere in the text.",
+    "host": "nysd.uscourts.gov",
+    "date": "2026-11-09",
+    "kind": "fact",
+    "archive": false
+   },
+   "10": {
     "state": "partly",
     "why": "AP confirms Democracy Forward's lawsuit against DOJ and the FBI seeking Epstein-related communications, including any Trump correspondence, filed after DOJ's decision not to release further records, but the article says the suit was filed 'on Friday' without a calendar date, and August 19, 2025 was a Tuesday, so the claim's specific date is not confirmed by this source.",
     "host": "apnews.com",
@@ -1587,7 +1619,15 @@
     "kind": "fact",
     "archive": false
    },
-   "7": {
+   "11": {
+    "state": "supports",
+    "why": "The AP report says Berman rejected the request Wednesday after the Maxwell judge also did, and quotes both the 'pales in comparison' and 'diversion' passages.",
+    "host": "abc7ny.com",
+    "date": "2026-11-09",
+    "kind": "fact",
+    "archive": false
+   },
+   "12": {
     "state": "supports",
     "why": "The NBC article (dated Saturday Aug. 23, 2025) reports the Friday release, Maxwell's denial of seeing inappropriate conduct by any man including Trump, and both Giuffre-family quotes verbatim.",
     "host": "nbcnews.com",
@@ -1595,7 +1635,7 @@
     "kind": "fact",
     "archive": false
    },
-   "8": {
+   "13": {
     "state": "partly",
     "why": "ABC News confirms Maxwell's exact quotes about there being no list and no awareness of blackmail, but the retrieved portion of this article contains no reference to a '100 different people' figure or an attorney quote about answering questions 'about everybody, not holding anything back.'",
     "host": "abcnews.com",
@@ -1603,7 +1643,7 @@
     "kind": "fact",
     "archive": false
    },
-   "9": {
+   "14": {
     "state": "partly",
     "why": "Al Jazeera confirms the Supreme Court declined Maxwell's appeal on October 6, 2025 (a Monday), leaving her 20-year sentence intact, but the article never specifies 'five felony convictions' or any count of her convictions.",
     "host": "aljazeera.com",
@@ -1611,7 +1651,7 @@
     "kind": "fact",
     "archive": false
    },
-   "10": {
+   "15": {
     "state": "supports",
     "why": "The Nov. 8, 2025 NBC article contains both email quotes, the House Judiciary Committee sourcing, Raskin's Oct. 30 letter to Warden Hall about 'VIP treatment' citing WSJ-reported perks and retaliation threats, the transferred inmate, and Garcia's similar inquiry.",
     "host": "nbcnews.com",
@@ -1619,7 +1659,7 @@
     "kind": "fact",
     "archive": false
    },
-   "11": {
+   "16": {
     "state": "supports",
     "why": "The House Judiciary Democrats' November 10, 2025 press release directly confirms all elements: the specific whistleblower allegations (customized meals, guests permitted to bring computers, after-hours exercise, a service-dog-in-training), the in-progress Commutation Application, and Raskin's demand for written answers from Trump plus public testimony from Blanche.",
     "host": "democrats-judiciary.house.gov",
@@ -1627,7 +1667,15 @@
     "kind": "fact",
     "archive": false
    },
-   "12": {
+   "17": {
+    "state": "supports",
+    "why": "NBC reports Engelmayer's Tuesday ruling granting release, attributes his change to the Epstein Files Transparency Act, and quotes the 'basis in fact', 'lip service', 'solicitude' and 'without giving notice' language.",
+    "host": "nbcnews.com",
+    "date": "2026-11-09",
+    "kind": "fact",
+    "archive": false
+   },
+   "18": {
     "state": "supports",
     "why": "The Feb. 9, 2026 NBC article reports Maxwell's brief virtual appearance invoking the Fifth, Markus's quote, and Comer's statement that he does not 'think she should be granted any type of immunity or clemency.'",
     "host": "nbcnews.com",
@@ -1635,7 +1683,7 @@
     "kind": "fact",
     "archive": false
    },
-   "13": {
+   "19": {
     "state": "supports",
     "why": "The Congress.gov record shows S.Res.608 by Sen. Rosen (D-NV), submitted 2026-02-12, Judiciary Committee discharged and resolution agreed to by unanimous consent on 2026-07-29, with the quoted title on Maxwell clemency.",
     "host": "govinfo.gov",
@@ -1643,7 +1691,7 @@
     "kind": "fact",
     "archive": false
    },
-   "14": {
+   "20": {
     "state": "unopened",
     "why": "",
     "host": "bloomberg.com",
@@ -1651,7 +1699,7 @@
     "kind": "fact",
     "archive": false
    },
-   "15": {
+   "21": {
     "state": "supports",
     "why": "The report text contains each quoted phrase: the three-occasions passage, \"Let's not talk about individuals,\" the August 11 Oversight interview, the witness-tampering/obstruction language with footnoted 18 U.S.C. 1512 and 1505, the \"may have engaged in criminal obstruction of justice\" conclusion, and the 28 CFR 600.1 special-counsel call with the \"little reason to believe\" line.",
     "host": "democrats-judiciary.house.gov",
@@ -1659,7 +1707,7 @@
     "kind": "fact",
     "archive": false
    },
-   "16": {
+   "22": {
     "state": "partly",
     "why": "The report states the 'Prominent Names' deck 'includes a reference to Jane’s account' and that Blanche 'did not ask any questions at all about Jane’s allegations,' and the text also supports the 1994 Mar-a-Lago age-14 allegation, the 'yeah' exchange, 'Let’s not talk about individuals,' the 'conspiracy of silence' line and Day 2 at 292/293/300; however, the extracted text is truncated before 'he said, she said' and does not show the report identifying Jane as a trial witness under that pseudonym.",
     "host": "democrats-judiciary.house.gov",
@@ -1667,7 +1715,7 @@
     "kind": "fact",
     "archive": false
    },
-   "17": {
+   "23": {
     "state": "supports",
     "why": "NBC reports the report said a special counsel is necessary because Blanche, once Trump's personal attorney, was compromised, notes Democrats acknowledged DOJ would be unlikely to appoint one, and gives the DOJ spokesperson's 'last-ditch effort' quote and no-comment-on-investigations statement.",
     "host": "nbcnews.com",
@@ -2209,13 +2257,29 @@
    },
    "3": {
     "state": "supports",
+    "why": "The letter text contains the quoted whistleblower sentence verbatim and requests the listed records no later than May 14, 2026, signed by Raskin and Scanlon to Davidson.",
+    "host": "democrats-judiciary.house.gov",
+    "date": "2026-11-09",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "supports",
+    "why": "MS NOW's May 1, 2026 article reports the exclusive whistleblower description, the Raskin/Scanlon letter naming Singh sent Thursday to Davidson, that it did not make clear who raised questions, and that DOJ did not respond.",
+    "host": "ms.now",
+    "date": "2026-11-09",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "supports",
     "why": "CBS News confirms this in detail: years of tax-focused investigation of the informant program (2019-2020, reopened 2025), IRS attorneys' determination that the program was legally structured under a Treasury exemption, no tax charges filed, and the subsequent April indictment on wire fraud, false-statement, and money-laundering charges.",
     "host": "cbsnews.com",
     "date": "2026-09-15",
     "kind": "fact",
     "archive": true
    },
-   "4": {
+   "6": {
     "state": "partly",
     "why": "The source confirms the $4.1M informant-payment allegations, KKK robes/hoods/cross-burning materials, no new charges or defendants, the 11-count total, and the dropped \"or misleading\" language tied to Thompson v. United States, but it does not give the specific 6/4/1 count breakdown by charge type that the claim asserts.",
     "host": "cbsnews.com",
@@ -2223,7 +2287,7 @@
     "kind": "fact",
     "archive": false
    },
-   "5": {
+   "7": {
     "state": "supports",
     "why": "Bloomberg Law reports the Friday order denying dismissal of the 11-count indictment for vindictive prosecution, rejection of the discovery motion, and the quoted 'failed to offer some evidence tending to show animus' language.",
     "host": "news.bloomberglaw.com",
@@ -2231,7 +2295,7 @@
     "kind": "fact",
     "archive": false
    },
-   "6": {
+   "8": {
     "state": "supports",
     "why": "Doc. 168 (filed 09/03/26, done September 2) recounts the August 31 rulings in Doc. 160 and, after SPLC counsel called February 1 unworkable, resets jury selection and trial to April 19, 2027 at 10:00 a.m. in Montgomery.",
     "host": "storage.courtlistener.com",
@@ -2239,7 +2303,7 @@
     "kind": "fact",
     "archive": false
    },
-   "7": {
+   "9": {
     "state": "supports",
     "why": "The Aug. 12, 2026 MS NOW article states the three counts, that she is the first named person, the 14 total charges against the center, and the $140,000 flow from SPLC to the informant's account to the couple's joint account.",
     "host": "ms.now",
@@ -2247,7 +2311,7 @@
     "kind": "fact",
     "archive": false
    },
-   "8": {
+   "10": {
     "state": "partly",
     "why": "The Clearinghouse page confirms the summary authors and dates and the August 7, 2026 denial with the quoted language, but the provided docket listing is truncated at the early April entries and does not show the May 18, 2026 arraignment order setting trial for 10/5/2026.",
     "host": "clearinghouse.net",
@@ -2255,11 +2319,19 @@
     "kind": "fact",
     "archive": false
    },
-   "9": {
+   "11": {
     "state": "supports",
     "why": "The motion's introduction calls F-9 'The government’s primary informant in this case' and states he met the government more than 20 times since November 2025 (at least four in person) and exchanged about 1,800 texts with the lead FBI and IRS agents; elsewhere it describes the four 'Intelligence Briefings' with 162 pages of slides, immunity 'which he was subsequently given', and treatment 'like part of the prosecutorial team itself'.",
     "host": "storage.courtlistener.com",
     "date": "2026-11-01",
+    "kind": "fact",
+    "archive": false
+   },
+   "12": {
+    "state": "partly",
+    "why": "The order text matches the claim's substance (Doc. 188 on Doc. 184, response due November 10, 2026, F-9 prosecution-team position, subpoena objection), but the judge's name does not appear in the provided text beyond the 'ECM' case suffix.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-11-09",
     "kind": "fact",
     "archive": false
    }
@@ -3015,61 +3087,29 @@
    },
    "1": {
     "state": "supports",
-    "why": "NPR confirms a federal judge tossed the case against James after finding the acting U.S. attorney who secured the indictment was unlawfully appointed.",
-    "host": "npr.org",
-    "date": "2026-09-15",
+    "why": "The NPR transcript states the Alexandria grand jury indicted James on bank fraud and false statements over a 2020 coastal Virginia property after Trump pressed DOJ, that the prior Republican prosecutor found insufficient evidence and was forced out, and that Halligan reportedly presented the case.",
+    "host": "whro.org",
+    "date": "2026-11-09",
     "kind": "fact",
     "archive": false
    },
    "2": {
     "state": "supports",
-    "why": "The press release confirms two separate federal grand juries declined to indict James and quotes the Members characterizing this as evidence of shoddy evidence and possible prosecutorial misconduct.",
-    "host": "democrats-judiciary.house.gov",
-    "date": "2026-09-15",
+    "why": "The TNND article reports Currie found Halligan's appointment illegal, quotes the 'set aside' language from opinions issued Monday in both cases, and says both were dismissed without prejudice.",
+    "host": "wjla.com",
+    "date": "2026-11-09",
     "kind": "fact",
     "archive": false
    },
    "3": {
     "state": "supports",
-    "why": "Stacey Young is quoted directly making this exact statement about DOJ's degraded independence and integrity relative to the department's 155-year history.",
-    "host": "npr.org",
-    "date": "2026-09-15",
-    "kind": "interpretation",
+    "why": "The Hill's December 19, 2025 article reports DOJ appealed both dismissals following Currie's defective-appointment ruling, and that two Virginia grand juries refused to reindict James.",
+    "host": "thehill.com",
+    "date": "2026-11-09",
+    "kind": "fact",
     "archive": false
    },
    "4": {
-    "state": "supports",
-    "why": "The article names Jerome Powell, Adam Schiff, James Clapper, and John Brennan as other perceived opponents who found themselves under DOJ investigation during Bondi's tenure.",
-    "host": "npr.org",
-    "date": "2026-09-15",
-    "kind": "fact",
-    "archive": false
-   },
-   "5": {
-    "state": "not_found",
-    "why": "The provided source is the March 16, 2026 press release announcing the investigation's launch; it cannot itself confirm a negative claim about the investigation's status remaining unconcluded 'as of this update' at some later point.",
-    "host": "democrats-judiciary.house.gov",
-    "date": "2026-09-15",
-    "kind": "fact",
-    "archive": false
-   },
-   "6": {
-    "state": "supports",
-    "why": "The CBS/wayback article confirms Pulte's new criminal referrals to Florida and Illinois prosecutors over insurance-application fraud, and quotes James's attorney Abbe Lowell calling it a political vendetta.",
-    "host": "cbsnews.com",
-    "date": "2026-09-15",
-    "kind": "fact",
-    "archive": true
-   },
-   "7": {
-    "state": "partly",
-    "why": "The Hill article, dated Dec. 19, 2025, confirms DOJ appealed the dismissal of both the Comey and James cases after Judge Currie found Halligan unlawfully appointed. It says nothing about a Dec. 22 filing date, the Democracy Docket reporting, or the Jan. 12, 2026 Fourth Circuit consolidation order, and its own date is earlier than the claimed filing date.",
-    "host": "thehill.com",
-    "date": "2026-09-21",
-    "kind": "fact",
-    "archive": false
-   },
-   "8": {
     "state": "supports",
     "why": "The Opinion & Order (25 Misc. 19, filed 01/08/26) states Sarcone personally directed the August 5, 2025 subpoenas, that he was not lawfully serving as Acting U.S. Attorney, that the retaliation argument need not be addressed, and that the subpoenas are quashed and he is disqualified, using the quoted sentence verbatim.",
     "host": "storage.courtlistener.com",
@@ -3077,15 +3117,15 @@
     "kind": "fact",
     "archive": false
    },
-   "9": {
+   "5": {
     "state": "supports",
-    "why": "Beneath the paywalled navigation, the Law360 article text confirms the Fourth Circuit scheduled in-person oral arguments on the consolidated Comey/James appeal for September 15-18, 2026.",
-    "host": "law360.com",
-    "date": "2026-09-15",
+    "why": "The Fourth Circuit order filed January 12, 2026 grants the consolidation motion for 25-4673 (L) and 25-4674, extends the briefing schedule, and grants appellees' motions to file separate briefs.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-11-09",
     "kind": "fact",
     "archive": false
    },
-   "10": {
+   "6": {
     "state": "partly",
     "why": "The release confirms the March 16 letter from Raskin, Lieu, Nadler and Goldman to Bondi, the retaliatory/President's-behest framing, the judge's ruling that Halligan's appointment was unlawful, and two grand juries' refusals; nothing in the text says the letter was dated March 15.",
     "host": "democrats-judiciary.house.gov",
@@ -3093,7 +3133,55 @@
     "kind": "fact",
     "archive": false
    },
+   "7": {
+    "state": "supports",
+    "why": "The press release confirms two separate federal grand juries declined to indict James and quotes the Members characterizing this as evidence of shoddy evidence and possible prosecutorial misconduct.",
+    "host": "democrats-judiciary.house.gov",
+    "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "8": {
+    "state": "partly",
+    "why": "The March 16, 2026 press release confirms the investigation's launch with a demand for records and communications, but a press release cannot establish the claim's assertion that no committee report or finding has since been published.",
+    "host": "democrats-judiciary.house.gov",
+    "date": "2026-11-09",
+    "kind": "fact",
+    "archive": false
+   },
+   "9": {
+    "state": "supports",
+    "why": "The CBS/wayback article confirms Pulte's new criminal referrals to Florida and Illinois prosecutors over insurance-application fraud, and quotes James's attorney Abbe Lowell calling it a political vendetta.",
+    "host": "cbsnews.com",
+    "date": "2026-09-15",
+    "kind": "fact",
+    "archive": true
+   },
+   "10": {
+    "state": "supports",
+    "why": "NPR confirms a federal judge tossed the case against James after finding the acting U.S. attorney who secured the indictment was unlawfully appointed.",
+    "host": "npr.org",
+    "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   },
    "11": {
+    "state": "supports",
+    "why": "Stacey Young is quoted directly making this exact statement about DOJ's degraded independence and integrity relative to the department's 155-year history.",
+    "host": "npr.org",
+    "date": "2026-09-15",
+    "kind": "interpretation",
+    "archive": false
+   },
+   "12": {
+    "state": "supports",
+    "why": "The article names Jerome Powell, Adam Schiff, James Clapper, and John Brennan as other perceived opponents who found themselves under DOJ investigation during Bondi's tenure.",
+    "host": "npr.org",
+    "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "13": {
     "state": "supports",
     "why": "The report, dated July 18, 2026, states the Fourth Circuit will hear arguments September 15 in Richmond on reviving the Comey and James cases, and the excerpt says the hearing will focus on Halligan's authority rather than the merits.",
     "host": "patriotnewsalerts.com",
@@ -3101,7 +3189,15 @@
     "kind": "fact",
     "archive": false
    },
-   "12": {
+   "14": {
+    "state": "supports",
+    "why": "Beneath the paywalled navigation, the Law360 article text confirms the Fourth Circuit scheduled in-person oral arguments on the consolidated Comey/James appeal for September 15-18, 2026.",
+    "host": "law360.com",
+    "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "15": {
     "state": "supports",
     "why": "The Second Circuit opinion (No. 26-156, decided August 21, 2026) states both holdings, treats the disqualification issue as forfeited, affirms, and notes Judge Park dissents.",
     "host": "ww3.ca2.uscourts.gov",
@@ -3109,7 +3205,7 @@
     "kind": "fact",
     "archive": false
    },
-   "13": {
+   "16": {
     "state": "supports",
     "why": "The Washington Examiner reports the DOJ Rapid Response X account's quoted statement after the 2nd Circuit's 2-1 ruling upholding the quashing; the article dates it only as 'Friday', which is consistent with the claim's August 21, 2026 date.",
     "host": "washingtonexaminer.com",
@@ -3117,7 +3213,7 @@
     "kind": "fact",
     "archive": false
    },
-   "14": {
+   "17": {
     "state": "supports",
     "why": "The Washington Post/Spokesman-Review piece describes a skeptical panel appearing poised to uphold the dismissals, with a ruling expected in coming months; the excerpt names Diaz and Floyd questioning the unending-temporary-appointment theory, and the article says Richardson was more receptive.",
     "host": "spokesman.com",
@@ -3125,7 +3221,7 @@
     "kind": "fact",
     "archive": false
    },
-   "15": {
+   "18": {
     "state": "supports",
     "why": "The NYT excerpt (Oct. 28, 2026) states a judge blocked Sarcone in January, that his office 'has continued in its quest,' that Louisiana prosecutors prompted by Albany filed identity-theft and bank-fraud charges against James's hairdresser per anonymous sources, and that the hairdresser pleaded not guilty and has not cooperated.",
     "host": "nytimes.com",
@@ -9004,22 +9100,30 @@
     "archive": false
    },
    "7": {
-    "state": "partly",
-    "why": "Courthouse News confirms Tillis withheld support specifically over Martin's Jan. 6 views and mentions 'hundreds of appearances on Russian state media,' but the article does not contain the '100 former prosecutors' letter, its quoted language, or the specific 150-appearance disclosure detail described in the claim.",
+    "state": "supports",
+    "why": "Courthouse News reports Trump's Oval Office withdrawal, Tillis's planned Judiciary Committee vote against Martin as the sole Republican opponent focused on Jan. 6, and opponents' citing of hundreds of Russian state media appearances.",
     "host": "courthousenews.com",
-    "date": "2026-09-15",
+    "date": "2026-11-09",
     "kind": "fact",
     "archive": false
    },
    "8": {
-    "state": "partly",
-    "why": "Fox 5 DC confirms Trump withdrew Martin's nomination on the cited date and cites opposition from a key Senate Republican over Jan. 6, but it does not mention Martin being redirected to the Pardon Attorney role and Weaponization Working Group, or Jeanine Pirro's appointment as interim U.S. Attorney.",
+    "state": "supports",
+    "why": "The Fox 5 DC article, sourced to AP, reports Trump's withdrawal of Martin's nomination after a key Republican senator cited his defense of Jan. 6 rioters.",
     "host": "fox5dc.com",
-    "date": "2026-09-15",
+    "date": "2026-11-09",
     "kind": "fact",
     "archive": false
    },
    "9": {
+    "state": "supports",
+    "why": "The AP report states Martin would become associate deputy AG, pardon attorney and weaponization working group director, that Pirro was named interim prosecutor, the 150+ undisclosed RT/Sputnik appearances, and the 100+ office veterans' quoted letter.",
+    "host": "yahoo.com",
+    "date": "2026-11-09",
+    "kind": "fact",
+    "archive": false
+   },
+   "10": {
     "state": "supports",
     "why": "ABC News confirms Wise's pardon, his prior charges for encouraging rioters, his DOJ role under the Weaponization Working Group as counselor to Martin, and that the New York Times first reported the appointment.",
     "host": "abcnews.com",
@@ -9027,7 +9131,7 @@
     "kind": "fact",
     "archive": false
    },
-   "10": {
+   "11": {
     "state": "supports",
     "why": "The September 3, 2025 Durbin release reports Durbin, Whitehouse and Schiff wrote Bondi urging removal of Wise, hired as a senior adviser to Ed Martin and the Weaponization Working Group, objecting to his 'shameless hiring'; the excerpt carries the second quote.",
     "host": "durbin.senate.gov",
@@ -9035,10 +9139,18 @@
     "kind": "fact",
     "archive": false
    },
-   "11": {
-    "state": "partly",
-    "why": "The WTOP-hosted CBS report confirms Wise, a counselor to Ed Martin, announced on X he left DOJ with the quoted 'outside of government' line on the day Bondi was ousted, but the provided text gives no publication date, so the April 2026 timing is not shown.",
+   "12": {
+    "state": "supports",
+    "why": "The article quotes Wise's X post about exposing abuses 'from outside of government', identifies him as a counselor to Ed Martin, and says he announced it the day Trump ousted Bondi; CBS News sourcing is referenced in the text.",
     "host": "wtop.com",
+    "date": "2026-11-09",
+    "kind": "fact",
+    "archive": false
+   },
+   "13": {
+    "state": "supports",
+    "why": "The AP article via Fortune, dated April 2, 2026, states Trump says Bondi is out as attorney general.",
+    "host": "fortune.com",
     "date": "2026-11-09",
     "kind": "fact",
     "archive": false
@@ -10054,110 +10166,6 @@
     "archive": false
    },
    "1": {
-    "state": "supports",
-    "why": "The source confirms Judge Currie dismissed both indictments, found Halligan's appointment violated the 120-day Section 546 limit, and voided all resulting actions including securing and signing the Comey indictment.",
-    "host": "cbsnews.com",
-    "date": "2026-09-15",
-    "kind": "fact",
-    "archive": false
-   },
-   "2": {
-    "state": "supports",
-    "why": "The CNN article directly states the judge found Halligan's appointment invalid and that everything flowing from it, including the indictments, was an unlawful exercise of executive power that was set aside, matching the claim exactly.",
-    "host": "cnn.com",
-    "date": "2026-09-15",
-    "kind": "fact",
-    "archive": false
-   },
-   "3": {
-    "state": "supports",
-    "why": "The Feb. 10, 2026 NBC report says DOJ's appellate filing called Bondi's citation error a 'paperwork mistake' that did not prejudice defendants and was cured by later Attorney General ratification orders.",
-    "host": "nbcnews.com",
-    "date": "2026-09-27",
-    "kind": "fact",
-    "archive": false
-   },
-   "4": {
-    "state": "supports",
-    "why": "The excerpt states more than a half-dozen EDVA prosecutors were demoted or pushed out, others left voluntarily, and a case tied to an Afghanistan terrorist attack was hobbled; the source later adds that judges unanimously selected a new U.S. attorney, Blanche (identified as then-Deputy AG) immediately fired him, and the office remains leaderless months later.",
-    "host": "washingtonpost.com",
-    "date": "2026-09-23",
-    "kind": "fact",
-    "archive": false
-   },
-   "5": {
-    "state": "not_found",
-    "why": "The fetched page is only the Fourth Circuit's generic recurring oral-argument calendar (session dates like Sept. 14-18, 2026); it names no case, makes no mention of Comey, James, a consolidation order, or any limitation of the argument's scope, so it does not address the specific claim at all.",
-    "host": "ca4.uscourts.gov",
-    "date": "2026-09-15",
-    "kind": "fact",
-    "archive": false
-   },
-   "6": {
-    "state": "unopened",
-    "why": "",
-    "host": "washingtonpost.com",
-    "date": "2026-09-23",
-    "kind": "fact",
-    "archive": false
-   },
-   "7": {
-    "state": "partly",
-    "why": "The source (the Society for the Rule of Law's own page) confirms that group filed an amicus brief urging the Fourth Circuit to uphold the ruling that Halligan's appointment was unlawful, but it says nothing about the Pacific Legal Foundation, the Virginia Association of Criminal Defense Lawyers, a bipartisan group of members of Congress, or the named individuals (Ayer, Gerson, Raul, Twardy) the claim also attributes to this filing -- those specifics are outside what this source covers.",
-    "host": "societyfortheruleoflaw.org",
-    "date": "2026-09-15",
-    "kind": "fact",
-    "archive": false
-   },
-   "8": {
-    "state": "unopened",
-    "why": "",
-    "host": "law360.com",
-    "date": "2026-09-15",
-    "kind": "fact",
-    "archive": false
-   },
-   "9": {
-    "state": "supports",
-    "why": "Politico reports Trump called Comey 'a dirty cop,' predicted 'there will be others,' denied pushing DOJ, and had over the weekend warned Bondi 'we can't delay any longer.'",
-    "host": "politico.com",
-    "date": "2026-09-27",
-    "kind": "fact",
-    "archive": false
-   },
-   "10": {
-    "state": "supports",
-    "why": "The NYT article confirms Halligan secured the indictment as her first act in the job over career prosecutors' misgivings after Siebert's resignation, and quotes Trump's Truth Social message to Bondi ending in exactly the 'JUSTICE MUST BE SERVED, NOW!!!' line the claim cites.",
-    "host": "nytimes.com",
-    "date": "2026-09-15",
-    "kind": "fact",
-    "archive": false
-   },
-   "11": {
-    "state": "partly",
-    "why": "The Guardian article confirms experts said Trump's push taints the case as a selective, politically motivated prosecution, but it never mentions the statute of limitations being about to expire as a reason the indictment was rushed -- that half of the claim is unaddressed.",
-    "host": "theguardian.com",
-    "date": "2026-09-15",
-    "kind": "fact",
-    "archive": false
-   },
-   "12": {
-    "state": "partly",
-    "why": "AP confirms Comey pleaded not guilty on a Wednesday and that his lawyers plan to argue the prosecution is politically motivated, but the text gives no Oct. 8 date and does not show Comey himself calling it a 'vendetta' by Trump's Justice Department.",
-    "host": "apnews.com",
-    "date": "2026-09-27",
-    "kind": "fact",
-    "archive": false
-   },
-   "13": {
-    "state": "unopened",
-    "why": "",
-    "host": "washingtonpost.com",
-    "date": "2026-09-15",
-    "kind": "fact",
-    "archive": false
-   },
-   "14": {
     "state": "partly",
     "why": "CNN confirms Edwards resigned Thursday night shortly after the indictment with the quoted one-sentence letter, but describes him only as 'a senior national security prosecutor' (not deputy chief of national security), and The Hill's reporting cannot be verified from this source.",
     "host": "cnn.com",
@@ -10165,7 +10173,31 @@
     "kind": "fact",
     "archive": false
    },
-   "15": {
+   "2": {
+    "state": "supports",
+    "why": "Politico reports Trump called Comey 'a dirty cop,' predicted 'there will be others,' denied pushing DOJ, and had over the weekend warned Bondi 'we can't delay any longer.'",
+    "host": "politico.com",
+    "date": "2026-09-27",
+    "kind": "fact",
+    "archive": false
+   },
+   "3": {
+    "state": "supports",
+    "why": "The NYT article confirms Halligan secured the indictment as her first act in the job over career prosecutors' misgivings after Siebert's resignation, and quotes Trump's Truth Social message to Bondi ending in exactly the 'JUSTICE MUST BE SERVED, NOW!!!' line the claim cites.",
+    "host": "nytimes.com",
+    "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "partly",
+    "why": "The Guardian article confirms experts said Trump's push taints the case as a selective, politically motivated prosecution, but it never mentions the statute of limitations being about to expire as a reason the indictment was rushed -- that half of the claim is unaddressed.",
+    "host": "theguardian.com",
+    "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
     "state": "supports",
     "why": "CNN (published Oct. 1, 2025) reports Ben'Ary, EDVA national security chief not involved in the Comey case, was fired Wednesday after Julie Kelly's quoted X post.",
     "host": "cnn.com",
@@ -10173,23 +10205,7 @@
     "kind": "fact",
     "archive": false
    },
-   "16": {
-    "state": "supports",
-    "why": "The source confirms an FBI agent was relieved of duty for refusing to arrange a Comey perp walk, and that only a summons -- not an arrest warrant -- had been issued.",
-    "host": "reuters.com",
-    "date": "2026-09-15",
-    "kind": "fact",
-    "archive": false
-   },
-   "17": {
-    "state": "supports",
-    "why": "CBS (Nov. 11, 2025) reports the Campaign for Accountability's complaint to the Florida and Virginia bars alleging 'abuse of power' and noting career officials found the cases 'insupportable'; the claim's longer quoted phrase is a close paraphrase rather than verbatim text.",
-    "host": "cbsnews.com",
-    "date": "2026-09-27",
-    "kind": "fact",
-    "archive": false
-   },
-   "18": {
+   "6": {
     "state": "supports",
     "why": "The source confirms James moved to dismiss on the unlawful-appointment grounds ahead of the ruling, and describes Halligan as a former Trump personal lawyer with no prosecutorial experience who obtained both indictments without career-prosecutor assistance.",
     "host": "reuters.com",
@@ -10197,7 +10213,31 @@
     "kind": "fact",
     "archive": false
    },
-   "19": {
+   "7": {
+    "state": "supports",
+    "why": "The source confirms an FBI agent was relieved of duty for refusing to arrange a Comey perp walk, and that only a summons -- not an arrest warrant -- had been issued.",
+    "host": "reuters.com",
+    "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "8": {
+    "state": "partly",
+    "why": "AP confirms Comey pleaded not guilty on a Wednesday and that his lawyers plan to argue the prosecution is politically motivated, but the text gives no Oct. 8 date and does not show Comey himself calling it a 'vendetta' by Trump's Justice Department.",
+    "host": "apnews.com",
+    "date": "2026-09-27",
+    "kind": "fact",
+    "archive": false
+   },
+   "9": {
+    "state": "unopened",
+    "why": "",
+    "host": "washingtonpost.com",
+    "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "10": {
     "state": "supports",
     "why": "The CNN article directly confirms DOJ's early-November filing defended Halligan's appointment and rebutted the retaliation theory, quoting prosecutors' argument that Trump's posts show he believes Comey is 'guilty as hell,' not that he wanted Comey punished for his speech.",
     "host": "cnn.com",
@@ -10205,15 +10245,7 @@
     "kind": "fact",
     "archive": false
    },
-   "20": {
-    "state": "supports",
-    "why": "NBC (Nov. 5, 2025) reports Fitzpatrick criticized the 'indict first, investigate later' approach, ordered production of grand jury materials and evidence seized in the earlier leak probe the defense hadn't reviewed, and questioned whether privileged information was used to secure the indictment.",
-    "host": "nbcnews.com",
-    "date": "2026-09-27",
-    "kind": "fact",
-    "archive": false
-   },
-   "21": {
+   "11": {
     "state": "supports",
     "why": "CBS reports prosecutors said the corrected two-count indictment was never shown to the full grand jury, a later filing saying the foreperson confirmed the vote, Fitzpatrick's 'disturbing pattern of profound investigative missteps' and 'fundamental misstatements of the law' findings, and Comey's motion to dismiss.",
     "host": "cbsnews.com",
@@ -10221,23 +10253,47 @@
     "kind": "fact",
     "archive": false
    },
-   "22": {
-    "state": "partly",
-    "why": "The source supports that days after the late-November dismissal, prosecutors were expected to present new indictments against both Comey and James to EDVA grand juries; but the signal came from anonymous sources (plus FBI Director Patel), not on-record DOJ officials, and the source treats Comey, not James, as the lead and more immediate target, the reverse of the claim's emphasis.",
-    "host": "cnn.com",
-    "date": "2026-09-23",
+   "12": {
+    "state": "supports",
+    "why": "NBC (Nov. 5, 2025) reports Fitzpatrick criticized the 'indict first, investigate later' approach, ordered production of grand jury materials and evidence seized in the earlier leak probe the defense hadn't reviewed, and questioned whether privileged information was used to secure the indictment.",
+    "host": "nbcnews.com",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
-   "23": {
+   "13": {
     "state": "supports",
-    "why": "CNN's article confirms a grand jury declined to re-indict James roughly ten days after the dismissal, and that DOJ was prepared to try again.",
+    "why": "CBS (Nov. 11, 2025) reports the Campaign for Accountability's complaint to the Florida and Virginia bars alleging 'abuse of power' and noting career officials found the cases 'insupportable'; the claim's longer quoted phrase is a close paraphrase rather than verbatim text.",
+    "host": "cbsnews.com",
+    "date": "2026-09-27",
+    "kind": "fact",
+    "archive": false
+   },
+   "14": {
+    "state": "supports",
+    "why": "CBS reports Currie's November 24, 2025 dismissal of both cases, the 120-day limit under Section 546 as the basis, and her ruling that all actions flowing from the defective appointment, including the indictment, must be set aside.",
+    "host": "cbsnews.com",
+    "date": "2026-11-09",
+    "kind": "fact",
+    "archive": false
+   },
+   "15": {
+    "state": "supports",
+    "why": "The CNN article directly states the judge found Halligan's appointment invalid and that everything flowing from it, including the indictments, was an unlawful exercise of executive power that was set aside, matching the claim exactly.",
     "host": "cnn.com",
     "date": "2026-09-15",
     "kind": "fact",
     "archive": false
    },
-   "24": {
+   "16": {
+    "state": "partly",
+    "why": "CNN reports, via anonymous sources, that prosecutors would likely present new indictments against both Comey and James, with the article centered on Comey; it does not describe DOJ officials publicly signaling plans, and the 'pursuing the same targets' framing is characterization.",
+    "host": "cnn.com",
+    "date": "2026-11-09",
+    "kind": "interpretation",
+    "archive": false
+   },
+   "17": {
     "state": "supports",
     "why": "The Hill reports the December attempt to add a third felony count, that grand jurors declined to indict on any charge (the second failed fresh-indictment attempt), and Judge Porter's refusal to seal, quoting 'serves the interest of transparency.'",
     "host": "thehill.com",
@@ -10245,7 +10301,15 @@
     "kind": "fact",
     "archive": false
    },
-   "25": {
+   "18": {
+    "state": "supports",
+    "why": "CNN's article confirms a grand jury declined to re-indict James roughly ten days after the dismissal, and that DOJ was prepared to try again.",
+    "host": "cnn.com",
+    "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "19": {
     "state": "partly",
     "why": "The source confirms a new investigation into James's financial transactions after the failed indictments and an earlier civil-rights inquiry, but the extracted text gives no January 2026 date and does not describe the civil-rights investigation as stalled.",
     "host": "nytimes.com",
@@ -10253,7 +10317,95 @@
     "kind": "fact",
     "archive": false
    },
+   "20": {
+    "state": "supports",
+    "why": "UPI reports Novak on Tuesday (January 6) ordered Halligan to explain her continued use of the title within seven days, saying it may amount to false or misleading statements.",
+    "host": "yahoo.com",
+    "date": "2026-11-09",
+    "kind": "fact",
+    "archive": false
+   },
+   "21": {
+    "state": "not_found",
+    "why": "The fetched page is only the Fourth Circuit's generic recurring oral-argument calendar (session dates like Sept. 14-18, 2026); it names no case, makes no mention of Comey, James, a consolidation order, or any limitation of the argument's scope, so it does not address the specific claim at all.",
+    "host": "ca4.uscourts.gov",
+    "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "22": {
+    "state": "supports",
+    "why": "The AP report describes Novak's Tuesday order striking the title from the signature block, barring its use, threatening discipline for Halligan and other signatories, and quotes the 'charade' sentence.",
+    "host": "nujournal.com",
+    "date": "2026-11-09",
+    "kind": "fact",
+    "archive": false
+   },
+   "23": {
+    "state": "supports",
+    "why": "MS NOW reports Halligan quit late Tuesday January 20, 2026, hours after Novak's order, and quotes Bondi's 'significant loss' statement.",
+    "host": "ms.now",
+    "date": "2026-11-09",
+    "kind": "fact",
+    "archive": false
+   },
+   "24": {
+    "state": "supports",
+    "why": "The Feb. 10, 2026 NBC report says DOJ's appellate filing called Bondi's citation error a 'paperwork mistake' that did not prejudice defendants and was cured by later Attorney General ratification orders.",
+    "host": "nbcnews.com",
+    "date": "2026-09-27",
+    "kind": "fact",
+    "archive": false
+   },
+   "25": {
+    "state": "supports",
+    "why": "States United lists the March 10 amicus brief by the Society for the Rule of Law, Nunziata and the named charter members, represented by States United, arguing the appointment circumvented Senate advice and consent and urging affirmance.",
+    "host": "statesunited.org",
+    "date": "2026-11-09",
+    "kind": "fact",
+    "archive": false
+   },
    "26": {
+    "state": "supports",
+    "why": "The filed brief (Doc. 32-1, filed 03/10/2026) is captioned as the amicus brief of bipartisan current and former members of Congress in support of appellees in Nos. 25-4673 and 25-4674.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-11-09",
+    "kind": "fact",
+    "archive": false
+   },
+   "27": {
+    "state": "supports",
+    "why": "PLF's March 12, 2026 post states it filed an amicus brief that week in the consolidated appeal urging the court to apply Wille v. Lutnick and reject after-the-fact ratification.",
+    "host": "hawaiifreepress.com",
+    "date": "2026-11-09",
+    "kind": "fact",
+    "archive": false
+   },
+   "28": {
+    "state": "supports",
+    "why": "The excerpt states more than a half-dozen EDVA prosecutors were demoted or pushed out, others left voluntarily, and a case tied to an Afghanistan terrorist attack was hobbled; the source later adds that judges unanimously selected a new U.S. attorney, Blanche (identified as then-Deputy AG) immediately fired him, and the office remains leaderless months later.",
+    "host": "washingtonpost.com",
+    "date": "2026-09-23",
+    "kind": "fact",
+    "archive": false
+   },
+   "29": {
+    "state": "supports",
+    "why": "Law360's June 16, 2026 item reports the Fourth Circuit scheduled in-person oral arguments for Sept. 15-18 in the appeal of the Comey and James dismissals.",
+    "host": "law360.com",
+    "date": "2026-11-09",
+    "kind": "fact",
+    "archive": false
+   },
+   "30": {
+    "state": "unopened",
+    "why": "",
+    "host": "washingtonpost.com",
+    "date": "2026-11-09",
+    "kind": "fact",
+    "archive": false
+   },
+   "31": {
     "state": "supports",
     "why": "The Washington Post snapshot (dated 2026-09-15) reports an appellate panel expressed skepticism Tuesday about reviving the Comey and James prosecutions after last year's illegal-appointment ruling.",
     "host": "washingtonpost.com",
@@ -13119,9 +13271,9 @@
    },
    "1": {
     "state": "supports",
-    "why": "The syndicated Post text reports Irizarry's hire into the Special Operations and Low Intensity Conflict office, describes the role as highly sensitive with top-secret clearance, and states his guilty plea, 14-day sentence and 2025 pardon.",
+    "why": "The Washington Post report (syndicated copy) establishes the SO/LIC hire, the guilty plea and 14-day sentence, the pardon, the role's sensitivity, and internal staff alarm per four anonymous people citing fear of retaliation.",
     "host": "washingtonpost.com",
-    "date": "2026-10-31",
+    "date": "2026-11-09",
     "kind": "fact",
     "archive": false
    },
@@ -13134,10 +13286,18 @@
     "archive": false
    },
    "3": {
-    "state": "partly",
-    "why": "The Hill confirms the hire and that the office oversees sensitive special operations and irregular warfare matters. The text does not report concerns raised by Pentagon officials; Pentagon statements defend the appointment.",
+    "state": "supports",
+    "why": "The Hill's June 2, 2026 report says the Pentagon confirmed the appointment, quotes its 'qualified, patriotic young professional' political-appointee statement, and places the role in the office overseeing special operations and irregular warfare.",
     "host": "thehill.com",
-    "date": "2026-09-21",
+    "date": "2026-11-09",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "supports",
+    "why": "The AP report dated June 3, 2026 cites internal records placing Irizarry in the USD(Policy) office, says the Pentagon declined to say how long he had been in the post, and quotes Warner's social media criticism.",
+    "host": "abc7.com",
+    "date": "2026-11-09",
     "kind": "fact",
     "archive": false
    },
@@ -13460,10 +13620,10 @@
     "archive": false
    },
    "1": {
-    "state": "unopened",
-    "why": "",
+    "state": "supports",
+    "why": "The complaint, filed 11/06/25 in the District of Massachusetts by three unions against Kupor and OPM, labels Question 3 the 'Loyalty Question' and alleges it elicits political agreement with the President.",
     "host": "democracyforward.org",
-    "date": "2026-09-21",
+    "date": "2026-11-09",
     "kind": "fact",
     "archive": false
    },
@@ -13484,10 +13644,18 @@
     "archive": false
    },
    "4": {
-    "state": "unopened",
-    "why": "",
-    "host": "usnews.com",
-    "date": "2026-09-21",
+    "state": "supports",
+    "why": "The Reuters report dated Sept. 12, 2026 covers the Friday ruling and quotes Democracy Forward's lawyers that over 70,000 federal job postings included the question.",
+    "host": "staradvertiser.com",
+    "date": "2026-11-09",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "supports",
+    "why": "The September 25, 2026 status report states Ezell transmitted the May 29, 2025 plan, Kupor assumed office July 15, 2025, the September 18 notice that agencies cannot consider Question Three responses, and replacement on announcements opening September 19 or later.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-11-09",
     "kind": "fact",
     "archive": false
    }
@@ -22507,13 +22675,21 @@
    },
    "1": {
     "state": "supports",
+    "why": "The OPA list's May 28, 2025 group is headed '16 Pardons and 6 Commutations' and includes 'Marian I Morgan' (Middle District of Florida; 405 months' imprisonment; $19,958,995 restitution) for conspiracy to defraud the United States, wire fraud, transfer of funds taken by fraud, money laundering, and making false statements on income tax returns, matching the claim. The excerpt is Morgan's row; the grant-date header appears verbatim earlier in the same listing.",
+    "host": "justice.gov",
+    "date": "2026-11-09",
+    "kind": "fact",
+    "archive": false
+   },
+   "2": {
+    "state": "supports",
     "why": "The source confirms the SEC's Thursday (September 11/12, 2025) move to dismiss its case against Milton, a Trump pardon recipient, with Milton waiving legal costs and releasing all claims against the agency.",
     "host": "reuters.com",
     "date": "2026-09-15",
     "kind": "fact",
     "archive": false
    },
-   "2": {
+   "3": {
     "state": "partly",
     "why": "Skilled Nursing News contains the quoted pardon sentence, the April three-year sentence and the lack of any stated reason (as of press time), but the provided text carries no publication date, so the November 2025 timing cannot be confirmed from it.",
     "host": "skillednursingnews.com",
@@ -22521,7 +22697,7 @@
     "kind": "fact",
     "archive": false
    },
-   "3": {
+   "4": {
     "state": "supports",
     "why": "The CNN text, published Dec 3, 2025, contains each element: the quoted pardon, the 'dated Tuesday' detail, the July indictment quote, the not-guilty plea, OVG's $15 million penalty per DOJ, and Gowdy's representation and lobbying per a person familiar.",
     "host": "cnn.com",
@@ -22529,7 +22705,7 @@
     "kind": "fact",
     "archive": false
    },
-   "4": {
+   "5": {
     "state": "supports",
     "why": "The NBC text dated Dec. 3, 2025 reports the pardon and describes the July Texas indictment over the $375 million, 15,000-seat Moody Center, the competitor standing down for subcontracts, the not-guilty plea, and OVG's $15 million payment.",
     "host": "nbcnews.com",
@@ -22537,7 +22713,7 @@
     "kind": "fact",
     "archive": false
    },
-   "5": {
+   "6": {
     "state": "supports",
     "why": "The Billboard text reports the pardon, the single bid-rigging count over the Moody Center, the OVG and Legends non-prosecution agreements, and OVG's $15 million payment.",
     "host": "billboard.com",
@@ -22545,7 +22721,7 @@
     "kind": "fact",
     "archive": false
    },
-   "6": {
+   "7": {
     "state": "partly",
     "why": "The source confirms the $15.5 million restitution elimination via Trump's late-November commutation of Gentile's sentence, but it describes 'thousands' of defrauded investors rather than confirming the specific figure of 'more than 10,000.'",
     "host": "politico.com",
@@ -22553,7 +22729,7 @@
     "kind": "fact",
     "archive": false
    },
-   "7": {
+   "8": {
     "state": "supports",
     "why": "The Billboard text says plans changed 'last week' due to a golf round between Trump and Gowdy, whom Leiweke hired to lobby, first reported by the WSJ and confirmed by a source, and that neither Leiweke nor OVG were major donors though OVG gave $250,000 to the inauguration.",
     "host": "billboard.com",
@@ -22561,7 +22737,7 @@
     "kind": "fact",
     "archive": false
    },
-   "8": {
+   "9": {
     "state": "unopened",
     "why": "",
     "host": "docs.house.gov",
@@ -22569,7 +22745,7 @@
     "kind": "fact",
     "archive": false
    },
-   "9": {
+   "10": {
     "state": "supports",
     "why": "The White House text shows Executive Order 14395 dated March 16, 2026 establishing the Task Force within the Executive Office of the President, with the Vice President as Chairman and the FTC Chairman as Vice Chairman.",
     "host": "whitehouse.gov",
@@ -22577,7 +22753,7 @@
     "kind": "fact",
     "archive": false
    },
-   "10": {
+   "11": {
     "state": "supports",
     "why": "The NYT investigation states Trump has granted clemency to \"more than 70\" people in fraud cases, cites the more than $700 million in wiped-out restitution/fines, and profiles both Esformes and Melgen's health-care-fraud convictions by name, exactly as the claim states.",
     "host": "nytimes.com",
@@ -22585,7 +22761,7 @@
     "kind": "fact",
     "archive": false
    },
-   "11": {
+   "12": {
     "state": "supports",
     "why": "Rolling Stone opens with Trump's new \"Task Force to Eliminate Fraud\"/\"War on Fraud\" framing and then pivots directly into the NYT's pardon-pattern findings, and it specifically documents both the Milton (his and his wife's $1.8 million in donations) and Herrera Velutini (his daughter's $3.5 million to MAGA Inc.) donor connections.",
     "host": "rollingstone.com",
@@ -22593,7 +22769,7 @@
     "kind": "fact",
     "archive": false
    },
-   "12": {
+   "13": {
     "state": "supports",
     "why": "ProPublica's reporting highlights state exactly this: Schwartz was convicted of a $39 million fraud but pardoned just three months into a three-year sentence, and patients' families have been awarded millions in lawsuit damages they have been unable to collect from him.",
     "host": "propublica.org",
@@ -22601,7 +22777,7 @@
     "kind": "fact",
     "archive": false
    },
-   "13": {
+   "14": {
     "state": "partly",
     "why": "The press release confirms the May 2026 launch, the 17 letters, Sens. Welch and Min (joined by Rep. Ruiz), and that the letters probe financial contributions/lobbyists/intermediaries in the clemency process, and it names Changpeng Zhao specifically -- but it never names Joseph Schwartz or Trevor Milton, never uses the phrase \"pay-to-play,\" and contains no White House response at all (no Abigail Jackson quote or \"absolute\" pardon-power position), all of which the claim also asserts.",
     "host": "welch.senate.gov",
@@ -22609,7 +22785,7 @@
     "kind": "fact",
     "archive": false
    },
-   "14": {
+   "15": {
     "state": "supports",
     "why": "The press release confirms the four preservation letters sent in June 2026 to DOJ's Pardon Attorney, the White House Records Management office, the White House Pardon Czar, and the Secret Service, seeking petitions, case files, internal communications, staff recommendations and visitor logs, with a July 24, 2026 deadline.",
     "host": "welch.senate.gov",
@@ -22617,7 +22793,7 @@
     "kind": "fact",
     "archive": false
    },
-   "15": {
+   "16": {
     "state": "supports",
     "why": "CBS reports the Tuesday letters from Blumenthal, Welch, Min and Scanlon asking for answers by Oct. 20, the Milton donations of almost $2 million and $750,000 to the MAHA Alliance PAC per FEC records, the cited June Reuters report, the source saying Kennedy will not advocate for pardons, and the EPA official saying Zeldin made no recommendation.",
     "host": "cbsnews.com",
@@ -22625,7 +22801,7 @@
     "kind": "fact",
     "archive": false
    },
-   "16": {
+   "17": {
     "state": "supports",
     "why": "Raw Story, relaying the Post, states the daughter committed $2.5 million a month after the charges were reduced to a misdemeanor, paid $835,000, Trump pardoned Herrera Velutini in January, the second payment was due this month, and the Post's caveat that its reporting does not show the donations led to government action.",
     "host": "rawstory.com",
@@ -22633,7 +22809,7 @@
     "kind": "fact",
     "archive": false
    },
-   "17": {
+   "18": {
     "state": "supports",
     "why": "The Daily Beast article, citing the Times, states each element: Isabela created Concord in October 2025, Habba signed within days while acting U.S. attorney, $10 million a year over four years plus bonuses (over $50 million), joined Jan. 1 while a Bondi adviser, the Jan. 15 pardon and amended order five days later, the $3.5 million super PAC donation, and the Habba, DOJ and White House denials.",
     "host": "thedailybeast.com",
@@ -22641,7 +22817,7 @@
     "kind": "fact",
     "archive": false
    },
-   "18": {
+   "19": {
     "state": "supports",
     "why": "Raw Story, citing the Times, directly reports the late-October 2025 Concord registration, Habba's general-counsel role within days at $10 million a year plus bonuses under a $50-million-plus deal, the 'no public profile' quote, Kise and the $3.5 million donation failing by fall, sources' belief she was hired for the pardon effort, and the Habba, DOJ and White House denials.",
     "host": "rawstory.com",
@@ -22649,7 +22825,7 @@
     "kind": "fact",
     "archive": false
    },
-   "19": {
+   "20": {
     "state": "supports",
     "why": "The CBS investigation text contains each element: the 160+ orders reviewed excluding 1,500+ Jan. 6/2020 grants, $119.4M vs. Biden's $14,000, $1B+ affected, ~70% bypassing the pardon office, 18+ recipients with White House ties, the Watson/Camberos/Chrisley sums, and Schwartz's lobbying payment and recoupment.",
     "host": "cbsnews.com",
