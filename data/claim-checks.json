@@ -298,6 +298,14 @@
     "archive": false
    },
    "16": {
+    "state": "partly",
+    "why": "The order denies the Motion to Stay (DE 114) and says the motion does not demonstrate likelihood of success or irreparable harm and does not undermine the findings on adverseness and bad faith; the claim's quoted phrasing ('have not demonstrated a likelihood of success in their appeal', 'have not established irreparable harm') does not appear verbatim in the provided (truncated) text.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-11-09",
+    "kind": "fact",
+    "archive": false
+   },
+   "17": {
     "state": "supports",
     "why": "The Bloomberg News article (published Wednesday September 30, describing 'the order on Tuesday') names the panel of Jordan, Rosenbaum and Newsom, quotes the 'strong showing'/'committed clear error' finding and the no-evidence holding verbatim, and states Blanche's immunity protection order 'is also still in effect.'",
     "host": "accountingtoday.com",
@@ -3448,10 +3456,10 @@
     "archive": false
    },
    "9": {
-    "state": "not_found",
-    "why": "The provided docket text covers only entries through 2025 (e.g., the April 16, 2025 administrative stay) and shows no August 7, 2026 or October 9, 2026 orders.",
+    "state": "unopened",
+    "why": "",
     "host": "courtlistener.com",
-    "date": "2026-11-02",
+    "date": "2026-11-09",
     "kind": "fact",
     "archive": false
    },
@@ -3460,6 +3468,22 @@
     "why": "The database page lists the Oct. 9, 2026 order granting the Coalition for Green Capital's motion for clarification and describes the lawsuits challenging EPA's freezing and termination of the fund, including claims against Citibank.",
     "host": "climatecasechart.com",
     "date": "2026-11-02",
+    "kind": "fact",
+    "archive": false
+   },
+   "11": {
+    "state": "supports",
+    "why": "The Supreme Court docket shows the petition filed Nov 02 2026 with response due December 4, 2026, docketed November 4, 2026, from the D.C. Circuit decision of August 4, 2026 in 25-5122/25-5123, with the Solicitor General as counsel.",
+    "host": "supremecourt.gov",
+    "date": "2026-11-09",
+    "kind": "fact",
+    "archive": false
+   },
+   "12": {
+    "state": "supports",
+    "why": "The docket lists a Nov 5, 2026 notice of petition for certiorari filed by EPA and Lee M. Zeldin.",
+    "host": "courtlistener.com",
+    "date": "2026-11-09",
     "kind": "fact",
     "archive": false
    }
@@ -6877,21 +6901,29 @@
   "doj-ms13-vulcan-case-dismissals-bukele-2025": {
    "0": {
     "state": "partly",
-    "why": "ProPublica confirms Task Force Vulcan's origin, the Bukele government's alleged obstruction of extraditions, and that one MS-13 leader was deported in March while DOJ sought to dismiss a second leader's charges; however, this excerpt does not contain the '14 leaders' indictment figure, the name César Humberto López Larios, or the 'foreign ally' quote the claim attributes to it (that quote appears in a different cited source).",
+    "why": "The article supports Task Force Vulcan's 2019 origins and the suspected secret deal with MS-13, but the provided text is truncated before and does not show the Jan. 14, 2021 indictment, the Durham letters, or the Lopez Larios return.",
     "host": "propublica.org",
-    "date": "2026-09-15",
+    "date": "2026-11-09",
     "kind": "fact",
     "archive": false
    },
    "1": {
     "state": "supports",
-    "why": "El Faro's own headline is the exact characterization the claim describes.",
+    "why": "El Faro reports Durham sought dismissal of charges against Vampiro and his secret deportation, quoting the foreign-ally harm argument, and dates the request to Apr. 1, 2025.",
     "host": "beta.elfaro.net",
-    "date": "2026-09-15",
-    "kind": "interpretation",
+    "date": "2026-11-09",
+    "kind": "fact",
     "archive": false
    },
    "2": {
+    "state": "partly",
+    "why": "The order supports the unsealing holding and both quoted phrases, but the provided (truncated) text does not show the March 11, 2025 Lopez-Larios dismissal being granted or the foreign-ally language for it.",
+    "host": "courthousenews.com",
+    "date": "2026-11-09",
+    "kind": "fact",
+    "archive": false
+   },
+   "3": {
     "state": "unopened",
     "why": "",
     "host": "oversightdemocrats.house.gov",
@@ -12221,8 +12253,8 @@
    },
    "5": {
     "state": "supports",
-    "why": "The FOX 5 DC piece carries the DOW statement confirming Rampersad, 28, of Ozone Park, N.Y., died during an enemy attack at Muwaffaq Salti Air Base after AFMES identification, and separately states she was originally reported missing and was one of four service members honored at Wednesday's Dover dignified transfer.",
-    "host": "fox5dc.com",
+    "why": "The article says the Pentagon pushed back and that the Times stood firm, citing multiple anonymous official sources, matching the quoted language.",
+    "host": "plataformamedia.com",
     "date": "2026-11-09",
     "kind": "fact",
     "archive": false
@@ -12237,13 +12269,37 @@
    },
    "7": {
     "state": "supports",
+    "why": "The release gives the identification, age, hometown, date, location, and states the incident remains under investigation.",
+    "host": "war.gov",
+    "date": "2026-11-09",
+    "kind": "fact",
+    "archive": false
+   },
+   "8": {
+    "state": "supports",
+    "why": "The FOX 5 DC piece carries the DOW statement confirming Rampersad, 28, of Ozone Park, N.Y., died during an enemy attack at Muwaffaq Salti Air Base after AFMES identification, and separately states she was originally reported missing and was one of four service members honored at Wednesday's Dover dignified transfer.",
+    "host": "fox5dc.com",
+    "date": "2026-11-09",
+    "kind": "fact",
+    "archive": false
+   },
+   "9": {
+    "state": "supports",
     "why": "CNN reports the Pentagon restored the four killed soldiers, the new Overseas Operations category starting July 7, and Valdez's 'temporary data disruptions' explanation, matching the claim.",
     "host": "cnn.com",
     "date": "2026-10-03",
     "kind": "fact",
     "archive": false
    },
-   "8": {
+   "10": {
+    "state": "supports",
+    "why": "The August 3, 2026 letter demands restoration of the four names, notes the 'Overseas Operations' category, and requests answers by August 10 including why they were not added back after the 'temporary data disruption'.",
+    "host": "meeks.house.gov",
+    "date": "2026-11-09",
+    "kind": "fact",
+    "archive": false
+   },
+   "11": {
     "state": "partly",
     "why": "The letter confirms the four deaths were removed and reappeared under 'Overseas Operations', the manipulation concern, and the three undisclosed Jordan strikes, but the provided text is truncated before the request for records and the Aug. 18 deadline.",
     "host": "oversightdemocrats.house.gov",
@@ -12251,7 +12307,7 @@
     "kind": "fact",
     "archive": false
    },
-   "9": {
+   "12": {
     "state": "supports",
     "why": "The Military Times article quotes Garcia's statement verbatim as in the claim.",
     "host": "militarytimes.com",
@@ -12259,7 +12315,7 @@
     "kind": "fact",
     "archive": false
    },
-   "10": {
+   "13": {
     "state": "supports",
     "why": "ABC News reports the Duckworth bill would combine Iran war casualty records into a single count and notify next of kin, and lists exactly 17 cosigners including those named in the claim.",
     "host": "abcnews.com",
@@ -12267,7 +12323,7 @@
     "kind": "fact",
     "archive": false
    },
-   "11": {
+   "14": {
     "state": "supports",
     "why": "The GovInfo introduced text shows H.R. 10457 introduced September 16, 2026 by Mr. Ryan for himself and 11 named cosponsors, referred to Armed Services and additionally to Oversight and Government Reform and Ways and Means; the short title section confirms the 'Honoring the Sacrifice of Troops in War Act of 2026' name.",
     "host": "govinfo.gov",
@@ -12275,7 +12331,7 @@
     "kind": "fact",
     "archive": false
    },
-   "12": {
+   "15": {
     "state": "partly",
     "why": "The Times of Israel text contains the Hegseth quotes exactly as given, but the extracted text does not show the September 18 date of the post.",
     "host": "timesofisrael.com",
@@ -12283,7 +12339,7 @@
     "kind": "fact",
     "archive": false
    },
-   "13": {
+   "16": {
     "state": "supports",
     "why": "The syndicated Post article contains the 22/23 official counts versus 18 in the database, the rise to 19, the unresolved gap, the two unlisted deaths and the Hegseth quote, as claimed.",
     "host": "spokesman.com",
@@ -12291,7 +12347,7 @@
     "kind": "fact",
     "archive": false
    },
-   "14": {
+   "17": {
     "state": "supports",
     "why": "The Post article reports the 37 added wounded (29 sailors, 8 Marines), the total of 861, the lack of explanation, the Navy and CENTCOM responses and the unresolved death-count gap.",
     "host": "spokesman.com",
@@ -12299,7 +12355,7 @@
     "kind": "fact",
     "archive": false
    },
-   "15": {
+   "18": {
     "state": "supports",
     "why": "The Intercept names Maj. Sorffly Davius as missing from the Pentagon's list, with the Camp Buehring March 6 death, and states at least 19 personnel have died per the official count.",
     "host": "theintercept.com",
@@ -12307,7 +12363,7 @@
     "kind": "fact",
     "archive": false
    },
-   "16": {
+   "19": {
     "state": "supports",
     "why": "The archived NYT text reports 21 killed (up from 18) and 865 wounded (up by 98 since August), posted Friday evening to DCAS, cause not completely clear, and the Smith/Houlahan quote and committee discrepancy finding.",
     "host": "nytimes.com",
@@ -12315,7 +12371,7 @@
     "kind": "fact",
     "archive": true
    },
-   "17": {
+   "20": {
     "state": "supports",
     "why": "The Post syndicated text reports the DCAS count of 21 including Davius and an unidentified Navy suicide, 865 wounded, the Seibel training death bringing the Middle East total to 22, and the Pentagon not acknowledging the change while adding a \"pending adjudication\" category.",
     "host": "adn.com",
@@ -22886,6 +22942,14 @@
     "date": "2026-10-15",
     "kind": "fact",
     "archive": false
+   },
+   "7": {
+    "state": "supports",
+    "why": "The motion seeks summary judgment on all counts, a declaration that removals violated 5 U.S.C. §403(b) and are legally ineffective, and salary and benefits from the date of removal; dated October 30, 2026.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-11-09",
+    "kind": "fact",
+    "archive": false
    }
   },
   "trump-jan6-anti-weaponization-fund-2026": {
@@ -24983,13 +25047,21 @@
    },
    "5": {
     "state": "supports",
+    "why": "The AP article reports the phone seizure, more than a dozen grand jury subpoenas including relatives, the Minnesota grand jury, and Pirro's Tuesday Fox News remarks.",
+    "host": "wfsb.com",
+    "date": "2026-11-09",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
+    "state": "supports",
     "why": "The National News Desk piece dated Oct. 20, 2026 reports the Oval Office exchange with the quoted answer, Omar's denial, her attorneys' 'no legitimate basis' statement, and that no charges have been announced.",
     "host": "wlos.com",
     "date": "2026-11-02",
     "kind": "fact",
     "archive": false
    },
-   "6": {
+   "7": {
     "state": "supports",
     "why": "The NYT excerpt contains each element: the eight U.S. attorneys and quoted 'thin evidence' line, three without Senate confirmation, two told to investigate, sections on all seven named attorneys, the Chicago case collapse figure, Trump's call to Essayli and his immediate investigation, Covington's quote, and Boyle's affidavit quote.",
     "host": "nytimes.com",
@@ -24997,7 +25069,7 @@
     "kind": "fact",
     "archive": false
    },
-   "7": {
+   "8": {
     "state": "supports",
     "why": "The Daily Beast (Oct. 28, 2026) relays the Times report, quotes Bis, and says it contacted Omar and Rosen.",
     "host": "thedailybeast.com",
@@ -25005,7 +25077,7 @@
     "kind": "fact",
     "archive": false
    },
-   "8": {
+   "9": {
     "state": "supports",
     "why": "Alternet's Oct. 28, 2026 summary of Barrett's report lists Boutros last of the eight, attributes the two-dozen-of-30 case failures to his office, and says a judge dismissed charges after finding the office mishandled a case where it won an indictment.",
     "host": "alternet.org",
@@ -25013,7 +25085,7 @@
     "kind": "fact",
     "archive": false
    },
-   "9": {
+   "10": {
     "state": "supports",
     "why": "The source reports Omar's fifth-term win amid the continuing investigation, her denial and characterization of it as Trump intimidation, and the government filings saying the search warrant is not yet fully executed and any charges would follow.",
     "host": "mprnews.org",
@@ -25021,7 +25093,7 @@
     "kind": "fact",
     "archive": false
    },
-   "10": {
+   "11": {
     "state": "supports",
     "why": "The November 6, 2026 ABC article states Blanche announced Reding Quinones' resignation, that sources said leadership admonished him for lack of progress, and that the probe has led to no criminal indictments.",
     "host": "abcnews.com",
@@ -26066,6 +26138,14 @@
     "why": "The ABA Journal article contains both quoted sentences, the 15-day deadline, the Nov. 13 next meeting, the August staff report finding 26 unmet criteria and recommending denial, and a decision expected by year's end.",
     "host": "abajournal.com",
     "date": "2026-10-16",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
+    "state": "partly",
+    "why": "The article supports the Oct. 7 DOJ letter, the quoted standards language, and the response deadline, but the provided (truncated) text does not show that DOJ and the Education Department declined to comment.",
+    "host": "insidehighered.com",
+    "date": "2026-11-09",
     "kind": "fact",
     "archive": false
    }
