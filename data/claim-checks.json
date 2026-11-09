@@ -1,6 +1,6 @@
 {
  "version": 1,
- "as_of": "2026-11-08",
+ "as_of": "2026-11-09",
  "checks": {
   "abrego-garcia-vindictive-prosecution-2025-2026": {
    "0": {
@@ -12197,13 +12197,37 @@
    },
    "2": {
     "state": "supports",
+    "why": "The source quotes Parnell's 'Claims of concealment are fabrications...' statement verbatim and reports he later posted that the 'vast majority' of the nearly 100 casualties since July 7 involved 'mild concussions' with 96 percent returned to duty, matching every element of the claim.",
+    "host": "nytimes.com",
+    "date": "2026-11-09",
+    "kind": "fact",
+    "archive": false
+   },
+   "3": {
+    "state": "supports",
+    "why": "The RedState article (dated Jul 20, 2026) reproduces Parnell's posted statement containing both quoted passages verbatim, including the 'outright lies from partisan hacks' line and the 'Claims of concealment are fabrications' line quoted elsewhere in full.",
+    "host": "redstate.com",
+    "date": "2026-11-09",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "supports",
     "why": "CNN reports DoD identified Feehan and Gonzales as killed in the Friday attack on Muwaffaq Salti Air Base and Rampersad, previously listed missing, as believed killed in the same attack.",
     "host": "cnn.com",
     "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
-   "3": {
+   "5": {
+    "state": "supports",
+    "why": "The FOX 5 DC piece carries the DOW statement confirming Rampersad, 28, of Ozone Park, N.Y., died during an enemy attack at Muwaffaq Salti Air Base after AFMES identification, and separately states she was originally reported missing and was one of four service members honored at Wednesday's Dover dignified transfer.",
+    "host": "fox5dc.com",
+    "date": "2026-11-09",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
     "state": "partly",
     "why": "The letter text confirms the 12 signatories, the July 30 response deadline, the casualty-count questions and the 14-vs-18 DCAS gap, but the provided text is cut off before the Jordan-attacks questions and the footnote showing 18 deaths by July 23.",
     "host": "kaine.senate.gov",
@@ -12211,7 +12235,7 @@
     "kind": "fact",
     "archive": false
    },
-   "4": {
+   "7": {
     "state": "supports",
     "why": "CNN reports the Pentagon restored the four killed soldiers, the new Overseas Operations category starting July 7, and Valdez's 'temporary data disruptions' explanation, matching the claim.",
     "host": "cnn.com",
@@ -12219,7 +12243,7 @@
     "kind": "fact",
     "archive": false
    },
-   "5": {
+   "8": {
     "state": "partly",
     "why": "The letter confirms the four deaths were removed and reappeared under 'Overseas Operations', the manipulation concern, and the three undisclosed Jordan strikes, but the provided text is truncated before the request for records and the Aug. 18 deadline.",
     "host": "oversightdemocrats.house.gov",
@@ -12227,7 +12251,7 @@
     "kind": "fact",
     "archive": false
    },
-   "6": {
+   "9": {
     "state": "supports",
     "why": "The Military Times article quotes Garcia's statement verbatim as in the claim.",
     "host": "militarytimes.com",
@@ -12235,7 +12259,7 @@
     "kind": "fact",
     "archive": false
    },
-   "7": {
+   "10": {
     "state": "supports",
     "why": "ABC News reports the Duckworth bill would combine Iran war casualty records into a single count and notify next of kin, and lists exactly 17 cosigners including those named in the claim.",
     "host": "abcnews.com",
@@ -12243,7 +12267,15 @@
     "kind": "fact",
     "archive": false
    },
-   "8": {
+   "11": {
+    "state": "supports",
+    "why": "The GovInfo introduced text shows H.R. 10457 introduced September 16, 2026 by Mr. Ryan for himself and 11 named cosponsors, referred to Armed Services and additionally to Oversight and Government Reform and Ways and Means; the short title section confirms the 'Honoring the Sacrifice of Troops in War Act of 2026' name.",
+    "host": "govinfo.gov",
+    "date": "2026-11-09",
+    "kind": "fact",
+    "archive": false
+   },
+   "12": {
     "state": "partly",
     "why": "The Times of Israel text contains the Hegseth quotes exactly as given, but the extracted text does not show the September 18 date of the post.",
     "host": "timesofisrael.com",
@@ -12251,7 +12283,7 @@
     "kind": "fact",
     "archive": false
    },
-   "9": {
+   "13": {
     "state": "supports",
     "why": "The syndicated Post article contains the 22/23 official counts versus 18 in the database, the rise to 19, the unresolved gap, the two unlisted deaths and the Hegseth quote, as claimed.",
     "host": "spokesman.com",
@@ -12259,7 +12291,7 @@
     "kind": "fact",
     "archive": false
    },
-   "10": {
+   "14": {
     "state": "supports",
     "why": "The Post article reports the 37 added wounded (29 sailors, 8 Marines), the total of 861, the lack of explanation, the Navy and CENTCOM responses and the unresolved death-count gap.",
     "host": "spokesman.com",
@@ -12267,7 +12299,7 @@
     "kind": "fact",
     "archive": false
    },
-   "11": {
+   "15": {
     "state": "supports",
     "why": "The Intercept names Maj. Sorffly Davius as missing from the Pentagon's list, with the Camp Buehring March 6 death, and states at least 19 personnel have died per the official count.",
     "host": "theintercept.com",
@@ -12275,7 +12307,7 @@
     "kind": "fact",
     "archive": false
    },
-   "12": {
+   "16": {
     "state": "supports",
     "why": "The archived NYT text reports 21 killed (up from 18) and 865 wounded (up by 98 since August), posted Friday evening to DCAS, cause not completely clear, and the Smith/Houlahan quote and committee discrepancy finding.",
     "host": "nytimes.com",
@@ -12283,7 +12315,7 @@
     "kind": "fact",
     "archive": true
    },
-   "13": {
+   "17": {
     "state": "supports",
     "why": "The Post syndicated text reports the DCAS count of 21 including Davius and an unidentified Navy suicide, 865 wounded, the Seibel training death bringing the Middle East total to 22, and the Pentagon not acknowledging the change while adding a \"pending adjudication\" category.",
     "host": "adn.com",
@@ -20187,9 +20219,9 @@
    },
    "4": {
     "state": "supports",
-    "why": "Central Maine (URL dated 2025/09/09) reports Dudek told ProPublica he wrote the cancellation email knowing it would gain negative attention so the contracts would be reinstated, and quotes 'Do I care about Janet Mills? No.'",
+    "why": "The article states Dudek told ProPublica he wrote the February cancellation email knowing it would gain negative attention (and that he aimed for quick reversal), quotes 'Do I care about Janet Mills? No.', and gives the March 6 effective date, March 7 rescission, and May leave; the September 2025 timing rests on the article's Monday ProPublica reference and its 2025/09/09 URL.",
     "host": "centralmaine.com",
-    "date": "2026-10-15",
+    "date": "2026-11-09",
     "kind": "fact",
     "archive": false
    }
