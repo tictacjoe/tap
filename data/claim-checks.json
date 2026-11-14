@@ -1,6 +1,6 @@
 {
  "version": 1,
- "as_of": "2026-11-09",
+ "as_of": "2026-11-14",
  "checks": {
   "abrego-garcia-vindictive-prosecution-2025-2026": {
    "0": {
@@ -9040,6 +9040,14 @@
     "date": "2026-09-27",
     "kind": "fact",
     "archive": false
+   },
+   "8": {
+    "state": "supports",
+    "why": "The Reuters report (Sept 9) states Martin, who left DOJ last week, is launching Firearm Rights for Americans to restore gun access for those convicted of nonviolent crimes and boost midterm turnout, and that he would work with the RNC to mobilize lawyers in battleground states as part of the legal battles Trump described.",
+    "host": "wsau.com",
+    "date": "2026-11-14",
+    "kind": "fact",
+    "archive": false
    }
   },
   "ed-martin-jan6-prosecutor-purge-hale-cusanelli-2025": {
@@ -10488,6 +10496,14 @@
     "date": "2026-09-27",
     "kind": "fact",
     "archive": false
+   },
+   "6": {
+    "state": "supports",
+    "why": "The AP article (Sept 3, 2026) states each element: Telle named acting secretary, Driscoll gave no explanation, his clashes with Hegseth widely reported, Gen. Randy George among ousted allies, and LaNeve pulled the plug on Driscoll's drone program.",
+    "host": "federalnewsnetwork.com",
+    "date": "2026-11-14",
+    "kind": "fact",
+    "archive": false
    }
   },
   "hegseth-army-cid-security-detail-diversion-2025": {
@@ -10876,10 +10892,10 @@
     "archive": false
    },
    "3": {
-    "state": "not_found",
-    "why": "The provided source text is simply the original July 13, 2026 announcement article reused; it contains no information about the task force's status as of an August 2026 update or whether any prosecutions/referrals resulted, so it cannot support or refute this re-verification claim.",
+    "state": "supports",
+    "why": "Both quotations appear verbatim in the article, attributed to Hegseth's Monday (July 13) social media video.",
     "host": "militarytimes.com",
-    "date": "2026-09-15",
+    "date": "2026-11-14",
     "kind": "fact",
     "archive": false
    },
@@ -11101,45 +11117,61 @@
   "hegseth-iran-school-strike-minab-2026": {
    "0": {
     "state": "supports",
-    "why": "Military Times/Reuters reporting confirms the Feb. 28 strike date, the 175+ deaths cited by Iranian officials, Cooper's May testimony calling the investigation 'complex', and the Pentagon's 'no updates to announce' response.",
+    "why": "The article states the Feb. 28 strike date, the 175+ deaths per Iranian officials, Reuters' March 5 first report, Cooper's May 'complex' testimony, the Pentagon official's quoted response, and Trump's June 24 'I don't think it was us' remark.",
     "host": "militarytimes.com",
-    "date": "2026-09-15",
+    "date": "2026-11-14",
     "kind": "fact",
     "archive": false
    },
    "1": {
-    "state": "partly",
-    "why": "Warren's press release confirms the DoD IG's May 2026 CHMR-AP review found all of the plan's objectives 'at risk' under Hegseth and that DoD is failing to comply with congressionally-mandated civilian-protection obligations, but the source only says 'In May' and never gives a specific 'May 13, 2026' date or an explicit count of 'eleven' objectives.",
+    "state": "supports",
+    "why": "Warren's press release states the May DoD IG review found all plan objectives 'at risk' under Hegseth and that failure to implement the plan means DoD is failing to comply with congressionally-mandated obligations.",
     "host": "warren.senate.gov",
-    "date": "2026-09-15",
+    "date": "2026-11-14",
     "kind": "fact",
     "archive": false
    },
    "2": {
-    "state": "partly",
-    "why": "The article confirms the 18-9 committee vote, the 25% travel-fund cap tied to the Minab and Yemen strike investigations, and the failed 13-14 amendment vote, but it identifies the bill as the fiscal year 2027 NDAA, not 'FY2026 NDAA' as the claim states.",
-    "host": "militarytimes.com",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "Raw Story (June 17, 2026), citing Politico, describes the SASC NDAA provision limiting Hegseth's office travel funds pending congressional requests including on the Minab bombing, and says the House version lacks similar language and would face conference negotiations.",
+    "host": "rawstory.com",
+    "date": "2026-11-14",
     "kind": "fact",
     "archive": false
    },
    "3": {
-    "state": "unopened",
-    "why": "",
-    "host": "warren.senate.gov",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "Military Times (June 18, 2026) reports the 18-9 committee vote last week, the provision limiting Hegseth's travel funding to no more than 25% pending the Minab and three 2025 Yemen civilian harm investigations, and the failed 13-14 Iran-funding amendment.",
+    "host": "militarytimes.com",
+    "date": "2026-11-14",
     "kind": "fact",
     "archive": false
    },
    "4": {
     "state": "supports",
-    "why": "CNN's exclusive reporting states senior commanders bypassed database warnings that intelligence was outdated and approved strikes including the one that hit the school, per three sources.",
-    "host": "cnn.com",
-    "date": "2026-09-15",
+    "why": "NBC News (June 18, 2026) reports CENTCOM completed the investigation, senior officials are in final review, lawmakers have no details or timeline, and four congressional officials plus a person familiar voiced concern about classification.",
+    "host": "nbcnews.com",
+    "date": "2026-11-14",
     "kind": "fact",
     "archive": false
    },
    "5": {
+    "state": "partly",
+    "why": "The July 5, 2026 letter, signed by Warren, Hirono, Van Hollen, Kelly, Duckworth, Murray, Gillibrand, Kim, Crow and Jacobs, states the IG report's findings exactly as claimed (gutting CHMR efforts, lacking 'personnel and capabilities') and elsewhere says the IG reclassified all eleven objectives 'at risk' and cites the Iran-war civilian-harm spike. The provided text is truncated in several places, so the negative assertion that the letter never names the Minab strike cannot be fully confirmed, though no mention appears in the available text.",
+    "host": "warren.senate.gov",
+    "date": "2026-11-14",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
+    "state": "supports",
+    "why": "CNN's July 7, 2026 exclusive, citing three sources, reports senior commanders bypassed database warnings that target intelligence was severely out of date and approved strikes including the one that hit the school.",
+    "host": "cnn.com",
+    "date": "2026-11-14",
+    "kind": "fact",
+    "archive": false
+   },
+   "7": {
     "state": "supports",
     "why": "The Reed Senate press release itself is the letter demanding the Pentagon release the complete, unredacted investigation and a corrective-action plan without further delay.",
     "host": "reed.senate.gov",
@@ -11147,43 +11179,51 @@
     "kind": "fact",
     "archive": false
    },
-   "6": {
-    "state": "supports",
-    "why": "The CNN article reports CENTCOM has not ordered the standard third-phase intelligence review, that interview material has been locked down with only a handful of officers granted access, and that pressure from the White House has made Hegseth and Cooper resistant to sharing information.",
-    "host": "cnn.com",
-    "date": "2026-09-15",
-    "kind": "fact",
-    "archive": false
-   },
-   "7": {
-    "state": "partly",
-    "why": "The BreakingDefense article confirms the House passed the FY2027 NDAA 216-212, but never mentions H.R. 8800, a travel-fund/boat-strike-video provision, or the status of the Senate's Minab-disclosure provision in conference -- the central legislative-leverage detail of the claim is absent from this source.",
-    "host": "breakingdefense.com",
-    "date": "2026-09-15",
-    "kind": "fact",
-    "archive": false
-   },
    "8": {
-    "state": "partly",
-    "why": "The cited Final Call/CommonDreams article confirms the Pentagon still had not released its investigation findings five months after the strike and that CNN had reported the probe as essentially complete, but this source text says nothing about an NBC News mid-June report, growing congressional concern about classification, or Trump's 'I don't think it was us' quote, so most of this compound claim is unaddressed by this specific source.",
-    "host": "new.finalcall.com",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "CNN's July 16, 2026 exclusive reports the standard third-phase intelligence review was never ordered, interview material was 'locked down' by CENTCOM with only a handful of officers given access, and White House pressure has made Hegseth and Cooper resist sharing information.",
+    "host": "cnn.com",
+    "date": "2026-11-14",
     "kind": "fact",
     "archive": false
    },
    "9": {
-    "state": "not_found",
-    "why": "",
-    "host": "militarytimes.com",
-    "date": "2026-09-15",
+    "state": "partly",
+    "why": "Breaking Defense confirms the 216-212 House passage, the SASC June approval, Senate Democrats blocking floor action over the Iran war and spending growth, and the need to reconcile versions; but the archived text says only 'today' and does not state the July 22 date (the snapshot is from July 23).",
+    "host": "breakingdefense.com",
+    "date": "2026-11-14",
+    "kind": "fact",
+    "archive": true
+   },
+   "10": {
+    "state": "supports",
+    "why": "The Final Call republication of Brad Reed's CommonDreams report states that as of July 28 DOD had not released its findings, that CNN reported earlier in the month the investigation was essentially complete, and that U.N. experts renewed calls for release.",
+    "host": "new.finalcall.com",
+    "date": "2026-11-14",
     "kind": "fact",
     "archive": false
    },
-   "10": {
-    "state": "partly",
-    "why": "The source supports the 'reasonable grounds' finding, the school as 'the intended point of impact', the Lamerd strike with 22 civilians killed, and at least 178 civilians across the two strikes. It does not say the Pentagon's preliminary finding found the U.S. probably responsible (only that findings have not been released), and it has no Trump or Hegseth statements about the duty to distinguish civilians.",
+   "11": {
+    "state": "supports",
+    "why": "The AP/NPR report (Sept 17, 2026) states the mission's 'reasonable grounds' finding on two Feb. 28 strikes killing at least 178 civilians, the 'intended point of impact' conclusion for Minab, the 22 killed in Lamerd, and Iranian state media's 168 toll.",
     "host": "npr.org",
-    "date": "2026-09-21",
+    "date": "2026-11-14",
+    "kind": "fact",
+    "archive": false
+   },
+   "12": {
+    "state": "supports",
+    "why": "Truthout reports the mission found reasonable grounds of a war crime at Minab and cited Trump and Hegseth's actions and statements dismissing civilian-harm practices, including 'binding obligations,' as establishing a 'mental element of recklessness.'",
+    "host": "truthout.org",
+    "date": "2026-11-14",
+    "kind": "fact",
+    "archive": false
+   },
+   "13": {
+    "state": "supports",
+    "why": "Antiwar.com (Oct 15, 2026), citing Bloomberg, states Hegseth's advisers told Pentagon personnel the report finding flawed intelligence, outdated imagery and AI overreliance would not be released before the Nov. 3 elections, and that it had been all but complete for months.",
+    "host": "news.antiwar.com",
+    "date": "2026-11-14",
     "kind": "fact",
     "archive": false
    }
@@ -13315,7 +13355,7 @@
     "state": "unopened",
     "why": "",
     "host": "apnews.com",
-    "date": "2026-09-15",
+    "date": "2026-11-14",
     "kind": "fact",
     "archive": true
    },
@@ -13412,10 +13452,10 @@
   },
   "jordan-jack-smith-perjury-referral-2025-2026": {
    "0": {
-    "state": "partly",
-    "why": "The Dec. 17 deposition date, Smith's compliance, and the rejected public-testimony offer are all confirmed, but the source's 'Wednesday'/dateline of December 3, 2025 for the subpoena's issuance does not match the claim's December 7, 2025 date (a Sunday).",
+    "state": "supports",
+    "why": "CBS News (Dec 3, 2025) reports Jordan's subpoena for a Dec. 17 closed-door deposition and Smith's lawyer saying he would comply while noting his rejected offer to testify publicly.",
     "host": "cbsnews.com",
-    "date": "2026-09-15",
+    "date": "2026-11-14",
     "kind": "fact",
     "archive": false
    },
@@ -14004,6 +14044,14 @@
     "date": "2026-11-02",
     "kind": "fact",
     "archive": false
+   },
+   "11": {
+    "state": "supports",
+    "why": "The Reuters report dated Nov 11, 2026, citing Axios, says 'US Commerce Secretary Howard Lutnick' stalled Trump's crackdown on Nvidia chip diversion to China.",
+    "host": "wsau.com",
+    "date": "2026-11-14",
+    "kind": "fact",
+    "archive": false
    }
   },
   "lutnick-usar-conflict-of-interest-2026-01": {
@@ -14319,11 +14367,11 @@
    },
    "1": {
     "state": "supports",
-    "why": "NPR states directly that more than half of OCR's lawyers and staff were fired in March 2025 and that seven of twelve regional OCR offices were shut down.",
-    "host": "npr.org",
-    "date": "2026-09-15",
+    "why": "The GAO highlights state each element: half of 575 OCR staff on leave and 7 of 12 regional offices closed in March 2025, up to $38 million cost March-December 2025, December 2025 recall, and early January 2026 rescission.",
+    "host": "gao.gov",
+    "date": "2026-11-14",
     "kind": "fact",
-    "archive": false
+    "archive": true
    },
    "2": {
     "state": "partly",
@@ -14426,6 +14474,14 @@
     "why": "NPR states over a hundred special education staffers began reporting at an HHS building Sept. 10 and dozens of civil rights employees moved to DOJ; it also states the administration is using interagency agreements to shift workers.",
     "host": "npr.org",
     "date": "2026-09-27",
+    "kind": "fact",
+    "archive": false
+   },
+   "15": {
+    "state": "unopened",
+    "why": "",
+    "host": "courtlistener.com",
+    "date": "2026-11-14",
     "kind": "fact",
     "archive": false
    }
