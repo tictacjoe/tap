@@ -165,7 +165,7 @@ def test_back_from_reporting_jump_restores_search(browser, site_url):
     page = _open(browser, site_url)
     term = page.evaluate(PICK_JS, ["tracker", "c => c.reporting > 0"])
     _search(page, term)
-    page.locator('section[data-group="reporting"] .headline-row-tracker').first.click()
+    page.locator('section[data-group="reporting"] .headline-row-text').first.click()
     page.wait_for_timeout(500)
     page.go_back()
     page.wait_for_timeout(600)

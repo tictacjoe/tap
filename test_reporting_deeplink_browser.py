@@ -160,9 +160,10 @@ def test_a_headlines_jump_to_an_old_reporting_row_opens_it_and_back_forward_repl
             break
         more.click()
         page.wait_for_timeout(300)
-    buttons = page.locator(".headline-row-tracker")
+    # The headline text opens the entry (2026-11-15; was the tracker chip).
+    buttons = page.locator('.headline-entry[data-tracker="tracker"] .headline-row-text')
     last = next((i for i in range(buttons.count() - 1, -1, -1)
-                 if "Reporting" in (buttons.nth(i).get_attribute("title") or "") and buttons.nth(i).is_visible()), None)
+                 if buttons.nth(i).is_visible()), None)
     if last is None:
         pytest.skip("no visible Reporting row among the loaded Headlines rows")
     buttons.nth(last).click()

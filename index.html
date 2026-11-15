@@ -1208,7 +1208,7 @@
      label. */
   .headline-row-tracker .tracker-name-abbr { display: none; }
   /* Tracker chip: filled with the tracker's color, always carries its name
-     as text. Sits inside the existing jump button, so the button's width
+     as text. Sits inside the row's tracker label, so that label's width
      rules (and the <600px abbr swap) still apply. */
   .tracker-chip {
     display: inline-block;
@@ -1271,6 +1271,12 @@
     overflow: hidden;
     text-overflow: ellipsis;
   }
+  /* The headline text opens the entry (2026-11-15); the tracker chip
+     beside it is a plain label now, so it drops the button hover cue. */
+  .headline-row-open { cursor: pointer; }
+  .headline-row-open:hover, .headline-row-open:focus-visible { text-decoration: underline; color: var(--brass); }
+  span.headline-row-tracker { cursor: default; box-sizing: border-box; line-height: normal; }
+  span.headline-row-tracker:hover { border-color: var(--rule); }
   .headline-more-btn, .headline-trail-btn { flex-shrink: 0; }
   .headline-tier-text { display: none; margin: 0 0.8rem 0.6rem; }
   .headline-trail-panel { margin: 0.5rem 0.8rem 0.6rem; }
@@ -2868,22 +2874,31 @@ function buildHeadlineRow(item, displayDate) {
     }
   }
 
-  // The tracker abbreviation is a real jump-tab, not just a label.
-  // Every item carries its source entry's own id (see the adapt*Entry()
-  // functions above; Reporting items since 2026-10-07), so it reuses the
-  // same goToTrackerHome() + openCardById() pair the "Copy link"
-  // hash-based deep link relies on -- lands directly on that entry's own
-  // card, opened and scrolled to (a Reporting card outside the 300 drawn
-  // is drawn on demand by openCardById()). An item with no id falls back
-  // to just switching the database dropdown to that tracker's home view.
-  const dbBtn = document.createElement("button");
-  dbBtn.type = "button";
-  dbBtn.className = "share-link-btn headline-row-tracker";
-  dbBtn.title = item.id ? "Jump to this entry in " + trackerLabel : "Jump to " + trackerLabel;
-  dbBtn.innerHTML = trackerChipHtml(item.tracker) || (
+  // The tracker chip is a plain label (Joe, 2026-11-15). It keeps the
+  // share-link-btn box so its width and look are unchanged, but it is a
+  // <span>, not a button: the headline text is what opens the entry now.
+  const dbTag = document.createElement("span");
+  dbTag.className = "share-link-btn headline-row-tracker";
+  dbTag.innerHTML = trackerChipHtml(item.tracker) || (
     '<span class="tracker-name-medium">' + escapeHtml(trackerMedium) + '</span>' +
     '<span class="tracker-name-abbr">' + escapeHtml(trackerAbbr) + '</span>');
-  dbBtn.addEventListener("click", () => {
+
+  // The headline text is the jump to the entry (it was the tracker chip
+  // until 2026-11-15). Every item carries its source entry's own id (see
+  // the adapt*Entry() functions above; Reporting items since 2026-10-07),
+  // so it reuses the same goToTrackerHome() + openCardById() pair the
+  // "Copy link" hash-based deep link relies on -- lands directly on that
+  // entry's own card, opened and scrolled to (a Reporting card outside
+  // the 300 drawn is drawn on demand by openCardById()). An item with no
+  // id falls back to just switching the database dropdown to that
+  // tracker's home view. A focusable role="button" span rather than a
+  // real <button>, so fitHeadlineRowText()'s ellipsis layout is untouched;
+  // Enter and Space open it from the keyboard.
+  textSpan.classList.add("headline-row-open");
+  textSpan.setAttribute("role", "button");
+  textSpan.setAttribute("tabindex", "0");
+  textSpan.setAttribute("aria-label", (item.id ? "Open this entry in " : "Go to ") + trackerLabel + ": " + item.headline);
+  const openEntry = () => {
     // Stamp the CURRENT history entry (still Records, not yet navigated)
     // with a snapshot via replaceState, then push a new entry for the
     // page we're about to show -- so a later Back lands on the replaced
@@ -2905,8 +2920,12 @@ function buildHeadlineRow(item, displayDate) {
     } else {
       selectDatabaseTab(item.tracker);
     }
+  };
+  textSpan.addEventListener("click", openEntry);
+  textSpan.addEventListener("keydown", e => {
+    if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openEntry(); }
   });
-  line.insertBefore(dbBtn, textSpan);
+  line.insertBefore(dbTag, textSpan);
 
   // Status pill right after the chip, once this tracker's entries all
   // carry status_stage; symbol-only at phone width. fitHeadlineRowText()

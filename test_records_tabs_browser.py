@@ -121,9 +121,35 @@ def test_back_returns_to_reporting_tab(browser, site_url):
     page = _open(browser, site_url)
     page.locator("#feed-tab-reporting").click()
     page.wait_for_timeout(500)
-    page.locator("#headlines-view .headline-row-tracker").first.click()
+    page.locator("#headlines-view .headline-row-text").first.click()
     page.wait_for_timeout(800)
     page.go_back()
     page.wait_for_timeout(800)
     assert page.locator("#feed-tab-reporting").get_attribute("aria-selected") == "true"
     assert set(_row_trackers(page)) == {"tracker"}
+
+
+def test_headline_text_opens_entry(browser, site_url):
+    # 2026-11-15: the headline text (right of the "notes" tag) opens the
+    # entry's detail card; the tracker chip is a plain label, not a button.
+    page = _open(browser, site_url)
+    row = page.locator("#headlines-view .headline-entry").first
+    assert row.locator("button.headline-row-tracker").count() == 0
+    assert row.locator("span.headline-row-tracker").count() == 1
+    text = row.locator(".headline-row-text")
+    assert text.get_attribute("role") == "button"
+    text.click()
+    page.wait_for_timeout(1000)
+    entry_id = page.evaluate("history.state && history.state.id")
+    assert entry_id
+    assert page.locator(f'.entry.open[data-entry-id="{entry_id}"]').count() == 1
+
+
+def test_headline_text_opens_entry_from_keyboard(browser, site_url):
+    page = _open(browser, site_url)
+    page.locator("#headlines-view .headline-row-text").first.focus()
+    page.keyboard.press("Enter")
+    page.wait_for_timeout(1000)
+    entry_id = page.evaluate("history.state && history.state.id")
+    assert entry_id
+    assert page.locator(f'.entry.open[data-entry-id="{entry_id}"]').count() == 1
