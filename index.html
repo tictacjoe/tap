@@ -2684,11 +2684,16 @@ function buildTrailHtml(trail) {
    automatically narrow enough too. Both spans render into the DOM
    always; the CSS media query below picks which one is visible. */
 /* tracker-colors:start */
+// 2026-11-15 (Joe): "Accountability" -> "Cabinet-Level Officials" and
+// "Family Deals" -> "Trump Family Self-Dealing", for accuracy. Both run past
+// the chip's 18ch min-width (sized for the old widest label), so those two
+// chips are wider than the rest; checked live at 1900/1280/800px and on a
+// phone-width entry header, they stay on one line.
 const HEADLINE_TRACKER_MEDIUM = {
   deregulation: "Deregulation",
-  prosecution: "Accountability",
+  prosecution: "Cabinet-Level Officials",
   govservices: "Service Cuts",
-  trumpfamily: "Family Deals",
+  trumpfamily: "Trump Family Self-Dealing",
   dai: "DHS and ICE",
   oea: "Other Actions",
   tracker: "Reporting",
@@ -2879,6 +2884,7 @@ function buildHeadlineRow(item, displayDate) {
   // <span>, not a button: the headline text is what opens the entry now.
   const dbTag = document.createElement("span");
   dbTag.className = "share-link-btn headline-row-tracker";
+  dbTag.title = trackerLabel; // full tracker name on hover, since the chip label is shortened
   dbTag.innerHTML = trackerChipHtml(item.tracker) || (
     '<span class="tracker-name-medium">' + escapeHtml(trackerMedium) + '</span>' +
     '<span class="tracker-name-abbr">' + escapeHtml(trackerAbbr) + '</span>');
