@@ -30,11 +30,12 @@ def _first_with_sources(file_name, has_sources):
 
 # One entry per detail-card builder: Cabinet-Level (evidence URLs),
 # Deregulation, and the shared govservices branch (GSR/TFS/DAI/OEA).
+# Each also has a Broader Pattern (`cause`), for the third-column check.
 CASES = [
     ("prosecution", _first_with_sources(
-        "prosecution.json", lambda e: any(i.get("source_url") for i in e.get("evidence") or []))),
-    ("deregulation", _first_with_sources("deregulation.json", lambda e: bool(e.get("sources")))),
-    ("govservices", _first_with_sources("government-services.json", lambda e: bool(e.get("sources")))),
+        "prosecution.json", lambda e: e.get("cause") and any(i.get("source_url") for i in e.get("evidence") or []))),
+    ("deregulation", _first_with_sources("deregulation.json", lambda e: e.get("cause") and bool(e.get("sources")))),
+    ("govservices", _first_with_sources("government-services.json", lambda e: e.get("cause") and bool(e.get("sources")))),
 ]
 
 # Which column the card's visible columns put it in, and its position there.
@@ -58,6 +59,7 @@ _PLACEMENT = """(id) => {
     return {
         columns: cols.length,
         sources: where('Sources'),
+        pattern: where('Broader Pattern'),
         what: where('What happened'),
         open: !!(details && details.open),
     };
@@ -121,3 +123,11 @@ def test_sources_follow_what_happened_on_phone(browser, site_url, tracker, entry
     assert r["open"]
     assert r["what"] == [0, 0]
     assert r["sources"] == [0, 1], "Sources should come right after What happened"
+
+
+@pytest.mark.parametrize("tracker,entry_id", CASES)
+def test_broader_pattern_tops_third_column(browser, site_url, tracker, entry_id):
+    # 2026-11-15: Broader Pattern sits to the right of Sources (top of column 3).
+    r = _placement(browser, site_url, tracker, entry_id, 1900)
+    assert r["columns"] == 3
+    assert r["pattern"] == [2, 0], "Broader Pattern should top the third column, right of Sources"

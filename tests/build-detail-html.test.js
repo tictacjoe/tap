@@ -334,7 +334,7 @@ test("prosecution without narrative_combined keeps the original two-card layout 
   assert(result.includes('<div class="field-label">Status</div><div class="field-value"><p>Second part.</p></div>'));
 });
 
-test("prosecution narrative_combined still puts Broader Pattern top-right (third card) despite Status no longer being a separate card", () => {
+test("prosecution puts Broader Pattern right after What happened (and Sources), merged or not (2026-11-15)", () => {
   const merged = buildDetailHtml({
     offense_category: "Fraud", status_category: "Investigation", incident_summary: "x", status: "y",
     cause: "The pattern.", narrative_combined: true,
@@ -343,12 +343,12 @@ test("prosecution narrative_combined still puts Broader Pattern top-right (third
     offense_category: "Fraud", status_category: "Investigation", incident_summary: "x", status: "y",
     cause: "The pattern.",
   }, { kind: "prosecution" });
-  // Broader Pattern must be the third field-group card in reading order in BOTH cases,
-  // so assignCardsToColumns (which seeds columns 0/1/2 from the first three cards)
-  // always lands it in the same column regardless of migration state.
+  // Broader Pattern follows What happened (and Sources, when there is one -- its
+  // label is a <summary>, so it is not in this list) in BOTH cases, so
+  // assignCardsToColumns lands it at the top of the third column.
   for (const result of [merged, unmerged]) {
     const cards = [...result.matchAll(/<div class="field-label">([^<]+)<\/div>/g)].map(m => m[1]);
-    assert.equal(cards[2], "Broader Pattern", `third card should be Broader Pattern, got: ${cards.join(", ")}`);
+    assert.equal(cards[1], "Broader Pattern", `Broader Pattern should follow What happened, got: ${cards.join(", ")}`);
   }
 });
 
@@ -365,15 +365,15 @@ test("prosecution narrative_combined with section_summaries.status gets a skim-l
   // The full status text is NOT duplicated into the small Status card...
   const statusCardStart = result.indexOf('<div class="field-label">Status</div>');
   const broaderPatternStart = result.indexOf('<div class="field-label">Broader Pattern</div>');
-  const statusCardHtml = result.slice(statusCardStart, broaderPatternStart);
+  const statusCardHtml = result.slice(statusCardStart, result.indexOf('<div class="field-label">Violation Type (in full)</div>'));
   assert(!statusCardHtml.includes("the full status prose"), "full status text should not appear inside the small Status card");
   // ...it stays merged inside What happened, same as before this change.
   const whatHappenedStart = result.indexOf('<div class="field-label">What happened</div>');
-  const whatHappenedHtml = result.slice(whatHappenedStart, statusCardStart);
+  const whatHappenedHtml = result.slice(whatHappenedStart, broaderPatternStart);
   assert(whatHappenedHtml.includes("<p>Second part, the full status prose.</p>"), "full status text should still be merged into What happened");
-  // Card order reverts to the same order as the non-merged branch: What happened, Status, Broader Pattern, Violation Type.
+  // Same order as the non-merged branch: What happened, Broader Pattern, Status, Violation Type.
   const cards = [...result.matchAll(/<div class="field-label">([^<]+)<\/div>/g)].map(m => m[1]);
-  assert.deepEqual(cards.slice(0, 4), ["What happened", "Status", "Broader Pattern", "Violation Type (in full)"]);
+  assert.deepEqual(cards.slice(0, 4), ["What happened", "Broader Pattern", "Status", "Violation Type (in full)"]);
 });
 
 test("prosecution narrative_combined without section_summaries.status renders no Status card at all (unchanged from before)", () => {
@@ -1009,7 +1009,7 @@ const layoutEntries = {
       comeback: "Rebuttal.",
     },
     // Confidence note is a collapsible <summary> for prosecution/CLA (2026-09-22), not a plain <div>.
-    order: [">What happened</div>", ">Status</div>", ">Broader Pattern</div>", ">Violation Type (in full)</div>", ">Anticipated Defense</div>", ">TAP's Rebuttal</div>", ">Violation/Concern Type</div>", ">Status Stage</div>", ">Confidence note</summary>", "entry-aside-quote"],
+    order: [">What happened</div>", ">Broader Pattern</div>", ">Status</div>", ">Violation Type (in full)</div>", ">Anticipated Defense</div>", ">TAP's Rebuttal</div>", ">Violation/Concern Type</div>", ">Status Stage</div>", ">Confidence note</summary>", "entry-aside-quote"],
   },
 };
 
@@ -1599,13 +1599,13 @@ for (const kind of ["govservices", "deregulation"]) {
   });
   const cardLabels = (html) => [...html.matchAll(/<div class="field-label">([^<]+)<\/div>/g)].map(m => m[1]);
 
-  test(`${kind} with cause renders Broader Pattern after Status, Estimated impact and Caveat`, () => {
+  test(`${kind} with cause renders Broader Pattern right after What happened, before Status (2026-11-15)`, () => {
     const result = buildDetailHtml({
       ...baseEntry(),
       cause: "[TAP Analysis, not sourced] Pattern text. See also: the DC takeover entry.",
       cause_references: [{ match: "the DC takeover entry", tracker: "prosecution", id: "trump-dc-police-federal-takeover-2025" }],
     }, { kind });
-    assert.deepEqual(cardLabels(result).slice(0, 5), ["What happened", "Status", "Estimated impact", "Caveat", "Broader Pattern"]);
+    assert.deepEqual(cardLabels(result).slice(0, 5), ["What happened", "Broader Pattern", "Status", "Estimated impact", "Caveat"]);
     assert(result.includes('<a href="#" class="related-entry-link cause-reference-link" data-tracker="prosecution" data-id="trump-dc-police-federal-takeover-2025">the DC takeover entry</a>'), "reference renders as a link");
     assert(result.includes("[TAP Analysis, not sourced] Pattern text."), "the analysis label is shown, as in CLA");
   });
@@ -1657,10 +1657,10 @@ for (const kind of ["govservices", "deregulation"]) {
     assert.deepEqual(cards[1], ["Status", "Estimated impact"]);
   });
 
-  test(`${kind} with cause keeps Broader Pattern as the third card, after the Status/impact card`, () => {
+  test(`${kind} with cause puts Broader Pattern before the Status/impact card`, () => {
     const entry = { ...entryWith({ summary: "Impact.", caveat: "A caveat." }), cause: "[TAP Analysis, not sourced] Pattern." };
     const cards = mainCards(buildDetailHtml(entry, { kind }));
-    assert.deepEqual(cards.map(c => c[0]), ["What happened", "Status", "Broader Pattern"]);
+    assert.deepEqual(cards.map(c => c[0]), ["What happened", "Broader Pattern", "Status"]);
   });
 
   test(`${kind} keeps the Caveat italic inside the shared card`, () => {
