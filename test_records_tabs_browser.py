@@ -153,3 +153,14 @@ def test_headline_text_opens_entry_from_keyboard(browser, site_url):
     entry_id = page.evaluate("history.state && history.state.id")
     assert entry_id
     assert page.locator(f'.entry.open[data-entry-id="{entry_id}"]').count() == 1
+
+
+def test_tracker_filter_names_match_chips(browser, site_url):
+    # 2026-11-15: "All trackers", and each option reads like its tracker chip.
+    page = _open(browser, site_url)
+    options = page.eval_on_selector_all(
+        "#headlines-tracker-filter option", "os => os.map(o => [o.value, o.textContent])")
+    assert options[0] == ["", "All trackers"]
+    chips = page.evaluate("HEADLINE_TRACKER_MEDIUM")
+    for value, text in options[1:]:
+        assert text == chips[value]

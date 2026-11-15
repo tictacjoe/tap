@@ -3236,8 +3236,10 @@ function renderHeadlinesControls() {
   const trackerSel = document.getElementById("headlines-tracker-filter");
   trackerSel.style.display = isReporting ? "none" : "";
   if (!headlinesCuratedKeys().includes(headlinesTrackerFilter)) headlinesTrackerFilter = "";
-  trackerSel.innerHTML = '<option value="">All databases</option>' +
-    headlinesCuratedKeys().map(key => '<option value="' + key + '">' + TRACKERS[key].label + '</option>').join("");
+  // Option names match the tracker chips (HEADLINE_TRACKER_MEDIUM), so the
+  // filter reads the same as the rows it filters (Joe, 2026-11-15).
+  trackerSel.innerHTML = '<option value="">All trackers</option>' +
+    headlinesCuratedKeys().map(key => '<option value="' + key + '">' + escapeHtml(HEADLINE_TRACKER_MEDIUM[key] || TRACKERS[key].label) + '</option>').join("");
   trackerSel.value = headlinesTrackerFilter;
 
   // The Records category subfilter (Corruption, Disinformation, etc., for
