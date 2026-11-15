@@ -14688,7 +14688,7 @@
     ],
     "rebuttal_anticipated": "DOJ can argue that the Supreme Court found in 2023 that Harvard violated Title VI by considering race, that checking compliance with applicant-level data is a routine and authorized use of its review power that Harvard agreed to as a funding recipient, and that the dismissal was purely procedural: the judge said the government had \"substantial arguments\" that it pursued voluntary cooperation, did not find the demand invalid, and left DOJ free to sue again.",
     "comeback": "The steps the court found missing are not technicalities: Title VI makes court enforcement a last resort after the recipient is told what it failed to do and what action will follow, and the judge wrote that \"**a deadline and a threat to sue, standing alone, do not necessarily demonstrate compliance**\" with that process. DOJ sued instead, less than two weeks after the president publicly demanded $1 billion from Harvard, and this is the second DOJ Title VI suit against Harvard dismissed in 2026 on the ground that the government skipped or could not show what the law requires first.",
-    "cause": "[TAP Analysis, not sourced] One of several federal actions taken against Harvard after it refused the administration's April 2025 demands, alongside the research funding freeze, the push to revoke its tax-exempt status, the attempt to bar it from enrolling international students and the Pentagon's end of military training and fellowships there. As with the funding freeze, a court rejected the government's move, though here only on procedural grounds and with the retaliation question left open.",
+    "cause": "[TAP Analysis, not sourced] One of several federal actions taken against Harvard after it refused the administration's April 2025 demands, alongside the research funding freeze, the push to revoke its tax-exempt status, the attempt to bar it from enrolling international students and the Pentagon's end of military training and fellowships there. As with the funding freeze, a court rejected the government's move, though here only on procedural grounds and with the retaliation question left open. See also the entry on DOJ's dismissed Title VI antisemitism suit against Harvard.",
     "cause_references": [
       {
         "match": "research funding freeze",
@@ -14709,6 +14709,11 @@
         "match": "Pentagon's end of military training and fellowships there",
         "tracker": "prosecution",
         "id": "hegseth-harvard-military-education-cutoff-2026"
+      },
+      {
+        "match": "the entry on DOJ's dismissed Title VI antisemitism suit against Harvard",
+        "tracker": "prosecution",
+        "id": "doj-harvard-antisemitism-title-vi-suit-dismissed-2026"
       }
     ],
     "confidence_note": "HIGH confidence on the facts of the demand, the suit and the dismissal: they come from DOJ's own complaint and press release, the judge's memorandum of decision and the court docket, corroborated by Courthouse News, Reuters (via CNBC), the Associated Press (via WBUR), The Harvard Crimson and Harvard Magazine. The ruling is procedural only: it makes no finding that the demand was improper or retaliatory, and the retaliation claim remains Harvard's allegation. DOJ's stated plan to refile is reported secondhand (Harvard Magazine citing Inside Higher Ed). Dhillon's and Bondi's roles are documented by the complaint's signature block and DOJ's release.",
@@ -14778,6 +14783,169 @@
     "last_verified": "2026-11-15",
     "date_added": "2026-11-15",
     "date_of_action": "2025-04-11 (DOJ opens Harvard admissions compliance reviews) through 2026-11-02 (judge dismisses DOJ's suit without prejudice)",
+    "last_substantive_update": "2026-11-15"
+  },
+  {
+    "id": "doj-harvard-antisemitism-title-vi-suit-dismissed-2026",
+    "official": "Harmeet Dhillon, then-Assistant Attorney General for Civil Rights (heads the March 2026 complaint's signature block; resigned November 2026); Pam Bondi, then-Attorney General (announced the suit)",
+    "offense_category": "Alleged retaliatory use of Title VI enforcement power -- a civil suit seeking to claw back federal grants over Harvard's response to campus antisemitism, not a prosecution and not unlawful in form; a federal court dismissed it because the government had not plausibly alleged any violation continuing after its statutory notice, and Harvard's claim that the suit was retaliation is disputed and undecided",
+    "narrative_combined": true,
+    "contested": true,
+    "incident_summary": "On June 30, 2025, the Department of Health and Human Services gave Harvard written notice of its investigative finding that Harvard's response to antisemitic and anti-Zionist harassment of students after Hamas's October 7, 2023 attack on Israel violated Title VI of the Civil Rights Act of 1964. On March 20, 2026, less than two months after President Trump said his administration was seeking $1 billion from Harvard to settle federal probes, Reuters reported, the Justice Department's Civil Rights Division sued Harvard in federal court in Boston. The complaint, filed under the name of Assistant Attorney General for Civil Rights Harmeet Dhillon, alleged that Harvard was deliberately indifferent to hostility against Jewish and Israeli students and refused to enforce its campus rules against those who harassed them. It asked the court to rescind and order restitution of all grant payments made to Harvard during its alleged noncompliance, to declare that the government need not make further payments on existing grants, to bar Harvard from new federal funding agreements until it complied, and to appoint an independent monitor; DOJ said Harvard was set to receive more than $2.6 billion under active HHS grants. The complaint spoke of recovering \"billions of dollars\"; The Harvard Crimson put the amount sought at nearly $1 billion. Then-Attorney General Pam Bondi said that \"too many of our educational institutions have allowed anti-Semitism to flourish on campus – Harvard included.\" Harvard moved to dismiss in May 2026, arguing that the government had not alleged an ongoing violation, that the suit was unlawful retaliation, and that there was no breach of contract; DOJ amended its complaint in June to add new incidents.\n\nOn August 13, 2026, Judge Richard Stearns granted Harvard's motion, agreeing with its first argument, \"that the Government has not sufficiently pled an ongoing violation of Title VI\": the amended complaint centered on the 2023-2024 school year and cited only three incidents from March 2025, which he found \"**too isolated and episodic to support a plausible inference that any institutionalized noncompliance with Title VI persists at Harvard to this day**.\" Title VI, he wrote, lets the government act only after it has notified a recipient and determined that compliance cannot be secured by voluntary means, and the amended complaint alleged nothing after the June 30, 2025 notice. He added that the government had identified no rational basis for its determination that voluntary compliance was impossible. Stearns ruled only on that first argument and did not decide Harvard's claim that the suit was retaliation. Dhillon said, \"We disagree with the ruling and are assessing next steps.\" On August 27, 2026, DOJ appealed to the U.S. Court of Appeals for the First Circuit. It was the first of two DOJ Title VI suits against Harvard dismissed in 2026; on November 2, Judge Myong Joun dismissed DOJ's separate suit for Harvard's admissions records.",
+    "status": "Dismissed on August 13, 2026 for failure to plead a Title VI violation continuing after the government's notice, with no ruling on Harvard's retaliation claim. DOJ's appeal to the First Circuit, filed August 27, 2026, is pending; no appellate ruling has been reported.",
+    "elements_required": [
+      "DOJ sued Harvard under Title VI over its response to campus antisemitism, seeking restitution of grant payments and a bar on new federal funding agreements",
+      "A federal court dismissed the suit because the government had not plausibly alleged any Title VI noncompliance after its June 30, 2025 statutory notice",
+      "The suit was filed amid a broader administration campaign against Harvard, less than two months after the president said he was seeking $1 billion from the university (the timing is documented; Harvard's claim of retaliatory purpose is an allegation the court did not decide)",
+      "Named DOJ officials are responsible: Assistant Attorney General Harmeet Dhillon's name heads the complaint's signature block and then-Attorney General Pam Bondi announced the suit"
+    ],
+    "evidence": [
+      {
+        "type": "court_filing",
+        "description": "DOJ's March 20, 2026 complaint (D. Mass. No. 1:26-cv-11352): HHS gave Harvard written notice of its Title VI finding on June 30, 2025; the suit seeks \"to compel Harvard to comply with Title VI, and to recover billions of dollars of taxpayer subsidies,\" restitution of \"all grant payments made to Harvard during the time of Harvard's noncompliance,\" a bar on new federal contracts with Title VI assurances, and an independent monitor; signature block headed by Assistant Attorney General Harmeet K. Dhillon",
+        "source_url": "https://storage.courtlistener.com/recap/gov.uscourts.mad.297801/gov.uscourts.mad.297801.1.0.pdf",
+        "maps_to_element": "DOJ sued Harvard under Title VI over its response to campus antisemitism, seeking restitution of grant payments and a bar on new federal funding agreements"
+      },
+      {
+        "type": "public_record",
+        "description": "DOJ press release, March 20, 2026: then-Attorney General Pamela Bondi said \"too many of our educational institutions have allowed anti-Semitism to flourish on campus – Harvard included\"; Dhillon said \"This Justice Department has no tolerance for such brazen violations of federal law\"; DOJ said Harvard is set to receive more than $2.6 billion under active HHS grants",
+        "source_url": "https://www.justice.gov/opa/pr/justice-department-sues-harvard-university-antisemitism",
+        "maps_to_element": "Named DOJ officials are responsible: Assistant Attorney General Harmeet Dhillon's name heads the complaint's signature block and then-Attorney General Pam Bondi announced the suit"
+      },
+      {
+        "type": "news_report",
+        "description": "Reuters (via Al-Monitor), March 20, 2026: the suit \"came less than two months after Trump said his administration was seeking $1 billion from Harvard to settle probes into school policies\"; \"It's unclear how much the administration is seeking\"",
+        "source_url": "https://www.al-monitor.com/originals/2026/03/us-sues-harvard-over-treatment-jewish-and-israeli-students-seeks-billions-dollars",
+        "maps_to_element": "The suit was filed amid a broader administration campaign against Harvard, less than two months after the president said he was seeking $1 billion from the university (the timing is documented; Harvard's claim of retaliatory purpose is an allegation the court did not decide)"
+      },
+      {
+        "type": "court_ruling",
+        "description": "Judge Richard G. Stearns's August 13, 2026 memorandum and order allowing Harvard's motion to dismiss on its first argument, \"that the Government has not sufficiently pled an ongoing violation of Title VI\"; the incidents are \"too isolated and episodic to support a plausible inference that any institutionalized noncompliance with Title VI persists at Harvard to this day\"; the government gave notice on June 30, 2025, and the amended complaint alleges nothing after that date; the government \"does not identify any rational basis\" for its determination that voluntary compliance was impossible",
+        "source_url": "https://storage.courtlistener.com/recap/gov.uscourts.mad.297801/gov.uscourts.mad.297801.65.0.pdf",
+        "maps_to_element": "A federal court dismissed the suit because the government had not plausibly alleged any Title VI noncompliance after its June 30, 2025 statutory notice"
+      },
+      {
+        "type": "news_report",
+        "description": "The Harvard Crimson, August 13, 2026: the suit sought to \"retroactively claw back nearly $1 billion in federal grants\"; Harvard moved to dismiss in May 2026 arguing no ongoing violation, unlawful retaliation and no breach of contract; DOJ added new incidents in an amended complaint in June; Dhillon: \"We disagree with the ruling and are assessing next steps\"",
+        "source_url": "https://www.thecrimson.com/article/2026/8/13/trump-antisemitism-lawsuit-dismissed/",
+        "maps_to_element": "A federal court dismissed the suit because the government had not plausibly alleged any Title VI noncompliance after its June 30, 2025 statutory notice"
+      },
+      {
+        "type": "news_report",
+        "description": "Inside Higher Ed, August 13, 2026: Stearns ruled Title VI \"unequivocally\" authorizes penalties \"only if and after\" the recipient is advised and voluntary compliance is found impossible; DOJ had argued the ruling would make it \"virtually impossible for the United States to win a Title VI suit\"",
+        "source_url": "https://www.insidehighered.com/node/216841",
+        "maps_to_element": "A federal court dismissed the suit because the government had not plausibly alleged any Title VI noncompliance after its June 30, 2025 statutory notice"
+      },
+      {
+        "type": "news_report",
+        "description": "Associated Press (via WGCU), August 14, 2026: the August 13 ruling found the administration \"failed to prove an ongoing violation\"; the suit \"is among several actions the government has taken against Harvard since the Ivy League university refused a list of demands made by the White House\"",
+        "source_url": "https://www.wgcu.org/2026-08-14/judge-dismisses-trump-administration-lawsuit-alleging-antisemitism-at-harvard-university",
+        "maps_to_element": "The suit was filed amid a broader administration campaign against Harvard, less than two months after the president said he was seeking $1 billion from the university (the timing is documented; Harvard's claim of retaliatory purpose is an allegation the court did not decide)"
+      },
+      {
+        "type": "court_filing",
+        "description": "DOJ's notice of appeal, August 27, 2026: the United States appeals to the First Circuit from the August 13, 2026 order granting Harvard's motion to dismiss and the order dismissing the case; filed under Dhillon's name",
+        "source_url": "https://storage.courtlistener.com/recap/gov.uscourts.mad.297801/gov.uscourts.mad.297801.67.0.pdf",
+        "maps_to_element": "A federal court dismissed the suit because the government had not plausibly alleged any Title VI noncompliance after its June 30, 2025 statutory notice"
+      },
+      {
+        "type": "news_report",
+        "description": "The Harvard Crimson, August 28, 2026: DOJ filed a notice asking the First Circuit to review the August 13 dismissal, \"seeking to revive a sweeping case\"; Stearns's four-page ruling was \"limited to the specific circumstances presented here\"",
+        "source_url": "https://www.thecrimson.com/article/2026/8/28/doj-harvard-antisemitism-appeal/",
+        "maps_to_element": "A federal court dismissed the suit because the government had not plausibly alleged any Title VI noncompliance after its June 30, 2025 statutory notice"
+      },
+      {
+        "type": "news_report",
+        "description": "CNBC (Reuters), November 2, 2026: Judge Myong Joun dismissed DOJ's separate suit seeking Harvard admissions records, agreeing with Harvard that DOJ \"sued without taking all legally required steps aimed at securing the university's voluntary compliance\"",
+        "source_url": "https://www.cnbc.com/2026/11/02/us-judge-dismisses-trump-administrations-harvard-admissions-probe-case.html",
+        "maps_to_element": "The suit was filed amid a broader administration campaign against Harvard, less than two months after the president said he was seeking $1 billion from the university (the timing is documented; Harvard's claim of retaliatory purpose is an allegation the court did not decide)"
+      }
+    ],
+    "rebuttal_anticipated": "DOJ can argue that HHS formally found Harvard in violation of Title VI, that the harassment of Jewish and Israeli students in 2023-2024 is well documented, that funds a recipient draws while breaking its Title VI assurances can be recovered for breach of its contract with the government regardless of later reforms, and that the ruling makes such suits \"virtually impossible\" to win because any school can stop once warned. The dismissal was on the pleadings, it did not find that Harvard complied, and DOJ has appealed.",
+    "comeback": "The court read the statute as Congress wrote it: Title VI enforcement exists to secure compliance, not to punish, and Stearns wrote that \"**Congress's intent was not to penalize a wayward funding recipient but instead to incentivize it to bring itself into compliance with Title VI**.\" DOJ built its suit almost entirely on incidents from the 2023-2024 school year, alleged nothing after its own notice, and could identify no rational basis for deciding voluntary compliance was impossible, while the president was publicly seeking $1 billion from Harvard.",
+    "cause": "[TAP Analysis, not sourced] One of several federal actions taken against Harvard after it refused the administration's April 2025 demands, alongside the research funding freeze, the push to revoke its tax-exempt status, the attempt to bar it from enrolling international students and DOJ's separate suit for its admissions records. Both DOJ Title VI suits against Harvard were dismissed in 2026 because the government had not shown what Title VI requires before a court can enforce it; in this one, the retaliation question was left undecided.",
+    "cause_references": [
+      {
+        "match": "research funding freeze",
+        "tracker": "government-services",
+        "id": "harvard-research-funding-freeze-2025"
+      },
+      {
+        "match": "push to revoke its tax-exempt status",
+        "tracker": "prosecution",
+        "id": "trump-harvard-irs-tax-exempt-threat-2025"
+      },
+      {
+        "match": "attempt to bar it from enrolling international students",
+        "tracker": "dai",
+        "id": "noem-harvard-sevp-revocation-2025"
+      },
+      {
+        "match": "DOJ's separate suit for its admissions records",
+        "tracker": "prosecution",
+        "id": "doj-harvard-admissions-records-suit-dismissed-2026"
+      }
+    ],
+    "confidence_note": "HIGH confidence on the suit, the relief sought, the dismissal and the appeal: they come from DOJ's complaint, press release and notice of appeal and from the judge's memorandum and order, corroborated by Reuters (via Al-Monitor), the Associated Press (via WGCU), The Harvard Crimson and Inside Higher Ed. The dollar amount at stake is not stated in the complaint; the nearly $1 billion figure is The Harvard Crimson's. The ruling turned on the pleadings: it did not find that Harvard complied with Title VI or that the suit was retaliatory, and Harvard's retaliation claim remains an allegation. Dhillon's role rests on her name heading the complaint's signature block (another Civil Rights Division lawyer signed it electronically); Bondi's rests on DOJ's release.",
+    "pull_quote": "\"Congress's intent was not to penalize a wayward funding recipient but instead to incentivize it to bring itself into compliance with Title VI.\" -- Judge Richard G. Stearns",
+    "section_summaries": {
+      "incident_summary": "DOJ sued Harvard to claw back federal grants over campus antisemitism; a judge dismissed it for alleging no violation after notice, and DOJ has appealed.",
+      "confidence_note": "Firmly documented in DOJ's filings and the judge's order; the ruling was on the pleadings, and Harvard's retaliation claim remains undecided."
+    },
+    "glance": {
+      "who": "Harmeet Dhillon (then-Assistant AG, Civil Rights)",
+      "what": "Sued Harvard to claw back federal grants over antisemitism; a judge dismissed it, and DOJ has appealed",
+      "harm": {
+        "kind": "money",
+        "certainty": "averted",
+        "who": "Harvard's federal research grants"
+      },
+      "reviewed": "2026-11-15"
+    },
+    "status_stage": "Court ruled",
+    "key_events": [
+      {
+        "date": "2025-06-30",
+        "text": "HHS notifies Harvard of its finding that Harvard's response to antisemitic harassment violated Title VI",
+        "sources": [
+          "https://storage.courtlistener.com/recap/gov.uscourts.mad.297801/gov.uscourts.mad.297801.1.0.pdf"
+        ]
+      },
+      {
+        "date": "2026-03-20",
+        "text": "DOJ sues Harvard under Title VI, seeking restitution of federal grant payments",
+        "turning_point": true,
+        "sources": [
+          "https://storage.courtlistener.com/recap/gov.uscourts.mad.297801/gov.uscourts.mad.297801.1.0.pdf",
+          "https://www.justice.gov/opa/pr/justice-department-sues-harvard-university-antisemitism"
+        ]
+      },
+      {
+        "date": "2026-05",
+        "text": "Harvard moves to dismiss, arguing no ongoing violation and calling the suit retaliation",
+        "sources": [
+          "https://www.thecrimson.com/article/2026/8/13/trump-antisemitism-lawsuit-dismissed/"
+        ]
+      },
+      {
+        "date": "2026-08-13",
+        "text": "Judge Richard Stearns dismisses the suit, finding no violation alleged after the government's notice",
+        "turning_point": true,
+        "sources": [
+          "https://storage.courtlistener.com/recap/gov.uscourts.mad.297801/gov.uscourts.mad.297801.65.0.pdf"
+        ]
+      },
+      {
+        "date": "2026-08-27",
+        "text": "DOJ appeals the dismissal to the First Circuit",
+        "sources": [
+          "https://storage.courtlistener.com/recap/gov.uscourts.mad.297801/gov.uscourts.mad.297801.67.0.pdf"
+        ]
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "date_added": "2026-11-15",
+    "date_of_action": "2026-03-20 (DOJ sues Harvard under Title VI) through 2026-08-27 (DOJ appeals the dismissal)",
     "last_substantive_update": "2026-11-15"
   },
   {
@@ -48712,7 +48880,7 @@
     ],
     "rebuttal_anticipated": "The administration could argue Trump's public comments were political rhetoric rather than a formal presidential directive to the IRS, that any IRS review of Harvard's tax-exempt status could be independently justified on the university's own conduct (e.g., alleged failure to adequately address campus antisemitism, a legitimate basis for IRS scrutiny of a 501(c)(3)'s tax-exempt activities), and that no formal audit or revocation was ever actually opened, so no completed statutory violation has occurred -- only a threat.",
     "comeback": "Section 7217 by its own text criminalizes requesting IRS action against a named taxpayer, not only a completed revocation -- multiple outlets independently reported the administration directly asked the IRS to act, which is the prohibited conduct itself, not merely rhetoric about tax policy in the abstract. The timing (immediately following Harvard's public refusal of unrelated governance and DEI demands) undercuts a good-faith, viewpoint-neutral tax-enforcement rationale, and Trump's public framing ('what they deserve') was explicitly retaliatory rather than a stated tax-compliance concern.",
-    "cause": "[TAP Analysis, not sourced] Part of the same broader campaign against Harvard documented in the Harvard SEVP entry (international-student enrollment) and the Harvard funding-freeze entry (research funding) -- three separate federal levers (immigration, research funding, tax status) deployed against the same institution in the same several-week period after it refused the administration's governance demands. See also the entry on DOJ's dismissed suit for Harvard admissions records.",
+    "cause": "[TAP Analysis, not sourced] Part of the same broader campaign against Harvard documented in the Harvard SEVP entry (international-student enrollment) and the Harvard funding-freeze entry (research funding) -- three separate federal levers (immigration, research funding, tax status) deployed against the same institution in the same several-week period after it refused the administration's governance demands. See also the entry on DOJ's dismissed suit for Harvard admissions records. See also the entry on DOJ's dismissed Title VI antisemitism suit against Harvard.",
     "confidence_note": "HIGH confidence on the sequence of public statements and reporting -- corroborated across Washington Post, CNN, NPR, Inside Higher Ed, and Yahoo/AP wire reprints, plus Harvard's own on-record response. MODERATE confidence on whether this rises to a prosecutable Section 7217 violation specifically, since no sourcing reviewed confirms the IRS ever formally opened an audit or issued a revocation determination -- the entry documents a well-corroborated threat and request, not a completed enforcement action. Update 2026-10-19: HIGH confidence on the September 3, 2026 Treasury-IRS proposed rules, reported by the Harvard Crimson, which said they could give the administration a new avenue to target Harvard's tax-exempt status and that nothing appeared to come of the 2025 IRS effort; no sourcing reviewed shows a revocation proceeding against Harvard since.",
     "pull_quote": "Trump renewed the threat publicly on May 2, 2025, saying revocation was ‘what they deserve.’",
     "last_verified": "2026-11-15",
@@ -48751,6 +48919,11 @@
         "match": "the entry on DOJ's dismissed suit for Harvard admissions records",
         "tracker": "prosecution",
         "id": "doj-harvard-admissions-records-suit-dismissed-2026"
+      },
+      {
+        "match": "the entry on DOJ's dismissed Title VI antisemitism suit against Harvard",
+        "tracker": "prosecution",
+        "id": "doj-harvard-antisemitism-title-vi-suit-dismissed-2026"
       }
     ],
     "status_stage": "Unchallenged",
