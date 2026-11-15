@@ -133,7 +133,8 @@ def test_last_dot_opens_sources_and_flashes(browser, site_url, tab, entry_id, ur
     page, errors = _open(browser, site_url, tab, entry_id, url)
     card = page.locator(f'.entry[data-entry-id="{entry_id}"]')
     sources = card.locator("details.field-toggle:has(.exhibit-list)")
-    assert sources.get_attribute("open") is None
+    # Sources is open by default since 2026-11-15; the dot keeps it open.
+    assert sources.get_attribute("open") is not None
     card.locator(".key-event-link").last.click()
     page.wait_for_timeout(150)
     assert sources.get_attribute("open") is not None

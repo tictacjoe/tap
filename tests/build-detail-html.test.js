@@ -821,7 +821,7 @@ test("prosecution Confidence note's toggle summary shows no as-of date even when
   assert(!html.includes("as of 2026-09-20") && !html.includes("field-asof"), "no as-of review date next to the label");
 });
 
-test("deregulation and government-services Confidence note and Sources are collapsible, same as CLA (2026-09-23)", () => {
+test("deregulation and government-services Confidence note and Sources are collapsible; Sources open by default (2026-11-15)", () => {
   for (const kind of ["deregulation", "govservices"]) {
     const entry = {
       what_changed: "x", incident_summary: "x", status: "y", confidence_note: "Some note.",
@@ -829,19 +829,22 @@ test("deregulation and government-services Confidence note and Sources are colla
     };
     const html = buildDetailHtml(entry, { kind });
     assert(html.includes('<details class="field-toggle"><summary class="field-label">Confidence note</summary>'), `${kind} Confidence note should be a collapsible toggle`);
-    assert(html.includes('<details class="field-toggle"><summary class="field-label">Sources</summary><ul class="exhibit-list">'), `${kind} Sources should be a collapsible toggle`);
-    assert(!html.includes('<details class="field-toggle" open'), `${kind} toggles must not default to open`);
+    assert(html.includes('<details class="field-toggle" open><summary class="field-label">Sources</summary><ul class="exhibit-list">'), `${kind} Sources should be a collapsible toggle, open by default`);
+    assert(!html.includes('<details class="field-toggle" open><summary class="field-label">Confidence note</summary>'), `${kind} Confidence note must stay closed by default`);
+    assert(html.indexOf(">Sources</summary>") < html.indexOf(">Status</div>"), `${kind} Sources comes right after What happened, before Status`);
   }
 });
 
-test("prosecution Sources card is a closed-by-default <details>/<summary> toggle", () => {
+test("prosecution Sources card is an open-by-default <details>/<summary> toggle, second after What happened (2026-11-15)", () => {
   const entry = {
     offense_category: "Fraud", status_category: "Investigation", incident_summary: "x", status: "y",
     evidence: [{ type: "news_report", description: "x", source_url: "https://example.com/a", maps_to_element: "e1" }],
   };
   const html = buildDetailHtml(entry, { kind: "prosecution" });
-  assert(html.includes('<details class="field-toggle"><summary class="field-label">Sources</summary><ul class="exhibit-list">'));
-  assert(!html.includes('<details class="field-toggle" open'), "must not default to open");
+  assert(html.includes('<details class="field-toggle" open><summary class="field-label">Sources</summary><ul class="exhibit-list">'));
+  assert(!html.includes('<details class="field-toggle" open><summary class="field-label">Confidence note</summary>'), "Confidence note stays closed");
+  const what = html.indexOf(">What happened</div>"), src = html.indexOf(">Sources</summary>"), status = html.indexOf(">Status</div>");
+  assert(what < src && src < status, "Sources sits between What happened and Status");
 });
 
 test("prosecution Confidence note renders no Updates section when it has no Update/Added markers", () => {
@@ -970,7 +973,8 @@ const layoutEntries = {
     // the Confidence note, then the pull-quote. Status card and the
     // collapsible Sources/Confidence note treatment added 2026-09-23,
     // matching prosecution/CLA's own pattern.
-    order: [">What happened</div>", ">Status</div>", ">Estimated impact</div>", ">Caveat</div>", ">Primary proponent</div>", "<!--figures:1-->", ">Sources</summary>", ">Confidence note</summary>", "entry-aside-quote"],
+    // Sources moved to second, right after What happened (2026-11-15).
+    order: [">What happened</div>", ">Sources</summary>", ">Status</div>", ">Estimated impact</div>", ">Caveat</div>", ">Primary proponent</div>", "<!--figures:1-->", ">Confidence note</summary>", "entry-aside-quote"],
   },
   govservices: {
     cfg: { kind: "govservices" },
@@ -984,7 +988,8 @@ const layoutEntries = {
       primary_proponent: { name: "Jane Smith", role: "Secretary", note: "" },
       sources: [{ name: "Src One", url: "https://example.com/1" }],
     },
-    order: [">What happened</div>", ">Status</div>", ">Estimated impact</div>", ">Caveat</div>", ">Institution</div>", ">Primary proponent</div>", "<!--figures:1-->", ">Sources</summary>", ">Confidence note</summary>", "entry-aside-quote"],
+    // Sources moved to second, right after What happened (2026-11-15).
+    order: [">What happened</div>", ">Sources</summary>", ">Status</div>", ">Estimated impact</div>", ">Caveat</div>", ">Institution</div>", ">Primary proponent</div>", "<!--figures:1-->", ">Confidence note</summary>", "entry-aside-quote"],
   },
   prosecution: {
     cfg: { kind: "prosecution" },
