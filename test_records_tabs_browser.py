@@ -164,3 +164,20 @@ def test_tracker_filter_names_match_chips(browser, site_url):
     chips = page.evaluate("HEADLINE_TRACKER_MEDIUM")
     for value, text in options[1:]:
         assert text == chips[value]
+
+
+def test_records_rows_line_up(browser, site_url):
+    # 2026-11-15: every part of a Records row starts at the same x on every row
+    # (the status pill sits in a fixed-width slot; pills vary 70-142px).
+    page = _open(browser, site_url)
+    starts = page.evaluate("""() => {
+        const rows = [...document.querySelectorAll('#headlines-view .headline-row')].slice(0, 300);
+        const out = {};
+        for (const sel of ['.headline-row-date', '.headline-row-tracker', '.headline-row-status', '.headline-trail-btn', '.headline-row-text']) {
+            out[sel] = [...new Set(rows.map(r => r.querySelector(sel)).filter(Boolean)
+                .map(el => Math.round(el.getBoundingClientRect().left)))];
+        }
+        return out;
+    }""")
+    for sel, xs in starts.items():
+        assert len(xs) == 1, f"{sel} starts at {xs}"

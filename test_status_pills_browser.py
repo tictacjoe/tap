@@ -143,7 +143,7 @@ def test_pills_with_injected_field(browser, site_url):
         """els => els.map(e => {
             const pill = e.querySelector('.status-pill');
             return [e.dataset.tracker, pill ? pill.textContent.trim() : null,
-                    pill ? pill.previousElementSibling.classList.contains('headline-row-tracker') : null];
+                    pill ? pill.closest('.headline-row-status').previousElementSibling.classList.contains('headline-row-tracker') : null];
         })""")
     cla = [r for r in rows if r[0] == "prosecution"]
     other = [r for r in rows if r[0] != "prosecution"]

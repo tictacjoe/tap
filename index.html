@@ -1267,6 +1267,13 @@
   span.headline-row-tracker { cursor: default; box-sizing: border-box; line-height: normal; }
   span.headline-row-tracker:hover { border-color: var(--rule); }
   .headline-more-btn, .headline-trail-btn { flex-shrink: 0; }
+  /* Status-pill slot in a Records row: as wide as the widest pill
+     ("Reversed or withdrawn", 142px = 11.1rem at this site's 12.8px root),
+     pill left-aligned inside, so every
+     row's "notes" tag and headline start at the same x (2026-11-15). At
+     phone width pills are symbol-only and already one size. */
+  .headline-row-status { flex-shrink: 0; min-width: 11.2rem; }
+  @media (max-width: 600px) { .headline-row-status { min-width: 0; } }
   .headline-tier-text { display: none; margin: 0 0.8rem 0.6rem; }
   .headline-trail-panel { margin: 0.5rem 0.8rem 0.6rem; }
   /* Records feed tabs: "TAP entries" vs the unverified Reporting feed. */
@@ -2912,7 +2919,10 @@ function buildHeadlineRow(item, displayDate) {
   // carry status_stage; symbol-only at phone width. fitHeadlineRowText()
   // leaves room for it.
   const pillHtml = entryStatusPillHtml(item.tracker, item.statusStage, useCompactPills());
-  if (pillHtml) textSpan.insertAdjacentHTML("beforebegin", pillHtml);
+  // Fixed-width slot (2026-11-15, Joe: "make the main records list sections
+  // line up cleanly"): pills run 70-142px wide, so without it the "notes" tag
+  // and headline started at a different x on every row.
+  if (pillHtml) textSpan.insertAdjacentHTML("beforebegin", '<span class="headline-row-status">' + pillHtml + '</span>');
 
   const trailBtn = document.createElement("button");
   trailBtn.type = "button";
