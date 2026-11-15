@@ -1,4 +1,4 @@
-"""Browser tests for the intro strip and the Advanced search toggle.
+"""Browser tests for the (removed) intro strip and the Advanced search toggle.
 Serves this repo's directory on a free port; page.route stubs
 data/site_meta.json. Skips if Playwright or Chromium is missing."""
 
@@ -48,25 +48,11 @@ def _open(browser, site_url, width=1280):
     return page
 
 
-WORDS = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"]
-
-
-def test_intro_strip_text(browser, site_url):
+def test_intro_strip_removed(browser, site_url):
+    # 2026-11-15 (Joe): the intro strip is gone; the browse button says "tracker".
     page = _open(browser, site_url)
-    assert page.locator("#intro-strip .intro-item").count() == 3
-    count = page.evaluate(
-        "Object.keys(TRACKERS).filter(k => k !== 'tracker' && k !== 'communitytopics' && !TRACKERS[k].hidden).length"
-    )
-    text = page.locator("#intro-strip").inner_text()
-    for needle in (
-        "What it tracks",
-        "Curated vs. Reporting",
-        "How to use it",
-        f"Executive branch actions since Jan. 2025, in {WORDS[count]} topic trackers.",
-        "TAP researches and sources curated entries. Reporting is a daily news feed that TAP collects but doesn't verify.",
-        "Search for a name or topic, or browse one tracker.",
-    ):
-        assert needle in text, needle
+    assert page.locator("#intro-strip").count() == 0
+    assert page.locator("#browse-instead").inner_text().strip().lower() == "— browse by tracker —"
 
 
 def test_advanced_panel_hidden_by_default(browser, site_url):
@@ -88,10 +74,3 @@ def test_advanced_shows_active_count(browser, site_url):
     page.check("#global-oneliner")
     page.click("#search-advanced-btn")
     assert page.locator("#search-advanced-btn").inner_text().strip() == "Advanced (2) \u25be"
-
-
-def test_intro_strip_above_search_box(browser, site_url):
-    page = _open(browser, site_url)
-    strip = page.locator("#intro-strip").bounding_box()["y"]
-    search = page.locator("#global-search").bounding_box()["y"]
-    assert strip < search

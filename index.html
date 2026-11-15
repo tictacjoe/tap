@@ -342,24 +342,6 @@
     gap: 1.1rem;
   }
   .search-advanced-panel[hidden] { display: none; }
-  .intro-strip {
-    max-width: 900px;
-    margin: 1.75rem auto 0;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    text-align: left;
-  }
-  .intro-item h2 {
-    font-family: Georgia, serif;
-    font-size: 0.95rem;
-    color: var(--brass);
-    margin: 0 0 0.25rem;
-  }
-  .intro-item p { font-size: 0.85rem; line-height: 1.45; margin: 0; color: var(--ink-soft); }
-  @media (max-width: 600px) {
-    .intro-strip { grid-template-columns: 1fr; }
-  }
   .clear-search-btn {
     font-family: ui-monospace, monospace;
     font-size: 0.95rem;
@@ -474,7 +456,7 @@
 
   /* ================= TABS ================= */
   /* Replaced the five database tabs (a row of buttons) with a single
-     dropdown -- same "— browse by database —" label above
+     dropdown -- same "— browse by tracker —" label above
      it, same TRACKERS-driven option list/counts, just one control
      instead of five, so there's no longer a tab-width-vs-label-length
      tradeoff to size around. Centered rather than left-aligned to
@@ -493,7 +475,7 @@
     cursor: pointer;
   }
   /* Used on the Records landing view, where the select would otherwise
-     sit redundantly below the "— browse by database —" button, which now
+     sit redundantly below the "— browse by tracker —" button, which now
      opens its own dialog (see #browse-backdrop) rather than this select.
      Only applied on Records; a tracker's own page still shows the
      select normally as its active-database indicator/switcher. */
@@ -1707,20 +1689,6 @@
   <h1>TAP</h1>
   <p class="tagline-name">The Accountability Project</p>
   <p class="tagline">Executive branch actions from Jan. 2025, assembled into topic dossiers through primary records and verified reporting. Every entry is built to hold up when challenged.</p>
-  <section class="intro-strip" id="intro-strip">
-    <div class="intro-item">
-      <h2>What it tracks</h2>
-      <p id="intro-tracks-text">Executive branch actions since Jan. 2025, in several topic trackers.</p>
-    </div>
-    <div class="intro-item">
-      <h2>Curated vs. Reporting</h2>
-      <p>TAP researches and sources curated entries. Reporting is a daily news feed that TAP collects but doesn't verify.</p>
-    </div>
-    <div class="intro-item">
-      <h2>How to use it</h2>
-      <p>Search for a name or topic, or browse one tracker.</p>
-    </div>
-  </section>
 
   <div class="global-search-box" id="search-mode-box">
     <span class="search-icon">🔍</span>
@@ -1734,7 +1702,7 @@
   </div>
 
   <div class="regex-error" id="regex-error"></div>
-  <button type="button" class="browse-instead" id="browse-instead">— browse by database —</button>
+  <button type="button" class="browse-instead" id="browse-instead">— browse by tracker —</button>
 
 </header>
 
@@ -1772,7 +1740,7 @@
 <div class="suggest-backdrop" id="browse-backdrop" hidden>
   <div class="suggest-modal" role="dialog" aria-modal="true" aria-labelledby="browse-modal-title">
     <button class="suggest-close-btn" id="browse-close-btn" type="button" title="Close">✕</button>
-    <h2 id="browse-modal-title">Browse by Database</h2>
+    <h2 id="browse-modal-title">Browse by Tracker</h2>
     <div class="browse-options" id="browse-options"></div>
   </div>
 </div>
@@ -7216,7 +7184,7 @@ document.getElementById("back-to-top-btn").addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-// "— browse by database —" opens a real dialog listing every database,
+// "— browse by tracker —" opens a real dialog listing every database,
 // rather than trying to force the native <select> open programmatically.
 // An earlier version called showPicker() on #tabs -- the standard API
 // for this exact purpose -- but it proved unreliable in practice (Joe
@@ -7289,15 +7257,9 @@ window.addEventListener("popstate", (e) => {
 });
 
 /* intro-and-advanced:start */
-/* Intro strip count word: curated trackers a visitor can see (TRACKERS
-   minus Reporting, Claim-checks and any hidden:true entry). */
-(function fillIntroTrackerCount() {
-  const words = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"];
-  const n = visibleTrackerKeys(TRACKERS).filter(k => k !== "tracker" && k !== "communitytopics").length;
-  const word = words[n] !== undefined ? words[n] : String(n);
-  document.getElementById("intro-tracks-text").textContent =
-    "Executive branch actions since Jan. 2025, in " + word + " topic trackers.";
-})();
+/* The intro strip ("What it tracks / Curated vs. Reporting / How to use it")
+   and the script that filled in its tracker count were removed 2026-11-15
+   (Joe). */
 
 /* Advanced search toggle: holds the 1-liners and regex checkboxes; the
    button label shows how many are on so a collapsed panel never hides
