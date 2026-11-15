@@ -22647,12 +22647,17 @@
       ],
       "caveat": "The administration's position, reflected in DOJ's litigation strategy, is that the President has inherent constitutional authority to remove principal officers of agencies exercising executive power, and the Supreme Court's Trump v. Slaughter ruling vindicated that view as a general matter. Samuels's dismissal of her own suit reflects her own assessment that the ruling foreclosed her specific claim, not an independent court finding that her particular firing was lawful on its individual facts. Quorum has been restored and the EEOC is now fully operational; the lasting impact is less about EEOC's current functioning and more about the eight-month policymaking gap and the broader precedent Trump v. Slaughter sets for every other independent agency in this dataset (cross-reference the CPSC, NCUA and NLRB/Wilcox entries, all shaped by the same ruling, and the Federal Reserve/Cook entry, where the Court ruled the same day that Cook could stay)."
     },
-    "cause": "[TAP Analysis, not sourced] The firings are part of the same run of removals of independent-agency members as the entry on the Consumer Product Safety Commission firings, and both challenges ended after the Supreme Court's June 29, 2026 Trump v. Slaughter ruling.",
+    "cause": "[TAP Analysis, not sourced] The firings are part of the same run of removals of independent-agency members as the entry on the Consumer Product Safety Commission firings, and both challenges ended after the Supreme Court's June 29, 2026 Trump v. Slaughter ruling. See also the entry on the EEOC's planned rollback of Pregnant Workers Fairness Act protections.",
     "cause_references": [
       {
         "match": "the entry on the Consumer Product Safety Commission firings",
         "tracker": "government-services",
         "id": "cpsc-commissioner-mass-firing-quorum-crisis-trump2"
+      },
+      {
+        "match": "the entry on the EEOC's planned rollback of Pregnant Workers Fairness Act protections",
+        "tracker": "deregulation",
+        "id": "eeoc-pregnant-workers-fairness-act-rollback-2026"
       }
     ],
     "confidence_note": "High confidence on the firing dates, quorum-loss duration, and litigation timeline, corroborated across congressional statements, EPI, NELP, Littler, Seyfarth Shaw, Holland & Knight, and multiple wire-service reports on Samuels's dismissal of her suit (AP via Federal News Network, Washington Post, The Hill, HR Dive). The characterization of Trump v. Slaughter as overturning Humphrey's Executor reflects the consistent framing across legal-analysis sources cited in this dataset's other quorum-loss entries (NCUA, NLRB), not an independent read of the opinion by this project. Re-verified 2026-10-05: the firing date corrected to January 27, 2025 (late Monday night, per NPR and Proskauer Rose in the National Law Review; Gilbride confirmed her own dismissal January 28); AP's report of Samuels dropping her suit re-read via Federal News Network; the EEOC's commission page still lists Lucas, Kotagal and Panuccio with two seats vacant; no later removal ruling or EEOC quorum change found.",
@@ -22662,7 +22667,7 @@
       "estimated_impact": "A bipartisan civil-rights agency couldn't set policy for months, and no court ruled on the firings -- Samuels dropped her suit after a broader removal-power ruling.",
       "confidence_note": "Well-corroborated on dates and outcomes across legal firms and wire services; the historic-precedent framing matches this dataset's other entries, not an independent legal read."
     },
-    "last_verified": "2026-10-05",
+    "last_verified": "2026-11-15",
     "date_added": "2026-07-18",
     "sources": [
       {
@@ -22698,7 +22703,7 @@
         "url": "https://www.npr.org/2025/01/28/nx-s1-5277103/nlrb-trump-wilcox-abruzzo-democrats-labor"
       }
     ],
-    "last_substantive_update": "2026-10-05",
+    "last_substantive_update": "2026-11-15",
     "glance": {
       "who": "Donald Trump (President)",
       "what": "Fired two EEOC commissioners and its general counsel, leaving the agency without a quorum for 8 months",
@@ -22707,7 +22712,7 @@
         "certainty": "documented",
         "who": "EEOC's ability to set policy"
       },
-      "reviewed": "2026-10-05"
+      "reviewed": "2026-11-15"
     },
     "status_stage": "Unchallenged",
     "key_events": [
