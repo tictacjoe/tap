@@ -5796,7 +5796,15 @@ if (window.speechSynthesis && window.speechSynthesis.getVoices) {
   if (window.speechSynthesis.addEventListener) window.speechSynthesis.addEventListener("voiceschanged", () => window.speechSynthesis.getVoices());
 }
 
+// Listen button on/off switch. Hidden site-wide since 2026-11-15 (Joe's
+// call); all the reading code below is kept so this is a one-line revert.
+// Set to true to bring the button back. test_listen_browser.py sets
+// window.__TAP_LISTEN_ON = true in its init script to exercise the
+// feature while it is switched off here.
+const LISTEN_BUTTON_ON = false;
+
 function listenAvailable() {
+  if (!LISTEN_BUTTON_ON && window.__TAP_LISTEN_ON !== true) return false;
   return !!(window.speechSynthesis && window.SpeechSynthesisUtterance);
 }
 

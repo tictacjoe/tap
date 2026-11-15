@@ -18,6 +18,10 @@ sync_api = pytest.importorskip("playwright.sync_api")
 
 SITE_DIR = pathlib.Path(__file__).parent
 
+# The Listen button is switched off site-wide (LISTEN_BUTTON_ON = false in
+# index.html, 2026-11-15); this flag turns it back on for these tests.
+_LISTEN_ON = "window.__TAP_LISTEN_ON = true;"
+
 _FAKE_SPEECH = """(() => {
     window.__spoken = [];
     window.__cancels = 0;
@@ -72,8 +76,10 @@ def browser():
         instance.close()
 
 
-def _open(browser, site_url, view="prosecution", speech=True, viewport=None):
+def _open(browser, site_url, view="prosecution", speech=True, viewport=None, listen_on=True):
     context = browser.new_context(viewport=viewport or {"width": 1280, "height": 900})
+    if listen_on:
+        context.add_init_script(_LISTEN_ON)
     context.add_init_script(_FAKE_SPEECH if speech else _NO_SPEECH)
     page = context.new_page()
     errors = []
@@ -163,6 +169,15 @@ def test_same_entry_button_toggles_pause(browser, site_url):
 
 def test_no_button_without_speech(browser, site_url):
     page, errors = _open(browser, site_url, speech=False)
+    assert page.locator(".entry").count() > 0
+    assert _listen_buttons(page).count() == 0
+    assert errors == []
+
+
+def test_no_button_when_switched_off(browser, site_url):
+    # Default site state: the switch is off, so even with speech available
+    # no entry gets a Listen button.
+    page, errors = _open(browser, site_url, listen_on=False)
     assert page.locator(".entry").count() > 0
     assert _listen_buttons(page).count() == 0
     assert errors == []
