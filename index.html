@@ -1198,7 +1198,11 @@
        reasoning as headline-row-date's own min-width below. Overridden
        narrower for the <600px abbreviated fallback, where the codes are
        already all 3 characters. */
-    min-width: 18ch;
+    /* 18.6em (2026-11-15): the width of the widest medium label, "Trump
+       Family Self-Dealing" / "Gov't Service Redirection" (154px measured
+       live; the computed font size here is 8.32px), replacing the old 18ch sized for
+       "Accountability". Same goal as before: every chip one width. */
+    min-width: 18.6em;
     text-align: center;
   }
   /* Medium theme-first label (e.g. "Accountability") shown by default;
@@ -2684,18 +2688,18 @@ function buildTrailHtml(trail) {
    automatically narrow enough too. Both spans render into the DOM
    always; the CSS media query below picks which one is visible. */
 /* tracker-colors:start */
-// 2026-11-15 (Joe): "Accountability" -> "Cabinet-Level Officials" and
-// "Family Deals" -> "Trump Family Self-Dealing", for accuracy. Both run past
-// the chip's 18ch min-width (sized for the old widest label), so those two
-// chips are wider than the rest; checked live at 1900/1280/800px and on a
-// phone-width entry header, they stay on one line.
+// 2026-11-15 (Joe): longer, more accurate labels for every curated tracker
+// ("Accountability" -> "Cabinet-Level Officials", "Family Deals" -> "Trump
+// Family Self-Dealing", "Service Cuts" -> "Gov't Service Redirection", etc.),
+// all 138-154px as chips. .headline-row-tracker's min-width is set to the
+// widest of them so every Records-row chip is the same width.
 const HEADLINE_TRACKER_MEDIUM = {
-  deregulation: "Deregulation",
+  deregulation: "Corporate Deregulation",
   prosecution: "Cabinet-Level Officials",
-  govservices: "Service Cuts",
+  govservices: "Gov't Service Redirection",
   trumpfamily: "Trump Family Self-Dealing",
-  dai: "DHS and ICE",
-  oea: "Other Actions",
+  dai: "DHS and ICE Enforcement",
+  oea: "Other Executive Actions",
   tracker: "Reporting",
   communitytopics: "Claim-checks",
 };
