@@ -4517,6 +4517,25 @@ function buildPullQuoteHtml(entry, hl) {
    list of bare URLs derived from an evidence array, so there's no
    evidenceForSourceTrail/dedup step -- just the same <details>/<summary>
    field-toggle wrapper and entry-aside-card styling. */
+/* principal-repeat:start */
+/* True when `text` (an Institution value or a Primary proponent name) already
+   appears, as whole words, in the glance card's Principal (`who`) -- e.g.
+   "Donald Trump" in "Donald Trump (President)", "U.S. Coast Guard" in
+   "U.S. Coast Guard". Case and punctuation are ignored. Empty text never
+   counts as a repeat. Used to drop those detail cards when the glance card is
+   showing (2026-11-15, Joe: remove Institution / Primary proponent "when they
+   are redundant with the principal in the glance card"; whole card, note
+   included; same for TFS's Business / Government link and DAI's Agencies /
+   Lead official). */
+function principalRepeatNorm(value) {
+  return " " + String(value || "").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim() + " ";
+}
+function repeatsPrincipal(text, who) {
+  const t = principalRepeatNorm(text), w = principalRepeatNorm(who);
+  return t.trim() !== "" && w.trim() !== "" && w.includes(t);
+}
+/* principal-repeat:end */
+
 /* build-sources-card-html:start */
 function buildSourcesCardHtml(entry, hl) {
   const sources = entry.sources || [];
@@ -4775,8 +4794,12 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
       (entry.estimated_health_impact?.caveat ? '<div class="field-label">Caveat</div><div class="field-value" style="font-style:italic;">' + hl(entry.estimated_health_impact.caveat) + '</div>' : '') +
       '</div>' +
       buildGsrCdrPatternCardHtml(entry, term, useRegex);
+    // Primary proponent is dropped when the glance card's Principal already
+    // names the same person (see repeatsPrincipal).
+    const glanceWho = glanceActive(entry, cfg) ? entry.glance.who : "";
     const asideHtml =
-      '<div class="field-group entry-aside-card"><div class="field-label">Primary proponent</div><div class="field-value"><strong>' + hl(entry.primary_proponent?.name) + '</strong> — ' + hl(entry.primary_proponent?.role) + (entry.primary_proponent?.note ? '<br><em>' + hl(entry.primary_proponent.note) + '</em>' : '') + '</div></div>' +
+      (repeatsPrincipal(entry.primary_proponent?.name, glanceWho) ? '' :
+        '<div class="field-group entry-aside-card"><div class="field-label">Primary proponent</div><div class="field-value"><strong>' + hl(entry.primary_proponent?.name) + '</strong> — ' + hl(entry.primary_proponent?.role) + (entry.primary_proponent?.note ? '<br><em>' + hl(entry.primary_proponent.note) + '</em>' : '') + '</div></div>') +
       (entry.estimated_health_impact?.figures?.length ? '<div class="field-group entry-aside-card">' + buildFiguresHtml(entry.estimated_health_impact.figures, hl) + '</div>' : '');
     // entry-aside-card + collapsible (2026-09-23, Joe's call: same
     // click-to-open treatment as CLA's Confidence note/Sources cards) --
@@ -4796,6 +4819,7 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
     // branch can rename the Institution / Primary proponent / Estimated
     // impact labels; GSR and OEA have none, so they keep the defaults.
     const L = cfg.fieldLabels || {};
+    const glanceWho = glanceActive(entry, cfg) ? entry.glance.who : "";
     // "What happened" (renamed from "What changed" 2026-09-18, Joe's
     // call): these entries are usually reporting an event/finding, not
     // a rule change the way Deregulation's field is, so "happened" fits
@@ -4820,8 +4844,14 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
     const asideHtml =
       (cfg.trackerKey === "trumpfamily" ? buildTrumpFamilyCardHtml(entry, hl) : "") +
       (cfg.trackerKey === "dai" ? buildDaiPeopleHtml(entry, hl) : "") +
-      '<div class="field-group entry-aside-card"><div class="field-label">' + escapeHtml(L.institution || "Institution") + '</div><div class="field-value">' + hl(entry.institution) + '</div></div>' +
-      '<div class="field-group entry-aside-card"><div class="field-label">' + escapeHtml(L.proponent || "Primary proponent") + '</div><div class="field-value"><strong>' + hl(entry.primary_proponent?.name) + '</strong> — ' + hl(entry.primary_proponent?.role) + (entry.primary_proponent?.note ? '<br><em>' + hl(entry.primary_proponent.note) + '</em>' : '') + '</div></div>' +
+      // Institution and Primary proponent (TFS: Business / Government link;
+      // DAI: Agencies / Lead official) are dropped when the glance card's
+      // Principal already says the same thing (see repeatsPrincipal), and
+      // when empty (some DAI entries name no lead official).
+      (!entry.institution || repeatsPrincipal(entry.institution, glanceWho) ? '' :
+        '<div class="field-group entry-aside-card"><div class="field-label">' + escapeHtml(L.institution || "Institution") + '</div><div class="field-value">' + hl(entry.institution) + '</div></div>') +
+      (!entry.primary_proponent?.name || repeatsPrincipal(entry.primary_proponent.name, glanceWho) ? '' :
+        '<div class="field-group entry-aside-card"><div class="field-label">' + escapeHtml(L.proponent || "Primary proponent") + '</div><div class="field-value"><strong>' + hl(entry.primary_proponent?.name) + '</strong> — ' + hl(entry.primary_proponent?.role) + (entry.primary_proponent?.note ? '<br><em>' + hl(entry.primary_proponent.note) + '</em>' : '') + '</div></div>') +
       (entry.estimated_impact?.figures?.length ? '<div class="field-group entry-aside-card">' + buildFiguresHtml(entry.estimated_impact.figures, hl) + '</div>' : '');
     const noteHtml = '<div class="field-group entry-aside-card">' + buildConfidenceNoteHtml(entry, hl, summary, true) + '</div>' + buildPullQuoteHtml(entry, hl);
     return buildEntryColsHtml(mainHtml, asideHtml, noteHtml) +

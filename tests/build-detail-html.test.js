@@ -54,6 +54,9 @@ const glanceHeadFunctionSource = extractFunction(source, "glance-head");
 // added buildSourcesCardHtml as a direct dependency of buildDetailHtml's
 // deregulation/govservices branches.
 const buildSourcesCardHtmlFunctionSource = extractFunction(source, "build-sources-card-html");
+// Added 2026-11-15: Institution / Primary proponent cards drop when the glance
+// Principal repeats them (repeatsPrincipal).
+const principalRepeatSource = extractFunction(source, "principal-repeat");
 // Added 2026-10-17: cross-reference links (cause_references, User Topics
 // callouts) check isHiddenRelatedTarget() against TRACKERS, so a link to a
 // hidden tracker (Trump Family, Phase A) renders as plain text / no callout.
@@ -86,7 +89,7 @@ const combined = escapeHtmlFunctionSource + "\n" + summaryLineFunctionSource + "
   updateTimelineFunctionSource + "\n" + buildConfidenceNoteHtmlFunctionSource + "\n" +
   safeHrefFunctionSource + "\n" + buildPullQuoteHtmlFunctionSource + "\n" + buildEntryColsHtmlFunctionSource + "\n" +
   buildFiguresHtmlStubSource + "\n" + evidenceDrawerFunctionSource + "\n" + glanceHeadFunctionSource + "\n" +
-  buildSourcesCardHtmlFunctionSource + "\n" + relatedTrackerFieldToKeySource + "\n" + trackersStubSource + "\n" +
+  principalRepeatSource + "\n" + buildSourcesCardHtmlFunctionSource + "\n" + relatedTrackerFieldToKeySource + "\n" + trackersStubSource + "\n" +
   buildDetailHtmlFunctionSource;
 const buildDetailHtml = (0, eval)(`${combined}\nbuildDetailHtml;`);
 const buildTriageButtonHtml = (0, eval)(`${combined}\nbuildTriageButtonHtml;`);
@@ -1815,4 +1818,64 @@ test("sources cards carry data-url on each item", () => {
   const cla = buildDetailHtml({ offense_category: "Fraud", status_category: "Investigation", incident_summary: "x",
     evidence: [{ source_url: "https://s.test/e1", quote: "q" }] }, { kind: "prosecution" });
   assert(cla.includes('<li data-url="https://s.test/e1">'));
+});
+
+// ---- Institution / Primary proponent vs. the glance Principal (2026-11-15) ----
+// Joe: remove those cards "when they are redundant with the principal in the
+// glance card" -- whole card, note included -- and the same for TFS/DAI's
+// relabeled equivalents (they share the govservices branch).
+const repeatsPrincipal = (0, eval)(`${principalRepeatSource}\nrepeatsPrincipal;`);
+
+test("repeatsPrincipal matches whole words, ignoring case and punctuation", () => {
+  assert(repeatsPrincipal("Donald Trump", "Donald Trump (President)"));
+  assert(repeatsPrincipal("U.S. Coast Guard", "U.S. Coast Guard"));
+  assert(repeatsPrincipal("doug burgum", "Doug Burgum"));
+  assert(!repeatsPrincipal("Ann", "Joanne Smith"), "no partial-word match");
+  assert(!repeatsPrincipal("Department of Education", "Linda McMahon (Education Secretary)"));
+  assert(!repeatsPrincipal("", "Donald Trump"), "empty text never repeats");
+  assert(!repeatsPrincipal("Donald Trump", ""), "no Principal, no repeat");
+});
+
+const principalGlance = (who) => ({ who, what: "Did a thing", harm: { kind: "rights", certainty: "documented", who: "Affected people" } });
+
+for (const kind of ["deregulation", "govservices"]) {
+  test(`${kind}: Primary proponent card drops when the glance Principal names the same person`, () => {
+    const base = {
+      what_changed: "x", status: "y", institution: "Department of the Interior",
+      primary_proponent: { name: "Doug Burgum", role: "Secretary of the Interior", note: "Signed it." },
+    };
+    const shown = buildDetailHtml({ ...base, glance: principalGlance("Doug Burgum (Interior Secretary)") }, { kind, glanceEnabled: true });
+    assert(!shown.includes(">Primary proponent</div>"), "repeated proponent card is dropped");
+    assert(!shown.includes("Signed it."), "whole card goes, note included");
+    const other = buildDetailHtml({ ...base, glance: principalGlance("Donald Trump (President)") }, { kind, glanceEnabled: true });
+    assert(other.includes(">Primary proponent</div>"), "a different Principal keeps the card");
+    const noGlance = buildDetailHtml({ ...base, glance: principalGlance("Doug Burgum") }, { kind, glanceEnabled: false });
+    assert(noGlance.includes(">Primary proponent</div>"), "no glance card showing, nothing is redundant");
+    if (kind === "govservices") {
+      assert(shown.includes(">Institution</div>"), "an Institution not in the Principal stays");
+    }
+  });
+}
+
+test("govservices: Institution card drops when the glance Principal is the same body", () => {
+  const entry = {
+    what_changed: "x", status: "y", institution: "U.S. Coast Guard",
+    primary_proponent: { name: "Kevin Lunday", role: "Commandant" },
+    glance: principalGlance("U.S. Coast Guard"),
+  };
+  const html = buildDetailHtml(entry, { kind: "govservices", glanceEnabled: true });
+  assert(!html.includes(">Institution</div>"));
+  assert(html.includes(">Primary proponent</div>"), "proponent not in the Principal stays");
+});
+
+test("govservices (TFS/DAI labels): relabeled cards follow the same rule; an empty lead is not drawn", () => {
+  const entry = {
+    what_changed: "x", status: "y", institution: "ICE, CBP",
+    primary_proponent: { name: "", role: "" },
+    glance: principalGlance("ICE and DHS leadership"),
+  };
+  const html = buildDetailHtml(entry, { kind: "govservices", glanceEnabled: true,
+    fieldLabels: { institution: "Agencies", proponent: "Lead official" } });
+  assert(html.includes(">Agencies</div>"), "agencies list is not in the Principal, so it stays");
+  assert(!html.includes(">Lead official</div>"), "no lead official, no empty card");
 });
