@@ -1879,3 +1879,21 @@ test("govservices (TFS/DAI labels): relabeled cards follow the same rule; an emp
   assert(html.includes(">Agencies</div>"), "agencies list is not in the Principal, so it stays");
   assert(!html.includes(">Lead official</div>"), "no lead official, no empty card");
 });
+
+// ---- Pull quotes that bring their own quote marks (2026-11-15) ----
+const buildPullQuoteHtml = (0, eval)(`${buildPullQuoteHtmlFunctionSource}\nbuildPullQuoteHtml;`);
+test("a pull quote that opens with its own quote mark turns off the CSS-added marks", () => {
+  const id = s => s;
+  for (const q of ['"Straight quote" -- Speaker', "\u201CCurly quote,\u201D a speaker said", "'Single quote' -- Speaker", "\u2018Curly single\u2019 -- X", '  "Leading space" -- X']) {
+    assert(buildPullQuoteHtml({ pull_quote: q }, id).includes('<blockquote class="own-quotes">'), q);
+  }
+  assert(buildPullQuoteHtml({ pull_quote: "Plain text with no marks" }, id).includes("<blockquote>"), "plain text keeps the site's marks");
+  assert.equal(buildPullQuoteHtml({}, id), "");
+});
+
+test("straight double quotes in a pull quote are shown curly", () => {
+  const id = s => s;
+  assert(buildPullQuoteHtml({ pull_quote: '"We will act," he said, "soon." -- Speaker' }, id)
+    .includes("\u201CWe will act,\u201D he said, \u201Csoon.\u201D -- Speaker"));
+  assert(buildPullQuoteHtml({ pull_quote: 'Called it a "hoax" (twice)' }, id).includes("a \u201Choax\u201D (twice)"));
+});

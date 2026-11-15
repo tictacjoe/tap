@@ -1148,6 +1148,9 @@
   }
   .entry-aside-quote blockquote::before { content: "\201C"; }
   .entry-aside-quote blockquote::after { content: "\201D"; }
+  /* The quote text carries its own marks (see buildPullQuoteHtml). */
+  .entry-aside-quote blockquote.own-quotes::before,
+  .entry-aside-quote blockquote.own-quotes::after { content: none; }
 
   .update-request-row {
     display: flex;
@@ -4502,10 +4505,18 @@ function buildConfidenceNoteHtml(entry, hl, summary, collapsible) {
    has that field yet (2026-09-18). See the .entry-aside-quote CSS
    comment and distributeEntryCards() for the rest of this mechanism. */
 /* build-pull-quote-html:start */
+// A pull quote that already opens with its own quote mark (usually the
+// '"Quote" -- Speaker' shape, about a quarter of all quotes) gets class
+// own-quotes, which turns off the CSS-added curly marks -- otherwise it showed
+// a doubled opening mark and a stray closing mark after the speaker's name
+// (2026-11-15).
 function buildPullQuoteHtml(entry, hl) {
-  return entry.pull_quote
-    ? '<div class="entry-aside-quote"><blockquote>' + hl(entry.pull_quote) + '</blockquote></div>'
-    : '';
+  if (!entry.pull_quote) return '';
+  const own = /^\s*["\u201C'\u2018]/.test(entry.pull_quote);
+  // Straight double quotes shown curly, to match the site's own marks: one at
+  // the start or after a space/bracket/dash opens, any other closes.
+  const text = entry.pull_quote.replace(/(^|[\s(\[\u2014-])"/g, "$1\u201C").replace(/"/g, "\u201D");
+  return '<div class="entry-aside-quote"><blockquote' + (own ? ' class="own-quotes"' : '') + '>' + hl(text) + '</blockquote></div>';
 }
 /* build-pull-quote-html:end */
 
