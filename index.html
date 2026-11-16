@@ -5328,14 +5328,20 @@ function buildHarmsListHtml(trackers, abbr) {
     a.who.localeCompare(b.who, undefined, { sensitivity: "base" }) ||
     (String(a.id) < String(b.id) ? -1 : String(a.id) > String(b.id) ? 1 : 0);
   // The total always carries its certainty breakdown (spec anti-goal: no bare
-  // grand total that adds alleged and documented together unseen).
+  // grand total that adds alleged and documented together unseen). Averted
+  // harms never happened, so they stay out of the headline number and follow
+  // it as "plus N averted" (Joe, 2026-11-16).
+  const averted = rows.filter(r => r.certainty === "averted").length;
+  const harmed = rows.length - averted;
   const parts = GLANCE_CERTAINTIES
+    .filter(c => c !== "averted")
     .map(c => [c, rows.filter(r => r.certainty === c).length])
     .filter(([, n]) => n > 0)
     .map(([c, n]) => n + " " + c);
   let html = '<section class="harms-list"><h2 class="harms-title">Harms by kind</h2>' +
-    '<p class="harms-total">' + rows.length + " harm" + (rows.length === 1 ? "" : "s") +
-    (parts.length ? ": " + parts.join(", ") : "") + '</p>';
+    '<p class="harms-total">' + harmed + " harm" + (harmed === 1 ? "" : "s") +
+    (parts.length ? ": " + parts.join(", ") : "") +
+    (averted ? "; plus " + averted + " averted" : "") + '</p>';
   Object.keys(GLANCE_HARM_LABELS).forEach(kind => {
     const inKind = rows.filter(r => r.kind === kind);
     if (!inKind.length) return;
@@ -5361,7 +5367,7 @@ function buildHarmsListHtml(trackers, abbr) {
 /* harms-list:end */
 /* harms-hash:start */
 /* The Harms view's own address, #harms, so it can be shared. Pure decision;
-   applyHarmsHash() does the history call. "load": #harms opens the view.
+   renderDispatch() and the load code make the history calls. "load": #harms opens the view.
    "switch" (every renderDispatch): write #harms on entering the view, clear
    it on leaving, so a copied URL is never stale. Other hashes (entry links,
    #owner-setup) are left alone. */
@@ -5377,8 +5383,12 @@ function harmsHashAction(hash, activeView, phase) {
 
 /* The replaceState arguments for the "switch" sync. Keeps the entry's own
    state (a search snapshot or a pushed {type:"entry"}) so Back/Forward still
-   replay it; only the URL changes. null = nothing to do. */
-function harmsHashReplacement(hash, activeView, state, pathAndSearch) {
+   replay it; only the URL changes. null = nothing to do. Nothing happens
+   before the data has loaded (ready false): a render then (e.g. typing in
+   global search early) would otherwise clear #harms before the load code
+   reads it. */
+function harmsHashReplacement(hash, activeView, state, pathAndSearch, ready) {
+  if (!ready) return null;
   const action = harmsHashAction(hash, activeView, "switch");
   if (action === "set") return { state, url: "#" + HARMS_VIEW };
   if (action === "clear") return { state, url: pathAndSearch };
@@ -7182,7 +7192,7 @@ function renderDispatch() {
   const countEl = document.getElementById("count");
 
   // Keep #harms in step with the view (every view change comes through here).
-  const harmsHash = harmsHashReplacement(location.hash, activeTracker, history.state, location.pathname + location.search);
+  const harmsHash = harmsHashReplacement(location.hash, activeTracker, history.state, location.pathname + location.search, allDataLoaded);
   if (harmsHash) history.replaceState(harmsHash.state, "", harmsHash.url);
 
   if (term) {
@@ -7423,6 +7433,9 @@ window.addEventListener("popstate", (e) => {
     document.getElementById("global-regex").checked = !!e.state.regex;
     document.getElementById("global-oneliner").checked = !!e.state.oneliner;
     updateAdvancedBtn();
+    // A search started on the Harms view carries #harms: come back to Harms
+    // underneath it, so clearing the search lands there again.
+    if (harmsHashAction(location.hash, activeTracker, "load") === "open") activeTracker = HARMS_VIEW;
     renderDispatch();
     requestAnimationFrame(() => window.scrollTo(0, e.state.scrollY));
   } else if (e.state.type === "entry") {

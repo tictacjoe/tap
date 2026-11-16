@@ -164,9 +164,9 @@ const hist = (0, eval)(`${extractFunction(source, "harms-hash")}\n({ harmsHashRe
 
 test("harmsHashReplacement keeps the current history state when setting or clearing #harms", () => {
   const st = { type: "entry", tracker: "prosecution", id: "x" };
-  assert.deepEqual(hist.harmsHashReplacement("#harms", "prosecution", st, "/tap/"), { state: st, url: "/tap/" });
-  assert.deepEqual(hist.harmsHashReplacement("", "harms", st, "/tap/"), { state: st, url: "#harms" });
-  assert.equal(hist.harmsHashReplacement("#harms", "harms", st, "/tap/"), null);
+  assert.deepEqual(hist.harmsHashReplacement("#harms", "prosecution", st, "/tap/", true), { state: st, url: "/tap/" });
+  assert.deepEqual(hist.harmsHashReplacement("", "harms", st, "/tap/", true), { state: st, url: "#harms" });
+  assert.equal(hist.harmsHashReplacement("#harms", "harms", st, "/tap/", true), null);
 });
 
 test("harmsLinkHistory stamps a harms return point, then pushes the entry", () => {
@@ -174,4 +174,23 @@ test("harmsLinkHistory stamps a harms return point, then pushes the entry", () =
     { op: "replace", state: { type: "harms", scrollY: 1234 }, url: "#harms" },
     { op: "push", state: { type: "entry", tracker: "govservices", id: "g1" }, url: "#harms" },
   ]);
+});
+
+// Minor fixes (2026-11-16, Joe): the headline total leaves averted out.
+test("total leaves averted out of the headline and lists it after", () => {
+  const html = api.buildHarmsListHtml(trackersWith([
+    entry("a", {}), entry("b", { certainty: "alleged" }), entry("c", { certainty: "averted" }),
+  ]), ABBR);
+  const total = html.match(/<p class="harms-total">([^<]*)<\/p>/)[1];
+  assert.equal(total, "2 harms: 1 documented, 1 alleged; plus 1 averted");
+});
+
+test("total with no averted has no averted clause", () => {
+  const html = api.buildHarmsListHtml(trackersWith([entry("a", {})]), ABBR);
+  assert.equal(html.match(/<p class="harms-total">([^<]*)<\/p>/)[1], "1 harm: 1 documented");
+});
+
+test("harmsHashReplacement does nothing until the data has loaded", () => {
+  assert.equal(hist.harmsHashReplacement("#harms", "headlines", null, "/tap/", false), null);
+  assert.deepEqual(hist.harmsHashReplacement("#harms", "headlines", null, "/tap/", true), { state: null, url: "/tap/" });
 });
