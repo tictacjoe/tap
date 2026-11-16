@@ -4951,7 +4951,6 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
   // Broader Pattern; the swap only still applies to the remaining
   // skim-line-less migrated entries.
   const violationTypeCardHtml = '<div class="field-group entry-main-card"><div class="field-label">Violation Type (in full)</div><div class="field-value">' + hl(entry.offense_category_raw || entry.offense_category) + '</div></div>';
-  const broaderPatternCardHtml = '<div class="field-group entry-main-card"><div class="field-label">Broader Pattern</div><div class="field-value">' + buildCauseFieldHtml(entry, term, useRegex) + '</div></div>';
   // Anticipated Defense and TAP's Rebuttal share one field-group (2026-09-22,
   // Joe's call: "put them into a single box so they stay together despite
   // how the layout is configured") -- distributeEntryCards() moves each
@@ -4961,8 +4960,15 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
   // buildConfidenceNoteHtml uses for its "Updates" sub-label; the second
   // label keeps its normal margin-top for internal separation (see the
   // .entry-col .field-group > .field-label:first-child CSS comment).
-  const tailCardsHtml =
-    '<div class="field-group entry-main-card"><div class="field-label">Anticipated Defense</div><div class="field-value">' + hl(entry.rebuttal_anticipated) + '</div>' +
+  //
+  // Moved under Broader Pattern (2026-11-16, Joe: "put anticipated defense and
+  // rebuttal under 'broader pattern' at the top right, to the right of
+  // sources"): all three now share ONE field-group, so they travel together as
+  // card 3 (top-right column, beside Sources) instead of the defense/rebuttal
+  // pair landing wherever the shortest column fell at the end.
+  const broaderPatternCardHtml =
+    '<div class="field-group entry-main-card"><div class="field-label">Broader Pattern</div><div class="field-value">' + buildCauseFieldHtml(entry, term, useRegex) + '</div>' +
+    '<div class="field-label">Anticipated Defense</div><div class="field-value">' + hl(entry.rebuttal_anticipated) + '</div>' +
     '<div class="field-label">TAP\'s Rebuttal</div><div class="field-value">' + hl(entry.comeback) + '</div></div>';
   const hasStatusSkim = !!(entry.narrative_combined && entry.section_summaries?.status);
   const statusSkimCardHtml = hasStatusSkim
@@ -4979,12 +4985,10 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
   const mainHtml = entry.narrative_combined
     ? '<div class="field-group entry-main-card"><div class="field-label">What happened</div><div class="field-value">' + summary(entry.section_summaries?.incident_summary) + buildKeyEventsRailHtml(entry, hl) + wrapFullStoryHtml(entry, "incident_summary", buildFieldTimelineHtml(entry, "incident_summary", hl) + buildFieldTimelineHtml(entry, "status", hl)) + '</div></div>' + sourcesCardHtml +
       broaderPatternCardHtml +
-      (hasStatusSkim
-        ? statusSkimCardHtml + violationTypeCardHtml + tailCardsHtml
-        : violationTypeCardHtml + tailCardsHtml)
+      (hasStatusSkim ? statusSkimCardHtml : '') + violationTypeCardHtml
     : '<div class="field-group entry-main-card"><div class="field-label">What happened</div><div class="field-value">' + summary(entry.section_summaries?.incident_summary) + buildKeyEventsRailHtml(entry, hl) + wrapFullStoryHtml(entry, "incident_summary", buildFieldTimelineHtml(entry, "incident_summary", hl)) + '</div></div>' + sourcesCardHtml + broaderPatternCardHtml +
       '<div class="field-group entry-main-card"><div class="field-label">Status</div><div class="field-value">' + buildFieldTimelineHtml(entry, "status", hl) + '</div></div>' +
-      violationTypeCardHtml + tailCardsHtml;
+      violationTypeCardHtml;
   // Violation/Concern Type and Status Stage move into the glance card's harm line
   // instead (2026-09-22, Joe's call; see buildGlanceHeadHtml) -- omitted here only
   // when glance is actually showing for this entry, so the information is never

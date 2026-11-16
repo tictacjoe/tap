@@ -371,9 +371,10 @@ test("prosecution narrative_combined with section_summaries.status gets a skim-l
   const whatHappenedStart = result.indexOf('<div class="field-label">What happened</div>');
   const whatHappenedHtml = result.slice(whatHappenedStart, broaderPatternStart);
   assert(whatHappenedHtml.includes("<p>Second part, the full status prose.</p>"), "full status text should still be merged into What happened");
-  // Same order as the non-merged branch: What happened, Broader Pattern, Status, Violation Type.
+  // Same order as the non-merged branch: What happened, Broader Pattern (with
+  // Anticipated Defense / TAP's Rebuttal inside it since 2026-11-16), Status, Violation Type.
   const cards = [...result.matchAll(/<div class="field-label">([^<]+)<\/div>/g)].map(m => m[1]);
-  assert.deepEqual(cards.slice(0, 4), ["What happened", "Broader Pattern", "Status", "Violation Type (in full)"]);
+  assert.deepEqual(cards.slice(0, 6), ["What happened", "Broader Pattern", "Anticipated Defense", "TAP's Rebuttal", "Status", "Violation Type (in full)"]);
 });
 
 test("prosecution narrative_combined without section_summaries.status renders no Status card at all (unchanged from before)", () => {
@@ -1009,7 +1010,7 @@ const layoutEntries = {
       comeback: "Rebuttal.",
     },
     // Confidence note is a collapsible <summary> for prosecution/CLA (2026-09-22), not a plain <div>.
-    order: [">What happened</div>", ">Broader Pattern</div>", ">Status</div>", ">Violation Type (in full)</div>", ">Anticipated Defense</div>", ">TAP's Rebuttal</div>", ">Violation/Concern Type</div>", ">Status Stage</div>", ">Confidence note</summary>", "entry-aside-quote"],
+    order: [">What happened</div>", ">Broader Pattern</div>", ">Anticipated Defense</div>", ">TAP's Rebuttal</div>", ">Status</div>", ">Violation Type (in full)</div>", ">Violation/Concern Type</div>", ">Status Stage</div>", ">Confidence note</summary>", "entry-aside-quote"],
   },
 };
 
@@ -1896,4 +1897,20 @@ test("straight double quotes in a pull quote are shown curly", () => {
   assert(buildPullQuoteHtml({ pull_quote: '"We will act," he said, "soon." -- Speaker' }, id)
     .includes("\u201CWe will act,\u201D he said, \u201Csoon.\u201D -- Speaker"));
   assert(buildPullQuoteHtml({ pull_quote: 'Called it a "hoax" (twice)' }, id).includes("a \u201Choax\u201D (twice)"));
+});
+
+test("prosecution puts Anticipated Defense and TAP's Rebuttal inside the Broader Pattern card (2026-11-16)", () => {
+  for (const narrative_combined of [false, true]) {
+    const entry = {
+      offense_category: "Fraud", status_category: "Investigation", incident_summary: "Summary.",
+      status: "Under investigation.", cause: "Pattern.", rebuttal_anticipated: "Defense.", comeback: "Rebuttal.",
+      narrative_combined,
+    };
+    const result = buildDetailHtml(entry, { kind: "prosecution" });
+    assert(result.includes(
+      '<div class="field-group entry-main-card"><div class="field-label">Broader Pattern</div><div class="field-value">Pattern.</div>' +
+      '<div class="field-label">Anticipated Defense</div><div class="field-value">Defense.</div>' +
+      '<div class="field-label">TAP\'s Rebuttal</div><div class="field-value">Rebuttal.</div></div>'
+    ), `one field-group holds all three (narrative_combined=${narrative_combined})`);
+  }
 });
