@@ -1165,21 +1165,13 @@
    },
    "1": {
     "state": "supports",
-    "why": "The Reuters text via Missouri Lawyers Media states each element: 14 firms, records and depositions, subpoenas filed Friday in Washington federal court, Epshteyn communications since the second term began, ABA communications about Epshteyn, and disclosure in the ABA's lawsuit.",
-    "host": "molawyersmedia.com",
-    "date": "2026-09-27",
-    "kind": "fact",
-    "archive": false
-   },
-   "2": {
-    "state": "supports",
     "why": "Bloomberg Law cites the NYT July 14 report, describes the nine deal firms that pledged $940 million and the four firms whose executive orders were struck down and are on appeal, and carries both DOJ spokesperson quotes verbatim, including on the motion to quash the ABA's Epshteyn subpoena.",
     "host": "news.bloomberglaw.com",
     "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
-   "3": {
+   "2": {
     "state": "supports",
     "why": "The source directly supports the claim: Rubino calls it unusual for DOJ to narrate litigation strategy mid-discovery, and argues DOJ's subpoena move concedes the Epshteyn communications are relevant even as DOJ separately claims privilege over them.",
     "host": "abovethelaw.com",
@@ -1187,10 +1179,18 @@
     "kind": "interpretation",
     "archive": false
    },
-   "4": {
+   "3": {
     "state": "partly",
-    "why": "ECF 69 (filed 07/22/26, reply in support of the motion to compel) makes the same argument about the government subpoenaing third parties to produce documents back to the ABA, but the provided text is truncated and does not contain the specific quoted phrases ('absurd outcome', 'huge waste of time', the privilege-log request).",
-    "host": "storage.courtlistener.com",
+    "why": "The docket page text provided only reaches back to October 2026; it confirms the November 4 discovery hearing with an order 'forthcoming via Chambers,' but the July and August entries (ECF 68, 70, 72, 79, the July 31 conference and August 3 minute order) are not in the provided text.",
+    "host": "courtlistener.com",
+    "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "supports",
+    "why": "The Reuters text via Missouri Lawyers Media states each element: 14 firms, records and depositions, subpoenas filed Friday in Washington federal court, Epshteyn communications since the second term began, ABA communications about Epshteyn, and disclosure in the ABA's lawsuit.",
+    "host": "molawyersmedia.com",
     "date": "2026-09-27",
     "kind": "fact",
     "archive": false
@@ -1205,17 +1205,17 @@
    },
    "6": {
     "state": "partly",
-    "why": "The OLC slip opinion dated August 10, 2026, addressed to the Counsel to the President, contains the quoted three-part conclusion and defines 'private advisers' as 'anyone the President consults outside the Executive Branch'; however, the provided (truncated) text does not show the 21-page length or the signature of T. Elliot Gaiser.",
-    "host": "justice.gov",
+    "why": "ECF 69 (filed 07/22/26, reply in support of the motion to compel) makes the same argument about the government subpoenaing third parties to produce documents back to the ABA, but the provided text is truncated and does not contain the specific quoted phrases ('absurd outcome', 'huge waste of time', the privilege-log request).",
+    "host": "storage.courtlistener.com",
     "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "7": {
     "state": "partly",
-    "why": "The docket page text provided only reaches back to October 2026; it confirms the November 4 discovery hearing with an order 'forthcoming via Chambers,' but the July and August entries (ECF 68, 70, 72, 79, the July 31 conference and August 3 minute order) are not in the provided text.",
-    "host": "courtlistener.com",
-    "date": "2026-11-08",
+    "why": "The OLC slip opinion dated August 10, 2026, addressed to the Counsel to the President, contains the quoted three-part conclusion and defines 'private advisers' as 'anyone the President consults outside the Executive Branch'; however, the provided (truncated) text does not show the 21-page length or the signature of T. Elliot Gaiser.",
+    "host": "justice.gov",
+    "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
@@ -1272,6 +1272,22 @@
     "why": "ECF 94 (filed 11/05/26) supports the 'Did Not Evade Service' point, the Rule 45 personal-service argument, the no-position stance on extension, and an abeyance request, but the specific quoted abeyance wording ('in abeyance until the Government's motion to quash those same subpoenas is fully and finally resolved') does not appear verbatim in the provided text.",
     "host": "storage.courtlistener.com",
     "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "15": {
+    "state": "supports",
+    "why": "The joint status report states DOJ intends to move for a protective order on the October 23 depositions (footnote lists Miller, Scharf, Whitaker, Warfield and the undisclosed individuals), proposes a November 18 deadline, agrees the depositions will be held in abeyance, and the stipulation keeps the November 12 fact-discovery deadline while allowing pre-deadline discovery to proceed.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-11-16",
+    "kind": "fact",
+    "archive": false
+   },
+   "16": {
+    "state": "supports",
+    "why": "The ECF 98 reply (filed 11/13/26) contains each quoted passage verbatim: evasion of the September substitute subpoenas including the concierge instruction, no motion to quash, and no substantive response despite at least five months' knowledge.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-11-16",
     "kind": "fact",
     "archive": false
    }
@@ -3738,10 +3754,10 @@
     "archive": false
    },
    "5": {
-    "state": "partly",
-    "why": "The status page lists the Bove complaint as filed 12/10/25 and still under consideration; the captured page does not show a date identifying this as an October 2026 update.",
+    "state": "supports",
+    "why": "Fix the Court's complaint-status page lists the formal complaint against Third Circuit Judge Emil Bove as filed 12/10/25 and still under consideration.",
     "host": "fixthecourt.com",
-    "date": "2026-11-08",
+    "date": "2026-11-16",
     "kind": "fact",
     "archive": false
    },
@@ -3962,6 +3978,22 @@
     "why": "MS NOW reports Chutkan deferred ruling on the veterans' requests in the consolidated suit and that a judge had not yet ruled on the Arlington County Board's lawsuit.",
     "host": "ms.now",
     "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "22": {
+    "state": "partly",
+    "why": "The docket text confirms the November 9 minute order setting the November 10/16/18 schedule, the November 10 PI motions by Byrnes, Gundersen, Lemmon and Loth and by Virginia and D.C. (with a 5 U.S.C. 705 stay request), the November 10 minute order on the motion to intervene, and the November 13 Kennedy motion to join and supplement; but the provided text does not identify the first movants as veterans and a historian, and the truncated Kennedy entry lists only four names, so 'nine Kennedy family members' cannot be confirmed.",
+    "host": "courtlistener.com",
+    "date": "2026-11-16",
+    "kind": "fact",
+    "archive": false
+   },
+   "23": {
+    "state": "supports",
+    "why": "The AP article (dated November 10, 2026) reports the nine RFK/EMK descendants' motion to intervene in two existing suits, the 250-foot shadow over the gravesites, the quoted 'fundamentally alter' language, and Davis Ingle's quoted statement.",
+    "host": "wpxi.com",
+    "date": "2026-11-16",
     "kind": "fact",
     "archive": false
    }
@@ -5611,13 +5643,29 @@
   "dhs-fema-polygraph-leak-crackdown-2025": {
    "0": {
     "state": "supports",
+    "why": "The Fox News Digital article reports Noem's February internal directive requiring a polygraph question on unauthorized communication with media outlets and nonprofits, per Bloomberg Government, and McLaughlin's post that DHS is a national security agency that 'can, should, and will polygraph personnel.'",
+    "host": "foxnews.com",
+    "date": "2026-11-16",
+    "kind": "fact",
+    "archive": false
+   },
+   "1": {
+    "state": "supports",
+    "why": "The CNN article (published April 12, 2025) states each element: ~50 staffers tested including Hamilton and roughly a dozen FEMA officials, Hamilton tested days after the closed-door meeting, at least one official put on leave and escorted out, McLaughlin's 'failed'/criminal-referral statements and Hamilton cleared, and the 'extremely farcical' and 'witch hunt' quotes.",
+    "host": "krdo.com",
+    "date": "2026-11-16",
+    "kind": "fact",
+    "archive": false
+   },
+   "2": {
+    "state": "supports",
     "why": "The Reuters story (dated May 23, 2025) states DHS managers ordered polygraphs on at least four attendees of the March Noem/Hamilton meeting, taken at TSA headquarters in Virginia per two former FEMA officials, that a FEMA public-affairs staffer was put on paid leave after an inconclusive test with unclear link to the meeting, that one employee resigned and described NDAs, and that four workers said employees were told they could be fired for refusing; every element matches.",
     "host": "srnnews.com",
     "date": "2026-11-08",
     "kind": "fact",
     "archive": false
    },
-   "1": {
+   "3": {
     "state": "supports",
     "why": "The source quotes the DHS spokesperson's statement to Reuters verbatim, exactly matching the claim.",
     "host": "antipolygraph.org",
@@ -6357,13 +6405,29 @@
    },
    "3": {
     "state": "partly",
-    "why": "The Al Jazeera article confirms the Roberts majority (joined by Barrett, Kavanaugh, Sotomayor, Jackson, Kagan), the 'scant evidence' quote, and Congress's missed 1952 INA opportunity, but it describes Kavanaugh as joining the majority opinion rather than as concurring in the judgment while dissenting in part on the reasoning as the claim states.",
-    "host": "aljazeera.com",
-    "date": "2026-09-15",
+    "why": "The Source New Mexico article confirms Trump announced Bondi was leaving DOJ with Blanche moving up in an acting role, but the provided text gives only 'Thursday' and no publication date, so the April 2, 2026 date cannot be confirmed from it.",
+    "host": "sourcenm.com",
+    "date": "2026-11-16",
     "kind": "fact",
     "archive": false
    },
    "4": {
+    "state": "supports",
+    "why": "Al Jazeera (published 30 Jun 2026) reports the 6-3 ruling, Roberts's 'scant evidence for this dramatically revisionist view' line about insufficient evidence from administration lawyers and dissenters, and Trump calling it 'too bad for our country' and urging Congress to act; the article separately reports Thomas's dissent.",
+    "host": "aljazeera.com",
+    "date": "2026-11-16",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "partly",
+    "why": "The slip opinion confirms the case, decision date, holding, affirmance, the full lineup of opinions (including Kavanaugh's view that the Order violates 8 U.S.C. 1401(a) but not the Fourteenth Amendment), the 'scant evidence' language, and the citation to Morse's 1881 Treatise on Citizenship; the provided text does not show that the affirmed court was the New Hampshire district court, a Wharton citation, or Thomas's dissent quoting the same Morse passage.",
+    "host": "supremecourt.gov",
+    "date": "2026-11-16",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
     "state": "supports",
     "why": "The American Presidency Project text of EO 14418, dated August 6, 2026, cites Trump v. Barbara, includes the quoted purpose language, sets out the alien-enemy, foreign-government-employee, commercial-transaction/fraud and territory categories where neither parent is a citizen, and requires agency guidance within 30 days.",
     "host": "presidency.ucsb.edu",
@@ -6371,7 +6435,7 @@
     "kind": "fact",
     "archive": false
    },
-   "5": {
+   "7": {
     "state": "supports",
     "why": "ECF 80, filed August 11, 2026 in No. 1:25-cv-244, is a motion to clarify the preliminary injunction or alternatively modify it or issue a new one, and contains the quoted 'purports to strip birthright citizenship' language.",
     "host": "storage.courtlistener.com",
@@ -6379,7 +6443,7 @@
     "kind": "fact",
     "archive": false
    },
-   "6": {
+   "8": {
     "state": "supports",
     "why": "Judge Boardman's September 2, 2026 order (ECF 182) enjoins State, DOJ, DHS, USCIS and SSA from enforcing EO 14418 against the certified class, described as identical to the Barbara class, finds likely success based on Barbara, and excludes Section 2(d) and Section 3(b) guidance.",
     "host": "storage.courtlistener.com",
@@ -6387,7 +6451,7 @@
     "kind": "fact",
     "archive": false
    },
-   "7": {
+   "9": {
     "state": "supports",
     "why": "ECF 183, dated September 8, 2026 and signed by Civil Division attorneys, moves to dissolve the preliminary injunction against EO 14418 or alternatively stay it pending appeal.",
     "host": "storage.courtlistener.com",
@@ -6395,7 +6459,7 @@
     "kind": "fact",
     "archive": false
    },
-   "8": {
+   "10": {
     "state": "supports",
     "why": "The Clearinghouse summary describes the September 22 opposition and the October 6 government brief on standing and class overbreadth exactly as claimed, lists no ruling, and states the case is ongoing.",
     "host": "clearinghouse.net",
@@ -6403,7 +6467,7 @@
     "kind": "fact",
     "archive": false
    },
-   "9": {
+   "11": {
     "state": "supports",
     "why": "ECF 96, filed September 23, 2026, recounts the September 22 status conference where the court said the supplemental complaint 'effectively represented a new case and should be filed as such,' withdraws ECF 80, 90, 91 and 92, keeps Barbara as a plaintiff, and says the new non-resident plaintiffs will file elsewhere.",
     "host": "storage.courtlistener.com",
@@ -6411,7 +6475,7 @@
     "kind": "fact",
     "archive": false
    },
-   "10": {
+   "12": {
     "state": "supports",
     "why": "The ACLU-DC page reports Nathan v. Trump was filed September 28, 2026 in D.D.C. with the national ACLU, lists international-organization employees and an Australian couple expecting via surrogacy, alleges constitutional and statutory violations, and says a preliminary-injunction motion will soon follow.",
     "host": "acludc.org",
@@ -6419,11 +6483,11 @@
     "kind": "fact",
     "archive": false
    },
-   "11": {
+   "13": {
     "state": "supports",
-    "why": "The Clearinghouse page shows the September 28, 2026 class action complaint challenging EO 14,418, the October 9 PI and class-certification motions, and Judge Cooper's order setting a November 12, 2026 hearing on both; the case is listed as ongoing.",
+    "why": "The Clearinghouse page shows the case filed September 28, 2026 challenging EO 14,418 with a class action complaint, the October 9 PI and class-certification motions, and a November 12 hearing before Judge Cooper at which both motions were taken under advisement with a forthcoming order, and labels the case 'Case Ongoing'.",
     "host": "clearinghouse.net",
-    "date": "2026-11-08",
+    "date": "2026-11-16",
     "kind": "fact",
     "archive": false
    }
@@ -9603,9 +9667,9 @@
   "fbi-milwaukee-election-director-home-visit-2026": {
    "0": {
     "state": "supports",
-    "why": "The CBS report (Wayback) states an FBI agent visited the elections director's home and left a business card, and quotes Christenson criticizing the visit as an intrusion when the agency could have contacted the Election Commission's office directly; the Wisconsin Examiner piece is not in the provided text, but CBS alone supports the claim.",
+    "why": "The Wayback capture (May 2026) of the CBS article reports Christenson saying an FBI agent visited the elections director's home and left a business card, with his quoted 'unfortunate' statement.",
     "host": "cbsnews.com",
-    "date": "2026-11-08",
+    "date": "2026-11-16",
     "kind": "fact",
     "archive": true
    },
@@ -10068,10 +10132,10 @@
     "archive": false
    },
    "16": {
-    "state": "supports",
-    "why": "The CNBC article dated July 28, 2026 reports the Senate confirmed Clayton as DNI 51-47 on Tuesday evening and that the confirmation ends interim DNI Bill Pulte's tenure.",
+    "state": "partly",
+    "why": "CNBC confirms the Senate confirmed Clayton, then SDNY U.S. attorney, as DNI on a Tuesday by a party-line 51-47 vote, but the provided text never states the date, so July 28, 2026 is not confirmed by it.",
     "host": "cnbc.com",
-    "date": "2026-11-07",
+    "date": "2026-11-16",
     "kind": "fact",
     "archive": false
    },
@@ -10174,10 +10238,18 @@
     "archive": false
    },
    "11": {
-    "state": "supports",
-    "why": "CNBC reports the 51-47 party-line Senate confirmation of Clayton as DNI and that it ends interim DNI Pulte's tenure, which featured several rounds of layoffs of high-ranking intelligence officials.",
+    "state": "partly",
+    "why": "CNBC confirms the party-line 51-47 confirmation and that Pulte, tapped to temporarily replace Gabbard, led layoffs of high-ranking intelligence officials as acting DNI, but the provided text gives only 'Tuesday' and not the July 28, 2026 date.",
     "host": "cnbc.com",
-    "date": "2026-11-08",
+    "date": "2026-11-16",
+    "kind": "fact",
+    "archive": false
+   },
+   "12": {
+    "state": "partly",
+    "why": "The article (noted as originally from The New York Times) confirms Clayton was sworn in on Monday after confirmation the previous Tuesday and the delay gave Pulte a few more days as acting director, but the provided text carries no date, so the Aug. 3/Aug. 4, 2026 dates and Boston Globe publication are not shown.",
+    "host": "bostonglobe.com",
+    "date": "2026-11-16",
     "kind": "fact",
     "archive": false
    }
@@ -10390,10 +10462,10 @@
     "archive": false
    },
    "6": {
-    "state": "partly",
-    "why": "Gibson Dunn confirms the May 7 2-1 ruling, the balance-of-payments-deficit definition rationale, the permanent injunction limited to three plaintiffs, the appeal, the May 12 Federal Circuit administrative stay, Proclamation 11012 at 10 percent and the unexecuted 15 percent threat; but it does not name the three plaintiffs (Burlap & Barrel, Basic Fun, Washington) and dates Section 122's passage to 1975 rather than 1974.",
+    "state": "supports",
+    "why": "The Gibson Dunn alert states the CIT's May 7, 2026 2-1 ruling that the Section 122 action did not meet the statutory criteria, the permanent injunction limited to three plaintiffs (two private importers and one state, Washington), dismissal of other states' claims, no universal injunction, the May 12 Federal Circuit administrative stay, and the 10 percent surcharge under Proclamation 11012 with an unexecuted threat to raise it to 15 percent; footnote 3 names State of Oregon v. Trump and Burlap and Barrel v. Trump.",
     "host": "gibsondunn.com",
-    "date": "2026-11-08",
+    "date": "2026-11-16",
     "kind": "fact",
     "archive": false
    },
@@ -10562,6 +10634,14 @@
     "why": "The November 4, 2026 TaxProf post states each element: the stayed, pending Section 122 appeal with the reply brief delayed 30 days and due November 12; the Section 301 supplemental briefing ordered October 2 and filed October 16; and the Section 338 briefing schedule with December 11 and January 11 deadlines.",
     "host": "taxprofblog.aals.org",
     "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "28": {
+    "state": "supports",
+    "why": "The ABS News Service item dated 06.11.2026 reports the panel's order to file declarations of import countries by November 10, that the judges did not say how it would factor in, and that at September 30 arguments judges and the small businesses' attorney raised relief for some two dozen countries.",
+    "host": "worldtradescanner.com",
+    "date": "2026-11-16",
     "kind": "fact",
     "archive": false
    }
@@ -12582,10 +12662,10 @@
     "archive": false
    },
    "5": {
-    "state": "unopened",
-    "why": "",
+    "state": "supports",
+    "why": "The April 26, 2026 letter signed by Warren, Gillibrand, Blumenthal and Kelly centers on the March 1 Shuaiba port attack, contains the quoted 'larger pattern' and Persian Gulf vessel-warning language including Merchant Marine Academy midshipmen, and lists nine questions due May 11, 2026, with question 8 matching the quoted text.",
     "host": "web.archive.org",
-    "date": "2026-11-08",
+    "date": "2026-11-16",
     "kind": "fact",
     "archive": false
    },
