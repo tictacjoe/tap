@@ -1,6 +1,6 @@
 {
  "version": 1,
- "as_of": "2026-11-15",
+ "as_of": "2026-11-16",
  "checks": {
   "abrego-garcia-vindictive-prosecution-2025-2026": {
    "0": {
@@ -639,9 +639,9 @@
   "blanche-campaign-events-hatch-act-2026": {
    "0": {
     "state": "supports",
-    "why": "The article (Charlie Savage, NYT via Inquirer) reports the Tuesday White House remarks, DOJ's 'approved by ethics' post, Bondi's March rescission of Garland's 2022 ban, Tirrell's 'sounds like a Hatch Act violation' comment, and that the attorney general is not listed among the further-restricted officials, as the excerpt shows.",
+    "why": "The Inquirer-syndicated Charlie Savage NYT article reports the White House podium remarks, DOJ's 'approved by ethics' post, Bondi's March rescission of Garland's ban, Tirrell's Hatch Act comment, Holder's quoted remark on the convention speech, and that the attorney general is not listed among further-restricted officials; the excerpt carries the Bondi rescission element.",
     "host": "inquirer.com",
-    "date": "2026-09-29",
+    "date": "2026-11-16",
     "kind": "fact",
     "archive": false
    },
@@ -663,9 +663,9 @@
    },
    "3": {
     "state": "supports",
-    "why": "GovExec reports Public Citizen's OSC request over the Aug. 14 Blakeman rally speech 'just one week after he was sworn in,' quotes DOJ's 'politically-motivated complaint designed to weaponize the Hatch Act' statement, and says OSC had no comment.",
+    "why": "The August 18 article reports Public Citizen's OSC request about the Aug. 14 Long Island rally for Blakeman 'just one week after he was sworn in,' quotes the DOJ statement in the excerpt, and says OSC had no comment.",
     "host": "govexec.com",
-    "date": "2026-09-29",
+    "date": "2026-11-16",
     "kind": "fact",
     "archive": false
    },
@@ -678,10 +678,10 @@
     "archive": false
    },
    "5": {
-    "state": "partly",
-    "why": "GovExec supports the DOJ X-account reply and the absence of OSC findings on senior appointees, but the Democrats' post was made ahead of the speech ('will be violating') and the source does not give the September 9 date.",
+    "state": "supports",
+    "why": "The article quotes House Judiciary Democrats' 'will be violating federal law' post, reports the DOJ X reply in the excerpt, and says OSC does not appear to have issued findings on senior appointees' complaints.",
     "host": "govexec.com",
-    "date": "2026-09-29",
+    "date": "2026-11-16",
     "kind": "fact",
     "archive": false
    },
@@ -3572,6 +3572,14 @@
     "date": "2026-11-03",
     "kind": "fact",
     "archive": false
+   },
+   "10": {
+    "state": "supports",
+    "why": "The Sun-Times article reports Perry's Tuesday docket complaint about 'two 1-page emails' with no metadata, the 'sheds no light' language, the Thursday deadline, Woodward's five-page filing with the 'mini-trial' quote and Fifth Amendment point, DOJ's Monday privilege claim, and the Nov. 16/Nov. 24 testimony dates.",
+    "host": "chicago.suntimes.com",
+    "date": "2026-11-16",
+    "kind": "fact",
+    "archive": false
    }
   },
   "bove-cheung-epa-grand-jury-pressure-2025": {
@@ -4812,6 +4820,14 @@
   },
   "comey-seashells-ednc-prosecution-2026": {
    "0": {
+    "state": "partly",
+    "why": "The excerpt and the following sentences confirm the Sept. 30 arraignment, Oct. 21 trial, and July 28/Aug. 18 motion deadlines, but the provided text does not state that the order was entered on May 26, 2026.",
+    "host": "witn.com",
+    "date": "2026-11-16",
+    "kind": "fact",
+    "archive": false
+   },
+   "1": {
     "state": "supports",
     "why": "The source directly confirms the filing removed Petracca as lead prosecutor and substituted Timothy Severo, and separately states that court filings on Petracca's removal from multiple cases do not specify why he stepped aside, supporting the 'no explanation given' part of the claim.",
     "host": "cbsnews.com",
@@ -4819,7 +4835,7 @@
     "kind": "fact",
     "archive": true
    },
-   "1": {
+   "2": {
     "state": "partly",
     "why": "The source clearly confirms the true-threat/First Amendment argument in Comey's motion to dismiss, and that Comey argued the DOJ was 'singling him out,' but it does not use the specific terms 'selective and vindictive prosecution' -- that legal theory is more explicitly developed in other sources cited elsewhere in this entry.",
     "host": "democracydocket.com",
@@ -4827,7 +4843,7 @@
     "kind": "fact",
     "archive": false
    },
-   "2": {
+   "3": {
     "state": "supports",
     "why": "The source directly states that Comey's lawyers alleged the Secret Service knowingly conducted illegal electronic surveillance of him in connection with the '8647'/seashell threat case, matching the claim.",
     "host": "cnbc.com",
@@ -4835,18 +4851,10 @@
     "kind": "fact",
     "archive": false
    },
-   "3": {
+   "4": {
     "state": "supports",
     "why": "The article reports Comey's Tuesday-evening motion-to-dismiss filing alleging the Secret Service 'sent frequent updates to Air Force One' at Trump's direct request before speaking to the press, and that the DOJ's 'number three' ordered warrantless surveillance an agent said was 'legally' a 'bad idea,' offered as vindictive/selective-prosecution evidence (the calendar date is given only as 'Tuesday').",
     "host": "democracydocket.com",
-    "date": "2026-09-27",
-    "kind": "fact",
-    "archive": false
-   },
-   "4": {
-    "state": "supports",
-    "why": "WITN reports Judge Flanagan set trial for October 21 and arraignment for September 30 in New Bern, with defense motions due July 28 and responses by August 18.",
-    "host": "witn.com",
     "date": "2026-09-27",
     "kind": "fact",
     "archive": false
@@ -4868,6 +4876,22 @@
     "archive": false
    },
    "7": {
+    "state": "supports",
+    "why": "The filing is Comey's reply in support of his motion to dismiss for lack of a true threat, filed 09/01/26, and its introduction quotes the government's '[o]nly a jury can resolve' argument and contends that context does not bear on the legal question.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-11-16",
+    "kind": "fact",
+    "archive": false
+   },
+   "8": {
+    "state": "supports",
+    "why": "The Sept. 25 order grants the Sept. 14 unopposed motion, moves arraignment from Sept. 30, 2026 to January 2027, says trial will be set after arraignment on a not guilty plea, and states in the excerpt that the listed motions 'now are ripe for decision.'",
+    "host": "storage.courtlistener.com",
+    "date": "2026-11-16",
+    "kind": "fact",
+    "archive": false
+   },
+   "9": {
     "state": "supports",
     "why": "The NYT excerpt states Boyle brought charges against Comey over the '86 47' seashell photo and quotes his affidavit with the exact wording in the claim.",
     "host": "nytimes.com",
@@ -5653,6 +5677,14 @@
    },
    "9": {
     "state": "supports",
+    "why": "The First Amended Complaint (Doc. 13, filed 10/28/26) names DOJ and Todd Blanche in his official capacity as Attorney General alongside DHS, Mullin, ICE, HSI, USCIS and officials, and contains the quoted challenge language and the 'Voter Data Policy' label.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-11-16",
+    "kind": "fact",
+    "archive": false
+   },
+   "10": {
+    "state": "supports",
     "why": "The order text grants ECF 15 and enjoins/stays under 705 disclosure of the voter lists to state and local election officials, with SAVE and prosecution carve-outs, signed by Judge Chutkan on November 2, 2026; the full two-page order contains no reference to HSI reviews of nonprofit groups, supporting the negative clause.",
     "host": "storage.courtlistener.com",
     "date": "2026-11-03",
@@ -6424,14 +6456,22 @@
     "archive": false
    },
    "3": {
-    "state": "partly",
-    "why": "The provided NPR source supports the first half of the claim (providers' concern about a practical enforcement gap), but it contains no reporting from The New Republic or MS NOW on bomb threats/arson increases, which the claim also attributes to this citation.",
+    "state": "supports",
+    "why": "The March 9, 2025 NPR piece states the enforcement limit, three dropped cases and 23 pardons in the excerpt, and elsewhere reports Brandt's 'green light' concern and Darnel's 'states can and will punish civil disobedience' remark.",
     "host": "npr.org",
-    "date": "2026-09-15",
+    "date": "2026-11-16",
     "kind": "fact",
     "archive": false
    },
    "4": {
+    "state": "supports",
+    "why": "The article supports the Charlotte director's 'pushing boundaries' remark and FBI dropping the bomb-threat probe, Burkhart's report of videos about setting Wellspring on fire again, and Fowler's quote in the excerpt; the May 29, 2025 publication date is not shown in the provided text.",
+    "host": "newrepublic.com",
+    "date": "2026-11-16",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
     "state": "supports",
     "why": "The August 20, 2025 NCR/OSV News article states six activists, including pardoned Bell and Goodman, face state charges for a July 31 Red Rose Rescue at the Delaware County Women's Center in Upland, PA; the charges are biosecurity and disorderly trespassing, both misdemeanors.",
     "host": "ncronline.org",
@@ -6439,7 +6479,7 @@
     "kind": "fact",
     "archive": false
    },
-   "5": {
+   "6": {
     "state": "supports",
     "why": "The OSV News article states the six were charged with defiant trespass and disorderly conduct, pleaded nolo contendere to obtain dismissal on Jan. 12, and the charges were dismissed with no fines, probation or community service.",
     "host": "catholicvirginian.org",
@@ -6447,7 +6487,7 @@
     "kind": "fact",
     "archive": false
    },
-   "6": {
+   "7": {
     "state": "supports",
     "why": "The DOJ press release itself frames the Biden-era FACE Act enforcement as weaponization and cites the pardons as corrective action, matching the claim precisely.",
     "host": "justice.gov",
@@ -6455,7 +6495,7 @@
     "kind": "fact",
     "archive": false
    },
-   "7": {
+   "8": {
     "state": "supports",
     "why": "The article states Vaughn will receive a seven-figure settlement \"his lawyers said\", that it was reached in April but first disclosed Tuesday, and that Blanche called him a victim of Biden-administration weaponization; conviction in 2024 and the pardon are also stated.",
     "host": "bostonglobe.com",
@@ -7238,6 +7278,14 @@
     "why": "The EdSource piece republished by LAist cites alleged FERPA and PPRA violations, says LAUSD denied wrongdoing per the Los Angeles Times, and says federal officials did not detail the nature of the action.",
     "host": "laist.com",
     "date": "2026-11-07",
+    "kind": "fact",
+    "archive": false
+   },
+   "7": {
+    "state": "supports",
+    "why": "The AP story reports Dhillon said she resigned as Civil Rights Division head and, per the excerpt, told Fox News Digital she decided weeks earlier, wanted to return to the private sector, and was not asked to resign; the text gives the day only as 'Thursday.'",
+    "host": "kctv5.com",
+    "date": "2026-11-16",
     "kind": "fact",
     "archive": false
    }
@@ -19183,13 +19231,21 @@
    },
    "32": {
     "state": "supports",
+    "why": "Document 306, filed 04/29/26, is the defendants' notice of appeal to the First Circuit from the March 16, 2026 order (ECF No. 291), exactly as the excerpt states.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-11-16",
+    "kind": "fact",
+    "archive": false
+   },
+   "33": {
+    "state": "supports",
     "why": "The Hill reports HHS on Monday (05/18/26) withdrew the proposed ACIP charter amendment, quotes the notice's 'administrative error' language citing 91 FR 17279 of April 6, 2026, and says the proposal would have replaced the vaccine-expertise requirement.",
     "host": "thehill.com",
     "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
-   "33": {
+   "34": {
     "state": "partly",
     "why": "The notice confirms the May 19, 2026 re-establishment and withdrawal of the April 6 renewal notice, but the 91 FR 17279 citation, the administrative-error/FACA timing reason, and the charter lapse are not in the available text.",
     "host": "federalregister.gov",
@@ -19197,7 +19253,7 @@
     "kind": "fact",
     "archive": false
    },
-   "34": {
+   "35": {
     "state": "supports",
     "why": "The opposition's footnote states the First Circuit granted Defendants' motion to expedite with reply due no later than July 27 and quotes the order that oral argument 'to the extent deemed necessary [Defendants did not request oral argument]' will be scheduled; the declaration dates the order June 16, 2026, and the body states 'a decision on the appeal appears likely in August.'",
     "host": "litigationtracker.law.georgetown.edu",
@@ -19205,7 +19261,7 @@
     "kind": "fact",
     "archive": false
    },
-   "35": {
+   "36": {
     "state": "supports",
     "why": "The opposition describes the renewed motion to stay and postpone the record dispute, the May 1 denial of the first stay motion, the July 17 motion to complete, and the August 18 hearing.",
     "host": "litigationtracker.law.georgetown.edu",
@@ -19213,7 +19269,7 @@
     "kind": "fact",
     "archive": false
    },
-   "36": {
+   "37": {
     "state": "supports",
     "why": "The clerk's notes (entered 07/23/2026) record argument on the second motion to stay, the stay granted until 9/3/2026, and cancellation of the hearing previously set for 8/18/2026.",
     "host": "courtlistener.com",
@@ -19221,7 +19277,7 @@
     "kind": "fact",
     "archive": false
    },
-   "37": {
+   "38": {
     "state": "supports",
     "why": "The September 3, 2026 motion recounts the July 23 stay (earlier of Sept. 3 or three weeks after the opinion), the Aug. 14 motion, the Aug. 19 order, and the October 6 argument setting.",
     "host": "storage.courtlistener.com",
@@ -19229,7 +19285,7 @@
     "kind": "fact",
     "archive": false
    },
-   "38": {
+   "39": {
     "state": "supports",
     "why": "The docket entry 354 description, entered 09/11/2026, records Judge Murphy granting the motion to stay proceedings pending the First Circuit appeal and staying the case until the Court of Appeals decides.",
     "host": "courtlistener.com",
@@ -19237,7 +19293,7 @@
     "kind": "fact",
     "archive": false
    },
-   "39": {
+   "40": {
     "state": "supports",
     "why": "Reuters reports Zorn's request and quote, Barron's remark, Pincus urging the order stay, and that the administration did not appeal the other portions of Murphy's order.",
     "host": "kelo.com",
@@ -19245,7 +19301,7 @@
     "kind": "fact",
     "archive": false
    },
-   "40": {
+   "41": {
     "state": "supports",
     "why": "The Guardian supports each element: no new nominations, the $40 Moderna co-pay, the January 2029 coverage timeline, and Siri's quote.",
     "host": "theguardian.com",
@@ -19527,13 +19583,21 @@
    },
    "7": {
     "state": "supports",
+    "why": "The docket shows the Oct. 9 joint motion to stay filed by Cole, DOJ and DEA, the excerpted minute order staying the case through Nov. 13 and requiring a joint status report, and a joint status report filed by the association on Nov. 13.",
+    "host": "pacermonitor.com",
+    "date": "2026-11-16",
+    "kind": "fact",
+    "archive": false
+   },
+   "8": {
+    "state": "supports",
     "why": "The notice states it is based on HHS's October 8, 2026 letter, withdraws the July 7-OH notice, intends to replace the no-threshold MGPI order after the 30-day notice, was signed by Administrator Terrance C. Cole on October 8, 2026 with a 10/14/2026 publication date, and contains the excerpted no-safety-finding statement.",
     "host": "public-inspection.federalregister.gov",
     "date": "2026-11-02",
     "kind": "fact",
     "archive": false
    },
-   "8": {
+   "9": {
     "state": "supports",
     "why": "The article reports Gabbay's lobbying push and about $2.9 million in Republican giving by Oct. 12, wrongful death lawsuits over MGPI-containing products, AKA funding by Gabbay-related companies, Chittiboyina's 'as much as 500 times' statement, and HHS's denial that litigation or contributions influenced its recommendation.",
     "host": "nytimes.com",
@@ -19541,7 +19605,7 @@
     "kind": "fact",
     "archive": false
    },
-   "9": {
+   "10": {
     "state": "supports",
     "why": "The article reports about two parts per million in eight liquid products and the 'too permissive' remark, separately quotes the senior author putting allowable amounts at '25 to 500 times the levels currently found on the market,' and quotes Kolodny of Brandeis criticizing the HHS justification.",
     "host": "nytimes.com",
@@ -19549,7 +19613,7 @@
     "kind": "fact",
     "archive": false
    },
-   "10": {
+   "11": {
     "state": "supports",
     "why": "Newsmax reports the Oct. 9 change, DEA's intent to replace the August ban no earlier than Nov. 13, the $79,000 RNC contributions and HHS/White House denials.",
     "host": "yahoo.com",
@@ -19557,7 +19621,7 @@
     "kind": "fact",
     "archive": false
    },
-   "11": {
+   "12": {
     "state": "supports",
     "why": "The Oct. 30 AKA release demands correction or retraction and says the Times failed to explain the combined threshold, the 100-to-1 ratio test, and the notice-of-intent status.",
     "host": "webdisclosure.com",
@@ -26204,6 +26268,54 @@
     "why": "Dkt. 30 states the parties could not reach a joint proposal, the DNC will file on November 5 if necessary, and defendants request 14 days and assert no exigency.",
     "host": "storage.courtlistener.com",
     "date": "2026-11-02",
+    "kind": "fact",
+    "archive": false
+   },
+   "51": {
+    "state": "partly",
+    "why": "The docket text confirms Dkt. 107 (Nov. 2: more than one business day, trial starting Nov. 16, possible Dec. 4 hearing) and Dkt. 112 (Nov. 3: opposition Nov. 5, reply Nov. 9), but the Dkt. 108 preliminary-injunction motion's own entry and filing date are not shown in the extracted text, only a later reference to '108 MOTION for Preliminary Injunction'.",
+    "host": "courtlistener.com",
+    "date": "2026-11-16",
+    "kind": "fact",
+    "archive": false
+   },
+   "52": {
+    "state": "partly",
+    "why": "Dkt. 113 (filed 11/05/26) argues mootness because the November 3 midterms have concluded, that future injury is speculative, and that EOP staff time does not clearly violate the Purpose Statute or Section 718; the 'not direct competitors' argument appears, but the extracted text truncates the sentence so it does not show it names SEIU 32BJ and its PAC.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-11-16",
+    "kind": "fact",
+    "archive": false
+   },
+   "53": {
+    "state": "supports",
+    "why": "The Democracy Docket updates in the excerpt list the Nov. 2 PI brief, Nov. 5 opposition, Nov. 9 reply, and the Nov. 13 hearing entry quoted in the claim.",
+    "host": "democracydocket.com",
+    "date": "2026-11-16",
+    "kind": "fact",
+    "archive": false
+   },
+   "54": {
+    "state": "partly",
+    "why": "The Nov. 13 order (Dkt. 117, Judge Rochon) contains the quoted denial as moot, but the order does not identify Dkt. 102 as the government's October 30 request to stay the MAGA Inc. portion of the restraining order.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-11-16",
+    "kind": "fact",
+    "archive": false
+   },
+   "55": {
+    "state": "supports",
+    "why": "Dkt. 33 (filed 11/13/26) states the government is no longer using appropriated funds and has not been for over a month, the relevant election is two years away, MAGA Inc. voluntarily instructed its media buyer to cancel placements, the amended complaint (Nov. 2) focused on latter-October ads, the PI motion was filed Nov. 5, and calls the staff-time theory novel.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-11-16",
+    "kind": "fact",
+    "archive": false
+   },
+   "56": {
+    "state": "not_found",
+    "why": "The captured CourtListener docket was last updated Nov. 2, 2026 and its entries end in late October; none of the Nov. 3, 5 or 13 minute orders (TRO extension to Nov. 25, Nov. 19 hearing, briefing deadlines) appear in the provided text.",
+    "host": "courtlistener.com",
+    "date": "2026-11-16",
     "kind": "fact",
     "archive": false
    }
