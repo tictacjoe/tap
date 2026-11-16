@@ -5269,6 +5269,69 @@ function glanceDetailTitleHtml(entry, cfg, hl) {
   return title ? '<p class="glance-orig-title">' + hl(title) + '</p>' : "";
 }
 /* glance-head:end */
+/* harms-list:start */
+/* Harms by kind (2026-11-16, Joe: visitors see the scale of harm, grouped by
+   kind; spec tap-data/docs/superpowers/specs/2026-11-16-harms-list-design.md).
+   One line per curated entry whose Glance block shows on its own card
+   (glanceActive), grouped by harm kind in severity order (GLANCE_HARM_LABELS
+   key order), then by certainty (GLANCE_CERTAINTIES order) so an alleged harm
+   never reads as a documented one. Reporting and Community Topics have no
+   Glance block and are skipped, as are hidden trackers. Pure (no DOM), so
+   tests/harms-list.test.js can run it; renderDispatch() does the wiring. */
+const HARMS_EXCLUDED_KEYS = ["tracker", "communitytopics"];
+
+function collectHarms(trackers) {
+  const rows = [];
+  Object.keys(trackers).forEach(key => {
+    const cfg = trackers[key];
+    if (!cfg || cfg.hidden || HARMS_EXCLUDED_KEYS.includes(key)) return;
+    (cfg.data || []).forEach(entry => {
+      if (!glanceActive(entry, cfg)) return;
+      const h = entry.glance.harm;
+      rows.push({ key, id: entry[cfg.idField], kind: h.kind, certainty: h.certainty, who: h.who, what: entry.glance.what });
+    });
+  });
+  return rows;
+}
+
+function buildHarmsListHtml(trackers, abbr) {
+  const rows = collectHarms(trackers);
+  const cap = s => s.charAt(0).toUpperCase() + s.slice(1);
+  const byWho = (a, b) =>
+    a.who.localeCompare(b.who, undefined, { sensitivity: "base" }) ||
+    (String(a.id) < String(b.id) ? -1 : String(a.id) > String(b.id) ? 1 : 0);
+  // The total always carries its certainty breakdown (spec anti-goal: no bare
+  // grand total that adds alleged and documented together unseen).
+  const parts = GLANCE_CERTAINTIES
+    .map(c => [c, rows.filter(r => r.certainty === c).length])
+    .filter(([, n]) => n > 0)
+    .map(([c, n]) => n + " " + c);
+  let html = '<section class="harms-list"><h2 class="harms-title">Harms by kind</h2>' +
+    '<p class="harms-total">' + rows.length + " harm" + (rows.length === 1 ? "" : "s") +
+    (parts.length ? ": " + parts.join(", ") : "") + '</p>';
+  Object.keys(GLANCE_HARM_LABELS).forEach(kind => {
+    const inKind = rows.filter(r => r.kind === kind);
+    if (!inKind.length) return;
+    html += '<section class="harms-kind" data-kind="' + kind + '"><h3 class="harms-kind-label">' +
+      escapeHtml(GLANCE_HARM_LABELS[kind]) + ' (' + inKind.length + ')</h3>';
+    GLANCE_CERTAINTIES.forEach(cert => {
+      const lines = inKind.filter(r => r.certainty === cert).sort(byWho);
+      if (!lines.length) return;
+      html += '<div class="harms-cert harms-cert-' + cert + '"><h4 class="harms-cert-label">' +
+        cap(cert) + ' (' + lines.length + ')</h4><ul class="harms-lines">';
+      lines.forEach(r => {
+        html += '<li><a href="#' + encodeURIComponent(r.key) + '/' + encodeURIComponent(r.id) +
+          '" class="harm-entry-link" data-tracker-key="' + escapeHtml(r.key) + '" data-id="' + escapeHtml(r.id) + '">' +
+          escapeHtml(r.who) + '</a> <span class="harm-what">— ' + escapeHtml(r.what) + '</span> ' +
+          '<span class="harm-tracker">' + escapeHtml((abbr && abbr[r.key]) || r.key) + '</span></li>';
+      });
+      html += '</ul></div>';
+    });
+    html += '</section>';
+  });
+  return html + '</section>';
+}
+/* harms-list:end */
 /* listen-script:start */
 /* Listen button, spoken text (2026-10-31, Joe's call; spec:
    tap-data/docs/superpowers/specs/2026-10-31-tap-entry-listen-button-design.md).
