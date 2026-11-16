@@ -2446,12 +2446,12 @@
     "archive": false
    },
    "1": {
-    "state": "unopened",
-    "why": "",
+    "state": "supports",
+    "why": "The Bloomberg text (dated March 16, 2026) states the proposal would make it easier for states to win a fast-track federal review 'as part of President Donald Trump's push to ramp up capital punishment' and that Bondi argued Obama- and Biden-era regulations prevented states from using a 1996 law to 'essentially cut the length of the federal review in half'.",
     "host": "bloomberg.com",
-    "date": "2026-09-15",
+    "date": "2026-11-16",
     "kind": "fact",
-    "archive": false
+    "archive": true
    },
    "2": {
     "state": "supports",
@@ -2519,9 +2519,9 @@
    },
    "10": {
     "state": "supports",
-    "why": "DPIC's analysis explicitly describes the certification process as an opt-in system based only on state officials' own assertions, with no independent verification and no public/opposing-view comment allowed.",
+    "why": "DPIC describes the 'opt-in' process as resting only on state officials' assertions about counsel, with no public comment and 'without considering any opposing views,' and states that once certified a prisoner 'must file his federal petition within 180 days' and federal courts 'must prioritize capital habeas petitions over all non-capital cases'.",
     "host": "deathpenaltyinfo.org",
-    "date": "2026-09-15",
+    "date": "2026-11-16",
     "kind": "fact",
     "archive": false
    }
@@ -4750,6 +4750,22 @@
     "date": "2026-11-07",
     "kind": "fact",
     "archive": false
+   },
+   "16": {
+    "state": "supports",
+    "why": "The ABC piece (Nov. 10, 2026) reports the Republican-led committee's 136-page report recommending DOJ renew its investigation of Epstein's associates, quotes the report's line that the facts 'do not suggest President Trump is implicated,' and quotes Garcia calling it 'a report based on an incomplete investigation'.",
+    "host": "abc30.com",
+    "date": "2026-11-16",
+    "kind": "fact",
+    "archive": false
+   },
+   "17": {
+    "state": "supports",
+    "why": "The release states the report culminates the Committee's 15-month investigation, recommends DOJ interview or re-interview key witnesses and further investigate allegations involving Epstein's associates, and says the facts gathered do not suggest President Trump is implicated; the Nov. 10 release date is not shown in the extracted text but is bibliographic.",
+    "host": "oversight.house.gov",
+    "date": "2026-11-16",
+    "kind": "fact",
+    "archive": false
    }
   },
   "comey-espionage-act-2016-leak-charges-2026": {
@@ -5977,9 +5993,9 @@
    },
    "3": {
     "state": "partly",
-    "why": "The extracted docket confirms the filing date, Judge Gleason, the 'Civil Rights: Voting' nature of suit, termination Nov. 1, Docs. 19, 63, 64, 67, 69, 79 (granting Docs. 55/57/60 and denying 58, 66, 70, 78 as moot), 87 and 88 with the 12/14/2026 and 1/11/2027 brief dates; but the text is truncated in many places, so several listed entries (Oct. 23-25 intervention filings, partial withdrawal of opposition, Docs. 72-77, 'without prejudice', and the Nov. 3-4 'moot as this case is closed' text orders) cannot be seen.",
+    "why": "The docket text confirms the filing date, judge, nature of suit, the Oct. 26/27 expedite orders, Doc. 63 denying motions as moot, Doc. 64, the Doc. 79 order dismissing the action and denying Docs. 58, 66, 70 and 78 as moot, and USCA Case Number 26-7304 with briefing dates; but the extracted text is truncated and does not show many other listed details (e.g., the late amicus/intervention text orders of Nov. 3-4, several filings' docket numbers and dates).",
     "host": "courtlistener.com",
-    "date": "2026-11-07",
+    "date": "2026-11-16",
     "kind": "fact",
     "archive": false
    },
@@ -6212,6 +6228,14 @@
     "why": "ADN reports Peltola's 637-vote lead with more than 215,000 ballots counted, tens of thousands still to count, Nov. 18 tabulation and Nov. 25 certification, and separately that the 9th Circuit is not expected to have briefings until Jan. 11.",
     "host": "adn.com",
     "date": "2026-11-07",
+    "kind": "fact",
+    "archive": false
+   },
+   "33": {
+    "state": "supports",
+    "why": "The article states the 251,094-ballot tally with Peltola at 121,487 (48.9%) and Sullivan at 117,512 (47.3%), that neither has more than 50%, that tabulation occurs Nov. 18, that the suit and investigations appear unlikely to resolve before Nov. 25 certification, Trump's repeated calls, and that Dunleavy and Heyman have not said what laws may have been violated.",
+    "host": "adn.com",
+    "date": "2026-11-16",
     "kind": "fact",
     "archive": false
    }
@@ -6597,13 +6621,21 @@
    },
    "2": {
     "state": "supports",
+    "why": "The AP/WABE text (March 17, 2025) states Judge Krause found the failures 'intentional, not done in good faith,' awarded fees and expenses 'totaling just over $54,000' in Merchant's suit on behalf of Roman, and that Willis's office plans to appeal.",
+    "host": "wabe.org",
+    "date": "2026-11-16",
+    "kind": "fact",
+    "archive": false
+   },
+   "3": {
+    "state": "supports",
     "why": "The Times text states the subpoena is a federal grand jury subpoena for Willis's travel records, seeks travel in the fall of 2024, is led by Hertzberg's office, and that scope and target status are unclear.",
     "host": "nytimes.com",
     "date": "2026-11-07",
     "kind": "fact",
     "archive": false
    },
-   "3": {
+   "4": {
     "state": "supports",
     "why": "The Hill article, dated 09/26/25, relays the Times' report of a federal grand jury subpoena for Willis travel records around the 2024 election and notes the scope was unclear and target status uncertain.",
     "host": "thehill.com",
@@ -6611,7 +6643,7 @@
     "kind": "fact",
     "archive": true
    },
-   "4": {
+   "5": {
     "state": "supports",
     "why": "The Oct. 21, 2025 article, citing the New York Times, reports DOJ scrutiny of Willis's Bahamas trip after her 2024 re-election and says the inquiry is overseen by Hertzberg, a 2025 Trump appointee.",
     "host": "blackenterprise.com",
@@ -6619,7 +6651,7 @@
     "kind": "fact",
     "archive": false
    },
-   "5": {
+   "6": {
     "state": "supports",
     "why": "The Georgia Recorder piece situates the subpoena within the broader toll on Willis, explicitly linking congressional Republicans and DOJ scrutiny.",
     "host": "georgiarecorder.com",
@@ -7896,6 +7928,14 @@
     "date": "2026-11-07",
     "kind": "fact",
     "archive": false
+   },
+   "12": {
+    "state": "supports",
+    "why": "The Fifth Circuit docket (appealed from N.D. Texas) shows an Oct. 19, 2026 order denying summary affirmance and granting expedition, and oral argument heard Nov. 4, 2026 before Judges Duncan, Engelhardt and Ramirez, with no later decision entry shown (last known filing Nov. 4).",
+    "host": "courtlistener.com",
+    "date": "2026-11-16",
+    "kind": "fact",
+    "archive": false
    }
   },
   "doj-texas-administrative-closure-rule-collusive-settlement-2026": {
@@ -8102,6 +8142,14 @@
     "archive": true
    },
    "10": {
+    "state": "supports",
+    "why": "The Congress.gov bill-status record for H.R. 131 (Finish the Arkansas Valley Conduit Act) shows 'Vetoed by President.' on 2025-12-29 and the Jan. 8, 2026 override vote failing '(2/3 required): 248 - 177, 1 Present (Roll no. 9)'.",
+    "host": "govinfo.gov",
+    "date": "2026-11-16",
+    "kind": "fact",
+    "archive": false
+   },
+   "11": {
     "state": "partly",
     "why": "The source confirms the 248-177 vote, 35 Republicans, 40 votes short, ~50,000 people, CBO under $500,000, unanimous passage, and the veto-message quote, but the extracted text cuts off at 'Still, some Democrats argued th' and contains nothing about the Peters-retaliation argument or Boebert's Epstein discharge petition/'calling out corruption' remark.",
     "host": "cpr.org",
@@ -8109,7 +8157,7 @@
     "kind": "fact",
     "archive": false
    },
-   "11": {
+   "12": {
     "state": "partly",
     "why": "Colorado Newsline confirms the Court of Appeals' unanimous ruling upholding the conviction, ordering resentencing over improper consideration of free speech, and rejecting the pardon-preemption theory, but the article attributes the opinion to a three-judge panel without stating that Judge Tow individually authored it.",
     "host": "coloradonewsline.com",
@@ -8117,7 +8165,7 @@
     "kind": "fact",
     "archive": false
    },
-   "12": {
+   "13": {
     "state": "supports",
     "why": "The CPR article dated April 23, 2026 says the panel 'today' rejected the April 16 rehearing request, that her attorneys argued the court 'misapprehended' their supremacy clause arguments, and that the ruling noted she may still appeal to the Colorado Supreme Court.",
     "host": "cpr.org",
@@ -8125,7 +8173,7 @@
     "kind": "fact",
     "archive": true
    },
-   "13": {
+   "14": {
     "state": "supports",
     "why": "Rocky Mountain PBS/CPR News directly confirms Polis's May 15, 2026 commutation halving her sentence to roughly four and a half years, parole eligibility June 1, his 'this is not a pardon' statement, and the free-speech/disproportionate-sentencing rationale.",
     "host": "rmpbs.org",
@@ -8133,7 +8181,7 @@
     "kind": "fact",
     "archive": false
    },
-   "14": {
+   "15": {
     "state": "partly",
     "why": "The PBS/AP text supports the pressure campaign (Scumbag Governor post, disinvitation, NCAR dismantling, Space Command relocation), Polis's 'appropriate contrition, apology' remark and the letter's 'demonstrates taking responsibility' line, but the claimed ABC7 reporting cannot be verified from this source.",
     "host": "pbs.org",
@@ -8141,7 +8189,7 @@
     "kind": "fact",
     "archive": false
    },
-   "15": {
+   "16": {
     "state": "partly",
     "why": "The Colorado Sun article confirms Peters is now on parole and traveling (with parole conditions), Curtis's plan to hire her, and that nothing in her parole terms bars election work, but it does not state she was 'processed for release... on June 1, 2026' -- the article's own text says she was 'released on parole May 15.'",
     "host": "coloradosun.com",
@@ -8149,7 +8197,7 @@
     "kind": "fact",
     "archive": false
    },
-   "16": {
+   "17": {
     "state": "supports",
     "why": "CyberScoop quotes Peters's statement via Ticktin denying acceptance of any Shasta County position and acknowledging only discussions, and reports Curtis's assistant-registrar then consultant plans, the supervisors' censure of Curtis, Democratic backlash, and the Secretary of State's monitoring; the exact Sept. 1 date is not in the text, which says only 'Tuesday'.",
     "host": "cyberscoop.com",
@@ -8157,7 +8205,7 @@
     "kind": "fact",
     "archive": false
    },
-   "17": {
+   "18": {
     "state": "supports",
     "why": "The order in Case No. 2026SC332 denies Peters's petition for certiorari to the Court of Appeals, by the court en banc on September 21, 2026; denial of review leaves the appeals court judgment in place.",
     "host": "courthousenews.com",
@@ -8165,7 +8213,7 @@
     "kind": "fact",
     "archive": false
    },
-   "18": {
+   "19": {
     "state": "supports",
     "why": "The Sentinel reports the Supreme Court declined the appeal and that the petition raised the supremacy clause, the Trump pardon applying to state charges, and a jury-tampering evidentiary hearing, all of which the appeals court had denied.",
     "host": "gjsentinel.com",
@@ -11248,10 +11296,10 @@
   },
   "hegseth-doj-leak-task-force-2026": {
    "0": {
-    "state": "partly",
-    "why": "Military Times confirms Hegseth announced the joint task force on July 13, 2026 and delegated tasking authority to the DoD Office of General Counsel, but the article makes no mention of a mandatory 2-day response requirement across department components -- that specific detail is not in this source.",
-    "host": "militarytimes.com",
-    "date": "2026-09-15",
+    "state": "supports",
+    "why": "The Hill article dated 07/13/26 reports Hegseth announcing the joint Pentagon-DOJ task force, with the OGC able to request information across the Pentagon and taskings requiring a 'full and complete' response within two days from all components.",
+    "host": "thehill.com",
+    "date": "2026-11-16",
     "kind": "fact",
     "archive": false
    },
@@ -11316,6 +11364,14 @@
     "why": "CBS reports Moss's and Harnish's views, Rosenblatt's disagreement and 'unreliable junk information' remark, the unverifiable allegations, two sources disputing the leaking, and the non-responses from Sylvia and the Pentagon.",
     "host": "cbsnews.com",
     "date": "2026-11-02",
+    "kind": "fact",
+    "archive": false
+   },
+   "9": {
+    "state": "supports",
+    "why": "The Post article (via Spokesman-Review) states the administration directed the military to explore a criminal case, that Sylvia faces jeopardy on two fronts after the DOJ referral, that the matter was delegated to acting Army Secretary Telle, that he has not been charged or spoken publicly, and that the Post had not verified the claims and the Pentagon declined to share its investigation.",
+    "host": "spokesman.com",
+    "date": "2026-11-16",
     "kind": "fact",
     "archive": false
    }
@@ -24384,10 +24440,10 @@
     "archive": false
    },
    "16": {
-    "state": "partly",
-    "why": "Fox reports Brinkema called the Judgment Fund 'a less transparent structure', suggested FACE Act defendants received large payouts, affirmed she meant Paul Vaughn, and gives the payout as 'seven figures' in a garbled sentence that names no confirmer; however the provided text never names the case as Floyd v. Department of Justice.",
+    "state": "supports",
+    "why": "Fox reports Brinkema called the Judgment Fund 'a less transparent structure,' suggested FACE Act defendants received large payouts, 'affirmed she was talking about the case of Paul Vaughn,' and gives the payout as 'seven figures' in a sentence that names no confirming source.",
     "host": "foxnews.com",
-    "date": "2026-11-03",
+    "date": "2026-11-16",
     "kind": "fact",
     "archive": false
    },
@@ -24404,6 +24460,22 @@
     "why": "",
     "host": "courtlistener.com",
     "date": "2026-11-03",
+    "kind": "fact",
+    "archive": false
+   },
+   "19": {
+    "state": "supports",
+    "why": "The Nov. 9, 2026 notice in Floyd v. DOJ (E.D. Va.) states the S.D. Cal. 'today dismissed similar claims challenging the proposed Anti-Weaponization Fund as moot' in Gill (3:26-cv-3283, Judge Bencivengo) and quotes the holding as claimed.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-11-16",
+    "kind": "fact",
+    "archive": false
+   },
+   "20": {
+    "state": "supports",
+    "why": "The Nov. 13, 2026 memorandum opposes the motion to dismiss the amended complaint, argues equitable tolling under 'extraordinary circumstances' due to the Fifth Amendment dilemma 'Prior to the President's pardon,' argues venue in the Middle District of Florida is proper and transfer should be denied, and concludes the motion should be denied in its entirety.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-11-16",
     "kind": "fact",
     "archive": false
    }
