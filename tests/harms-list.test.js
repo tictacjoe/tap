@@ -140,3 +140,20 @@ test("an empty input renders the heading and a zero total, no kind sections", ()
   assert(!html.includes("harms-kind"));
   assert.match(html, /<p class="harms-total">0 harms<\/p>/);
 });
+
+// #harms address (Task 2): when to open, set or clear it.
+const { harmsHashAction } = (0, eval)(`${extractFunction(source, "harms-hash")}\n({ harmsHashAction });`);
+
+test("harmsHashAction opens the view on load only for #harms", () => {
+  assert.equal(harmsHashAction("#harms", "headlines", "load"), "open");
+  assert.equal(harmsHashAction("#prosecution/x", "headlines", "load"), null);
+  assert.equal(harmsHashAction("", "headlines", "load"), null);
+});
+
+test("harmsHashAction sets #harms on entering the view and clears it on leaving", () => {
+  assert.equal(harmsHashAction("", "harms", "switch"), "set");
+  assert.equal(harmsHashAction("#harms", "prosecution", "switch"), "clear");
+  assert.equal(harmsHashAction("#harms", "harms", "switch"), null);
+  assert.equal(harmsHashAction("#owner-setup", "prosecution", "switch"), null);
+  assert.equal(harmsHashAction("#prosecution/x", "prosecution", "switch"), null);
+});

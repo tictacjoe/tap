@@ -791,6 +791,33 @@
   /* Its label reads in full ink and bold, unlike the other faint labels. */
   .glance-harm-label.glance-harm-label-harmed { color: var(--ink); font-weight: 700; }
   .glance-orig-title { margin: 0 0 0.6rem; font-weight: bold; color: var(--ink-soft); }
+  /* Harms by kind view (2026-11-16; see the harms-list script block). Kind
+     headings borrow the card-label look; averted lines are muted like the
+     averted badge, since that harm never happened. */
+  .harms-list { padding: 0.5rem 0 2rem; }
+  .harms-title { margin: 0 0 0.3rem; }
+  .harms-total { margin: 0 0 1rem; color: var(--ink-soft); }
+  .harms-kind { margin: 0 0 1.5rem; }
+  .harms-kind-label {
+    font-family: ui-monospace, monospace;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--brass);
+    margin: 0 0 0.4rem;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 0.2rem;
+  }
+  .harms-cert-label { margin: 0.6rem 0 0.2rem; font-size: 0.85rem; color: var(--ink-soft); font-weight: 600; }
+  .harms-lines { margin: 0; padding-left: 1.2rem; }
+  .harms-lines li { margin: 0.2rem 0; overflow-wrap: anywhere; }
+  /* Same look as the site's other in-page links (.back-home-link). */
+  .harm-entry-link { color: var(--brass); font-weight: 600; text-decoration: none; }
+  .harm-entry-link:hover { text-decoration: underline; }
+  .harm-what { color: var(--ink-soft); }
+  .harm-tracker { white-space: nowrap; font-family: ui-monospace, monospace; font-size: 0.72rem; color: var(--ink-faint); }
+  .harms-cert-averted, .harms-cert-averted .harm-entry-link { color: var(--ink-soft); }
+  .harms-cert-averted .harm-entry-link { font-weight: 400; }
 
   /* User Topics card-level coverage indicator -- same color language as
      the detail view's .promoted-callout/.related-callout (brass for
@@ -5332,6 +5359,22 @@ function buildHarmsListHtml(trackers, abbr) {
   return html + '</section>';
 }
 /* harms-list:end */
+/* harms-hash:start */
+/* The Harms view's own address, #harms, so it can be shared. Pure decision;
+   applyHarmsHash() does the history call. "load": #harms opens the view.
+   "switch" (every renderDispatch): write #harms on entering the view, clear
+   it on leaving, so a copied URL is never stale. Other hashes (entry links,
+   #owner-setup) are left alone. */
+const HARMS_VIEW = "harms";
+
+function harmsHashAction(hash, activeView, phase) {
+  const onHarms = hash === "#" + HARMS_VIEW;
+  if (phase === "load") return onHarms ? "open" : null;
+  if (activeView === HARMS_VIEW && !onHarms) return "set";
+  if (activeView !== HARMS_VIEW && onHarms) return "clear";
+  return null;
+}
+/* harms-hash:end */
 /* listen-script:start */
 /* Listen button, spoken text (2026-10-31, Joe's call; spec:
    tap-data/docs/superpowers/specs/2026-10-31-tap-entry-listen-button-design.md).
@@ -6089,15 +6132,23 @@ function renderTabs() {
   placeholder.value = "";
   placeholder.textContent = "— choose a database —";
   placeholder.disabled = true;
-  placeholder.selected = !TRACKERS[activeTracker];
+  placeholder.selected = !TRACKERS[activeTracker] && activeTracker !== HARMS_VIEW;
   select.appendChild(placeholder);
+  // "Harms by kind" (2026-11-16): a cross-tracker view, not a database, listed
+  // after the curated trackers and before Reporting (see harms-list block).
+  const harmsOpt = document.createElement("option");
+  harmsOpt.value = HARMS_VIEW;
+  harmsOpt.textContent = "Harms by kind";
+  harmsOpt.selected = activeTracker === HARMS_VIEW;
   visibleTrackerKeys(TRACKERS).forEach(key => {
+    if (key === "tracker") select.appendChild(harmsOpt);
     const opt = document.createElement("option");
     opt.value = key;
     opt.textContent = TRACKERS[key].label + " (" + TRACKERS[key].data.length + ")";
     opt.selected = key === activeTracker;
     select.appendChild(opt);
   });
+  if (!harmsOpt.parentNode) select.appendChild(harmsOpt);
   select.onchange = () => switchToTracker(select.value);
 
   // Records (formerly "Headlines", briefly "Reports") lives in its own
@@ -7109,6 +7160,11 @@ function renderDispatch() {
   const entriesEl = document.getElementById("entries");
   const countEl = document.getElementById("count");
 
+  // Keep #harms in step with the view (every view change comes through here).
+  const harmsHash = harmsHashAction(location.hash, activeTracker, "switch");
+  if (harmsHash === "set") history.replaceState(null, "", "#" + HARMS_VIEW);
+  else if (harmsHash === "clear") history.replaceState(null, "", location.pathname + location.search);
+
   if (term) {
     tabsEl.style.display = "none";
     mainEl.style.display = "";
@@ -7132,6 +7188,26 @@ function renderDispatch() {
     headlinesWrapEl.style.display = "";
     renderHeadlinesControls();
     renderHeadlinesView();
+    return;
+  }
+
+  if (activeTracker === HARMS_VIEW) {
+    tabsEl.classList.remove("visually-hidden");
+    mainEl.style.display = "";
+    controlsEl.style.display = "none";
+    headlinesWrapEl.style.display = "none";
+    countEl.style.display = "none";
+    entriesEl.style.display = "";
+    entriesEl.innerHTML = buildHarmsListHtml(TRACKERS, HEADLINE_TRACKER_ABBR);
+    entriesEl.querySelectorAll(".harm-entry-link").forEach(a => {
+      a.addEventListener("click", (e) => {
+        e.preventDefault();
+        const target = resolveEntryTarget(a.dataset.trackerKey, a.dataset.id, TRACKERS, MOVED_IDS);
+        if (!target) return;
+        goToTrackerHome(target.key);
+        openCardById(a.dataset.id);
+      });
+    });
     return;
   }
 
@@ -7555,6 +7631,9 @@ async function loadAllData() {
 
   allDataLoaded = true;
   if (!browseBackdrop.hidden) openBrowseModal();
+  // #harms opens the Harms view; checked before the first render, which would
+  // otherwise clear #harms as "leaving" the view.
+  if (harmsHashAction(location.hash, activeTracker, "load") === "open") activeTracker = HARMS_VIEW;
   renderDispatch();
   openEntryFromHash();
 
