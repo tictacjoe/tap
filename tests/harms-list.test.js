@@ -157,3 +157,21 @@ test("harmsHashAction sets #harms on entering the view and clears it on leaving"
   assert.equal(harmsHashAction("#owner-setup", "prosecution", "switch"), null);
   assert.equal(harmsHashAction("#prosecution/x", "prosecution", "switch"), null);
 });
+
+// Final-review fixes: history handling (Back from an entry returns to Harms;
+// the #harms sync keeps whatever state the current history entry carries).
+const hist = (0, eval)(`${extractFunction(source, "harms-hash")}\n({ harmsHashReplacement, harmsLinkHistory });`);
+
+test("harmsHashReplacement keeps the current history state when setting or clearing #harms", () => {
+  const st = { type: "entry", tracker: "prosecution", id: "x" };
+  assert.deepEqual(hist.harmsHashReplacement("#harms", "prosecution", st, "/tap/"), { state: st, url: "/tap/" });
+  assert.deepEqual(hist.harmsHashReplacement("", "harms", st, "/tap/"), { state: st, url: "#harms" });
+  assert.equal(hist.harmsHashReplacement("#harms", "harms", st, "/tap/"), null);
+});
+
+test("harmsLinkHistory stamps a harms return point, then pushes the entry", () => {
+  assert.deepEqual(hist.harmsLinkHistory("govservices", "g1", 1234), [
+    { op: "replace", state: { type: "harms", scrollY: 1234 }, url: "#harms" },
+    { op: "push", state: { type: "entry", tracker: "govservices", id: "g1" }, url: "#harms" },
+  ]);
+});

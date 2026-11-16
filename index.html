@@ -5374,6 +5374,27 @@ function harmsHashAction(hash, activeView, phase) {
   if (activeView !== HARMS_VIEW && onHarms) return "clear";
   return null;
 }
+
+/* The replaceState arguments for the "switch" sync. Keeps the entry's own
+   state (a search snapshot or a pushed {type:"entry"}) so Back/Forward still
+   replay it; only the URL changes. null = nothing to do. */
+function harmsHashReplacement(hash, activeView, state, pathAndSearch) {
+  const action = harmsHashAction(hash, activeView, "switch");
+  if (action === "set") return { state, url: "#" + HARMS_VIEW };
+  if (action === "clear") return { state, url: pathAndSearch };
+  return null;
+}
+
+/* History steps for a click on a harm line, same pattern as a Records row:
+   stamp the current entry as a Harms return point (with the scroll position,
+   since the list is long), then push the entry being opened. Back lands on
+   the stamp and the popstate handler reopens Harms where the visitor was. */
+function harmsLinkHistory(trackerKey, id, scrollY) {
+  return [
+    { op: "replace", state: { type: "harms", scrollY }, url: "#" + HARMS_VIEW },
+    { op: "push", state: { type: "entry", tracker: trackerKey, id }, url: "#" + HARMS_VIEW },
+  ];
+}
 /* harms-hash:end */
 /* listen-script:start */
 /* Listen button, spoken text (2026-10-31, Joe's call; spec:
@@ -7161,9 +7182,8 @@ function renderDispatch() {
   const countEl = document.getElementById("count");
 
   // Keep #harms in step with the view (every view change comes through here).
-  const harmsHash = harmsHashAction(location.hash, activeTracker, "switch");
-  if (harmsHash === "set") history.replaceState(null, "", "#" + HARMS_VIEW);
-  else if (harmsHash === "clear") history.replaceState(null, "", location.pathname + location.search);
+  const harmsHash = harmsHashReplacement(location.hash, activeTracker, history.state, location.pathname + location.search);
+  if (harmsHash) history.replaceState(harmsHash.state, "", harmsHash.url);
 
   if (term) {
     tabsEl.style.display = "none";
@@ -7204,6 +7224,8 @@ function renderDispatch() {
         e.preventDefault();
         const target = resolveEntryTarget(a.dataset.trackerKey, a.dataset.id, TRACKERS, MOVED_IDS);
         if (!target) return;
+        harmsLinkHistory(target.key, a.dataset.id, window.scrollY).forEach(step =>
+          step.op === "push" ? history.pushState(step.state, "", step.url) : history.replaceState(step.state, "", step.url));
         goToTrackerHome(target.key);
         openCardById(a.dataset.id);
       });
@@ -7406,6 +7428,11 @@ window.addEventListener("popstate", (e) => {
   } else if (e.state.type === "entry") {
     goToTrackerHome(e.state.tracker);
     if (e.state.id) openCardById(e.state.id);
+  } else if (e.state.type === "harms") {
+    // Back from an entry opened in the Harms view (harmsLinkHistory).
+    activeTracker = HARMS_VIEW;
+    renderDispatch();
+    requestAnimationFrame(() => window.scrollTo(0, e.state.scrollY || 0));
   }
 });
 
