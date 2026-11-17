@@ -18358,26 +18358,34 @@
     "archive": false
    },
    "1": {
-    "state": "supports",
-    "why": "American Banker confirms several major banks including JPMorgan Chase, Bank of America and Wells Fargo received the subpoenas, and that Pirro's office is investigating potential FIRREA violations, matching the claim's core assertions (the Forbes portion of the citation is not itself in this source but the substance is directly supported).",
+    "state": "partly",
+    "why": "The source supports that several major banks including JPMorgan, Bank of America and Wells Fargo got subpoenas at different points over the past year. The provided text never mentions FIRREA, and the only Frayer quote in it is a different one (about Trump's animus toward large banks), not the 'novel' / litigation-risk quotes.",
     "host": "americanbanker.com",
-    "date": "2026-09-15",
+    "date": "2026-11-16",
     "kind": "fact",
     "archive": false
    },
    "2": {
-    "state": "not_found",
-    "why": "This source (Yahoo/Retail Banker International) covers the subpoenas generally but does not contain any quote from a Consumer Federation of America director calling the FIRREA theory 'novel' or describing litigation-cost pressure on banks; that content is absent from this text.",
+    "state": "supports",
+    "why": "The article says some subpoenas were sent last year and ask for lists of debanked individuals and explanations of closures, that the OCC had not referred cases and Pirro's office began independently, and that FIRREA has mainly been used in bank-related fraud cases.",
     "host": "finance.yahoo.com",
-    "date": "2026-09-15",
+    "date": "2026-11-16",
     "kind": "fact",
     "archive": false
    },
    "3": {
     "state": "supports",
-    "why": "NBC News confirms Trump filed a $5 billion suit against JPMorgan Chase and CEO Jamie Dimon on January 22, 2026, alleging the bank closed his accounts for political reasons after Jan. 6, 2021, and that JPMorgan denies closing accounts for political or religious reasons.",
+    "why": "NBC reports the $5 billion suit claiming improper account closures for political reasons, the notification shortly after the Jan. 6 riot, JPMorgan's 'no merit' statement, and that it does not close accounts on political grounds; the lawsuit is described separately from the DOJ inquiry.",
     "host": "nbcnews.com",
-    "date": "2026-09-15",
+    "date": "2026-11-16",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "supports",
+    "why": "The Sidley text states the Report identifies no violation of law and announces no penalties, referrals, or supervisory directives; it also says the Report does not mention referrals and that the OCC could not quantify the extent of even the debanking it alleged. All three quoted points appear in the source.",
+    "host": "sidley.com",
+    "date": "2026-11-16",
     "kind": "fact",
     "archive": false
    }

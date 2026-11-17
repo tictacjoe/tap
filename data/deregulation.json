@@ -2720,7 +2720,7 @@
     "status": "Fully Enacted (in effect, ongoing)",
     "date_of_action": "2025-04-09",
     "original_rule_summary": "No prior rule -- builds on Executive Order 14219 ('Ensuring Lawful Governance...'), issued Feb. 19, 2025, which had directed agencies to identify 'unlawful and potentially unlawful' regulations within a 60-day review period.",
-    "what_changed": "This Presidential Memorandum instructs agencies to repeal regulations they determine are 'facially unlawful' without going through the normal notice-and-comment rulemaking process, by invoking the Administrative Procedure Act's 'good cause' exception (normally reserved for genuine emergencies). It targets regulations agencies believe conflict with 10 specific recent Supreme Court decisions, including Loper Bright Enterprises v. Raimondo (2024, overturning Chevron deference), West Virginia v. EPA (2022, establishing the 'major questions doctrine'), and Sackett v. EPA (2023, narrowing WOTUS). Within 30 days after the review period, agencies must submit a one-page summary to OMB's Office of Information and Regulatory Affairs (OIRA) for each regulation identified as unlawful, then move to repeal.",
+    "what_changed": "This Presidential Memorandum instructs agencies to repeal regulations they determine are 'facially unlawful' without going through the normal notice-and-comment rulemaking process, by invoking the Administrative Procedure Act's 'good cause' exception (normally reserved for genuine emergencies). It targets regulations agencies believe conflict with 10 specific recent Supreme Court decisions, including Loper Bright Enterprises v. Raimondo (2024, overturning Chevron deference), West Virginia v. EPA (2022, establishing the 'major questions doctrine'), and Sackett v. EPA (2023, narrowing WOTUS). Each repeal must carry a brief statement of why the 'good cause' exception applies. Within 30 days after the review period, agencies must send OMB's Office of Information and Regulatory Affairs (OIRA) a one-page summary of each regulation they initially flagged but have not targeted for repeal, explaining the decision not to repeal it.\n\nUpdate 2026-11-16: The Energy Department's May 2025 direct final rule to rescind a loan-program rule for minority-owned businesses, which it said conflicted with Students for Fair Admissions v. Harvard, was the first public use of the memo, Bloomberg Tax reported; the rescission has not taken effect, as the department has delayed its effective date six times, most recently to Dec. 24, 2026, according to the Federal Register. On Oct. 21, 2025, OIRA acting administrator Jeffrey Clark issued a follow-up memo saying agencies 'do not appear to be fully maximizing their energy in carrying out these directives' and setting a presumptive 14-day maximum OIRA review for rules deemed 'facially unlawful,' Government Executive reported. In 2026, Bloomberg Law reported that the plan had 'flopped,' with 'just a handful of rules dumped' through the good cause shortcut.",
     "primary_proponent": {
       "name": "Donald Trump",
       "role": "President",
@@ -2734,13 +2734,13 @@
       "figures": [],
       "caveat": "No quantified health impact figure exists for the memo itself, since it is a process mechanism enabling repeal of other rules, not a rule targeting a specific pollutant or practice. Its harm is best argued as procedural (loss of public input) rather than via a body-count claim. Downstream rules repealed under its authority may have their own quantified figures in other entries of this tracker."
     },
-    "confidence_note": "Strong 'process is the harm' entry, similar in category to EO 14192 and the sunset rule mandate. The specific mechanism here -- invoking APA 'good cause' to skip notice-and-comment based on an agency's own legal judgment that a rule is 'unlawful' -- is a distinct and arguably more aggressive procedural shortcut than either of the other two structural entries, since it removes public input entirely rather than just accelerating repeal volume or adding expiration dates. Re-verified with a targeted search for developments since last_verified, CDR batch 2 (2026-09-08) -- no developments found since the last recheck.",
+    "confidence_note": "Strong 'process is the harm' entry, similar in category to EO 14192 and the sunset rule mandate. The specific mechanism here -- invoking APA 'good cause' to skip notice-and-comment based on an agency's own legal judgment that a rule is 'unlawful' -- is a distinct and arguably more aggressive procedural shortcut than either of the other two structural entries, since it removes public input entirely rather than just accelerating repeal volume or adding expiration dates. Re-verified 2026-09-08: no developments found since the previous check. Re-verified 2026-11-16 against the memo's text. Bloomberg Law reported in 2026 that agencies had used the good cause route for only a handful of repeals. Skadden's Trump administration regulatory litigation tracker, current through Oct. 10, 2025, listed no pending cases challenging the memo, and a fresh search found no later challenge.",
     "section_summaries": {
-      "what_changed": "Directs agencies to repeal rules they deem 'unlawful' by invoking an APA emergency exception, skipping normal notice-and-comment review entirely.",
+      "what_changed": "Directs agencies to repeal rules they deem 'unlawful' via the APA 'good cause' exception, skipping notice and comment; a 2025 OIRA memo pushed harder, but few repeals followed.",
       "estimated_impact": "Eliminates the main formal channel for health experts and communities to object before a rule is repealed -- a procedural, not substantive, harm.",
       "confidence_note": "A 'process is the harm' entry -- skipping public comment entirely is a more aggressive shortcut than the EO 14192 or sunset-rule entries."
     },
-    "last_verified": "2026-09-08",
+    "last_verified": "2026-11-16",
     "date_added": "2026-07-03",
     "sources": [
       {
@@ -2754,10 +2754,34 @@
       {
         "name": "American Public Power Association — Trump Issues Executive Orders Tied to Energy, Environmental Regulations",
         "url": "https://www.publicpower.org/periodical/article/trump-issues-executive-orders-tied-energy-environmental-regulations"
+      },
+      {
+        "name": "The White House — Directing the Repeal of Unlawful Regulations (Presidential Memorandum, April 9, 2025)",
+        "url": "https://www.whitehouse.gov/presidential-actions/2025/04/directing-the-repeal-of-unlawful-regulations/"
+      },
+      {
+        "name": "Bloomberg Tax — Trump's Rapid Deregulatory Plan Tested in Energy Rule Rollback",
+        "url": "https://news.bloombergtax.com/esg/trumps-rapid-deregulatory-plan-tested-in-energy-rule-rollback"
+      },
+      {
+        "name": "Government Executive — White House pushes agencies to deregulate faster (Oct. 28, 2025)",
+        "url": "https://www.govexec.com/management/2025/10/white-house-pushes-agencies-deregulate-faster/409121/"
+      },
+      {
+        "name": "Bloomberg Law — Trump's Swift Deregulation Strategy Falls Flat With Agencies",
+        "url": "https://news.bloomberglaw.com/safety/trumps-swift-deregulation-strategy-falls-flat-with-agencies"
+      },
+      {
+        "name": "Skadden — Trump Administration Regulatory Litigation Tracker",
+        "url": "https://www.skadden.com/insights/publications/executive-briefing/trump-administration-regulatory-litigation-tracker"
+      },
+      {
+        "name": "Federal Register — DOE, Rescinding Regulations for Loans for Minority Business Enterprises: further delay of effective date (Aug. 26, 2026)",
+        "url": "https://www.federalregister.gov/documents/2026/08/26/2026-17381/rescinding-regulations-for-loans-for-minority-business-enterprises-seeking-doe-contracts-and"
       }
     ],
     "short_summary": "Lets agencies repeal rules they deem 'unlawful' by skipping public notice-and-comment.",
-    "last_substantive_update": "2026-09-08",
+    "last_substantive_update": "2026-11-16",
     "glance": {
       "who": "Donald Trump",
       "what": "Told agencies to repeal 'unlawful' rules without public notice and comment",
@@ -2766,7 +2790,7 @@
         "certainty": "documented",
         "who": "Public input on rule repeals"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-11-16"
     },
     "status_stage": "Unchallenged",
     "key_events": [
@@ -2784,10 +2808,39 @@
         "sources": [
           "https://www.lathamreg.com/2025/04/trump-administration-pursues-deregulation-in-a-trio-of-orders/",
           "https://www.publicpower.org/periodical/article/trump-issues-executive-orders-tied-energy-environmental-regulations",
-          "https://www.bdlaw.com/publications/tracking-update-trump-administrations-latest-deregulatory-actions-on-energy-environment-and-natural-resources/"
+          "https://www.bdlaw.com/publications/tracking-update-trump-administrations-latest-deregulatory-actions-on-energy-environment-and-natural-resources/",
+          "https://www.whitehouse.gov/presidential-actions/2025/04/directing-the-repeal-of-unlawful-regulations/"
+        ]
+      },
+      {
+        "date": "2025-05-16",
+        "text": "Energy Department publishes a direct final rule to rescind a minority-business loan rule, the memo's first public use",
+        "sources": [
+          "https://news.bloombergtax.com/esg/trumps-rapid-deregulatory-plan-tested-in-energy-rule-rollback",
+          "https://www.federalregister.gov/documents/2026/08/26/2026-17381/rescinding-regulations-for-loans-for-minority-business-enterprises-seeking-doe-contracts-and"
+        ]
+      },
+      {
+        "date": "2025-10-21",
+        "text": "OIRA follow-up memo says agencies do not appear to be fully carrying out the directive and sets a 14-day review cap",
+        "sources": [
+          "https://www.govexec.com/management/2025/10/white-house-pushes-agencies-deregulate-faster/409121/"
         ]
       }
-    ]
+    ],
+    "timeline": {
+      "what_changed": {
+        "base": "This Presidential Memorandum instructs agencies to repeal regulations they determine are 'facially unlawful' without going through the normal notice-and-comment rulemaking process, by invoking the Administrative Procedure Act's 'good cause' exception (normally reserved for genuine emergencies). It targets regulations agencies believe conflict with 10 specific recent Supreme Court decisions, including Loper Bright Enterprises v. Raimondo (2024, overturning Chevron deference), West Virginia v. EPA (2022, establishing the 'major questions doctrine'), and Sackett v. EPA (2023, narrowing WOTUS). Each repeal must carry a brief statement of why the 'good cause' exception applies. Within 30 days after the review period, agencies must send OMB's Office of Information and Regulatory Affairs (OIRA) a one-page summary of each regulation they initially flagged but have not targeted for repeal, explaining the decision not to repeal it.",
+        "updates": [
+          {
+            "date": "2026-11-16",
+            "label": "Update",
+            "text": "Update 2026-11-16: The Energy Department's May 2025 direct final rule to rescind a loan-program rule for minority-owned businesses, which it said conflicted with Students for Fair Admissions v. Harvard, was the first public use of the memo, Bloomberg Tax reported; the rescission has not taken effect, as the department has delayed its effective date six times, most recently to Dec. 24, 2026, according to the Federal Register. On Oct. 21, 2025, OIRA acting administrator Jeffrey Clark issued a follow-up memo saying agencies 'do not appear to be fully maximizing their energy in carrying out these directives' and setting a presumptive 14-day maximum OIRA review for rules deemed 'facially unlawful,' Government Executive reported. In 2026, Bloomberg Law reported that the plan had 'flopped,' with 'just a handful of rules dumped' through the good cause shortcut.",
+            "effective_date": "2026-11-16"
+          }
+        ]
+      }
+    }
   },
   {
     "id": "dodd-frank-threshold-amendment-trump1",
@@ -2812,13 +2865,13 @@
       "figures": [],
       "caveat": "No formal quantified mortality/illness estimate exists for this rollback, as is typical for financial (rather than environmental/health) regulation -- the strength of this entry is the documented causal chain to an actual bank failure (SVB, 2023), not a modeled health figure."
     },
-    "confidence_note": "This is legislation, not a unilateral executive rollback -- note the mechanism is different from most other entries in this tracker. Strongest framing: cite the direct causal chain to the Silicon Valley Bank collapse as a real-world materialized harm, rather than an abstract 'increases risk' claim. Re-verified with a targeted search for developments since last_verified, CDR batch 2 (2026-09-08) -- no developments found since the last recheck.",
+    "confidence_note": "This is legislation, not a unilateral executive rollback -- note the mechanism is different from most other entries in this tracker. Strongest framing: cite the direct causal chain to the Silicon Valley Bank collapse as a real-world materialized harm, rather than an abstract 'increases risk' claim. Re-verified 2026-09-08: no later developments. Re-verified 2026-11-16: the law's $250 billion threshold still stands as enacted, with no repeal, amendment or court ruling changing it; the Yale Journal on Regulation, Roosevelt Institute and Wikipedia sources still say what this entry cites them for.",
     "section_summaries": {
       "what_changed": "Congress freed regional banks up to $250B in assets from post-2008 stress tests and living-will requirements, a fivefold jump from the original $50B cutoff.",
       "estimated_impact": "A think tank has since drawn a direct line from these exemptions to an actual bank failure -- Silicon Valley Bank's 2023 collapse.",
       "confidence_note": "Legislative, not executive, rollback; strongest framing ties it to SVB's real-world collapse rather than an abstract risk claim."
     },
-    "last_verified": "2026-09-08",
+    "last_verified": "2026-11-16",
     "date_added": "2026-07-03",
     "sources": [
       {
@@ -2835,7 +2888,7 @@
       }
     ],
     "short_summary": "Exempted regional banks under $250B in assets from strict post-2008 oversight.",
-    "last_substantive_update": "2026-09-08",
+    "last_substantive_update": "2026-11-16",
     "glance": {
       "who": "Donald Trump (signed S.2155)",
       "what": "Raised the Dodd-Frank oversight threshold for banks from $50B to $250B in assets",
@@ -2844,7 +2897,7 @@
         "certainty": "alleged",
         "who": "Bank depositors and the economy"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-11-16"
     },
     "status_stage": "Unchallenged",
     "key_events": [
@@ -11443,17 +11496,17 @@
   {
     "id": "joint-employer-standard-narrowing-trump2",
     "rule_name": "Joint-Employer Standard Narrowing (NLRB)",
-    "administration": "Trump II (2025-present) -- corrected from an earlier draft that misdated this as a First Term action",
+    "administration": "Trump II (2025-present)",
     "agency": "NLRB",
     "domain": "labor",
     "status": "Fully Repealed (2023 rule withdrawn; 2020 standard reinstated)",
     "date_of_action": "2026-02-25 (final rule); effective 2026-02-27",
     "original_rule_summary": "The NLRB's joint-employer standard determines when two companies (e.g. a franchisor and franchisee, or a company and its staffing agency) can both be held liable for labor law violations and both required to bargain collectively with the same workers. A 2023 Biden-era rule broadened the standard to include 'indirect' or 'reserved' (even unexercised) control over terms like wages, work rules, or health and safety -- making it easier to hold parent companies/franchisors jointly liable.",
-    "what_changed": "The 2023 rule was vacated by a federal court in March 2024 as 'arbitrary and capricious.' **The NLRB (with its quorum restored) formally withdrew the 2023 rule and reinstated the narrower 2020 first-Trump-term standard: an entity is now a joint employer only if it 'possesses and exercises substantial direct and immediate control' over essential terms of employment (wages, benefits, hours, hiring, discharge, discipline, supervision, direction). Indirect or unexercised control no longer counts.**",
+    "what_changed": "The 2023 rule was vacated by a federal court in March 2024 as 'arbitrary and capricious.' **The NLRB (with its quorum restored) formally withdrew the 2023 rule and reinstated the narrower 2020 first-Trump-term standard: an entity is now a joint employer only if it 'possesses and exercises substantial direct and immediate control' over essential terms of employment (wages, benefits, hours, hiring, discharge, discipline, supervision, direction). Indirect or unexercised control no longer counts.**\n\nUpdate 2026-11-16: The reinstated 2020 standard is itself under court challenge. The Service Employees International Union petitioned the U.S. Court of Appeals for the D.C. Circuit on May 2, 2025 to review the 2020 rule (No. 25-1119). A U.S. Chamber of Commerce coalition filed a brief on March 9, 2026 defending the 2020 rule and arguing the appeals court lacks jurisdiction to hear the challenge. Judges Henderson, Millett and Rogers heard argument on Nov. 16, 2026; the court has not yet ruled. A successful challenge could once again change the governing standard.",
     "primary_proponent": {
       "name": "National Labor Relations Board (agency-level action)",
       "role": "NLRB",
-      "note": "No single named Board member or Chairman was clearly identified as the primary individual driver in sourcing found this session -- the NLRB characterized the rulemaking as 'ministerial,' implementing the court's vacatur rather than a new policy choice by named leadership. Flag attribution as agency-level, not individual, until further verified."
+      "note": "No single named Board member or Chairman is identified as the primary individual driver in the sourcing -- the NLRB characterized the rulemaking as 'ministerial,' implementing the court's vacatur rather than a new policy choice by named leadership. Attribution is agency-level, not individual."
     },
     "corporate_beneficiaries": [
       "Franchisors, staffing agencies, and businesses using subcontractors -- explicitly named as beneficiaries in legal analysis of the rule"
@@ -11463,14 +11516,14 @@
       "figures": [],
       "caveat": "No quantified health/safety figure exists for this rule -- it is a liability-allocation rule, not a safety standard itself. The health-relevant argument is indirect: reduced accountability for the entity best positioned to enforce safety standards across a franchise/contractor network."
     },
-    "confidence_note": "Solid on the facts and timeline (Federal Register citation, clear before/after standard). Two things to flag: (1) this is a Trump II action from Feb. 2026, not Trump I as an earlier version of this tracker listed -- the 2020 rule referenced here was Trump I, but the specific rollback being tracked (reversing the 2023 expansion) happened this year; (2) no individual proponent is clearly named in sourcing, unlike most other entries in this tracker. Update: 2026-09-06 recheck sweep surfaced NLRB General Counsel Crystal Carey's August 2026 Memorandum GC 26-04 -- verified its 13 targeted precedents (severance agreements, captive-audience meetings, bargaining orders, remedies, dues checkoff, etc.) do not include the joint-employer standard. No development found specific to this entry's own tracked rule.",
+    "confidence_note": "Solid on the facts and timeline (Federal Register citation, clear before/after standard). Two things to flag: (1) this is a Trump II action from Feb. 2026; the 2020 rule it restored dates from Trump I, but the rollback tracked here (reversing the 2023 expansion) happened in 2026; (2) no individual proponent is named in the sourcing, unlike most other entries in this tracker. Re-verified 2026-09-06: NLRB General Counsel Crystal Carey's August 2026 Memorandum GC 26-04 lists 13 targeted precedents (severance agreements, captive-audience meetings, bargaining orders, remedies, dues checkoff, etc.); none is the joint-employer standard.\n\nUpdate 2026-11-16: The restored 2020 standard is not settled law: SEIU's D.C. Circuit challenge to it was argued Nov. 16, 2026, and Holland & Knight notes a successful challenge could once again alter the governing standard. The Federal Register notice, Sullivan & Cromwell and Jackson Lewis still support the before/after standard and the Feb. 27, 2026 effective date.",
     "pull_quote": "Narrowing joint-employer liability limits the ability to hold parent companies and franchisors responsible for labor violations -- including workplace safety violations -- occurring at a franchisee's or contractor's site.",
     "section_summaries": {
-      "what_changed": "NLRB withdrew the 2023 joint-employer rule and reinstated the narrower 2020 standard, requiring direct and exercised control to count.",
+      "what_changed": "NLRB withdrew the 2023 joint-employer rule and reinstated the narrower 2020 standard; a union's D.C. Circuit challenge to that standard was argued Nov. 16, 2026.",
       "estimated_impact": "Minimal direct health impact; the real harm is reduced corporate accountability, since parent firms are less liable for a contractor's safety violations.",
-      "confidence_note": "Solid on facts, but this is a Trump II action from 2026, not Trump I as an earlier tracker version listed -- no individual proponent is named."
+      "confidence_note": "Solid on facts; a Trump II action from 2026 with no individual proponent named. The restored 2020 standard faces a pending court challenge."
     },
-    "last_verified": "2026-09-06",
+    "last_verified": "2026-11-16",
     "date_added": "2026-07-03",
     "sources": [
       {
@@ -11484,10 +11537,26 @@
       {
         "name": "Jackson Lewis — NLRB Goes Back to the Employer-Friendly Future",
         "url": "https://www.jacksonlewis.com/insights/nlrb-goes-back-employer-friendly-future-it-reinstates-strict-joint-employer-rule"
+      },
+      {
+        "name": "Holland & Knight — NLRB Withdraws 2023 Joint Employer Rule",
+        "url": "https://www.hklaw.com/en/insights/publications/2026/03/nlrb-withdraws-2023-joint-employer-rule"
+      },
+      {
+        "name": "CourtListener — SEIU v. NLRB, No. 25-1119 (D.C. Cir.) docket entries",
+        "url": "https://www.courtlistener.com/?q=%22joint+employer%22&type=r&court=cadc&docket_number=25-1119"
+      },
+      {
+        "name": "U.S. Chamber of Commerce — SEIU v. NLRB case page (amicus brief, March 9, 2026)",
+        "url": "https://www.uschamber.com/cases/labor-and-employment/seiu-v-nlrb-3"
+      },
+      {
+        "name": "U.S. Court of Appeals for the D.C. Circuit — oral argument recordings, November 2026",
+        "url": "https://media.cadc.uscourts.gov/recordings/bydate/2026/11"
       }
     ],
     "short_summary": "Made it harder to hold parent companies liable for franchisee labor violations.",
-    "last_substantive_update": "2026-09-06",
+    "last_substantive_update": "2026-11-16",
     "glance": {
       "who": "National Labor Relations Board",
       "what": "Withdrew the 2023 joint-employer rule and restored the narrower 2020 standard",
@@ -11496,9 +11565,9 @@
         "certainty": "documented",
         "who": "Accountability of parent companies"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-11-16"
     },
-    "status_stage": "Unchallenged",
+    "status_stage": "In court",
     "key_events": [
       {
         "date": "2020",
@@ -11523,6 +11592,14 @@
         ]
       },
       {
+        "date": "2025-05-02",
+        "text": "The SEIU asks the D.C. Circuit to review the 2020 joint-employer rule",
+        "sources": [
+          "https://www.courtlistener.com/?q=%22joint+employer%22&type=r&court=cadc&docket_number=25-1119",
+          "https://www.hklaw.com/en/insights/publications/2026/03/nlrb-withdraws-2023-joint-employer-rule"
+        ]
+      },
+      {
         "date": "2026-02-25",
         "text": "The NLRB formally withdraws the 2023 rule and restores the narrower 2020 standard",
         "turning_point": true,
@@ -11531,17 +11608,35 @@
           "https://www.sullcrom.com/insights/blogs/2026/March/NLRB-Reinstates-Narrower-Joint-Employer-Standard-First-Implemented-During-President-Trump-First-Term",
           "https://www.jacksonlewis.com/insights/nlrb-goes-back-employer-friendly-future-it-reinstates-strict-joint-employer-rule"
         ]
+      },
+      {
+        "date": "2026-11-16",
+        "text": "A D.C. Circuit panel hears the SEIU's challenge to the restored 2020 standard",
+        "sources": [
+          "https://media.cadc.uscourts.gov/recordings/bydate/2026/11"
+        ]
       }
     ],
     "timeline": {
-      "confidence_note": {
-        "base": "Solid on the facts and timeline (Federal Register citation, clear before/after standard). Two things to flag: (1) this is a Trump II action from Feb. 2026, not Trump I as an earlier version of this tracker listed -- the 2020 rule referenced here was Trump I, but the specific rollback being tracked (reversing the 2023 expansion) happened this year; (2) no individual proponent is clearly named in sourcing, unlike most other entries in this tracker.",
+      "what_changed": {
+        "base": "The 2023 rule was vacated by a federal court in March 2024 as 'arbitrary and capricious.' **The NLRB (with its quorum restored) formally withdrew the 2023 rule and reinstated the narrower 2020 first-Trump-term standard: an entity is now a joint employer only if it 'possesses and exercises substantial direct and immediate control' over essential terms of employment (wages, benefits, hours, hiring, discharge, discipline, supervision, direction). Indirect or unexercised control no longer counts.**",
         "updates": [
           {
-            "date": null,
+            "date": "2026-11-16",
             "label": "Update",
-            "text": "Update: 2026-09-06 recheck sweep surfaced NLRB General Counsel Crystal Carey's August 2026 Memorandum GC 26-04 -- verified its 13 targeted precedents (severance agreements, captive-audience meetings, bargaining orders, remedies, dues checkoff, etc.) do not include the joint-employer standard. No development found specific to this entry's own tracked rule.",
-            "effective_date": null
+            "text": "Update 2026-11-16: The reinstated 2020 standard is itself under court challenge. The Service Employees International Union petitioned the U.S. Court of Appeals for the D.C. Circuit on May 2, 2025 to review the 2020 rule (No. 25-1119). A U.S. Chamber of Commerce coalition filed a brief on March 9, 2026 defending the 2020 rule and arguing the appeals court lacks jurisdiction to hear the challenge. Judges Henderson, Millett and Rogers heard argument on Nov. 16, 2026; the court has not yet ruled. A successful challenge could once again change the governing standard.",
+            "effective_date": "2026-11-16"
+          }
+        ]
+      },
+      "confidence_note": {
+        "base": "Solid on the facts and timeline (Federal Register citation, clear before/after standard). Two things to flag: (1) this is a Trump II action from Feb. 2026; the 2020 rule it restored dates from Trump I, but the rollback tracked here (reversing the 2023 expansion) happened in 2026; (2) no individual proponent is named in the sourcing, unlike most other entries in this tracker. Re-verified 2026-09-06: NLRB General Counsel Crystal Carey's August 2026 Memorandum GC 26-04 lists 13 targeted precedents (severance agreements, captive-audience meetings, bargaining orders, remedies, dues checkoff, etc.); none is the joint-employer standard.",
+        "updates": [
+          {
+            "date": "2026-11-16",
+            "label": "Update",
+            "text": "Update 2026-11-16: The restored 2020 standard is not settled law: SEIU's D.C. Circuit challenge to it was argued Nov. 16, 2026, and Holland & Knight notes a successful challenge could once again alter the governing standard. The Federal Register notice, Sullivan & Cromwell and Jackson Lewis still support the before/after standard and the Feb. 27, 2026 effective date.",
+            "effective_date": "2026-11-16"
           }
         ]
       }
@@ -13815,10 +13910,10 @@
     "administration": "Trump I (2017-2021)",
     "agency": "OSHA / Department of Labor",
     "domain": "labor",
-    "status": "Weakened (partially repealed)",
+    "status": "Weakened, then reversed in part: a July 21, 2023 OSHA rule, effective Jan. 1, 2024, again requires establishments with 100 or more employees in designated high-hazard industries to submit Form 300 and 301 data each year; 2025 data was due March 2, 2026. A 2021 court ruling had upheld the rollback.",
     "date_of_action": "2019-01-25",
     "original_rule_summary": "2016 Obama-era OSHA rule requiring employers with 250+ workers at an establishment to electronically submit detailed, itemized workplace injury and illness data (Forms 300, 301, 300A) to OSHA annually, making injury patterns easier for regulators, researchers, and the public to identify.",
-    "what_changed": "OSHA finalized a rule eliminating the requirement to submit the detailed itemized logs (Forms 300 and 301), leaving only the aggregated summary form (300A). The final rule was published during the 2018-2019 government shutdown. Anti-retaliation protections for injury reporting were left in place.",
+    "what_changed": "OSHA finalized a rule eliminating the requirement to submit the detailed itemized logs (Forms 300 and 301), leaving only the aggregated summary form (300A). The final rule was published during the 2018-2019 government shutdown. Anti-retaliation protections for injury reporting were left in place.\n\nUpdate 2026-11-16: The rollback was challenged in court and later partly undone. Public Citizen, the American Public Health Association and the Council of State and Territorial Epidemiologists sued on January 25, 2019, the day the rule was published, and a group of states sued on March 6, 2019. On January 11, 2021 the federal district court in Washington, D.C. dismissed the health groups' suit for lack of standing and held, in the states' case, that rescinding the requirement was within OSHA's discretion. Both groups appealed; the appeals were stayed while OSHA rewrote the rule. A final rule published July 21, 2023 and effective January 1, 2024 requires establishments with 100 or more employees in designated industries to electronically submit information from their Forms 300 and 301 once a year, and OSHA said it intends to post some of that data on a public website after removing information that could identify individuals. Establishments with 250 or more employees outside those industries still submit only their Form 300A summary. Public Citizen dropped its appeal in July 2023, saying the new rule satisfied the issues raised in the lawsuit. Covered employers had to submit their 2025 Form 300 and 301 data by March 2, 2026.",
     "primary_proponent": {
       "name": "Alexander Acosta",
       "role": "Secretary of Labor",
@@ -13828,7 +13923,7 @@
       "Large employers (250+ workers) previously subject to detailed injury-log disclosure, particularly in construction and manufacturing"
     ],
     "estimated_health_impact": {
-      "summary": "**Labor advocates and unions argued the rollback makes it significantly harder for OSHA, researchers, and the public to detect workplace-injury patterns and target enforcement, since only aggregate (not itemized, establishment-level) data remains available -- an effect on detection and prevention capacity rather than a directly modeled mortality/injury count.**",
+      "summary": "**Labor advocates and unions argued the rollback made it significantly harder for OSHA, researchers, and the public to detect workplace-injury patterns and target enforcement, since only aggregate (not itemized, establishment-level) data remained available until OSHA restored itemized reporting for designated high-hazard industries in 2024 -- an effect on detection and prevention capacity rather than a directly modeled mortality/injury count.**",
       "figures": [
         {
           "metric": "U.S. workplace deaths per year (context figure, not rollback-specific)",
@@ -13838,14 +13933,14 @@
       ],
       "caveat": "No agency or independent body has published a quantified estimate of additional deaths/injuries directly attributable to this specific reporting rollback -- the harm argument is about degraded detection/prevention capacity, not a modeled body count. Present it that way rather than implying a specific casualty figure."
     },
-    "confidence_note": "Frame as a transparency/detection-capacity rollback, not a body-count claim -- this is the more defensible, harder-to-rebut version of the argument. Unions (IBEW) and NELP are the sourced critics; note them as advocacy voices, not neutral analysts. Update: 2026-09-06 recheck sweep surfaced a July 21, 2026 Fifth Circuit ruling vacating an OSHA rule requiring mental-health-illness logging on OSHA 300 forms -- verified this concerns a separate OSHA rule, not the 2019 Forms 300/301 electronic-submission rollback tracked here. No development found specific to this entry's own tracked rule.",
+    "confidence_note": "Frame as a transparency/detection-capacity rollback, not a body-count claim -- this is the more defensible, harder-to-rebut version of the argument. Unions (IBEW) and NELP are the sourced critics; note them as advocacy voices, not neutral analysts.\n\nUpdate 2026-09-06: A July 21, 2026 Fifth Circuit ruling vacated a separate OSHA rule requiring employers to log work-related mental illnesses on OSHA 300 forms; it does not concern the Forms 300/301 electronic-submission requirement tracked here.\n\nUpdate 2026-11-16: The 2021 ruling and the 2023 restoration come from OSHA's own Federal Register rule and from Public Citizen, a party to the suit; a February 2026 Jackson Lewis client alert confirms the Form 300 and 301 filing requirement applied to 2025 data.",
     "pull_quote": "Roughly 5,000 U.S. workers died on the job in 2016, the baseline year before this rollback — context for what detection capacity injury-log data is meant to support, not a rollback-specific death count.",
     "section_summaries": {
-      "what_changed": "OSHA dropped the requirement to submit detailed injury logs, leaving only aggregated summary data; anti-retaliation protections stayed in place.",
-      "estimated_impact": "The harm here is blindness, not body count -- regulators lose the itemized data needed to spot injury patterns and aim enforcement.",
-      "confidence_note": "The stronger, harder-to-rebut argument is reduced injury-detection capacity, not a death count -- and unions/NELP are advocacy sources, not neutral analysts."
+      "what_changed": "OSHA dropped required filing of detailed injury logs in 2019; a court upheld that in 2021, and a 2023 rule restored it for sites with 100+ workers in high-hazard industries.",
+      "estimated_impact": "The harm here is blindness, not body count -- regulators lost the itemized data needed to spot injury patterns until high-hazard industries had to file it again in 2024.",
+      "confidence_note": "The stronger argument is reduced injury-detection capacity, not a death count; unions/NELP are advocacy sources, and the 2023 restoration rests on OSHA's own rule."
     },
-    "last_verified": "2026-09-06",
+    "last_verified": "2026-11-16",
     "date_added": "2026-07-03",
     "sources": [
       {
@@ -13859,10 +13954,22 @@
       {
         "name": "The Hill — OSHA to reduce Obama-era injury report requirements for large companies",
         "url": "https://thehill.com/regulation/labor/399323-osha-reduces-obama-era-injury-report-requirements-for-large-companies/"
+      },
+      {
+        "name": "Federal Register — Improve Tracking of Workplace Injuries and Illnesses (final rule, July 21, 2023)",
+        "url": "https://www.govinfo.gov/content/pkg/FR-2023-07-21/html/2023-15091.htm"
+      },
+      {
+        "name": "Public Citizen — Public Citizen Health Research Group v. Acosta / State of New Jersey v. Su",
+        "url": "https://www.citizen.org/litigation/public-citizen-health-research-group-v-acosta-2019/"
+      },
+      {
+        "name": "Jackson Lewis (via Mondaq) — Fast-Approaching Deadline: OSHA Injury And Illness Data Due March 2, 2026",
+        "url": "https://www.mondaq.com/unitedstates/health-safety/1753384/fast-approaching-deadline-osha-injury-and-illness-data-due-march-2-2026"
       }
     ],
     "short_summary": "Ended detailed public reporting of workplace injuries at large employers.",
-    "last_substantive_update": "2026-09-06",
+    "last_substantive_update": "2026-11-16",
     "glance": {
       "who": "Alexander Acosta (Labor Secretary)",
       "what": "Ended the requirement for large employers to submit detailed injury logs to OSHA",
@@ -13871,9 +13978,9 @@
         "certainty": "documented",
         "who": "OSHA's ability to spot injury patterns"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-11-16"
     },
-    "status_stage": "Unchallenged",
+    "status_stage": "Reversed or withdrawn",
     "key_events": [
       {
         "date": "2016",
@@ -13890,17 +13997,66 @@
           "https://www.nelp.org/trump-administration-rolls-back-workplace-injury-reporting-rule/",
           "https://ucommblog.com/section/safety/trump-repeals-osha-safety-standards"
         ]
+      },
+      {
+        "date": "2019-01-25",
+        "text": "Public Citizen and two public health groups sue to set the rollback aside; a group of states sues in March",
+        "sources": [
+          "https://www.citizen.org/litigation/public-citizen-health-research-group-v-acosta-2019/",
+          "https://www.govinfo.gov/content/pkg/FR-2023-07-21/html/2023-15091.htm"
+        ]
+      },
+      {
+        "date": "2021-01-11",
+        "text": "Federal court in Washington, D.C. upholds the rollback as within OSHA's discretion; both groups appeal",
+        "turning_point": true,
+        "sources": [
+          "https://www.govinfo.gov/content/pkg/FR-2023-07-21/html/2023-15091.htm",
+          "https://www.citizen.org/litigation/public-citizen-health-research-group-v-acosta-2019/"
+        ]
+      },
+      {
+        "date": "2023-07-21",
+        "text": "OSHA rule restores yearly Form 300 and 301 filing for sites with 100+ workers in high-hazard industries",
+        "turning_point": true,
+        "sources": [
+          "https://www.govinfo.gov/content/pkg/FR-2023-07-21/html/2023-15091.htm"
+        ]
+      },
+      {
+        "date": "2026-03-02",
+        "text": "Deadline for covered employers to file their 2025 Form 300 and 301 injury data with OSHA",
+        "sources": [
+          "https://www.mondaq.com/unitedstates/health-safety/1753384/fast-approaching-deadline-osha-injury-and-illness-data-due-march-2-2026"
+        ]
       }
     ],
     "timeline": {
+      "what_changed": {
+        "base": "OSHA finalized a rule eliminating the requirement to submit the detailed itemized logs (Forms 300 and 301), leaving only the aggregated summary form (300A). The final rule was published during the 2018-2019 government shutdown. Anti-retaliation protections for injury reporting were left in place.",
+        "updates": [
+          {
+            "date": "2026-11-16",
+            "label": "Update",
+            "text": "Update 2026-11-16: The rollback was challenged in court and later partly undone. Public Citizen, the American Public Health Association and the Council of State and Territorial Epidemiologists sued on January 25, 2019, the day the rule was published, and a group of states sued on March 6, 2019. On January 11, 2021 the federal district court in Washington, D.C. dismissed the health groups' suit for lack of standing and held, in the states' case, that rescinding the requirement was within OSHA's discretion. Both groups appealed; the appeals were stayed while OSHA rewrote the rule. A final rule published July 21, 2023 and effective January 1, 2024 requires establishments with 100 or more employees in designated industries to electronically submit information from their Forms 300 and 301 once a year, and OSHA said it intends to post some of that data on a public website after removing information that could identify individuals. Establishments with 250 or more employees outside those industries still submit only their Form 300A summary. Public Citizen dropped its appeal in July 2023, saying the new rule satisfied the issues raised in the lawsuit. Covered employers had to submit their 2025 Form 300 and 301 data by March 2, 2026.",
+            "effective_date": "2026-11-16"
+          }
+        ]
+      },
       "confidence_note": {
         "base": "Frame as a transparency/detection-capacity rollback, not a body-count claim -- this is the more defensible, harder-to-rebut version of the argument. Unions (IBEW) and NELP are the sourced critics; note them as advocacy voices, not neutral analysts.",
         "updates": [
           {
-            "date": null,
+            "date": "2026-09-06",
             "label": "Update",
-            "text": "Update: 2026-09-06 recheck sweep surfaced a July 21, 2026 Fifth Circuit ruling vacating an OSHA rule requiring mental-health-illness logging on OSHA 300 forms -- verified this concerns a separate OSHA rule, not the 2019 Forms 300/301 electronic-submission rollback tracked here. No development found specific to this entry's own tracked rule.",
-            "effective_date": null
+            "text": "Update 2026-09-06: A July 21, 2026 Fifth Circuit ruling vacated a separate OSHA rule requiring employers to log work-related mental illnesses on OSHA 300 forms; it does not concern the Forms 300/301 electronic-submission requirement tracked here.",
+            "effective_date": "2026-09-06"
+          },
+          {
+            "date": "2026-11-16",
+            "label": "Update",
+            "text": "Update 2026-11-16: The 2021 ruling and the 2023 restoration come from OSHA's own Federal Register rule and from Public Citizen, a party to the suit; a February 2026 Jackson Lewis client alert confirms the Form 300 and 301 filing requirement applied to 2025 data.",
+            "effective_date": "2026-11-16"
           }
         ]
       }
@@ -14888,14 +15044,14 @@
       "figures": [],
       "caveat": "No agency-produced quantified mortality/illness estimate exists specifically for this repeal (unlike MATS or the ACE Rule); health linkage is drawn from separate academic literature on mountaintop-removal mining exposure generally, not a rule-specific impact study."
     },
-    "confidence_note": "Use with a general-harm framing, not a specific body-count figure -- be explicit that the health literature concerns mountaintop-removal mining exposure broadly, and connect it to the repealed rule's purpose rather than citing a specific number of cases caused by the repeal itself. Re-verified with a targeted search for developments since last_verified, CDR batch 2 (2026-09-08) -- no developments found since the last recheck.",
+    "confidence_note": "Use with a general-harm framing, not a specific body-count figure -- be explicit that the health literature concerns mountaintop-removal mining exposure broadly, and connect it to the repealed rule's purpose rather than citing a specific number of cases caused by the repeal itself. Re-verified 2026-09-08: no later developments. Re-verified 2026-11-16: the 2017 repeal stands; a November 28, 2025 Interior Department (OSMRE) direct final rule on subsidence controls confirms that all of the Stream Protection Rule's changes were disapproved under the Congressional Review Act and that the Act still bars reissuing the rule in substantially the same form.",
     "pull_quote": "Trump signed the CRA joint resolution on February 16, 2017, publicly framing it as saving “thousands of US mining jobs.”",
     "section_summaries": {
       "what_changed": "Coal-waste stream limits died fast -- a CRA vote within Trump's first month in office, which also blocks any similar future rule absent new legislation.",
       "estimated_impact": "Mining-waste contamination is linked in peer-reviewed research to birth defects and cardiovascular disease in Appalachia, though not re-studied for this repeal.",
       "confidence_note": "Use a general-harm framing tied to mountaintop-removal mining broadly -- don't cite a specific case count caused by the repeal itself."
     },
-    "last_verified": "2026-09-08",
+    "last_verified": "2026-11-16",
     "date_added": "2026-07-03",
     "sources": [
       {
@@ -14905,10 +15061,14 @@
       {
         "name": "Sierra Club — The Trump Administration is Reversing 100 Environmental Rules",
         "url": "https://www.sierracluboahu.org/blog/the-trump-administration-is-reversing-100-environmental-rules"
+      },
+      {
+        "name": "Federal Register — OSMRE direct final rule on subsidence controls (Nov. 28, 2025)",
+        "url": "https://www.federalregister.gov/documents/2025/11/28/2025-21444/rescission-of-portions-of-permanent-program-performance-standards-regulating-subsidence-controls-for"
       }
     ],
     "short_summary": "Repealed limits on dumping coal mining waste into nearby streams.",
-    "last_substantive_update": "2026-09-08",
+    "last_substantive_update": "2026-11-16",
     "glance": {
       "who": "Donald Trump",
       "what": "Signed the Congressional Review Act repeal of limits on dumping coal-mining waste into streams",
@@ -14917,7 +15077,7 @@
         "certainty": "projected",
         "who": "Appalachian mining communities"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-11-16"
     },
     "status_stage": "Unchallenged",
     "key_events": [
