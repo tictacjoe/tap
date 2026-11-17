@@ -4567,36 +4567,46 @@
     "administration": "Trump II (2025-present)",
     "agency": "DOL",
     "domain": "labor",
-    "status": "Fully Repealed (enforcement suspended June 20, 2025; formal rescission published in the Federal Register July 2, 2025)",
-    "date_of_action": "2025-06-20 (enforcement suspension announced) through 2025-07-02 (formal rescission published)",
-    "original_rule_summary": "Finalized by the Biden administration in 2024, the rule extended new protections to workers on H-2A temporary agricultural visas (about 400,000 admitted annually as of 2025, roughly 15% of average U.S. crop-farm employment): the right to engage in 'concerted activity' with coworkers to improve working conditions, anti-retaliation protections barring employers from firing or disciplining workers for organizing, defined progressive-discipline/termination standards, and wage-disclosure and payment requirements.",
-    "what_changed": "On June 20, 2025, DOL's Wage and Hour Division announced it would suspend all enforcement of the rule nationwide, directing field staff to revert to the pre-rule H-2A labor-certification process in effect before the rule's June 27, 2024 effective date. DOL cited a preliminary federal court injunction -- covering Georgia, Kansas, South Carolina, Arkansas, Florida, Idaho, Indiana, Iowa, Louisiana, Missouri, Montana, Nebraska, North Dakota, Oklahoma, Tennessee, Texas, and Virginia -- and said the resulting patchwork of enforceability across states created legal uncertainty for agricultural employers, framing the suspension as offering clarity rather than a policy reversal. DOL followed the nationwide non-enforcement announcement with a formal rescission of the rule itself, published in the Federal Register on July 2, 2025, eliminating the underlying protections entirely rather than merely pausing their enforcement pending litigation.",
+    "status": "Proposed Repeal (enforcement suspended nationwide June 20, 2025; DOL proposed rescinding most of the rule July 2, 2025, comments closed Sept. 2, 2025; DOL's regulatory agenda projected a final rule for July 2026, but none has been published)",
+    "date_of_action": "2025-06-20 (enforcement suspended) and 2025-07-02 (rescission proposed)",
+    "original_rule_summary": "Finalized by the Biden administration in April 2024 and effective June 28, 2024, the rule extended new protections to workers on H-2A temporary agricultural visas (about 385,000 H-2A positions were certified in fiscal 2024, according to USDA's Economic Research Service): the right to engage in 'concerted activity' with coworkers to improve working conditions, anti-retaliation protections barring employers from firing or disciplining workers for organizing, defined progressive-discipline/termination standards, seat-belt requirements, worker guest access to employer-provided housing, and wage-disclosure and payment requirements.",
+    "what_changed": "On June 20, 2025, DOL's Wage and Hour Division issued Field Assistance Bulletin 2025-2, suspending enforcement of all provisions of the rule nationwide and directing field staff to assess employer compliance under the H-2A regulations in effect on June 27, 2024, the day before the rule took effect. The bulletin cited multiple federal court rulings: a Southern District of Georgia injunction (Aug. 26, 2024) blocking the whole rule in Georgia, Kansas, South Carolina, Arkansas, Florida, Idaho, Indiana, Iowa, Louisiana, Missouri, Montana, Nebraska, North Dakota, Oklahoma, Tennessee, Texas and Virginia and for certain employers; an Eastern District of Kentucky injunction (Nov. 25, 2024) against key provisions in Kentucky, Alabama, Ohio and West Virginia and for certain employers; and a Southern District of Mississippi nationwide stay (Nov. 25, 2024) of the concerted-activity protections. A North Carolina federal court had upheld the rule on May 5, 2025. The bulletin said the injunctions created 'significant legal uncertainty' and that a temporary nationwide suspension 'ensures clarity and consistency' while litigation continued and DOL considered further regulatory action. On July 2, 2025, DOL published a proposed rule to rescind most of the 2024 rule, including its progressive-discipline standards, anti-retaliation protections for workers engaged in self-organization and concerted activity, and foreign-labor-recruiter disclosure requirements; comments closed Sept. 2, 2025. DOL's regulatory agenda lists the rescission at the final-rule stage with a final rule projected for July 2026, but no final rule has been published in the Federal Register, so the 2024 rule remains on the books with its enforcement suspended.",
     "primary_proponent": {
       "name": "Lori Chavez-DeRemer",
       "role": "Secretary of Labor",
-      "note": "The Wage and Hour Division's June 20, 2025 field-assistance bulletin and the July 2, 2025 Federal Register rescission were issued as institutional DOL actions; no more specific individual official is named in sourcing reviewed as personally directing the decision beyond the department's own leadership."
+      "note": "Field Assistance Bulletin 2025-2 (June 20, 2025) was issued by Wage and Hour Division Acting Administrator Donald M. Harrison III; the July 2, 2025 proposed rescission was signed by Harrison and Employment and Training Administration Acting Assistant Secretary Susan Frazier. Both are DOL actions under Secretary Chavez-DeRemer."
     },
     "corporate_beneficiaries": [
-      "Agricultural employers using the H-2A visa program, particularly in the 17 states covered by the preliminary injunction, who are relieved of the rule's organizing-protection and progressive-discipline compliance obligations"
+      "Agricultural employers using the H-2A visa program (8,938 unique certified H-2A employers in DOL's proposed-rule estimate), relieved of the rule's organizing-protection, progressive-discipline and disclosure obligations; DOL estimated the proposed rescission would shift about $12.66 million a year in wages from H-2A workers to employers"
     ],
     "estimated_health_impact": {
-      "summary": "Rescinding the rule **removes anti-retaliation protections for a workforce of roughly 400,000 H-2A visa holders annually, most of whom cannot easily change employers under the visa's structure and are therefore especially vulnerable to retaliation for reporting unsafe conditions or attempting to organize** -- a labor-safety and workplace-power dynamic rather than a directly quantified health-mortality risk.",
+      "summary": "Suspending enforcement of the rule, and proposing to rescind it, **leaves a workforce of roughly 385,000 H-2A positions a year without the rule's anti-retaliation, organizing and progressive-discipline protections; most H-2A workers are bound to one employer for the length of their visa, which leaves them especially vulnerable to retaliation** -- a labor-safety and workplace-power dynamic rather than a directly quantified health-mortality risk.",
       "figures": [
         {
-          "metric": "H-2A workers admitted annually, scope of workforce losing the rule's protections",
-          "value": "~400,000 (2025)",
-          "source": "USDA Economic Research Service / industry reporting, cited in coverage of the H-2A program"
+          "metric": "H-2A positions certified, fiscal 2024 (scope of the workforce covered by the rule)",
+          "value": "~385,000",
+          "source": "USDA Economic Research Service"
+        },
+        {
+          "metric": "Annualized transfer payments from H-2A workers to employers under the proposed rescission (7% discount rate)",
+          "value": "$12.66 million",
+          "source": "DOL proposed rule, July 2, 2025"
+        },
+        {
+          "metric": "Annualized net cost savings to employers under the proposed rescission (7% discount rate)",
+          "value": "$1.02 million",
+          "source": "DOL proposed rule, July 2, 2025"
         }
       ],
-      "caveat": "No source reviewed provides a dollar cost/savings figure for this specific rescission (e.g., an agency compliance-cost estimate) or a quantified injury/fatality-risk figure specific to the loss of anti-retaliation protections -- this entry states that gap explicitly rather than presenting a manufactured figure. The worker-protection figures above describe the scope of the affected population, not a modeled harm estimate."
+      "caveat": "The dollar figures are DOL's own proposed-rule estimates, not a final-rule analysis; DOL attributes the transfer figure to ending the immediate effective date for updated wage rates, not to the anti-retaliation provisions. No injury or retaliation-incident figure has been published for the loss of these protections. The worker figure counts certified positions, not individual workers, and describes the scope of the affected population, not a modeled harm estimate."
     },
-    "confidence_note": "HIGH confidence on the core procedural facts: the June 20, 2025 enforcement-suspension announcement and the July 2, 2025 Federal Register rescission are both documented in DOL's own public records (a Wage and Hour Division field-assistance bulletin and the Federal Register notice itself), independently confirmed by EPI, Law360, and multiple employment-law-firm client alerts describing the same dates and mechanism. MODERATE confidence on the practical labor-safety impact, since no source reviewed quantifies actual retaliation incidents before or after the rule's brief effective period (June 2024-June 2025); the harm is presented as a removed legal protection for a documented vulnerable workforce, not as a proven increase in retaliation incidents.",
+    "confidence_note": "HIGH confidence on the core procedural facts: the June 20, 2025 enforcement suspension is documented in the Wage and Hour Division's own Field Assistance Bulletin 2025-2 and was reported by EPI and Reuters, and the July 2, 2025 Federal Register document is a proposed rule whose comment period closed Sept. 2, 2025. MODERATE confidence on the practical labor-safety impact: the harm is a protection no longer enforced for a documented vulnerable workforce (much of the rule was already blocked by court orders before the suspension, as EPI noted), not a measured increase in retaliation incidents. Update 2026-11-17: corrected; the July 2, 2025 rescission is a proposed rule, and DOL's regulatory agenda projected a final rule for July 2026, but none has been published, so the rule remains on the books with enforcement suspended.",
     "section_summaries": {
-      "what_changed": "DOL suspended, then formally repealed, a 2024 rule protecting H-2A farmworkers from retaliation for organizing, citing a multi-state court injunction.",
-      "estimated_impact": "Removes anti-retaliation protections for roughly 400,000 H-2A workers annually; no dollar-cost or injury-rate figure was found for this specific rescission.",
-      "confidence_note": "The procedural facts are well-documented in DOL's own public records; the practical labor-safety impact is not independently quantified in sourcing reviewed."
+      "what_changed": "DOL suspended enforcement of a 2024 rule protecting H-2A farmworkers from retaliation, citing court injunctions, and proposed repealing it; no final repeal has been published.",
+      "estimated_impact": "Leaves about 385,000 H-2A jobs a year without the rule's protections; DOL estimated $12.66M a year shifts from workers to employers. No injury figure exists.",
+      "confidence_note": "Procedural facts come from DOL's own bulletin and Federal Register notice; the repeal is still only proposed, and the labor-safety harm is not quantified."
     },
-    "last_verified": "2026-09-12",
+    "last_verified": "2026-11-17",
     "date_added": "2026-09-12",
     "sources": [
       {
@@ -4608,41 +4618,65 @@
         "url": "https://www.dol.gov/sites/dolgov/files/WHD/fab/fab2025-2.pdf"
       },
       {
-        "name": "Federal Register -- Rescission of Final Rule: Improving Protections for Workers in Temporary Agricultural Employment in the United States",
+        "name": "Federal Register -- Proposed rule: Rescission of Final Rule: Improving Protections for Workers in Temporary Agricultural Employment in the United States (July 2, 2025)",
         "url": "https://www.federalregister.gov/documents/2025/07/02/2025-12315/recission-of-final-rule-improving-protections-for-workers-in-temporary-agricultural-employment-in"
       },
       {
         "name": "Reuters -- Trump Administration Says It Is Suspending Enforcement of Biden-Era Farmworker Rule",
         "url": "https://www.reuters.com/legal/litigation/trump-administration-says-it-is-suspending-enforcement-biden-era-farmworker-rule-2025-06-20/"
+      },
+      {
+        "name": "USDA Economic Research Service -- H-2A positions certified, fiscal 2005-2024 (chart)",
+        "url": "https://ers.usda.gov/data-products/chart-gallery/chart-detail?chartId=86844"
+      },
+      {
+        "name": "Reginfo.gov -- Unified Agenda entry, RIN 1205-AC25: Rescission of Final Rule (final rule stage)",
+        "url": "https://www.reginfo.gov/public/do/eAgendaViewRule?pubId=202510&RIN=1205-AC25"
       }
     ],
-    "short_summary": "DOL suspended, then repealed, a 2024 rule protecting H-2A farmworkers from retaliation for organizing.",
+    "short_summary": "DOL suspended enforcement of a 2024 rule protecting H-2A farmworkers from retaliation for organizing, and proposed repealing it.",
     "narrative_override": {
-      "headline": "DOL suspended, then repealed, a 2024 rule protecting H-2A farmworkers from retaliation."
+      "headline": "DOL suspended, and proposed repealing, a 2024 rule protecting H-2A farmworkers from retaliation."
     },
-    "last_substantive_update": "2026-09-12",
+    "last_substantive_update": "2026-11-17",
     "glance": {
       "who": "Lori Chavez-DeRemer (Labor Secretary)",
-      "what": "Suspended, then repealed, a rule protecting H-2A farmworkers from retaliation for organizing",
+      "what": "Suspended enforcement of, and proposed repealing, a rule protecting H-2A farmworkers from retaliation",
       "harm": {
         "kind": "rights",
         "certainty": "documented",
-        "who": "H-2A farmworkers (~400,000 a year)"
+        "who": "H-2A farmworkers (~385,000 jobs a year)"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-11-17"
     },
     "status_stage": "Unchallenged",
     "key_events": [
       {
-        "date": "2024-06-27",
+        "date": "2024-06-28",
         "text": "Biden-era rule giving H-2A farmworkers new protections, including the right to organize, takes effect",
         "sources": [
+          "https://www.federalregister.gov/documents/2025/07/02/2025-12315/recission-of-final-rule-improving-protections-for-workers-in-temporary-agricultural-employment-in",
+          "https://www.dol.gov/sites/dolgov/files/WHD/fab/fab2025-2.pdf"
+        ]
+      },
+      {
+        "date": "2024-08-26",
+        "text": "Federal court in Georgia blocks enforcement of the whole rule in 17 states",
+        "sources": [
+          "https://www.federalregister.gov/documents/2025/07/02/2025-12315/recission-of-final-rule-improving-protections-for-workers-in-temporary-agricultural-employment-in"
+        ]
+      },
+      {
+        "date": "2024-11-25",
+        "text": "Federal court in Mississippi stays the rule's concerted-activity protections nationwide",
+        "sources": [
+          "https://www.federalregister.gov/documents/2025/07/02/2025-12315/recission-of-final-rule-improving-protections-for-workers-in-temporary-agricultural-employment-in",
           "https://www.dol.gov/sites/dolgov/files/WHD/fab/fab2025-2.pdf"
         ]
       },
       {
         "date": "2025-06-20",
-        "text": "Labor Department suspends enforcement of the rule nationwide, citing a court injunction in 17 states",
+        "text": "Labor Department suspends enforcement of the whole rule nationwide, citing multiple court injunctions",
         "turning_point": true,
         "sources": [
           "https://www.dol.gov/sites/dolgov/files/WHD/fab/fab2025-2.pdf",
@@ -4652,13 +4686,26 @@
       },
       {
         "date": "2025-07-02",
-        "text": "Labor Department publishes a formal rescission, wiping out the protections entirely",
+        "text": "Labor Department proposes rescinding most of the rule, including its anti-retaliation protections",
         "turning_point": true,
         "sources": [
           "https://www.federalregister.gov/documents/2025/07/02/2025-12315/recission-of-final-rule-improving-protections-for-workers-in-temporary-agricultural-employment-in"
         ]
       }
-    ]
+    ],
+    "timeline": {
+      "confidence_note": {
+        "base": "HIGH confidence on the core procedural facts: the June 20, 2025 enforcement suspension is documented in the Wage and Hour Division's own Field Assistance Bulletin 2025-2 and was reported by EPI and Reuters, and the July 2, 2025 Federal Register document is a proposed rule whose comment period closed Sept. 2, 2025. MODERATE confidence on the practical labor-safety impact: the harm is a protection no longer enforced for a documented vulnerable workforce (much of the rule was already blocked by court orders before the suspension, as EPI noted), not a measured increase in retaliation incidents.",
+        "updates": [
+          {
+            "date": "2026-11-17",
+            "label": "Update",
+            "text": "Update 2026-11-17: corrected; the July 2, 2025 rescission is a proposed rule, and DOL's regulatory agenda projected a final rule for July 2026, but none has been published, so the rule remains on the books with enforcement suspended.",
+            "effective_date": "2026-11-17"
+          }
+        ]
+      }
+    }
   },
   {
     "id": "dol-overtime-threshold-rescission-trump2",
@@ -15691,18 +15738,18 @@
     "domain": "consumer_safety",
     "status": "Fully Withdrawn",
     "date_of_action": "2025-04-25 (withdrawal announced)",
-    "original_rule_summary": "In August 2024, FSIS proposed a new regulatory framework declaring raw chicken and turkey products \"adulterated\" -- and therefore subject to recall or sale-block -- if they contained 10 or more colony-forming units of Salmonella per gram/milliliter and tested positive for one of several Salmonella serotypes linked to human illness. It was the first proposal to treat Salmonella contamination itself, above a set threshold, as grounds for regulatory action on raw poultry, rather than relying solely on post-market illness surveillance. FSIS estimated the framework would meaningfully reduce Salmonella-attributed illness from chicken and turkey.",
-    "what_changed": "On April 25, 2025, FSIS withdrew the proposed Salmonella framework in its entirety, stating it would \"further assess its approach for addressing Salmonella illnesses associated with poultry products\" rather than finalize the 2024 proposal. The agency's withdrawal notice followed roughly 7,000 public comments, including opposition from poultry and meat industry groups, members of Congress, and a risk-assessment firm retained by industry that challenged the proposed testing thresholds. No replacement framework or timeline for a new proposal was announced.",
+    "original_rule_summary": "In August 2024, FSIS proposed a new regulatory framework declaring raw chicken and turkey products \"adulterated\" -- and therefore subject to recall or sale-block -- if they contained 10 or more colony-forming units of Salmonella per gram/milliliter and tested positive for one of several Salmonella serotypes linked to human illness. It would have extended to raw chicken and turkey products broadly the adulterant approach FSIS had finalized in April 2024 for raw breaded, stuffed chicken, after FSIS found that its Salmonella verification testing program, in place since 1996, had cut contamination rates but shown no observable impact on human illness rates. FSIS estimated the framework would meaningfully reduce Salmonella-attributed illness from chicken and turkey.",
+    "what_changed": "On April 25, 2025, FSIS withdrew the proposed Salmonella framework in its entirety, stating it would \"further assess its approach for addressing Salmonella illnesses associated with poultry products\" rather than finalize the 2024 proposal. The agency's withdrawal notice followed 7,089 public comments from stakeholders including poultry and meat industry trade associations, consumer advocacy organizations, members of Congress, and a risk-assessment firm; FSIS said the comments raised objections to its legal authority to set the standards, the science behind the framework, and its economic impacts. No replacement framework or timeline for a new proposal was announced.\n\nUpdate 2026-11-17: Rather than re-proposing product standards, FSIS has moved to meetings and pilots. In December 2025 it again delayed, with no new date, verification sampling under its separate April 2024 determination that Salmonella above 1 CFU/g adulterates raw breaded, stuffed chicken, citing \"limitations in available test methods.\" On January 14, 2026 it held a public meeting on \"practical strategies for reducing Salmonella illnesses attributed to poultry products,\" seeking input on \"alternative performance standard parameters\" and the needs of small and very small producers; Consumer Reports' Michael Hansen urged the agency there to reverse the breaded-chicken delay. In June 2026 FSIS announced a pilot for raw poultry plants that use Salmonella biomapping or a validated HACCP control point, judging them against existing performance standards over a shorter moving window (starting at 13 weeks instead of 52); it said the pilot's data could inform potential future regulatory changes.",
     "primary_proponent": {
       "name": "Brooke Rollins",
       "role": "Secretary of Agriculture",
       "note": "FSIS, which she oversees, issued the formal withdrawal notice; no more specific individual within FSIS is named on the record as having personally driven the decision."
     },
     "corporate_beneficiaries": [
-      "Poultry and meat processing industry -- trade groups and a risk-assessment consultancy retained by industry were among the roughly 7,000 commenters whose opposition the withdrawal notice cited"
+      "Poultry and meat processing industry -- industry trade associations were among the 7,089 commenters, and FSIS cited commenters' objections to its legal authority, the science and the economic impacts in withdrawing the proposal"
     ],
     "estimated_health_impact": {
-      "summary": "**FSIS's own data attributes well over 100,000 Salmonella illnesses per year to chicken and turkey consumption; the withdrawn framework was the first proposal to regulate Salmonella contamination itself (rather than only post-illness surveillance) on raw poultry, and its withdrawal leaves that regulatory gap unaddressed with no announced replacement.**",
+      "summary": "**FSIS's own data attributes well over 100,000 Salmonella illnesses per year to chicken and turkey consumption; the withdrawn framework would have barred sale of raw chicken and turkey above set Salmonella levels, and its withdrawal leaves that gap unaddressed with no announced replacement.**",
       "figures": [
         {
           "metric": "FSIS-estimated chicken-associated Salmonella illnesses per year",
@@ -15720,22 +15767,22 @@
           "source": "CDC national Salmonella burden estimate"
         },
         {
-          "metric": "Public comments received opposing the proposed framework",
-          "value": "~7,000",
-          "source": "USDA/FSIS withdrawal notice, April 2025, as reported by CIDRAP and Civil Eats"
+          "metric": "Public comments received on the proposed framework (supporting and opposing)",
+          "value": "7,089 (1,415 unique letters)",
+          "source": "FSIS withdrawal notice, Federal Register doc. 2025-07187, April 25, 2025"
         }
       ],
       "caveat": "The chicken/turkey-specific illness figures are FSIS's own baseline burden estimates, not a projection of how much the withdrawn rule specifically would have reduced them -- FSIS did not publish a finalized quantified reduction estimate before withdrawing the proposal. The CDC figure covers all Salmonella sources, not poultry alone, and is included as national-scale context, not a poultry-specific figure."
     },
-    "confidence_note": "HIGH confidence on the withdrawal itself and its stated rationale -- independently corroborated by CIDRAP, Civil Eats, The New Lede, U.S. News, Food Dive, and The Hill, several citing FSIS's own withdrawal notice text. The illness-burden figures are FSIS's and CDC's own published estimates, not advocacy-group figures.",
+    "confidence_note": "HIGH confidence on the withdrawal itself and its stated rationale -- independently corroborated by CIDRAP, Civil Eats, The New Lede, U.S. News, Food Dive, and The Hill, several citing FSIS's own withdrawal notice text. The illness-burden figures are FSIS's and CDC's own published estimates, not advocacy-group figures. Re-verified 2026-11-17: withdrawal details reconfirmed (CIDRAP, Rolling Stone, The New Lede, The Hill); FSIS's December 2025 meeting notice and Food Safety Magazine coverage of the breaded-chicken delay, the January 2026 meeting and the June 2026 pilot added.",
     "pull_quote": "CDC's broader national estimate ties non-typhoidal Salmonella from all sources to roughly 1.35 million illnesses, 26,500 hospitalizations, and 420 deaths a year — the larger burden the withdrawn poultry-specific framework was designed to help address.",
-    "short_summary": "USDA withdrew a proposed rule that would have set the first-ever Salmonella contamination limits for raw chicken and turkey.",
+    "short_summary": "USDA withdrew a proposed rule that would have barred sale of raw chicken and turkey above set Salmonella contamination limits.",
     "section_summaries": {
-      "what_changed": "USDA/FSIS withdrew its 2024 proposal to set the first-ever contamination-based Salmonella limits on raw chicken and turkey, after industry pushback, with no replacement announced.",
-      "estimated_impact": "FSIS's own data ties over 165,000 illnesses/year to chicken and turkey Salmonella; the withdrawn rule was the first proposal to regulate that contamination directly.",
+      "what_changed": "USDA/FSIS withdrew its 2024 proposal to bar sale of raw chicken and turkey above set Salmonella levels; since then it has held a public meeting and announced a pilot, not a new rule.",
+      "estimated_impact": "FSIS's own data ties over 165,000 illnesses/year to chicken and turkey Salmonella; the withdrawn rule would have barred sale of the most contaminated product.",
       "confidence_note": "Well-corroborated across multiple food-safety and general-news outlets; figures are FSIS's/CDC's own."
     },
-    "last_verified": "2026-09-10",
+    "last_verified": "2026-11-17",
     "date_added": "2026-09-10",
     "sources": [
       {
@@ -15761,18 +15808,38 @@
       {
         "name": "FSIS -- Salmonella By the Numbers",
         "url": "https://www.fsis.usda.gov/inspection/inspection-programs/inspection-poultry-products/reducing-salmonella-poultry/salmonella"
+      },
+      {
+        "name": "FSIS -- Notice of public meeting, Exploring Practical Strategies to Reduce Salmonella in Poultry Products (Federal Register, Dec. 2, 2025)",
+        "url": "https://public-inspection.federalregister.gov/2025-21738.pdf"
+      },
+      {
+        "name": "Food Safety Magazine -- USDA Indefinitely Delays Enforcement of Salmonella as Adulterant in Raw Breaded, Stuffed Chicken (Dec. 1, 2025)",
+        "url": "https://www.food-safety.com/articles/10909-usda-indefinitely-delays-enforcement-of-salmonella-as-adulterant-in-raw-breaded-stuffed-chicken"
+      },
+      {
+        "name": "Food Safety Magazine -- Support for USDA-FSIS' Withdrawn Regulatory Framework for Salmonella in Poultry Voiced at Meeting (Jan. 15, 2026)",
+        "url": "https://www.food-safety.com/articles/11047-support-for-usda-fsis-withdrawn-regulatory-framework-for-salmonella-in-poultry-voiced-at-meeting"
+      },
+      {
+        "name": "Food Safety Magazine -- USDA-FSIS Announces Pilot Program to Evaluate Salmonella Control Strategies in Raw Poultry Establishments (June 29, 2026)",
+        "url": "https://www.food-safety.com/articles/11557-usda-fsis-announces-pilot-program-to-evaluate-salmonella-control-strategies-in-raw-poultry-establishments"
+      },
+      {
+        "name": "Federal Register -- FSIS, Salmonella Framework for Raw Poultry Products; Withdrawal (Apr. 25, 2025)",
+        "url": "https://www.federalregister.gov/documents/2025/04/25/2025-07187/salmonella-framework-for-raw-poultry-products"
       }
     ],
-    "last_substantive_update": "2026-09-10",
+    "last_substantive_update": "2026-11-17",
     "glance": {
       "who": "Brooke Rollins (Agriculture Secretary)",
-      "what": "Withdrew the first-ever proposed Salmonella limits for raw chicken and turkey",
+      "what": "Withdrew proposed Salmonella limits that would have kept tainted raw chicken and turkey off sale",
       "harm": {
         "kind": "physical",
         "certainty": "projected",
         "who": "Consumers of raw poultry"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-11-17"
     },
     "status_stage": "Unchallenged",
     "key_events": [
@@ -15794,8 +15861,44 @@
           "https://www.thenewlede.org/2025/04/usda-withdraws-proposed-rule-meant-to-reduce-salmonella-in-poultry-products/",
           "https://thehill.com/homenews/administration/5268172-usda-pulls-rule-to-limit-salmonella-levels-in-raw-poultry/"
         ]
+      },
+      {
+        "date": "2025-12",
+        "text": "FSIS again delays, with no new date, Salmonella testing under its rule for raw breaded, stuffed chicken",
+        "sources": [
+          "https://www.food-safety.com/articles/10909-usda-indefinitely-delays-enforcement-of-salmonella-as-adulterant-in-raw-breaded-stuffed-chicken",
+          "https://www.food-safety.com/articles/11047-support-for-usda-fsis-withdrawn-regulatory-framework-for-salmonella-in-poultry-voiced-at-meeting"
+        ]
+      },
+      {
+        "date": "2026-01-14",
+        "text": "FSIS holds a public meeting on practical strategies to reduce poultry Salmonella illnesses",
+        "sources": [
+          "https://public-inspection.federalregister.gov/2025-21738.pdf",
+          "https://www.food-safety.com/articles/11047-support-for-usda-fsis-withdrawn-regulatory-framework-for-salmonella-in-poultry-voiced-at-meeting"
+        ]
+      },
+      {
+        "date": "2026-06",
+        "text": "FSIS announces a pilot judging poultry plants on a shorter Salmonella window, not a new rule",
+        "sources": [
+          "https://www.food-safety.com/articles/11557-usda-fsis-announces-pilot-program-to-evaluate-salmonella-control-strategies-in-raw-poultry-establishments"
+        ]
       }
-    ]
+    ],
+    "timeline": {
+      "what_changed": {
+        "base": "On April 25, 2025, FSIS withdrew the proposed Salmonella framework in its entirety, stating it would \"further assess its approach for addressing Salmonella illnesses associated with poultry products\" rather than finalize the 2024 proposal. The agency's withdrawal notice followed 7,089 public comments from stakeholders including poultry and meat industry trade associations, consumer advocacy organizations, members of Congress, and a risk-assessment firm; FSIS said the comments raised objections to its legal authority to set the standards, the science behind the framework, and its economic impacts. No replacement framework or timeline for a new proposal was announced.",
+        "updates": [
+          {
+            "date": "2026-11-17",
+            "label": "Update",
+            "text": "Update 2026-11-17: Rather than re-proposing product standards, FSIS has moved to meetings and pilots. In December 2025 it again delayed, with no new date, verification sampling under its separate April 2024 determination that Salmonella above 1 CFU/g adulterates raw breaded, stuffed chicken, citing \"limitations in available test methods.\" On January 14, 2026 it held a public meeting on \"practical strategies for reducing Salmonella illnesses attributed to poultry products,\" seeking input on \"alternative performance standard parameters\" and the needs of small and very small producers; Consumer Reports' Michael Hansen urged the agency there to reverse the breaded-chicken delay. In June 2026 FSIS announced a pilot for raw poultry plants that use Salmonella biomapping or a validated HACCP control point, judging them against existing performance standards over a shorter moving window (starting at 13 weeks instead of 52); it said the pilot's data could inform potential future regulatory changes.",
+            "effective_date": "2026-11-17"
+          }
+        ]
+      }
+    }
   },
   {
     "id": "va-firearm-fiduciary-mental-illness-rollback-2026",
