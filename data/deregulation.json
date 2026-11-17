@@ -5,7 +5,7 @@
     "administration": "Trump II (2025-present)",
     "agency": "White House / OMB (directs EPA, DOE, DOI, FERC, NRC, Army Corps of Engineers, BLM, BOEM)",
     "domain": "cross-cutting (structural/process rule, energy/environmental focus)",
-    "status": "In effect, partly implemented: FERC and NRC sunset rules are in force (first lapses due Dec. 5, 2026 and Jan. 8, 2027 unless extended); DOE withdrew its direct final rule July 9, 2026, and its identical proposal is pending; no EPA sunset rule in the Federal Register as of Sept. 2026.",
+    "status": "In effect, partly implemented: FERC and NRC sunset rules are in force (first lapses due Dec. 5, 2026 and Jan. 8, 2027 unless extended); DOE withdrew its direct final rule July 9, 2026, and its identical proposal is pending; EPA has not published a sunset rule.",
     "date_of_action": "2025-04-09",
     "original_rule_summary": "No prior rule -- this is a new process mandate targeting energy-related regulations under statutes including the Federal Power Act, Natural Gas Act, Atomic Energy Act, Surface Mining Control and Reclamation Act, Outer Continental Shelf Lands Act, Endangered Species Act, and appliance efficiency law; EPA and the Army Corps were to name their own covered statutes to OMB.",
     "what_changed": "Directs covered agencies (EPA, DOE, FERC, NRC, DOI bureaus, Army Corps, BLM, BOEM) to issue a 'sunset rule', effective by September 30, 2025, inserting a 'Conditional Sunset Date' into covered existing regulations -- one year after the sunset rule's effective date, unless the agency affirmatively extends it (to a date no more than 5 years out). All new energy-related regulations must include a sunset date no more than 5 years out. **If an agency does not act to extend a regulation before its sunset date, the regulation automatically expires and is removed from the Code of Federal Regulations -- no further rulemaking is required for the expiration itself, though the order says the agency will first offer the public a chance to comment on the rule's costs and benefits.** Agencies missed the September 30, 2025 deadline and applied the order narrowly. FERC issued a direct final rule on October 21, 2025, effective December 5, 2025, giving a set of its regulations a December 5, 2026 sunset date; it rescinded the sunset for one provision (non-mandatory smart-grid guidance) after an adverse comment. NRC issued its direct final rule on December 3, 2025, effective January 8, 2026, with a January 8, 2027 sunset date. NRC said the vast majority of its regulations fell outside the order because they protect public health and safety or the common defense, form part of its statutory permitting regime, or implement other statutes, so it applied sunsets mainly to unused or outdated provisions such as interpretation sections. After six comment submissions raised significant adverse comments, NRC withdrew the sunset for its aircraft impact assessment requirement for reactors (10 CFR 50.150) on January 8, 2026, then reinstated it through a final rule effective April 8, 2026. In June 2026 NRC opened the promised public comment period on the costs and benefits of the regulations due to lapse January 8, 2027. DOE published a direct final rule and an identical proposed rule on May 29, 2026, setting a one-year sunset on 21 parts of Title 10 of the CFR and a five-year sunset on seven more (covering access to classified information, the Human Reliability Program and worker safety), while leaving out nuclear-safety rules tied to Price-Anderson indemnification; its list does not include DOE's appliance efficiency standards. Adverse comments followed: the Institute for Policy Integrity said the process 'bypasses both meaningful public input and true consideration of whether the sunsets comport with statutory mandates or improve overall public welfare,' and 14 state attorneys general wrote that the proposal 'effectively repeals hundreds of regulations.' DOE withdrew the direct final rule on July 9, 2026, and said it would respond to the comments in any final action on the proposed rule, which remains pending. In a June 2026 oil and gas leasing proposal, BLM declined to add a sunset date, saying those rules rest mainly on the Mineral Leasing Act rather than the Federal Land Policy and Management Act.",
@@ -38,14 +38,14 @@
       ],
       "caveat": "Counts are TAP's, taken from the agencies' Federal Register documents; no agency, GAO or outside estimate of health, mortality or dollar effects was found, and none is claimed here. The 'hundreds of regulations' characterization is the state attorneys general's. Real impact depends on which provisions agencies let lapse at the first sunset dates, on DOE's final action, and on whether EPA, Interior bureaus and the Army Corps issue sunset rules; the order's requirement that new covered rules carry sunset dates of no more than five years is not captured in these counts."
     },
-    "confidence_note": "Strong 'process is the harm' entry, similar to EO 14192 but energy-specific and more severe in mechanism -- automatic expiration by default, rather than requiring agencies to affirmatively act to repeal. Worth noting that NRC and FERC applied sunsets mainly to unused, outdated or procedural provisions (NRC said most of its rules were outside the order's scope), DOE withdrew its direct final rule after adverse comments, and BLM declined to sunset its oil and gas leasing rules: the mechanism is structurally risky, but outcomes so far are narrow and uneven. NRC did, however, reinstate a sunset on its aircraft impact assessment requirement over adverse comments.",
+    "confidence_note": "Strong 'process is the harm' entry, similar to EO 14192 but energy-specific and more severe in mechanism -- automatic expiration by default, rather than requiring agencies to affirmatively act to repeal. Worth noting that NRC and FERC applied sunsets mainly to unused, outdated or procedural provisions (NRC said most of its rules were outside the order's scope), DOE withdrew its direct final rule after adverse comments, and BLM declined to sunset its oil and gas leasing rules: the mechanism is structurally risky, but outcomes so far are narrow and uneven. NRC did, however, reinstate a sunset on its aircraft impact assessment requirement over adverse comments. Re-verified 2026-11-17: FERC's rule text still sets a Dec. 5, 2026 lapse unless the Commission extends it, and the Federal Register shows no FERC extension notice, no final DOE action on its pending proposal and no EPA, Interior or Army Corps sunset rule.",
     "pull_quote": "The sunset process 'bypasses both meaningful public input and true consideration of whether the sunsets comport with statutory mandates,' the Institute for Policy Integrity told DOE, which withdrew its direct final rule in July 2026.",
     "section_summaries": {
       "what_changed": "Agencies must give existing energy rules automatic expiration dates; unless renewed, they lapse. FERC and NRC applied it narrowly; DOE withdrew its direct final rule after adverse comments.",
       "estimated_impact": "The order makes covered energy rules lapse unless renewed, but agencies have aimed it mostly at minor or unused rules; the first lapses are due Dec. 2026 (FERC) and Jan. 2027 (NRC).",
       "confidence_note": "A structurally risky mechanism with a narrow, uneven rollout: NRC and FERC sunset mostly unused rules, DOE withdrew its direct final rule, and BLM left its leasing rules out."
     },
-    "last_verified": "2026-09-28",
+    "last_verified": "2026-11-17",
     "date_added": "2026-07-03",
     "sources": [
       {
@@ -114,7 +114,7 @@
       }
     ],
     "short_summary": "Ordered energy agencies to make covered rules auto-expire after 1 year unless renewed.",
-    "last_substantive_update": "2026-09-28",
+    "last_substantive_update": "2026-11-17",
     "glance": {
       "who": "Donald Trump",
       "what": "Ordered energy rules to expire after one year unless agencies renew them",
@@ -123,7 +123,7 @@
         "certainty": "documented",
         "who": "Energy and environmental protections"
       },
-      "reviewed": "2026-09-28"
+      "reviewed": "2026-11-17"
     },
     "status_stage": "Unchallenged",
     "key_events": [
