@@ -3557,7 +3557,15 @@
    },
    "11": {
     "state": "supports",
-    "why": "The notice, filed 11/12/26, describes the November 11, 2026 Abramowitz v. Lake decision, says defendants there as here argued the CSRA implicitly vested exclusive jurisdiction in the MSPB, and quotes the court's conclusion as the claim states.",
+    "why": "The opinion header shows No. 25-5314 decided November 10, 2026, and the court states 'We affirm the injunction' barring removal without the Broadcasting Board's approval, and concludes that Congress had no reason to channel the claim through the CSRA 'and every reason not to.'",
+    "host": "media.cadc.uscourts.gov",
+    "date": "2026-11-16",
+    "kind": "fact",
+    "archive": false
+   },
+   "12": {
+    "state": "supports",
+    "why": "The notice, filed 11/12/26, describes the Abramowitz v. Lake decision, states defendants there argued the CSRA implicitly vested exclusive jurisdiction in the MSPB, and quotes the court's 'no reason to channel ... and every reason not to' conclusion.",
     "host": "storage.courtlistener.com",
     "date": "2026-11-16",
     "kind": "fact",
@@ -4925,7 +4933,7 @@
   "comey-seashells-ednc-prosecution-2026": {
    "0": {
     "state": "partly",
-    "why": "The excerpt and the following sentences confirm the Sept. 30 arraignment, Oct. 21 trial, and July 28/Aug. 18 motion deadlines, but the provided text does not state that the order was entered on May 26, 2026.",
+    "why": "The WITN article reports Judge Flanagan set trial for October 21st and arraignment September 30th in New Bern, with motions due July 28th and responses August 18th; however, the provided text does not show the article's publication date of May 26, 2026.",
     "host": "witn.com",
     "date": "2026-11-16",
     "kind": "fact",
@@ -4933,13 +4941,21 @@
    },
    "1": {
     "state": "supports",
+    "why": "The order grants the unopposed May 20 motion, recites the May 8 scheduling order's June 30 arraignment and July 15 trial, and sets arraignment September 30, 2026 and trial October 21, 2026 at New Bern, with motions July 28, responses August 18 and replies September 1.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-11-16",
+    "kind": "fact",
+    "archive": false
+   },
+   "2": {
+    "state": "supports",
     "why": "The source directly confirms the filing removed Petracca as lead prosecutor and substituted Timothy Severo, and separately states that court filings on Petracca's removal from multiple cases do not specify why he stepped aside, supporting the 'no explanation given' part of the claim.",
     "host": "cbsnews.com",
     "date": "2026-09-15",
     "kind": "fact",
     "archive": true
    },
-   "2": {
+   "3": {
     "state": "partly",
     "why": "The source clearly confirms the true-threat/First Amendment argument in Comey's motion to dismiss, and that Comey argued the DOJ was 'singling him out,' but it does not use the specific terms 'selective and vindictive prosecution' -- that legal theory is more explicitly developed in other sources cited elsewhere in this entry.",
     "host": "democracydocket.com",
@@ -4947,7 +4963,7 @@
     "kind": "fact",
     "archive": false
    },
-   "3": {
+   "4": {
     "state": "supports",
     "why": "The source directly states that Comey's lawyers alleged the Secret Service knowingly conducted illegal electronic surveillance of him in connection with the '8647'/seashell threat case, matching the claim.",
     "host": "cnbc.com",
@@ -4955,7 +4971,7 @@
     "kind": "fact",
     "archive": false
    },
-   "4": {
+   "5": {
     "state": "supports",
     "why": "The article reports Comey's Tuesday-evening motion-to-dismiss filing alleging the Secret Service 'sent frequent updates to Air Force One' at Trump's direct request before speaking to the press, and that the DOJ's 'number three' ordered warrantless surveillance an agent said was 'legally' a 'bad idea,' offered as vindictive/selective-prosecution evidence (the calendar date is given only as 'Tuesday').",
     "host": "democracydocket.com",
@@ -4963,7 +4979,7 @@
     "kind": "fact",
     "archive": false
    },
-   "5": {
+   "6": {
     "state": "supports",
     "why": "The AP report (dated August 19) describes DOJ's late-Tuesday filings quoting 'there is no serious dispute that an objective viewer of Comey's post could read it to mean 'Kill President Trump,'' doubting Comey's seashell account, and denying vindictiveness because the local U.S. attorney made the indictment decision.",
     "host": "reviewjournal.com",
@@ -4971,7 +4987,7 @@
     "kind": "fact",
     "archive": false
    },
-   "6": {
+   "7": {
     "state": "supports",
     "why": "Boyle's affidavit, filed 08/18/26 in support of the response to Comey's vindictive/selective prosecution motion, contains the quoted paragraph 14 and states he had no communication with Blanche until the day before the April 28, 2026 true bill.",
     "host": "storage.courtlistener.com",
@@ -4979,7 +4995,7 @@
     "kind": "fact",
     "archive": false
    },
-   "7": {
+   "8": {
     "state": "supports",
     "why": "The filing is Comey's reply in support of his motion to dismiss for lack of a true threat, filed 09/01/26, and its introduction quotes the government's '[o]nly a jury can resolve' argument and contends that context does not bear on the legal question.",
     "host": "storage.courtlistener.com",
@@ -4987,7 +5003,7 @@
     "kind": "fact",
     "archive": false
    },
-   "8": {
+   "9": {
     "state": "supports",
     "why": "The Sept. 25 order grants the Sept. 14 unopposed motion, moves arraignment from Sept. 30, 2026 to January 2027, says trial will be set after arraignment on a not guilty plea, and states in the excerpt that the listed motions 'now are ripe for decision.'",
     "host": "storage.courtlistener.com",
@@ -4995,7 +5011,7 @@
     "kind": "fact",
     "archive": false
    },
-   "9": {
+   "10": {
     "state": "supports",
     "why": "The NYT excerpt states Boyle brought charges against Comey over the '86 47' seashell photo and quotes his affidavit with the exact wording in the claim.",
     "host": "nytimes.com",
@@ -6570,6 +6586,14 @@
     "why": "Chainalysis's own blog post is this industry analysis, describing the memo's practical effect of ending 'regulation by prosecution' while retaining focus on harm-based crimes.",
     "host": "chainalysis.com",
     "date": "2026-09-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "supports",
+    "why": "The Cointelegraph article, published April 28, 2026, reports Blanche speaking Monday at a Las Vegas Bitcoin conference, quoting 'fundamentally changed the game' and that developers not knowingly helping third parties will not be investigated or charged.",
+    "host": "cointelegraph.com",
+    "date": "2026-11-16",
     "kind": "fact",
     "archive": false
    }
@@ -17570,12 +17594,12 @@
     "archive": false
    },
    "4": {
-    "state": "supports",
-    "why": "The Feb. 28, 2026 NYT text reports, 'to an extent not previously reported,' that rotating SWAT teams escort Wilkins for singing appearances, personal engagements and errands, that Patel beefed up Nashville staffing where she lives, and that former agents called the arrangement unprecedented.",
+    "state": "partly",
+    "why": "The archived NYT preview confirms rotating SWAT teams escorting Wilkins for singing appearances, personal engagements and errands, described as unprecedented by former agents and 'to an extent not previously reported'; the Nashville staffing increase, the four-agent two-vehicle team, and the overridden legal-review advice are not in the provided preview text.",
     "host": "nytimes.com",
-    "date": "2026-09-27",
+    "date": "2026-11-16",
     "kind": "fact",
-    "archive": false
+    "archive": true
    },
    "5": {
     "state": "supports",
@@ -17587,13 +17611,21 @@
    },
    "6": {
     "state": "supports",
+    "why": "The Reuters report (Jerusalem Post, March 20, 2026) states a 26-year-old Massachusetts man was arrested and charged in Boston with threats in interstate commerce over the 'canoed by an assault rifle' email, sent after a February 28 article per a search warrant application, and that he pleaded not guilty.",
+    "host": "jpost.com",
+    "date": "2026-11-16",
+    "kind": "fact",
+    "archive": false
+   },
+   "7": {
+    "state": "supports",
     "why": "The NYT text covers the Pearl Harbor 'V.I.P. Snorkel,' the pattern of blending leisure with official travel on government jets, the Philadelphia concert viewed from a private suite, and the SWAT security detail for Wilkins.",
     "host": "nytimes.com",
     "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
-   "7": {
+   "8": {
     "state": "supports",
     "why": "IBTimes UK states the security-detail agents were previously assigned to an FBI SWAT team in the Nashville field office, and separately that providing full FBI protection to a romantic partner not residing with the official is unprecedented, matching both parts of the claim.",
     "host": "ibtimes.co.uk",
@@ -17601,7 +17633,7 @@
     "kind": "fact",
     "archive": false
    },
-   "8": {
+   "9": {
     "state": "supports",
     "why": "Mediaite quotes the Times directly: Patel, through an FBI spokesman, declined to say who financed the suite, and the spokesman said Wilkins was an 'invited guest' of performers whose representatives did not respond to confirm it.",
     "host": "mediaite.com",
@@ -17609,7 +17641,7 @@
     "kind": "fact",
     "archive": false
    },
-   "9": {
+   "10": {
     "state": "supports",
     "why": "The Daily Beast article confirms the Philadelphia concert trip and that flight crew and security detail remained on duty past 11 p.m. collecting overtime.",
     "host": "thedailybeast.com",
@@ -17617,7 +17649,15 @@
     "kind": "fact",
     "archive": false
    },
-   "10": {
+   "11": {
+    "state": "supports",
+    "why": "The complaint (Case 3:26-cv-00725, M.D. Tenn., filed 05/29/26) names Versant Media Group d/b/a MS NOW, Leonnig and Dilanian, pleads defamation and a false-light count over the December 5, 2025 Article, calls it 'entirely false,' and states she 'did not have a security detail' in Spring 2025 and 'had only then been recently assigned a detail' at the November 17, 2025 article.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-11-16",
+    "kind": "fact",
+    "archive": false
+   },
+   "12": {
     "state": "supports",
     "why": "The July 9, 2026 House Judiciary Democrats release announces the Raskin-Durbin bicameral investigation following Grassley's private May 5, 2026 letter and cites VIP snorkeling in Hawaii, jet skiing, East Asia helicopter tours, and a $100,000 Milan Olympics trip; the letter's July 8 date is not stated in the text.",
     "host": "democrats-judiciary.house.gov",
@@ -17625,7 +17665,7 @@
     "kind": "fact",
     "archive": false
    },
-   "11": {
+   "13": {
     "state": "supports",
     "why": "IBTimes UK reports the 4 October engagement announcement with Wilkins's 'Went and got the law involved' post on X, recounts the NYT reporting that past directors' spouses got no personal security detail, and states her announcement made no mention of her security detail.",
     "host": "ibtimes.co.uk",
@@ -25013,9 +25053,9 @@
    },
    "7": {
     "state": "supports",
-    "why": "The NBC article reports the life sentence, quoted in the excerpt. The rest of the provided text covers the arrest, the conviction, the windfall claim and other Jan. 6 defendants, and never mentions an appeal or any later development in Johnson's case.",
-    "host": "nbcnews.com",
-    "date": "2026-09-27",
+    "why": "The report states Banuelos pleaded not guilty, is held at the Salt Lake County jail after prosecutors secured pretrial detention, faces a three-day trial beginning December 1st with the prospect of life in prison, and is one of nearly 100 January 6th defendants facing new prosecutions per the House Judiciary ranking member's report.",
+    "host": "macfarlanenews.substack.com",
+    "date": "2026-11-16",
     "kind": "fact",
     "archive": false
    }
@@ -26681,13 +26721,21 @@
    },
    "49": {
     "state": "supports",
+    "why": "The October 30, 2026 letter signed by AUSA Jeffrey Oestericher asks that the TRO (ECF No. 101) be amended to remove, as applicable to MAGA, Inc., the cancellation requirement, and states MAGA, Inc. is not a party and the named Defendants cannot control it.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-11-16",
+    "kind": "fact",
+    "archive": false
+   },
+   "50": {
+    "state": "supports",
     "why": "Dkt. 104 certifies emailing the TRO to MAGA, Inc. and its representative, the absence of airing arrangements with third parties or MAGA, and the removal.",
     "host": "storage.courtlistener.com",
     "date": "2026-11-02",
     "kind": "fact",
     "archive": false
    },
-   "50": {
+   "51": {
     "state": "supports",
     "why": "Dkt. 30 states the parties could not reach a joint proposal, the DNC will file on November 5 if necessary, and defendants request 14 days and assert no exigency.",
     "host": "storage.courtlistener.com",
@@ -26695,7 +26743,7 @@
     "kind": "fact",
     "archive": false
    },
-   "51": {
+   "52": {
     "state": "partly",
     "why": "The docket text confirms Dkt. 107 (Nov. 2: more than one business day, trial starting Nov. 16, possible Dec. 4 hearing) and Dkt. 112 (Nov. 3: opposition Nov. 5, reply Nov. 9), but the Dkt. 108 preliminary-injunction motion's own entry and filing date are not shown in the extracted text, only a later reference to '108 MOTION for Preliminary Injunction'.",
     "host": "courtlistener.com",
@@ -26703,7 +26751,7 @@
     "kind": "fact",
     "archive": false
    },
-   "52": {
+   "53": {
     "state": "partly",
     "why": "Dkt. 113 (filed 11/05/26) argues mootness because the November 3 midterms have concluded, that future injury is speculative, and that EOP staff time does not clearly violate the Purpose Statute or Section 718; the 'not direct competitors' argument appears, but the extracted text truncates the sentence so it does not show it names SEIU 32BJ and its PAC.",
     "host": "storage.courtlistener.com",
@@ -26711,7 +26759,7 @@
     "kind": "fact",
     "archive": false
    },
-   "53": {
+   "54": {
     "state": "supports",
     "why": "The Democracy Docket updates in the excerpt list the Nov. 2 PI brief, Nov. 5 opposition, Nov. 9 reply, and the Nov. 13 hearing entry quoted in the claim.",
     "host": "democracydocket.com",
@@ -26719,15 +26767,15 @@
     "kind": "fact",
     "archive": false
    },
-   "54": {
-    "state": "partly",
-    "why": "The Nov. 13 order (Dkt. 117, Judge Rochon) contains the quoted denial as moot, but the order does not identify Dkt. 102 as the government's October 30 request to stay the MAGA Inc. portion of the restraining order.",
+   "55": {
+    "state": "supports",
+    "why": "The November 13, 2026 order by Judge Rochon (Dkt. 117) contains the quoted language denying the Dkt. 102 letter motion as moot given Dkt. 104.",
     "host": "storage.courtlistener.com",
     "date": "2026-11-16",
     "kind": "fact",
     "archive": false
    },
-   "55": {
+   "56": {
     "state": "supports",
     "why": "Dkt. 33 (filed 11/13/26) states the government is no longer using appropriated funds and has not been for over a month, the relevant election is two years away, MAGA Inc. voluntarily instructed its media buyer to cancel placements, the amended complaint (Nov. 2) focused on latter-October ads, the PI motion was filed Nov. 5, and calls the staff-time theory novel.",
     "host": "storage.courtlistener.com",
@@ -26735,7 +26783,7 @@
     "kind": "fact",
     "archive": false
    },
-   "56": {
+   "57": {
     "state": "not_found",
     "why": "The captured CourtListener docket was last updated Nov. 2, 2026 and its entries end in late October; none of the Nov. 3, 5 or 13 minute orders (TRO extension to Nov. 25, Nov. 19 hearing, briefing deadlines) appear in the provided text.",
     "host": "courtlistener.com",
@@ -26908,6 +26956,14 @@
     "archive": false
    },
    "6": {
+    "state": "partly",
+    "why": "The release confirms the October 19, 2026 date, 28 LPR defendants charged in complaints under 'Operation Protect the Vote' across all four California USAOs, felony false-statement charges, the Essayli quote, and the presumption of innocence; but the provided text is truncated and does not show that 13 defendants were in the Central District.",
+    "host": "justice.gov",
+    "date": "2026-11-16",
+    "kind": "fact",
+    "archive": false
+   },
+   "7": {
     "state": "supports",
     "why": "The National News Desk piece dated Oct. 20, 2026 reports the Oval Office exchange with the quoted answer, Omar's denial, her attorneys' 'no legitimate basis' statement, and that no charges have been announced.",
     "host": "wlos.com",
@@ -26915,7 +26971,7 @@
     "kind": "fact",
     "archive": false
    },
-   "7": {
+   "8": {
     "state": "supports",
     "why": "The NYT excerpt contains each element: the eight U.S. attorneys and quoted 'thin evidence' line, three without Senate confirmation, two told to investigate, sections on all seven named attorneys, the Chicago case collapse figure, Trump's call to Essayli and his immediate investigation, Covington's quote, and Boyle's affidavit quote.",
     "host": "nytimes.com",
@@ -26923,7 +26979,7 @@
     "kind": "fact",
     "archive": false
    },
-   "8": {
+   "9": {
     "state": "supports",
     "why": "The Daily Beast (Oct. 28, 2026) relays the Times report, quotes Bis, and says it contacted Omar and Rosen.",
     "host": "thedailybeast.com",
@@ -26931,7 +26987,7 @@
     "kind": "fact",
     "archive": false
    },
-   "9": {
+   "10": {
     "state": "supports",
     "why": "Alternet's Oct. 28, 2026 summary of Barrett's report lists Boutros last of the eight, attributes the two-dozen-of-30 case failures to his office, and says a judge dismissed charges after finding the office mishandled a case where it won an indictment.",
     "host": "alternet.org",
@@ -26939,7 +26995,7 @@
     "kind": "fact",
     "archive": false
    },
-   "10": {
+   "11": {
     "state": "supports",
     "why": "The source reports Omar's fifth-term win amid the continuing investigation, her denial and characterization of it as Trump intimidation, and the government filings saying the search warrant is not yet fully executed and any charges would follow.",
     "host": "mprnews.org",
@@ -26947,7 +27003,7 @@
     "kind": "fact",
     "archive": false
    },
-   "11": {
+   "12": {
     "state": "supports",
     "why": "The November 6, 2026 ABC article states Blanche announced Reding Quinones' resignation, that sources said leadership admonished him for lack of progress, and that the probe has led to no criminal indictments.",
     "host": "abcnews.com",
@@ -28079,13 +28135,21 @@
    },
    "3": {
     "state": "supports",
+    "why": "The transcribed letter contains each quoted passage: the Sherman Act Section 1 concern over Standard 403, Woodward's adjunct-professor remark, the amicus-brief list, the 15-day response demand referencing the September 11, 2026 proposal, and the warning of additional investigatory steps.",
+    "host": "insidehighered.com",
+    "date": "2026-11-16",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "supports",
     "why": "Raw Story's text contains each quoted passage: the Oct 7 antitrust warning over part-time professor limits, the adjunct-bio line, the 15-day deadline with 'may proceed with additional investigatory steps,' and the letter faulting ABA stances on abortion, affirmative action and transgender health care.",
     "host": "rawstory.com",
     "date": "2026-10-16",
     "kind": "fact",
     "archive": false
    },
-   "4": {
+   "5": {
     "state": "supports",
     "why": "The Newsmax text states the letter went to the Council of the Section of Legal Education and Admissions to the Bar, quotes the 'insufficient'/'additional investigatory steps' warning, the ABA's proposal to drop the first-third rule, Woodward's view that it would not fully resolve concerns, and his criticism of ABA positions on abortion access, affirmative action and transgender procedures.",
     "host": "yahoo.com",
@@ -28093,7 +28157,7 @@
     "kind": "fact",
     "archive": false
    },
-   "5": {
+   "6": {
     "state": "supports",
     "why": "The ABA Journal article contains both quoted sentences, the 15-day deadline, the Nov. 13 next meeting, the August staff report finding 26 unmet criteria and recommending denial, and a decision expected by year's end.",
     "host": "abajournal.com",
@@ -28101,7 +28165,7 @@
     "kind": "fact",
     "archive": false
    },
-   "6": {
+   "7": {
     "state": "partly",
     "why": "The article supports the Oct. 7 DOJ letter, the quoted standards language, and the response deadline, but the provided (truncated) text does not show that DOJ and the Education Department declined to comment.",
     "host": "insidehighered.com",
@@ -28109,7 +28173,7 @@
     "kind": "fact",
     "archive": false
    },
-   "7": {
+   "8": {
     "state": "supports",
     "why": "The Nov. 16, 2026 ABA Journal article by Julianne Hill reports each element: the Friday vote on faculty requirements, easing non-bachelor admissions, cutting in-person hours 64 to 48, the Standards 402/403 approval with a second round going back for comment, and the expected year-end Education Department decision.",
     "host": "abajournal.com",
