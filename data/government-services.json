@@ -20119,9 +20119,9 @@
     "title": "Trump Officials Paused Mental Health Parity Enforcement Rules While Staffing at the Agency That Enforces Them Collapsed by a Fifth",
     "institution": "Employee Benefits Security Administration (EBSA), Department of Labor",
     "domain": "staff_office_cuts",
-    "status": "Ongoing -- rules remain paused, staffing decline projected to continue through 2026",
+    "status": "Ongoing -- the 2024 parity rules' new provisions stay unenforced; on March 30, 2026 the administration told a court it would stop defending them and propose a rewrite, now aiming to send it to White House review by Dec. 18, 2026. House Democrats said EBSA reportedly had about 590 staff in May 2026.",
     "date_of_action": "2025 (rule pause and staffing decline reported)",
-    "what_changed": "The Trump administration suspended enforcement of September 2024 regulations that required health plans to collect and report detailed data on mental health claim denials and coverage restrictions, and to explain corrective steps where disparities with physical-healthcare coverage were found. Enforcement of these rules falls to EBSA, a Department of Labor agency overseeing workplace benefits for roughly 150 million Americans, whose own workforce is projected to shrink nearly one-fifth -- from 831 employees in 2024 to 687 or fewer by 2026 -- following the expiration of temporary supplemental funding created by the 2020 No Surprises Act. Within that decline, EBSA's benefit advisers (who handle insurance-denial appeals directly with affected patients) fell 30%, and its investigative staff fell 40%. Former EBSA second-in-command Ali Khawar said 'the expectation was that these rules would be incredibly significant in driving better compliance,' while James Gelfand, president of the ERISA Industry Committee (representing large employers), argued the rules created 'an impossible standard.' EBSA's investigative capacity was already limited before this decline: between February 2021 and July 2024, the agency conducted only 150 investigations into mental health parity, finding 70 violations. ProPublica documented one concrete case of the enforcement mechanism's value: **a Massachusetts family facing $80,000 in bills after their daughter's residential mental-health treatment was denied by insurance had the denial resolved only after EBSA intervened**.",
+    "what_changed": "The Trump administration suspended enforcement of September 2024 regulations that required health plans to collect and report detailed data on mental health claim denials and coverage restrictions, and to explain corrective steps where disparities with physical-healthcare coverage were found. Enforcement of these rules falls to EBSA, a Department of Labor agency overseeing workplace benefits for roughly 150 million Americans, whose own workforce is projected to shrink nearly one-fifth -- from 831 employees in 2024 to 687 or fewer by 2026 -- following the expiration of temporary supplemental funding created by the 2020 No Surprises Act. Within that decline, EBSA's benefit advisers (who handle insurance-denial appeals directly with affected patients) fell by about 30%, and its investigative staff by nearly 40%, according to current and former employees. Former EBSA second-in-command Ali Khawar said 'the expectation was that these rules would be incredibly significant in driving better compliance,' while James Gelfand, president of the ERISA Industry Committee (representing large employers), argued the rules created 'an impossible standard.' EBSA's investigative capacity was already limited before this decline: between February 2021 and July 2024, the agency conducted only 150 investigations into mental health parity and issued just 70 letters finding violations, according to a Labor Department Inspector General report ProPublica cited. ProPublica documented one concrete case of the enforcement mechanism's value: **a Massachusetts family facing $80,000 in bills after their daughter's residential mental-health treatment was denied by insurance had the denial resolved only after EBSA intervened**.\n\nUpdate 2026-11-17: The pause grew out of a lawsuit the ERISA Industry Committee filed in January 2025, days before Trump's second inauguration; the Labor, Health and Human Services and Treasury departments announced on May 15, 2025 that they would not enforce the 2024 rule's provisions that are new relative to the 2013 rule. In a March 30, 2026 joint court filing, the departments said that \"rather than defend the Rule in this proceeding, they will issue a new proposed rule, including anticipated significant revisions\" to the provisions the employer group challenged, and that they intended to issue it \"no later than December 31, 2026.\" On September 8, 2026, the Labor Department issued Field Assistance Bulletin 2026-03, which kept that non-enforcement in place and narrowed the focus of EBSA's requests for plans' parity comparative analyses to three areas: separate treatment limitations and exclusions, medical necessity standards and review processes, and network adequacy. In a September 30, 2026 filing, the departments said they now intend to send the proposed rule to the White House Office of Information and Regulatory Affairs by December 18, 2026; the employer group called this \"a dramatic change from the government's previous representations\" and said the government should be directed to answer the suit by January 15, 2027 if no rule is proposed by December 31. Reported staffing fell further than ProPublica's projection: an October 8, 2026 letter from Reps. Bobby Scott and Mark DeSaulnier, the top Democrats on the House Education and Workforce Committee and its health and labor subcommittee, said that in May 2026 EBSA \"reportedly had approximately 590 employees,\" quoted a former senior official saying the agency had \"lost 40 [percent] of its investigators since the end of fiscal year 2024,\" and cited a January 2026 Labor Department Inspector General report finding \"roughly 1 investigator for every 21,400 plans.\" The lawmakers asked EBSA Assistant Secretary Daniel Aronowitz to answer questions on staffing by October 22, 2026.",
     "primary_proponent": {
       "name": "Trump administration, Department of Labor",
       "role": "Suspended enforcement of the 2024 parity-reporting rules while EBSA's enforcement staff declined",
@@ -20131,44 +20131,74 @@
       "summary": "Reduced federal capacity to enforce mental health insurance parity for the roughly 150 million Americans covered by employer health plans, at the same time the specific reporting rules meant to surface coverage disparities were suspended -- removing both the disclosure mechanism and much of the enforcement staff that would act on it.",
       "figures": [
         {
-          "metric": "EBSA workforce decline, 2024 to projected 2026",
+          "metric": "EBSA workforce, 2024 to ProPublica's projected 2026 level",
           "value": "831 to 687 or fewer employees (~17-18%)",
           "source": "ProPublica, citing EBSA workforce data"
         },
         {
+          "metric": "EBSA workforce, May 2026 (reported)",
+          "value": "about 590 employees",
+          "source": "Reps. Bobby Scott and Mark DeSaulnier, Oct. 8, 2026 letter to EBSA, citing a March 2026 letter from former EBSA officials"
+        },
+        {
           "metric": "Benefit-adviser staffing decline",
-          "value": "30%",
-          "source": "ProPublica"
+          "value": "about 30%",
+          "source": "ProPublica, citing current and former employees"
         },
         {
           "metric": "Investigative staffing decline",
-          "value": "40%",
-          "source": "ProPublica"
+          "value": "nearly 40%",
+          "source": "ProPublica, citing current and former employees"
+        },
+        {
+          "metric": "Benefit plans per EBSA investigator",
+          "value": "roughly 21,400",
+          "source": "Labor Department Inspector General report (Jan. 2026), quoted in the Oct. 8, 2026 House Democrats' letter"
         },
         {
           "metric": "EBSA mental-health-parity investigations, Feb. 2021-July 2024",
-          "value": "150 investigations, 70 violations found",
-          "source": "ProPublica, citing EBSA's own investigation data"
+          "value": "150 investigations, 70 letters finding violations",
+          "source": "ProPublica, citing a Labor Department Inspector General report"
         }
       ],
       "caveat": "Sourcing reviewed does not quantify how many patients nationally have been denied mental health claims that would otherwise have been caught by the paused reporting requirement or the reduced investigative staff -- the $80,000 Massachusetts case is documented as an illustrative example, not a systematic count."
     },
-    "confidence_note": "HIGH confidence on the paused rules, EBSA's staffing figures, and the named reactions, all directly sourced to ProPublica's dedicated investigation, which draws on EBSA's own workforce and investigation data.",
-    "pull_quote": "Between 2021 and 2024, EBSA conducted just 150 mental-health-parity investigations nationwide -- and found 70 violations.",
-    "last_verified": "2026-09-13",
+    "confidence_note": "HIGH confidence on the paused rules, EBSA's staffing figures, and the named reactions, all directly sourced to ProPublica's dedicated investigation, which draws on EBSA's own workforce and investigation data. Update 2026-11-17: the March 30 and September 30, 2026 positions are read directly from the joint status reports filed in the employer group's lawsuit, and the September 2026 enforcement bulletin from the Sept. 30 filing and a Morgan Lewis client alert. The 590-employee figure is from the House Democrats' letter, which says \"reportedly\" and cites a March 2026 letter from former EBSA officials; it is not an official EBSA count. Re-verified 2026-11-17: ProPublica's staffing, investigation and quoted figures re-read and still hold.",
+    "pull_quote": "Between 2021 and 2024, EBSA conducted just 150 mental-health-parity investigations nationwide -- and issued just 70 letters finding violations.",
+    "last_verified": "2026-11-17",
     "date_added": "2026-09-13",
     "sources": [
       {
         "name": "ProPublica -- mental health insurance rules paused, EBSA staffing collapse",
         "url": "https://www.propublica.org/article/mental-health-insurance-trump-rules"
+      },
+      {
+        "name": "ERIC v. HHS joint status report, March 30, 2026 (departments will not defend the 2024 rule)",
+        "url": "https://litigationtracker.law.georgetown.edu/wp-content/uploads/2025/01/ERISA-INDUSTRY-COMMITTEE-v.-DEPARTMENT-OF-HEALTH-AND-HUMAN-SERVICES-et-al_2026.03.30_JOINT-STATUS-REPORT.pdf"
+      },
+      {
+        "name": "ERIC v. HHS joint status report, September 30, 2026 (proposed rule to OIRA by Dec. 18, 2026)",
+        "url": "https://litigationtracker.law.georgetown.edu/wp-content/uploads/2025/01/ERISA-INDUSTRY-COMMITTEE-v.-DEPARTMENT-OF-HEALTH-AND-HUMAN-SERVICES-et-al_2026.09.30_JOINT-STATUS-REPORT.pdf"
+      },
+      {
+        "name": "Morgan Lewis -- Labor Department clarifies mental health parity enforcement focus (FAB 2026-03)",
+        "url": "https://www.morganlewis.com/pubs/2026/09/us-department-of-labor-clarifies-mental-health-parity-enforcement-focus"
+      },
+      {
+        "name": "Reps. Scott and DeSaulnier letter to EBSA on staffing and enforcement, Oct. 8, 2026",
+        "url": "https://fedscoop.com/wp-content/uploads/sites/5/2026/10/26.10.08-RM-Scott-HELP-Subcmte-RM-DeSaulnier-to-EBSA-re-Staffing-Enforcement.pdf"
+      },
+      {
+        "name": "FedScoop -- House Dems want DOL's benefits agency to answer for 'drastic' enforcement cuts",
+        "url": "https://fedscoop.com/employee-benefits-labor-department-workforce-cuts"
       }
     ],
     "section_summaries": {
-      "what_changed": "Trump officials suspended 2024 rules requiring health plans to report mental-health claim-denial disparities, while EBSA -- the Labor Department agency that enforces parity for 150 million Americans -- lost nearly a fifth of its staff (benefit advisers down 30%, investigators down 40%).",
-      "estimated_impact": "Removes both the disclosure mechanism meant to surface mental-health coverage disparities and much of the staff that would act on violations; no national count of resulting denied claims is available, though ProPublica documents one $80,000 case an EBSA investigation resolved before the cuts.",
-      "confidence_note": "HIGH confidence, directly sourced to ProPublica's dedicated investigation using EBSA's own data."
+      "what_changed": "Trump officials paused, then stopped defending, 2024 rules requiring health plans to report mental-health denial disparities, as the agency that enforces parity lost nearly 40% of its investigators.",
+      "estimated_impact": "Removes the disclosure mechanism meant to expose mental-health coverage gaps and much of the staff who act on violations; EBSA reportedly had about 590 staff in May 2026, down from 831 in 2024.",
+      "confidence_note": "HIGH confidence: ProPublica's investigation, the lawsuit's court filings and House Democrats' Oct. 2026 letter; the latest staff count is reported, not an official EBSA figure."
     },
-    "last_substantive_update": "2026-09-13",
+    "last_substantive_update": "2026-11-17",
     "glance": {
       "who": "Trump administration, Department of Labor",
       "what": "Paused mental-health parity reporting rules as EBSA, the enforcer, lost nearly a fifth of its staff",
@@ -20177,9 +20207,9 @@
         "certainty": "documented",
         "who": "Mental-health parity enforcement"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-11-17"
     },
-    "status_stage": "Unchallenged",
+    "status_stage": "In court",
     "key_events": [
       {
         "date": "2024-09",
@@ -20190,20 +20220,75 @@
       },
       {
         "date": "2025",
-        "text": "Trump administration suspends enforcement of the 2024 mental health parity rules",
-        "turning_point": true,
+        "text": "EBSA's benefit advisers fall about 30% and its investigators nearly 40% as temporary funding runs out",
         "sources": [
           "https://www.propublica.org/article/mental-health-insurance-trump-rules"
         ]
       },
       {
-        "date": "2025",
-        "text": "EBSA's benefit advisers fall 30% and its investigators 40% as temporary funding runs out",
+        "date": "2025-01",
+        "text": "Large-employer trade group ERIC sues to block the 2024 mental health parity rules",
         "sources": [
           "https://www.propublica.org/article/mental-health-insurance-trump-rules"
         ]
+      },
+      {
+        "date": "2025-05-15",
+        "text": "Labor, HHS and Treasury say they will not enforce the 2024 rules' new provisions",
+        "turning_point": true,
+        "sources": [
+          "https://www.morganlewis.com/pubs/2026/09/us-department-of-labor-clarifies-mental-health-parity-enforcement-focus"
+        ]
+      },
+      {
+        "date": "2026-03-30",
+        "text": "Departments tell the court they will stop defending the 2024 rules and propose a rewrite",
+        "turning_point": true,
+        "sources": [
+          "https://litigationtracker.law.georgetown.edu/wp-content/uploads/2025/01/ERISA-INDUSTRY-COMMITTEE-v.-DEPARTMENT-OF-HEALTH-AND-HUMAN-SERVICES-et-al_2026.03.30_JOINT-STATUS-REPORT.pdf"
+        ]
+      },
+      {
+        "date": "2026-09-08",
+        "text": "Labor Department bulletin keeps non-enforcement and narrows EBSA's parity enforcement focus",
+        "sources": [
+          "https://www.morganlewis.com/pubs/2026/09/us-department-of-labor-clarifies-mental-health-parity-enforcement-focus",
+          "https://litigationtracker.law.georgetown.edu/wp-content/uploads/2025/01/ERISA-INDUSTRY-COMMITTEE-v.-DEPARTMENT-OF-HEALTH-AND-HUMAN-SERVICES-et-al_2026.09.30_JOINT-STATUS-REPORT.pdf"
+        ]
+      },
+      {
+        "date": "2026-10-08",
+        "text": "House Democrats press EBSA on staffing, saying it reportedly had about 590 employees in May 2026",
+        "sources": [
+          "https://fedscoop.com/wp-content/uploads/sites/5/2026/10/26.10.08-RM-Scott-HELP-Subcmte-RM-DeSaulnier-to-EBSA-re-Staffing-Enforcement.pdf",
+          "https://fedscoop.com/employee-benefits-labor-department-workforce-cuts"
+        ]
       }
-    ]
+    ],
+    "timeline": {
+      "what_changed": {
+        "base": "The Trump administration suspended enforcement of September 2024 regulations that required health plans to collect and report detailed data on mental health claim denials and coverage restrictions, and to explain corrective steps where disparities with physical-healthcare coverage were found. Enforcement of these rules falls to EBSA, a Department of Labor agency overseeing workplace benefits for roughly 150 million Americans, whose own workforce is projected to shrink nearly one-fifth -- from 831 employees in 2024 to 687 or fewer by 2026 -- following the expiration of temporary supplemental funding created by the 2020 No Surprises Act. Within that decline, EBSA's benefit advisers (who handle insurance-denial appeals directly with affected patients) fell by about 30%, and its investigative staff by nearly 40%, according to current and former employees. Former EBSA second-in-command Ali Khawar said 'the expectation was that these rules would be incredibly significant in driving better compliance,' while James Gelfand, president of the ERISA Industry Committee (representing large employers), argued the rules created 'an impossible standard.' EBSA's investigative capacity was already limited before this decline: between February 2021 and July 2024, the agency conducted only 150 investigations into mental health parity and issued just 70 letters finding violations, according to a Labor Department Inspector General report ProPublica cited. ProPublica documented one concrete case of the enforcement mechanism's value: **a Massachusetts family facing $80,000 in bills after their daughter's residential mental-health treatment was denied by insurance had the denial resolved only after EBSA intervened**.",
+        "updates": [
+          {
+            "date": "2026-11-17",
+            "label": "Update",
+            "text": "Update 2026-11-17: The pause grew out of a lawsuit the ERISA Industry Committee filed in January 2025, days before Trump's second inauguration; the Labor, Health and Human Services and Treasury departments announced on May 15, 2025 that they would not enforce the 2024 rule's provisions that are new relative to the 2013 rule. In a March 30, 2026 joint court filing, the departments said that \"rather than defend the Rule in this proceeding, they will issue a new proposed rule, including anticipated significant revisions\" to the provisions the employer group challenged, and that they intended to issue it \"no later than December 31, 2026.\" On September 8, 2026, the Labor Department issued Field Assistance Bulletin 2026-03, which kept that non-enforcement in place and narrowed the focus of EBSA's requests for plans' parity comparative analyses to three areas: separate treatment limitations and exclusions, medical necessity standards and review processes, and network adequacy. In a September 30, 2026 filing, the departments said they now intend to send the proposed rule to the White House Office of Information and Regulatory Affairs by December 18, 2026; the employer group called this \"a dramatic change from the government's previous representations\" and said the government should be directed to answer the suit by January 15, 2027 if no rule is proposed by December 31. Reported staffing fell further than ProPublica's projection: an October 8, 2026 letter from Reps. Bobby Scott and Mark DeSaulnier, the top Democrats on the House Education and Workforce Committee and its health and labor subcommittee, said that in May 2026 EBSA \"reportedly had approximately 590 employees,\" quoted a former senior official saying the agency had \"lost 40 [percent] of its investigators since the end of fiscal year 2024,\" and cited a January 2026 Labor Department Inspector General report finding \"roughly 1 investigator for every 21,400 plans.\" The lawmakers asked EBSA Assistant Secretary Daniel Aronowitz to answer questions on staffing by October 22, 2026.",
+            "effective_date": "2026-11-17"
+          }
+        ]
+      },
+      "confidence_note": {
+        "base": "HIGH confidence on the paused rules, EBSA's staffing figures, and the named reactions, all directly sourced to ProPublica's dedicated investigation, which draws on EBSA's own workforce and investigation data.",
+        "updates": [
+          {
+            "date": "2026-11-17",
+            "label": "Update",
+            "text": "Update 2026-11-17: the March 30 and September 30, 2026 positions are read directly from the joint status reports filed in the employer group's lawsuit, and the September 2026 enforcement bulletin from the Sept. 30 filing and a Morgan Lewis client alert. The 590-employee figure is from the House Democrats' letter, which says \"reportedly\" and cites a March 2026 letter from former EBSA officials; it is not an official EBSA count. Re-verified 2026-11-17: ProPublica's staffing, investigation and quoted figures re-read and still hold.",
+            "effective_date": "2026-11-17"
+          }
+        ]
+      }
+    }
   },
   {
     "id": "education-department-dismantlement-trump2",
@@ -61692,43 +61777,43 @@
     "title": "FY2027 Budget Proposal Eliminates All U.S. Funding for the Pan American Health Organization",
     "institution": "Department of Health and Human Services; Pan American Health Organization (PAHO), the WHO's regional body for the Americas",
     "domain": "funding_redirection",
-    "status": "Proposed -- part of the discretionary FY2027 budget request released April 3, 2026, not yet enacted by Congress, which writes and passes final appropriations and has historically modified or restored proposed eliminations of this kind.",
+    "status": "Proposed in the FY2027 budget request (April 3, 2026). The House Appropriations Committee's FY2027 State Department bill also eliminates PAHO funding, and the House passed it 217-209 on July 15, 2026; the Senate has not moved its own version. A stopgap law funds the government through Dec. 11, 2026.",
     "date_of_action": "2026-04-03 (FY2027 budget request released)",
-    "what_changed": "The administration's FY2027 discretionary budget request eliminates all U.S. funding for the Pan American Health Organization (PAHO), the WHO's regional body coordinating disease surveillance and public health response across 35 countries in the Americas. The elimination is part of a proposed $4.3 billion cut to the U.S. global health budget overall. The U.S. is PAHO's largest single funder, providing roughly half of all member-state contributions, and already owes PAHO nearly $135 million in overdue payments -- an arrears problem that predates this proposal and followed the administration's earlier withdrawal from the WHO itself and termination of WHO funding (tracked separately in this database's who-withdrawal-surveillance-access-loss entry). PAHO has responded to the funding uncertainty by projecting a 19% cut to its 2026/27 budget and cutting 17% of its staff. More than 100 health, national-security, and business figures signed a July 30, 2026 open letter opposing the elimination, citing PAHO's role in early-warning surveillance for threats including New World screwworm (a livestock parasite eradicated from the U.S. in 1966 that has since reemerged in the region) and H5N1 avian influenza in poultry and dairy herds.",
+    "what_changed": "The administration's FY2027 discretionary budget request eliminates all U.S. funding for the Pan American Health Organization (PAHO), the WHO's regional body coordinating disease surveillance and public health response across 35 countries in the Americas. The elimination is part of a proposed $4.3 billion cut to the U.S. global health budget overall. The U.S. is PAHO's largest single funder, providing roughly half of all member-state contributions, and owed PAHO nearly $135 million in overdue payments as of mid-2026 -- an arrears problem that predates this proposal and followed the administration's earlier withdrawal from the WHO itself and termination of WHO funding (covered in a separate entry on the WHO withdrawal). PAHO has responded to the funding uncertainty by projecting a 19% cut to its 2026/27 budget and cutting 17% of its staff. More than 100 health, national-security, and business figures signed a July 30, 2026 open letter opposing the elimination, citing PAHO's role in early-warning surveillance for threats including New World screwworm (a livestock parasite eradicated from the U.S. in 1966 that has since reemerged in the region) and H5N1 avian influenza in poultry and dairy herds.\n\nUpdate 2026-11-17: The House Appropriations Committee's FY2027 State Department funding bill, released April 22, 2026, also eliminates funding for PAHO, the WHO and UNFPA, though it funds the main global health account at $8.9 billion, $3.8 billion above the request; the full House passed the bill 217-209 on July 15, 2026. The Senate has not passed its own version, and a stopgap law signed September 2, 2026 funds the government largely at FY2026 levels through December 11, 2026. Separately, PAHO's statements of assessed contributions show the U.S. had paid nothing in 2026 as of July 31, then $55.8 million by September 30, 2026, cutting its unpaid balance from $134.6 million to $78.8 million.",
     "primary_proponent": {
       "name": "Trump administration (FY2027 budget request, HHS)",
       "role": "Executive budget proposal",
-      "note": "No single named official was identified in sourcing reviewed as personally responsible for the PAHO line-item specifically; the administration has characterized PAHO and the WHO broadly as showing 'no independence from inappropriate political influence.'"
+      "note": "The PAHO cut is part of the administration's budget request rather than a decision attributed to one official; the request calls PAHO and the WHO 'corrupt organizations' that show 'no independence from inappropriate political influence.'"
     },
     "estimated_impact": {
-      "summary": "**Elimination of the single largest funding source for a regional public-health body covering 35 countries, on top of $135 million already owed, at a time PAHO is already cutting 19% of its budget and 17% of its staff -- degrading disease early-warning capacity for threats (screwworm, H5N1) that cross into the U.S.**",
+      "summary": "**Elimination of the single largest funding source for a regional public-health body covering 35 countries, with $78.8 million in U.S. dues still unpaid in September 2026, at a time PAHO is already cutting 19% of its budget and 17% of its staff -- degrading disease early-warning capacity for threats (screwworm, H5N1) that cross into the U.S.**",
       "figures": [
         {
           "metric": "Total U.S. global health budget cut proposed in the FY2027 request",
           "value": "$4.3 billion",
-          "source": "FY2027 budget request, reported by Health Policy Watch/KFF"
+          "source": "FY2027 budget request, reported by Health Policy Watch and KFF"
         },
         {
-          "metric": "U.S. arrears owed to PAHO as of this proposal",
-          "value": "~$135 million",
-          "source": "New York Times, July 2026"
+          "metric": "U.S. assessed dues unpaid to PAHO (2024-2026)",
+          "value": "$134.6 million due Jan. 1, 2026 (including the $56.1 million 2026 assessment); $78.8 million after a $55.8 million payment (Sept. 30, 2026)",
+          "source": "PAHO statements of assessed contributions, July 31 and Sept. 30, 2026"
         },
         {
           "metric": "PAHO's projected 2026/27 budget cut",
           "value": "19%",
-          "source": "PAHO, reported February 2026"
+          "source": "PAHO, February 2026 (reported by Health Policy Watch)"
         },
         {
           "metric": "PAHO staff cuts underway",
           "value": "17%",
-          "source": "PAHO, reported February 2026"
+          "source": "PAHO, February 2026 (reported by Health Policy Watch)"
         }
       ],
-      "caveat": "This is a budget request, not enacted law -- Congress writes and passes final appropriations and has frequently modified or restored proposed eliminations of this kind in prior years. No source reviewed provided a mortality or case-count estimate specific to PAHO's defunding; the health-impact case rests on named disease-surveillance risks (screwworm, H5N1) rather than a quantified death toll."
+      "caveat": "This is a budget request, not enacted law: the House's FY2027 State Department bill, as released by its Appropriations Committee, would also eliminate PAHO funding, but final FY2027 appropriations have not been enacted. The health-impact case rests on named disease-surveillance risks (screwworm, H5N1), not a published mortality or case-count estimate."
     },
-    "confidence_note": "HIGH confidence for the proposal's existence and scope, corroborated across Health Policy Watch, KFF, and the New York Times' reporting on the $135 million arrears figure. The 100+-signatory open letter is a strong, non-partisan corroborating data point (self-described as bipartisan, drawn from health/security/business). The proposed elimination is still a pending budget proposal, not a completed defunding.",
+    "confidence_note": "HIGH confidence for the proposal's existence and scope, corroborated across Health Policy Watch, KFF, and the New York Times' reporting on the $135 million arrears figure. The 100+-signatory open letter is a strong, non-partisan corroborating data point (self-described as bipartisan, drawn from health/security/business). The proposed elimination is still a pending budget proposal, not a completed defunding. Update 2026-11-17: The House bill's elimination of PAHO funding comes from KFF's analysis of the committee bill, and its July 15, 2026 passage from the House Appropriations Committee and the Congressional Research Service. The 2026 payment and remaining balance come from PAHO's own statements of assessed contributions, which supersede the nearly $135 million arrears figure reported in July 2026.",
     "pull_quote": "More than 100 health, national-security, and business figures signed a July 2026 open letter warning the cuts would weaken early-warning surveillance for threats including New World screwworm -- a livestock parasite eradicated from the U.S. in 1966 that has since reemerged in the region -- and H5N1 avian influenza in poultry and dairy herds.",
-    "last_verified": "2026-09-13",
+    "last_verified": "2026-11-17",
     "date_added": "2026-09-13",
     "sources": [
       {
@@ -61742,23 +61827,51 @@
       {
         "name": "Medical Daily -- More Than 100 Experts Say Ending PAHO Funding Would Weaken Early Warning for Diseases Reaching U.S. Farms",
         "url": "https://www.medicaldaily.com/paho-funding-letter-disease-surveillance-early-warning-us-farms-476758"
+      },
+      {
+        "name": "KFF -- Global Health Funding in the FY 2027 President's Budget Request",
+        "url": "https://www.kff.org/global-health-policy/global-health-funding-in-the-fy-2027-presidents-budget-request/"
+      },
+      {
+        "name": "Health Policy Watch -- Trump's 2027 Budget Deepens Cuts To Global And Domestic Health",
+        "url": "https://healthpolicy-watch.news/ttrump-2027-budget-extends-us-global-and-domestic-health-cuts/"
+      },
+      {
+        "name": "KFF -- House Appropriations Committee Releases FY 2027 National Security, Department of State, and Related Programs (NSRP) Appropriations Bill",
+        "url": "https://www.kff.org/global-health-policy/house-appropriations-committee-releases-fy-2027-national-security-department-of-state-and-related-programs-nsrp-appropriations-bill/"
+      },
+      {
+        "name": "House Appropriations Committee -- House Passes H.R. 8595 (July 15, 2026)",
+        "url": "https://appropriations.house.gov/news/press-releases/house-passes-hr-8595-countering-adversaries-reinforcing-security-and-advancing"
+      },
+      {
+        "name": "Congressional Research Service -- National Security, Department of State, and Related Programs: FY2027 Budget and Appropriations (R48956, Oct. 13, 2026)",
+        "url": "https://www.everycrsreport.com/files/2026-10-13_R48956_db007f73c9786dfdb3e81636314f2cd13497b333.html"
+      },
+      {
+        "name": "PAHO -- Statement of Assessed Contributions as of 31 July 2026",
+        "url": "https://www.paho.org/sites/default/files/2026/08/statement-assessed-contributions-31july2026_0.pdf"
+      },
+      {
+        "name": "PAHO -- Statement of Assessed Contributions as of 30 September 2026",
+        "url": "https://www.paho.org/sites/default/files/2026/10/statement-assessed-contributions-30sep2026_2.pdf"
       }
     ],
     "section_summaries": {
-      "what_changed": "The FY2027 budget request (released April 3, 2026) would eliminate all U.S. funding for the Pan American Health Organization, the WHO's regional health body for 35 countries, as part of a proposed $4.3 billion global-health cut; it is a proposal, not enacted, and the U.S. already owes PAHO nearly $135 million in arrears.",
-      "estimated_impact": "Removing PAHO's largest funder (roughly half of member-state contributions) while it is already cutting 19% of its budget and 17% of its staff would degrade early-warning surveillance for cross-border threats like screwworm and H5N1; no mortality estimate was found.",
-      "confidence_note": "HIGH confidence in the proposal's existence and scope (Health Policy Watch, KFF, New York Times); it remains a pending budget request that Congress could modify or restore, and should be framed that way."
+      "what_changed": "The FY2027 budget request (April 3, 2026) would eliminate all U.S. funding for PAHO, the WHO's regional body for 35 countries; the House Appropriations Committee's bill also zeroes it out.",
+      "estimated_impact": "Cutting off PAHO's largest funder while it trims 19% of its budget and 17% of its staff would weaken early warning for threats like screwworm and H5N1; the harm case rests on surveillance risks.",
+      "confidence_note": "HIGH confidence in the proposal and the House bill's elimination (Health Policy Watch, KFF, House record); PAHO's own statements give the U.S. arrears. Final funding is not enacted."
     },
-    "last_substantive_update": "2026-09-13",
+    "last_substantive_update": "2026-11-17",
     "glance": {
       "who": "Trump administration (FY2027 budget request)",
-      "what": "Proposed eliminating all U.S. funding for the Pan American Health Organization; the U.S. already owes ~$135M",
+      "what": "Proposed eliminating all U.S. funding for the Pan American Health Organization; the House bill agrees",
       "harm": {
         "kind": "physical",
         "certainty": "projected",
         "who": "Disease early warning in the Americas"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-11-17"
     },
     "status_stage": "Unchallenged",
     "key_events": [
@@ -61772,13 +61885,53 @@
         ]
       },
       {
+        "date": "2026-07-15",
+        "text": "The House passes its FY2027 State Department bill; the committee's version eliminated PAHO funding",
+        "sources": [
+          "https://www.kff.org/global-health-policy/house-appropriations-committee-releases-fy-2027-national-security-department-of-state-and-related-programs-nsrp-appropriations-bill/",
+          "https://appropriations.house.gov/news/press-releases/house-passes-hr-8595-countering-adversaries-reinforcing-security-and-advancing"
+        ]
+      },
+      {
         "date": "2026-07-30",
         "text": "More than 100 health, security and business figures sign an open letter opposing the PAHO funding cut",
         "sources": [
           "https://www.medicaldaily.com/paho-funding-letter-disease-surveillance-early-warning-us-farms-476758"
         ]
+      },
+      {
+        "date": "2026-09-30",
+        "text": "PAHO records a $55.8 million U.S. payment in 2026, leaving $78.8 million in U.S. dues unpaid",
+        "sources": [
+          "https://www.paho.org/sites/default/files/2026/08/statement-assessed-contributions-31july2026_0.pdf",
+          "https://www.paho.org/sites/default/files/2026/10/statement-assessed-contributions-30sep2026_2.pdf"
+        ]
       }
-    ]
+    ],
+    "timeline": {
+      "what_changed": {
+        "base": "The administration's FY2027 discretionary budget request eliminates all U.S. funding for the Pan American Health Organization (PAHO), the WHO's regional body coordinating disease surveillance and public health response across 35 countries in the Americas. The elimination is part of a proposed $4.3 billion cut to the U.S. global health budget overall. The U.S. is PAHO's largest single funder, providing roughly half of all member-state contributions, and owed PAHO nearly $135 million in overdue payments as of mid-2026 -- an arrears problem that predates this proposal and followed the administration's earlier withdrawal from the WHO itself and termination of WHO funding (covered in a separate entry on the WHO withdrawal). PAHO has responded to the funding uncertainty by projecting a 19% cut to its 2026/27 budget and cutting 17% of its staff. More than 100 health, national-security, and business figures signed a July 30, 2026 open letter opposing the elimination, citing PAHO's role in early-warning surveillance for threats including New World screwworm (a livestock parasite eradicated from the U.S. in 1966 that has since reemerged in the region) and H5N1 avian influenza in poultry and dairy herds.",
+        "updates": [
+          {
+            "date": "2026-11-17",
+            "label": "Update",
+            "text": "Update 2026-11-17: The House Appropriations Committee's FY2027 State Department funding bill, released April 22, 2026, also eliminates funding for PAHO, the WHO and UNFPA, though it funds the main global health account at $8.9 billion, $3.8 billion above the request; the full House passed the bill 217-209 on July 15, 2026. The Senate has not passed its own version, and a stopgap law signed September 2, 2026 funds the government largely at FY2026 levels through December 11, 2026. Separately, PAHO's statements of assessed contributions show the U.S. had paid nothing in 2026 as of July 31, then $55.8 million by September 30, 2026, cutting its unpaid balance from $134.6 million to $78.8 million.",
+            "effective_date": "2026-11-17"
+          }
+        ]
+      },
+      "confidence_note": {
+        "base": "HIGH confidence for the proposal's existence and scope, corroborated across Health Policy Watch, KFF, and the New York Times' reporting on the $135 million arrears figure. The 100+-signatory open letter is a strong, non-partisan corroborating data point (self-described as bipartisan, drawn from health/security/business). The proposed elimination is still a pending budget proposal, not a completed defunding.",
+        "updates": [
+          {
+            "date": "2026-11-17",
+            "label": "Update",
+            "text": "Update 2026-11-17: The House bill's elimination of PAHO funding comes from KFF's analysis of the committee bill, and its July 15, 2026 passage from the House Appropriations Committee and the Congressional Research Service. The 2026 payment and remaining balance come from PAHO's own statements of assessed contributions, which supersede the nearly $135 million arrears figure reported in July 2026.",
+            "effective_date": "2026-11-17"
+          }
+        ]
+      }
+    }
   },
   {
     "id": "patel-fbi-field-office-purge-2025-2026",
@@ -66644,9 +66797,9 @@
     "title": "CMS Tied Billions in Rural Health Funding to States Adopting Trump/MAHA-Aligned Policies Unrelated to Rural Health Itself",
     "institution": "Centers for Medicare & Medicaid Services (CMS), Department of Health and Human Services",
     "domain": "funding_redirection",
-    "status": "CMS began grading states on policy compliance in 2026, with clawback reductions tied to at least four scheduled grading cycles; several Democratic-led states publicly refused specific conditions (SNAP restrictions, short-term-plan deregulation) even at the cost of forgoing funding, while other states scrambled to pass or pledge the incentivized policies to secure their share",
+    "status": "CMS's $10 billion second-year awards (Nov. 9, 2026) weighed states' progress on incentivized policies such as the Presidential Fitness Test, but every state's award stayed within 4% of its first-year amount; new quarterly state reports will inform the three remaining annual awards",
     "date_of_action": "2025-07 (Rural Health Transformation Fund created by the One Big Beautiful Bill Act) through 2025-12 (Politico's investigative report on the policy-conditionality structure; state applications and CMS grading continued into 2026)",
-    "what_changed": "The One Big Beautiful Bill Act created a $50 billion Rural Health Transformation Fund in July 2025, framed as the largest recent federal investment in rural healthcare and intended in part to offset the same law's Medicaid cuts (see the related medicaid-hospital-closure-risk-2026.json entry). CMS, under Administrator Mehmet Oz, structured the fund's distribution so that 50% is divided equally among applicant states regardless of population, 25% is allocated by rural-population and uncompensated-care factors, and the remaining 25% (roughly $3.75 billion) is awarded based on each state's alignment with a CMS-defined set of policy priorities -- some bipartisan (nutrition education in medical schools, telehealth expansion, expanded scope of practice for nurses and other providers) and some politically divisive and largely unrelated to rural healthcare delivery itself: SNAP restrictions on 'non-nutritious' foods, deregulation of short-term health insurance plans that fall outside Affordable Care Act coverage requirements, and even Presidential Fitness Test implementation in schools (adopted by Tennessee). States receive full credit for policies already enacted and partial credit for pledges to implement them by 2027-2028; CMS said it would grade states at least four times on compliance, with funding subject to 'clawback' reductions if promised policies are not implemented. CMS officials, including Oz, described the clawback threat not as a punishment but as leverage governors could use domestically to push the incentivized policies through their own legislatures. Politico's December 7, 2025 investigation, headlined quoting a state legislator's 'sort of blackmail' characterization, documented the resulting political conflict: Minnesota state Sen. Matt Klein (D), a physician running for Congress, said 'if that rural hospital fund is tied to sort of blackmail policy initiatives that are unacceptable to the people of Minnesota, we'll have to figure out our own pathway to care for our members'; Delaware Gov. Matt Meyer (D) rejected the SNAP-related conditions despite Delaware seeking over $100 million, saying 'we're not going to sell ourselves out to do this for $1 here, $1 there'; and Arizona state Sen. Priya Sundareshan (D) called the food-stamp rules 'paternalistic,' warning the structure penalized states with divided governments that could not easily pass the incentivized legislation. By the December 2025 reporting, 12 Republican-led states had already adopted the SNAP restrictions and 11 more had pledged to, while 14 or more states had already implemented the short-term-plan deregulation; some states with legislatures out of session when November 2025 applications were due, including North Dakota, convened special committees under time pressure to meet CMS deadlines, pushing swift legislative action on policies that in some cases had been debated for over a decade. RFK Jr., whose Make America Healthy Again movement's priorities feature heavily among the incentivized policies (CMS directed policy inquiries to a dedicated MAHARural@cms.hhs.gov address), said in November 2025 that the fund's formula resulted from ordinary legislative negotiation rather than his own direction. KFF Health News's own reporting on the program's enforcement quoted Oz directly: 'We will take the money back if states don't abide by what they wrote, if they don't do a good job,' and described the fitness-test push as giving governors 'extra umph, a little bit of gusto to go after these issues'; CMS deputy director Kate Sapra said federal officers check in with states 'at least twice a month, if not on a weekly basis.' Resistance to the fund's terms was not limited to Democratic states: CBS News reported Republican state lawmakers in Wyoming killed a pre-approved state health-insurance plan ('BearCare'), while GOP legislators in Ohio, Michigan, and North Carolina separately pushed back on funding-allocation and rural-definition disputes; first-year state awards ranged from $147 million (New Jersey) to $281 million (Texas). Nebraska Rural Health Association's Jed Hansen said 'Rural Health Transformation will not save a single hospital in our state,' and Sen. Ron Wyden (D-Ore.) called the program 'a complete sham.'",
+    "what_changed": "The One Big Beautiful Bill Act created a $50 billion Rural Health Transformation Fund in July 2025, framed as the largest recent federal investment in rural healthcare and intended in part to offset the same law's Medicaid cuts (see the related entry on rural hospitals at risk of closing because of the Medicaid cuts). CMS, under Administrator Mehmet Oz, structured the fund's distribution so that 50% is divided equally among applicant states regardless of population, 25% is allocated by rural-population and uncompensated-care factors, and the remaining 25% (roughly $3.75 billion) is awarded based on each state's alignment with a CMS-defined set of policy priorities -- some bipartisan (nutrition education in medical schools, telehealth expansion, expanded scope of practice for nurses and other providers) and some politically divisive and largely unrelated to rural healthcare delivery itself: SNAP restrictions on 'non-nutritious' foods, deregulation of short-term health insurance plans that fall outside Affordable Care Act coverage requirements, and even Presidential Fitness Test implementation in schools (adopted by Tennessee). States receive full credit for policies already enacted and partial credit for pledges to implement them by 2027-2028; CMS said it would grade states at least four times on compliance, with funding subject to 'clawback' reductions if promised policies are not implemented. CMS officials, including Oz, described the clawback threat not as a punishment but as leverage governors could use domestically to push the incentivized policies through their own legislatures. Politico's December 7, 2025 investigation, headlined quoting a state legislator's 'sort of blackmail' characterization, documented the resulting political conflict: Minnesota state Sen. Matt Klein (D), a physician running for Congress, said 'if that rural hospital fund is tied to sort of blackmail policy initiatives that are unacceptable to the people of Minnesota, we'll have to figure out our own pathway to care for our members'; Delaware Gov. Matt Meyer (D) rejected the SNAP-related conditions despite Delaware seeking over $100 million, saying 'we're not going to sell ourselves out to do this for $1 here, $1 there'; and Arizona state Sen. Priya Sundareshan (D) called the food-stamp rules 'paternalistic,' warning the structure penalized states with divided governments that could not easily pass the incentivized legislation. By the December 2025 reporting, 12 Republican-led states had already adopted the SNAP restrictions and 11 more had pledged to, while 14 or more states had already implemented the short-term-plan deregulation; some states with legislatures out of session when November 2025 applications were due, including North Dakota, convened special committees under time pressure to meet CMS deadlines, pushing swift legislative action on policies that in some cases had been debated for over a decade. RFK Jr., whose Make America Healthy Again movement's priorities feature heavily among the incentivized policies (CMS directed policy inquiries to a dedicated MAHARural@cms.hhs.gov address), said in November 2025 that the fund's formula resulted from ordinary legislative negotiation rather than his own direction. KFF Health News's own reporting on the program's enforcement quoted Oz directly: 'We will take the money back if states don't abide by what they wrote, if they don't do a good job,' and described the fitness-test push as giving governors 'extra umph, a little bit of gusto to go after these issues'; CMS deputy director Kate Sapra said federal officers check in with states 'at least twice a month, if not on a weekly basis.' Resistance to the fund's terms was not limited to Democratic states: CBS News reported Republican state lawmakers in Wyoming killed a pre-approved state health-insurance plan ('BearCare'), while GOP legislators in Ohio, Michigan, and North Carolina separately pushed back on funding-allocation and rural-definition disputes; first-year state awards ranged from $147 million (New Jersey) to $281 million (Texas). Nebraska Rural Health Association's Jed Hansen said 'Rural Health Transformation will not save a single hospital in our state,' and Sen. Ron Wyden (D-Ore.) called the program 'a complete sham.'\n\nUpdate 2026-11-17: On November 9, 2026, CMS announced $10 billion in second-year (fiscal 2027) awards to all 50 states, saying awards were determined in part by 'state progress on implementation of state policies to improve rural health, such as the Presidential Fitness Test and Continuing Medical Education (CME) for physicians on nutrition.' Awards ranged from $142.3 million (New Jersey) to about $282 million (Texas). A healthsystemCIO comparison of CMS's year-one and year-two tables found 25 states gained money and 25 lost it, with every state's award within 4% of its first-year amount; HFMA reported North Dakota had the biggest increase (3.7%) and New Jersey the biggest decrease (3.3%). CMS said one year's decrease does not set a state's funding path for the rest of the program, and states began more detailed quarterly reporting to CMS in November 2026 that CMS will use, with annual reports, to inform future awards.",
     "primary_proponent": {
       "name": "Mehmet Oz",
       "role": "Administrator, Centers for Medicare & Medicaid Services",
@@ -66676,16 +66829,16 @@
           "source": "Yahoo News/Politico, Dec. 7, 2025"
         }
       ],
-      "caveat": "No source reviewed quantified a specific dollar amount any individual state stood to lose from non-compliance beyond Delaware's ~$100 million total funding request (not broken out by the conditional-vs-unconditional share); nor did any source reviewed provide a health/mortality impact figure specific to this funding-conditionality mechanism, as distinct from the broader Medicaid-cut and rural-hospital-closure impacts this database already documents in medicaid-hospital-closure-risk-2026.json."
+      "caveat": "No source reviewed quantified a specific dollar amount any individual state stood to lose from non-compliance beyond Delaware's ~$100 million total funding request (not broken out by the conditional-vs-unconditional share); nor did any source reviewed provide a health/mortality impact figure specific to this funding-conditionality mechanism, as distinct from the broader Medicaid-cut and rural-hospital-closure impacts documented in the related entry on rural hospitals at risk of closing because of the Medicaid cuts."
     },
-    "confidence_note": "HIGH confidence on the fund's structure, the policy-scoring mechanism, the clawback threat, and the named officials' quotes (Klein, Meyer, Sundareshan, Oz, Sapra, Hansen, Wyden) -- all three cited outlets (Yahoo News's carriage of Politico's original December 7, 2025 investigation, KFF Health News, and CBS News) were directly fetched and read, not inferred from search-result titles. Politico's own site could not be directly fetched. MODERATE confidence on the precise state-by-state compliance counts (12/11/14+) and the first-year award figures, which reflect single points-in-time as of these December 2025/subsequent reports and likely shifted as CMS's grading cycles continued into 2026.",
+    "confidence_note": "HIGH confidence on the fund's structure, the policy-scoring mechanism, the clawback threat, and the named officials' quotes (Klein, Meyer, Sundareshan, Oz, Sapra, Hansen, Wyden) -- all three cited outlets (Yahoo News's carriage of Politico's original December 7, 2025 investigation, KFF Health News, and CBS News) were directly fetched and read, not inferred from search-result titles. Politico's own site could not be directly fetched. MODERATE confidence on the precise state-by-state compliance counts (12/11/14+) and the first-year award figures, which reflect single points-in-time as of these December 2025/subsequent reports and likely shifted as CMS's grading cycles continued into 2026. Update 2026-11-17: Re-verified against the Politico (via Yahoo News) and KFF Health News pages, which still carry the quoted passages; CMS's November 9, 2026 second-year award release, with healthsystemCIO's and HFMA's analyses, confirms CMS weighed states' policy progress in year two, while no state's award changed by more than 4%.",
     "pull_quote": "CMS Administrator Mehmet Oz told KFF Health News, “We will take the money back if states don't abide by what they wrote, if they don't do a good job.”",
-    "last_verified": "2026-09-12",
+    "last_verified": "2026-11-17",
     "date_added": "2026-09-12",
     "section_summaries": {
-      "what_changed": "CMS conditioned roughly $3.75 billion of the $50 billion Rural Health Transformation Fund -- created to offset the same law's Medicaid cuts -- on states adopting largely unrelated Trump/MAHA-aligned policies (SNAP food restrictions, insurance deregulation, Presidential Fitness Tests), with a 'clawback' threat CMS Administrator Oz described as leverage for governors to push the policies through their legislatures.",
-      "estimated_impact": "Republican-led states, mostly already aligned with the incentivized policies, captured the conditional funding with little friction, while Democratic-led states like Minnesota, Delaware, and Arizona faced a choice between forgoing rural-health dollars or passing contested legislation -- a dynamic a Minnesota state senator called 'sort of blackmail.'",
-      "confidence_note": "The fund's structure and the officials' quotes are well-corroborated across multiple outlets; state-by-state compliance figures are a single-point-in-time snapshot likely to have shifted as CMS's grading cycles continued."
+      "what_changed": "CMS tied about $3.75 billion of the $50 billion rural health fund to states adopting Trump/MAHA policies like SNAP limits, with clawback threats; year-two awards shifted states by under 4%.",
+      "estimated_impact": "Democratic-led states faced forgoing rural-health money or passing contested policies a Minnesota senator called 'sort of blackmail'; Republican-led states, mostly aligned, met them easily.",
+      "confidence_note": "Fund structure and officials' quotes are confirmed from fetched reporting; state compliance counts are a December 2025 snapshot, and CMS's year-two award table is confirmed."
     },
     "sources": [
       {
@@ -66699,9 +66852,21 @@
       {
         "name": "CBS News -- States face pushback on their rural health transformation plans",
         "url": "https://www.cbsnews.com/news/states-rural-health-transformation-plans/"
+      },
+      {
+        "name": "CMS -- Trump Administration Announces $10 Billion in Second Year of Rural Health Transformation Awards to All 50 States (Nov. 9, 2026)",
+        "url": "https://www.cms.gov/newsroom/press-releases/trump-administration-announces-10-billion-second-year-rural-health-transformation-awards-all-50"
+      },
+      {
+        "name": "healthsystemCIO -- Rural Health Transformation Year 2 Awards Stay Near Year 1 as CMS Weighs State Progress",
+        "url": "https://healthsystemcio.com/2026/11/09/rural-health-transformation-year-2-awards/"
+      },
+      {
+        "name": "HFMA -- Rural Health Transformation Program Year 2 awards largely mirror prior-year disbursements",
+        "url": "https://www.hfma.org/payment-reimbursement-and-managed-care/rural-health-transformation-program-year-2-awards/"
       }
     ],
-    "last_substantive_update": "2026-09-12",
+    "last_substantive_update": "2026-11-17",
     "glance": {
       "who": "Mehmet Oz (CMS Administrator)",
       "what": "Tied ~$3.75B of the $50B Rural Health Transformation Fund to states adopting Trump/MAHA-aligned policies",
@@ -66710,7 +66875,7 @@
         "certainty": "documented",
         "who": "State rural-health funding"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-11-17"
     },
     "status_stage": "Unchallenged",
     "key_events": [
@@ -66743,8 +66908,40 @@
         "sources": [
           "https://kffhealthnews.org/rural-health/rural-health-transformation-program-federal-cms-clawbacks-state-plans/"
         ]
+      },
+      {
+        "date": "2026-11-09",
+        "text": "CMS announces $10 billion in second-year awards, weighing states' policy progress; no state moves more than 4%",
+        "sources": [
+          "https://www.cms.gov/newsroom/press-releases/trump-administration-announces-10-billion-second-year-rural-health-transformation-awards-all-50",
+          "https://healthsystemcio.com/2026/11/09/rural-health-transformation-year-2-awards/"
+        ]
       }
-    ]
+    ],
+    "timeline": {
+      "what_changed": {
+        "base": "The One Big Beautiful Bill Act created a $50 billion Rural Health Transformation Fund in July 2025, framed as the largest recent federal investment in rural healthcare and intended in part to offset the same law's Medicaid cuts (see the related entry on rural hospitals at risk of closing because of the Medicaid cuts). CMS, under Administrator Mehmet Oz, structured the fund's distribution so that 50% is divided equally among applicant states regardless of population, 25% is allocated by rural-population and uncompensated-care factors, and the remaining 25% (roughly $3.75 billion) is awarded based on each state's alignment with a CMS-defined set of policy priorities -- some bipartisan (nutrition education in medical schools, telehealth expansion, expanded scope of practice for nurses and other providers) and some politically divisive and largely unrelated to rural healthcare delivery itself: SNAP restrictions on 'non-nutritious' foods, deregulation of short-term health insurance plans that fall outside Affordable Care Act coverage requirements, and even Presidential Fitness Test implementation in schools (adopted by Tennessee). States receive full credit for policies already enacted and partial credit for pledges to implement them by 2027-2028; CMS said it would grade states at least four times on compliance, with funding subject to 'clawback' reductions if promised policies are not implemented. CMS officials, including Oz, described the clawback threat not as a punishment but as leverage governors could use domestically to push the incentivized policies through their own legislatures. Politico's December 7, 2025 investigation, headlined quoting a state legislator's 'sort of blackmail' characterization, documented the resulting political conflict: Minnesota state Sen. Matt Klein (D), a physician running for Congress, said 'if that rural hospital fund is tied to sort of blackmail policy initiatives that are unacceptable to the people of Minnesota, we'll have to figure out our own pathway to care for our members'; Delaware Gov. Matt Meyer (D) rejected the SNAP-related conditions despite Delaware seeking over $100 million, saying 'we're not going to sell ourselves out to do this for $1 here, $1 there'; and Arizona state Sen. Priya Sundareshan (D) called the food-stamp rules 'paternalistic,' warning the structure penalized states with divided governments that could not easily pass the incentivized legislation. By the December 2025 reporting, 12 Republican-led states had already adopted the SNAP restrictions and 11 more had pledged to, while 14 or more states had already implemented the short-term-plan deregulation; some states with legislatures out of session when November 2025 applications were due, including North Dakota, convened special committees under time pressure to meet CMS deadlines, pushing swift legislative action on policies that in some cases had been debated for over a decade. RFK Jr., whose Make America Healthy Again movement's priorities feature heavily among the incentivized policies (CMS directed policy inquiries to a dedicated MAHARural@cms.hhs.gov address), said in November 2025 that the fund's formula resulted from ordinary legislative negotiation rather than his own direction. KFF Health News's own reporting on the program's enforcement quoted Oz directly: 'We will take the money back if states don't abide by what they wrote, if they don't do a good job,' and described the fitness-test push as giving governors 'extra umph, a little bit of gusto to go after these issues'; CMS deputy director Kate Sapra said federal officers check in with states 'at least twice a month, if not on a weekly basis.' Resistance to the fund's terms was not limited to Democratic states: CBS News reported Republican state lawmakers in Wyoming killed a pre-approved state health-insurance plan ('BearCare'), while GOP legislators in Ohio, Michigan, and North Carolina separately pushed back on funding-allocation and rural-definition disputes; first-year state awards ranged from $147 million (New Jersey) to $281 million (Texas). Nebraska Rural Health Association's Jed Hansen said 'Rural Health Transformation will not save a single hospital in our state,' and Sen. Ron Wyden (D-Ore.) called the program 'a complete sham.'",
+        "updates": [
+          {
+            "date": "2026-11-17",
+            "label": "Update",
+            "text": "Update 2026-11-17: On November 9, 2026, CMS announced $10 billion in second-year (fiscal 2027) awards to all 50 states, saying awards were determined in part by 'state progress on implementation of state policies to improve rural health, such as the Presidential Fitness Test and Continuing Medical Education (CME) for physicians on nutrition.' Awards ranged from $142.3 million (New Jersey) to about $282 million (Texas). A healthsystemCIO comparison of CMS's year-one and year-two tables found 25 states gained money and 25 lost it, with every state's award within 4% of its first-year amount; HFMA reported North Dakota had the biggest increase (3.7%) and New Jersey the biggest decrease (3.3%). CMS said one year's decrease does not set a state's funding path for the rest of the program, and states began more detailed quarterly reporting to CMS in November 2026 that CMS will use, with annual reports, to inform future awards.",
+            "effective_date": "2026-11-17"
+          }
+        ]
+      },
+      "confidence_note": {
+        "base": "HIGH confidence on the fund's structure, the policy-scoring mechanism, the clawback threat, and the named officials' quotes (Klein, Meyer, Sundareshan, Oz, Sapra, Hansen, Wyden) -- all three cited outlets (Yahoo News's carriage of Politico's original December 7, 2025 investigation, KFF Health News, and CBS News) were directly fetched and read, not inferred from search-result titles. Politico's own site could not be directly fetched. MODERATE confidence on the precise state-by-state compliance counts (12/11/14+) and the first-year award figures, which reflect single points-in-time as of these December 2025/subsequent reports and likely shifted as CMS's grading cycles continued into 2026.",
+        "updates": [
+          {
+            "date": "2026-11-17",
+            "label": "Update",
+            "text": "Update 2026-11-17: Re-verified against the Politico (via Yahoo News) and KFF Health News pages, which still carry the quoted passages; CMS's November 9, 2026 second-year award release, with healthsystemCIO's and HFMA's analyses, confirms CMS weighed states' policy progress in year two, while no state's award changed by more than 4%.",
+            "effective_date": "2026-11-17"
+          }
+        ]
+      }
+    }
   },
   {
     "id": "samhsa-fentanyl-test-strip-funding-ban-2026",
@@ -76835,24 +77032,29 @@
   },
   {
     "id": "usda-regional-food-business-centers-terminated-2025",
-    "title": "USDA Shuts Down $420 Million Nationwide Program That Aided Small Farms and Food Businesses",
+    "title": "USDA Shuts Down $400 Million Nationwide Program That Aided Small Farms and Food Businesses",
     "institution": "U.S. Department of Agriculture (USDA), Agricultural Marketing Service",
     "domain": "funding_redirection",
-    "status": "Terminated -- USDA stated it would continue honoring existing commitments on more than 450 already-awarded grants, but the program itself, including its 12 regional centers' broader technical-assistance and coordination work, was shut down",
+    "status": "Terminated -- four of the 12 centers closed at once in July 2025 and the rest could manage already-awarded Business Builder grants only through May 2026; in September 2026 USDA said the centers were in closeout and it was reallocating remaining funds to other priorities",
     "date_of_action": "2025-07-15",
-    "what_changed": "Agriculture Secretary Brooke Rollins announced the termination of the Regional Food Business Centers (RFBC) program on July 15, 2025. USDA had launched the program in 2022-2023 with $420 million in American Rescue Plan Act funding, establishing 12 regional centers -- covering all 50 states, plus a dedicated national tribal center and centers targeting Colonias (U.S./Mexico border counties) and persistent-poverty areas -- to provide small and mid-sized farms and food businesses with technical assistance, grants, and help navigating federal, state, and local resources to access new markets. Rollins criticized the program's structure directly: 'The Biden Administration created multiple, massive programs without any long-term way to finance them. This is not sustainable for farmers who rely on these programs, and it flies in the face of Congressional intent.' USDA said it would continue honoring more than 450 already-awarded grants to farmers and food businesses so in-progress planning decisions on the farm could proceed, but ended the centers' broader ongoing technical-assistance and coordination role. Local reporting through mid-2025 and into 2026 documented concrete downstream effects: Civil Eats reported the program had already been caught in the administration's earlier funding freeze months before its formal termination, and **KCUR reported in August 2025 on a Midwest small grower who said losing the program's support put her farm's continued operation at risk**; This Is Reno reported small Nevada farms and food businesses stood to lose roughly $3 million in USDA support tied to the program specifically in that state.",
+    "what_changed": "Agriculture Secretary Brooke Rollins announced the termination of the Regional Food Business Centers (RFBC) program on July 15, 2025. USDA had launched the program in 2022-2023 with $400 million in American Rescue Plan Act funding, establishing 12 regional centers -- covering all 50 states, plus a dedicated national tribal center and centers targeting Colonias (U.S./Mexico border counties) and persistent-poverty areas -- to provide small and mid-sized farms and food businesses with technical assistance, grants, and help navigating federal, state, and local resources to access new markets. Rollins criticized the program's structure directly: 'The Biden Administration created multiple, massive programs without any long-term way to finance them. This is not sustainable for farmers who rely on these programs, and it flies in the face of Congressional intent.' USDA said it would continue honoring more than 450 already-awarded grants to farmers and food businesses so in-progress planning decisions on the farm could proceed, but ended the centers' broader ongoing technical-assistance and coordination role. Local reporting in mid-2025 documented concrete downstream effects: Civil Eats reported the program had already been caught in the administration's earlier funding freeze months before its formal termination, and **KCUR reported in August 2025 on a Midwest small grower who said losing the program's support put her farm's continued operation at risk**; This Is Reno reported small Nevada farms and food businesses stood to lose roughly $3 million in USDA support tied to the program specifically in that state.\n\nUpdate 2026-11-17: USDA's July 2025 notice closed four centers outright -- Great Lakes Midwest, Southeast, Delta, and Islands and Remote Areas -- and let the other eight manage Business Builder grants already executed or announced only through May 2026. Agri-Pulse reported that the Southwest center, which had distributed about $1 million in Business Builder grants, would close in September 2025, nearly three years ahead of schedule, and that its host's plans to award $4.2 million over multiple years were halted. In September 2026, El Paso Matters reported that the Rio Grande Colonias center serving El Paso and the Rio Grande Valley, a five-year, $30 million project, had come to an end. A USDA spokesperson told the outlet the agency was reallocating the program's remaining funds to other 'priorities supporting American agriculture' and that 'the Regional Food Business Centers are still in their closeout period, so we do not have final numbers for unspent funds.'",
     "primary_proponent": {
       "name": "Brooke Rollins",
       "role": "Secretary of Agriculture",
       "note": "Personally announced the termination and publicly framed the Biden-era program as fiscally unsustainable and contrary to congressional intent."
     },
     "estimated_impact": {
-      "summary": "A $420 million, 12-center program serving small and mid-sized farms and food businesses nationwide -- including tribal, border, and persistent-poverty-area producers specifically targeted for support -- was shut down roughly two and a half years into its planned multi-year run, with the technical-assistance and market-access services it provided ended even where individual grant commitments continued.",
+      "summary": "A $400 million, 12-center program serving small and mid-sized farms and food businesses nationwide -- including tribal, border, and persistent-poverty-area producers specifically targeted for support -- was shut down about two years into a performance period that was to run through June 2028, with the technical-assistance and market-access services it provided ended even where individual grant commitments continued.",
       "figures": [
         {
-          "metric": "Total American Rescue Plan Act funding allocated to the program at launch",
-          "value": "$420,000,000",
-          "source": "USDA press release, 2023"
+          "metric": "American Rescue Plan Act funding USDA used to launch the program",
+          "value": "$400,000,000",
+          "source": "KCUR, August 2025"
+        },
+        {
+          "metric": "Farms and food businesses/organizations given training or technical assistance, July 2023-December 2024",
+          "value": "5,527",
+          "source": "USDA RFBC semi-annual performance report, July-December 2024"
         },
         {
           "metric": "Already-awarded grants USDA said it would continue honoring",
@@ -76865,15 +77067,15 @@
           "source": "This Is Reno, August 2025"
         }
       ],
-      "caveat": "No source reviewed provided a national dollar or health/mortality figure specific to the program's termination beyond the state-level Nevada example and the individual-farm anecdote KCUR reported -- the program's full national reach (technical assistance to thousands of producers, per USDA's own October 2024 progress report citing roughly 2,800 individuals already assisted) suggests broader impact than these two data points alone quantify, but no aggregated national estimate was found in sourcing reviewed."
+      "caveat": "No national dollar or health figure for the termination's effects has been reported beyond the state-level Nevada example and the individual-farm account KCUR reported. USDA's own progress report shows the program's reach was far broader -- Centers and their partners had given training or technical assistance to 5,527 farms and food businesses and 7,874 individuals from July 2023 through December 2024 -- and in September 2026 USDA said it did not yet have final numbers for unspent funds."
     },
-    "confidence_note": "HIGH confidence on the termination itself, its date, Rollins's stated rationale, and the $420 million/12-center program scope -- corroborated across USDA's own press releases, Reuters, DTN/Progressive Farmer, and Civil Eats. MODERATE confidence on the downstream farmer-level impact -- the KCUR and This Is Reno accounts are single-outlet, localized reporting rather than a national impact study, though both are on-the-record and specific.",
+    "confidence_note": "HIGH confidence on the termination itself, its date, Rollins's stated rationale, and the $400 million/12-center program scope -- corroborated across USDA's own press release, Reuters, KCUR, Agri-Pulse, and Civil Eats. MODERATE confidence on the downstream farmer-level impact -- the KCUR and This Is Reno accounts are single-outlet, localized reporting rather than a national impact study, though both are on-the-record and specific. Update 2026-11-17: the wind-down's later stages (four centers closed at once, the rest limited to existing grants through May 2026, closeout and reallocation of remaining funds as of September 2026) rest on USDA's notice, the National Sustainable Agriculture Coalition, Agri-Pulse and El Paso Matters; USDA has released no program-wide final accounting of unspent funds. Re-verified 2026-11-17: no court challenge to or reversal of the termination has been reported.",
     "pull_quote": "This Is Reno reported small Nevada farms and food businesses stood to lose roughly $3 million in USDA support tied to the program specifically in that state.",
-    "last_verified": "2026-09-12",
+    "last_verified": "2026-11-17",
     "date_added": "2026-09-12",
     "section_summaries": {
-      "what_changed": "USDA Secretary Rollins terminated the $420 million Regional Food Business Centers program on July 15, 2025, ending technical-assistance and market-access support for small and mid-sized farms nationwide, while continuing to honor 450+ already-awarded grants.",
-      "estimated_impact": "Nevada alone stood to lose roughly $3 million in program support; a Midwest grower told KCUR the loss put her farm's continued operation at risk. No aggregated national impact figure was found.",
+      "what_changed": "Rollins ended the $400 million Regional Food Business Centers program July 15, 2025, closing four of 12 centers at once; the rest could manage 450+ already-awarded grants only through May 2026.",
+      "estimated_impact": "The program had reached 5,527 farms and food businesses; Nevada alone stood to lose about $3 million, and a Midwest grower told KCUR the loss put her farm at risk. No national total is reported.",
       "confidence_note": "The termination and its scope are well-corroborated across USDA's own statements and multiple outlets; farmer-level impact rests on more limited, localized reporting."
     },
     "sources": [
@@ -76896,24 +77098,40 @@
       {
         "name": "This Is Reno -- Small farms, food businesses in Nevada to lose $3M in USDA support",
         "url": "https://thisisreno.com/2025/08/usda-terminates-biden-era-program/"
+      },
+      {
+        "name": "National Sustainable Agriculture Coalition -- Comment: NSAC Responds to Termination of Regional Food Business Centers",
+        "url": "https://sustainableagriculture.net/blog/comment-nsac-responds-to-termination-of-regional-food-business-centers/"
+      },
+      {
+        "name": "Agri-Pulse -- USDA closes Southwest Regional Food Business Center",
+        "url": "https://www.agri-pulse.com/articles/23255-usda-closes-southwest-regional-food-business-center"
+      },
+      {
+        "name": "USDA Regional Food Business Center Program -- Semi-Annual Performance Progress Report Highlights, July-December 2024 (via NSAC)",
+        "url": "https://sustainableagriculture.net/wp-content/uploads/2025/06/Combined_RFBC_PPR_HighlightsandDashboardJuly2023_December2024.pdf"
+      },
+      {
+        "name": "El Paso Matters -- Food center for El Paso, Rio Grande Valley closes after Trump takes back grants",
+        "url": "https://elpasomatters.org/2026/09/15/el-paso-usda-food-center-closes-trump-cuts-funding/"
       }
     ],
-    "last_substantive_update": "2026-09-12",
+    "last_substantive_update": "2026-11-17",
     "glance": {
       "who": "Brooke Rollins (Secretary of Agriculture)",
-      "what": "Terminated the $420M Regional Food Business Centers program on July 15, 2025; 450+ awarded grants continue",
+      "what": "Terminated the $400M Regional Food Business Centers program on July 15, 2025, pledging to honor 450+ grants",
       "harm": {
         "kind": "money",
         "certainty": "documented",
         "who": "Small farms and food businesses"
       },
-      "reviewed": "2026-09-20"
+      "reviewed": "2026-11-17"
     },
     "status_stage": "Unchallenged",
     "key_events": [
       {
         "date": "2025-07-15",
-        "text": "USDA ends the $420 million Regional Food Business Centers program but says it will honor 450-plus grants already awarded",
+        "text": "USDA ends the Regional Food Business Centers program, closing four of 12 centers and pledging to honor 450-plus grants",
         "turning_point": true,
         "sources": [
           "https://www.ams.usda.gov/press-release/termination-regional-food-business-centers-programs",
@@ -76933,8 +77151,39 @@
         "sources": [
           "https://www.kcur.org/news/2025-08-08/usda-canceled-support-program-small-businesses-midwest-growers"
         ]
+      },
+      {
+        "date": "2026-09-15",
+        "text": "El Paso Matters reports the Rio Grande Colonias center has closed as USDA reallocates the program's remaining funds",
+        "sources": [
+          "https://elpasomatters.org/2026/09/15/el-paso-usda-food-center-closes-trump-cuts-funding/"
+        ]
       }
-    ]
+    ],
+    "timeline": {
+      "what_changed": {
+        "base": "Agriculture Secretary Brooke Rollins announced the termination of the Regional Food Business Centers (RFBC) program on July 15, 2025. USDA had launched the program in 2022-2023 with $400 million in American Rescue Plan Act funding, establishing 12 regional centers -- covering all 50 states, plus a dedicated national tribal center and centers targeting Colonias (U.S./Mexico border counties) and persistent-poverty areas -- to provide small and mid-sized farms and food businesses with technical assistance, grants, and help navigating federal, state, and local resources to access new markets. Rollins criticized the program's structure directly: 'The Biden Administration created multiple, massive programs without any long-term way to finance them. This is not sustainable for farmers who rely on these programs, and it flies in the face of Congressional intent.' USDA said it would continue honoring more than 450 already-awarded grants to farmers and food businesses so in-progress planning decisions on the farm could proceed, but ended the centers' broader ongoing technical-assistance and coordination role. Local reporting in mid-2025 documented concrete downstream effects: Civil Eats reported the program had already been caught in the administration's earlier funding freeze months before its formal termination, and **KCUR reported in August 2025 on a Midwest small grower who said losing the program's support put her farm's continued operation at risk**; This Is Reno reported small Nevada farms and food businesses stood to lose roughly $3 million in USDA support tied to the program specifically in that state.",
+        "updates": [
+          {
+            "date": "2026-11-17",
+            "label": "Update",
+            "text": "Update 2026-11-17: USDA's July 2025 notice closed four centers outright -- Great Lakes Midwest, Southeast, Delta, and Islands and Remote Areas -- and let the other eight manage Business Builder grants already executed or announced only through May 2026. Agri-Pulse reported that the Southwest center, which had distributed about $1 million in Business Builder grants, would close in September 2025, nearly three years ahead of schedule, and that its host's plans to award $4.2 million over multiple years were halted. In September 2026, El Paso Matters reported that the Rio Grande Colonias center serving El Paso and the Rio Grande Valley, a five-year, $30 million project, had come to an end. A USDA spokesperson told the outlet the agency was reallocating the program's remaining funds to other 'priorities supporting American agriculture' and that 'the Regional Food Business Centers are still in their closeout period, so we do not have final numbers for unspent funds.'",
+            "effective_date": "2026-11-17"
+          }
+        ]
+      },
+      "confidence_note": {
+        "base": "HIGH confidence on the termination itself, its date, Rollins's stated rationale, and the $400 million/12-center program scope -- corroborated across USDA's own press release, Reuters, KCUR, Agri-Pulse, and Civil Eats. MODERATE confidence on the downstream farmer-level impact -- the KCUR and This Is Reno accounts are single-outlet, localized reporting rather than a national impact study, though both are on-the-record and specific.",
+        "updates": [
+          {
+            "date": "2026-11-17",
+            "label": "Update",
+            "text": "Update 2026-11-17: the wind-down's later stages (four centers closed at once, the rest limited to existing grants through May 2026, closeout and reallocation of remaining funds as of September 2026) rest on USDA's notice, the National Sustainable Agriculture Coalition, Agri-Pulse and El Paso Matters; USDA has released no program-wide final accounting of unspent funds. Re-verified 2026-11-17: no court challenge to or reversal of the termination has been reported.",
+            "effective_date": "2026-11-17"
+          }
+        ]
+      }
+    }
   },
   {
     "id": "usda-snap-data-demand-reapplication-fraud-narrative-2025-2026",
