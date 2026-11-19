@@ -55,6 +55,12 @@ test("isValidGlance rejects missing, oversized, multiline and mis-typed fields",
   assert.equal(api.isValidGlance(validGlance({ harm: null })), false);
 });
 
+test("isValidGlance accepts harm.tier 1, 2, 3 or absent and rejects anything else (mirrors validate_glance.py)", () => {
+  const withTier = tier => validGlance({ harm: { kind: "rights", certainty: "alleged", who: "X", tier } });
+  for (const tier of [1, 2, 3]) assert.equal(api.isValidGlance(withTier(tier)), true, String(tier));
+  for (const tier of ["1", 0, 4, 1.5, true, null]) assert.equal(api.isValidGlance(withTier(tier)), false, String(tier));
+});
+
 test("glanceActive needs the tracker flag AND a valid block", () => {
   assert.equal(api.glanceActive({ glance: validGlance() }, cfgOn), true);
   assert.equal(api.glanceActive({ glance: validGlance() }, cfgOff), false);

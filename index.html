@@ -786,14 +786,25 @@
   /* Its label reads in full ink and bold, unlike the other faint labels. */
   .glance-harm-label.glance-harm-label-harmed { color: var(--ink); font-weight: 700; }
   .glance-orig-title { margin: 0 0 0.6rem; font-weight: bold; color: var(--ink-soft); }
-  /* Harms by kind view (2026-11-16; see the harms-list script block). Kind
-     headings borrow the card-label look; averted lines are muted like the
-     averted badge, since that harm never happened. */
+  /* Harms view (2026-11-16, regrouped by first principle 2026-11-19; see the
+     harms-list script block). Tier headings borrow the card-label look;
+     averted lines are muted like the averted badge, since that harm never
+     happened. */
   .harms-list { padding: 0.5rem 0 2rem; }
   .harms-title { margin: 0 0 0.3rem; }
   .harms-total { margin: 0 0 1rem; color: var(--ink-soft); }
-  .harms-kind { margin: 0 0 1.5rem; }
-  .harms-kind-label {
+  .harms-key {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 0.15rem 0.6rem;
+    margin: 0 0 1.25rem;
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+  }
+  .harms-key dt { font-weight: 600; }
+  .harms-key dd { margin: 0; }
+  .harms-tier { margin: 0 0 1.5rem; }
+  .harms-tier-label {
     font-family: ui-monospace, monospace;
     font-size: 0.85rem;
     text-transform: uppercase;
@@ -803,16 +814,29 @@
     border-bottom: 1px solid var(--rule);
     padding-bottom: 0.2rem;
   }
-  .harms-cert-label { margin: 0.6rem 0 0.2rem; font-size: 0.85rem; color: var(--ink-soft); font-weight: 600; }
+  .harms-kind-label { margin: 0.6rem 0 0.2rem; font-size: 0.85rem; color: var(--ink-soft); font-weight: 600; }
   .harms-lines { margin: 0; padding-left: 1.2rem; }
   .harms-lines li { margin: 0.2rem 0; overflow-wrap: anywhere; }
   /* Same look as the site's other in-page links (.back-home-link). */
   .harm-entry-link { color: var(--brass); font-weight: 600; text-decoration: none; }
   .harm-entry-link:hover { text-decoration: underline; }
   .harm-what { color: var(--ink-soft); }
+  /* Certainty tag: small outlined label; its title explains the value. */
+  .harm-cert {
+    white-space: nowrap;
+    font-family: ui-monospace, monospace;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--ink-soft);
+    border: 1px solid var(--rule-strong);
+    border-radius: 2px;
+    padding: 0 0.3rem;
+    cursor: help;
+  }
   .harm-tracker { white-space: nowrap; font-family: ui-monospace, monospace; font-size: 0.72rem; color: var(--ink-faint); }
-  .harms-cert-averted, .harms-cert-averted .harm-entry-link { color: var(--ink-soft); }
-  .harms-cert-averted .harm-entry-link { font-weight: 400; }
+  .harm-line-averted, .harm-line-averted .harm-entry-link { color: var(--ink-soft); }
+  .harm-line-averted .harm-entry-link { font-weight: 400; }
 
   /* User Topics card-level coverage indicator -- same color language as
      the detail view's .promoted-callout/.related-callout (brass for
@@ -5210,7 +5234,10 @@ function isValidGlance(g) {
     !!harm && typeof harm === "object" &&
     Object.prototype.hasOwnProperty.call(GLANCE_HARM_LABELS, harm.kind) &&
     GLANCE_CERTAINTIES.includes(harm.certainty) &&
-    line(harm.who, 40);
+    line(harm.who, 40) &&
+    // Optional first-principle override for the Harms view (2026-11-19):
+    // absent, or exactly the integer 1, 2 or 3.
+    (!Object.prototype.hasOwnProperty.call(harm, "tier") || [1, 2, 3].includes(harm.tier));
 }
 
 function glanceActive(entry, cfg) {
@@ -5280,15 +5307,41 @@ function glanceDetailTitleHtml(entry, cfg, hl) {
 }
 /* glance-head:end */
 /* harms-list:start */
-/* Harms by kind (2026-11-16, Joe: visitors see the scale of harm, grouped by
-   kind; spec tap-data/docs/superpowers/specs/2026-11-16-harms-list-design.md).
+/* Harms by first principle (2026-11-19, Joe; spec tap-data/docs/superpowers/
+   specs/2026-11-19-harms-first-principle-design.md, replacing the 2026-11-16
+   by-kind grouping). Joe's first principles rank harms: (1) life and health,
+   (2) money harm that puts life or health at risk, (3) money -- the same
+   ranking as the schema's "Which fact to pick" rule. An entry's tier comes
+   from its glance.harm.tier when set (a reviewed editorial promotion), else
+   from its kind: physical 1, livelihood 2, money 3; every other kind goes
+   under "Other harms", split by kind. Inside a group, lines run documented,
+   projected, alleged, averted, then A-Z, and each line carries a certainty
+   tag whose title explains it (the key under the total says the same).
    One line per curated entry whose Glance block shows on its own card
-   (glanceActive), grouped by harm kind in severity order (GLANCE_HARM_LABELS
-   key order), then by certainty (GLANCE_CERTAINTIES order) so an alleged harm
-   never reads as a documented one. Reporting and Community Topics have no
-   Glance block and are skipped, as are hidden trackers. Pure (no DOM), so
+   (glanceActive). Reporting and Community Topics have no Glance block and
+   are skipped, as are hidden trackers. Pure (no DOM), so
    tests/harms-list.test.js can run it; renderDispatch() does the wiring. */
 const HARMS_EXCLUDED_KEYS = ["tracker", "communitytopics"];
+const HARM_TIER_LABELS = {
+  1: "1. Life and health",
+  2: "2. Money harm that puts life or health at risk",
+  3: "3. Money",
+};
+const HARM_KIND_DEFAULT_TIER = { physical: 1, livelihood: 2, money: 3 };
+const HARMS_OTHER_KINDS = ["rights", "environment", "institutional"];
+// Wording from the schema's certainty standard (government-services/SCHEMA.md).
+const HARM_CERTAINTY_KEY = {
+  documented: "on the record (official record, court finding or admission)",
+  projected: "the action happened; the harm is expected",
+  alleged: "claimed by critics and disputed, or no official record",
+  averted: "blocked or withdrawn before it took effect",
+};
+
+// 1, 2 or 3, or null for "Other harms".
+function harmTier(kind, override) {
+  if ([1, 2, 3].includes(override)) return override;
+  return HARM_KIND_DEFAULT_TIER[kind] || null;
+}
 
 function collectHarms(trackers) {
   const rows = [];
@@ -5298,7 +5351,7 @@ function collectHarms(trackers) {
     (cfg.data || []).forEach(entry => {
       if (!glanceActive(entry, cfg)) return;
       const h = entry.glance.harm;
-      rows.push({ key, id: entry[cfg.idField], kind: h.kind, certainty: h.certainty, who: h.who, what: entry.glance.what });
+      rows.push({ key, id: entry[cfg.idField], kind: h.kind, certainty: h.certainty, who: h.who, what: entry.glance.what, tier: harmTier(h.kind, h.tier) });
     });
   });
   return rows;
@@ -5307,7 +5360,8 @@ function collectHarms(trackers) {
 function buildHarmsListHtml(trackers, abbr) {
   const rows = collectHarms(trackers);
   const cap = s => s.charAt(0).toUpperCase() + s.slice(1);
-  const byWho = (a, b) =>
+  const order = (a, b) =>
+    GLANCE_CERTAINTIES.indexOf(a.certainty) - GLANCE_CERTAINTIES.indexOf(b.certainty) ||
     a.who.localeCompare(b.who, undefined, { sensitivity: "base" }) ||
     (String(a.id) < String(b.id) ? -1 : String(a.id) > String(b.id) ? 1 : 0);
   // The total always carries its certainty breakdown (spec anti-goal: no bare
@@ -5321,30 +5375,37 @@ function buildHarmsListHtml(trackers, abbr) {
     .map(c => [c, rows.filter(r => r.certainty === c).length])
     .filter(([, n]) => n > 0)
     .map(([c, n]) => n + " " + c);
-  let html = '<section class="harms-list"><h2 class="harms-title">Harms by kind</h2>' +
+  const linesHtml = list => '<ul class="harms-lines">' + list.slice().sort(order).map(r =>
+    '<li' + (r.certainty === "averted" ? ' class="harm-line-averted"' : '') + '><a href="#' +
+    encodeURIComponent(r.key) + '/' + encodeURIComponent(r.id) +
+    '" class="harm-entry-link" data-tracker-key="' + escapeHtml(r.key) + '" data-id="' + escapeHtml(r.id) + '">' +
+    escapeHtml(r.who) + '</a> <span class="harm-what">— ' + escapeHtml(r.what) + '</span> ' +
+    '<span class="harm-cert harm-cert-' + r.certainty + '" title="' + escapeHtml(cap(HARM_CERTAINTY_KEY[r.certainty])) + '">' +
+    cap(r.certainty) + '</span> ' +
+    '<span class="harm-tracker">' + escapeHtml((abbr && abbr[r.key]) || r.key) + '</span></li>').join("") + '</ul>';
+  let html = '<section class="harms-list"><h2 class="harms-title">Harms by first principle</h2>' +
     '<p class="harms-total">' + harmed + " harm" + (harmed === 1 ? "" : "s") +
     (parts.length ? ": " + parts.join(", ") : "") +
-    (averted ? "; plus " + averted + " averted" : "") + '</p>';
-  Object.keys(GLANCE_HARM_LABELS).forEach(kind => {
-    const inKind = rows.filter(r => r.kind === kind);
-    if (!inKind.length) return;
-    html += '<section class="harms-kind" data-kind="' + kind + '"><h3 class="harms-kind-label">' +
-      escapeHtml(GLANCE_HARM_LABELS[kind]) + ' (' + inKind.length + ')</h3>';
-    GLANCE_CERTAINTIES.forEach(cert => {
-      const lines = inKind.filter(r => r.certainty === cert).sort(byWho);
-      if (!lines.length) return;
-      html += '<div class="harms-cert harms-cert-' + cert + '"><h4 class="harms-cert-label">' +
-        cap(cert) + ' (' + lines.length + ')</h4><ul class="harms-lines">';
-      lines.forEach(r => {
-        html += '<li><a href="#' + encodeURIComponent(r.key) + '/' + encodeURIComponent(r.id) +
-          '" class="harm-entry-link" data-tracker-key="' + escapeHtml(r.key) + '" data-id="' + escapeHtml(r.id) + '">' +
-          escapeHtml(r.who) + '</a> <span class="harm-what">— ' + escapeHtml(r.what) + '</span> ' +
-          '<span class="harm-tracker">' + escapeHtml((abbr && abbr[r.key]) || r.key) + '</span></li>';
-      });
-      html += '</ul></div>';
+    (averted ? "; plus " + averted + " averted" : "") + '</p>' +
+    '<dl class="harms-key">' + GLANCE_CERTAINTIES.map(c =>
+      '<dt>' + cap(c) + '</dt><dd>' + escapeHtml(HARM_CERTAINTY_KEY[c]) + '</dd>').join("") + '</dl>';
+  [1, 2, 3].forEach(tier => {
+    const inTier = rows.filter(r => r.tier === tier);
+    if (!inTier.length) return;
+    html += '<section class="harms-tier" data-tier="' + tier + '"><h3 class="harms-tier-label">' +
+      escapeHtml(HARM_TIER_LABELS[tier]) + ' (' + inTier.length + ')</h3>' + linesHtml(inTier) + '</section>';
+  });
+  const other = rows.filter(r => r.tier === null);
+  if (other.length) {
+    html += '<section class="harms-tier" data-tier="other"><h3 class="harms-tier-label">Other harms (' + other.length + ')</h3>';
+    HARMS_OTHER_KINDS.forEach(kind => {
+      const inKind = other.filter(r => r.kind === kind);
+      if (!inKind.length) return;
+      html += '<div class="harms-kind" data-kind="' + kind + '"><h4 class="harms-kind-label">' +
+        escapeHtml(GLANCE_HARM_LABELS[kind]) + ' (' + inKind.length + ')</h4>' + linesHtml(inKind) + '</div>';
     });
     html += '</section>';
-  });
+  }
   return html + '</section>';
 }
 /* harms-list:end */
@@ -6148,11 +6209,11 @@ function renderTabs() {
   placeholder.disabled = true;
   placeholder.selected = !TRACKERS[activeTracker] && activeTracker !== HARMS_VIEW;
   select.appendChild(placeholder);
-  // "Harms by kind" (2026-11-16): a cross-tracker view, not a database, listed
+  // The Harms view (2026-11-16; "Harms by first principle" since 2026-11-19): a cross-tracker view, not a database, listed
   // after the curated trackers and before Reporting (see harms-list block).
   const harmsOpt = document.createElement("option");
   harmsOpt.value = HARMS_VIEW;
-  harmsOpt.textContent = "Harms by kind";
+  harmsOpt.textContent = "Harms by first principle";
   harmsOpt.selected = activeTracker === HARMS_VIEW;
   visibleTrackerKeys(TRACKERS).forEach(key => {
     if (key === "tracker") select.appendChild(harmsOpt);
