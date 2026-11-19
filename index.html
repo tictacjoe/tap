@@ -1825,7 +1825,7 @@
 <div id="headlines-wrap" style="display:none">
   <div class="records-feed-tabs" role="tablist" aria-label="Records feed">
     <button type="button" role="tab" id="feed-tab-curated" aria-selected="true">TAP entries</button>
-    <button type="button" role="tab" id="feed-tab-reporting" aria-selected="false">Reporting feed, unverified</button>
+    <button type="button" role="tab" id="feed-tab-reporting" aria-selected="false">Reporting feed, uncurated</button>
   </div>
   <div class="controls" id="headlines-controls">
     <select id="headlines-sort"></select>
@@ -3101,7 +3101,7 @@ function renderHeadlinesView(appendOnly) {
   document.getElementById("feed-tab-curated").textContent =
     "TAP entries (" + items.filter(i => curatedKeys.includes(i.tracker)).length + ")";
   document.getElementById("feed-tab-reporting").textContent =
-    "Reporting feed, unverified (" + items.filter(i => i.tracker === "tracker").length + ")";
+    "Reporting feed, uncurated (" + items.filter(i => i.tracker === "tracker").length + ")";
 
   // Claim-checks never appear in either feed.
   if (headlinesFeed === "reporting") {
