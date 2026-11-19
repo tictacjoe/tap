@@ -15,6 +15,8 @@
     --trk-dai: #3462b0;
     --trk-trumpfamily: #a3303f;
     --trk-oea: #8a7a0a;
+    /* Claim-checks: browse-chip row only (2026-11-19). White text ~6.6:1. */
+    --trk-communitytopics: #4f5b66;
     --paper-card: #F7F8F2;
     --ink: #1D2220;
     --ink-soft: #52564F;
@@ -132,24 +134,37 @@
     outline: none;
   }
   .global-search-box input[type="text"]::placeholder { color: var(--ink-faint); }
-  .browse-instead {
-    display: block;
-    width: fit-content;
+  /* Browse chips (2026-11-19): one chip per tracker, under the search box,
+     replacing the "— browse by tracker —" button and its dialog. Same
+     colors and type as the entry tracker chips (.tracker-chip), sized up
+     for tapping; each chip is as wide as its own label and the row wraps. */
+  .browse-chips {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.4rem;
+    max-width: 880px;
     margin: 1.75rem auto 0;
-    text-align: center;
-    font-family: ui-monospace, monospace;
-    font-size: 0.72rem;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: var(--ink-soft);
-    background: var(--paper-card);
-    border: 1px solid var(--rule-strong);
-    border-radius: 4px;
-    padding: 0.55rem 1rem;
-    cursor: pointer;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    padding: 0 1rem;
   }
-  .browse-instead:hover { background: var(--brass); color: var(--paper-card); border-color: var(--brass); }
+  .browse-chip {
+    background: var(--chip);
+    color: #fff;
+    font-family: ui-monospace, monospace;
+    /* html is 80%, so 0.95rem renders ~12px; padding keeps chips >= 24px tall. */
+    font-size: 0.95rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    line-height: 1.3;
+    padding: 0.5rem 0.75rem;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  /* Same contrast fix as .tracker-chip: black on the OEA olive. */
+  .browse-chip[data-tracker="oea"] { color: #000; }
+  .browse-chip:hover,
+  .browse-chip:focus-visible { outline: 2px solid var(--brass); outline-offset: 2px; }
 
   /* ================= TOP BAR ================= */
   /* Slim bar above the masthead: updated date on the left, text links on
@@ -287,26 +302,6 @@
   }
   .suggest-success .stamp-check { font-size: 2rem; color: var(--verified); }
   .suggest-success p { color: var(--ink-soft); font-size: 0.9rem; margin: 0.6rem 0 0; }
-
-  /* ================= BROWSE-BY-INDEX MODAL ================= */
-  .browse-options { display: flex; flex-direction: column; gap: 0.5rem; }
-  .browse-option-btn {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    font-family: ui-monospace, monospace;
-    font-size: 0.9rem;
-    color: var(--ink);
-    background: var(--paper);
-    border: 1px solid var(--rule-strong);
-    border-radius: 4px;
-    padding: 0.7rem 0.9rem;
-    cursor: pointer;
-    text-align: left;
-  }
-  .browse-option-btn:hover { background: var(--brass-light); border-color: var(--brass); }
-  .browse-option-count { color: var(--ink-faint); font-size: 0.8rem; }
 
   /* (The other half of the narrow-viewport fix, main and #headlines-wrap
      going fluid, lives after their base rules below.) */
@@ -475,8 +470,8 @@
     cursor: pointer;
   }
   /* Used on the Records landing view, where the select would otherwise
-     sit redundantly below the "— browse by tracker —" button, which now
-     opens its own dialog (see #browse-backdrop) rather than this select.
+     sit redundantly below the browse chips (#browse-chips), which open
+     a tracker directly rather than through this select.
      Only applied on Records; a tracker's own page still shows the
      select normally as its active-database indicator/switcher. */
   .tabs-select.visually-hidden {
@@ -1736,7 +1731,7 @@
   </div>
 
   <div class="regex-error" id="regex-error"></div>
-  <button type="button" class="browse-instead" id="browse-instead">— browse by tracker —</button>
+  <nav class="browse-chips" id="browse-chips" aria-label="Browse by tracker"></nav>
 
 </header>
 
@@ -1766,18 +1761,6 @@
   </div>
 </div>
 
-<!-- Browse-by-index modal: lists every database as a clickable option.
-     Built on the same suggest-backdrop/suggest-modal shell as Claim-Check
-     above, for visual consistency and so this doesn't need its own CSS.
-     Options are populated from TRACKERS in openBrowseModal() (see JS
-     section near the bottom), not hardcoded here. -->
-<div class="suggest-backdrop" id="browse-backdrop" hidden>
-  <div class="suggest-modal" role="dialog" aria-modal="true" aria-labelledby="browse-modal-title">
-    <button class="suggest-close-btn" id="browse-close-btn" type="button" title="Close">✕</button>
-    <h2 id="browse-modal-title">Browse by Tracker</h2>
-    <div class="browse-options" id="browse-options"></div>
-  </div>
-</div>
 <iframe name="suggest-target-frame" id="suggest-target-frame" style="display:none;" title="Submission target (hidden)"></iframe>
 <form id="suggest-hidden-form"
       action="https://docs.google.com/forms/d/e/1FAIpQLSeje_96qI3OzIVhd-4Ngb5WPA_6NmO20vY6AfcIFq_9b8jAFA/formResponse"
@@ -7186,7 +7169,7 @@ function renderDispatch() {
   const tabsEl = document.getElementById("tabs");
   const mainEl = document.querySelector("main");
   const controlsEl = document.getElementById("tab-controls");
-  const browseLabelEl = document.getElementById("browse-instead");
+  const browseChipsEl = document.getElementById("browse-chips");
   const headlinesWrapEl = document.getElementById("headlines-wrap");
   const entriesEl = document.getElementById("entries");
   const countEl = document.getElementById("count");
@@ -7199,7 +7182,7 @@ function renderDispatch() {
     tabsEl.style.display = "none";
     mainEl.style.display = "";
     controlsEl.style.display = "none";
-    browseLabelEl.style.display = "none";
+    browseChipsEl.style.display = "none";
     headlinesWrapEl.style.display = "none";
     entriesEl.style.display = "";
     countEl.style.display = "";
@@ -7208,9 +7191,10 @@ function renderDispatch() {
   }
 
   tabsEl.style.display = "";
-  browseLabelEl.style.display = "";
+  browseChipsEl.style.display = "";
   document.getElementById("regex-error").textContent = "";
   renderTabs();
+  renderBrowseChips();
 
   if (activeTracker === "headlines") {
     tabsEl.classList.add("visually-hidden");
@@ -7369,53 +7353,32 @@ document.getElementById("back-to-top-btn").addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-// "— browse by tracker —" opens a real dialog listing every database,
-// rather than trying to force the native <select> open programmatically.
-// An earlier version called showPicker() on #tabs -- the standard API
-// for this exact purpose -- but it proved unreliable in practice (Joe
-// reported the button doing nothing, even though showPicker() itself
-// never threw in testing). A custom modal, built on the same
-// suggest-backdrop/suggest-modal shell the Claim-Check dialog already
-// uses, has no dependency on that API at all and works identically in
-// every browser.
-const browseBackdrop = document.getElementById("browse-backdrop");
-const browseOptionsEl = document.getElementById("browse-options");
+// Browse chips (2026-11-19): one chip per visible tracker except Reporting
+// (reachable from the Records feed tab instead), replacing the
+// "— browse by tracker —" button and dialog. A click does what picking the
+// tracker in that dialog did. Hover titles carry the entry count.
 // Set by loadAllData() once every data file has settled. Until then each
-// tracker's data is still its empty placeholder array, so the counts below
-// would read 0 (seen live 2026-11-01): show "…" instead, and loadAllData()
-// redraws an open dialog with the real counts when loading finishes.
+// tracker's data is still its empty placeholder array, so a count would
+// read 0 (seen live 2026-11-01): the title shows the name alone until then.
 let allDataLoaded = false;
 
-function openBrowseModal() {
-  browseOptionsEl.innerHTML = "";
-  visibleTrackerKeys(TRACKERS).forEach(key => {
+function renderBrowseChips() {
+  const row = document.getElementById("browse-chips");
+  if (!row) return;
+  row.innerHTML = "";
+  visibleTrackerKeys(TRACKERS).filter(key => key !== "tracker").forEach(key => {
     const btn = document.createElement("button");
     btn.type = "button";
-    btn.className = "browse-option-btn";
-    btn.innerHTML =
-      '<span>' + escapeHtml(TRACKERS[key].label) + '</span>' +
-      '<span class="browse-option-count">' + (allDataLoaded ? TRACKERS[key].data.length : "…") + '</span>';
-    btn.addEventListener("click", () => {
-      closeBrowseModal();
-      selectDatabaseTab(key);
-    });
-    browseOptionsEl.appendChild(btn);
+    btn.className = "browse-chip";
+    btn.dataset.tracker = key;
+    btn.style.setProperty("--chip", "var(--trk-" + key + ")");
+    btn.textContent = HEADLINE_TRACKER_MEDIUM[key];
+    btn.title = TRACKERS[key].label +
+      (allDataLoaded ? " (" + TRACKERS[key].data.length + " entries)" : "");
+    btn.addEventListener("click", () => selectDatabaseTab(key));
+    row.appendChild(btn);
   });
-  browseBackdrop.hidden = false;
 }
-
-function closeBrowseModal() {
-  browseBackdrop.hidden = true;
-}
-
-document.getElementById("browse-instead").addEventListener("click", openBrowseModal);
-document.getElementById("browse-close-btn").addEventListener("click", closeBrowseModal);
-browseBackdrop.addEventListener("click", (e) => {
-  if (e.target === browseBackdrop) closeBrowseModal();
-});
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape" && !browseBackdrop.hidden) closeBrowseModal();
-});
 
 // Counterpart to the dbBtn click handler in buildHeadlineRow() -- restores
 // Records from its stamped snapshot on Back, or replays the jump to the
@@ -7571,6 +7534,8 @@ suggestSubmitBtn.addEventListener("click", () => {
    into individually searchable events immediately after loading. */
 async function loadAllData() {
   document.getElementById("entries").innerHTML = '<div class="empty-state">Loading data\u2026</div>';
+  // Chips show while the data files load (titles fill in afterwards).
+  renderBrowseChips();
 
   const [prosecutionResult, deregulationResult, trackerResult, govservicesResult, oeaResult, trumpfamilyResult, daiResult, communitytopicsResult] = await Promise.allSettled([
     fetch("data/prosecution.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
@@ -7670,7 +7635,6 @@ async function loadAllData() {
   refreshStatusStageFlags();
 
   allDataLoaded = true;
-  if (!browseBackdrop.hidden) openBrowseModal();
   // #harms opens the Harms view; checked before the first render, which would
   // otherwise clear #harms as "leaving" the view.
   if (harmsHashAction(location.hash, activeTracker, "load") === "open") activeTracker = HARMS_VIEW;

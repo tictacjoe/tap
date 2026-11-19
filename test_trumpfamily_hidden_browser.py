@@ -72,11 +72,10 @@ def test_hidden_tracker_has_no_tab_browse_or_headlines(browser, site_url):
     assert page.locator('#tabs option[value="trumpfamily"]').count() == 0
     assert page.locator('#headlines-tracker-filter option[value="trumpfamily"]').count() == 0
     assert page.evaluate("buildHeadlineItems().filter(i => i.tracker === 'trumpfamily').length") == 0
-    # Browse modal lists no Trump Family option.
-    page.evaluate("openBrowseModal()")
-    browse = page.locator("#browse-options .browse-option-btn").all_inner_texts()
-    assert browse and not any("Trump Family" in t for t in browse)
-    page.evaluate("closeBrowseModal()")
+    # Browse chips show no Trump Family chip.
+    page.evaluate("renderBrowseChips()")
+    assert page.locator("#browse-chips .browse-chip").count() > 0
+    assert page.locator('.browse-chip[data-tracker="trumpfamily"]').count() == 0
     # Global search (the #global-search input -> renderDispatch ->
     # renderGlobalResults) finds nothing from the hidden tracker.
     page.fill("#global-search", "Fixture WLF")

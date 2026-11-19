@@ -91,10 +91,9 @@ def test_hidden_dai_has_no_tab_browse_headlines_or_search_hit(browser, site_url)
     assert page.locator('#tabs option[value="dai"]').count() == 0
     assert page.locator('#headlines-tracker-filter option[value="dai"]').count() == 0
     assert page.evaluate("buildHeadlineItems().filter(i => i.tracker === 'dai').length") == 0
-    page.evaluate("openBrowseModal()")
-    browse = page.locator("#browse-options .browse-option-btn").all_inner_texts()
-    assert browse and not any("DHS and ICE" in t for t in browse)
-    page.evaluate("closeBrowseModal()")
+    page.evaluate("renderBrowseChips()")
+    assert page.locator("#browse-chips .browse-chip").count() > 0
+    assert page.locator('.browse-chip[data-tracker="dai"]').count() == 0
     page.fill("#global-search", "Fixture Broadview")
     page.wait_for_timeout(300)
     assert page.locator('#entries .entry[data-entry-id="dai-fixture"]').count() == 0
