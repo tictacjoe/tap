@@ -215,7 +215,10 @@ def moved_targets_hidden(working, site):
     path = Path(working) / "tracker" / "moved_ids.json"
     if not path.exists():
         return set()
-    targets = {info["to"] for info in json.loads(path.read_text(encoding="utf-8")).values()}
+    # `to` is a tap-data name; hidden-tracker detection reads site keys.
+    to_site_key = {"government-services": "govservices", "cla": "prosecution"}
+    targets = {to_site_key.get(info["to"], info["to"])
+               for info in json.loads(path.read_text(encoding="utf-8")).values()}
     return targets & hidden_trackers.site_hidden_trackers(Path(site) / "index.html")
 
 

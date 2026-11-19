@@ -58,3 +58,15 @@ def test_moved_targets_hidden_gsr_origin(tmp_path):
     site.mkdir()
     (site / "index.html").write_text("const TRACKERS = {\n  dai: {\n    hidden: true,\n  },\n};\n")
     assert publish.moved_targets_hidden(w, site) == {"dai"}
+
+
+def test_moved_targets_hidden_maps_gsr_target_to_site_key(tmp_path):
+    # Retire-OEA: moved_ids records `to` as the tap-data name ("government-services");
+    # hidden-tracker detection reads site keys ("govservices").
+    w = _working(tmp_path, {"n1": {"from": "oea", "to": "government-services", "date": "2026-11-19"}})
+    site = tmp_path / "site"
+    site.mkdir()
+    (site / "index.html").write_text("const TRACKERS = {\n  govservices: {\n    hidden: true,\n  },\n};\n")
+    assert publish.moved_targets_hidden(w, site) == {"govservices"}
+    (site / "index.html").write_text("const TRACKERS = {\n  govservices: {\n  },\n};\n")
+    assert publish.moved_targets_hidden(w, site) == set()

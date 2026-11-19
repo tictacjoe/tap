@@ -122,6 +122,13 @@ test("resolveEntryTarget: unknown id on a visible tracker keeps today's behavior
   assert.equal(fns.resolveEntryTarget("nope", "x", TRK, MOVED), null);
   assert.deepEqual(fns.resolveEntryTarget("prosecution", "m1", TRK, {}), { key: "prosecution", id: "m1", moved: false });
 });
+test("resolveEntryTarget: OEA move into GSR/CLA maps `to` to the site key, with no oea tracker config", () => {
+  const trk = { govservices: { idField: "id", data: [{ id: "npr" }] }, prosecution: { idField: "id", data: [{ id: "gren" }] } };
+  const moved = { npr: { from: "oea", to: "government-services", date: "2026-11-19" },
+                  gren: { from: "oea", to: "prosecution", date: "2026-11-19" } };
+  assert.deepEqual(fns.resolveEntryTarget("oea", "npr", trk, moved), { key: "govservices", id: "npr", moved: true });
+  assert.deepEqual(fns.resolveEntryTarget("oea", "gren", trk, moved), { key: "prosecution", id: "gren", moved: true });
+});
 test("globalSearchDatabaseCount counts visible non-Reporting trackers", () => {
   assert.equal(fns.globalSearchDatabaseCount({ a: {}, b: { hidden: true }, tracker: {}, c: {} }), 2);
 });
