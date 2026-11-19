@@ -443,3 +443,14 @@ def test_status_stage_passes_through(tmp_path):
 
     assert included[0]["status_stage"] == "In court"
     assert json.loads(dest_file.read_text())[0]["status_stage"] == "In court"
+
+
+def test_moved_to_site_keys_maps_tap_data_names_once():
+    import publish as publish_mod
+    moved = {"g": {"from": "government-services", "to": "dai", "date": "d"},
+             "n": {"from": "oea", "to": "government-services", "date": "d"},
+             "k": {"from": "prosecution", "to": "trumpfamily", "date": "d"}}
+    assert publish_mod.moved_to_site_keys(moved) == {
+        "g": {"from": "govservices", "to": "dai", "date": "d"},
+        "n": {"from": "oea", "to": "govservices", "date": "d"},
+        "k": {"from": "prosecution", "to": "trumpfamily", "date": "d"}}

@@ -206,6 +206,20 @@ def publish_claim_checks(module, claims_file: Path, published_entries: list,
     return report
 
 
+# tap-data tracker/moved_ids.json records `from`/`to` as tap-data names;
+# the site and its links use site keys. This is the one place they are
+# mapped: publish writes data/moved-ids.json in site keys, so index.html
+# reads them as-is. Names not listed (prosecution, trumpfamily, dai, a
+# retired "oea") are already the same in both.
+MOVED_SITE_KEYS = {"government-services": "govservices", "cla": "prosecution"}
+
+
+def moved_to_site_keys(moved):
+    """moved_ids.json content with `from`/`to` mapped to site keys."""
+    return {entry_id: {**info, **{k: MOVED_SITE_KEYS.get(info[k], info[k]) for k in ("from", "to") if k in info}}
+            for entry_id, info in moved.items()}
+
+
 def moved_targets_hidden(working, site):
     """Move targets (tap-data tracker/moved_ids.json) still hidden on the
     site: publishing then would drop moved entries from their old tab before
@@ -213,10 +227,7 @@ def moved_targets_hidden(working, site):
     path = Path(working) / "tracker" / "moved_ids.json"
     if not path.exists():
         return set()
-    # `to` is a tap-data name; hidden-tracker detection reads site keys.
-    to_site_key = {"government-services": "govservices", "cla": "prosecution"}
-    targets = {to_site_key.get(info["to"], info["to"])
-               for info in json.loads(path.read_text(encoding="utf-8")).values()}
+    targets = {info["to"] for info in moved_to_site_keys(json.loads(path.read_text(encoding="utf-8"))).values()}
     return targets & hidden_trackers.site_hidden_trackers(Path(site) / "index.html")
 
 
@@ -389,7 +400,7 @@ def main():
 
     # --- moved-ids (Phase B): old-link redirects for site and connector ---
     moved_src = working / "tracker" / "moved_ids.json"
-    moved = json.loads(moved_src.read_text(encoding="utf-8")) if moved_src.exists() else {}
+    moved = moved_to_site_keys(json.loads(moved_src.read_text(encoding="utf-8"))) if moved_src.exists() else {}
     print(f"=== moved-ids === {len(moved)} redirect(s)")
     if not args.dry_run:
         (site / "data" / "moved-ids.json").write_text(json.dumps(moved, indent=2, sort_keys=True) + "\n",

@@ -123,9 +123,9 @@ test("resolveEntryTarget: unknown id on a visible tracker keeps today's behavior
   assert.equal(fns.resolveEntryTarget("nope", "x", TRK, MOVED), null);
   assert.deepEqual(fns.resolveEntryTarget("prosecution", "m1", TRK, {}), { key: "prosecution", id: "m1", moved: false });
 });
-test("resolveEntryTarget: OEA move into GSR/CLA maps `to` to the site key, with no oea tracker config", () => {
+test("resolveEntryTarget: OEA move into GSR/CLA lands on the site key, with no oea tracker config", () => {
   const trk = { govservices: { idField: "id", data: [{ id: "npr" }] }, prosecution: { idField: "id", data: [{ id: "gren" }] } };
-  const moved = { npr: { from: "oea", to: "government-services", date: "2026-11-19" },
+  const moved = { npr: { from: "oea", to: "govservices", date: "2026-11-19" },
                   gren: { from: "oea", to: "prosecution", date: "2026-11-19" } };
   assert.deepEqual(fns.resolveEntryTarget("oea", "npr", trk, moved), { key: "govservices", id: "npr", moved: true });
   assert.deepEqual(fns.resolveEntryTarget("oea", "gren", trk, moved), { key: "prosecution", id: "gren", moved: true });
@@ -185,11 +185,11 @@ test("globalSearchNoMatchesText lists visible non-Reporting tracker labels", () 
   assert.equal(fns.globalSearchNoMatchesText({ a: { label: "A" } }), "No matches in A.");
 });
 
-test("resolveEntryTarget: a move recorded with the tap-data name redirects the site-key link", () => {
-  // tracker/moved_ids.json records `from` as tap-data names ("government-services");
-  // site links use site keys ("govservices"). DAI Phase B moves entries out of GSR.
+test("resolveEntryTarget: a move out of GSR redirects the old govservices link", () => {
+  // publish.py writes data/moved-ids.json in site keys ("govservices", not
+  // tap-data's "government-services"). DAI Phase B moves entries out of GSR.
   const trk = { govservices: { idField: "id", data: [] }, dai: { idField: "id", data: [{ id: "g1" }] } };
-  const moved = { g1: { from: "government-services", to: "dai", date: "2026-10-18" } };
+  const moved = { g1: { from: "govservices", to: "dai", date: "2026-10-18" } };
   assert.deepEqual(fns.resolveEntryTarget("govservices", "g1", trk, moved), { key: "dai", id: "g1", moved: true });
   assert.deepEqual(fns.resolveEntryTarget("prosecution", "g1", Object.assign({ prosecution: { idField: "id", data: [] } }, trk), moved),
                    { key: "prosecution", id: "g1", moved: false });

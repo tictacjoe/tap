@@ -166,8 +166,8 @@ def test_cla_individual_view_has_no_tfs_link_while_hidden(browser, site_url):
 
 
 def test_old_govservices_link_redirects_to_dai(browser, site_url):
-    # DAI Phase B: tracker/moved_ids.json records GSR moves as "government-services";
-    # the old site link uses the key "govservices".
+    # DAI Phase B: publish.py writes data/moved-ids.json in site keys, so a
+    # GSR move reads "govservices" (tap-data's "government-services").
     page, errors = _goto(browser, site_url, "")
     page.evaluate("""() => {
       const fx = mapDaiEntry({id: "g-fx", title: "Fixture GSR move", category: "removals",
@@ -175,7 +175,7 @@ def test_old_govservices_link_redirects_to_dai(browser, site_url):
         human_toll: {summary: "s", figures: [], caveat: "c"}, status: "Ongoing", sources: []});
       TRACKERS.dai.hidden = false;
       TRACKERS.dai.data = [fx];
-      MOVED_IDS = {"g-fx": {from: "government-services", to: "dai", date: "2026-10-18"}};
+      MOVED_IDS = {"g-fx": {from: "govservices", to: "dai", date: "2026-10-18"}};
     }""")
     page.evaluate("location.hash = '#govservices/g-fx'; openEntryFromHash();")
     assert page.evaluate("activeTracker") == "dai"
