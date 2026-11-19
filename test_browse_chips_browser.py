@@ -130,3 +130,16 @@ def test_claimchecks_chip_color(site_url, browser):
     )
     assert bg == "rgb(79, 91, 102)"
     page.close()
+
+
+def test_chips_are_readable_and_tappable(site_url, browser):
+    # Spec: about 12px text, easy to tap. html is font-size 80%, so rem
+    # values render smaller than they read; check computed size and height.
+    page = _open(browser, site_url, width=375)
+    sizes = page.locator(".browse-chip").evaluate_all(
+        "els => els.map(e => [parseFloat(getComputedStyle(e).fontSize), e.getBoundingClientRect().height])"
+    )
+    for font_px, height_px in sizes:
+        assert 11.5 <= font_px <= 12.5, font_px
+        assert height_px >= 24, height_px
+    page.close()
