@@ -73,7 +73,6 @@ COLORS = {
     "deregulation": "rgb(176, 86, 26)",
     "dai": "rgb(52, 98, 176)",
     "trumpfamily": "rgb(163, 48, 63)",
-    "oea": "rgb(138, 122, 10)",
 }
 
 
@@ -91,8 +90,7 @@ def test_cards_have_left_border_and_chip(browser, site_url, key):
     assert chip.count() == 1
     assert chip.evaluate("e => getComputedStyle(e).backgroundColor") == COLORS[key]
     assert chip.evaluate("e => e.textContent.trim()")
-    assert chip.evaluate("e => getComputedStyle(e).color") == (
-        "rgb(0, 0, 0)" if key == "oea" else "rgb(255, 255, 255)")
+    assert chip.evaluate("e => getComputedStyle(e).color") == "rgb(255, 255, 255)"
     # Chip leads the header line.
     assert card.locator(".entry-title").first.evaluate(
         "e => e.firstElementChild.classList.contains('tracker-chip')")

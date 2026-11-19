@@ -237,11 +237,12 @@ def test_triage_button_shows_and_locks_when_configured(browser, site_url):
     assert btn.inner_text() == "Queued, thanks ✓"
 
 
-def test_empty_oea_tab_says_no_entries_yet_but_other_empties_keep_the_filter_message(browser, site_url):
-    """Spec sec-6: an OEA tab with no data says "No entries yet", not "try a different search"."""
+def test_empty_tfs_tab_says_no_entries_yet_but_other_empties_keep_the_filter_message(browser, site_url):
+    """An empty Trump Family tab says "No entries yet", not "try a different search"
+    (was the OEA tab until OEA's retirement, 2026-11-19)."""
     page, errors = _goto(browser, site_url, "")
-    # Force the empty-data case regardless of what oea.json holds today.
-    page.evaluate("() => { TRACKERS.oea.data = []; switchToTracker('oea'); }")
+    # Force the empty-data case regardless of what trumpfamily.json holds today.
+    page.evaluate("() => { TRACKERS.trumpfamily.data = []; switchToTracker('trumpfamily'); }")
     page.wait_for_timeout(300)
     assert page.locator("#entries .empty-state").inner_text().strip() == "No entries yet."
     # A tracker with data and a search matching nothing keeps the generic message.

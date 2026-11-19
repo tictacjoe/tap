@@ -198,7 +198,6 @@ test("corpus: every published curated entry speaks cleanly", () => {
     trumpfamily: { kind: "govservices", trackerKey: "trumpfamily", label: "Trump Family", titleField: "title", glanceEnabled: true,
       fieldLabels: { institution: "Business", proponent: "Government link", impact: "Financial stake" } },
     dai: daiCfg,
-    oea: { kind: "govservices", trackerKey: "oea", label: "Other Executive Actions", titleField: "title", glanceEnabled: true },
   };
   // A leaked JS value shows up as a whole field ("Status. undefined."), not as a word inside prose
   // ("over undefined 'DEI'" is real text), so match it only standing alone between separators.

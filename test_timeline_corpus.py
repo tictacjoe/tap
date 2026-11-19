@@ -13,7 +13,6 @@ FILES = {
     "deregulation": "deregulation.json",
     "government-services": "government-services.json",
     "prosecution": "prosecution.json",
-    "oea": "oea.json",
     "trumpfamily": "trumpfamily.json",
     "dai": "dai.json",
 }

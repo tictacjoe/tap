@@ -12,7 +12,6 @@ FILES = {
     "prosecution": "prosecution.json",
     "deregulation": "deregulation.json",
     "government-services": "government-services.json",
-    "oea": "oea.json",
     "trumpfamily": "trumpfamily.json",
     "dai": "dai.json",
 }
@@ -48,7 +47,7 @@ def test_cause_references_never_appear_without_a_cause(tracker):
     assert bad == []
 
 
-@pytest.mark.parametrize("tracker", ["deregulation", "government-services", "oea", "trumpfamily", "dai"])
+@pytest.mark.parametrize("tracker", ["deregulation", "government-services", "trumpfamily", "dai"])
 def test_gsr_and_cdr_causes_open_with_the_analysis_label(tracker):
     bad = [e["id"] for e in _entries(tracker) if e.get("cause") and not e["cause"].startswith(LABEL)]
     assert bad == []

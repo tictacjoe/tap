@@ -1673,8 +1673,8 @@ for (const kind of ["govservices", "deregulation"]) {
 test("update-request button uses trackerKey when the config has one", () => {
   const html = buildDetailHtml(
     { id: "x", title: "T", last_verified: "2026-10-17", estimated_impact: {} },
-    { kind: "govservices", trackerKey: "oea", idField: "id", titleField: "title" });
-  assert.match(html, /data-tracker="oea"/);
+    { kind: "govservices", trackerKey: "somekey", idField: "id", titleField: "title" });
+  assert.match(html, /data-tracker="somekey"/);
 });
 
 test("share-link button writes the TRACKERS key (trackerKey), not the shared kind", () => {

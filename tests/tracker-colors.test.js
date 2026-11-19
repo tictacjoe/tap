@@ -23,10 +23,9 @@ const EXPECTED = {
   deregulation: "#b0561a",
   dai: "#3462b0",
   trumpfamily: "#a3303f",
-  oea: "#8a7a0a",
 };
 
-test("TRACKER_COLORS holds the six exact colors", () => {
+test("TRACKER_COLORS holds the five exact colors (OEA retired 2026-11-19)", () => {
   assert.deepEqual(TRACKER_COLORS, EXPECTED);
 });
 
@@ -36,8 +35,15 @@ test(":root declares each --trk-<key> with the exact hex", () => {
   }
 });
 
+test("OEA is gone from the page: no tracker config, data fetch, adapter or color", () => {
+  assert.doesNotMatch(source, /--trk-oea/);
+  assert.doesNotMatch(source, /data\/oea\.json/);
+  assert.doesNotMatch(source, /^\s*oea:\s*\{/m);
+  assert.doesNotMatch(source, /adaptOeaEntry/);
+});
+
 test("trackerChipHtml is empty for non-curated or unknown keys", () => {
-  for (const k of ["tracker", "communitytopics", "nope", ""]) assert.equal(trackerChipHtml(k), "");
+  for (const k of ["tracker", "communitytopics", "oea", "nope", ""]) assert.equal(trackerChipHtml(k), "");
 });
 
 test("trackerChipHtml carries the color var and the tracker name as text", () => {

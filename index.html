@@ -14,7 +14,6 @@
     --trk-deregulation: #b0561a;
     --trk-dai: #3462b0;
     --trk-trumpfamily: #a3303f;
-    --trk-oea: #8a7a0a;
     /* Claim-checks: browse-chip row only (2026-11-19). White text ~6.6:1. */
     --trk-communitytopics: #4f5b66;
     --paper-card: #F7F8F2;
@@ -161,8 +160,6 @@
     border-radius: 3px;
     cursor: pointer;
   }
-  /* Same contrast fix as .tracker-chip: black on the OEA olive. */
-  .browse-chip[data-tracker="oea"] { color: #000; }
   .browse-chip:hover,
   .browse-chip:focus-visible { outline: 2px solid var(--brass); outline-offset: 2px; }
 
@@ -1253,8 +1250,6 @@
     padding: 0.1rem 0.4rem;
     line-height: 1.3;
   }
-  /* White on --trk-oea (#8a7a0a) is 4.31:1, under 4.5:1 at this size; black is ~4.87:1. */
-  .tracker-chip[style*="--trk-oea"] { color: #000; }
   /* Outside a Records row the chip shows the medium label only. */
   .tracker-chip .tracker-name-abbr { display: none; }
   .entry-title > .tracker-chip {
@@ -1970,25 +1965,6 @@ const TRACKERS = {
     glanceEnabled: true,
     fieldLabels: { institution: "Agencies", proponent: "Lead official", impact: "Human toll" },
   },
-  // Other Executive Actions (2026-10-17): GSR's format with free-text
-  // `category` in place of `domain`, so kind "govservices" reuses every
-  // GSR rendering branch. loadAllData() copies category into domain so
-  // those branches' domain tag and filter read it. trackerKey keeps the
-  // update-request queue's tracker column honest ("oea", not the kind).
-  oea: {
-    label: "Other Executive Actions",
-    data: [],
-    titleField: "title",
-    idField: "id",
-    dateField: "date_of_action",
-    dateAddedField: "date_added",
-    filterField: "domain",
-    filterLabel: "category",
-    statusField: "status",
-    kind: "govservices",
-    trackerKey: "oea",
-    glanceEnabled: true,
-  },
   tracker: {
     label: "Reporting",
     data: [],
@@ -2359,15 +2335,6 @@ function adaptGovServicesEntry(entry) {
 }
 /* adapt-govservices-entry:end */
 
-/* adapt-oea-entry:start */
-function adaptOeaEntry(entry) {
-  return Object.assign(adaptGovServicesEntry(entry), {
-    tracker: "oea",
-    category: entry.category || null,
-  });
-}
-/* adapt-oea-entry:end */
-
 /* visible-tracker-keys:start */
 /* Tracker keys minus any with hidden: true, in TRACKERS order. Every
    place that lists trackers to a visitor goes through this. */
@@ -2645,7 +2612,6 @@ function buildHeadlineItems() {
   const items = [];
   TRACKERS.deregulation.data.forEach(e => items.push(adaptDeregulationEntry(e)));
   TRACKERS.govservices.data.forEach(e => items.push(adaptGovServicesEntry(e)));
-  TRACKERS.oea.data.forEach(e => items.push(adaptOeaEntry(e)));
   if (!TRACKERS.trumpfamily.hidden) TRACKERS.trumpfamily.data.forEach(e => items.push(adaptTrumpFamilyEntry(e)));
   if (!TRACKERS.dai.hidden) TRACKERS.dai.data.forEach(e => items.push(adaptDaiEntry(e)));
   TRACKERS.prosecution.data.forEach(e => items.push(adaptProsecutionEntry(e)));
@@ -2711,7 +2677,6 @@ const HEADLINE_TRACKER_MEDIUM = {
   govservices: "Gov't Service Redirection",
   trumpfamily: "Trump Family Self-Dealing",
   dai: "DHS and ICE Enforcement",
-  oea: "Other Executive Actions",
   tracker: "Reporting",
   communitytopics: "Claim-checks",
 };
@@ -2721,7 +2686,6 @@ const HEADLINE_TRACKER_ABBR = {
   govservices: "GSR",
   trumpfamily: "TFS",
   dai: "DAI",
-  oea: "OEA",
   tracker: "RPT",
   communitytopics: "CC",
 };
@@ -2733,7 +2697,6 @@ const TRACKER_COLORS = {
   deregulation: "#b0561a",
   dai: "#3462b0",
   trumpfamily: "#a3303f",
-  oea: "#8a7a0a",
 };
 
 // Chip markup for a curated tracker key; "" for Reporting, Claim-checks and
@@ -4842,7 +4805,7 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
   if (cfg.kind === "govservices") {
     // fieldLabels (Trump Family, 2026-10-17): a tracker sharing this
     // branch can rename the Institution / Primary proponent / Estimated
-    // impact labels; GSR and OEA have none, so they keep the defaults.
+    // impact labels; GSR has none, so it keeps the defaults.
     const L = cfg.fieldLabels || {};
     const glanceWho = glanceActive(entry, cfg) ? entry.glance.who : "";
     // "What happened" (renamed from "What changed" 2026-09-18, Joe's
@@ -6639,8 +6602,8 @@ function renderEntries() {
     ? toRender.length + " shown of " + filtered.length + " entries — search or filter to narrow further"
     : filtered.length + " of " + cfg.data.length + " entries shown";
 
-  if (filtered.length === 0 && cfg.data.length === 0 && ["oea", "trumpfamily", "dai"].includes(cfg.trackerKey)) {
-    // OEA, TFS and DAI ship empty: no search or filter is involved, so don't suggest changing one.
+  if (filtered.length === 0 && cfg.data.length === 0 && ["trumpfamily", "dai"].includes(cfg.trackerKey)) {
+    // TFS and DAI shipped empty: no search or filter is involved, so don't suggest changing one.
     container.innerHTML = '<div class="empty-state">No entries yet.</div>';
     return;
   }
@@ -6711,7 +6674,6 @@ const RELATED_TRACKER_FIELD_TO_KEY = {
   deregulation: "deregulation",
   prosecution: "prosecution",
   "government-services": "govservices",
-  oea: "oea",
   trumpfamily: "trumpfamily",
   dai: "dai",
 };
@@ -6878,7 +6840,7 @@ function jumpToRelatedEntry(trackerField, id) {
 
 // Shareable-link support: a card's "Copy link" button writes
 // #<trackerKey>/<entryId> (trackerKey is a TRACKERS key: cfg.trackerKey
-// when the config has one, e.g. "oea" whose kind is "govservices", else cfg.kind); this reads that
+// when the config has one, else cfg.kind); this reads that
 // hash back on initial load, switches to the right tab via
 // goToTrackerHome() (not a bare activeTracker assignment -- that resets
 // filter, sort and grouping to the tracker's defaults, so a stale choice
@@ -7599,12 +7561,11 @@ async function loadAllData() {
   // Chips show while the data files load (titles fill in afterwards).
   renderBrowseChips();
 
-  const [prosecutionResult, deregulationResult, trackerResult, govservicesResult, oeaResult, trumpfamilyResult, daiResult, communitytopicsResult] = await Promise.allSettled([
+  const [prosecutionResult, deregulationResult, trackerResult, govservicesResult, trumpfamilyResult, daiResult, communitytopicsResult] = await Promise.allSettled([
     fetch("data/prosecution.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
     fetch("data/deregulation.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
     fetch("data/tracker.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
     fetch("data/government-services.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
-    fetch("data/oea.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
     fetch("data/trumpfamily.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
     fetch("data/dai.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
     fetch("data/community-topics.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
@@ -7646,13 +7607,6 @@ async function loadAllData() {
     TRACKERS.govservices.data = govservicesResult.value;
   } else {
     loadErrors.push("government-services.json (" + govservicesResult.reason.message + ")");
-  }
-
-  if (oeaResult.status === "fulfilled") {
-    // category -> domain: see TRACKERS.oea's comment.
-    TRACKERS.oea.data = oeaResult.value.map(e => Object.assign({}, e, { domain: e.category }));
-  } else {
-    loadErrors.push("oea.json (" + oeaResult.reason.message + ")");
   }
 
   // Trump Family: see TRACKERS.trumpfamily's comment. While hidden, a

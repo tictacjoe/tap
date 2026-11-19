@@ -16,7 +16,6 @@ Directory assumptions (override with flags if yours differ):
     prosecution/cabinet-level/*.json
     deregulation/entries/*.json
     government-services/entries/*.json
-    oea/entries/*.json
     trumpfamily/entries/*.json
     dai/entries/*.json
     tracker/moved_ids.json
@@ -27,7 +26,6 @@ Directory assumptions (override with flags if yours differ):
     data/prosecution.json
     data/deregulation.json
     data/government-services.json
-    data/oea.json
     data/trumpfamily.json
     data/dai.json
     data/moved-ids.json
@@ -222,6 +220,23 @@ def moved_targets_hidden(working, site):
     return targets & hidden_trackers.site_hidden_trackers(Path(site) / "index.html")
 
 
+# Data files of retired trackers. Other Executive Actions (OEA) was retired
+# 2026-11-19; its entries moved to GSR and CLA (tap-data tracker/moved_ids.json).
+RETIRED_OUTPUTS = ("oea.json",)
+
+
+def remove_retired_outputs(site, dry_run: bool = False) -> list:
+    """Delete any retired tracker's leftover data file; return the names removed."""
+    removed = []
+    for name in RETIRED_OUTPUTS:
+        path = Path(site) / "data" / name
+        if path.exists():
+            if not dry_run:
+                path.unlink()
+                removed.append(name)
+    return removed
+
+
 def write_site_meta(dest_file: Path, today: date, dry_run: bool = False) -> dict:
     """Write {"updated": "YYYY-MM-DD"} so the page can show a site update date."""
     meta = {"updated": today.isoformat()}
@@ -331,23 +346,9 @@ def main():
         print(f"  WARNING: {govservices_src} not found, skipping")
     print()
 
-    # --- other executive actions (OEA, 2026-10-17) ---
-    # Same format as government-services; its entries arrive only via the
-    # Reporting tab's "Triage this" button. An empty folder still publishes
-    # [] so the site's fetch never 404s.
-    print("=== oea ===")
-    oea_src = working / "oea" / "entries"
-    if oea_src.exists():
-        included, excl_count = publish_json_entries(
-            oea_src, site / "data" / "oea.json",
-            excluded_ids, dry_run=args.dry_run, check_glance=check_glance,
-            update_markers=update_markers,
-            timeline_fields=update_markers.TIMELINE_FIELDS["oea"]
-        )
-        print(f"  {len(included)} entries published, {excl_count} excluded")
-    else:
-        print(f"  WARNING: {oea_src} not found, skipping")
-    print()
+    # --- retired trackers: remove their stale data files ---
+    for name in remove_retired_outputs(site, dry_run=args.dry_run):
+        print(f"  removed retired data/{name}")
 
     # --- trump family (TFS, 2026-10-17) ---
     # Own schema (trumpfamily/SCHEMA.md); published even while the site

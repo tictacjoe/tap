@@ -36,7 +36,6 @@ CURATED_FILES = [
     "prosecution.json",
     "deregulation.json",
     "government-services.json",
-    "oea.json",
     "trumpfamily.json",
     "dai.json",
 ]

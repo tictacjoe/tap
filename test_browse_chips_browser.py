@@ -63,14 +63,14 @@ def _open(browser, site_url, width=1280, wait_loaded=True):
     return page
 
 
-def test_seven_chips_in_order(site_url, browser):
+def test_six_chips_in_order(site_url, browser):
     page = _open(browser, site_url)
     expected = page.evaluate(
         "visibleTrackerKeys(TRACKERS).filter(k => k !== 'tracker')"
         ".map(k => HEADLINE_TRACKER_MEDIUM[k].toUpperCase())"
     )
     chips = [t.strip() for t in page.locator("#browse-chips .browse-chip").all_inner_texts()]
-    assert len(chips) == 7
+    assert len(chips) == 6  # OEA retired 2026-11-19
     assert chips == expected
     assert chips[-1] == "CLAIM-CHECKS"
     assert "REPORTING" not in chips

@@ -116,7 +116,7 @@ def test_no_view_is_wider_than_the_phone(phone_page):
 # stays as aria-label and title), and no row or view may overflow.
 _CURATED_FILES = [
     "prosecution.json", "deregulation.json", "government-services.json",
-    "oea.json", "trumpfamily.json", "dai.json",
+    "trumpfamily.json", "dai.json",
 ]
 PILL_PHONE_WIDTH = 400
 

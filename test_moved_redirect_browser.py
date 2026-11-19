@@ -182,3 +182,18 @@ def test_old_govservices_link_redirects_to_dai(browser, site_url):
     assert page.evaluate("location.hash") == "#dai/g-fx"
     assert page.locator('.entry.open[data-entry-id="g-fx"]').count() == 1
     assert errors == []
+
+
+@pytest.mark.parametrize("entry_id,key", [
+    ("trump-eo-14290-npr-pbs-funding-cutoff-2025", "govservices"),
+    ("grenell-kennedy-center-donation-allegation-2026", "prosecution"),
+])
+def test_retired_oea_links_land_in_new_tracker(browser, site_url, entry_id, key):
+    # OEA retired 2026-11-19: no oea tracker exists, old #oea/<id> links redirect
+    # via the committed data/moved-ids.json, and no oea.json fetch error shows.
+    page, errors = _goto(browser, site_url, f"oea/{entry_id}")
+    assert page.evaluate("'oea' in TRACKERS") is False
+    assert page.evaluate("activeTracker") == key
+    assert page.locator(f'.entry[data-entry-id="{entry_id}"]').count() == 1
+    assert page.locator(LOAD_ERROR_BANNER).count() == 0
+    assert errors == []

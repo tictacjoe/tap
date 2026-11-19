@@ -314,14 +314,23 @@ def test_publish_claim_checks_drops_a_check_whose_evidence_changed(tmp_path, cap
     assert "entry-a::ev000" in capsys.readouterr().out
 
 
-def test_publish_empty_oea_dir_writes_empty_array(tmp_path):
-    src = tmp_path / "oea" / "entries"
-    src.mkdir(parents=True)
-    (src / ".gitkeep").write_text("")
-    dest = tmp_path / "oea.json"
-    included, excluded = publish_json_entries(src, dest, set())
-    assert included == [] and excluded == 0
-    assert json.loads(dest.read_text()) == []
+def test_remove_retired_outputs_deletes_stale_oea_json(tmp_path, capsys):
+    import publish as publish_mod
+    # OEA retired 2026-11-19: a leftover data/oea.json is removed on publish.
+    data = tmp_path / "data"
+    data.mkdir()
+    (data / "oea.json").write_text("[]")
+    (data / "dai.json").write_text("[]")
+    assert publish_mod.remove_retired_outputs(tmp_path) == ["oea.json"]
+    assert not (data / "oea.json").exists() and (data / "dai.json").exists()
+    assert publish_mod.remove_retired_outputs(tmp_path) == []
+    assert publish_mod.remove_retired_outputs(tmp_path, dry_run=True) == []
+
+
+def test_publish_has_no_oea_section():
+    from pathlib import Path
+    import publish as publish_mod
+    assert "oea/entries" not in Path(publish_mod.__file__).read_text()
 
 
 def test_publish_empty_trumpfamily_dir_writes_empty_array(tmp_path):

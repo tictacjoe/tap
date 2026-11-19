@@ -29,7 +29,7 @@ def _first_with_sources(file_name, has_sources):
 
 
 # One entry per detail-card builder: Cabinet-Level (evidence URLs),
-# Deregulation, and the shared govservices branch (GSR/TFS/DAI/OEA).
+# Deregulation, and the shared govservices branch (GSR/TFS/DAI).
 # Each also has a Broader Pattern (`cause`), for the third-column check.
 CASES = [
     ("prosecution", _first_with_sources(

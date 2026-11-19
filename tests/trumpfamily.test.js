@@ -173,12 +173,12 @@ test("crossViewOnlyOfficials (TFS): TFS officials with no CLA group, sorted by n
 test("globalSearchNoMatchesText lists visible non-Reporting tracker labels", () => {
   const trk = { deregulation: { label: "Corporate Deregulation" }, prosecution: { label: "Cabinet-Level Accountability" },
                 govservices: { label: "Government Service Redirection" },
-                trumpfamily: { label: "Trump Family", hidden: true }, oea: { label: "Other Executive Actions" },
+                trumpfamily: { label: "Trump Family", hidden: true },
                 tracker: { label: "Reporting" }, communitytopics: { label: "Claim-checks" } };
   assert.equal(fns.globalSearchNoMatchesText(trk),
-    "No matches in Corporate Deregulation, Cabinet-Level Accountability, Government Service Redirection, Other Executive Actions, or Claim-checks.");
+    "No matches in Corporate Deregulation, Cabinet-Level Accountability, Government Service Redirection, or Claim-checks.");
   trk.trumpfamily.hidden = false;
-  assert.match(fns.globalSearchNoMatchesText(trk), /Redirection, Trump Family, Other Executive Actions, or Claim-checks\.$/);
+  assert.match(fns.globalSearchNoMatchesText(trk), /Redirection, Trump Family, or Claim-checks\.$/);
   assert.equal(fns.globalSearchNoMatchesText({ a: { label: "A" }, tracker: { label: "Reporting" }, b: { label: "B" } }),
     "No matches in A or B.");
   assert.equal(fns.globalSearchNoMatchesText({ a: { label: "A" } }), "No matches in A.");
