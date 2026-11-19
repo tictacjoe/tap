@@ -226,14 +226,15 @@ RETIRED_OUTPUTS = ("oea.json",)
 
 
 def remove_retired_outputs(site, dry_run: bool = False) -> list:
-    """Delete any retired tracker's leftover data file; return the names removed."""
+    """Delete any retired tracker's leftover data file; return the names removed
+    (on a dry run, the names that would be removed, nothing deleted)."""
     removed = []
     for name in RETIRED_OUTPUTS:
         path = Path(site) / "data" / name
         if path.exists():
             if not dry_run:
                 path.unlink()
-                removed.append(name)
+            removed.append(name)
     return removed
 
 
@@ -348,7 +349,7 @@ def main():
 
     # --- retired trackers: remove their stale data files ---
     for name in remove_retired_outputs(site, dry_run=args.dry_run):
-        print(f"  removed retired data/{name}")
+        print(f"  {'would remove' if args.dry_run else 'removed'} retired data/{name}")
 
     # --- trump family (TFS, 2026-10-17) ---
     # Own schema (trumpfamily/SCHEMA.md); published even while the site

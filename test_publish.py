@@ -325,6 +325,10 @@ def test_remove_retired_outputs_deletes_stale_oea_json(tmp_path, capsys):
     assert not (data / "oea.json").exists() and (data / "dai.json").exists()
     assert publish_mod.remove_retired_outputs(tmp_path) == []
     assert publish_mod.remove_retired_outputs(tmp_path, dry_run=True) == []
+    # A dry run lists what it would remove without deleting it.
+    (data / "oea.json").write_text("[]")
+    assert publish_mod.remove_retired_outputs(tmp_path, dry_run=True) == ["oea.json"]
+    assert (data / "oea.json").exists()
 
 
 def test_publish_has_no_oea_section():
