@@ -5440,6 +5440,184 @@ function harmsLinkHistory(trackerKey, id, scrollY) {
   ];
 }
 /* harms-hash:end */
+/* illegality-view:start */
+/* Possible Illegality view (2026-11-19; spec tap-data/docs/superpowers/specs/
+   2026-11-19-tap-possible-illegality-design.md, "Site"). A cross-tracker
+   list, one row per entry that has at least one possible-violation record
+   in data/illegality.json, joined to the entry the site already loaded in
+   TRACKERS[key].data. Everything here is pure (no DOM, no fetch) so
+   tests/illegality.test.js can run it; Task 8 wires renderDispatch(), the
+   popstate handler and the data fetch. Reader wording stays hedged:
+   "possible", "may violate", never a conclusion of wrongdoing. */
+const ILLEGALITY_VIEW = "illegality";
+// Default sort order of the status stages (the site's existing status words).
+const ILLEGALITY_STATUS_ORDER = ["Unchallenged", "Under investigation", "In court", "Finding issued", "Court ruled", "Reversed or withdrawn"];
+const ILLEGALITY_LABEL_TEXT = { criminal: "Criminal", civil: "Civil/constitutional" };
+const ILLEGALITY_SORTS = [["status", "Status"], ["label", "Label"], ["law", "Law"], ["tracker", "Tracker"], ["who", "Who"], ["harm", "Harm"], ["action", "Date of action"], ["updated", "Recently updated"]];
+
+/* Join illegality data to loaded tracker entries. Returns one row per id
+   that is held by a visible, non-Reporting, non-Community tracker; ids held
+   nowhere (withheld, hidden tracker, deleted) are skipped quietly. The id is
+   looked up across every tracker, so an entry that moved trackers lands on
+   its new home. `labels` is a sorted, unique ARRAY of "civil"/"criminal". */
+function buildIllegalityRows(trackers, data) {
+  const laws = (data && data.laws) || {};
+  const entries = (data && data.entries) || {};
+  // id -> {key, entry}, over visible curated trackers only.
+  const byId = {};
+  visibleTrackerKeys(trackers).forEach(key => {
+    if (HARMS_EXCLUDED_KEYS.includes(key)) return;
+    const cfg = trackers[key];
+    (cfg.data || []).forEach(entry => {
+      const id = entry[cfg.idField];
+      if (id !== undefined && !(id in byId)) byId[id] = { key, entry };
+    });
+  });
+  const rows = [];
+  Object.keys(entries).forEach(id => {
+    const hit = Object.prototype.hasOwnProperty.call(byId, id) ? byId[id] : null;
+    if (!hit) return;
+    const list = Array.isArray(entries[id]) ? entries[id] : [];
+    if (!list.length) return;
+    const e = hit.entry;
+    const glance = e.glance || {};
+    const harm = glance.harm || {};
+    const violations = list.map(v => {
+      const law = laws[v.law] || {};
+      return { law: v.law, name: law.name || v.law, cite: law.cite, label: law.label, who: v.who, why: v.why };
+    });
+    const labels = Array.from(new Set(violations.map(v => v.label).filter(Boolean))).sort();
+    rows.push({
+      id, key: hit.key, what: glance.what || "", status: e.status_stage || null,
+      harmTier: harmTier(harm.kind, harm.tier), actionDate: e.date_of_action || null,
+      updated: e.last_substantive_update || null, violations, labels,
+    });
+  });
+  return rows;
+}
+
+/* Sortable form of a free-text date_of_action: the first YYYY-MM-DD, else
+   the first YYYY as YYYY-00-00, else null (sorts last). */
+function actionSortDate(raw) {
+  if (typeof raw !== "string") return null;
+  const full = raw.match(/\d{4}-\d{2}-\d{2}/);
+  if (full) return full[0];
+  const year = raw.match(/\d{4}/);
+  return year ? year[0] + "-00-00" : null;
+}
+
+const _illCmp = (a, b) => (a < b ? -1 : a > b ? 1 : 0);
+// Default order: status stage, harm tier (null last), what A-Z, id.
+function _illDefaultCmp(a, b) {
+  const sa = ILLEGALITY_STATUS_ORDER.indexOf(a.status), sb = ILLEGALITY_STATUS_ORDER.indexOf(b.status);
+  return (sa < 0 ? 99 : sa) - (sb < 0 ? 99 : sb) ||
+    (a.harmTier || 9) - (b.harmTier || 9) ||
+    String(a.what).localeCompare(String(b.what), undefined, { sensitivity: "base" }) ||
+    _illCmp(String(a.id), String(b.id));
+}
+const _illText = (a, b) => String(a || "").localeCompare(String(b || ""), undefined, { sensitivity: "base" });
+// Newest first, missing values last.
+const _illNewest = (a, b) => (a === b ? 0 : !a ? 1 : !b ? -1 : _illCmp(b, a));
+
+/* Returns a new sorted array. Every sort falls back to the default order so
+   tied rows never shuffle. A two-label row sorts as Criminal; multi-law rows
+   use their first violation for Law and Who. */
+function sortIllegalityRows(rows, sortKey) {
+  const first = r => r.violations[0] || {};
+  const by = {
+    label: (a, b) => (a.labels.includes("criminal") ? 0 : 1) - (b.labels.includes("criminal") ? 0 : 1),
+    law: (a, b) => _illText(first(a).name, first(b).name),
+    tracker: (a, b) => _illCmp(a.key, b.key),
+    who: (a, b) => _illText(first(a).who, first(b).who),
+    harm: (a, b) => (a.harmTier || 9) - (b.harmTier || 9),
+    action: (a, b) => _illNewest(actionSortDate(a.actionDate), actionSortDate(b.actionDate)),
+    updated: (a, b) => _illNewest(a.updated, b.updated),
+  }[sortKey];
+  return rows.slice().sort((a, b) => (by ? by(a, b) : 0) || _illDefaultCmp(a, b));
+}
+
+/* Filters: empty value = no filter. `term` searches what plus every law
+   name, cite, who and why (regex when f.regex; an invalid regex matches
+   nothing). */
+function filterIllegalityRows(rows, f) {
+  f = f || {};
+  return rows.filter(r => {
+    if (f.label && !r.labels.includes(f.label)) return false;
+    if (f.status && r.status !== f.status) return false;
+    if (f.tracker && r.key !== f.tracker) return false;
+    if (f.law && !r.violations.some(v => v.law === f.law)) return false;
+    if (f.term) {
+      const hay = [r.what].concat(r.violations.map(v => [v.name, v.cite, v.who, v.why].filter(Boolean).join(" "))).join(" ");
+      if (matchesTerm(hay, f.term, !!f.regex) !== true) return false;
+    }
+    return true;
+  });
+}
+
+// A two-label row counts once in total and once in each label split.
+function illegalityCounts(rows) {
+  return {
+    total: rows.length,
+    criminal: rows.filter(r => r.labels.includes("criminal")).length,
+    civil: rows.filter(r => r.labels.includes("civil")).length,
+  };
+}
+
+/* The whole view. `controls` = {label, status, tracker, law, sort, term,
+   laws: [[key, name]], trackers: [[key, abbr]]}: current values plus option
+   lists. No rows listed at all (counts.total 0) reads "None listed yet.";
+   rows listed but all filtered out reads "No entries match.". */
+function buildIllegalityHtml(rows, counts, progress, abbr, controls) {
+  const c = controls || {};
+  const p = progress || { screened: 0, total: 0 };
+  const opt = (value, text, cur) => '<option value="' + escapeHtml(value) + '"' + (String(cur || "") === String(value) ? " selected" : "") + '>' + escapeHtml(text) + '</option>';
+  const select = (id, label, all, options, cur) => '<label class="ill-control">' + escapeHtml(label) +
+    ' <select id="' + id + '">' + opt("", all, cur) + options.map(o => opt(o[0], o[1], cur)).join("") + '</select></label>';
+  const tag = l => '<span class="ill-label ill-label-' + escapeHtml(l) + '">' + escapeHtml(ILLEGALITY_LABEL_TEXT[l] || l) + '</span>';
+  let html = '<section class="ill-view"><h2 class="ill-title">Possible Illegality</h2>' +
+    '<p class="ill-progress">Reviewed so far: ' + p.screened + ' of ' + p.total + ' entries</p>' +
+    '<p class="ill-counts">' + counts.total + (counts.total === 1 ? ' entry' : ' entries') + ' · ' + counts.criminal + ' criminal · ' + counts.civil + ' civil/constitutional</p>' +
+    '<p class="ill-note">An entry that cites both kinds of law counts in each split but once in the total. These are possible violations, not findings.</p>' +
+    '<div class="ill-controls">' +
+    select("ill-label", "Label", "All labels", [["criminal", ILLEGALITY_LABEL_TEXT.criminal], ["civil", ILLEGALITY_LABEL_TEXT.civil]], c.label) +
+    select("ill-status", "Status", "All statuses", ILLEGALITY_STATUS_ORDER.map(s => [s, s]), c.status) +
+    select("ill-tracker", "Tracker", "All trackers", c.trackers || [], c.tracker) +
+    select("ill-law", "Law", "All laws", c.laws || [], c.law) +
+    '<label class="ill-control">Sort <select id="ill-sort">' + ILLEGALITY_SORTS.map(s => opt(s[0], s[1], c.sort || "status")).join("") + '</select></label>' +
+    '<input type="search" id="ill-search" placeholder="Search these entries" aria-label="Search these entries" value="' + escapeHtml(c.term || "") + '">' +
+    '</div>';
+  if (!rows.length) {
+    return html + '<p class="ill-empty">' + (counts.total ? "No entries match." : "None listed yet.") + '</p></section>';
+  }
+  html += '<ul class="ill-rows">' + rows.map(r => {
+    const laws = r.violations.map(v => '<div class="ill-law">' + tag(v.label) + ' ' + escapeHtml(v.name) + (v.cite ? ' (' + escapeHtml(v.cite) + ')' : '') +
+      '<div class="ill-who">Who: ' + escapeHtml(v.who) + '</div><div class="ill-why">Why: ' + escapeHtml(v.why) + '</div></div>').join("");
+    return '<li class="ill-row"><a href="#' + encodeURIComponent(r.key) + '/' + encodeURIComponent(r.id) +
+      '" class="ill-entry-link" data-tracker-key="' + escapeHtml(r.key) + '" data-id="' + escapeHtml(r.id) + '">' +
+      '<span class="ill-status">' + escapeHtml(r.status || "") + '</span> ' +
+      '<span class="ill-tracker">' + escapeHtml((abbr && abbr[r.key]) || r.key) + '</span>' +
+      '<span class="ill-what">' + escapeHtml(r.what) + '</span>' + laws + '</a></li>';
+  }).join("") + '</ul>';
+  return html + '</section>';
+}
+
+/* Address handling, same contracts as harmsHashAction / harmsLinkHistory
+   but for #illegality and state type "illegality". */
+function illegalityHashAction(hash, activeView, phase) {
+  const on = hash === "#" + ILLEGALITY_VIEW;
+  if (phase === "load") return on ? "open" : null;
+  if (activeView === ILLEGALITY_VIEW && !on) return "set";
+  if (activeView !== ILLEGALITY_VIEW && on) return "clear";
+  return null;
+}
+
+function illegalityLinkHistory(trackerKey, id, scrollY) {
+  return [
+    { op: "replace", state: { type: "illegality", scrollY }, url: "#" + ILLEGALITY_VIEW },
+    { op: "push", state: { type: "entry", tracker: trackerKey, id }, url: "#" + ILLEGALITY_VIEW },
+  ];
+}
+/* illegality-view:end */
 /* listen-script:start */
 /* Listen button, spoken text (2026-10-31, Joe's call; spec:
    tap-data/docs/superpowers/specs/2026-10-31-tap-entry-listen-button-design.md).
