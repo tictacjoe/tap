@@ -150,6 +150,7 @@ def test_option_follows_harms_and_shows_rows(browser, site_url):
     assert page.locator(".ill-title").inner_text() == "Possible Illegality"
     assert "Reviewed so far: 7 of 900 entries" in page.locator(".ill-progress").inner_text()
     assert page.locator(".ill-counts").inner_text().startswith("3 entries")
+    assert "unchallenged" in page.locator(".ill-counts").inner_text()
     # Default (status) order: Unchallenged first, Reversed or withdrawn last.
     assert _row_ids(page) == [DEREG["id"], PROS["id"], GSR["id"]]
     # The tracker's own controls bar and count are hidden, like Harms.

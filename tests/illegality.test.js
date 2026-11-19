@@ -46,7 +46,7 @@ test("two-label row: one row, counts once in total, once per split, sorts as cri
   const rows = rowsFor({ g1: [V("bribery"), V("ica")], g2: [V("ica")], d1: [V("apa")] });
   const two = rows.find(r => r.id === "g1");
   assert.deepEqual(two.labels, ["civil", "criminal"]);
-  assert.deepEqual(api.illegalityCounts(rows), { total: 3, criminal: 1, civil: 3 });
+  assert.deepEqual(api.illegalityCounts(rows), { total: 3, criminal: 1, civil: 3, unchallenged: 3 });
   const sorted = api.sortIllegalityRows(rows, "label");
   assert.equal(sorted[0].id, "g1");
 });
@@ -73,7 +73,8 @@ test("row fields", () => {
 
 test("actionSortDate", () => {
   assert.equal(api.actionSortDate("2025-03-01"), "2025-03-01");
-  assert.equal(api.actionSortDate("early 2025 ... 2026-10-15"), "2026-10-15");
+  assert.equal(api.actionSortDate("early 2025 ... through 2026-10-15"), "2025-00-00");
+  assert.equal(api.actionSortDate("2025-08 (x) through 2026-06-26"), "2025-08-00");
   assert.equal(api.actionSortDate("Ongoing since early 2025"), "2025-00-00");
   assert.equal(api.actionSortDate(null), null);
   assert.equal(api.actionSortDate("unknown"), null);
@@ -150,7 +151,8 @@ test("html: row content, escaping, selected control values", () => {
   const html = api.buildIllegalityHtml(rows, counts, { screened: 1, total: 940 }, { govservices: "GSR" }, {
     label: "criminal", status: "", tracker: "govservices", law: "", sort: "who", term: "a\"b",
     laws: [["bribery", "Bribery"]], trackers: [["govservices", "GSR"]] });
-  assert.match(html, /1 (entry|entries) · 1 criminal · 0 civil\/constitutional/);
+  assert.match(html, /1 (entry|entries) · 1 criminal · 0 civil\/constitutional · 1 unchallenged/);
+  assert.match(html, /class="ill-results" aria-live="polite"/);
   assert.match(html, /class="ill-entry-link"[^>]*data-tracker-key="govservices"[^>]*data-id="g1"|data-tracker-key="govservices"/);
   assert.match(html, /Bribery \(18 U\.S\.C\. 201\)/);
   assert.match(html, /Who:/);
@@ -178,4 +180,10 @@ test("link history", () => {
     { op: "replace", state: { type: "illegality", scrollY: 120 }, url: "#illegality" },
     { op: "push", state: { type: "entry", tracker: "dai", id: "d1" }, url: "#illegality" },
   ]);
+});
+
+test("counts: unchallenged is rows whose status is Unchallenged", () => {
+  const rows = rowsFor({ g1: [V("bribery")], g2: [V("ica")] });
+  rows[1].status = "In court";
+  assert.deepEqual(api.illegalityCounts(rows), { total: 2, criminal: 1, civil: 1, unchallenged: 1 });
 });

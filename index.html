@@ -5566,14 +5566,13 @@ function buildIllegalityRows(trackers, data) {
   return rows;
 }
 
-/* Sortable form of a free-text date_of_action: the first YYYY-MM-DD, else
-   the first YYYY as YYYY-00-00, else null (sorts last). */
+/* Sortable form of a free-text date_of_action: the first date token of any
+   precision, padded (YYYY -> YYYY-00-00, YYYY-MM -> YYYY-MM-00), else null
+   (sorts last). "early 2025 ... through 2026-10-15" sorts as 2025. */
 function actionSortDate(raw) {
   if (typeof raw !== "string") return null;
-  const full = raw.match(/\d{4}-\d{2}-\d{2}/);
-  if (full) return full[0];
-  const year = raw.match(/\d{4}/);
-  return year ? year[0] + "-00-00" : null;
+  const m = raw.match(/\d{4}(?:-\d{2}(?:-\d{2})?)?/);
+  return m ? (m[0] + "-00-00").slice(0, 10) : null;
 }
 
 const _illCmp = (a, b) => (a < b ? -1 : a > b ? 1 : 0);
@@ -5625,11 +5624,13 @@ function filterIllegalityRows(rows, f) {
 }
 
 // A two-label row counts once in total and once in each label split.
+// `unchallenged` (status Unchallenged) makes that share visible (spec goal).
 function illegalityCounts(rows) {
   return {
     total: rows.length,
     criminal: rows.filter(r => r.labels.includes("criminal")).length,
     civil: rows.filter(r => r.labels.includes("civil")).length,
+    unchallenged: rows.filter(r => r.status === "Unchallenged").length,
   };
 }
 
@@ -5645,7 +5646,7 @@ function buildIllegalityHtml(rows, counts, progress, abbr, controls) {
     ' <select id="' + id + '">' + opt("", all, cur) + options.map(o => opt(o[0], o[1], cur)).join("") + '</select></label>';
   let html = '<section class="ill-view"><h2 class="ill-title">Possible Illegality</h2>' +
     '<p class="ill-progress">Reviewed so far: ' + p.screened + ' of ' + p.total + ' entries</p>' +
-    '<p class="ill-counts">' + counts.total + (counts.total === 1 ? ' entry' : ' entries') + ' · ' + counts.criminal + ' criminal · ' + counts.civil + ' civil/constitutional</p>' +
+    '<p class="ill-counts">' + counts.total + (counts.total === 1 ? ' entry' : ' entries') + ' · ' + counts.criminal + ' criminal · ' + counts.civil + ' civil/constitutional · ' + (counts.unchallenged || 0) + ' unchallenged</p>' +
     '<p class="ill-note">An entry that cites both kinds of law counts in each split but once in the total. These are possible violations, not findings.</p>' +
     '<div class="ill-controls">' +
     select("ill-label", "Label", "All labels", [["criminal", ILLEGALITY_LABEL_TEXT.criminal], ["civil", ILLEGALITY_LABEL_TEXT.civil]], c.label) +
@@ -5657,7 +5658,7 @@ function buildIllegalityHtml(rows, counts, progress, abbr, controls) {
     '</div>';
   // The results part sits in its own container so the page can replace just
   // it on a filter/sort/search change and leave the controls (and focus) be.
-  return html + '<div class="ill-results">' + buildIllegalityResultsHtml(rows, counts, abbr) + '</div></section>';
+  return html + '<div class="ill-results" aria-live="polite">' + buildIllegalityResultsHtml(rows, counts, abbr) + '</div></section>';
 }
 
 /* The results part of the view: the row list, or the empty message ("None
