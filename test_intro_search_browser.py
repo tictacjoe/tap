@@ -49,10 +49,11 @@ def _open(browser, site_url, width=1280):
 
 
 def test_intro_strip_removed(browser, site_url):
-    # 2026-11-15 (Joe): the intro strip is gone; the browse button says "tracker".
+    # 2026-11-15 (Joe): the intro strip is gone. 2026-11-19: the browse
+    # button became a row of tracker chips.
     page = _open(browser, site_url)
     assert page.locator("#intro-strip").count() == 0
-    assert page.locator("#browse-instead").inner_text().strip().lower() == "— browse by tracker —"
+    assert page.locator("#browse-chips").is_visible()
 
 
 def test_advanced_panel_hidden_by_default(browser, site_url):
