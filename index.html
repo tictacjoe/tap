@@ -5658,7 +5658,7 @@ function buildIllegalityHtml(rows, counts, progress, abbr, controls) {
     '</div>';
   // The results part sits in its own container so the page can replace just
   // it on a filter/sort/search change and leave the controls (and focus) be.
-  return html + '<div class="ill-results" aria-live="polite">' + buildIllegalityResultsHtml(rows, counts, abbr) + '</div></section>';
+  return html + '<div class="ill-results">' + buildIllegalityResultsHtml(rows, counts, abbr) + '</div></section>';
 }
 
 /* The results part of the view: the row list, or the empty message ("None

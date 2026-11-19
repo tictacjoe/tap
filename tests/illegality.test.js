@@ -152,7 +152,7 @@ test("html: row content, escaping, selected control values", () => {
     label: "criminal", status: "", tracker: "govservices", law: "", sort: "who", term: "a\"b",
     laws: [["bribery", "Bribery"]], trackers: [["govservices", "GSR"]] });
   assert.match(html, /1 (entry|entries) · 1 criminal · 0 civil\/constitutional · 1 unchallenged/);
-  assert.match(html, /class="ill-results" aria-live="polite"/);
+  assert.match(html, /class="ill-results">/);  // no aria-live: re-renders would read the whole list (Joe, 2026-11-19)
   assert.match(html, /class="ill-entry-link"[^>]*data-tracker-key="govservices"[^>]*data-id="g1"|data-tracker-key="govservices"/);
   assert.match(html, /Bribery \(18 U\.S\.C\. 201\)/);
   assert.match(html, /Who:/);
