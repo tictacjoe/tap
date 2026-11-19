@@ -1,6 +1,6 @@
 {
  "version": 1,
- "as_of": "2026-11-17",
+ "as_of": "2026-11-19",
  "checks": {
   "abrego-garcia-vindictive-prosecution-2025-2026": {
    "0": {
@@ -15188,6 +15188,30 @@
     "why": "The NZ Herald text (citing the Post) contains the former-official account of three directives and Lutnick's resistance, the line that Commerce did not respond to the Post's requests for comment, and Nvidia's statement that the Megaspeed diversion allegations were investigated and debunked.",
     "host": "nzherald.co.nz",
     "date": "2026-11-17",
+    "kind": "fact",
+    "archive": false
+   },
+   "17": {
+    "state": "partly",
+    "why": "The November 17, 2026 letter to Brandon Lutnick, signed by Raskin and Meeks as ranking members and by Kamlager-Dove, contains all three quoted passages verbatim and asks for documents 'no later than 5:00 p.m. on December 1, 2026'; however, the provided text elides part of the numbered request list, and no visible passage asks for every Cantor Nvidia trade since January 1, 2024, so that detail cannot be confirmed.",
+    "host": "democrats-judiciary.house.gov",
+    "date": "2026-11-19",
+    "kind": "fact",
+    "archive": false
+   },
+   "18": {
+    "state": "supports",
+    "why": "The CNBC article reports the Raskin/Meeks/Kamlager-Dove letter, Mast's letter to Under Secretary Kessler about possible chip smuggling by Megaspeed and Speedmatrix, the line that there is no known evidence of the sons' insider knowledge, and Cantor's statement calling the letter 'inaccurate' with the quoted swaps language, all as claimed; the extracted text does not itself show a publication date.",
+    "host": "cnbc.com",
+    "date": "2026-11-19",
+    "kind": "fact",
+    "archive": false
+   },
+   "19": {
+    "state": "supports",
+    "why": "The MS NOW article dated Nov. 18, 2026 describes Raskin and Meeks as 'the incoming chairmen of the House Judiciary and Foreign Affairs Committee' who led the letter, quotes the 'significant conflicts of interests' allegation and the Cantor spokesperson's 'claims in the letter are inaccurate', and reports Tim Scott's request that Lutnick and Huang testify.",
+    "host": "ms.now",
+    "date": "2026-11-19",
     "kind": "fact",
     "archive": false
    }
