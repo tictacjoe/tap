@@ -1303,7 +1303,7 @@
   @media (max-width: 600px) { .headline-row-status { min-width: 0; } }
   .headline-tier-text { display: none; margin: 0 0.8rem 0.6rem; }
   .headline-trail-panel { margin: 0.5rem 0.8rem 0.6rem; }
-  /* Records feed tabs: "TAP entries" vs the unverified Reporting feed. */
+  /* Records feed tabs: "TAP entries" vs the uncurated Reporting feed. */
   .records-feed-tabs { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.8rem; }
   .records-feed-tabs button {
     font-family: inherit;
@@ -3036,7 +3036,7 @@ let headlinesSubFilter = "";
 // TAP entries tab status dropdown (#headlines-status-filter, spec 5.6).
 let headlinesStatusFilter = "";
 // Which Records feed is showing: "curated" (TAP's own trackers) or
-// "reporting" (the unverified third-party Reporting archive).
+// "reporting" (the uncurated third-party Reporting archive).
 let headlinesFeed = "curated";
 // How many of the current (sorted/filtered) result set are actually
 // rendered to the DOM -- grows via the "Load more" button rather than
@@ -7007,8 +7007,8 @@ function wireTriageButtons(container) {
 }
 
 /* Global search shows up to three groups, in this order: TAP entries
-   (curated trackers), Claim-checks, and Reporting (third-party, not
-   verified by TAP). A group with no matches is not rendered at all. */
+   (curated trackers), Claim-checks, and Reporting (third-party,
+   uncurated). A group with no matches is not rendered at all. */
 const SEARCH_REPORTING_CAP = 50;
 const SEARCH_GROUP_CAP = 300;
 
