@@ -1942,3 +1942,19 @@ test("prosecution puts Anticipated Defense and TAP's Rebuttal inside the Broader
     ), `one field-group holds all three (narrative_combined=${narrative_combined})`);
   }
 });
+
+// CLA entries not yet merged (2026-11-19, Joe: skim lines instead of a Braid
+// merge): with a section_summaries.status skim, the Status card shows it and
+// puts the full status behind "More on the status"; without one, unchanged.
+test("prosecution (not merged) Status card: skim line, full status behind the toggle", () => {
+  const entry = { offense_category: "Fraud", incident_summary: "First part.", status: "Full status prose.",
+    section_summaries: { status: "Status skim." }, cause: "The pattern." };
+  const result = buildDetailHtml(entry, { kind: "prosecution" });
+  assert(result.includes('<div class="field-label">Status</div><div class="field-value"><p class="field-summary">Status skim.</p><details class="full-story skim-more"><summary>More on the status</summary><p>Full status prose.</p></details></div>'));
+});
+
+test("prosecution (not merged) Status card without a skim shows the full status", () => {
+  const entry = { offense_category: "Fraud", incident_summary: "First part.", status: "Full status prose.", cause: "The pattern." };
+  const result = buildDetailHtml(entry, { kind: "prosecution" });
+  assert(result.includes('<div class="field-label">Status</div><div class="field-value"><p>Full status prose.</p></div>'));
+});
