@@ -29,6 +29,7 @@ Directory assumptions (override with flags if yours differ):
     data/trumpfamily.json
     data/dai.json
     data/moved-ids.json
+    data/illegality.json
     data/community-topics.json
     data/tracker.json
     publish_exclude.txt   <- entry IDs to exclude, one per line, '#' for comments
@@ -71,7 +72,8 @@ def strip_internal_fields(entry: dict) -> dict:
 
 def publish_json_entries(source_dir: Path, dest_file: Path, excluded_ids: set,
                           dry_run: bool = False, check_glance=None,
-                          update_markers=None, timeline_fields=()) -> tuple:
+                          update_markers=None, timeline_fields=(),
+                          published_stems=None) -> tuple:
     """Read all *.json files in source_dir, exclude by FILENAME (stem,
     no .json extension) -- not a schema field, since prosecution and
     deregulation don't share a consistent id-field name (prosecution
@@ -89,7 +91,10 @@ def publish_json_entries(source_dir: Path, dest_file: Path, excluded_ids: set,
     builds each entry's `timeline` object from the text fields named in
     timeline_fields and adds it next to the untouched prose. `timeline`
     is a reserved key: one already present in a source entry is dropped
-    with a WARNING."""
+    with a WARNING.
+
+    published_stems, when given (a set), gets the filename stem of every
+    entry written, so callers know the published ids without re-reading."""
     files = sorted(source_dir.glob("*.json"))
     included = []
     excluded_count = 0
@@ -117,6 +122,8 @@ def publish_json_entries(source_dir: Path, dest_file: Path, excluded_ids: set,
             if timeline:
                 published["timeline"] = timeline
         included.append(published)
+        if published_stems is not None:
+            published_stems.add(f.stem)
 
     if not dry_run:
         dest_file.parent.mkdir(parents=True, exist_ok=True)
@@ -204,6 +211,65 @@ def publish_claim_checks(module, claims_file: Path, published_entries: list,
           f"{report['unchecked']} evidence items without a check, {report.get('recheck_notes', 0)} recheck notes (never checked), "
           f"{report['withheld']} withheld for review")
     return report
+
+
+def load_illegality(working: Path):
+    """Imports illegality from the working repo's tracker/ folder (same
+    pattern as load_claim_checks). tracker/ must be FIRST on sys.path: the
+    repo root also has an illegality/ data directory that would otherwise
+    shadow the module as a namespace package."""
+    tracker_dir = str(working / "tracker")
+    if tracker_dir in sys.path:
+        sys.path.remove(tracker_dir)
+    sys.path.insert(0, tracker_dir)
+    import illegality
+    return illegality
+
+
+def illegality_problems(module, working: Path, site=None) -> list:
+    """validate() messages for the working repo's illegality/ folder. Builds
+    the cross-tracker id index; concerns=None lets validate() ask the site
+    (via node, using `site`'s tools/cla_concern_ids.js) only when a
+    Cabinet-Level id is filed. A failed concern check (RuntimeError) comes
+    back as one message, so the caller reports it like any other problem."""
+    import tap_entry_index
+    index = tap_entry_index.build_entry_index(tap_entry_index.tracker_dirs_under(working))
+    try:
+        return module.validate(working, index, site=site)
+    except RuntimeError as exc:
+        return [str(exc)]
+
+
+def publish_illegality(module, working: Path, dest_file: Path, published_ids: set,
+                       excluded_ids: set, dry_run: bool = False, problems=None,
+                       site=None) -> dict:
+    """Write data/illegality.json: laws, the filed violations of published
+    entries, and screening progress. Only ids in published_ids are listed; a
+    filed id in excluded_ids is withheld and counted in `omitted`. Any
+    validate() message is fatal (ERROR, exit 1) -- or a WARNING on a dry run.
+    `problems` lets main() pass messages it already checked up front."""
+    if problems is None:
+        problems = illegality_problems(module, working, site)
+    for msg in problems:
+        print(f"{'WARNING' if dry_run else 'ERROR'}: illegality: {msg}")
+    if problems and not dry_run:
+        sys.exit(1)
+
+    files = module.load_files(working)
+    # .get + list check: on a dry run a malformed file (already reported as a
+    # WARNING) is skipped rather than crashing the run.
+    entries = {fid: data.get("violations") for fid, data in sorted(files.items())
+               if fid in published_ids and isinstance(data.get("violations"), list)}
+    omitted = sum(1 for fid in files if fid in excluded_ids and fid not in published_ids)
+    screened = len(module.screened_ids(working) & published_ids)
+    out = {"version": 1, "laws": module.load_laws(working), "entries": entries,
+           "progress": {"screened": screened, "total": len(published_ids)}}
+    if not dry_run:
+        dest_file.parent.mkdir(parents=True, exist_ok=True)
+        dest_file.write_text(json.dumps(out, indent=2, sort_keys=True, ensure_ascii=False) + "\n",
+                             encoding="utf-8")
+    return {"listed": len(entries), "screened": screened,
+            "total": len(published_ids), "omitted": omitted}
 
 
 # tap-data tracker/moved_ids.json records `from`/`to` as tap-data names;
@@ -297,6 +363,20 @@ def main():
         print(f"ERROR: cannot load claim_checks_public from {working / 'tracker'}: {exc}")
         sys.exit(1)
 
+    try:
+        illegality = load_illegality(working)
+    except ImportError as exc:
+        print(f"ERROR: cannot load illegality from {working / 'tracker'}: {exc}")
+        sys.exit(1)
+
+    # Validate the illegality data BEFORE any data file is written, like the
+    # moved-targets check below: a bad file blocks the whole publish.
+    illegality_msgs = illegality_problems(illegality, working, site)
+    for msg in illegality_msgs:
+        print(f"{'WARNING' if args.dry_run else 'ERROR'}: illegality: {msg}")
+    if illegality_msgs and not args.dry_run:
+        sys.exit(1)
+
     blocked = moved_targets_hidden(working, site)
     if blocked:
         msg = ("moved entries target hidden tracker(s): " + ", ".join(sorted(blocked)) +
@@ -308,6 +388,7 @@ def main():
             sys.exit(1)
 
     excluded_ids = load_exclude_list(site)
+    published_ids = set()  # ids written to the five curated data files this run
     print(f"Exclude list: {len(excluded_ids)} entry ID(s) — {sorted(excluded_ids) if excluded_ids else '(none)'}")
     print()
 
@@ -319,7 +400,8 @@ def main():
             prosecution_src, site / "data" / "prosecution.json",
             excluded_ids, dry_run=args.dry_run, check_glance=check_glance,
             update_markers=update_markers,
-            timeline_fields=update_markers.TIMELINE_FIELDS["prosecution"]
+            timeline_fields=update_markers.TIMELINE_FIELDS["prosecution"],
+            published_stems=published_ids
         )
         print(f"  {len(included)} entries published, {excl_count} excluded")
         publish_claim_checks(claim_checks, working / CLAIMS_RELATIVE, included,
@@ -336,7 +418,8 @@ def main():
             deregulation_src, site / "data" / "deregulation.json",
             excluded_ids, dry_run=args.dry_run, check_glance=check_glance,
             update_markers=update_markers,
-            timeline_fields=update_markers.TIMELINE_FIELDS["deregulation"]
+            timeline_fields=update_markers.TIMELINE_FIELDS["deregulation"],
+            published_stems=published_ids
         )
         print(f"  {len(included)} entries published, {excl_count} excluded")
     else:
@@ -351,7 +434,8 @@ def main():
             govservices_src, site / "data" / "government-services.json",
             excluded_ids, dry_run=args.dry_run, check_glance=check_glance,
             update_markers=update_markers,
-            timeline_fields=update_markers.TIMELINE_FIELDS["government-services"]
+            timeline_fields=update_markers.TIMELINE_FIELDS["government-services"],
+            published_stems=published_ids
         )
         print(f"  {len(included)} entries published, {excl_count} excluded")
     else:
@@ -373,7 +457,8 @@ def main():
             tfs_src, site / "data" / "trumpfamily.json",
             excluded_ids, dry_run=args.dry_run, check_glance=check_glance,
             update_markers=update_markers,
-            timeline_fields=update_markers.TIMELINE_FIELDS["trumpfamily"]
+            timeline_fields=update_markers.TIMELINE_FIELDS["trumpfamily"],
+            published_stems=published_ids
         )
         print(f"  {len(included)} entries published, {excl_count} excluded")
     else:
@@ -391,7 +476,8 @@ def main():
             dai_src, site / "data" / "dai.json",
             excluded_ids, dry_run=args.dry_run, check_glance=check_glance,
             update_markers=update_markers,
-            timeline_fields=update_markers.TIMELINE_FIELDS["dai"]
+            timeline_fields=update_markers.TIMELINE_FIELDS["dai"],
+            published_stems=published_ids
         )
         print(f"  {len(included)} entries published, {excl_count} excluded")
     else:
@@ -405,6 +491,17 @@ def main():
     if not args.dry_run:
         (site / "data" / "moved-ids.json").write_text(json.dumps(moved, indent=2, sort_keys=True) + "\n",
                                                       encoding="utf-8")
+    print()
+
+    # --- illegality (Possible Illegality view) ---
+    # Messages were already checked up front, so pass them through only to
+    # print dry-run warnings (a real run never reaches here with any).
+    report = publish_illegality(illegality, working, site / "data" / "illegality.json",
+                                published_ids, excluded_ids, dry_run=args.dry_run,
+                                problems=[], site=site)
+    print(f"=== illegality === {report['listed']} listed, "
+          f"{report['screened']} of {report['total']} screened, "
+          f"{report['omitted']} omitted (withheld)")
     print()
 
     # --- community topics ---
