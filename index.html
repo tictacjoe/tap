@@ -4764,12 +4764,16 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
   // impact" toggle, opened on its own when a search match is inside. With no
   // skim line, the full text shows as before. The Caveat that used to follow
   // moved into the Confidence note (buildConfidenceNoteHtml's caveat arg).
-  const impactHtml = (skim, full) => {
-    const fullHtml = hl(full);
+  // Status (same day, Joe): the Status card on Deregulation / GSR / Trump
+  // Family / DHS and ICE works the same way once an entry has a
+  // section_summaries.status skim; entries without one keep the full status.
+  const skimThenMore = (skim, fullHtml, label) => {
     if (!skim || !fullHtml) return summary(skim) + fullHtml;
     const open = fullHtml.indexOf("<mark") !== -1 ? " open" : "";
-    return summary(skim) + '<details class="full-story impact-more"' + open + '><summary>More on the impact</summary>' + fullHtml + '</details>';
+    return summary(skim) + '<details class="full-story skim-more"' + open + '><summary>' + label + '</summary>' + fullHtml + '</details>';
   };
+  const impactHtml = (skim, full) => skimThenMore(skim, hl(full), "More on the impact");
+  const statusHtml = () => skimThenMore(entry.section_summaries?.status, buildFieldTimelineHtml(entry, "status", hl), "More on the status");
 
   if (cfg.kind === "deregulation") {
     // "What happened" (renamed from "What changed" 2026-09-21, Joe's call),
@@ -4798,7 +4802,7 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
       '<div class="field-group entry-main-card"><div class="field-label">What happened</div><div class="field-value">' + summary(entry.section_summaries?.what_changed) + buildKeyEventsRailHtml(entry, hl) + wrapFullStoryHtml(entry, "what_changed", buildFieldTimelineHtml(entry, "what_changed", hl)) + '</div></div>' +
       buildSourcesCardHtml(entry, hl) +
       buildGsrCdrPatternCardHtml(entry, term, useRegex) +
-      '<div class="field-group entry-main-card"><div class="field-label">Status</div><div class="field-value">' + buildFieldTimelineHtml(entry, "status", hl) + '</div>' +
+      '<div class="field-group entry-main-card"><div class="field-label">Status</div><div class="field-value">' + statusHtml() + '</div>' +
       '<div class="field-label">Estimated impact</div><div class="field-value">' + impactHtml(entry.section_summaries?.estimated_impact, entry.estimated_health_impact?.summary) + '</div>' +
       '</div>';
     // Primary proponent is dropped when the glance card's Principal already
@@ -4846,7 +4850,7 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
       '<div class="field-group entry-main-card"><div class="field-label">What happened</div><div class="field-value">' + summary(entry.section_summaries?.what_changed) + buildKeyEventsRailHtml(entry, hl) + wrapFullStoryHtml(entry, "what_changed", buildFieldTimelineHtml(entry, "what_changed", hl)) + '</div></div>' +
       buildSourcesCardHtml(entry, hl) +
       buildGsrCdrPatternCardHtml(entry, term, useRegex) +
-      '<div class="field-group entry-main-card"><div class="field-label">Status</div><div class="field-value">' + buildFieldTimelineHtml(entry, "status", hl) + '</div>' +
+      '<div class="field-group entry-main-card"><div class="field-label">Status</div><div class="field-value">' + statusHtml() + '</div>' +
       '<div class="field-label">' + escapeHtml(L.impact || "Estimated impact") + '</div><div class="field-value">' + impactHtml(entry.section_summaries?.estimated_impact, entry.estimated_impact?.summary) + '</div>' +
       '</div>';
     const asideHtml =

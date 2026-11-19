@@ -1673,7 +1673,23 @@ for (const kind of ["govservices", "deregulation"]) {
   test(`${kind} puts the full impact text behind a toggle when a skim line exists (2026-11-19)`, () => {
     const entry = { ...entryWith({ summary: "Long impact text." }), section_summaries: { estimated_impact: "Skim." } };
     const html = buildDetailHtml(entry, { kind });
-    assert(html.includes('<p class="field-summary">Skim.</p><details class="full-story impact-more"><summary>More on the impact</summary>Long impact text.</details>'));
+    assert(html.includes('<p class="field-summary">Skim.</p><details class="full-story skim-more"><summary>More on the impact</summary>Long impact text.</details>'));
+  });
+
+  test(`${kind} Status card: skim line, full status behind "More on the status" (2026-11-19)`, () => {
+    const entry = { ...entryWith({ summary: "I." }), status: "Full status text.", section_summaries: { status: "Status skim." } };
+    const html = buildDetailHtml(entry, { kind });
+    assert(html.includes('<div class="field-label">Status</div><div class="field-value"><p class="field-summary">Status skim.</p><details class="full-story skim-more"><summary>More on the status</summary><p>Full status text.</p></details></div>'));
+  });
+
+  test(`${kind} Status card without a skim shows the full status as before`, () => {
+    const html = buildDetailHtml({ ...entryWith({ summary: "I." }), status: "Full status text." }, { kind });
+    assert(html.includes('<div class="field-label">Status</div><div class="field-value"><p>Full status text.</p></div>'));
+  });
+
+  test(`${kind} Status toggle opens on a search match inside the full status`, () => {
+    const entry = { ...entryWith({ summary: "I." }), status: "The zebra ruling.", section_summaries: { status: "Status skim." } };
+    assert(buildDetailHtml(entry, { kind }, "zebra", false).includes('<details class="full-story skim-more" open><summary>More on the status</summary>'));
   });
 
   test(`${kind} shows the full impact text directly when there is no skim line`, () => {
