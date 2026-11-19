@@ -818,6 +818,52 @@
   .harm-entry-link { color: var(--brass); font-weight: 600; text-decoration: none; }
   .harm-entry-link:hover { text-decoration: underline; }
   .harm-what { color: var(--ink-soft); }
+  /* Possible Illegality view (2026-11-19; see the illegality-view script
+     block). Controls reuse the .controls select/input look; rows are cards
+     like .entry (tracker-colored left border via --trk) so it reads as a
+     list of entries, not a table, and wraps cleanly on a phone. No dark
+     mode: the page has none. */
+  .ill-view { padding: 0.5rem 0 2rem; }
+  .ill-title { margin: 0 0 0.3rem; }
+  .ill-progress, .ill-counts { margin: 0 0 0.3rem; color: var(--ink-soft); }
+  .ill-counts { font-weight: 600; color: var(--ink); }
+  .ill-note { margin: 0 0 1rem; font-size: 0.85rem; color: var(--ink-faint); }
+  .ill-controls { display: flex; flex-wrap: wrap; gap: 0.5rem 0.75rem; margin: 0 0 1.25rem; align-items: center; }
+  .ill-control {
+    font-family: ui-monospace, monospace; font-size: 0.75rem; color: var(--ink-soft);
+    display: inline-flex; align-items: center; gap: 0.35rem; max-width: 100%;
+  }
+  .ill-controls select, .ill-controls input[type="search"] {
+    font-family: ui-monospace, monospace; font-size: 0.8rem; padding: 0.45rem 0.55rem;
+    border: 1px solid var(--rule-strong); background: var(--paper); color: var(--ink);
+    border-radius: 3px; max-width: 100%; min-width: 0;
+  }
+  .ill-controls input[type="search"] { font-family: Georgia, serif; font-size: 0.95rem; flex: 1 1 14rem; }
+  .ill-rows { list-style: none; margin: 0; padding: 0; }
+  .ill-row { margin: 0 0 0.75rem; }
+  .ill-entry-link {
+    display: block; padding: 0.7rem 0.9rem; color: var(--ink); text-decoration: none;
+    border: 1px solid var(--rule-strong); border-left: 6px solid var(--trk, var(--rule-strong));
+    border-radius: 4px; background: var(--paper-card); overflow-wrap: anywhere;
+  }
+  .ill-entry-link:hover { border-color: var(--brass); }
+  .ill-entry-link:hover .ill-what { text-decoration: underline; }
+  .ill-status, .ill-tracker {
+    font-family: ui-monospace, monospace; font-size: 0.75rem; text-transform: uppercase;
+    letter-spacing: 0.05em; color: var(--ink-soft);
+  }
+  .ill-tracker { float: right; margin-left: 0.5rem; color: var(--trk, var(--ink-soft)); font-weight: 700; }
+  .ill-what { display: block; margin: 0.25rem 0 0.35rem; font-weight: 600; color: var(--brass); }
+  .ill-law { margin: 0.3rem 0 0; font-size: 0.9rem; }
+  .ill-who, .ill-why { color: var(--ink-soft); font-size: 0.85rem; margin-left: 0.2rem; }
+  .ill-label {
+    font-family: ui-monospace, monospace; font-size: 0.7rem; text-transform: uppercase;
+    letter-spacing: 0.05em; padding: 0.05rem 0.35rem; border-radius: 2px; white-space: nowrap;
+  }
+  /* Criminal reuses the flag red pair, civil the brass pair (both > 4.5:1). */
+  .ill-label-criminal { color: var(--flag); background: var(--flag-bg); }
+  .ill-label-civil { color: #6b5420; background: var(--brass-light); }
+  .ill-empty { color: var(--ink-soft); }
   /* Certainty tag: small outlined label; its title explains the value. */
   .harm-cert {
     white-space: nowrap;
@@ -2075,6 +2121,15 @@ let statusGroupOn = false;
 /* Phase B old-link redirects: data/moved-ids.json, {"<id>": {from, to, date}},
    loaded in loadAllData(); resolveEntryTarget() reads it. Empty = no redirects. */
 let MOVED_IDS = {};
+
+/* Possible Illegality view (see the illegality-view block): data/illegality.json,
+   loaded in loadAllData(). Missing or malformed = this empty shape (no load
+   error; the view then reads "None listed yet."). */
+const EMPTY_ILLEGALITY_DATA = () => ({ version: 1, laws: {}, entries: {}, progress: { screened: 0, total: 0 } });
+let ILLEGALITY_DATA = EMPTY_ILLEGALITY_DATA();
+/* The view's control values. Module-level so they survive leaving the view
+   and coming Back to it; not saved in the #illegality address (spec). */
+let illegalityState = { label: "", status: "", tracker: "", law: "", sort: "status", term: "" };
 
 function stampClass(entry, cfg) {
   if (cfg.kind === "deregulation") {
@@ -6375,7 +6430,7 @@ function renderTabs() {
   placeholder.value = "";
   placeholder.textContent = "— choose a database —";
   placeholder.disabled = true;
-  placeholder.selected = !TRACKERS[activeTracker] && activeTracker !== HARMS_VIEW;
+  placeholder.selected = !TRACKERS[activeTracker] && activeTracker !== HARMS_VIEW && activeTracker !== ILLEGALITY_VIEW;
   select.appendChild(placeholder);
   // The Harms view (2026-11-16; "Harms by first principle" since 2026-11-19): a cross-tracker view, not a database, listed
   // after the curated trackers and before Reporting (see harms-list block).
@@ -6383,15 +6438,21 @@ function renderTabs() {
   harmsOpt.value = HARMS_VIEW;
   harmsOpt.textContent = "Harms by first principle";
   harmsOpt.selected = activeTracker === HARMS_VIEW;
+  // Possible Illegality (2026-11-19): the other cross-tracker view, always
+  // right after Harms (same visibility rule: always listed).
+  const illOpt = document.createElement("option");
+  illOpt.value = ILLEGALITY_VIEW;
+  illOpt.textContent = "Possible Illegality";
+  illOpt.selected = activeTracker === ILLEGALITY_VIEW;
   visibleTrackerKeys(TRACKERS).forEach(key => {
-    if (key === "tracker") select.appendChild(harmsOpt);
+    if (key === "tracker") { select.appendChild(harmsOpt); select.appendChild(illOpt); }
     const opt = document.createElement("option");
     opt.value = key;
     opt.textContent = TRACKERS[key].label + " (" + TRACKERS[key].data.length + ")";
     opt.selected = key === activeTracker;
     select.appendChild(opt);
   });
-  if (!harmsOpt.parentNode) select.appendChild(harmsOpt);
+  if (!harmsOpt.parentNode) { select.appendChild(harmsOpt); select.appendChild(illOpt); }
   select.onchange = () => switchToTracker(select.value);
 
   // Records (formerly "Headlines", briefly "Reports") lives in its own
@@ -7385,6 +7446,94 @@ function renderGlobalResults(term, useRegex, useOneLiners, useImpactSort) {
   }
 }
 
+/* ---- Possible Illegality view wiring (Task 8, 2026-11-19) ----
+   The pure builders live in the illegality-view block; these functions do
+   the DOM work. */
+
+/* #illegality address sync for the "switch" phase (every renderDispatch):
+   write it on entering the view, clear it on leaving. Same rules as
+   harmsHashReplacement(): keep history.state, do nothing before the data
+   has loaded (an early render would otherwise clear #illegality before the
+   load code reads it). */
+function syncIllegalityHash() {
+  if (!allDataLoaded) return;
+  const action = illegalityHashAction(location.hash, activeTracker, "switch");
+  if (action === "set") history.replaceState(history.state, "", "#" + ILLEGALITY_VIEW);
+  else if (action === "clear") history.replaceState(history.state, "", location.pathname + location.search);
+}
+
+/* Renders the whole view into #entries from ILLEGALITY_DATA + the loaded
+   trackers + illegalityState, then binds the controls and row links.
+   Focus choice: the whole view (controls included) is re-rendered on every
+   change -- the header counts and the "No entries match." / "None listed
+   yet." wording come from the one builder -- so when the search box had
+   focus, focus and the caret/selection are restored on the new box. */
+function renderIllegalityView() {
+  const entriesEl = document.getElementById("entries");
+  const active = document.activeElement;
+  const searchHadFocus = !!(active && active.id === "ill-search");
+  const selStart = searchHadFocus ? active.selectionStart : null;
+  const selEnd = searchHadFocus ? active.selectionEnd : null;
+
+  const allRows = buildIllegalityRows(TRACKERS, ILLEGALITY_DATA);
+  // Header counts describe every listed entry, not the filtered subset.
+  const counts = illegalityCounts(allRows);
+  // Per-tracker search is plain text site-wide (no regex toggle), so here too.
+  const shown = sortIllegalityRows(filterIllegalityRows(allRows, {
+    label: illegalityState.label, status: illegalityState.status,
+    tracker: illegalityState.tracker, law: illegalityState.law,
+    term: illegalityState.term.trim(), regex: false,
+  }), illegalityState.sort);
+
+  // Option lists: only laws/trackers that actually appear in the rows, so
+  // no choice can lead to an always-empty list. Laws A-Z by name; trackers
+  // in the dropdown's own order, by their full label.
+  const lawNames = {};
+  allRows.forEach(r => r.violations.forEach(v => { lawNames[v.law] = v.name; }));
+  const laws = Object.keys(lawNames).map(k => [k, lawNames[k]])
+    .sort((a, b) => String(a[1]).localeCompare(String(b[1]), undefined, { sensitivity: "base" }));
+  const rowKeys = new Set(allRows.map(r => r.key));
+  const trackers = visibleTrackerKeys(TRACKERS).filter(k => rowKeys.has(k)).map(k => [k, TRACKERS[k].label]);
+
+  entriesEl.innerHTML = buildIllegalityHtml(shown, counts, ILLEGALITY_DATA.progress, HEADLINE_TRACKER_ABBR,
+    Object.assign({}, illegalityState, { laws, trackers }));
+
+  // Tracker color on each row card (same --trk tokens as the browse chips).
+  entriesEl.querySelectorAll(".ill-entry-link").forEach(a => {
+    a.style.setProperty("--trk", "var(--trk-" + a.dataset.trackerKey + ")");
+  });
+
+  // Dropdowns: store the value, re-render.
+  [["ill-label", "label"], ["ill-status", "status"], ["ill-tracker", "tracker"], ["ill-law", "law"], ["ill-sort", "sort"]]
+    .forEach(([id, field]) => {
+      const el = document.getElementById(id);
+      if (el) el.addEventListener("change", () => { illegalityState[field] = el.value; renderIllegalityView(); });
+    });
+  const search = document.getElementById("ill-search");
+  if (search) {
+    search.addEventListener("input", () => { illegalityState.term = search.value; renderIllegalityView(); });
+    if (searchHadFocus) {
+      search.focus();
+      try { search.setSelectionRange(selStart, selEnd); } catch (e) { /* type=search may refuse */ }
+    }
+  }
+
+  // Row click: open the entry in its home tracker, same jump as Harms
+  // (resolveEntryTarget with moved ids), with history steps so Back returns
+  // here at the same scroll position.
+  entriesEl.querySelectorAll(".ill-entry-link").forEach(a => {
+    a.addEventListener("click", (e) => {
+      e.preventDefault();
+      const target = resolveEntryTarget(a.dataset.trackerKey, a.dataset.id, TRACKERS, MOVED_IDS);
+      if (!target) return;
+      illegalityLinkHistory(target.key, a.dataset.id, window.scrollY).forEach(step =>
+        step.op === "push" ? history.pushState(step.state, "", step.url) : history.replaceState(step.state, "", step.url));
+      goToTrackerHome(target.key);
+      openCardById(a.dataset.id);
+    });
+  });
+}
+
 /* Top-level dispatcher: global search (if non-empty) takes over the
    whole results area and hides the per-tracker tabs/controls, since
    showing both search modes active at once would be confusing about
@@ -7405,6 +7554,10 @@ function renderDispatch() {
   // Keep #harms in step with the view (every view change comes through here).
   const harmsHash = harmsHashReplacement(location.hash, activeTracker, history.state, location.pathname + location.search, allDataLoaded);
   if (harmsHash) history.replaceState(harmsHash.state, "", harmsHash.url);
+  // Same for #illegality, as a parallel call (Harms left untouched). Reads
+  // location.hash AFTER the Harms sync, so Harms -> Illegality sets
+  // #illegality and Illegality -> Harms leaves Harms' #harms alone.
+  syncIllegalityHash();
 
   if (term) {
     tabsEl.style.display = "none";
@@ -7452,6 +7605,19 @@ function renderDispatch() {
         openCardById(a.dataset.id);
       });
     });
+    return;
+  }
+
+  if (activeTracker === ILLEGALITY_VIEW) {
+    // Like Harms: the tracker's own controls bar and count are hidden; the
+    // view brings its own filter bar (ill-* controls) inside #entries.
+    tabsEl.classList.remove("visually-hidden");
+    mainEl.style.display = "";
+    controlsEl.style.display = "none";
+    headlinesWrapEl.style.display = "none";
+    countEl.style.display = "none";
+    entriesEl.style.display = "";
+    renderIllegalityView();
     return;
   }
 
@@ -7627,6 +7793,8 @@ window.addEventListener("popstate", (e) => {
     // A search started on the Harms view carries #harms: come back to Harms
     // underneath it, so clearing the search lands there again.
     if (harmsHashAction(location.hash, activeTracker, "load") === "open") activeTracker = HARMS_VIEW;
+    // Same for a search started on the Possible Illegality view.
+    if (illegalityHashAction(location.hash, activeTracker, "load") === "open") activeTracker = ILLEGALITY_VIEW;
     renderDispatch();
     requestAnimationFrame(() => window.scrollTo(0, e.state.scrollY));
   } else if (e.state.type === "entry") {
@@ -7635,6 +7803,12 @@ window.addEventListener("popstate", (e) => {
   } else if (e.state.type === "harms") {
     // Back from an entry opened in the Harms view (harmsLinkHistory).
     activeTracker = HARMS_VIEW;
+    renderDispatch();
+    requestAnimationFrame(() => window.scrollTo(0, e.state.scrollY || 0));
+  } else if (e.state.type === "illegality") {
+    // Back from an entry opened in the Possible Illegality view
+    // (illegalityLinkHistory); illegalityState still holds its controls.
+    activeTracker = ILLEGALITY_VIEW;
     renderDispatch();
     requestAnimationFrame(() => window.scrollTo(0, e.state.scrollY || 0));
   }
@@ -7686,6 +7860,7 @@ document.getElementById("start-over-btn").addEventListener("click", () => {
   sortValue = "";
   groupMode = "";
   statusGroupOn = false;
+  illegalityState = { label: "", status: "", tracker: "", law: "", sort: "status", term: "" };
   renderDispatch();
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
@@ -7841,6 +8016,14 @@ async function loadAllData() {
     MOVED_IDS = r.ok ? (await r.json()) || {} : {};
   } catch (e) { MOVED_IDS = {}; }
 
+  // Possible Illegality data, same handling: missing (404 until publish.py
+  // writes it) or malformed = empty data, never a load-error banner.
+  try {
+    const r = await fetch("data/illegality.json");
+    const d = r.ok ? await r.json() : null;
+    ILLEGALITY_DATA = (d && typeof d === "object") ? Object.assign(EMPTY_ILLEGALITY_DATA(), d) : EMPTY_ILLEGALITY_DATA();
+  } catch (e) { ILLEGALITY_DATA = EMPTY_ILLEGALITY_DATA(); }
+
   // Triage queue owner flag (2026-10-17). Unlinked; honor-system by design.
   // Runs before the first render so the label is right on this load.
   if (location.hash === "#owner-setup" || location.hash === "#owner-clear") {
@@ -7858,6 +8041,8 @@ async function loadAllData() {
   // #harms opens the Harms view; checked before the first render, which would
   // otherwise clear #harms as "leaving" the view.
   if (harmsHashAction(location.hash, activeTracker, "load") === "open") activeTracker = HARMS_VIEW;
+  // #illegality likewise opens the Possible Illegality view.
+  if (illegalityHashAction(location.hash, activeTracker, "load") === "open") activeTracker = ILLEGALITY_VIEW;
   renderDispatch();
   openEntryFromHash();
 
