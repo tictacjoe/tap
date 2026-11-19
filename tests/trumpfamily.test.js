@@ -52,12 +52,12 @@ test("mapTrumpFamilyEntry tolerates missing nested objects", () => {
   assert.deepEqual(m.estimated_impact, {});
 });
 
-test("buildTrumpFamilyCardHtml shows members, stake, action and labeled legal context, escaped", () => {
+test("buildTrumpFamilyCardHtml shows members, stake and labeled legal context, escaped; no Government action (2026-11-19)", () => {
   const hl = t => String(t || "").replace(/&/g, "&amp;").replace(/</g, "&lt;");
   const html = fns.buildTrumpFamilyCardHtml(Object.assign({}, RAW, { family_members: ["Eric <b>Trump</b>"] }), hl);
   assert.match(html, /Eric &lt;b>Trump/);
   assert.match(html, /40% family stake/);
-  assert.match(html, /Chip export approval/);
+  assert.doesNotMatch(html, /Government action/);
   assert.match(html, /Legal context \(not a finding\)/);
   assert.doesNotMatch(fns.buildTrumpFamilyCardHtml(Object.assign({}, RAW, { legal_context: undefined }), hl), /Legal context/);
 });
@@ -74,11 +74,12 @@ const searchApi = (0, eval)(["escape-html", "highlight-matches", "glance-head", 
 const TFS_CFG = { kind: "govservices", titleField: "title", trackerKey: "trumpfamily", glanceEnabled: true };
 const GSR_CFG = { kind: "govservices", titleField: "title", trackerKey: "govservices", glanceEnabled: true };
 
-test("visibleSearchText covers TFS family, stake, action and legal context", () => {
+test("visibleSearchText covers TFS family, stake and legal context, not the no-longer-shown action (2026-11-19)", () => {
   const text = searchApi.visibleSearchText(fns.mapTrumpFamilyEntry(RAW), TFS_CFG);
-  for (const needle of ["Donald Trump Jr.", "Eric Trump", "40% family stake", "Chip export approval", "Emoluments"]) {
+  for (const needle of ["Donald Trump Jr.", "Eric Trump", "40% family stake", "Emoluments"]) {
     assert.ok(text.includes(needle), needle);
   }
+  assert.ok(!text.includes("Chip export approval"), "Government action is no longer rendered, so it is not searched");
 });
 
 test("visibleSearchText covers TFS also_officials names (the CLA 'Also in Trump Family' link searches them)", () => {
@@ -155,7 +156,7 @@ test("buildTrumpFamilyCardHtml lists also_officials as 'Also involved', escaped,
   const withAlso = Object.assign({}, RAW, { government_nexus: Object.assign({}, RAW.government_nexus, {
     also_officials: [{ name: "Howard Lutnick", role: "Secretary of Commerce" }, { name: "Scott <i>Bessent" }] }) });
   const html = fns.buildTrumpFamilyCardHtml(withAlso, hl);
-  assert.match(html, /Also involved: Howard Lutnick \(Secretary of Commerce\), Scott &lt;i>Bessent/);
+  assert.match(html, /Also involved<\/div><div class="field-value">Howard Lutnick \(Secretary of Commerce\), Scott &lt;i>Bessent/);
   assert.doesNotMatch(fns.buildTrumpFamilyCardHtml(RAW, hl), /Also involved/);
 });
 

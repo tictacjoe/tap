@@ -84,8 +84,14 @@ test("buildGlanceHeadHtml renders who, what, Harm to and harm status, with no Ha
   assert.ok(!html.includes("was harmed"));
 });
 
-test("Harm to leads the harm line, then Harm status, then Principal", () => {
+test("Principal is left off when the title already opens with the same name (2026-11-19)", () => {
   const html = api.buildGlanceHeadHtml({ glance: validGlance() }, cfgOn, { hl: hlPlain });
+  assert.ok(html.includes("glance-who"), "the title lead-in carries the name");
+  assert.ok(!html.includes("Principal:"));
+});
+
+test("Harm to leads the harm line, then Harm status, then Principal (grouped view)", () => {
+  const html = api.buildGlanceHeadHtml({ glance: validGlance() }, cfgOn, { hl: hlPlain, hideWho: true });
   assert.ok(html.includes(">Principal:</span> Example Agency Administrator"));
   const line = html.slice(html.indexOf('<p class="glance-harm">'));
   assert.ok(line.startsWith('<p class="glance-harm"><span class="glance-harm-item"><span class="glance-harm-label glance-harm-label-harmed">Harm to:</span>'),
@@ -105,7 +111,7 @@ test("Principal still renders when hideWho hides the title's who-lead-in", () =>
 
 test("Principal renders for non-Cabinet-Level trackers too (no cfg.kind guard, unlike Violation/Concern Type)", () => {
   const cfgDeregulation = { kind: "deregulation", titleField: "rule_name", glanceEnabled: true };
-  const html = api.buildGlanceHeadHtml({ glance: validGlance() }, cfgDeregulation, { hl: hlPlain });
+  const html = api.buildGlanceHeadHtml({ glance: validGlance() }, cfgDeregulation, { hl: hlPlain, hideWho: true });
   assert.ok(html.includes(">Principal:</span> Example Agency Administrator"));
 });
 
@@ -115,7 +121,7 @@ test("Cabinet-Level: Violation/Concern Type and Status Stage render after Princi
     offense_category: "Fraud",
     status_category: "Investigation",
   };
-  const html = api.buildGlanceHeadHtml(entry, cfgOn, { hl: hlPlain });
+  const html = api.buildGlanceHeadHtml(entry, cfgOn, { hl: hlPlain, hideWho: true });
   assert.ok(html.includes(">Violation/Concern Type:</span> Fraud"));
   assert.ok(html.includes(">Status Stage:</span> Investigation"));
   const principalIdx = html.indexOf("Principal:");

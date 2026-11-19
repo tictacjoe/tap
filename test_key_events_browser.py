@@ -119,7 +119,7 @@ def test_rail_is_visible_above_the_closed_story(browser, site_url, tab, entry_id
     page, errors = _open(browser, site_url, tab, entry_id, url)
     card = page.locator(f'.entry[data-entry-id="{entry_id}"]')
     rail = card.locator("ol.key-events")
-    story = card.locator("details.full-story")
+    story = card.locator("details.full-story:not(.impact-more)")
     assert rail.is_visible()
     assert rail.locator("li.key-event").count() == 3
     assert card.locator("li.key-event-turning").count() == 1

@@ -978,7 +978,7 @@ const layoutEntries = {
     // collapsible Sources/Confidence note treatment added 2026-09-23,
     // matching prosecution/CLA's own pattern.
     // Sources moved to second, right after What happened (2026-11-15).
-    order: [">What happened</div>", ">Sources</summary>", ">Status</div>", ">Estimated impact</div>", ">Caveat</div>", ">Primary proponent</div>", "<!--figures:1-->", ">Confidence note</summary>", "entry-aside-quote"],
+    order: [">What happened</div>", ">Sources</summary>", ">Status</div>", ">Estimated impact</div>", ">Primary proponent</div>", "<!--figures:1-->", ">Confidence note</summary>", ">Caveat on the impact</div>", "entry-aside-quote"],
   },
   govservices: {
     cfg: { kind: "govservices" },
@@ -993,7 +993,7 @@ const layoutEntries = {
       sources: [{ name: "Src One", url: "https://example.com/1" }],
     },
     // Sources moved to second, right after What happened (2026-11-15).
-    order: [">What happened</div>", ">Sources</summary>", ">Status</div>", ">Estimated impact</div>", ">Caveat</div>", ">Institution</div>", ">Primary proponent</div>", "<!--figures:1-->", ">Confidence note</summary>", "entry-aside-quote"],
+    order: [">What happened</div>", ">Sources</summary>", ">Status</div>", ">Estimated impact</div>", ">Institution</div>", ">Primary proponent</div>", "<!--figures:1-->", ">Confidence note</summary>", ">Caveat on the impact</div>", "entry-aside-quote"],
   },
   prosecution: {
     cfg: { kind: "prosecution" },
@@ -1606,7 +1606,7 @@ for (const kind of ["govservices", "deregulation"]) {
       cause: "[TAP Analysis, not sourced] Pattern text. See also: the DC takeover entry.",
       cause_references: [{ match: "the DC takeover entry", tracker: "prosecution", id: "trump-dc-police-federal-takeover-2025" }],
     }, { kind });
-    assert.deepEqual(cardLabels(result).slice(0, 5), ["What happened", "Broader Pattern", "Status", "Estimated impact", "Caveat"]);
+    assert.deepEqual(cardLabels(result).slice(0, 4), ["What happened", "Broader Pattern", "Status", "Estimated impact"]);
     assert(result.includes('<a href="#" class="related-entry-link cause-reference-link" data-tracker="prosecution" data-id="trump-dc-police-federal-takeover-2025">the DC takeover entry</a>'), "reference renders as a link");
     assert(result.includes("[TAP Analysis, not sourced] Pattern text."), "the analysis label is shown, as in CLA");
   });
@@ -1614,7 +1614,7 @@ for (const kind of ["govservices", "deregulation"]) {
   test(`${kind} without cause renders no Broader Pattern card and keeps the original order`, () => {
     const result = buildDetailHtml(baseEntry(), { kind });
     assert(!result.includes("Broader Pattern"));
-    assert.deepEqual(cardLabels(result).slice(0, 4), ["What happened", "Status", "Estimated impact", "Caveat"]);
+    assert.deepEqual(cardLabels(result).slice(0, 3), ["What happened", "Status", "Estimated impact"]);
   });
 
   test(`${kind} with an empty cause (even with references) renders no Broader Pattern card`, () => {
@@ -1646,10 +1646,10 @@ for (const kind of ["govservices", "deregulation"]) {
   const mainCards = (html) => html.split('<div class="field-group entry-main-card">').slice(1)
     .map(c => [...c.split("entry-aside-card")[0].matchAll(/<div class="field-label">([^<]+)<\/div>/g)].map(m => m[1]));
 
-  test(`${kind} puts Status, Estimated impact and Caveat together in the second (middle) card`, () => {
+  test(`${kind} puts Status and Estimated impact together in the second (middle) card; Caveat is not there (2026-11-19)`, () => {
     const cards = mainCards(buildDetailHtml(entryWith({ summary: "Impact.", caveat: "A caveat." }), { kind }));
     assert.deepEqual(cards[0], ["What happened"]);
-    assert.deepEqual(cards[1], ["Status", "Estimated impact", "Caveat"]);
+    assert.deepEqual(cards[1], ["Status", "Estimated impact"]);
     assert.equal(cards.length, 2, "no separate Estimated impact or Caveat card");
   });
 
@@ -1664,9 +1664,21 @@ for (const kind of ["govservices", "deregulation"]) {
     assert.deepEqual(cards.map(c => c[0]), ["What happened", "Broader Pattern", "Status"]);
   });
 
-  test(`${kind} keeps the Caveat italic inside the shared card`, () => {
+  test(`${kind} moves the Caveat, italic, inside the Confidence note toggle (2026-11-19)`, () => {
     const html = buildDetailHtml(entryWith({ summary: "Impact.", caveat: "A caveat." }), { kind });
-    assert(html.includes('<div class="field-label">Caveat</div><div class="field-value" style="font-style:italic;">A caveat.</div>'));
+    const note = html.slice(html.indexOf('<details class="field-toggle">'), html.indexOf("</details>", html.indexOf('<details class="field-toggle">')));
+    assert(note.includes('<div class="field-label">Caveat on the impact</div><div class="field-value" style="font-style:italic;">A caveat.</div>'));
+  });
+
+  test(`${kind} puts the full impact text behind a toggle when a skim line exists (2026-11-19)`, () => {
+    const entry = { ...entryWith({ summary: "Long impact text." }), section_summaries: { estimated_impact: "Skim." } };
+    const html = buildDetailHtml(entry, { kind });
+    assert(html.includes('<p class="field-summary">Skim.</p><details class="full-story impact-more"><summary>More on the impact</summary>Long impact text.</details>'));
+  });
+
+  test(`${kind} shows the full impact text directly when there is no skim line`, () => {
+    const html = buildDetailHtml(entryWith({ summary: "Long impact text." }), { kind });
+    assert(html.includes('<div class="field-label">Estimated impact</div><div class="field-value">Long impact text.</div>'));
   });
 }
 

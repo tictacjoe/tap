@@ -2408,14 +2408,14 @@ function adaptTrumpFamilyEntry(entry) {
 function buildTrumpFamilyCardHtml(entry, hl) {
   const chips = (entry.family_members || []).map(n => '<span class="family-chip">' + hl(n) + '</span>').join(" ");
   const stake = entry.business_entity && entry.business_entity.family_stake;
-  const action = entry.government_nexus && entry.government_nexus.action;
   const also = ((entry.government_nexus && entry.government_nexus.also_officials) || [])
     .filter(o => o && o.name).map(o => hl(o.name) + (o.role ? " (" + hl(o.role) + ")" : "")).join(", ");
   return '<div class="field-group entry-aside-card">' +
     '<div class="field-label">Family members</div><div class="field-value">' + chips + '</div>' +
     (stake ? '<div class="field-label">Family stake</div><div class="field-value">' + hl(stake) + '</div>' : '') +
-    (action ? '<div class="field-label">Government action</div><div class="field-value">' + hl(action) + '</div>' : '') +
-    (also ? '<div class="field-value">Also involved: ' + also + '</div>' : '') +
+    // "Government action" dropped 2026-11-19 (Joe, section cleanup): about 80%
+    // of its words repeat What happened. "Also involved" keeps its own label.
+    (also ? '<div class="field-label">Also involved</div><div class="field-value">' + also + '</div>' : '') +
     (entry.legal_context ? '<div class="field-label">Legal context (not a finding)</div><div class="field-value">' + hl(entry.legal_context) + '</div>' : '') +
     '</div>';
 }
@@ -4133,7 +4133,7 @@ function visibleSearchText(entry, cfg) {
     // TFS card (buildTrumpFamilyCardHtml) shows these on top of GSR's fields.
     if (cfg.trackerKey === "trumpfamily") {
       (entry.family_members || []).forEach(n => parts.push(n));
-      parts.push(entry.business_entity?.family_stake, entry.government_nexus?.action, entry.legal_context);
+      parts.push(entry.business_entity?.family_stake, entry.legal_context);
       (entry.government_nexus?.also_officials || []).forEach(o => parts.push(o?.name, o?.role));
     }
     // DAI People card (buildDaiPeopleHtml) and location.
@@ -4449,7 +4449,7 @@ function boldLeadingSourcingQuality(text) {
 // in the closed <details> is visible. Deregulation and Government Service
 // Redirection don't pass this flag, so their rendering is byte-for-byte
 // unchanged.
-function buildConfidenceNoteHtml(entry, hl, summary, collapsible) {
+function buildConfidenceNoteHtml(entry, hl, summary, collapsible, caveat) {
   const part = entry.timeline && entry.timeline.confidence_note;
   const hasUpdates = !!(part && Array.isArray(part.updates) && part.updates.length);
   const base = hasUpdates ? part.base : (entry.confidence_note || "").trim();
@@ -4470,9 +4470,17 @@ function buildConfidenceNoteHtml(entry, hl, summary, collapsible) {
       ).join("") +
       '</div>';
   }
+  // Impact caveat (2026-11-19, Joe, section cleanup): moved here from the
+  // Status card. Both are TAP hedging its own claims, so they sit together.
+  // Only Deregulation / GSR / Trump Family / DHS and ICE pass one.
+  if (caveat) {
+    bodyHtml += '<div class="field-label">Caveat on the impact</div><div class="field-value" style="font-style:italic;">' + hl(caveat) + '</div>';
+  }
   if (!collapsible) return labelHtml + bodyHtml;
   const summaryTag = '<summary class="field-label">Confidence note</summary>';
-  return '<details class="field-toggle">' + summaryTag + bodyHtml + '</details>' + summaryLine;
+  // Opens on its own when a search match is inside, like "Read the full story".
+  const open = bodyHtml.indexOf("<mark") !== -1 ? " open" : "";
+  return '<details class="field-toggle"' + open + '>' + summaryTag + bodyHtml + '</details>' + summaryLine;
 }
 /* build-confidence-note-html:end */
 
@@ -4750,6 +4758,18 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
   // but never show the reader why.
   const hl = (text) => highlightMatches(stripProcessLabels(text), term, useRegex);
   const summary = (text) => summaryLineHtml(text, term, useRegex);
+  // Impact block (2026-11-19, Joe, section cleanup): the bold skim line used to
+  // be followed at once by the full impact summary, which mostly restated it.
+  // Now the skim line shows and the full text sits behind a "More on the
+  // impact" toggle, opened on its own when a search match is inside. With no
+  // skim line, the full text shows as before. The Caveat that used to follow
+  // moved into the Confidence note (buildConfidenceNoteHtml's caveat arg).
+  const impactHtml = (skim, full) => {
+    const fullHtml = hl(full);
+    if (!skim || !fullHtml) return summary(skim) + fullHtml;
+    const open = fullHtml.indexOf("<mark") !== -1 ? " open" : "";
+    return summary(skim) + '<details class="full-story impact-more"' + open + '><summary>More on the impact</summary>' + fullHtml + '</details>';
+  };
 
   if (cfg.kind === "deregulation") {
     // "What happened" (renamed from "What changed" 2026-09-21, Joe's call),
@@ -4779,8 +4799,7 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
       buildSourcesCardHtml(entry, hl) +
       buildGsrCdrPatternCardHtml(entry, term, useRegex) +
       '<div class="field-group entry-main-card"><div class="field-label">Status</div><div class="field-value">' + buildFieldTimelineHtml(entry, "status", hl) + '</div>' +
-      '<div class="field-label">Estimated impact</div><div class="field-value">' + summary(entry.section_summaries?.estimated_impact) + hl(entry.estimated_health_impact?.summary) + '</div>' +
-      (entry.estimated_health_impact?.caveat ? '<div class="field-label">Caveat</div><div class="field-value" style="font-style:italic;">' + hl(entry.estimated_health_impact.caveat) + '</div>' : '') +
+      '<div class="field-label">Estimated impact</div><div class="field-value">' + impactHtml(entry.section_summaries?.estimated_impact, entry.estimated_health_impact?.summary) + '</div>' +
       '</div>';
     // Primary proponent is dropped when the glance card's Principal already
     // names the same person (see repeatsPrincipal).
@@ -4793,7 +4812,7 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
     // click-to-open treatment as CLA's Confidence note/Sources cards) --
     // matches buildSourcesCardHtml's own wrapper so both boxes read the
     // same way.
-    const noteHtml = '<div class="field-group entry-aside-card">' + buildConfidenceNoteHtml(entry, hl, summary, true) + '</div>' + buildPullQuoteHtml(entry, hl);
+    const noteHtml = '<div class="field-group entry-aside-card">' + buildConfidenceNoteHtml(entry, hl, summary, true, entry.estimated_health_impact?.caveat) + '</div>' + buildPullQuoteHtml(entry, hl);
     return buildEntryColsHtml(mainHtml, asideHtml, noteHtml) +
       buildUpdateRequestHtml(entry, cfg);
   }
@@ -4828,8 +4847,7 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
       buildSourcesCardHtml(entry, hl) +
       buildGsrCdrPatternCardHtml(entry, term, useRegex) +
       '<div class="field-group entry-main-card"><div class="field-label">Status</div><div class="field-value">' + buildFieldTimelineHtml(entry, "status", hl) + '</div>' +
-      '<div class="field-label">' + escapeHtml(L.impact || "Estimated impact") + '</div><div class="field-value">' + summary(entry.section_summaries?.estimated_impact) + hl(entry.estimated_impact?.summary) + '</div>' +
-      (entry.estimated_impact?.caveat ? '<div class="field-label">Caveat</div><div class="field-value" style="font-style:italic;">' + hl(entry.estimated_impact.caveat) + '</div>' : '') +
+      '<div class="field-label">' + escapeHtml(L.impact || "Estimated impact") + '</div><div class="field-value">' + impactHtml(entry.section_summaries?.estimated_impact, entry.estimated_impact?.summary) + '</div>' +
       '</div>';
     const asideHtml =
       (cfg.trackerKey === "trumpfamily" ? buildTrumpFamilyCardHtml(entry, hl) : "") +
@@ -4843,7 +4861,7 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
       (!entry.primary_proponent?.name || repeatsPrincipal(entry.primary_proponent.name, glanceWho) ? '' :
         '<div class="field-group entry-aside-card"><div class="field-label">' + escapeHtml(L.proponent || "Primary proponent") + '</div><div class="field-value"><strong>' + hl(entry.primary_proponent?.name) + '</strong> — ' + hl(entry.primary_proponent?.role) + (entry.primary_proponent?.note ? '<br><em>' + hl(entry.primary_proponent.note) + '</em>' : '') + '</div></div>') +
       (entry.estimated_impact?.figures?.length ? '<div class="field-group entry-aside-card">' + buildFiguresHtml(entry.estimated_impact.figures, hl) + '</div>' : '');
-    const noteHtml = '<div class="field-group entry-aside-card">' + buildConfidenceNoteHtml(entry, hl, summary, true) + '</div>' + buildPullQuoteHtml(entry, hl);
+    const noteHtml = '<div class="field-group entry-aside-card">' + buildConfidenceNoteHtml(entry, hl, summary, true, entry.estimated_impact?.caveat) + '</div>' + buildPullQuoteHtml(entry, hl);
     return buildEntryColsHtml(mainHtml, asideHtml, noteHtml) +
       buildUpdateRequestHtml(entry, cfg);
   }
@@ -5253,7 +5271,10 @@ function buildGlanceHeadHtml(entry, cfg, opts) {
         // "List by individual" grouped prosecution view), so the name is never
         // entirely absent from an individual card just because its group header
         // already names the person.
-        '<span class="glance-harm-item"><span class="glance-harm-label">Principal:</span> ' + hl(g.who) + '</span>' +
+        // Since 2026-11-19 (Joe, section cleanup) Principal shows ONLY when
+        // opts.hideWho dropped the title's who-lead-in; otherwise the title
+        // already opens with the same name.
+        (opts.hideWho ? '<span class="glance-harm-item"><span class="glance-harm-label">Principal:</span> ' + hl(g.who) + '</span>' : '') +
         claExtraHtml +
       '</p>' +
       '<div class="entry-meta">' + (opts.metaHtml || "") + '</div>' +
