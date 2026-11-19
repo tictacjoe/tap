@@ -292,3 +292,44 @@ def test_fits_phone_width(browser, site_url):
     widths = page.evaluate("[window.innerWidth, document.documentElement.scrollWidth]")
     assert widths == [390, 390]
     assert errors == []
+
+
+def test_typing_keeps_the_same_search_box(browser, site_url):
+    # Review fix: the search box must never be replaced while typing (a
+    # replaced box loses the phone keyboard on iOS and breaks Android
+    # predictive text). A marker property set before typing must still be on
+    # the box in the DOM, and that box must still have focus.
+    page, errors = _goto(browser, site_url)
+    _open_view(page)
+    page.click("#ill-search")
+    page.evaluate("document.getElementById('ill-search').__marker = 'same-box'")
+    page.keyboard.type("zebra", delay=20)
+    assert _row_ids(page) == [DEREG["id"]]
+    assert page.evaluate("document.getElementById('ill-search').__marker") == "same-box"
+    assert page.evaluate("document.activeElement.__marker") == "same-box"
+    assert errors == []
+
+
+def test_select_change_keeps_focus_on_the_select(browser, site_url):
+    page, errors = _goto(browser, site_url)
+    _open_view(page)
+    page.evaluate("document.getElementById('ill-sort').__marker = 'same-select'")
+    page.focus("#ill-sort")
+    page.select_option("#ill-sort", "law")
+    assert _row_ids(page) == [PROS["id"], GSR["id"], DEREG["id"]]
+    assert page.evaluate("document.activeElement.id") == "ill-sort"
+    assert page.evaluate("document.activeElement.__marker") == "same-select"
+    assert errors == []
+
+
+def test_wrongly_typed_fields_fall_back_to_empty(browser, site_url):
+    # Only top-level fields of the right type are taken from the file.
+    bad = {"version": 1, "laws": LAWS, "entries": ["not", "an", "object"],
+           "progress": {"screened": "7", "total": 900}}
+    page, errors = _goto(browser, site_url, data=bad)
+    data = page.evaluate("ILLEGALITY_DATA")
+    assert data["entries"] == {}
+    assert data["progress"] == {"screened": 0, "total": 0}
+    assert data["laws"] == LAWS
+    assert page.locator(LOAD_ERROR_BANNER).count() == 0
+    assert errors == []

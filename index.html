@@ -2127,6 +2127,21 @@ let MOVED_IDS = {};
    error; the view then reads "None listed yet."). */
 const EMPTY_ILLEGALITY_DATA = () => ({ version: 1, laws: {}, entries: {}, progress: { screened: 0, total: 0 } });
 let ILLEGALITY_DATA = EMPTY_ILLEGALITY_DATA();
+/* Takes only the top-level fields of a loaded illegality.json that have the
+   right type (entries/laws plain objects; progress with numeric
+   screened/total); anything else keeps the empty default. */
+function typedIllegalityData(d) {
+  const out = EMPTY_ILLEGALITY_DATA();
+  const isObj = v => !!v && typeof v === "object" && !Array.isArray(v);
+  if (!isObj(d)) return out;
+  if (typeof d.version === "number") out.version = d.version;
+  if (isObj(d.laws)) out.laws = d.laws;
+  if (isObj(d.entries)) out.entries = d.entries;
+  if (isObj(d.progress) && Number.isFinite(d.progress.screened) && Number.isFinite(d.progress.total)) {
+    out.progress = { screened: d.progress.screened, total: d.progress.total };
+  }
+  return out;
+}
 /* The view's control values. Module-level so they survive leaving the view
    and coming Back to it; not saved in the #illegality address (spec). */
 let illegalityState = { label: "", status: "", tracker: "", law: "", sort: "status", term: "" };
@@ -5628,7 +5643,6 @@ function buildIllegalityHtml(rows, counts, progress, abbr, controls) {
   const opt = (value, text, cur) => '<option value="' + escapeHtml(value) + '"' + (String(cur || "") === String(value) ? " selected" : "") + '>' + escapeHtml(text) + '</option>';
   const select = (id, label, all, options, cur) => '<label class="ill-control">' + escapeHtml(label) +
     ' <select id="' + id + '">' + opt("", all, cur) + options.map(o => opt(o[0], o[1], cur)).join("") + '</select></label>';
-  const tag = l => '<span class="ill-label ill-label-' + escapeHtml(l) + '">' + escapeHtml(ILLEGALITY_LABEL_TEXT[l] || l) + '</span>';
   let html = '<section class="ill-view"><h2 class="ill-title">Possible Illegality</h2>' +
     '<p class="ill-progress">Reviewed so far: ' + p.screened + ' of ' + p.total + ' entries</p>' +
     '<p class="ill-counts">' + counts.total + (counts.total === 1 ? ' entry' : ' entries') + ' · ' + counts.criminal + ' criminal · ' + counts.civil + ' civil/constitutional</p>' +
@@ -5641,10 +5655,21 @@ function buildIllegalityHtml(rows, counts, progress, abbr, controls) {
     '<label class="ill-control">Sort <select id="ill-sort">' + ILLEGALITY_SORTS.map(s => opt(s[0], s[1], c.sort || "status")).join("") + '</select></label>' +
     '<input type="search" id="ill-search" placeholder="Search these entries" aria-label="Search these entries" value="' + escapeHtml(c.term || "") + '">' +
     '</div>';
+  // The results part sits in its own container so the page can replace just
+  // it on a filter/sort/search change and leave the controls (and focus) be.
+  return html + '<div class="ill-results">' + buildIllegalityResultsHtml(rows, counts, abbr) + '</div></section>';
+}
+
+/* The results part of the view: the row list, or the empty message ("None
+   listed yet." when nothing is listed at all, "No entries match." when the
+   filters hide every row). Used by buildIllegalityHtml() and on its own by
+   the page's in-place re-render. */
+function buildIllegalityResultsHtml(rows, counts, abbr) {
+  const tag = l => '<span class="ill-label ill-label-' + escapeHtml(l) + '">' + escapeHtml(ILLEGALITY_LABEL_TEXT[l] || l) + '</span>';
   if (!rows.length) {
-    return html + '<p class="ill-empty">' + (counts.total ? "No entries match." : "None listed yet.") + '</p></section>';
+    return '<p class="ill-empty">' + (counts.total ? "No entries match." : "None listed yet.") + '</p>';
   }
-  html += '<ul class="ill-rows">' + rows.map(r => {
+  return '<ul class="ill-rows">' + rows.map(r => {
     const laws = r.violations.map(v => '<div class="ill-law">' + tag(v.label) + ' ' + escapeHtml(v.name) + (v.cite ? ' (' + escapeHtml(v.cite) + ')' : '') +
       '<div class="ill-who">Who: ' + escapeHtml(v.who) + '</div><div class="ill-why">Why: ' + escapeHtml(v.why) + '</div></div>').join("");
     return '<li class="ill-row"><a href="#' + encodeURIComponent(r.key) + '/' + encodeURIComponent(r.id) +
@@ -5653,7 +5678,6 @@ function buildIllegalityHtml(rows, counts, progress, abbr, controls) {
       '<span class="ill-tracker">' + escapeHtml((abbr && abbr[r.key]) || r.key) + '</span>' +
       '<span class="ill-what">' + escapeHtml(r.what) + '</span>' + laws + '</a></li>';
   }).join("") + '</ul>';
-  return html + '</section>';
 }
 
 /* Address handling, same contracts as harmsHashAction / harmsLinkHistory
@@ -7462,66 +7486,74 @@ function syncIllegalityHash() {
   else if (action === "clear") history.replaceState(history.state, "", location.pathname + location.search);
 }
 
-/* Renders the whole view into #entries from ILLEGALITY_DATA + the loaded
-   trackers + illegalityState, then binds the controls and row links.
-   Focus choice: the whole view (controls included) is re-rendered on every
-   change -- the header counts and the "No entries match." / "None listed
-   yet." wording come from the one builder -- so when the search box had
-   focus, focus and the caret/selection are restored on the new box. */
+/* Rows of the current view entry: built once in renderIllegalityView() and
+   reused by every filter/sort/search change (the trackers and the data do
+   not change while the view is open). */
+let illegalityAllRows = [];
+
+/* Renders the whole view (header, controls, results) into #entries. Called
+   once per view entry (each renderDispatch() into the view). Control
+   changes do NOT come back here: they call renderIllegalityResults(), which
+   replaces only the results container, so the select or search box the
+   visitor is using is never replaced. That keeps focus, the caret, the
+   phone keyboard (iOS ignores a scripted focus() not started by a tap) and
+   Android's predictive-text composition intact. The header counts cover
+   every listed entry, not the filtered subset, so they need no update on a
+   filter change. */
 function renderIllegalityView() {
   const entriesEl = document.getElementById("entries");
-  const active = document.activeElement;
-  const searchHadFocus = !!(active && active.id === "ill-search");
-  const selStart = searchHadFocus ? active.selectionStart : null;
-  const selEnd = searchHadFocus ? active.selectionEnd : null;
-
-  const allRows = buildIllegalityRows(TRACKERS, ILLEGALITY_DATA);
-  // Header counts describe every listed entry, not the filtered subset.
-  const counts = illegalityCounts(allRows);
-  // Per-tracker search is plain text site-wide (no regex toggle), so here too.
-  const shown = sortIllegalityRows(filterIllegalityRows(allRows, {
-    label: illegalityState.label, status: illegalityState.status,
-    tracker: illegalityState.tracker, law: illegalityState.law,
-    term: illegalityState.term.trim(), regex: false,
-  }), illegalityState.sort);
+  illegalityAllRows = buildIllegalityRows(TRACKERS, ILLEGALITY_DATA);
+  const counts = illegalityCounts(illegalityAllRows);
 
   // Option lists: only laws/trackers that actually appear in the rows, so
   // no choice can lead to an always-empty list. Laws A-Z by name; trackers
   // in the dropdown's own order, by their full label.
   const lawNames = {};
-  allRows.forEach(r => r.violations.forEach(v => { lawNames[v.law] = v.name; }));
+  illegalityAllRows.forEach(r => r.violations.forEach(v => { lawNames[v.law] = v.name; }));
   const laws = Object.keys(lawNames).map(k => [k, lawNames[k]])
-    .sort((a, b) => String(a[1]).localeCompare(String(b[1]), undefined, { sensitivity: "base" }));
-  const rowKeys = new Set(allRows.map(r => r.key));
+    .sort((x, y) => String(x[1]).localeCompare(String(y[1]), undefined, { sensitivity: "base" }));
+  const rowKeys = new Set(illegalityAllRows.map(r => r.key));
   const trackers = visibleTrackerKeys(TRACKERS).filter(k => rowKeys.has(k)).map(k => [k, TRACKERS[k].label]);
 
-  entriesEl.innerHTML = buildIllegalityHtml(shown, counts, ILLEGALITY_DATA.progress, HEADLINE_TRACKER_ABBR,
+  entriesEl.innerHTML = buildIllegalityHtml(illegalityShownRows(), counts, ILLEGALITY_DATA.progress, HEADLINE_TRACKER_ABBR,
     Object.assign({}, illegalityState, { laws, trackers }));
+  bindIllegalityRows(entriesEl);
 
-  // Tracker color on each row card (same --trk tokens as the browse chips).
-  entriesEl.querySelectorAll(".ill-entry-link").forEach(a => {
-    a.style.setProperty("--trk", "var(--trk-" + a.dataset.trackerKey + ")");
-  });
-
-  // Dropdowns: store the value, re-render.
+  // Controls are bound once here; their handlers only touch the results.
   [["ill-label", "label"], ["ill-status", "status"], ["ill-tracker", "tracker"], ["ill-law", "law"], ["ill-sort", "sort"]]
     .forEach(([id, field]) => {
       const el = document.getElementById(id);
-      if (el) el.addEventListener("change", () => { illegalityState[field] = el.value; renderIllegalityView(); });
+      if (el) el.addEventListener("change", () => { illegalityState[field] = el.value; renderIllegalityResults(); });
     });
   const search = document.getElementById("ill-search");
-  if (search) {
-    search.addEventListener("input", () => { illegalityState.term = search.value; renderIllegalityView(); });
-    if (searchHadFocus) {
-      search.focus();
-      try { search.setSelectionRange(selStart, selEnd); } catch (e) { /* type=search may refuse */ }
-    }
-  }
+  if (search) search.addEventListener("input", () => { illegalityState.term = search.value; renderIllegalityResults(); });
+}
 
-  // Row click: open the entry in its home tracker, same jump as Harms
-  // (resolveEntryTarget with moved ids), with history steps so Back returns
-  // here at the same scroll position.
-  entriesEl.querySelectorAll(".ill-entry-link").forEach(a => {
+/* The rows the current illegalityState shows, sorted. Per-tracker search is
+   plain text site-wide (no regex toggle), so here too. */
+function illegalityShownRows() {
+  return sortIllegalityRows(filterIllegalityRows(illegalityAllRows, {
+    label: illegalityState.label, status: illegalityState.status,
+    tracker: illegalityState.tracker, law: illegalityState.law,
+    term: illegalityState.term.trim(), regex: false,
+  }), illegalityState.sort);
+}
+
+// In-place re-render of the results container only (see renderIllegalityView).
+function renderIllegalityResults() {
+  const box = document.querySelector("#entries .ill-results");
+  if (!box) return;
+  box.innerHTML = buildIllegalityResultsHtml(illegalityShownRows(), illegalityCounts(illegalityAllRows), HEADLINE_TRACKER_ABBR);
+  bindIllegalityRows(box);
+}
+
+/* Row cards inside `root`: tracker color, and the click-through. A click
+   opens the entry in its home tracker, same jump as Harms (resolveEntryTarget
+   with moved ids), with history steps so Back returns here at the same
+   scroll position. */
+function bindIllegalityRows(root) {
+  root.querySelectorAll(".ill-entry-link").forEach(a => {
+    a.style.setProperty("--trk", "var(--trk-" + a.dataset.trackerKey + ")");
     a.addEventListener("click", (e) => {
       e.preventDefault();
       const target = resolveEntryTarget(a.dataset.trackerKey, a.dataset.id, TRACKERS, MOVED_IDS);
@@ -8021,7 +8053,7 @@ async function loadAllData() {
   try {
     const r = await fetch("data/illegality.json");
     const d = r.ok ? await r.json() : null;
-    ILLEGALITY_DATA = (d && typeof d === "object") ? Object.assign(EMPTY_ILLEGALITY_DATA(), d) : EMPTY_ILLEGALITY_DATA();
+    ILLEGALITY_DATA = typedIllegalityData(d);
   } catch (e) { ILLEGALITY_DATA = EMPTY_ILLEGALITY_DATA(); }
 
   // Triage queue owner flag (2026-10-17). Unlinked; honor-system by design.
