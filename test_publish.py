@@ -520,3 +520,48 @@ def test_publish_illegality_screened_none_counts(tmp_path):
     mod = load_illegality(w)
     rep = publish_illegality(mod, w, s / "data/illegality.json", {"a", "b"}, set())
     assert rep == {"listed": 0, "screened": 1, "total": 2, "omitted": 0}
+
+
+def _write_ill(w, fid, data):
+    (w / "illegality" / "entries" / f"{fid}.json").write_text(json.dumps(data))
+
+
+def test_illegality_malformed_violations_dry_run_no_crash(tmp_path):
+    w, s = _illegality_tree(tmp_path, ["a", "b"])
+    _write_ill(w, "a", {"id": "a", "reviewed": "2026-11-19", "source_version": "2026-11-19"})
+    _write_ill(w, "b", {"id": "b", "reviewed": "2026-11-19", "source_version": "2026-11-19",
+                        "violations": "text"})
+    r = _run_publish(w, s, "--dry-run")
+    assert r.returncode == 0, r.stdout + r.stderr
+    assert "Traceback" not in r.stderr
+    assert "WARNING: illegality: a: no violations" in r.stdout
+    mod = load_illegality(w)
+    rep = publish_illegality(mod, w, s / "data/illegality.json", {"a", "b"}, set(),
+                             dry_run=True, problems=[])
+    assert rep["listed"] == 0
+
+
+def _cla_filed_tree(tmp_path):
+    """A Cabinet-Level id with a file, so validate() asks the site."""
+    w, s = _illegality_tree(tmp_path, [])
+    cla = w / "prosecution" / "cabinet-level"
+    cla.mkdir(parents=True)
+    (cla / "c.json").write_text(json.dumps({"id": "c"}))
+    _write_ill(w, "c", {"id": "c", "reviewed": "2026-11-19", "source_version": "2026-11-19",
+                        "violations": [{"law": "fraud", "who": "Someone", "why": "Because."}]})
+    return w, s
+
+
+def test_illegality_concern_check_uses_site_and_errors_cleanly(tmp_path):
+    w, s = _cla_filed_tree(tmp_path)
+    r = _run_publish(w, s)
+    assert r.returncode == 1
+    assert "Traceback" not in r.stderr
+    assert "ERROR: illegality: concern check script not found: " + str(s / "tools") in r.stdout
+
+
+def test_illegality_concern_check_error_is_warning_on_dry_run(tmp_path):
+    w, s = _cla_filed_tree(tmp_path)
+    r = _run_publish(w, s, "--dry-run")
+    assert r.returncode == 0, r.stdout + r.stderr
+    assert "WARNING: illegality: concern check script not found: " + str(s / "tools") in r.stdout

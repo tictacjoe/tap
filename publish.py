@@ -226,32 +226,40 @@ def load_illegality(working: Path):
     return illegality
 
 
-def illegality_problems(module, working: Path) -> list:
+def illegality_problems(module, working: Path, site=None) -> list:
     """validate() messages for the working repo's illegality/ folder. Builds
     the cross-tracker id index; concerns=None lets validate() ask the site
-    (via node) only when a Cabinet-Level id is filed."""
+    (via node, using `site`'s tools/cla_concern_ids.js) only when a
+    Cabinet-Level id is filed. A failed concern check (RuntimeError) comes
+    back as one message, so the caller reports it like any other problem."""
     import tap_entry_index
     index = tap_entry_index.build_entry_index(tap_entry_index.tracker_dirs_under(working))
-    return module.validate(working, index)
+    try:
+        return module.validate(working, index, site=site)
+    except RuntimeError as exc:
+        return [str(exc)]
 
 
 def publish_illegality(module, working: Path, dest_file: Path, published_ids: set,
-                       excluded_ids: set, dry_run: bool = False, problems=None) -> dict:
+                       excluded_ids: set, dry_run: bool = False, problems=None,
+                       site=None) -> dict:
     """Write data/illegality.json: laws, the filed violations of published
     entries, and screening progress. Only ids in published_ids are listed; a
     filed id in excluded_ids is withheld and counted in `omitted`. Any
     validate() message is fatal (ERROR, exit 1) -- or a WARNING on a dry run.
     `problems` lets main() pass messages it already checked up front."""
     if problems is None:
-        problems = illegality_problems(module, working)
+        problems = illegality_problems(module, working, site)
     for msg in problems:
         print(f"{'WARNING' if dry_run else 'ERROR'}: illegality: {msg}")
     if problems and not dry_run:
         sys.exit(1)
 
     files = module.load_files(working)
-    entries = {fid: data["violations"] for fid, data in sorted(files.items())
-               if fid in published_ids}
+    # .get + list check: on a dry run a malformed file (already reported as a
+    # WARNING) is skipped rather than crashing the run.
+    entries = {fid: data.get("violations") for fid, data in sorted(files.items())
+               if fid in published_ids and isinstance(data.get("violations"), list)}
     omitted = sum(1 for fid in files if fid in excluded_ids and fid not in published_ids)
     screened = len(module.screened_ids(working) & published_ids)
     out = {"version": 1, "laws": module.load_laws(working), "entries": entries,
@@ -363,7 +371,7 @@ def main():
 
     # Validate the illegality data BEFORE any data file is written, like the
     # moved-targets check below: a bad file blocks the whole publish.
-    illegality_msgs = illegality_problems(illegality, working)
+    illegality_msgs = illegality_problems(illegality, working, site)
     for msg in illegality_msgs:
         print(f"{'WARNING' if args.dry_run else 'ERROR'}: illegality: {msg}")
     if illegality_msgs and not args.dry_run:
@@ -490,7 +498,7 @@ def main():
     # print dry-run warnings (a real run never reaches here with any).
     report = publish_illegality(illegality, working, site / "data" / "illegality.json",
                                 published_ids, excluded_ids, dry_run=args.dry_run,
-                                problems=[])
+                                problems=[], site=site)
     print(f"=== illegality === {report['listed']} listed, "
           f"{report['screened']} of {report['total']} screened, "
           f"{report['omitted']} omitted (withheld)")
