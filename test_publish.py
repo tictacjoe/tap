@@ -1,7 +1,7 @@
 import json
 from datetime import date
 
-from publish import publish_json_entries, write_site_meta
+from publish import publish_json_entries, write_site_meta, publish_illegality, load_illegality
 
 
 def test_publish_json_entries_preserves_section_summaries(tmp_path):
@@ -454,3 +454,69 @@ def test_moved_to_site_keys_maps_tap_data_names_once():
         "g": {"from": "govservices", "to": "dai", "date": "d"},
         "n": {"from": "oea", "to": "govservices", "date": "d"},
         "k": {"from": "prosecution", "to": "trumpfamily", "date": "d"}}
+
+
+# --- Possible Illegality (data/illegality.json) ---
+
+def _illegality_tree(tmp_path, entry_ids, filed=None, laws=None, screened=""):
+    """_e2e_dirs tree with trumpfamily entries `entry_ids` and an illegality/
+    data folder. `filed` is {id: law_key} (one violation each)."""
+    w, s = _e2e_dirs(tmp_path, {})
+    ent = w / "trumpfamily" / "entries"
+    ent.mkdir()
+    for i in entry_ids:
+        (ent / f"{i}.json").write_text(json.dumps({"id": i}))
+    d = w / "illegality"
+    (d / "entries").mkdir(parents=True)
+    (d / "laws.json").write_text(json.dumps(
+        laws if laws is not None else {"fraud": {"name": "Wire fraud", "label": "criminal"}}))
+    (d / "screened-none.txt").write_text(screened)
+    for fid, law in (filed or {}).items():
+        (d / "entries" / f"{fid}.json").write_text(json.dumps({
+            "id": fid, "reviewed": "2026-11-19", "source_version": "2026-11-19",
+            "violations": [{"law": law, "who": "Someone", "why": "Because."}]}))
+    return w, s
+
+
+def test_illegality_empty_folder(tmp_path):
+    w, s = _illegality_tree(tmp_path, ["a", "b"])
+    r = _run_publish(w, s)
+    assert r.returncode == 0, r.stdout + r.stderr
+    out = json.loads((s / "data/illegality.json").read_text())
+    assert out["entries"] == {} and out["progress"] == {"screened": 0, "total": 2}
+    assert out["version"] == 1 and "=== illegality === 0 listed, 0 of 2 screened, 0 omitted" in r.stdout
+
+
+def test_illegality_excluded_id_omitted(tmp_path):
+    w, s = _illegality_tree(tmp_path, ["a", "b"], filed={"a": "fraud", "b": "fraud"})
+    (s / "publish_exclude.txt").write_text("b\n")
+    r = _run_publish(w, s)
+    assert r.returncode == 0, r.stdout + r.stderr
+    out = json.loads((s / "data/illegality.json").read_text())
+    assert list(out["entries"]) == ["a"]
+    # total counts published entries only; b is withheld, not screened.
+    assert out["progress"] == {"screened": 1, "total": 1}
+    assert "1 listed, 1 of 1 screened, 1 omitted" in r.stdout
+
+
+def test_illegality_unknown_law_exits_1_before_writing(tmp_path):
+    w, s = _illegality_tree(tmp_path, ["a"], filed={"a": "nope"})
+    r = _run_publish(w, s)
+    assert r.returncode == 1
+    assert 'ERROR: illegality: a: violation 1: unknown law "nope"' in r.stdout
+    assert list((s / "data").glob("*.json")) == []
+
+
+def test_illegality_dry_run_warns_and_writes_nothing(tmp_path):
+    w, s = _illegality_tree(tmp_path, ["a"], filed={"a": "nope"})
+    r = _run_publish(w, s, "--dry-run")
+    assert r.returncode == 0, r.stdout + r.stderr
+    assert "WARNING: illegality: a: violation 1: unknown law" in r.stdout
+    assert list((s / "data").glob("*.json")) == []
+
+
+def test_publish_illegality_screened_none_counts(tmp_path):
+    w, s = _illegality_tree(tmp_path, ["a", "b"], screened="b 2026-11-19 nothing\n")
+    mod = load_illegality(w)
+    rep = publish_illegality(mod, w, s / "data/illegality.json", {"a", "b"}, set())
+    assert rep == {"listed": 0, "screened": 1, "total": 2, "omitted": 0}
