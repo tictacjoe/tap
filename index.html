@@ -7113,9 +7113,9 @@ function renderGlobalResults(term, useRegex, useOneLiners, useImpactSort) {
   const tapTotal = curatedMatches.length + claimMatches.length;
   const repN = reportingMatches.length;
   countEl.textContent = (tapTotal === 0 && repN > 0
-    ? repN + " in Reporting (unverified) for \"" + term + "\""
+    ? repN + " in Reporting (uncurated) for \"" + term + "\""
     : tapTotal + " result(s) across " + globalSearchDatabaseCount(TRACKERS) + " databases" +
-      (repN ? ", plus " + repN + " in Reporting (unverified)" : "") + " for \"" + term + "\"") +
+      (repN ? ", plus " + repN + " in Reporting (uncurated)" : "") + " for \"" + term + "\"") +
     (useRegex ? " (regex)" : "") + (useOneLiners ? " — 1-liner view" : "");
 
   container.innerHTML = "";
@@ -7146,7 +7146,7 @@ function renderGlobalResults(term, useRegex, useOneLiners, useImpactSort) {
     container.appendChild(section);
   }
   if (reportingMatches.length) {
-    const section = buildSearchGroup("reporting", "Reporting, not verified by TAP (" + reportingMatches.length + ")");
+    const section = buildSearchGroup("reporting", "Reporting, uncurated (" + reportingMatches.length + ")");
     container.appendChild(section);
     // Newest first, rendered as headline-style rows like the Records feed.
     const todayNum = todayDateNum();

@@ -1,5 +1,5 @@
 """Browser tests for global search results in three groups: TAP entries,
-Claim-checks, and Reporting (not verified by TAP). Search terms are chosen
+Claim-checks, and Reporting (uncurated). Search terms are chosen
 at test time from the loaded data so they never go stale. Skips if
 Playwright or Chromium is missing."""
 
@@ -103,7 +103,7 @@ def test_groups_in_order(browser, site_url):
     assert headings == [
         f"TAP entries ({counts['curated']})",
         f"Claim-checks ({counts['claimchecks']})",
-        f"Reporting, not verified by TAP ({counts['reporting']})",
+        f"Reporting, uncurated ({counts['reporting']})",
     ]
 
 
