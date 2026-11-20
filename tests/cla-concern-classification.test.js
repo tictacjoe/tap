@@ -173,6 +173,8 @@ const RECLASSIFIED_TO_VIOLATION = new Set([
   // illegality-IL6 (2026-11-20)
   "national-trust-white-house-ballroom-lawsuit-2025",
   "noem-perjury-referral-2026",
+  // illegality-IL7 (2026-11-20)
+  "trump-gender-affirming-care-eo-2025",
 ]);
 
 test("entries reclassified under the 2026-11-19 owner rule now have a Violation Type", () => {
