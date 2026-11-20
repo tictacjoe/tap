@@ -840,22 +840,59 @@
   }
   .ill-controls input[type="search"] { font-family: Georgia, serif; font-size: 0.95rem; flex: 1 1 14rem; }
   .ill-rows { list-style: none; margin: 0; padding: 0; }
-  .ill-row { margin: 0 0 0.75rem; }
-  .ill-entry-link {
-    display: block; padding: 0.7rem 0.9rem; color: var(--ink); text-decoration: none;
-    border: 1px solid var(--rule-strong); border-left: 6px solid var(--trk, var(--rule-strong));
-    border-radius: 4px; background: var(--paper-card); overflow-wrap: anywhere;
+  /* One-line rows (2026-11-19 one-liners spec): header and line share one
+     grid -- toggle, Label, Status, Entry, Law, Who -- and every text cell
+     cuts off with an ellipsis (full text in its title and the details). */
+  .ill-head, .ill-line {
+    display: grid; align-items: center; gap: 0.5rem;
+    grid-template-columns: 1.5rem 7rem 10rem minmax(0, 2.2fr) minmax(0, 1fr) minmax(0, 1fr);
   }
-  .ill-entry-link:hover { border-color: var(--brass); }
-  .ill-entry-link:hover .ill-what { text-decoration: underline; }
+  .ill-head { padding: 0 0.6rem 0.3rem calc(0.6rem + 6px); border-bottom: 1px solid var(--rule-strong); margin: 0 0 0.4rem; }
+  .ill-sort-btn {
+    font-family: ui-monospace, monospace; font-size: 0.75rem; color: var(--ink-soft); text-align: left;
+    background: none; border: 0; padding: 0.2rem 0; cursor: pointer; text-transform: uppercase; letter-spacing: 0.05em;
+  }
+  .ill-sort-btn:hover { color: var(--brass); }
+  .ill-sort-btn[aria-pressed="true"] { color: var(--ink); font-weight: 700; }
+  .ill-row {
+    margin: 0 0 0.35rem; padding: 0.4rem 0.6rem; background: var(--paper-card);
+    border: 1px solid var(--rule-strong); border-left: 6px solid var(--trk, var(--rule-strong)); border-radius: 4px;
+  }
+  .ill-row:hover { border-color: var(--brass); border-left-color: var(--trk, var(--brass)); }
+  .ill-line > span, .ill-line > a { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+  .ill-c-law, .ill-c-who { font-size: 0.85rem; color: var(--ink-soft); }
+  .ill-toggle {
+    background: none; border: 0; padding: 0; cursor: pointer; color: var(--ink-soft);
+    font-size: 0.9rem; width: 1.5rem; height: 1.5rem; line-height: 1;
+  }
+  .ill-toggle:hover { color: var(--brass); }
+  .ill-entry-link { font-weight: 600; color: var(--brass); text-decoration: none; }
+  .ill-entry-link:hover { text-decoration: underline; }
   .ill-status, .ill-tracker {
     font-family: ui-monospace, monospace; font-size: 0.75rem; text-transform: uppercase;
     letter-spacing: 0.05em; color: var(--ink-soft);
   }
-  .ill-tracker { float: right; margin-left: 0.5rem; color: var(--trk, var(--ink-soft)); font-weight: 700; }
-  .ill-what { display: block; margin: 0.25rem 0 0.35rem; font-weight: 600; color: var(--brass); }
+  .ill-tracker { display: block; color: var(--trk, var(--ink-soft)); font-weight: 700; }
+  .ill-details { margin: 0.4rem 0 0.2rem 2rem; overflow-wrap: anywhere; }
   .ill-law { margin: 0.3rem 0 0; font-size: 0.9rem; }
   .ill-who, .ill-why { color: var(--ink-soft); font-size: 0.85rem; margin-left: 0.2rem; }
+  .ill-sort-full { display: none; }
+  @media (max-width: 600px) {
+    .ill-head, .ill-sort-more { display: none; }
+    .ill-sort-full { display: inline-flex; }
+    .ill-line {
+      grid-template-columns: 1.5rem minmax(0, 1fr) minmax(0, 1fr);
+      grid-template-areas: "t l s" ". w w" ". a o";
+      row-gap: 0.2rem;
+    }
+    .ill-toggle { grid-area: t; } .ill-c-label { grid-area: l; } .ill-c-status { grid-area: s; }
+    .ill-entry-link { grid-area: w; } .ill-c-law { grid-area: a; } .ill-c-who { grid-area: o; }
+    .ill-details { margin-left: 1.5rem; }
+    /* ~30 characters is too little title to read: wrap it to two lines. */
+    .ill-line > a.ill-entry-link {
+      white-space: normal; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+    }
+  }
   .ill-label {
     font-family: ui-monospace, monospace; font-size: 0.7rem; text-transform: uppercase;
     letter-spacing: 0.05em; padding: 0.05rem 0.35rem; border-radius: 2px; white-space: nowrap;
@@ -2144,7 +2181,7 @@ function typedIllegalityData(d) {
 }
 /* The view's control values. Module-level so they survive leaving the view
    and coming Back to it; not saved in the #illegality address (spec). */
-let illegalityState = { label: "", status: "", tracker: "", law: "", sort: "status", term: "" };
+let illegalityState = { label: "", status: "", tracker: "", law: "", sort: "status", dir: "asc", term: "" };
 
 function stampClass(entry, cfg) {
   if (cfg.kind === "deregulation") {
@@ -7575,13 +7612,53 @@ function renderIllegalityView() {
   bindIllegalityRows(entriesEl);
 
   // Controls are bound once here; their handlers only touch the results.
-  [["ill-label", "label"], ["ill-status", "status"], ["ill-tracker", "tracker"], ["ill-law", "law"], ["ill-sort", "sort"]]
+  [["ill-label", "label"], ["ill-status", "status"], ["ill-tracker", "tracker"], ["ill-law", "law"]]
     .forEach(([id, field]) => {
       const el = document.getElementById(id);
       if (el) el.addEventListener("change", () => { illegalityState[field] = el.value; renderIllegalityResults(); });
     });
+  // Both sort dropdowns start a fresh ascending sort ("Column order", the
+  // More-sorts placeholder, leaves the current sort alone).
+  ["ill-sort", "ill-sort-more"].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.addEventListener("change", () => { if (el.value) setIllegalitySort(el.value, "asc"); });
+  });
   const search = document.getElementById("ill-search");
   if (search) search.addEventListener("input", () => { illegalityState.term = search.value; renderIllegalityResults(); });
+
+  // Header sort buttons and row toggles live inside the results, which are
+  // replaced on every re-render, so one delegated listener on the box.
+  const box = entriesEl.querySelector(".ill-results");
+  if (box) box.addEventListener("click", (e) => {
+    const btn = e.target.closest(".ill-sort-btn");
+    if (btn) {
+      const key = btn.dataset.sort;
+      const dir = illegalityState.sort === key && illegalityState.dir === "asc" ? "desc" : "asc";
+      setIllegalitySort(key, dir);
+      const again = box.querySelector('.ill-sort-btn[data-sort="' + key + '"]');
+      if (again) again.focus(); // keyboard users keep their place
+      return;
+    }
+    const tog = e.target.closest(".ill-toggle");
+    if (tog) {
+      const open = tog.getAttribute("aria-expanded") !== "true";
+      tog.setAttribute("aria-expanded", String(open));
+      tog.textContent = open ? "\u25BE" : "\u25B8";
+      const details = document.getElementById(tog.getAttribute("aria-controls"));
+      if (details) details.hidden = !open;
+    }
+  });
+}
+
+/* Set the sort, keep both dropdowns showing it, re-render the results. */
+function setIllegalitySort(key, dir) {
+  illegalityState.sort = key;
+  illegalityState.dir = dir;
+  const full = document.getElementById("ill-sort");
+  if (full) full.value = key;
+  const more = document.getElementById("ill-sort-more");
+  if (more) more.value = ILLEGALITY_MORE_SORTS.some(s => s[0] === key) ? key : "";
+  renderIllegalityResults();
 }
 
 /* The rows the current illegalityState shows, sorted. Per-tracker search is
@@ -7591,14 +7668,15 @@ function illegalityShownRows() {
     label: illegalityState.label, status: illegalityState.status,
     tracker: illegalityState.tracker, law: illegalityState.law,
     term: illegalityState.term.trim(), regex: false,
-  }), illegalityState.sort);
+  }), illegalityState.sort, illegalityState.dir);
 }
 
 // In-place re-render of the results container only (see renderIllegalityView).
 function renderIllegalityResults() {
   const box = document.querySelector("#entries .ill-results");
   if (!box) return;
-  box.innerHTML = buildIllegalityResultsHtml(illegalityShownRows(), illegalityCounts(illegalityAllRows), HEADLINE_TRACKER_ABBR);
+  box.innerHTML = buildIllegalityResultsHtml(illegalityShownRows(), illegalityCounts(illegalityAllRows), HEADLINE_TRACKER_ABBR,
+    { key: illegalityState.sort, dir: illegalityState.dir });
   bindIllegalityRows(box);
 }
 
@@ -7607,8 +7685,8 @@ function renderIllegalityResults() {
    with moved ids), with history steps so Back returns here at the same
    scroll position. */
 function bindIllegalityRows(root) {
+  root.querySelectorAll(".ill-row").forEach(li => li.style.setProperty("--trk", "var(--trk-" + li.dataset.trackerKey + ")"));
   root.querySelectorAll(".ill-entry-link").forEach(a => {
-    a.style.setProperty("--trk", "var(--trk-" + a.dataset.trackerKey + ")");
     a.addEventListener("click", (e) => {
       e.preventDefault();
       const target = resolveEntryTarget(a.dataset.trackerKey, a.dataset.id, TRACKERS, MOVED_IDS);
@@ -7977,7 +8055,7 @@ document.getElementById("start-over-btn").addEventListener("click", () => {
   sortValue = "";
   groupMode = "";
   statusGroupOn = false;
-  illegalityState = { label: "", status: "", tracker: "", law: "", sort: "status", term: "" };
+  illegalityState = { label: "", status: "", tracker: "", law: "", sort: "status", dir: "asc", term: "" };
   renderDispatch();
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
