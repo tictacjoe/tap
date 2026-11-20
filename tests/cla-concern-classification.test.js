@@ -144,8 +144,8 @@ const MOVED_OUT_OF_CLA = new Set(Object.entries(
 // Possible Illegality owner rule (Joe, 2026-11-19: when a specific law
 // plausibly applies, the entry's offense_category is rewritten to name it).
 // They are skipped by the pinned-concern checks and must now carry a Violation Type.
+// (boutros-broadview-six was reverted to a concern 2026-11-19: owner call, no contempt finding yet.)
 const RECLASSIFIED_TO_VIOLATION = new Set([
-  "boutros-broadview-six-grand-jury-misconduct-2026",
   "doj-maurene-comey-firing-2025-2026",
   "doj-voter-data-lawsuits-election-records-preservation-2025-2026",
   "hegseth-pentagon-press-credentialing-restrictions-2025",
