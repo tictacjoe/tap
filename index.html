@@ -5447,7 +5447,7 @@ function buildHarmsListHtml(trackers, abbr) {
     '<span class="harm-cert harm-cert-' + r.certainty + '" title="' + escapeHtml(cap(HARM_CERTAINTY_KEY[r.certainty])) + '">' +
     cap(r.certainty) + '</span> ' +
     '<span class="harm-tracker">' + escapeHtml((abbr && abbr[r.key]) || r.key) + '</span></li>').join("") + '</ul>';
-  let html = '<section class="harms-list"><h2 class="harms-title">Harms by first principle</h2>' +
+  let html = '<section class="harms-list"><h2 class="harms-title">Harms</h2>' +
     '<p class="harms-total">' + harmed + " harm" + (harmed === 1 ? "" : "s") +
     (parts.length ? ": " + parts.join(", ") : "") +
     (averted ? "; plus " + averted + " averted" : "") + '</p>' +

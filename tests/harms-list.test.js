@@ -161,9 +161,9 @@ test("the key explains all four certainty values, verbatim", () => {
 });
 function escapeForTest(s) { return s.replace(/&/g, "&amp;"); }
 
-test("title reads Harms by first principle", () => {
+test("title reads Harms (Joe, 2026-11-19)", () => {
   const html = api.buildHarmsListHtml(trackersWith([]), ABBR);
-  assert(html.includes('<h2 class="harms-title">Harms by first principle</h2>'));
+  assert(html.includes('<h2 class="harms-title">Harms</h2>'));
 });
 
 test("each line links to its entry and shows the what line and tracker abbreviation", () => {
