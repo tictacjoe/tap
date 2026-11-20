@@ -3288,8 +3288,9 @@ function renderHeadlinesControls() {
   // filter reads the same as the rows it filters (Joe, 2026-11-15).
   trackerSel.innerHTML = '<option value="">All trackers</option>' +
     headlinesCuratedKeys().map(key => '<option value="' + key + '">' + escapeHtml(HEADLINE_TRACKER_MEDIUM[key] || TRACKERS[key].label) + '</option>').join("") +
-    // Not a row filter: picking it opens the Possible Illegality view
+    // Not row filters: these open the Harms and Possible Illegality views
     // (Joe, 2026-11-19; see the change handler below).
+    '<option value="' + HARMS_VIEW + '">Harms \u2192</option>' +
     '<option value="' + ILLEGALITY_VIEW + '">Possible Illegality \u2192</option>';
   trackerSel.value = headlinesTrackerFilter;
 
@@ -7695,11 +7696,12 @@ document.getElementById("headlines-sort").addEventListener("change", (e) => {
   renderHeadlinesView();
 });
 document.getElementById("headlines-tracker-filter").addEventListener("change", (e) => {
-  // The Possible Illegality option navigates instead of filtering; put the
-  // select back so Records keeps its filter when the visitor returns.
-  if (e.target.value === ILLEGALITY_VIEW) {
+  // The Harms and Possible Illegality options navigate instead of filtering;
+  // put the select back so Records keeps its filter when the visitor returns.
+  if (e.target.value === HARMS_VIEW || e.target.value === ILLEGALITY_VIEW) {
+    const view = e.target.value;
     e.target.value = headlinesTrackerFilter;
-    switchToTracker(ILLEGALITY_VIEW);
+    switchToTracker(view);
     return;
   }
   headlinesTrackerFilter = e.target.value;
@@ -7815,9 +7817,19 @@ function renderBrowseChips() {
     btn.addEventListener("click", () => selectDatabaseTab(key));
     row.appendChild(btn);
   });
-  // Possible Illegality (Joe, 2026-11-19): a cross-tracker view, not a
-  // tracker, so it gets the dark ink color instead of a tracker color and
-  // sits last in the row. Opens the same view as the database dropdown.
+  // Harms and Possible Illegality (Joe, 2026-11-19): cross-tracker views,
+  // not trackers, so they get the dark ink color instead of a tracker color
+  // and sit last in the row, in database-dropdown order. Each opens the same
+  // view as the database dropdown. The Harms chip reads just "Harms" (Joe).
+  const harms = document.createElement("button");
+  harms.type = "button";
+  harms.className = "browse-chip";
+  harms.dataset.view = HARMS_VIEW;
+  harms.style.setProperty("--chip", "var(--ink)");
+  harms.textContent = "Harms";
+  harms.title = "Harms by first principle: every documented harm across the trackers";
+  harms.addEventListener("click", () => switchToTracker(HARMS_VIEW));
+  row.appendChild(harms);
   const ill = document.createElement("button");
   ill.type = "button";
   ill.className = "browse-chip";
