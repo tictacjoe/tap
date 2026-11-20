@@ -79,3 +79,19 @@ def test_key_on_a_tracker_tab(browser, site_url):
     page.evaluate("switchToTracker('prosecution')")
     page.wait_for_timeout(800)
     assert page.locator("#status-key-tab").is_visible()
+
+
+def test_key_is_plain_single_column_with_hyphens(browser, site_url):
+    """Joe, 2026-11-20 rev 2: no icons or colors, "Name - meaning", one column."""
+    page = _open(browser, site_url)
+    key = page.locator("#status-key-records")
+    items = key.locator(".status-key-item")
+    xs = set()
+    body_color = key.evaluate("el => getComputedStyle(el).color")
+    for i, name in enumerate(STAGES):
+        item = items.nth(i)
+        assert item.inner_text().startswith(name + " - ")
+        xs.add(round(item.bounding_box()["x"]))
+        assert item.locator(".status-key-name").evaluate(
+            "el => getComputedStyle(el).color") == body_color
+    assert len(xs) == 1  # every stage starts at the same left edge

@@ -1447,21 +1447,11 @@
   /* Status key above the result count (2026-11-20): plain text, tight. */
   .status-key { margin: 0 0 0.5rem; font-size: 0.72rem; line-height: 1.45; color: var(--ink-soft); }
   .status-key[hidden] { display: none; }
-  /* Two columns (Joe, 2026-11-20), filled down the first column then the
-     second so the priority order reads top to bottom; one column on phones. */
-  .status-key { display: grid; grid-template-columns: repeat(2, minmax(0, max-content)); grid-template-rows: repeat(3, auto); grid-auto-flow: column; gap: 0.05rem 1.5rem; }
-  .status-key-label, .status-key-note { grid-column: 1 / -1; }
-  .status-key-label { grid-row: 1; }
-  .status-key-note { grid-row: 5; }
-  @media (max-width: 600px) { .status-key { grid-template-columns: 1fr; grid-template-rows: none; grid-auto-flow: row; } .status-key-label, .status-key-note { grid-row: auto; } }
+  /* One column, plain text (Joe, 2026-11-20 rev 2): no symbols, no
+     stage colors, "Name - meaning" one per line in priority order. */
+  .status-key { display: grid; grid-template-columns: minmax(0, max-content); gap: 0.05rem 0; }
   .status-key-label { font-family: ui-monospace, monospace; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-faint); }
-  .status-key-name { font-family: ui-monospace, monospace; white-space: nowrap; }
-  .status-key-name.s-rev { color: #4f6b2a; }
-  .status-key-name.s-ruled { color: #8f2a1f; }
-  .status-key-name.s-court { color: #9a5a00; }
-  .status-key-name.s-find { color: #7a4a10; }
-  .status-key-name.s-inv { color: #5a5a5a; }
-  .status-key-name.s-none { color: #6b6558; }
+  .status-key-name { font-weight: bold; }
   .status-key-note { color: var(--ink-faint); }
   .entry-title > .status-pill { margin-right: 0.5rem; }
   .oneliner-text > .status-pill { margin-right: 0.4rem; }
@@ -2977,14 +2967,14 @@ function trackerHasStatusStage(key, trackers) {
 function stageOrCategory(entry, cfg) {
   return cfg && cfg.statusStageLive ? entry.status_stage : entry.status_category;
 }
-/* Status key (Joe, 2026-11-20: "just text and tighter"): plain text
-   above the result count wherever pills appear. Each stage is its symbol
-   and name in the pill's color, then its one-line meaning. */
+/* Status key (Joe, 2026-11-20: "just text and tighter"; rev 2: no icons
+   or colors, a hyphen between term and meaning, one column): plain text
+   above the result count wherever pills appear, one stage per line. */
 function statusKeyHtml() {
   return '<span class="status-key-label">Status key:</span> ' +
     STATUS_STAGES.map(s =>
-      '<span class="status-key-item"><span class="status-key-name ' + s.cls + '">' + s.symbol + '\u00a0' + s.name +
-      '</span> ' + s.def.charAt(0).toLowerCase() + s.def.slice(1, -1) + '</span>').join('') +
+      '<span class="status-key-item"><span class="status-key-name">' + s.name +
+      '</span> - ' + s.def.charAt(0).toLowerCase() + s.def.slice(1, -1) + '</span>').join('') +
     '<span class="status-key-note">Each entry shows the first that applies, in this order.</span>';
 }
 /* status-stage:end */
