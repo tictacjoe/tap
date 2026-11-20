@@ -1413,6 +1413,25 @@
   .status-pill.s-none { color: #6b6558; border-style: dashed; }
   /* Symbol-only pill on phone-width Records rows. */
   .status-pill.compact { padding: 0.05rem 0.35rem; }
+  /* Status key above the result count (2026-11-20): plain text, tight. */
+  .status-key { margin: 0 0 0.5rem; font-size: 0.72rem; line-height: 1.45; color: var(--ink-soft); }
+  .status-key[hidden] { display: none; }
+  /* Two columns (Joe, 2026-11-20), filled down the first column then the
+     second so the priority order reads top to bottom; one column on phones. */
+  .status-key { display: grid; grid-template-columns: repeat(2, minmax(0, max-content)); grid-template-rows: repeat(3, auto); grid-auto-flow: column; gap: 0.05rem 1.5rem; }
+  .status-key-label, .status-key-note { grid-column: 1 / -1; }
+  .status-key-label { grid-row: 1; }
+  .status-key-note { grid-row: 5; }
+  @media (max-width: 600px) { .status-key { grid-template-columns: 1fr; grid-template-rows: none; grid-auto-flow: row; } .status-key-label, .status-key-note { grid-row: auto; } }
+  .status-key-label { font-family: ui-monospace, monospace; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-faint); }
+  .status-key-name { font-family: ui-monospace, monospace; white-space: nowrap; }
+  .status-key-name.s-rev { color: #4f6b2a; }
+  .status-key-name.s-ruled { color: #8f2a1f; }
+  .status-key-name.s-court { color: #9a5a00; }
+  .status-key-name.s-find { color: #7a4a10; }
+  .status-key-name.s-inv { color: #5a5a5a; }
+  .status-key-name.s-none { color: #6b6558; }
+  .status-key-note { color: var(--ink-faint); }
   .entry-title > .status-pill { margin-right: 0.5rem; }
   .oneliner-text > .status-pill { margin-right: 0.4rem; }
   .headline-row-text {
@@ -1948,6 +1967,7 @@
     <select id="group-mode"></select>
     <label class="regex-toggle" id="status-group-label" style="display:none"><input type="checkbox" id="status-group-toggle"> Group by status</label>
   </div>
+  <div class="status-key" id="status-key-tab" hidden></div>
   <div class="result-count" id="count"></div>
   <div id="entries"></div>
 </main>
@@ -1962,6 +1982,7 @@
     <select id="headlines-subfilter"></select>
     <select id="headlines-status-filter" aria-label="Filter by status" style="display:none"></select>
   </div>
+  <div class="status-key" id="status-key-records" hidden></div>
   <div class="result-count" id="headlines-count"></div>
   <div id="headlines-view"></div>
   <div id="headlines-load-more-row" class="headlines-load-more-row" style="display:none">
@@ -2871,12 +2892,18 @@ function trackerChipHtml(key) {
    symbol plus words, so color is never the only cue; the colors live in
    CSS (.status-pill.s-*). */
 const STATUS_STAGES = [
-  { name: "Reversed or withdrawn", symbol: "↺", cls: "s-rev" },
-  { name: "Court ruled", symbol: "⚖", cls: "s-ruled" },
-  { name: "In court", symbol: "⧗", cls: "s-court" },
-  { name: "Finding issued", symbol: "✎", cls: "s-find" },
-  { name: "Under investigation", symbol: "◔", cls: "s-inv" },
-  { name: "Unchallenged", symbol: "○", cls: "s-none" },
+  { name: "Reversed or withdrawn", symbol: "↺", cls: "s-rev",
+    def: "The action was undone, vacated by a court, or withdrawn." },
+  { name: "Court ruled", symbol: "⚖", cls: "s-ruled",
+    def: "A court has ruled on the merits, found contempt, or dismissed a prosecution." },
+  { name: "In court", symbol: "⧗", cls: "s-court",
+    def: "A lawsuit or appeal is pending." },
+  { name: "Finding issued", symbol: "✎", cls: "s-find",
+    def: "An inspector general, the GAO or another watchdog has published a finding." },
+  { name: "Under investigation", symbol: "◔", cls: "s-inv",
+    def: "An inspector general, Congress, a prosecutor or a complaint is open, with no finding yet." },
+  { name: "Unchallenged", symbol: "○", cls: "s-none",
+    def: "The action stands and no formal challenge has been found." },
 ];
 
 function statusStageInfo(stage) {
@@ -2916,6 +2943,16 @@ function trackerHasStatusStage(key, trackers) {
 function stageOrCategory(entry, cfg) {
   return cfg && cfg.statusStageLive ? entry.status_stage : entry.status_category;
 }
+/* Status key (Joe, 2026-11-20: "just text and tighter"): plain text
+   above the result count wherever pills appear. Each stage is its symbol
+   and name in the pill's color, then its one-line meaning. */
+function statusKeyHtml() {
+  return '<span class="status-key-label">Status key:</span> ' +
+    STATUS_STAGES.map(s =>
+      '<span class="status-key-item"><span class="status-key-name ' + s.cls + '">' + s.symbol + '\u00a0' + s.name +
+      '</span> ' + s.def.charAt(0).toLowerCase() + s.def.slice(1, -1) + '</span>').join('') +
+    '<span class="status-key-note">Each entry shows the first that applies, in this order.</span>';
+}
 /* status-stage:end */
 
 /* trackerHasStatusStage() is evaluated once per tracker after the data
@@ -2948,6 +2985,14 @@ function effectiveFilterField(cfg) {
    is built, the same moment fitHeadlineRowText() measures it. */
 function useCompactPills() {
   return !!(window.matchMedia && window.matchMedia("(max-width: 600px)").matches);
+}
+
+/* Show or hide one status-key container. */
+function updateStatusKey(id, show) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.hidden = !show;
+  if (show && !el.innerHTML) el.innerHTML = statusKeyHtml();
 }
 
 function buildHeadlineRow(item, displayDate) {
@@ -3228,6 +3273,9 @@ function renderHeadlinesView(appendOnly) {
     "TAP entries (" + items.filter(i => curatedKeys.includes(i.tracker)).length + ")";
   document.getElementById("feed-tab-reporting").textContent =
     "Reporting feed, uncurated (" + items.filter(i => i.tracker === "tracker").length + ")";
+
+  updateStatusKey("status-key-records",
+    headlinesFeed === "curated" && curatedKeys.some(k => TRACKERS[k] && TRACKERS[k].statusStageLive));
 
   // Claim-checks never appear in either feed.
   if (headlinesFeed === "reporting") {
@@ -7015,6 +7063,7 @@ function renderEntries() {
   const cfg = TRACKERS[activeTracker];
   const container = document.getElementById("entries");
   const countEl = document.getElementById("count");
+  updateStatusKey("status-key-tab", !!cfg.statusStageLive);
 
   const filtered = cfg.data.filter(e => {
     // No search: skip building the haystack. matchesTerm() would return
@@ -7571,6 +7620,7 @@ function renderSearchMatches(section, matches, term, useRegex, useOneLiners) {
 
 function renderGlobalResults(term, useRegex, useOneLiners, useImpactSort) {
   const container = document.getElementById("entries");
+  updateStatusKey("status-key-tab", false);
   const countEl = document.getElementById("count");
   const errorEl = document.getElementById("regex-error");
   errorEl.textContent = "";
