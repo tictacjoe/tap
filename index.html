@@ -3837,6 +3837,12 @@ function classifyOffenseCategory(raw) {
     // anchors to the statute or limit the entry's own text names.
     [/epstein files transparency act/, "Epstein Files Transparency Act Violation"],
     [/18\s*u\.?\s*s\.?\s*c\.?\s*§?\s*201\(c\)|illegal[- ]gratuit/, "Illegal Gratuities (18 U.S.C. § 201(c))"],
+    // Added 2026-11-20 (Possible Illegality IL5 owner call): rules for laws
+    // named by court rulings on concern entries (Walz/Frey subpoenas, NYU
+    // Langone subpoena, Jan. 6 prosecutor firings). Appended last.
+    [/tenth amendment|anti-commandeering/, "Tenth Amendment (Anti-Commandeering) Violation"],
+    [/fourth amendment/, "Fourth Amendment Violation"],
+    [/civil service reform act/, "Civil Service Reform Act Violation"],
   ];
 
   for (const [pattern, label] of rules) {

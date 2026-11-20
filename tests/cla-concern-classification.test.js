@@ -36,6 +36,9 @@ test("classifyOffenseCategory recognizes the new statute/doctrine-named patterns
   assert.equal(classifyOffenseCategory("a district court's contempt inquiry, not yet a finding"), "Federal Court Order Defiance");
   assert.equal(classifyOffenseCategory("Possible Violation of the Epstein Files Transparency Act -- DOJ missed the deadline"), "Epstein Files Transparency Act Violation");
   assert.equal(classifyOffenseCategory("the federal illegal-gratuities statute, 18 U.S.C. 201(c), as cited in watchdog complaints"), "Illegal Gratuities (18 U.S.C. § 201(c))");
+  assert.equal(classifyOffenseCategory("Subpoenas quashed under the Tenth Amendment's anti-commandeering rule"), "Tenth Amendment (Anti-Commandeering) Violation");
+  assert.equal(classifyOffenseCategory("Possible Fourth Amendment violation -- a court found likely success"), "Fourth Amendment Violation");
+  assert.equal(classifyOffenseCategory("Removals challenged under the Civil Service Reform Act"), "Civil Service Reform Act Violation");
   assert.equal(classifyOffenseCategory("Recalling commanders, raises Posse Comitatus Act Concerns"), "Posse Comitatus Act Concern");
   assert.equal(classifyOffenseCategory("Contested Exercise of D.C. Home Rule Act Emergency Authority"), "D.C. Home Rule Act Dispute");
   assert.equal(classifyOffenseCategory("Circumventing Senate Advice-and-Consent Review by Installing a Rejected Nominee"), "Senate Confirmation Bypass");
