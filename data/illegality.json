@@ -372,6 +372,13 @@
         "why": "Dillon's pending suit alleges her removal by the EOIR acting director was void because only the attorney general can remove an immigration judge under Article II."
       }
     ],
+    "doe-oced-dismantlement-trump2": [
+      {
+        "law": "equal-protection-fifth-amendment",
+        "who": "U.S. Department of Energy",
+        "why": "In UC researchers' pending class action, DOE stipulated its October 2025 cut of 283 blue-state grants was based solely on the states' political identity, a possible equal protection violation."
+      }
+    ],
     "doge-chatgpt-grant-cuts-deposition-2026": [
       {
         "law": "first-amendment-retaliation",
@@ -389,6 +396,28 @@
         "law": "federal-records-act",
         "who": "National Labor Relations Board",
         "why": "GAO reported the NLRB deleted DOGE staffers' system-access accounts; the General Records Schedule generally requires such records be kept six years, so this may violate records law."
+      }
+    ],
+    "doge-ssa-fraud-review-data-access-2025-2026": [
+      {
+        "law": "privacy-act-civil",
+        "who": "Social Security Administration",
+        "why": "A pending federal suit alleges DOGE's access to SSA records violates the Privacy Act; SSA admitted DOGE staff shared data via Cloudflare, a server 'not approved for storing SSA data.'"
+      },
+      {
+        "law": "court-order-defiance-civil",
+        "who": "Social Security Administration",
+        "why": "SSA's own court filing disclosed it had falsely assured the court of compliance with a restraining order on DOGE data access, as a judge's June 2026 opinion recounts."
+      },
+      {
+        "law": "hatch-act",
+        "who": "SSA DOGE Team member (unnamed)",
+        "why": "SSA made two Hatch Act referrals to the Office of Special Counsel after a DOGE Team member signed a voter-data deal with a group seeking to overturn election results."
+      },
+      {
+        "law": "whistleblower-protection-act",
+        "who": "Social Security Administration",
+        "why": "SSA's chief data officer filed a retaliation complaint after his whistleblower disclosure on DOGE's data copying, saying retaliation kept him from working 'legally and ethically'; elements reported."
       }
     ],
     "doj-fbi-epstein-files-delay-presentation-2026": [
@@ -474,6 +503,13 @@
         "why": "A judge quashed DOJ's grand jury subpoenas to Minnesota officials under the Tenth Amendment's anti-commandeering rule, finding they aimed to coerce and retaliate against them."
       }
     ],
+    "dot-duffy-directive-funding-conditions-2025": [
+      {
+        "law": "administrative-procedure-act",
+        "who": "Transportation Secretary Sean Duffy and the U.S. Department of Transportation",
+        "why": "A judge ruled DOT's immigration-enforcement grant condition unlawful as beyond its authority and arbitrary and capricious, and permanently barred it for 22 states; DOT dropped its appeal."
+      }
+    ],
     "dot-ev-charging-funds-impoundment-lawsuits-2025": [
       {
         "law": "administrative-procedure-act",
@@ -524,11 +560,39 @@
         "why": "A source told CNN Martin denied sharing the material when DOJ leaders asked, until emails showed he had; a knowing false denial may violate the false-statements law."
       }
     ],
+    "education-department-dismantlement-trump2": [
+      {
+        "law": "agency-action-beyond-authority",
+        "who": "Education Secretary Linda McMahon",
+        "why": "A federal judge's May 2025 preliminary injunction blocked the mass layoffs and student-loan transfer, agreeing with states that only Congress can abolish the department; the Supreme Court stayed it."
+      }
+    ],
     "education-department-early-contract-cuts-2025": [
       {
         "law": "administrative-procedure-act",
         "who": "U.S. Department of Education",
         "why": "A federal judge ruled the department's February 2025 directive behind the teacher-training grant cancellations \"arbitrary and capricious and contrary to law\" under the APA and vacated it."
+      }
+    ],
+    "education-dept-community-schools-grants-cancellation-2026": [
+      {
+        "law": "administrative-procedure-act",
+        "who": "U.S. Department of Education",
+        "why": "North Carolina, Maryland and D.C. are suing, alleging the department's mid-cycle cancellation of the multi-year grants was arbitrary and capricious under the Administrative Procedure Act."
+      }
+    ],
+    "education-dept-school-mental-health-grants-terminated-2025": [
+      {
+        "law": "administrative-procedure-act",
+        "who": "U.S. Department of Education",
+        "why": "A judge vacated the April 2025 cutoff notices, and a Sept. 2026 injunction found the renewed termination plan likely arbitrary and capricious, a possible APA violation."
+      }
+    ],
+    "education-dept-title-ix-transgender-school-funding-cuts-2025-2026": [
+      {
+        "law": "administrative-procedure-act",
+        "who": "U.S. Department of Education, Office for Civil Rights",
+        "why": "A judge granted New York City's APA challenge, ruling the department skipped procedures Title IX requires before cutting off funding, and vacated its magnet grant decisions."
       }
     ],
     "education-hep-camp-migrant-education-pocket-rescission-2026": [
@@ -579,6 +643,13 @@
         "law": "administrative-procedure-act",
         "who": "Lee Zeldin, EPA Administrator",
         "why": "A Rhode Island federal judge declared EPA's termination of the $7 billion Solar for All program \"unlawful under the APA\" and vacated it; EPA has appealed."
+      }
+    ],
+    "epa-noaa-cdc-data-tools-erasure-2026": [
+      {
+        "law": "administrative-procedure-act",
+        "who": "U.S. Office of Personnel Management and Department of Health and Human Services",
+        "why": "A judge ruled the OPM memo and HHS guidance behind the CDC health-page removals violated the Administrative Procedure Act, vacated them and ordered the pages restored."
       }
     ],
     "exum-martinez-midway-blitz-shooting-evidence-2025": [
@@ -1779,6 +1850,11 @@
       "label": "civil",
       "name": "Epstein Files Transparency Act"
     },
+    "equal-protection-fifth-amendment": {
+      "cite": "U.S. Const. amend. V",
+      "label": "civil",
+      "name": "Equal protection (Fifth Amendment)"
+    },
     "establishment-clause": {
       "cite": "U.S. Const. amend. I",
       "label": "civil",
@@ -1986,7 +2062,7 @@
     }
   },
   "progress": {
-    "screened": 594,
+    "screened": 642,
     "total": 940
   },
   "version": 1
