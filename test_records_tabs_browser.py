@@ -163,7 +163,7 @@ def test_tracker_filter_names_match_chips(browser, site_url):
     assert options[0] == ["", "All trackers"]
     # 2026-11-19: the last two options open the Harms and Possible Illegality
     # views instead of filtering rows, so they have no chip name.
-    assert options[-2:] == [["harms", "Harms across trackers \u2192"], ["illegality", "Illegality across trackers \u2192"]]
+    assert options[-2:] == [["harms", "Harms (all trackers) \u2192"], ["illegality", "Illegality (all trackers) \u2192"]]
     chips = page.evaluate("HEADLINE_TRACKER_MEDIUM")
     for value, text in options[1:-2]:
         assert text == chips[value]

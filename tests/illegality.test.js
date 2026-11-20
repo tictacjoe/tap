@@ -272,12 +272,12 @@ test("counts: unchallenged is rows whose status is Unchallenged", () => {
 test("homepage has a Possible Illegality chip and All-trackers option", () => {
   const src = require("node:fs").readFileSync(require("node:path").join(__dirname, "..", "index.html"), "utf8");
   assert.match(src, /ill\.dataset\.view = ILLEGALITY_VIEW;[\s\S]{0,400}ill\.addEventListener\("click", \(\) => switchToTracker\(ILLEGALITY_VIEW\)\)/);
-  assert.match(src, /'<option value="' \+ ILLEGALITY_VIEW \+ '">Illegality across trackers \\u2192<\/option>'/);
+  assert.match(src, /'<option value="' \+ ILLEGALITY_VIEW \+ '">Illegality \(all trackers\) \\u2192<\/option>'/);
   assert.match(src, /if \(e\.target\.value === HARMS_VIEW \|\| e\.target\.value === ILLEGALITY_VIEW\) \{\s*const view = e\.target\.value;\s*e\.target\.value = headlinesTrackerFilter;\s*switchToTracker\(view\);/);
-  // Harms gets the same two entry points, labeled "Harms across trackers" (Joe).
-  assert.match(src, /harms\.textContent = "Harms across trackers";[\s\S]{0,300}harms\.addEventListener\("click", \(\) => switchToTracker\(HARMS_VIEW\)\)/);
-  assert.match(src, /'<option value="' \+ HARMS_VIEW \+ '">Harms across trackers \\u2192<\/option>'/);
-  assert.match(src, /harmsOpt\.textContent = "Harms across trackers";/);
+  // Harms gets the same two entry points, labeled "Harms (all trackers)" (Joe).
+  assert.match(src, /harms\.textContent = "Harms \(all trackers\)";[\s\S]{0,300}harms\.addEventListener\("click", \(\) => switchToTracker\(HARMS_VIEW\)\)/);
+  assert.match(src, /'<option value="' \+ HARMS_VIEW \+ '">Harms \(all trackers\) \\u2192<\/option>'/);
+  assert.match(src, /harmsOpt\.textContent = "Harms \(all trackers\)";/);
 });
 
 test("desktop label column fits both short tags (CRIMINAL CIVIL) without clipping", () => {
