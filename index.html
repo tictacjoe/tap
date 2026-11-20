@@ -141,10 +141,32 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 0.4rem;
+    /* Gaps here are between the two groups (trackers / Claim-checks +
+       cross-tracker views), a bit wider than the 0.4rem inside each group,
+       so the second group sits a little apart. */
+    gap: 0.9rem 1.2rem;
     max-width: 880px;
     margin: 1.75rem auto 0;
     padding: 0 1rem;
+  }
+  /* "Trackers" label (Joe, 2026-11-19): its own centered line above the chips. */
+  .browse-label {
+    flex-basis: 100%;
+    text-align: center;
+    font-family: ui-monospace, monospace;
+    font-size: 0.85rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-bottom: -0.4rem; /* label sits closer to the chips than the group gap */
+  }
+  /* Each group wraps as a unit, so the second group never splits from itself
+     onto two lines unless it can't fit on one. */
+  .browse-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.4rem;
   }
   .browse-chip {
     background: var(--chip);
@@ -7992,6 +8014,19 @@ function renderBrowseChips() {
   const row = document.getElementById("browse-chips");
   if (!row) return;
   row.innerHTML = "";
+  // "Trackers" label, then two groups (Joe, 2026-11-19): the curated
+  // trackers, and a slightly separated group of Claim-checks plus the two
+  // cross-tracker views (see .browse-group).
+  const label = document.createElement("span");
+  label.className = "browse-label";
+  label.textContent = "Trackers";
+  row.appendChild(label);
+  const mainGroup = document.createElement("div");
+  mainGroup.className = "browse-group";
+  const extraGroup = document.createElement("div");
+  extraGroup.className = "browse-group browse-group-extra";
+  row.appendChild(mainGroup);
+  row.appendChild(extraGroup);
   visibleTrackerKeys(TRACKERS).filter(key => key !== "tracker").forEach(key => {
     const btn = document.createElement("button");
     btn.type = "button";
@@ -8002,7 +8037,7 @@ function renderBrowseChips() {
     btn.title = TRACKERS[key].label +
       (allDataLoaded ? " (" + TRACKERS[key].data.length + " entries)" : "");
     btn.addEventListener("click", () => selectDatabaseTab(key));
-    row.appendChild(btn);
+    (key === "communitytopics" ? extraGroup : mainGroup).appendChild(btn);
   });
   // Harms and Possible Illegality (Joe, 2026-11-19): cross-tracker views,
   // not trackers, so they get the dark ink color instead of a tracker color
@@ -8016,7 +8051,7 @@ function renderBrowseChips() {
   harms.textContent = "Harms (all trackers)";
   harms.title = "Harms by first principle: every documented harm across the trackers";
   harms.addEventListener("click", () => switchToTracker(HARMS_VIEW));
-  row.appendChild(harms);
+  extraGroup.appendChild(harms);
   const ill = document.createElement("button");
   ill.type = "button";
   ill.className = "browse-chip";
@@ -8025,7 +8060,7 @@ function renderBrowseChips() {
   ill.textContent = "Illegality (all trackers)";
   ill.title = "Possible Illegality across all trackers: entries where a specific law may have been broken";
   ill.addEventListener("click", () => switchToTracker(ILLEGALITY_VIEW));
-  row.appendChild(ill);
+  extraGroup.appendChild(ill);
 }
 
 // Counterpart to the dbBtn click handler in buildHeadlineRow() -- restores

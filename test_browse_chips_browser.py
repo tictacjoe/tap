@@ -150,3 +150,20 @@ def test_chips_are_readable_and_tappable(site_url, browser):
         assert 11.5 <= font_px <= 12.5, font_px
         assert height_px >= 24, height_px
     page.close()
+
+
+def test_trackers_label_and_groups(site_url, browser):
+    # 2026-11-19 (Joe): a "Trackers" label above the chips, and Claim-checks
+    # plus the two cross-tracker views in their own, slightly separated group.
+    page = _open(browser, site_url)
+    assert page.locator("#browse-chips .browse-label").inner_text().strip().upper() == "TRACKERS"
+    groups = page.locator("#browse-chips .browse-group").evaluate_all(
+        "gs => gs.map(g => [...g.querySelectorAll('.browse-chip')].map(e => e.dataset.view || e.dataset.tracker))")
+    assert len(groups) == 2
+    assert "communitytopics" not in groups[0] and len(groups[0]) == 5
+    assert groups[1] == ["communitytopics", "harms", "illegality"]
+    # The gap between groups is wider than the gap between chips in a group.
+    outer = page.locator("#browse-chips").evaluate("e => parseFloat(getComputedStyle(e).rowGap)")
+    inner = page.locator("#browse-chips .browse-group").first.evaluate("e => parseFloat(getComputedStyle(e).rowGap)")
+    assert outer > inner
+    page.close()
