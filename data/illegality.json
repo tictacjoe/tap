@@ -40,6 +40,13 @@
         "why": "A judge ruled Essayli unlawfully served as acting U.S. attorney in violation of the Vacancies Act, and later that he serves unlawfully as a 'de facto' U.S. attorney."
       }
     ],
+    "blanche-phang-epstein-files-court-orders-2026": [
+      {
+        "law": "epstein-files-transparency-act",
+        "who": "Attorney General Todd Blanche (official capacity), U.S. Department of Justice",
+        "why": "A judge's preliminary injunction ordered DOJ to unredact or justify Epstein-file redactions, produce or justify withheld FBI notes and start a foreign-language review; DOJ appealed."
+      }
+    ],
     "bondi-habba-nj-us-attorney-appointments-clause-2026": [
       {
         "law": "appointments-clause",
@@ -83,6 +90,13 @@
         "why": "ABC's pending lawsuit alleges the FCC called in its eight stations' licenses for early renewal to punish its programming; the FCC says the order serves a discrimination probe."
       }
     ],
+    "carr-fcc-paramount-gala-gifts-ethics-complaints-2026": [
+      {
+        "law": "illegal-gratuity-18-usc-201c",
+        "who": "FCC Chairman Brendan Carr and Commissioner Olivia Trusty",
+        "why": "A complaint to the FCC inspector general and ethics office asks if their Paramount gala tickets were an illegal gratuity, just before a Paramount bid needing FCC approval; FCC says they were cleared."
+      }
+    ],
     "cecot-venezuelan-detainees-due-process-2025-2026": [
       {
         "law": "due-process-clause",
@@ -116,6 +130,13 @@
         "law": "federal-records-act",
         "who": "National Labor Relations Board",
         "why": "GAO reported the NLRB deleted DOGE staffers' system-access accounts; the General Records Schedule generally requires such records be kept six years, so this may violate records law."
+      }
+    ],
+    "doj-fbi-epstein-files-delay-presentation-2026": [
+      {
+        "law": "epstein-files-transparency-act",
+        "who": "Pam Bondi, then-Attorney General, U.S. Department of Justice",
+        "why": "DOJ missed the Act's December 19, 2025 deadline to release the Epstein files, and a House Oversight majority report says DOJ failed the Act's requirements; DOJ disputes it."
       }
     ],
     "doj-maurene-comey-firing-2025-2026": [
@@ -781,6 +802,11 @@
       "label": "civil",
       "name": "Elections Clause"
     },
+    "epstein-files-transparency-act": {
+      "cite": "Pub. L. 119-38 (2025)",
+      "label": "civil",
+      "name": "Epstein Files Transparency Act"
+    },
     "establishment-clause": {
       "cite": "U.S. Const. amend. I",
       "label": "civil",
@@ -830,6 +856,11 @@
       "cite": "5 U.S.C. 7321-7326",
       "label": "civil",
       "name": "Hatch Act"
+    },
+    "illegal-gratuity-18-usc-201c": {
+      "cite": "18 U.S.C. 201(c)",
+      "label": "criminal",
+      "name": "Illegal gratuities"
     },
     "impoundment-control-act": {
       "cite": "2 U.S.C. 681-688",
@@ -918,7 +949,7 @@
     }
   },
   "progress": {
-    "screened": 161,
+    "screened": 162,
     "total": 940
   },
   "version": 1

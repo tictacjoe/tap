@@ -3832,6 +3832,11 @@ function classifyOffenseCategory(raw) {
     [/unlawful service in a senate-confirmed office/, "Senate Confirmation Bypass"],
     [/attorney-discipline charges/, "Attorney Discipline Charges (Not Adjudicated)"],
     [/foreign service act/, "Foreign Service Act Violation"],
+    // Added 2026-11-20 (Possible Illegality IL2/IL3 owner call: a rewrite that
+    // only reaches Other/Unclassified needs a real rule). Appended last; each
+    // anchors to the statute or limit the entry's own text names.
+    [/epstein files transparency act/, "Epstein Files Transparency Act Violation"],
+    [/18\s*u\.?\s*s\.?\s*c\.?\s*§?\s*201\(c\)|illegal[- ]gratuit/, "Illegal Gratuities (18 U.S.C. § 201(c))"],
   ];
 
   for (const [pattern, label] of rules) {

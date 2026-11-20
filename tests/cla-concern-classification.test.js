@@ -34,6 +34,8 @@ test("classifyOffenseCategory recognizes the new statute/doctrine-named patterns
   assert.equal(classifyOffenseCategory('circumventing 42 U.S.C. § 1975\'s requirement that the President designate the chair'), "Civil Rights Commission Act Violation (42 U.S.C. § 1975)");
   assert.equal(classifyOffenseCategory("Violation of a Federal Court Injunction (Kennedy Center Naming)"), "Federal Court Order Defiance");
   assert.equal(classifyOffenseCategory("a district court's contempt inquiry, not yet a finding"), "Federal Court Order Defiance");
+  assert.equal(classifyOffenseCategory("Possible Violation of the Epstein Files Transparency Act -- DOJ missed the deadline"), "Epstein Files Transparency Act Violation");
+  assert.equal(classifyOffenseCategory("the federal illegal-gratuities statute, 18 U.S.C. 201(c), as cited in watchdog complaints"), "Illegal Gratuities (18 U.S.C. § 201(c))");
   assert.equal(classifyOffenseCategory("Recalling commanders, raises Posse Comitatus Act Concerns"), "Posse Comitatus Act Concern");
   assert.equal(classifyOffenseCategory("Contested Exercise of D.C. Home Rule Act Emergency Authority"), "D.C. Home Rule Act Dispute");
   assert.equal(classifyOffenseCategory("Circumventing Senate Advice-and-Consent Review by Installing a Rejected Nominee"), "Senate Confirmation Bypass");
@@ -154,6 +156,10 @@ const RECLASSIFIED_TO_VIOLATION = new Set([
   // illegality-IL3 (2026-11-20)
   "patel-bondi-arctic-frost-agents-lawsuit-2026",
   "rosen-don-lemon-church-protest-prosecution-2026",
+  // illegality-IL3b (2026-11-20): new Epstein Act and 18 U.S.C. 201(c) rules
+  "doj-fbi-epstein-files-delay-presentation-2026",
+  "blanche-phang-epstein-files-court-orders-2026",
+  "carr-fcc-paramount-gala-gifts-ethics-complaints-2026",
 ]);
 
 test("entries reclassified under the 2026-11-19 owner rule now have a Violation Type", () => {
