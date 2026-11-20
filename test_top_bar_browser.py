@@ -60,8 +60,10 @@ def test_top_bar_links(browser, site_url):
     page = _open(browser, site_url, '{"updated":"2026-11-01"}')
     assert page.get_attribute("#top-bar-about", "href").endswith("about.html")
     assert page.locator(".nav-actions").count() == 0
-    for sel in ("#start-over-btn", "#back-to-top-btn", "#suggest-claim-link"):
+    for sel in ("#start-over-btn", "#suggest-claim-link"):
         assert page.locator(f"#top-bar {sel}").count() == 1
+    # Back to Top left the bar for a floating button (2026-11-20).
+    assert page.locator("#top-bar #back-to-top-btn").count() == 0
     assert page.locator("#suggest-claim-link").inner_text().strip().endswith("Suggest a topic")
     page.click("#suggest-claim-link")
     assert page.locator("#suggest-backdrop").is_visible()
@@ -77,3 +79,26 @@ def test_top_bar_without_site_meta(browser, site_url):
     assert page.locator("#top-bar-updated").inner_text() == ""
     text = page.locator("#top-bar").inner_text()
     assert "Invalid" not in text and "undefined" not in text
+
+
+def test_top_bar_sticks_and_drops_the_date_when_scrolled(browser, site_url):
+    # 2026-11-20 (Joe): sticky bar; scrolled, it hides the Updated date.
+    page = _open(browser, site_url, '{"updated":"2026-11-01"}')
+    page.mouse.wheel(0, 2500)
+    page.wait_for_timeout(600)
+    assert page.locator("#top-bar").bounding_box()["y"] == 0
+    assert page.locator("#top-bar #start-over-btn").is_visible()
+    assert not page.locator("#top-bar-updated").is_visible()
+
+
+def test_floating_back_to_top_appears_after_scrolling(browser, site_url):
+    page = _open(browser, site_url, '{"updated":"2026-11-01"}')
+    fab = page.locator("#back-to-top-btn")
+    assert not fab.is_visible()
+    page.mouse.wheel(0, 2500)
+    page.wait_for_timeout(600)
+    assert fab.is_visible()
+    fab.click()
+    page.wait_for_timeout(1200)
+    assert page.evaluate("window.scrollY") == 0
+    assert not fab.is_visible()

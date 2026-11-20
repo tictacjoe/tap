@@ -195,7 +195,13 @@
   /* ================= TOP BAR ================= */
   /* Slim bar above the masthead: updated date on the left, text links on
      the right. Replaced the old fixed floating side buttons. */
+  /* Sticky (Joe, 2026-11-20) so About / Suggest a topic / Start Over stay
+     reachable while scrolling; once scrolled (.scrolled) it drops the
+     Updated date to stay one thin line. */
   .top-bar {
+    position: sticky;
+    top: 0;
+    z-index: 150;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -209,6 +215,31 @@
     letter-spacing: 0.02em;
   }
   .top-bar-updated { color: var(--ink-soft); }
+  .top-bar.scrolled { padding-top: 0.25rem; padding-bottom: 0.25rem; box-shadow: 0 1px 4px rgba(29, 34, 32, 0.12); }
+  .top-bar.scrolled .top-bar-updated { display: none; }
+  .top-bar.scrolled .top-bar-links { margin-left: auto; }
+  /* Anchor jumps and scrollIntoView() land below the sticky bar. */
+  html { scroll-padding-top: 2.5rem; }
+  .back-to-top-fab {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 150;
+    width: 2.6rem;
+    height: 2.6rem;
+    border-radius: 50%;
+    border: 1px solid var(--rule-strong);
+    background: var(--paper-card);
+    color: var(--ink-soft);
+    font-size: 1.1rem;
+    line-height: 1;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(29, 34, 32, 0.18);
+  }
+  .back-to-top-fab[hidden] { display: none; }
+  .back-to-top-fab:hover, .back-to-top-fab:focus-visible { color: var(--brass); border-color: var(--brass); }
+  /* Sit above the bottom Listen player bar while it is showing. */
+  body.listen-active .back-to-top-fab { bottom: 7.5rem; }
   .top-bar-links {
     display: flex;
     flex-wrap: wrap;
@@ -1874,10 +1905,13 @@
     <a class="nav-action-btn" id="top-bar-about" href="about.html">About</a>
     <button id="suggest-claim-link" class="nav-action-btn" type="button" title="Suggest a topic or submit a claim for TAP to check">Suggest a topic</button>
     <button id="start-over-btn" class="nav-action-btn" type="button" title="Clear search/filters and return to the default view">↻ Start Over</button>
-    <button id="back-to-top-btn" class="nav-action-btn" type="button" title="Scroll to the top of the page">↑ Back to Top</button>
     <button id="demo-tour-btn" class="nav-action-btn" type="button" title="Start automated or interactive video walkthrough tour" hidden>▶ Demo Tour</button>
   </nav>
 </div>
+
+<!-- Floating Back to Top (2026-11-20): bottom-right, shown only once the
+     visitor has scrolled about a screen down. -->
+<button id="back-to-top-btn" class="back-to-top-fab" type="button" title="Back to top" aria-label="Back to top" hidden>↑</button>
 
 <header class="masthead">
   <h1>TAP</h1>
@@ -8090,6 +8124,25 @@ fetch("data/site_meta.json")
 document.getElementById("back-to-top-btn").addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
+
+// Sticky-bar compact state and the floating ↑ button's visibility, both
+// from scroll position (rAF-throttled; passive listener).
+(function () {
+  const bar = document.getElementById("top-bar");
+  const fab = document.getElementById("back-to-top-btn");
+  let queued = false;
+  function update() {
+    queued = false;
+    const y = window.scrollY || document.documentElement.scrollTop || 0;
+    if (bar) bar.classList.toggle("scrolled", y > 40);
+    if (fab) fab.hidden = y < window.innerHeight * 0.9;
+  }
+  window.addEventListener("scroll", () => {
+    if (!queued) { queued = true; requestAnimationFrame(update); }
+  }, { passive: true });
+  window.addEventListener("resize", update);
+  update();
+})();
 
 // Browse chips (2026-11-19): one chip per visible tracker except Reporting
 // (reachable from the Records feed tab instead), replacing the
