@@ -151,6 +151,9 @@ const RECLASSIFIED_TO_VIOLATION = new Set([
   "doj-voter-data-lawsuits-election-records-preservation-2025-2026",
   "hegseth-pentagon-press-credentialing-restrictions-2025",
   "mullin-save-system-voter-roll-scrub-2026",
+  // illegality-IL3 (2026-11-20)
+  "patel-bondi-arctic-frost-agents-lawsuit-2026",
+  "rosen-don-lemon-church-protest-prosecution-2026",
 ]);
 
 test("entries reclassified under the 2026-11-19 owner rule now have a Violation Type", () => {
