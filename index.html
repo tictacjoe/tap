@@ -4656,8 +4656,12 @@ function buildConfidenceNoteHtml(entry, hl, summary, collapsible, caveat) {
 // own-quotes, which turns off the CSS-added curly marks -- otherwise it showed
 // a doubled opening mark and a stray closing mark after the speaker's name
 // (2026-11-15).
-function buildPullQuoteHtml(entry, hl) {
-  if (!entry.pull_quote) return '';
+// On/off switch for pull quotes in the detailed entry view (Joe, 2026-11-19:
+// hidden for now, may come back). Set to true to show them again; nothing
+// else needs to change -- the pull_quote data stays in every entry.
+const SHOW_PULL_QUOTES = false;
+function buildPullQuoteHtml(entry, hl, show = SHOW_PULL_QUOTES) {
+  if (!show || !entry.pull_quote) return '';
   const own = /^\s*["\u201C'\u2018]/.test(entry.pull_quote);
   // Straight double quotes shown curly, to match the site's own marks: one at
   // the start or after a space/bracket/dash opens, any other closes.

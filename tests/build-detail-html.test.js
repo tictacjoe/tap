@@ -40,7 +40,11 @@ const buildDetailHtmlFunctionSource = extractFunction(source, "build-detail-html
 // up, so 26 of these tests were failing with ReferenceErrors before any
 // layout work started.
 const safeHrefFunctionSource = extractFunction(source, "safe-href");
-const buildPullQuoteHtmlFunctionSource = extractFunction(source, "build-pull-quote-html");
+// Pull quotes are switched off on the site (SHOW_PULL_QUOTES = false,
+// 2026-11-19). The layout and quote-mark tests below exercise the quotes
+// themselves, so they run with the switch on; the off state has its own test.
+const buildPullQuoteHtmlSourceAsShipped = extractFunction(source, "build-pull-quote-html");
+const buildPullQuoteHtmlFunctionSource = buildPullQuoteHtmlSourceAsShipped.replace("const SHOW_PULL_QUOTES = false;", "const SHOW_PULL_QUOTES = true;");
 const buildEntryColsHtmlFunctionSource = extractFunction(source, "build-entry-cols-html");
 const evidenceDrawerFunctionSource = extractFunction(source, "evidence-drawer");
 // Added 2026-09-22: buildDetailHtml's prosecution/CLA branch now calls
@@ -1907,6 +1911,14 @@ test("govservices (TFS/DAI labels): relabeled cards follow the same rule; an emp
     fieldLabels: { institution: "Agencies", proponent: "Lead official" } });
   assert(html.includes(">Agencies</div>"), "agencies list is not in the Principal, so it stays");
   assert(!html.includes(">Lead official</div>"), "no lead official, no empty card");
+});
+
+// ---- Pull quotes switched off (2026-11-19) ----
+test("pull quotes are hidden as shipped, and come back when the switch is on", () => {
+  assert(buildPullQuoteHtmlSourceAsShipped.includes("const SHOW_PULL_QUOTES = false;"), "switch is off in index.html");
+  const shipped = (0, eval)(`${buildPullQuoteHtmlSourceAsShipped}\nbuildPullQuoteHtml;`);
+  assert.equal(shipped({ pull_quote: "A striking quote." }, s => s), "", "no quote markup while the switch is off");
+  assert(shipped({ pull_quote: "A striking quote." }, s => s, true).includes("entry-aside-quote"), "renders when switched on");
 });
 
 // ---- Pull quotes that bring their own quote marks (2026-11-15) ----
