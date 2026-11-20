@@ -5666,12 +5666,16 @@ function buildIllegalityHtml(rows, counts, progress, abbr, controls) {
     select("ill-status", "Status", "All statuses", ILLEGALITY_STATUS_ORDER.map(s => [s, s]), c.status) +
     select("ill-tracker", "Tracker", "All trackers", c.trackers || [], c.tracker) +
     select("ill-law", "Law", "All laws", c.laws || [], c.law) +
-    '<label class="ill-control">Sort <select id="ill-sort">' + ILLEGALITY_SORTS.map(s => opt(s[0], s[1], c.sort || "status")).join("") + '</select></label>' +
+    // Phone: every sort in one dropdown (the column header is hidden there).
+    // Desktop: the header buttons sort by column; the rest are "More sorts".
+    '<label class="ill-control ill-sort-full">Sort <select id="ill-sort">' + ILLEGALITY_SORTS.map(s => opt(s[0], s[1], c.sort || "status")).join("") + '</select></label>' +
+    '<label class="ill-control ill-sort-more">More sorts <select id="ill-sort-more">' + opt("", "Column order", ILLEGALITY_MORE_SORTS.some(s => s[0] === c.sort) ? c.sort : "") +
+    ILLEGALITY_MORE_SORTS.map(s => opt(s[0], s[1], c.sort)).join("") + '</select></label>' +
     '<input type="search" id="ill-search" placeholder="Search these entries" aria-label="Search these entries" value="' + escapeHtml(c.term || "") + '">' +
     '</div>';
   // The results part sits in its own container so the page can replace just
   // it on a filter/sort/search change and leave the controls (and focus) be.
-  return html + '<div class="ill-results">' + buildIllegalityResultsHtml(rows, counts, abbr) + '</div></section>';
+  return html + '<div class="ill-results">' + buildIllegalityResultsHtml(rows, counts, abbr, { key: c.sort || "status", dir: c.dir || "asc" }) + '</div></section>';
 }
 
 /* What a row's one line shows (spec 2026-11-19-tap-illegality-one-liners):

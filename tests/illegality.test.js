@@ -232,6 +232,19 @@ test("results html: empty rows have no header", () => {
   assert.ok(!html.includes("ill-head")); assert.match(html, /None listed yet\./);
 });
 
+test("controls: full sort and More sorts dropdowns", () => {
+  const rows = rowsFor({ g1: [V("bribery")] });
+  const counts = api.illegalityCounts(rows);
+  let html = api.buildIllegalityHtml(rows, counts, { screened: 1, total: 9 }, {}, { sort: "harm", dir: "asc" });
+  assert.match(html, /id="ill-sort"/);
+  assert.match(html, /id="ill-sort-more"/);
+  assert.match(html, /More sorts/);
+  assert.match(html, /id="ill-sort-more">[^]*<option value="harm" selected>/);
+  html = api.buildIllegalityHtml(rows, counts, { screened: 1, total: 9 }, {}, { sort: "who", dir: "desc" });
+  assert.match(html, /id="ill-sort-more"><option value="" selected>Column order/);
+  assert.match(html, /data-sort="who" aria-pressed="true">Who ▼</);
+});
+
 test("hash action mirrors harms", () => {
   assert.equal(api.illegalityHashAction("#illegality", "headlines", "load"), "open");
   assert.equal(api.illegalityHashAction("#harms", "headlines", "load"), null);
