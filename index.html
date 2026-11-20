@@ -3843,6 +3843,13 @@ function classifyOffenseCategory(raw) {
     [/tenth amendment|anti-commandeering/, "Tenth Amendment (Anti-Commandeering) Violation"],
     [/fourth amendment/, "Fourth Amendment Violation"],
     [/civil service reform act/, "Civil Service Reform Act Violation"],
+    // Added 2026-11-20 (Possible Illegality IL7 side queue): Elections Clause
+    // (court rulings on the election EOs) and FECA soft money (52 U.S.C.
+    // 30125, pleaded in an FEC complaint). Appended last, so entries that
+    // already match an earlier rule keep their label. "Separation of powers"
+    // is deliberately not a rule: concern entries use it as framing.
+    [/elections clause/, "Elections Clause Violation"],
+    [/federal election campaign act|52\s*u\.?\s*s\.?\s*c\.?\s*§?\s*30125/, "Federal Election Campaign Act Violation"],
   ];
 
   for (const [pattern, label] of rules) {

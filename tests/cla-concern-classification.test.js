@@ -39,6 +39,9 @@ test("classifyOffenseCategory recognizes the new statute/doctrine-named patterns
   assert.equal(classifyOffenseCategory("Subpoenas quashed under the Tenth Amendment's anti-commandeering rule"), "Tenth Amendment (Anti-Commandeering) Violation");
   assert.equal(classifyOffenseCategory("Possible Fourth Amendment violation -- a court found likely success"), "Fourth Amendment Violation");
   assert.equal(classifyOffenseCategory("Removals challenged under the Civil Service Reform Act"), "Civil Service Reform Act Violation");
+  assert.equal(classifyOffenseCategory("Order exceeding presidential power under the Elections Clause, as courts found"), "Elections Clause Violation");
+  assert.equal(classifyOffenseCategory("Alleged Federal Election Campaign Act soft-money violation"), "Federal Election Campaign Act Violation");
+  assert.equal(classifyOffenseCategory("soft money barred by 52 U.S.C. § 30125(e)(1)(A), per an FEC complaint"), "Federal Election Campaign Act Violation");
   assert.equal(classifyOffenseCategory("Recalling commanders, raises Posse Comitatus Act Concerns"), "Posse Comitatus Act Concern");
   assert.equal(classifyOffenseCategory("Contested Exercise of D.C. Home Rule Act Emergency Authority"), "D.C. Home Rule Act Dispute");
   assert.equal(classifyOffenseCategory("Circumventing Senate Advice-and-Consent Review by Installing a Rejected Nominee"), "Senate Confirmation Bypass");
@@ -173,6 +176,9 @@ const RECLASSIFIED_TO_VIOLATION = new Set([
   // illegality-IL6 (2026-11-20)
   "national-trust-white-house-ballroom-lawsuit-2025",
   "noem-perjury-referral-2026",
+  // illegality-IL7r (2026-11-20): new Elections Clause and FECA rules
+  "trump-election-eo-14248-military-voters-2025",
+  "trump-maga-inc-super-pac-control-2026",
   // illegality-IL7 (2026-11-20)
   "trump-gender-affirming-care-eo-2025",
 ]);
