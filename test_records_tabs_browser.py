@@ -184,3 +184,23 @@ def test_records_rows_line_up(browser, site_url):
     }""")
     for sel, xs in starts.items():
         assert len(xs) == 1, f"{sel} starts at {xs}"
+
+
+def test_all_trackers_option_in_database_dropdown(browser, site_url):
+    # 2026-11-19 (Joe): inside a tracker, the database dropdown's first real
+    # option, "All trackers", returns to Records showing every curated tracker.
+    page = _open(browser, site_url)
+    page.click('.browse-chip[data-tracker="prosecution"]')
+    page.wait_for_timeout(500)
+    assert page.locator("#tabs").is_visible()
+    options = page.eval_on_selector_all("#tabs option", "os => os.map(o => [o.value, o.textContent])")
+    assert options[1] == ["all", "All trackers"]
+    page.select_option("#tabs", "all")
+    page.wait_for_timeout(800)
+    assert page.evaluate("activeTracker") == "headlines"
+    assert page.evaluate("headlinesFeed") == "curated"
+    assert page.locator("#headlines-wrap").is_visible()
+    assert page.locator("#headlines-tracker-filter").input_value() == ""
+    trackers = set(_row_trackers(page))
+    assert len(trackers) > 1, trackers
+    page.close()

@@ -6612,6 +6612,20 @@ function switchToTracker(key) {
   renderDispatch();
 }
 
+// The database dropdown's "All trackers" option (Joe, 2026-11-19): Records,
+// curated feed, every tracker. The search term carries over, as it does when
+// switching databases (see switchToTracker).
+const ALL_TRACKERS_VIEW = "all";
+function showAllTrackers() {
+  activeTracker = "headlines";
+  headlinesFeed = "curated";
+  headlinesTrackerFilter = "";
+  headlinesSubFilter = "";
+  headlinesStatusFilter = "";
+  renderDispatch();
+  window.scrollTo(0, 0);
+}
+
 function selectDatabaseTab(key) {
   const select = document.getElementById("tabs");
   if (!select || !TRACKERS[key]) return;
@@ -6632,6 +6646,13 @@ function renderTabs() {
   placeholder.disabled = true;
   placeholder.selected = !TRACKERS[activeTracker] && activeTracker !== HARMS_VIEW && activeTracker !== ILLEGALITY_VIEW;
   select.appendChild(placeholder);
+  // "All trackers" (Joe, 2026-11-19): first real option, so from inside a
+  // tracker one pick gets back to every curated entry. Not a view of its own:
+  // it opens Records with the "All trackers" filter (see showAllTrackers).
+  const allOpt = document.createElement("option");
+  allOpt.value = ALL_TRACKERS_VIEW;
+  allOpt.textContent = "All trackers";
+  select.appendChild(allOpt);
   // The Harms view (2026-11-16; "Harms by first principle" since 2026-11-19): a cross-tracker view, not a database, listed
   // after the curated trackers and before Reporting (see harms-list block).
   const harmsOpt = document.createElement("option");
@@ -6653,7 +6674,7 @@ function renderTabs() {
     select.appendChild(opt);
   });
   if (!harmsOpt.parentNode) { select.appendChild(harmsOpt); select.appendChild(illOpt); }
-  select.onchange = () => switchToTracker(select.value);
+  select.onchange = () => select.value === ALL_TRACKERS_VIEW ? showAllTrackers() : switchToTracker(select.value);
 
   // Records (formerly "Headlines", briefly "Reports") lives in its own
   // centered row below the five database tabs, not inline with them --
