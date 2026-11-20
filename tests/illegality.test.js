@@ -16,7 +16,8 @@ const combined = ["escape-html", "highlight-matches", "matches-term", "visible-t
   .map(n => extractFunction(source, n)).join("\n");
 const api = (0, eval)(`${combined}
 ({ buildIllegalityRows, actionSortDate, sortIllegalityRows, filterIllegalityRows, illegalityCounts,
-   buildIllegalityHtml, illegalityHashAction, illegalityLinkHistory, ILLEGALITY_SORTS });`);
+   buildIllegalityHtml, illegalityHashAction, illegalityLinkHistory, ILLEGALITY_SORTS,
+   ILLEGALITY_COLUMN_SORTS, ILLEGALITY_MORE_SORTS });`);
 
 const LAWS = {
   bribery: { name: "Bribery", cite: "18 U.S.C. 201", label: "criminal" },
@@ -108,10 +109,33 @@ test("each sort ties to the default", () => {
   ];
   for (const [k] of api.ILLEGALITY_SORTS) {
     // all rows tie on label/law/who/tracker/date, so each sort must equal the default order
-    if (["harm", "status"].includes(k)) continue;
+    if (["harm", "status", "what"].includes(k)) continue;
     assert.deepEqual(api.sortIllegalityRows(rows, k).map(r => r.id), ["c", "a", "b"], k);
   }
   assert.deepEqual(api.sortIllegalityRows(rows, "harm").map(r => r.id), ["c", "b", "a"]);
+});
+
+test("entry sort is title A-Z; desc reverses", () => {
+  const rows = [mk("1", "Unchallenged", 1, "Beta"), mk("2", "In court", 1, "alpha")];
+  assert.deepEqual(api.sortIllegalityRows(rows, "what").map(r => r.id), ["2", "1"]);
+  assert.deepEqual(api.sortIllegalityRows(rows, "what", "desc").map(r => r.id), ["1", "2"]);
+});
+
+test("desc reverses only the primary key; ties stay default ascending", () => {
+  const rows = [mk("a", "In court", 1, "B"), mk("b", "Unchallenged", 1, "Z"), mk("c", "Unchallenged", 1, "A")];
+  assert.deepEqual(api.sortIllegalityRows(rows, "status", "desc").map(r => r.id), ["a", "c", "b"]);
+});
+
+test("label desc puts civil-only rows first", () => {
+  const crim = mk("k", "Unchallenged", 1, "A", { labels: ["criminal"] });
+  const civ = mk("v", "Unchallenged", 1, "B", { labels: ["civil"] });
+  assert.deepEqual(api.sortIllegalityRows([crim, civ], "label", "desc").map(r => r.id), ["v", "k"]);
+});
+
+test("sort lists: column sorts then more sorts", () => {
+  assert.deepEqual(api.ILLEGALITY_COLUMN_SORTS.map(s => s[0]), ["label", "status", "what", "law", "who"]);
+  assert.deepEqual(api.ILLEGALITY_MORE_SORTS.map(s => s[0]), ["harm", "action", "updated", "tracker"]);
+  assert.deepEqual(api.ILLEGALITY_SORTS.map(s => s[0]), ["label", "status", "what", "law", "who", "harm", "action", "updated", "tracker"]);
 });
 
 test("law and who sorts use the first violation", () => {

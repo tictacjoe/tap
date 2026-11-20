@@ -5527,7 +5527,11 @@ const ILLEGALITY_VIEW = "illegality";
 // Default sort order of the status stages (the site's existing status words).
 const ILLEGALITY_STATUS_ORDER = ["Unchallenged", "Under investigation", "In court", "Finding issued", "Court ruled", "Reversed or withdrawn"];
 const ILLEGALITY_LABEL_TEXT = { criminal: "Criminal", civil: "Civil/constitutional" };
-const ILLEGALITY_SORTS = [["status", "Status"], ["label", "Label"], ["law", "Law"], ["tracker", "Tracker"], ["who", "Who"], ["harm", "Harm"], ["action", "Date of action"], ["updated", "Recently updated"]];
+// Column sorts are the one-line rows' header buttons, in column order; the
+// rest sit in the "More sorts" dropdown. The phone dropdown lists both.
+const ILLEGALITY_COLUMN_SORTS = [["label", "Label"], ["status", "Status"], ["what", "Entry"], ["law", "Law"], ["who", "Who"]];
+const ILLEGALITY_MORE_SORTS = [["harm", "Harm"], ["action", "Date of action"], ["updated", "Recently updated"], ["tracker", "Tracker"]];
+const ILLEGALITY_SORTS = ILLEGALITY_COLUMN_SORTS.concat(ILLEGALITY_MORE_SORTS);
 
 /* Join illegality data to loaded tracker entries. Returns one row per id
    that is held by a visible, non-Reporting, non-Community tracker; ids held
@@ -5594,10 +5598,14 @@ const _illNewest = (a, b) => (a === b ? 0 : !a ? 1 : !b ? -1 : _illCmp(b, a));
 
 /* Returns a new sorted array. Every sort falls back to the default order so
    tied rows never shuffle. A two-label row sorts as Criminal; multi-law rows
-   use their first violation for Law and Who. */
-function sortIllegalityRows(rows, sortKey) {
+   use their first violation for Law and Who. `dir` "desc" reverses only the
+   primary key; ties stay in default (ascending) order. */
+function sortIllegalityRows(rows, sortKey, dir = "asc") {
   const first = r => r.violations[0] || {};
+  const stage = r => { const i = ILLEGALITY_STATUS_ORDER.indexOf(r.status); return i < 0 ? 99 : i; };
   const by = {
+    status: (a, b) => stage(a) - stage(b),
+    what: (a, b) => _illText(a.what, b.what),
     label: (a, b) => (a.labels.includes("criminal") ? 0 : 1) - (b.labels.includes("criminal") ? 0 : 1),
     law: (a, b) => _illText(first(a).name, first(b).name),
     tracker: (a, b) => _illCmp(a.key, b.key),
@@ -5606,7 +5614,8 @@ function sortIllegalityRows(rows, sortKey) {
     action: (a, b) => _illNewest(actionSortDate(a.actionDate), actionSortDate(b.actionDate)),
     updated: (a, b) => _illNewest(a.updated, b.updated),
   }[sortKey];
-  return rows.slice().sort((a, b) => (by ? by(a, b) : 0) || _illDefaultCmp(a, b));
+  const sign = dir === "desc" ? -1 : 1;
+  return rows.slice().sort((a, b) => (by ? sign * by(a, b) : 0) || _illDefaultCmp(a, b));
 }
 
 /* Filters: empty value = no filter. `term` searches what plus every law
