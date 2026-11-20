@@ -877,6 +877,16 @@
   .ill-law { margin: 0.3rem 0 0; font-size: 0.9rem; }
   .ill-who, .ill-why { color: var(--ink-soft); font-size: 0.85rem; margin-left: 0.2rem; }
   .ill-sort-full { display: none; }
+  .ill-reverse {
+    font-family: ui-monospace, monospace; font-size: 0.75rem; padding: 0.45rem 0.55rem; cursor: pointer;
+    border: 1px solid var(--rule-strong); background: var(--paper); color: var(--ink-soft); border-radius: 3px;
+  }
+  .ill-reverse[aria-pressed="true"] { color: var(--ink); border-color: var(--brass); }
+  /* Read by screen readers, not shown. */
+  .ill-sr {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden;
+    clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+  }
   @media (max-width: 600px) {
     .ill-head, .ill-sort-more { display: none; }
     .ill-sort-full { display: inline-flex; }
@@ -2182,6 +2192,8 @@ function typedIllegalityData(d) {
 /* The view's control values. Module-level so they survive leaving the view
    and coming Back to it; not saved in the #illegality address (spec). */
 let illegalityState = { label: "", status: "", tracker: "", law: "", sort: "status", dir: "asc", term: "" };
+// Ids of rows whose details are open; kept across result re-renders.
+let illegalityOpen = new Set();
 
 function stampClass(entry, cfg) {
   if (cfg.kind === "deregulation") {
@@ -5640,19 +5652,42 @@ const _illNewest = (a, b) => (a === b ? 0 : !a ? 1 : !b ? -1 : _illCmp(b, a));
 function sortIllegalityRows(rows, sortKey, dir = "asc") {
   const first = r => r.violations[0] || {};
   const stage = r => { const i = ILLEGALITY_STATUS_ORDER.indexOf(r.status); return i < 0 ? 99 : i; };
+  // Missing values go last whichever way the sort runs.
+  const missing = {
+    status: r => stage(r) === 99, what: r => !r.what, law: r => !first(r).name, who: r => !illegalityLineCells(r).who,
+    harm: r => !r.harmTier, action: r => !actionSortDate(r.actionDate), updated: r => !r.updated, label: r => !r.labels.length,
+  }[sortKey];
   const by = {
     status: (a, b) => stage(a) - stage(b),
     what: (a, b) => _illText(a.what, b.what),
     label: (a, b) => (a.labels.includes("criminal") ? 0 : 1) - (b.labels.includes("criminal") ? 0 : 1),
     law: (a, b) => _illText(first(a).name, first(b).name),
     tracker: (a, b) => _illCmp(a.key, b.key),
-    who: (a, b) => _illText(first(a).who, first(b).who),
+    who: (a, b) => _illText(illegalityLineCells(a).who, illegalityLineCells(b).who),
     harm: (a, b) => (a.harmTier || 9) - (b.harmTier || 9),
     action: (a, b) => _illNewest(actionSortDate(a.actionDate), actionSortDate(b.actionDate)),
     updated: (a, b) => _illNewest(a.updated, b.updated),
   }[sortKey];
   const sign = dir === "desc" ? -1 : 1;
-  return rows.slice().sort((a, b) => (by ? sign * by(a, b) : 0) || _illDefaultCmp(a, b));
+  const primary = (a, b) => {
+    if (!by) return 0;
+    const ma = missing ? missing(a) : false, mb = missing ? missing(b) : false;
+    if (ma !== mb) return ma ? 1 : -1;
+    return sign * by(a, b);
+  };
+  return rows.slice().sort((a, b) => primary(a, b) || _illDefaultCmp(a, b));
+}
+
+/* The sort after a visitor action: {type: "header", key} sorts by that
+   column, or reverses it when it's already the sort; {type: "select", value}
+   (either dropdown) starts that sort ascending, and "" ("Column order")
+   returns to the default; {type: "reverse"} (phone button) flips direction. */
+function nextIllegalitySort(cur, action) {
+  const c = cur || { sort: "status", dir: "asc" };
+  if (action.type === "header") return { sort: action.key, dir: c.sort === action.key && c.dir === "asc" ? "desc" : "asc" };
+  if (action.type === "select") return action.value ? { sort: action.value, dir: "asc" } : { sort: "status", dir: "asc" };
+  if (action.type === "reverse") return { sort: c.sort, dir: c.dir === "desc" ? "asc" : "desc" };
+  return { sort: c.sort, dir: c.dir };
 }
 
 /* Filters: empty value = no filter. `term` searches what plus every law
@@ -5705,14 +5740,15 @@ function buildIllegalityHtml(rows, counts, progress, abbr, controls) {
     select("ill-law", "Law", "All laws", c.laws || [], c.law) +
     // Phone: every sort in one dropdown (the column header is hidden there).
     // Desktop: the header buttons sort by column; the rest are "More sorts".
-    '<label class="ill-control ill-sort-full">Sort <select id="ill-sort">' + ILLEGALITY_SORTS.map(s => opt(s[0], s[1], c.sort || "status")).join("") + '</select></label>' +
+    '<span class="ill-control ill-sort-full"><label class="ill-control">Sort <select id="ill-sort">' + ILLEGALITY_SORTS.map(s => opt(s[0], s[1], c.sort || "status")).join("") + '</select></label>' +
+    '<button type="button" id="ill-reverse" class="ill-reverse" aria-pressed="' + (c.dir === "desc") + '">\u21C5 Reverse</button></span>' +
     '<label class="ill-control ill-sort-more">More sorts <select id="ill-sort-more">' + opt("", "Column order", ILLEGALITY_MORE_SORTS.some(s => s[0] === c.sort) ? c.sort : "") +
     ILLEGALITY_MORE_SORTS.map(s => opt(s[0], s[1], c.sort)).join("") + '</select></label>' +
     '<input type="search" id="ill-search" placeholder="Search these entries" aria-label="Search these entries" value="' + escapeHtml(c.term || "") + '">' +
     '</div>';
   // The results part sits in its own container so the page can replace just
   // it on a filter/sort/search change and leave the controls (and focus) be.
-  return html + '<div class="ill-results">' + buildIllegalityResultsHtml(rows, counts, abbr, { key: c.sort || "status", dir: c.dir || "asc" }) + '</div></section>';
+  return html + '<div class="ill-results">' + buildIllegalityResultsHtml(rows, counts, abbr, { key: c.sort || "status", dir: c.dir || "asc" }, c.open) + '</div></section>';
 }
 
 /* What a row's one line shows (spec 2026-11-19-tap-illegality-one-liners):
@@ -5726,10 +5762,11 @@ function illegalityLineCells(row) {
   const names = distinct(vs.map(v => v.name));
   const whos = distinct(vs.map(v => v.who));
   const first = vs[0] || {};
+  const who = first.who || whos[0] || "";
   return {
     labels: ["criminal", "civil"].filter(l => (row.labels || []).includes(l)),
     law: first.name || "", lawMore: Math.max(0, distinct(vs.map(v => v.law)).length - 1), lawTitle: names.join("; "),
-    who: first.who || "", whoMore: whos.filter(w => w !== first.who).length, whoTitle: whos.join("; "),
+    who, whoMore: whos.filter(w => w !== who).length, whoTitle: whos.join("; "),
   };
 }
 
@@ -5740,8 +5777,10 @@ function illegalityLineCells(row) {
    entries match." when the filters hide every row), with no header. Used by
    buildIllegalityHtml() and on its own by the page's in-place re-render.
    `sort` = {key, dir}. */
-function buildIllegalityResultsHtml(rows, counts, abbr, sort) {
+function buildIllegalityResultsHtml(rows, counts, abbr, sort, open) {
   const cur = sort || { key: "status", dir: "asc" };
+  const isOpen = id => !!(open && open.has(id));
+  const sr = t => '<span class="ill-sr">' + t + ': </span>'; // field names for screen readers
   const tag = (l, short) => '<span class="ill-label ill-label-' + escapeHtml(l) + '"' +
     (short ? ' title="' + escapeHtml(ILLEGALITY_LABEL_TEXT[l] || l) + '">' + escapeHtml(l === "criminal" ? "Criminal" : l === "civil" ? "Civil" : l)
       : '>' + escapeHtml(ILLEGALITY_LABEL_TEXT[l] || l)) + '</span>';
@@ -5751,7 +5790,8 @@ function buildIllegalityResultsHtml(rows, counts, abbr, sort) {
   }
   const head = '<div class="ill-head"><span></span>' + ILLEGALITY_COLUMN_SORTS.map(([key, text]) => {
     const on = key === cur.key;
-    return '<button type="button" class="ill-sort-btn" data-sort="' + key + '" aria-pressed="' + on + '">' + escapeHtml(text) +
+    return '<button type="button" class="ill-sort-btn" data-sort="' + key + '" aria-pressed="' + on + '"' +
+      (on ? ' aria-label="' + escapeHtml(text) + ', sorted ' + (cur.dir === "desc" ? "descending" : "ascending") + '"' : '') + '>' + escapeHtml(text) +
       (on ? (cur.dir === "desc" ? ' ▼' : ' ▲') : '') + '</button>';
   }).join("") + '</div>';
   return head + '<ul class="ill-rows">' + rows.map(r => {
@@ -5760,14 +5800,14 @@ function buildIllegalityResultsHtml(rows, counts, abbr, sort) {
     const laws = r.violations.map(v => '<div class="ill-law">' + (v.label ? tag(v.label, false) + ' ' : '') + escapeHtml(v.name) + (v.cite ? ' (' + escapeHtml(v.cite) + ')' : '') +
       '<div class="ill-who">Who: ' + escapeHtml(v.who || "") + '</div><div class="ill-why">Why: ' + escapeHtml(v.why || "") + '</div></div>').join("");
     return '<li class="ill-row" data-tracker-key="' + escapeHtml(r.key) + '"><div class="ill-line">' +
-      '<button type="button" class="ill-toggle" aria-expanded="false" aria-controls="' + did + '" aria-label="Show laws for: ' + escapeHtml(r.what) + '">▸</button>' +
+      '<button type="button" class="ill-toggle" aria-expanded="' + isOpen(r.id) + '" aria-controls="' + did + '" aria-label="Show laws for: ' + escapeHtml(r.what) + '">' + (isOpen(r.id) ? '▾' : '▸') + '</button>' +
       '<span class="ill-c-label">' + c.labels.map(l => tag(l, true)).join(" ") + '</span>' +
-      '<span class="ill-c-status ill-status">' + escapeHtml(r.status || "") + '</span>' +
+      '<span class="ill-c-status ill-status">' + sr("Status") + escapeHtml(r.status || "") + '</span>' +
       '<a href="#' + encodeURIComponent(r.key) + '/' + encodeURIComponent(r.id) +
       '" class="ill-entry-link ill-what" data-tracker-key="' + escapeHtml(r.key) + '" data-id="' + escapeHtml(r.id) + '" title="' + escapeHtml(r.what) + '">' + escapeHtml(r.what) + '</a>' +
-      '<span class="ill-c-law" title="' + escapeHtml(c.lawTitle) + '">' + escapeHtml(c.law) + more(c.lawMore) + '</span>' +
-      '<span class="ill-c-who" title="' + escapeHtml(c.whoTitle) + '">' + escapeHtml(c.who) + more(c.whoMore) + '</span>' +
-      '</div><div class="ill-details" id="' + did + '" hidden>' +
+      '<span class="ill-c-law" title="' + escapeHtml(c.lawTitle) + '">' + sr("Law") + escapeHtml(c.law) + more(c.lawMore) + '</span>' +
+      '<span class="ill-c-who" title="' + escapeHtml(c.whoTitle) + '">' + sr("Who") + escapeHtml(c.who) + more(c.whoMore) + '</span>' +
+      '</div><div class="ill-details" id="' + did + '"' + (isOpen(r.id) ? '' : ' hidden') + '>' +
       '<span class="ill-tracker">' + escapeHtml((abbr && abbr[r.key]) || r.key) + '</span>' + laws + '</div></li>';
   }).join("") + '</ul>';
 }
@@ -7608,7 +7648,7 @@ function renderIllegalityView() {
   const trackers = visibleTrackerKeys(TRACKERS).filter(k => rowKeys.has(k)).map(k => [k, TRACKERS[k].label]);
 
   entriesEl.innerHTML = buildIllegalityHtml(illegalityShownRows(), counts, ILLEGALITY_DATA.progress, HEADLINE_TRACKER_ABBR,
-    Object.assign({}, illegalityState, { laws, trackers }));
+    Object.assign({}, illegalityState, { laws, trackers, open: illegalityOpen }));
   bindIllegalityRows(entriesEl);
 
   // Controls are bound once here; their handlers only touch the results.
@@ -7621,8 +7661,10 @@ function renderIllegalityView() {
   // More-sorts placeholder, leaves the current sort alone).
   ["ill-sort", "ill-sort-more"].forEach(id => {
     const el = document.getElementById(id);
-    if (el) el.addEventListener("change", () => { if (el.value) setIllegalitySort(el.value, "asc"); });
+    if (el) el.addEventListener("change", () => setIllegalitySort(nextIllegalitySort(illegalityState, { type: "select", value: el.value })));
   });
+  const rev = document.getElementById("ill-reverse");
+  if (rev) rev.addEventListener("click", () => setIllegalitySort(nextIllegalitySort(illegalityState, { type: "reverse" })));
   const search = document.getElementById("ill-search");
   if (search) search.addEventListener("input", () => { illegalityState.term = search.value; renderIllegalityResults(); });
 
@@ -7633,8 +7675,7 @@ function renderIllegalityView() {
     const btn = e.target.closest(".ill-sort-btn");
     if (btn) {
       const key = btn.dataset.sort;
-      const dir = illegalityState.sort === key && illegalityState.dir === "asc" ? "desc" : "asc";
-      setIllegalitySort(key, dir);
+      setIllegalitySort(nextIllegalitySort(illegalityState, { type: "header", key }));
       const again = box.querySelector('.ill-sort-btn[data-sort="' + key + '"]');
       if (again) again.focus(); // keyboard users keep their place
       return;
@@ -7646,14 +7687,21 @@ function renderIllegalityView() {
       tog.textContent = open ? "\u25BE" : "\u25B8";
       const details = document.getElementById(tog.getAttribute("aria-controls"));
       if (details) details.hidden = !open;
+      // Remembered so the row stays open through filter/sort/search re-renders.
+      const id = tog.closest(".ill-row").querySelector(".ill-entry-link").dataset.id;
+      if (open) illegalityOpen.add(id); else illegalityOpen.delete(id);
     }
   });
 }
 
-/* Set the sort, keep both dropdowns showing it, re-render the results. */
-function setIllegalitySort(key, dir) {
+/* Set the sort ({sort, dir} from nextIllegalitySort), keep both dropdowns
+   and the phone Reverse button showing it, re-render the results. */
+function setIllegalitySort(next) {
+  const key = next.sort;
   illegalityState.sort = key;
-  illegalityState.dir = dir;
+  illegalityState.dir = next.dir;
+  const rev = document.getElementById("ill-reverse");
+  if (rev) rev.setAttribute("aria-pressed", String(next.dir === "desc"));
   const full = document.getElementById("ill-sort");
   if (full) full.value = key;
   const more = document.getElementById("ill-sort-more");
@@ -7676,7 +7724,7 @@ function renderIllegalityResults() {
   const box = document.querySelector("#entries .ill-results");
   if (!box) return;
   box.innerHTML = buildIllegalityResultsHtml(illegalityShownRows(), illegalityCounts(illegalityAllRows), HEADLINE_TRACKER_ABBR,
-    { key: illegalityState.sort, dir: illegalityState.dir });
+    { key: illegalityState.sort, dir: illegalityState.dir }, illegalityOpen);
   bindIllegalityRows(box);
 }
 
@@ -8056,6 +8104,7 @@ document.getElementById("start-over-btn").addEventListener("click", () => {
   groupMode = "";
   statusGroupOn = false;
   illegalityState = { label: "", status: "", tracker: "", law: "", sort: "status", dir: "asc", term: "" };
+  illegalityOpen = new Set();
   renderDispatch();
   window.scrollTo({ top: 0, behavior: "smooth" });
 });

@@ -17,7 +17,7 @@ const combined = ["escape-html", "highlight-matches", "matches-term", "visible-t
 const api = (0, eval)(`${combined}
 ({ buildIllegalityRows, actionSortDate, sortIllegalityRows, filterIllegalityRows, illegalityCounts,
    buildIllegalityHtml, illegalityHashAction, illegalityLinkHistory, ILLEGALITY_SORTS,
-   ILLEGALITY_COLUMN_SORTS, ILLEGALITY_MORE_SORTS, illegalityLineCells, buildIllegalityResultsHtml });`);
+   ILLEGALITY_COLUMN_SORTS, ILLEGALITY_MORE_SORTS, illegalityLineCells, buildIllegalityResultsHtml, nextIllegalitySort });`);
 
 const LAWS = {
   bribery: { name: "Bribery", cite: "18 U.S.C. 201", label: "criminal" },
@@ -215,7 +215,7 @@ test("results html: header, one line per entry, details hidden, escaping in attr
   const rows = rowsFor({ g1: [V("bribery", 'Sec. "Q" <b>', "Why & so"), V("ica", "Other")] });
   const html = api.buildIllegalityResultsHtml(rows, api.illegalityCounts(rows), { govservices: "GSR" }, { key: "law", dir: "desc" });
   assert.match(html, /class="ill-head"/);
-  assert.match(html, /data-sort="law" aria-pressed="true">Law ▼</);
+  assert.match(html, /data-sort="law" aria-pressed="true"[^>]*>Law ▼</);
   assert.match(html, /data-sort="status" aria-pressed="false">Status</);
   assert.equal((html.match(/class="ill-line"/g) || []).length, 1);
   assert.match(html, /aria-controls="ill-d-g1"/);
@@ -242,7 +242,7 @@ test("controls: full sort and More sorts dropdowns", () => {
   assert.match(html, /id="ill-sort-more">[^]*<option value="harm" selected>/);
   html = api.buildIllegalityHtml(rows, counts, { screened: 1, total: 9 }, {}, { sort: "who", dir: "desc" });
   assert.match(html, /id="ill-sort-more"><option value="" selected>Column order/);
-  assert.match(html, /data-sort="who" aria-pressed="true">Who ▼</);
+  assert.match(html, /data-sort="who" aria-pressed="true"[^>]*>Who ▼</);
 });
 
 test("hash action mirrors harms", () => {
@@ -285,4 +285,75 @@ test("desktop label column fits both short tags (CRIMINAL CIVIL) without clippin
   const m = source.match(/\.ill-head, \.ill-line \{[^}]*grid-template-columns: 1\.5rem ([\d.]+)rem/);
   assert.ok(m, "grid template not found");
   assert.ok(parseFloat(m[1]) >= 8.5, "label column " + m[1] + "rem");
+});
+
+// ---- Deferred review minors (2026-11-19) ----
+
+test("minor 1+2: next sort for header, dropdowns, Column order and Reverse", () => {
+  const cur = { sort: "harm", dir: "desc" };
+  assert.deepEqual(api.nextIllegalitySort(cur, { type: "header", key: "law" }), { sort: "law", dir: "asc" });
+  assert.deepEqual(api.nextIllegalitySort({ sort: "law", dir: "asc" }, { type: "header", key: "law" }), { sort: "law", dir: "desc" });
+  assert.deepEqual(api.nextIllegalitySort({ sort: "law", dir: "desc" }, { type: "header", key: "law" }), { sort: "law", dir: "asc" });
+  assert.deepEqual(api.nextIllegalitySort(cur, { type: "select", value: "action" }), { sort: "action", dir: "asc" });
+  // "Column order" (empty) goes back to the default sort.
+  assert.deepEqual(api.nextIllegalitySort(cur, { type: "select", value: "" }), { sort: "status", dir: "asc" });
+  assert.deepEqual(api.nextIllegalitySort(cur, { type: "reverse" }), { sort: "harm", dir: "asc" });
+  assert.deepEqual(api.nextIllegalitySort({ sort: "who", dir: "asc" }, { type: "reverse" }), { sort: "who", dir: "desc" });
+});
+
+test("minor 2: phone Reverse button in the full-sort control, pressed when descending", () => {
+  const rows = rowsFor({ g1: [V("bribery")] });
+  const c = api.illegalityCounts(rows);
+  let html = api.buildIllegalityHtml(rows, c, { screened: 1, total: 9 }, {}, { sort: "who", dir: "desc" });
+  assert.match(html, /class="ill-control ill-sort-full">[^]*id="ill-reverse"[^>]*aria-pressed="true"/);
+  html = api.buildIllegalityHtml(rows, c, { screened: 1, total: 9 }, {}, { sort: "who", dir: "asc" });
+  assert.match(html, /id="ill-reverse"[^>]*aria-pressed="false"/);
+});
+
+test("minor 3: missing values sort last in both directions", () => {
+  const has = mk("h", "Unchallenged", 1, "A", { actionDate: "2025-01-01", updated: "2026-01-01" });
+  const none = mk("n", "Unchallenged", null, "B", { actionDate: null, updated: null,
+    violations: [{ law: "x", name: "", label: "civil", who: "", why: "" }] });
+  const odd = mk("o", "Mystery", 1, "", {});
+  for (const k of ["harm", "action", "updated", "law", "who"]) {
+    for (const d of ["asc", "desc"]) assert.equal(api.sortIllegalityRows([none, has], k, d)[1].id, "n", k + " " + d);
+  }
+  for (const d of ["asc", "desc"]) {
+    assert.equal(api.sortIllegalityRows([odd, has], "status", d)[1].id, "o", "status " + d);
+    assert.equal(api.sortIllegalityRows([odd, has], "what", d)[1].id, "o", "what " + d);
+  }
+});
+
+test("minor 4: first named person shown when the first law has no who", () => {
+  const r = rowsFor({ g1: [{ law: "ica", why: "w" }, V("apa", "Agency B")] })[0];
+  const c = api.illegalityLineCells(r);
+  assert.equal(c.who, "Agency B");
+  assert.equal(c.whoMore, 0);
+});
+
+test("minor 5: rows in the open set render expanded", () => {
+  const rows = rowsFor({ g1: [V("bribery")], g2: [V("ica")] });
+  const html = api.buildIllegalityResultsHtml(rows, api.illegalityCounts(rows), {}, null, new Set(["g1"]));
+  assert.match(html, /aria-expanded="true" aria-controls="ill-d-g1"[^>]*>▾</);
+  assert.match(html, /id="ill-d-g1">/);
+  assert.match(html, /aria-expanded="false" aria-controls="ill-d-g2"[^>]*>▸</);
+  assert.match(html, /id="ill-d-g2" hidden>/);
+});
+
+test("minor 6: screen-reader field names on the line", () => {
+  const rows = rowsFor({ g1: [V("bribery", "Sec. X")] });
+  const html = api.buildIllegalityResultsHtml(rows, api.illegalityCounts(rows), {});
+  assert.match(html, /class="ill-c-status ill-status"><span class="ill-sr">Status: <\/span>/);
+  assert.match(html, /class="ill-c-law"[^>]*><span class="ill-sr">Law: <\/span>Bribery/);
+  assert.match(html, /class="ill-c-who"[^>]*><span class="ill-sr">Who: <\/span>Sec\. X/);
+  assert.match(source, /\.ill-sr \{[^}]*clip/);
+});
+
+test("minor 7: active header says its direction to screen readers", () => {
+  const rows = rowsFor({ g1: [V("bribery")] });
+  let html = api.buildIllegalityResultsHtml(rows, api.illegalityCounts(rows), {}, { key: "law", dir: "desc" });
+  assert.match(html, /data-sort="law" aria-pressed="true" aria-label="Law, sorted descending">/);
+  html = api.buildIllegalityResultsHtml(rows, api.illegalityCounts(rows), {}, { key: "law", dir: "asc" });
+  assert.match(html, /aria-label="Law, sorted ascending"/);
+  assert.ok(!/data-sort="who"[^>]*aria-label/.test(html));
 });
