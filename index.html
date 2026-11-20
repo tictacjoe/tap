@@ -5674,23 +5674,60 @@ function buildIllegalityHtml(rows, counts, progress, abbr, controls) {
   return html + '<div class="ill-results">' + buildIllegalityResultsHtml(rows, counts, abbr) + '</div></section>';
 }
 
-/* The results part of the view: the row list, or the empty message ("None
-   listed yet." when nothing is listed at all, "No entries match." when the
-   filters hide every row). Used by buildIllegalityHtml() and on its own by
-   the page's in-place re-render. */
-function buildIllegalityResultsHtml(rows, counts, abbr) {
-  const tag = l => '<span class="ill-label ill-label-' + escapeHtml(l) + '">' + escapeHtml(ILLEGALITY_LABEL_TEXT[l] || l) + '</span>';
+/* What a row's one line shows (spec 2026-11-19-tap-illegality-one-liners):
+   label tags criminal first; the first violation's law and who, each with a
+   count of the other distinct laws / people, and every distinct value joined
+   with "; " for the hover title. Missing values read "" (law falls back to
+   its key, as in buildIllegalityRows), never "undefined". */
+function illegalityLineCells(row) {
+  const vs = row.violations || [];
+  const distinct = list => Array.from(new Set(list.filter(Boolean)));
+  const names = distinct(vs.map(v => v.name));
+  const whos = distinct(vs.map(v => v.who));
+  const first = vs[0] || {};
+  return {
+    labels: ["criminal", "civil"].filter(l => (row.labels || []).includes(l)),
+    law: first.name || "", lawMore: Math.max(0, distinct(vs.map(v => v.law)).length - 1), lawTitle: names.join("; "),
+    who: first.who || "", whoMore: whos.filter(w => w !== first.who).length, whoTitle: whos.join("; "),
+  };
+}
+
+/* The results part of the view: the column header (sort buttons, the active
+   one marked with an arrow) and one line per entry, each with a hidden
+   details panel (tracker, then every law with cite, who and why); or the
+   empty message ("None listed yet." when nothing is listed at all, "No
+   entries match." when the filters hide every row), with no header. Used by
+   buildIllegalityHtml() and on its own by the page's in-place re-render.
+   `sort` = {key, dir}. */
+function buildIllegalityResultsHtml(rows, counts, abbr, sort) {
+  const cur = sort || { key: "status", dir: "asc" };
+  const tag = (l, short) => '<span class="ill-label ill-label-' + escapeHtml(l) + '"' +
+    (short ? ' title="' + escapeHtml(ILLEGALITY_LABEL_TEXT[l] || l) + '">' + escapeHtml(l === "criminal" ? "Criminal" : l === "civil" ? "Civil" : l)
+      : '>' + escapeHtml(ILLEGALITY_LABEL_TEXT[l] || l)) + '</span>';
+  const more = n => (n ? ' +' + n : '');
   if (!rows.length) {
     return '<p class="ill-empty">' + (counts.total ? "No entries match." : "None listed yet.") + '</p>';
   }
-  return '<ul class="ill-rows">' + rows.map(r => {
-    const laws = r.violations.map(v => '<div class="ill-law">' + tag(v.label) + ' ' + escapeHtml(v.name) + (v.cite ? ' (' + escapeHtml(v.cite) + ')' : '') +
-      '<div class="ill-who">Who: ' + escapeHtml(v.who) + '</div><div class="ill-why">Why: ' + escapeHtml(v.why) + '</div></div>').join("");
-    return '<li class="ill-row"><a href="#' + encodeURIComponent(r.key) + '/' + encodeURIComponent(r.id) +
-      '" class="ill-entry-link" data-tracker-key="' + escapeHtml(r.key) + '" data-id="' + escapeHtml(r.id) + '">' +
-      '<span class="ill-status">' + escapeHtml(r.status || "") + '</span> ' +
-      '<span class="ill-tracker">' + escapeHtml((abbr && abbr[r.key]) || r.key) + '</span>' +
-      '<span class="ill-what">' + escapeHtml(r.what) + '</span>' + laws + '</a></li>';
+  const head = '<div class="ill-head"><span></span>' + ILLEGALITY_COLUMN_SORTS.map(([key, text]) => {
+    const on = key === cur.key;
+    return '<button type="button" class="ill-sort-btn" data-sort="' + key + '" aria-pressed="' + on + '">' + escapeHtml(text) +
+      (on ? (cur.dir === "desc" ? ' ▼' : ' ▲') : '') + '</button>';
+  }).join("") + '</div>';
+  return head + '<ul class="ill-rows">' + rows.map(r => {
+    const c = illegalityLineCells(r);
+    const did = 'ill-d-' + escapeHtml(r.id);
+    const laws = r.violations.map(v => '<div class="ill-law">' + (v.label ? tag(v.label, false) + ' ' : '') + escapeHtml(v.name) + (v.cite ? ' (' + escapeHtml(v.cite) + ')' : '') +
+      '<div class="ill-who">Who: ' + escapeHtml(v.who || "") + '</div><div class="ill-why">Why: ' + escapeHtml(v.why || "") + '</div></div>').join("");
+    return '<li class="ill-row" data-tracker-key="' + escapeHtml(r.key) + '"><div class="ill-line">' +
+      '<button type="button" class="ill-toggle" aria-expanded="false" aria-controls="' + did + '" aria-label="Show laws for: ' + escapeHtml(r.what) + '">▸</button>' +
+      '<span class="ill-c-label">' + c.labels.map(l => tag(l, true)).join(" ") + '</span>' +
+      '<span class="ill-c-status ill-status">' + escapeHtml(r.status || "") + '</span>' +
+      '<a href="#' + encodeURIComponent(r.key) + '/' + encodeURIComponent(r.id) +
+      '" class="ill-entry-link ill-what" data-tracker-key="' + escapeHtml(r.key) + '" data-id="' + escapeHtml(r.id) + '" title="' + escapeHtml(r.what) + '">' + escapeHtml(r.what) + '</a>' +
+      '<span class="ill-c-law" title="' + escapeHtml(c.lawTitle) + '">' + escapeHtml(c.law) + more(c.lawMore) + '</span>' +
+      '<span class="ill-c-who" title="' + escapeHtml(c.whoTitle) + '">' + escapeHtml(c.who) + more(c.whoMore) + '</span>' +
+      '</div><div class="ill-details" id="' + did + '" hidden>' +
+      '<span class="ill-tracker">' + escapeHtml((abbr && abbr[r.key]) || r.key) + '</span>' + laws + '</div></li>';
   }).join("") + '</ul>';
 }
 

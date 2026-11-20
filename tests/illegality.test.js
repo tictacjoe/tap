@@ -17,7 +17,7 @@ const combined = ["escape-html", "highlight-matches", "matches-term", "visible-t
 const api = (0, eval)(`${combined}
 ({ buildIllegalityRows, actionSortDate, sortIllegalityRows, filterIllegalityRows, illegalityCounts,
    buildIllegalityHtml, illegalityHashAction, illegalityLinkHistory, ILLEGALITY_SORTS,
-   ILLEGALITY_COLUMN_SORTS, ILLEGALITY_MORE_SORTS });`);
+   ILLEGALITY_COLUMN_SORTS, ILLEGALITY_MORE_SORTS, illegalityLineCells, buildIllegalityResultsHtml });`);
 
 const LAWS = {
   bribery: { name: "Bribery", cite: "18 U.S.C. 201", label: "criminal" },
@@ -188,6 +188,48 @@ test("html: row content, escaping, selected control values", () => {
   assert.match(html, /id="ill-search"[^>]*value="a&quot;b"/);
   for (const id of ["ill-status", "ill-tracker", "ill-law", "ill-sort"]) assert.ok(html.includes(`id="${id}"`), id);
   assert.match(html, /GSR/);
+});
+
+test("line cells: first law/who, +N counts distinct, criminal tag first", () => {
+  const r = rowsFor({ g1: [V("ica", "Agency A"), V("bribery", "Agency A"), V("apa", "Agency B")] })[0];
+  const c = api.illegalityLineCells(r);
+  assert.deepEqual(c.labels, ["criminal", "civil"]);
+  assert.equal(c.law, "Impoundment Control Act"); assert.equal(c.lawMore, 2);
+  assert.equal(c.who, "Agency A"); assert.equal(c.whoMore, 1);
+  assert.equal(c.whoTitle, "Agency A; Agency B");
+});
+
+test("line cells: same who on two laws gives no +N", () => {
+  const c = api.illegalityLineCells(rowsFor({ g1: [V("ica", "X"), V("apa", "X")] })[0]);
+  assert.equal(c.whoMore, 0);
+});
+
+test("line cells: missing who / unknown law key never 'undefined'", () => {
+  const r = rowsFor({ g1: [{ law: "nolaw", why: "w" }] })[0];
+  const c = api.illegalityLineCells(r);
+  assert.equal(c.who, ""); assert.equal(c.law, "nolaw");
+  assert.ok(!api.buildIllegalityResultsHtml([r], api.illegalityCounts([r]), {}).includes("undefined"));
+});
+
+test("results html: header, one line per entry, details hidden, escaping in attributes", () => {
+  const rows = rowsFor({ g1: [V("bribery", 'Sec. "Q" <b>', "Why & so"), V("ica", "Other")] });
+  const html = api.buildIllegalityResultsHtml(rows, api.illegalityCounts(rows), { govservices: "GSR" }, { key: "law", dir: "desc" });
+  assert.match(html, /class="ill-head"/);
+  assert.match(html, /data-sort="law" aria-pressed="true">Law ▼</);
+  assert.match(html, /data-sort="status" aria-pressed="false">Status</);
+  assert.equal((html.match(/class="ill-line"/g) || []).length, 1);
+  assert.match(html, /aria-controls="ill-d-g1"/);
+  assert.match(html, /id="ill-d-g1" hidden/);
+  assert.match(html, /title="Sec\. &quot;Q&quot; &lt;b&gt;; Other"/);
+  assert.match(html, /Bribery \+1</);
+  assert.match(html, /Why: Why &amp; so/);
+  assert.match(html, /class="ill-tracker">GSR</);
+  assert.ok(!html.includes("<b>"));
+});
+
+test("results html: empty rows have no header", () => {
+  const html = api.buildIllegalityResultsHtml([], { total: 0 }, {});
+  assert.ok(!html.includes("ill-head")); assert.match(html, /None listed yet\./);
 });
 
 test("hash action mirrors harms", () => {
