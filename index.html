@@ -3339,8 +3339,8 @@ function renderHeadlinesControls() {
     headlinesCuratedKeys().map(key => '<option value="' + key + '">' + escapeHtml(HEADLINE_TRACKER_MEDIUM[key] || TRACKERS[key].label) + '</option>').join("") +
     // Not row filters: these open the Harms and Possible Illegality views
     // (Joe, 2026-11-19; see the change handler below).
-    '<option value="' + HARMS_VIEW + '">Harms \u2192</option>' +
-    '<option value="' + ILLEGALITY_VIEW + '">Possible Illegality (All Trackers) \u2192</option>';
+    '<option value="' + HARMS_VIEW + '">Harms across trackers \u2192</option>' +
+    '<option value="' + ILLEGALITY_VIEW + '">Illegality across trackers \u2192</option>';
   trackerSel.value = headlinesTrackerFilter;
 
   // The Records category subfilter (Corruption, Disinformation, etc., for
@@ -5740,7 +5740,7 @@ function buildIllegalityHtml(rows, counts, progress, abbr, controls) {
   const opt = (value, text, cur) => '<option value="' + escapeHtml(value) + '"' + (String(cur || "") === String(value) ? " selected" : "") + '>' + escapeHtml(text) + '</option>';
   const select = (id, label, all, options, cur) => '<label class="ill-control">' + escapeHtml(label) +
     ' <select id="' + id + '">' + opt("", all, cur) + options.map(o => opt(o[0], o[1], cur)).join("") + '</select></label>';
-  let html = '<section class="ill-view"><h2 class="ill-title">Possible Illegality (All Trackers)</h2>' +
+  let html = '<section class="ill-view"><h2 class="ill-title">Illegality across trackers</h2>' +
     '<p class="ill-progress">Reviewed so far: ' + p.screened + ' of ' + p.total + ' entries</p>' +
     '<p class="ill-counts">' + counts.total + (counts.total === 1 ? ' entry' : ' entries') + ' · ' + counts.criminal + ' criminal · ' + counts.civil + ' civil/constitutional · ' + (counts.unchallenged || 0) + ' unchallenged</p>' +
     '<p class="ill-note">An entry that cites both kinds of law counts in each split but once in the total. These are possible violations, not findings.</p>' +
@@ -6603,13 +6603,13 @@ function renderTabs() {
   // after the curated trackers and before Reporting (see harms-list block).
   const harmsOpt = document.createElement("option");
   harmsOpt.value = HARMS_VIEW;
-  harmsOpt.textContent = "Harms"; // short label (Joe, 2026-11-19); the view heading keeps the full name
+  harmsOpt.textContent = "Harms across trackers"; // names its cross-tracker scope (Joe, 2026-11-19); the view heading keeps the full name
   harmsOpt.selected = activeTracker === HARMS_VIEW;
   // Possible Illegality (2026-11-19): the other cross-tracker view, always
   // right after Harms (same visibility rule: always listed).
   const illOpt = document.createElement("option");
   illOpt.value = ILLEGALITY_VIEW;
-  illOpt.textContent = "Possible Illegality (All Trackers)"; // names its cross-tracker scope (Joe, 2026-11-19)
+  illOpt.textContent = "Illegality across trackers"; // names its cross-tracker scope (Joe, 2026-11-19)
   illOpt.selected = activeTracker === ILLEGALITY_VIEW;
   visibleTrackerKeys(TRACKERS).forEach(key => {
     if (key === "tracker") { select.appendChild(harmsOpt); select.appendChild(illOpt); }
@@ -8013,7 +8013,7 @@ function renderBrowseChips() {
   harms.className = "browse-chip";
   harms.dataset.view = HARMS_VIEW;
   harms.style.setProperty("--chip", "var(--ink)");
-  harms.textContent = "Harms";
+  harms.textContent = "Harms across trackers";
   harms.title = "Harms by first principle: every documented harm across the trackers";
   harms.addEventListener("click", () => switchToTracker(HARMS_VIEW));
   row.appendChild(harms);
@@ -8022,7 +8022,7 @@ function renderBrowseChips() {
   ill.className = "browse-chip";
   ill.dataset.view = ILLEGALITY_VIEW;
   ill.style.setProperty("--chip", "var(--ink)");
-  ill.textContent = "Possible Illegality (All Trackers)";
+  ill.textContent = "Illegality across trackers";
   ill.title = "Possible Illegality across all trackers: entries where a specific law may have been broken";
   ill.addEventListener("click", () => switchToTracker(ILLEGALITY_VIEW));
   row.appendChild(ill);
