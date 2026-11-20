@@ -168,6 +168,13 @@
     justify-content: center;
     gap: 0.4rem;
   }
+  /* Hairline above the second group (Joe, 2026-11-19, mockup option 2).
+     The five tracker chips are wider than the row's 880px cap, so this group
+     always starts its own line and the rule never sits beside a chip. */
+  .browse-group-extra {
+    border-top: 1px solid var(--rule-strong);
+    padding-top: 0.9rem;
+  }
   .browse-chip {
     background: var(--chip);
     color: #fff;

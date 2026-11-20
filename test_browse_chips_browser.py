@@ -166,4 +166,8 @@ def test_trackers_label_and_groups(site_url, browser):
     outer = page.locator("#browse-chips").evaluate("e => parseFloat(getComputedStyle(e).rowGap)")
     inner = page.locator("#browse-chips .browse-group").first.evaluate("e => parseFloat(getComputedStyle(e).rowGap)")
     assert outer > inner
+    # Hairline rule above the second group (mockup option 2).
+    border = page.locator("#browse-chips .browse-group-extra").evaluate(
+        "e => [getComputedStyle(e).borderTopStyle, parseFloat(getComputedStyle(e).borderTopWidth)]")
+    assert border[0] == "solid" and border[1] >= 1
     page.close()
