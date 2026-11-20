@@ -1,12 +1,16 @@
 """Browser tests for status pills and the staged status filter (UX refresh
 spec 5.6).
 
-No published entry carries `status_stage` yet, so with real data the site
-must look exactly as it did before: no pills, no new status filters, and
-Cabinet-Level keeps its computed "Status Stage" text, `status_category`
-filter and "Group by status". The other tests route the real data files
-through page.route with `status_stage` added, to show what switches on once
-a tracker's backfill is complete. Skips if Playwright or Chromium is missing.
+Pills and status filters stay hidden for a tracker until every entry in it
+has `status_stage`. Every curated tracker has been backfilled since
+2026-11-01 to 2026-11-02 (GSR and CLA last), so the real data can no longer show
+the hidden state. Each test therefore starts from the real data files routed
+through page.route with `status_stage` stripped (the pre-backfill baseline:
+no pills, no new status filters, and Cabinet-Level keeps its computed
+"Status Stage" text, `status_category` filter and "Group by status"), then
+adds `status_stage` back to the files it names, to show what switches on
+once a tracker's backfill is complete. Skips if Playwright or Chromium is
+missing.
 """
 
 import functools
@@ -30,8 +34,8 @@ STAGES = [
     "Unchallenged",
 ]
 
-# The six curated tracker files (tracker.json, the Reporting archive, is
-# never touched).
+# The five curated tracker files with status_stage (tracker.json, the
+# Reporting archive, is never touched).
 CURATED_FILES = [
     "prosecution.json",
     "deregulation.json",
@@ -84,9 +88,21 @@ def inject_status_stage(page, files, stage="Court ruled"):
         page.route("**/data/" + name, _fulfill_with(json.dumps(entries)))
 
 
+def strip_status_stage(page, files):
+    """Route each named data file to the real file with `status_stage`
+    removed from every entry: the pre-backfill state."""
+    for name in files:
+        entries = json.loads((SITE_DIR / "data" / name).read_text(encoding="utf-8"))
+        for entry in entries:
+            entry.pop("status_stage", None)
+        page.route("**/data/" + name, _fulfill_with(json.dumps(entries)))
+
+
 def _open(browser, site_url, inject=(), width=1280):
     context = browser.new_context(viewport={"width": width, "height": 900})
     page = context.new_page()
+    # Baseline: no curated file has status_stage, except the injected ones.
+    strip_status_stage(page, [f for f in CURATED_FILES if f not in inject])
     inject_status_stage(page, inject)
     page.goto(site_url + "/index.html", wait_until="networkidle")
     page.wait_for_timeout(800)

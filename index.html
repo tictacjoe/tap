@@ -3831,6 +3831,17 @@ function classifyConcernType(raw) {
     [/interference in a state-run federal election|referral of state election partners/, "Federal Reach Into Election Administration"],
     [/no-bid contract/, "Contracting Integrity Concern (Non-Adjudicated)"],
     [/cash rewards from a justice department program/, "Misuse of Official Resources or Authority"],
+    // Added 2026-11-19 for the 8 concern-framed entries (of 305) neither classifier
+    // matched, same appended-last approach; every one's own text disclaims a legal
+    // violation. "handling of whistleblower complaints" restores the GAO/DHS
+    // entry's old label after its text was reworded.
+    [/retaliatory use of title vi enforcement power/, "Investigative Power Used Against Critics/Institutions"],
+    [/handling of whistleblower complaints/, "Congressional or Internal Oversight Obstructed"],
+    [/failure to deposit a kennedy center donation/, "Public Integrity Concern"],
+    [/failure to enforce export controls/, "Conflict of Interest / Undisclosed Ties (Non-Adjudicated)"],
+    [/reversed its support for a no-threshold schedule i ban/, "Public Integrity Concern"],
+    [/presidential direction of federal prosecutors/, "Institutional Independence / Prosecutorial Integrity Concern"],
+    [/foreign-policy and sanctions accountability concern/, "Executive Action With No Established Legal Violation (Policy Dispute)"],
   ];
 
   for (const [pattern, label] of rules) {

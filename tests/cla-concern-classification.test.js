@@ -78,6 +78,7 @@ test("the new rules do not change classification for any entry the site actually
   // lands here again: give it a rule, or raise this number deliberately.
   // 0 -> 12 by 2026-10-18 (data drift + new entries); 12 -> 0 the same day with appended rules (see EXPECTED_2026_10_18).
   // 0 -> 11 by 2026-10-31 (9 new entries + 2 reworded); 11 -> 0 the same day with appended rules (see EXPECTED_2026_10_31_*).
+  // 0 -> 8 by 2026-11-19 (7 new entries + 1 reworded); 8 -> 0 the same day with appended rules (see EXPECTED_2026_11_19_CONCERNS).
   const data = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "data", "prosecution.json"), "utf8"));
   let residual = 0;
   for (const e of data) {
@@ -243,6 +244,38 @@ test("each of the 11 previously unmatched published entries gets its 2026-10-31 
     if (got !== label) wrong.push(`${id}: violation got ${got}`);
   }
   for (const [id, label] of Object.entries(EXPECTED_2026_10_31_CONCERNS)) {
+    if (MOVED_OUT_OF_CLA.has(id) || RECLASSIFIED_TO_VIOLATION.has(id)) continue;
+    assert.ok(byId[id], `${id} is not in the published data`);
+    const e = byId[id];
+    const off = classifyOffenseCategory(e.offense_category);
+    if (off !== "Other/Unclassified") { wrong.push(`${id}: now has Violation Type ${off}`); continue; }
+    const got = classifyConcernType(e.offense_category);
+    if (got !== label) wrong.push(`${id}: concern got ${got}`);
+  }
+  assert.deepEqual(wrong, []);
+});
+
+// 2026-11-19: the 8 entries (of 305) neither classifier matched. Seven are new since
+// 2026-10-31; one is data drift (the GAO/DHS whistleblower entry, reworded to "GAO
+// Investigation Into DHS's Handling...") restored to the label it had. Every one's own
+// text disclaims a legal violation, so each gets a concern type, drawn from the
+// existing concern vocabulary (no new labels).
+const EXPECTED_2026_11_19_CONCERNS = {
+  "doj-harvard-admissions-records-suit-dismissed-2026": "Investigative Power Used Against Critics/Institutions",
+  "doj-harvard-antisemitism-title-vi-suit-dismissed-2026": "Investigative Power Used Against Critics/Institutions",
+  "gao-dhs-whistleblower-investigation-2026": "Congressional or Internal Oversight Obstructed",
+  "grenell-kennedy-center-donation-allegation-2026": "Public Integrity Concern",
+  "lutnick-megaspeed-nvidia-chip-diversion-2026": "Conflict of Interest / Undisclosed Ties (Non-Adjudicated)",
+  "rfk-jr-kratom-mgpi-ban-reversal-2026": "Public Integrity Concern",
+  "trump-us-attorneys-opponent-prosecutions-2026": "Institutional Independence / Prosecutorial Integrity Concern",
+  "witkoff-kushner-russian-gas-ukraine-sanctions-2026": "Executive Action With No Established Legal Violation (Policy Dispute)",
+};
+
+test("each of the 8 previously unmatched published entries gets its 2026-11-19 label", () => {
+  const data = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "data", "prosecution.json"), "utf8"));
+  const byId = Object.fromEntries(data.map(e => [e.id, e]));
+  const wrong = [];
+  for (const [id, label] of Object.entries(EXPECTED_2026_11_19_CONCERNS)) {
     if (MOVED_OUT_OF_CLA.has(id) || RECLASSIFIED_TO_VIOLATION.has(id)) continue;
     assert.ok(byId[id], `${id} is not in the published data`);
     const e = byId[id];
