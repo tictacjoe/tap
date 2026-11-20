@@ -410,6 +410,13 @@
         "why": "A judge ruled the Office of Personnel Management exceeded its own powers and unlawfully directed agencies, including the Transportation Department, to fire probationary staff."
       }
     ],
+    "duffy-hatch-act-michigan-super-pac-2026": [
+      {
+        "law": "hatch-act",
+        "who": "Secretary of Transportation Sean Duffy",
+        "why": "A complaint to the Office of Special Counsel alleges he may have used his official authority to affect an election by touting his department's work while urging votes for Mike Rogers."
+      }
+    ],
     "ed-martin-dc-bar-georgetown-dei-charges-2026": [
       {
         "law": "first-amendment-retaliation",
@@ -649,6 +656,13 @@
         "why": "Just Security read a DoD inspector general report as showing the cut civilian-harm structure may violate two statutes; the Pentagon disputes it is out of compliance."
       }
     ],
+    "hegseth-hatch-act-campaign-appearances-2026": [
+      {
+        "law": "hatch-act",
+        "who": "Pete Hegseth, Secretary of Defense",
+        "why": "A pending complaint asks the Office of Special Counsel to investigate whether he used his office at an Iowa fundraiser by invoking his department's budget and access to the President."
+      }
+    ],
     "hegseth-iran-school-strike-minab-2026": [
       {
         "law": "war-crimes-18-usc-2441",
@@ -661,6 +675,18 @@
         "law": "posse-comitatus-act",
         "who": "Defense Secretary Pete Hegseth and the Defense Department",
         "why": "A federal judge ruled after trial that troops Hegseth sent to Los Angeles executed the laws in violation of the Posse Comitatus Act; that injunction is stayed on appeal."
+      }
+    ],
+    "hegseth-massie-impeachment-articles-2026": [
+      {
+        "law": "war-powers-resolution",
+        "who": "Pete Hegseth, Secretary of Defense",
+        "why": "Rep. Thomas Massie's impeachment articles charge he waged the Iran war without authorization and past the War Powers Resolution's 60-day limit; the House never voted on them."
+      },
+      {
+        "law": "dod-civilian-harm-mitigation-statutes",
+        "who": "Pete Hegseth, Secretary of Defense",
+        "why": "Massie's impeachment articles charge he ignored the civilian-protection law, 10 U.S.C. 184, before the Minab school strike; these allegations remain unadjudicated."
       }
     ],
     "hegseth-pentagon-press-credentialing-restrictions-2025": [
@@ -871,6 +897,18 @@
         "law": "administrative-procedure-act",
         "who": "Scott Kupor, Director of the Office of Personnel Management",
         "why": "A federal judge found the essay question on federal job postings likely violated the APA by infringing applicants' First Amendment rights, and stayed it."
+      }
+    ],
+    "kushner-special-envoy-appointments-clause-disclosure-2026": [
+      {
+        "law": "appointments-clause",
+        "who": "Jared Kushner, presidential envoy for peace",
+        "why": "A pending CREW lawsuit alleges Kushner holds a continuing U.S. office with significant authority without the Senate confirmation the Appointments Clause requires."
+      },
+      {
+        "law": "ethics-in-government-act-financial-disclosure",
+        "who": "Jared Kushner, presidential envoy for peace",
+        "why": "CREW's pending lawsuit alleges Kushner, as an envoy negotiating for the U.S., may be required to file public financial disclosures and has filed none."
       }
     ],
     "lewandowski-dhs-contracts-2026": [
@@ -1637,6 +1675,11 @@
       "label": "civil",
       "name": "Establishment Clause"
     },
+    "ethics-in-government-act-financial-disclosure": {
+      "cite": "5 U.S.C. 13103-13105",
+      "label": "civil",
+      "name": "Ethics in Government Act, public financial disclosure"
+    },
     "false-statements-18-usc-1001": {
       "cite": "18 U.S.C. 1001",
       "label": "criminal",
@@ -1834,7 +1877,7 @@
     }
   },
   "progress": {
-    "screened": 450,
+    "screened": 498,
     "total": 940
   },
   "version": 1
