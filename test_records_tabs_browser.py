@@ -130,7 +130,7 @@ def test_back_returns_to_reporting_tab(browser, site_url):
 
 
 def test_headline_text_opens_entry(browser, site_url):
-    # 2026-11-15: the headline text (right of the "notes" tag) opens the
+    # 2026-11-15: the headline text (right of the "confidence/sources" tag) opens the
     # entry's detail card; the tracker chip is a plain label, not a button.
     page = _open(browser, site_url)
     row = page.locator("#headlines-view .headline-entry").first
@@ -204,3 +204,15 @@ def test_all_trackers_option_in_database_dropdown(browser, site_url):
     trackers = set(_row_trackers(page))
     assert len(trackers) > 1, trackers
     page.close()
+
+
+def test_trail_button_label_shortens_at_phone_width(browser, site_url):
+    # 2026-11-20 (Joe): "confidence/sources" on desktop, "sources" at phone
+    # width so the headline keeps its room; the accessible name stays full.
+    page = _open(browser, site_url)
+    btn = page.locator("#headlines-view .headline-trail-btn").first
+    assert btn.inner_text() == "confidence/sources"
+    assert btn.get_attribute("aria-label") == "confidence/sources"
+    page.set_viewport_size({"width": 390, "height": 900})
+    page.wait_for_timeout(300)
+    assert btn.inner_text() == "sources"
