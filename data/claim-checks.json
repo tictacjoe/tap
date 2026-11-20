@@ -822,6 +822,46 @@
     "date": "2026-11-08",
     "kind": "fact",
     "archive": false
+   },
+   "7": {
+    "state": "supports",
+    "why": "The AP story (Nov. 10, 2026) reports a unanimous 4th Circuit panel returned the case to Judge Hanes in Newport News with an instruction to narrow the 'substantially overbroad' order, rejected LinkedIn's request to quash it entirely, and notes the journalists' employer isn't identified in court records.",
+    "host": "goodmorningamerica.com",
+    "date": "2026-11-20",
+    "kind": "fact",
+    "archive": false
+   },
+   "8": {
+    "state": "supports",
+    "why": "The docket for 4:26-dm-00001 shows Cole's motion to continue filed November 13, 2026 and Judge Davis's November 17 order denying continuance of the November 19 hearing.",
+    "host": "courtlistener.com",
+    "date": "2026-11-20",
+    "kind": "fact",
+    "archive": false
+   },
+   "9": {
+    "state": "supports",
+    "why": "The Times article (unsealed filing, Nov. 16) states prosecutors told O'Neil they demanded LinkedIn metadata, sought data for six accounts (Cole, four other Times journalists, one other person), sought Cole's phone records, and that the filing confirms two parallel fronts in one investigation.",
+    "host": "nytimes.com",
+    "date": "2026-11-20",
+    "kind": "fact",
+    "archive": true
+   },
+   "10": {
+    "state": "supports",
+    "why": "The MS NOW piece reports the Nov. 12 disclosure, the 'served legal process' statement, DOJ's 'no good cause for delay' opposition, the prior week's 4th Circuit narrowing decision, and Cole questioning why it 'served as the triggering event.'",
+    "host": "ms.now",
+    "date": "2026-11-20",
+    "kind": "fact",
+    "archive": false
+   },
+   "11": {
+    "state": "supports",
+    "why": "The November 19, 2026 minute entry before Judge Davis records the motion hearing, the 14-day ex parte submission directive, and that the matter was taken under advisement.",
+    "host": "courtlistener.com",
+    "date": "2026-11-20",
+    "kind": "fact",
+    "archive": false
    }
   },
   "blanche-crypto-conflict-of-interest-2025": {
@@ -2244,10 +2284,10 @@
     "archive": false
    },
    "7": {
-    "state": "supports",
-    "why": "Source confirms the 18-page agreement signed by Rubio and Hegseth, the 35% stake via a Barbados-registered parent with little owner information, safeguarding of Betancourt as CEO with a supermajority of five to oust him, Alvarado's signature and Miami Herald co-conspirator report, the NABEP denial, and the linked Aug. 27, 2026 Post report that Landau, Bondi and then-Deputy AG Blanche sought closure of investigations.",
+    "state": "partly",
+    "why": "The provided ProPublica text supports the 18-page agreement, CEO safeguard, seven-member 15-year board, no explicit $200 billion guarantee, 35% Barbados parent stake, Alvarado's signature and Miami Herald characterization, and NABEP's denial; but the text (truncated) does not contain the 'supermajority vote of five' detail or the repeat of the Post's report on Landau, Bondi and Blanche petitioning foreign counterparts.",
     "host": "propublica.org",
-    "date": "2026-11-09",
+    "date": "2026-11-20",
     "kind": "fact",
     "archive": false
    }
@@ -11538,6 +11578,30 @@
     "date": "2026-10-06",
     "kind": "fact",
     "archive": false
+   },
+   "26": {
+    "state": "supports",
+    "why": "MS NOW (Nov. 16) reports the Monday suit over the March 17 twin drone strikes on La Negra Francisca Duarte II after Ecuadorian navy clearance, the 16 crew and two burned, zip-ties and hoods, compensation and moratorium sought on no-congressional-approval grounds, Southern Command's earlier denial, and the Pentagon's no-comment.",
+    "host": "ms.now",
+    "date": "2026-11-20",
+    "kind": "fact",
+    "archive": false
+   },
+   "27": {
+    "state": "supports",
+    "why": "Bloomberg Law gives the W.D. Pa. filing, case caption and number, the illegal armed-drone allegation, the 'no actual armed conflict' claim, the requested stop order and damages, and Kovalik as counsel.",
+    "host": "news.bloomberglaw.com",
+    "date": "2026-11-20",
+    "kind": "fact",
+    "archive": false
+   },
+   "28": {
+    "state": "supports",
+    "why": "The Reuters report via The Star covers the Pittsburgh filing, relief sought, the two-drone allegation with burns to two of 16 crew, the U.S. claim of no information on this and two other vessels, and the Post's August CIA-program report.",
+    "host": "thestar.com.my",
+    "date": "2026-11-20",
+    "kind": "fact",
+    "archive": false
    }
   },
   "hegseth-butler-firing-milley-association-2026": {
@@ -12199,13 +12263,21 @@
    },
    "2": {
     "state": "partly",
+    "why": "Truthout reports Ryan's question about survivors lying, Hegseth's 'monologue falsehoods' reply, and his 'tragic' / 'consequence of conflict' remark at a House hearing chaired by the HASC chair, but the article only says the hearing was on 'Wednesday' and never states the April 29, 2026 date.",
+    "host": "truthout.org",
+    "date": "2026-09-27",
+    "kind": "fact",
+    "archive": false
+   },
+   "3": {
+    "state": "partly",
     "why": "The provided text supports the account of Barnes running for the exit and bunker while dozens remained behind, but it is truncated before any passage stating that no interviewed troops saw Barnes or Hinson help the dead or wounded, or giving Army Central's response about leadership assisting the evacuation.",
     "host": "washingtonpost.com",
     "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
-   "3": {
+   "4": {
     "state": "supports",
     "why": "CBS reports the medical-support request (personnel, availability and accessibility of supplies) was ignored, Carrier's statement that there was no mass-casualty planning or rehearsal, Ramsbottom's ambulance quote about Amor, and the relocation about one week before Epic Fury.",
     "host": "cbsnews.com",
@@ -12213,7 +12285,7 @@
     "kind": "fact",
     "archive": true
    },
-   "4": {
+   "5": {
     "state": "partly",
     "why": "The text supports the 17-interview basis, the allegations that Barnes and Hinson ignored warnings and overrode force-protection assessments, and the U.S. official's statement that the investigation assigns no fault; it is truncated before any mention of the EAGLS request or of Hinson appointing a mid-career officer to run the investigation.",
     "host": "washingtonpost.com",
@@ -12221,23 +12293,7 @@
     "kind": "fact",
     "archive": false
    },
-   "5": {
-    "state": "supports",
-    "why": "CBS states the Pentagon completed its review in July, Army leaders briefed families without assigning blame or commenting on decision-making mistakes, the Pentagon has refused for weeks to disclose the 350-plus-page report, and a DoD spokesperson did not respond about release timing.",
-    "host": "cbsnews.com",
-    "date": "2026-09-27",
-    "kind": "fact",
-    "archive": false
-   },
    "6": {
-    "state": "supports",
-    "why": "The Baldwin press release dated 08.05.2026 lists exactly the three requests to Adm. Cooper with an August 18, 2026 deadline, matching the claim.",
-    "host": "baldwin.senate.gov",
-    "date": "2026-09-27",
-    "kind": "fact",
-    "archive": false
-   },
-   "7": {
     "state": "partly",
     "why": "The letter text confirms the July 29, 2026 date, the earlier April 2026 letter, and that Hegseth had not provided the investigation results or directly answered all the April questions; the provided excerpt is truncated before the signature list, the question count, the August 12 deadline, and any question about a commander appointing a subordinate to investigate.",
     "host": "warren.senate.gov",
@@ -12245,18 +12301,26 @@
     "kind": "fact",
     "archive": false
    },
+   "7": {
+    "state": "supports",
+    "why": "The Baldwin press release dated 08.05.2026 lists exactly the three requests to Adm. Cooper with an August 18, 2026 deadline, matching the claim.",
+    "host": "baldwin.senate.gov",
+    "date": "2026-09-27",
+    "kind": "fact",
+    "archive": false
+   },
    "8": {
-    "state": "partly",
-    "why": "Truthout reports Ryan's question about survivors lying, Hegseth's 'monologue falsehoods' reply, and his 'tragic' / 'consequence of conflict' remark at a House hearing chaired by the HASC chair, but the article only says the hearing was on 'Wednesday' and never states the April 29, 2026 date.",
-    "host": "truthout.org",
+    "state": "supports",
+    "why": "Baldwin's letter states she asked Hegseth on July 21 about the denial of counter-drone systems, quotes his 'not a single drone or defense request denied' answer as contradicted by the July 12 Post article, and records his pledge to coordinate with CENTCOM.",
+    "host": "baldwin.senate.gov",
     "date": "2026-09-27",
     "kind": "fact",
     "archive": false
    },
    "9": {
     "state": "supports",
-    "why": "Baldwin's letter states she asked Hegseth on July 21 about the denial of counter-drone systems, quotes his 'not a single drone or defense request denied' answer as contradicted by the July 12 Post article, and records his pledge to coordinate with CENTCOM.",
-    "host": "baldwin.senate.gov",
+    "why": "CBS states the Pentagon completed its review in July, Army leaders briefed families without assigning blame or commenting on decision-making mistakes, the Pentagon has refused for weeks to disclose the 350-plus-page report, and a DoD spokesperson did not respond about release timing.",
+    "host": "cbsnews.com",
     "date": "2026-09-27",
     "kind": "fact",
     "archive": false
@@ -12306,6 +12370,30 @@
     "why": "The AP text directly reports the July 20 IG letter clearing Barnes based on limited evidence and noting the Hinson complaint was withdrawn, which the officer disputed.",
     "host": "wcax.com",
     "date": "2026-10-14",
+    "kind": "fact",
+    "archive": false
+   },
+   "16": {
+    "state": "supports",
+    "why": "CBS (published Sunday Nov. 15) says the complaint went to the Armed Services Committees on Friday, and reports the ignored-warnings and fortification allegations, the medical-support quote, Ramsbottom's 'tactical failure' quote, the Pentagon's declining to comment, and Blumenthal's Nov. 15 letter.",
+    "host": "cbsnews.com",
+    "date": "2026-11-20",
+    "kind": "fact",
+    "archive": true
+   },
+   "17": {
+    "state": "supports",
+    "why": "Raw Story (Nov. 15) quotes Shuster's Atlantic reporting on officers urging deployment of Ukrainian interceptor tech, ignored warnings, and fired/retired officers, and Parnell calling the suggestion 'disgusting.'",
+    "host": "rawstory.com",
+    "date": "2026-11-20",
+    "kind": "fact",
+    "archive": false
+   },
+   "18": {
+    "state": "supports",
+    "why": "Stars and Stripes (Nov. 16) reports the IG complaint seeking an independent investigation per the law firm's Sunday statement, the Friday submission to Capitol Hill, and that the Pentagon did not immediately respond.",
+    "host": "stripes.com",
+    "date": "2026-11-20",
     "kind": "fact",
     "archive": false
    }
@@ -23880,6 +23968,30 @@
     "why": "Mezha reproduces the Axios report including Scharf's quoted \"will remain disciplined...\" memo language and the statement that Scharf's office will use its interpretation of \"legitimate\" when deciding on testimony.",
     "host": "mezha.net",
     "date": "2026-11-17",
+    "kind": "fact",
+    "archive": false
+   },
+   "16": {
+    "state": "supports",
+    "why": "The CBS article reports the Monday Campaign for Accountability complaint to the Texas bar over letters to Blumenthal and Warren, the two cited rules, Reitz's 'harassing'/'frivolous'/'unfazed' response, the DOJ 'selective barfare' statement, and Blanche's 'no ongoing criminal investigations' remark the prior week.",
+    "host": "cbsnews.com",
+    "date": "2026-11-20",
+    "kind": "fact",
+    "archive": true
+   },
+   "17": {
+    "state": "supports",
+    "why": "Democracy Docket reports the Monday grievance to the State Bar of Texas, the probable-cause rule language, the Speech or Debate Clause press-release quote, and Reitz's social-media response as quoted.",
+    "host": "democracydocket.com",
+    "date": "2026-11-20",
+    "kind": "fact",
+    "archive": false
+   },
+   "18": {
+    "state": "supports",
+    "why": "Raw Story (Nov. 16) says the complaint cites letters to Blumenthal, Warren and Slotkin and asks the Texas bar to assess threats without probable cause, and reproduces Reitz's Nov. 16 X post with the quoted language.",
+    "host": "rawstory.com",
+    "date": "2026-11-20",
     "kind": "fact",
     "archive": false
    }
