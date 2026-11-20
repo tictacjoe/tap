@@ -198,4 +198,5 @@ test("homepage has a Possible Illegality chip and All-trackers option", () => {
   // Harms gets the same two entry points, labeled just "Harms" (Joe).
   assert.match(src, /harms\.textContent = "Harms";[\s\S]{0,300}harms\.addEventListener\("click", \(\) => switchToTracker\(HARMS_VIEW\)\)/);
   assert.match(src, /'<option value="' \+ HARMS_VIEW \+ '">Harms \\u2192<\/option>'/);
+  assert.match(src, /harmsOpt\.textContent = "Harms";/);
 });

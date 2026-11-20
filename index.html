@@ -6465,7 +6465,7 @@ function renderTabs() {
   // after the curated trackers and before Reporting (see harms-list block).
   const harmsOpt = document.createElement("option");
   harmsOpt.value = HARMS_VIEW;
-  harmsOpt.textContent = "Harms by first principle";
+  harmsOpt.textContent = "Harms"; // short label (Joe, 2026-11-19); the view heading keeps the full name
   harmsOpt.selected = activeTracker === HARMS_VIEW;
   // Possible Illegality (2026-11-19): the other cross-tracker view, always
   // right after Harms (same visibility rule: always listed).
