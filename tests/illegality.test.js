@@ -187,3 +187,12 @@ test("counts: unchallenged is rows whose status is Unchallenged", () => {
   rows[1].status = "In court";
   assert.deepEqual(api.illegalityCounts(rows), { total: 2, criminal: 1, civil: 1, unchallenged: 1 });
 });
+
+// Homepage entry points (Joe, 2026-11-19): a browse chip and a last option in
+// the Records "All trackers" filter, both opening the Possible Illegality view.
+test("homepage has a Possible Illegality chip and All-trackers option", () => {
+  const src = require("node:fs").readFileSync(require("node:path").join(__dirname, "..", "index.html"), "utf8");
+  assert.match(src, /ill\.dataset\.view = ILLEGALITY_VIEW;[\s\S]{0,400}ill\.addEventListener\("click", \(\) => switchToTracker\(ILLEGALITY_VIEW\)\)/);
+  assert.match(src, /'<option value="' \+ ILLEGALITY_VIEW \+ '">Possible Illegality \\u2192<\/option>'/);
+  assert.match(src, /if \(e\.target\.value === ILLEGALITY_VIEW\) \{\s*e\.target\.value = headlinesTrackerFilter;\s*switchToTracker\(ILLEGALITY_VIEW\);/);
+});

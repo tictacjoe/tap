@@ -3287,7 +3287,10 @@ function renderHeadlinesControls() {
   // Option names match the tracker chips (HEADLINE_TRACKER_MEDIUM), so the
   // filter reads the same as the rows it filters (Joe, 2026-11-15).
   trackerSel.innerHTML = '<option value="">All trackers</option>' +
-    headlinesCuratedKeys().map(key => '<option value="' + key + '">' + escapeHtml(HEADLINE_TRACKER_MEDIUM[key] || TRACKERS[key].label) + '</option>').join("");
+    headlinesCuratedKeys().map(key => '<option value="' + key + '">' + escapeHtml(HEADLINE_TRACKER_MEDIUM[key] || TRACKERS[key].label) + '</option>').join("") +
+    // Not a row filter: picking it opens the Possible Illegality view
+    // (Joe, 2026-11-19; see the change handler below).
+    '<option value="' + ILLEGALITY_VIEW + '">Possible Illegality \u2192</option>';
   trackerSel.value = headlinesTrackerFilter;
 
   // The Records category subfilter (Corruption, Disinformation, etc., for
@@ -7692,6 +7695,13 @@ document.getElementById("headlines-sort").addEventListener("change", (e) => {
   renderHeadlinesView();
 });
 document.getElementById("headlines-tracker-filter").addEventListener("change", (e) => {
+  // The Possible Illegality option navigates instead of filtering; put the
+  // select back so Records keeps its filter when the visitor returns.
+  if (e.target.value === ILLEGALITY_VIEW) {
+    e.target.value = headlinesTrackerFilter;
+    switchToTracker(ILLEGALITY_VIEW);
+    return;
+  }
   headlinesTrackerFilter = e.target.value;
   headlinesSubFilter = "";
   headlinesRenderLimit = RENDER_STEP;
@@ -7805,6 +7815,18 @@ function renderBrowseChips() {
     btn.addEventListener("click", () => selectDatabaseTab(key));
     row.appendChild(btn);
   });
+  // Possible Illegality (Joe, 2026-11-19): a cross-tracker view, not a
+  // tracker, so it gets the dark ink color instead of a tracker color and
+  // sits last in the row. Opens the same view as the database dropdown.
+  const ill = document.createElement("button");
+  ill.type = "button";
+  ill.className = "browse-chip";
+  ill.dataset.view = ILLEGALITY_VIEW;
+  ill.style.setProperty("--chip", "var(--ink)");
+  ill.textContent = "Possible Illegality";
+  ill.title = "Possible Illegality: entries where a specific law may have been broken";
+  ill.addEventListener("click", () => switchToTracker(ILLEGALITY_VIEW));
+  row.appendChild(ill);
 }
 
 // Counterpart to the dbBtn click handler in buildHeadlineRow() -- restores

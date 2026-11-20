@@ -140,12 +140,33 @@ const MOVED_OUT_OF_CLA = new Set(Object.entries(
   JSON.parse(fs.readFileSync(path.join(__dirname, "..", "data", "moved-ids.json"), "utf8")))
   .filter(([, m]) => m.from === "prosecution").map(([id]) => id));
 
+// Concern entries later reclassified as alleged legal violations under the
+// Possible Illegality owner rule (Joe, 2026-11-19: when a specific law
+// plausibly applies, the entry's offense_category is rewritten to name it).
+// They are skipped by the pinned-concern checks and must now carry a Violation Type.
+const RECLASSIFIED_TO_VIOLATION = new Set([
+  "boutros-broadview-six-grand-jury-misconduct-2026",
+  "doj-maurene-comey-firing-2025-2026",
+  "doj-voter-data-lawsuits-election-records-preservation-2025-2026",
+  "hegseth-pentagon-press-credentialing-restrictions-2025",
+  "mullin-save-system-voter-roll-scrub-2026",
+]);
+
+test("entries reclassified under the 2026-11-19 owner rule now have a Violation Type", () => {
+  const data = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "data", "prosecution.json"), "utf8"));
+  const byId = Object.fromEntries(data.map(e => [e.id, e]));
+  for (const id of RECLASSIFIED_TO_VIOLATION) {
+    assert.ok(byId[id], `${id} is not in the published data`);
+    assert.notEqual(classifyOffenseCategory(byId[id].offense_category), "Other/Unclassified", id);
+  }
+});
+
 test("each of the 42 previously unmatched published entries gets its 2026-10-07 concern type", () => {
   const data = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "data", "prosecution.json"), "utf8"));
   const byId = Object.fromEntries(data.map(e => [e.id, e]));
   const wrong = [];
   for (const [id, label] of Object.entries(EXPECTED_2026_10_07)) {
-    if (MOVED_OUT_OF_CLA.has(id)) continue;
+    if (MOVED_OUT_OF_CLA.has(id) || RECLASSIFIED_TO_VIOLATION.has(id)) continue;
     const e = byId[id];
     assert.ok(e, `${id} is not in the published data`);
     assert.equal(classifyOffenseCategory(e.offense_category), "Other/Unclassified", `${id} now has a Violation Type`);
@@ -178,7 +199,7 @@ test("each of the 12 previously unmatched published entries gets its 2026-10-18 
   const byId = Object.fromEntries(data.map(e => [e.id, e]));
   const wrong = [];
   for (const [id, label] of Object.entries(EXPECTED_2026_10_18)) {
-    if (MOVED_OUT_OF_CLA.has(id)) continue;
+    if (MOVED_OUT_OF_CLA.has(id) || RECLASSIFIED_TO_VIOLATION.has(id)) continue;
     const e = byId[id];
     assert.ok(e, `${id} is not in the published data`);
     assert.equal(classifyOffenseCategory(e.offense_category), "Other/Unclassified", `${id} now has a Violation Type`);
@@ -216,13 +237,13 @@ test("each of the 11 previously unmatched published entries gets its 2026-10-31 
   const byId = Object.fromEntries(data.map(e => [e.id, e]));
   const wrong = [];
   for (const [id, label] of Object.entries(EXPECTED_2026_10_31_VIOLATIONS)) {
-    if (MOVED_OUT_OF_CLA.has(id)) continue;
+    if (MOVED_OUT_OF_CLA.has(id) || RECLASSIFIED_TO_VIOLATION.has(id)) continue;
     assert.ok(byId[id], `${id} is not in the published data`);
     const got = classifyOffenseCategory(byId[id].offense_category);
     if (got !== label) wrong.push(`${id}: violation got ${got}`);
   }
   for (const [id, label] of Object.entries(EXPECTED_2026_10_31_CONCERNS)) {
-    if (MOVED_OUT_OF_CLA.has(id)) continue;
+    if (MOVED_OUT_OF_CLA.has(id) || RECLASSIFIED_TO_VIOLATION.has(id)) continue;
     assert.ok(byId[id], `${id} is not in the published data`);
     const e = byId[id];
     const off = classifyOffenseCategory(e.offense_category);
