@@ -170,6 +170,9 @@ const RECLASSIFIED_TO_VIOLATION = new Set([
   // illegality-IL5r (2026-11-20): new Tenth/Fourth Amendment rules
   "doj-walz-frey-subpoenas-quashed-2026",
   "doj-nyu-langone-trans-care-subpoena-2026",
+  // illegality-IL6 (2026-11-20)
+  "national-trust-white-house-ballroom-lawsuit-2025",
+  "noem-perjury-referral-2026",
 ]);
 
 test("entries reclassified under the 2026-11-19 owner rule now have a Violation Type", () => {

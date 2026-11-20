@@ -586,6 +586,13 @@
         "why": "A federal judge found the essay question on federal job postings likely violated the APA by infringing applicants' First Amendment rights, and stayed it."
       }
     ],
+    "lewandowski-dhs-contracts-2026": [
+      {
+        "law": "bribery-18-usc-201",
+        "who": "Corey Lewandowski, former senior adviser to DHS Secretary Kristi Noem",
+        "why": "As a DHS special government employee he allegedly demanded kickbacks tied to GEO Group's DHS contracts; DOJ reportedly opened a criminal probe after an IG referral. He denies wrongdoing."
+      }
+    ],
     "mcmahon-education-dept-transfers-2025-2026": [
       {
         "law": "agency-action-beyond-authority",
@@ -638,6 +645,13 @@
         "why": "A judge ruled the Office of Personnel Management unlawfully directed the probationary firings, in a ruling that covers Interior, but ordered records fixed, not rehiring; an appeal is pending."
       }
     ],
+    "national-trust-white-house-ballroom-lawsuit-2025": [
+      {
+        "law": "dc-federal-land-structures-40-usc-8106",
+        "who": "Donald Trump, President",
+        "why": "A judge ruled the ballroom runs up against 40 U.S.C. 8106, which bars D.C. federal-land buildings without Congress's express approval; the Supreme Court stayed that on standing, not legality."
+      }
+    ],
     "ncua-harper-otsuka-firing-quorum-loss-trump2": [
       {
         "law": "federal-credit-union-act-board-removal",
@@ -678,6 +692,18 @@
         "why": "A judge ruled NIH's directives, which cut vaccine-hesitancy grants, arbitrary and capricious under the Administrative Procedure Act; the Supreme Court paused grant reinstatement on appeal."
       }
     ],
+    "noem-fema-katrina-declaration-whistleblower-retaliation-2025-2026": [
+      {
+        "law": "whistleblower-protection-act",
+        "who": "U.S. Department of Homeland Security under then-Secretary Kristi Noem",
+        "why": "A day after 14 FEMA staff warned Congress, DHS put them on leave, then overrode FEMA counsel's finding their conduct was protected; they filed an OSC complaint."
+      },
+      {
+        "law": "first-amendment-retaliation",
+        "who": "U.S. Department of Homeland Security under then-Secretary Kristi Noem",
+        "why": "FEMA's own counsel found the signers' letter to Congress protected by the First Amendment; DHS suspended them the day after it was sent and re-suspended them after reinstatement."
+      }
+    ],
     "noem-harvard-sevp-revocation-2025": [
       {
         "law": "first-amendment-retaliation",
@@ -693,6 +719,13 @@
         "law": "due-process-clause",
         "who": "DHS under Kristi Noem (then-Secretary of Homeland Security)",
         "why": "Harvard sued, alleging the revocation denied it procedural due process; a judge blocked it with a preliminary injunction, and the case has no final judgment."
+      }
+    ],
+    "noem-perjury-referral-2026": [
+      {
+        "law": "false-statements-18-usc-1001",
+        "who": "Kristi Noem, then-Secretary of Homeland Security",
+        "why": "Noem told senators Corey Lewandowski had no role approving DHS contracts, but DHS records ProPublica reviewed show he approved a multimillion-dollar one; she was referred to DOJ, and DHS denies it."
       }
     ],
     "offshore-wind-coal-taxpayer-funded-rollback-2025-2026": [
@@ -736,6 +769,13 @@
         "why": "A lawsuit alleges Patel falsely told House and Senate committees the firings followed internal investigations; it says none of the fired employees was investigated."
       }
     ],
+    "patel-fbi-el-sayed-video-hatch-act-2026": [
+      {
+        "law": "hatch-act",
+        "who": "FBI under Director Kash Patel",
+        "why": "The FBI's official X account posted a video attacking Democrats, including Senate nominee Abdul El-Sayed, weeks before the midterms; CREW says OSC opened a Hatch Act probe."
+      }
+    ],
     "patel-journalist-retaliation-2025-2026": [
       {
         "law": "first-amendment-retaliation",
@@ -772,6 +812,18 @@
         "law": "inspector-general-act",
         "who": "Federal Housing Finance Agency",
         "why": "FHFA's inspector general reported FHFA refused records it requested, calling that unprecedented and citing its right to all records; FHFA disputes the account."
+      }
+    ],
+    "rfk-jr-acip-apa-violation-2026-03": [
+      {
+        "law": "administrative-procedure-act",
+        "who": "Robert F. Kennedy Jr., Secretary of Health and Human Services",
+        "why": "A federal judge preliminarily ruled plaintiffs were likely to show the ACIP overhaul and January 2026 schedule changes violated the APA, and stayed them; an appeal is pending."
+      },
+      {
+        "law": "federal-advisory-committee-act",
+        "who": "Robert F. Kennedy Jr., Secretary of Health and Human Services",
+        "why": "A judge held plaintiffs plausibly alleged the reconstituted ACIP does not comport with FACA requirements, denying dismissal; the suit is pending."
       }
     ],
     "rfk-jr-samoa-vaccine-testimony-2026": [
@@ -1270,7 +1322,7 @@
     }
   },
   "progress": {
-    "screened": 258,
+    "screened": 306,
     "total": 940
   },
   "version": 1
