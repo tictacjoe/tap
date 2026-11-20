@@ -151,11 +151,11 @@ def test_option_follows_harms_and_shows_rows(browser, site_url):
     texts = page.eval_on_selector_all("#tabs option", "os => os.map(o => o.textContent)")
     i = values.index("illegality")
     assert values[i - 1] == "harms"
-    assert texts[i] == "Possible Illegality"
+    assert texts[i] == "Possible Illegality (All Trackers)"
     _open_view(page)
     assert page.evaluate("activeTracker") == "illegality"
     assert page.evaluate("location.hash") == "#illegality"
-    assert page.locator(".ill-title").inner_text() == "Possible Illegality"
+    assert page.locator(".ill-title").inner_text() == "Possible Illegality (All Trackers)"
     assert "Reviewed so far: 7 of 900 entries" in page.locator(".ill-progress").inner_text()
     assert page.locator(".ill-counts").inner_text().startswith("3 entries")
     assert "unchallenged" in page.locator(".ill-counts").inner_text()
