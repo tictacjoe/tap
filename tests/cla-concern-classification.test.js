@@ -160,6 +160,10 @@ const RECLASSIFIED_TO_VIOLATION = new Set([
   "doj-fbi-epstein-files-delay-presentation-2026",
   "blanche-phang-epstein-files-court-orders-2026",
   "carr-fcc-paramount-gala-gifts-ethics-complaints-2026",
+  // illegality-IL5 (2026-11-20)
+  "bondi-doj-renee-good-widow-investigation-2026",
+  "doge-chatgpt-grant-cuts-deposition-2026",
+  "doj-fema-nyc-migrant-shelter-subpoenas-2025",
 ]);
 
 test("entries reclassified under the 2026-11-19 owner rule now have a Violation Type", () => {
