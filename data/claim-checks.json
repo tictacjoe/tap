@@ -1,6 +1,6 @@
 {
  "version": 1,
- "as_of": "2026-11-19",
+ "as_of": "2026-11-20",
  "checks": {
   "abrego-garcia-vindictive-prosecution-2025-2026": {
    "0": {
@@ -634,6 +634,22 @@
     "date": "2026-11-07",
     "kind": "fact",
     "archive": false
+   },
+   "40": {
+    "state": "supports",
+    "why": "The Bloomberg Law article states each element: Essayli's deployment to Miami on a special assignment to probe the Mar-a-Lago searchers per three people familiar, his designation as a special assistant US attorney in South Florida, the 'grand conspiracy' framing, the lack of indictments, and the Nov. 16 denial of DOJ's attempt to pause the ruling.",
+    "host": "news.bloomberglaw.com",
+    "date": "2026-11-20",
+    "kind": "fact",
+    "archive": false
+   },
+   "41": {
+    "state": "supports",
+    "why": "The CBS article (Wayback capture of Nov 19, 2026) states Essayli, first assistant U.S. attorney in the Central District of California, was tapped for the Mar-a-Lago raid and Smith classified-documents probes, that sources said he will only focus on those, and that it was unclear who oversees the Russia-assessment portion.",
+    "host": "cbsnews.com",
+    "date": "2026-11-20",
+    "kind": "fact",
+    "archive": true
    }
   },
   "blanche-campaign-events-hatch-act-2026": {
@@ -1288,6 +1304,22 @@
     "why": "The ECF 98 reply (filed 11/13/26) contains each quoted passage verbatim: evasion of the September substitute subpoenas including the concierge instruction, no motion to quash, and no substantive response despite at least five months' knowledge.",
     "host": "storage.courtlistener.com",
     "date": "2026-11-16",
+    "kind": "fact",
+    "archive": false
+   },
+   "17": {
+    "state": "partly",
+    "why": "The order text confirms the partial grant, the adoption of the government's request to pursue the law-firm subpoenas, the December 28, 2026 deadline, and the government's representation about few responsive materials; however, the provided text is truncated where the Epshteyn/Bannon requests are resolved, showing only that 'Given the government's affirmative concession that it must respond, the court finds it unnecessary at this' stage, without explicitly stating those requests were denied as moot.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-11-20",
+    "kind": "fact",
+    "archive": false
+   },
+   "18": {
+    "state": "supports",
+    "why": "ECF 103, filed 11/18/26, is Defendants' Rule 26(c)(1) motion for a protective order preventing the depositions of Miller, Scharf, Warfield, Whitaker and the 'Undisclosed Individuals', matching the claim's quotation.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-11-20",
     "kind": "fact",
     "archive": false
    }
@@ -2396,6 +2428,14 @@
     "why": "The docket entries confirm the Pate signatures on Docs. 187/188, the Nov 6 order (Doc. 195) with the Nov 17 deadline, Nov 12 conferral, and Nov 18 hearing on Docs. 114, 175, 183, 184, the Nov 24 deadline (Doc. 191), and Beirich's Nov 10 joinder (Doc. 198). The page text does not describe Doc. 114 as a motion to compel exculpatory material or Doc. 175 as Beirich's joinder, and Doc. 185 itself appears only through Doc. 186's reference.",
     "host": "courtlistener.com",
     "date": "2026-11-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "14": {
+    "state": "supports",
+    "why": "The CourtListener feed lists Entry #203 (Nov. 16 motion in limine to exclude nullification arguments or evidence), Entry #204 (Nov. 17 government response re Doc. 184 as to SPLC and Heidi Beirich), and Entry #205 (Nov. 18 notice of attorney appearance) as the latest entry.",
+    "host": "courtlistener.com",
+    "date": "2026-11-20",
     "kind": "fact",
     "archive": false
    }
@@ -4046,6 +4086,14 @@
     "archive": false
    },
    "22": {
+    "state": "supports",
+    "why": "The amended complaint (Document 14, filed 11/06/26, Case No. 26-cv-3372, E.D. Va.) names NPS, Interior, Burgum in his official capacity and Bowron, challenges the November 5, 2026 Decision Record and the Revised EA/FONSI, and alleges the Arch violates the Commemorative Works Act and 40 U.S.C. § 8106 absent congressional authorization.",
+    "host": "justsecurity.org",
+    "date": "2026-11-20",
+    "kind": "fact",
+    "archive": false
+   },
+   "23": {
     "state": "partly",
     "why": "The docket text confirms the November 9 minute order setting the November 10/16/18 schedule, the November 10 PI motions by Byrnes, Gundersen, Lemmon and Loth and by Virginia and D.C. (with a 5 U.S.C. 705 stay request), the November 10 minute order on the motion to intervene, and the November 13 Kennedy motion to join and supplement; but the provided text does not identify the first movants as veterans and a historian, and the truncated Kennedy entry lists only four names, so 'nine Kennedy family members' cannot be confirmed.",
     "host": "courtlistener.com",
@@ -4053,11 +4101,27 @@
     "kind": "fact",
     "archive": false
    },
-   "23": {
+   "24": {
     "state": "supports",
     "why": "The AP article (dated November 10, 2026) reports the nine RFK/EMK descendants' motion to intervene in two existing suits, the 250-foot shadow over the gravesites, the quoted 'fundamentally alter' language, and Davis Ingle's quoted statement.",
     "host": "wpxi.com",
     "date": "2026-11-16",
+    "kind": "fact",
+    "archive": false
+   },
+   "25": {
+    "state": "supports",
+    "why": "The docket feed lists every item named: the 11/10 first amended complaint by D.C. and Virginia against NPS, Bowron, Interior and Burgum; the 11/16 government response to motions 115 and 117; the 11/18 replies; the 11/18 response to the Kennedy motions; the 11/18 order extending the TRO through December 3, 2026; and the 11/19 Kennedy motion for leave to reply.",
+    "host": "courtlistener.com",
+    "date": "2026-11-20",
+    "kind": "fact",
+    "archive": false
+   },
+   "26": {
+    "state": "supports",
+    "why": "The AP story (via KSL) reports the 14-day extension keeping construction on hold until Dec. 3 or a ruling on the preliminary injunction, Chutkan's reasoning that nothing had significantly changed, and Davis Ingle's quoted statement.",
+    "host": "ksl.com",
+    "date": "2026-11-20",
     "kind": "fact",
     "archive": false
    }
@@ -16332,6 +16396,22 @@
     "date": "2026-10-20",
     "kind": "fact",
     "archive": false
+   },
+   "13": {
+    "state": "supports",
+    "why": "The Supreme Court docket for No. 25-1103 shows an Oct 28 2026 order extending the joint appendix and petitioners' brief to December 4, 2026 and respondents' brief to January 11, 2027, and lists no argument date.",
+    "host": "supremecourt.gov",
+    "date": "2026-11-20",
+    "kind": "fact",
+    "archive": false
+   },
+   "14": {
+    "state": "supports",
+    "why": "Entry 258 is the Oct 30, 2026 order by Judge Chuang accepting the joint motion to dissolve for filing, and it is the most recent entry on the docket (date of last known filing Oct. 30, 2026), with no ruling on the dissolution motion or the deposition motion (226) shown.",
+    "host": "courtlistener.com",
+    "date": "2026-11-20",
+    "kind": "fact",
+    "archive": false
    }
   },
   "national-trust-white-house-ballroom-lawsuit-2025": {
@@ -21236,6 +21316,22 @@
     "date": "2026-11-07",
     "kind": "fact",
     "archive": false
+   },
+   "27": {
+    "state": "partly",
+    "why": "The docket text (last updated Nov. 16, 2026) confirms the Nov 12 order on motion 276 (sealed 11/13) and the Nov 13 redacted order, but its latest entry is Sant's Nov 16 extension motion; it contains no Nov 17 order granting that motion and no Nov 18 order granting leave for the churches' amicus brief.",
+    "host": "courtlistener.com",
+    "date": "2026-11-20",
+    "kind": "fact",
+    "archive": false
+   },
+   "28": {
+    "state": "partly",
+    "why": "The redacted order confirms the partial grant, the findings of no legitimate government interest and a due process violation, the 'reckless and false' language with no probable cause or reasonable suspicion, the retention order for O'Neal's personal files, and the redacted replacement; but the provided text is truncated in the operative order, so the written produced-in-error notice and destruction of all originals appear only as the movant's requests, and the denial of a not-guilty finding is implied rather than stated.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-11-20",
+    "kind": "fact",
+    "archive": false
    }
   },
   "rubio-berisha-sanctions-lobbying-reversal-2026": {
@@ -23394,6 +23490,30 @@
     "why": "The docket's Nov 5 minute order grants the joint motion and sets the Nov 18 opposition, Nov 25 reply, and Dec 2 10:00 a.m. hearing exactly as claimed.",
     "host": "courtlistener.com",
     "date": "2026-11-15",
+    "kind": "fact",
+    "archive": false
+   },
+   "37": {
+    "state": "supports",
+    "why": "The Nov. 6, 2026 endorsement on the government's letter grants the application in part with the quoted Nov. 16/Nov. 23 deadlines and deems the amicus brief filed; the letter itself sought a two-week extension to Nov. 23 and states Plaintiffs do not consent.",
+    "host": "cdn.knightcolumbia.org",
+    "date": "2026-11-20",
+    "kind": "fact",
+    "archive": false
+   },
+   "38": {
+    "state": "supports",
+    "why": "The November 16, 2026 opposition asks the court to transfer to D.D.C. because 'the only apparent nexus to this District is the residence of a single Plaintiff,' and otherwise to deny the motion, citing the 20-month delay, generalized grievances, and D.C. Circuit non-fora; footnote 1 states Miller is automatically substituted for Wiles.",
+    "host": "cdn.knightcolumbia.org",
+    "date": "2026-11-20",
+    "kind": "fact",
+    "archive": false
+   },
+   "39": {
+    "state": "supports",
+    "why": "The November 18, 2026 opposition's introduction opens with 'Access to the White House is a privilege, not a right,' says the request 'is foreclosed as a matter of law' under the AP v. Budowich stay decision, contains the quoted viewpoint-discrimination sentence, and argues equity and law of the case bar relief because plaintiffs 'withdrew their request for this relief.'",
+    "host": "storage.courtlistener.com",
+    "date": "2026-11-20",
     "kind": "fact",
     "archive": false
    }
@@ -25780,6 +25900,14 @@
     "date": "2026-11-07",
     "kind": "fact",
     "archive": false
+   },
+   "13": {
+    "state": "supports",
+    "why": "The docket feed shows Beatty's Nov. 12 status report (ECF 119), defendants' Nov. 13 status report (ECF 120), the Nov. 17 minute order denying ECF 114 and ordering in camera production by Nov. 20 in the quoted terms, and the Nov. 19 hearing minute entry with the quoted language.",
+    "host": "courtlistener.com",
+    "date": "2026-11-20",
+    "kind": "fact",
+    "archive": false
    }
   },
   "trump-kidan-donor-pardon-2026": {
@@ -27344,6 +27472,22 @@
     "why": "The captured CourtListener docket was last updated Nov. 2, 2026 and its entries end in late October; none of the Nov. 3, 5 or 13 minute orders (TRO extension to Nov. 25, Nov. 19 hearing, briefing deadlines) appear in the provided text.",
     "host": "courtlistener.com",
     "date": "2026-11-16",
+    "kind": "fact",
+    "archive": false
+   },
+   "58": {
+    "state": "supports",
+    "why": "The feed's Nov. 13 minute entry records the motion hearing on the 108 PI motion before Judge Rochon, and the only later item (Nov. 17) is a 'Motion Hearing' stub, with no order deciding the motion.",
+    "host": "courtlistener.com",
+    "date": "2026-11-20",
+    "kind": "fact",
+    "archive": false
+   },
+   "59": {
+    "state": "supports",
+    "why": "The Nov. 19, 2026 minute entry before Judge AliKhan on Motion 31 for a PI and § 705 stay contains both quoted passages verbatim.",
+    "host": "courtlistener.com",
+    "date": "2026-11-20",
     "kind": "fact",
     "archive": false
    }
