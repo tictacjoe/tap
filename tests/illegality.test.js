@@ -279,3 +279,10 @@ test("homepage has a Possible Illegality chip and All-trackers option", () => {
   assert.match(src, /'<option value="' \+ HARMS_VIEW \+ '">Harms \\u2192<\/option>'/);
   assert.match(src, /harmsOpt\.textContent = "Harms";/);
 });
+
+test("desktop label column fits both short tags (CRIMINAL CIVIL) without clipping", () => {
+  // Measured in headless Chrome (final review): both tags need ~121px; 7rem gave 112px.
+  const m = source.match(/\.ill-head, \.ill-line \{[^}]*grid-template-columns: 1\.5rem ([\d.]+)rem/);
+  assert.ok(m, "grid template not found");
+  assert.ok(parseFloat(m[1]) >= 8.5, "label column " + m[1] + "rem");
+});
