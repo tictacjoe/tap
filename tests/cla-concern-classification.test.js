@@ -167,6 +167,9 @@ const RECLASSIFIED_TO_VIOLATION = new Set([
   "bondi-doj-renee-good-widow-investigation-2026",
   "doge-chatgpt-grant-cuts-deposition-2026",
   "doj-fema-nyc-migrant-shelter-subpoenas-2025",
+  // illegality-IL5r (2026-11-20): new Tenth/Fourth Amendment rules
+  "doj-walz-frey-subpoenas-quashed-2026",
+  "doj-nyu-langone-trans-care-subpoena-2026",
 ]);
 
 test("entries reclassified under the 2026-11-19 owner rule now have a Violation Type", () => {
