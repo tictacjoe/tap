@@ -26,6 +26,13 @@
         "why": "A judge ruled the release order's bar on future IRS audits of Trump and his family 'directly contravenes' 26 U.S.C. 7217, which bars a President from asking to end an audit."
       }
     ],
+    "blanche-campaign-events-hatch-act-2026": [
+      {
+        "law": "hatch-act",
+        "who": "Attorney General Todd Blanche",
+        "why": "At an event watchdogs say was billed as official, Blanche, introduced as attorney general, praised the GOP nominee for governor; Hatch Act complaints are pending at OSC."
+      }
+    ],
     "blanche-essayli-cdcal-de-facto-us-attorney-2025-2026": [
       {
         "law": "vacancies-act",
@@ -69,11 +76,25 @@
         "why": "Interior approved building the 250-foot arch on federal parkland in the capital though no act of Congress expressly authorizes it, which 40 U.S.C. 8106 may require."
       }
     ],
+    "carr-fcc-abc-early-license-renewal-2026": [
+      {
+        "law": "first-amendment-retaliation",
+        "who": "Brendan Carr, Chairman of the Federal Communications Commission",
+        "why": "ABC's pending lawsuit alleges the FCC called in its eight stations' licenses for early renewal to punish its programming; the FCC says the order serves a discrimination probe."
+      }
+    ],
     "cecot-venezuelan-detainees-due-process-2025-2026": [
       {
         "law": "due-process-clause",
         "who": "U.S. Department of Homeland Security",
         "why": "Chief Judge James Boasberg ruled the 137 men sent to CECOT under the Alien Enemies Act were denied due process; the ruling is on appeal."
+      }
+    ],
+    "comey-seashells-ednc-prosecution-2026": [
+      {
+        "law": "due-process-vindictive-prosecution",
+        "who": "U.S. Attorney W. Ellis Boyle, Eastern District of North Carolina",
+        "why": "Comey has formally moved to dismiss the threat indictment over his seashell post as selective and vindictive prosecution; the motion is pending with no ruling."
       }
     ],
     "dhs-jop-settlement-removals-contempt-2025-2026": [
@@ -114,11 +135,47 @@
         "why": "A judge held DOJ's voter-roll policy violates the Privacy Act; another, in a suit naming DOJ, found the administration's sharing of noncitizen voter lists likely does too."
       }
     ],
+    "ed-martin-dc-bar-georgetown-dei-charges-2026": [
+      {
+        "law": "first-amendment-retaliation",
+        "who": "Ed Martin, then interim U.S. Attorney for the District of Columbia",
+        "why": "D.C.'s Disciplinary Counsel formally charged that Martin's Georgetown letters used coercion to suppress a disfavored viewpoint, violating the First Amendment; he denies it."
+      },
+      {
+        "law": "due-process-clause",
+        "who": "Ed Martin, then interim U.S. Attorney for the District of Columbia",
+        "why": "D.C.'s Disciplinary Counsel also charged that Martin's undefined DEI demand gave Georgetown Law no fair notice or chance to defend itself, violating the Fifth Amendment; he denies it."
+      }
+    ],
+    "ed-martin-grand-jury-leak-2026": [
+      {
+        "law": "grand-jury-secrecy-rule-6e",
+        "who": "Ed Martin, then head of DOJ's Weaponization Working Group",
+        "why": "A DOJ internal review reportedly found Martin shared secret grand jury material from the Schiff probe with unauthorized people; he has not been charged."
+      },
+      {
+        "law": "false-statements-18-usc-1001",
+        "who": "Ed Martin, then head of DOJ's Weaponization Working Group",
+        "why": "A source told CNN Martin denied sharing the material when DOJ leaders asked, until emails showed he had; a knowing false denial may violate the false-statements law."
+      }
+    ],
     "eoir-children-removal-orders-sij-continuances-2025-2026": [
       {
         "law": "court-order-defiance-civil",
         "who": "USCIS",
         "why": "A federal judge in Maryland found the government did not comply with his order restoring 21 days' notice for children's asylum interviews and ordered USCIS to remedy the noncompliance."
+      }
+    ],
+    "epa-environmental-justice-grants-cancellation-2025-2026": [
+      {
+        "law": "impoundment-control-act",
+        "who": "Environmental Protection Agency (EPA)",
+        "why": "GAO found EPA violated the Impoundment Control Act by pausing, then terminating, over $1.5 billion in obligated grants without the required message to Congress."
+      },
+      {
+        "law": "administrative-procedure-act",
+        "who": "Environmental Protection Agency (EPA)",
+        "why": "A federal judge ruled EPA's termination of the $2.8 billion environmental justice grant program \"arbitrary and capricious and unlawful\"; his order enforcing it is stayed on appeal."
       }
     ],
     "epa-ggrf-climate-grants-clawback-blocked-2026": [
@@ -140,11 +197,37 @@
         "why": "The FBI seized a reporter's devices from her home on a warrant Kromberg sought; a judge ruled the Privacy Protection Act bars the government from searching the protected materials."
       }
     ],
+    "fema-capacity-collapse-texas-floods-trump2": [
+      {
+        "law": "agency-action-beyond-authority",
+        "who": "Department of Homeland Security",
+        "why": "A judge ruled DHS unlawfully usurped FEMA's authority, in violation of the post-Katrina law, by ordering FEMA to cut its workforce roughly in half."
+      }
+    ],
+    "fema-shelter-and-services-program-termination-2025": [
+      {
+        "law": "impoundment-control-act",
+        "who": "Federal Emergency Management Agency (FEMA)",
+        "why": "GAO found FEMA violated the Impoundment Control Act by withholding and de-obligating money Congress appropriated for the Shelter and Services Program."
+      },
+      {
+        "law": "administrative-procedure-act",
+        "who": "Department of Homeland Security and FEMA",
+        "why": "Two federal judges found the termination of the shelter grants arbitrary and capricious, one in a preliminary injunction and one in a final judgment."
+      }
+    ],
     "forest-service-hq-relocation-2026": [
       {
         "law": "administrative-procedure-act",
         "who": "U.S. Department of Agriculture",
         "why": "A federal judge stayed the office closures and relocations, including this move, under the APA, finding they \"likely violate the appropriations statutes\"; USDA has appealed."
+      }
+    ],
+    "fort-bliss-detention-contract-albers-donor-cronyism-2025": [
+      {
+        "law": "cica-bid-protest-stay-31-usc-3553",
+        "who": "U.S. Army",
+        "why": "A claims judge ruled the Army violated the Competition in Contracting Act's protest stay by letting work continue before a written override; it found the error corrected and upheld the override."
       }
     ],
     "greer-ieepa-tariffs-scotus-2026-02": [
@@ -178,6 +261,13 @@
         "why": "The Washington Post reported Hegseth ordered \"leave no survivors\" before a strike whose follow-up killed two survivors; the order is disputed, and ex-military lawyers call such orders illegal."
       }
     ],
+    "hegseth-iran-school-strike-minab-2026": [
+      {
+        "law": "war-crimes-18-usc-2441",
+        "who": "U.S. Department of Defense under Secretary Pete Hegseth",
+        "why": "A U.N.-backed fact-finding mission found reasonable grounds to believe the U.S. committed a war crime in the Minab school strike, calling the school the intended point of impact."
+      }
+    ],
     "hegseth-la-guard-federalization-posse-comitatus-2025": [
       {
         "law": "posse-comitatus-act",
@@ -204,6 +294,13 @@
         "why": "The Pentagon inspector general found he and his office did not keep his Signal messages about the Yemen strike as federal records."
       }
     ],
+    "hhs-alicia-jackson-evernow-menopause-conflict-2026": [
+      {
+        "law": "conflict-of-interest-18-usc-208",
+        "who": "Alicia Jackson, Director of the Advanced Research Projects Agency for Health (ARPA-H), HHS",
+        "why": "Jackson publicly backed dropping hormone-therapy warnings while her disclosures listed Evernow stock; a watchdog complaint says she may have violated the conflict-of-interest law."
+      }
+    ],
     "ice-castanon-nava-warrantless-arrests-midway-blitz-2025-2026": [
       {
         "law": "court-order-defiance-civil",
@@ -216,6 +313,39 @@
         "law": "court-order-defiance-civil",
         "who": "ICE",
         "why": "Minnesota's chief federal judge found ICE violated 210 court orders in 143 habeas cases in early 2026; DOJ disputes the characterization and no ICE official was held in contempt."
+      }
+    ],
+    "interior-east-potomac-golf-tree-removal-2026": [
+      {
+        "law": "national-environmental-policy-act",
+        "who": "Doug Burgum, Secretary of the Interior, and the National Park Service",
+        "why": "A federal judge found challengers likely to succeed on their claim that Interior violated NEPA by segmenting its review of the course plan, and enjoined tree cutting; the government has appealed."
+      },
+      {
+        "law": "administrative-procedure-act",
+        "who": "Doug Burgum, Secretary of the Interior, and the National Park Service",
+        "why": "A federal judge found the park closure likely violated the APA because a Park Service rule required notice and comment first, called its stated reasons pretextual, and temporarily blocked it."
+      }
+    ],
+    "irs-workforce-collapse-trump2": [
+      {
+        "law": "agency-action-beyond-authority",
+        "who": "Office of Personnel Management (OPM)",
+        "why": "A judge ruled the Office of Personnel Management exceeded its own powers and directed agencies, including Treasury, to fire probationary staff under false pretense."
+      }
+    ],
+    "kennedy-niaid-whistleblower-retaliation-2025": [
+      {
+        "law": "first-amendment-retaliation",
+        "who": "Robert F. Kennedy Jr., Secretary of Health and Human Services",
+        "why": "Marrazzo's pending federal suit alleges Kennedy fired her 22 days after her whistleblower complaint, in retaliation for protected speech; a judge has let the suit proceed."
+      }
+    ],
+    "kupor-opm-loyalty-essay-question-2025-2026": [
+      {
+        "law": "administrative-procedure-act",
+        "who": "Scott Kupor, Director of the Office of Personnel Management",
+        "why": "A federal judge found the essay question on federal job postings likely violated the APA by infringing applicants' First Amendment rights, and stayed it."
       }
     ],
     "mullin-save-system-voter-roll-scrub-2026": [
@@ -242,11 +372,30 @@
         "why": "Judge William Young ruled NIH's grant terminations violated the Administrative Procedure Act; the Supreme Court let the terminations proceed while the case continued."
       }
     ],
+    "nih-impoundment-gao-finding-trump2": [
+      {
+        "law": "impoundment-control-act",
+        "who": "National Institutes of Health (NIH)",
+        "why": "GAO found NIH illegally withheld appropriated research funds in violation of the Impoundment Control Act, citing an almost $8 billion drop in obligations."
+      },
+      {
+        "law": "administrative-procedure-act",
+        "who": "National Institutes of Health (NIH)",
+        "why": "A federal judge ruled NIH's grant cancellations violated the Administrative Procedure Act; the Supreme Court stayed that part on jurisdiction but left in place the ruling against NIH's guidance."
+      }
+    ],
     "patel-journalist-retaliation-2025-2026": [
       {
         "law": "first-amendment-retaliation",
         "who": "Federal Bureau of Investigation under Director Kash Patel",
         "why": "The FBI reportedly looked into a Times reporter after her story on Patel's girlfriend's security; some DOJ officials saw it as retaliation with no legal basis."
+      }
+    ],
+    "pentagon-civilian-harm-reduction-program-dismantled-2026": [
+      {
+        "law": "dod-civilian-harm-mitigation-statutes",
+        "who": "Department of Defense (Department of War)",
+        "why": "The Pentagon's inspector general found the dismantled program left the military without the personnel, tools or infrastructure needed to comply with the two statutes that require it."
       }
     ],
     "pulte-mortgage-data-misuse-2025-2026": [
@@ -337,6 +486,30 @@
         "who": "Executive Office of the President, OMB and DHS",
         "why": "A New York judge found challengers likely to succeed on their ultra vires claim as to three of the ads and barred their dissemination, ordering them off government websites."
       }
+    ],
+    "vasquez-perdomo-noem-la-racial-profiling-stops-2025-2026": [
+      {
+        "law": "court-order-defiance-civil",
+        "who": "DHS, Border Patrol and ICE",
+        "why": "A judge held the government in civil contempt in July 2026, finding by clear and convincing evidence it failed to image agents' phones as ordered; it disputes the personal-phone part."
+      },
+      {
+        "law": "fourth-amendment-unreasonable-seizure",
+        "who": "DHS, Border Patrol and ICE",
+        "why": "A pending class action alleges agents stopped people by race, language and job without reasonable suspicion; the Supreme Court paused an order against the stops."
+      }
+    ],
+    "wright-faca-violation-2026": [
+      {
+        "law": "federal-advisory-committee-act",
+        "who": "Chris Wright, Secretary of Energy, and the U.S. Department of Energy",
+        "why": "A federal judge ruled that DOE's Climate Working Group was a federal advisory committee whose FACA violations were \"established as matter of law.\""
+      },
+      {
+        "law": "federal-records-act",
+        "who": "U.S. Department of Energy",
+        "why": "A pending lawsuit alleges DOE appointees used personal email to conduct the climate working group's business, which may violate the Federal Records Act."
+      }
     ]
   },
   "laws": {
@@ -373,6 +546,11 @@
       "cite": "18 U.S.C. 201",
       "label": "criminal",
       "name": "Bribery"
+    },
+    "cica-bid-protest-stay-31-usc-3553": {
+      "cite": "31 U.S.C. 3553(d)(3)",
+      "label": "civil",
+      "name": "Competition in Contracting Act (bid-protest stay)"
     },
     "civil-service-reform-act": {
       "cite": "5 U.S.C. 7511-7513",
@@ -412,6 +590,11 @@
       "cite": "D.C. Code 1-201.01 et seq.",
       "label": "civil",
       "name": "D.C. Home Rule Act"
+    },
+    "dod-civilian-harm-mitigation-statutes": {
+      "cite": "10 U.S.C. 134 note, 184",
+      "label": "civil",
+      "name": "Civilian harm mitigation statutes (civilian harm policy and Civilian Protection Center of Excellence)"
     },
     "due-process-clause": {
       "cite": "U.S. Const. amend. V",
@@ -463,6 +646,16 @@
       "label": "civil",
       "name": "Foreign Service Act"
     },
+    "fourth-amendment-unreasonable-seizure": {
+      "cite": "U.S. Const. amend. IV",
+      "label": "civil",
+      "name": "Unreasonable search and seizure (Fourth Amendment)"
+    },
+    "grand-jury-secrecy-rule-6e": {
+      "cite": "Fed. R. Crim. P. 6(e)(2), 6(e)(7)",
+      "label": "criminal",
+      "name": "Grand jury secrecy"
+    },
     "hatch-act": {
       "cite": "5 U.S.C. 7321-7326",
       "label": "civil",
@@ -492,6 +685,11 @@
       "cite": "18 U.S.C. 793",
       "label": "criminal",
       "name": "Mishandling national defense information"
+    },
+    "national-environmental-policy-act": {
+      "cite": "42 U.S.C. 4321 et seq.",
+      "label": "civil",
+      "name": "National Environmental Policy Act"
     },
     "obstruction-of-justice": {
       "cite": "18 U.S.C. 1503, 1505, 1512",
@@ -550,7 +748,7 @@
     }
   },
   "progress": {
-    "screened": 65,
+    "screened": 113,
     "total": 940
   },
   "version": 1
