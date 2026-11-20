@@ -161,8 +161,11 @@ def test_tracker_filter_names_match_chips(browser, site_url):
     options = page.eval_on_selector_all(
         "#headlines-tracker-filter option", "os => os.map(o => [o.value, o.textContent])")
     assert options[0] == ["", "All trackers"]
+    # 2026-11-19: the last two options open the Harms and Possible Illegality
+    # views instead of filtering rows, so they have no chip name.
+    assert options[-2:] == [["harms", "Harms \u2192"], ["illegality", "Possible Illegality \u2192"]]
     chips = page.evaluate("HEADLINE_TRACKER_MEDIUM")
-    for value, text in options[1:]:
+    for value, text in options[1:-2]:
         assert text == chips[value]
 
 

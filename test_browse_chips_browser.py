@@ -1,8 +1,10 @@
 """Browser tests for the browse chips (2026-11-19): a row of tracker chips
 under the search box replaced the "— browse by tracker —" button and its
-dialog. Seven chips -- the six curated trackers plus Claim-checks, no
-Reporting -- each opening its tracker in one click. Hover titles carry the
-tracker's full name and entry count once data has loaded.
+dialog. Six tracker chips -- the five curated trackers plus Claim-checks, no
+Reporting (OEA retired 2026-11-19) -- each opening its tracker in one click,
+then two view chips (data-view, not data-tracker): Harms and Possible
+Illegality. Tracker chips' hover titles carry the tracker's full name and
+entry count once data has loaded.
 
 The server holds back tracker.json (the ~14MB Reporting file) so the page
 can be checked mid-load, the way a slow connection sees it. Skips if
@@ -69,11 +71,16 @@ def test_six_chips_in_order(site_url, browser):
         "visibleTrackerKeys(TRACKERS).filter(k => k !== 'tracker')"
         ".map(k => HEADLINE_TRACKER_MEDIUM[k].toUpperCase())"
     )
-    chips = [t.strip() for t in page.locator("#browse-chips .browse-chip").all_inner_texts()]
+    chips = [t.strip() for t in page.locator("#browse-chips .browse-chip[data-tracker]").all_inner_texts()]
     assert len(chips) == 6  # OEA retired 2026-11-19
     assert chips == expected
     assert chips[-1] == "CLAIM-CHECKS"
     assert "REPORTING" not in chips
+    # The two cross-tracker view chips sit last, after every tracker chip.
+    every = page.locator("#browse-chips .browse-chip").evaluate_all(
+        "els => els.map(e => e.dataset.view || e.dataset.tracker)")
+    assert every[-2:] == ["harms", "illegality"]
+    assert len(every) == 8
     assert page.locator("#browse-instead").count() == 0
     assert page.locator("#browse-backdrop").count() == 0
     page.close()
@@ -90,10 +97,10 @@ def test_chip_click_opens_tracker(site_url, browser):
 def test_titles_fill_after_load(site_url, browser):
     page = _open(browser, site_url, wait_loaded=False)
     page.wait_for_selector("#browse-chips .browse-chip", state="attached", timeout=10000)
-    during = page.locator(".browse-chip").evaluate_all("els => els.map(e => e.title)")
+    during = page.locator(".browse-chip[data-tracker]").evaluate_all("els => els.map(e => e.title)")
     assert during and all(not re.search(r"\d", t) for t in during), during
     page.wait_for_function("allDataLoaded === true", timeout=60000)
-    pairs = page.locator(".browse-chip").evaluate_all(
+    pairs = page.locator(".browse-chip[data-tracker]").evaluate_all(
         "els => els.map(e => [e.title, TRACKERS[e.dataset.tracker].data.length])"
     )
     for title, n in pairs:

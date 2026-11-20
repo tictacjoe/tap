@@ -133,6 +133,14 @@ def _open_view(page):
     _select_view(page, "illegality")
 
 
+def _sort_by_header(page, key):
+    """Desktop sort: click the column-header button (one-liner rows,
+    2026-11-19). The full #ill-sort dropdown is shown only at phone width,
+    but stays in sync, so its value is still checked below."""
+    page.locator(f'.ill-sort-btn[data-sort="{key}"]').click()
+    page.wait_for_timeout(200)
+
+
 def _row_ids(page):
     return page.eval_on_selector_all(".ill-entry-link", "els => els.map(a => a.dataset.id)")
 
@@ -179,9 +187,10 @@ def test_leaving_view_clears_hash(browser, site_url):
 def test_sort_by_law_reorders(browser, site_url):
     page, errors = _goto(browser, site_url)
     _open_view(page)
-    page.select_option("#ill-sort", "law")
+    _sort_by_header(page, "law")
     # Administrative Procedure Act, Bribery, Impoundment Control Act.
     assert _row_ids(page) == [PROS["id"], GSR["id"], DEREG["id"]]
+    assert page.locator('.ill-sort-btn[data-sort="law"]').get_attribute("aria-pressed") == "true"
     assert page.locator("#ill-sort").input_value() == "law"
     assert errors == []
 
@@ -234,7 +243,8 @@ def test_moved_id_lands_on_new_tracker(browser, site_url):
       const fx = mapTrumpFamilyEntry({id: "moved-fx", title: "Fixture", category: "crypto",
         family_members: ["Eric Trump"], business_entity: {name: "World Liberty Financial"},
         government_nexus: {action: "a", official: {name: "Steve Witkoff", role: "Envoy"}},
-        financial_stake: {summary: "s", figures: [], caveat: "c"}, status: "Ongoing", sources: []});
+        financial_stake: {summary: "s", figures: [], caveat: "c"}, status: "Ongoing", sources: [],
+        glance: {what: "Moved fixture"}});
       TRACKERS.trumpfamily.hidden = false;
       TRACKERS.trumpfamily.data = [fx];
       MOVED_IDS = {"moved-fx": {from: "prosecution", to: "trumpfamily", date: "2026-10-20"}};
@@ -255,7 +265,7 @@ def test_back_returns_to_view_at_same_scroll(browser, site_url):
            "progress": {"screened": 60, "total": 60}}
     page, errors = _goto(browser, site_url, data=big)
     _open_view(page)
-    page.select_option("#ill-sort", "law")
+    _sort_by_header(page, "law")
     page.evaluate("window.scrollTo(0, 1500)")
     page.wait_for_timeout(200)
     y = page.evaluate("window.scrollY")
@@ -312,7 +322,8 @@ def test_typing_keeps_the_same_search_box(browser, site_url):
 
 
 def test_select_change_keeps_focus_on_the_select(browser, site_url):
-    page, errors = _goto(browser, site_url)
+    # #ill-sort is the phone sort dropdown (one-liner rows, 2026-11-19).
+    page, errors = _goto(browser, site_url, viewport={"width": 390, "height": 844})
     _open_view(page)
     page.evaluate("document.getElementById('ill-sort').__marker = 'same-select'")
     page.focus("#ill-sort")
