@@ -3369,7 +3369,7 @@ function renderHeadlinesControls() {
     // Not row filters: these open the Harms and Possible Illegality views
     // (Joe, 2026-11-19; see the change handler below).
     '<option value="' + HARMS_VIEW + '">Harms (all trackers) \u2192</option>' +
-    '<option value="' + ILLEGALITY_VIEW + '">Illegality (all trackers) \u2192</option>';
+    '<option value="' + ILLEGALITY_VIEW + '">Possible illegality (all trackers) \u2192</option>';
   trackerSel.value = headlinesTrackerFilter;
 
   // The Records category subfilter (Corruption, Disinformation, etc., for
@@ -6663,7 +6663,7 @@ function renderTabs() {
   // right after Harms (same visibility rule: always listed).
   const illOpt = document.createElement("option");
   illOpt.value = ILLEGALITY_VIEW;
-  illOpt.textContent = "Illegality (all trackers)"; // names its cross-tracker scope (Joe, 2026-11-19)
+  illOpt.textContent = "Possible illegality (all trackers)"; // names its cross-tracker scope (Joe, 2026-11-19)
   illOpt.selected = activeTracker === ILLEGALITY_VIEW;
   visibleTrackerKeys(TRACKERS).forEach(key => {
     if (key === "tracker") { select.appendChild(harmsOpt); select.appendChild(illOpt); }
@@ -8089,7 +8089,7 @@ function renderBrowseChips() {
   ill.className = "browse-chip";
   ill.dataset.view = ILLEGALITY_VIEW;
   ill.style.setProperty("--chip", "var(--ink)");
-  ill.textContent = "Illegality (all trackers)";
+  ill.textContent = "Possible illegality (all trackers)";
   ill.title = "Possible Illegality across all trackers: entries where a specific law may have been broken";
   ill.addEventListener("click", () => switchToTracker(ILLEGALITY_VIEW));
   extraGroup.appendChild(ill);
