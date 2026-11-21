@@ -172,6 +172,13 @@
         "why": "Interior approved building the 250-foot arch on federal parkland in the capital though no act of Congress expressly authorizes it, which 40 U.S.C. 8106 may require."
       }
     ],
+    "burgum-lutnick-carr-wasilla-rally-hatch-act-2026": [
+      {
+        "law": "hatch-act",
+        "who": "Interior Secretary Doug Burgum, Commerce Secretary Howard Lutnick and FCC Chairman Brendan Carr",
+        "why": "A pending request to the Office of Special Counsel says they may have used their official positions to affect an election at a rally for Sen. Dan Sullivan."
+      }
+    ],
     "camp-east-montana-detention-conditions-deaths-2026": [
       {
         "law": "due-process-clause",
@@ -1343,6 +1350,11 @@
         "law": "administrative-procedure-act",
         "who": "Keith Sonderling, Acting Director of IMLS",
         "why": "A federal court in Rhode Island found the IMLS dismantling actions arbitrary and capricious and contrary to law, set them aside and permanently barred further steps."
+      },
+      {
+        "law": "impoundment-control-act",
+        "who": "Institute of Museum and Library Services (IMLS), under Acting Director Keith Sonderling",
+        "why": "GAO concluded IMLS violated the Impoundment Control Act by withholding appropriated funds, including Grants to States money, a finding the Rhode Island court cited in its ruling."
       }
     ],
     "interior-east-potomac-golf-tree-removal-2026": [
@@ -1367,6 +1379,16 @@
         "law": "administrative-procedure-act",
         "who": "Internal Revenue Service",
         "why": "A judge stayed the IRS's address-sharing procedure with ICE as likely contrary to the tax code, a stay an appeals court affirmed in September 2026."
+      },
+      {
+        "law": "taxpayer-confidentiality-26-usc-6103",
+        "who": "ICE and DHS",
+        "why": "A Massachusetts judge barred ICE and DHS from using the IRS addresses, finding a high likelihood that ICE's handling, use and storage of them violated the tax code's confidentiality section."
+      },
+      {
+        "law": "administrative-procedure-act",
+        "who": "ICE and DHS",
+        "why": "A Massachusetts judge stayed the IRS-ICE agreement under the Administrative Procedure Act, finding ICE's use of the data likely violates the APA; the government's appeal is pending."
       }
     ],
     "irs-notice-2025-42-wind-solar-safe-harbor-2025": [
@@ -1686,6 +1708,13 @@
         "why": "The Ninth Circuit upheld an order reinstating UC researchers' DEI-cut grants, ruling the terminations likely violate the First Amendment; the Supreme Court denied review."
       }
     ],
+    "nws-staffing-losses-trump2": [
+      {
+        "law": "agency-action-beyond-authority",
+        "who": "Office of Personnel Management (OPM)",
+        "why": "A judge ruled the Office of Personnel Management lacked authority to direct the probationary firings, in a ruling that covers NOAA, but ordered no rehiring; an appeal is pending."
+      }
+    ],
     "obbba-grad-plus-medical-loan-caps-2025": [
       {
         "law": "administrative-procedure-act",
@@ -1841,6 +1870,13 @@
         "why": "FHFA's inspector general reported FHFA refused records it requested, calling that unprecedented and citing its right to all records; FHFA disputes the account."
       }
     ],
+    "ratcliffe-gabbard-cia-dei-officer-firings-2025": [
+      {
+        "law": "due-process-clause",
+        "who": "John Ratcliffe, CIA Director; Tulsi Gabbard, then-Director of National Intelligence",
+        "why": "A divided 4th Circuit panel upheld an injunction holding CIA and ODNI had to honor the officers' Fifth Amendment due-process protections before firing them; the full court denied rehearing."
+      }
+    ],
     "rfk-jr-acip-apa-violation-2026-03": [
       {
         "law": "administrative-procedure-act",
@@ -1886,6 +1922,11 @@
         "law": "foreign-service-act",
         "who": "U.S. Department of State under Secretary of State Marco Rubio",
         "why": "Six current and former officials told a paper promotion candidates were asked how they voted; a complaint to OSC and the IG says this may violate the Foreign Service Act's political-affiliation bar."
+      },
+      {
+        "law": "hatch-act",
+        "who": "U.S. Department of State under Secretary of State Marco Rubio",
+        "why": "A watchdog's pending complaint to the Office of Special Counsel says tying promotions to how officers voted and donated may be coercion of political activity barred by the Hatch Act."
       }
     ],
     "rubio-state-dept-mass-visa-revocations-2025-2026": [
@@ -1943,6 +1984,11 @@
         "law": "administrative-procedure-act",
         "who": "U.S. Department of State",
         "why": "A judge found unions likely to succeed on claims that State's December 2025 layoffs, pressed during a shutdown-deal freeze on layoffs, were contrary to law, and blocked them."
+      },
+      {
+        "law": "agency-action-beyond-authority",
+        "who": "U.S. Department of State",
+        "why": "A judge found unions likely to succeed on their claim that State acted ultra vires by refusing to rescind layoffs carried out during the shutdown, contrary to the shutdown-deal freeze."
       }
     ],
     "swine-poultry-line-speed-deregulation-trump1-trump2": [
@@ -2238,12 +2284,22 @@
       {
         "law": "court-order-defiance-civil",
         "who": "DHS, Border Patrol and ICE",
-        "why": "A judge held the government in civil contempt in July 2026, finding by clear and convincing evidence it failed to image agents' phones as ordered; it disputes the personal-phone part."
+        "why": "A judge held the government in civil contempt in July 2026, finding by clear and convincing evidence it failed to image agents' phones as ordered; it still pays the daily fine."
       },
       {
         "law": "fourth-amendment-unreasonable-seizure",
         "who": "DHS, Border Patrol and ICE",
-        "why": "A pending class action alleges agents stopped people by race, language and job without reasonable suspicion; the Supreme Court paused an order against the stops."
+        "why": "An October 2026 preliminary injunction found plaintiffs likely to show a policy of stops based on racial stereotyping that violates the Fourth Amendment; it is paused on appeal."
+      },
+      {
+        "law": "equal-protection-fifth-amendment",
+        "who": "DHS, Border Patrol and ICE",
+        "why": "The same October 2026 injunction found the race-based stops policy likely violates the Fifth Amendment's equal protection guarantee; the Ninth Circuit paused it pending appeal."
+      },
+      {
+        "law": "due-process-clause",
+        "who": "ICE",
+        "why": "A November 2025 preliminary injunction found plaintiffs likely to succeed on a Fifth Amendment access-to-counsel claim over lawyer access at the B-18 holding area."
       }
     ],
     "voa-usagm-dismantlement-trump2": [
@@ -2662,8 +2718,8 @@
     }
   },
   "progress": {
-    "screened": 940,
-    "total": 940
+    "screened": 941,
+    "total": 941
   },
   "version": 1
 }

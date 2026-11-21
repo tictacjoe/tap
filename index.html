@@ -3865,6 +3865,11 @@ function classifyOffenseCategory(raw) {
     // is deliberately not a rule: concern entries use it as framing.
     [/elections clause/, "Elections Clause Violation"],
     [/federal election campaign act|52\s*u\.?\s*s\.?\s*c\.?\s*§?\s*30125/, "Federal Election Campaign Act Violation"],
+    // Added 2026-11-21 (side-batch-GW, Possible Illegality IL11 side queue): a
+    // court-held Fifth Amendment due-process violation. Narrow on purpose: the
+    // bare words "due process" stay a concern (classifyConcernType below), and
+    // only an offense_category that says "Due Process Clause violation" moves.
+    [/due process clause violation/, "Due Process Clause Violation"],
   ];
 
   for (const [pattern, label] of rules) {
