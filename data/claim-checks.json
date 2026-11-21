@@ -2789,9 +2789,9 @@
    },
    "4": {
     "state": "partly",
-    "why": "The docket text confirms the case number, the July 24, 2025 filing by Gordon, Hartman and Tirrell, the defendants, and a last filing on Nov. 3, 2026, but the provided excerpt of entries ends in August 2025 and does not show the Nov. 25, 2025 motion to dismiss or the absence of a ruling.",
+    "why": "The docket confirms the filing date, APA cause, the Nov. 25, 2025 motion to dismiss for lack of jurisdiction by Bondi, DOJ, EOP and the United States, and the Aug. 18, 2026 minute order directing defendants to address 5 U.S.C. 7513 and 7543 after plaintiffs' supplemental-authority notices; however, the provided docket text is truncated in several places, so the claim that no ruling on the motion issued through Nov. 12, 2026 cannot be fully confirmed.",
     "host": "courtlistener.com",
-    "date": "2026-11-07",
+    "date": "2026-11-21",
     "kind": "fact",
     "archive": false
    },
@@ -3156,12 +3156,12 @@
     "archive": false
    },
    "1": {
-    "state": "partly",
-    "why": "The source confirms the court-appointed Desiree Grace was terminated hours after her appointment and that Trump withdrew Habba's own nomination, but it attributes Grace's termination to Attorney General Pam Bondi, not to Trump personally as the claim states; it also says nothing about Judge Brann's later ruling on unlawful service from July 1, 2025.",
+    "state": "supports",
+    "why": "Axios states the stalled confirmation, the court's appointment of Desiree Leigh Grace, Bondi's termination of Grace hours later, and Trump's withdrawal of Habba's nomination so she could become first assistant and acting leader, exactly as claimed.",
     "host": "axios.com",
-    "date": "2026-09-15",
+    "date": "2026-11-21",
     "kind": "fact",
-    "archive": false
+    "archive": true
    },
    "2": {
     "state": "supports",
@@ -3188,14 +3188,22 @@
     "archive": false
    },
    "5": {
-    "state": "partly",
-    "why": "NBC News confirms the appeals court upheld the disqualification ruling and explicitly cites the FVRA violation, but this article does not state that Habba resigned as a result -- it only notes a prior August ruling and does not mention any resignation.",
+    "state": "supports",
+    "why": "The Dec. 1, 2025 NBC article reports the Third Circuit upheld the lower-court ruling disqualifying Habba and found her appointment violates the FVRA; it also says Judge Fisher wrote for the three-judge panel.",
     "host": "nbcnews.com",
-    "date": "2026-09-15",
+    "date": "2026-11-21",
     "kind": "fact",
     "archive": false
    },
    "6": {
+    "state": "supports",
+    "why": "The Dec. 8, 2025 Axios article reports Habba stepped down Monday after being disqualified by an appeals court and said she would continue as Bondi's senior adviser for U.S. attorneys.",
+    "host": "axios.com",
+    "date": "2026-11-21",
+    "kind": "fact",
+    "archive": true
+   },
+   "7": {
     "state": "supports",
     "why": "CBS, dated March 9, 2026, reports Brann ruled Monday, the second time in under a year, that the Lamparello/Fox/Fontecchio replacement team was unconstitutionally appointed.",
     "host": "cbsnews.com",
@@ -3203,7 +3211,7 @@
     "kind": "fact",
     "archive": false
    },
-   "7": {
+   "8": {
     "state": "partly",
     "why": "The AP text supports the hearing events, the Appointments Clause context, the order to testify under oath, and the quote, but gives the hearing date only as 'Monday' and never states March 16, 2026.",
     "host": "apnews.com",
@@ -3211,7 +3219,7 @@
     "kind": "fact",
     "archive": false
    },
-   "8": {
+   "9": {
     "state": "supports",
     "why": "New Jersey Monitor confirms the district judges appointed career prosecutor Robert Frazer as acting U.S. Attorney, ending the leadership standoff.",
     "host": "newjerseymonitor.com",
@@ -3219,7 +3227,7 @@
     "kind": "fact",
     "archive": false
    },
-   "9": {
+   "10": {
     "state": "supports",
     "why": "The article confirms Judge Brann ruled Frazer's appointment lawful on April 16, 2026, rejecting Naviwala's challenge seeking to unwind his Medicare-fraud case.",
     "host": "yahoo.com",
@@ -3227,7 +3235,7 @@
     "kind": "fact",
     "archive": false
    },
-   "10": {
+   "11": {
     "state": "supports",
     "why": "The News From The States republication of the New Jersey Monitor story, dated Aug 27, 2026, says a 3rd Circuit panel on Wednesday largely agreed with rejecting McIver's immunity arguments, clearing a trial on two of three counts and sending the third back for review.",
     "host": "newsfromthestates.com",
@@ -3235,7 +3243,7 @@
     "kind": "fact",
     "archive": true
    },
-   "11": {
+   "12": {
     "state": "supports",
     "why": "JURIST names Judges Chung and Bibas as the majority, describes the vacate-and-remand of Count Three and the jurisdictional dismissal of the selective and vindictive prosecution claims, and notes Judge Ambro's partial dissent.",
     "host": "jurist.org",
@@ -3243,11 +3251,19 @@
     "kind": "fact",
     "archive": false
    },
-   "12": {
+   "13": {
     "state": "supports",
     "why": "TheGrio's Oct. 9, 2026 article states McIver and her attorneys filed a brief Friday requesting en banc review by the full Third Circuit after a three-judge panel declined in August to dismiss the charges.",
     "host": "thegrio.com",
     "date": "2026-11-16",
+    "kind": "fact",
+    "archive": false
+   },
+   "14": {
+    "state": "partly",
+    "why": "The article supports the full Third Circuit's denial of panel and en banc rehearing, the 3-of-13 vote and the retained August Speech and Debate ruling, but the provided text never states the November 19, 2026 date of the order.",
+    "host": "newjerseymonitor.com",
+    "date": "2026-11-21",
     "kind": "fact",
     "archive": false
    }
@@ -3271,13 +3287,29 @@
    },
    "2": {
     "state": "supports",
+    "why": "The motion, Document 53 filed 11/07/25 in No. 2:25-cr-122, contains both quoted passages and asks the court to dismiss the indictment with prejudice.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-11-21",
+    "kind": "fact",
+    "archive": false
+   },
+   "3": {
+    "state": "supports",
+    "why": "The docket shows entry 134, the government's opposition to the vindictive/selective prosecution motion, entered 11/20/2025, and entry 140, Judge Currie's 11/24/25 order dismissing the indictment on the Halligan appointment issue; no entry shown rules on the ECF 53 motion.",
+    "host": "courtlistener.com",
+    "date": "2026-11-21",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "supports",
     "why": "The TNND article reports Currie found Halligan's appointment illegal, quotes the 'set aside' language from opinions issued Monday in both cases, and says both were dismissed without prejudice.",
     "host": "wjla.com",
     "date": "2026-11-09",
     "kind": "fact",
     "archive": false
    },
-   "3": {
+   "5": {
     "state": "supports",
     "why": "The Hill's December 19, 2025 article reports DOJ appealed both dismissals following Currie's defective-appointment ruling, and that two Virginia grand juries refused to reindict James.",
     "host": "thehill.com",
@@ -3285,7 +3317,7 @@
     "kind": "fact",
     "archive": false
    },
-   "4": {
+   "6": {
     "state": "supports",
     "why": "The Opinion & Order (25 Misc. 19, filed 01/08/26) states Sarcone personally directed the August 5, 2025 subpoenas, that he was not lawfully serving as Acting U.S. Attorney, that the retaliation argument need not be addressed, and that the subpoenas are quashed and he is disqualified, using the quoted sentence verbatim.",
     "host": "storage.courtlistener.com",
@@ -3293,7 +3325,7 @@
     "kind": "fact",
     "archive": false
    },
-   "5": {
+   "7": {
     "state": "supports",
     "why": "The Fourth Circuit order filed January 12, 2026 grants the consolidation motion for 25-4673 (L) and 25-4674, extends the briefing schedule, and grants appellees' motions to file separate briefs.",
     "host": "storage.courtlistener.com",
@@ -3301,7 +3333,7 @@
     "kind": "fact",
     "archive": false
    },
-   "6": {
+   "8": {
     "state": "partly",
     "why": "The release confirms the March 16 letter from Raskin, Lieu, Nadler and Goldman to Bondi, the retaliatory/President's-behest framing, the judge's ruling that Halligan's appointment was unlawful, and two grand juries' refusals; nothing in the text says the letter was dated March 15.",
     "host": "democrats-judiciary.house.gov",
@@ -3309,7 +3341,7 @@
     "kind": "fact",
     "archive": false
    },
-   "7": {
+   "9": {
     "state": "supports",
     "why": "The press release confirms two separate federal grand juries declined to indict James and quotes the Members characterizing this as evidence of shoddy evidence and possible prosecutorial misconduct.",
     "host": "democrats-judiciary.house.gov",
@@ -3317,7 +3349,7 @@
     "kind": "fact",
     "archive": false
    },
-   "8": {
+   "10": {
     "state": "supports",
     "why": "The March 16, 2026 release contains both the demand for Bondi to produce records and communications pertaining to the unlawful prosecution of AG James and the Members' quoted statement about another reported investigation.",
     "host": "democrats-judiciary.house.gov",
@@ -3325,7 +3357,7 @@
     "kind": "fact",
     "archive": false
    },
-   "9": {
+   "11": {
     "state": "supports",
     "why": "The CBS/wayback article confirms Pulte's new criminal referrals to Florida and Illinois prosecutors over insurance-application fraud, and quotes James's attorney Abbe Lowell calling it a political vendetta.",
     "host": "cbsnews.com",
@@ -3333,7 +3365,7 @@
     "kind": "fact",
     "archive": true
    },
-   "10": {
+   "12": {
     "state": "supports",
     "why": "NPR confirms a federal judge tossed the case against James after finding the acting U.S. attorney who secured the indictment was unlawfully appointed.",
     "host": "npr.org",
@@ -3341,7 +3373,7 @@
     "kind": "fact",
     "archive": false
    },
-   "11": {
+   "13": {
     "state": "supports",
     "why": "Stacey Young is quoted directly making this exact statement about DOJ's degraded independence and integrity relative to the department's 155-year history.",
     "host": "npr.org",
@@ -3349,7 +3381,7 @@
     "kind": "interpretation",
     "archive": false
    },
-   "12": {
+   "14": {
     "state": "supports",
     "why": "The article names Jerome Powell, Adam Schiff, James Clapper, and John Brennan as other perceived opponents who found themselves under DOJ investigation during Bondi's tenure.",
     "host": "npr.org",
@@ -3357,7 +3389,7 @@
     "kind": "fact",
     "archive": false
    },
-   "13": {
+   "15": {
     "state": "supports",
     "why": "The report, dated July 18, 2026, states the Fourth Circuit will hear arguments September 15 in Richmond on reviving the Comey and James cases, and the excerpt says the hearing will focus on Halligan's authority rather than the merits.",
     "host": "patriotnewsalerts.com",
@@ -3365,7 +3397,7 @@
     "kind": "fact",
     "archive": false
    },
-   "14": {
+   "16": {
     "state": "supports",
     "why": "Beneath the paywalled navigation, the Law360 article text confirms the Fourth Circuit scheduled in-person oral arguments on the consolidated Comey/James appeal for September 15-18, 2026.",
     "host": "law360.com",
@@ -3373,7 +3405,7 @@
     "kind": "fact",
     "archive": false
    },
-   "15": {
+   "17": {
     "state": "supports",
     "why": "The Second Circuit opinion (No. 26-156, decided August 21, 2026) states both holdings, treats the disqualification issue as forfeited, affirms, and notes Judge Park dissents.",
     "host": "ww3.ca2.uscourts.gov",
@@ -3381,7 +3413,7 @@
     "kind": "fact",
     "archive": false
    },
-   "16": {
+   "18": {
     "state": "supports",
     "why": "The Washington Examiner reports the DOJ Rapid Response X account's quoted statement after the 2nd Circuit's 2-1 ruling upholding the quashing; the article dates it only as 'Friday', which is consistent with the claim's August 21, 2026 date.",
     "host": "washingtonexaminer.com",
@@ -3389,7 +3421,7 @@
     "kind": "fact",
     "archive": false
    },
-   "17": {
+   "19": {
     "state": "supports",
     "why": "The Washington Post/Spokesman-Review piece describes a skeptical panel appearing poised to uphold the dismissals, with a ruling expected in coming months; the excerpt names Diaz and Floyd questioning the unending-temporary-appointment theory, and the article says Richardson was more receptive.",
     "host": "spokesman.com",
@@ -3397,7 +3429,7 @@
     "kind": "fact",
     "archive": false
    },
-   "18": {
+   "20": {
     "state": "supports",
     "why": "The NYT excerpt (Oct. 28, 2026) states a judge blocked Sarcone in January, that his office 'has continued in its quest,' that Louisiana prosecutors prompted by Albany filed identity-theft and bank-fraud charges against James's hairdresser per anonymous sources, and that the hairdresser pleaded not guilty and has not cooperated.",
     "host": "nytimes.com",
@@ -3589,13 +3621,21 @@
    },
    "2": {
     "state": "supports",
+    "why": "The complaint, dated July 24, 2025, states Bondi informed plaintiffs by one-page memoranda citing Article II with no cause, alleges Tirrell's SES removal grounds are limited by 5 U.S.C. 7543(a) with the 7543(b) notice/answer rights and that he was removed without such process, and pleads APA (not in accordance with law; ultra vires), Declaratory Judgment Act, mandamus and Fifth Amendment due process claims.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-11-21",
+    "kind": "fact",
+    "archive": false
+   },
+   "3": {
+    "state": "supports",
     "why": "The ABA Journal report (July 25, 2025) states the suit was filed Thursday by Gordon, Hartman and Tirrell in D.D.C. seeking reinstatement and back pay, and the excerpt carries the MSPB point exactly as claimed.",
     "host": "abajournal.com",
     "date": "2026-11-09",
     "kind": "fact",
     "archive": false
    },
-   "3": {
+   "4": {
     "state": "supports",
     "why": "The MSPB FAQ, updated November 14, 2025, states Woodruff was sworn in as a Board member on October 28, 2025 and that the quorum is currently intact, matching the claim.",
     "host": "mspb.gov",
@@ -3603,7 +3643,7 @@
     "kind": "fact",
     "archive": false
    },
-   "4": {
+   "5": {
     "state": "supports",
     "why": "The November 17, 2025 Daily Beast piece, citing Tirrell's account to the NYT, describes pushback over McGregor cigars and a FIFA soccer ball, Tirrell telling the AG's office to pay, return or discard the items, and a DOJ spokesperson confirming the ball was accepted and the cigars destroyed after ethics consultation.",
     "host": "thedailybeast.com",
@@ -3611,7 +3651,7 @@
     "kind": "fact",
     "archive": false
    },
-   "5": {
+   "6": {
     "state": "supports",
     "why": "The December 24, 2025 USA Herald article describes the November motion to dismiss and the plaintiffs' opposition arguing the MSPB is neither appropriate nor independent enough, citing the firing of members, removal of an AJ and direction of the board, as claimed.",
     "host": "usaherald.com",
@@ -3619,7 +3659,7 @@
     "kind": "fact",
     "archive": false
    },
-   "6": {
+   "7": {
     "state": "supports",
     "why": "The Above the Law text describes Tirrell, former DOJ ethics director, writing against DOJ's change to the long-standing policy treating political appointees as Hatch Act 'further restricted' employees, and notes he was dismissed by Bondi in July 2025; the exact March 9 publication date is not stated in the text.",
     "host": "abovethelaw.com",
@@ -3627,7 +3667,7 @@
     "kind": "fact",
     "archive": false
    },
-   "7": {
+   "8": {
     "state": "supports",
     "why": "The September 15, 2026 filing responds to the August 18, 2026 minute order, recounts the November 2025 motion to dismiss, calls Comans and Comey erroneous, and states each plaintiff's MSPB appeal remains pending.",
     "host": "storage.courtlistener.com",
@@ -3635,7 +3675,7 @@
     "kind": "fact",
     "archive": false
    },
-   "8": {
+   "9": {
     "state": "supports",
     "why": "The Sept. 29, 2026 plaintiffs' response to the Aug. 18, 2026 minute order in No. 1:25-cv-02409 argues exactly that the Comans and Comey courts correctly held the MSPB lacks jurisdiction over terminations via a naked assertion of Article II authority rather than for cause under the CSRA.",
     "host": "storage.courtlistener.com",
@@ -3643,7 +3683,7 @@
     "kind": "fact",
     "archive": false
    },
-   "9": {
+   "10": {
     "state": "supports",
     "why": "The October 26, 2026 notice submits an October 26, 2026 S.D.N.Y. decision in Comey v. U.S. Dep't of Justice (25-cv-7625) that 'addresses similar issues relating to the motions currently pending,' matching the claim.",
     "host": "storage.courtlistener.com",
@@ -3651,7 +3691,7 @@
     "kind": "fact",
     "archive": false
    },
-   "10": {
+   "11": {
     "state": "supports",
     "why": "The November 3, 2026 notice submits a November 2, 2026 District of Maryland decision in Marrazzo v. Kennedy (25-04144) that addresses similar issues relating to pending motions, matching the claim.",
     "host": "storage.courtlistener.com",
@@ -3659,7 +3699,7 @@
     "kind": "fact",
     "archive": false
    },
-   "11": {
+   "12": {
     "state": "supports",
     "why": "The opinion header shows No. 25-5314 decided November 10, 2026, and the court states 'We affirm the injunction' barring removal without the Broadcasting Board's approval, and concludes that Congress had no reason to channel the claim through the CSRA 'and every reason not to.'",
     "host": "media.cadc.uscourts.gov",
@@ -3667,7 +3707,7 @@
     "kind": "fact",
     "archive": false
    },
-   "12": {
+   "13": {
     "state": "supports",
     "why": "The notice, filed 11/12/26, describes the Abramowitz v. Lake decision, states defendants there argued the CSRA implicitly vested exclusive jurisdiction in the MSPB, and quotes the court's 'no reason to channel ... and every reason not to' conclusion.",
     "host": "storage.courtlistener.com",
@@ -8316,6 +8356,14 @@
     "archive": false
    },
    "8": {
+    "state": "supports",
+    "why": "The Clearinghouse summary describes the amended opinion's conclusion in the quoted words and the permanent injunction, and elsewhere confirms the subpoena number, July 9, 2025 service, 18 U.S.C. 3486 basis, FDCA investigation and Judge McElroy.",
+    "host": "clearinghouse.net",
+    "date": "2026-11-21",
+    "kind": "fact",
+    "archive": false
+   },
+   "9": {
     "state": "partly",
     "why": "The Globe supports the Friday referral over representations, review by the district's active judges, and DOJ's 'without merit' response. It does not name Lisa Hsiao, does not contain the 'clearly misleading, if not utterly false' quote, does not mention anonymization agreements with other hospitals, and gives the order date only as 'Friday'.",
     "host": "bostonglobe.com",
@@ -8323,7 +8371,7 @@
     "kind": "fact",
     "archive": false
    },
-   "9": {
+   "10": {
     "state": "partly",
     "why": "The Clearinghouse summary records DOJ's May 14, 2026 appeal (No. 26-1568), but the provided text is truncated and contains neither the June 5, 2026 Local Rule 210(b) text order nor the May 22, 2026 motion to expedite.",
     "host": "clearinghouse.net",
@@ -8331,7 +8379,7 @@
     "kind": "fact",
     "archive": false
    },
-   "10": {
+   "11": {
     "state": "supports",
     "why": "Reuters (via KFGO), dated Aug 14, 2026, reports a divided 9th Circuit panel (Bea and Bress, with Paez dissenting) held that the Seattle judge wrongly found bad faith in QueerDoc's case. It says this was the first appeals court to uphold such a subpoena, quotes the 'President may direct DOJ' line, and reports a remand on overbreadth and burden.",
     "host": "kfgo.com",
@@ -8339,7 +8387,7 @@
     "kind": "fact",
     "archive": false
    },
-   "11": {
+   "12": {
     "state": "supports",
     "why": "Uprise RI, dated October 11, 2026, reports the First Circuit heard the No. 26-1568 appeal on Wednesday, October 7, with the Child Advocate's lawyers urging affirmance, and that as of Friday no ruling or decision date existed.",
     "host": "upriseri.com",
@@ -8347,7 +8395,7 @@
     "kind": "fact",
     "archive": false
    },
-   "12": {
+   "13": {
     "state": "supports",
     "why": "The Fifth Circuit docket (appealed from N.D. Texas) shows an Oct. 19, 2026 order denying summary affirmance and granting expedition, and oral argument heard Nov. 4, 2026 before Judges Duncan, Engelhardt and Ramirez, with no later decision entry shown (last known filing Nov. 4).",
     "host": "courtlistener.com",
@@ -18126,6 +18174,22 @@
     "why": "The notes state over 200 agents were pulled to review seized 2020 Fulton ballots, nothing new came of it per her understanding, and two people were walked out of the Atlanta office; the FBI declined to comment on personnel.",
     "host": "theatlantic.com",
     "date": "2026-10-13",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
+    "state": "supports",
+    "why": "Newsweek reports the Oct. 28 D.D.C. declaration by Eric Neff in the NAACP FOIA litigation, the quoted Neff and DOJ-spokesperson statements, and that Patel had declined to rule out federal agents' presence.",
+    "host": "newsweek.com",
+    "date": "2026-11-21",
+    "kind": "fact",
+    "archive": false
+   },
+   "7": {
+    "state": "supports",
+    "why": "ProPublica's Election Day article contains both quoted passages verbatim; its byline reads November 2, 2026 but it reports on Tuesday's voting, matching the claim's Election Day framing.",
+    "host": "propublica.org",
+    "date": "2026-11-21",
     "kind": "fact",
     "archive": false
    }
