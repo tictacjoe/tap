@@ -160,6 +160,15 @@
     color: var(--ink-soft);
     margin-bottom: -0.4rem; /* label sits closer to the chips than the group gap */
   }
+  /* "Uncurated reporting" chip (Joe, 2026-11-21): its own centered line at the
+     top of the chips, under the label and above both groups. Same
+     label-to-chip spacing as the label above the tracker chips. */
+  .browse-reporting-row {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: -0.4rem;
+  }
   /* Each group wraps as a unit, so the second group never splits from itself
      onto two lines unless it can't fit on one. */
   .browse-group {
@@ -6767,7 +6776,9 @@ function renderTabs() {
     if (key === "tracker") { select.appendChild(harmsOpt); select.appendChild(illOpt); }
     const opt = document.createElement("option");
     opt.value = key;
-    opt.textContent = TRACKERS[key].label + " (" + TRACKERS[key].data.length + ")";
+    // Reporting reads "Uncurated reporting" here to match its browse chip
+    // (Joe, 2026-11-21); its label stays "Reporting" everywhere else.
+    opt.textContent = (key === "tracker" ? "Uncurated reporting" : TRACKERS[key].label) + " (" + TRACKERS[key].data.length + ")";
     opt.selected = key === activeTracker;
     select.appendChild(opt);
   });
@@ -8152,8 +8163,8 @@ document.getElementById("back-to-top-btn").addEventListener("click", () => {
   update();
 })();
 
-// Browse chips (2026-11-19): one chip per visible tracker except Reporting
-// (reachable from the Records feed tab instead), replacing the
+// Browse chips (2026-11-19): one chip per visible tracker (Reporting's is
+// the "Uncurated reporting" chip on its own top line, 2026-11-21), replacing the
 // "— browse by tracker —" button and dialog. A click does what picking the
 // tracker in that dialog did. Hover titles carry the entry count.
 // Set by loadAllData() once every data file has settled. Until then each
@@ -8172,6 +8183,25 @@ function renderBrowseChips() {
   label.className = "browse-label";
   label.textContent = "Trackers";
   row.appendChild(label);
+  // "Uncurated reporting" (Joe, 2026-11-21): Reporting's one chip, on its own
+  // centered line at the top. Opens the Reporting tracker, the same as the
+  // database dropdown's matching "Uncurated reporting (N)" option. Soft grey,
+  // since Reporting has no tracker color and isn't curated.
+  if (TRACKERS.tracker && !TRACKERS.tracker.hidden) {
+    const reportingRow = document.createElement("div");
+    reportingRow.className = "browse-reporting-row";
+    const rep = document.createElement("button");
+    rep.type = "button";
+    rep.className = "browse-chip";
+    rep.dataset.tracker = "tracker";
+    rep.style.setProperty("--chip", "var(--ink-soft)");
+    rep.textContent = "Uncurated reporting";
+    rep.title = "Reporting: third-party daily news, not curated by TAP" +
+      (allDataLoaded ? " (" + TRACKERS.tracker.data.length + " entries)" : "");
+    rep.addEventListener("click", () => selectDatabaseTab("tracker"));
+    reportingRow.appendChild(rep);
+    row.appendChild(reportingRow);
+  }
   const mainGroup = document.createElement("div");
   mainGroup.className = "browse-group";
   const extraGroup = document.createElement("div");

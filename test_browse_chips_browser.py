@@ -1,8 +1,9 @@
 """Browser tests for the browse chips (2026-11-19): a row of tracker chips
 under the search box replaced the "— browse by tracker —" button and its
-dialog. Six tracker chips -- the five curated trackers plus Claim-checks, no
-Reporting (OEA retired 2026-11-19) -- each opening its tracker in one click,
-then two view chips (data-view, not data-tracker): Harms and Possible
+dialog. An "Uncurated reporting" chip (2026-11-21) on its own centered line
+at the top, then six tracker chips -- the five curated trackers plus
+Claim-checks (OEA retired 2026-11-19) -- each opening its tracker in one
+click, then two view chips (data-view, not data-tracker): Harms and Possible
 Illegality. Tracker chips' hover titles carry the tracker's full name and
 entry count once data has loaded.
 
@@ -71,16 +72,20 @@ def test_six_chips_in_order(site_url, browser):
         "visibleTrackerKeys(TRACKERS).filter(k => k !== 'tracker')"
         ".map(k => HEADLINE_TRACKER_MEDIUM[k].toUpperCase())"
     )
-    chips = [t.strip() for t in page.locator("#browse-chips .browse-chip[data-tracker]").all_inner_texts()]
+    chips = [t.strip() for t in page.locator("#browse-chips .browse-group .browse-chip[data-tracker]").all_inner_texts()]
     assert len(chips) == 6  # OEA retired 2026-11-19
     assert chips == expected
     assert chips[-1] == "CLAIM-CHECKS"
     assert "REPORTING" not in chips
+    # 2026-11-21 (Joe): Reporting gets one chip of its own, first, above the groups.
+    first = page.locator("#browse-chips .browse-chip").first
+    assert first.get_attribute("data-tracker") == "tracker"
+    assert first.inner_text().strip().upper() == "UNCURATED REPORTING"
     # The two cross-tracker view chips sit last, after every tracker chip.
     every = page.locator("#browse-chips .browse-chip").evaluate_all(
         "els => els.map(e => e.dataset.view || e.dataset.tracker)")
     assert every[-2:] == ["harms", "illegality"]
-    assert len(every) == 8
+    assert len(every) == 9
     assert page.locator("#browse-instead").count() == 0
     assert page.locator("#browse-backdrop").count() == 0
     page.close()
@@ -170,4 +175,33 @@ def test_trackers_label_and_groups(site_url, browser):
     border = page.locator("#browse-chips .browse-group-extra").evaluate(
         "e => [getComputedStyle(e).borderTopStyle, parseFloat(getComputedStyle(e).borderTopWidth)]")
     assert border[0] == "solid" and border[1] >= 1
+    page.close()
+
+
+def test_uncurated_reporting_chip(site_url, browser):
+    # 2026-11-21 (Joe): an "Uncurated reporting" chip at the top center of the
+    # chips, on its own line under the TRACKERS label. It opens the Reporting
+    # tracker, and the database dropdown's matching option reads the same.
+    page = _open(browser, site_url)
+    chip = page.locator('#browse-chips .browse-reporting-row .browse-chip[data-tracker="tracker"]')
+    assert chip.count() == 1
+    assert chip.inner_text().strip().upper() == "UNCURATED REPORTING"
+    assert re.search(r"\((\d+) entries\)$", chip.get_attribute("title"))
+    geo = page.evaluate("""() => {
+      const row = document.getElementById('browse-chips').getBoundingClientRect();
+      const label = document.querySelector('#browse-chips .browse-label').getBoundingClientRect();
+      const chip = document.querySelector('.browse-reporting-row .browse-chip').getBoundingClientRect();
+      const groupTop = Math.min(...[...document.querySelectorAll('#browse-chips .browse-group .browse-chip')]
+        .map(e => e.getBoundingClientRect().top));
+      return {rowMid: row.left + row.width / 2, chipMid: chip.left + chip.width / 2,
+              labelBottom: label.bottom, chipTop: chip.top, chipBottom: chip.bottom, groupTop};
+    }""")
+    assert abs(geo["rowMid"] - geo["chipMid"]) <= 2, geo
+    assert geo["chipTop"] >= geo["labelBottom"] - 1, geo
+    assert geo["chipBottom"] <= geo["groupTop"], geo
+    chip.click()
+    assert page.evaluate("activeTracker") == "tracker"
+    assert page.evaluate("document.getElementById('tabs').value") == "tracker"
+    text = page.evaluate("document.querySelector('#tabs option[value=\"tracker\"]').textContent")
+    assert re.fullmatch(r"Uncurated reporting \(\d+\)", text), text
     page.close()
