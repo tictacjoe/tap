@@ -323,8 +323,8 @@ test("prosecution with narrative_combined merges What happened and Status into o
   assert(!result.includes('<div class="field-label">Status</div>'), "no separate Status card");
   assert.equal((result.match(/field-label">What happened</g) || []).length, 1, "exactly one What happened card");
   const whatHappenedStart = result.indexOf('<div class="field-label">What happened</div><div class="field-value">');
-  const violationStart = result.indexOf('<div class="field-label">Violation Type (in full)</div>');
-  const whatHappenedHtml = result.slice(whatHappenedStart, violationStart);
+  const whatHappenedEnd = result.indexOf('<div class="field-label">Broader Pattern</div>');
+  const whatHappenedHtml = result.slice(whatHappenedStart, whatHappenedEnd);
   assert(whatHappenedHtml.includes("<p>First part.</p>"), "incident_summary renders inside the merged card");
   assert(whatHappenedHtml.includes("<p>Second part.</p>"), "status renders inside the SAME merged card, right after incident_summary");
 });
@@ -356,7 +356,9 @@ test("prosecution puts Broader Pattern right after What happened (and Sources), 
   }
 });
 
-test("prosecution narrative_combined with section_summaries.status gets a skim-line-only Status card, full text stays merged too (2026-09-22)", () => {
+test("prosecution narrative_combined with section_summaries.status renders no Status card; the status stays in What happened (2026-11-21)", () => {
+  // Joe, 2026-11-21: the one-line Status card repeated text already in
+  // What happened on merged entries, so it was dropped.
   const entry = {
     offense_category: "Fraud", status_category: "Investigation", incident_summary: "First part.",
     status: "Second part, the full status prose.", narrative_combined: true,
@@ -364,21 +366,22 @@ test("prosecution narrative_combined with section_summaries.status gets a skim-l
     cause: "The pattern.",
   };
   const result = buildDetailHtml(entry, { kind: "prosecution" });
-  // A real Status card exists again, skim-line only.
-  assert(result.includes('<div class="field-label">Status</div><div class="field-value"><p class="field-summary">Short current-status skim line.</p></div>'), "Status card should hold only the skim line");
-  // The full status text is NOT duplicated into the small Status card...
-  const statusCardStart = result.indexOf('<div class="field-label">Status</div>');
-  const broaderPatternStart = result.indexOf('<div class="field-label">Broader Pattern</div>');
-  const statusCardHtml = result.slice(statusCardStart, result.indexOf('<div class="field-label">Violation Type (in full)</div>'));
-  assert(!statusCardHtml.includes("the full status prose"), "full status text should not appear inside the small Status card");
-  // ...it stays merged inside What happened, same as before this change.
+  assert(!result.includes('<div class="field-label">Status</div>'), "no Status card on a merged entry");
+  assert(!result.includes("Short current-status skim line."), "the skim line is not shown anywhere");
   const whatHappenedStart = result.indexOf('<div class="field-label">What happened</div>');
-  const whatHappenedHtml = result.slice(whatHappenedStart, broaderPatternStart);
-  assert(whatHappenedHtml.includes("<p>Second part, the full status prose.</p>"), "full status text should still be merged into What happened");
-  // Same order as the non-merged branch: What happened, Broader Pattern (with
-  // Anticipated Defense / TAP's Rebuttal inside it since 2026-11-16), Status, Violation Type.
+  const whatHappenedHtml = result.slice(whatHappenedStart, result.indexOf('<div class="field-label">Broader Pattern</div>'));
+  assert(whatHappenedHtml.includes("<p>Second part, the full status prose.</p>"), "full status text stays merged into What happened");
   const cards = [...result.matchAll(/<div class="field-label">([^<]+)<\/div>/g)].map(m => m[1]);
-  assert.deepEqual(cards.slice(0, 6), ["What happened", "Broader Pattern", "Anticipated Defense", "TAP's Rebuttal", "Status", "Violation Type (in full)"]);
+  assert.deepEqual(cards.slice(0, 4), ["What happened", "Broader Pattern", "Anticipated Defense", "TAP's Rebuttal"]);
+});
+
+test("prosecution never renders a Violation Type (in full) card (2026-11-21)", () => {
+  // Joe, 2026-11-21: it only ever repeated the header's Violation/Concern Type line.
+  for (const narrative_combined of [false, true]) {
+    const result = buildDetailHtml({ offense_category: "Fraud", offense_category_raw: "18 USC 1001", incident_summary: "x", status: "y",
+      narrative_combined }, { kind: "prosecution" });
+    assert(!result.includes("Violation Type (in full)"), `no full-violation card (narrative_combined=${narrative_combined})`);
+  }
 });
 
 test("prosecution narrative_combined without section_summaries.status renders no Status card at all (unchanged from before)", () => {
@@ -982,7 +985,7 @@ const layoutEntries = {
     // collapsible Sources/Confidence note treatment added 2026-09-23,
     // matching prosecution/CLA's own pattern.
     // Sources moved to second, right after What happened (2026-11-15).
-    order: [">What happened</div>", ">Sources</summary>", ">Status</div>", ">Estimated impact</div>", ">Primary proponent</div>", "<!--figures:1-->", ">Confidence note</summary>", ">Caveat on the impact</div>", "entry-aside-quote"],
+    order: [">What happened</div>", ">Sources</summary>", ">Status</div>", ">Estimated impact</div>", ">Primary proponent</div>", ">Key figures</div>", "<!--figures:1-->", ">Confidence note</summary>", ">Caveat on the impact</div>", "entry-aside-quote"],
   },
   govservices: {
     cfg: { kind: "govservices" },
@@ -997,7 +1000,7 @@ const layoutEntries = {
       sources: [{ name: "Src One", url: "https://example.com/1" }],
     },
     // Sources moved to second, right after What happened (2026-11-15).
-    order: [">What happened</div>", ">Sources</summary>", ">Status</div>", ">Estimated impact</div>", ">Institution</div>", ">Primary proponent</div>", "<!--figures:1-->", ">Confidence note</summary>", ">Caveat on the impact</div>", "entry-aside-quote"],
+    order: [">What happened</div>", ">Sources</summary>", ">Status</div>", ">Estimated impact</div>", ">Institution</div>", ">Primary proponent</div>", ">Key figures</div>", "<!--figures:1-->", ">Confidence note</summary>", ">Caveat on the impact</div>", "entry-aside-quote"],
   },
   prosecution: {
     cfg: { kind: "prosecution" },
@@ -1014,7 +1017,7 @@ const layoutEntries = {
       comeback: "Rebuttal.",
     },
     // Confidence note is a collapsible <summary> for prosecution/CLA (2026-09-22), not a plain <div>.
-    order: [">What happened</div>", ">Broader Pattern</div>", ">Anticipated Defense</div>", ">TAP's Rebuttal</div>", ">Status</div>", ">Violation Type (in full)</div>", ">Violation/Concern Type</div>", ">Status Stage</div>", ">Confidence note</summary>", "entry-aside-quote"],
+    order: [">What happened</div>", ">Broader Pattern</div>", ">Anticipated Defense</div>", ">TAP's Rebuttal</div>", ">Status</div>", ">Violation/Concern Type</div>", ">Status Stage</div>", ">Confidence note</summary>", "entry-aside-quote"],
   },
 };
 
@@ -1969,4 +1972,16 @@ test("prosecution (not merged) Status card without a skim shows the full status"
   const entry = { offense_category: "Fraud", incident_summary: "First part.", status: "Full status prose.", cause: "The pattern." };
   const result = buildDetailHtml(entry, { kind: "prosecution" });
   assert(result.includes('<div class="field-label">Status</div><div class="field-value"><p>Full status prose.</p></div>'));
+});
+
+test("the figures card opens with a Key figures label (2026-11-21)", () => {
+  // Joe, 2026-11-21: the figures box was the one box with no label.
+  const figures = [{ metric: "m", value: "v", source: "s" }];
+  const cdr = buildDetailHtml({ what_changed: "x", status: "y", estimated_health_impact: { figures } }, { kind: "deregulation" });
+  const gsr = buildDetailHtml({ what_changed: "x", status: "y", estimated_impact: { figures } }, { kind: "govservices" });
+  for (const result of [cdr, gsr]) {
+    assert(result.includes('<div class="field-group entry-aside-card"><div class="field-label">Key figures</div><!--figures:1--></div>'));
+  }
+  const none = buildDetailHtml({ what_changed: "x", status: "y" }, { kind: "govservices" });
+  assert(!none.includes("Key figures"), "no figures, no card");
 });

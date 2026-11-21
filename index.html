@@ -5093,7 +5093,11 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
     const asideHtml =
       (repeatsPrincipal(entry.primary_proponent?.name, glanceWho) ? '' :
         '<div class="field-group entry-aside-card"><div class="field-label">Primary proponent</div><div class="field-value"><strong>' + hl(entry.primary_proponent?.name) + '</strong> — ' + hl(entry.primary_proponent?.role) + (entry.primary_proponent?.note ? '<br><em>' + hl(entry.primary_proponent.note) + '</em>' : '') + '</div></div>') +
-      (entry.estimated_health_impact?.figures?.length ? '<div class="field-group entry-aside-card">' + buildFiguresHtml(entry.estimated_health_impact.figures, hl) + '</div>' : '');
+      // "Key figures" label (Joe, 2026-11-21): the figures card was the one
+      // detail box with no heading after the columnar layout (866dbed) moved
+      // the figures out from under "Estimated impact". Same label in the
+      // govservices branch below.
+      (entry.estimated_health_impact?.figures?.length ? '<div class="field-group entry-aside-card"><div class="field-label">Key figures</div>' + buildFiguresHtml(entry.estimated_health_impact.figures, hl) + '</div>' : '');
     // entry-aside-card + collapsible (2026-09-23, Joe's call: same
     // click-to-open treatment as CLA's Confidence note/Sources cards) --
     // matches buildSourcesCardHtml's own wrapper so both boxes read the
@@ -5146,7 +5150,7 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
         '<div class="field-group entry-aside-card"><div class="field-label">' + escapeHtml(L.institution || "Institution") + '</div><div class="field-value">' + hl(entry.institution) + '</div></div>') +
       (!entry.primary_proponent?.name || repeatsPrincipal(entry.primary_proponent.name, glanceWho) ? '' :
         '<div class="field-group entry-aside-card"><div class="field-label">' + escapeHtml(L.proponent || "Primary proponent") + '</div><div class="field-value"><strong>' + hl(entry.primary_proponent?.name) + '</strong> — ' + hl(entry.primary_proponent?.role) + (entry.primary_proponent?.note ? '<br><em>' + hl(entry.primary_proponent.note) + '</em>' : '') + '</div></div>') +
-      (entry.estimated_impact?.figures?.length ? '<div class="field-group entry-aside-card">' + buildFiguresHtml(entry.estimated_impact.figures, hl) + '</div>' : '');
+      (entry.estimated_impact?.figures?.length ? '<div class="field-group entry-aside-card"><div class="field-label">Key figures</div>' + buildFiguresHtml(entry.estimated_impact.figures, hl) + '</div>' : '');
     const noteHtml = '<div class="field-group entry-aside-card">' + buildConfidenceNoteHtml(entry, hl, summary, true, entry.estimated_impact?.caveat) + '</div>' + buildPullQuoteHtml(entry, hl);
     return buildEntryColsHtml(mainHtml, asideHtml, noteHtml) +
       buildUpdateRequestHtml(entry, cfg);
@@ -5251,7 +5255,12 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
   // since a real Status card exists again to hold third place open for
   // Broader Pattern; the swap only still applies to the remaining
   // skim-line-less migrated entries.
-  const violationTypeCardHtml = '<div class="field-group entry-main-card"><div class="field-label">Violation Type (in full)</div><div class="field-value">' + hl(entry.offense_category_raw || entry.offense_category) + '</div></div>';
+  // 2026-11-21 (Joe): the "Violation Type (in full)" card and, on merged
+  // (narrative_combined) entries, the skim-only Status card are gone. No
+  // entry carries offense_category_raw, so the first only repeated the
+  // header's Violation/Concern Type line word for word; the second repeated
+  // status text already merged into What happened. The history above is
+  // kept for context.
   // Anticipated Defense and TAP's Rebuttal share one field-group (2026-09-22,
   // Joe's call: "put them into a single box so they stay together despite
   // how the layout is configured") -- distributeEntryCards() moves each
@@ -5271,10 +5280,6 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
     '<div class="field-group entry-main-card"><div class="field-label">Broader Pattern</div><div class="field-value">' + buildCauseFieldHtml(entry, term, useRegex) + '</div>' +
     '<div class="field-label">Anticipated Defense</div><div class="field-value">' + hl(entry.rebuttal_anticipated) + '</div>' +
     '<div class="field-label">TAP\'s Rebuttal</div><div class="field-value">' + hl(entry.comeback) + '</div></div>';
-  const hasStatusSkim = !!(entry.narrative_combined && entry.section_summaries?.status);
-  const statusSkimCardHtml = hasStatusSkim
-    ? '<div class="field-group entry-main-card"><div class="field-label">Status</div><div class="field-value">' + summary(entry.section_summaries.status) + '</div></div>'
-    : '';
   // Sources sits second in reading order, right after What happened, open by
   // default (2026-11-15, Joe: "expand sources by default and place it to the right
   // of the what happened timelines"). distributeEntryCards() seeds card 1 into
@@ -5285,11 +5290,9 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
   const sourcesCardHtml = buildProsecutionSourcesCardHtml(entry);
   const mainHtml = entry.narrative_combined
     ? '<div class="field-group entry-main-card"><div class="field-label">What happened</div><div class="field-value">' + summary(entry.section_summaries?.incident_summary) + buildKeyEventsRailHtml(entry, hl) + wrapFullStoryHtml(entry, "incident_summary", buildFieldTimelineHtml(entry, "incident_summary", hl) + buildFieldTimelineHtml(entry, "status", hl)) + '</div></div>' + sourcesCardHtml +
-      broaderPatternCardHtml +
-      (hasStatusSkim ? statusSkimCardHtml : '') + violationTypeCardHtml
+      broaderPatternCardHtml
     : '<div class="field-group entry-main-card"><div class="field-label">What happened</div><div class="field-value">' + summary(entry.section_summaries?.incident_summary) + buildKeyEventsRailHtml(entry, hl) + wrapFullStoryHtml(entry, "incident_summary", buildFieldTimelineHtml(entry, "incident_summary", hl)) + '</div></div>' + sourcesCardHtml + broaderPatternCardHtml +
-      '<div class="field-group entry-main-card"><div class="field-label">Status</div><div class="field-value">' + statusHtml() + '</div></div>' +
-      violationTypeCardHtml;
+      '<div class="field-group entry-main-card"><div class="field-label">Status</div><div class="field-value">' + statusHtml() + '</div></div>';
   // Violation/Concern Type and Status Stage move into the glance card's harm line
   // instead (2026-09-22, Joe's call; see buildGlanceHeadHtml) -- omitted here only
   // when glance is actually showing for this entry, so the information is never
