@@ -671,6 +671,11 @@
         "law": "administrative-procedure-act",
         "who": "OMB Director Russell Vought",
         "why": "A pending suit by seven states alleges $132 million in minority-serving college funds was impounded past fiscal 2025's end and could be again, a possible Administrative Procedure Act violation."
+      },
+      {
+        "law": "agency-action-beyond-authority",
+        "who": "OMB Director Russell Vought",
+        "why": "The same pending suit claims that withholding the minority-serving college funds Congress appropriated is ultra vires, possible action beyond any authority the law gives."
       }
     ],
     "eoir-children-removal-orders-sij-continuances-2025-2026": [
@@ -869,6 +874,18 @@
         "why": "Two federal judges found the termination of the shelter grants arbitrary and capricious, one in a preliminary injunction and one in a final judgment."
       }
     ],
+    "foreign-aid-rescissions-2026": [
+      {
+        "law": "impoundment-control-act",
+        "who": "President Trump and OMB Director Russell Vought",
+        "why": "GAO found the Impoundment Control Act \"does not permit the withholding of funds past their date of expiration\"; the aid in the special message was withheld until it expired Sept. 30, 2025."
+      },
+      {
+        "law": "administrative-procedure-act",
+        "who": "President Trump and OMB Director Russell Vought",
+        "why": "A federal judge ruled the refusal to spend the aid likely violated the Administrative Procedure Act; the Supreme Court stayed that order without ruling on the merits, and the suit continues."
+      }
+    ],
     "foreign-doctor-visa-delays-2026": [
       {
         "law": "administrative-procedure-act",
@@ -944,12 +961,12 @@
       {
         "law": "national-environmental-policy-act",
         "who": "Bureau of Ocean Energy Management (Department of the Interior)",
-        "why": "A pending suit alleges BOEM violated NEPA by holding the first mandated Gulf lease sale without environmental review; the court has not ruled."
+        "why": "Pending suits allege BOEM violated NEPA by holding the first and second mandated Gulf lease sales without environmental review, and a third suit challenges the third sale; no ruling yet."
       },
       {
         "law": "administrative-procedure-act",
         "who": "Interior Secretary Doug Burgum and the Endangered Species Committee",
-        "why": "Pending suits allege the first Gulf sale and the committee's Gulf-wide exemption from the Endangered Species Act were arbitrary and capricious; no ruling on the merits yet."
+        "why": "Pending suits allege the first two Gulf sales and the committee's Gulf-wide ESA exemption were arbitrary and capricious; one exemption suit was dismissed on jurisdiction, with no merits ruling."
       }
     ],
     "halligan-comey-vindictive-prosecution-2025-2026": [
@@ -1520,13 +1537,18 @@
     "neh-grants-staff-cuts-trump2": [
       {
         "law": "first-amendment-retaliation",
-        "who": "National Endowment for the Humanities (NEH)",
-        "why": "A judge ruled NEH's mass termination of 1,400+ grants \"unlawful, unconstitutional\" and a First Amendment violation; the government's appeal is pending, with no stay sought."
+        "who": "DOGE and the National Endowment for the Humanities (NEH)",
+        "why": "A judge ruled the DOGE-directed mass termination of 1,400+ NEH grants \"unlawful, unconstitutional\" and a First Amendment violation; the government's appeal is pending."
+      },
+      {
+        "law": "equal-protection-fifth-amendment",
+        "who": "DOGE and the National Endowment for the Humanities (NEH)",
+        "why": "The same May 2026 ruling held the mass grant termination violated the Fifth Amendment's equal-protection component; the government's appeal is pending."
       },
       {
         "law": "agency-action-beyond-authority",
-        "who": "National Endowment for the Humanities (NEH)",
-        "why": "The same May 2026 ruling found the mass grant termination \"ultra vires\" and undertaken without statutory authority; NEH is reinstating grants while the appeal is pending."
+        "who": "DOGE and the National Endowment for the Humanities (NEH)",
+        "why": "The ruling found the termination \"ultra vires\" because DOGE officials \"exercised decisive authority\" over NEH grants \"without any statutory authority to do so.\""
       }
     ],
     "nhtsa-safe-iii-cafe-standards-rollback-2025": [
@@ -1581,6 +1603,13 @@
         "why": "A judge's preliminary injunction held HHS and Kennedy \"lack the authority to unilaterally cancel\" NIOSH's black lung screening program; the case later ended by stipulation."
       }
     ],
+    "noaa-wide-staffing-collapse-spring-2025": [
+      {
+        "law": "agency-action-beyond-authority",
+        "who": "Office of Personnel Management (OPM)",
+        "why": "A judge ruled the Office of Personnel Management unlawfully directed agencies to fire probationary staff, about 650 at NOAA among them, under false pretense, but ordered no reinstatement."
+      }
+    ],
     "noem-dhs-text-message-preservation-violation-2025": [
       {
         "law": "federal-records-act",
@@ -1629,6 +1658,13 @@
         "law": "administrative-procedure-act",
         "who": "U.S. Department of the Interior and National Park Service",
         "why": "A judge's June 2026 injunction found Interior's exhibit-removal order likely violates the Administrative Procedure Act; an appeals court stayed it on irreparable-harm grounds."
+      }
+    ],
+    "nsf-antarctic-program-staff-firings-2025": [
+      {
+        "law": "agency-action-beyond-authority",
+        "who": "Office of Personnel Management (OPM)",
+        "why": "A judge ruled the Office of Personnel Management lacked authority to direct agencies, NSF among them, to fire probationary staff, but ordered no reinstatement."
       }
     ],
     "nsf-doge-grant-terminations-2025": [
@@ -1750,6 +1786,18 @@
         "why": "The FBI reportedly looked into a Times reporter after her story on Patel's girlfriend's security; some DOJ officials saw it as retaliation with no legal basis."
       }
     ],
+    "patel-kneeling-agents-firing-2025": [
+      {
+        "law": "first-amendment-retaliation",
+        "who": "Kash Patel, FBI Director",
+        "why": "A pending suit by 12 agents Patel fired over a 2020 protest kneel alleges he fired them for their perceived political affiliation, which may violate the First Amendment."
+      },
+      {
+        "law": "due-process-clause",
+        "who": "Kash Patel, FBI Director",
+        "why": "The fired agents' pending suit also alleges the firings may violate their Fifth Amendment due process rights; DOJ has moved to dismiss and the court has not ruled."
+      }
+    ],
     "pentagon-civilian-harm-reduction-program-dismantled-2026": [
       {
         "law": "dod-civilian-harm-mitigation-statutes",
@@ -1859,6 +1907,18 @@
         "why": "NARA and GAO confirmed the Archivist vacancy was not reported to GAO until Jan. 23, 2026, over seven weeks after Rubio's stated exit, which may breach the Act's reporting requirement."
       }
     ],
+    "sba-workforce-reduction-trump2": [
+      {
+        "law": "administrative-procedure-act",
+        "who": "Small Business Administration (SBA)",
+        "why": "A judge found unions likely to succeed on claims that SBA's refusal to reverse its shutdown-era layoffs was contrary to the shutdown-ending funding law, and ordered the laid-off staff reinstated."
+      },
+      {
+        "law": "agency-action-beyond-authority",
+        "who": "Small Business Administration (SBA)",
+        "why": "The same December 2025 ruling found the unions likely to succeed on their claim that SBA's refusal to rescind those layoffs was ultra vires."
+      }
+    ],
     "snap-shutdown-funding-freeze-trump2": [
       {
         "law": "administrative-procedure-act",
@@ -1871,6 +1931,11 @@
         "law": "administrative-procedure-act",
         "who": "Keith Sonderling, Acting Director of IMLS",
         "why": "A federal court in Rhode Island found the IMLS dismantling actions he carried out, including staff cuts and grant cancellations, arbitrary and capricious and contrary to law."
+      },
+      {
+        "law": "impoundment-control-act",
+        "who": "Institute of Museum and Library Services (IMLS), under Acting Director Keith Sonderling",
+        "why": "GAO concluded IMLS violated the Impoundment Control Act by withholding appropriated funds, a finding the Rhode Island court cited in its ruling."
       }
     ],
     "state-department-reorganization-trump2": [
@@ -2208,7 +2273,7 @@
     "wiles-ap-press-access-2025": [
       {
         "law": "first-amendment-retaliation",
-        "who": "Susie Wiles, White House Chief of Staff",
+        "who": "Susie Wiles, White House Chief of Staff at the time",
         "why": "A judge granted AP a preliminary injunction, finding it was excluded over its Stylebook's viewpoint; an appeals panel stayed it except for the East Room while the appeal is pending."
       }
     ],

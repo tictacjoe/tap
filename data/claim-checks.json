@@ -1,6 +1,6 @@
 {
  "version": 1,
- "as_of": "2026-11-20",
+ "as_of": "2026-11-21",
  "checks": {
   "abrego-garcia-vindictive-prosecution-2025-2026": {
    "0": {
@@ -4660,10 +4660,10 @@
     "archive": false
    },
    "3": {
-    "state": "partly",
-    "why": "The source confirms pushback from the American Legion, VFW, Burn Pits 360 and IAVA, but does not mention the 10,000-comment figure, and DAV and PVA appear here praising the reversal rather than issuing formal condemnation.",
-    "host": "taskandpurpose.com",
-    "date": "2026-10-04",
+    "state": "supports",
+    "why": "The article names the VFW, Disabled American Veterans, American Legion and Paralyzed Veterans of America among critics and states the Federal Register comments section drew more than 10,000 responses in the first 60 hours, matching the claim.",
+    "host": "militarytimes.com",
+    "date": "2026-11-21",
     "kind": "fact",
     "archive": false
    },
@@ -4676,6 +4676,14 @@
     "archive": false
    },
    "5": {
+    "state": "supports",
+    "why": "The Feb 19, 2026 Military Times article quotes Jennings asking the court to set aside the interim final rule in the quoted words and reports the plaintiffs' economic-harm argument.",
+    "host": "militarytimes.com",
+    "date": "2026-11-21",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
     "state": "partly",
     "why": "Military.com confirms the sub-48-hour Federal Circuit petition by MilVet, Derek Debus (via Stone Rose Law Firm) and Andrew Laffoon seeking vacatur, but the text gives no case caption or number (No. 26-1469) and does not itself establish it is separate from Ingram v. Collins.",
     "host": "military.com",
@@ -4683,15 +4691,15 @@
     "kind": "fact",
     "archive": false
    },
-   "6": {
+   "7": {
     "state": "supports",
-    "why": "The Federal Register page shows the final rule rescinding the interim final rule, effective February 27, 2026.",
+    "why": "The Federal Register rescission document states the final rule rescinding the interim final rule is effective February 27, 2026, published at 91 FR 9712.",
     "host": "federalregister.gov",
-    "date": "2026-10-04",
+    "date": "2026-11-21",
     "kind": "fact",
     "archive": false
    },
-   "7": {
+   "8": {
     "state": "supports",
     "why": "The Federal Circuit order in No. 2026-1469 dated March 5, 2026 dismisses the Section 502 petition under FRAP 42(b) 'The parties having so agreed' with each side bearing its own costs, and says nothing about the rule's validity.",
     "host": "cafc.uscourts.gov",
@@ -4699,7 +4707,7 @@
     "kind": "fact",
     "archive": false
    },
-   "8": {
+   "9": {
     "state": "partly",
     "why": "The docket confirms Ingram v. Collins (appealed from the CAVC) was voluntarily dismissed on March 30, 2026 after a joint stipulation by appellant Collins, but it does not describe the subject matter or the March 2025 CAVC ruling being left in place.",
     "host": "courtlistener.com",
@@ -16402,6 +16410,14 @@
     "date": "2026-11-07",
     "kind": "fact",
     "archive": false
+   },
+   "30": {
+    "state": "supports",
+    "why": "Democracy Docket reports the quoted Fox News remarks, the 'looking at the registers' language, and that Mullin did not say how the administration would access the data; the photo caption dates it Nov. 3, 2026.",
+    "host": "democracydocket.com",
+    "date": "2026-11-21",
+    "kind": "fact",
+    "archive": false
    }
   },
   "musk-doge-deposition-evasion-2026": {
@@ -16831,13 +16847,21 @@
   "noem-fema-katrina-declaration-whistleblower-retaliation-2025-2026": {
    "0": {
     "state": "supports",
-    "why": "The Government Accountability Project press release matches the claim closely: the August 25, 2025 Katrina Declaration language, the next-day administrative leave/work-cessation/communication-blackout order, and the termination on the sole 'Conduct Unbecoming a Federal Employee' charge.",
+    "why": "The GAP release states the Aug 25, 2025 letter protested the quoted categories, that DHS put public signers on indefinite leave the next day with orders to cease work and not contact FEMA/DHS, and that after an OPR investigation an employee was terminated on the sole 'Conduct Unbecoming' charge.",
     "host": "whistleblower.org",
-    "date": "2026-09-15",
+    "date": "2026-11-21",
     "kind": "fact",
     "archive": false
    },
    "1": {
+    "state": "supports",
+    "why": "CBS reports Tuesday's suspension of more than 20 signers and that Monday's Katrina Declaration said it was signed by 191 current and former employees, some 35 by name, the rest withholding names over fear of retaliation; the article's own dateline is not shown but the Wayback capture and weekday references fit Aug 26, 2025.",
+    "host": "cbsnews.com",
+    "date": "2026-11-21",
+    "kind": "fact",
+    "archive": true
+   },
+   "2": {
     "state": "unopened",
     "why": "",
     "host": "bloomberg.com",
@@ -16845,23 +16869,23 @@
     "kind": "fact",
     "archive": false
    },
-   "2": {
+   "3": {
     "state": "partly",
-    "why": "The source confirms FEMA/DHS said the reinstatement was done wrongly and without authorization, but the specific quoted language 'will not tolerate rogue conduct, unauthorized actions, or entrenched bureaucrats resisting change' does not appear anywhere in this text.",
+    "why": "Both quoted DHS email passages appear verbatim; however, the claim's gloss that the language targeted FEMA staff rather than the whistleblowers is the claim's own characterization, and the same statement describes the 14 as 'previously placed on leave for misconduct'.",
     "host": "axios.com",
-    "date": "2026-09-15",
+    "date": "2026-11-21",
+    "kind": "interpretation",
+    "archive": true
+   },
+   "4": {
+    "state": "supports",
+    "why": "Pallone's Dec 2, 2025 release calls the re-suspension 'retaliation in plain sight,' says it puts states including New Jersey 'at real risk,' and describes the letter's warning in the quoted 'gutting critical reforms' language.",
+    "host": "pallone.house.gov",
+    "date": "2026-11-21",
     "kind": "fact",
     "archive": false
    },
-   "3": {
-    "state": "supports",
-    "why": "Rep. Pallone's press release matches the claim nearly verbatim, including the 14 employees, the 'retaliation in plain sight' characterization, the Katrina Declaration's substance regarding post-Katrina reforms, and the New Jersey risk language.",
-    "host": "pallone.house.gov",
-    "date": "2026-09-15",
-    "kind": "interpretation",
-    "archive": false
-   },
-   "4": {
+   "5": {
     "state": "supports",
     "why": "The whistleblower-law blog confirms the OSC complaint filed with GAP's assistance after the August 2025 leave placement, the MSPB appeal pathway, and the disputed employment status as of the December 17, 2025 publication date.",
     "host": "whistleblowersblog.org",
@@ -16869,7 +16893,15 @@
     "kind": "fact",
     "archive": false
    },
-   "5": {
+   "6": {
+    "state": "supports",
+    "why": "The Guardian reports DHS confirmed the reversal after CNN's report, quotes the 'will not tolerate rogue conduct' line and FEMA's email on WPA/First Amendment protection, and quotes Seide on the worker fired in mid-November who successfully challenged it.",
+    "host": "theguardian.com",
+    "date": "2026-11-21",
+    "kind": "fact",
+    "archive": false
+   },
+   "7": {
     "state": "supports",
     "why": "NBC News confirms DHS's email to Sen. Kim stating all employees were offered return-to-duty status effective April 30, 2026, the eight-months-of-paid-leave detail, and the framing around the 2026 hurricane season and FIFA World Cup under new leadership.",
     "host": "nbcnews.com",
@@ -18241,9 +18273,9 @@
    },
    "1": {
     "state": "partly",
-    "why": "NPR confirms a DOJ inspector general review in 2024 found no misconduct, predating the September firings, but the article does not specifically mention a Hatch Act finding -- only 'no misconduct' generically.",
+    "why": "NPR states the DOJ inspector general reviewed the incident in 2024 and found no misconduct, predating the September firings; the claim's framing of it as a 'second, independent clearance' relies on another clearance not described in this text.",
     "host": "npr.org",
-    "date": "2026-09-15",
+    "date": "2026-11-21",
     "kind": "fact",
     "archive": false
    },
@@ -18260,6 +18292,30 @@
     "why": "The complaint's paragraphs 96-98 state Patel became Director on February 21, 2025, immediately began working to terminate all agents who knelt on June 4, 2020, and that senior leaders believed the decision was already made and originated from the White House; the header confirms Case 1:25-cv-04258 filed 12/08/25.",
     "host": "storage.courtlistener.com",
     "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "4": {
+    "state": "partly",
+    "why": "The excerpt (filed 12/08/25) confirms the complaint's First Amendment theory against partisan dismissal, but the truncated text does not reach the count titles, the Fifth Amendment due process counts, or the requested remedies.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-11-21",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
+    "state": "partly",
+    "why": "The Sept 30, 2026 motion to dismiss the second amended complaint shows Article II removal and First Amendment arguments (and a property-interest heading) in its table of contents, but the truncated text does not contain the quoted language, Trump v. Slaughter, Patel's findings, or Bondi's ratification.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-11-21",
+    "kind": "fact",
+    "archive": false
+   },
+   "6": {
+    "state": "partly",
+    "why": "The docket header confirms assignment to Judge Trevor Neil McFadden and a last known filing on Nov. 13, 2026, but the truncated entries end in December 2025 and do not show the Oct 30 opposition, the reply's nature, or the absence of a ruling.",
+    "host": "courtlistener.com",
+    "date": "2026-11-21",
     "kind": "fact",
     "archive": false
    }
@@ -22287,13 +22343,21 @@
    },
    "12": {
     "state": "partly",
-    "why": "The November 21, 2025 Memorandum and Order in the Rhode Island case grants the States summary judgment on EO 14238 as to IMLS, MBDA, FMCS and USICH, but the extracted text is cut off before the 'arbitrary and capricious'/'contrary to law' holdings, the vacatur, and the permanent injunction.",
+    "why": "GAO's June 16, 2025 decision B-337375 concludes IMLS violated the ICA by withholding funds and by withholding funds that cannot be withheld under the fourth disclaimer, and notes IMLS did not respond; the text provided does not tie the fourth-disclaimer funds specifically to Grants to States.",
+    "host": "gao.gov",
+    "date": "2026-11-21",
+    "kind": "fact",
+    "archive": true
+   },
+   "13": {
+    "state": "partly",
+    "why": "The Nov 21, 2025 Memorandum and Order in Rhode Island v. Trump grants the States' summary judgment motion on EO 14238's implementation for IMLS, MBDA, FMCS and USICH, but the truncated text does not include the 'arbitrary and capricious'/'contrary to law' holdings, vacatur, permanent injunction, or the GAO discussion.",
     "host": "storage.courtlistener.com",
-    "date": "2026-09-28",
+    "date": "2026-11-21",
     "kind": "fact",
     "archive": false
    },
-   "13": {
+   "14": {
     "state": "supports",
     "why": "The April 9, 2026 stipulation by ALA, AFSCME and defendants including Sonderling and IMLS dismisses the action without prejudice with each party bearing its own costs and fees.",
     "host": "storage.courtlistener.com",
@@ -22301,7 +22365,7 @@
     "kind": "fact",
     "archive": false
    },
-   "14": {
+   "15": {
     "state": "supports",
     "why": "The agreement contains the binding-on-parties clause, the no-more-RIFs and statutory-surveys provisions, and the 7-day dismissal-without-prejudice clause with a reserved right to reinstate claims; a DOJ signature is dated Apr 9 and plaintiffs' counsel also signed.",
     "host": "ala.org",
@@ -22309,7 +22373,7 @@
     "kind": "fact",
     "archive": false
    },
-   "15": {
+   "16": {
     "state": "supports",
     "why": "The Senate roll call page shows vote 256 on Sept. 30, 2026 confirming Sonderling as Secretary of Labor with 47 yeas, 41 nays and 12 not voting.",
     "host": "senate.gov",
@@ -28725,13 +28789,21 @@
    },
    "10": {
     "state": "supports",
+    "why": "The AP report says Trump announced Miller, the deputy chief of staff, was replacing Wiles days after Republicans lost Congress, and separately that Wiles gave her resignation Thursday night.",
+    "host": "boston.com",
+    "date": "2026-11-21",
+    "kind": "fact",
+    "archive": false
+   },
+   "11": {
+    "state": "supports",
     "why": "The statutory text of 5 U.S.C. 7323(a)(1) matches the claim.",
     "host": "law.cornell.edu",
     "date": "2026-11-01",
     "kind": "fact",
     "archive": false
    },
-   "11": {
+   "12": {
     "state": "supports",
     "why": "5 U.S.C. 7324(b) permits EOP-paid employees and Senate-confirmed appointees in nationwide administration of federal law to engage in otherwise-barred on-duty political activity if costs are not Treasury-paid (the statute also requires duties continuing outside normal hours, a detail the summary omits).",
     "host": "law.cornell.edu",
@@ -28810,6 +28882,14 @@
     "why": "The June 6, 2025 order grants the stay except as to the East Room, notes Pillard would deny, and Rao's concurrence (joined by Katsas) contains the quoted viewpoint-discretion language about restricted presidential spaces.",
     "host": "storage.courtlistener.com",
     "date": "2026-09-28",
+    "kind": "fact",
+    "archive": false
+   },
+   "9": {
+    "state": "supports",
+    "why": "The docket shows AP's notices of supplemental authority on Sep 29, 2026 and the appellants' Oct 1, 2026 response; entries after the Nov 24, 2025 argument are only transcripts, notices and the response, with no merits decision.",
+    "host": "courtlistener.com",
+    "date": "2026-11-21",
     "kind": "fact",
     "archive": false
    }
