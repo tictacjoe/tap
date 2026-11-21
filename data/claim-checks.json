@@ -282,6 +282,14 @@
     "archive": false
    },
    "14": {
+    "state": "supports",
+    "why": "The First Amended Complaint dated August 6, 2026 names NTEU as plaintiff and the IRS and Bisignano as defendants, contains the quoted 'career IRS employees' and section 7217 allegations, pleads Count IV (Domestic Emoluments Clause) by NTEU against the listed defendants, and states Bessent 'confirmed that Treasury \"will follow the instructions and the settlement\"' on June 3, 2026.",
+    "host": "storage.courtlistener.com",
+    "date": "2026-11-21",
+    "kind": "fact",
+    "archive": false
+   },
+   "15": {
     "state": "partly",
     "why": "The provided text confirms an August 12, 2026 Eleventh Circuit filing titled Defendants' Response to Appellants' Time-Sensitive Motion for Stay by Acting Deputy AG McCotter, but it is truncated in the interested-persons list and contains none of the stay/vacatur/reassignment arguments or the 'improper political motivation' quote.",
     "host": "storage.courtlistener.com",
@@ -289,7 +297,7 @@
     "kind": "fact",
     "archive": false
    },
-   "15": {
+   "16": {
     "state": "supports",
     "why": "The filing is Defendants' Notice of Appeal dated September 11, 2026, signed by R. Trent McCotter as Acting Deputy Attorney General, appearing solely to notice appeal to the Eleventh Circuit from ECF No. 106 of July 13, 2026.",
     "host": "storage.courtlistener.com",
@@ -297,7 +305,7 @@
     "kind": "fact",
     "archive": false
    },
-   "16": {
+   "17": {
     "state": "partly",
     "why": "The order denies the Motion to Stay (DE 114) and says the motion does not demonstrate likelihood of success or irreparable harm and does not undermine the findings on adverseness and bad faith; the claim's quoted phrasing ('have not demonstrated a likelihood of success in their appeal', 'have not established irreparable harm') does not appear verbatim in the provided (truncated) text.",
     "host": "storage.courtlistener.com",
@@ -305,7 +313,7 @@
     "kind": "fact",
     "archive": false
    },
-   "17": {
+   "18": {
     "state": "supports",
     "why": "The Bloomberg News article (published Wednesday September 30, describing 'the order on Tuesday') names the panel of Jordan, Rosenbaum and Newsom, quotes the 'strong showing'/'committed clear error' finding and the no-evidence holding verbatim, and states Blanche's immunity protection order 'is also still in effect.'",
     "host": "accountingtoday.com",
@@ -3172,14 +3180,22 @@
     "archive": false
    },
    "3": {
-    "state": "partly",
-    "why": "NBC reports Judge Brann's Aug. 21, 2025 ruling that Habba's appointment was unlawful and sidestepped the Senate's role, but the provided text never names the Federal Vacancies Reform Act or the Appointments Clause as the bases of the ruling.",
+    "state": "supports",
+    "why": "NBC News reports Brann's 77-page ruling found Habba's appointment unlawful, that her actions since July may be declared void, and that she must be disqualified from ongoing cases, matching the claim.",
     "host": "nbcnews.com",
-    "date": "2026-11-07",
+    "date": "2026-11-21",
     "kind": "fact",
     "archive": false
    },
    "4": {
+    "state": "supports",
+    "why": "The August 21, 2025 Giraud opinion concludes Habba has acted 'without lawful authority since July 1, 2025,' holds her interim appointment ended July 1, 2025, finds she did not become Acting U.S. Attorney as a first assistant, disqualifies her from ongoing cases, and states there is 'no need to reach the Girauds' constitutional claims.'",
+    "host": "govinfo.gov",
+    "date": "2026-11-21",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
     "state": "supports",
     "why": "The New Jersey Globe piece reports McIver said 'absolutely' when asked whether Brann was correct, and that her motions to dismiss on political-motivation and legislative-duty grounds made no mention of Habba's legitimacy.",
     "host": "newjerseyglobe.com",
@@ -3187,7 +3203,7 @@
     "kind": "fact",
     "archive": false
    },
-   "5": {
+   "6": {
     "state": "supports",
     "why": "The Dec. 1, 2025 NBC article reports the Third Circuit upheld the lower-court ruling disqualifying Habba and found her appointment violates the FVRA; it also says Judge Fisher wrote for the three-judge panel.",
     "host": "nbcnews.com",
@@ -3195,7 +3211,7 @@
     "kind": "fact",
     "archive": false
    },
-   "6": {
+   "7": {
     "state": "supports",
     "why": "The Dec. 8, 2025 Axios article reports Habba stepped down Monday after being disqualified by an appeals court and said she would continue as Bondi's senior adviser for U.S. attorneys.",
     "host": "axios.com",
@@ -3203,7 +3219,7 @@
     "kind": "fact",
     "archive": true
    },
-   "7": {
+   "8": {
     "state": "supports",
     "why": "CBS, dated March 9, 2026, reports Brann ruled Monday, the second time in under a year, that the Lamparello/Fox/Fontecchio replacement team was unconstitutionally appointed.",
     "host": "cbsnews.com",
@@ -3211,7 +3227,15 @@
     "kind": "fact",
     "archive": false
    },
-   "8": {
+   "9": {
+    "state": "supports",
+    "why": "The March 9, 2026 Naviwala/Torres opinion contains both quoted passages verbatim (the leadership structure 'exceeds the Attorney General's statutory authority ... in violation of the Appointments Clause' and the 'cares far more about who is running the USAO-NJ' line) and states the finding 'requires disqualification of the Attorney General's appointees.'",
+    "host": "govinfo.gov",
+    "date": "2026-11-21",
+    "kind": "fact",
+    "archive": false
+   },
+   "10": {
     "state": "partly",
     "why": "The AP text supports the hearing events, the Appointments Clause context, the order to testify under oath, and the quote, but gives the hearing date only as 'Monday' and never states March 16, 2026.",
     "host": "apnews.com",
@@ -3219,7 +3243,7 @@
     "kind": "fact",
     "archive": false
    },
-   "9": {
+   "11": {
     "state": "supports",
     "why": "New Jersey Monitor confirms the district judges appointed career prosecutor Robert Frazer as acting U.S. Attorney, ending the leadership standoff.",
     "host": "newjerseymonitor.com",
@@ -3227,7 +3251,7 @@
     "kind": "fact",
     "archive": false
    },
-   "10": {
+   "12": {
     "state": "supports",
     "why": "The article confirms Judge Brann ruled Frazer's appointment lawful on April 16, 2026, rejecting Naviwala's challenge seeking to unwind his Medicare-fraud case.",
     "host": "yahoo.com",
@@ -3235,7 +3259,7 @@
     "kind": "fact",
     "archive": false
    },
-   "11": {
+   "13": {
     "state": "supports",
     "why": "The News From The States republication of the New Jersey Monitor story, dated Aug 27, 2026, says a 3rd Circuit panel on Wednesday largely agreed with rejecting McIver's immunity arguments, clearing a trial on two of three counts and sending the third back for review.",
     "host": "newsfromthestates.com",
@@ -3243,7 +3267,7 @@
     "kind": "fact",
     "archive": true
    },
-   "12": {
+   "14": {
     "state": "supports",
     "why": "JURIST names Judges Chung and Bibas as the majority, describes the vacate-and-remand of Count Three and the jurisdictional dismissal of the selective and vindictive prosecution claims, and notes Judge Ambro's partial dissent.",
     "host": "jurist.org",
@@ -3251,7 +3275,7 @@
     "kind": "fact",
     "archive": false
    },
-   "13": {
+   "15": {
     "state": "supports",
     "why": "TheGrio's Oct. 9, 2026 article states McIver and her attorneys filed a brief Friday requesting en banc review by the full Third Circuit after a three-judge panel declined in August to dismiss the charges.",
     "host": "thegrio.com",
@@ -3259,7 +3283,7 @@
     "kind": "fact",
     "archive": false
    },
-   "14": {
+   "16": {
     "state": "partly",
     "why": "The article supports the full Third Circuit's denial of panel and en banc rehearing, the 3-of-13 vote and the retained August Speech and Debate ruling, but the provided text never states the November 19, 2026 date of the order.",
     "host": "newjerseymonitor.com",
@@ -16688,6 +16712,14 @@
     "archive": false
    },
    "2": {
+    "state": "supports",
+    "why": "The Clearinghouse summary states that on February 4, 2026, after briefing but without a hearing, the court denied the protective-order motion on exactly the quoted reasoning.",
+    "host": "clearinghouse.net",
+    "date": "2026-11-21",
+    "kind": "fact",
+    "archive": false
+   },
+   "3": {
     "state": "unopened",
     "why": "",
     "host": "bloomberg.com",
@@ -16695,7 +16727,15 @@
     "kind": "fact",
     "archive": false
    },
-   "6": {
+   "4": {
+    "state": "supports",
+    "why": "The Fourth Circuit amended order (filed March 4, amended March 5, 2026, No. 26-1160) grants mandamus, directs the district court to grant the protective order 'at this time,' contains the quoted 'does not mean ... barred' language, and records Quattlebaum writing with Niemeyer concurring and Gregory dissenting.",
+    "host": "ca4.uscourts.gov",
+    "date": "2026-11-21",
+    "kind": "fact",
+    "archive": false
+   },
+   "5": {
     "state": "supports",
     "why": "The summary reports the March 4 mandamus grant, quotes the court's statement about depositions not being barred, and states that as of September 2026 the parties are in discovery and the case is ongoing; the summary was authored 9/29/2026.",
     "host": "clearinghouse.net",
@@ -16703,7 +16743,7 @@
     "kind": "fact",
     "archive": false
    },
-   "7": {
+   "6": {
     "state": "supports",
     "why": "The September 30, 2026 letter (Document 253) is filed by Plaintiffs 'on behalf of all parties' to request leave to file the joint motion to dissolve the March 18, 2025 preliminary injunction and request an indicative ruling under Rule 62.1, and contains the quoted language about seeking final judgment at the close of discovery.",
     "host": "storage.courtlistener.com",
@@ -16711,7 +16751,7 @@
     "kind": "fact",
     "archive": false
    },
-   "8": {
+   "7": {
     "state": "supports",
     "why": "Document 253-1, filed 09/30/26, is a joint motion of plaintiffs and defendants requesting a Rule 62.1 indicative ruling that the Court would dissolve the injunction if the Fourth Circuit remands, states the injunction 'has been stayed since March 28, 2025,' and says Plaintiffs will not seek a new preliminary injunction and 'will pursue final judgment.'",
     "host": "storage.courtlistener.com",
@@ -16719,7 +16759,7 @@
     "kind": "fact",
     "archive": false
    },
-   "9": {
+   "8": {
     "state": "unopened",
     "why": "",
     "host": "courtlistener.com",
@@ -16727,7 +16767,7 @@
     "kind": "fact",
     "archive": false
    },
-   "10": {
+   "9": {
     "state": "supports",
     "why": "The October 7, 2026 joint letter (Document 256) on the motion to depose Jackson and Davis contains Plaintiffs' argument 'given the present unavailability of Lewin, Marocco and Musk' and Defendants' position that the Fourth Circuit's In re Musk order 'applies equally' to Davis and Jackson, exactly as the claim states.",
     "host": "storage.courtlistener.com",
@@ -16735,7 +16775,7 @@
     "kind": "fact",
     "archive": false
    },
-   "11": {
+   "10": {
     "state": "supports",
     "why": "The Supreme Court docket for No. 25-1103, U.S. DOGE Service v. U.S. District Court for the District of Columbia, lists 'Petition GRANTED.' under Oct 13 2026.",
     "host": "supremecourt.gov",
@@ -16743,7 +16783,7 @@
     "kind": "fact",
     "archive": false
    },
-   "12": {
+   "11": {
     "state": "supports",
     "why": "Document 257, a defendants' notice of supplemental authority filed 10/14/26, reports the October 13, 2026 cert grant in No. 25-1103 on discovery from USDS 'including a deposition of USDS's head' and argues the grant supports denying the request to depose Mr. Davis.",
     "host": "storage.courtlistener.com",
@@ -16751,7 +16791,7 @@
     "kind": "fact",
     "archive": false
    },
-   "13": {
+   "12": {
     "state": "supports",
     "why": "The Supreme Court docket for No. 25-1103 shows an Oct 28 2026 order extending the joint appendix and petitioners' brief to December 4, 2026 and respondents' brief to January 11, 2027, and lists no argument date.",
     "host": "supremecourt.gov",
@@ -16759,7 +16799,7 @@
     "kind": "fact",
     "archive": false
    },
-   "14": {
+   "13": {
     "state": "supports",
     "why": "Entry 258 is the Oct 30, 2026 order by Judge Chuang accepting the joint motion to dissolve for filing, and it is the most recent entry on the docket (date of last known filing Oct. 30, 2026), with no ruling on the dissolution motion or the deposition motion (226) shown.",
     "host": "courtlistener.com",
@@ -25321,9 +25361,9 @@
    },
    "5": {
     "state": "supports",
-    "why": "Metro Weekly reports Judge Kasubhai's 49-page April 18 ruling vacated the Kennedy Declaration in its entirety, found HHS lacked authority to set standards of care overriding state standards, referenced the APA notice-and-comment violation, and permanently blocked HHS and its OIG from implementing it or any 'materially similar policy,' with relief for providers in the plaintiff jurisdictions.",
+    "why": "Metro Weekly reports Kasubhai's 49-page April 18 ruling vacated the Kennedy Declaration in its entirety, found HHS lacked authority to override state standards of care, found APA violations, and permanently blocked HHS and its OIG from implementing it or any 'materially similar policy.'",
     "host": "metroweekly.com",
-    "date": "2026-10-19",
+    "date": "2026-11-21",
     "kind": "fact",
     "archive": false
    },
@@ -26416,12 +26456,12 @@
     "archive": false
    },
    "5": {
-    "state": "partly",
-    "why": "The Axios text confirms the judge's 30-day written notice requirement. It contains no statement from Kennedy Center officials about a temporary closure, structural repairs, or 'nothing is being demolished', and no PBS NewsHour text was provided.",
-    "host": "axios.com",
-    "date": "2026-09-21",
+    "state": "supports",
+    "why": "The archived CBS report states Cooper ordered 30 days' notice before any 'demolition,' that a spokesperson said Wednesday 'nothing is being demolished,' and quotes Floca's declaration verbatim as claimed.",
+    "host": "cbsnews.com",
+    "date": "2026-11-21",
     "kind": "fact",
-    "archive": false
+    "archive": true
    },
    "6": {
     "state": "supports",
