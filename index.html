@@ -3156,9 +3156,15 @@ function buildHeadlineRow(item, displayDate) {
   trailBtn.type = "button";
   trailBtn.className = "share-link-btn headline-trail-btn";
   // Full label on desktop, "sources" at phone width so the headline keeps
-  // its room (Joe, 2026-11-20); CSS swaps the two spans.
-  trailBtn.innerHTML = '<span class="trail-label-long">confidence/sources</span><span class="trail-label-short">sources</span>';
-  trailBtn.setAttribute("aria-label", "confidence/sources");
+  // its room (Joe, 2026-11-20); CSS swaps the two spans. Reporting rows read
+  // just "source" at every width (Joe, 2026-11-21).
+  if (item.tracker === "tracker") {
+    trailBtn.textContent = "source";
+    trailBtn.setAttribute("aria-label", "source");
+  } else {
+    trailBtn.innerHTML = '<span class="trail-label-long">confidence/sources</span><span class="trail-label-short">sources</span>';
+    trailBtn.setAttribute("aria-label", "confidence/sources");
+  }
   line.insertBefore(trailBtn, textSpan);
 
   const trailPanel = document.createElement("div");

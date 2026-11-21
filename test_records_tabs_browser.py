@@ -216,3 +216,23 @@ def test_trail_button_label_shortens_at_phone_width(browser, site_url):
     page.set_viewport_size({"width": 390, "height": 900})
     page.wait_for_timeout(300)
     assert btn.inner_text() == "sources"
+
+
+def test_reporting_trail_button_reads_source(browser, site_url):
+    # 2026-11-21 (Joe): Reporting rows' trail button reads just "source", at
+    # every width; curated rows keep "confidence/sources".
+    page = _open(browser, site_url)
+    page.locator("#feed-tab-reporting").click()
+    page.wait_for_timeout(800)
+    btns = page.locator("#headlines-view .headline-trail-btn")
+    assert btns.count() > 0
+    labels = set(btns.evaluate_all("bs => bs.slice(0, 50).map(b => b.innerText.trim())"))
+    assert labels == {"source"}, labels
+    assert btns.first.get_attribute("aria-label") == "source"
+    page.set_viewport_size({"width": 390, "height": 900})
+    page.wait_for_timeout(300)
+    assert btns.first.inner_text().strip() == "source"
+    page.locator("#feed-tab-curated").click()
+    page.wait_for_timeout(800)
+    assert page.locator("#headlines-view .headline-trail-btn").first.get_attribute("aria-label") == "confidence/sources"
+    page.close()
