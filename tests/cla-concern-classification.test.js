@@ -45,6 +45,7 @@ test("classifyOffenseCategory recognizes the new statute/doctrine-named patterns
   assert.equal(classifyOffenseCategory("Recalling commanders, raises Posse Comitatus Act Concerns"), "Posse Comitatus Act Concern");
   assert.equal(classifyOffenseCategory("Contested Exercise of D.C. Home Rule Act Emergency Authority"), "D.C. Home Rule Act Dispute");
   assert.equal(classifyOffenseCategory("Circumventing Senate Advice-and-Consent Review by Installing a Rejected Nominee"), "Senate Confirmation Bypass");
+  assert.equal(classifyOffenseCategory("DHS Secretary Missed the 30-Day Corrective-Action Deadline Set by 10 U.S.C. 1034(f)(1) and 41 U.S.C. 4712(c)(1) in All 11 Substantiated Whistleblower Retaliation Cases, GAO Found"), "Whistleblower Protection Statute Violation");
   assert.equal(classifyOffenseCategory("Federal Procurement Authority Violation -- exercising contracting authority he did not legally hold"), "Federal Procurement Authority Violation");
 });
 
@@ -181,6 +182,10 @@ const RECLASSIFIED_TO_VIOLATION = new Set([
   "trump-maga-inc-super-pac-control-2026",
   // illegality-IL7 (2026-11-20)
   "trump-gender-affirming-care-eo-2025",
+  // side-batch-GY (2026-11-21, owner call confirmed): 18 U.S.C. 208 named
+  "rfk-jr-donor-gifts-book-advances-2026",
+  // 2026-11-21 (owner call): new whistleblower-statute rule (10 U.S.C. 1034 / 41 U.S.C. 4712)
+  "gao-dhs-whistleblower-investigation-2026",
 ]);
 
 test("entries reclassified under the 2026-11-19 owner rule now have a Violation Type", () => {

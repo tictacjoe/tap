@@ -21860,14 +21860,15 @@
   {
     "id": "gao-dhs-whistleblower-investigation-2026",
     "official": "Kristi Noem, then-Secretary of Homeland Security / Joseph Cuffari, DHS Inspector General",
-    "offense_category": "GAO Investigation Into DHS's Handling of Whistleblower Complaints, Opened Amid Separate Concerns About the DHS Inspector General's Independence -- documents GAO's published findings of delays and missed statutory deadlines in DHS whistleblower retaliation cases, not a finding of retaliation by any named official",
+    "offense_category": "DHS Secretary Missed the 30-Day Corrective-Action Deadline Set by 10 U.S.C. 1034(f)(1) and 41 U.S.C. 4712(c)(1) in All 11 Substantiated Whistleblower Retaliation Cases, GAO Found -- a missed statutory deadline reported by GAO, not a finding of retaliation by any named official",
     "incident_summary": "The Government Accountability Office opened an investigation into DHS's handling of whistleblower complaints spanning from October 1, 2017 (Trump's first term) through September 30, 2025 (the first year of his second term), at the request of Rep. Bennie Thompson, top Democrat on the House Homeland Security Committee, and Sen. Gary Peters. GAO sought interviews with DHS whistleblowers who filed complaints during that roughly eight-year window, spanning both Trump administrations and the Biden administration, to gather firsthand accounts of how their complaints were handled. The review became public in February 2026, after DHS said it had asked Inspector General Joseph Cuffari -- himself a first-Trump-term appointee -- to turn over a list of all his office's active investigations, a request The Hill reported amid concerns about the DHS watchdog's independence.",
     "contested": false,
     "elements_required": [
       "GAO, an independent legislative-branch auditor, opened a formal investigation into DHS whistleblower handling at the explicit request of congressional oversight members",
       "The review's scope spans multiple administrations (both Trump terms and Biden), indicating a structural inquiry into DHS whistleblower-handling practices generally, not a partisan complaint about only the current administration",
       "GAO's request for direct whistleblower interviews indicates an intent to gather firsthand, systemic evidence rather than relying solely on DHS's own self-reporting",
-      "The review became public after DHS's general counsel confirmed asking IG Cuffari to disclose his office's active investigations -- a request raising separate oversight-independence concerns, reported by The Hill"
+      "The review became public after DHS's general counsel confirmed asking IG Cuffari to disclose his office's active investigations -- a request raising separate oversight-independence concerns, reported by The Hill",
+      "GAO's published report found the Secretary did not decide on corrective action within the 30 days required by 10 U.S.C. 1034(f)(1) and 41 U.S.C. 4712(c)(1) in any of the 11 substantiated retaliation cases"
     ],
     "evidence": [
       {
@@ -21918,9 +21919,9 @@
       "who": "Kristi Noem (DHS) and Joseph Cuffari (DHS IG)",
       "what": "GAO found DHS slow on whistleblower retaliation cases; DHS had sought its IG's list of active probes",
       "harm": {
-        "kind": "institutional",
-        "certainty": "alleged",
-        "who": "DHS Inspector General's independence"
+        "kind": "rights",
+        "certainty": "documented",
+        "who": "Whistleblowers with substantiated cases"
       },
       "reviewed": "2026-11-21"
     },

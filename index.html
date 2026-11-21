@@ -3822,6 +3822,10 @@ function classifyOffenseCategory(raw) {
     [/federal records act/, "Federal Records Act Violation"],
     [/whistleblower protection act|whistleblower-disclosure and congressional-notification|intelligence community whistleblower/, "Whistleblower Protection Act Violation"],
     [/inspector general act/, "Inspector General Act Violation"],
+    // Added 2026-11-21 (owner call): the GAO/DHS entry's text names the 30-day
+    // corrective-action deadlines in 10 U.S.C. 1034(f)(1) / 41 U.S.C. 4712(c)(1)
+    // that GAO-26-108106 found the Secretary missed.
+    [/41 u\.s\.c\. 4712|10 u\.s\.c\. 1034/, "Whistleblower Protection Statute Violation"],
     // Added 2026-09-21 (Joe's request to narrow the residual Other/Unclassified
     // bucket): each pattern anchors to a statute, clause or exact phrase the
     // entry's own offense_category text actually uses -- not a topic guess.
