@@ -3817,6 +3817,9 @@ function classifyOffenseCategory(raw) {
     [/polling places|18 u\.s\.c\. §592/, "Election-Related Statutory Violation"],
     [/confidential financial data|grand jury material|unauthorized disclosure/, "Misuse of Confidential Data"],
     [/politicization of intelligence|tradecraft/, "Intelligence Politicization"],
+    // Added 2026-11-21 (owner call): a free-speech holding is not retaliation, so
+    // text naming the Free Speech Clause is caught before the general rule below.
+    [/free speech clause/, "First Amendment (Free Speech) Violation"],
     [/first amendment/, "First Amendment Retaliation"],
     [/unlawful agency action/, "Unlawful Agency Action"],
     [/federal records act/, "Federal Records Act Violation"],

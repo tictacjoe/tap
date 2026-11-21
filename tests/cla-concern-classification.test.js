@@ -46,6 +46,7 @@ test("classifyOffenseCategory recognizes the new statute/doctrine-named patterns
   assert.equal(classifyOffenseCategory("Contested Exercise of D.C. Home Rule Act Emergency Authority"), "D.C. Home Rule Act Dispute");
   assert.equal(classifyOffenseCategory("Circumventing Senate Advice-and-Consent Review by Installing a Rejected Nominee"), "Senate Confirmation Bypass");
   assert.equal(classifyOffenseCategory("DHS Secretary Missed the 30-Day Corrective-Action Deadline Set by 10 U.S.C. 1034(f)(1) and 41 U.S.C. 4712(c)(1) in All 11 Substantiated Whistleblower Retaliation Cases, GAO Found"), "Whistleblower Protection Statute Violation");
+  assert.equal(classifyOffenseCategory("Sanctions order held to violate the First Amendment's Free Speech Clause as applied to U.S. advocates"), "First Amendment (Free Speech) Violation");
   assert.equal(classifyOffenseCategory("Federal Procurement Authority Violation -- exercising contracting authority he did not legally hold"), "Federal Procurement Authority Violation");
 });
 
@@ -186,6 +187,8 @@ const RECLASSIFIED_TO_VIOLATION = new Set([
   "rfk-jr-donor-gifts-book-advances-2026",
   // 2026-11-21 (owner call): new whistleblower-statute rule (10 U.S.C. 1034 / 41 U.S.C. 4712)
   "gao-dhs-whistleblower-investigation-2026",
+  // 2026-11-21 (owner call): new Free Speech Clause rule
+  "trump-foreign-judiciary-sanctions-pattern-2025",
 ]);
 
 test("entries reclassified under the 2026-11-19 owner rule now have a Violation Type", () => {
