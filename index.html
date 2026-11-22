@@ -4296,6 +4296,14 @@ function highlightMatches(text, term, useRegex) {
    piece still gets escaped/highlighted independently at the call
    site -- this function itself returns plain text, no HTML. */
 /* one-liner-base:start */
+/* Deregulation note (2026-11-21): the status-keyword verb below dates from
+   when `status` was a bare label. It is now a snapshot sentence, so the
+   substring match can misfire (e.g. "not yet proposed" -> "proposed
+   repealing"; a delayed rollback -> "paused enforcement of"). It is a
+   fallback only: oneLinerFor() uses the glance whenever glanceActive(),
+   and every CDR entry has a valid glance, so readers don't see it. Rework
+   it (lead phrase only, neutral verb for Delayed/Paused) if CDR entries
+   without a glance ever ship. */
 function oneLinerBase(entry, cfg) {
   if (cfg.kind === "deregulation") {
     const s = (entry.status || "").toLowerCase();
