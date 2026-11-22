@@ -166,11 +166,21 @@ test("title reads Harms (Joe, 2026-11-19)", () => {
   assert(html.includes('<h2 class="harms-title">Harms</h2>'));
 });
 
-test("each line links to its entry and shows the what line and tracker abbreviation", () => {
-  const html = api.buildHarmsListHtml(trackersWith([entry("e1", {}, "Jailed people without hearings")]), ABBR);
+test("each line links to its entry and shows the what line and a tracker-name button", () => {
+  const NAMES = { prosecution: "Cabinet-Level Officials" };
+  const html = api.buildHarmsListHtml(trackersWith([entry("e1", {}, "Jailed people without hearings")]), ABBR, NAMES);
   assert(html.includes('<a href="#prosecution/e1" class="harm-entry-link" data-tracker-key="prosecution" data-id="e1">Example detainees</a>'));
   assert.match(html, /<span class="harm-what">[^<]*Jailed people without hearings<\/span>/);
-  assert.match(html, /<span class="harm-tracker">CLA<\/span>/);
+  // Tracker tag (2026-11-22): a button with the full name, short code for phones.
+  assert(html.includes('<button type="button" class="entry-row-tracker harm-tracker" data-goto-tracker="prosecution" title="Open Cabinet-Level Officials">'));
+  assert(html.includes('<span class="tracker-name-medium">Cabinet-Level Officials</span><span class="tracker-name-abbr">CLA</span>'));
+});
+
+test("the status tag leads the row, before the tracker tag and the text", () => {
+  const html = api.buildHarmsListHtml(trackersWith([entry("e1", {})]), ABBR);
+  const row = html.match(/<li class="harm-row"[^>]*>(.*?)<\/li>/)[1];
+  assert(row.indexOf("harm-cert") < row.indexOf("harm-tracker"));
+  assert(row.indexOf("harm-tracker") < row.indexOf("harm-entry-link"));
 });
 
 test("total keeps its certainty breakdown and leaves averted out of the headline number", () => {
@@ -193,8 +203,8 @@ test("escapes HTML in who, what and id", () => {
 
 test("averted lines carry the muted class", () => {
   const html = api.buildHarmsListHtml(trackersWith([entry("a", { certainty: "averted" }), entry("b", {})]), ABBR);
-  assert.match(html, /<li class="harm-line-averted"><a [^>]*data-id="a"/);
-  assert.match(html, /<li><a [^>]*data-id="b"/);
+  assert.match(html, /<li class="harm-row harm-line-averted"[^>]*>(?:(?!<\/li>).)*data-id="a"/);
+  assert.match(html, /<li class="harm-row"[^>]*>(?:(?!<\/li>).)*data-id="b"/);
 });
 
 test("an empty input renders the heading, key and a zero total, no tier sections", () => {

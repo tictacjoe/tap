@@ -903,12 +903,30 @@
     padding-bottom: 0.2rem;
   }
   .harms-kind-label { margin: 0.6rem 0 0.2rem; font-size: 0.85rem; color: var(--ink-soft); font-weight: 600; }
-  .harms-lines { margin: 0; padding-left: 1.2rem; }
-  .harms-lines li { margin: 0.2rem 0; overflow-wrap: anywhere; }
-  /* Same look as the site's other in-page links (.back-home-link). */
-  .harm-entry-link { color: var(--brass); font-weight: 600; text-decoration: none; }
-  .harm-entry-link:hover { text-decoration: underline; }
+  /* Rows like the curated tracker pages (2026-11-22): status tag, tracker
+     tag button, then the harmed party (bold) and what happened, one line. */
+  .harms-lines { margin: 0; padding: 0; list-style: none; }
+  .harms-lines li.harm-row {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin: 0;
+    padding: 0.55rem 0.8rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  .harm-cert-slot { flex-shrink: 0; min-width: 6.4rem; display: flex; }
+  .harm-row-text {
+    flex: 1 1 auto;
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .harm-entry-link { color: var(--ink); font-weight: bold; text-decoration: none; }
+  .harm-entry-link:hover { text-decoration: underline; color: var(--brass); }
   .harm-what { color: var(--ink-soft); }
+  button.harm-tracker { cursor: pointer; font-family: ui-monospace, monospace; }
+  button.harm-tracker:hover { text-decoration: underline; }
   /* Possible Illegality view (2026-11-19; see the illegality-view script
      block). Controls reuse the .controls select/input look; rows are cards
      like .entry (tracker-colored left border via --trk) so it reads as a
@@ -1015,7 +1033,6 @@
     padding: 0 0.3rem;
     cursor: help;
   }
-  .harm-tracker { white-space: nowrap; font-family: ui-monospace, monospace; font-size: 0.72rem; color: var(--ink-faint); }
   .harm-line-averted, .harm-line-averted .harm-entry-link { color: var(--ink-soft); }
   .harm-line-averted .harm-entry-link { font-weight: 400; }
 
@@ -5848,7 +5865,9 @@ function collectHarms(trackers) {
   return rows;
 }
 
-function buildHarmsListHtml(trackers, abbr) {
+/* abbr: tracker key -> short code (phones); names: key -> medium tracker
+   name (the tag's text on wider screens). Both passed in so this stays pure. */
+function buildHarmsListHtml(trackers, abbr, names) {
   const rows = collectHarms(trackers);
   const cap = s => s.charAt(0).toUpperCase() + s.slice(1);
   const order = (a, b) =>
@@ -5866,14 +5885,23 @@ function buildHarmsListHtml(trackers, abbr) {
     .map(c => [c, rows.filter(r => r.certainty === c).length])
     .filter(([, n]) => n > 0)
     .map(([c, n]) => n + " " + c);
+  // One row per harm, laid out like the curated tracker rows (Joe,
+  // 2026-11-22): the harm status tag first, then a tracker-name tag button
+  // (opens that tracker), then the harmed party and what happened on one
+  // line, cut with an ellipsis at the edge (the full text is the title).
+  const tagName = key => (names && names[key]) || (abbr && abbr[key]) || key;
   const linesHtml = list => '<ul class="harms-lines">' + list.slice().sort(order).map(r =>
-    '<li' + (r.certainty === "averted" ? ' class="harm-line-averted"' : '') + '><a href="#' +
+    '<li class="harm-row' + (r.certainty === "averted" ? ' harm-line-averted' : '') + '" style="--trk:var(--trk-' + escapeHtml(r.key) + ')">' +
+    '<span class="harm-cert-slot"><span class="harm-cert harm-cert-' + r.certainty + '" title="' + escapeHtml(cap(HARM_CERTAINTY_KEY[r.certainty])) + '">' +
+    cap(r.certainty) + '</span></span>' +
+    '<span class="entry-row-tracker-slot"><button type="button" class="entry-row-tracker harm-tracker" data-goto-tracker="' + escapeHtml(r.key) + '"' +
+    ' title="Open ' + escapeHtml(tagName(r.key)) + '">' +
+    '<span class="tracker-name-medium">' + escapeHtml(tagName(r.key)) + '</span>' +
+    '<span class="tracker-name-abbr">' + escapeHtml((abbr && abbr[r.key]) || r.key) + '</span></button></span>' +
+    '<span class="harm-row-text" title="' + escapeHtml(r.who + " — " + r.what) + '"><a href="#' +
     encodeURIComponent(r.key) + '/' + encodeURIComponent(r.id) +
     '" class="harm-entry-link" data-tracker-key="' + escapeHtml(r.key) + '" data-id="' + escapeHtml(r.id) + '">' +
-    escapeHtml(r.who) + '</a> <span class="harm-what">— ' + escapeHtml(r.what) + '</span> ' +
-    '<span class="harm-cert harm-cert-' + r.certainty + '" title="' + escapeHtml(cap(HARM_CERTAINTY_KEY[r.certainty])) + '">' +
-    cap(r.certainty) + '</span> ' +
-    '<span class="harm-tracker">' + escapeHtml((abbr && abbr[r.key]) || r.key) + '</span></li>').join("") + '</ul>';
+    escapeHtml(r.who) + '</a> <span class="harm-what">— ' + escapeHtml(r.what) + '</span></span></li>').join("") + '</ul>';
   let html = '<section class="harms-list"><h2 class="harms-title">Harms</h2>' +
     '<p class="harms-total">' + harmed + " harm" + (harmed === 1 ? "" : "s") +
     (parts.length ? ": " + parts.join(", ") : "") +
@@ -8337,7 +8365,19 @@ function renderDispatch() {
     headlinesWrapEl.style.display = "none";
     countEl.style.display = "none";
     entriesEl.style.display = "";
-    entriesEl.innerHTML = buildHarmsListHtml(TRACKERS, HEADLINE_TRACKER_ABBR);
+    entriesEl.innerHTML = buildHarmsListHtml(TRACKERS, HEADLINE_TRACKER_ABBR, HEADLINE_TRACKER_MEDIUM);
+    // Tracker tag buttons open that tracker's page; Back returns here at the
+    // same scroll position (same history steps as a harm link, no entry id).
+    entriesEl.querySelectorAll(".harm-tracker[data-goto-tracker]").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const key = btn.dataset.gotoTracker;
+        if (!TRACKERS[key] || TRACKERS[key].hidden) return;
+        harmsLinkHistory(key, null, window.scrollY).forEach(step =>
+          step.op === "push" ? history.pushState(step.state, "", step.url) : history.replaceState(step.state, "", step.url));
+        goToTrackerHome(key);
+        window.scrollTo(0, 0);
+      });
+    });
     entriesEl.querySelectorAll(".harm-entry-link").forEach(a => {
       a.addEventListener("click", (e) => {
         e.preventDefault();
