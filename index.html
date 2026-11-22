@@ -178,8 +178,22 @@
     gap: 0.4rem;
   }
   /* Hairline above the second group (Joe, 2026-11-19, mockup option 2).
-     The five tracker chips are wider than the row's 880px cap, so this group
+     The tracker group (.browse-group-stacked) takes a full line, so this group
      always starts its own line and the rule never sits beside a chip. */
+  /* Tracker chips in two centered lines (Joe, 2026-11-21): CDR, CLA, GSR on
+     the first; DHS and ICE then Trump Family on the second, centered under
+     it. Each line still wraps on its own at narrow widths. */
+  .browse-group-stacked {
+    flex-basis: 100%; /* own line, so the second group never sits beside it */
+    flex-direction: column;
+    align-items: center;
+  }
+  .browse-group-line {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.4rem;
+  }
   .browse-group-extra {
     border-top: 1px solid var(--rule-strong);
     padding-top: 0.9rem;
@@ -8232,12 +8246,24 @@ function renderBrowseChips() {
     row.appendChild(reportingRow);
   }
   const mainGroup = document.createElement("div");
-  mainGroup.className = "browse-group";
+  mainGroup.className = "browse-group browse-group-stacked";
+  // Two lines (Joe, 2026-11-21): DHS and ICE, then Trump Family, sit on a
+  // second line centered under the other curated trackers.
+  const SECOND_LINE = ["dai", "trumpfamily"];
+  const line1 = document.createElement("div");
+  line1.className = "browse-group-line";
+  const line2 = document.createElement("div");
+  line2.className = "browse-group-line";
+  mainGroup.appendChild(line1);
+  mainGroup.appendChild(line2);
   const extraGroup = document.createElement("div");
   extraGroup.className = "browse-group browse-group-extra";
   row.appendChild(mainGroup);
   row.appendChild(extraGroup);
-  visibleTrackerKeys(TRACKERS).filter(key => key !== "tracker").forEach(key => {
+  const chipKeys = visibleTrackerKeys(TRACKERS).filter(key => key !== "tracker");
+  const ordered = chipKeys.filter(k => !SECOND_LINE.includes(k))
+    .concat(SECOND_LINE.filter(k => chipKeys.includes(k)));
+  ordered.forEach(key => {
     const btn = document.createElement("button");
     btn.type = "button";
     btn.className = "browse-chip";
@@ -8247,7 +8273,8 @@ function renderBrowseChips() {
     btn.title = TRACKERS[key].label +
       (allDataLoaded ? " (" + TRACKERS[key].data.length + " entries)" : "");
     btn.addEventListener("click", () => selectDatabaseTab(key));
-    (key === "communitytopics" ? extraGroup : mainGroup).appendChild(btn);
+    (key === "communitytopics" ? extraGroup
+      : SECOND_LINE.includes(key) ? line2 : line1).appendChild(btn);
   });
   // Harms and Possible Illegality (Joe, 2026-11-19): cross-tracker views,
   // not trackers, so they get the dark ink color instead of a tracker color
