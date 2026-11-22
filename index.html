@@ -167,7 +167,8 @@
     flex-basis: 100%;
     display: flex;
     justify-content: center;
-    margin-bottom: -0.4rem;
+    /* No negative margin (2026-11-21): a hairline now sits below this row,
+       spaced like the one above the second group (row gap, rule, 0.9rem). */
   }
   /* Each group wraps as a unit, so the second group never splits from itself
      onto two lines unless it can't fit on one. */
@@ -195,6 +196,13 @@
     gap: 0.4rem;
   }
   .browse-group-extra {
+    border-top: 1px solid var(--rule-strong);
+    padding-top: 0.9rem;
+  }
+  /* Hairline under the "Uncurated reporting" chip (Joe, 2026-11-21): the
+     same rule as above the second group, drawn on the first tracker line so
+     it spans that line's chips. Only set when the Reporting row is shown. */
+  .browse-group-line-ruled {
     border-top: 1px solid var(--rule-strong);
     padding-top: 0.9rem;
   }
@@ -8230,6 +8238,7 @@ function renderBrowseChips() {
   // centered line at the top. Opens the Reporting tracker, the same as the
   // database dropdown's matching "Uncurated reporting (N)" option. Soft grey,
   // since Reporting has no tracker color and isn't curated.
+  let reportingShown = false;
   if (TRACKERS.tracker && !TRACKERS.tracker.hidden) {
     const reportingRow = document.createElement("div");
     reportingRow.className = "browse-reporting-row";
@@ -8244,6 +8253,7 @@ function renderBrowseChips() {
     rep.addEventListener("click", () => selectDatabaseTab("tracker"));
     reportingRow.appendChild(rep);
     row.appendChild(reportingRow);
+    reportingShown = true;
   }
   const mainGroup = document.createElement("div");
   mainGroup.className = "browse-group browse-group-stacked";
@@ -8251,7 +8261,8 @@ function renderBrowseChips() {
   // second line centered under the other curated trackers.
   const SECOND_LINE = ["dai", "trumpfamily"];
   const line1 = document.createElement("div");
-  line1.className = "browse-group-line";
+  line1.className = "browse-group-line" +
+    (reportingShown ? " browse-group-line-ruled" : "");
   const line2 = document.createElement("div");
   line2.className = "browse-group-line";
   mainGroup.appendChild(line1);
