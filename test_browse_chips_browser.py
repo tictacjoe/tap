@@ -68,9 +68,14 @@ def _open(browser, site_url, width=1280, wait_loaded=True):
 
 def test_six_chips_in_order(site_url, browser):
     page = _open(browser, site_url)
+    # 2026-11-21 (Joe): DHS and ICE, then Trump Family, move to a second
+    # line after the other curated trackers; Claim-checks stays last.
     expected = page.evaluate(
-        "visibleTrackerKeys(TRACKERS).filter(k => k !== 'tracker')"
-        ".map(k => HEADLINE_TRACKER_MEDIUM[k].toUpperCase())"
+        "(() => { const ks = visibleTrackerKeys(TRACKERS).filter(k => k !== 'tracker');"
+        " const second = ['dai', 'trumpfamily'];"
+        " return ks.filter(k => !second.includes(k) && k !== 'communitytopics')"
+        ".concat(second.filter(k => ks.includes(k)), ks.filter(k => k === 'communitytopics'))"
+        ".map(k => HEADLINE_TRACKER_MEDIUM[k].toUpperCase()); })()"
     )
     chips = [t.strip() for t in page.locator("#browse-chips .browse-group .browse-chip[data-tracker]").all_inner_texts()]
     assert len(chips) == 6  # OEA retired 2026-11-19
@@ -180,8 +185,9 @@ def test_trackers_label_and_groups(site_url, browser):
 
 def test_uncurated_reporting_chip(site_url, browser):
     # 2026-11-21 (Joe): an "Uncurated reporting" chip at the top center of the
-    # chips, on its own line under the TRACKERS label. It opens the Reporting
-    # tracker, and the database dropdown's matching option reads the same.
+    # chips, on its own line under the TRACKERS label. It opens Records'
+    # one-line Reporting feed (Joe, 2026-11-21, not the card view), and the
+    # database dropdown's matching option reads the same and does the same.
     page = _open(browser, site_url)
     chip = page.locator('#browse-chips .browse-reporting-row .browse-chip[data-tracker="tracker"]')
     assert chip.count() == 1
@@ -200,8 +206,16 @@ def test_uncurated_reporting_chip(site_url, browser):
     assert geo["chipTop"] >= geo["labelBottom"] - 1, geo
     assert geo["chipBottom"] <= geo["groupTop"], geo
     chip.click()
-    assert page.evaluate("activeTracker") == "tracker"
+    assert page.evaluate("activeTracker") == "headlines"
+    assert page.evaluate("headlinesFeed") == "reporting"
+    assert page.locator("#feed-tab-reporting").get_attribute("aria-selected") == "true"
+    assert page.locator("#headlines-view .headline-trail-btn").first.inner_text().strip() == "source"
     assert page.evaluate("document.getElementById('tabs').value") == "tracker"
+    # The dropdown option goes to the same one-line feed from a curated tracker.
+    page.click('.browse-chip[data-tracker="prosecution"]')
+    page.evaluate("const s = document.getElementById('tabs'); s.value = 'tracker'; s.onchange()")
+    assert page.evaluate("activeTracker") == "headlines"
+    assert page.evaluate("headlinesFeed") == "reporting"
     text = page.evaluate("document.querySelector('#tabs option[value=\"tracker\"]').textContent")
     assert re.fullmatch(r"Uncurated reporting \(\d+\)", text), text
     page.close()

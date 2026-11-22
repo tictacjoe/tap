@@ -6784,6 +6784,20 @@ function showAllTrackers() {
   window.scrollTo(0, 0);
 }
 
+// Reporting opens as one-liners (Joe, 2026-11-21): the "Uncurated reporting"
+// chip and dropdown option go to Records' Reporting feed tab (date, more,
+// source, headline on one line) instead of the Reporting tracker's card view.
+function showReportingFeed() {
+  activeTracker = "headlines";
+  headlinesFeed = "reporting";
+  headlinesTrackerFilter = "";
+  headlinesSubFilter = "";
+  headlinesStatusFilter = "";
+  headlinesSortValue = "date-desc";
+  headlinesRenderLimit = RENDER_STEP;
+  renderDispatch();
+}
+
 function selectDatabaseTab(key) {
   const select = document.getElementById("tabs");
   if (!select || !TRACKERS[key]) return;
@@ -6802,7 +6816,8 @@ function renderTabs() {
   placeholder.value = "";
   placeholder.textContent = "— choose a database —";
   placeholder.disabled = true;
-  placeholder.selected = !TRACKERS[activeTracker] && activeTracker !== HARMS_VIEW && activeTracker !== ILLEGALITY_VIEW;
+  const reportingFeedOn = activeTracker === "headlines" && headlinesFeed === "reporting";
+  placeholder.selected = !TRACKERS[activeTracker] && activeTracker !== HARMS_VIEW && activeTracker !== ILLEGALITY_VIEW && !reportingFeedOn;
   select.appendChild(placeholder);
   // "All trackers" (Joe, 2026-11-19): first real option, so from inside a
   // tracker one pick gets back to every curated entry. Not a view of its own:
@@ -6830,11 +6845,13 @@ function renderTabs() {
     // Reporting reads "Uncurated reporting" here to match its browse chip
     // (Joe, 2026-11-21); its label stays "Reporting" everywhere else.
     opt.textContent = (key === "tracker" ? "Uncurated reporting" : TRACKERS[key].label) + " (" + TRACKERS[key].data.length + ")";
-    opt.selected = key === activeTracker;
+    opt.selected = key === activeTracker || (key === "tracker" && reportingFeedOn);
     select.appendChild(opt);
   });
   if (!harmsOpt.parentNode) { select.appendChild(harmsOpt); select.appendChild(illOpt); }
-  select.onchange = () => select.value === ALL_TRACKERS_VIEW ? showAllTrackers() : switchToTracker(select.value);
+  select.onchange = () => select.value === ALL_TRACKERS_VIEW ? showAllTrackers()
+    : select.value === "tracker" ? showReportingFeed()
+    : switchToTracker(select.value);
 
   // Records (formerly "Headlines", briefly "Reports") lives in its own
   // centered row below the five database tabs, not inline with them --
@@ -8235,8 +8252,9 @@ function renderBrowseChips() {
   label.textContent = "Trackers";
   row.appendChild(label);
   // "Uncurated reporting" (Joe, 2026-11-21): Reporting's one chip, on its own
-  // centered line at the top. Opens the Reporting tracker, the same as the
-  // database dropdown's matching "Uncurated reporting (N)" option. Soft grey,
+  // centered line at the top. Opens Records' one-line Reporting feed (see
+  // showReportingFeed), the same as the database dropdown's matching
+  // "Uncurated reporting (N)" option. Soft grey,
   // since Reporting has no tracker color and isn't curated.
   let reportingShown = false;
   if (TRACKERS.tracker && !TRACKERS.tracker.hidden) {
@@ -8250,7 +8268,7 @@ function renderBrowseChips() {
     rep.textContent = "Uncurated reporting";
     rep.title = "Reporting: third-party daily news, not curated by TAP" +
       (allDataLoaded ? " (" + TRACKERS.tracker.data.length + " entries)" : "");
-    rep.addEventListener("click", () => selectDatabaseTab("tracker"));
+    rep.addEventListener("click", showReportingFeed);
     reportingRow.appendChild(rep);
     row.appendChild(reportingRow);
     reportingShown = true;
