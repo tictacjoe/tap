@@ -2819,6 +2819,7 @@ function adaptReportingEntry(entry) {
   const full = override.full || medium;
   return stripAdaptedItemLabels({
     headline,
+    headlineOverridden: !!override.headline,
     tiers: [brief, medium, full],
     trail: {
       sources: entry.source_name ? [{ name: entry.source_name, url: entry.source_url || null }] : [],
@@ -3070,13 +3071,22 @@ function buildHeadlineRow(item, displayDate) {
   // packHeadline() repacking expects headline-shaped text, not a full
   // paragraph, so it's left untouched.
   const tooltipText = (item.tiers && item.tiers[0]) || item.headline;
+  // Reporting rows run to the edge of the screen (Joe, 2026-11-21): instead
+  // of the 110-character headline, the row carries the full "what happened"
+  // text and CSS ends it with an ellipsis wherever the row runs out of room,
+  // so wide monitors show more. No packHeadline() repacking (data-no-pack):
+  // a natural-break cut would end the line early again. A hand-written
+  // narrative_override.headline is used as is.
+  const fullLine = item.tracker === "tracker" && item.tiers && item.tiers[0] &&
+    !item.headlineOverridden ? item.tiers[0] : null;
+  const rowText = fullLine || item.headline;
   // displayDate defaults to the event date (item.date), same as always,
   // for every caller except renderHeadlinesView()'s "Recently updated"
   // sort mode, which passes last_substantive_update instead -- see that
   // call site.
   line.innerHTML =
     '<span class="headline-row-date">' + escapeHtml(formatHeadlineDate(displayDate ?? item.date)) + '</span>' +
-    '<span class="headline-row-text" data-full-headline="' + escapeHtml(item.headline) + '" title="' + escapeHtml(tooltipText) + '">' + escapeHtml(item.headline) + '</span>';
+    '<span class="headline-row-text"' + (fullLine ? ' data-no-pack="1"' : '') + ' data-full-headline="' + escapeHtml(rowText) + '" title="' + escapeHtml(tooltipText) + '">' + escapeHtml(rowText) + '</span>';
   const textSpan = line.querySelector(".headline-row-text");
   row.appendChild(line);
 
@@ -3250,6 +3260,7 @@ function headlineTextAvailWidth(el) {
    measured estimate since packHeadline's natural-break search can land
    the cut a little short or long of the raw pixel estimate. */
 function fitHeadlineRowText(el) {
+  if (el.dataset.noPack) return; // CSS ellipsis only (Reporting rows)
   if (el.scrollWidth <= el.clientWidth) return;
   const full = el.dataset.fullHeadline || el.textContent;
   // Subtract the chip and pill (and the row's other items) first.
