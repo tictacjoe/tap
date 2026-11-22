@@ -1773,6 +1773,14 @@
     padding-top: 0.2rem;
   }
   .entry-row-header .entry-row-ghost { visibility: hidden; }
+  /* Sortable column labels (2026-11-22), styled like the Possible
+     Illegality view's header sort buttons. */
+  .entry-row-sort {
+    font: inherit; letter-spacing: inherit; text-transform: inherit; color: inherit;
+    background: none; border: 0; padding: 0.2rem 0; cursor: pointer; text-align: left;
+  }
+  .entry-row-sort:hover { color: var(--brass); }
+  .entry-row-sort[aria-pressed="true"] { color: var(--ink); font-weight: 700; }
   .entry-row-date {
     font-family: ui-monospace, monospace;
     font-size: 0.7rem;
@@ -2964,6 +2972,44 @@ function buildHeadlineItems() {
   // Reporting's exclude toggle.
   TRACKERS.communitytopics.data.forEach(e => items.push(adaptCommunityTopicEntry(e)));
   return items;
+}
+
+/* Sortable column labels on curated row lists (Joe, 2026-11-22). A click
+   sorts by that column; a second click on the same label reverses it.
+   sortValue holds "col-<key>" and rowSortDir the direction, so the sort
+   dropdown and the column labels share one sort. first: direction of a
+   column's first click. */
+const ROW_SORTS = {
+  updated: { label: "Updated", first: "desc" },
+  status: { label: "Status", first: "asc" },
+  entry: { label: "Entry", first: "asc" },
+  harm: { label: "Harm to", first: "asc" },
+};
+let rowSortDir = "desc";
+
+/* Sort key for one entry under a column sort. Missing values return null
+   and always sort last, whichever the direction. */
+function rowSortKey(entry, cfg, key) {
+  const g = glanceActive(entry, cfg) ? entry.glance : null;
+  if (key === "updated") return entry.last_substantive_update || entry.last_verified || null;
+  if (key === "status") {
+    const i = STATUS_STAGES.findIndex(st => st.name === entry.status_stage);
+    return i === -1 ? null : i;
+  }
+  // Text columns sort on their first letter or digit ("~42 million" as "42 million").
+  const text = t => (t || "").toLowerCase().replace(/^[^a-z0-9]+/, "") || null;
+  if (key === "entry") return text(g ? g.who + " " + g.what : entry[cfg.titleField]);
+  if (key === "harm") return g ? text(g.harm.who) : null;
+  return null;
+}
+
+function compareRowSort(a, b, cfg, key, dir) {
+  const ka = rowSortKey(a, cfg, key), kb = rowSortKey(b, cfg, key);
+  if (ka === null || kb === null) return (ka === null) - (kb === null);
+  const c = typeof ka === "number" ? ka - kb : ka.localeCompare(kb);
+  if (c) return dir === "desc" ? -c : c;
+  // Ties (same status, same harm): most recently updated first.
+  return (rowSortKey(b, cfg, "updated") || "").localeCompare(rowSortKey(a, cfg, "updated") || "");
 }
 
 /* Curated row list (2026-11-22): each curated tracker's adapter, used for
@@ -7175,6 +7221,10 @@ function renderSortToggle(cfg) {
   options.push(['impact', 'Biggest impact first']);
   if (cfg.kind !== "tracker") options.push(['covered', 'Most covered']);
   if (cfg.kind === "prosecution") options.push(['alpha', 'Alphabetical']);
+  // A column-label sort (2026-11-22) shows here while it is active.
+  if (sortValue.startsWith("col-") && ROW_SORTS[sortValue.slice(4)]) {
+    options.push([sortValue, 'Column: ' + ROW_SORTS[sortValue.slice(4)].label + (rowSortDir === "desc" ? ' ▼' : ' ▲')]);
+  }
   sel.innerHTML = options.map(([v, label]) => '<option value="' + v + '">' + label + '</option>').join("");
   sel.value = sortValue;
 }
@@ -7415,7 +7465,10 @@ function renderEntries() {
     }
     return activityKeys.get(e);
   };
-  if (sortValue === "added" && cfg.dateAddedField) {
+  if (sortValue.startsWith("col-") && ROW_SORTS[sortValue.slice(4)]) {
+    const key = sortValue.slice(4);
+    filtered.sort((a, b) => compareRowSort(a, b, cfg, key, rowSortDir));
+  } else if (sortValue === "added" && cfg.dateAddedField) {
     filtered.sort((a, b) => (b[cfg.dateAddedField] || "").localeCompare(a[cfg.dateAddedField] || ""));
   } else if (sortValue === "activity") {
     filtered.sort((a, b) => activityDate(b) - activityDate(a));
@@ -7508,15 +7561,34 @@ function renderEntries() {
 function buildEntryRowHeader() {
   const h = document.createElement("div");
   h.className = "entry-row-header";
-  h.setAttribute("aria-hidden", "true");
+  const curKey = sortValue.startsWith("col-") ? sortValue.slice(4) : "";
+  const sortBtn = key => {
+    const on = key === curKey;
+    const text = ROW_SORTS[key].label;
+    return '<button type="button" class="entry-row-sort" data-sort="' + key + '" aria-pressed="' + on + '"' +
+      ' aria-label="Sort by ' + escapeHtml(text) + (on ? ', sorted ' + (rowSortDir === "desc" ? "descending" : "ascending") : '') + '">' +
+      escapeHtml(text) + (on ? (rowSortDir === "desc" ? ' ▼' : ' ▲') : '') + '</button>';
+  };
   h.innerHTML =
-    '<span class="entry-row-date">Updated</span>' +
-    '<span class="share-link-btn entry-row-more entry-row-ghost"><span class="lbl-more">more</span></span>' +
+    '<span class="entry-row-date">' + sortBtn("updated") + '</span>' +
+    '<span class="share-link-btn entry-row-more entry-row-ghost" aria-hidden="true"><span class="lbl-more">more</span></span>' +
     '<span class="entry-row-tracker-slot">Tracker</span>' +
-    '<span class="headline-row-status">Status</span>' +
-    '<span class="share-link-btn entry-row-sources entry-row-ghost">sources</span>' +
-    '<span class="entry-row-text">Entry</span>' +
-    '<span class="entry-row-harm">Harm to</span>';
+    '<span class="headline-row-status">' + sortBtn("status") + '</span>' +
+    '<span class="share-link-btn entry-row-sources entry-row-ghost" aria-hidden="true">sources</span>' +
+    '<span class="entry-row-text">' + sortBtn("entry") + '</span>' +
+    '<span class="entry-row-harm">' + sortBtn("harm") + '</span>';
+  h.addEventListener("click", (e) => {
+    const btn = e.target.closest(".entry-row-sort");
+    if (!btn) return;
+    const key = btn.dataset.sort;
+    rowSortDir = key === curKey ? (rowSortDir === "desc" ? "asc" : "desc") : ROW_SORTS[key].first;
+    sortValue = "col-" + key;
+    renderSortToggle(TRACKERS[activeTracker]);
+    renderEntries();
+    // Keyboard users keep their place.
+    const again = document.querySelector('#entries .entry-row-sort[data-sort="' + key + '"]');
+    if (again) again.focus();
+  });
   return h;
 }
 
