@@ -88,6 +88,9 @@ def _open(browser, site_url, view="prosecution", speech=True, viewport=None, lis
     page.wait_for_timeout(1200)
     page.evaluate(_SELECT_VIEW, view)
     page.wait_for_timeout(900)
+    # Curated trackers list one-line rows (2026-11-22); Listen sits at the top
+    # of the opened entry, so open the first two.
+    page.evaluate("document.querySelectorAll('#entries .entry-rowmode').forEach((c, i) => { if (i < 2) c.classList.add('open'); })")
     return page, errors
 
 
@@ -184,9 +187,10 @@ def test_no_button_when_switched_off(browser, site_url):
 
 
 def test_no_button_on_reporting(browser, site_url):
+    # Reporting opens as the one-line Records feed (2026-11-21).
     page, _ = _open(browser, site_url, view="tracker")
-    assert page.locator(".entry").count() > 0
-    assert _listen_buttons(page).count() == 0
+    assert page.locator("#headlines-view .headline-entry").count() > 0
+    assert page.locator(".listen-btn").count() == 0
 
 
 def test_bar_fits_phone_width(browser, site_url):

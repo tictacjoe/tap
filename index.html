@@ -1739,6 +1739,115 @@
     .headline-row-tracker { min-width: 4ch; }
   }
 
+  /* ================= CURATED ROW LIST (2026-11-22) =================
+     Curated tracker pages list one line per entry (Joe's pick, idea 4 of
+     the tracker-list mockups): updated date, more, a soft tracker-name tag,
+     status pill, sources, then the official's name in a faint tracker tint
+     and the bold headline running to the edge, and a faint "Harm to" column
+     on wide screens. The row is the card's .entry-head, so a click (or
+     "more") still opens the full card underneath, and deep links, Copy link
+     and Listen keep working. */
+  .entry.entry-rowmode {
+    border: none;
+    border-bottom: 1px solid var(--rule);
+    border-radius: 0;
+    margin: 0;
+    background: transparent;
+  }
+  .entry.entry-rowmode.open { border: 1px solid var(--rule-strong); border-radius: 4px; margin: 0.4rem 0; background: var(--paper); }
+  .entry-rowmode > .entry-head.entry-row,
+  .entry-row-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.55rem 0.8rem;
+  }
+  .entry-row-header {
+    border-bottom: 1px solid var(--rule-strong);
+    font-family: ui-monospace, monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    padding-top: 0.2rem;
+  }
+  .entry-row-header .entry-row-ghost { visibility: hidden; }
+  .entry-row-date {
+    font-family: ui-monospace, monospace;
+    font-size: 0.7rem;
+    color: var(--ink-faint);
+    white-space: nowrap;
+    flex-shrink: 0;
+    min-width: 10ch;
+  }
+  .entry-row-header .entry-row-date { font-size: inherit; color: inherit; }
+  .entry-row-more, .entry-row-sources { flex-shrink: 0; }
+  .entry-row-more .lbl-less { display: none; }
+  .entry.open .entry-row-more .lbl-more { display: none; }
+  .entry.open .entry-row-more .lbl-less { display: inline; }
+  /* Tracker-name slot: as wide as the widest name so every headline starts
+     at the same x. */
+  .entry-row-tracker-slot { flex-shrink: 0; min-width: 11.4rem; display: flex; } /* widest tag, Gov't Service Redirection: 143.6px */
+  .entry-row-tracker {
+    font-family: ui-monospace, monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    line-height: 1.3;
+    color: var(--trk);
+    border: 1px solid color-mix(in srgb, var(--trk) 35%, transparent);
+    background: color-mix(in srgb, var(--trk) 6%, transparent);
+    border-radius: 3px;
+    padding: 0.1rem 0.4rem;
+  }
+  .entry-row-tracker .tracker-name-abbr { display: none; }
+  .entry-row-text {
+    flex: 1 1 auto;
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .entry-row-who { color: color-mix(in srgb, var(--trk) 80%, var(--ink)); }
+  .entry-row-what { font-weight: bold; }
+  .entry-head.entry-row:hover .entry-row-what { text-decoration: underline; color: var(--brass); }
+  .entry-row-harm {
+    flex: 0 0 18rem;
+    min-width: 0;
+    font-size: 0.85em;
+    font-style: italic;
+    color: var(--ink-soft);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .entry-row-header .entry-row-harm { font-style: normal; font-size: inherit; }
+  /* No outline around the status in a row (Joe, 2026-11-22): colored text only. */
+  .entry-row .status-pill { border: none; padding-left: 0; padding-right: 0; }
+  /* Narrower status slot to match: the widest unboxed pill is ~128px. */
+  @media (min-width: 601px) {
+    .entry-row .headline-row-status, .entry-row-header .headline-row-status { min-width: 10.2rem; }
+  }
+  .entry-row-status-text { font-family: ui-monospace, monospace; font-size: 0.7rem; color: var(--ink-soft); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 14rem; }
+  .entry-row-sources-panel { margin: 0.2rem 0.8rem 0.6rem; }
+  .entry-row-tools { display: flex; gap: 0.5rem; flex-wrap: wrap; padding-top: 0.8rem; }
+  @media (max-width: 900px) {
+    .entry-row-harm { display: none; }
+  }
+  @media (max-width: 600px) {
+    .entry-rowmode > .entry-head.entry-row { padding-right: 0.8rem; }
+    .entry-row-tracker-slot { min-width: 4.2ch; }
+    .entry-row-tracker .tracker-name-medium { display: none; }
+    .entry-row-tracker .tracker-name-abbr { display: inline; }
+    .entry-row-sources, .entry-row-header .entry-row-sources { display: none; }
+    /* Phone: the headline alone (the official's name would fill the line),
+       and no column labels. */
+    .entry-row-who { display: none; }
+    .entry-row-header { display: none; }
+  }
+
   /* ================= DEMO MODE & GUIDED TOUR ================= */
   .demo-spotlight {
     position: absolute;
@@ -2856,6 +2965,16 @@ function buildHeadlineItems() {
   TRACKERS.communitytopics.data.forEach(e => items.push(adaptCommunityTopicEntry(e)));
   return items;
 }
+
+/* Curated row list (2026-11-22): each curated tracker's adapter, used for
+   the row's "sources" box (the same trail Records rows show). */
+const ROW_ADAPTERS = {
+  deregulation: e => adaptDeregulationEntry(e),
+  govservices: e => adaptGovServicesEntry(e),
+  trumpfamily: e => adaptTrumpFamilyEntry(e),
+  dai: e => adaptDaiEntry(e),
+  prosecution: e => adaptProsecutionEntry(e),
+};
 
 function buildTrailHtml(trail) {
   const parts = [];
@@ -6569,6 +6688,68 @@ function buildEntryCard(entry, cfg, docketLabel, sourceLabel, term, useRegex, ca
     chipHtml: cardChipHtml + cardPillHtml,
     metaHtml: glanceMetaHtml(entry, cfg, sourceLabel, hl),
   });
+  // Curated row list (2026-11-22): renderEntries() passes cardOpts.row on
+  // curated tracker pages; the card head becomes one line (see the CURATED
+  // ROW LIST CSS block). Copy link and Listen move to the top of the opened
+  // card, and "sources" opens the same confidence/sources box Records rows use.
+  const rowMode = !!(cardOpts && cardOpts.row && cardChipHtml && ROW_ADAPTERS[cardTrackerKey]);
+  if (rowMode) {
+    div.classList.add("entry-rowmode");
+    const g = glanceActive(entry, cfg) ? entry.glance : null;
+    const hideWho = !!(cardOpts && cardOpts.hideWho);
+    const who = g && !hideWho ? g.who : "";
+    const what = g ? g.what : (entry[cfg.titleField] || "Untitled");
+    const harm = g ? g.harm.who : "";
+    const updated = entry.last_substantive_update || entry.last_verified || "";
+    const pill = entryStatusPillHtml(cardTrackerKey, entry.status_stage, useCompactPills());
+    const tip = (who ? who + " — " : "") + what + (harm ? " (Harm to: " + harm + ")" : "");
+    const rowHead =
+      '<div class="entry-head entry-row" title="' + escapeHtml(tip) + '">' +
+        '<span class="entry-row-date">' + escapeHtml(updated) + '</span>' +
+        '<button type="button" class="share-link-btn entry-row-more" aria-label="Show or hide the full entry"><span class="lbl-more">more</span><span class="lbl-less">less</span></button>' +
+        '<span class="entry-row-tracker-slot"><span class="entry-row-tracker" title="' + escapeHtml(cfg.label || "") + '">' +
+          '<span class="tracker-name-medium">' + escapeHtml(HEADLINE_TRACKER_MEDIUM[cardTrackerKey] || "") + '</span>' +
+          '<span class="tracker-name-abbr">' + escapeHtml(HEADLINE_TRACKER_ABBR[cardTrackerKey] || "") + '</span>' +
+        '</span></span>' +
+        // No status_stage yet: Cabinet-Level falls back to its computed
+        // status_category text, as the card head did.
+        (pill ? '<span class="headline-row-status">' + pill + '</span>'
+          : (cfg.kind === "prosecution" && !cfg.statusStageLive && entry.status_category
+            ? '<span class="headline-row-status entry-row-status-text">' + hl(entry.status_category) + '</span>' : '')) +
+        '<button type="button" class="share-link-btn entry-row-sources">sources</button>' +
+        '<span class="entry-row-text">' +
+          (who ? '<span class="entry-row-who">' + hl(who) + '</span> ' : '') +
+          '<span class="entry-row-what">' + hl(what) + '</span>' +
+        '</span>' +
+        '<span class="entry-row-harm">' + hl(harm) + '</span>' +
+      '</div>';
+    const item = ROW_ADAPTERS[cardTrackerKey](entry);
+    div.innerHTML = rowHead +
+      '<div class="confidence-box entry-row-sources-panel" style="display:none">' + buildTrailHtml(item.trail) + '</div>' +
+      '<div class="entry-detail">' +
+        '<div class="entry-row-tools">' + shareBtnHtml + listenBtnHtml + '</div>' +
+        (g ? glanceDetailTitleHtml(entry, cfg, hl) : "") +
+        buildDetailHtml(entry, cfg, term, useRegex) +
+      '</div>';
+    const head = div.querySelector(".entry-head");
+    head.addEventListener("click", () => {
+      div.classList.toggle("open");
+      if (div.classList.contains("open")) distributeEntryCards(div);
+    });
+    const panel = div.querySelector(".entry-row-sources-panel");
+    div.querySelector(".entry-row-sources").addEventListener("click", (e) => {
+      e.stopPropagation();
+      panel.style.display = panel.style.display === "none" ? "block" : "none";
+    });
+    wireRelatedEntryLinks(div);
+    wireKeyEventLinks(div);
+    wireUpdateRequestButtons(div);
+    wireTriageButtons(div);
+    wireShareLinkButtons(div);
+    wireListenButtons(div, entry, cfg);
+    wireEvidenceDrawers(div, entry, cfg, term, useRegex);
+    return div;
+  }
   const oldHead =
     '<div class="entry-head">' +
       '<div class="entry-title-block">' +
@@ -6603,7 +6784,9 @@ function buildEntryCard(entry, cfg, docketLabel, sourceLabel, term, useRegex, ca
 // toggles the card open/closed, same reason wireRelatedEntryLinks()
 // needs it for its coverage-tag links.
 function wireShareLinkButtons(container) {
-  container.querySelectorAll(".share-link-btn").forEach(btn => {
+  // Only real Copy link buttons (they carry data-share-tracker): curated row
+  // lists reuse the share-link-btn look for "more" and "sources" (2026-11-22).
+  container.querySelectorAll(".share-link-btn[data-share-tracker]").forEach(btn => {
     btn.addEventListener("click", (e) => {
       e.stopPropagation();
       const url = buildShareUrl(btn.dataset.shareTracker, btn.dataset.shareId);
@@ -7009,7 +7192,7 @@ function renderGroupToggle(cfg) {
   // DHS and ICE (2026-10-18): "List by agency" / "List by official".
   if (cfg.trackerKey === "dai") {
     sel.style.display = "";
-    sel.innerHTML = '<option value="">Individual cards</option><option value="agency">List by agency</option><option value="official">List by official</option>';
+    sel.innerHTML = '<option value="">Individual entries</option><option value="agency">List by agency</option><option value="official">List by official</option>';
     sel.value = groupMode;
     sel.disabled = false;
     statusLabel.style.display = "none";
@@ -7017,7 +7200,7 @@ function renderGroupToggle(cfg) {
   }
   if (cfg.trackerKey === "trumpfamily") {
     sel.style.display = "";
-    sel.innerHTML = '<option value="">Individual cards</option><option value="family">List by family member</option>';
+    sel.innerHTML = '<option value="">Individual entries</option><option value="family">List by family member</option>';
     sel.value = groupMode;
     sel.disabled = false;
     statusLabel.style.display = "none";
@@ -7029,7 +7212,7 @@ function renderGroupToggle(cfg) {
     return;
   }
   sel.style.display = "";
-  sel.innerHTML = '<option value="">Individual cards</option><option value="individual">List by individual</option>';
+  sel.innerHTML = '<option value="">Individual entries</option><option value="individual">List by individual</option>';
   sel.value = groupMode;
   sel.disabled = statusGroupOn;
   statusLabel.style.display = "";
@@ -7185,7 +7368,9 @@ function renderGroupedEntries(entries, cfg, container, keyFn, sortGroups, cardOp
     }));
     const body = div.querySelector(".official-group-body");
     groupEntries.forEach(entry => {
-      body.appendChild(buildEntryCard(entry, cfg, null, null, searchTerm, false, cardOpts));
+      // Curated trackers list rows inside groups too (2026-11-22).
+      const opts = ROW_ADAPTERS[cfg.trackerKey || cfg.kind] ? { ...(cardOpts || {}), row: true } : cardOpts;
+      body.appendChild(buildEntryCard(entry, cfg, null, null, searchTerm, false, opts));
     });
     container.appendChild(div);
   });
@@ -7311,9 +7496,28 @@ function renderEntries() {
   }
 
   container.innerHTML = "";
+  const rows = !!ROW_ADAPTERS[cfg.trackerKey || cfg.kind];
+  if (rows) container.appendChild(buildEntryRowHeader());
   toRender.forEach((entry, i) => {
-    container.appendChild(buildEntryCard(entry, cfg, "NO. " + String(i + 1).padStart(2, "0"), null, searchTerm, false));
+    container.appendChild(buildEntryCard(entry, cfg, "NO. " + String(i + 1).padStart(2, "0"), null, searchTerm, false, rows ? { row: true } : undefined));
   });
+}
+
+/* Column labels over a curated row list. Invisible copies of the row's
+   buttons and tag slot keep every label over its column. */
+function buildEntryRowHeader() {
+  const h = document.createElement("div");
+  h.className = "entry-row-header";
+  h.setAttribute("aria-hidden", "true");
+  h.innerHTML =
+    '<span class="entry-row-date">Updated</span>' +
+    '<span class="share-link-btn entry-row-more entry-row-ghost"><span class="lbl-more">more</span></span>' +
+    '<span class="entry-row-tracker-slot">Tracker</span>' +
+    '<span class="headline-row-status">Status</span>' +
+    '<span class="share-link-btn entry-row-sources entry-row-ghost">sources</span>' +
+    '<span class="entry-row-text">Entry</span>' +
+    '<span class="entry-row-harm">Harm to</span>';
+  return h;
 }
 
 /* Cross-database search: iterates every tracker's data (News is

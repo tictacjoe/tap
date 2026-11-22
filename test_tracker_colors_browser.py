@@ -84,16 +84,14 @@ def test_cards_have_left_border_and_chip(browser, site_url, key):
     card = page.locator(".entry.curated-card").first
     if card.count() == 0:
         pytest.skip(f"no {key} entries loaded")
-    assert card.evaluate("e => getComputedStyle(e).borderLeftColor") == COLORS[key]
-    assert card.evaluate("e => getComputedStyle(e).borderLeftWidth") == "6px"
-    chip = card.locator(".tracker-chip")
-    assert chip.count() == 1
-    assert chip.evaluate("e => getComputedStyle(e).backgroundColor") == COLORS[key]
-    assert chip.evaluate("e => e.textContent.trim()")
-    assert chip.evaluate("e => getComputedStyle(e).color") == "rgb(255, 255, 255)"
-    # Chip leads the header line.
-    assert card.locator(".entry-title").first.evaluate(
-        "e => e.firstElementChild.classList.contains('tracker-chip')")
+    # Curated rows (2026-11-22, Joe): a soft outlined tracker-name tag in the
+    # tracker's color replaces the filled chip and the 6px left border.
+    assert "entry-rowmode" in card.get_attribute("class")
+    tag = card.locator(".entry-row .entry-row-tracker")
+    assert tag.count() == 1
+    assert tag.evaluate("e => getComputedStyle(e).color") == COLORS[key]
+    assert tag.evaluate("e => e.textContent.trim()")
+    assert card.locator(".tracker-chip").count() == 0
 
 
 def test_search_result_cards_have_chip(browser, site_url):

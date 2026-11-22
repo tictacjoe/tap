@@ -134,7 +134,8 @@ def test_no_pill_without_field(browser, site_url):
     _view(page, "prosecution")
     assert page.locator("#entries .entry").count() > 0
     assert page.locator(".status-pill").count() == 0
-    assert "Status Stage" in page.locator("#entries").inner_text()
+    # Rows (2026-11-22) show the computed status_category in the status slot.
+    assert page.locator("#entries .entry-row .entry-row-status-text").count() > 0
     assert not page.locator("#status-filter").is_visible()
     # Cabinet-Level's filter is still the computed status_category one.
     options = _option_texts(page, "#filter")
@@ -171,12 +172,13 @@ def test_pills_with_injected_field(browser, site_url):
     _view(page, "prosecution")
     cards = page.locator("#entries .entry")
     assert cards.count() > 0
+    # Curated rows (2026-11-22): the pill's slot follows the tracker-name slot.
     pills = page.eval_on_selector_all(
-        "#entries .entry .entry-title",
+        "#entries .entry .entry-row",
         """els => els.map(t => {
             const pill = t.querySelector('.status-pill');
-            return pill ? [pill.textContent.trim(), pill.previousElementSibling
-                && pill.previousElementSibling.classList.contains('tracker-chip')] : null;
+            return pill ? [pill.textContent.trim(), pill.closest('.headline-row-status').previousElementSibling
+                .classList.contains('entry-row-tracker-slot')] : null;
         })""")
     assert pills and all(p == ["⚖ Court ruled", True] for p in pills)
     assert "Status Stage" not in page.locator("#entries").inner_text()
