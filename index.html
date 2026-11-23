@@ -2817,6 +2817,9 @@ function adaptDeregulationEntry(entry) {
     statusStage: entry.status_stage || null,
     category: entry.domain || null,
     id: entry.id || null,
+    // One-sentence summary for the Records hover text (spec decision 8.2.2);
+    // null when the entry has none. stripAdaptedItemLabels() cleans it too.
+    skim: entry.section_summaries?.what_changed || null,
   });
 }
 /* adapt-deregulation-entry:end */
@@ -2849,6 +2852,9 @@ function adaptGovServicesEntry(entry) {
     statusStage: entry.status_stage || null,
     category: entry.domain || null,
     id: entry.id || null,
+    // One-sentence summary for the Records hover text (spec decision 8.2.2);
+    // null when the entry has none. stripAdaptedItemLabels() cleans it too.
+    skim: entry.section_summaries?.what_changed || null,
   });
 }
 /* adapt-govservices-entry:end */
@@ -3061,6 +3067,9 @@ function adaptProsecutionEntry(entry) {
     statusStage: entry.status_stage || null,
     category: entry.offense_category || null,
     id: entry.id || null,
+    // Cabinet-Level has no what_changed; its one-sentence summary is
+    // incident_summary. Used as the Records hover text (spec decision 8.2.2).
+    skim: entry.section_summaries?.incident_summary || null,
   });
 }
 /* adapt-prosecution-entry:end */
@@ -3392,6 +3401,8 @@ function buildHeadlineRow(item, displayDate) {
   const row = document.createElement("div");
   row.className = "headline-entry";
   row.dataset.tracker = item.tracker;
+  // Entry id (curated rows only), so tests and tools can map a row to its entry.
+  if (item.id) row.dataset.entryId = item.id;
 
   const trackerLabel = TRACKERS[item.tracker].label;
   const trackerMedium = HEADLINE_TRACKER_MEDIUM[item.tracker] || trackerLabel;
@@ -3399,15 +3410,18 @@ function buildHeadlineRow(item, displayDate) {
 
   const line = document.createElement("div");
   line.className = "headline-row";
-  // The hover tooltip deliberately points at tiers[0] ("brief"), the
-  // fuller untruncated source text each adapt*Entry() function carries,
-  // not item.headline -- headline is already truncated to ~110 chars,
-  // so using it here just echoed the visible truncated text back on
-  // hover instead of showing anything new. data-full-headline stays
-  // bound to item.headline on purpose: fitHeadlineRowText()'s
+  // Hover tooltip (spec decision 8.2.2): curated rows show the entry's
+  // one-sentence skim summary (item.skim: what_changed, or incident_summary
+  // for Cabinet-Level), falling back to item.headline when an entry has
+  // none. This replaced the older tiers[0] ("brief") tooltip, which was the
+  // long untruncated source text. Reporting rows keep their old rule
+  // (tiers[0], else headline), since Reporting has no skim. data-full-headline
+  // stays bound to item.headline on purpose: fitHeadlineRowText()'s
   // packHeadline() repacking expects headline-shaped text, not a full
   // paragraph, so it's left untouched.
-  const tooltipText = (item.tiers && item.tiers[0]) || item.headline;
+  const tooltipText = item.tracker === "tracker"
+    ? ((item.tiers && item.tiers[0]) || item.headline)
+    : (item.skim || item.headline);
   // Reporting rows run to the edge of the screen (Joe, 2026-11-21): instead
   // of the 110-character headline, the row carries the full "what happened"
   // text and CSS ends it with an ellipsis wherever the row runs out of room,
@@ -3539,10 +3553,15 @@ function buildHeadlineRow(item, displayDate) {
   const trailPanel = document.createElement("div");
   trailPanel.className = "confidence-box headline-trail-panel";
   trailPanel.style.display = "none";
-  trailPanel.innerHTML = buildTrailHtml(item.trail);
+  // The panel starts empty; its contents are built once, on the first click
+  // (buildTrailHtml runs for no row nobody opens). Later clicks only toggle.
   body.appendChild(trailPanel);
 
   trailBtn.addEventListener("click", () => {
+    if (!trailPanel.dataset.built) {
+      trailPanel.innerHTML = buildTrailHtml(item.trail);
+      trailPanel.dataset.built = "1";
+    }
     trailPanel.style.display = trailPanel.style.display === "none" ? "block" : "none";
   });
 
@@ -4585,6 +4604,7 @@ function stripProcessLabels(text) {
    function's own doc comment); this only reuses it, it does not widen what it strips. */
 function stripAdaptedItemLabels(item) {
   item.headline = stripProcessLabels(item.headline);
+  if (item.skim) item.skim = stripProcessLabels(item.skim);
   if (Array.isArray(item.tiers)) item.tiers = item.tiers.map(stripProcessLabels);
   if (item.trail) {
     if (item.trail.confidenceNote) item.trail.confidenceNote = stripProcessLabels(item.trail.confidenceNote);
@@ -6901,6 +6921,11 @@ function glanceMetaHtml(entry, cfg, sourceLabel, hl) {
   return html;
 }
 
+// Build arguments for each tracker-tab card's lazy detail, keyed by the card
+// element (a WeakMap, so no expando properties and no leak when a tab redraws).
+// Holds {entry, cfg, term, useRegex, html}; html() returns the detail markup.
+const detailArgs = new WeakMap();
+
 /* Shared card builder used by both the per-tracker tabbed view and
    the cross-database global search view, so the two stay visually
    and behaviorally consistent rather than drifting apart. */
@@ -7033,31 +7058,39 @@ function buildEntryCard(entry, cfg, docketLabel, sourceLabel, term, useRegex, ca
         '</span>' +
         '<span class="entry-row-harm">' + hl(harm) + '</span>' +
       '</div>';
-    const item = ROW_ADAPTERS[cardTrackerKey](entry);
+    // The sources panel and .entry-detail both start empty; the panel is
+    // filled on the first "sources" click (below), the detail by
+    // ensureEntryDetail() on first open.
     div.innerHTML = rowHead +
-      '<div class="confidence-box entry-row-sources-panel" style="display:none">' + buildTrailHtml(item.trail) + '</div>' +
-      '<div class="entry-detail">' +
+      '<div class="confidence-box entry-row-sources-panel" style="display:none"></div>' +
+      '<div class="entry-detail"></div>';
+    detailArgs.set(div, {
+      entry, cfg, term, useRegex,
+      html: () =>
         '<div class="entry-row-tools">' + shareBtnHtml + listenBtnHtml + '</div>' +
         (g ? glanceDetailTitleHtml(entry, cfg, hl) : "") +
-        buildDetailHtml(entry, cfg, term, useRegex) +
-      '</div>';
+        buildDetailHtml(entry, cfg, term, useRegex),
+    });
     const head = div.querySelector(".entry-head");
     head.addEventListener("click", () => {
       div.classList.toggle("open");
-      if (div.classList.contains("open")) distributeEntryCards(div);
+      if (div.classList.contains("open")) {
+        ensureEntryDetail(div);
+        distributeEntryCards(div);
+      }
     });
     const panel = div.querySelector(".entry-row-sources-panel");
     div.querySelector(".entry-row-sources").addEventListener("click", (e) => {
       e.stopPropagation();
+      // Built once, on the first click: the adapter runs here, not at draw time.
+      if (!panel.dataset.built) {
+        panel.innerHTML = buildTrailHtml(ROW_ADAPTERS[cardTrackerKey](entry).trail);
+        panel.dataset.built = "1";
+      }
       panel.style.display = panel.style.display === "none" ? "block" : "none";
     });
-    wireRelatedEntryLinks(div);
-    wireKeyEventLinks(div);
-    wireUpdateRequestButtons(div);
-    wireTriageButtons(div);
-    wireShareLinkButtons(div);
-    wireListenButtons(div, entry, cfg);
-    wireEvidenceDrawers(div, entry, cfg, term, useRegex);
+    // Head only; the detail is wired when it is built (ensureEntryDetail).
+    wireEntryContent(head, entry, cfg, term, useRegex);
     return div;
   }
   const oldHead =
@@ -7067,24 +7100,66 @@ function buildEntryCard(entry, cfg, docketLabel, sourceLabel, term, useRegex, ca
         '<div class="entry-meta">' + metaHtml + '</div>' +
       '</div>' +
     '</div>';
-  div.innerHTML = (glanceHead || oldHead) +
-    '<div class="entry-detail">' +
+  // Detail starts empty and is built on first open (ensureEntryDetail).
+  div.innerHTML = (glanceHead || oldHead) + '<div class="entry-detail"></div>';
+  detailArgs.set(div, {
+    entry, cfg, term, useRegex,
+    html: () =>
       (glanceHead ? glanceDetailTitleHtml(entry, cfg, hl) : "") +
-      buildDetailHtml(entry, cfg, term, useRegex) +
-    '</div>';
-
-  div.querySelector(".entry-head").addEventListener("click", () => {
-    div.classList.toggle("open");
-    if (div.classList.contains("open")) distributeEntryCards(div);
+      buildDetailHtml(entry, cfg, term, useRegex),
   });
-  wireRelatedEntryLinks(div);
-  wireKeyEventLinks(div);
-  wireUpdateRequestButtons(div);
-  wireTriageButtons(div);
-  wireShareLinkButtons(div);
-  wireListenButtons(div, entry, cfg);
-  wireEvidenceDrawers(div, entry, cfg, term, useRegex);
+
+  const cardHead = div.querySelector(".entry-head");
+  cardHead.addEventListener("click", () => {
+    div.classList.toggle("open");
+    if (div.classList.contains("open")) {
+      ensureEntryDetail(div);
+      distributeEntryCards(div);
+    }
+  });
+  // Head only; the detail is wired when it is built (ensureEntryDetail).
+  wireEntryContent(cardHead, entry, cfg, term, useRegex);
   return div;
+}
+
+// The wire* helpers every card needs, run on one container: the card's
+// .entry-head at draw time, then its .entry-detail when that is built. Never
+// run on the whole card twice, or buttons would get two click handlers.
+function wireEntryContent(container, entry, cfg, term, useRegex) {
+  wireRelatedEntryLinks(container);
+  wireKeyEventLinks(container);
+  wireUpdateRequestButtons(container);
+  wireTriageButtons(container);
+  wireShareLinkButtons(container);
+  wireListenButtons(container, entry, cfg);
+  wireEvidenceDrawers(container, entry, cfg, term, useRegex);
+}
+
+// Fills a card's .entry-detail the first time it is needed (open by click,
+// deep link, history, tour) and wires it. Later calls return the same node
+// untouched. Returns null for an element that isn't a lazy card.
+function ensureEntryDetail(el) {
+  const args = detailArgs.get(el);
+  if (!args) return null;
+  // A global-search one-liner's .oneliner-detail IS the detail node; a card
+  // holds its detail in a child .entry-detail.
+  const isOneLiner = el.classList.contains("oneliner-detail");
+  const detail = isOneLiner ? el : el.querySelector(".entry-detail");
+  if (!detail || el.dataset.detailBuilt === "1") return detail;
+  detail.innerHTML = args.html();
+  if (isOneLiner) {
+    // One-liner detail has no share/listen/update-request buttons, so it keeps
+    // its original four wires (the full set would be a no-op here, but this
+    // keeps the one-liner behaviour exactly as it was).
+    wireRelatedEntryLinks(detail);
+    wireKeyEventLinks(detail);
+    wireEvidenceDrawers(detail, args.entry, args.cfg, args.term, args.useRegex);
+    wireTriageButtons(detail);
+  } else {
+    wireEntryContent(detail, args.entry, args.cfg, args.term, args.useRegex);
+  }
+  el.dataset.detailBuilt = "1";
+  return detail;
 }
 
 // Browser-only counterpart to the .share-link-btn markup above --
@@ -8038,6 +8113,8 @@ function openCardById(id) {
   const group = card.closest(".official-group");
   if (group) group.classList.add("open");
   card.classList.add("open", "deep-linked");
+  // Opening by id skips the head click, so build the detail here first.
+  ensureEntryDetail(card);
   // Deal the cards into columns, same as the entry-head click handler does
   // (2026-11-15: this path skipped it, so a deep-linked or Records-row-opened
   // entry showed every card stacked in the first column until a resize).
@@ -8293,18 +8370,22 @@ function renderSearchMatches(section, matches, term, useRegex, useOneLiners) {
 
     const detail = document.createElement("div");
     detail.className = "oneliner-detail";
-    detail.innerHTML =
-      glanceDetailTitleHtml(m.entry, m.cfg, (t) => highlightMatches(t || "", term, useRegex)) +
-      buildDetailHtml(m.entry, m.cfg, term, useRegex);
-    wireRelatedEntryLinks(detail);
-    wireKeyEventLinks(detail);
-    wireEvidenceDrawers(detail, m.entry, m.cfg, term, useRegex);
-    wireTriageButtons(detail);
+    // Lazy: the detail markup is built (and wired) by ensureEntryDetail the
+    // first time the row is opened, not at draw time.
+    detailArgs.set(detail, {
+      entry: m.entry, cfg: m.cfg, term, useRegex,
+      html: () =>
+        glanceDetailTitleHtml(m.entry, m.cfg, (t) => highlightMatches(t || "", term, useRegex)) +
+        buildDetailHtml(m.entry, m.cfg, term, useRegex),
+    });
 
     row.addEventListener("click", () => {
       row.classList.toggle("open");
       detail.style.display = row.classList.contains("open") ? "block" : "none";
-      if (row.classList.contains("open")) distributeEntryCards(detail);
+      if (row.classList.contains("open")) {
+        ensureEntryDetail(detail);
+        distributeEntryCards(detail);
+      }
     });
 
     list.appendChild(row);
@@ -9502,8 +9583,10 @@ const TapDemoTour = (() => {
         if (firstEntry) {
           firstEntry.scrollIntoView({ behavior: "smooth", block: "center" });
           if (!firstEntry.classList.contains("open")) {
+            // The head click builds the detail; ensureEntryDetail is a no-op after it.
             const head = firstEntry.querySelector(".entry-head");
             if (head) head.click();
+            ensureEntryDetail(firstEntry);
           }
         }
       }

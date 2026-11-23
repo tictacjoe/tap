@@ -37,6 +37,7 @@ _OPEN_ENTRY = """(id) => {
     const group = card.closest('.official-group');
     if (group) group.classList.add('open');
     card.classList.add('open');
+    ensureEntryDetail(card);   // detail is built lazily on first open (2026-11-23)
     card.scrollIntoView();
 }"""
 
@@ -244,10 +245,20 @@ def test_the_drawer_works_in_the_global_search_one_liner_list(browser, site_url)
     page.check("#global-oneliner")
     page.fill("#global-search", "Tirrell")
     page.wait_for_timeout(900)
-    detail = page.locator(f'.oneliner-detail:has(.evidence-drawer[data-evidence-entry="{ENTRY_ID}"])')
-    assert detail.count() == 1
-    # expand the row that owns this detail (the row is the detail's previous sibling)
-    detail.evaluate("el => el.previousElementSibling.click()")
+    # One-liner details are built lazily on first open, so they are empty (no drawer to select
+    # by) until the row is clicked. Find the detail through its stashed args (detailArgs is a
+    # top-level const), tag it, then click its row (the previous sibling) to build it.
+    tagged = page.evaluate("""(id) => {
+        const el = [...document.querySelectorAll(".oneliner-detail")]
+            .find(d => { const a = detailArgs.get(d); return a && a.entry.id === id; });
+        if (!el) return false;
+        el.dataset.testTarget = "1";
+        el.previousElementSibling.click();
+        return true;
+    }""", ENTRY_ID)
+    assert tagged
+    detail = page.locator(".oneliner-detail[data-test-target='1']")
+    assert detail.locator(f'.evidence-drawer[data-evidence-entry="{ENTRY_ID}"]').count() == 1
     drawer = detail.locator(".evidence-drawer")
     drawer.scroll_into_view_if_needed()
     drawer.locator(".evidence-drawer-head").click()

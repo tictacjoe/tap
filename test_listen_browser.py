@@ -90,7 +90,7 @@ def _open(browser, site_url, view="prosecution", speech=True, viewport=None, lis
     page.wait_for_timeout(900)
     # Curated trackers list one-line rows (2026-11-22); Listen sits at the top
     # of the opened entry, so open the first two.
-    page.evaluate("document.querySelectorAll('#entries .entry-rowmode').forEach((c, i) => { if (i < 2) c.classList.add('open'); })")
+    page.evaluate("document.querySelectorAll('#entries .entry-rowmode').forEach((c, i) => { if (i < 2) { c.classList.add('open'); ensureEntryDetail(c); } })")
     return page, errors
 
 
