@@ -182,3 +182,19 @@ def test_reporting_failure_shows_a_note_not_a_spinner(browser, site_url):
     page.evaluate("selectDatabaseTab('tracker')")
     assert "Reporting couldn't be loaded." in page.locator("#entries").inner_text()
     assert page.locator('#tabs option[value="tracker"]').text_content().endswith("(unavailable)")
+
+
+def test_global_search_before_reporting_fills_in_on_arrival(browser, site_url):
+    """Searching while Reporting is held shows curated hits plus a 'still loading' note;
+    when Reporting arrives the same term is re-searched and the note is replaced."""
+    page, held, _ = _open_held(browser, site_url)
+    page.fill("#global-search", "EPA")
+    assert "Reporting still loading…" in page.locator("#count").inner_text()
+    assert page.locator("#entries .entry").count() > 0
+    _release(page, held)
+    page.wait_for_function(
+        "document.getElementById('count').textContent.includes('in Reporting (uncurated)')",
+        timeout=30000)
+    count = page.locator("#count").inner_text()
+    assert "still loading" not in count
+    assert page.input_value("#global-search") == "EPA"

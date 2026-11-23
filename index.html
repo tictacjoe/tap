@@ -8337,9 +8337,13 @@ function renderGlobalResults(term, useRegex, useOneLiners, useImpactSort) {
   // Always plain-text matching here, regardless of the regex toggle --
   // Reporting's own tab search box doesn't support regex, so this count
   // needs to match what actually shows up after following the link.
-  const reportingMatches = TRACKERS.tracker.data.filter(entry =>
+  // Until Reporting has arrived there is nothing to search, so treat it as zero matches
+  // and say so in the count line; onReportingLoaded() re-runs this search on arrival.
+  const reportingMatches = !reportingLoaded ? [] : TRACKERS.tracker.data.filter(entry =>
     matchesTerm(visibleSearchText(entry, TRACKERS.tracker), term, false)
   );
+  const reportingNote = reportingLoaded ? ""
+    : (reportingFailed ? " (Reporting unavailable)" : " (Reporting still loading\u2026)");
 
   if (useImpactSort) {
     const byImpact = (a, b) => impactScore(b.entry, b.cfg) - impactScore(a.entry, a.cfg);
@@ -8353,14 +8357,20 @@ function renderGlobalResults(term, useRegex, useOneLiners, useImpactSort) {
     ? repN + " in Reporting (uncurated) for \"" + term + "\""
     : tapTotal + " result(s) across " + globalSearchDatabaseCount(TRACKERS) + " databases" +
       (repN ? ", plus " + repN + " in Reporting (uncurated)" : "") + " for \"" + term + "\"") +
-    (useRegex ? " (regex)" : "") + (useOneLiners ? " — 1-liner view" : "");
+    reportingNote + (useRegex ? " (regex)" : "") + (useOneLiners ? " — 1-liner view" : "");
 
   container.innerHTML = "";
 
   if (tapTotal === 0 && reportingMatches.length === 0) {
     const empty = document.createElement("div");
     empty.className = "empty-state";
-    empty.textContent = globalSearchNoMatchesText(TRACKERS);
+    if (reportingLoaded) {
+      empty.textContent = globalSearchNoMatchesText(TRACKERS);
+    } else {
+      // Reporting not here yet: reuse the shared loading/failed message.
+      empty.innerHTML = reportingNotReadyHtml();
+      empty.textContent = empty.firstElementChild.textContent;
+    }
     container.appendChild(empty);
     return;
   }
