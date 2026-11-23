@@ -4040,7 +4040,7 @@ function classifyOffenseCategory(raw) {
     // concern", or next to "not itself unlawful"), it alleges no violation, so
     // return Other/Unclassified to hand it to classifyConcernType below
     // instead of labelling it First Amendment Retaliation.
-    [/first amendment[^.;]{0,40}\bconcern\b|first amendment[\s\S]*not itself unlawful|not itself unlawful[\s\S]*first amendment/, "Other/Unclassified"],
+    [/first amendment[^.;]{0,40}\bconcerns?\b|first amendment[\s\S]*not itself unlawful|not itself unlawful[\s\S]*first amendment/, "Other/Unclassified"],
     [/first amendment/, "First Amendment Retaliation"],
     [/unlawful agency action/, "Unlawful Agency Action"],
     [/federal records act/, "Federal Records Act Violation"],
@@ -4130,10 +4130,14 @@ function classifyConcernType(raw) {
   const text = raw.toLowerCase();
 
   const rules = [
+    // Added 2026-11-23 (side queue, Rosen NSPM-7 entry): charges said to raise
+    // First Amendment freedom-of-association concerns are a civil-liberties
+    // concern, not retaliation against a named critic. Must precede the rule below.
+    [/first amendment freedom-of-association concerns?/, "Civil Liberties / Discriminatory Targeting Concern"],
     // Added 2026-11-23 with the First Amendment concern rule in
     // classifyOffenseCategory above (same pattern): those entries describe
     // retaliation against critics, oversight or institutions as a concern.
-    [/first amendment[^.;]{0,40}\bconcern\b|first amendment[\s\S]*not itself unlawful|not itself unlawful[\s\S]*first amendment/, "Retaliation Against Critics or Political Opponents"],
+    [/first amendment[^.;]{0,40}\bconcerns?\b|first amendment[\s\S]*not itself unlawful|not itself unlawful[\s\S]*first amendment/, "Retaliation Against Critics or Political Opponents"],
     [/pardon|clemency|commutation/, "Pardon / Clemency Pattern"],
     [/purge|retaliatory firing|retaliation against|removal of a senior|firing the nation's|firing national security|removal of the army|removal of a career|firing fbi personnel|firing of career|removed.*without stated cause|politicized removal/, "Retaliatory or Politicized Personnel Action"],
     [/vetting|unqualified|unvetted|non-credentialed|research-compromised|politically-screened hiring|politically screened/, "Politicized or Unqualified Appointment/Hiring"],

@@ -342,3 +342,11 @@ test("First Amendment named only as a concern is a concern, not a violation", ()
   assert.equal(classifyOffenseCategory("First Amendment Retaliation and Fifth Amendment Due Process Violations Alleged in the Firings"), "First Amendment Retaliation");
   assert.equal(classifyOffenseCategory("Retaliation against protected federal whistleblowers -- potential violation of the Whistleblower Protection Act and First Amendment"), "First Amendment Retaliation");
 });
+
+// 2026-11-23 (side queue, Rosen NSPM-7 entry): plural "concerns" and the
+// freedom-of-association wording get the civil-liberties concern label.
+test("First Amendment freedom-of-association concerns are a civil-liberties concern", () => {
+  const t = "Use of Federal Conspiracy Charges to Criminalize Protest Organizing -- raising First Amendment freedom-of-association concerns";
+  assert.equal(classifyOffenseCategory(t), "Other/Unclassified");
+  assert.equal(classifyConcernType(t), "Civil Liberties / Discriminatory Targeting Concern");
+});
