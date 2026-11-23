@@ -324,3 +324,21 @@ test("each of the 8 previously unmatched published entries gets its 2026-11-19 l
   }
   assert.deepEqual(wrong, []);
 });
+
+// 2026-11-23 owner call (side queue IL2/IL3): text that names the First Amendment
+// only as a concern routes to the concern classifier, not First Amendment Retaliation.
+test("First Amendment named only as a concern is a concern, not a violation", () => {
+  const cases = [
+    "Retaliatory/Chilling Personnel Action Against Protected Speech (potential First Amendment retaliation concern; due-process concern) -- NOT charged",
+    "Viewpoint-Based Retaliation Against Academic Institutions -- potential First Amendment concern given the explicitly ideological stated rationale",
+    "Forcible removal of a sitting U.S. Senator (potential First Amendment/congressional-oversight retaliation concern; no charges filed)",
+    "a directive implicating Congress's Article I oversight power and the First Amendment. Directing an investigation is not itself unlawful",
+  ];
+  for (const t of cases) {
+    assert.equal(classifyOffenseCategory(t), "Other/Unclassified");
+    assert.equal(classifyConcernType(t), "Retaliation Against Critics or Political Opponents");
+  }
+  // Alleged or found violations keep the violation label.
+  assert.equal(classifyOffenseCategory("First Amendment Retaliation and Fifth Amendment Due Process Violations Alleged in the Firings"), "First Amendment Retaliation");
+  assert.equal(classifyOffenseCategory("Retaliation against protected federal whistleblowers -- potential violation of the Whistleblower Protection Act and First Amendment"), "First Amendment Retaliation");
+});
