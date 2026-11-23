@@ -41,8 +41,21 @@ def browser():
         instance.close()
 
 
+_contexts = []
+
+
+@pytest.fixture(autouse=True)
+def _close_contexts():
+    """Close every context a test opened, so held routes and pages don't pile up."""
+    yield
+    while _contexts:
+        _contexts.pop().close()
+
+
 def _new_page(browser):
-    page = browser.new_context(viewport={"width": 1280, "height": 900}).new_page()
+    context = browser.new_context(viewport={"width": 1280, "height": 900})
+    _contexts.append(context)
+    page = context.new_page()
     errors = []
     page.on("pageerror", lambda e: errors.append(str(e)))
     return page, errors
@@ -168,7 +181,11 @@ def test_reporting_arrival_keeps_an_open_curated_card(browser, site_url):
     page.evaluate("selectDatabaseTab('deregulation')")
     page.locator(".entry .entry-head").first.click()
     assert "open" in page.locator(".entry").first.get_attribute("class")
+    # Really scroll first, so the scrollY comparison below means something.
+    page.mouse.wheel(0, 400)
+    page.wait_for_timeout(300)
     y = page.evaluate("window.scrollY")
+    assert y > 0
     _release(page, held)
     assert "open" in page.locator(".entry").first.get_attribute("class")
     assert page.evaluate("window.scrollY") == y
@@ -182,6 +199,9 @@ def test_reporting_failure_shows_a_note_not_a_spinner(browser, site_url):
     page.evaluate("selectDatabaseTab('tracker')")
     assert "Reporting couldn't be loaded." in page.locator("#entries").inner_text()
     assert page.locator('#tabs option[value="tracker"]').text_content().endswith("(unavailable)")
+    # A deep link while Reporting is unavailable adds no misleading "not on the tab" note.
+    page.evaluate("openCardById('no-such-id')")
+    assert page.locator(".deep-link-note").count() == 0
 
 
 def test_global_search_before_reporting_fills_in_on_arrival(browser, site_url):
@@ -208,3 +228,25 @@ def test_global_search_over_cap_still_says_reporting_is_loading(browser, site_ur
     assert "shown of" in count, count
     assert "Reporting still loading…" in count
     _release(page, held)
+
+
+def test_search_cards_stay_open_when_reporting_arrives(browser, site_url):
+    """An expanded curated search-result card must survive Reporting's arrival: the Reporting
+    group is appended and the count line updated, without rebuilding the results."""
+    page, held, _ = _open_held(browser, site_url)
+    page.fill("#global-search", "EPA")
+    card = page.locator('#entries section[data-group="curated"] .entry').first
+    card.locator(".entry-head").click()
+    assert "open" in card.get_attribute("class")
+    card_id = card.get_attribute("data-entry-id")
+    page.mouse.wheel(0, 400)
+    page.wait_for_timeout(300)
+    _release(page, held)
+    page.wait_for_function(
+        "document.getElementById('count').textContent.includes('in Reporting (uncurated)')",
+        timeout=30000)
+    same = page.locator(f'#entries .entry[data-entry-id="{card_id}"]').first
+    assert "open" in same.get_attribute("class")
+    assert page.locator('#entries section[data-group="reporting"]').count() == 1
+    assert "in Reporting (uncurated)" in page.locator("#count").inner_text()
+    assert "still loading" not in page.locator("#count").inner_text()
