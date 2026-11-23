@@ -2499,6 +2499,19 @@ function verdictColor(verdict) {
   return map[verdict] || "#5C5A52";
 }
 
+/* reporting-load-labels:start */
+/* Label helper for the uncurated Reporting archive, which loads after the
+   curated trackers. Appends a state suffix to a base label:
+   a number -> "(812)"; null/undefined -> "(loading…)";
+   failed=true -> "(unavailable)". Pure, so it is unit-tested in
+   tests/reporting-load-labels.test.js. */
+function withLoadCount(base, n, failed) {
+  if (failed) return base + " (unavailable)";
+  if (n === null || n === undefined) return base + " (loading…)";
+  return base + " (" + n + ")";
+}
+/* reporting-load-labels:end */
+
 /* flatten-tracker-posts:start */
 /* Converts raw scraped posts (one JSON object per Substack post, each
    containing multiple dated entries) into a flat list of individually
@@ -8377,7 +8390,7 @@ function renderGlobalResults(term, useRegex, useOneLiners, useImpactSort) {
    has loaded (an early render would otherwise clear #illegality before the
    load code reads it). */
 function syncIllegalityHash() {
-  if (!allDataLoaded) return;
+  if (!curatedLoaded) return;
   const action = illegalityHashAction(location.hash, activeTracker, "switch");
   if (action === "set") history.replaceState(history.state, "", "#" + ILLEGALITY_VIEW);
   else if (action === "clear") history.replaceState(history.state, "", location.pathname + location.search);
@@ -8530,7 +8543,7 @@ function renderDispatch() {
   const countEl = document.getElementById("count");
 
   // Keep #harms in step with the view (every view change comes through here).
-  const harmsHash = harmsHashReplacement(location.hash, activeTracker, history.state, location.pathname + location.search, allDataLoaded);
+  const harmsHash = harmsHashReplacement(location.hash, activeTracker, history.state, location.pathname + location.search, curatedLoaded);
   if (harmsHash) history.replaceState(harmsHash.state, "", harmsHash.url);
   // Same for #illegality, as a parallel call (Harms left untouched). Reads
   // location.hash AFTER the Harms sync, so Harms -> Illegality sets
@@ -8774,7 +8787,7 @@ function wireFrontStrip(mount) {
   if (entryLink) entryLink.addEventListener("click", (e) => {
     e.preventDefault();
     const key = entryLink.dataset.tracker, id = entryLink.dataset.id;
-    allDataPromise.then(() => {
+    curatedDataPromise.then(() => {
       const target = resolveEntryTarget(key, id, TRACKERS, MOVED_IDS);
       if (!target || TRACKERS[target.key].hidden) return;
       goToTrackerHome(target.key);
@@ -8786,7 +8799,7 @@ function wireFrontStrip(mount) {
   const harmsLink = mount.querySelector(".fs-harms-link");
   if (harmsLink) harmsLink.addEventListener("click", (e) => {
     e.preventDefault();
-    allDataPromise.then(() => {
+    curatedDataPromise.then(() => {
       activeTracker = HARMS_VIEW;
       renderDispatch();
       const tabsEl = document.getElementById("tabs");
@@ -8827,7 +8840,7 @@ document.getElementById("back-to-top-btn").addEventListener("click", () => {
 // Set by loadAllData() once every data file has settled. Until then each
 // tracker's data is still its empty placeholder array, so a count would
 // read 0 (seen live 2026-11-01): the title shows the name alone until then.
-let allDataLoaded = false;
+let curatedLoaded = false;
 
 function renderBrowseChips() {
   const row = document.getElementById("browse-chips");
@@ -8856,7 +8869,7 @@ function renderBrowseChips() {
     rep.style.setProperty("--chip", "var(--ink-soft)");
     rep.textContent = "Uncurated reporting";
     rep.title = "Reporting: third-party daily news, not curated by TAP" +
-      (allDataLoaded ? " (" + TRACKERS.tracker.data.length + " entries)" : "");
+      (curatedLoaded ? " (" + TRACKERS.tracker.data.length + " entries)" : "");
     rep.addEventListener("click", showReportingFeed);
     reportingRow.appendChild(rep);
     row.appendChild(reportingRow);
@@ -8889,7 +8902,7 @@ function renderBrowseChips() {
     btn.style.setProperty("--chip", "var(--trk-" + key + ")");
     btn.textContent = HEADLINE_TRACKER_MEDIUM[key];
     btn.title = TRACKERS[key].label +
-      (allDataLoaded ? " (" + TRACKERS[key].data.length + " entries)" : "");
+      (curatedLoaded ? " (" + TRACKERS[key].data.length + " entries)" : "");
     btn.addEventListener("click", () => selectDatabaseTab(key));
     (key === "communitytopics" ? extraGroup
       : SECOND_LINE.includes(key) ? line2 : line1).appendChild(btn);
@@ -9182,7 +9195,7 @@ async function loadAllData() {
   // Status pills and status filters switch on per tracker (spec 5.6).
   refreshStatusStageFlags();
 
-  allDataLoaded = true;
+  curatedLoaded = true;
   // #harms opens the Harms view; checked before the first render, which would
   // otherwise clear #harms as "leaving" the view.
   if (harmsHashAction(location.hash, activeTracker, "load") === "open") activeTracker = HARMS_VIEW;
@@ -9205,7 +9218,7 @@ async function loadAllData() {
 
 // Kept so the front strip's "Read the entry" link can wait for the data
 // if it's clicked before every tracker file has arrived.
-const allDataPromise = loadAllData();
+const curatedDataPromise = loadAllData();
 
 /* ====================================================================
    DEMO MODE / GUIDED TOUR CONTROLLER
