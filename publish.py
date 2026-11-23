@@ -48,6 +48,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import hidden_trackers  # noqa: E402
+import feed  # noqa: E402  (feed.xml RSS builder)
 
 
 def load_exclude_list(site_dir: Path) -> set:
@@ -529,6 +530,16 @@ def main():
     meta = write_site_meta(site / "data" / "site_meta.json", date.today(),
                            dry_run=args.dry_run)
     print(f"  updated {meta['updated']}")
+    print()
+
+    # --- RSS feed (feed.xml at the site root) ---
+    # Runs last: it reads the data/*.json files written above, so it only
+    # ever lists entries that are actually published. Hidden trackers and
+    # Reporting are left out (see feed.py).
+    print("=== feed ===")
+    feed_items = feed.write_feed(site, hidden_trackers.site_hidden_trackers(site / "index.html"),
+                                 date.today(), dry_run=args.dry_run)
+    print(f"  {feed_items} items in feed.xml")
     print()
 
     print("---")
