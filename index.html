@@ -9088,20 +9088,69 @@ suggestSubmitBtn.addEventListener("click", () => {
   }, 900);
 });
 
-/* Loads the three published JSON files. Uses Promise.allSettled
-   (not Promise.all) so that a failure on one file -- missing,
-   malformed, not yet published -- doesn't prevent the other two
-   databases from working. Tracker data is flattened from raw posts
-   into individually searchable events immediately after loading. */
+// Shows the "Could not load" banner at the top of <main>. Shared by loadAllData (curated
+// files) and ensureReporting (tracker.json), so a failure reads the same either way.
+function showLoadErrors(names) {
+  const banner = document.createElement("div");
+  banner.className = "regex-error";
+  banner.style.margin = "0 auto 1rem";
+  banner.style.maxWidth = "880px";
+  banner.style.textAlign = "left";
+  banner.textContent = "Could not load: " + names.join(", ") + ". Other databases are unaffected.";
+  document.querySelector("main").prepend(banner);
+  console.warn("Data load errors:", names);
+}
+
+// Reporting (data/tracker.json) loads separately from the curated files, once per page load.
+// reportingLoaded flips true on success, reportingFailed on failure (never retried).
+let reportingLoaded = false;
+let reportingFailed = false;
+let reportingPromise = null;
+
+// Hook for whatever must refresh once Reporting settles (success or failure). Filled in by a
+// later task; deliberately empty for now.
+function onReportingLoaded() {}
+
+// Idempotent: every caller shares one cached promise. Resolves true on success, false on
+// failure; never rejects. Raw posts are flattened into individually searchable events here.
+function ensureReporting() {
+  if (!reportingPromise) {
+    reportingPromise = fetch("data/tracker.json")
+      .then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+      .then(raw => {
+        const flattened = flattenTrackerPosts(raw);
+        flattened.forEach(e => { e.category = normalizeCategory(e.category); });
+        // These categories are excluded entirely from Reporting -- not
+        // just hidden from the filter dropdown, but removed from
+        // browsing, search, and global search everywhere in the site.
+        const EXCLUDED_TRACKER_CATEGORIES = new Set(["Announcement", "White Supremacist", "Uncategorized", "Other"]);
+        TRACKERS.tracker.data = flattened.filter(e => !EXCLUDED_TRACKER_CATEGORIES.has(e.category));
+        reportingLoaded = true;
+        onReportingLoaded();
+        return true;
+      })
+      .catch(err => {
+        reportingFailed = true;
+        showLoadErrors(["tracker.json (" + err.message + ")"]);
+        onReportingLoaded();
+        return false;
+      });
+  }
+  return reportingPromise;
+}
+
+/* Loads the curated published JSON files (Reporting loads separately,
+   see ensureReporting). Uses Promise.allSettled (not Promise.all) so
+   that a failure on one file -- missing, malformed, not yet published
+   -- doesn't prevent the other databases from working. */
 async function loadAllData() {
   document.getElementById("entries").innerHTML = '<div class="empty-state">Loading data\u2026</div>';
   // Chips show while the data files load (titles fill in afterwards).
   renderBrowseChips();
 
-  const [prosecutionResult, deregulationResult, trackerResult, govservicesResult, trumpfamilyResult, daiResult, communitytopicsResult] = await Promise.allSettled([
+  const [prosecutionResult, deregulationResult, govservicesResult, trumpfamilyResult, daiResult, communitytopicsResult] = await Promise.allSettled([
     fetch("data/prosecution.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
     fetch("data/deregulation.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
-    fetch("data/tracker.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
     fetch("data/government-services.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
     fetch("data/trumpfamily.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
     fetch("data/dai.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
@@ -9126,18 +9175,6 @@ async function loadAllData() {
     TRACKERS.deregulation.data = deregulationResult.value;
   } else {
     loadErrors.push("deregulation.json (" + deregulationResult.reason.message + ")");
-  }
-
-  if (trackerResult.status === "fulfilled") {
-    const flattened = flattenTrackerPosts(trackerResult.value);
-    flattened.forEach(e => { e.category = normalizeCategory(e.category); });
-    // These categories are excluded entirely from Reporting -- not
-    // just hidden from the filter dropdown, but removed from
-    // browsing, search, and global search everywhere in the site.
-    const EXCLUDED_TRACKER_CATEGORIES = new Set(["Announcement", "White Supremacist", "Uncategorized", "Other"]);
-    TRACKERS.tracker.data = flattened.filter(e => !EXCLUDED_TRACKER_CATEGORIES.has(e.category));
-  } else {
-    loadErrors.push("tracker.json (" + trackerResult.reason.message + ")");
   }
 
   if (govservicesResult.status === "fulfilled") {
@@ -9204,16 +9241,11 @@ async function loadAllData() {
   renderDispatch();
   openEntryFromHash();
 
-  if (loadErrors.length) {
-    const banner = document.createElement("div");
-    banner.className = "regex-error";
-    banner.style.margin = "0 auto 1rem";
-    banner.style.maxWidth = "880px";
-    banner.style.textAlign = "left";
-    banner.textContent = "Could not load: " + loadErrors.join(", ") + ". Other databases are unaffected.";
-    document.querySelector("main").prepend(banner);
-    console.warn("Data load errors:", loadErrors);
-  }
+  if (loadErrors.length) showLoadErrors(loadErrors);
+
+  // Reporting (the large uncurated archive) is deliberately NOT part of the load above: it
+  // starts only now, after the first render, so it never delays the curated trackers.
+  (window.requestIdleCallback || (cb => setTimeout(cb, 0)))(() => ensureReporting());
 }
 
 // Kept so the front strip's "Read the entry" link can wait for the data

@@ -105,13 +105,24 @@ def test_chip_click_opens_tracker(site_url, browser):
 
 
 def test_titles_fill_after_load(site_url, browser):
-    page = _open(browser, site_url, wait_loaded=False)
+    # Hold one curated file so the "while loading" window is observable now that Reporting no
+    # longer slows the boot down.
+    page = browser.new_page(viewport={"width": 1280, "height": 900})
+    held = []
+    page.route("**/data/deregulation.json", lambda r: held.append(r))
+    page.goto(site_url + "/index.html", wait_until="domcontentloaded")
     page.wait_for_selector("#browse-chips .browse-chip", state="attached", timeout=10000)
     during = page.locator(".browse-chip[data-tracker]").evaluate_all("els => els.map(e => e.title)")
     assert during and all(not re.search(r"\d", t) for t in during), during
+    for _ in range(50):
+        if held:
+            break
+        page.wait_for_timeout(100)
+    held[0].continue_()
     page.wait_for_function("curatedLoaded === true", timeout=60000)
     pairs = page.locator(".browse-chip[data-tracker]").evaluate_all(
-        "els => els.map(e => [e.title, TRACKERS[e.dataset.tracker].data.length])"
+        "els => els.filter(e => e.dataset.tracker !== 'tracker')"
+        ".map(e => [e.title, TRACKERS[e.dataset.tracker].data.length])"
     )
     for title, n in pairs:
         m = re.search(r"\((\d+) entries\)$", title)
@@ -205,6 +216,8 @@ def test_uncurated_reporting_chip(site_url, browser):
     assert abs(geo["rowMid"] - geo["chipMid"]) <= 2, geo
     assert geo["chipTop"] >= geo["labelBottom"] - 1, geo
     assert geo["chipBottom"] <= geo["groupTop"], geo
+    # Reporting now arrives after first paint; wait for it before opening its feed.
+    page.wait_for_function("reportingLoaded === true", timeout=60000)
     chip.click()
     assert page.evaluate("activeTracker") == "headlines"
     assert page.evaluate("headlinesFeed") == "reporting"
