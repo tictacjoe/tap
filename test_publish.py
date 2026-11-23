@@ -370,6 +370,10 @@ def _e2e_dirs(tmp_path, moved):
     s = tmp_path / "site"
     (s / "data").mkdir(parents=True)
     (s / "index.html").write_text(_INDEX_HIDDEN)
+    # publish.py runs the site's tools/build_index.js (which reads the REAL
+    # index.html next to the script, through the symlink).
+    (s / "tools").mkdir()
+    (s / "tools" / "build_index.js").symlink_to(Path(__file__).parent / "tools" / "build_index.js")
     return w, s
 
 
@@ -593,3 +597,69 @@ def test_publish_tracker_drops_unlabeled_sections_and_keeps_everything_else(tmp_
     del expected["unlabeled_sections"]
     assert published[0] == expected
     assert published[1] == bare
+
+
+# --- Slim per-tracker index files (lazy-load phase 3b) ---
+_INDEX_FILES = ["prosecution.json", "deregulation.json", "government-services.json",
+                "trumpfamily.json", "dai.json"]
+_INDEX_GLANCE = {"who": "EPA", "what": "Repealed the rule.",
+                 "harm": {"kind": "physical", "certainty": "documented", "who": "Workers"}}
+
+
+def _index_tree(tmp_path):
+    """Temp working + site with one entry in each of the five curated trackers."""
+    w, s = _e2e_dirs(tmp_path, {})
+    one = {"date_added": "2026-01-01", "last_verified": "2026-01-02", "status_stage": "Unchallenged"}
+    folders = {
+        "prosecution/cabinet-level": {"id": "cla-1", "official": "Some Official", "offense_category": "Obstruction",
+                                      "status": "Under investigation", "confidence_note": "HIGH. text",
+                                      "incident_summary": "Something happened.", "evidence": [{"description": "Memo"}]},
+        "deregulation/entries": {"id": "cdr-1", "rule_name": "Rule", "domain": "Air", "what_changed": "Changed.",
+                                 "sources": [{"name": "A"}]},
+        "government-services/entries": {"id": "gsr-1", "title": "Office", "domain": "Health", "what_changed": "Closed.",
+                                        "sources": [{"name": "A"}]},
+        "trumpfamily/entries": {"id": "tfs-1", "title": "Deal", "category": "Crypto", "family_members": ["Donald Jr."],
+                                "what_changed": "A deal.", "sources": []},
+        "dai/entries": {"id": "dai-1", "title": "Death", "category": "Deaths", "agencies": ["ICE"],
+                        "what_changed": "Died.", "people": {"officials": [{"name": "Kim", "role": "Warden"}]}},
+    }
+    for folder, entry in folders.items():
+        (w / folder).mkdir(parents=True, exist_ok=True)
+        (w / folder / (entry["id"] + ".json")).write_text(json.dumps({**one, **entry}))
+    return w, s
+
+
+def test_publish_writes_index_files(tmp_path):
+    w, s = _index_tree(tmp_path)
+    r = _run_publish(w, s)
+    assert r.returncode == 0, r.stdout + r.stderr
+    for name in _INDEX_FILES:
+        full = json.loads((s / "data" / name).read_text())
+        slim = json.loads((s / "data" / "index" / name).read_text())
+        assert full and [e["id"] for e in slim] == [e["id"] for e in full], name
+
+
+def test_index_parity_failure_blocks_publish(tmp_path, monkeypatch, capsys):
+    import publish
+    w, s = _index_tree(tmp_path)
+    real_run = subprocess.run
+
+    def fake_run(cmd, *a, **kw):
+        if any(str(c).endswith("build_index.js") for c in cmd):
+            return subprocess.CompletedProcess(cmd, 1, stdout="", stderr="gsr-1: filter differs")
+        return real_run(cmd, *a, **kw)
+
+    monkeypatch.setattr(publish.subprocess, "run", fake_run)
+    monkeypatch.setattr(sys, "argv", ["publish.py", "--working", str(w), "--site", str(s)])
+    with pytest.raises(SystemExit) as exc:
+        publish.main()
+    assert exc.value.code == 1
+    assert "ERROR: index: gsr-1: filter differs" in capsys.readouterr().out
+
+
+def test_index_failure_is_a_warning_on_dry_run(tmp_path):
+    w, s = _index_tree(tmp_path)
+    (s / "tools" / "build_index.js").unlink()  # no build script
+    r = _run_publish(w, s, "--dry-run")
+    assert r.returncode == 0, r.stdout + r.stderr
+    assert "WARNING: index: build script not found" in r.stdout

@@ -41,6 +41,8 @@ Usage:
 """
 
 import json
+import shutil
+import subprocess
 import sys
 import argparse
 from datetime import date
@@ -334,6 +336,33 @@ def write_site_meta(dest_file: Path, today: date, dry_run: bool = False) -> dict
     return meta
 
 
+def build_site_index(site: Path, dry_run: bool) -> None:
+    """Build data/index/*.json (slim per-tracker lists) with tools/build_index.js.
+    The tool also re-runs the site's own sort/filter/group/headline functions on
+    every full entry and its slim copy; any difference is reported and that
+    tracker's index file is deleted (the site then loads the full file). Failure
+    is fatal (ERROR, exit 1) -- or a WARNING on a dry run, where node only
+    checks (--check) and writes nothing."""
+    label = "WARNING" if dry_run else "ERROR"
+    node = shutil.which("node")
+    script = site / "tools" / "build_index.js"
+    if node is None:
+        msg = "needs `node` on PATH (to run build_index.js)"
+    elif not script.exists():
+        msg = f"build script not found: {script}"
+    else:
+        cmd = [node, str(script), str(site)] + (["--check"] if dry_run else [])
+        res = subprocess.run(cmd, capture_output=True, text=True)
+        if res.returncode == 0:
+            if res.stdout.strip():
+                print(res.stdout.rstrip())
+            return
+        msg = res.stderr.strip() or f"build_index.js exited {res.returncode}"
+    print(f"{label}: index: {msg}")
+    if not dry_run:
+        sys.exit(1)
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--working", default=str(Path.home() / "gjoe/tap-data"),
@@ -492,6 +521,12 @@ def main():
         print(f"  {len(included)} entries published, {excl_count} excluded")
     else:
         print(f"  WARNING: {dai_src} not found, skipping")
+    print()
+
+    # --- slim per-tracker index files (lazy-load phase 3b) ---
+    # After every data file above is written; before moved-ids.
+    print("=== index ===")
+    build_site_index(site, args.dry_run)
     print()
 
     # --- moved-ids (Phase B): old-link redirects for site and connector ---
