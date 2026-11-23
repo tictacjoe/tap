@@ -38022,7 +38022,7 @@
     },
     "confidence_note": "HIGH confidence -- the staffing cut figures, the named generals' objections, and the AI-substitution pattern are corroborated across Politico, The Intercept, Truthout, and additional wire coverage (Al Mayadeen, syndicated AP-sourced pieces); The Guardian's March 2025 and The Intercept's April 2025 reporting show the cuts had begun by early spring 2025, though neither gives a size for the cut; the ~90% figure comes from ProPublica (March 2026, citing former personnel) and CBS News (August 2026, citing U.S. officials, 'since March 2025'). MODERATE confidence on the implied connection to the Minab school strike's outcome specifically, since no official investigation finding tying the two together was identified in sourcing reviewed as of this entry's addition -- the connection documented here is institutional and temporal (the offices responsible for this kind of risk assessment were gutted before the strike this tracker separately documents), not a confirmed causal finding. Re-verified 2026-08-17: the FY2027 NDAA travel-funds provision is corroborated across Military Times, The Hill, and Raw Story reporting on the Senate Armed Services Committee's June 2026 markup; its not-yet-enacted status (House passed July 22, 2026; Senate floor vote blocked; conference ongoing as of August 4, 2026) is corroborated via Breaking Defense and Congress.gov/CRS reporting. Presented here as a pending legislative provision, not a description of enacted law. Re-verified 2026-08-30 (real correction): the commander-poll detail, named generals, and partial-revival proposal come from ProPublica (Aug. 25, 2026), republished by Defense One the same day. The DoD Inspector General's May 2026 evaluation is corroborated via Just Security's direct review of the IG report and Colby's response (the statutory-violation reading is Just Security's), and separately via a Washington Times report on the same IG evaluation; presented as HIGH confidence on the finding's existence, MODERATE on whether Colby's promised follow-up reviews were ever completed, since sourcing reviewed describes that as unresolved rather than confirmed either way. Re-verified 2026-11-21: the Center of Excellence's own fiscal 2025 annual report to Congress says it had approximately 40 personnel in January 2025 and was reduced to 9 (7 civilians, 2 military) 'by the close of FY25,' that is, by Sept. 30, 2025; The Intercept's July 2026 report had described the same drop as coming 'by the end of the year.'",
     "pull_quote": "The offices responsible for pre-strike civilian-risk assessment and post-strike investigation had been cut from ~200 staff to fewer than 40, per Politico, when a U.S. strike killed 168 people, most of them children, at a school in Iran, according to Iranian state media -- no official investigation has confirmed a direct causal link between the two.",
-    "last_verified": "2026-11-21",
+    "last_verified": "2026-11-22",
     "date_added": "2026-08-05",
     "sources": [
       {
@@ -38096,7 +38096,7 @@
       "estimated_impact": "Pentagon civilian-harm staff fell from ~200 to under 40 (Politico) over military leaders' objections; Just Security reads a DoD IG report as finding two statutes violated. No official Minab link.",
       "confidence_note": "Staffing cuts and the commander poll are well-corroborated; Just Security, not the IG, calls the cuts illegal; the rebuild plan is ProPublica's and unconfirmed."
     },
-    "last_substantive_update": "2026-11-21",
+    "last_substantive_update": "2026-11-22",
     "glance": {
       "who": "Pete Hegseth (Secretary of Defense)",
       "what": "Cut Pentagon civilian-harm staff from ~200 to under 40 over commanders' objections; IG found plan goals unmet",
@@ -38105,7 +38105,7 @@
         "certainty": "documented",
         "who": "Pentagon civilian-harm mitigation"
       },
-      "reviewed": "2026-11-21"
+      "reviewed": "2026-11-22"
     },
     "status_stage": "Finding issued",
     "key_events": [
@@ -38181,12 +38181,17 @@
         ]
       }
     ],
-    "cause": "[TAP Analysis, not sourced] The staff cuts are **one part of a broader dismantling of Pentagon civilian-protection safeguards alleged in a House impeachment article**, which also cites the stalled civilian harm action plan and a request to repeal the statutory requirement. See also: the Massie impeachment-articles entry in the Cabinet-Level tracker.",
+    "cause": "[TAP Analysis, not sourced] The staff cuts are **one part of a broader dismantling of Pentagon civilian-protection safeguards alleged in a House impeachment article**, which also cites the stalled civilian harm action plan and a request to repeal the statutory requirement. See also: the Massie impeachment-articles entry in the Cabinet-Level tracker. For the Inspector General's compliance finding and the civilian-casualty counts, see the companion entry on the dismantled civilian-harm program.",
     "cause_references": [
       {
         "match": "the Massie impeachment-articles entry",
         "tracker": "prosecution",
         "id": "hegseth-massie-impeachment-articles-2026"
+      },
+      {
+        "match": "the companion entry on the dismantled civilian-harm program",
+        "tracker": "government-services",
+        "id": "pentagon-civilian-harm-reduction-program-dismantled-2026"
       }
     ],
     "timeline": {
@@ -63780,9 +63785,17 @@
       ],
       "caveat": "The IG report documents a pattern of de facto dismantling (meetings stopped, staff reassigned, funding cut, data system abandoned) rather than a single formal decision, which is itself part of the finding -- the Pentagon avoided the accountability that would come with an announced policy change."
     },
+    "cause": "[TAP Analysis, not sourced] This entry tracks the Inspector General's compliance finding and the civilian-casualty counts; the staff cuts themselves are tracked in the companion entry on Hegseth's civilian-harm staff cuts.",
+    "cause_references": [
+      {
+        "match": "the companion entry on Hegseth's civilian-harm staff cuts",
+        "tracker": "government-services",
+        "id": "hegseth-civilian-harm-office-cuts-2026"
+      }
+    ],
     "confidence_note": "HIGH confidence -- based on a Department of War Inspector General finding, the strongest source type this tracker prioritizes, and independently corroborated across multiple outlets (Washington Times, Army Times, Stars and Stripes, The Intercept) plus a formal Senate oversight letter. Re-verified 2026-08-17: the civilian-casualty report's findings are corroborated by The Intercept and CBS News. This is a direct, concrete illustration of the capacity loss the original IG finding warned about -- the report's implausibly low figures and zero-casualty finding for an active strike campaign are exactly the kind of accountability failure the dismantled program was supposed to prevent. Updated 2026-08-30: the commander-poll and Center-of-Excellence-staffing details are corroborated across Defense One, ProPublica, and the Center of Excellence's own annual report (a primary source); the $11.6M/$72.8M appropriations gap and the Army's request are corroborated via Just Security's analysis. The Minab school-strike incident is independently corroborated across Amnesty International, TIME, CNN, Al Jazeera, and NBC News, with a Wikipedia article documenting the multi-outlet consensus; the exact death toll is genuinely disputed across sources (100+ children initially reported vs. 168 killed, most of them children, per Iranian state media as reported by AP via NPR) and is presented here as a range rather than resolved to a single figure, consistent with this tracker's practice of flagging rather than picking between conflicting casualty counts. The ~200 boat-strike death toll and the ~1,700 Iran-war civilian-death figure (AP reporting and Human Rights Activists in Iran, both cited via Just Security) cover different operations from the Yemen figures and are noted as separate, less-verified estimates rather than adopted as fact, since this tracker did not independently verify either organization's methodology. Corrected 2026-09-26: the budget's 'disestablishment of the program' language comes from CBS News, not The Intercept; the ~90% figure comes from ProPublica (March 2026, citing former personnel) and CBS News (citing U.S. officials); the 'total whitewash' remark comes from one of two anonymous officials quoted by The Intercept; the Center of Excellence's FY2025 annual report was generated April 4, 2026; Just Security credits the $11.6M figure to information obtained by CIVIC and the $72.8M estimate to a 2024 DoD joint manpower assessment; and the Iran figure is HRA's count of 1,701 civilian deaths from Feb. 28 to Apr. 8, 2026. Updated 2026-11-16: the Minab toll now follows Iranian state media's figure of 168 killed, most of them children (AP via NPR), replacing an unsourced 165; NPR (Aug. 31, 2026) reported a proposed partial restoration of the program awaiting Hegseth's sign-off, and ProPublica (via Defense One, Sept. 10, 2026) reported the U.S. absence from the international civilian-harm contact group's meeting. Updated 2026-11-21: the two statutes are named from Warren's July 5, 2026 letter, which cites 10 U.S.C. 134 (civilian harm policy) and 10 U.S.C. 184 (Civilian Protection Center of Excellence) and quotes the IG's finding on 10 U.S.C. 134. Re-verified 2026-11-21: no decision on the proposed partial restoration has been reported since NPR's Aug. 31, 2026 report.",
     "pull_quote": "One of two government officials who spoke anonymously to The Intercept called the Pentagon's civilian-casualty report a “total whitewash”; UN human rights chief Volker Türk said in October 2025 that the boat strikes “violate international human rights law.”",
-    "last_verified": "2026-11-21",
+    "last_verified": "2026-11-22",
     "date_added": "2026-08-02",
     "sources": [
       {
@@ -63889,7 +63902,7 @@
       "status": "Ongoing: the IG found the Pentagon can't comply with the two laws requiring the program; a partial restoration reported in August awaited Hegseth's sign-off."
     },
     "last_updated": "2026-08-30",
-    "last_substantive_update": "2026-11-21",
+    "last_substantive_update": "2026-11-22",
     "glance": {
       "who": "Pete Hegseth (Secretary of Defense)",
       "what": "Quietly dismantled the congressionally mandated civilian-harm program, a DoD IG found; staff fell ~90%",
@@ -63898,7 +63911,7 @@
         "certainty": "documented",
         "who": "Pentagon civilian-harm tracking"
       },
-      "reviewed": "2026-11-21"
+      "reviewed": "2026-11-22"
     },
     "status_stage": "Finding issued",
     "key_events": [
