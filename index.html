@@ -7115,10 +7115,23 @@ function wireEntryContent(container, entry, cfg, term, useRegex) {
 function ensureEntryDetail(el) {
   const args = detailArgs.get(el);
   if (!args) return null;
-  const detail = el.querySelector(".entry-detail");
+  // A global-search one-liner's .oneliner-detail IS the detail node; a card
+  // holds its detail in a child .entry-detail.
+  const isOneLiner = el.classList.contains("oneliner-detail");
+  const detail = isOneLiner ? el : el.querySelector(".entry-detail");
   if (!detail || el.dataset.detailBuilt === "1") return detail;
   detail.innerHTML = args.html();
-  wireEntryContent(detail, args.entry, args.cfg, args.term, args.useRegex);
+  if (isOneLiner) {
+    // One-liner detail has no share/listen/update-request buttons, so it keeps
+    // its original four wires (the full set would be a no-op here, but this
+    // keeps the one-liner behaviour exactly as it was).
+    wireRelatedEntryLinks(detail);
+    wireKeyEventLinks(detail);
+    wireEvidenceDrawers(detail, args.entry, args.cfg, args.term, args.useRegex);
+    wireTriageButtons(detail);
+  } else {
+    wireEntryContent(detail, args.entry, args.cfg, args.term, args.useRegex);
+  }
   el.dataset.detailBuilt = "1";
   return detail;
 }
@@ -8331,18 +8344,22 @@ function renderSearchMatches(section, matches, term, useRegex, useOneLiners) {
 
     const detail = document.createElement("div");
     detail.className = "oneliner-detail";
-    detail.innerHTML =
-      glanceDetailTitleHtml(m.entry, m.cfg, (t) => highlightMatches(t || "", term, useRegex)) +
-      buildDetailHtml(m.entry, m.cfg, term, useRegex);
-    wireRelatedEntryLinks(detail);
-    wireKeyEventLinks(detail);
-    wireEvidenceDrawers(detail, m.entry, m.cfg, term, useRegex);
-    wireTriageButtons(detail);
+    // Lazy: the detail markup is built (and wired) by ensureEntryDetail the
+    // first time the row is opened, not at draw time.
+    detailArgs.set(detail, {
+      entry: m.entry, cfg: m.cfg, term, useRegex,
+      html: () =>
+        glanceDetailTitleHtml(m.entry, m.cfg, (t) => highlightMatches(t || "", term, useRegex)) +
+        buildDetailHtml(m.entry, m.cfg, term, useRegex),
+    });
 
     row.addEventListener("click", () => {
       row.classList.toggle("open");
       detail.style.display = row.classList.contains("open") ? "block" : "none";
-      if (row.classList.contains("open")) distributeEntryCards(detail);
+      if (row.classList.contains("open")) {
+        ensureEntryDetail(detail);
+        distributeEntryCards(detail);
+      }
     });
 
     list.appendChild(row);

@@ -134,3 +134,28 @@ def test_row_copy_link_in_lazy_detail_works_once(page):
     page.wait_for_function(
         "document.querySelector('#entries .entry .entry-row-tools .share-link-btn[data-share-tracker]').textContent === 'Copied!'")
     assert page.evaluate("document.querySelector('#entries .entry').classList.contains('open')")
+
+
+def test_oneliner_search_builds_detail_on_click(page):
+    """Global search in 1-liner mode draws rows only; the detail is built on the
+    first click, once, and keeps its <mark> highlights."""
+    page.evaluate(_COUNT_CALLS)
+    # The toggle may sit in a collapsed advanced panel, so set it directly.
+    page.evaluate("""() => {
+        const cb = document.getElementById('global-oneliner');
+        cb.checked = true;
+        cb.dispatchEvent(new Event('change', { bubbles: true }));
+    }""")
+    page.fill("#global-search", "EPA")
+    page.wait_for_selector(".oneliner-row")
+    page.wait_for_timeout(500)  # let the debounced search settle
+    assert page.evaluate("window.__bdh") == 0
+    page.locator(".oneliner-row").first.click()
+    assert page.evaluate("window.__bdh") == 1
+    marks = page.evaluate(
+        "document.querySelector('.oneliner-row + .oneliner-detail').querySelectorAll('mark').length")
+    assert marks > 0
+    # Close and reopen: built once, never rebuilt.
+    page.locator(".oneliner-row").first.click()
+    page.locator(".oneliner-row").first.click()
+    assert page.evaluate("window.__bdh") == 1
