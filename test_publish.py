@@ -565,3 +565,31 @@ def test_illegality_concern_check_error_is_warning_on_dry_run(tmp_path):
     r = _run_publish(w, s, "--dry-run")
     assert r.returncode == 0, r.stdout + r.stderr
     assert "WARNING: illegality: concern check script not found: " + str(s / "tools") in r.stdout
+
+
+# --- Reporting: drop the unused unlabeled_sections field (lazy-load spec
+# phase 1, tap-data docs/superpowers/specs/2026-11-23-site-lazy-load-design.md).
+from publish import publish_tracker
+
+
+def test_publish_tracker_drops_unlabeled_sections_and_keeps_everything_else(tmp_path):
+    post = {
+        "date": "2026-11-01",
+        "title": "Day 1",
+        "url": "https://example.com/p/day-1",
+        "entries": [{"id": "r-1", "what_happened": "Thing.", "source_urls": ["https://a.example"]}],
+        "unlabeled_sections": [{"heading": "Misc", "text": "never shown"}],
+    }
+    bare = {"date": "2026-11-02", "title": "Day 2", "entries": []}
+    source = tmp_path / "posts.json"
+    source.write_text(json.dumps([post, bare]))
+    dest = tmp_path / "data" / "tracker.json"
+
+    assert publish_tracker(source, dest) == 2
+
+    published = json.loads(dest.read_text())
+    assert "unlabeled_sections" not in published[0]
+    expected = dict(post)
+    del expected["unlabeled_sections"]
+    assert published[0] == expected
+    assert published[1] == bare

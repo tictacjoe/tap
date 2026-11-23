@@ -137,14 +137,22 @@ def publish_json_entries(source_dir: Path, dest_file: Path, excluded_ids: set,
 
 
 def publish_tracker(source_file: Path, dest_file: Path, dry_run: bool = False) -> int:
-    """tracker is already a single combined posts.json -- straight copy,
+    """tracker is already a single combined posts.json -- copied whole,
     no per-entry exclude list applied (it's a scraped archive, not
-    individually-authored research claims)."""
+    individually-authored research claims).
+
+    One field is dropped: each post's `unlabeled_sections` (the parser's
+    leftover unmatched text). Nothing public reads it -- not index.html's
+    flattenTrackerPosts(), not the TAP MCP connector -- and it was ~25% of
+    the file's gzipped size. tap-data's posts.json keeps it. (Lazy-load
+    spec phase 1, tap-data docs/superpowers/specs/2026-11-23-site-lazy-load-design.md.)"""
     if not source_file.exists():
         print(f"    WARNING: {source_file} not found, skipping tracker")
         return 0
     with open(source_file) as fh:
         data = json.load(fh)
+    for post in data:
+        post.pop("unlabeled_sections", None)
     if not dry_run:
         dest_file.parent.mkdir(parents=True, exist_ok=True)
         with open(dest_file, "w") as fh:
