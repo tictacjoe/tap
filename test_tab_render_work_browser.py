@@ -50,7 +50,7 @@ def page(site_url):
             pytest.skip(f"Chromium unavailable: {exc}")
         pg = b.new_page()
         pg.goto(site_url + "/index.html")
-        pg.wait_for_function("TRACKERS.tracker.data.length > 0", timeout=60000)
+        pg.wait_for_function("reportingLoaded === true", timeout=60000)
         pg.evaluate(_COUNT_CALLS)
         yield pg
         b.close()

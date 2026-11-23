@@ -62,7 +62,7 @@ def _open(browser, site_url, width=1280, wait_loaded=True):
     page = browser.new_page(viewport={"width": width, "height": 900})
     page.goto(site_url + "/index.html", wait_until="domcontentloaded")
     if wait_loaded:
-        page.wait_for_function("allDataLoaded === true", timeout=60000)
+        page.wait_for_function("curatedLoaded === true", timeout=60000)
     return page
 
 
@@ -105,18 +105,37 @@ def test_chip_click_opens_tracker(site_url, browser):
 
 
 def test_titles_fill_after_load(site_url, browser):
-    page = _open(browser, site_url, wait_loaded=False)
+    # Hold one curated file so the "while loading" window is observable now that Reporting no
+    # longer slows the boot down.
+    page = browser.new_page(viewport={"width": 1280, "height": 900})
+    held = []
+    page.route("**/data/deregulation.json", lambda r: held.append(r))
+    page.goto(site_url + "/index.html", wait_until="domcontentloaded")
     page.wait_for_selector("#browse-chips .browse-chip", state="attached", timeout=10000)
     during = page.locator(".browse-chip[data-tracker]").evaluate_all("els => els.map(e => e.title)")
     assert during and all(not re.search(r"\d", t) for t in during), during
-    page.wait_for_function("allDataLoaded === true", timeout=60000)
+    for _ in range(50):
+        if held:
+            break
+        page.wait_for_timeout(100)
+    held[0].continue_()
+    page.wait_for_function("curatedLoaded === true", timeout=60000)
     pairs = page.locator(".browse-chip[data-tracker]").evaluate_all(
-        "els => els.map(e => [e.title, TRACKERS[e.dataset.tracker].data.length])"
+        "els => els.filter(e => e.dataset.tracker !== 'tracker')"
+        ".map(e => [e.title, TRACKERS[e.dataset.tracker].data.length])"
     )
     for title, n in pairs:
         m = re.search(r"\((\d+) entries\)$", title)
         assert m, title
         assert int(m.group(1)) == n
+    # Reporting's chip says "(loading…)" until its data arrives, then gains its real count.
+    rep_title = page.locator('.browse-chip[data-tracker="tracker"]').get_attribute("title")
+    assert rep_title.endswith("(loading…)") or re.search(r"\(\d+ entries\)$", rep_title), rep_title
+    page.wait_for_function("reportingLoaded === true", timeout=60000)
+    rep = page.evaluate(
+        "[document.querySelector('.browse-chip[data-tracker=\"tracker\"]').title, TRACKERS.tracker.data.length]")
+    m = re.search(r"\((\d+) entries\)$", rep[0])
+    assert m and int(m.group(1)) == rep[1], rep
     page.close()
 
 
@@ -192,6 +211,8 @@ def test_uncurated_reporting_chip(site_url, browser):
     chip = page.locator('#browse-chips .browse-reporting-row .browse-chip[data-tracker="tracker"]')
     assert chip.count() == 1
     assert chip.inner_text().strip().upper() == "UNCURATED REPORTING"
+    # Reporting arrives after first paint; its title only gains the count once loaded.
+    page.wait_for_function("reportingLoaded === true", timeout=60000)
     assert re.search(r"\((\d+) entries\)$", chip.get_attribute("title"))
     geo = page.evaluate("""() => {
       const row = document.getElementById('browse-chips').getBoundingClientRect();

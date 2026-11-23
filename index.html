@@ -2499,6 +2499,19 @@ function verdictColor(verdict) {
   return map[verdict] || "#5C5A52";
 }
 
+/* reporting-load-labels:start */
+/* Label helper for the uncurated Reporting archive, which loads after the
+   curated trackers. Appends a state suffix to a base label:
+   a number -> "(812)"; null/undefined -> "(loading…)";
+   failed=true -> "(unavailable)". Pure, so it is unit-tested in
+   tests/reporting-load-labels.test.js. */
+function withLoadCount(base, n, failed) {
+  if (failed) return base + " (unavailable)";
+  if (n === null || n === undefined) return base + " (loading…)";
+  return base + " (" + n + ")";
+}
+/* reporting-load-labels:end */
+
 /* flatten-tracker-posts:start */
 /* Converts raw scraped posts (one JSON object per Substack post, each
    containing multiple dated entries) into a flat list of individually
@@ -3649,6 +3662,14 @@ function setHeadlinesFeed(feed) {
    problem RENDER_STEP exists to avoid in the first place. A sort,
    filter, or the feed tab still does a full rebuild,
    since the actual set of rows (not just how many) has changed. */
+// Count shown on the "Reporting feed, uncurated" tab: Reporting items since Jan 2025, the same
+// set the feed lists. Only meaningful once Reporting has loaded.
+function reportingFeedCount() {
+  // Straight from the data (adaptReportingEntry takes date from entry.date), so this does not
+  // build every headline item just to count.
+  return TRACKERS.tracker.data.filter(e => extractFirstDate(e.date || null) >= 20250101).length;
+}
+
 function renderHeadlinesView(appendOnly) {
   const container = document.getElementById("headlines-view");
   const countEl = document.getElementById("headlines-count");
@@ -3668,10 +3689,19 @@ function renderHeadlinesView(appendOnly) {
   document.getElementById("feed-tab-curated").textContent =
     "TAP entries (" + items.filter(i => curatedKeys.includes(i.tracker)).length + ")";
   document.getElementById("feed-tab-reporting").textContent =
-    "Reporting feed, uncurated (" + items.filter(i => i.tracker === "tracker").length + ")";
+    withLoadCount("Reporting feed, uncurated",
+      reportingLoaded ? reportingFeedCount() : null, reportingFailed);
 
   updateStatusKey("status-key-records",
     headlinesFeed === "curated" && curatedKeys.some(k => TRACKERS[k] && TRACKERS[k].statusStageLive));
+
+  // Reporting not here yet: say so instead of showing an empty "0 records" feed.
+  if (headlinesFeed === "reporting" && !reportingLoaded) {
+    container.innerHTML = reportingNotReadyHtml();
+    countEl.textContent = "";
+    document.getElementById("headlines-load-more-row").style.display = "none";
+    return;
+  }
 
   // Claim-checks never appear in either feed.
   if (headlinesFeed === "reporting") {
@@ -7279,6 +7309,12 @@ function selectDatabaseTab(key) {
   switchToTracker(key);
 }
 
+// Text of the Reporting <option> in #tabs. One place, shared by renderTabs() and
+// onReportingLoaded() (which updates just this option), so the two can't drift.
+function reportingOptionText() {
+  return withLoadCount("Uncurated reporting", reportingLoaded ? TRACKERS.tracker.data.length : null, reportingFailed);
+}
+
 function renderTabs() {
   const select = document.getElementById("tabs");
   select.innerHTML = "";
@@ -7318,7 +7354,9 @@ function renderTabs() {
     opt.value = key;
     // Reporting reads "Uncurated reporting" here to match its browse chip
     // (Joe, 2026-11-21); its label stays "Reporting" everywhere else.
-    opt.textContent = (key === "tracker" ? "Uncurated reporting" : TRACKERS[key].label) + " (" + TRACKERS[key].data.length + ")";
+    opt.textContent = key === "tracker"
+      ? reportingOptionText()
+      : TRACKERS[key].label + " (" + TRACKERS[key].data.length + ")";
     opt.selected = key === activeTracker || (key === "tracker" && reportingFeedOn);
     select.appendChild(opt);
   });
@@ -7666,6 +7704,13 @@ function renderEntries() {
   const countEl = document.getElementById("count");
   updateStatusKey("status-key-tab", !!cfg.statusStageLive);
 
+  // Reporting's data arrives after first paint: show a loading note, not "0 of 0 entries".
+  if (cfg.kind === "tracker" && !reportingLoaded) {
+    container.innerHTML = reportingNotReadyHtml();
+    countEl.textContent = "";
+    return;
+  }
+
   const filtered = cfg.data.filter(e => {
     // No search: skip building the haystack. matchesTerm() would return
     // true anyway, but visibleSearchText() runs stripProcessLabels()'s
@@ -7957,10 +8002,18 @@ function openCardById(id) {
   const container = document.getElementById("entries");
   // A second jump in the same visit must not stack earlier on-demand cards or notes.
   container.querySelectorAll(":scope > .linked-item, :scope > .deep-link-note").forEach(el => el.remove());
+  // Reporting not loaded yet: wait for it, then retry (if still on Reporting). Report "handled".
+  if (activeTracker === "tracker" && !reportingLoaded && !reportingFailed) {
+    ensureReporting().then(ok => { if (ok && activeTracker === "tracker") openCardById(id); });
+    return true;
+  }
   let card = container.querySelector('.entry[data-entry-id="' + CSS.escape(id) + '"]');
   if (!card && activeTracker === "tracker") {
     const cfg = TRACKERS.tracker;
     const entry = cfg.data.find(e => e.id === id);
+    // Reporting failed: the "couldn't be loaded" empty state already explains; a "not on the
+    // Reporting tab" note would be misleading.
+    if (!entry && reportingFailed) return false;
     if (!entry) {
       const note = document.createElement("div");
       note.className = "empty-state deep-link-note";
@@ -8267,6 +8320,7 @@ function renderGlobalResults(term, useRegex, useOneLiners, useImpactSort) {
   const errorEl = document.getElementById("regex-error");
   errorEl.textContent = "";
 
+  lastGlobalRender = null;
   let curatedMatches = [];
   let claimMatches = [];
   let hadRegexError = false;
@@ -8293,9 +8347,9 @@ function renderGlobalResults(term, useRegex, useOneLiners, useImpactSort) {
   // Always plain-text matching here, regardless of the regex toggle --
   // Reporting's own tab search box doesn't support regex, so this count
   // needs to match what actually shows up after following the link.
-  const reportingMatches = TRACKERS.tracker.data.filter(entry =>
-    matchesTerm(visibleSearchText(entry, TRACKERS.tracker), term, false)
-  );
+  // Until Reporting has arrived there is nothing to search, so treat it as zero matches
+  // and say so in the count line; onReportingLoaded() re-runs this search on arrival.
+  const reportingMatches = searchReportingMatches(term);
 
   if (useImpactSort) {
     const byImpact = (a, b) => impactScore(b.entry, b.cfg) - impactScore(a.entry, a.cfg);
@@ -8304,30 +8358,25 @@ function renderGlobalResults(term, useRegex, useOneLiners, useImpactSort) {
   }
 
   const tapTotal = curatedMatches.length + claimMatches.length;
-  const repN = reportingMatches.length;
-  countEl.textContent = (tapTotal === 0 && repN > 0
-    ? repN + " in Reporting (uncurated) for \"" + term + "\""
-    : tapTotal + " result(s) across " + globalSearchDatabaseCount(TRACKERS) + " databases" +
-      (repN ? ", plus " + repN + " in Reporting (uncurated)" : "") + " for \"" + term + "\"") +
-    (useRegex ? " (regex)" : "") + (useOneLiners ? " — 1-liner view" : "");
+  countEl.textContent = globalCountText(term, useRegex, useOneLiners, curatedMatches.length, claimMatches.length, reportingMatches.length);
 
   container.innerHTML = "";
 
   if (tapTotal === 0 && reportingMatches.length === 0) {
-    const empty = document.createElement("div");
-    empty.className = "empty-state";
-    empty.textContent = globalSearchNoMatchesText(TRACKERS);
-    container.appendChild(empty);
+    if (reportingLoaded) {
+      const empty = document.createElement("div");
+      empty.className = "empty-state";
+      empty.textContent = globalSearchNoMatchesText(TRACKERS);
+      container.appendChild(empty);
+    } else {
+      // Reporting not here yet: the shared helper returns the whole empty-state element
+      // (loading or failed message), so insert it as-is. container was cleared above.
+      container.innerHTML = reportingNotReadyHtml();
+    }
     return;
   }
 
-  // Safety valve: a broad term could still match hundreds of entries --
-  // cap what's rendered per group so the page doesn't choke, and say so.
-  if (curatedMatches.length > SEARCH_GROUP_CAP || claimMatches.length > SEARCH_GROUP_CAP) {
-    countEl.textContent = (Math.min(curatedMatches.length, SEARCH_GROUP_CAP) + Math.min(claimMatches.length, SEARCH_GROUP_CAP)) +
-      " shown of " + tapTotal + " results — refine your search to narrow further";
-  }
-
+  // (The per-group cap, SEARCH_GROUP_CAP, is applied below and reflected in globalCountText.)
   if (curatedMatches.length) {
     const section = buildSearchGroup("curated", "TAP entries (" + curatedMatches.length + ")");
     renderSearchMatches(section, curatedMatches.slice(0, SEARCH_GROUP_CAP), term, useRegex, useOneLiners);
@@ -8338,33 +8387,90 @@ function renderGlobalResults(term, useRegex, useOneLiners, useImpactSort) {
     renderSearchMatches(section, claimMatches.slice(0, SEARCH_GROUP_CAP), term, useRegex, useOneLiners);
     container.appendChild(section);
   }
-  if (reportingMatches.length) {
-    const section = buildSearchGroup("reporting", "Reporting, uncurated (" + reportingMatches.length + ")");
-    container.appendChild(section);
-    // Newest first, rendered as headline-style rows like the Records feed.
-    const todayNum = todayDateNum();
-    const items = reportingMatches.map(adaptReportingEntry);
-    items.forEach(i => { i.sortDate = headlineSortDate(i, todayNum); });
-    items.sort((a, b) => extractFirstDate(b.sortDate) - extractFirstDate(a.sortDate));
-    const spans = [];
-    items.slice(0, SEARCH_REPORTING_CAP).forEach(item => {
-      const row = buildHeadlineRow(item, item.sortDate || item.date);
-      spans.push(row.querySelector(".headline-row-text"));
-      section.appendChild(row);
-    });
-    spans.forEach(fitHeadlineRowText);
-    if (reportingMatches.length > SEARCH_REPORTING_CAP) {
-      const more = document.createElement("p");
-      more.className = "reporting-link";
-      const btn = document.createElement("button");
-      btn.type = "button";
-      btn.className = "search-group-show-all";
-      btn.textContent = "Show all " + reportingMatches.length + " in the Reporting database";
-      btn.addEventListener("click", () => jumpToReportingSearch(term));
-      more.appendChild(btn);
-      section.appendChild(more);
-    }
+  appendReportingSearchGroup(container, reportingMatches, term);
+  // Remember what is on screen so Reporting's late arrival can append to it in place.
+  lastGlobalRender = { term, useRegex, useOneLiners, curatedN: curatedMatches.length, claimN: claimMatches.length };
+}
+
+// Reporting hits for a global search: always plain-text matching, regardless of the regex
+// toggle (Reporting's own tab search has no regex). Empty until Reporting has loaded.
+function searchReportingMatches(term) {
+  return !reportingLoaded ? [] : TRACKERS.tracker.data.filter(entry =>
+    matchesTerm(visibleSearchText(entry, TRACKERS.tracker), term, false)
+  );
+}
+
+// The count line for global search results. The one place its wording lives: used by the
+// normal render and by the in-place update when Reporting arrives (applyReportingArrivalToSearch).
+function globalCountText(term, useRegex, useOneLiners, curatedN, claimN, repN) {
+  const tapTotal = curatedN + claimN;
+  const reportingNote = reportingLoaded ? ""
+    : (reportingFailed ? " (Reporting unavailable)" : " (Reporting still loading\u2026)");
+  const suffix = reportingNote + (useRegex ? " (regex)" : "") + (useOneLiners ? " \u2014 1-liner view" : "");
+  // Safety valve: a broad term could still match hundreds of entries -- the groups are
+  // capped (SEARCH_GROUP_CAP), and the count line says so.
+  if (curatedN > SEARCH_GROUP_CAP || claimN > SEARCH_GROUP_CAP) {
+    return (Math.min(curatedN, SEARCH_GROUP_CAP) + Math.min(claimN, SEARCH_GROUP_CAP)) +
+      " shown of " + tapTotal + " results \u2014 refine your search to narrow further" + suffix;
   }
+  return (tapTotal === 0 && repN > 0
+    ? repN + " in Reporting (uncurated) for \"" + term + "\""
+    : tapTotal + " result(s) across " + globalSearchDatabaseCount(TRACKERS) + " databases" +
+      (repN ? ", plus " + repN + " in Reporting (uncurated)" : "") + " for \"" + term + "\"") + suffix;
+}
+
+// Builds the "Reporting, uncurated" group and appends it to container (nothing if no matches).
+// Shared by renderGlobalResults and the in-place Reporting arrival.
+function appendReportingSearchGroup(container, reportingMatches, term) {
+  if (!reportingMatches.length) return;
+  const section = buildSearchGroup("reporting", "Reporting, uncurated (" + reportingMatches.length + ")");
+  container.appendChild(section);
+  // Newest first, rendered as headline-style rows like the Records feed.
+  const todayNum = todayDateNum();
+  const items = reportingMatches.map(adaptReportingEntry);
+  items.forEach(i => { i.sortDate = headlineSortDate(i, todayNum); });
+  items.sort((a, b) => extractFirstDate(b.sortDate) - extractFirstDate(a.sortDate));
+  const spans = [];
+  items.slice(0, SEARCH_REPORTING_CAP).forEach(item => {
+    const row = buildHeadlineRow(item, item.sortDate || item.date);
+    spans.push(row.querySelector(".headline-row-text"));
+    section.appendChild(row);
+  });
+  spans.forEach(fitHeadlineRowText);
+  if (reportingMatches.length > SEARCH_REPORTING_CAP) {
+    const more = document.createElement("p");
+    more.className = "reporting-link";
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "search-group-show-all";
+    btn.textContent = "Show all " + reportingMatches.length + " in the Reporting database";
+    btn.addEventListener("click", () => jumpToReportingSearch(term));
+    more.appendChild(btn);
+    section.appendChild(more);
+  }
+}
+
+// What the last global-search render showed (null when no results are on screen), so
+// Reporting's arrival can add its group without rebuilding (and closing) the open cards.
+let lastGlobalRender = null;
+
+// Called when Reporting arrives while global search is showing. If curated/claim-check results
+// are on screen, only the count line and the Reporting group change; those cards stay as the
+// reader left them (open, scrolled). Returns false when a full re-render is needed instead.
+function applyReportingArrivalToSearch() {
+  const last = lastGlobalRender;
+  if (!reportingLoaded || !last || last.curatedN + last.claimN === 0) return false;
+  const term = document.getElementById("global-search").value.trim();
+  if (term !== last.term
+    || document.getElementById("global-regex").checked !== last.useRegex
+    || document.getElementById("global-oneliner").checked !== last.useOneLiners) return false;
+  const container = document.getElementById("entries");
+  if (container.querySelector('.search-group[data-group="reporting"]')) return false; // already there
+  const matches = searchReportingMatches(term);
+  document.getElementById("count").textContent =
+    globalCountText(term, last.useRegex, last.useOneLiners, last.curatedN, last.claimN, matches.length);
+  appendReportingSearchGroup(container, matches, term);
+  return true;
 }
 
 /* ---- Possible Illegality view wiring (Task 8, 2026-11-19) ----
@@ -8377,7 +8483,7 @@ function renderGlobalResults(term, useRegex, useOneLiners, useImpactSort) {
    has loaded (an early render would otherwise clear #illegality before the
    load code reads it). */
 function syncIllegalityHash() {
-  if (!allDataLoaded) return;
+  if (!curatedLoaded) return;
   const action = illegalityHashAction(location.hash, activeTracker, "switch");
   if (action === "set") history.replaceState(history.state, "", "#" + ILLEGALITY_VIEW);
   else if (action === "clear") history.replaceState(history.state, "", location.pathname + location.search);
@@ -8530,7 +8636,7 @@ function renderDispatch() {
   const countEl = document.getElementById("count");
 
   // Keep #harms in step with the view (every view change comes through here).
-  const harmsHash = harmsHashReplacement(location.hash, activeTracker, history.state, location.pathname + location.search, allDataLoaded);
+  const harmsHash = harmsHashReplacement(location.hash, activeTracker, history.state, location.pathname + location.search, curatedLoaded);
   if (harmsHash) history.replaceState(harmsHash.state, "", harmsHash.url);
   // Same for #illegality, as a parallel call (Harms left untouched). Reads
   // location.hash AFTER the Harms sync, so Harms -> Illegality sets
@@ -8774,7 +8880,7 @@ function wireFrontStrip(mount) {
   if (entryLink) entryLink.addEventListener("click", (e) => {
     e.preventDefault();
     const key = entryLink.dataset.tracker, id = entryLink.dataset.id;
-    allDataPromise.then(() => {
+    curatedDataPromise.then(() => {
       const target = resolveEntryTarget(key, id, TRACKERS, MOVED_IDS);
       if (!target || TRACKERS[target.key].hidden) return;
       goToTrackerHome(target.key);
@@ -8786,7 +8892,7 @@ function wireFrontStrip(mount) {
   const harmsLink = mount.querySelector(".fs-harms-link");
   if (harmsLink) harmsLink.addEventListener("click", (e) => {
     e.preventDefault();
-    allDataPromise.then(() => {
+    curatedDataPromise.then(() => {
       activeTracker = HARMS_VIEW;
       renderDispatch();
       const tabsEl = document.getElementById("tabs");
@@ -8824,10 +8930,11 @@ document.getElementById("back-to-top-btn").addEventListener("click", () => {
 // the "Uncurated reporting" chip on its own top line, 2026-11-21), replacing the
 // "— browse by tracker —" button and dialog. A click does what picking the
 // tracker in that dialog did. Hover titles carry the entry count.
-// Set by loadAllData() once every data file has settled. Until then each
+// Set by loadAllData() once every curated data file has settled (Reporting is tracked
+// separately by reportingLoaded / reportingFailed). Until then each
 // tracker's data is still its empty placeholder array, so a count would
 // read 0 (seen live 2026-11-01): the title shows the name alone until then.
-let allDataLoaded = false;
+let curatedLoaded = false;
 
 function renderBrowseChips() {
   const row = document.getElementById("browse-chips");
@@ -8855,8 +8962,12 @@ function renderBrowseChips() {
     rep.dataset.tracker = "tracker";
     rep.style.setProperty("--chip", "var(--ink-soft)");
     rep.textContent = "Uncurated reporting";
-    rep.title = "Reporting: third-party daily news, not curated by TAP" +
-      (allDataLoaded ? " (" + TRACKERS.tracker.data.length + " entries)" : "");
+    // Same "(N entries)" format as the curated chips once loaded; "(loading…)" or
+    // "(unavailable)" before that. Before curated data is in, no suffix (as for the other chips).
+    const repBase = "Reporting: third-party daily news, not curated by TAP";
+    rep.title = reportingLoaded ? repBase + " (" + TRACKERS.tracker.data.length + " entries)"
+      : curatedLoaded ? withLoadCount(repBase, null, reportingFailed)
+      : repBase;
     rep.addEventListener("click", showReportingFeed);
     reportingRow.appendChild(rep);
     row.appendChild(reportingRow);
@@ -8889,7 +9000,7 @@ function renderBrowseChips() {
     btn.style.setProperty("--chip", "var(--trk-" + key + ")");
     btn.textContent = HEADLINE_TRACKER_MEDIUM[key];
     btn.title = TRACKERS[key].label +
-      (allDataLoaded ? " (" + TRACKERS[key].data.length + " entries)" : "");
+      (curatedLoaded ? " (" + TRACKERS[key].data.length + " entries)" : "");
     btn.addEventListener("click", () => selectDatabaseTab(key));
     (key === "communitytopics" ? extraGroup
       : SECOND_LINE.includes(key) ? line2 : line1).appendChild(btn);
@@ -9075,20 +9186,102 @@ suggestSubmitBtn.addEventListener("click", () => {
   }, 900);
 });
 
-/* Loads the three published JSON files. Uses Promise.allSettled
-   (not Promise.all) so that a failure on one file -- missing,
-   malformed, not yet published -- doesn't prevent the other two
-   databases from working. Tracker data is flattened from raw posts
-   into individually searchable events immediately after loading. */
+// Shows the "Could not load" banner at the top of <main>. Shared by loadAllData (curated
+// files) and ensureReporting (tracker.json), so a failure reads the same either way.
+function showLoadErrors(names) {
+  const banner = document.createElement("div");
+  banner.className = "regex-error";
+  banner.style.margin = "0 auto 1rem";
+  banner.style.maxWidth = "880px";
+  banner.style.textAlign = "left";
+  banner.textContent = "Could not load: " + names.join(", ") + ". Other databases are unaffected.";
+  document.querySelector("main").prepend(banner);
+  console.warn("Data load errors:", names);
+}
+
+// Reporting (data/tracker.json) loads separately from the curated files, once per page load.
+// reportingLoaded flips true on success, reportingFailed on failure (never retried).
+let reportingLoaded = false;
+let reportingFailed = false;
+let reportingPromise = null;
+
+// True when the current view needs Reporting's data: the Reporting tab, Records' Reporting
+// feed, or a global search (which searches Reporting too).
+function reportingViewActive() {
+  return activeTracker === "tracker"
+    || (activeTracker === "headlines" && headlinesFeed === "reporting")
+    || document.getElementById("global-search").value.trim() !== "";
+}
+
+// Empty-state HTML shown in a Reporting list view until the data has arrived (or failed).
+function reportingNotReadyHtml() {
+  return reportingFailed
+    ? '<div class="empty-state">Reporting couldn\'t be loaded. Reload the page to try again.</div>'
+    : '<div class="empty-state">Loading Reporting\u2026</div>';
+}
+
+// Runs once Reporting settles (success or failure). Only refreshes the labels that carry
+// Reporting's count; a view is re-rendered only if it is a Reporting view, so an open
+// curated card and the scroll position are left alone. renderTabs() is NOT called: it rebuilds
+// the Records button and the dropdown (stealing focus, disturbing an open picker), so only the
+// Reporting <option>'s text is updated. A global search already showing curated results gets
+// the Reporting group appended in place instead of being rebuilt (which would close open cards).
+function onReportingLoaded() {
+  renderBrowseChips();
+  const tabOpt = document.querySelector('#tabs option[value="tracker"]');
+  if (tabOpt) tabOpt.textContent = reportingOptionText();
+  const feedTab = document.getElementById("feed-tab-reporting");
+  feedTab.textContent = withLoadCount("Reporting feed, uncurated", reportingLoaded ? reportingFeedCount() : null, reportingFailed);
+  if (!reportingViewActive()) return;
+  if (document.getElementById("global-search").value.trim() !== "" && applyReportingArrivalToSearch()) return;
+  renderDispatch();
+}
+
+// Idempotent: every caller shares one cached promise. Resolves true on success, false on
+// failure; never rejects. Raw posts are flattened into individually searchable events here.
+function ensureReporting() {
+  if (!reportingPromise) {
+    // The .catch covers only fetch/parse/flatten: a render bug in onReportingLoaded() must not be
+    // reported as a failed download (or flip both flags). onReportingLoaded() then runs once,
+    // on either outcome, and its own exceptions are logged, never turned into a rejection.
+    reportingPromise = fetch("data/tracker.json")
+      .then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+      .then(raw => {
+        const flattened = flattenTrackerPosts(raw);
+        flattened.forEach(e => { e.category = normalizeCategory(e.category); });
+        // These categories are excluded entirely from Reporting -- not
+        // just hidden from the filter dropdown, but removed from
+        // browsing, search, and global search everywhere in the site.
+        const EXCLUDED_TRACKER_CATEGORIES = new Set(["Announcement", "White Supremacist", "Uncategorized", "Other"]);
+        TRACKERS.tracker.data = flattened.filter(e => !EXCLUDED_TRACKER_CATEGORIES.has(e.category));
+        reportingLoaded = true;
+        return true;
+      })
+      .catch(err => {
+        reportingFailed = true;
+        showLoadErrors(["tracker.json (" + err.message + ")"]);
+        return false;
+      })
+      .then(ok => {
+        try { onReportingLoaded(); } catch (e) { console.error("onReportingLoaded failed:", e); }
+        return ok;
+      });
+  }
+  return reportingPromise;
+}
+
+/* Loads the curated published JSON files (Reporting loads separately,
+   see ensureReporting). Uses Promise.allSettled (not Promise.all) so
+   that a failure on one file -- missing, malformed, not yet published
+   -- doesn't prevent the other databases from working. */
 async function loadAllData() {
   document.getElementById("entries").innerHTML = '<div class="empty-state">Loading data\u2026</div>';
   // Chips show while the data files load (titles fill in afterwards).
   renderBrowseChips();
 
-  const [prosecutionResult, deregulationResult, trackerResult, govservicesResult, trumpfamilyResult, daiResult, communitytopicsResult] = await Promise.allSettled([
+  const [prosecutionResult, deregulationResult, govservicesResult, trumpfamilyResult, daiResult, communitytopicsResult] = await Promise.allSettled([
     fetch("data/prosecution.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
     fetch("data/deregulation.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
-    fetch("data/tracker.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
     fetch("data/government-services.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
     fetch("data/trumpfamily.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
     fetch("data/dai.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
@@ -9113,18 +9306,6 @@ async function loadAllData() {
     TRACKERS.deregulation.data = deregulationResult.value;
   } else {
     loadErrors.push("deregulation.json (" + deregulationResult.reason.message + ")");
-  }
-
-  if (trackerResult.status === "fulfilled") {
-    const flattened = flattenTrackerPosts(trackerResult.value);
-    flattened.forEach(e => { e.category = normalizeCategory(e.category); });
-    // These categories are excluded entirely from Reporting -- not
-    // just hidden from the filter dropdown, but removed from
-    // browsing, search, and global search everywhere in the site.
-    const EXCLUDED_TRACKER_CATEGORIES = new Set(["Announcement", "White Supremacist", "Uncategorized", "Other"]);
-    TRACKERS.tracker.data = flattened.filter(e => !EXCLUDED_TRACKER_CATEGORIES.has(e.category));
-  } else {
-    loadErrors.push("tracker.json (" + trackerResult.reason.message + ")");
   }
 
   if (govservicesResult.status === "fulfilled") {
@@ -9182,7 +9363,7 @@ async function loadAllData() {
   // Status pills and status filters switch on per tracker (spec 5.6).
   refreshStatusStageFlags();
 
-  allDataLoaded = true;
+  curatedLoaded = true;
   // #harms opens the Harms view; checked before the first render, which would
   // otherwise clear #harms as "leaving" the view.
   if (harmsHashAction(location.hash, activeTracker, "load") === "open") activeTracker = HARMS_VIEW;
@@ -9191,21 +9372,19 @@ async function loadAllData() {
   renderDispatch();
   openEntryFromHash();
 
-  if (loadErrors.length) {
-    const banner = document.createElement("div");
-    banner.className = "regex-error";
-    banner.style.margin = "0 auto 1rem";
-    banner.style.maxWidth = "880px";
-    banner.style.textAlign = "left";
-    banner.textContent = "Could not load: " + loadErrors.join(", ") + ". Other databases are unaffected.";
-    document.querySelector("main").prepend(banner);
-    console.warn("Data load errors:", loadErrors);
-  }
+  if (loadErrors.length) showLoadErrors(loadErrors);
+
+  // Reporting (the large uncurated archive) is deliberately NOT part of the load above: it
+  // starts only now, after the first render, so it never delays the curated trackers.
+  // requestIdleCallback gets a 2s timeout so a permanently busy page still starts the load.
+  if (window.requestIdleCallback) window.requestIdleCallback(() => ensureReporting(), { timeout: 2000 });
+  else setTimeout(() => ensureReporting(), 0);
 }
 
 // Kept so the front strip's "Read the entry" link can wait for the data
-// if it's clicked before every tracker file has arrived.
-const allDataPromise = loadAllData();
+// if it's clicked before every curated tracker file has arrived (Reporting is separate: see
+// ensureReporting).
+const curatedDataPromise = loadAllData();
 
 /* ====================================================================
    DEMO MODE / GUIDED TOUR CONTROLLER
