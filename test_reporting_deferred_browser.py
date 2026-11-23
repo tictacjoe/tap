@@ -198,3 +198,13 @@ def test_global_search_before_reporting_fills_in_on_arrival(browser, site_url):
     count = page.locator("#count").inner_text()
     assert "still loading" not in count
     assert page.input_value("#global-search") == "EPA"
+
+
+def test_global_search_over_cap_still_says_reporting_is_loading(browser, site_url):
+    """A broad term overflows the per-group cap; that count line must still carry the note."""
+    page, held, _ = _open_held(browser, site_url)
+    page.fill("#global-search", "the")
+    count = page.locator("#count").inner_text()
+    assert "shown of" in count, count
+    assert "Reporting still loading…" in count
+    _release(page, held)

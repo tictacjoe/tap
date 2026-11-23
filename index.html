@@ -8362,16 +8362,16 @@ function renderGlobalResults(term, useRegex, useOneLiners, useImpactSort) {
   container.innerHTML = "";
 
   if (tapTotal === 0 && reportingMatches.length === 0) {
-    const empty = document.createElement("div");
-    empty.className = "empty-state";
     if (reportingLoaded) {
+      const empty = document.createElement("div");
+      empty.className = "empty-state";
       empty.textContent = globalSearchNoMatchesText(TRACKERS);
+      container.appendChild(empty);
     } else {
-      // Reporting not here yet: reuse the shared loading/failed message.
-      empty.innerHTML = reportingNotReadyHtml();
-      empty.textContent = empty.firstElementChild.textContent;
+      // Reporting not here yet: the shared helper returns the whole empty-state element
+      // (loading or failed message), so insert it as-is. container was cleared above.
+      container.innerHTML = reportingNotReadyHtml();
     }
-    container.appendChild(empty);
     return;
   }
 
@@ -8379,7 +8379,9 @@ function renderGlobalResults(term, useRegex, useOneLiners, useImpactSort) {
   // cap what's rendered per group so the page doesn't choke, and say so.
   if (curatedMatches.length > SEARCH_GROUP_CAP || claimMatches.length > SEARCH_GROUP_CAP) {
     countEl.textContent = (Math.min(curatedMatches.length, SEARCH_GROUP_CAP) + Math.min(claimMatches.length, SEARCH_GROUP_CAP)) +
-      " shown of " + tapTotal + " results — refine your search to narrow further";
+      " shown of " + tapTotal + " results — refine your search to narrow further" +
+      // Same suffixes, same order, as the normal count line above.
+      reportingNote + (useRegex ? " (regex)" : "") + (useOneLiners ? " — 1-liner view" : "");
   }
 
   if (curatedMatches.length) {
