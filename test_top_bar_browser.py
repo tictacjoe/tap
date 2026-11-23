@@ -102,3 +102,24 @@ def test_floating_back_to_top_appears_after_scrolling(browser, site_url):
     page.wait_for_timeout(1200)
     assert page.evaluate("window.scrollY") == 0
     assert not fab.is_visible()
+
+
+def test_subscribe_link_points_at_feed_and_fits_on_phone(browser, site_url):
+    # Subscribe link (2026-11-23): top-bar link to the RSS feed (feed.xml,
+    # written by publish.py via feed.py).
+    page = _open(browser, site_url, '{"updated":"2026-11-01"}')
+    link = page.locator("#top-bar #top-bar-subscribe")
+    assert link.count() == 1
+    assert link.get_attribute("href") == "feed.xml"
+    assert link.inner_text().strip() == "Subscribe"
+    assert "RSS" in (link.get_attribute("title") or "")
+    # Phone: every top-bar item stays inside the 390px screen.
+    ctx = browser.new_context(viewport={"width": 390, "height": 844}, is_mobile=True, has_touch=True)
+    phone = ctx.new_page()
+    phone.goto(site_url + "/index.html", wait_until="networkidle")
+    phone.wait_for_timeout(800)
+    assert phone.locator("#top-bar-subscribe").is_visible()
+    widest = phone.evaluate("""() => Math.max(...[...document.querySelectorAll('#top-bar *')]
+        .map(el => el.getBoundingClientRect().right))""")
+    assert widest <= 390
+    ctx.close()
