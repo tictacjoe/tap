@@ -5,6 +5,7 @@ tabs working. Served from this repo on a free port; skips without Playwright/Chr
 import functools
 import http.server
 import pathlib
+import re
 import threading
 
 import pytest
@@ -96,3 +97,88 @@ def test_a_failed_reporting_file_leaves_curated_working(browser, site_url):
     assert "Could not load: tracker.json (HTTP 404)" in banner
     assert "Other databases are unaffected." in banner
     assert page.locator("#headlines-view .headline-row").count() > 0
+
+
+# ---- Reporting views wait for the data (Task 3) ----
+
+def _open_held(browser, site_url, fragment=""):
+    """Open the site with tracker.json held; returns (page, held, errors). Curated is loaded."""
+    page, errors = _new_page(browser)
+    held = []
+    page.route("**/data/tracker.json", lambda r: held.append(r))
+    page.goto(f"{site_url}/index.html" + (f"#{fragment}" if fragment else ""), wait_until="domcontentloaded")
+    page.wait_for_function("curatedLoaded === true", timeout=60000)
+    return page, held, errors
+
+
+def _release(page, held):
+    for _ in range(50):
+        if held:
+            break
+        page.wait_for_timeout(100)
+    assert held
+    held[0].continue_()
+    page.wait_for_function("reportingLoaded === true", timeout=60000)
+
+
+def test_reporting_labels_say_loading_then_show_counts(browser, site_url):
+    page, held, _ = _open_held(browser, site_url)
+    assert page.locator("#feed-tab-reporting").inner_text() == "Reporting feed, uncurated (loading…)"
+    assert page.locator('#tabs option[value="tracker"]').text_content() == "Uncurated reporting (loading…)"
+    _release(page, held)
+    assert re.search(r"\(\d+\)$", page.locator("#feed-tab-reporting").inner_text())
+    assert re.search(r"\(\d+\)$", page.locator('#tabs option[value="tracker"]').text_content())
+
+
+def test_reporting_feed_opened_early_shows_loading_then_rows(browser, site_url):
+    page, held, _ = _open_held(browser, site_url)
+    page.click("#feed-tab-reporting")
+    assert page.locator("#headlines-view").inner_text().strip() == "Loading Reporting…"
+    _release(page, held)
+    page.wait_for_function("document.querySelectorAll('#headlines-view .headline-row').length > 0", timeout=30000)
+
+
+def test_reporting_tab_opened_early_shows_loading_then_cards(browser, site_url):
+    page, held, _ = _open_held(browser, site_url)
+    page.evaluate("selectDatabaseTab('tracker')")
+    assert page.locator("#entries").inner_text().strip() == "Loading Reporting…"
+    assert "0 of 0" not in page.locator("#count").inner_text()
+    _release(page, held)
+    page.wait_for_function("document.querySelectorAll('#entries .entry').length > 0", timeout=30000)
+
+
+def test_reporting_deep_link_before_load_opens_the_card(browser, site_url):
+    # Learn a drawn id from an unheld page, as test_reporting_deeplink_browser._ids() does.
+    probe, _ = _new_page(browser)
+    probe.goto(f"{site_url}/index.html#tracker/x", wait_until="domcontentloaded")
+    probe.wait_for_function("reportingLoaded === true", timeout=60000)
+    probe.wait_for_selector("#entries .entry[data-entry-id]", timeout=30000)
+    rid = probe.evaluate("document.querySelector('#entries .entry[data-entry-id]').dataset.entryId")
+    page, held, _ = _open_held(browser, site_url, "tracker/" + rid)
+    _release(page, held)
+    card = page.locator(f'.entry[data-entry-id="{rid}"]')
+    page.wait_for_function("document.querySelector('.entry.deep-linked')", timeout=30000)
+    classes = card.get_attribute("class")
+    assert "open" in classes and "deep-linked" in classes
+    assert page.locator(".deep-link-note").count() == 0
+
+
+def test_reporting_arrival_keeps_an_open_curated_card(browser, site_url):
+    page, held, _ = _open_held(browser, site_url)
+    page.evaluate("selectDatabaseTab('deregulation')")
+    page.locator(".entry .entry-head").first.click()
+    assert "open" in page.locator(".entry").first.get_attribute("class")
+    y = page.evaluate("window.scrollY")
+    _release(page, held)
+    assert "open" in page.locator(".entry").first.get_attribute("class")
+    assert page.evaluate("window.scrollY") == y
+
+
+def test_reporting_failure_shows_a_note_not_a_spinner(browser, site_url):
+    page, _ = _new_page(browser)
+    page.route("**/data/tracker.json", lambda r: r.fulfill(status=404, body=""))
+    page.goto(f"{site_url}/index.html", wait_until="domcontentloaded")
+    page.wait_for_function("reportingFailed === true", timeout=60000)
+    page.evaluate("selectDatabaseTab('tracker')")
+    assert "Reporting couldn't be loaded." in page.locator("#entries").inner_text()
+    assert page.locator('#tabs option[value="tracker"]').text_content().endswith("(unavailable)")

@@ -3662,6 +3662,14 @@ function setHeadlinesFeed(feed) {
    problem RENDER_STEP exists to avoid in the first place. A sort,
    filter, or the feed tab still does a full rebuild,
    since the actual set of rows (not just how many) has changed. */
+// Count shown on the "Reporting feed, uncurated" tab: Reporting items since Jan 2025, the same
+// set the feed lists. Only meaningful once Reporting has loaded.
+function reportingFeedCount() {
+  // Straight from the data (adaptReportingEntry takes date from entry.date), so this does not
+  // build every headline item just to count.
+  return TRACKERS.tracker.data.filter(e => extractFirstDate(e.date || null) >= 20250101).length;
+}
+
 function renderHeadlinesView(appendOnly) {
   const container = document.getElementById("headlines-view");
   const countEl = document.getElementById("headlines-count");
@@ -3681,10 +3689,19 @@ function renderHeadlinesView(appendOnly) {
   document.getElementById("feed-tab-curated").textContent =
     "TAP entries (" + items.filter(i => curatedKeys.includes(i.tracker)).length + ")";
   document.getElementById("feed-tab-reporting").textContent =
-    "Reporting feed, uncurated (" + items.filter(i => i.tracker === "tracker").length + ")";
+    withLoadCount("Reporting feed, uncurated",
+      reportingLoaded ? items.filter(i => i.tracker === "tracker").length : null, reportingFailed);
 
   updateStatusKey("status-key-records",
     headlinesFeed === "curated" && curatedKeys.some(k => TRACKERS[k] && TRACKERS[k].statusStageLive));
+
+  // Reporting not here yet: say so instead of showing an empty "0 records" feed.
+  if (headlinesFeed === "reporting" && !reportingLoaded) {
+    container.innerHTML = reportingNotReadyHtml();
+    countEl.textContent = "";
+    document.getElementById("headlines-load-more-row").style.display = "none";
+    return;
+  }
 
   // Claim-checks never appear in either feed.
   if (headlinesFeed === "reporting") {
@@ -7331,7 +7348,9 @@ function renderTabs() {
     opt.value = key;
     // Reporting reads "Uncurated reporting" here to match its browse chip
     // (Joe, 2026-11-21); its label stays "Reporting" everywhere else.
-    opt.textContent = (key === "tracker" ? "Uncurated reporting" : TRACKERS[key].label) + " (" + TRACKERS[key].data.length + ")";
+    opt.textContent = key === "tracker"
+      ? withLoadCount("Uncurated reporting", reportingLoaded ? TRACKERS[key].data.length : null, reportingFailed)
+      : TRACKERS[key].label + " (" + TRACKERS[key].data.length + ")";
     opt.selected = key === activeTracker || (key === "tracker" && reportingFeedOn);
     select.appendChild(opt);
   });
@@ -7679,6 +7698,13 @@ function renderEntries() {
   const countEl = document.getElementById("count");
   updateStatusKey("status-key-tab", !!cfg.statusStageLive);
 
+  // Reporting's data arrives after first paint: show a loading note, not "0 of 0 entries".
+  if (cfg.kind === "tracker" && !reportingLoaded) {
+    container.innerHTML = reportingNotReadyHtml();
+    countEl.textContent = "";
+    return;
+  }
+
   const filtered = cfg.data.filter(e => {
     // No search: skip building the haystack. matchesTerm() would return
     // true anyway, but visibleSearchText() runs stripProcessLabels()'s
@@ -7970,6 +7996,11 @@ function openCardById(id) {
   const container = document.getElementById("entries");
   // A second jump in the same visit must not stack earlier on-demand cards or notes.
   container.querySelectorAll(":scope > .linked-item, :scope > .deep-link-note").forEach(el => el.remove());
+  // Reporting not loaded yet: wait for it, then retry (if still on Reporting). Report "handled".
+  if (activeTracker === "tracker" && !reportingLoaded && !reportingFailed) {
+    ensureReporting().then(ok => { if (ok && activeTracker === "tracker") openCardById(id); });
+    return true;
+  }
   let card = container.querySelector('.entry[data-entry-id="' + CSS.escape(id) + '"]');
   if (!card && activeTracker === "tracker") {
     const cfg = TRACKERS.tracker;
@@ -8868,8 +8899,12 @@ function renderBrowseChips() {
     rep.dataset.tracker = "tracker";
     rep.style.setProperty("--chip", "var(--ink-soft)");
     rep.textContent = "Uncurated reporting";
-    rep.title = "Reporting: third-party daily news, not curated by TAP" +
-      (curatedLoaded ? " (" + TRACKERS.tracker.data.length + " entries)" : "");
+    // Same "(N entries)" format as the curated chips once loaded; "(loading…)" or
+    // "(unavailable)" before that. Before curated data is in, no suffix (as for the other chips).
+    const repBase = "Reporting: third-party daily news, not curated by TAP";
+    rep.title = reportingLoaded ? repBase + " (" + TRACKERS.tracker.data.length + " entries)"
+      : curatedLoaded ? withLoadCount(repBase, null, reportingFailed)
+      : repBase;
     rep.addEventListener("click", showReportingFeed);
     reportingRow.appendChild(rep);
     row.appendChild(reportingRow);
@@ -9107,9 +9142,31 @@ let reportingLoaded = false;
 let reportingFailed = false;
 let reportingPromise = null;
 
-// Hook for whatever must refresh once Reporting settles (success or failure). Filled in by a
-// later task; deliberately empty for now.
-function onReportingLoaded() {}
+// True when the current view needs Reporting's data: the Reporting tab, Records' Reporting
+// feed, or a global search (which searches Reporting too).
+function reportingViewActive() {
+  return activeTracker === "tracker"
+    || (activeTracker === "headlines" && headlinesFeed === "reporting")
+    || document.getElementById("global-search").value.trim() !== "";
+}
+
+// Empty-state HTML shown in a Reporting list view until the data has arrived (or failed).
+function reportingNotReadyHtml() {
+  return reportingFailed
+    ? '<div class="empty-state">Reporting couldn\'t be loaded. Reload the page to try again.</div>'
+    : '<div class="empty-state">Loading Reporting\u2026</div>';
+}
+
+// Runs once Reporting settles (success or failure). Only refreshes the labels that carry
+// Reporting's count; a view is re-rendered only if it is a Reporting view, so an open
+// curated card and the scroll position are left alone.
+function onReportingLoaded() {
+  renderBrowseChips();
+  renderTabs();
+  const feedTab = document.getElementById("feed-tab-reporting");
+  feedTab.textContent = withLoadCount("Reporting feed, uncurated", reportingLoaded ? reportingFeedCount() : null, reportingFailed);
+  if (reportingViewActive()) renderDispatch();
+}
 
 // Idempotent: every caller shares one cached promise. Resolves true on success, false on
 // failure; never rejects. Raw posts are flattened into individually searchable events here.

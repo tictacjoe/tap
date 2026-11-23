@@ -128,6 +128,14 @@ def test_titles_fill_after_load(site_url, browser):
         m = re.search(r"\((\d+) entries\)$", title)
         assert m, title
         assert int(m.group(1)) == n
+    # Reporting's chip says "(loading…)" until its data arrives, then gains its real count.
+    rep_title = page.locator('.browse-chip[data-tracker="tracker"]').get_attribute("title")
+    assert rep_title.endswith("(loading…)") or re.search(r"\(\d+ entries\)$", rep_title), rep_title
+    page.wait_for_function("reportingLoaded === true", timeout=60000)
+    rep = page.evaluate(
+        "[document.querySelector('.browse-chip[data-tracker=\"tracker\"]').title, TRACKERS.tracker.data.length]")
+    m = re.search(r"\((\d+) entries\)$", rep[0])
+    assert m and int(m.group(1)) == rep[1], rep
     page.close()
 
 
@@ -203,6 +211,8 @@ def test_uncurated_reporting_chip(site_url, browser):
     chip = page.locator('#browse-chips .browse-reporting-row .browse-chip[data-tracker="tracker"]')
     assert chip.count() == 1
     assert chip.inner_text().strip().upper() == "UNCURATED REPORTING"
+    # Reporting arrives after first paint; its title only gains the count once loaded.
+    page.wait_for_function("reportingLoaded === true", timeout=60000)
     assert re.search(r"\((\d+) entries\)$", chip.get_attribute("title"))
     geo = page.evaluate("""() => {
       const row = document.getElementById('browse-chips').getBoundingClientRect();
@@ -216,8 +226,6 @@ def test_uncurated_reporting_chip(site_url, browser):
     assert abs(geo["rowMid"] - geo["chipMid"]) <= 2, geo
     assert geo["chipTop"] >= geo["labelBottom"] - 1, geo
     assert geo["chipBottom"] <= geo["groupTop"], geo
-    # Reporting now arrives after first paint; wait for it before opening its feed.
-    page.wait_for_function("reportingLoaded === true", timeout=60000)
     chip.click()
     assert page.evaluate("activeTracker") == "headlines"
     assert page.evaluate("headlinesFeed") == "reporting"
