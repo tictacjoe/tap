@@ -142,6 +142,9 @@
     border: 1px solid var(--rule);
     padding: 0.8rem 1rem 0.9rem;
     display: grid;
+    /* minmax(0, 1fr): without it the phone's one-line (nowrap) Featured
+       button would stretch the column past the screen edge. */
+    grid-template-columns: minmax(0, 1fr);
     gap: 0.75rem;
   }
   .fs-stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
@@ -211,6 +214,8 @@
     .fs-toggle {
       display: flex;
       width: 100%;
+      box-sizing: border-box;
+      min-width: 0;
       gap: 0.5rem;
       align-items: baseline;
       background: var(--paper);
@@ -2202,6 +2207,10 @@
   <h1>TAP</h1>
   <p class="tagline-name">The Accountability Project</p>
   <p class="tagline">Executive branch actions from Jan. 2025, assembled into topic dossiers through primary records and verified reporting. Every entry is built to hold up when challenged.</p>
+
+  <!-- Front-page findings strip (2026-11-23): filled by loadFrontStrip()
+       from data/front-strip.json; stays hidden if that file is missing. -->
+  <div id="front-strip" class="front-strip" hidden></div>
 
   <div class="global-search-box" id="search-mode-box">
     <span class="search-icon">🔍</span>
@@ -8727,6 +8736,62 @@ fetch("data/site_meta.json")
   })
   .catch(() => {});
 
+/* Front-page findings strip (2026-11-23). Fetches the small
+   data/front-strip.json on its own -- not inside loadAllData() -- so the
+   strip shows before the big tracker files finish. Any failure (404, bad
+   JSON, missing stats) leaves #front-strip hidden and empty: the page then
+   looks exactly as it did before the strip existed. */
+function loadFrontStrip() {
+  const mount = document.getElementById("front-strip");
+  if (!mount) return;
+  fetch("data/front-strip.json")
+    .then(r => (r.ok ? r.json() : null))
+    .then(strip => {
+      const html = buildFrontStripHtml(strip, key => "var(--trk-" + key + ")");
+      if (!html) return;
+      mount.innerHTML = html;
+      mount.hidden = false;
+      wireFrontStrip(mount);
+    })
+    .catch(err => console.warn("front strip not shown:", err));
+}
+
+function wireFrontStrip(mount) {
+  // Phone: the one-line "Featured" button folds the card open/closed.
+  const toggle = mount.querySelector(".fs-toggle");
+  if (toggle) toggle.addEventListener("click", () => {
+    const open = mount.classList.toggle("open");
+    toggle.setAttribute("aria-expanded", String(open));
+  });
+  // "Read the entry": same jump as a related-entry link (moved ids
+  // resolved), after the tracker data has loaded.
+  const entryLink = mount.querySelector(".fs-entry-link");
+  if (entryLink) entryLink.addEventListener("click", (e) => {
+    e.preventDefault();
+    const key = entryLink.dataset.tracker, id = entryLink.dataset.id;
+    allDataPromise.then(() => {
+      const target = resolveEntryTarget(key, id, TRACKERS, MOVED_IDS);
+      if (!target || TRACKERS[target.key].hidden) return;
+      goToTrackerHome(target.key);
+      openCardById(id);
+    });
+  });
+  // "All N life/health harms": open the Harms view the way Back does
+  // (renderDispatch() keeps the #harms address in step).
+  const harmsLink = mount.querySelector(".fs-harms-link");
+  if (harmsLink) harmsLink.addEventListener("click", (e) => {
+    e.preventDefault();
+    allDataPromise.then(() => {
+      activeTracker = HARMS_VIEW;
+      renderDispatch();
+      const tabsEl = document.getElementById("tabs");
+      if (tabsEl) tabsEl.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
+}
+
+loadFrontStrip();
+
 document.getElementById("back-to-top-btn").addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
@@ -9133,7 +9198,9 @@ async function loadAllData() {
   }
 }
 
-loadAllData();
+// Kept so the front strip's "Read the entry" link can wait for the data
+// if it's clicked before every tracker file has arrived.
+const allDataPromise = loadAllData();
 
 /* ====================================================================
    DEMO MODE / GUIDED TOUR CONTROLLER
