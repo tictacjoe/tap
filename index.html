@@ -2817,6 +2817,9 @@ function adaptDeregulationEntry(entry) {
     statusStage: entry.status_stage || null,
     category: entry.domain || null,
     id: entry.id || null,
+    // One-sentence summary for the Records hover text (spec decision 8.2.2);
+    // null when the entry has none. stripAdaptedItemLabels() cleans it too.
+    skim: entry.section_summaries?.what_changed || null,
   });
 }
 /* adapt-deregulation-entry:end */
@@ -2849,6 +2852,9 @@ function adaptGovServicesEntry(entry) {
     statusStage: entry.status_stage || null,
     category: entry.domain || null,
     id: entry.id || null,
+    // One-sentence summary for the Records hover text (spec decision 8.2.2);
+    // null when the entry has none. stripAdaptedItemLabels() cleans it too.
+    skim: entry.section_summaries?.what_changed || null,
   });
 }
 /* adapt-govservices-entry:end */
@@ -3061,6 +3067,9 @@ function adaptProsecutionEntry(entry) {
     statusStage: entry.status_stage || null,
     category: entry.offense_category || null,
     id: entry.id || null,
+    // Cabinet-Level has no what_changed; its one-sentence summary is
+    // incident_summary. Used as the Records hover text (spec decision 8.2.2).
+    skim: entry.section_summaries?.incident_summary || null,
   });
 }
 /* adapt-prosecution-entry:end */
@@ -3392,6 +3401,8 @@ function buildHeadlineRow(item, displayDate) {
   const row = document.createElement("div");
   row.className = "headline-entry";
   row.dataset.tracker = item.tracker;
+  // Entry id (curated rows only), so tests and tools can map a row to its entry.
+  if (item.id) row.dataset.entryId = item.id;
 
   const trackerLabel = TRACKERS[item.tracker].label;
   const trackerMedium = HEADLINE_TRACKER_MEDIUM[item.tracker] || trackerLabel;
@@ -3399,15 +3410,18 @@ function buildHeadlineRow(item, displayDate) {
 
   const line = document.createElement("div");
   line.className = "headline-row";
-  // The hover tooltip deliberately points at tiers[0] ("brief"), the
-  // fuller untruncated source text each adapt*Entry() function carries,
-  // not item.headline -- headline is already truncated to ~110 chars,
-  // so using it here just echoed the visible truncated text back on
-  // hover instead of showing anything new. data-full-headline stays
-  // bound to item.headline on purpose: fitHeadlineRowText()'s
+  // Hover tooltip (spec decision 8.2.2): curated rows show the entry's
+  // one-sentence skim summary (item.skim: what_changed, or incident_summary
+  // for Cabinet-Level), falling back to item.headline when an entry has
+  // none. This replaced the older tiers[0] ("brief") tooltip, which was the
+  // long untruncated source text. Reporting rows keep their old rule
+  // (tiers[0], else headline), since Reporting has no skim. data-full-headline
+  // stays bound to item.headline on purpose: fitHeadlineRowText()'s
   // packHeadline() repacking expects headline-shaped text, not a full
   // paragraph, so it's left untouched.
-  const tooltipText = (item.tiers && item.tiers[0]) || item.headline;
+  const tooltipText = item.tracker === "tracker"
+    ? ((item.tiers && item.tiers[0]) || item.headline)
+    : (item.skim || item.headline);
   // Reporting rows run to the edge of the screen (Joe, 2026-11-21): instead
   // of the 110-character headline, the row carries the full "what happened"
   // text and CSS ends it with an ellipsis wherever the row runs out of room,
@@ -3539,10 +3553,15 @@ function buildHeadlineRow(item, displayDate) {
   const trailPanel = document.createElement("div");
   trailPanel.className = "confidence-box headline-trail-panel";
   trailPanel.style.display = "none";
-  trailPanel.innerHTML = buildTrailHtml(item.trail);
+  // The panel starts empty; its contents are built once, on the first click
+  // (buildTrailHtml runs for no row nobody opens). Later clicks only toggle.
   body.appendChild(trailPanel);
 
   trailBtn.addEventListener("click", () => {
+    if (!trailPanel.dataset.built) {
+      trailPanel.innerHTML = buildTrailHtml(item.trail);
+      trailPanel.dataset.built = "1";
+    }
     trailPanel.style.display = trailPanel.style.display === "none" ? "block" : "none";
   });
 
@@ -4585,6 +4604,7 @@ function stripProcessLabels(text) {
    function's own doc comment); this only reuses it, it does not widen what it strips. */
 function stripAdaptedItemLabels(item) {
   item.headline = stripProcessLabels(item.headline);
+  if (item.skim) item.skim = stripProcessLabels(item.skim);
   if (Array.isArray(item.tiers)) item.tiers = item.tiers.map(stripProcessLabels);
   if (item.trail) {
     if (item.trail.confidenceNote) item.trail.confidenceNote = stripProcessLabels(item.trail.confidenceNote);
@@ -7033,10 +7053,11 @@ function buildEntryCard(entry, cfg, docketLabel, sourceLabel, term, useRegex, ca
         '</span>' +
         '<span class="entry-row-harm">' + hl(harm) + '</span>' +
       '</div>';
-    const item = ROW_ADAPTERS[cardTrackerKey](entry);
-    // The .entry-detail starts empty; ensureEntryDetail() fills it on first open.
+    // The sources panel and .entry-detail both start empty; the panel is
+    // filled on the first "sources" click (below), the detail by
+    // ensureEntryDetail() on first open.
     div.innerHTML = rowHead +
-      '<div class="confidence-box entry-row-sources-panel" style="display:none">' + buildTrailHtml(item.trail) + '</div>' +
+      '<div class="confidence-box entry-row-sources-panel" style="display:none"></div>' +
       '<div class="entry-detail"></div>';
     detailArgs.set(div, {
       entry, cfg, term, useRegex,
@@ -7056,6 +7077,11 @@ function buildEntryCard(entry, cfg, docketLabel, sourceLabel, term, useRegex, ca
     const panel = div.querySelector(".entry-row-sources-panel");
     div.querySelector(".entry-row-sources").addEventListener("click", (e) => {
       e.stopPropagation();
+      // Built once, on the first click: the adapter runs here, not at draw time.
+      if (!panel.dataset.built) {
+        panel.innerHTML = buildTrailHtml(ROW_ADAPTERS[cardTrackerKey](entry).trail);
+        panel.dataset.built = "1";
+      }
       panel.style.display = panel.style.display === "none" ? "block" : "none";
     });
     // Head only; the detail is wired when it is built (ensureEntryDetail).

@@ -30,6 +30,7 @@ const names = [
   "adapt-deregulation-entry",
   "adapt-govservices-entry",
   "adapt-trumpfamily-entry",
+  "adapt-dai-entry",
   "adapt-prosecution-entry",
   "adapt-communitytopic-entry",
   "adapt-reporting-entry",
@@ -37,7 +38,7 @@ const names = [
 const combined = names.map(n => extractFunction(source, n)).join("\n");
 const exposeNames = [
   "combineTierText", "fullestTierText", "packHeadline", "stripAdaptedItemLabels", "flattenTrackerPosts",
-  "adaptDeregulationEntry", "adaptGovServicesEntry", "adaptTrumpFamilyEntry", "adaptProsecutionEntry",
+  "adaptDeregulationEntry", "adaptGovServicesEntry", "adaptTrumpFamilyEntry", "adaptDaiEntry", "adaptProsecutionEntry",
   "adaptCommunityTopicEntry", "adaptReportingEntry",
 ];
 const fns = (0, eval)(`${combined}\n({ ${exposeNames.join(", ")} });`);
@@ -379,4 +380,33 @@ test("adaptTrumpFamilyEntry names the family and the government link, not a prop
   assert.ok(full.includes("Pattern: Pay-to-play pattern."), full);
   assert.equal(item.tracker, "trumpfamily");
   assert.equal(item.category, "crypto");
+});
+
+// skim: the one-sentence summary the Records row shows on hover (spec decision 8.2.2).
+test("adaptDeregulationEntry carries section_summaries.what_changed as skim", () => {
+  const r = fns.adaptDeregulationEntry({ what_changed: "Long text.", section_summaries: { what_changed: "Skim line." } });
+  assert.equal(r.skim, "Skim line.");
+});
+
+test("adaptProsecutionEntry carries section_summaries.incident_summary as skim", () => {
+  const r = fns.adaptProsecutionEntry({ incident_summary: "Long text.", section_summaries: { incident_summary: "CLA skim." } });
+  assert.equal(r.skim, "CLA skim.");
+});
+
+test("the GSR, TFS and DAI adapters carry section_summaries.what_changed as skim", () => {
+  const entry = { what_changed: "Long text.", section_summaries: { what_changed: "Skim line." } };
+  assert.equal(fns.adaptGovServicesEntry(entry).skim, "Skim line.");
+  assert.equal(fns.adaptTrumpFamilyEntry(entry).skim, "Skim line.");
+  assert.equal(fns.adaptDaiEntry(entry).skim, "Skim line.");
+});
+
+test("every curated adapter returns skim === null without section_summaries", () => {
+  const entry = { what_changed: "Long text.", incident_summary: "Long text." };
+  for (const name of ["adaptDeregulationEntry", "adaptGovServicesEntry", "adaptTrumpFamilyEntry", "adaptDaiEntry", "adaptProsecutionEntry"]) {
+    assert.strictEqual(fns[name](entry).skim, null, name);
+  }
+});
+
+test("Reporting and community-topic adapters do not return skim", () => {
+  assert.equal("skim" in fns.adaptCommunityTopicEntry({}), false);
 });

@@ -22,6 +22,14 @@ _COUNT_CALLS = """() => {
 }"""
 
 
+# Same idea for buildTrailHtml (the sources panels).
+_COUNT_TRAILS = """() => {
+    window.__bth = 0;
+    const real = window.buildTrailHtml;
+    window.buildTrailHtml = function (...args) { window.__bth++; return real.apply(this, args); };
+}"""
+
+
 class _Quiet(http.server.SimpleHTTPRequestHandler):
     def log_message(self, *args):
         pass
@@ -159,3 +167,63 @@ def test_oneliner_search_builds_detail_on_click(page):
     page.locator(".oneliner-row").first.click()
     page.locator(".oneliner-row").first.click()
     assert page.evaluate("window.__bdh") == 1
+
+
+def _records_page(page):
+    """Counter first, then draw Records again, so every row is built under the
+    counter. The page is already loaded (curatedLoaded) and sits on Records
+    (the default view), so install the counter and call renderDispatch()."""
+    page.evaluate(_COUNT_TRAILS)
+    page.evaluate("renderDispatch()")
+    page.wait_for_selector("#headlines-view .headline-row")
+
+
+def test_records_render_builds_no_trails(page):
+    _records_page(page)
+    assert page.evaluate("window.__bth") == 0
+    btn = page.locator('#headlines-view .headline-row button[aria-label="confidence/sources"]').first
+    btn.click()
+    assert page.evaluate("window.__bth") == 1
+    panel = page.locator("#headlines-view .headline-trail-panel:visible").first
+    assert panel.locator("a[href]").count() > 0
+    btn.click()
+    btn.click()
+    assert page.evaluate("window.__bth") == 1
+
+
+def test_tab_row_sources_panel_builds_on_click(page):
+    page.evaluate(_COUNT_TRAILS)
+    page.evaluate("selectDatabaseTab('govservices')")
+    page.wait_for_selector("#entries .entry")
+    assert page.evaluate("window.__bth") == 0
+    page.locator("#entries .entry button.entry-row-sources").first.click()
+    assert page.evaluate("window.__bth") == 1
+    panel = page.locator(".entry-row-sources-panel:visible").first
+    assert panel.locator("a[href]").count() > 0
+
+
+def test_records_hover_is_the_skim_summary(page):
+    _records_page(page)
+    # Expected skim per "tracker:id", read from the loaded tracker data.
+    skims = page.evaluate("""() => {
+        const out = {};
+        for (const k of Object.keys(TRACKERS)) {
+          for (const e of (TRACKERS[k].data || [])) {
+            const s = e.section_summaries;
+            const v = s && (k === 'prosecution' ? s.incident_summary : s.what_changed);
+            if (e.id && v) out[k + ':' + e.id] = v;
+          }
+        }
+        return out;
+    }""")
+    rows = page.evaluate("""() => [...document.querySelectorAll('#headlines-view .headline-entry')].map(r => ({
+        key: r.dataset.entryId ? r.dataset.tracker + ':' + r.dataset.entryId : null,
+        title: r.querySelector('.headline-row-text').title,
+    }))""")
+    norm = lambda x: " ".join((x or "").split())
+    checked = 0
+    for r in rows:
+        if r["key"] in skims:  # skip Reporting rows and entries with no skim
+            assert norm(r["title"]) == norm(skims[r["key"]]), r["key"]
+            checked += 1
+    assert checked > 0
