@@ -40,3 +40,13 @@ def test_render_page_lists_after_text():
 
 def test_render_page_numbered_list_after_text():
     assert "<ol>" in blp.render_page("Rules:\n1. x\n2. y", "T")
+
+
+def test_subscribe_page_explains_and_links_feed():
+    # How-to-subscribe page (2026-11-23): the top bar's Subscribe link lands
+    # here instead of on the raw feed.xml.
+    assert ("SUBSCRIBE.md", "subscribe.html", "Subscribe") in blp.PAGES
+    page = (ROOT / "subscribe.html").read_text(encoding="utf-8")
+    assert "https://tictacjoe.github.io/tap/feed.xml" in page
+    assert 'href="feed.xml"' in page
+    assert "Reporting" in page  # says what the feed leaves out

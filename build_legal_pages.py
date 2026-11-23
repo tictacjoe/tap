@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Render TERMS.md and LICENSE.md into styled terms.html / license.html.
+"""Render TERMS.md, LICENSE.md and SUBSCRIBE.md into styled terms.html /
+license.html / subscribe.html.
 
 Styling is borrowed from about.html's <style> block at build time so the
 legal pages match the site. Output is deterministic (no timestamps).
@@ -16,6 +17,9 @@ ROOT = Path(__file__).parent
 PAGES = [
     ("TERMS.md", "terms.html", "Terms of Use"),
     ("LICENSE.md", "license.html", "License"),
+    # Not a legal page, but the same Markdown-to-styled-page job (2026-11-23):
+    # the "how to subscribe" page the top bar's Subscribe link opens.
+    ("SUBSCRIBE.md", "subscribe.html", "Subscribe"),
 ]
 
 

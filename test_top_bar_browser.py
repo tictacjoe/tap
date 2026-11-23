@@ -110,7 +110,7 @@ def test_subscribe_link_points_at_feed_and_fits_on_phone(browser, site_url):
     page = _open(browser, site_url, '{"updated":"2026-11-01"}')
     link = page.locator("#top-bar #top-bar-subscribe")
     assert link.count() == 1
-    assert link.get_attribute("href") == "feed.xml"
+    assert link.get_attribute("href") == "subscribe.html"  # how-to page, links on to feed.xml
     assert link.inner_text().strip() == "Subscribe"
     assert "RSS" in (link.get_attribute("title") or "")
     # Phone: every top-bar item stays inside the 390px screen.

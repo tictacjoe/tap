@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Subscribe — The Accountability Project</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<style>
+  :root {
+    --paper: #EDEFE7;
+    --paper-card: #F7F8F2;
+    --ink: #1D2220;
+    --ink-soft: #52564F;
+    --ink-faint: #8A8D82;
+    --rule: #C7CABB;
+    --rule-strong: #A9AC9A;
+    --brass: #96762C;
+    --brass-light: #EFE7D2;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: Georgia, 'Iowan Old Style', 'Times New Roman', serif;
+    line-height: 1.6;
+  }
+
+  header.masthead {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 1.5rem;
+    text-align: center;
+    border-bottom: 3px double var(--rule-strong);
+  }
+  header.masthead h1 {
+    margin: 0;
+    font-size: 2.6rem;
+    letter-spacing: 0.06em;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  header.masthead .tagline {
+    margin: 0.6rem 0 0;
+    font-size: 0.85rem;
+    letter-spacing: 0.03em;
+    color: var(--brass);
+    font-style: italic;
+  }
+
+  main {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+  }
+
+  main h2 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 0.4rem;
+    margin-top: 2.5rem;
+  }
+
+  main p { color: var(--ink-soft); }
+  main strong { color: var(--ink); }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    background: var(--paper-card);
+    font-size: 0.92rem;
+  }
+  th, td {
+    text-align: left;
+    padding: 0.6rem 0.8rem;
+    border: 1px solid var(--rule);
+    vertical-align: top;
+  }
+  th {
+    background: var(--brass-light);
+    color: var(--brass);
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    font-family: ui-monospace, monospace;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-top: 2rem;
+    font-family: ui-monospace, monospace;
+    font-size: 0.78rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--brass);
+    text-decoration: none;
+  }
+  .back-link:hover { text-decoration: underline; }
+
+  footer.site-footer {
+    max-width: 880px;
+    margin: 3rem auto 2rem;
+    padding: 1.5rem 1rem 1rem;
+    text-align: center;
+    border-top: 1px solid var(--rule);
+    font-size: 0.85rem;
+    color: var(--ink-faint);
+    line-height: 1.6;
+  }
+  footer.site-footer .footer-copyright {
+    margin: 0 0 0.5rem;
+  }
+  footer.site-footer .footer-links a {
+    color: var(--brass);
+    text-decoration: none;
+  }
+  footer.site-footer .footer-links a:hover {
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+
+<main>
+  <p><a class="back-link" href="./">&larr; Back to TAP</a></p>
+
+<h1>Subscribe to new entries</h1>
+<p>TAP publishes a feed of newly added entries. Add it to a feed reader and new TAP entries show up there alongside the other sites you follow, with no account or email signup needed on TAP.</p>
+<h2>The feed address</h2>
+<p>Copy this address:</p>
+<pre><code>https://tictacjoe.github.io/tap/feed.xml
+</code></pre>
+<h2>How to subscribe</h2>
+<ol>
+<li>Open a feed reader. That's an app or website that collects new posts from sites you follow. Free options include Feedly and Inoreader on the web, NetNewsWire on Mac and iPhone, and Feeder on Android.</li>
+<li>Look for a button labeled "Add feed", "Follow", "Subscribe" or "+".</li>
+<li>Paste the feed address above and confirm.</li>
+</ol>
+<p>Many feed readers also accept the main site address, https://tictacjoe.github.io/tap/, and find the feed on their own.</p>
+<h2>Prefer email?</h2>
+<p>Feed-to-email services can send new feed items to your inbox. Search for "RSS to email" and give the service the feed address above.</p>
+<h2>What's in the feed</h2>
+<ul>
+<li>The 50 most recently added entries from Corporate Deregulation, Cabinet-Level Accountability, Government Service Redirection, Trump Family, DHS and ICE, and User Topics claim-checks.</li>
+<li>Each item gives the entry's one-line summary and status and links straight to the entry on TAP.</li>
+<li>The feed refreshes whenever the site is updated.</li>
+</ul>
+<p>What's not in the feed:</p>
+<ul>
+<li>The Reporting tracker. It's a third-party daily news archive that TAP collects but does not independently verify.</li>
+<li>Updates to existing entries. An entry appears once, when it's first added.</li>
+</ul>
+<p><a href="feed.xml">View the raw feed</a>. It looks like code in a browser; that's normal, and feed readers display it properly.</p>
+</main>
+
+</body>
+</html>
