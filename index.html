@@ -126,6 +126,110 @@
     color: var(--brass);
     font-style: italic;
   }
+  /* ================= FRONT STRIP (2026-11-23) =================
+     Ledger row of four numbers + one featured life/health harm card,
+     between the tagline and the search box. Built by buildFrontStripHtml()
+     from data/front-strip.json. Same width as the search box. On phones
+     the row goes 2x2 and the card folds to one tappable line. */
+  .front-strip {
+    max-width: 700px;
+    margin: 1.6rem auto 0;
+    text-align: left;
+    container-type: inline-size;
+  }
+  .front-strip-inner {
+    background: var(--paper-card);
+    border: 1px solid var(--rule);
+    padding: 0.8rem 1rem 0.9rem;
+    display: grid;
+    gap: 0.75rem;
+  }
+  .fs-stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .fs-stat { padding: 0 0.9rem; border-left: 1px solid var(--rule); min-width: 0; }
+  .fs-stat:first-child { padding-left: 0; border-left: 0; }
+  .fs-num {
+    display: block;
+    font-size: 1.7rem;
+    font-weight: 700;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+  }
+  .fs-num-harm { color: var(--harm-figure); }
+  .fs-num-flag { color: var(--flag); }
+  .fs-label, .fs-kicker, .fs-toggle-k {
+    display: block;
+    margin-top: 0.3rem;
+    font-family: ui-monospace, 'SF Mono', 'Courier New', monospace;
+    font-size: 0.66rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ink-soft);
+  }
+  .fs-card {
+    border: 1px solid var(--rule);
+    border-left: 4px solid var(--rule-strong); /* tracker color set inline */
+    background: var(--paper);
+    padding: 0.65rem 0.85rem;
+    display: grid;
+    gap: 0.35rem;
+  }
+  .fs-meta { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
+  .fs-kicker { margin-top: 0; }
+  .fs-dot { display: inline-block; width: 0.55rem; height: 0.55rem; border-radius: 50%; margin-right: 0.3rem; vertical-align: 0.05rem; }
+  .fs-pill {
+    font-family: ui-monospace, monospace;
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 1px 6px;
+    border: 1px solid var(--ink-soft);
+    border-radius: 2px;
+    color: var(--ink-soft);
+  }
+  .fs-what { margin: 0; font-size: 1rem; font-weight: 700; line-height: 1.3; }
+  .fs-who { font-size: 0.85rem; color: var(--harm-figure); }
+  .fs-quote {
+    margin: 0;
+    font-size: 0.85rem;
+    font-style: italic;
+    color: var(--ink-soft);
+    border-left: 2px solid var(--rule-strong);
+    padding-left: 0.6rem;
+  }
+  .fs-links { display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; }
+  .fs-links a {
+    font-family: ui-monospace, monospace;
+    font-size: 0.72rem;
+    color: var(--brass);
+    text-decoration: none;
+    border-bottom: 1px solid var(--brass);
+  }
+  .fs-toggle { display: none; }
+  @container (max-width: 520px) {
+    .fs-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 0.8rem; }
+    .fs-stat:nth-child(3) { padding-left: 0; border-left: 0; }
+    .fs-toggle {
+      display: flex;
+      width: 100%;
+      gap: 0.5rem;
+      align-items: baseline;
+      background: var(--paper);
+      border: 1px solid var(--rule);
+      border-left: 4px solid var(--rule-strong);
+      padding: 0.55rem 0.7rem;
+      font: inherit;
+      font-size: 0.85rem;
+      color: var(--ink);
+      text-align: left;
+      cursor: pointer;
+    }
+    .fs-toggle-k { margin-top: 0; flex: none; color: var(--harm-figure); }
+    .fs-toggle-t { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .fs-toggle-chev { margin-left: auto; flex: none; color: var(--ink-soft); }
+    .front-strip.open .fs-toggle-chev { transform: rotate(180deg); }
+    .front-strip:not(.open) .fs-card { display: none; }
+    .fs-quote { display: none; }
+  }
   /* ================= GLOBAL SEARCH (primary interaction) ================= */
   .global-search-box {
     max-width: 700px;
@@ -5968,6 +6072,54 @@ function buildHarmsListHtml(trackers, abbr, names) {
   return html + '</section>';
 }
 /* harms-list:end */
+/* Front-page findings strip (2026-11-23, spec tap-data
+   docs/superpowers/specs/2026-11-23-front-strip-design.md). Turns
+   data/front-strip.json (written by front_strip.py at publish time) into
+   the ledger row of four numbers + one featured life/health harm card.
+   Pure (no DOM) so tests/front-strip.test.js can run it; loadFrontStrip()
+   does the fetch and wiring. colorFor(key) returns the tracker's CSS
+   color, e.g. "var(--trk-govservices)". Returns "" for missing data so
+   the page simply looks like it did before the strip existed. */
+/* front-strip:start */
+function buildFrontStripHtml(strip, colorFor) {
+  if (!strip || !strip.stats) return "";
+  const s = strip.stats;
+  const fmt = n => Number(n || 0).toLocaleString("en-US");
+  // [number, label, extra class for the number's color]
+  const stats = [
+    [s.entries, "sourced entries", ""],
+    [s.life_health, "harm life or health", " fs-num-harm"],
+    [s.illegality, "possible illegality", " fs-num-flag"],
+    [s.claim_checks, "claim checks", ""],
+  ];
+  let html = '<div class="front-strip-inner"><div class="fs-stats">' +
+    stats.map(([n, label, cls]) =>
+      '<div class="fs-stat"><span class="fs-num' + cls + '">' + fmt(n) + '</span>' +
+      '<span class="fs-label">' + label + '</span></div>').join("") +
+    '</div>';
+  const f = strip.featured;
+  if (f) {
+    const color = escapeHtml(colorFor(f.tracker));
+    // Phone only (CSS): one tappable line standing in for the card.
+    html += '<button type="button" class="fs-toggle" aria-expanded="false" style="border-left-color:' + color + '">' +
+      '<span class="fs-toggle-k">Featured</span><span class="fs-toggle-t">' + escapeHtml(f.what) + '</span>' +
+      '<span class="fs-toggle-chev" aria-hidden="true">▾</span></button>';
+    html += '<div class="fs-card" style="border-left-color:' + color + '">' +
+      '<div class="fs-meta"><span class="fs-kicker"><span class="fs-dot" style="background:' + color + '"></span>' +
+      'Featured · ' + escapeHtml(f.label) + '</span>' +
+      (f.status ? '<span class="fs-pill">' + escapeHtml(f.status) + '</span>' : '') + '</div>' +
+      '<h2 class="fs-what">' + escapeHtml(f.what) + '</h2>' +
+      '<div class="fs-who">Harmed: ' + escapeHtml(f.who) + '</div>' +
+      (f.pull_quote ? '<blockquote class="fs-quote">' + escapeHtml(f.pull_quote) + '</blockquote>' : '') +
+      '<div class="fs-links">' +
+      '<a href="#' + encodeURIComponent(f.tracker) + '/' + encodeURIComponent(f.id) + '" class="fs-entry-link" data-tracker="' +
+        escapeHtml(f.tracker) + '" data-id="' + escapeHtml(f.id) + '">Read the entry →</a>' +
+      '<a href="#harms" class="fs-harms-link">All ' + fmt(s.life_health) + ' life/health harms →</a>' +
+      '</div></div>';
+  }
+  return html + '</div>';
+}
+/* front-strip:end */
 /* harms-hash:start */
 /* The Harms view's own address, #harms, so it can be shared. Pure decision;
    renderDispatch() and the load code make the history calls. "load": #harms opens the view.
