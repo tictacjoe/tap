@@ -49,6 +49,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import hidden_trackers  # noqa: E402
 import feed  # noqa: E402  (feed.xml RSS builder)
+import front_strip  # noqa: E402  (data/front-strip.json for the front-page strip)
 
 
 def load_exclude_list(site_dir: Path) -> set:
@@ -530,6 +531,18 @@ def main():
     meta = write_site_meta(site / "data" / "site_meta.json", date.today(),
                            dry_run=args.dry_run)
     print(f"  updated {meta['updated']}")
+    print()
+
+    # --- front strip (data/front-strip.json) ---
+    # The four numbers + featured life/health harm above the search box.
+    # Reads the data/*.json written above and the previous front-strip.json
+    # (for the featured-entry rotation); see front_strip.py.
+    print("=== front strip ===")
+    strip = front_strip.write_front_strip(site, hidden_trackers.site_hidden_trackers(site / "index.html"),
+                                          date.today(), dry_run=args.dry_run)
+    fs_pick = strip["featured"]
+    print(f"  {strip['stats']}")
+    print(f"  featured: {fs_pick['tracker'] + '/' + fs_pick['id'] if fs_pick else 'none'}")
     print()
 
     # --- RSS feed (feed.xml at the site root) ---
