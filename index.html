@@ -7034,30 +7034,32 @@ function buildEntryCard(entry, cfg, docketLabel, sourceLabel, term, useRegex, ca
         '<span class="entry-row-harm">' + hl(harm) + '</span>' +
       '</div>';
     const item = ROW_ADAPTERS[cardTrackerKey](entry);
+    // The .entry-detail starts empty; ensureEntryDetail() fills it on first open.
     div.innerHTML = rowHead +
       '<div class="confidence-box entry-row-sources-panel" style="display:none">' + buildTrailHtml(item.trail) + '</div>' +
-      '<div class="entry-detail">' +
+      '<div class="entry-detail"></div>';
+    detailArgs.set(div, {
+      entry, cfg, term, useRegex,
+      html: () =>
         '<div class="entry-row-tools">' + shareBtnHtml + listenBtnHtml + '</div>' +
         (g ? glanceDetailTitleHtml(entry, cfg, hl) : "") +
-        buildDetailHtml(entry, cfg, term, useRegex) +
-      '</div>';
+        buildDetailHtml(entry, cfg, term, useRegex),
+    });
     const head = div.querySelector(".entry-head");
     head.addEventListener("click", () => {
       div.classList.toggle("open");
-      if (div.classList.contains("open")) distributeEntryCards(div);
+      if (div.classList.contains("open")) {
+        ensureEntryDetail(div);
+        distributeEntryCards(div);
+      }
     });
     const panel = div.querySelector(".entry-row-sources-panel");
     div.querySelector(".entry-row-sources").addEventListener("click", (e) => {
       e.stopPropagation();
       panel.style.display = panel.style.display === "none" ? "block" : "none";
     });
-    wireRelatedEntryLinks(div);
-    wireKeyEventLinks(div);
-    wireUpdateRequestButtons(div);
-    wireTriageButtons(div);
-    wireShareLinkButtons(div);
-    wireListenButtons(div, entry, cfg);
-    wireEvidenceDrawers(div, entry, cfg, term, useRegex);
+    // Head only; the detail is wired when it is built (ensureEntryDetail).
+    wireEntryContent(head, entry, cfg, term, useRegex);
     return div;
   }
   const oldHead =
@@ -7067,24 +7069,58 @@ function buildEntryCard(entry, cfg, docketLabel, sourceLabel, term, useRegex, ca
         '<div class="entry-meta">' + metaHtml + '</div>' +
       '</div>' +
     '</div>';
-  div.innerHTML = (glanceHead || oldHead) +
-    '<div class="entry-detail">' +
+  // Detail starts empty and is built on first open (ensureEntryDetail).
+  div.innerHTML = (glanceHead || oldHead) + '<div class="entry-detail"></div>';
+  detailArgs.set(div, {
+    entry, cfg, term, useRegex,
+    html: () =>
       (glanceHead ? glanceDetailTitleHtml(entry, cfg, hl) : "") +
-      buildDetailHtml(entry, cfg, term, useRegex) +
-    '</div>';
-
-  div.querySelector(".entry-head").addEventListener("click", () => {
-    div.classList.toggle("open");
-    if (div.classList.contains("open")) distributeEntryCards(div);
+      buildDetailHtml(entry, cfg, term, useRegex),
   });
-  wireRelatedEntryLinks(div);
-  wireKeyEventLinks(div);
-  wireUpdateRequestButtons(div);
-  wireTriageButtons(div);
-  wireShareLinkButtons(div);
-  wireListenButtons(div, entry, cfg);
-  wireEvidenceDrawers(div, entry, cfg, term, useRegex);
+
+  const cardHead = div.querySelector(".entry-head");
+  cardHead.addEventListener("click", () => {
+    div.classList.toggle("open");
+    if (div.classList.contains("open")) {
+      ensureEntryDetail(div);
+      distributeEntryCards(div);
+    }
+  });
+  // Head only; the detail is wired when it is built (ensureEntryDetail).
+  wireEntryContent(cardHead, entry, cfg, term, useRegex);
   return div;
+}
+
+// Build arguments for each tracker-tab card's lazy detail, keyed by the card
+// element (a WeakMap, so no expando properties and no leak when a tab redraws).
+// Holds {entry, cfg, term, useRegex, html}; html() returns the detail markup.
+const detailArgs = new WeakMap();
+
+// The wire* helpers every card needs, run on one container: the card's
+// .entry-head at draw time, then its .entry-detail when that is built. Never
+// run on the whole card twice, or buttons would get two click handlers.
+function wireEntryContent(container, entry, cfg, term, useRegex) {
+  wireRelatedEntryLinks(container);
+  wireKeyEventLinks(container);
+  wireUpdateRequestButtons(container);
+  wireTriageButtons(container);
+  wireShareLinkButtons(container);
+  wireListenButtons(container, entry, cfg);
+  wireEvidenceDrawers(container, entry, cfg, term, useRegex);
+}
+
+// Fills a card's .entry-detail the first time it is needed (open by click,
+// deep link, history, tour) and wires it. Later calls return the same node
+// untouched. Returns null for an element that isn't a lazy card.
+function ensureEntryDetail(el) {
+  const args = detailArgs.get(el);
+  if (!args) return null;
+  const detail = el.querySelector(".entry-detail");
+  if (!detail || el.dataset.detailBuilt === "1") return detail;
+  detail.innerHTML = args.html();
+  wireEntryContent(detail, args.entry, args.cfg, args.term, args.useRegex);
+  el.dataset.detailBuilt = "1";
+  return detail;
 }
 
 // Browser-only counterpart to the .share-link-btn markup above --
@@ -8038,6 +8074,8 @@ function openCardById(id) {
   const group = card.closest(".official-group");
   if (group) group.classList.add("open");
   card.classList.add("open", "deep-linked");
+  // Opening by id skips the head click, so build the detail here first.
+  ensureEntryDetail(card);
   // Deal the cards into columns, same as the entry-head click handler does
   // (2026-11-15: this path skipped it, so a deep-linked or Records-row-opened
   // entry showed every card stacked in the first column until a resize).
@@ -9502,8 +9540,10 @@ const TapDemoTour = (() => {
         if (firstEntry) {
           firstEntry.scrollIntoView({ behavior: "smooth", block: "center" });
           if (!firstEntry.classList.contains("open")) {
+            // The head click builds the detail; ensureEntryDetail is a no-op after it.
             const head = firstEntry.querySelector(".entry-head");
             if (head) head.click();
+            ensureEntryDetail(firstEntry);
           }
         }
       }

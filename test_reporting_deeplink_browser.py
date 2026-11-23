@@ -226,15 +226,17 @@ def test_no_triage_button_while_the_form_is_unconfigured(browser, site_url):
 
 def test_triage_button_shows_and_locks_when_configured(browser, site_url):
     page = _goto_with_triage(browser, site_url, configured=True)
+    # The card's detail (and its Triage button) is built when it is first opened.
+    page.locator("#entries .entry .entry-head").first.click()
     btn = page.locator("#entries .entry .triage-btn").first
-    assert btn.inner_text() == "Triage this"
+    assert btn.text_content() == "Triage this"  # text_content: the opened button is CSS-uppercased
     post_id = btn.get_attribute("data-post-id")
     btn.evaluate("b => b.click()")  # card is collapsed; click without needing it visible
     assert btn.is_disabled()
     assert page.evaluate("(id) => localStorage.getItem('tap-triage-requested:' + id)", post_id) == "1"
     assert page.locator("#triage-hidden-post-id").get_attribute("name") == "entry.1"
     page.wait_for_timeout(1200)
-    assert btn.inner_text() == "Queued, thanks ✓"
+    assert btn.text_content() == "Queued, thanks ✓"
 
 
 def test_empty_tfs_tab_says_no_entries_yet_but_other_empties_keep_the_filter_message(browser, site_url):

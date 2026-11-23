@@ -37,6 +37,7 @@ _OPEN_ENTRY = """(id) => {
     const group = card.closest('.official-group');
     if (group) group.classList.add('open');
     card.classList.add('open');
+    ensureEntryDetail(card);   // detail is built lazily on first open (2026-11-23)
     card.scrollIntoView();
 }"""
 
