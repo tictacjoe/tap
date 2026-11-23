@@ -6123,7 +6123,9 @@ function buildFrontStripHtml(strip, colorFor) {
       '<div class="fs-links">' +
       '<a href="#' + encodeURIComponent(f.tracker) + '/' + encodeURIComponent(f.id) + '" class="fs-entry-link" data-tracker="' +
         escapeHtml(f.tracker) + '" data-id="' + escapeHtml(f.id) + '">Read the entry →</a>' +
-      '<a href="#harms" class="fs-harms-link">All ' + fmt(s.life_health) + ' life/health harms →</a>' +
+      // No number here: the Harms view's tier heading also counts averted
+      // harms, which the strip's own number leaves out (review I1).
+      '<a href="#harms" class="fs-harms-link">See all life/health harms →</a>' +
       '</div></div>';
   }
   return html + '</div>';

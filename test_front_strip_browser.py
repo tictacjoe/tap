@@ -160,6 +160,7 @@ def test_harms_link_opens_harms_view_and_counts_match(browser, site_url):
     page.locator(".fs-harms-link").click()
     page.wait_for_timeout(800)
     assert page.locator(".harms-list").is_visible()
-    tier1 = page.locator('.harms-tier[data-tier="1"] .harm-row').count()
+    # averted rows never happened and are left out of the strip's number
+    tier1 = page.locator('.harms-tier[data-tier="1"] .harm-row:not(.harm-line-averted)').count()
     assert tier1 == real["stats"]["life_health"]
     assert errors == []

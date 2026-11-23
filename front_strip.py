@@ -54,13 +54,32 @@ def harm_tier(kind, override):
     return _KIND_DEFAULT_TIER.get(kind)
 
 
+# Same lists as GLANCE_HARM_LABELS / GLANCE_CERTAINTIES in index.html.
+_HARM_KINDS = {"physical", "rights", "livelihood", "money", "environment", "institutional"}
+_CERTAINTIES = {"documented", "projected", "alleged", "averted"}
+
+
+def _line(value, max_len):
+    """isValidGlance()'s line(): non-blank one-line string of <= max_len chars."""
+    return (isinstance(value, str) and value.strip() != "" and len(value) <= max_len
+            and "\n" not in value and "\r" not in value)
+
+
 def _harm(entry):
-    """The entry's glance.harm dict, or None if it has no usable one."""
+    """The entry's glance.harm dict if its Glance passes the same check as
+    isValidGlance() in index.html (so this count always matches the #harms
+    view), else None."""
     glance = entry.get("glance")
     if not isinstance(glance, dict):
         return None
     harm = glance.get("harm")
-    if not isinstance(harm, dict) or not harm.get("kind"):
+    if not (_line(glance.get("who"), 50) and _line(glance.get("what"), 110)
+            and isinstance(harm, dict) and harm.get("kind") in _HARM_KINDS
+            and harm.get("certainty") in _CERTAINTIES and _line(harm.get("who"), 40)):
+        return None
+    # Optional tier override: absent, or exactly the integer 1, 2 or 3
+    # (bool is an int subclass in Python, so rule it out explicitly).
+    if "tier" in harm and (isinstance(harm["tier"], bool) or harm["tier"] not in (1, 2, 3)):
         return None
     return harm
 
@@ -105,6 +124,11 @@ def build_front_strip(site_dir, hidden, today, previous):
         for entry in data:
             harm = _harm(entry)
             if not harm or harm_tier(harm.get("kind"), harm.get("tier")) != 1:
+                continue
+            # Averted harms never happened: the #harms view keeps them out of
+            # its headline number ("plus N averted"), so the strip does too,
+            # and never features one.
+            if harm.get("certainty") == "averted":
                 continue
             life_health += 1
             if entry.get("pull_quote") and harm.get("who") and entry.get("id"):

@@ -19,7 +19,7 @@ def _harm_entry(entry_id, kind="physical", certainty="documented", updated="2026
     harm = {"kind": kind, "certainty": certainty, "who": who}
     if tier is not None:
         harm["tier"] = tier
-    entry = {"id": entry_id, "glance": {"what": f"What {entry_id}", "harm": harm},
+    entry = {"id": entry_id, "glance": {"who": "An official", "what": f"What {entry_id}", "harm": harm},
              "last_substantive_update": updated, "status_stage": "Court ruled"}
     if quote:
         entry["pull_quote"] = quote
@@ -142,3 +142,34 @@ def test_write_front_strip_dry_run_and_bad_previous(tmp_path):
     write_front_strip(tmp_path, set(), TODAY)
     written = json.loads((tmp_path / "data" / "front-strip.json").read_text())
     assert written["featured"]["id"] == "a"
+
+
+def test_averted_excluded_from_count_and_pool(tmp_path):
+    # Review I1: averted harms never happened -- the #harms view keeps them
+    # out of its headline number, so the strip does too, and never features one.
+    _write(tmp_path, "government-services.json", [
+        _harm_entry("averted-top", certainty="averted", updated="2026-11-22"),
+        _harm_entry("real", updated="2026-01-01"),
+    ])
+    strip = build_front_strip(tmp_path, set(), TODAY, None)
+    assert strip["stats"]["life_health"] == 1
+    assert strip["featured"]["id"] == "real"
+
+
+def test_invalid_glance_not_counted(tmp_path):
+    # Review I2: same validity rule as isValidGlance() in index.html, so the
+    # strip can't count (or feature) an entry the #harms view drops.
+    bad = [
+        _harm_entry("long-what"),
+        _harm_entry("bad-cert", certainty="likely"),
+        _harm_entry("bool-tier", kind="rights", tier=True),
+        _harm_entry("no-glance-who"),
+        _harm_entry("long-harm-who", who="x" * 41),
+        _harm_entry("bad-kind", kind="spiritual", tier=1),
+    ]
+    bad[0]["glance"]["what"] = "w" * 111
+    bad[3]["glance"].pop("who", None)
+    _write(tmp_path, "dai.json", bad)
+    strip = build_front_strip(tmp_path, set(), TODAY, None)
+    assert strip["stats"]["life_health"] == 0
+    assert strip["featured"] is None

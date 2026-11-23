@@ -51,7 +51,7 @@ test("renders featured card with escaped text", () => {
   assert.ok(html.includes("Cut &lt;b&gt;aid&lt;/b&gt; &amp; &quot;more&quot;"));
   assert.ok(!html.includes("<b>aid</b>"));
   assert.ok(html.includes("Harmed: 9/11 responders"));
-  assert.ok(html.includes("All 118 life/health harms →"));
+  assert.ok(html.includes("See all life/health harms →"));
   assert.ok(html.includes("Specimens were left."));
   assert.ok(html.includes("Court ruled"));
   assert.ok(html.includes("var(--trk-govservices)"));
