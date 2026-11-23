@@ -6921,6 +6921,11 @@ function glanceMetaHtml(entry, cfg, sourceLabel, hl) {
   return html;
 }
 
+// Build arguments for each tracker-tab card's lazy detail, keyed by the card
+// element (a WeakMap, so no expando properties and no leak when a tab redraws).
+// Holds {entry, cfg, term, useRegex, html}; html() returns the detail markup.
+const detailArgs = new WeakMap();
+
 /* Shared card builder used by both the per-tracker tabbed view and
    the cross-database global search view, so the two stay visually
    and behaviorally consistent rather than drifting apart. */
@@ -7116,11 +7121,6 @@ function buildEntryCard(entry, cfg, docketLabel, sourceLabel, term, useRegex, ca
   wireEntryContent(cardHead, entry, cfg, term, useRegex);
   return div;
 }
-
-// Build arguments for each tracker-tab card's lazy detail, keyed by the card
-// element (a WeakMap, so no expando properties and no leak when a tab redraws).
-// Holds {entry, cfg, term, useRegex, html}; html() returns the detail markup.
-const detailArgs = new WeakMap();
 
 // The wire* helpers every card needs, run on one container: the card's
 // .entry-head at draw time, then its .entry-detail when that is built. Never

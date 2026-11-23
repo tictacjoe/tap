@@ -211,7 +211,8 @@ def test_records_hover_is_the_skim_summary(page):
           for (const e of (TRACKERS[k].data || [])) {
             const s = e.section_summaries;
             const v = s && (k === 'prosecution' ? s.incident_summary : s.what_changed);
-            if (e.id && v) out[k + ':' + e.id] = v;
+            // Production runs the skim through stripAdaptedItemLabels -> stripProcessLabels.
+            if (e.id && v) out[k + ':' + e.id] = stripProcessLabels(v);
           }
         }
         return out;
@@ -223,7 +224,7 @@ def test_records_hover_is_the_skim_summary(page):
     norm = lambda x: " ".join((x or "").split())
     checked = 0
     for r in rows:
-        if r["key"] in skims:  # skip Reporting rows and entries with no skim
+        if r["key"] in skims:  # skip any row whose entry has no skim (e.g. Reporting)
             assert norm(r["title"]) == norm(skims[r["key"]]), r["key"]
             checked += 1
     assert checked > 0

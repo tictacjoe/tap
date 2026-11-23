@@ -231,7 +231,7 @@ def test_triage_button_shows_and_locks_when_configured(browser, site_url):
     btn = page.locator("#entries .entry .triage-btn").first
     assert btn.text_content() == "Triage this"  # text_content: the opened button is CSS-uppercased
     post_id = btn.get_attribute("data-post-id")
-    btn.evaluate("b => b.click()")  # card is collapsed; click without needing it visible
+    btn.evaluate("b => b.click()")  # card is open (opened above); click without needing it visible
     assert btn.is_disabled()
     assert page.evaluate("(id) => localStorage.getItem('tap-triage-requested:' + id)", post_id) == "1"
     assert page.locator("#triage-hidden-post-id").get_attribute("name") == "entry.1"

@@ -409,4 +409,5 @@ test("every curated adapter returns skim === null without section_summaries", ()
 
 test("Reporting and community-topic adapters do not return skim", () => {
   assert.equal("skim" in fns.adaptCommunityTopicEntry({}), false);
+  assert.equal("skim" in fns.adaptReportingEntry({}), false);
 });
