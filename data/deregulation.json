@@ -2922,7 +2922,13 @@
     ],
     "estimated_health_impact": {
       "summary": "Indirect/systemic: increases financial system volatility risk, which correlates with mental health and economic-stability harms during downturns rather than a direct physical health pathway. This is not purely theoretical -- **the Roosevelt Institute directly traces mechanisms of the 2023 Silicon Valley Bank collapse to the stress-test and liquidity exemptions this law created for banks in the $50-250B range**.",
-      "figures": [],
+      "figures": [
+        {
+          "metric": "Bank asset threshold for mandatory enhanced Federal Reserve oversight (stress tests, living wills), before and after",
+          "value": "$50 billion -> $250 billion",
+          "source": "S.2155 (Section 401), via Yale Journal on Regulation"
+        }
+      ],
       "caveat": "No formal quantified mortality/illness estimate exists for this rollback, as is typical for financial (rather than environmental/health) regulation -- the strength of this entry is the documented causal chain to an actual bank failure (SVB, 2023), not a modeled health figure."
     },
     "confidence_note": "This is legislation, not a unilateral executive rollback -- note the mechanism is different from most other entries in this tracker. Strongest framing: cite the direct causal chain to the Silicon Valley Bank collapse as a real-world materialized harm, rather than an abstract 'increases risk' claim. Re-verified 2026-09-08: no later developments. Re-verified 2026-11-16: the law's $250 billion threshold still stands as enacted, with no repeal, amendment or court ruling changing it; the Yale Journal on Regulation, Roosevelt Institute and Wikipedia sources still say what this entry cites them for.",
@@ -2932,7 +2938,7 @@
       "confidence_note": "Legislative, not executive, rollback; strongest framing ties it to SVB's real-world collapse rather than an abstract risk claim.",
       "status": "Still law and unchallenged: mandatory enhanced Fed oversight starts at $250B; the Fed's supervision chief says it is working to index asset thresholds."
     },
-    "last_verified": "2026-11-21",
+    "last_verified": "2026-11-24",
     "date_added": "2026-07-03",
     "sources": [
       {
@@ -2953,7 +2959,7 @@
       }
     ],
     "short_summary": "Exempted regional banks under $250B in assets from strict post-2008 oversight.",
-    "last_substantive_update": "2026-11-21",
+    "last_substantive_update": "2026-11-24",
     "glance": {
       "who": "Donald Trump (signed S.2155)",
       "what": "Raised the Dodd-Frank oversight threshold for banks from $50B to $250B in assets",
@@ -2962,7 +2968,7 @@
         "certainty": "alleged",
         "who": "Bank depositors and the economy"
       },
-      "reviewed": "2026-11-21"
+      "reviewed": "2026-11-24"
     },
     "status_stage": "Unchallenged",
     "key_events": [
@@ -3444,11 +3450,28 @@
     ],
     "estimated_health_impact": {
       "summary": "Extending the operational life of aging coal plants -- rather than allowing planned retirements to proceed -- means **continued emissions (including particulate matter and greenhouse gases) from generation sources that would otherwise be phased out on market timelines, at direct taxpayer expense** rather than through market competition. DOE's June 2026 coal-program selections go further, backing two planned new coal plants and the restart of a closed one.",
+      "figures": [
+        {
+          "metric": "DOE coal program funds committed to upgrading, building and restarting coal plants",
+          "value": "$525 million ($175 million in Feb. 2026 + up to $350 million in June 2026)",
+          "source": "Department of Energy, June 4, 2026 announcement"
+        },
+        {
+          "metric": "Separate Defense Production Act funds for coal",
+          "value": "up to $500 million ($425 million for 12 projects at 13 coal plants; $75 million for an Oakland coal export terminal)",
+          "source": "Department of Energy, June 4, 2026 announcement"
+        },
+        {
+          "metric": "Combined capacity of the two planned new coal-fired plants (Anchorage, AK; Mt. Storm, WV)",
+          "value": "2,850 MW",
+          "source": "Department of Energy, June 4, 2026 announcement"
+        }
+      ],
       "caveat": "DOE's stated rationale (grid reliability amid rising electricity demand, and national security for the Defense Production Act awards) is a genuine and non-trivial policy consideration independent of any environmental effect; this entry does not evaluate whether the reliability justification is sound, only documents the subsidy's existence, scale, and stated purpose."
     },
     "confidence_note": "HIGH confidence -- Executive Order 14386 (Pentagon coal power purchases) is confirmed by its White House text; the $175 million for six projects in West Virginia, Ohio, North Carolina and Kentucky, and the $525 million total program, are confirmed by DOE's own announcement, and The Hill corroborates the $175 million for six projects in those four states. Re-verified 2026-10-06: corrected the state list (four states, not five, with no Virginia project), clarified that the executive order covers Pentagon purchases while the DOE funding came from an existing program, and added DOE's June 2026 $350 million selections and its separate $500 million Defense Production Act selections, both confirmed on DOE's site; no Pentagon coal power deal found in news searches.",
     "short_summary": "Trump ordered the Pentagon to seek coal power deals as DOE committed $525M to upgrading, building and restarting coal plants, plus up to $500M in defense funds for 13 plants and a coal terminal.",
-    "last_verified": "2026-10-06",
+    "last_verified": "2026-11-24",
     "date_added": "2026-08-05",
     "last_updated": "2026-10-06",
     "sources": [
@@ -3491,7 +3514,7 @@
       "confidence_note": "Confirmed by the executive order's text and DOE's own announcements, with corroboration from The Hill.",
       "status": "In effect: DOE's $525M coal program is fully committed, and a separate $500M in Defense Production Act funds backs 12 coal projects and an Oakland terminal."
     },
-    "last_substantive_update": "2026-10-06",
+    "last_substantive_update": "2026-11-24",
     "glance": {
       "who": "Donald Trump (with DOE)",
       "what": "Told the Pentagon to seek coal deals as DOE put about $1B into keeping coal plants open and building new ones",
@@ -3500,7 +3523,7 @@
         "certainty": "projected",
         "who": "Air quality and climate"
       },
-      "reviewed": "2026-10-06"
+      "reviewed": "2026-11-24"
     },
     "status_stage": "Unchallenged",
     "key_events": [
@@ -3560,6 +3583,7 @@
     ],
     "estimated_health_impact": {
       "summary": "California AG Bonta's coalition argues the exemption shifts environmental review of a future advanced reactor from a public-facing review to a purely internal DOE examination, for reactors it calls 'new and without an established track record,' some of which use 'novel and unproven technologies.' The review being skipped, NPR reports, typically required a written, public assessment of the possible consequences of a nuclear accident.",
+      "figures": [],
       "caveat": "DOE frames the exclusion as appropriately calibrated to advanced reactors' passive safety systems, which differ mechanically from the large light-water reactor designs NEPA's existing review framework was built around; no independent safety-agency (e.g., NRC) finding on the CatEx's substantive safety adequacy was identified in sourcing reviewed, and the projects DOE has excluded so far are zero-power critical assemblies and small research or test reactors, not commercial power plants."
     },
     "confidence_note": "HIGH confidence -- the categorical exclusion, its effective date, and DOE's stated justification are confirmed by DOE's own Federal Register notice, reported by NPR (the same NPR story was carried by Houston Public Media, Georgia Public Broadcasting, and KPBS, so those are not independent confirmations). California AG Bonta's formal opposition is confirmed via his office's own press release. Re-verified 2026-10-06: NPR, the California AG release and DOE's notice page still say what the entry says; DOE's own B5.26 determinations listing shows the exclusion applied to five projects from April 14 to June 15, 2026; no court challenge to the exclusion was found.",
@@ -8459,13 +8483,19 @@
     ],
     "estimated_health_impact": {
       "summary": "Had EPA's vacatur motion succeeded, the tighter 2024 soot standard -- which environmental and public-health groups credit with preventing pollution-related illness and premature death from fine particulate matter, a pollutant linked to heart attacks, asthma, and other cardiopulmonary harm -- would have reverted to the looser 12 microgram/cubic meter limit. The court's rejection means this harm did not materialize.",
-      "figures": [],
+      "figures": [
+        {
+          "metric": "Annual PM2.5 (soot) limit EPA asked the court to vacate, vs. the prior limit",
+          "value": "9 micrograms per cubic meter (down from 12)",
+          "source": "EPA 2024 PM2.5 standard, via EHSLeaders"
+        }
+      ],
       "caveat": "Because the rollback attempt failed, no source reviewed quantifies a harm that was ultimately averted rather than realized; the entry documents the attempt and its rejection, not a realized health impact."
     },
     "confidence_note": "HIGH confidence -- the litigation history, EPA's own vacatur motion, and the June 26, 2026 appellate rejection are corroborated across EHSLeaders, Utility Dive, Smart Cities Dive, E&E News, Earthjustice, and the Environmental Defense Fund. This is a rare instance in this database of a specific rollback attempt being fully defeated in court rather than finalized, delayed, or contested.\n\nUpdate 2026-10-11: HIGH confidence on the later developments -- the two Supreme Court petitions and EPA's supporting brief are documented on the Court's dockets (Nos. 26-277 and 26-298) and the U.S. Chamber of Commerce's case page, and reported by Bloomberg Law; EPA's news release, its Ninth Circuit appeal and its notice to the states are reported by DTN; and the Northern District of California order is documented by Earthjustice. The D.C. Circuit defeat is not yet final while the Supreme Court petitions are pending.\n\nUpdate 2026-11-20: HIGH confidence -- the Nov. 17, 2026 briefs opposing review, filed by the health and environmental groups and by California and other states, are listed on both Supreme Court dockets, which show no action yet on the petitions.",
     "pull_quote": "On June 26, 2026, the U.S. Court of Appeals denied both the original petitions for review and EPA's own motion for vacatur, finding the challengers' arguments ‘lack merit.’",
     "short_summary": "A federal appeals court rejected EPA's attempt to vacate the 2024 soot air-quality standard, leaving it in effect.",
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-24",
     "date_added": "2026-08-11",
     "sources": [
       {
@@ -8512,7 +8542,7 @@
       "confidence_note": "Well-corroborated across legal and trade press; a rollback attempt defeated in the appeals court, though Supreme Court petitions backed by EPA are pending.",
       "status": "Rejected by the D.C. Circuit in June 2026; the 2024 standard stays. 25 states and businesses seek Supreme Court review, backed by EPA; a court set a Feb. 6, 2027 designation deadline."
     },
-    "last_substantive_update": "2026-11-20",
+    "last_substantive_update": "2026-11-24",
     "glance": {
       "who": "Lee Zeldin (EPA Administrator)",
       "what": "Moved to vacate the 2024 soot standard; an appeals court denied it and the standard stays",
@@ -8521,7 +8551,7 @@
         "certainty": "averted",
         "who": "People exposed to fine-particle soot"
       },
-      "reviewed": "2026-11-20"
+      "reviewed": "2026-11-24"
     },
     "status_stage": "Court ruled",
     "key_events": [
@@ -10183,6 +10213,7 @@
     ],
     "estimated_health_impact": {
       "summary": "Replication across independent studies has historically served as a safeguard against approving drugs based on results that don't hold up under a second trial -- **a single-trial default standard increases the risk that approved drugs' safety/efficacy profiles rest on findings that would not have replicated**, a tradeoff FDA is making explicitly in favor of faster approval timelines.",
+      "figures": [],
       "caveat": "FDA retains discretion to require additional studies for specific drugs under the announced single-trial default; this entry documents the announced change in the default standard, not a claim that every future approval under it will prove unsafe or ineffective."
     },
     "confidence_note": "HIGH confidence -- the policy announcement, its FDA leadership attribution (Makary and Prasad), and its stated acceleration rationale are confirmed by AP's direct reporting, with no dispute of the underlying facts identified in sourcing reviewed. Added 2026-09-12: Pazdur's appointment, his legal/safety objections, his own on-record 'just agree to it' and 'wall...breached' quotes, and his December 2, 2025 retirement filing are HIGH confidence, corroborated across the Washington Post's original reporting and BioSpace's detailed follow-up coverage, including HHS's on-record defense of the changes. Update 2026-11-08: the June 2026 revised draft guidance and the departure of Makary and Prasad from their posts are documented in Latham & Watkins and Hogan Lovells client alerts; the two firms differ on whether the draft sets a single-trial default, and the entry reports both readings.",
@@ -14481,12 +14512,29 @@
     ],
     "estimated_health_impact": {
       "summary": "**A 42% drop in 'willful' violation findings -- OSHA's most serious enforcement category -- alongside a 20% drop in inspections overall suggests reduced deterrence against the most serious, knowing workplace-safety violations, at a time when the underlying safety standards remain formally in place but are being enforced against fewer employers.**",
+      "figures": [
+        {
+          "metric": "Change in OSHA workplace inspections, April-September 2025 vs. same months of 2024",
+          "value": "-20%",
+          "source": "OSHA enforcement statistics, via Sen. Warren and five senators' letter to DOL, Feb. 18, 2026"
+        },
+        {
+          "metric": "Change in 'willful' violation findings (OSHA's most serious category), same period",
+          "value": "-42%",
+          "source": "OSHA enforcement statistics, via Sen. Warren and five senators' letter to DOL, Feb. 18, 2026"
+        },
+        {
+          "metric": "New OSHA inspectors hired since May 2026 (agency's own claim)",
+          "value": "more than 120",
+          "source": "OSHA head David Keeling, via Safety+Health Magazine, Sept. 2026"
+        }
+      ],
       "caveat": "This entry documents Sen. Warren's office's data release characterizing OSHA's own enforcement statistics; a single comparison period can be affected by staffing transitions and other administrative factors, though the specific and simultaneous decline in both inspection volume and the most serious violation-finding category suggests more than ordinary year-to-year variance."
     },
     "confidence_note": "MODERATE-HIGH confidence -- the specific percentage figures are drawn from Sen. Warren's office's data release as reported by The New York Times and set out in the senators' February 18, 2026 letter; this is a Democratic senator's office characterization of OSHA's own data rather than an independent nonpartisan audit, though the underlying inspection/violation-finding statistics themselves are OSHA's own enforcement records. Re-verified 2026-10-06: the senators' February 18 letter confirms the 20% and 42% figures and dates the comparison to April-September 2025 (not late 2025), so the period was corrected; Warren's February 19 press release says only \"in 2025\"; no formal DOL response was found.",
     "pull_quote": "This decline mirrors a separately-documented pattern at EPA, where civil enforcement also collapsed without any formal repeal of the underlying environmental standards — the rules stay on the books but are enforced against far fewer violators.",
     "short_summary": "OSHA conducted 20% fewer inspections and found 42% fewer 'willful' violations in April-September 2025 than the same months of 2024, per OSHA data released by Sen. Warren and five other senators.",
-    "last_verified": "2026-10-06",
+    "last_verified": "2026-11-24",
     "date_added": "2026-08-05",
     "last_updated": "2026-10-06",
     "sources": [
@@ -14517,7 +14565,7 @@
       "confidence_note": "Underlying figures are OSHA's own enforcement statistics, released and characterized by a Democratic senator's office rather than an independent nonpartisan audit.",
       "status": "Completed comparison of April-September 2025 with the same months of 2024; senators sought a DOL answer by March 4, 2026, none reported; OSHA says it hired 120+ inspectors."
     },
-    "last_substantive_update": "2026-10-06",
+    "last_substantive_update": "2026-11-24",
     "glance": {
       "who": "Department of Labor (OSHA)",
       "what": "OSHA inspections fell 20% and 'willful' violation findings 42% in April-September 2025 vs. 2024",
@@ -14526,7 +14574,7 @@
         "certainty": "documented",
         "who": "Workplace safety enforcement"
       },
-      "reviewed": "2026-10-06"
+      "reviewed": "2026-11-24"
     },
     "status_stage": "Unchallenged",
     "key_events": [

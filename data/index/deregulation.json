@@ -783,20 +783,24 @@
         "certainty": "alleged",
         "who": "Bank depositors and the economy"
       },
-      "reviewed": "2026-11-21"
+      "reviewed": "2026-11-24"
     },
     "status_stage": "Unchallenged",
     "date_of_action": "2018-05-24",
     "date_added": "2026-07-03",
-    "last_verified": "2026-11-21",
-    "last_substantive_update": "2026-11-21",
+    "last_verified": "2026-11-24",
+    "last_substantive_update": "2026-11-24",
     "section_summaries": {
       "what_changed": "Congress freed regional banks up to $250B in assets from post-2008 stress tests and living-will requirements, a fivefold jump from the original $50B cutoff."
     },
     "domain": "financial",
     "short_summary": "Exempted regional banks under $250B in assets from strict post-2008 oversight.",
     "estimated_health_impact": {
-      "figures": []
+      "figures": [
+        {
+          "value": "$50 billion -> $250 billion"
+        }
+      ]
     },
     "sources": [
       {},
@@ -933,18 +937,31 @@
         "certainty": "projected",
         "who": "Air quality and climate"
       },
-      "reviewed": "2026-10-06"
+      "reviewed": "2026-11-24"
     },
     "status_stage": "Unchallenged",
     "date_of_action": "2026-02-11",
     "date_added": "2026-08-05",
-    "last_verified": "2026-10-06",
-    "last_substantive_update": "2026-10-06",
+    "last_verified": "2026-11-24",
+    "last_substantive_update": "2026-11-24",
     "section_summaries": {
       "what_changed": "Trump ordered the Pentagon to seek coal power deals; DOE put $525M into upgrading, building and restarting coal plants, plus $500M in defense funds for 13 plants and an export terminal."
     },
     "domain": "environmental",
     "short_summary": "Trump ordered the Pentagon to seek coal power deals as DOE committed $525M to upgrading, building and restarting coal plants, plus up to $500M in defense funds for 13 plants and a coal terminal.",
+    "estimated_health_impact": {
+      "figures": [
+        {
+          "value": "$525 million ($175 million in Feb. 2026 + up to $350 million in June 2026)"
+        },
+        {
+          "value": "up to $500 million ($425 million for 12 projects at 13 coal plants; $75 million for an Oakland coal export terminal)"
+        },
+        {
+          "value": "2,850 MW"
+        }
+      ]
+    },
     "sources": [
       {},
       {},
@@ -979,6 +996,9 @@
     },
     "domain": "cross-cutting (structural/process rule, energy/environmental focus)",
     "short_summary": "DOE exempted advanced nuclear reactors from major NEPA environmental-review requirements via an immediately-effective categorical exclusion, over formal objection from a coalition of state attorneys general.",
+    "estimated_health_impact": {
+      "figures": []
+    },
     "sources": [
       {},
       {},
@@ -2360,20 +2380,24 @@
         "certainty": "averted",
         "who": "People exposed to fine-particle soot"
       },
-      "reviewed": "2026-11-20"
+      "reviewed": "2026-11-24"
     },
     "status_stage": "Court ruled",
     "date_of_action": "2025-11 (EPA moves to vacate) through 2026-06-26 (appeals court denies the motion)",
     "date_added": "2026-08-11",
-    "last_verified": "2026-11-20",
-    "last_substantive_update": "2026-11-20",
+    "last_verified": "2026-11-24",
+    "last_substantive_update": "2026-11-24",
     "section_summaries": {
       "what_changed": "EPA moved in 2025 to vacate the 2024 soot standard; the D.C. Circuit refused in June 2026. EPA now backs Supreme Court petitions while a court orders it to implement the standard."
     },
     "domain": "environmental",
     "short_summary": "A federal appeals court rejected EPA's attempt to vacate the 2024 soot air-quality standard, leaving it in effect.",
     "estimated_health_impact": {
-      "figures": []
+      "figures": [
+        {
+          "value": "9 micrograms per cubic meter (down from 12)"
+        }
+      ]
     },
     "sources": [
       {},
@@ -2863,6 +2887,9 @@
     },
     "domain": "consumer_safety",
     "short_summary": "FDA announced it would end its default two-independent-study requirement for new drug approvals, moving to a single-trial standard to accelerate approvals.",
+    "estimated_health_impact": {
+      "figures": []
+    },
     "sources": [
       {},
       {},
@@ -4020,18 +4047,31 @@
         "certainty": "documented",
         "who": "Workplace safety enforcement"
       },
-      "reviewed": "2026-10-06"
+      "reviewed": "2026-11-24"
     },
     "status_stage": "Unchallenged",
     "date_of_action": "April-September 2025 (comparison period), data released 2026-02-18",
     "date_added": "2026-08-05",
-    "last_verified": "2026-10-06",
-    "last_substantive_update": "2026-10-06",
+    "last_verified": "2026-11-24",
+    "last_substantive_update": "2026-11-24",
     "section_summaries": {
       "what_changed": "OSHA conducted 20% fewer inspections and found 42% fewer 'willful' violations in April-September 2025 vs. the same months of 2024, per data released by Sen. Warren."
     },
     "domain": "labor",
     "short_summary": "OSHA conducted 20% fewer inspections and found 42% fewer 'willful' violations in April-September 2025 than the same months of 2024, per OSHA data released by Sen. Warren and five other senators.",
+    "estimated_health_impact": {
+      "figures": [
+        {
+          "value": "-20%"
+        },
+        {
+          "value": "-42%"
+        },
+        {
+          "value": "more than 120"
+        }
+      ]
+    },
     "sources": [
       {},
       {},
