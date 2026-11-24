@@ -15838,6 +15838,14 @@
     "archive": false
    },
    "17": {
+    "state": "supports",
+    "why": "The November 16, 2026 joint Commerce/Justice statement contains each quoted passage: the 2024 Commerce investigation, the May 2025 records request to Nvidia, Nvidia's June 2025 'no sell' listing, the June 2025 BIS/Singapore end-use check and interview of Alice Huang, DOJ taking the lead role, and credit to 'the excellent work of the Department of Commerce under Secretary Howard Lutnick.'",
+    "host": "justice.gov",
+    "date": "2026-11-24",
+    "kind": "fact",
+    "archive": false
+   },
+   "18": {
     "state": "partly",
     "why": "The November 17, 2026 letter to Brandon Lutnick, signed by Raskin and Meeks as ranking members and by Kamlager-Dove, contains all three quoted passages verbatim and asks for documents 'no later than 5:00 p.m. on December 1, 2026'; however, the provided text elides part of the numbered request list, and no visible passage asks for every Cantor Nvidia trade since January 1, 2024, so that detail cannot be confirmed.",
     "host": "democrats-judiciary.house.gov",
@@ -15845,7 +15853,7 @@
     "kind": "fact",
     "archive": false
    },
-   "18": {
+   "19": {
     "state": "supports",
     "why": "The CNBC article reports the Raskin/Meeks/Kamlager-Dove letter, Mast's letter to Under Secretary Kessler about possible chip smuggling by Megaspeed and Speedmatrix, the line that there is no known evidence of the sons' insider knowledge, and Cantor's statement calling the letter 'inaccurate' with the quoted swaps language, all as claimed; the extracted text does not itself show a publication date.",
     "host": "cnbc.com",
@@ -15853,11 +15861,27 @@
     "kind": "fact",
     "archive": false
    },
-   "19": {
+   "20": {
     "state": "supports",
     "why": "The MS NOW article dated Nov. 18, 2026 describes Raskin and Meeks as 'the incoming chairmen of the House Judiciary and Foreign Affairs Committee' who led the letter, quotes the 'significant conflicts of interests' allegation and the Cantor spokesperson's 'claims in the letter are inaccurate', and reports Tim Scott's request that Lutnick and Huang testify.",
     "host": "ms.now",
     "date": "2026-11-19",
+    "kind": "fact",
+    "archive": false
+   },
+   "21": {
+    "state": "supports",
+    "why": "The CNBC article states Huang resigned Nov. 12 after reports of an affair with Alice Huang, described in the quoted words; quotes Trump that the board asked for guarantees and 'we gave them assurances, at least with everything we know'; and states Commerce added Megaspeed to a trade blacklist later Monday. Reinstatement by the board is stated in the Key Points.",
+    "host": "cnbc.com",
+    "date": "2026-11-24",
+    "kind": "fact",
+    "archive": false
+   },
+   "22": {
+    "state": "partly",
+    "why": "The rule text confirms the BIS final rule adding 7 entities (including the named Megaspeed entities), the quoted rationale, the all-items license requirement with presumption of denial, ERC decision with Commerce as chair, and scheduled publication on 2026-11-25; however, the effective date is a placeholder '[INSERT DATE OF PUBLIC INSPECTION IN THE FEDERAL REGISTER]', so the text does not itself confirm a November 23, 2026 filing/effective date.",
+    "host": "public-inspection.federalregister.gov",
+    "date": "2026-11-24",
     "kind": "fact",
     "archive": false
    }
