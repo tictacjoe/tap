@@ -193,7 +193,7 @@ function checks(trackerKey) {
     for (const k of ["offense_category", "status_category", "concern_type"]) list.push([k, (e) => e[k]]);
   }
   const adapt = ADAPTERS[trackerKey];
-  const adapted = (pick) => (e) => pick(adapt(e));
+  const adapted = (pick) => (e) => pick(adapt(e, true)); // Records adapts rows rowOnly (spec note 8.3.5)
   for (const k of ["headline", "date", "statusStage", "category", "id", "skim"]) list.push([`adapter ${k}`, adapted((a) => a[k])]);
   list.push(["adapter trail.lastSubstantiveUpdate", adapted((a) => a.trail.lastSubstantiveUpdate)]);
   list.push(["adapter trail.dateAdded", adapted((a) => a.trail.dateAdded)]);

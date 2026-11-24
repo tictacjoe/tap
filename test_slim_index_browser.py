@@ -341,3 +341,19 @@ def test_search_waits_then_failure_message(page, site_url):
     page.wait_for_function(
         "document.querySelector('#entries .empty-state') && document.querySelector('#entries .empty-state').innerText.includes(\"Search couldn't load every entry\")",
         timeout=60000)
+
+
+# ---- Task 5: Records adapts claim-checks only when filtered to them ----
+
+def test_records_skips_community_topics(page, site_url):
+    _boot(page, site_url)
+    page.evaluate("""() => {
+        window.__ct = 0;
+        const real = window.adaptCommunityTopicEntry;
+        window.adaptCommunityTopicEntry = function (...args) { window.__ct++; return real.apply(this, args); };
+    }""")
+    page.evaluate("headlinesTrackerFilter = ''; renderHeadlinesView()")
+    assert page.evaluate("window.__ct") == 0
+    page.evaluate("headlinesTrackerFilter = 'communitytopics'; buildHeadlineItems()")
+    assert page.evaluate("window.__ct") > 0
+    page.evaluate("headlinesTrackerFilter = ''")

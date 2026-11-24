@@ -2793,21 +2793,25 @@ function packHeadline(text, maxChars) {
 /* pack-headline:end */
 
 /* adapt-deregulation-entry:start */
-function adaptDeregulationEntry(entry) {
+function adaptDeregulationEntry(entry, rowOnly = false) {
   const override = entry.narrative_override || {};
   const headline = override.headline || entry.short_summary || truncate(entry.what_changed || "", 110);
   const brief = override.brief || entry.what_changed || "";
   const beforeText = entry.original_rule_summary ? "Before this action: " + entry.original_rule_summary : "";
-  const medium = override.medium || combineTierText([brief, beforeText]);
-  const stakesText = entry.estimated_health_impact?.summary ? "At stake: " + entry.estimated_health_impact.summary : "";
-  const causeText = entry.cause ? "Pattern: " + entry.cause : "";
-  const full = override.full || combineTierText([medium, stakesText, causeText]);
+  let tiers = [];
+  if (!rowOnly) {
+    const medium = override.medium || combineTierText([brief, beforeText]);
+    const stakesText = entry.estimated_health_impact?.summary ? "At stake: " + entry.estimated_health_impact.summary : "";
+    const causeText = entry.cause ? "Pattern: " + entry.cause : "";
+    const full = override.full || combineTierText([medium, stakesText, causeText]);
+    tiers = [brief, medium, full];
+  }
   return stripAdaptedItemLabels({
     headline,
-    tiers: [brief, medium, full],
+    tiers,
     trail: {
-      sources: (entry.sources || []).map(s => ({ name: s.name || "Source", url: s.url || null })),
-      confidenceNote: entry.confidence_note || null,
+      sources: rowOnly ? null : (entry.sources || []).map(s => ({ name: s.name || "Source", url: s.url || null })),
+      confidenceNote: rowOnly ? null : entry.confidence_note || null,
       lastVerified: entry.last_verified || null,
       lastSubstantiveUpdate: entry.last_substantive_update || entry.last_verified || null,
       dateAdded: entry.date_added || null,
@@ -2825,7 +2829,7 @@ function adaptDeregulationEntry(entry) {
 /* adapt-deregulation-entry:end */
 
 /* adapt-govservices-entry:start */
-function adaptGovServicesEntry(entry) {
+function adaptGovServicesEntry(entry, rowOnly = false) {
   const override = entry.narrative_override || {};
   const headline = override.headline || entry.title || truncate(entry.what_changed || "", 110);
   const brief = override.brief || entry.what_changed || "";
@@ -2833,16 +2837,20 @@ function adaptGovServicesEntry(entry) {
   const proponentText = p?.name
     ? "Driven by " + p.name + (p.role ? " (" + p.role + ")" : "") + (p.note ? " — " + p.note : "")
     : "";
-  const medium = override.medium || combineTierText([brief, proponentText]);
-  const impactText = entry.estimated_impact?.summary ? "Impact: " + entry.estimated_impact.summary : "";
-  const causeText = entry.cause ? "Pattern: " + entry.cause : "";
-  const full = override.full || combineTierText([medium, impactText, causeText]);
+  let tiers = [];
+  if (!rowOnly) {
+    const medium = override.medium || combineTierText([brief, proponentText]);
+    const impactText = entry.estimated_impact?.summary ? "Impact: " + entry.estimated_impact.summary : "";
+    const causeText = entry.cause ? "Pattern: " + entry.cause : "";
+    const full = override.full || combineTierText([medium, impactText, causeText]);
+    tiers = [brief, medium, full];
+  }
   return stripAdaptedItemLabels({
     headline,
-    tiers: [brief, medium, full],
+    tiers,
     trail: {
-      sources: (entry.sources || []).map(s => ({ name: s.name || "Source", url: s.url || null })),
-      confidenceNote: entry.confidence_note || null,
+      sources: rowOnly ? null : (entry.sources || []).map(s => ({ name: s.name || "Source", url: s.url || null })),
+      confidenceNote: rowOnly ? null : entry.confidence_note || null,
       lastVerified: entry.last_verified || null,
       lastSubstantiveUpdate: entry.last_substantive_update || entry.last_verified || null,
       dateAdded: entry.date_added || null,
@@ -2907,8 +2915,11 @@ function mapTrumpFamilyEntry(e) {
 /* GSR's shape, but the medium/full tiers name the family and call the
    official the "Government link" (GSR's "Driven by" would credit the
    family's deal to the official) and label the money "Financial stake". */
-function adaptTrumpFamilyEntry(entry) {
+function adaptTrumpFamilyEntry(entry, rowOnly = false) {
   const override = entry.narrative_override || {};
+  if (rowOnly) {
+    return Object.assign(adaptGovServicesEntry(entry, true), { tracker: "trumpfamily", category: entry.category || null });
+  }
   const brief = override.brief || entry.what_changed || "";
   const members = (entry.family_members || []).join(", ");
   const familyText = members ? "Family: " + members + "." : "";
@@ -2975,8 +2986,11 @@ function mapDaiEntry(e) {
 /* adapt-dai-entry:start */
 /* GSR's shape; the medium/full tiers name the agencies and the lead
    official ("Lead official", not GSR's "Driven by") and the human toll. */
-function adaptDaiEntry(entry) {
+function adaptDaiEntry(entry, rowOnly = false) {
   const override = entry.narrative_override || {};
+  if (rowOnly) {
+    return Object.assign(adaptGovServicesEntry(entry, true), { tracker: "dai", category: entry.category || null });
+  }
   const brief = override.brief || entry.what_changed || "";
   const agencies = (entry.agencies || []).join(", ");
   const agencyText = agencies ? "Agencies: " + agencies + "." : "";
@@ -3039,10 +3053,12 @@ function daiOfficialGroupKeys(entry) {
 /* dai-group-keys:end */
 
 /* adapt-prosecution-entry:start */
-function adaptProsecutionEntry(entry) {
+function adaptProsecutionEntry(entry, rowOnly = false) {
   const override = entry.narrative_override || {};
   const headline = override.headline || entry.section_summaries?.incident_summary || truncate(entry.incident_summary || "", 110);
   const brief = override.brief || entry.incident_summary || "";
+  let tiers = [];
+  if (!rowOnly) {
   const elementsText = (entry.elements_required || []).length
     ? "What must hold: " + entry.elements_required.join("; ") : "";
   const evidenceText = (entry.evidence || []).length
@@ -3052,12 +3068,14 @@ function adaptProsecutionEntry(entry) {
   const rebuttalText = entry.rebuttal_anticipated ? "Anticipated defense: " + entry.rebuttal_anticipated : "";
   const comebackText = entry.comeback ? "Response: " + entry.comeback : "";
   const full = override.full || combineTierText([medium, causeText, rebuttalText, comebackText]);
+  tiers = [brief, medium, full];
+  }
   return stripAdaptedItemLabels({
     headline,
-    tiers: [brief, medium, full],
+    tiers,
     trail: {
-      sources: evidenceForSourceTrail(entry.evidence).map(ev => ({ name: ev.description || ev.type || "Evidence", url: ev.source_url || null })),
-      confidenceNote: entry.confidence_note || null,
+      sources: rowOnly ? null : evidenceForSourceTrail(entry.evidence).map(ev => ({ name: ev.description || ev.type || "Evidence", url: ev.source_url || null })),
+      confidenceNote: rowOnly ? null : entry.confidence_note || null,
       lastVerified: entry.last_verified || null,
       lastSubstantiveUpdate: entry.last_substantive_update || entry.last_verified || null,
       dateAdded: entry.date_added || null,
@@ -3137,21 +3155,23 @@ function adaptReportingEntry(entry) {
 /* adapt-reporting-entry:end */
 
 function buildHeadlineItems() {
+  // Curated rows are adapted rowOnly: Records shows only the headline, date,
+  // status and category, so the tier text and sources trail are skipped (the
+  // trail button rebuilds it from the full adapter on click). Spec note 8.3.5.
   const items = [];
-  TRACKERS.deregulation.data.forEach(e => items.push(adaptDeregulationEntry(e)));
-  TRACKERS.govservices.data.forEach(e => items.push(adaptGovServicesEntry(e)));
-  if (!TRACKERS.trumpfamily.hidden) TRACKERS.trumpfamily.data.forEach(e => items.push(adaptTrumpFamilyEntry(e)));
-  if (!TRACKERS.dai.hidden) TRACKERS.dai.data.forEach(e => items.push(adaptDaiEntry(e)));
-  TRACKERS.prosecution.data.forEach(e => items.push(adaptProsecutionEntry(e)));
+  TRACKERS.deregulation.data.forEach(e => items.push(adaptDeregulationEntry(e, true)));
+  TRACKERS.govservices.data.forEach(e => items.push(adaptGovServicesEntry(e, true)));
+  if (!TRACKERS.trumpfamily.hidden) TRACKERS.trumpfamily.data.forEach(e => items.push(adaptTrumpFamilyEntry(e, true)));
+  if (!TRACKERS.dai.hidden) TRACKERS.dai.data.forEach(e => items.push(adaptDaiEntry(e, true)));
+  TRACKERS.prosecution.data.forEach(e => items.push(adaptProsecutionEntry(e, true)));
   TRACKERS.tracker.data.forEach(e => items.push(adaptReportingEntry(e)));
-  // Claim-checks (community-submitted topics) are included here so they
-  // exist to be found when the tracker filter is explicitly set to
-  // "communitytopics" -- but renderHeadlinesView() unconditionally
-  // filters them back out otherwise (Joe's call, 2026-09-18): the "All
-  // databases" aggregate stays TAP's own curated trackers plus Reporting,
-  // same as before. Claim-checks is opt-in only, never opt-out like
-  // Reporting's exclude toggle.
-  TRACKERS.communitytopics.data.forEach(e => items.push(adaptCommunityTopicEntry(e)));
+  // Claim-checks (community-submitted topics) are adapted only when the
+  // tracker filter is explicitly "communitytopics" (opt-in, Joe 2026-09-18).
+  // renderHeadlinesView() filters them out of both feeds otherwise, so
+  // adapting them every render was wasted work.
+  if (headlinesTrackerFilter === "communitytopics") {
+    TRACKERS.communitytopics.data.forEach(e => items.push(adaptCommunityTopicEntry(e)));
+  }
   return items;
 }
 
@@ -3563,7 +3583,7 @@ function buildHeadlineRow(item, displayDate) {
     fillSourcesPanel(trailPanel, item.tracker, () => {
       if (item.tracker === "tracker" || !ROW_ADAPTERS[item.tracker]) return item.trail;
       const entry = TRACKERS[item.tracker].data.find(e => e.id === item.id);
-      return entry ? ROW_ADAPTERS[item.tracker](entry).trail : item.trail;
+      return entry ? ROW_ADAPTERS[item.tracker](entry).trail : { ...item.trail, sources: item.trail.sources || [] };
     });
     trailPanel.style.display = trailPanel.style.display === "none" ? "block" : "none";
   });
