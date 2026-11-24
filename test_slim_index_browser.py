@@ -243,6 +243,7 @@ def test_deep_link_before_full_load(page, site_url):
     page.wait_for_function(
         "(s) => document.querySelector(s + ' .entry-detail').innerText.length > 200", arg=sel, timeout=60000)
     assert page.evaluate("(s) => document.querySelectorAll(s + ' .entry-cols').length", sel) > 0
+    assert page.evaluate("(s) => document.querySelectorAll(s + ' .entry-cols[data-cards-ordered]').length", sel) > 0
 
 
 def test_records_trail_before_full_load(page, site_url):
@@ -462,3 +463,18 @@ def test_global_search_settles_with_one_render(page, site_url):
     page.wait_for_function("lastGlobalRender !== null", timeout=60000)
     page.wait_for_timeout(300)
     assert page.evaluate("window.__rg") == 1
+
+
+def test_records_trail_for_missing_entry_says_so(page, site_url):
+    """Records trail fallback: the row's entry isn't in memory any more (an
+    index from another publish) -> a reload hint, not an empty panel."""
+    _boot(page, site_url)
+    assert page.evaluate("ensureFullEntries()") is True
+    page.wait_for_selector("#headlines-view .headline-entry[data-entry-id] .headline-trail-btn")
+    row = page.locator("#headlines-view .headline-entry[data-entry-id]").first
+    rid = row.get_attribute("data-entry-id")
+    page.evaluate("""(id) => Object.keys(FULL_ENTRY_FILES).forEach(k => {
+        TRACKERS[k].data = TRACKERS[k].data.filter(e => e.id !== id); })""", rid)
+    row.locator(".headline-trail-btn").click()
+    assert row.locator(".headline-trail-panel").inner_text().strip() == \
+        "Sources couldn't be loaded. Reload the page to try again."

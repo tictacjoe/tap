@@ -206,7 +206,12 @@ function parityProblems(trackerKey, full, slim) {
   const problems = [];
   for (const [name, fn] of checks(trackerKey)) {
     let va, vb;
-    try { va = JSON.stringify(fn(a, cfg)); } catch (err) { va = "threw " + err.message; }
+    // A check that throws on the full entry would break the site on that
+    // entry too: a problem even when the slim copy throws the same way.
+    try { va = JSON.stringify(fn(a, cfg)); } catch (err) {
+      problems.push(`${full.id}: ${name} threw on full entry`);
+      continue;
+    }
     try { vb = JSON.stringify(fn(b, cfg)); } catch (err) { vb = "threw " + err.message; }
     if (va !== vb) problems.push(`${full.id}: ${name} differs`);
   }

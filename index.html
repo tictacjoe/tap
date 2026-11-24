@@ -3059,16 +3059,16 @@ function adaptProsecutionEntry(entry, rowOnly = false) {
   const brief = override.brief || entry.incident_summary || "";
   let tiers = [];
   if (!rowOnly) {
-  const elementsText = (entry.elements_required || []).length
-    ? "What must hold: " + entry.elements_required.join("; ") : "";
-  const evidenceText = (entry.evidence || []).length
-    ? "Evidence: " + entry.evidence.map(ev => ev.description).filter(Boolean).join("; ") : "";
-  const medium = override.medium || combineTierText([brief, elementsText, evidenceText]);
-  const causeText = entry.cause ? "Pattern: " + entry.cause : "";
-  const rebuttalText = entry.rebuttal_anticipated ? "Anticipated defense: " + entry.rebuttal_anticipated : "";
-  const comebackText = entry.comeback ? "Response: " + entry.comeback : "";
-  const full = override.full || combineTierText([medium, causeText, rebuttalText, comebackText]);
-  tiers = [brief, medium, full];
+    const elementsText = (entry.elements_required || []).length
+      ? "What must hold: " + entry.elements_required.join("; ") : "";
+    const evidenceText = (entry.evidence || []).length
+      ? "Evidence: " + entry.evidence.map(ev => ev.description).filter(Boolean).join("; ") : "";
+    const medium = override.medium || combineTierText([brief, elementsText, evidenceText]);
+    const causeText = entry.cause ? "Pattern: " + entry.cause : "";
+    const rebuttalText = entry.rebuttal_anticipated ? "Anticipated defense: " + entry.rebuttal_anticipated : "";
+    const comebackText = entry.comeback ? "Response: " + entry.comeback : "";
+    const full = override.full || combineTierText([medium, causeText, rebuttalText, comebackText]);
+    tiers = [brief, medium, full];
   }
   return stripAdaptedItemLabels({
     headline,
@@ -3582,8 +3582,9 @@ function buildHeadlineRow(item, displayDate) {
     // adapted from a slim index entry); Reporting rows keep item.trail.
     fillSourcesPanel(trailPanel, item.tracker, () => {
       if (item.tracker === "tracker" || !ROW_ADAPTERS[item.tracker]) return item.trail;
+      // Not in memory (an index from another publish): null -> reload hint.
       const entry = TRACKERS[item.tracker].data.find(e => e.id === item.id);
-      return entry ? ROW_ADAPTERS[item.tracker](entry).trail : { ...item.trail, sources: item.trail.sources || [] };
+      return entry ? ROW_ADAPTERS[item.tracker](entry).trail : null;
     });
     trailPanel.style.display = trailPanel.style.display === "none" ? "block" : "none";
   });
@@ -7180,10 +7181,13 @@ const DETAIL_FAILED_HTML = '<div class="empty-state">Details couldn\'t be loaded
 // trailFn() run on the full entry: right away when the tracker's full entries
 // are in, else "Loading sources..." until ensureFullEntries() settles. Clicks
 // while it waits change nothing here (the caller still toggles the panel).
+// trailFn() returning null (the entry isn't there) shows the reload hint.
+const SOURCES_FAILED_HTML = '<div class="field-value">Sources couldn\'t be loaded. Reload the page to try again.</div>';
 function fillSourcesPanel(panel, trackerKey, trailFn) {
   if (panel.dataset.built || panel.dataset.pending) return;
   const build = () => {
-    panel.innerHTML = buildTrailHtml(trailFn());
+    const trail = trailFn();
+    panel.innerHTML = trail ? buildTrailHtml(trail) : SOURCES_FAILED_HTML;
     panel.dataset.built = "1";
   };
   if (entriesFullFor(trackerKey)) { build(); return; }
@@ -7192,7 +7196,7 @@ function fillSourcesPanel(panel, trackerKey, trailFn) {
   ensureFullEntries(trackerKey).then(ok => {
     delete panel.dataset.pending;
     if (ok) build();
-    else panel.innerHTML = '<div class="field-value">Sources couldn\'t be loaded. Reload the page to try again.</div>';
+    else panel.innerHTML = SOURCES_FAILED_HTML;
   });
 }
 

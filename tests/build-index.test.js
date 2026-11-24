@@ -121,3 +121,9 @@ test("real data: every entry's projection has no parity problems", () => {
     assert.deepEqual(problems, [], `${file}: ${problems.slice(0, 5).join("; ")}`);
   }
 });
+
+test("parity reports a check that throws on the full entry, even if the slim one throws the same", () => {
+  const bad = { ...tfs, family_members: { length: 1 } }; // familyGroupKeys calls .slice()
+  const problems = parityProblems("trumpfamily", bad, projectEntry("trumpfamily", bad));
+  assert.ok(problems.includes("tfs-1: familyGroupKeys threw on full entry"), problems.join("; "));
+});
