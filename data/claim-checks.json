@@ -1,6 +1,6 @@
 {
  "version": 1,
- "as_of": "2026-11-23",
+ "as_of": "2026-11-24",
  "checks": {
   "abrego-garcia-vindictive-prosecution-2025-2026": {
    "0": {
@@ -1466,6 +1466,22 @@
     "why": "The article states Seabright 'Monday rejected Essayli's request to suspend the ruling through an appeal' and quotes his 'vague and conclusory,' 'government's requested stay that may further delay,' and 'bald assertion... does not establish probable irreparable injury' language as the claim does.",
     "host": "mynewsla.com",
     "date": "2026-11-17",
+    "kind": "fact",
+    "archive": false
+   },
+   "11": {
+    "state": "partly",
+    "why": "The docket text confirms the November 16 order denying the stay (12 pages) and that Ramirez III 'will go into effect one week from today, subject to any further orders of this court or an appellate court.' The fetched text ends on page 5, before the quoted findings ('vague and conclusory', 'bald assertion', the October 13 concession, 'low likelihood of success'), so those parts cannot be checked.",
+    "host": "courtlistener.com",
+    "date": "2026-11-24",
+    "kind": "fact",
+    "archive": false
+   },
+   "12": {
+    "state": "supports",
+    "why": "The article states Essayli may soon need to vacate after the Nov. 16 stay denial and that DOJ asked the Ninth Circuit for an emergency stay. Elsewhere it says he 'is still helming the Los Angeles office, said one of those people' among three anonymous sources, while on a Miami special assignment.",
+    "host": "news.bloomberglaw.com",
+    "date": "2026-11-24",
     "kind": "fact",
     "archive": false
    }
@@ -5940,6 +5956,22 @@
     "why": "The docket lists entry 29 on Nov 5, 2026 as DOJ Civil Rights Division and Dhillon's 'ANSWER to 18 Amended Complaint' and a Nov 13, 2026 'Order on Motion for Extension of Time to', matching both items the claim describes.",
     "host": "courtlistener.com",
     "date": "2026-11-14",
+    "kind": "fact",
+    "archive": false
+   },
+   "39": {
+    "state": "partly",
+    "why": "The report confirms 3,126 documents processed by November 2, a 31-document release on November 3 (18 in full, 7 in part, 6 withheld), 4,370 remaining, and 250 pages a month with the next production by December 15. The fetched text cuts off before any NAACP position on a BOP training video or the Louisiana runoffs, or DOJ's response, so those parts are unverified.",
+    "host": "democracydocket.com",
+    "date": "2026-11-24",
+    "kind": "fact",
+    "archive": false
+   },
+   "40": {
+    "state": "not_found",
+    "why": "The fetched docket page lists entries only through early October; it shows a last known filing of Nov. 20, 2026, but not the text of any November 20 minute order, so the vacatur and January 11, 2027 deadline cannot be checked.",
+    "host": "courtlistener.com",
+    "date": "2026-11-24",
     "kind": "fact",
     "archive": false
    }
@@ -28469,9 +28501,49 @@
    },
    "12": {
     "state": "supports",
+    "why": "The article says ten non-citizens in LA and Orange counties were indicted Wednesday by a Santa Ana federal grand jury, that all are lawful permanent residents charged under 'Operation Protect the Vote' per the C.D. Cal. USAO, that nine are accused of false naturalization statements, and that all had faced prior complaints.",
+    "host": "mynewsla.com",
+    "date": "2026-11-24",
+    "kind": "fact",
+    "archive": false
+   },
+   "13": {
+    "state": "supports",
     "why": "The November 6, 2026 ABC article states Blanche announced Reding Quinones' resignation, that sources said leadership admonished him for lack of progress, and that the probe has led to no criminal indictments.",
     "host": "abcnews.com",
     "date": "2026-11-08",
+    "kind": "fact",
+    "archive": false
+   },
+   "14": {
+    "state": "supports",
+    "why": "The article relays the Times account of each element: the February investigation letter, the March meeting whose 'main focus' was Omar, Rivers' '100% being run by 1600 Pennsylvania Avenue' quote, the offer to intervene in deportation, the September dismissal motion, and Rogers calling the offer 'outrageous.'",
+    "host": "commondreams.org",
+    "date": "2026-11-24",
+    "kind": "fact",
+    "archive": false
+   },
+   "15": {
+    "state": "supports",
+    "why": "Political Wire quotes the Star Tribune verbatim with both passages in the claim.",
+    "host": "politicalwire.com",
+    "date": "2026-11-24",
+    "kind": "fact",
+    "archive": false
+   },
+   "16": {
+    "state": "supports",
+    "why": "The article reports Boasberg's ruling that some material could be made public, the redacted publication absent appeal, granting 14 media organizations' requests, the 'vast majority' of the affidavit staying sealed as 'premature' to unseal, Serano saying material was still being reviewed, and that no formal charges have been filed.",
+    "host": "washingtonexaminer.com",
+    "date": "2026-11-24",
+    "kind": "fact",
+    "archive": false
+   },
+   "17": {
+    "state": "supports",
+    "why": "The AP story reports Sharbaugh's Speech or Debate ruling and the agreed protocol, Boasberg's partial unsealing and agreement that unsealing the 67-page affidavit would be premature, that the redacted documents do not disclose new details, and that Omar has not been charged and denies wrongdoing.",
+    "host": "abcnews.com",
+    "date": "2026-11-24",
     "kind": "fact",
     "archive": false
    }
