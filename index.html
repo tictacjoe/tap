@@ -9540,29 +9540,74 @@ function prepareCuratedEntries(key, raw) {
    Each full entry is assigned into the existing object with the same id (slim
    fields the full entry lacks are removed first, in case the index is from an
    older publish), or appended if the index didn't have it. Index entries the
-   full file lacks are dropped. The array ends up in full-file order. A re-render
-   happens only if entries were added or removed and the tracker (or Records)
-   is on screen. */
+   full file lacks are dropped. The array ends up in full-file order.
+   Normally (index and full file from the same publish) nothing on screen
+   changes, so nothing is redrawn. If the index came from another publish --
+   entries added or removed, or a field the index copies whole differs -- the
+   views that show this tracker's rows (its tab, Records, Harms, Possible
+   Illegality) are redrawn, and every view is if a tracker's status pills
+   switched on or off; cards open before the redraw are reopened. */
+
+// The fields build_index.js copies whole into each tracker's index (keep in
+// step with projectEntry in tools/build_index.js; for Cabinet-Level, also the
+// fields classifyClaEntry derives from them), as one string per entry: equal
+// for an index entry and its full entry from the same publish.
+const INDEXED_WHOLE_FIELDS = {
+  prosecution: ["contested", "offense_category", "status", "status_category", "concern_type"],
+  deregulation: ["domain", "short_summary"],
+  govservices: ["domain"],
+  trumpfamily: ["category", "family_members"],
+  dai: ["category", "agencies"],
+};
+function indexedFieldsSignature(trackerKey, e) {
+  const ss = e.section_summaries || {};
+  return JSON.stringify([
+    e.id, e[TRACKERS[trackerKey].titleField], e.glance, e.status_stage, e.date_of_action, e.date_added,
+    e.last_verified, e.last_substantive_update,
+    e.narrative_override && e.narrative_override.headline, ss.what_changed, ss.incident_summary,
+  ].concat((INDEXED_WHOLE_FIELDS[trackerKey] || []).map(k => e[k])));
+}
+
+// Reopens, after a redraw, the cards that were open before it (by
+// data-entry-id), without the scroll or highlight of a deep link.
+function reopenEntryCards(ids) {
+  ids.forEach(id => {
+    const card = document.querySelector('#entries .entry[data-entry-id="' + CSS.escape(id) + '"]');
+    if (!card || card.classList.contains("open")) return;
+    const group = card.closest(".official-group");
+    if (group) group.classList.add("open");
+    openEntryCard(card);
+  });
+}
+
 function mergeFullEntries(trackerKey, fullRaw) {
   const t = TRACKERS[trackerKey];
   const existing = new Map(t.data.map(e => [e.id, e]));
   const reused = new Set();
-  let added = 0;
+  let added = 0, changed = 0;
   t.data = prepareCuratedEntries(trackerKey, fullRaw).map(full => {
     const slim = existing.get(full.id);
     if (!slim || reused.has(slim)) { added++; return full; }
     reused.add(slim);
+    if (indexedFieldsSignature(trackerKey, slim) !== indexedFieldsSignature(trackerKey, full)) changed++;
     Object.keys(slim).forEach(k => { if (!(k in full)) delete slim[k]; });
     return Object.assign(slim, full);
   });
   const removed = existing.size - reused.size;
   fullEntriesLoaded[trackerKey] = true;
   // Same answer as at boot unless the index came from another publish.
+  const liveBefore = Object.keys(TRACKERS).map(k => !!TRACKERS[k].statusStageLive).join();
   refreshStatusStageFlags();
-  if (added + removed > 0 && (activeTracker === trackerKey || activeTracker === "headlines")) {
-    try { renderDispatch(); } catch (e) { console.error("renderDispatch after merge failed:", e); }
+  const liveFlipped = Object.keys(TRACKERS).map(k => !!TRACKERS[k].statusStageLive).join() !== liveBefore;
+  const showsTracker = [trackerKey, "headlines", HARMS_VIEW, ILLEGALITY_VIEW].includes(activeTracker);
+  if (liveFlipped || (added + removed + changed > 0 && showsTracker)) {
+    const openIds = [...document.querySelectorAll("#entries .entry.open[data-entry-id]")].map(c => c.dataset.entryId);
+    try {
+      renderDispatch();
+      reopenEntryCards(openIds);
+    } catch (e) { console.error("renderDispatch after merge failed:", e); }
   }
-  return { added, removed };
+  return { added, removed, changed };
 }
 
 // Idempotent per tracker: one cached promise each, so no file is fetched twice.

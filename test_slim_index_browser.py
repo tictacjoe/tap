@@ -357,3 +357,55 @@ def test_records_skips_community_topics(page, site_url):
     page.evaluate("headlinesTrackerFilter = 'communitytopics'; buildHeadlineItems()")
     assert page.evaluate("window.__ct") > 0
     page.evaluate("headlinesTrackerFilter = ''")
+
+
+# ---- Final-review fixes ----
+
+def test_merge_redraws_stale_rows_and_keeps_open_cards(page, site_url):
+    """I1: an index from an older publish (same ids, different glance.what)
+    must not leave stale row text after the merge, and a card opened before
+    the merge stays open after the redraw."""
+    index = json.loads((SITE_DIR / "data" / "index" / "government-services.json").read_text())
+    stale = json.loads(json.dumps(index))
+    stale[0]["glance"]["what"] = "STALE-WHAT-TEXT"
+    page.route("**/data/index/government-services.json",
+               lambda route: route.fulfill(status=200, content_type="application/json",
+                                           body=json.dumps(stale)))
+    release = delayed_full(page)
+    _boot(page, site_url)
+    page.evaluate("selectDatabaseTab('govservices')")
+    page.wait_for_selector("#entries .entry")
+    assert "STALE-WHAT-TEXT" in page.inner_text("#entries")
+    # Open a card (not the stale one) before the merge.
+    open_id = index[1]["id"]
+    sel = f'#entries .entry[data-entry-id="{open_id}"]'
+    page.locator(sel + " .entry-head").click()
+    assert "open" in page.get_attribute(sel, "class")
+    release()
+    page.wait_for_function("fullEntriesLoaded.govservices === true", timeout=60000)
+    page.wait_for_function(
+        "!document.getElementById('entries').innerText.includes('STALE-WHAT-TEXT')", timeout=10000)
+    assert "open" in page.get_attribute(sel, "class")
+    page.wait_for_function(
+        "(s) => document.querySelector(s + ' .entry-detail').innerText.length > 200", arg=sel, timeout=10000)
+
+
+def test_same_publish_merge_redraws_nothing(page, site_url):
+    """I1 guard: index and full file from the same publish change nothing on
+    screen, so the merge must not redraw (for any tracker)."""
+    release = delayed_full(page)
+    _boot(page, site_url)
+    page.evaluate("""() => {
+        window.__rd = 0;
+        const real = window.renderDispatch;
+        window.renderDispatch = function (...a) { window.__rd++; return real.apply(this, a); };
+        window.__merges = {};
+        const realMerge = window.mergeFullEntries;
+        window.mergeFullEntries = function (k, raw) { const r = realMerge(k, raw); window.__merges[k] = r; return r; };
+    }""")
+    release()
+    assert page.evaluate("ensureFullEntries()") is True
+    merges = page.evaluate("window.__merges")
+    assert sorted(merges) == sorted(["prosecution", "deregulation", "govservices", "trumpfamily", "dai"])
+    assert all(m == {"added": 0, "removed": 0, "changed": 0} for m in merges.values()), merges
+    assert page.evaluate("window.__rd") == 0
