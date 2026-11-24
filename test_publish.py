@@ -370,6 +370,10 @@ def _e2e_dirs(tmp_path, moved):
     s = tmp_path / "site"
     (s / "data").mkdir(parents=True)
     (s / "index.html").write_text(_INDEX_HIDDEN)
+    # publish.py runs the site's tools/build_index.js (which reads the REAL
+    # index.html next to the script, through the symlink).
+    (s / "tools").mkdir()
+    (s / "tools" / "build_index.js").symlink_to(Path(__file__).parent / "tools" / "build_index.js")
     return w, s
 
 
@@ -593,3 +597,163 @@ def test_publish_tracker_drops_unlabeled_sections_and_keeps_everything_else(tmp_
     del expected["unlabeled_sections"]
     assert published[0] == expected
     assert published[1] == bare
+
+
+# --- Slim per-tracker index files (lazy-load phase 3b) ---
+_INDEX_FILES = ["prosecution.json", "deregulation.json", "government-services.json",
+                "trumpfamily.json", "dai.json"]
+_INDEX_GLANCE = {"who": "EPA", "what": "Repealed the rule.",
+                 "harm": {"kind": "physical", "certainty": "documented", "who": "Workers"}}
+
+
+def _index_tree(tmp_path):
+    """Temp working + site with one entry in each of the five curated trackers."""
+    w, s = _e2e_dirs(tmp_path, {})
+    one = {"date_added": "2026-01-01", "last_verified": "2026-01-02", "status_stage": "Unchallenged"}
+    folders = {
+        "prosecution/cabinet-level": {"id": "cla-1", "official": "Some Official", "offense_category": "Obstruction",
+                                      "status": "Under investigation", "confidence_note": "HIGH. text",
+                                      "incident_summary": "Something happened.", "evidence": [{"description": "Memo"}]},
+        "deregulation/entries": {"id": "cdr-1", "rule_name": "Rule", "domain": "Air", "what_changed": "Changed.",
+                                 "sources": [{"name": "A"}]},
+        "government-services/entries": {"id": "gsr-1", "title": "Office", "domain": "Health", "what_changed": "Closed.",
+                                        "sources": [{"name": "A"}]},
+        "trumpfamily/entries": {"id": "tfs-1", "title": "Deal", "category": "Crypto", "family_members": ["Donald Jr."],
+                                "what_changed": "A deal.", "sources": []},
+        "dai/entries": {"id": "dai-1", "title": "Death", "category": "Deaths", "agencies": ["ICE"],
+                        "what_changed": "Died.", "people": {"officials": [{"name": "Kim", "role": "Warden"}]}},
+    }
+    for folder, entry in folders.items():
+        (w / folder).mkdir(parents=True, exist_ok=True)
+        (w / folder / (entry["id"] + ".json")).write_text(json.dumps({**one, **entry}))
+    return w, s
+
+
+def test_publish_writes_index_files(tmp_path):
+    w, s = _index_tree(tmp_path)
+    r = _run_publish(w, s)
+    assert r.returncode == 0, r.stdout + r.stderr
+    for name in _INDEX_FILES:
+        full = json.loads((s / "data" / name).read_text())
+        slim = json.loads((s / "data" / "index" / name).read_text())
+        assert full and [e["id"] for e in slim] == [e["id"] for e in full], name
+
+
+def test_index_parity_failure_blocks_publish(tmp_path, monkeypatch, capsys):
+    import publish
+    w, s = _index_tree(tmp_path)
+    real_run = subprocess.run
+
+    def fake_run(cmd, *a, **kw):
+        if any(str(c).endswith("build_index.js") for c in cmd):
+            return subprocess.CompletedProcess(cmd, 1, stdout="", stderr="gsr-1: filter differs")
+        return real_run(cmd, *a, **kw)
+
+    monkeypatch.setattr(publish.subprocess, "run", fake_run)
+    monkeypatch.setattr(sys, "argv", ["publish.py", "--working", str(w), "--site", str(s)])
+    with pytest.raises(SystemExit) as exc:
+        publish.main()
+    assert exc.value.code == 1
+    assert "ERROR: index: gsr-1: filter differs" in capsys.readouterr().out
+
+
+def test_index_failure_is_a_warning_on_dry_run(tmp_path):
+    w, s = _index_tree(tmp_path)
+    (s / "tools" / "build_index.js").unlink()  # no build script
+    r = _run_publish(w, s, "--dry-run")
+    assert r.returncode == 0, r.stdout + r.stderr
+    assert "WARNING: index: build script not found" in r.stdout
+
+
+def test_index_node_missing_still_publishes_everything_else(tmp_path, monkeypatch, capsys):
+    """I3: a failed index step must not leave a half-published site. Without
+    node the run still writes every other output, removes the (now stale)
+    index files so the site loads the full files, and exits 1 at the end."""
+    import publish
+    w, s = _index_tree(tmp_path)
+    (s / "data" / "index").mkdir()
+    for name in _INDEX_FILES:  # an older publish's index files
+        (s / "data" / "index" / name).write_text("[]\n")
+    real_which = publish.shutil.which
+    monkeypatch.setattr(publish.shutil, "which", lambda c, *a, **kw: None if c == "node" else real_which(c, *a, **kw))
+    monkeypatch.setattr(sys, "argv", ["publish.py", "--working", str(w), "--site", str(s)])
+    with pytest.raises(SystemExit) as exc:
+        publish.main()
+    assert exc.value.code == 1
+    out = capsys.readouterr().out
+    assert "ERROR: index:" in out
+    for name in ["moved-ids.json", "illegality.json", "site_meta.json", "front-strip.json"] + _INDEX_FILES:
+        assert (s / "data" / name).exists(), name
+    assert (s / "feed.xml").exists()
+    assert list((s / "data" / "index").glob("*.json")) == []
+
+
+def test_index_parity_failure_removes_that_trackers_index(tmp_path, monkeypatch, capsys):
+    """I3: on a parity failure the named tracker's index is removed (the tool
+    does it; publish makes sure) and the other trackers' index files stay."""
+    import publish
+    w, s = _index_tree(tmp_path)
+    real_run = subprocess.run
+
+    def fake_run(cmd, *a, **kw):
+        res = real_run(cmd, *a, **kw)
+        if any(str(c).endswith("build_index.js") for c in cmd):
+            return subprocess.CompletedProcess(cmd, 1, stdout=res.stdout, stderr="govservices: gsr-1: filter differs")
+        return res
+
+    monkeypatch.setattr(publish.subprocess, "run", fake_run)
+    monkeypatch.setattr(sys, "argv", ["publish.py", "--working", str(w), "--site", str(s)])
+    with pytest.raises(SystemExit) as exc:
+        publish.main()
+    assert exc.value.code == 1
+    assert (s / "feed.xml").exists() and (s / "data" / "site_meta.json").exists()
+    left = sorted(p.name for p in (s / "data" / "index").glob("*.json"))
+    assert left == sorted(n for n in _INDEX_FILES if n != "government-services.json")
+
+
+def test_index_crash_after_a_parity_line_removes_every_index(tmp_path, monkeypatch, capsys):
+    """Task 7C1: build_index.js reported a parity line for one tracker, then
+    threw uncaught on a later one: a crash, so all five index files go, not
+    just the named tracker's."""
+    import publish
+    w, s = _index_tree(tmp_path)
+    real_run = subprocess.run
+    crash = ("prosecution: cla-1: filter differs\n"
+             "/site/tools/build_index.js:300\n"
+             "TypeError: Cannot read properties of undefined (reading 'figures')\n"
+             "    at projectEntry (/site/tools/build_index.js:120:5)")
+
+    def fake_run(cmd, *a, **kw):
+        res = real_run(cmd, *a, **kw)  # writes all five index files
+        if any(str(c).endswith("build_index.js") for c in cmd):
+            return subprocess.CompletedProcess(cmd, 1, stdout=res.stdout, stderr=crash)
+        return res
+
+    monkeypatch.setattr(publish.subprocess, "run", fake_run)
+    monkeypatch.setattr(sys, "argv", ["publish.py", "--working", str(w), "--site", str(s)])
+    with pytest.raises(SystemExit) as exc:
+        publish.main()
+    assert exc.value.code == 1
+    assert list((s / "data" / "index").glob("*.json")) == []
+
+
+def test_exception_after_curated_files_leaves_no_index(tmp_path, monkeypatch, capsys):
+    """Task 7C2: the index step runs last, so an uncaught exception in an
+    earlier step (after the curated files are written) must not leave the
+    previous publish's index beside the new full files."""
+    import publish
+    w, s = _index_tree(tmp_path)
+    (s / "data" / "index").mkdir()
+    for name in _INDEX_FILES:  # an older publish's index files
+        (s / "data" / "index" / name).write_text("[]\n")
+
+    def boom(*a, **kw):
+        raise RuntimeError("site meta exploded")
+
+    monkeypatch.setattr(publish, "write_site_meta", boom)
+    monkeypatch.setattr(sys, "argv", ["publish.py", "--working", str(w), "--site", str(s)])
+    with pytest.raises(RuntimeError):
+        publish.main()
+    assert (s / "data" / "prosecution.json").exists()  # curated files were written
+    assert list((s / "data" / "index").glob("*.json")) == []
+    assert "removed data/index/" in capsys.readouterr().out

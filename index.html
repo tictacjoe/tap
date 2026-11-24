@@ -2793,21 +2793,25 @@ function packHeadline(text, maxChars) {
 /* pack-headline:end */
 
 /* adapt-deregulation-entry:start */
-function adaptDeregulationEntry(entry) {
+function adaptDeregulationEntry(entry, rowOnly = false) {
   const override = entry.narrative_override || {};
   const headline = override.headline || entry.short_summary || truncate(entry.what_changed || "", 110);
   const brief = override.brief || entry.what_changed || "";
   const beforeText = entry.original_rule_summary ? "Before this action: " + entry.original_rule_summary : "";
-  const medium = override.medium || combineTierText([brief, beforeText]);
-  const stakesText = entry.estimated_health_impact?.summary ? "At stake: " + entry.estimated_health_impact.summary : "";
-  const causeText = entry.cause ? "Pattern: " + entry.cause : "";
-  const full = override.full || combineTierText([medium, stakesText, causeText]);
+  let tiers = [];
+  if (!rowOnly) {
+    const medium = override.medium || combineTierText([brief, beforeText]);
+    const stakesText = entry.estimated_health_impact?.summary ? "At stake: " + entry.estimated_health_impact.summary : "";
+    const causeText = entry.cause ? "Pattern: " + entry.cause : "";
+    const full = override.full || combineTierText([medium, stakesText, causeText]);
+    tiers = [brief, medium, full];
+  }
   return stripAdaptedItemLabels({
     headline,
-    tiers: [brief, medium, full],
+    tiers,
     trail: {
-      sources: (entry.sources || []).map(s => ({ name: s.name || "Source", url: s.url || null })),
-      confidenceNote: entry.confidence_note || null,
+      sources: rowOnly ? null : (entry.sources || []).map(s => ({ name: s.name || "Source", url: s.url || null })),
+      confidenceNote: rowOnly ? null : entry.confidence_note || null,
       lastVerified: entry.last_verified || null,
       lastSubstantiveUpdate: entry.last_substantive_update || entry.last_verified || null,
       dateAdded: entry.date_added || null,
@@ -2825,7 +2829,7 @@ function adaptDeregulationEntry(entry) {
 /* adapt-deregulation-entry:end */
 
 /* adapt-govservices-entry:start */
-function adaptGovServicesEntry(entry) {
+function adaptGovServicesEntry(entry, rowOnly = false) {
   const override = entry.narrative_override || {};
   const headline = override.headline || entry.title || truncate(entry.what_changed || "", 110);
   const brief = override.brief || entry.what_changed || "";
@@ -2833,16 +2837,20 @@ function adaptGovServicesEntry(entry) {
   const proponentText = p?.name
     ? "Driven by " + p.name + (p.role ? " (" + p.role + ")" : "") + (p.note ? " — " + p.note : "")
     : "";
-  const medium = override.medium || combineTierText([brief, proponentText]);
-  const impactText = entry.estimated_impact?.summary ? "Impact: " + entry.estimated_impact.summary : "";
-  const causeText = entry.cause ? "Pattern: " + entry.cause : "";
-  const full = override.full || combineTierText([medium, impactText, causeText]);
+  let tiers = [];
+  if (!rowOnly) {
+    const medium = override.medium || combineTierText([brief, proponentText]);
+    const impactText = entry.estimated_impact?.summary ? "Impact: " + entry.estimated_impact.summary : "";
+    const causeText = entry.cause ? "Pattern: " + entry.cause : "";
+    const full = override.full || combineTierText([medium, impactText, causeText]);
+    tiers = [brief, medium, full];
+  }
   return stripAdaptedItemLabels({
     headline,
-    tiers: [brief, medium, full],
+    tiers,
     trail: {
-      sources: (entry.sources || []).map(s => ({ name: s.name || "Source", url: s.url || null })),
-      confidenceNote: entry.confidence_note || null,
+      sources: rowOnly ? null : (entry.sources || []).map(s => ({ name: s.name || "Source", url: s.url || null })),
+      confidenceNote: rowOnly ? null : entry.confidence_note || null,
       lastVerified: entry.last_verified || null,
       lastSubstantiveUpdate: entry.last_substantive_update || entry.last_verified || null,
       dateAdded: entry.date_added || null,
@@ -2907,8 +2915,11 @@ function mapTrumpFamilyEntry(e) {
 /* GSR's shape, but the medium/full tiers name the family and call the
    official the "Government link" (GSR's "Driven by" would credit the
    family's deal to the official) and label the money "Financial stake". */
-function adaptTrumpFamilyEntry(entry) {
+function adaptTrumpFamilyEntry(entry, rowOnly = false) {
   const override = entry.narrative_override || {};
+  if (rowOnly) {
+    return Object.assign(adaptGovServicesEntry(entry, true), { tracker: "trumpfamily", category: entry.category || null });
+  }
   const brief = override.brief || entry.what_changed || "";
   const members = (entry.family_members || []).join(", ");
   const familyText = members ? "Family: " + members + "." : "";
@@ -2975,8 +2986,11 @@ function mapDaiEntry(e) {
 /* adapt-dai-entry:start */
 /* GSR's shape; the medium/full tiers name the agencies and the lead
    official ("Lead official", not GSR's "Driven by") and the human toll. */
-function adaptDaiEntry(entry) {
+function adaptDaiEntry(entry, rowOnly = false) {
   const override = entry.narrative_override || {};
+  if (rowOnly) {
+    return Object.assign(adaptGovServicesEntry(entry, true), { tracker: "dai", category: entry.category || null });
+  }
   const brief = override.brief || entry.what_changed || "";
   const agencies = (entry.agencies || []).join(", ");
   const agencyText = agencies ? "Agencies: " + agencies + "." : "";
@@ -3039,25 +3053,29 @@ function daiOfficialGroupKeys(entry) {
 /* dai-group-keys:end */
 
 /* adapt-prosecution-entry:start */
-function adaptProsecutionEntry(entry) {
+function adaptProsecutionEntry(entry, rowOnly = false) {
   const override = entry.narrative_override || {};
   const headline = override.headline || entry.section_summaries?.incident_summary || truncate(entry.incident_summary || "", 110);
   const brief = override.brief || entry.incident_summary || "";
-  const elementsText = (entry.elements_required || []).length
-    ? "What must hold: " + entry.elements_required.join("; ") : "";
-  const evidenceText = (entry.evidence || []).length
-    ? "Evidence: " + entry.evidence.map(ev => ev.description).filter(Boolean).join("; ") : "";
-  const medium = override.medium || combineTierText([brief, elementsText, evidenceText]);
-  const causeText = entry.cause ? "Pattern: " + entry.cause : "";
-  const rebuttalText = entry.rebuttal_anticipated ? "Anticipated defense: " + entry.rebuttal_anticipated : "";
-  const comebackText = entry.comeback ? "Response: " + entry.comeback : "";
-  const full = override.full || combineTierText([medium, causeText, rebuttalText, comebackText]);
+  let tiers = [];
+  if (!rowOnly) {
+    const elementsText = (entry.elements_required || []).length
+      ? "What must hold: " + entry.elements_required.join("; ") : "";
+    const evidenceText = (entry.evidence || []).length
+      ? "Evidence: " + entry.evidence.map(ev => ev.description).filter(Boolean).join("; ") : "";
+    const medium = override.medium || combineTierText([brief, elementsText, evidenceText]);
+    const causeText = entry.cause ? "Pattern: " + entry.cause : "";
+    const rebuttalText = entry.rebuttal_anticipated ? "Anticipated defense: " + entry.rebuttal_anticipated : "";
+    const comebackText = entry.comeback ? "Response: " + entry.comeback : "";
+    const full = override.full || combineTierText([medium, causeText, rebuttalText, comebackText]);
+    tiers = [brief, medium, full];
+  }
   return stripAdaptedItemLabels({
     headline,
-    tiers: [brief, medium, full],
+    tiers,
     trail: {
-      sources: evidenceForSourceTrail(entry.evidence).map(ev => ({ name: ev.description || ev.type || "Evidence", url: ev.source_url || null })),
-      confidenceNote: entry.confidence_note || null,
+      sources: rowOnly ? null : evidenceForSourceTrail(entry.evidence).map(ev => ({ name: ev.description || ev.type || "Evidence", url: ev.source_url || null })),
+      confidenceNote: rowOnly ? null : entry.confidence_note || null,
       lastVerified: entry.last_verified || null,
       lastSubstantiveUpdate: entry.last_substantive_update || entry.last_verified || null,
       dateAdded: entry.date_added || null,
@@ -3137,21 +3155,23 @@ function adaptReportingEntry(entry) {
 /* adapt-reporting-entry:end */
 
 function buildHeadlineItems() {
+  // Curated rows are adapted rowOnly: Records shows only the headline, date,
+  // status and category, so the tier text and sources trail are skipped (the
+  // trail button rebuilds it from the full adapter on click). Spec note 8.3.5.
   const items = [];
-  TRACKERS.deregulation.data.forEach(e => items.push(adaptDeregulationEntry(e)));
-  TRACKERS.govservices.data.forEach(e => items.push(adaptGovServicesEntry(e)));
-  if (!TRACKERS.trumpfamily.hidden) TRACKERS.trumpfamily.data.forEach(e => items.push(adaptTrumpFamilyEntry(e)));
-  if (!TRACKERS.dai.hidden) TRACKERS.dai.data.forEach(e => items.push(adaptDaiEntry(e)));
-  TRACKERS.prosecution.data.forEach(e => items.push(adaptProsecutionEntry(e)));
+  TRACKERS.deregulation.data.forEach(e => items.push(adaptDeregulationEntry(e, true)));
+  TRACKERS.govservices.data.forEach(e => items.push(adaptGovServicesEntry(e, true)));
+  if (!TRACKERS.trumpfamily.hidden) TRACKERS.trumpfamily.data.forEach(e => items.push(adaptTrumpFamilyEntry(e, true)));
+  if (!TRACKERS.dai.hidden) TRACKERS.dai.data.forEach(e => items.push(adaptDaiEntry(e, true)));
+  TRACKERS.prosecution.data.forEach(e => items.push(adaptProsecutionEntry(e, true)));
   TRACKERS.tracker.data.forEach(e => items.push(adaptReportingEntry(e)));
-  // Claim-checks (community-submitted topics) are included here so they
-  // exist to be found when the tracker filter is explicitly set to
-  // "communitytopics" -- but renderHeadlinesView() unconditionally
-  // filters them back out otherwise (Joe's call, 2026-09-18): the "All
-  // databases" aggregate stays TAP's own curated trackers plus Reporting,
-  // same as before. Claim-checks is opt-in only, never opt-out like
-  // Reporting's exclude toggle.
-  TRACKERS.communitytopics.data.forEach(e => items.push(adaptCommunityTopicEntry(e)));
+  // Claim-checks (community-submitted topics) are adapted only when the
+  // tracker filter is explicitly "communitytopics" (opt-in, Joe 2026-09-18).
+  // renderHeadlinesView() filters them out of both feeds otherwise, so
+  // adapting them every render was wasted work.
+  if (headlinesTrackerFilter === "communitytopics") {
+    TRACKERS.communitytopics.data.forEach(e => items.push(adaptCommunityTopicEntry(e)));
+  }
   return items;
 }
 
@@ -3558,10 +3578,14 @@ function buildHeadlineRow(item, displayDate) {
   body.appendChild(trailPanel);
 
   trailBtn.addEventListener("click", () => {
-    if (!trailPanel.dataset.built) {
-      trailPanel.innerHTML = buildTrailHtml(item.trail);
-      trailPanel.dataset.built = "1";
-    }
+    // Curated rows build from the full entry (the row's item may have been
+    // adapted from a slim index entry); Reporting rows keep item.trail.
+    fillSourcesPanel(trailPanel, item.tracker, () => {
+      if (item.tracker === "tracker" || !ROW_ADAPTERS[item.tracker]) return item.trail;
+      // Not in memory (an index from another publish): null -> reload hint.
+      const entry = TRACKERS[item.tracker].data.find(e => e.id === item.id);
+      return entry ? ROW_ADAPTERS[item.tracker](entry).trail : null;
+    });
     trailPanel.style.display = trailPanel.style.display === "none" ? "block" : "none";
   });
 
@@ -7065,7 +7089,7 @@ function buildEntryCard(entry, cfg, docketLabel, sourceLabel, term, useRegex, ca
       '<div class="confidence-box entry-row-sources-panel" style="display:none"></div>' +
       '<div class="entry-detail"></div>';
     detailArgs.set(div, {
-      entry, cfg, term, useRegex,
+      entry, cfg, term, useRegex, trackerKey: cardTrackerKey,
       html: () =>
         '<div class="entry-row-tools">' + shareBtnHtml + listenBtnHtml + '</div>' +
         (g ? glanceDetailTitleHtml(entry, cfg, hl) : "") +
@@ -7073,20 +7097,15 @@ function buildEntryCard(entry, cfg, docketLabel, sourceLabel, term, useRegex, ca
     });
     const head = div.querySelector(".entry-head");
     head.addEventListener("click", () => {
-      div.classList.toggle("open");
-      if (div.classList.contains("open")) {
-        ensureEntryDetail(div);
-        distributeEntryCards(div);
-      }
+      if (div.classList.contains("open")) div.classList.remove("open");
+      else openEntryCard(div);
     });
     const panel = div.querySelector(".entry-row-sources-panel");
     div.querySelector(".entry-row-sources").addEventListener("click", (e) => {
       e.stopPropagation();
-      // Built once, on the first click: the adapter runs here, not at draw time.
-      if (!panel.dataset.built) {
-        panel.innerHTML = buildTrailHtml(ROW_ADAPTERS[cardTrackerKey](entry).trail);
-        panel.dataset.built = "1";
-      }
+      // Built once, on the first click: the adapter runs here, not at draw
+      // time, and on the full entry (fillSourcesPanel waits for it).
+      fillSourcesPanel(panel, cardTrackerKey, () => ROW_ADAPTERS[cardTrackerKey](entry).trail);
       panel.style.display = panel.style.display === "none" ? "block" : "none";
     });
     // Head only; the detail is wired when it is built (ensureEntryDetail).
@@ -7103,7 +7122,7 @@ function buildEntryCard(entry, cfg, docketLabel, sourceLabel, term, useRegex, ca
   // Detail starts empty and is built on first open (ensureEntryDetail).
   div.innerHTML = (glanceHead || oldHead) + '<div class="entry-detail"></div>';
   detailArgs.set(div, {
-    entry, cfg, term, useRegex,
+    entry, cfg, term, useRegex, trackerKey: cardTrackerKey,
     html: () =>
       (glanceHead ? glanceDetailTitleHtml(entry, cfg, hl) : "") +
       buildDetailHtml(entry, cfg, term, useRegex),
@@ -7111,11 +7130,8 @@ function buildEntryCard(entry, cfg, docketLabel, sourceLabel, term, useRegex, ca
 
   const cardHead = div.querySelector(".entry-head");
   cardHead.addEventListener("click", () => {
-    div.classList.toggle("open");
-    if (div.classList.contains("open")) {
-      ensureEntryDetail(div);
-      distributeEntryCards(div);
-    }
+    if (div.classList.contains("open")) div.classList.remove("open");
+    else openEntryCard(div);
   });
   // Head only; the detail is wired when it is built (ensureEntryDetail).
   wireEntryContent(cardHead, entry, cfg, term, useRegex);
@@ -7135,9 +7151,71 @@ function wireEntryContent(container, entry, cfg, term, useRegex) {
   wireEvidenceDrawers(container, entry, cfg, term, useRegex);
 }
 
+// Lazy-load phase 3b: true once a tracker's entries in memory are full.
+// Community topics and Reporting have no slim index, so they always are.
+function entriesFullFor(trackerKey) {
+  return !FULL_ENTRY_FILES[trackerKey] || !!fullEntriesLoaded[trackerKey];
+}
+
+// Lazy-load phase 3b (decision 7.3): search needs full body text, so it waits for the
+// full entries. Returns the empty-state HTML to show instead of results, or null when
+// every tracker in `keys` is full. Pending -> spinner; settled with a failure -> reload hint.
+const SEARCH_LOADING_HTML = '<div class="empty-state search-loading">Loading full entries for search\u2026</div>';
+const SEARCH_FAILED_HTML = '<div class="empty-state">Search couldn\'t load every entry. Reload the page to try again.</div>';
+function searchWaitHtml(keys) {
+  const missing = keys.filter(k => !entriesFullFor(k));
+  if (!missing.length) return null;
+  return missing.some(k => !fullEntriesFailed[k]) ? SEARCH_LOADING_HTML : SEARCH_FAILED_HTML;
+}
+// One settle render per wait: every render while a search waits (each key
+// typed, a filter change...) shows the spinner again, but only the first
+// attaches the .then; on settle the CURRENT term and tab are rendered once.
+// Tab waits are keyed per tracker (tabSearchWaits[key] = true while that
+// tracker's wait is attached), so switching trackers mid-wait attaches the new
+// tracker's own wait instead of riding on the old one's; the global wait is a flag.
+const tabSearchWaits = {};
+let globalSearchWaitPending = false;
+
+const DETAIL_LOADING_HTML = '<div class="empty-state">Loading details\u2026</div>';
+const DETAIL_FAILED_HTML = '<div class="empty-state">Details couldn\'t be loaded. Reload the page to try again.</div>';
+
+// Fills a sources panel (row-mode "sources", Records trail) once, from
+// trailFn() run on the full entry: right away when the tracker's full entries
+// are in, else "Loading sources..." until ensureFullEntries() settles. Clicks
+// while it waits change nothing here (the caller still toggles the panel).
+// trailFn() returning null (the entry isn't there) shows the reload hint.
+const SOURCES_FAILED_HTML = '<div class="field-value">Sources couldn\'t be loaded. Reload the page to try again.</div>';
+function fillSourcesPanel(panel, trackerKey, trailFn) {
+  if (panel.dataset.built || panel.dataset.pending) return;
+  const build = () => {
+    const trail = trailFn();
+    panel.innerHTML = trail ? buildTrailHtml(trail) : SOURCES_FAILED_HTML;
+    panel.dataset.built = "1";
+  };
+  if (entriesFullFor(trackerKey)) { build(); return; }
+  panel.dataset.pending = "1";
+  panel.innerHTML = '<div class="field-value">Loading sources\u2026</div>';
+  ensureFullEntries(trackerKey).then(ok => {
+    delete panel.dataset.pending;
+    if (ok) build();
+    else panel.innerHTML = SOURCES_FAILED_HTML;
+  });
+}
+
+// Opens a card and builds (or starts loading) its detail, then deals its
+// cards into columns. Used by both head clicks, openCardById and the tour.
+function openEntryCard(card) {
+  card.classList.add("open");
+  ensureEntryDetail(card);
+  distributeEntryCards(card);
+}
+
 // Fills a card's .entry-detail the first time it is needed (open by click,
 // deep link, history, tour) and wires it. Later calls return the same node
 // untouched. Returns null for an element that isn't a lazy card.
+// Until the card's tracker has its full entries (lazy-load phase 3b) the
+// detail shows "Loading details..." and is built when they arrive, then dealt
+// into columns if the card is still open; if they fail, it says so.
 function ensureEntryDetail(el) {
   const args = detailArgs.get(el);
   if (!args) return null;
@@ -7145,7 +7223,31 @@ function ensureEntryDetail(el) {
   // holds its detail in a child .entry-detail.
   const isOneLiner = el.classList.contains("oneliner-detail");
   const detail = isOneLiner ? el : el.querySelector(".entry-detail");
-  if (!detail || el.dataset.detailBuilt === "1") return detail;
+  if (!detail || el.dataset.detailBuilt === "1" || el.dataset.detailPending === "1") return detail;
+  if (fullEntriesFailed[args.trackerKey] && !entriesFullFor(args.trackerKey)) {
+    detail.innerHTML = DETAIL_FAILED_HTML;
+    return detail;
+  }
+  if (!entriesFullFor(args.trackerKey)) {
+    el.dataset.detailPending = "1";
+    detail.innerHTML = DETAIL_LOADING_HTML;
+    ensureFullEntries(args.trackerKey).then(ok => {
+      delete el.dataset.detailPending;
+      if (!ok) { detail.innerHTML = DETAIL_FAILED_HTML; return; }
+      buildEntryDetail(el, detail, args, isOneLiner);
+      // A one-liner's detail is open while it is shown; a card while .open.
+      const stillOpen = isOneLiner ? el.style.display !== "none" : el.classList.contains("open");
+      if (stillOpen) distributeEntryCards(el);
+    });
+    return detail;
+  }
+  buildEntryDetail(el, detail, args, isOneLiner);
+  return detail;
+}
+
+// ensureEntryDetail's build, from full entries only: markup, wiring, and the
+// detailBuilt flag that makes every later call a no-op.
+function buildEntryDetail(el, detail, args, isOneLiner) {
   detail.innerHTML = args.html();
   if (isOneLiner) {
     // One-liner detail has no share/listen/update-request buttons, so it keeps
@@ -7159,7 +7261,6 @@ function ensureEntryDetail(el) {
     wireEntryContent(detail, args.entry, args.cfg, args.term, args.useRegex);
   }
   el.dataset.detailBuilt = "1";
-  return detail;
 }
 
 // Browser-only counterpart to the .share-link-btn markup above --
@@ -7259,8 +7360,19 @@ function wireListenButtons(container, entry, cfg) {
         player.toggle();
         return;
       }
-      const title = glanceActive(entry, cfg) ? entry.glance.what : entry[cfg.titleField];
-      player.start(btn.dataset.listenKey, stripProcessLabels(title || ""), buildListenScript(entry, cfg));
+      const key = cfg.trackerKey || cfg.kind;
+      const start = () => {
+        const title = glanceActive(entry, cfg) ? entry.glance.what : entry[cfg.titleField];
+        player.start(btn.dataset.listenKey, stripProcessLabels(title || ""), buildListenScript(entry, cfg));
+      };
+      // Full entries in: start inside the tap, as before. Otherwise the
+      // script is built from the full entry once ensureFullEntries settles.
+      if (entriesFullFor(key)) start();
+      else if (!btn.dataset.listenPending) {
+        // A second tap while waiting doesn't queue a second start.
+        btn.dataset.listenPending = "1";
+        ensureFullEntries(key).then(ok => { delete btn.dataset.listenPending; if (ok) start(); });
+      }
     });
   });
 }
@@ -7786,6 +7898,25 @@ function renderEntries() {
     return;
   }
 
+  // Search reads full body text: wait for this tracker's full entries (decision 7.3).
+  if (searchTerm && !entriesFullFor(activeTracker)) {
+    container.innerHTML = searchWaitHtml([activeTracker]);
+    countEl.textContent = "";
+    if (!fullEntriesFailed[activeTracker] && !tabSearchWaits[activeTracker]) {
+      const waitKey = activeTracker;
+      tabSearchWaits[waitKey] = true;
+      ensureFullEntries(waitKey).then(() => {
+        delete tabSearchWaits[waitKey];
+        // Re-render only if this tracker is still shown with a tab search
+        // (not cleared, not taken over by global search). Another tracker
+        // the reader switched to has its own wait.
+        if (!searchTerm || document.getElementById("global-search").value.trim()) return;
+        if (activeTracker === waitKey) renderDispatch();
+      });
+    }
+    return;
+  }
+
   const filtered = cfg.data.filter(e => {
     // No search: skip building the haystack. matchesTerm() would return
     // true anyway, but visibleSearchText() runs stripProcessLabels()'s
@@ -8112,13 +8243,12 @@ function openCardById(id) {
   // the deep link actually shows something.
   const group = card.closest(".official-group");
   if (group) group.classList.add("open");
-  card.classList.add("open", "deep-linked");
-  // Opening by id skips the head click, so build the detail here first.
-  ensureEntryDetail(card);
-  // Deal the cards into columns, same as the entry-head click handler does
-  // (2026-11-15: this path skipped it, so a deep-linked or Records-row-opened
+  card.classList.add("deep-linked");
+  // Opening by id skips the head click, so open it the same way: build (or
+  // start loading) the detail and deal the cards into columns (2026-11-15:
+  // this path once skipped the dealing, so a deep-linked or Records-row-opened
   // entry showed every card stacked in the first column until a resize).
-  distributeEntryCards(card);
+  openEntryCard(card);
   setTimeout(() => card.classList.remove("deep-linked"), DEEP_LINK_HIGHLIGHT_MS);
   card.scrollIntoView({ behavior: "smooth", block: "start" });
   return true;
@@ -8373,7 +8503,7 @@ function renderSearchMatches(section, matches, term, useRegex, useOneLiners) {
     // Lazy: the detail markup is built (and wired) by ensureEntryDetail the
     // first time the row is opened, not at draw time.
     detailArgs.set(detail, {
-      entry: m.entry, cfg: m.cfg, term, useRegex,
+      entry: m.entry, cfg: m.cfg, term, useRegex, trackerKey: m.cfg.trackerKey || m.cfg.kind,
       html: () =>
         glanceDetailTitleHtml(m.entry, m.cfg, (t) => highlightMatches(t || "", term, useRegex)) +
         buildDetailHtml(m.entry, m.cfg, term, useRegex),
@@ -8402,6 +8532,25 @@ function renderGlobalResults(term, useRegex, useOneLiners, useImpactSort) {
   errorEl.textContent = "";
 
   lastGlobalRender = null;
+
+  // Search reads full body text: wait for the full entries of every tracker it
+  // searches (decision 7.3) -- the visible ones; a hidden tracker isn't searched.
+  const waitKeys = visibleTrackerKeys(TRACKERS).filter(k => FULL_ENTRY_FILES[k]);
+  const waitHtml = searchWaitHtml(waitKeys);
+  if (waitHtml) {
+    container.innerHTML = waitHtml;
+    countEl.textContent = "";
+    if (waitHtml === SEARCH_LOADING_HTML && !globalSearchWaitPending) {
+      globalSearchWaitPending = true;
+      Promise.all(waitKeys.map(k => ensureFullEntries(k))).then(() => {
+        globalSearchWaitPending = false;
+        // Cleared meanwhile: that render already showed the tabs.
+        if (document.getElementById("global-search").value.trim()) renderDispatch();
+      });
+    }
+    return;
+  }
+
   let curatedMatches = [];
   let claimMatches = [];
   let hadRegexError = false;
@@ -9351,6 +9500,169 @@ function ensureReporting() {
   return reportingPromise;
 }
 
+/* Full curated entries (lazy-load phase 3b). The first render reads each
+   tracker's slim index (data/index/<file>: the same entries, in the same order,
+   holding only the fields read before a card is opened). The full entries load
+   right after, in the background, and mergeFullEntries() copies each one INTO
+   the slim object already in memory, so every closure, detailArgs record and
+   adapter call that captured an entry sees the full entry once it arrives.
+   Community topics and Reporting have no index. */
+const FULL_ENTRY_FILES = {
+  prosecution: "prosecution.json",
+  deregulation: "deregulation.json",
+  govservices: "government-services.json",
+  trumpfamily: "trumpfamily.json",
+  dai: "dai.json",
+};
+// trackerKey -> true once that tracker's full entries are in TRACKERS[key].data
+// (merged, or loaded whole at boot when its index was missing), and also when
+// its boot load failed entirely (no index, no full file): it has no entries,
+// so there is nothing to wait for, as before the index existed.
+let fullEntriesLoaded = {};
+// trackerKey -> true once its full file has failed to load after its index
+// loaded (never retried): its slim entries are on screen but never get full.
+let fullEntriesFailed = {};
+const fullEntriesPromises = {};
+// For tests: how many times a full data/<file> has been fetched.
+window.__fullFetches = 0;
+
+function fetchJsonOk(url) {
+  return fetch(url).then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); });
+}
+
+function fetchFullFile(key) {
+  window.__fullFetches++;
+  return fetchJsonOk("data/" + FULL_ENTRY_FILES[key]);
+}
+
+// Boot read for one tracker: its index, or (index missing, failed or malformed)
+// its full file, silently, as before the index existed. Resolves {raw, full};
+// rejects only if the full file fails too.
+function fetchIndexOrFull(key) {
+  return fetchJsonOk("data/index/" + FULL_ENTRY_FILES[key])
+    .then(raw => { if (!Array.isArray(raw)) throw new Error("index is not a list"); return { raw, full: false }; })
+    .catch(() => fetchFullFile(key).then(raw => ({ raw, full: true })));
+}
+
+/* Cabinet-Level's load step. Runs exactly once per object: on the parsed
+   entries at boot, and on each freshly parsed full entry before it is merged
+   (never on an object that was already classified). */
+function classifyClaEntry(e) {
+  e.offense_category_raw = e.offense_category;
+  e.offense_category = classifyOffenseCategory(e.offense_category);
+  e.status_category = classifyStatus(e.status);
+  e.concern_type = e.offense_category === "Other/Unclassified" ? classifyConcernType(e.offense_category_raw) : null;
+}
+
+// Freshly parsed entries -> the objects the site keeps (boot and merge alike).
+function prepareCuratedEntries(key, raw) {
+  if (key === "trumpfamily") return raw.map(mapTrumpFamilyEntry);
+  if (key === "dai") return raw.map(mapDaiEntry);
+  if (key === "prosecution") raw.forEach(classifyClaEntry);
+  return raw;
+}
+
+/* Merges a tracker's full file into the entries already loaded from its index.
+   Each full entry is assigned into the existing object with the same id (slim
+   fields the full entry lacks are removed first, in case the index is from an
+   older publish), or appended if the index didn't have it. Index entries the
+   full file lacks are dropped. The array ends up in full-file order.
+   Normally (index and full file from the same publish) nothing on screen
+   changes, so nothing is redrawn. If the index came from another publish --
+   entries added or removed, or a field the index copies whole differs -- the
+   views that show this tracker's rows (its tab, Records, Harms, Possible
+   Illegality) are redrawn, and every view is if a tracker's status pills
+   switched on or off; cards open before the redraw are reopened. */
+
+// The fields build_index.js copies whole into each tracker's index (keep in
+// step with projectEntry in tools/build_index.js; for Cabinet-Level, also the
+// fields classifyClaEntry derives from them), as one string per entry: equal
+// for an index entry and its full entry from the same publish.
+const INDEXED_WHOLE_FIELDS = {
+  prosecution: ["contested", "offense_category", "status", "status_category", "concern_type"],
+  deregulation: ["domain", "short_summary"],
+  govservices: ["domain"],
+  trumpfamily: ["category", "family_members"],
+  dai: ["category", "agencies"],
+};
+function indexedFieldsSignature(trackerKey, e) {
+  const ss = e.section_summaries || {};
+  return JSON.stringify([
+    e.id, e[TRACKERS[trackerKey].titleField], e.glance, e.status_stage, e.date_of_action, e.date_added,
+    e.last_verified, e.last_substantive_update,
+    e.narrative_override && e.narrative_override.headline, ss.what_changed, ss.incident_summary,
+  ].concat((INDEXED_WHOLE_FIELDS[trackerKey] || []).map(k => e[k])));
+}
+
+// Reopens, after a redraw, the cards that were open before it (by
+// data-entry-id), without the scroll or highlight of a deep link.
+function reopenEntryCards(ids) {
+  ids.forEach(id => {
+    const card = document.querySelector('#entries .entry[data-entry-id="' + CSS.escape(id) + '"]');
+    if (!card || card.classList.contains("open")) return;
+    const group = card.closest(".official-group");
+    if (group) group.classList.add("open");
+    openEntryCard(card);
+  });
+}
+
+function mergeFullEntries(trackerKey, fullRaw) {
+  const t = TRACKERS[trackerKey];
+  const existing = new Map(t.data.map(e => [e.id, e]));
+  const reused = new Set();
+  let added = 0, changed = 0;
+  t.data = prepareCuratedEntries(trackerKey, fullRaw).map(full => {
+    const slim = existing.get(full.id);
+    if (!slim || reused.has(slim)) { added++; return full; }
+    reused.add(slim);
+    if (indexedFieldsSignature(trackerKey, slim) !== indexedFieldsSignature(trackerKey, full)) changed++;
+    Object.keys(slim).forEach(k => { if (!(k in full)) delete slim[k]; });
+    return Object.assign(slim, full);
+  });
+  const removed = existing.size - reused.size;
+  fullEntriesLoaded[trackerKey] = true;
+  // Same answer as at boot unless the index came from another publish.
+  const liveBefore = Object.keys(TRACKERS).map(k => !!TRACKERS[k].statusStageLive).join();
+  refreshStatusStageFlags();
+  const liveFlipped = Object.keys(TRACKERS).map(k => !!TRACKERS[k].statusStageLive).join() !== liveBefore;
+  const showsTracker = [trackerKey, "headlines", HARMS_VIEW, ILLEGALITY_VIEW].includes(activeTracker);
+  if (liveFlipped || (added + removed + changed > 0 && showsTracker)) {
+    const openIds = [...document.querySelectorAll("#entries .entry.open[data-entry-id]")].map(c => c.dataset.entryId);
+    try {
+      renderDispatch();
+      reopenEntryCards(openIds);
+    } catch (e) { console.error("renderDispatch after merge failed:", e); }
+  }
+  return { added, removed, changed };
+}
+
+// Idempotent per tracker: one cached promise each, so no file is fetched twice.
+// With no key, waits for all five and resolves true only if all succeeded.
+// Resolves false on failure; never rejects.
+function ensureFullEntries(trackerKey) {
+  if (trackerKey === undefined) {
+    return Promise.all(Object.keys(FULL_ENTRY_FILES).map(k => ensureFullEntries(k)))
+      .then(oks => oks.every(Boolean));
+  }
+  if (!fullEntriesPromises[trackerKey]) {
+    // Waits for the boot load, which may already have read the full file
+    // (the .catch keeps a boot exception from turning into a rejection here).
+    fullEntriesPromises[trackerKey] = curatedDataPromise.catch(() => {}).then(() => {
+      if (fullEntriesLoaded[trackerKey]) return true;
+      if (fullEntriesFailed[trackerKey]) return false;
+      return fetchFullFile(trackerKey).then(raw => {
+        mergeFullEntries(trackerKey, raw);
+        return true;
+      }).catch(err => {
+        fullEntriesFailed[trackerKey] = true;
+        console.warn("Full entries failed to load:", FULL_ENTRY_FILES[trackerKey], err);
+        return false;
+      });
+    });
+  }
+  return fullEntriesPromises[trackerKey];
+}
+
 /* Loads the curated published JSON files (Reporting loads separately,
    see ensureReporting). Uses Promise.allSettled (not Promise.all) so
    that a failure on one file -- missing, malformed, not yet published
@@ -9360,55 +9672,29 @@ async function loadAllData() {
   // Chips show while the data files load (titles fill in afterwards).
   renderBrowseChips();
 
-  const [prosecutionResult, deregulationResult, govservicesResult, trumpfamilyResult, daiResult, communitytopicsResult] = await Promise.allSettled([
-    fetch("data/prosecution.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
-    fetch("data/deregulation.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
-    fetch("data/government-services.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
-    fetch("data/trumpfamily.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
-    fetch("data/dai.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
-    fetch("data/community-topics.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
+  // The five indexed trackers boot from data/index/<file> (falling back to the
+  // full file, see fetchIndexOrFull); community topics is fetched whole.
+  const curatedKeys = Object.keys(FULL_ENTRY_FILES);
+  const [communitytopicsResult, ...curatedResults] = await Promise.allSettled([
+    fetchJsonOk("data/community-topics.json"),
+    ...curatedKeys.map(fetchIndexOrFull),
   ]);
 
   const loadErrors = [];
 
-  if (prosecutionResult.status === "fulfilled") {
-    TRACKERS.prosecution.data = prosecutionResult.value;
-    TRACKERS.prosecution.data.forEach(e => {
-      e.offense_category_raw = e.offense_category;
-      e.offense_category = classifyOffenseCategory(e.offense_category);
-      e.status_category = classifyStatus(e.status);
-      e.concern_type = e.offense_category === "Other/Unclassified" ? classifyConcernType(e.offense_category_raw) : null;
-    });
-  } else {
-    loadErrors.push("prosecution.json (" + prosecutionResult.reason.message + ")");
-  }
-
-  if (deregulationResult.status === "fulfilled") {
-    TRACKERS.deregulation.data = deregulationResult.value;
-  } else {
-    loadErrors.push("deregulation.json (" + deregulationResult.reason.message + ")");
-  }
-
-  if (govservicesResult.status === "fulfilled") {
-    TRACKERS.govservices.data = govservicesResult.value;
-  } else {
-    loadErrors.push("government-services.json (" + govservicesResult.reason.message + ")");
-  }
-
-  // Trump Family: see TRACKERS.trumpfamily's comment. While hidden, a
-  // failed fetch stays silent -- a banner would reveal the tracker.
-  if (trumpfamilyResult.status === "fulfilled") {
-    TRACKERS.trumpfamily.data = trumpfamilyResult.value.map(mapTrumpFamilyEntry);
-  } else if (!TRACKERS.trumpfamily.hidden) {
-    loadErrors.push("trumpfamily.json (" + trumpfamilyResult.reason.message + ")");
-  }
-
-  // DHS and ICE: see TRACKERS.dai's comment; same hidden-aware handling.
-  if (daiResult.status === "fulfilled") {
-    TRACKERS.dai.data = daiResult.value.map(mapDaiEntry);
-  } else if (!TRACKERS.dai.hidden) {
-    loadErrors.push("dai.json (" + daiResult.reason.message + ")");
-  }
+  // Trump Family and DHS and ICE: see their TRACKERS comments. While a tracker
+  // is hidden, a failed fetch stays silent -- a banner would reveal it.
+  curatedKeys.forEach((key, i) => {
+    const result = curatedResults[i];
+    if (result.status === "fulfilled") {
+      TRACKERS[key].data = prepareCuratedEntries(key, result.value.raw);
+      if (result.value.full) fullEntriesLoaded[key] = true;
+    } else {
+      // Nothing loaded: no entries to wait on (see fullEntriesLoaded).
+      fullEntriesLoaded[key] = true;
+      if (!TRACKERS[key].hidden) loadErrors.push(FULL_ENTRY_FILES[key] + " (" + result.reason.message + ")");
+    }
+  });
 
   if (communitytopicsResult.status === "fulfilled") {
     TRACKERS.communitytopics.data = communitytopicsResult.value;
@@ -9455,11 +9741,12 @@ async function loadAllData() {
 
   if (loadErrors.length) showLoadErrors(loadErrors);
 
-  // Reporting (the large uncurated archive) is deliberately NOT part of the load above: it
-  // starts only now, after the first render, so it never delays the curated trackers.
-  // requestIdleCallback gets a 2s timeout so a permanently busy page still starts the load.
-  if (window.requestIdleCallback) window.requestIdleCallback(() => ensureReporting(), { timeout: 2000 });
-  else setTimeout(() => ensureReporting(), 0);
+  // The full curated entries, then Reporting (the large uncurated archive), are deliberately
+  // NOT part of the load above: they start only now, after the first render, so they never
+  // delay it. requestIdleCallback gets a 2s timeout so a permanently busy page still starts them.
+  const startBackgroundLoads = () => { ensureFullEntries(); ensureReporting(); };
+  if (window.requestIdleCallback) window.requestIdleCallback(startBackgroundLoads, { timeout: 2000 });
+  else setTimeout(startBackgroundLoads, 0);
 }
 
 // Kept so the front strip's "Read the entry" link can wait for the data
@@ -9582,12 +9869,7 @@ const TapDemoTour = (() => {
         const firstEntry = document.querySelector(".entry");
         if (firstEntry) {
           firstEntry.scrollIntoView({ behavior: "smooth", block: "center" });
-          if (!firstEntry.classList.contains("open")) {
-            // The head click builds the detail; ensureEntryDetail is a no-op after it.
-            const head = firstEntry.querySelector(".entry-head");
-            if (head) head.click();
-            ensureEntryDetail(firstEntry);
-          }
+          if (!firstEntry.classList.contains("open")) openEntryCard(firstEntry);
         }
       }
     },

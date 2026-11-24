@@ -109,7 +109,8 @@ def test_titles_fill_after_load(site_url, browser):
     # longer slows the boot down.
     page = browser.new_page(viewport={"width": 1280, "height": 900})
     held = []
-    page.route("**/data/deregulation.json", lambda r: held.append(r))
+    # The boot reads the slim index (data/index/<file>), so that is the file held.
+    page.route("**/data/index/deregulation.json", lambda r: held.append(r))
     page.goto(site_url + "/index.html", wait_until="domcontentloaded")
     page.wait_for_selector("#browse-chips .browse-chip", state="attached", timeout=10000)
     during = page.locator(".browse-chip[data-tracker]").evaluate_all("els => els.map(e => e.title)")

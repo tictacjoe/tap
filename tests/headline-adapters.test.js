@@ -411,3 +411,36 @@ test("Reporting and community-topic adapters do not return skim", () => {
   assert.equal("skim" in fns.adaptCommunityTopicEntry({}), false);
   assert.equal("skim" in fns.adaptReportingEntry({}), false);
 });
+
+// rowOnly (Records render cost, spec note 8.3.5): the row's own fields are
+// identical, but tier text and the sources trail are skipped.
+test("rowOnly adapters keep every row field and skip tiers and sources", () => {
+  const entry = {
+    id: "x-1", title: "T", short_summary: "Short.", what_changed: "Changed.", incident_summary: "Incident.",
+    original_rule_summary: "Before.", estimated_health_impact: { summary: "Harm." }, cause: "Cause.",
+    domain: "d", category: "c", offense_category: "o", status_stage: "Enacted",
+    date_of_action: "2026-01-01", date_added: "2026-01-15", last_verified: "2026-09-01",
+    last_substantive_update: "2026-08-01", confidence_note: "High.",
+    section_summaries: { what_changed: "Skim.", incident_summary: "Skim P." },
+    sources: [{ name: "S", url: "https://example.com/s" }],
+    evidence: [{ description: "Ev", source_url: "https://example.com/e" }],
+    family_members: ["A"], agencies: ["ICE"],
+  };
+  const adapters = {
+    deregulation: fns.adaptDeregulationEntry, govservices: fns.adaptGovServicesEntry,
+    trumpfamily: fns.adaptTrumpFamilyEntry, dai: fns.adaptDaiEntry, prosecution: fns.adaptProsecutionEntry,
+  };
+  for (const [key, adapt] of Object.entries(adapters)) {
+    const full = adapt(entry), row = adapt(entry, true);
+    for (const f of ["headline", "date", "statusStage", "category", "id", "skim", "tracker"]) {
+      assert.deepEqual(row[f], full[f], key + " " + f);
+    }
+    for (const f of ["lastVerified", "lastSubstantiveUpdate", "dateAdded"]) {
+      assert.equal(row.trail[f], full.trail[f], key + " trail." + f);
+    }
+    assert.deepEqual(row.tiers, [], key);
+    assert.equal(row.trail.sources, null, key);
+    assert.equal(row.trail.confidenceNote, null, key);
+    assert.ok(full.tiers.length === 3 && full.trail.sources.length > 0, key + " full call unchanged");
+  }
+});
