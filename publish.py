@@ -336,14 +336,39 @@ def write_site_meta(dest_file: Path, today: date, dry_run: bool = False) -> dict
     return meta
 
 
-def build_site_index(site: Path, dry_run: bool) -> None:
+# Site tracker key -> its file under data/ and data/index/ (as INDEX_FILES in
+# tools/build_index.js).
+INDEX_FILES = {
+    "prosecution": "prosecution.json",
+    "deregulation": "deregulation.json",
+    "govservices": "government-services.json",
+    "trumpfamily": "trumpfamily.json",
+    "dai": "dai.json",
+}
+
+
+def remove_index_files(site: Path, keys) -> None:
+    """Delete data/index/<file> for each tracker key, so the site loads that
+    tracker's full file instead of an index that may be stale."""
+    for key in keys:
+        dest = site / "data" / "index" / INDEX_FILES[key]
+        if dest.exists():
+            dest.unlink()
+            print(f"  removed data/index/{INDEX_FILES[key]} (the site loads data/{INDEX_FILES[key]} instead)")
+
+
+def build_site_index(site: Path, dry_run: bool) -> bool:
     """Build data/index/*.json (slim per-tracker lists) with tools/build_index.js.
     The tool also re-runs the site's own sort/filter/group/headline functions on
     every full entry and its slim copy; any difference is reported and that
-    tracker's index file is deleted (the site then loads the full file). Failure
-    is fatal (ERROR, exit 1) -- or a WARNING on a dry run, where node only
-    checks (--check) and writes nothing."""
+    tracker's index file is deleted (the site then loads the full file).
+    Returns True on success. On failure it prints ERROR (a WARNING on a dry
+    run, where node only checks (--check) and writes nothing) and, on a real
+    run, deletes the index files of the trackers that failed -- all five if
+    node is missing or the tool crashed -- so no stale index stays beside the
+    new full files. main() runs this last and exits 1 after it fails."""
     label = "WARNING" if dry_run else "ERROR"
+    failed_keys = list(INDEX_FILES)  # node missing, no script, crash: all five
     node = shutil.which("node")
     script = site / "tools" / "build_index.js"
     if node is None:
@@ -356,11 +381,18 @@ def build_site_index(site: Path, dry_run: bool) -> None:
         if res.returncode == 0:
             if res.stdout.strip():
                 print(res.stdout.rstrip())
-            return
+            return True
         msg = res.stderr.strip() or f"build_index.js exited {res.returncode}"
+        # Parity problems are reported as "<tracker key>: <id>: <check> ...";
+        # if no line names a tracker, the tool crashed: treat all as failed.
+        named = [k for k in INDEX_FILES
+                 if any(line.startswith(k + ": ") for line in res.stderr.splitlines())]
+        if named:
+            failed_keys = named
     print(f"{label}: index: {msg}")
     if not dry_run:
-        sys.exit(1)
+        remove_index_files(site, failed_keys)
+    return False
 
 
 def main():
@@ -523,12 +555,6 @@ def main():
         print(f"  WARNING: {dai_src} not found, skipping")
     print()
 
-    # --- slim per-tracker index files (lazy-load phase 3b) ---
-    # After every data file above is written; before moved-ids.
-    print("=== index ===")
-    build_site_index(site, args.dry_run)
-    print()
-
     # --- moved-ids (Phase B): old-link redirects for site and connector ---
     moved_src = working / "tracker" / "moved_ids.json"
     moved = moved_to_site_keys(json.loads(moved_src.read_text(encoding="utf-8"))) if moved_src.exists() else {}
@@ -598,7 +624,19 @@ def main():
     print(f"  {feed_items} items in feed.xml")
     print()
 
+    # --- slim per-tracker index files (lazy-load phase 3b) ---
+    # Last, after every data file is written, so a failure here (parity, node
+    # missing, crash) never leaves the rest of the site half-published: the
+    # failed trackers' index files are removed (the site loads their full
+    # files) and the run exits 1 only now.
+    print("=== index ===")
+    index_ok = build_site_index(site, args.dry_run)
+    print()
+
     print("---")
+    if not index_ok and not args.dry_run:
+        print("ERROR: index: everything else was published; fix the index problem above and publish again.")
+        sys.exit(1)
     if args.dry_run:
         print("DRY RUN — no files were written. Re-run without --dry-run to publish.")
     else:

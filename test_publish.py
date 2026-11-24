@@ -663,3 +663,49 @@ def test_index_failure_is_a_warning_on_dry_run(tmp_path):
     r = _run_publish(w, s, "--dry-run")
     assert r.returncode == 0, r.stdout + r.stderr
     assert "WARNING: index: build script not found" in r.stdout
+
+
+def test_index_node_missing_still_publishes_everything_else(tmp_path, monkeypatch, capsys):
+    """I3: a failed index step must not leave a half-published site. Without
+    node the run still writes every other output, removes the (now stale)
+    index files so the site loads the full files, and exits 1 at the end."""
+    import publish
+    w, s = _index_tree(tmp_path)
+    (s / "data" / "index").mkdir()
+    for name in _INDEX_FILES:  # an older publish's index files
+        (s / "data" / "index" / name).write_text("[]\n")
+    real_which = publish.shutil.which
+    monkeypatch.setattr(publish.shutil, "which", lambda c, *a, **kw: None if c == "node" else real_which(c, *a, **kw))
+    monkeypatch.setattr(sys, "argv", ["publish.py", "--working", str(w), "--site", str(s)])
+    with pytest.raises(SystemExit) as exc:
+        publish.main()
+    assert exc.value.code == 1
+    out = capsys.readouterr().out
+    assert "ERROR: index:" in out
+    for name in ["moved-ids.json", "illegality.json", "site_meta.json", "front-strip.json"] + _INDEX_FILES:
+        assert (s / "data" / name).exists(), name
+    assert (s / "feed.xml").exists()
+    assert list((s / "data" / "index").glob("*.json")) == []
+
+
+def test_index_parity_failure_removes_that_trackers_index(tmp_path, monkeypatch, capsys):
+    """I3: on a parity failure the named tracker's index is removed (the tool
+    does it; publish makes sure) and the other trackers' index files stay."""
+    import publish
+    w, s = _index_tree(tmp_path)
+    real_run = subprocess.run
+
+    def fake_run(cmd, *a, **kw):
+        res = real_run(cmd, *a, **kw)
+        if any(str(c).endswith("build_index.js") for c in cmd):
+            return subprocess.CompletedProcess(cmd, 1, stdout=res.stdout, stderr="govservices: gsr-1: filter differs")
+        return res
+
+    monkeypatch.setattr(publish.subprocess, "run", fake_run)
+    monkeypatch.setattr(sys, "argv", ["publish.py", "--working", str(w), "--site", str(s)])
+    with pytest.raises(SystemExit) as exc:
+        publish.main()
+    assert exc.value.code == 1
+    assert (s / "feed.xml").exists() and (s / "data" / "site_meta.json").exists()
+    left = sorted(p.name for p in (s / "data" / "index").glob("*.json"))
+    assert left == sorted(n for n in _INDEX_FILES if n != "government-services.json")
