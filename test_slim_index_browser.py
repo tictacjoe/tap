@@ -421,3 +421,44 @@ def test_global_search_works_when_one_tracker_failed_at_boot(page, site_url):
     page.wait_for_function("lastGlobalRender && lastGlobalRender.curatedN > 0", timeout=60000)
     assert "Search couldn't load every entry" not in page.inner_text("#entries")
     assert page.locator("#entries .search-loading").count() == 0
+
+
+_COUNT_RENDERS = """() => {
+    window.__re = 0; window.__rg = 0;
+    const realE = window.renderEntries;
+    window.renderEntries = function (...a) { window.__re++; return realE.apply(this, a); };
+    const realG = window.renderGlobalResults;
+    window.renderGlobalResults = function (...a) { window.__rg++; return realG.apply(this, a); };
+}"""
+
+
+def test_tab_search_settles_with_one_render(page, site_url):
+    """I4: renders while the tab search waits attach no extra settle renders."""
+    release = delayed_full(page)
+    _boot(page, site_url)
+    page.evaluate("selectDatabaseTab('prosecution')")
+    page.wait_for_selector("#entries .entry")
+    page.type("#search", "heal", delay=20)
+    page.wait_for_selector("#entries .search-loading")
+    page.select_option("#filter", index=1)
+    page.evaluate("renderEntries(); renderEntries()")
+    page.evaluate(_COUNT_RENDERS)
+    release()
+    page.wait_for_function("fullEntriesLoaded.prosecution === true", timeout=60000)
+    page.wait_for_function("document.querySelector('#entries .search-loading') === null", timeout=10000)
+    page.wait_for_timeout(300)
+    assert page.evaluate("window.__re") == 1
+
+
+def test_global_search_settles_with_one_render(page, site_url):
+    """I4: renders while global search waits attach no extra settle renders."""
+    release = delayed_full(page)
+    _boot(page, site_url)
+    page.type("#global-search", "heal", delay=20)
+    page.wait_for_selector("#entries .search-loading")
+    page.evaluate("renderDispatch(); renderDispatch()")
+    page.evaluate(_COUNT_RENDERS)
+    release()
+    page.wait_for_function("lastGlobalRender !== null", timeout=60000)
+    page.wait_for_timeout(300)
+    assert page.evaluate("window.__rg") == 1

@@ -7166,6 +7166,12 @@ function searchWaitHtml(keys) {
   if (!missing.length) return null;
   return missing.some(k => !fullEntriesFailed[k]) ? SEARCH_LOADING_HTML : SEARCH_FAILED_HTML;
 }
+// One settle render per wait: every render while a search waits (each key
+// typed, a filter change...) shows the spinner again, but only the first
+// attaches the .then; on settle the CURRENT term and tab are rendered once.
+// The tab wait holds the tracker key it waits on; the global wait is a flag.
+let tabSearchWaitKey = null;
+let globalSearchWaitPending = false;
 
 const DETAIL_LOADING_HTML = '<div class="empty-state">Loading details\u2026</div>';
 const DETAIL_FAILED_HTML = '<div class="empty-state">Details couldn\'t be loaded. Reload the page to try again.</div>';
@@ -7890,10 +7896,15 @@ function renderEntries() {
   if (searchTerm && !entriesFullFor(activeTracker)) {
     container.innerHTML = searchWaitHtml([activeTracker]);
     countEl.textContent = "";
-    if (!fullEntriesFailed[activeTracker]) {
-      const waitKey = activeTracker, waitTerm = searchTerm;
+    if (!fullEntriesFailed[activeTracker] && !tabSearchWaitKey) {
+      const waitKey = tabSearchWaitKey = activeTracker;
       ensureFullEntries(waitKey).then(() => {
-        if (activeTracker === waitKey && searchTerm === waitTerm) renderDispatch();
+        tabSearchWaitKey = null;
+        // Still a tab search (not cleared, not taken over by global search)
+        // on the tracker waited for -- or on another tracker still waiting,
+        // whose render attached no wait of its own while this one was pending.
+        if (!searchTerm || document.getElementById("global-search").value.trim()) return;
+        if (activeTracker === waitKey || (FULL_ENTRY_FILES[activeTracker] && !entriesFullFor(activeTracker))) renderDispatch();
       });
     }
     return;
@@ -8522,9 +8533,12 @@ function renderGlobalResults(term, useRegex, useOneLiners, useImpactSort) {
   if (waitHtml) {
     container.innerHTML = waitHtml;
     countEl.textContent = "";
-    if (waitHtml === SEARCH_LOADING_HTML) {
+    if (waitHtml === SEARCH_LOADING_HTML && !globalSearchWaitPending) {
+      globalSearchWaitPending = true;
       Promise.all(waitKeys.map(k => ensureFullEntries(k))).then(() => {
-        if (document.getElementById("global-search").value.trim() === term) renderDispatch();
+        globalSearchWaitPending = false;
+        // Cleared meanwhile: that render already showed the tabs.
+        if (document.getElementById("global-search").value.trim()) renderDispatch();
       });
     }
     return;
