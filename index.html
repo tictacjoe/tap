@@ -7136,6 +7136,17 @@ function entriesFullFor(trackerKey) {
   return !FULL_ENTRY_FILES[trackerKey] || !!fullEntriesLoaded[trackerKey];
 }
 
+// Lazy-load phase 3b (decision 7.3): search needs full body text, so it waits for the
+// full entries. Returns the empty-state HTML to show instead of results, or null when
+// every tracker in `keys` is full. Pending -> spinner; settled with a failure -> reload hint.
+const SEARCH_LOADING_HTML = '<div class="empty-state search-loading">Loading full entries for search\u2026</div>';
+const SEARCH_FAILED_HTML = '<div class="empty-state">Search couldn\'t load every entry. Reload the page to try again.</div>';
+function searchWaitHtml(keys) {
+  const missing = keys.filter(k => !entriesFullFor(k));
+  if (!missing.length) return null;
+  return missing.some(k => !fullEntriesFailed[k]) ? SEARCH_LOADING_HTML : SEARCH_FAILED_HTML;
+}
+
 const DETAIL_LOADING_HTML = '<div class="empty-state">Loading details\u2026</div>';
 const DETAIL_FAILED_HTML = '<div class="empty-state">Details couldn\'t be loaded. Reload the page to try again.</div>';
 
@@ -7855,6 +7866,19 @@ function renderEntries() {
     return;
   }
 
+  // Search reads full body text: wait for this tracker's full entries (decision 7.3).
+  if (searchTerm && !entriesFullFor(activeTracker)) {
+    container.innerHTML = searchWaitHtml([activeTracker]);
+    countEl.textContent = "";
+    if (!fullEntriesFailed[activeTracker]) {
+      const waitKey = activeTracker, waitTerm = searchTerm;
+      ensureFullEntries(waitKey).then(() => {
+        if (activeTracker === waitKey && searchTerm === waitTerm) renderDispatch();
+      });
+    }
+    return;
+  }
+
   const filtered = cfg.data.filter(e => {
     // No search: skip building the haystack. matchesTerm() would return
     // true anyway, but visibleSearchText() runs stripProcessLabels()'s
@@ -8470,6 +8494,20 @@ function renderGlobalResults(term, useRegex, useOneLiners, useImpactSort) {
   errorEl.textContent = "";
 
   lastGlobalRender = null;
+
+  // Search reads full body text: wait for every tracker's full entries (decision 7.3).
+  const waitHtml = searchWaitHtml(Object.keys(FULL_ENTRY_FILES));
+  if (waitHtml) {
+    container.innerHTML = waitHtml;
+    countEl.textContent = "";
+    if (waitHtml === SEARCH_LOADING_HTML) {
+      ensureFullEntries().then(() => {
+        if (document.getElementById("global-search").value.trim() === term) renderDispatch();
+      });
+    }
+    return;
+  }
+
   let curatedMatches = [];
   let claimMatches = [];
   let hadRegexError = false;

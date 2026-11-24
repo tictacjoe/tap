@@ -266,3 +266,78 @@ def test_full_load_failure_message(page, site_url):
     page.wait_for_function(
         "(t) => document.querySelector('#entries .entry .entry-detail').innerText.trim() === t",
         arg=LOAD_FAILED, timeout=60000)
+
+
+# ---- Task 4: search waits for the full entries (decision 7.3) ----
+
+SEARCH_LOADING = "Loading full entries for search…"
+
+
+def _body_only_word(file, field="what_changed"):
+    """(entry id, word): a word found in `field` of one entry and nowhere else
+    in the whole file's JSON, so only a search over full bodies can match it."""
+    import re
+    entries = json.loads((SITE_DIR / "data" / file).read_text())
+    blob = json.dumps(entries).lower()
+    for e in entries:
+        for w in re.findall(r"[a-z]{9,}", (e.get(field) or "").lower()):
+            if blob.count(w) == 1:
+                return e["id"], w
+    pytest.skip("no body-only word in " + file)
+
+
+def test_global_search_waits_for_full_entries(page, site_url):
+    eid, word = _body_only_word("deregulation.json")
+    release = delayed_full(page)
+    _boot(page, site_url)
+    page.fill("#global-search", word)
+    page.wait_for_selector("#entries .search-loading")
+    assert page.inner_text("#entries .search-loading").strip() == SEARCH_LOADING
+    # The slim index can't match a body-only word, and no "no results" flash.
+    assert page.locator("#entries .entry").count() == 0
+    release()
+    page.wait_for_selector(f'#entries .entry[data-entry-id="{eid}"]', timeout=60000)
+    assert page.locator("#entries .search-loading").count() == 0
+
+
+def test_global_search_matches_full_page(page, browser, site_url):
+    _, word = _body_only_word("deregulation.json")
+    release = delayed_full(page)
+    _boot(page, site_url)
+    page.fill("#global-search", word)
+    page.wait_for_selector("#entries .search-loading")
+    release()
+    page.wait_for_function("document.querySelector('#entries .search-loading') === null", timeout=60000)
+    page.wait_for_function("lastGlobalRender && lastGlobalRender.curatedN > 0", timeout=60000)
+    delayed_n = page.evaluate("lastGlobalRender.curatedN")
+
+    ref = browser.new_context().new_page()
+    ref.goto(site_url + "/index.html", wait_until="networkidle")
+    ref.wait_for_function("fullEntriesLoaded.dai === true && fullEntriesLoaded.prosecution === true", timeout=60000)
+    ref.fill("#global-search", word)
+    ref.wait_for_function("lastGlobalRender && lastGlobalRender.curatedN > 0", timeout=60000)
+    assert ref.evaluate("lastGlobalRender.curatedN") == delayed_n
+    ref.context.close()
+
+
+def test_tab_search_waits(page, site_url):
+    eid, word = _body_only_word("prosecution.json", "incident_summary")
+    release = delayed_full(page)
+    _boot(page, site_url)
+    page.evaluate("selectDatabaseTab('prosecution')")
+    page.wait_for_selector("#entries .entry")
+    page.fill("#search", word)
+    page.wait_for_selector("#entries .search-loading")
+    assert page.inner_text("#entries .search-loading").strip() == SEARCH_LOADING
+    release()
+    page.wait_for_selector(f'#entries .entry[data-entry-id="{eid}"]', timeout=60000)
+    assert page.locator("#entries .search-loading").count() == 0
+
+
+def test_search_waits_then_failure_message(page, site_url):
+    page.route("**/data/government-services.json", lambda route: route.fulfill(status=500, body="boom"))
+    _boot(page, site_url)
+    page.fill("#global-search", "health")
+    page.wait_for_function(
+        "document.querySelector('#entries .empty-state') && document.querySelector('#entries .empty-state').innerText.includes(\"Search couldn't load every entry\")",
+        timeout=60000)
