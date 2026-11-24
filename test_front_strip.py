@@ -1,5 +1,6 @@
 """Tests for front_strip.py -- data for the front-page findings strip
-(spec: tap-data docs/superpowers/specs/2026-11-23-front-strip-design.md)."""
+(spec: tap-data docs/superpowers/specs/2026-11-23-front-strip-design.md).
+The featured cards and their rotation were removed 2026-11-24."""
 
 import json
 from datetime import date
@@ -40,127 +41,52 @@ def test_stats_count_curated_trackers_and_tier1(tmp_path):
     _write(tmp_path, "community-topics.json", [{"id": "c", "topic": "T"}])
     _write(tmp_path, "illegality.json", {"entries": {"a": {}, "b": {}}})
     _write(tmp_path, "tracker.json", [{"t": 1}, {"t": 2}, {"t": 3}])
-    strip = build_front_strip(tmp_path, set(), TODAY, None)
+    strip = build_front_strip(tmp_path, set(), TODAY)
     assert strip["stats"] == {"entries": 3, "life_health": 1, "illegality": 2, "reporting": 3}
     # hidden Reporting counts as zero
-    assert build_front_strip(tmp_path, {"tracker"}, TODAY, None)["stats"]["reporting"] == 0
+    assert build_front_strip(tmp_path, {"tracker"}, TODAY)["stats"]["reporting"] == 0
     assert strip["as_of"] == "2026-11-23"
 
 
 def test_tier_override_counts_and_hidden_excluded(tmp_path):
     _write(tmp_path, "government-services.json", [_harm_entry("liv", kind="livelihood", tier=1)])
     _write(tmp_path, "dai.json", [_harm_entry("hid")])
-    strip = build_front_strip(tmp_path, {"dai"}, TODAY, None)
+    strip = build_front_strip(tmp_path, {"dai"}, TODAY)
     assert strip["stats"]["entries"] == 1
     assert strip["stats"]["life_health"] == 1
-    assert strip["featured"]["id"] == "liv"
 
 
-def test_ranking_prefers_documented_then_newest(tmp_path):
-    _write(tmp_path, "government-services.json", [
-        _harm_entry("alleged-newest", certainty="alleged", updated="2026-11-20"),
-        _harm_entry("doc-old", updated="2026-10-01"),
-        _harm_entry("doc-new", updated="2026-11-10"),
-    ])
-    f = build_front_strip(tmp_path, set(), TODAY, None)["featured"]
-    assert f["id"] == "doc-new"
-    assert f["tracker"] == "govservices"
-    assert f["label"] == "Government Service Redirection"
-    assert f["what"] == "What doc-new"
-    assert f["who"] == "Some people"
-    assert f["status"] == "Court ruled"
-    assert f["pull_quote"] == "A quote."
-    assert f["certainty"] == "documented"
-    assert f["since"] == "2026-11-23"
-
-
-def _prev(entry_id, since, history=None):
-    return {"featured": {"tracker": "govservices", "id": entry_id, "since": since},
-            "history": history if history is not None else [
-                {"tracker": "govservices", "id": entry_id, "since": since}]}
-
-
-def test_hold_keeps_pick_for_three_days(tmp_path):
-    _write(tmp_path, "government-services.json", [
-        _harm_entry("top", updated="2026-11-20"), _harm_entry("x", updated="2026-01-01")])
-    prev = _prev("x", "2026-11-21")
-    kept = build_front_strip(tmp_path, set(), date(2026, 11, 23), prev)
-    assert kept["featured"]["id"] == "x"
-    assert kept["featured"]["since"] == "2026-11-21"
-    assert len(kept["history"]) == 1  # a kept pick isn't re-added
-    changed = build_front_strip(tmp_path, set(), date(2026, 11, 24), prev)
-    assert changed["featured"]["id"] == "top"
-
-
-def test_no_repeat_within_14_days_then_fallback(tmp_path):
-    _write(tmp_path, "government-services.json", [
-        _harm_entry("first", updated="2026-11-20"), _harm_entry("second", updated="2026-11-10")])
-    prev = {"featured": {"tracker": "govservices", "id": "first", "since": "2026-11-15"},
-            "history": [{"tracker": "govservices", "id": "first", "since": "2026-11-15"}]}
-    assert build_front_strip(tmp_path, set(), date(2026, 11, 24), prev)["featured"]["id"] == "second"
-    # both featured recently -> fall back to the top-ranked one
-    prev["history"].append({"tracker": "govservices", "id": "second", "since": "2026-11-12"})
-    prev["featured"] = {"tracker": "govservices", "id": "second", "since": "2026-11-12"}
-    assert build_front_strip(tmp_path, set(), date(2026, 11, 24), prev)["featured"]["id"] == "first"
-
-
-def test_pick_replaced_when_it_leaves_pool(tmp_path):
-    _write(tmp_path, "government-services.json", [_harm_entry("other")])
-    prev = _prev("gone", "2026-11-22")
-    assert build_front_strip(tmp_path, set(), TODAY, prev)["featured"]["id"] == "other"
-
-
-def test_same_id_in_another_tracker_is_not_the_held_pick(tmp_path):
-    _write(tmp_path, "dai.json", [_harm_entry("x")])
-    _write(tmp_path, "government-services.json", [_harm_entry("y", updated="2026-01-01")])
-    prev = _prev("x", "2026-11-22")  # held pick was govservices/x, which no longer exists
-    f = build_front_strip(tmp_path, set(), TODAY, prev)["featured"]
-    assert (f["tracker"], f["id"]) == ("dai", "x")
-    assert f["since"] == "2026-11-23"
-
-
-def test_empty_pool_gives_null_featured(tmp_path):
-    _write(tmp_path, "deregulation.json", [_harm_entry("a", quote=None)])
-    strip = build_front_strip(tmp_path, set(), TODAY, None)
-    assert strip["featured"] is None
-    assert strip["stats"]["life_health"] == 1
-
-
-def test_history_capped_and_newest_first(tmp_path):
-    _write(tmp_path, "government-services.json", [_harm_entry("new")])
-    history = [{"tracker": "govservices", "id": f"old{n}", "since": "2026-01-01"} for n in range(30)]
-    prev = {"featured": {"tracker": "govservices", "id": "old0", "since": "2026-01-01"}, "history": history}
-    strip = build_front_strip(tmp_path, set(), TODAY, prev)
-    assert len(strip["history"]) == 30
-    assert strip["history"][0] == {"tracker": "govservices", "id": "new", "since": "2026-11-23"}
+def test_output_is_stats_only(tmp_path):
+    # Featured cards removed 2026-11-24: no featured/history keys any more.
+    _write(tmp_path, "deregulation.json", [_harm_entry("a")])
+    _write(tmp_path, "illegality.json", {"entries": {"a": [{"law": "apa"}]}})
+    assert set(build_front_strip(tmp_path, set(), TODAY)) == {"as_of", "stats"}
 
 
 def test_write_front_strip_dry_run_and_bad_previous(tmp_path):
     _write(tmp_path, "deregulation.json", [_harm_entry("a")])
     (tmp_path / "data" / "front-strip.json").write_text("{not json")
     strip = write_front_strip(tmp_path, set(), TODAY, dry_run=True)
-    assert strip["featured"]["id"] == "a"
+    assert strip["stats"]["life_health"] == 1
     assert (tmp_path / "data" / "front-strip.json").read_text() == "{not json"
     write_front_strip(tmp_path, set(), TODAY)
     written = json.loads((tmp_path / "data" / "front-strip.json").read_text())
-    assert written["featured"]["id"] == "a"
+    assert written == strip
 
 
-def test_averted_excluded_from_count_and_pool(tmp_path):
+def test_averted_excluded_from_count(tmp_path):
     # Review I1: averted harms never happened -- the #harms view keeps them
-    # out of its headline number, so the strip does too, and never features one.
+    # out of its headline number, so the strip does too.
     _write(tmp_path, "government-services.json", [
         _harm_entry("averted-top", certainty="averted", updated="2026-11-22"),
         _harm_entry("real", updated="2026-01-01"),
     ])
-    strip = build_front_strip(tmp_path, set(), TODAY, None)
-    assert strip["stats"]["life_health"] == 1
-    assert strip["featured"]["id"] == "real"
+    assert build_front_strip(tmp_path, set(), TODAY)["stats"]["life_health"] == 1
 
 
 def test_invalid_glance_not_counted(tmp_path):
     # Review I2: same validity rule as isValidGlance() in index.html, so the
-    # strip can't count (or feature) an entry the #harms view drops.
+    # strip can't count an entry the #harms view drops.
     bad = [
         _harm_entry("long-what"),
         _harm_entry("bad-cert", certainty="likely"),
@@ -172,58 +98,5 @@ def test_invalid_glance_not_counted(tmp_path):
     bad[0]["glance"]["what"] = "w" * 111
     bad[3]["glance"].pop("who", None)
     _write(tmp_path, "dai.json", bad)
-    strip = build_front_strip(tmp_path, set(), TODAY, None)
+    strip = build_front_strip(tmp_path, set(), TODAY)
     assert strip["stats"]["life_health"] == 0
-    assert strip["featured"] is None
-
-
-def _ill(entries, laws=None):
-    return {"version": 1, "laws": laws or {"apa": {"name": "Administrative Procedure Act",
-                                                    "cite": "5 U.S.C. 551-706", "label": "civil"}},
-            "entries": entries, "progress": {}}
-
-
-def test_illegality_feature_picks_newest_and_shows_first_law(tmp_path):
-    _write(tmp_path, "deregulation.json", [
-        _harm_entry("old", kind="money", updated="2026-01-01"),
-        _harm_entry("new", kind="money", updated="2026-11-20"),
-        _harm_entry("no-record", kind="money", updated="2026-11-22"),
-    ])
-    rec = {"law": "apa", "who": "EPA", "why": "A judge said so."}
-    _write(tmp_path, "illegality.json", _ill({"old": [rec], "new": [rec, {"law": "x"}], "ghost": [rec]}))
-    strip = build_front_strip(tmp_path, set(), TODAY, None)
-    g = strip["featured_illegality"]
-    assert g == {"tracker": "deregulation", "id": "new", "label": "Corporate Deregulation",
-                 "what": "What new", "status": "Court ruled", "law": "Administrative Procedure Act",
-                 "cite": "5 U.S.C. 551-706", "law_label": "civil", "who": "EPA",
-                 "why": "A judge said so.", "more_laws": 1, "since": "2026-11-23"}
-    assert strip["history_illegality"] == [{"tracker": "deregulation", "id": "new", "since": "2026-11-23"}]
-
-
-def test_illegality_feature_never_matches_harm_feature(tmp_path):
-    _write(tmp_path, "dai.json", [_harm_entry("both", updated="2026-11-20"),
-                                  _harm_entry("other", kind="money", updated="2026-01-01")])
-    rec = {"law": "apa", "who": "ICE", "why": "Why."}
-    _write(tmp_path, "illegality.json", _ill({"both": [rec], "other": [rec]}))
-    strip = build_front_strip(tmp_path, set(), TODAY, None)
-    assert strip["featured"]["id"] == "both"
-    assert strip["featured_illegality"]["id"] == "other"
-
-
-def test_illegality_feature_holds_and_skips_user_topics(tmp_path):
-    _write(tmp_path, "deregulation.json", [_harm_entry("a", kind="money", updated="2026-11-20"),
-                                           _harm_entry("b", kind="money", updated="2026-01-01")])
-    _write(tmp_path, "community-topics.json", [_harm_entry("ct", kind="money", updated="2026-11-22")])
-    rec = {"law": "apa"}
-    _write(tmp_path, "illegality.json", _ill({"a": [rec], "b": [rec], "ct": [rec]}))
-    prev = {"featured_illegality": {"tracker": "deregulation", "id": "b", "since": "2026-11-22"},
-            "history_illegality": [{"tracker": "deregulation", "id": "b", "since": "2026-11-22"}]}
-    assert build_front_strip(tmp_path, set(), TODAY, prev)["featured_illegality"]["id"] == "b"
-    assert build_front_strip(tmp_path, set(), TODAY, None)["featured_illegality"]["id"] == "a"
-
-
-def test_no_illegality_data_gives_null_feature(tmp_path):
-    _write(tmp_path, "deregulation.json", [_harm_entry("a")])
-    strip = build_front_strip(tmp_path, set(), TODAY, None)
-    assert strip["featured_illegality"] is None
-    assert strip["history_illegality"] == []

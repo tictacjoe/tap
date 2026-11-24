@@ -25,22 +25,14 @@ const { buildFrontStripHtml } = (0, eval)(`${combined}\n({ buildFrontStripHtml }
 
 const color = key => `var(--trk-${key})`;
 
-const ILL = {
-  tracker: "deregulation", id: "epa-x", label: "Corporate Deregulation",
-  what: "Rolled back <rule>", status: "In court", law: "Clean Air Act", cite: "42 U.S.C. 7401",
-  law_label: "civil", who: "EPA", why: "A judge found it likely unlawful.", more_laws: 2, since: "2026-11-23",
-};
-
-function strip(featured, featuredIll) {
+// Old-format data (featured cards, removed 2026-11-24) must still render
+// only the numbers, so a stale cached front-strip.json is harmless.
+function strip() {
   return {
     as_of: "2026-11-23",
     stats: { entries: 1234, life_health: 118, illegality: 274, reporting: 615 },
-    featured_illegality: featuredIll === undefined ? ILL : featuredIll,
-    featured: featured === undefined ? {
-      tracker: "govservices", id: "niosh-cuts", label: "Government Service Redirection",
-      what: 'Cut <b>aid</b> & "more"', who: "9/11 responders", status: "Court ruled",
-      pull_quote: "Specimens were left.", certainty: "documented", since: "2026-11-23",
-    } : featured,
+    featured: { tracker: "govservices", id: "niosh-cuts", label: "Government Service Redirection", what: "Cut aid" },
+    featured_illegality: { tracker: "deregulation", id: "epa-x", what: "Rolled back a rule", law: "Clean Air Act" },
     history: [],
   };
 }

@@ -6123,8 +6123,8 @@ function buildHarmsListHtml(trackers, abbr, names) {
    docs/superpowers/specs/2026-11-23-front-strip-design.md). Turns
    data/front-strip.json (written by front_strip.py at publish time) into
    the ledger row of four numbers. The two featured cards (life/health
-   harm, possible illegality) were removed 2026-11-24 (Joe); front_strip.py
-   still writes their data, which the page ignores.
+   harm, possible illegality) were removed 2026-11-24 (Joe), here and in
+   front_strip.py; an older file's featured keys are simply ignored.
    All four numbers link to their views via data-goto ("all", "harms",
    "illegality", "reporting"), wired in wireFrontStrip().
    Pure (no DOM) so tests/front-strip.test.js can run it; loadFrontStrip()

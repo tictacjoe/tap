@@ -614,18 +614,12 @@ def main():
     print()
 
     # --- front strip (data/front-strip.json) ---
-    # The four numbers + featured life/health harm and possible-illegality
-    # cards above the search box.
-    # Reads the data/*.json written above and the previous front-strip.json
-    # (for the featured-entry rotation); see front_strip.py.
+    # The four numbers above the search box. Reads the data/*.json
+    # written above; see front_strip.py.
     print("=== front strip ===")
     strip = front_strip.write_front_strip(site, hidden_trackers.site_hidden_trackers(site / "index.html"),
                                           date.today(), dry_run=args.dry_run)
-    fs_pick = strip["featured"]
     print(f"  {strip['stats']}")
-    print(f"  featured: {fs_pick['tracker'] + '/' + fs_pick['id'] if fs_pick else 'none'}")
-    fs_ill = strip["featured_illegality"]
-    print(f"  featured illegality: {fs_ill['tracker'] + '/' + fs_ill['id'] if fs_ill else 'none'}")
     print()
 
     # --- RSS feed (feed.xml at the site root) ---

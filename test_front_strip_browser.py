@@ -3,8 +3,8 @@ docs/superpowers/specs/2026-11-23-front-strip-design.md): placement above
 the search box, graceful failure when data/front-strip.json is missing or
 broken, phone layout, and the number links.
 
-The fixture still carries featured data (front_strip.py writes it); the
-page has ignored it since the cards were removed 2026-11-24. Server/browser fixtures copied from
+The two featured cards were removed 2026-11-24 (page and front_strip.py).
+Server/browser fixtures copied from
 test_illegality_browser.py; skips without Playwright/Chromium.
 """
 
@@ -21,32 +21,9 @@ sync_api = pytest.importorskip("playwright.sync_api")
 SITE_DIR = pathlib.Path(__file__).parent
 
 
-def _real_featured():
-    for e in json.loads((SITE_DIR / "data" / "dai.json").read_text(encoding="utf-8")):
-        harm = (e.get("glance") or {}).get("harm") or {}
-        if harm.get("kind") == "physical" and e.get("pull_quote") and harm.get("who"):
-            return e
-    raise AssertionError("no tier-1 DAI entry with a pull quote")
-
-
-REAL = _real_featured()
 STRIP = {
     "as_of": "2026-11-23",
     "stats": {"entries": 1953, "life_health": 7, "illegality": 6, "reporting": 5},
-    "featured": {
-        "tracker": "dai", "id": REAL["id"], "label": "DHS and ICE",
-        "what": REAL["glance"]["what"], "who": REAL["glance"]["harm"]["who"],
-        "status": REAL.get("status_stage", ""), "pull_quote": REAL["pull_quote"],
-        "certainty": "documented", "since": "2026-11-23",
-    },
-    "history": [],
-    "featured_illegality": {
-        "tracker": "dai", "id": REAL["id"], "label": "DHS and ICE",
-        "what": REAL["glance"]["what"], "status": "", "law": "Due process",
-        "cite": "U.S. Const. amend. V", "law_label": "civil", "who": "ICE",
-        "why": "A judge ruled.", "more_laws": 0, "since": "2026-11-23",
-    },
-    "history_illegality": [],
 }
 PHONE = {"width": 390, "height": 844}
 
