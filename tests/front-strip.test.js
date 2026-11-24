@@ -62,6 +62,9 @@ test("entry link carries tracker and id", () => {
   assert.match(html, /<a [^>]*class="fs-entry-link"[^>]*data-tracker="govservices"[^>]*data-id="niosh-cuts"/);
   assert.match(html, /class="fs-harms-link"/);
   assert.match(html, /<button [^>]*class="fs-toggle"[^>]*aria-expanded="false"/);
+  assert.match(html, /<button [^>]*aria-controls="fs-card"/);
+  assert.match(html, /<div class="fs-card" id="fs-card"/);
+  assert.doesNotMatch(html, /<h2/);
 });
 
 test("null featured omits card and toggle", () => {

@@ -6187,14 +6187,14 @@ function buildFrontStripHtml(strip, colorFor) {
   if (f) {
     const color = escapeHtml(colorFor(f.tracker));
     // Phone only (CSS): one tappable line standing in for the card.
-    html += '<button type="button" class="fs-toggle" aria-expanded="false" style="border-left-color:' + color + '">' +
+    html += '<button type="button" class="fs-toggle" aria-expanded="false" aria-controls="fs-card" style="border-left-color:' + color + '">' +
       '<span class="fs-toggle-k">Featured</span><span class="fs-toggle-t">' + escapeHtml(f.what) + '</span>' +
       '<span class="fs-toggle-chev" aria-hidden="true">▾</span></button>';
-    html += '<div class="fs-card" style="border-left-color:' + color + '">' +
+    html += '<div class="fs-card" id="fs-card" style="border-left-color:' + color + '">' +
       '<div class="fs-meta"><span class="fs-kicker"><span class="fs-dot" style="background:' + color + '"></span>' +
       'Featured · ' + escapeHtml(f.label) + '</span>' +
       (f.status ? '<span class="fs-pill">' + escapeHtml(f.status) + '</span>' : '') + '</div>' +
-      '<h2 class="fs-what">' + escapeHtml(f.what) + '</h2>' +
+      '<p class="fs-what">' + escapeHtml(f.what) + '</p>' +
       '<div class="fs-who">Harmed: ' + escapeHtml(f.who) + '</div>' +
       (f.pull_quote ? '<blockquote class="fs-quote">' + escapeHtml(f.pull_quote) + '</blockquote>' : '') +
       '<div class="fs-links">' +
