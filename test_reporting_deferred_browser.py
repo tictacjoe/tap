@@ -209,6 +209,7 @@ def test_global_search_before_reporting_fills_in_on_arrival(browser, site_url):
     """Searching while Reporting is held shows curated hits plus a 'still loading' note;
     when Reporting arrives the same term is re-searched and the note is replaced."""
     page, held, _ = _open_held(browser, site_url)
+    page.evaluate("ensureFullEntries()")  # search waits for the full curated entries (phase 3b)
     page.fill("#global-search", "EPA")
     assert "Reporting still loading…" in page.locator("#count").inner_text()
     assert page.locator("#entries .entry").count() > 0
@@ -224,6 +225,7 @@ def test_global_search_before_reporting_fills_in_on_arrival(browser, site_url):
 def test_global_search_over_cap_still_says_reporting_is_loading(browser, site_url):
     """A broad term overflows the per-group cap; that count line must still carry the note."""
     page, held, _ = _open_held(browser, site_url)
+    page.evaluate("ensureFullEntries()")  # search waits for the full curated entries (phase 3b)
     page.fill("#global-search", "the")
     count = page.locator("#count").inner_text()
     assert "shown of" in count, count
@@ -235,6 +237,7 @@ def test_search_cards_stay_open_when_reporting_arrives(browser, site_url):
     """An expanded curated search-result card must survive Reporting's arrival: the Reporting
     group is appended and the count line updated, without rebuilding the results."""
     page, held, _ = _open_held(browser, site_url)
+    page.evaluate("ensureFullEntries()")  # search waits for the full curated entries (phase 3b)
     page.fill("#global-search", "EPA")
     card = page.locator('#entries section[data-group="curated"] .entry').first
     card.locator(".entry-head").click()
