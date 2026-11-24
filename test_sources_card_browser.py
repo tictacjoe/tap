@@ -49,7 +49,8 @@ _PLACEMENT = """(id) => {
             const kids = [...cols[ci].children];
             const k = kids.findIndex(el => {
                 const lab = el.querySelector('.field-label');
-                return lab && lab.textContent.trim() === label;
+                // first text node only: "What happened" may carry a hint span (2026-11-24)
+                return lab && lab.firstChild && lab.firstChild.textContent.trim() === label;
             });
             if (k !== -1) return [ci, k];
         }
