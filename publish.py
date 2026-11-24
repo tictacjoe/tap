@@ -383,12 +383,15 @@ def build_site_index(site: Path, dry_run: bool) -> bool:
                 print(res.stdout.rstrip())
             return True
         msg = res.stderr.strip() or f"build_index.js exited {res.returncode}"
-        # Parity problems are reported as "<tracker key>: <id>: <check> ...";
-        # if no line names a tracker, the tool crashed: treat all as failed.
-        named = [k for k in INDEX_FILES
-                 if any(line.startswith(k + ": ") for line in res.stderr.splitlines())]
-        if named:
-            failed_keys = named
+        # Parity problems are reported as "<tracker key>: <id>: <check> ...".
+        # Only when EVERY non-empty stderr line is one of those are just the
+        # named trackers failed; any other line (a traceback after a parity
+        # line for an earlier tracker, say) means the tool crashed: all five.
+        lines = [line for line in res.stderr.splitlines() if line.strip()]
+        prefixes = tuple(k + ": " for k in INDEX_FILES)
+        if lines and all(line.startswith(prefixes) for line in lines):
+            failed_keys = [k for k in INDEX_FILES
+                           if any(line.startswith(k + ": ") for line in lines)]
     print(f"{label}: index: {msg}")
     if not dry_run:
         remove_index_files(site, failed_keys)
@@ -462,6 +465,14 @@ def main():
     published_ids = set()  # ids written to the five curated data files this run
     print(f"Exclude list: {len(excluded_ids)} entry ID(s) — {sorted(excluded_ids) if excluded_ids else '(none)'}")
     print()
+
+    # The index step runs last, so an uncaught exception in any step between
+    # here and there would leave the previous publish's index files beside
+    # the new full files. Remove them now; build_site_index() rebuilds them.
+    if not args.dry_run:
+        print("=== index (cleared; rebuilt at the end) ===")
+        remove_index_files(site, INDEX_FILES)
+        print()
 
     # --- prosecution ---
     print("=== prosecution ===")

@@ -709,3 +709,51 @@ def test_index_parity_failure_removes_that_trackers_index(tmp_path, monkeypatch,
     assert (s / "feed.xml").exists() and (s / "data" / "site_meta.json").exists()
     left = sorted(p.name for p in (s / "data" / "index").glob("*.json"))
     assert left == sorted(n for n in _INDEX_FILES if n != "government-services.json")
+
+
+def test_index_crash_after_a_parity_line_removes_every_index(tmp_path, monkeypatch, capsys):
+    """Task 7C1: build_index.js reported a parity line for one tracker, then
+    threw uncaught on a later one: a crash, so all five index files go, not
+    just the named tracker's."""
+    import publish
+    w, s = _index_tree(tmp_path)
+    real_run = subprocess.run
+    crash = ("prosecution: cla-1: filter differs\n"
+             "/site/tools/build_index.js:300\n"
+             "TypeError: Cannot read properties of undefined (reading 'figures')\n"
+             "    at projectEntry (/site/tools/build_index.js:120:5)")
+
+    def fake_run(cmd, *a, **kw):
+        res = real_run(cmd, *a, **kw)  # writes all five index files
+        if any(str(c).endswith("build_index.js") for c in cmd):
+            return subprocess.CompletedProcess(cmd, 1, stdout=res.stdout, stderr=crash)
+        return res
+
+    monkeypatch.setattr(publish.subprocess, "run", fake_run)
+    monkeypatch.setattr(sys, "argv", ["publish.py", "--working", str(w), "--site", str(s)])
+    with pytest.raises(SystemExit) as exc:
+        publish.main()
+    assert exc.value.code == 1
+    assert list((s / "data" / "index").glob("*.json")) == []
+
+
+def test_exception_after_curated_files_leaves_no_index(tmp_path, monkeypatch, capsys):
+    """Task 7C2: the index step runs last, so an uncaught exception in an
+    earlier step (after the curated files are written) must not leave the
+    previous publish's index beside the new full files."""
+    import publish
+    w, s = _index_tree(tmp_path)
+    (s / "data" / "index").mkdir()
+    for name in _INDEX_FILES:  # an older publish's index files
+        (s / "data" / "index" / name).write_text("[]\n")
+
+    def boom(*a, **kw):
+        raise RuntimeError("site meta exploded")
+
+    monkeypatch.setattr(publish, "write_site_meta", boom)
+    monkeypatch.setattr(sys, "argv", ["publish.py", "--working", str(w), "--site", str(s)])
+    with pytest.raises(RuntimeError):
+        publish.main()
+    assert (s / "data" / "prosecution.json").exists()  # curated files were written
+    assert list((s / "data" / "index").glob("*.json")) == []
+    assert "removed data/index/" in capsys.readouterr().out
