@@ -127,10 +127,10 @@
     font-style: italic;
   }
   /* ================= FRONT STRIP (2026-11-23) =================
-     Ledger row of four numbers + two featured cards (life/health harm,
-     possible illegality), between the tagline and the search box. Built by buildFrontStripHtml()
-     from data/front-strip.json. Same width as the search box. On phones
-     the row goes 2x2 and the card folds to one tappable line. */
+     Ledger row of four numbers between the tagline and the search box.
+     Built by buildFrontStripHtml() from data/front-strip.json. Same width
+     as the search box. On phones the row goes 2x2. (The two featured
+     cards were removed 2026-11-24, Joe.) */
   .front-strip {
     max-width: 700px;
     margin: 1.6rem auto 0;
@@ -142,19 +142,8 @@
     border: 1px solid var(--rule);
     padding: 0.8rem 1rem 0.9rem;
     display: grid;
-    /* minmax(0, 1fr): without it the phone's one-line (nowrap) Featured
-       button would stretch the column past the screen edge. */
     grid-template-columns: minmax(0, 1fr);
     gap: 0.75rem;
-  }
-  /* Wide screens: the two featured cards sit side by side under the
-     stats row (Joe, 2026-11-24); a lone card spans the full width. */
-  @container (min-width: 521px) {
-    .front-strip-inner { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .fs-stats { grid-column: 1 / -1; }
-    .fs-feature:last-child:nth-child(2) { grid-column: 1 / -1; }
-    .fs-feature { display: flex; }
-    .fs-card { flex: 1; align-content: start; }
   }
   .fs-stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .fs-stat { padding: 0 0.9rem; border-left: 1px solid var(--rule); min-width: 0; }
@@ -171,7 +160,7 @@
   a.fs-num-link { text-decoration: none; }
   a.fs-num-link:not(.fs-num-harm):not(.fs-num-flag) { color: var(--ink); }
   a.fs-num-link:hover, a.fs-num-link:focus-visible { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
-  .fs-label, .fs-kicker, .fs-toggle-k {
+  .fs-label {
     display: block;
     margin-top: 0.3rem;
     font-family: ui-monospace, 'SF Mono', 'Courier New', monospace;
@@ -180,77 +169,9 @@
     letter-spacing: 0.1em;
     color: var(--ink-soft);
   }
-  .fs-card {
-    border: 1px solid var(--rule);
-    border-left: 4px solid var(--rule-strong); /* tracker color set inline */
-    background: var(--paper);
-    padding: 0.65rem 0.85rem;
-    display: grid;
-    gap: 0.35rem;
-  }
-  .fs-meta { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
-  .fs-kicker { margin-top: 0; }
-  .fs-dot { display: inline-block; width: 0.55rem; height: 0.55rem; border-radius: 50%; margin-right: 0.3rem; vertical-align: 0.05rem; }
-  .fs-pill {
-    font-family: ui-monospace, monospace;
-    font-size: 0.62rem;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    padding: 1px 6px;
-    border: 1px solid var(--ink-soft);
-    border-radius: 2px;
-    color: var(--ink-soft);
-  }
-  .fs-what { margin: 0; font-size: 1rem; font-weight: 700; line-height: 1.3; }
-  .fs-who { font-size: 0.85rem; color: var(--harm-figure); }
-  .fs-law { font-size: 0.85rem; color: var(--flag); }
-  .fs-cite { color: var(--ink-soft); }
-  .fs-actor { font-size: 0.85rem; color: var(--ink-soft); }
-  .fs-quote {
-    margin: 0;
-    font-size: 0.85rem;
-    font-style: italic;
-    color: var(--ink-soft);
-    border-left: 2px solid var(--rule-strong);
-    padding-left: 0.6rem;
-  }
-  .fs-links { display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; }
-  .fs-links a {
-    font-family: ui-monospace, monospace;
-    font-size: 0.72rem;
-    color: var(--brass);
-    text-decoration: none;
-    border-bottom: 1px solid var(--brass);
-  }
-  .fs-toggle { display: none; }
   @container (max-width: 520px) {
     .fs-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 0.8rem; }
     .fs-stat:nth-child(3) { padding-left: 0; border-left: 0; }
-    .fs-toggle {
-      display: flex;
-      width: 100%;
-      box-sizing: border-box;
-      min-width: 0;
-      gap: 0.5rem;
-      align-items: baseline;
-      background: var(--paper);
-      border: 1px solid var(--rule);
-      border-left: 4px solid var(--rule-strong);
-      padding: 0.55rem 0.7rem;
-      font: inherit;
-      font-size: 0.85rem;
-      color: var(--ink);
-      text-align: left;
-      cursor: pointer;
-    }
-    .fs-toggle-k { margin-top: 0; flex: none; color: var(--harm-figure); }
-    .fs-toggle-t { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-    .fs-toggle-chev { margin-left: auto; flex: none; color: var(--ink-soft); }
-    .fs-feature-illegality .fs-toggle-k { color: var(--flag); }
-    .fs-feature + .fs-feature { margin-top: -0.35rem; }
-    .fs-feature.open .fs-toggle-chev { transform: rotate(180deg); }
-    .fs-feature:not(.open) .fs-card { display: none; }
-    .fs-quote { display: none; }
   }
   /* ================= GLOBAL SEARCH (primary interaction) ================= */
   .global-search-box {
@@ -6201,13 +6122,14 @@ function buildHarmsListHtml(trackers, abbr, names) {
 /* Front-page findings strip (2026-11-23, spec tap-data
    docs/superpowers/specs/2026-11-23-front-strip-design.md). Turns
    data/front-strip.json (written by front_strip.py at publish time) into
-   the ledger row of four numbers + two featured cards (one life/health
-   harm, one entry describing possible illegality; Joe, 2026-11-23).
+   the ledger row of four numbers. The two featured cards (life/health
+   harm, possible illegality) were removed 2026-11-24 (Joe); front_strip.py
+   still writes their data, which the page ignores.
    All four numbers link to their views via data-goto ("all", "harms",
    "illegality", "reporting"), wired in wireFrontStrip().
    Pure (no DOM) so tests/front-strip.test.js can run it; loadFrontStrip()
-   does the fetch and wiring. colorFor(key) returns the tracker's CSS
-   color, e.g. "var(--trk-govservices)". Returns "" for missing data so
+   does the fetch and wiring. colorFor is unused since the cards went.
+   Returns "" for missing data so
    the page simply looks like it did before the strip existed. */
 /* front-strip:start */
 function buildFrontStripHtml(strip, colorFor) {
@@ -6230,46 +6152,6 @@ function buildFrontStripHtml(strip, colorFor) {
       '<span class="fs-label">' + label + '</span></div>').join("") +
     '</div>';
 
-  // One featured card plus its phone-only fold line. `body` is the card's
-  // inner HTML below the kicker/status row.
-  const feature = (slot, f, toggleLabel, kicker, body) => {
-    const color = escapeHtml(colorFor(f.tracker));
-    const cardId = "fs-card-" + slot;
-    return '<div class="fs-feature fs-feature-' + slot + '">' +
-      '<button type="button" class="fs-toggle" aria-expanded="false" aria-controls="' + cardId + '" style="border-left-color:' + color + '">' +
-      '<span class="fs-toggle-k">' + toggleLabel + '</span><span class="fs-toggle-t">' + escapeHtml(f.what) + '</span>' +
-      '<span class="fs-toggle-chev" aria-hidden="true">▾</span></button>' +
-      '<div class="fs-card" id="' + cardId + '" style="border-left-color:' + color + '">' +
-      '<div class="fs-meta"><span class="fs-kicker"><span class="fs-dot" style="background:' + color + '"></span>' +
-      kicker + ' · ' + escapeHtml(f.label) + '</span>' +
-      (f.status ? '<span class="fs-pill">' + escapeHtml(f.status) + '</span>' : '') + '</div>' +
-      '<p class="fs-what">' + escapeHtml(f.what) + '</p>' + body + '</div></div>';
-  };
-  const entryLink = f => '<a href="#' + encodeURIComponent(f.tracker) + '/' + encodeURIComponent(f.id) +
-    '" class="fs-entry-link" data-tracker="' + escapeHtml(f.tracker) + '" data-id="' + escapeHtml(f.id) + '">Read the entry →</a>';
-
-  const f = strip.featured;
-  if (f) {
-    html += feature("harm", f, "Harm", "Featured harm",
-      '<div class="fs-who">Harmed: ' + escapeHtml(f.who) + '</div>' +
-      (f.pull_quote ? '<blockquote class="fs-quote">' + escapeHtml(f.pull_quote) + '</blockquote>' : '') +
-      '<div class="fs-links">' + entryLink(f) +
-      // No number here: the Harms view's tier heading also counts averted
-      // harms, which the strip's own number leaves out (review I1).
-      '<a href="#harms" class="fs-harms-link">See all life/health harms →</a></div>');
-  }
-  const g = strip.featured_illegality;
-  if (g) {
-    // Hedged wording, as in the Possible Illegality view: "may violate".
-    const more = g.more_laws > 0 ? " (+" + g.more_laws + " more)" : "";
-    html += feature("illegality", g, "Illegality", "Featured possible illegality",
-      '<div class="fs-law">May violate: ' + escapeHtml(g.law) +
-      (g.cite ? ' <span class="fs-cite">(' + escapeHtml(g.cite) + ')</span>' : '') + escapeHtml(more) + '</div>' +
-      (g.who ? '<div class="fs-actor">By: ' + escapeHtml(g.who) + '</div>' : '') +
-      (g.why ? '<blockquote class="fs-quote">' + escapeHtml(g.why) + '</blockquote>' : '') +
-      '<div class="fs-links">' + entryLink(g) +
-      '<a href="#illegality" class="fs-illegality-link">See all possible illegality →</a></div>');
-  }
   return html + '</div>';
 }
 /* front-strip:end */
@@ -9163,28 +9045,7 @@ function loadFrontStrip() {
 }
 
 function wireFrontStrip(mount) {
-  // Phone: each card's one-line fold button opens/closes that card.
-  mount.querySelectorAll(".fs-toggle").forEach(toggle => {
-    toggle.addEventListener("click", () => {
-      const open = toggle.parentElement.classList.toggle("open");
-      toggle.setAttribute("aria-expanded", String(open));
-    });
-  });
-  // "Read the entry": same jump as a related-entry link (moved ids
-  // resolved), after the tracker data has loaded.
-  mount.querySelectorAll(".fs-entry-link").forEach(entryLink => {
-    entryLink.addEventListener("click", (e) => {
-      e.preventDefault();
-      const key = entryLink.dataset.tracker, id = entryLink.dataset.id;
-      curatedDataPromise.then(() => {
-        const target = resolveEntryTarget(key, id, TRACKERS, MOVED_IDS);
-        if (!target || TRACKERS[target.key].hidden) return;
-        goToTrackerHome(target.key);
-        openCardById(id);
-      });
-    });
-  });
-  // The linked numbers and the "See all" links. "all" opens Records with
+  // The linked numbers. "all" opens Records with
   // the All-trackers filter; "reporting" opens Records' Reporting feed (as
   // the "Uncurated reporting" chip does); "harms"/"illegality" open those
   // views the way Back does (renderDispatch() keeps #harms/#illegality in step).
@@ -9197,8 +9058,6 @@ function wireFrontStrip(mount) {
   });
   const wire = (el, view) => el.addEventListener("click", (e) => { e.preventDefault(); openView(view); });
   mount.querySelectorAll(".fs-num-link").forEach(a => wire(a, a.dataset.goto));
-  mount.querySelectorAll(".fs-harms-link").forEach(a => wire(a, "harms"));
-  mount.querySelectorAll(".fs-illegality-link").forEach(a => wire(a, "illegality"));
 }
 
 loadFrontStrip();

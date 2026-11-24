@@ -61,55 +61,12 @@ test("all four numbers link to their views", () => {
   assert.deepEqual(links, [["#", "all", "1,234"], ["#harms", "harms", "118"], ["#illegality", "illegality", "274"], ["#", "reporting", "615"]]);
 });
 
-test("renders featured possible-illegality card, escaped and hedged", () => {
+test("featured cards are never rendered (removed 2026-11-24)", () => {
   const html = buildFrontStripHtml(strip(), color);
-  assert.ok(html.includes("Rolled back &lt;rule&gt;"));
-  assert.ok(html.includes("May violate: Clean Air Act"));
-  assert.ok(html.includes("(42 U.S.C. 7401)"));
-  assert.ok(html.includes("(+2 more)"));
-  assert.ok(html.includes("By: EPA"));
-  assert.ok(html.includes("A judge found it likely unlawful."));
-  assert.ok(html.includes("Featured possible illegality · Corporate Deregulation"));
-  assert.match(html, /<a [^>]*class="fs-entry-link"[^>]*data-tracker="deregulation"[^>]*data-id="epa-x"/);
-  assert.match(html, /class="fs-illegality-link"/);
-  assert.match(html, /<button [^>]*aria-controls="fs-card-illegality"/);
-  assert.match(html, /<div class="fs-card" id="fs-card-illegality"/);
-  // harm card comes first
-  assert.ok(html.indexOf("fs-card-harm") < html.indexOf("fs-card-illegality"));
-});
-
-test("null illegality feature omits only that card", () => {
-  const html = buildFrontStripHtml(strip(undefined, null), color);
-  assert.ok(html.includes("fs-card-harm"));
-  assert.ok(!html.includes("fs-card-illegality"));
-});
-
-test("renders featured card with escaped text", () => {
-  const html = buildFrontStripHtml(strip(), color);
-  assert.ok(html.includes("Cut &lt;b&gt;aid&lt;/b&gt; &amp; &quot;more&quot;"));
-  assert.ok(!html.includes("<b>aid</b>"));
-  assert.ok(html.includes("Harmed: 9/11 responders"));
-  assert.ok(html.includes("See all life/health harms →"));
-  assert.ok(html.includes("Specimens were left."));
-  assert.ok(html.includes("Court ruled"));
-  assert.ok(html.includes("var(--trk-govservices)"));
-});
-
-test("entry link carries tracker and id", () => {
-  const html = buildFrontStripHtml(strip(), color);
-  assert.match(html, /<a [^>]*class="fs-entry-link"[^>]*data-tracker="govservices"[^>]*data-id="niosh-cuts"/);
-  assert.match(html, /class="fs-harms-link"/);
-  assert.match(html, /<button [^>]*class="fs-toggle"[^>]*aria-expanded="false"/);
-  assert.match(html, /<button [^>]*aria-controls="fs-card-harm"/);
-  assert.match(html, /<div class="fs-card" id="fs-card-harm"/);
-  assert.doesNotMatch(html, /<h2/);
-});
-
-test("null featured omits cards and toggles", () => {
-  const html = buildFrontStripHtml(strip(null, null), color);
   assert.ok(html.includes("front-strip-inner"));
-  assert.ok(!html.includes("fs-card"));
-  assert.ok(!html.includes("fs-toggle"));
+  for (const cls of ["fs-card", "fs-toggle", "fs-feature", "fs-entry-link", "fs-harms-link", "fs-illegality-link"]) {
+    assert.ok(!html.includes(cls), cls);
+  }
 });
 
 test("missing stats returns empty string", () => {
