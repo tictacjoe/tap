@@ -6194,9 +6194,8 @@ function buildHarmsListHtml(trackers, abbr, names) {
    data/front-strip.json (written by front_strip.py at publish time) into
    the ledger row of four numbers + two featured cards (one life/health
    harm, one entry describing possible illegality; Joe, 2026-11-23).
-   The first three numbers link to their views via data-goto ("all",
-   "harms", "illegality"), wired in wireFrontStrip(). Reporting's number
-   is plain text.
+   All four numbers link to their views via data-goto ("all", "harms",
+   "illegality", "reporting"), wired in wireFrontStrip().
    Pure (no DOM) so tests/front-strip.test.js can run it; loadFrontStrip()
    does the fetch and wiring. colorFor(key) returns the tracker's CSS
    color, e.g. "var(--trk-govservices)". Returns "" for missing data so
@@ -6211,7 +6210,7 @@ function buildFrontStripHtml(strip, colorFor) {
     [s.entries, "sourced entries", "", ["#", "all"]],
     [s.life_health, "harms to life or health", " fs-num-harm", ["#harms", "harms"]],
     [s.illegality, "entries describing possible illegality", " fs-num-flag", ["#illegality", "illegality"]],
-    [s.reporting, "uncurated reporting", "", null],
+    [s.reporting, "uncurated reporting", "", ["#", "reporting"]],
   ];
   let html = '<div class="front-strip-inner"><div class="fs-stats">' +
     stats.map(([n, label, cls, link]) =>
@@ -9177,10 +9176,12 @@ function wireFrontStrip(mount) {
     });
   });
   // The linked numbers and the "See all" links. "all" opens Records with
-  // the All-trackers filter; "harms"/"illegality" open those views the way
-  // Back does (renderDispatch() keeps the #harms/#illegality address in step).
+  // the All-trackers filter; "reporting" opens Records' Reporting feed (as
+  // the "Uncurated reporting" chip does); "harms"/"illegality" open those
+  // views the way Back does (renderDispatch() keeps #harms/#illegality in step).
   const openView = (view) => curatedDataPromise.then(() => {
     if (view === "all") showAllTrackers();
+    else if (view === "reporting") showReportingFeed();
     else { activeTracker = view === "harms" ? HARMS_VIEW : ILLEGALITY_VIEW; renderDispatch(); }
     const tabsEl = document.getElementById("tabs");
     if (tabsEl) tabsEl.scrollIntoView({ behavior: "smooth", block: "start" });

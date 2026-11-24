@@ -201,3 +201,11 @@ def test_illegality_link_opens_view(browser, site_url):
     page.wait_for_timeout(800)
     assert page.locator(".ill-view").is_visible()
     assert errors == []
+
+
+def test_reporting_number_opens_reporting_feed(browser, site_url):
+    page, errors = _goto(browser, site_url)
+    page.locator('.fs-num-link[data-goto="reporting"]').click()
+    page.wait_for_timeout(1500)
+    assert page.locator("#tabs").input_value() == "tracker"  # "Uncurated reporting" selected
+    assert errors == []

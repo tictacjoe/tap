@@ -54,12 +54,11 @@ test("renders four stats in order", () => {
   assert.ok(!html.includes("claim checks"));
 });
 
-test("first three numbers link to their views, reporting does not", () => {
+test("all four numbers link to their views", () => {
   const html = buildFrontStripHtml(strip(), color);
   const links = [...html.matchAll(/<a href="([^"]*)" data-goto="([^"]*)"[^>]*class="fs-num fs-num-link[^"]*">([^<]*)</g)]
     .map(m => [m[1], m[2], m[3]]);
-  assert.deepEqual(links, [["#", "all", "1,234"], ["#harms", "harms", "118"], ["#illegality", "illegality", "274"]]);
-  assert.match(html, /<span class="fs-num">615<\/span>/);
+  assert.deepEqual(links, [["#", "all", "1,234"], ["#harms", "harms", "118"], ["#illegality", "illegality", "274"], ["#", "reporting", "615"]]);
 });
 
 test("renders featured possible-illegality card, escaped and hedged", () => {
