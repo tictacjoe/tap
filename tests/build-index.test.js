@@ -127,3 +127,54 @@ test("parity reports a check that throws on the full entry, even if the slim one
   const problems = parityProblems("trumpfamily", bad, projectEntry("trumpfamily", bad));
   assert.ok(problems.includes("tfs-1: familyGroupKeys threw on full entry"), problems.join("; "));
 });
+
+// Drift guard (task 7B): the site's INDEXED_WHOLE_FIELDS (which fields an index
+// entry shares whole with its full entry, read by the same-publish merge check)
+// must classify every key projectEntry outputs. A newly projected key fails here
+// until it is added to INDEXED_WHOLE_FIELDS in index.html or to PARTIAL below.
+function siteIndexedWholeFields() {
+  const html = fs.readFileSync(path.join(__dirname, "..", "index.html"), "utf8");
+  const token = "const INDEXED_WHOLE_FIELDS =";
+  const at = html.indexOf(token);
+  assert.notEqual(at, -1, `${token} not found in index.html`);
+  const m = html.slice(at);
+  let depth = 0, end = -1;
+  for (let j = m.indexOf("{"); j < m.length; j++) {
+    if (m[j] === "{") depth++;
+    if (m[j] === "}") { depth--; if (depth === 0) { end = j; break; } }
+  }
+  assert.notEqual(end, -1, "INDEXED_WHOLE_FIELDS: closing brace not found");
+  return (0, eval)("(" + m.slice(m.indexOf("{"), end + 1) + ")");
+}
+
+// Keys every tracker's signature already covers (indexedFieldsSignature's fixed part).
+const SIGNATURE_KEYS = ["id", "glance", "status_stage", "date_of_action", "date_added", "last_verified",
+  "last_substantive_update", "narrative_override", "section_summaries"];
+const TITLE_KEYS = { prosecution: "official", deregulation: "rule_name", govservices: "title", trumpfamily: "title", dai: "title" };
+// Keys projected partially (blanked, trimmed, or only some entries): deliberately
+// not in the signature.
+const PARTIAL = {
+  deregulation: ["sources", "estimated_health_impact", "what_changed"],
+  govservices: ["sources", "estimated_impact"],
+  trumpfamily: ["sources", "financial_stake", "government_nexus"],
+  dai: ["sources", "human_toll", "people"],
+  prosecution: ["evidence", "confidence_note", "incident_summary"],
+};
+
+test("drift guard: every projected key is in the signature, INDEXED_WHOLE_FIELDS or PARTIAL", () => {
+  const whole = siteIndexedWholeFields();
+  assert.deepEqual(Object.keys(whole).sort(), Object.keys(INDEX_FILES).sort());
+  const dataDir = path.join(__dirname, "..", "data");
+  for (const [key, file] of Object.entries(INDEX_FILES)) {
+    const known = new Set([...SIGNATURE_KEYS, TITLE_KEYS[key], ...whole[key], ...PARTIAL[key]]);
+    const entries = JSON.parse(fs.readFileSync(path.join(dataDir, file), "utf8")).concat([fixtures[key]]);
+    const unclassified = new Set();
+    for (const e of entries) {
+      const s = projectEntry(key, e);
+      for (const k of Object.keys(s)) if (!known.has(k)) unclassified.add(k);
+      // A field the site treats as copied whole really is copied whole.
+      for (const k of whole[key]) if (k in s) assert.deepEqual(s[k], e[k], `${key} ${e.id}: ${k} not whole`);
+    }
+    assert.deepEqual([...unclassified], [], `${key}: projected keys not classified: ${[...unclassified].join(", ")}`);
+  }
+});
