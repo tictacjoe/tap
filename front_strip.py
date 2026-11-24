@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """
 front_strip.py -- builds data/front-strip.json, the data behind the
-front-page findings strip (the ledger row of four numbers plus one
-featured life/health harm card above the search box).
+front-page findings strip (the ledger row of four numbers plus two
+featured cards above the search box: one life/health harm and one entry
+describing possible illegality).
 
 Spec: tap-data docs/superpowers/specs/2026-11-23-front-strip-design.md
 
@@ -20,6 +21,13 @@ Featured-entry rotation, in plain words:
     NO_REPEAT_DAYS days, unless everything was (then take the top one).
   * The rotation state is the previous front-strip.json itself (its
     `featured` and `history`), so no extra state file is needed.
+
+The possible-illegality card (Joe, 2026-11-23) rotates the same way with
+its own state (`featured_illegality`, `history_illegality`):
+  * Pool: entries in data/illegality.json held by a visible curated
+    tracker (not User Topics), with a valid Glance "what" line.
+  * Ranking: most recently updated, then tracker, then id.
+  * Never the same entry as the life/health card that run.
 
 Run standalone to rebuild from the current site data:
     python3 front_strip.py --site ~/gjoe/tap-site
@@ -112,6 +120,7 @@ def build_front_strip(site_dir, hidden, today, previous):
     entries_total = 0
     life_health = 0
     pool = []
+    by_id = {}  # entry id -> (tracker key, entry), for the illegality card
     for filename, key, _label, _title in FEED_SOURCES:
         if key in hidden:
             continue
@@ -122,6 +131,9 @@ def build_front_strip(site_dir, hidden, today, previous):
         if key in HARM_EXCLUDED_KEYS:
             continue
         for entry in data:
+            # First tracker wins, like buildIllegalityRows() in index.html.
+            if entry.get("id") and entry["id"] not in by_id:
+                by_id[entry["id"]] = (key, entry)
             harm = _harm(entry)
             if not harm or harm_tier(harm.get("kind"), harm.get("tier")) != 1:
                 continue
@@ -143,25 +155,69 @@ def build_front_strip(site_dir, hidden, today, previous):
     pool.sort(key=_rank_key)
 
     illegality = _load(site_dir / "data" / "illegality.json", {})
-    claim_checks = _load(site_dir / "data" / "claim-checks.json", {})
+    if not isinstance(illegality, dict):
+        illegality = {}
+    # Reporting (the uncurated archive) lives in tracker.json, not in
+    # FEED_SOURCES; same number as the "Uncurated reporting (N)" option.
+    reporting = [] if "tracker" in hidden else _load(site_dir / "data" / "tracker.json", [])
     stats = {
         "entries": entries_total,
         "life_health": life_health,
-        "illegality": len(illegality.get("entries", {})) if isinstance(illegality, dict) else 0,
-        "claim_checks": len(claim_checks.get("checks", [])) if isinstance(claim_checks, dict) else 0,
+        "illegality": len(illegality.get("entries", {})),
+        "reporting": len(reporting) if isinstance(reporting, list) else 0,
     }
 
     previous = previous if isinstance(previous, dict) else {}
-    history = [h for h in previous.get("history", []) if isinstance(h, dict)]
-    featured = _choose(pool, previous.get("featured"), history, today)
+    featured, history = _rotate(pool, previous.get("featured"), previous.get("history"), today)
+    taken = (featured["tracker"], featured["id"]) if featured else None
+    ill_pool = [c for c in _illegality_pool(illegality, by_id) if (c["tracker"], c["id"]) != taken]
+    featured_ill, history_ill = _rotate(ill_pool, previous.get("featured_illegality"),
+                                        previous.get("history_illegality"), today)
+    return {"as_of": today.isoformat(), "stats": stats, "featured": featured,
+            "history": history, "featured_illegality": featured_ill,
+            "history_illegality": history_ill}
+
+
+def _rotate(pool, prev_featured, prev_history, today):
+    """One card's rotation step: (featured or None, new history list)."""
+    history = [h for h in (prev_history or []) if isinstance(h, dict)]
+    featured = _choose(pool, prev_featured, history, today)
     if featured and not featured.get("_kept"):
         history.insert(0, {"tracker": featured["tracker"], "id": featured["id"],
                            "since": featured["since"]})
     if featured:
         featured.pop("_kept", None)
         featured.pop("updated", None)
-    return {"as_of": today.isoformat(), "stats": stats, "featured": featured,
-            "history": history[:HISTORY_MAX]}
+    return featured, history[:HISTORY_MAX]
+
+
+def _illegality_pool(illegality, by_id):
+    """Candidates for the possible-illegality card, best first. Each shows
+    the entry's first possible-violation record (law, who, why) and how many
+    more it has."""
+    laws = illegality.get("laws") if isinstance(illegality.get("laws"), dict) else {}
+    entries = illegality.get("entries") if isinstance(illegality.get("entries"), dict) else {}
+    pool = []
+    for entry_id, records in entries.items():
+        if entry_id not in by_id or not isinstance(records, list) or not records:
+            continue
+        key, entry = by_id[entry_id]
+        glance = entry.get("glance") if isinstance(entry.get("glance"), dict) else {}
+        first = records[0] if isinstance(records[0], dict) else {}
+        law = laws.get(first.get("law")) if isinstance(laws.get(first.get("law")), dict) else {}
+        if not _line(glance.get("what"), 110) or not first.get("law"):
+            continue
+        pool.append({
+            "tracker": key, "id": entry_id, "label": _LABELS[key],
+            "what": glance["what"], "status": entry.get("status_stage", ""),
+            "law": law.get("name") or first["law"], "cite": law.get("cite", ""),
+            "law_label": law.get("label", ""),
+            "who": first.get("who", ""), "why": first.get("why", ""),
+            "more_laws": len(records) - 1,
+            "updated": entry.get("last_substantive_update", ""),
+        })
+    pool.sort(key=lambda c: (-(_day(c["updated"]) or date.min).toordinal(), c["tracker"], c["id"]))
+    return pool
 
 
 def _choose(pool, prev_featured, history, today):
@@ -205,5 +261,5 @@ if __name__ == "__main__":
     args = parser.parse_args()
     site = Path(args.site).expanduser()
     s = write_front_strip(site, hidden_trackers.site_hidden_trackers(site / "index.html"), date.today())
-    f = s["featured"]
-    print(f"stats {s['stats']}; featured {f['tracker'] + '/' + f['id'] if f else 'none'}")
+    ref = lambda f: f["tracker"] + "/" + f["id"] if f else "none"
+    print(f"stats {s['stats']}; featured {ref(s['featured'])}; illegality {ref(s['featured_illegality'])}")

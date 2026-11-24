@@ -22,9 +22,9 @@ const harness = new Function(
   extractFunction(source, "escape-html") +
   extractFunction(source, "format-key-event-date") +
   extractFunction(source, "key-events-rail") +
-  "return { escapeHtml, formatKeyEventDate, buildKeyEventsRailHtml };"
+  "return { escapeHtml, formatKeyEventDate, buildKeyEventsRailHtml, whatHappenedLabelHtml };"
 )();
-const { formatKeyEventDate, buildKeyEventsRailHtml, escapeHtml } = harness;
+const { formatKeyEventDate, buildKeyEventsRailHtml, escapeHtml, whatHappenedLabelHtml } = harness;
 const hl = (t) => escapeHtml(t);
 
 test("formatKeyEventDate: first event shows full date with year", () => {
@@ -91,4 +91,14 @@ test("rail: dates use formatKeyEventDate with the previous event", () => {
   const html = buildKeyEventsRailHtml({ key_events: [ev("2026-08-18", "A"), ev("2026-10-22", "B"), ev("2027-01-05", "C")] }, hl);
   const dates = [...html.matchAll(/<span class="key-event-date">(.*?)<\/span>/g)].map((m) => m[1]);
   assert.deepEqual(dates, ["Aug 18, 2026", "Oct 22", "Jan 5, 2027"]);
+});
+
+// 2026-11-24 (Joe): the What happened label tells readers the rail's
+// events are clickable, only when there is a rail.
+test("whatHappenedLabelHtml: hint only when the entry has key events", () => {
+  const withRail = whatHappenedLabelHtml({ key_events: [{ date: "2026-01-01", text: "x" }] });
+  assert.match(withRail, /^<div class="field-label">What happened <span class="field-label-hint">/);
+  assert.ok(withRail.includes('<span class="hint-click">click</span><span class="hint-tap">tap</span> an event to see its source)'));
+  assert.equal(whatHappenedLabelHtml({}), '<div class="field-label">What happened</div>');
+  assert.equal(whatHappenedLabelHtml({ key_events: [] }), '<div class="field-label">What happened</div>');
 });

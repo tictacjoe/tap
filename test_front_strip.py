@@ -39,9 +39,11 @@ def test_stats_count_curated_trackers_and_tier1(tmp_path):
     _write(tmp_path, "deregulation.json", [_harm_entry("a"), _harm_entry("b", kind="money")])
     _write(tmp_path, "community-topics.json", [{"id": "c", "topic": "T"}])
     _write(tmp_path, "illegality.json", {"entries": {"a": {}, "b": {}}})
-    _write(tmp_path, "claim-checks.json", {"checks": [1, 2, 3]})
+    _write(tmp_path, "tracker.json", [{"t": 1}, {"t": 2}, {"t": 3}])
     strip = build_front_strip(tmp_path, set(), TODAY, None)
-    assert strip["stats"] == {"entries": 3, "life_health": 1, "illegality": 2, "claim_checks": 3}
+    assert strip["stats"] == {"entries": 3, "life_health": 1, "illegality": 2, "reporting": 3}
+    # hidden Reporting counts as zero
+    assert build_front_strip(tmp_path, {"tracker"}, TODAY, None)["stats"]["reporting"] == 0
     assert strip["as_of"] == "2026-11-23"
 
 
@@ -173,3 +175,55 @@ def test_invalid_glance_not_counted(tmp_path):
     strip = build_front_strip(tmp_path, set(), TODAY, None)
     assert strip["stats"]["life_health"] == 0
     assert strip["featured"] is None
+
+
+def _ill(entries, laws=None):
+    return {"version": 1, "laws": laws or {"apa": {"name": "Administrative Procedure Act",
+                                                    "cite": "5 U.S.C. 551-706", "label": "civil"}},
+            "entries": entries, "progress": {}}
+
+
+def test_illegality_feature_picks_newest_and_shows_first_law(tmp_path):
+    _write(tmp_path, "deregulation.json", [
+        _harm_entry("old", kind="money", updated="2026-01-01"),
+        _harm_entry("new", kind="money", updated="2026-11-20"),
+        _harm_entry("no-record", kind="money", updated="2026-11-22"),
+    ])
+    rec = {"law": "apa", "who": "EPA", "why": "A judge said so."}
+    _write(tmp_path, "illegality.json", _ill({"old": [rec], "new": [rec, {"law": "x"}], "ghost": [rec]}))
+    strip = build_front_strip(tmp_path, set(), TODAY, None)
+    g = strip["featured_illegality"]
+    assert g == {"tracker": "deregulation", "id": "new", "label": "Corporate Deregulation",
+                 "what": "What new", "status": "Court ruled", "law": "Administrative Procedure Act",
+                 "cite": "5 U.S.C. 551-706", "law_label": "civil", "who": "EPA",
+                 "why": "A judge said so.", "more_laws": 1, "since": "2026-11-23"}
+    assert strip["history_illegality"] == [{"tracker": "deregulation", "id": "new", "since": "2026-11-23"}]
+
+
+def test_illegality_feature_never_matches_harm_feature(tmp_path):
+    _write(tmp_path, "dai.json", [_harm_entry("both", updated="2026-11-20"),
+                                  _harm_entry("other", kind="money", updated="2026-01-01")])
+    rec = {"law": "apa", "who": "ICE", "why": "Why."}
+    _write(tmp_path, "illegality.json", _ill({"both": [rec], "other": [rec]}))
+    strip = build_front_strip(tmp_path, set(), TODAY, None)
+    assert strip["featured"]["id"] == "both"
+    assert strip["featured_illegality"]["id"] == "other"
+
+
+def test_illegality_feature_holds_and_skips_user_topics(tmp_path):
+    _write(tmp_path, "deregulation.json", [_harm_entry("a", kind="money", updated="2026-11-20"),
+                                           _harm_entry("b", kind="money", updated="2026-01-01")])
+    _write(tmp_path, "community-topics.json", [_harm_entry("ct", kind="money", updated="2026-11-22")])
+    rec = {"law": "apa"}
+    _write(tmp_path, "illegality.json", _ill({"a": [rec], "b": [rec], "ct": [rec]}))
+    prev = {"featured_illegality": {"tracker": "deregulation", "id": "b", "since": "2026-11-22"},
+            "history_illegality": [{"tracker": "deregulation", "id": "b", "since": "2026-11-22"}]}
+    assert build_front_strip(tmp_path, set(), TODAY, prev)["featured_illegality"]["id"] == "b"
+    assert build_front_strip(tmp_path, set(), TODAY, None)["featured_illegality"]["id"] == "a"
+
+
+def test_no_illegality_data_gives_null_feature(tmp_path):
+    _write(tmp_path, "deregulation.json", [_harm_entry("a")])
+    strip = build_front_strip(tmp_path, set(), TODAY, None)
+    assert strip["featured_illegality"] is None
+    assert strip["history_illegality"] == []

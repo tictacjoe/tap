@@ -33,7 +33,7 @@ def _real_featured():
 REAL = _real_featured()
 STRIP = {
     "as_of": "2026-11-23",
-    "stats": {"entries": 1953, "life_health": 7, "illegality": 6, "claim_checks": 5},
+    "stats": {"entries": 1953, "life_health": 7, "illegality": 6, "reporting": 5},
     "featured": {
         "tracker": "dai", "id": REAL["id"], "label": "DHS and ICE",
         "what": REAL["glance"]["what"], "who": REAL["glance"]["harm"]["who"],
@@ -41,6 +41,13 @@ STRIP = {
         "certainty": "documented", "since": "2026-11-23",
     },
     "history": [],
+    "featured_illegality": {
+        "tracker": "dai", "id": REAL["id"], "label": "DHS and ICE",
+        "what": REAL["glance"]["what"], "status": "", "law": "Due process",
+        "cite": "U.S. Const. amend. V", "law_label": "civil", "who": "ICE",
+        "why": "A judge ruled.", "more_laws": 0, "since": "2026-11-23",
+    },
+    "history_illegality": [],
 }
 PHONE = {"width": 390, "height": 844}
 
@@ -101,8 +108,9 @@ def test_strip_renders_above_search(browser, site_url):
     assert strip.is_visible()
     assert strip.bounding_box()["y"] < page.locator("#search-mode-box").bounding_box()["y"]
     assert page.locator(".fs-num").all_inner_texts() == ["1,953", "7", "6", "5"]
-    assert page.locator(".fs-card").is_visible()
-    assert not page.locator(".fs-toggle").is_visible()  # desktop: no fold line
+    assert page.locator("#fs-card-harm").is_visible()
+    assert page.locator("#fs-card-illegality").is_visible()
+    assert not page.locator(".fs-toggle").first.is_visible()  # desktop: no fold line
     assert errors == []
 
 
@@ -124,8 +132,10 @@ def test_bad_file_leaves_page_unchanged(browser, site_url, body):
 
 def test_phone_toggle(browser, site_url):
     page, errors = _goto(browser, site_url, viewport=PHONE)
-    toggle = page.locator(".fs-toggle")
-    card = page.locator(".fs-card")
+    toggle = page.locator(".fs-feature-harm .fs-toggle")
+    card = page.locator("#fs-card-harm")
+    other = page.locator("#fs-card-illegality")
+    assert page.locator(".fs-feature-illegality .fs-toggle").is_visible()
     assert toggle.is_visible()
     assert card.is_hidden()
     # Nothing in the strip may poke past its own box (phone overflow).
@@ -138,6 +148,7 @@ def test_phone_toggle(browser, site_url):
     assert overflow == []
     toggle.click()
     assert card.is_visible()
+    assert other.is_hidden()  # each card folds on its own
     assert toggle.get_attribute("aria-expanded") == "true"
     toggle.click()
     assert card.is_hidden()
@@ -147,7 +158,7 @@ def test_phone_toggle(browser, site_url):
 
 def test_entry_link_opens_card(browser, site_url):
     page, errors = _goto(browser, site_url)
-    page.locator(".fs-entry-link").click()
+    page.locator(".fs-feature-harm .fs-entry-link").click()
     page.wait_for_timeout(800)
     card = page.locator(f'#entries .entry[data-entry-id="{REAL["id"]}"]').first
     assert card.is_visible()
@@ -163,4 +174,30 @@ def test_harms_link_opens_harms_view_and_counts_match(browser, site_url):
     # averted rows never happened and are left out of the strip's number
     tier1 = page.locator('.harms-tier[data-tier="1"] .harm-row:not(.harm-line-averted)').count()
     assert tier1 == real["stats"]["life_health"]
+    assert errors == []
+
+
+@pytest.mark.parametrize("goto,selector", [("harms", ".harms-list"), ("illegality", ".ill-view")])
+def test_number_links_open_views(browser, site_url, goto, selector):
+    page, errors = _goto(browser, site_url)
+    page.locator(f'.fs-num-link[data-goto="{goto}"]').click()
+    page.wait_for_timeout(800)
+    assert page.locator(selector).is_visible()
+    assert errors == []
+
+
+def test_entries_number_opens_all_trackers(browser, site_url):
+    page, errors = _goto(browser, site_url)
+    page.locator('.fs-num-link[data-goto="all"]').click()
+    page.wait_for_timeout(800)
+    assert page.locator("#tabs").input_value() == ""  # Records, no single database
+    assert page.locator("#entries .entry").count() > 0 or page.locator("#entries").inner_text() != ""
+    assert errors == []
+
+
+def test_illegality_link_opens_view(browser, site_url):
+    page, errors = _goto(browser, site_url)
+    page.locator(".fs-illegality-link").click()
+    page.wait_for_timeout(800)
+    assert page.locator(".ill-view").is_visible()
     assert errors == []

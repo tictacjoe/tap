@@ -127,8 +127,8 @@
     font-style: italic;
   }
   /* ================= FRONT STRIP (2026-11-23) =================
-     Ledger row of four numbers + one featured life/health harm card,
-     between the tagline and the search box. Built by buildFrontStripHtml()
+     Ledger row of four numbers + two featured cards (life/health harm,
+     possible illegality), between the tagline and the search box. Built by buildFrontStripHtml()
      from data/front-strip.json. Same width as the search box. On phones
      the row goes 2x2 and the card folds to one tappable line. */
   .front-strip {
@@ -159,6 +159,9 @@
   }
   .fs-num-harm { color: var(--harm-figure); }
   .fs-num-flag { color: var(--flag); }
+  a.fs-num-link { text-decoration: none; }
+  a.fs-num-link:not(.fs-num-harm):not(.fs-num-flag) { color: var(--ink); }
+  a.fs-num-link:hover, a.fs-num-link:focus-visible { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
   .fs-label, .fs-kicker, .fs-toggle-k {
     display: block;
     margin-top: 0.3rem;
@@ -191,6 +194,9 @@
   }
   .fs-what { margin: 0; font-size: 1rem; font-weight: 700; line-height: 1.3; }
   .fs-who { font-size: 0.85rem; color: var(--harm-figure); }
+  .fs-law { font-size: 0.85rem; color: var(--flag); }
+  .fs-cite { color: var(--ink-soft); }
+  .fs-actor { font-size: 0.85rem; color: var(--ink-soft); }
   .fs-quote {
     margin: 0;
     font-size: 0.85rem;
@@ -231,8 +237,10 @@
     .fs-toggle-k { margin-top: 0; flex: none; color: var(--harm-figure); }
     .fs-toggle-t { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
     .fs-toggle-chev { margin-left: auto; flex: none; color: var(--ink-soft); }
-    .front-strip.open .fs-toggle-chev { transform: rotate(180deg); }
-    .front-strip:not(.open) .fs-card { display: none; }
+    .fs-feature-illegality .fs-toggle-k { color: var(--flag); }
+    .fs-feature + .fs-feature { margin-top: -0.35rem; }
+    .fs-feature.open .fs-toggle-chev { transform: rotate(180deg); }
+    .fs-feature:not(.open) .fs-card { display: none; }
     .fs-quote { display: none; }
   }
   /* ================= GLOBAL SEARCH (primary interaction) ================= */
@@ -1454,6 +1462,19 @@
     color: var(--ink-soft);
   }
   .key-event-text { display: block; }
+  /* "What happened (click an event to see its source)": the hint reads as
+     a quiet aside, not part of the uppercase label. */
+  .field-label-hint {
+    text-transform: none;
+    letter-spacing: 0;
+    color: var(--ink-soft);
+    margin-left: 0.3rem;
+  }
+  .hint-tap { display: none; }
+  @media (hover: none) {
+    .hint-click { display: none; }
+    .hint-tap { display: inline; }
+  }
   @media (max-width: 600px) {
     .key-event-link { min-height: 44px; }
   }
@@ -5007,6 +5028,16 @@ function buildKeyEventsRailHtml(entry, hl) {
   });
   return '<ol class="key-events" aria-label="Key events">' + items.join("") + "</ol>";
 }
+
+/* The "What happened" card label. With a key-events rail (whose items open
+   and flash their sources), a short hint follows it (Joe, 2026-11-24):
+   "click" with a mouse, "tap" on touch screens (CSS swaps the two words). */
+function whatHappenedLabelHtml(entry) {
+  var hasRail = !!(entry && entry.key_events && entry.key_events.length);
+  return '<div class="field-label">What happened' + (hasRail
+    ? ' <span class="field-label-hint">(<span class="hint-click">click</span><span class="hint-tap">tap</span> an event to see its source)</span>'
+    : "") + "</div>";
+}
 /* key-events-rail:end */
 
 /* full-story-disclosure:start */
@@ -5546,7 +5577,7 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
     // in distributeEntryCards(), and as the second card it always seeds the middle
     // column -- same technique as CLA's shared Anticipated Defense / TAP's Rebuttal card.
     const mainHtml =
-      '<div class="field-group entry-main-card"><div class="field-label">What happened</div><div class="field-value">' + summary(entry.section_summaries?.what_changed) + buildKeyEventsRailHtml(entry, hl) + wrapFullStoryHtml(entry, "what_changed", buildFieldTimelineHtml(entry, "what_changed", hl)) + '</div></div>' +
+      '<div class="field-group entry-main-card">' + whatHappenedLabelHtml(entry) + '<div class="field-value">' + summary(entry.section_summaries?.what_changed) + buildKeyEventsRailHtml(entry, hl) + wrapFullStoryHtml(entry, "what_changed", buildFieldTimelineHtml(entry, "what_changed", hl)) + '</div></div>' +
       buildSourcesCardHtml(entry, hl) +
       buildGsrCdrPatternCardHtml(entry, term, useRegex) +
       '<div class="field-group entry-main-card"><div class="field-label">Status</div><div class="field-value">' + statusHtml() + '</div>' +
@@ -5598,7 +5629,7 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
     // in distributeEntryCards(), and as the second card it always seeds the middle
     // column -- same technique as CLA's shared Anticipated Defense / TAP's Rebuttal card.
     const mainHtml =
-      '<div class="field-group entry-main-card"><div class="field-label">What happened</div><div class="field-value">' + summary(entry.section_summaries?.what_changed) + buildKeyEventsRailHtml(entry, hl) + wrapFullStoryHtml(entry, "what_changed", buildFieldTimelineHtml(entry, "what_changed", hl)) + '</div></div>' +
+      '<div class="field-group entry-main-card">' + whatHappenedLabelHtml(entry) + '<div class="field-value">' + summary(entry.section_summaries?.what_changed) + buildKeyEventsRailHtml(entry, hl) + wrapFullStoryHtml(entry, "what_changed", buildFieldTimelineHtml(entry, "what_changed", hl)) + '</div></div>' +
       buildSourcesCardHtml(entry, hl) +
       buildGsrCdrPatternCardHtml(entry, term, useRegex) +
       '<div class="field-group entry-main-card"><div class="field-label">Status</div><div class="field-value">' + statusHtml() + '</div>' +
@@ -5754,9 +5785,9 @@ function buildDetailHtml(entry, cfg, term, useRegex) {
   // the sources box"), so it is card 3 and tops the third column.
   const sourcesCardHtml = buildProsecutionSourcesCardHtml(entry);
   const mainHtml = entry.narrative_combined
-    ? '<div class="field-group entry-main-card"><div class="field-label">What happened</div><div class="field-value">' + summary(entry.section_summaries?.incident_summary) + buildKeyEventsRailHtml(entry, hl) + wrapFullStoryHtml(entry, "incident_summary", buildFieldTimelineHtml(entry, "incident_summary", hl) + buildFieldTimelineHtml(entry, "status", hl)) + '</div></div>' + sourcesCardHtml +
+    ? '<div class="field-group entry-main-card">' + whatHappenedLabelHtml(entry) + '<div class="field-value">' + summary(entry.section_summaries?.incident_summary) + buildKeyEventsRailHtml(entry, hl) + wrapFullStoryHtml(entry, "incident_summary", buildFieldTimelineHtml(entry, "incident_summary", hl) + buildFieldTimelineHtml(entry, "status", hl)) + '</div></div>' + sourcesCardHtml +
       broaderPatternCardHtml
-    : '<div class="field-group entry-main-card"><div class="field-label">What happened</div><div class="field-value">' + summary(entry.section_summaries?.incident_summary) + buildKeyEventsRailHtml(entry, hl) + wrapFullStoryHtml(entry, "incident_summary", buildFieldTimelineHtml(entry, "incident_summary", hl)) + '</div></div>' + sourcesCardHtml + broaderPatternCardHtml +
+    : '<div class="field-group entry-main-card">' + whatHappenedLabelHtml(entry) + '<div class="field-value">' + summary(entry.section_summaries?.incident_summary) + buildKeyEventsRailHtml(entry, hl) + wrapFullStoryHtml(entry, "incident_summary", buildFieldTimelineHtml(entry, "incident_summary", hl)) + '</div></div>' + sourcesCardHtml + broaderPatternCardHtml +
       '<div class="field-group entry-main-card"><div class="field-label">Status</div><div class="field-value">' + statusHtml() + '</div></div>';
   // Violation/Concern Type and Status Stage move into the glance card's harm line
   // instead (2026-09-22, Joe's call; see buildGlanceHeadHtml) -- omitted here only
@@ -6161,7 +6192,11 @@ function buildHarmsListHtml(trackers, abbr, names) {
 /* Front-page findings strip (2026-11-23, spec tap-data
    docs/superpowers/specs/2026-11-23-front-strip-design.md). Turns
    data/front-strip.json (written by front_strip.py at publish time) into
-   the ledger row of four numbers + one featured life/health harm card.
+   the ledger row of four numbers + two featured cards (one life/health
+   harm, one entry describing possible illegality; Joe, 2026-11-23).
+   The first three numbers link to their views via data-goto ("all",
+   "harms", "illegality"), wired in wireFrontStrip(). Reporting's number
+   is plain text.
    Pure (no DOM) so tests/front-strip.test.js can run it; loadFrontStrip()
    does the fetch and wiring. colorFor(key) returns the tracker's CSS
    color, e.g. "var(--trk-govservices)". Returns "" for missing data so
@@ -6171,39 +6206,61 @@ function buildFrontStripHtml(strip, colorFor) {
   if (!strip || !strip.stats) return "";
   const s = strip.stats;
   const fmt = n => Number(n || 0).toLocaleString("en-US");
-  // [number, label, extra class for the number's color]
+  // [number, label, extra class for the number's color, link: [href, data-goto] or null]
   const stats = [
-    [s.entries, "sourced entries", ""],
-    [s.life_health, "harm life or health", " fs-num-harm"],
-    [s.illegality, "possible illegality", " fs-num-flag"],
-    [s.claim_checks, "claim checks", ""],
+    [s.entries, "sourced entries", "", ["#", "all"]],
+    [s.life_health, "harms to life or health", " fs-num-harm", ["#harms", "harms"]],
+    [s.illegality, "entries describing possible illegality", " fs-num-flag", ["#illegality", "illegality"]],
+    [s.reporting, "uncurated reporting", "", null],
   ];
   let html = '<div class="front-strip-inner"><div class="fs-stats">' +
-    stats.map(([n, label, cls]) =>
-      '<div class="fs-stat"><span class="fs-num' + cls + '">' + fmt(n) + '</span>' +
+    stats.map(([n, label, cls, link]) =>
+      '<div class="fs-stat">' +
+      (link
+        ? '<a href="' + link[0] + '" data-goto="' + link[1] + '" title="Open ' + label + '" class="fs-num fs-num-link' + cls + '">' + fmt(n) + '</a>'
+        : '<span class="fs-num' + cls + '">' + fmt(n) + '</span>') +
       '<span class="fs-label">' + label + '</span></div>').join("") +
     '</div>';
+
+  // One featured card plus its phone-only fold line. `body` is the card's
+  // inner HTML below the kicker/status row.
+  const feature = (slot, f, toggleLabel, kicker, body) => {
+    const color = escapeHtml(colorFor(f.tracker));
+    const cardId = "fs-card-" + slot;
+    return '<div class="fs-feature fs-feature-' + slot + '">' +
+      '<button type="button" class="fs-toggle" aria-expanded="false" aria-controls="' + cardId + '" style="border-left-color:' + color + '">' +
+      '<span class="fs-toggle-k">' + toggleLabel + '</span><span class="fs-toggle-t">' + escapeHtml(f.what) + '</span>' +
+      '<span class="fs-toggle-chev" aria-hidden="true">▾</span></button>' +
+      '<div class="fs-card" id="' + cardId + '" style="border-left-color:' + color + '">' +
+      '<div class="fs-meta"><span class="fs-kicker"><span class="fs-dot" style="background:' + color + '"></span>' +
+      kicker + ' · ' + escapeHtml(f.label) + '</span>' +
+      (f.status ? '<span class="fs-pill">' + escapeHtml(f.status) + '</span>' : '') + '</div>' +
+      '<p class="fs-what">' + escapeHtml(f.what) + '</p>' + body + '</div></div>';
+  };
+  const entryLink = f => '<a href="#' + encodeURIComponent(f.tracker) + '/' + encodeURIComponent(f.id) +
+    '" class="fs-entry-link" data-tracker="' + escapeHtml(f.tracker) + '" data-id="' + escapeHtml(f.id) + '">Read the entry →</a>';
+
   const f = strip.featured;
   if (f) {
-    const color = escapeHtml(colorFor(f.tracker));
-    // Phone only (CSS): one tappable line standing in for the card.
-    html += '<button type="button" class="fs-toggle" aria-expanded="false" aria-controls="fs-card" style="border-left-color:' + color + '">' +
-      '<span class="fs-toggle-k">Featured</span><span class="fs-toggle-t">' + escapeHtml(f.what) + '</span>' +
-      '<span class="fs-toggle-chev" aria-hidden="true">▾</span></button>';
-    html += '<div class="fs-card" id="fs-card" style="border-left-color:' + color + '">' +
-      '<div class="fs-meta"><span class="fs-kicker"><span class="fs-dot" style="background:' + color + '"></span>' +
-      'Featured · ' + escapeHtml(f.label) + '</span>' +
-      (f.status ? '<span class="fs-pill">' + escapeHtml(f.status) + '</span>' : '') + '</div>' +
-      '<p class="fs-what">' + escapeHtml(f.what) + '</p>' +
+    html += feature("harm", f, "Harm", "Featured harm",
       '<div class="fs-who">Harmed: ' + escapeHtml(f.who) + '</div>' +
       (f.pull_quote ? '<blockquote class="fs-quote">' + escapeHtml(f.pull_quote) + '</blockquote>' : '') +
-      '<div class="fs-links">' +
-      '<a href="#' + encodeURIComponent(f.tracker) + '/' + encodeURIComponent(f.id) + '" class="fs-entry-link" data-tracker="' +
-        escapeHtml(f.tracker) + '" data-id="' + escapeHtml(f.id) + '">Read the entry →</a>' +
+      '<div class="fs-links">' + entryLink(f) +
       // No number here: the Harms view's tier heading also counts averted
       // harms, which the strip's own number leaves out (review I1).
-      '<a href="#harms" class="fs-harms-link">See all life/health harms →</a>' +
-      '</div></div>';
+      '<a href="#harms" class="fs-harms-link">See all life/health harms →</a></div>');
+  }
+  const g = strip.featured_illegality;
+  if (g) {
+    // Hedged wording, as in the Possible Illegality view: "may violate".
+    const more = g.more_laws > 0 ? " (+" + g.more_laws + " more)" : "";
+    html += feature("illegality", g, "Illegality", "Featured possible illegality",
+      '<div class="fs-law">May violate: ' + escapeHtml(g.law) +
+      (g.cite ? ' <span class="fs-cite">(' + escapeHtml(g.cite) + ')</span>' : '') + escapeHtml(more) + '</div>' +
+      (g.who ? '<div class="fs-actor">By: ' + escapeHtml(g.who) + '</div>' : '') +
+      (g.why ? '<blockquote class="fs-quote">' + escapeHtml(g.why) + '</blockquote>' : '') +
+      '<div class="fs-links">' + entryLink(g) +
+      '<a href="#illegality" class="fs-illegality-link">See all possible illegality →</a></div>');
   }
   return html + '</div>';
 }
@@ -9098,37 +9155,40 @@ function loadFrontStrip() {
 }
 
 function wireFrontStrip(mount) {
-  // Phone: the one-line "Featured" button folds the card open/closed.
-  const toggle = mount.querySelector(".fs-toggle");
-  if (toggle) toggle.addEventListener("click", () => {
-    const open = mount.classList.toggle("open");
-    toggle.setAttribute("aria-expanded", String(open));
+  // Phone: each card's one-line fold button opens/closes that card.
+  mount.querySelectorAll(".fs-toggle").forEach(toggle => {
+    toggle.addEventListener("click", () => {
+      const open = toggle.parentElement.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", String(open));
+    });
   });
   // "Read the entry": same jump as a related-entry link (moved ids
   // resolved), after the tracker data has loaded.
-  const entryLink = mount.querySelector(".fs-entry-link");
-  if (entryLink) entryLink.addEventListener("click", (e) => {
-    e.preventDefault();
-    const key = entryLink.dataset.tracker, id = entryLink.dataset.id;
-    curatedDataPromise.then(() => {
-      const target = resolveEntryTarget(key, id, TRACKERS, MOVED_IDS);
-      if (!target || TRACKERS[target.key].hidden) return;
-      goToTrackerHome(target.key);
-      openCardById(id);
+  mount.querySelectorAll(".fs-entry-link").forEach(entryLink => {
+    entryLink.addEventListener("click", (e) => {
+      e.preventDefault();
+      const key = entryLink.dataset.tracker, id = entryLink.dataset.id;
+      curatedDataPromise.then(() => {
+        const target = resolveEntryTarget(key, id, TRACKERS, MOVED_IDS);
+        if (!target || TRACKERS[target.key].hidden) return;
+        goToTrackerHome(target.key);
+        openCardById(id);
+      });
     });
   });
-  // "All N life/health harms": open the Harms view the way Back does
-  // (renderDispatch() keeps the #harms address in step).
-  const harmsLink = mount.querySelector(".fs-harms-link");
-  if (harmsLink) harmsLink.addEventListener("click", (e) => {
-    e.preventDefault();
-    curatedDataPromise.then(() => {
-      activeTracker = HARMS_VIEW;
-      renderDispatch();
-      const tabsEl = document.getElementById("tabs");
-      if (tabsEl) tabsEl.scrollIntoView({ behavior: "smooth", block: "start" });
-    });
+  // The linked numbers and the "See all" links. "all" opens Records with
+  // the All-trackers filter; "harms"/"illegality" open those views the way
+  // Back does (renderDispatch() keeps the #harms/#illegality address in step).
+  const openView = (view) => curatedDataPromise.then(() => {
+    if (view === "all") showAllTrackers();
+    else { activeTracker = view === "harms" ? HARMS_VIEW : ILLEGALITY_VIEW; renderDispatch(); }
+    const tabsEl = document.getElementById("tabs");
+    if (tabsEl) tabsEl.scrollIntoView({ behavior: "smooth", block: "start" });
   });
+  const wire = (el, view) => el.addEventListener("click", (e) => { e.preventDefault(); openView(view); });
+  mount.querySelectorAll(".fs-num-link").forEach(a => wire(a, a.dataset.goto));
+  mount.querySelectorAll(".fs-harms-link").forEach(a => wire(a, "harms"));
+  mount.querySelectorAll(".fs-illegality-link").forEach(a => wire(a, "illegality"));
 }
 
 loadFrontStrip();
