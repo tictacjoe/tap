@@ -14,8 +14,8 @@ const { withLoadCount } = (0, eval)(
 );
 
 test("appends the count once loaded, including zero", () => {
-  assert.equal(withLoadCount("Reporting feed, uncurated", 812), "Reporting feed, uncurated (812)");
-  assert.equal(withLoadCount("Reporting feed, uncurated", 0), "Reporting feed, uncurated (0)");
+  assert.equal(withLoadCount("Uncurated reporting", 812), "Uncurated reporting (812)");
+  assert.equal(withLoadCount("Uncurated reporting", 0), "Uncurated reporting (0)");
 });
 
 test("shows loading while the count is unknown", () => {

@@ -78,7 +78,7 @@ def test_tab_counts(browser, site_url):
     assert counts["curated"] > 0 and counts["reporting"] > 0
     assert page.locator("#feed-tab-curated").inner_text() == f"TAP entries ({counts['curated']})"
     assert (page.locator("#feed-tab-reporting").inner_text()
-            == f"Reporting feed, uncurated ({counts['reporting']})")
+            == f"Uncurated reporting ({counts['reporting']})")
 
 
 def test_reporting_tab_only_reporting(browser, site_url):

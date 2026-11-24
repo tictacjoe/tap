@@ -137,7 +137,7 @@ def _release(page, held):
 
 def test_reporting_labels_say_loading_then_show_counts(browser, site_url):
     page, held, _ = _open_held(browser, site_url)
-    assert page.locator("#feed-tab-reporting").inner_text() == "Reporting feed, uncurated (loading…)"
+    assert page.locator("#feed-tab-reporting").inner_text() == "Uncurated reporting (loading…)"
     assert page.locator('#tabs option[value="tracker"]').text_content() == "Uncurated reporting (loading…)"
     _release(page, held)
     assert re.search(r"\(\d+\)$", page.locator("#feed-tab-reporting").inner_text())

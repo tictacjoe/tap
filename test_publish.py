@@ -682,7 +682,7 @@ def test_index_node_missing_still_publishes_everything_else(tmp_path, monkeypatc
     assert exc.value.code == 1
     out = capsys.readouterr().out
     assert "ERROR: index:" in out
-    for name in ["moved-ids.json", "illegality.json", "site_meta.json", "front-strip.json"] + _INDEX_FILES:
+    for name in ["moved-ids.json", "illegality.json", "site_meta.json"] + _INDEX_FILES:
         assert (s / "data" / name).exists(), name
     assert (s / "feed.xml").exists()
     assert list((s / "data" / "index").glob("*.json")) == []

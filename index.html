@@ -126,53 +126,6 @@
     color: var(--brass);
     font-style: italic;
   }
-  /* ================= FRONT STRIP (2026-11-23) =================
-     Ledger row of four numbers between the tagline and the search box.
-     Built by buildFrontStripHtml() from data/front-strip.json. Same width
-     as the search box. On phones the row goes 2x2. (The two featured
-     cards were removed 2026-11-24, Joe.) */
-  .front-strip {
-    max-width: 700px;
-    margin: 1.6rem auto 0;
-    text-align: left;
-    container-type: inline-size;
-  }
-  .front-strip-inner {
-    background: var(--paper-card);
-    border: 1px solid var(--rule);
-    padding: 0.8rem 1rem 0.9rem;
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    gap: 0.75rem;
-  }
-  .fs-stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
-  .fs-stat { padding: 0 0.9rem; border-left: 1px solid var(--rule); min-width: 0; }
-  .fs-stat:first-child { padding-left: 0; border-left: 0; }
-  .fs-num {
-    display: block;
-    font-size: 1.7rem;
-    font-weight: 700;
-    line-height: 1;
-    font-variant-numeric: tabular-nums;
-  }
-  .fs-num-harm { color: var(--harm-figure); }
-  .fs-num-flag { color: var(--flag); }
-  a.fs-num-link { text-decoration: none; }
-  a.fs-num-link:not(.fs-num-harm):not(.fs-num-flag) { color: var(--ink); }
-  a.fs-num-link:hover, a.fs-num-link:focus-visible { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
-  .fs-label {
-    display: block;
-    margin-top: 0.3rem;
-    font-family: ui-monospace, 'SF Mono', 'Courier New', monospace;
-    font-size: 0.66rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--ink-soft);
-  }
-  @container (max-width: 520px) {
-    .fs-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 0.8rem; }
-    .fs-stat:nth-child(3) { padding-left: 0; border-left: 0; }
-  }
   /* ================= GLOBAL SEARCH (primary interaction) ================= */
   .global-search-box {
     max-width: 700px;
@@ -2162,10 +2115,6 @@
   <p class="tagline-name">The Accountability Project</p>
   <p class="tagline">Executive branch actions from Jan. 2025, assembled into topic dossiers through primary records and verified reporting. Every entry is built to hold up when challenged.</p>
 
-  <!-- Front-page findings strip (2026-11-23): filled by loadFrontStrip()
-       from data/front-strip.json; stays hidden if that file is missing. -->
-  <div id="front-strip" class="front-strip" hidden></div>
-
   <div class="global-search-box" id="search-mode-box">
     <span class="search-icon">🔍</span>
     <input type="text" id="global-search" placeholder="Search everything — try &quot;EPA&quot;, &quot;Supreme Court&quot;, or a name...">
@@ -2256,7 +2205,7 @@
 <div id="headlines-wrap" style="display:none">
   <div class="records-feed-tabs" role="tablist" aria-label="Records feed">
     <button type="button" role="tab" id="feed-tab-curated" aria-selected="true">TAP entries</button>
-    <button type="button" role="tab" id="feed-tab-reporting" aria-selected="false">Reporting feed, uncurated</button>
+    <button type="button" role="tab" id="feed-tab-reporting" aria-selected="false">Uncurated reporting</button>
   </div>
   <div class="controls" id="headlines-controls">
     <select id="headlines-sort"></select>
@@ -3656,7 +3605,7 @@ function setHeadlinesFeed(feed) {
    problem RENDER_STEP exists to avoid in the first place. A sort,
    filter, or the feed tab still does a full rebuild,
    since the actual set of rows (not just how many) has changed. */
-// Count shown on the "Reporting feed, uncurated" tab: Reporting items since Jan 2025, the same
+// Count shown on the "Uncurated reporting" tab: Reporting items since Jan 2025, the same
 // set the feed lists. Only meaningful once Reporting has loaded.
 function reportingFeedCount() {
   // Straight from the data (adaptReportingEntry takes date from entry.date), so this does not
@@ -3683,7 +3632,7 @@ function renderHeadlinesView(appendOnly) {
   document.getElementById("feed-tab-curated").textContent =
     "TAP entries (" + items.filter(i => curatedKeys.includes(i.tracker)).length + ")";
   document.getElementById("feed-tab-reporting").textContent =
-    withLoadCount("Reporting feed, uncurated",
+    withLoadCount("Uncurated reporting",
       reportingLoaded ? reportingFeedCount() : null, reportingFailed);
 
   updateStatusKey("status-key-records",
@@ -6119,42 +6068,6 @@ function buildHarmsListHtml(trackers, abbr, names) {
   return html + '</section>';
 }
 /* harms-list:end */
-/* Front-page findings strip (2026-11-23, spec tap-data
-   docs/superpowers/specs/2026-11-23-front-strip-design.md). Turns
-   data/front-strip.json (written by front_strip.py at publish time) into
-   the ledger row of four numbers. The two featured cards (life/health
-   harm, possible illegality) were removed 2026-11-24 (Joe), here and in
-   front_strip.py; an older file's featured keys are simply ignored.
-   All four numbers link to their views via data-goto ("all", "harms",
-   "illegality", "reporting"), wired in wireFrontStrip().
-   Pure (no DOM) so tests/front-strip.test.js can run it; loadFrontStrip()
-   does the fetch and wiring. colorFor is unused since the cards went.
-   Returns "" for missing data so
-   the page simply looks like it did before the strip existed. */
-/* front-strip:start */
-function buildFrontStripHtml(strip, colorFor) {
-  if (!strip || !strip.stats) return "";
-  const s = strip.stats;
-  const fmt = n => Number(n || 0).toLocaleString("en-US");
-  // [number, label, extra class for the number's color, link: [href, data-goto] or null]
-  const stats = [
-    [s.entries, "curated entries", "", ["#", "all"]],
-    [s.life_health, "harms to life or health", " fs-num-harm", ["#harms", "harms"]],
-    [s.illegality, "entries describing possible illegality", " fs-num-flag", ["#illegality", "illegality"]],
-    [s.reporting, "uncurated reporting", "", ["#", "reporting"]],
-  ];
-  let html = '<div class="front-strip-inner"><div class="fs-stats">' +
-    stats.map(([n, label, cls, link]) =>
-      '<div class="fs-stat">' +
-      (link
-        ? '<a href="' + link[0] + '" data-goto="' + link[1] + '" title="Open ' + label + '" class="fs-num fs-num-link' + cls + '">' + fmt(n) + '</a>'
-        : '<span class="fs-num' + cls + '">' + fmt(n) + '</span>') +
-      '<span class="fs-label">' + label + '</span></div>').join("") +
-    '</div>';
-
-  return html + '</div>';
-}
-/* front-strip:end */
 /* harms-hash:start */
 /* The Harms view's own address, #harms, so it can be shared. Pure decision;
    renderDispatch() and the load code make the history calls. "load": #harms opens the view.
@@ -9024,44 +8937,6 @@ fetch("data/site_meta.json")
   })
   .catch(() => {});
 
-/* Front-page findings strip (2026-11-23). Fetches the small
-   data/front-strip.json on its own -- not inside loadAllData() -- so the
-   strip shows before the big tracker files finish. Any failure (404, bad
-   JSON, missing stats) leaves #front-strip hidden and empty: the page then
-   looks exactly as it did before the strip existed. */
-function loadFrontStrip() {
-  const mount = document.getElementById("front-strip");
-  if (!mount) return;
-  fetch("data/front-strip.json")
-    .then(r => (r.ok ? r.json() : null))
-    .then(strip => {
-      const html = buildFrontStripHtml(strip, key => "var(--trk-" + key + ")");
-      if (!html) return;
-      mount.innerHTML = html;
-      mount.hidden = false;
-      wireFrontStrip(mount);
-    })
-    .catch(err => console.warn("front strip not shown:", err));
-}
-
-function wireFrontStrip(mount) {
-  // The linked numbers. "all" opens Records with
-  // the All-trackers filter; "reporting" opens Records' Reporting feed (as
-  // the "Uncurated reporting" chip does); "harms"/"illegality" open those
-  // views the way Back does (renderDispatch() keeps #harms/#illegality in step).
-  const openView = (view) => curatedDataPromise.then(() => {
-    if (view === "all") showAllTrackers();
-    else if (view === "reporting") showReportingFeed();
-    else { activeTracker = view === "harms" ? HARMS_VIEW : ILLEGALITY_VIEW; renderDispatch(); }
-    const tabsEl = document.getElementById("tabs");
-    if (tabsEl) tabsEl.scrollIntoView({ behavior: "smooth", block: "start" });
-  });
-  const wire = (el, view) => el.addEventListener("click", (e) => { e.preventDefault(); openView(view); });
-  mount.querySelectorAll(".fs-num-link").forEach(a => wire(a, a.dataset.goto));
-}
-
-loadFrontStrip();
-
 document.getElementById("back-to-top-btn").addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
@@ -9390,7 +9265,7 @@ function onReportingLoaded() {
   const tabOpt = document.querySelector('#tabs option[value="tracker"]');
   if (tabOpt) tabOpt.textContent = reportingOptionText();
   const feedTab = document.getElementById("feed-tab-reporting");
-  feedTab.textContent = withLoadCount("Reporting feed, uncurated", reportingLoaded ? reportingFeedCount() : null, reportingFailed);
+  feedTab.textContent = withLoadCount("Uncurated reporting", reportingLoaded ? reportingFeedCount() : null, reportingFailed);
   if (!reportingViewActive()) return;
   if (document.getElementById("global-search").value.trim() !== "" && applyReportingArrivalToSearch()) return;
   renderDispatch();
@@ -9678,9 +9553,8 @@ async function loadAllData() {
   else setTimeout(startBackgroundLoads, 0);
 }
 
-// Kept so the front strip's "Read the entry" link can wait for the data
-// if it's clicked before every curated tracker file has arrived (Reporting is separate: see
-// ensureReporting).
+// Kept so later loads (full entries) can wait until every curated tracker
+// file has arrived (Reporting is separate: see ensureReporting).
 const curatedDataPromise = loadAllData();
 
 /* ====================================================================
