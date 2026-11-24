@@ -192,3 +192,77 @@ def test_missing_index_falls_back_to_full(page, site_url):
     # The boot fetch counted, and the background load doesn't fetch dai again.
     assert page.evaluate("ensureFullEntries()") is True
     assert page.evaluate("window.__fullFetches") == 5
+
+
+# ---- Task 3: opening a card, sources panel or Listen waits for the full entry ----
+
+# Same counter as test_lazy_detail_browser.py: buildDetailHtml calls.
+_COUNT_CALLS = """() => {
+    window.__bdh = 0;
+    const real = window.buildDetailHtml;
+    window.buildDetailHtml = function (...args) { window.__bdh++; return real.apply(this, args); };
+}"""
+
+LOADING_DETAILS = "Loading details…"
+LOADING_SOURCES = "Loading sources…"
+LOAD_FAILED = "Details couldn't be loaded. Reload the page to try again."
+
+
+def _detail_text(page, card_sel):
+    return page.evaluate(
+        "(s) => { const d = document.querySelector(s + ' .entry-detail'); return d ? d.innerText.trim() : null; }",
+        card_sel)
+
+
+def test_card_opened_early_fills_after_load(page, site_url):
+    release = delayed_full(page)
+    _boot(page, site_url)
+    page.evaluate(_COUNT_CALLS)
+    page.evaluate("selectDatabaseTab('govservices')")
+    page.wait_for_selector("#entries .entry")
+    page.locator("#entries .entry .entry-head").first.click()
+    assert _detail_text(page, "#entries .entry") == LOADING_DETAILS
+    assert page.evaluate("window.__bdh") == 0
+    release()
+    page.wait_for_function("fullEntriesLoaded.govservices === true", timeout=60000)
+    page.wait_for_function(
+        "document.querySelector('#entries .entry .entry-detail').innerText.length > 200", timeout=10000)
+    assert page.evaluate("window.__bdh") == 1
+
+
+def test_deep_link_before_full_load(page, site_url):
+    eid = json.loads((SITE_DIR / "data" / "index" / "deregulation.json").read_text())[5]["id"]
+    release = delayed_full(page)
+    page.goto(site_url + f"/index.html#deregulation/{eid}")
+    page.wait_for_function("curatedLoaded === true", timeout=60000)
+    sel = f'#entries .entry[data-entry-id="{eid}"]'
+    page.wait_for_selector(sel)
+    assert "open" in page.get_attribute(sel, "class")
+    assert _detail_text(page, sel) == LOADING_DETAILS
+    release()
+    page.wait_for_function(
+        "(s) => document.querySelector(s + ' .entry-detail').innerText.length > 200", arg=sel, timeout=60000)
+    assert page.evaluate("(s) => document.querySelectorAll(s + ' .entry-cols').length", sel) > 0
+
+
+def test_records_trail_before_full_load(page, site_url):
+    release = delayed_full(page)
+    _boot(page, site_url)
+    page.wait_for_selector("#headlines-view .headline-entry[data-entry-id] .headline-trail-btn")
+    row = page.locator("#headlines-view .headline-entry[data-entry-id]").first
+    row.locator(".headline-trail-btn").click()
+    panel = row.locator(".headline-trail-panel")
+    assert panel.inner_text().strip() == LOADING_SOURCES
+    release()
+    panel.locator("a[href]").first.wait_for(timeout=60000)
+
+
+def test_full_load_failure_message(page, site_url):
+    page.route("**/data/government-services.json", lambda route: route.fulfill(status=500, body="boom"))
+    _boot(page, site_url)
+    page.evaluate("selectDatabaseTab('govservices')")
+    page.wait_for_selector("#entries .entry")
+    page.locator("#entries .entry .entry-head").first.click()
+    page.wait_for_function(
+        "(t) => document.querySelector('#entries .entry .entry-detail').innerText.trim() === t",
+        arg=LOAD_FAILED, timeout=60000)

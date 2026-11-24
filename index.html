@@ -3558,10 +3558,13 @@ function buildHeadlineRow(item, displayDate) {
   body.appendChild(trailPanel);
 
   trailBtn.addEventListener("click", () => {
-    if (!trailPanel.dataset.built) {
-      trailPanel.innerHTML = buildTrailHtml(item.trail);
-      trailPanel.dataset.built = "1";
-    }
+    // Curated rows build from the full entry (the row's item may have been
+    // adapted from a slim index entry); Reporting rows keep item.trail.
+    fillSourcesPanel(trailPanel, item.tracker, () => {
+      if (item.tracker === "tracker" || !ROW_ADAPTERS[item.tracker]) return item.trail;
+      const entry = TRACKERS[item.tracker].data.find(e => e.id === item.id);
+      return entry ? ROW_ADAPTERS[item.tracker](entry).trail : item.trail;
+    });
     trailPanel.style.display = trailPanel.style.display === "none" ? "block" : "none";
   });
 
@@ -7065,7 +7068,7 @@ function buildEntryCard(entry, cfg, docketLabel, sourceLabel, term, useRegex, ca
       '<div class="confidence-box entry-row-sources-panel" style="display:none"></div>' +
       '<div class="entry-detail"></div>';
     detailArgs.set(div, {
-      entry, cfg, term, useRegex,
+      entry, cfg, term, useRegex, trackerKey: cardTrackerKey,
       html: () =>
         '<div class="entry-row-tools">' + shareBtnHtml + listenBtnHtml + '</div>' +
         (g ? glanceDetailTitleHtml(entry, cfg, hl) : "") +
@@ -7073,20 +7076,15 @@ function buildEntryCard(entry, cfg, docketLabel, sourceLabel, term, useRegex, ca
     });
     const head = div.querySelector(".entry-head");
     head.addEventListener("click", () => {
-      div.classList.toggle("open");
-      if (div.classList.contains("open")) {
-        ensureEntryDetail(div);
-        distributeEntryCards(div);
-      }
+      if (div.classList.contains("open")) div.classList.remove("open");
+      else openEntryCard(div);
     });
     const panel = div.querySelector(".entry-row-sources-panel");
     div.querySelector(".entry-row-sources").addEventListener("click", (e) => {
       e.stopPropagation();
-      // Built once, on the first click: the adapter runs here, not at draw time.
-      if (!panel.dataset.built) {
-        panel.innerHTML = buildTrailHtml(ROW_ADAPTERS[cardTrackerKey](entry).trail);
-        panel.dataset.built = "1";
-      }
+      // Built once, on the first click: the adapter runs here, not at draw
+      // time, and on the full entry (fillSourcesPanel waits for it).
+      fillSourcesPanel(panel, cardTrackerKey, () => ROW_ADAPTERS[cardTrackerKey](entry).trail);
       panel.style.display = panel.style.display === "none" ? "block" : "none";
     });
     // Head only; the detail is wired when it is built (ensureEntryDetail).
@@ -7103,7 +7101,7 @@ function buildEntryCard(entry, cfg, docketLabel, sourceLabel, term, useRegex, ca
   // Detail starts empty and is built on first open (ensureEntryDetail).
   div.innerHTML = (glanceHead || oldHead) + '<div class="entry-detail"></div>';
   detailArgs.set(div, {
-    entry, cfg, term, useRegex,
+    entry, cfg, term, useRegex, trackerKey: cardTrackerKey,
     html: () =>
       (glanceHead ? glanceDetailTitleHtml(entry, cfg, hl) : "") +
       buildDetailHtml(entry, cfg, term, useRegex),
@@ -7111,11 +7109,8 @@ function buildEntryCard(entry, cfg, docketLabel, sourceLabel, term, useRegex, ca
 
   const cardHead = div.querySelector(".entry-head");
   cardHead.addEventListener("click", () => {
-    div.classList.toggle("open");
-    if (div.classList.contains("open")) {
-      ensureEntryDetail(div);
-      distributeEntryCards(div);
-    }
+    if (div.classList.contains("open")) div.classList.remove("open");
+    else openEntryCard(div);
   });
   // Head only; the detail is wired when it is built (ensureEntryDetail).
   wireEntryContent(cardHead, entry, cfg, term, useRegex);
@@ -7135,9 +7130,49 @@ function wireEntryContent(container, entry, cfg, term, useRegex) {
   wireEvidenceDrawers(container, entry, cfg, term, useRegex);
 }
 
+// Lazy-load phase 3b: true once a tracker's entries in memory are full.
+// Community topics and Reporting have no slim index, so they always are.
+function entriesFullFor(trackerKey) {
+  return !FULL_ENTRY_FILES[trackerKey] || !!fullEntriesLoaded[trackerKey];
+}
+
+const DETAIL_LOADING_HTML = '<div class="empty-state">Loading details\u2026</div>';
+const DETAIL_FAILED_HTML = '<div class="empty-state">Details couldn\'t be loaded. Reload the page to try again.</div>';
+
+// Fills a sources panel (row-mode "sources", Records trail) once, from
+// trailFn() run on the full entry: right away when the tracker's full entries
+// are in, else "Loading sources..." until ensureFullEntries() settles. Clicks
+// while it waits change nothing here (the caller still toggles the panel).
+function fillSourcesPanel(panel, trackerKey, trailFn) {
+  if (panel.dataset.built || panel.dataset.pending) return;
+  const build = () => {
+    panel.innerHTML = buildTrailHtml(trailFn());
+    panel.dataset.built = "1";
+  };
+  if (entriesFullFor(trackerKey)) { build(); return; }
+  panel.dataset.pending = "1";
+  panel.innerHTML = '<div class="field-value">Loading sources\u2026</div>';
+  ensureFullEntries(trackerKey).then(ok => {
+    delete panel.dataset.pending;
+    if (ok) build();
+    else panel.innerHTML = '<div class="field-value">Sources couldn\'t be loaded. Reload the page to try again.</div>';
+  });
+}
+
+// Opens a card and builds (or starts loading) its detail, then deals its
+// cards into columns. Used by both head clicks, openCardById and the tour.
+function openEntryCard(card) {
+  card.classList.add("open");
+  ensureEntryDetail(card);
+  distributeEntryCards(card);
+}
+
 // Fills a card's .entry-detail the first time it is needed (open by click,
 // deep link, history, tour) and wires it. Later calls return the same node
 // untouched. Returns null for an element that isn't a lazy card.
+// Until the card's tracker has its full entries (lazy-load phase 3b) the
+// detail shows "Loading details..." and is built when they arrive, then dealt
+// into columns if the card is still open; if they fail, it says so.
 function ensureEntryDetail(el) {
   const args = detailArgs.get(el);
   if (!args) return null;
@@ -7145,7 +7180,31 @@ function ensureEntryDetail(el) {
   // holds its detail in a child .entry-detail.
   const isOneLiner = el.classList.contains("oneliner-detail");
   const detail = isOneLiner ? el : el.querySelector(".entry-detail");
-  if (!detail || el.dataset.detailBuilt === "1") return detail;
+  if (!detail || el.dataset.detailBuilt === "1" || el.dataset.detailPending === "1") return detail;
+  if (fullEntriesFailed[args.trackerKey] && !entriesFullFor(args.trackerKey)) {
+    detail.innerHTML = DETAIL_FAILED_HTML;
+    return detail;
+  }
+  if (!entriesFullFor(args.trackerKey)) {
+    el.dataset.detailPending = "1";
+    detail.innerHTML = DETAIL_LOADING_HTML;
+    ensureFullEntries(args.trackerKey).then(ok => {
+      delete el.dataset.detailPending;
+      if (!ok) { detail.innerHTML = DETAIL_FAILED_HTML; return; }
+      buildEntryDetail(el, detail, args, isOneLiner);
+      // A one-liner's detail is open while it is shown; a card while .open.
+      const stillOpen = isOneLiner ? el.style.display !== "none" : el.classList.contains("open");
+      if (stillOpen) distributeEntryCards(el);
+    });
+    return detail;
+  }
+  buildEntryDetail(el, detail, args, isOneLiner);
+  return detail;
+}
+
+// ensureEntryDetail's build, from full entries only: markup, wiring, and the
+// detailBuilt flag that makes every later call a no-op.
+function buildEntryDetail(el, detail, args, isOneLiner) {
   detail.innerHTML = args.html();
   if (isOneLiner) {
     // One-liner detail has no share/listen/update-request buttons, so it keeps
@@ -7159,7 +7218,6 @@ function ensureEntryDetail(el) {
     wireEntryContent(detail, args.entry, args.cfg, args.term, args.useRegex);
   }
   el.dataset.detailBuilt = "1";
-  return detail;
 }
 
 // Browser-only counterpart to the .share-link-btn markup above --
@@ -7259,8 +7317,19 @@ function wireListenButtons(container, entry, cfg) {
         player.toggle();
         return;
       }
-      const title = glanceActive(entry, cfg) ? entry.glance.what : entry[cfg.titleField];
-      player.start(btn.dataset.listenKey, stripProcessLabels(title || ""), buildListenScript(entry, cfg));
+      const key = cfg.trackerKey || cfg.kind;
+      const start = () => {
+        const title = glanceActive(entry, cfg) ? entry.glance.what : entry[cfg.titleField];
+        player.start(btn.dataset.listenKey, stripProcessLabels(title || ""), buildListenScript(entry, cfg));
+      };
+      // Full entries in: start inside the tap, as before. Otherwise the
+      // script is built from the full entry once ensureFullEntries settles.
+      if (entriesFullFor(key)) start();
+      else if (!btn.dataset.listenPending) {
+        // A second tap while waiting doesn't queue a second start.
+        btn.dataset.listenPending = "1";
+        ensureFullEntries(key).then(ok => { delete btn.dataset.listenPending; if (ok) start(); });
+      }
     });
   });
 }
@@ -8112,13 +8181,12 @@ function openCardById(id) {
   // the deep link actually shows something.
   const group = card.closest(".official-group");
   if (group) group.classList.add("open");
-  card.classList.add("open", "deep-linked");
-  // Opening by id skips the head click, so build the detail here first.
-  ensureEntryDetail(card);
-  // Deal the cards into columns, same as the entry-head click handler does
-  // (2026-11-15: this path skipped it, so a deep-linked or Records-row-opened
+  card.classList.add("deep-linked");
+  // Opening by id skips the head click, so open it the same way: build (or
+  // start loading) the detail and deal the cards into columns (2026-11-15:
+  // this path once skipped the dealing, so a deep-linked or Records-row-opened
   // entry showed every card stacked in the first column until a resize).
-  distributeEntryCards(card);
+  openEntryCard(card);
   setTimeout(() => card.classList.remove("deep-linked"), DEEP_LINK_HIGHLIGHT_MS);
   card.scrollIntoView({ behavior: "smooth", block: "start" });
   return true;
@@ -8373,7 +8441,7 @@ function renderSearchMatches(section, matches, term, useRegex, useOneLiners) {
     // Lazy: the detail markup is built (and wired) by ensureEntryDetail the
     // first time the row is opened, not at draw time.
     detailArgs.set(detail, {
-      entry: m.entry, cfg: m.cfg, term, useRegex,
+      entry: m.entry, cfg: m.cfg, term, useRegex, trackerKey: m.cfg.trackerKey || m.cfg.kind,
       html: () =>
         glanceDetailTitleHtml(m.entry, m.cfg, (t) => highlightMatches(t || "", term, useRegex)) +
         buildDetailHtml(m.entry, m.cfg, term, useRegex),
@@ -9671,12 +9739,7 @@ const TapDemoTour = (() => {
         const firstEntry = document.querySelector(".entry");
         if (firstEntry) {
           firstEntry.scrollIntoView({ behavior: "smooth", block: "center" });
-          if (!firstEntry.classList.contains("open")) {
-            // The head click builds the detail; ensureEntryDetail is a no-op after it.
-            const head = firstEntry.querySelector(".entry-head");
-            if (head) head.click();
-            ensureEntryDetail(firstEntry);
-          }
+          if (!firstEntry.classList.contains("open")) openEntryCard(firstEntry);
         }
       }
     },
