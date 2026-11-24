@@ -7170,8 +7170,10 @@ function searchWaitHtml(keys) {
 // One settle render per wait: every render while a search waits (each key
 // typed, a filter change...) shows the spinner again, but only the first
 // attaches the .then; on settle the CURRENT term and tab are rendered once.
-// The tab wait holds the tracker key it waits on; the global wait is a flag.
-let tabSearchWaitKey = null;
+// Tab waits are keyed per tracker (tabSearchWaits[key] = true while that
+// tracker's wait is attached), so switching trackers mid-wait attaches the new
+// tracker's own wait instead of riding on the old one's; the global wait is a flag.
+const tabSearchWaits = {};
 let globalSearchWaitPending = false;
 
 const DETAIL_LOADING_HTML = '<div class="empty-state">Loading details\u2026</div>';
@@ -7900,15 +7902,16 @@ function renderEntries() {
   if (searchTerm && !entriesFullFor(activeTracker)) {
     container.innerHTML = searchWaitHtml([activeTracker]);
     countEl.textContent = "";
-    if (!fullEntriesFailed[activeTracker] && !tabSearchWaitKey) {
-      const waitKey = tabSearchWaitKey = activeTracker;
+    if (!fullEntriesFailed[activeTracker] && !tabSearchWaits[activeTracker]) {
+      const waitKey = activeTracker;
+      tabSearchWaits[waitKey] = true;
       ensureFullEntries(waitKey).then(() => {
-        tabSearchWaitKey = null;
-        // Still a tab search (not cleared, not taken over by global search)
-        // on the tracker waited for -- or on another tracker still waiting,
-        // whose render attached no wait of its own while this one was pending.
+        delete tabSearchWaits[waitKey];
+        // Re-render only if this tracker is still shown with a tab search
+        // (not cleared, not taken over by global search). Another tracker
+        // the reader switched to has its own wait.
         if (!searchTerm || document.getElementById("global-search").value.trim()) return;
-        if (activeTracker === waitKey || (FULL_ENTRY_FILES[activeTracker] && !entriesFullFor(activeTracker))) renderDispatch();
+        if (activeTracker === waitKey) renderDispatch();
       });
     }
     return;

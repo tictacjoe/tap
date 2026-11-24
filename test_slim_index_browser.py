@@ -478,3 +478,41 @@ def test_records_trail_for_missing_entry_says_so(page, site_url):
     row.locator(".headline-trail-btn").click()
     assert row.locator(".headline-trail-panel").inner_text().strip() == \
         "Sources couldn't be loaded. Reload the page to try again."
+
+
+def test_tab_search_after_tracker_switch_settles(page, site_url):
+    """Task 7A: a tab search waiting on tracker A, then switched to tracker B
+    (same term), must show B's results once B is full -- even when B's full
+    file lands first and A's wait settles later."""
+    held = {}  # file name -> list of held routes
+    released = set()
+
+    def handler(route):
+        name = route.request.url.split("?", 1)[0].rsplit("/", 1)[-1]
+        if name in released:
+            route.continue_()
+        else:
+            held.setdefault(name, []).append(route)
+
+    page.route(_is_full_file, handler)
+
+    def release(name):
+        released.add(name)
+        for r in held.pop(name, []):
+            r.continue_()
+
+    _boot(page, site_url)
+    page.evaluate("selectDatabaseTab('prosecution')")
+    page.wait_for_selector("#entries .entry")
+    page.fill("#search", "the")
+    page.wait_for_selector("#entries .search-loading")
+    page.evaluate("selectDatabaseTab('deregulation')")
+    page.wait_for_selector("#entries .search-loading")
+    release("deregulation.json")
+    page.wait_for_function("fullEntriesLoaded.deregulation === true", timeout=60000)
+    release("prosecution.json")
+    page.wait_for_function("fullEntriesLoaded.prosecution === true", timeout=60000)
+    page.wait_for_selector("#entries .entry", timeout=10000)
+    assert page.locator("#entries .search-loading").count() == 0
+    for f in FULL_FILES:
+        release(f)
