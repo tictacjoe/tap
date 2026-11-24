@@ -97,7 +97,14 @@ def _placement(browser, site_url, tracker, entry_id, width):
     page = context.new_page()
     errors = []
     page.on("pageerror", lambda e: errors.append(str(e)))
-    page.goto(f"{site_url}/index.html#{tracker}/{entry_id}", wait_until="networkidle")
+    # The deep link is followed once the full entries have merged (the boot
+    # draws from the slim index; opening a card before then is Task 3's
+    # "Loading details..." path, tested in test_slim_index_browser.py).
+    page.goto(f"{site_url}/index.html", wait_until="domcontentloaded")
+    page.wait_for_function("curatedLoaded === true", timeout=60000)
+    assert page.evaluate("ensureFullEntries()") is True
+    page.evaluate("(h) => { history.replaceState(null, '', h); openEntryFromHash(); }",
+                  f"#{tracker}/{entry_id}")
     page.wait_for_timeout(1500)
     result = page.evaluate(_PLACEMENT, entry_id)
     context.close()

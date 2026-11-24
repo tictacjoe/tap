@@ -85,7 +85,8 @@ def test_reporting_is_requested_only_after_curated_data(browser, site_url):
     page, _ = _new_page(browser)
     held, held_p = [], []
     page.route("**/data/tracker.json", lambda r: held.append(r))
-    page.route("**/data/prosecution.json", lambda r: held_p.append(r))
+    # The boot reads the slim index (data/index/<file>), so that is the file held.
+    page.route("**/data/index/prosecution.json", lambda r: held_p.append(r))
     page.goto(f"{site_url}/index.html", wait_until="domcontentloaded")
     page.wait_for_timeout(1500)
     assert held == []  # curated is still incomplete, so Reporting has not been asked for

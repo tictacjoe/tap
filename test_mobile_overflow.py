@@ -131,10 +131,12 @@ def _fulfill_with(body):
 def _inject_status_stage(page, stage="Court ruled"):
     data_dir = pathlib.Path(__file__).parent / "data"
     for name in _CURATED_FILES:
-        entries = json.loads((data_dir / name).read_text(encoding="utf-8"))
-        for entry in entries:
-            entry["status_stage"] = stage
-        page.route("**/data/" + name, _fulfill_with(json.dumps(entries)))
+        # The slim index (read at boot) and the full file (merged in after).
+        for rel in ("", "index/"):
+            entries = json.loads((data_dir / rel / name).read_text(encoding="utf-8"))
+            for entry in entries:
+                entry["status_stage"] = stage
+            page.route("**/data/" + rel + name, _fulfill_with(json.dumps(entries)))
 
 
 def test_curated_feed_with_compact_pills_fits_the_phone(site_url, phone_browser):

@@ -82,20 +82,24 @@ def inject_status_stage(page, files, stage="Court ruled"):
     """Route each named data file to the real file with `status_stage` set on
     every entry. Shared with test_mobile_overflow.py."""
     for name in files:
-        entries = json.loads((SITE_DIR / "data" / name).read_text(encoding="utf-8"))
-        for entry in entries:
-            entry["status_stage"] = stage
-        page.route("**/data/" + name, _fulfill_with(json.dumps(entries)))
+        # The slim index (data/index/<name>, read at boot) and the full file
+        # (merged in afterwards) both get the change.
+        for rel in ("", "index/"):
+            entries = json.loads((SITE_DIR / "data" / rel / name).read_text(encoding="utf-8"))
+            for entry in entries:
+                entry["status_stage"] = stage
+            page.route("**/data/" + rel + name, _fulfill_with(json.dumps(entries)))
 
 
 def strip_status_stage(page, files):
     """Route each named data file to the real file with `status_stage`
     removed from every entry: the pre-backfill state."""
     for name in files:
-        entries = json.loads((SITE_DIR / "data" / name).read_text(encoding="utf-8"))
-        for entry in entries:
-            entry.pop("status_stage", None)
-        page.route("**/data/" + name, _fulfill_with(json.dumps(entries)))
+        for rel in ("", "index/"):  # the slim index and the full file
+            entries = json.loads((SITE_DIR / "data" / rel / name).read_text(encoding="utf-8"))
+            for entry in entries:
+                entry.pop("status_stage", None)
+            page.route("**/data/" + rel + name, _fulfill_with(json.dumps(entries)))
 
 
 def _open(browser, site_url, inject=(), width=1280):

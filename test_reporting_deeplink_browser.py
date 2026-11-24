@@ -107,7 +107,13 @@ def test_an_unknown_or_hidden_reporting_id_shows_the_note(browser, site_url, whi
 
 
 def test_curated_links_still_open_and_now_highlight(browser, site_url):
-    page, errors = _goto(browser, site_url, "prosecution/" + CURATED_ID)
+    # Not _goto: its networkidle now also waits out the background full-entry
+    # downloads, which can outlast the DEEP_LINK_HIGHLIGHT_MS highlight.
+    page = browser.new_context(viewport={"width": 1280, "height": 900}).new_page()
+    errors = []
+    page.on("pageerror", lambda e: errors.append(str(e)))
+    page.goto(f"{site_url}/index.html#prosecution/{CURATED_ID}", wait_until="domcontentloaded")
+    page.wait_for_function("curatedLoaded === true", timeout=60000)
     card = page.locator(f'.entry[data-entry-id="{CURATED_ID}"]')
     assert "open" in card.get_attribute("class") and "deep-linked" in card.get_attribute("class")
     assert errors == []

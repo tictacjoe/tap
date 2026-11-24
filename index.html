@@ -9351,6 +9351,121 @@ function ensureReporting() {
   return reportingPromise;
 }
 
+/* Full curated entries (lazy-load phase 3b). The first render reads each
+   tracker's slim index (data/index/<file>: the same entries, in the same order,
+   holding only the fields read before a card is opened). The full entries load
+   right after, in the background, and mergeFullEntries() copies each one INTO
+   the slim object already in memory, so every closure, detailArgs record and
+   adapter call that captured an entry sees the full entry once it arrives.
+   Community topics and Reporting have no index. */
+const FULL_ENTRY_FILES = {
+  prosecution: "prosecution.json",
+  deregulation: "deregulation.json",
+  govservices: "government-services.json",
+  trumpfamily: "trumpfamily.json",
+  dai: "dai.json",
+};
+// trackerKey -> true once that tracker's full entries are in TRACKERS[key].data
+// (merged, or loaded whole at boot when its index was missing).
+let fullEntriesLoaded = {};
+// trackerKey -> true once its full file has failed to load (never retried).
+let fullEntriesFailed = {};
+const fullEntriesPromises = {};
+// For tests: how many times a full data/<file> has been fetched.
+window.__fullFetches = 0;
+
+function fetchJsonOk(url) {
+  return fetch(url).then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); });
+}
+
+function fetchFullFile(key) {
+  window.__fullFetches++;
+  return fetchJsonOk("data/" + FULL_ENTRY_FILES[key]);
+}
+
+// Boot read for one tracker: its index, or (index missing, failed or malformed)
+// its full file, silently, as before the index existed. Resolves {raw, full};
+// rejects only if the full file fails too.
+function fetchIndexOrFull(key) {
+  return fetchJsonOk("data/index/" + FULL_ENTRY_FILES[key])
+    .then(raw => { if (!Array.isArray(raw)) throw new Error("index is not a list"); return { raw, full: false }; })
+    .catch(() => fetchFullFile(key).then(raw => ({ raw, full: true })));
+}
+
+/* Cabinet-Level's load step. Runs exactly once per object: on the parsed
+   entries at boot, and on each freshly parsed full entry before it is merged
+   (never on an object that was already classified). */
+function classifyClaEntry(e) {
+  e.offense_category_raw = e.offense_category;
+  e.offense_category = classifyOffenseCategory(e.offense_category);
+  e.status_category = classifyStatus(e.status);
+  e.concern_type = e.offense_category === "Other/Unclassified" ? classifyConcernType(e.offense_category_raw) : null;
+}
+
+// Freshly parsed entries -> the objects the site keeps (boot and merge alike).
+function prepareCuratedEntries(key, raw) {
+  if (key === "trumpfamily") return raw.map(mapTrumpFamilyEntry);
+  if (key === "dai") return raw.map(mapDaiEntry);
+  if (key === "prosecution") raw.forEach(classifyClaEntry);
+  return raw;
+}
+
+/* Merges a tracker's full file into the entries already loaded from its index.
+   Each full entry is assigned into the existing object with the same id (slim
+   fields the full entry lacks are removed first, in case the index is from an
+   older publish), or appended if the index didn't have it. Index entries the
+   full file lacks are dropped. The array ends up in full-file order. A re-render
+   happens only if entries were added or removed and the tracker (or Records)
+   is on screen. */
+function mergeFullEntries(trackerKey, fullRaw) {
+  const t = TRACKERS[trackerKey];
+  const existing = new Map(t.data.map(e => [e.id, e]));
+  const reused = new Set();
+  let added = 0;
+  t.data = prepareCuratedEntries(trackerKey, fullRaw).map(full => {
+    const slim = existing.get(full.id);
+    if (!slim || reused.has(slim)) { added++; return full; }
+    reused.add(slim);
+    Object.keys(slim).forEach(k => { if (!(k in full)) delete slim[k]; });
+    return Object.assign(slim, full);
+  });
+  const removed = existing.size - reused.size;
+  fullEntriesLoaded[trackerKey] = true;
+  // Same answer as at boot unless the index came from another publish.
+  refreshStatusStageFlags();
+  if (added + removed > 0 && (activeTracker === trackerKey || activeTracker === "headlines")) {
+    try { renderDispatch(); } catch (e) { console.error("renderDispatch after merge failed:", e); }
+  }
+  return { added, removed };
+}
+
+// Idempotent per tracker: one cached promise each, so no file is fetched twice.
+// With no key, waits for all five and resolves true only if all succeeded.
+// Resolves false on failure; never rejects.
+function ensureFullEntries(trackerKey) {
+  if (trackerKey === undefined) {
+    return Promise.all(Object.keys(FULL_ENTRY_FILES).map(k => ensureFullEntries(k)))
+      .then(oks => oks.every(Boolean));
+  }
+  if (!fullEntriesPromises[trackerKey]) {
+    // Waits for the boot load, which may already have read the full file
+    // (the .catch keeps a boot exception from turning into a rejection here).
+    fullEntriesPromises[trackerKey] = curatedDataPromise.catch(() => {}).then(() => {
+      if (fullEntriesLoaded[trackerKey]) return true;
+      if (fullEntriesFailed[trackerKey]) return false;
+      return fetchFullFile(trackerKey).then(raw => {
+        mergeFullEntries(trackerKey, raw);
+        return true;
+      }).catch(err => {
+        fullEntriesFailed[trackerKey] = true;
+        console.warn("Full entries failed to load:", FULL_ENTRY_FILES[trackerKey], err);
+        return false;
+      });
+    });
+  }
+  return fullEntriesPromises[trackerKey];
+}
+
 /* Loads the curated published JSON files (Reporting loads separately,
    see ensureReporting). Uses Promise.allSettled (not Promise.all) so
    that a failure on one file -- missing, malformed, not yet published
@@ -9360,55 +9475,28 @@ async function loadAllData() {
   // Chips show while the data files load (titles fill in afterwards).
   renderBrowseChips();
 
-  const [prosecutionResult, deregulationResult, govservicesResult, trumpfamilyResult, daiResult, communitytopicsResult] = await Promise.allSettled([
-    fetch("data/prosecution.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
-    fetch("data/deregulation.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
-    fetch("data/government-services.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
-    fetch("data/trumpfamily.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
-    fetch("data/dai.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
-    fetch("data/community-topics.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
+  // The five indexed trackers boot from data/index/<file> (falling back to the
+  // full file, see fetchIndexOrFull); community topics is fetched whole.
+  const curatedKeys = Object.keys(FULL_ENTRY_FILES);
+  const [communitytopicsResult, ...curatedResults] = await Promise.allSettled([
+    fetchJsonOk("data/community-topics.json"),
+    ...curatedKeys.map(fetchIndexOrFull),
   ]);
 
   const loadErrors = [];
 
-  if (prosecutionResult.status === "fulfilled") {
-    TRACKERS.prosecution.data = prosecutionResult.value;
-    TRACKERS.prosecution.data.forEach(e => {
-      e.offense_category_raw = e.offense_category;
-      e.offense_category = classifyOffenseCategory(e.offense_category);
-      e.status_category = classifyStatus(e.status);
-      e.concern_type = e.offense_category === "Other/Unclassified" ? classifyConcernType(e.offense_category_raw) : null;
-    });
-  } else {
-    loadErrors.push("prosecution.json (" + prosecutionResult.reason.message + ")");
-  }
-
-  if (deregulationResult.status === "fulfilled") {
-    TRACKERS.deregulation.data = deregulationResult.value;
-  } else {
-    loadErrors.push("deregulation.json (" + deregulationResult.reason.message + ")");
-  }
-
-  if (govservicesResult.status === "fulfilled") {
-    TRACKERS.govservices.data = govservicesResult.value;
-  } else {
-    loadErrors.push("government-services.json (" + govservicesResult.reason.message + ")");
-  }
-
-  // Trump Family: see TRACKERS.trumpfamily's comment. While hidden, a
-  // failed fetch stays silent -- a banner would reveal the tracker.
-  if (trumpfamilyResult.status === "fulfilled") {
-    TRACKERS.trumpfamily.data = trumpfamilyResult.value.map(mapTrumpFamilyEntry);
-  } else if (!TRACKERS.trumpfamily.hidden) {
-    loadErrors.push("trumpfamily.json (" + trumpfamilyResult.reason.message + ")");
-  }
-
-  // DHS and ICE: see TRACKERS.dai's comment; same hidden-aware handling.
-  if (daiResult.status === "fulfilled") {
-    TRACKERS.dai.data = daiResult.value.map(mapDaiEntry);
-  } else if (!TRACKERS.dai.hidden) {
-    loadErrors.push("dai.json (" + daiResult.reason.message + ")");
-  }
+  // Trump Family and DHS and ICE: see their TRACKERS comments. While a tracker
+  // is hidden, a failed fetch stays silent -- a banner would reveal it.
+  curatedKeys.forEach((key, i) => {
+    const result = curatedResults[i];
+    if (result.status === "fulfilled") {
+      TRACKERS[key].data = prepareCuratedEntries(key, result.value.raw);
+      if (result.value.full) fullEntriesLoaded[key] = true;
+    } else {
+      fullEntriesFailed[key] = true;
+      if (!TRACKERS[key].hidden) loadErrors.push(FULL_ENTRY_FILES[key] + " (" + result.reason.message + ")");
+    }
+  });
 
   if (communitytopicsResult.status === "fulfilled") {
     TRACKERS.communitytopics.data = communitytopicsResult.value;
@@ -9455,11 +9543,12 @@ async function loadAllData() {
 
   if (loadErrors.length) showLoadErrors(loadErrors);
 
-  // Reporting (the large uncurated archive) is deliberately NOT part of the load above: it
-  // starts only now, after the first render, so it never delays the curated trackers.
-  // requestIdleCallback gets a 2s timeout so a permanently busy page still starts the load.
-  if (window.requestIdleCallback) window.requestIdleCallback(() => ensureReporting(), { timeout: 2000 });
-  else setTimeout(() => ensureReporting(), 0);
+  // The full curated entries, then Reporting (the large uncurated archive), are deliberately
+  // NOT part of the load above: they start only now, after the first render, so they never
+  // delay it. requestIdleCallback gets a 2s timeout so a permanently busy page still starts them.
+  const startBackgroundLoads = () => { ensureFullEntries(); ensureReporting(); };
+  if (window.requestIdleCallback) window.requestIdleCallback(startBackgroundLoads, { timeout: 2000 });
+  else setTimeout(startBackgroundLoads, 0);
 }
 
 // Kept so the front strip's "Read the entry" link can wait for the data
