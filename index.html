@@ -8515,13 +8515,15 @@ function renderGlobalResults(term, useRegex, useOneLiners, useImpactSort) {
 
   lastGlobalRender = null;
 
-  // Search reads full body text: wait for every tracker's full entries (decision 7.3).
-  const waitHtml = searchWaitHtml(Object.keys(FULL_ENTRY_FILES));
+  // Search reads full body text: wait for the full entries of every tracker it
+  // searches (decision 7.3) -- the visible ones; a hidden tracker isn't searched.
+  const waitKeys = visibleTrackerKeys(TRACKERS).filter(k => FULL_ENTRY_FILES[k]);
+  const waitHtml = searchWaitHtml(waitKeys);
   if (waitHtml) {
     container.innerHTML = waitHtml;
     countEl.textContent = "";
     if (waitHtml === SEARCH_LOADING_HTML) {
-      ensureFullEntries().then(() => {
+      Promise.all(waitKeys.map(k => ensureFullEntries(k))).then(() => {
         if (document.getElementById("global-search").value.trim() === term) renderDispatch();
       });
     }
@@ -9492,9 +9494,12 @@ const FULL_ENTRY_FILES = {
   dai: "dai.json",
 };
 // trackerKey -> true once that tracker's full entries are in TRACKERS[key].data
-// (merged, or loaded whole at boot when its index was missing).
+// (merged, or loaded whole at boot when its index was missing), and also when
+// its boot load failed entirely (no index, no full file): it has no entries,
+// so there is nothing to wait for, as before the index existed.
 let fullEntriesLoaded = {};
-// trackerKey -> true once its full file has failed to load (never retried).
+// trackerKey -> true once its full file has failed to load after its index
+// loaded (never retried): its slim entries are on screen but never get full.
 let fullEntriesFailed = {};
 const fullEntriesPromises = {};
 // For tests: how many times a full data/<file> has been fetched.
@@ -9664,7 +9669,8 @@ async function loadAllData() {
       TRACKERS[key].data = prepareCuratedEntries(key, result.value.raw);
       if (result.value.full) fullEntriesLoaded[key] = true;
     } else {
-      fullEntriesFailed[key] = true;
+      // Nothing loaded: no entries to wait on (see fullEntriesLoaded).
+      fullEntriesLoaded[key] = true;
       if (!TRACKERS[key].hidden) loadErrors.push(FULL_ENTRY_FILES[key] + " (" + result.reason.message + ")");
     }
   });

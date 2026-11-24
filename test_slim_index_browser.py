@@ -409,3 +409,15 @@ def test_same_publish_merge_redraws_nothing(page, site_url):
     assert sorted(merges) == sorted(["prosecution", "deregulation", "govservices", "trumpfamily", "dai"])
     assert all(m == {"added": 0, "removed": 0, "changed": 0} for m in merges.values()), merges
     assert page.evaluate("window.__rd") == 0
+
+
+def test_global_search_works_when_one_tracker_failed_at_boot(page, site_url):
+    """I2: a tracker whose index AND full file failed at boot has nothing to
+    wait for; global search still searches the other trackers."""
+    page.route("**/data/index/dai.json", lambda route: route.fulfill(status=404, body="nope"))
+    page.route("**/data/dai.json", lambda route: route.fulfill(status=404, body="nope"))
+    _boot(page, site_url)
+    page.fill("#global-search", "health")
+    page.wait_for_function("lastGlobalRender && lastGlobalRender.curatedN > 0", timeout=60000)
+    assert "Search couldn't load every entry" not in page.inner_text("#entries")
+    assert page.locator("#entries .search-loading").count() == 0
