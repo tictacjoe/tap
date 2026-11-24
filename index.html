@@ -147,6 +147,15 @@
     grid-template-columns: minmax(0, 1fr);
     gap: 0.75rem;
   }
+  /* Wide screens: the two featured cards sit side by side under the
+     stats row (Joe, 2026-11-24); a lone card spans the full width. */
+  @container (min-width: 521px) {
+    .front-strip-inner { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .fs-stats { grid-column: 1 / -1; }
+    .fs-feature:last-child:nth-child(2) { grid-column: 1 / -1; }
+    .fs-feature { display: flex; }
+    .fs-card { flex: 1; align-content: start; }
+  }
   .fs-stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .fs-stat { padding: 0 0.9rem; border-left: 1px solid var(--rule); min-width: 0; }
   .fs-stat:first-child { padding-left: 0; border-left: 0; }
@@ -6207,7 +6216,7 @@ function buildFrontStripHtml(strip, colorFor) {
   const fmt = n => Number(n || 0).toLocaleString("en-US");
   // [number, label, extra class for the number's color, link: [href, data-goto] or null]
   const stats = [
-    [s.entries, "sourced entries", "", ["#", "all"]],
+    [s.entries, "curated entries", "", ["#", "all"]],
     [s.life_health, "harms to life or health", " fs-num-harm", ["#harms", "harms"]],
     [s.illegality, "entries describing possible illegality", " fs-num-flag", ["#illegality", "illegality"]],
     [s.reporting, "uncurated reporting", "", ["#", "reporting"]],

@@ -48,7 +48,7 @@ function strip(featured, featuredIll) {
 test("renders four stats in order", () => {
   const html = buildFrontStripHtml(strip(), color);
   const labels = [...html.matchAll(/class="fs-label">([^<]*)</g)].map(m => m[1]);
-  assert.deepEqual(labels, ["sourced entries", "harms to life or health", "entries describing possible illegality", "uncurated reporting"]);
+  assert.deepEqual(labels, ["curated entries", "harms to life or health", "entries describing possible illegality", "uncurated reporting"]);
   const nums = [...html.matchAll(/class="fs-num[^"]*">([^<]*)</g)].map(m => m[1]);
   assert.deepEqual(nums, ["1,234", "118", "274", "615"]);
   assert.ok(!html.includes("claim checks"));
